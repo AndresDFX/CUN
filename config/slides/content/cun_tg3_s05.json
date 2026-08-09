@@ -1,0 +1,212 @@
+[
+  {
+    "type": "bullets",
+    "title": "Aquí es donde se descarrilan los proyectos",
+    "bullets": [
+      "El error más caro del trabajo de grado: **elegir el método porque suena bien** y descubrir tarde que no mide lo que se preguntó.",
+      "  Se recogen datos, se llenan tablas, se pierde un mes… y en la sustentación el jurado pregunta \"¿y esto qué objetivo responde?\".",
+      "Caso concreto: un estudiante quería *evaluar el efecto de un chatbot en la mesa de ayuda* y aplicó una encuesta de satisfacción general.",
+      "  La encuesta medía **si les caía bien** el chatbot, no si bajó el tiempo de respuesta. El objetivo quedó sin evidencia.",
+      "Regla de la sesión: **el método no se elige, se deriva** de la pregunta y de los objetivos.",
+      "La herramienta que lo garantiza tiene nombre: **matriz de consistencia**. Si una fila no encaja, el que está mal es el método, no la matriz.",
+      "Hoy sale de clase con: la matriz llena, las tres decisiones metodológicas declaradas y el bosquejo del instrumento."
+    ],
+    "note": "Tenga abiertos sus objetivos específicos de la Sesión 02: son las filas de la matriz que vamos a construir."
+  },
+  {
+    "type": "table",
+    "title": "La matriz de consistencia, fila por fila",
+    "headers": ["Objetivo específico", "Variable / constructo", "Técnica", "Instrumento", "Análisis"],
+    "rows": [
+      ["Caracterizar el proceso actual de despliegue", "Tiempo de despliegue", "Observación", "Bitácora / registro de logs", "Estadística descriptiva (promedio, rango)"],
+      ["Diseñar la automatización de las pruebas", "Cobertura de pruebas", "Prototipado", "Prototipo (obra-creación) + rúbrica", "Revisión técnica contra criterios"],
+      ["Comparar el desempeño antes y después", "Errores en producción", "Medición", "Registro de incidencias", "Comparación de promedios"]
+    ],
+    "note": "Léala de izquierda a derecha: **qué quiero lograr → qué observo → cómo lo capturo → con qué herramienta → cómo lo interpreto**. Si una fila se corta a medio camino, ahí está el problema.",
+    "col_w": [3.0, 2.1, 1.7, 2.5, 2.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se construye la matriz: el orden importa",
+    "bullets": [
+      "**No empiece por el instrumento.** Casi todo el mundo lo hace y por eso termina con encuestas que no miden nada.",
+      "**Paso 1 — Copie sus objetivos específicos** en la primera columna, uno por fila. No los reescriba: cópielos textuales.",
+      "**Paso 2 — Extraiga la variable** que hay en cada objetivo. Pregúntese: ¿qué es lo que va a cambiar o lo que voy a observar aquí?",
+      "  Si un objetivo no tiene variable identificable, ese objetivo estaba mal escrito y hay que arreglarlo hoy.",
+      "**Paso 3 — Elija la técnica**: observación, encuesta, entrevista, medición, prototipado, análisis documental.",
+      "  La técnica es la **forma de acercarse** al dato; el instrumento es el **objeto** con el que lo captura.",
+      "**Paso 4 — Nombre el instrumento** concreto: \"cuestionario de 10 ítems\", \"guía de entrevista de 8 preguntas\", \"bitácora de despliegues\", \"rúbrica del prototipo\".",
+      "**Paso 5 — Declare el análisis**: promedios y frecuencias, codificación por categorías, comparación antes/después, revisión contra criterios.",
+      "Si al terminar hay una celda vacía, ahí tiene su tarea pendiente: no siga adelante hasta llenarla."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Decisión 1 — El enfoque: cuali, cuanti o mixto",
+    "headers": ["Enfoque", "Para qué sirve", "Qué produce", "Se nota cuando…"],
+    "rows": [
+      ["**Cuantitativo**", "Medir, contar, comparar magnitudes", "Números, tablas, porcentajes, gráficos", "Su pregunta dice \"en qué medida\", \"cuánto\", \"qué diferencia\""],
+      ["**Cualitativo**", "Comprender significados, prácticas y percepciones", "Categorías, patrones, citas de los participantes", "Su pregunta dice \"cómo\", \"por qué\", \"qué sentido\""],
+      ["**Mixto**", "Combinar la medida con la comprensión", "Números + categorías que se explican entre sí", "Necesita el dato duro **y** la explicación de la gente"]
+    ],
+    "note": "El enfoque no se decide por gusto ni por facilidad: se decide por lo que exige su pregunta. Y una vez decidido, condiciona todo el resto de la matriz.",
+    "col_w": [2.0, 3.1, 3.3, 3.5]
+  },
+  {
+    "type": "table",
+    "title": "Decisión 2 y 3 — Alcance y diseño",
+    "headers": ["Decisión", "Opciones", "Cuándo se usa"],
+    "rows": [
+      ["**Alcance: exploratorio**", "Tema poco estudiado, primeras aproximaciones", "Cuando encontró muy pocos referentes en la Fase I"],
+      ["**Alcance: descriptivo**", "Caracterizar cómo es algo, sin explicar causas", "Lo más común en trabajos de grado de pregrado"],
+      ["**Alcance: correlacional**", "Ver si dos variables se mueven juntas", "Cuando su pregunta relaciona dos variables medibles"],
+      ["**Alcance: explicativo**", "Establecer causa y efecto", "Exige control de condiciones; rara vez viable en un semestre"],
+      ["**Diseño: estudio de caso**", "Un solo escenario estudiado a fondo", "Cuando trabaja con una sola empresa, área o comunidad"],
+      ["**Diseño: cuasi-experimento**", "Medición antes y después de una intervención", "Cuando usted introduce un cambio y mide su efecto"],
+      ["**Diseño: investigación-creación**", "Se diseña, se prueba y se documenta una obra o prototipo", "Cuando el producto de su trabajo **es** el prototipo"]
+    ],
+    "note": "Estas tres decisiones —enfoque, alcance, diseño— se **enuncian explícitamente** en la sección de Metodología del artículo. El jurado las busca.",
+    "col_w": [3.3, 4.3, 4.3]
+  },
+  {
+    "type": "bullets",
+    "title": "Investigación-creación: el prototipo es método y resultado a la vez",
+    "bullets": [
+      "En obra-creación el prototipo **no es solo el producto final**: el proceso de construirlo es parte del método.",
+      "Eso significa que hay que **documentar el proceso**, no solo entregar el producto funcionando.",
+      "Qué se documenta, iteración por iteración:",
+      "  **La decisión de diseño** — qué se eligió (arquitectura, librería, flujo de pantallas) y qué alternativas se descartaron.",
+      "  **El criterio** — por qué se eligió eso: rendimiento, costo cero, accesibilidad, tiempo disponible.",
+      "  **La prueba** — cómo se verificó que funcionaba y con quién se probó.",
+      "  **El aprendizaje** — qué salió mal y qué se cambió en la siguiente versión.",
+      "Su instrumento aquí no es una encuesta: es una **rúbrica del prototipo** con criterios verificables y una **bitácora de iteraciones**.",
+      "Un prototipo sin bitácora es una tarea de programación; un prototipo con bitácora es investigación-creación."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El instrumento: cada ítem responde a un objetivo",
+    "bullets": [
+      "**Regla dura:** por cada pregunta o criterio de su instrumento, pregúntese **\"¿a qué objetivo responde?\"**.",
+      "  Si no responde a ninguno, se borra. Sin discusión, sin lástima.",
+      "Una encuesta de **40 preguntas dispersas** no sirve: cansa al que responde y produce datos que usted no sabrá analizar.",
+      "Una de **10 ítems alineados** sí sirve, y usted sabrá exactamente qué hacer con cada respuesta.",
+      "Cómo se redacta un buen ítem:",
+      "  **Una idea por ítem.** \"¿Es rápido y confiable el proceso?\" son dos preguntas disfrazadas de una.",
+      "  **Sin inducir la respuesta.** \"¿No cree que el proceso manual es ineficiente?\" ya trae la respuesta adentro.",
+      "  **En el lenguaje del que responde**, no en el suyo. Si el usuario no dice \"despliegue\", no se lo pregunte así.",
+      "  **Con escala clara** cuando aplique: opciones excluyentes, sin \"a veces\" al lado de \"algunas veces\".",
+      "Numere sus ítems y **anote al frente el objetivo** al que apuntan. Esa columna es su prueba de consistencia."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Qué instrumento para qué necesidad",
+    "headers": ["Instrumento", "Captura", "Tamaño razonable", "Ojo con…"],
+    "rows": [
+      ["**Cuestionario**", "Percepciones y frecuencias de muchas personas", "8 a 12 ítems", "Preguntas dobles y respuestas inducidas"],
+      ["**Guía de entrevista**", "Explicaciones y matices de pocas personas", "6 a 8 preguntas abiertas", "Convertirla en un interrogatorio cerrado"],
+      ["**Guía de observación**", "Lo que pasa realmente, sin intermediarios", "5 a 8 criterios", "Observar sin criterios definidos previamente"],
+      ["**Bitácora / registro**", "Datos que se generan solos (tiempos, incidencias)", "Campos fijos por evento", "No definir desde cuándo hasta cuándo se registra"],
+      ["**Rúbrica del prototipo**", "Calidad de la obra-creación contra criterios", "4 a 6 criterios con niveles", "Criterios subjetivos que nadie más podría aplicar"]
+    ],
+    "note": "Se puede usar más de un instrumento: lo normal es una bitácora para lo medible y una entrevista corta para entender el porqué.",
+    "col_w": [2.6, 3.6, 2.6, 3.1]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — de una fila de la matriz a los ítems",
+    "bullets": [
+      "**Fila completa:** Objetivo → *caracterizar el proceso actual de despliegue* · Variable → *tiempo de despliegue* · Técnica → *observación* · Instrumento → *bitácora de despliegues* · Análisis → *estadística descriptiva*.",
+      "  Mire cómo la fila **cierra sola**: sé qué mido, con qué lo capturo y cómo lo voy a interpretar.",
+      "**Bajo esa fila a ítems concretos de la bitácora:**",
+      "  Ítem 1: \"Fecha y hora de inicio y de fin del despliegue\" → responde al objetivo de caracterizar (mide el tiempo).",
+      "  Ítem 2: \"Número de pasos ejecutados manualmente\" → responde al objetivo de caracterizar (mide la manualidad).",
+      "  Ítem 3: \"Incidencias reportadas en las 24 horas siguientes\" → responde al objetivo de comparar antes/después.",
+      "**Y ahora el ítem huérfano:** \"¿Le gusta trabajar en equipo?\".",
+      "  ¿A qué objetivo responde? A **ninguno**. Se borra. Así de simple.",
+      "**Ese es el estándar:** ningún ítem entra porque \"suena interesante\"; entra porque un objetivo lo necesita."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Ética de los datos: no es un trámite, es un criterio de evaluación",
+    "boxes": [
+      ["advertencia", "Si su instrumento recoge información de personas, necesita **consentimiento informado**: quién es usted, para qué son los datos, que la participación es voluntaria y que puede retirarse."],
+      ["advertencia", "**Anonimice siempre.** Nada de nombres, cédulas, correos ni cargos identificables en el artículo. Use códigos: Participante 1, Participante 2."],
+      ["aclaracion", "Los datos se usan **solo para este estudio**. No se comparten con terceros, no se publican en bruto y no se reutilizan para otro proyecto sin nuevo consentimiento."],
+      ["aclaracion", "Si trabaja con datos de una empresa, pida **autorización escrita** de quien pueda darla y respete lo que sea confidencial. Un logo o un dato interno publicado sin permiso le puede costar la sustentación."],
+      ["info", "En su sección de Metodología debe quedar **una declaración explícita** del tratamiento ético. El jurado la busca y su ausencia resta."]
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes de esta sesión",
+    "boxes": [
+      ["advertencia", "\"Elegí encuesta porque es lo más fácil.\" — El método se deriva de la pregunta y los objetivos, no de la comodidad. Revíselo en la matriz de consistencia."],
+      ["advertencia", "\"Mi encuesta tiene 40 preguntas para que sea completa.\" — Está dispersa. Cada ítem debe responder a un objetivo; si no, se borra. Diez ítems alineados valen más que cuarenta sueltos."],
+      ["advertencia", "\"Copié el método de un artículo tal cual.\" — Puede copiar la **lógica**, nunca el texto, y debe justificar por qué aplica a **su** pregunta y a **su** contexto."],
+      ["aclaracion", "\"¿Puedo cambiar el instrumento si no funciona?\" — Sí, y se documenta el cambio. Lo que no se puede es cambiarlo a mitad de la recolección sin dejar constancia."],
+      ["info", "Un buen indicio de que la matriz quedó bien: usted puede explicar su metodología completa en dos minutos, sin leer."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso — armar la matriz y el instrumento en la nube",
+    "bullets": [
+      "**1.** En Google Docs cree `S05_MetodoInstrumento_Apellido`. Todo gratis y en el navegador.",
+      "**2.** Inserte una **tabla de 5 columnas** con los encabezados: objetivo específico · variable · técnica · instrumento · análisis.",
+      "**3.** Copie textualmente sus objetivos específicos en la primera columna, una fila por objetivo.",
+      "**4.** Llene de izquierda a derecha, fila por fila. **No salte** a la fila siguiente si dejó una celda vacía.",
+      "**5.** Debajo de la tabla escriba tres líneas: \"El enfoque es… El alcance es… El diseño es…\", cada una con su justificación en media línea.",
+      "**6.** Busque en Google Académico **un estudio con diseño parecido** al suyo y observe cómo redactaron su metodología. Copie la estructura, no el texto.",
+      "**7.** Redacte el instrumento y agregue una **columna final** con el objetivo al que apunta cada ítem.",
+      "**8.** Recorra esa columna: si algún ítem quedó sin objetivo, bórrelo en ese momento.",
+      "**9.** Cierre con un párrafo corto de **tratamiento ético** de los datos.",
+      "**10.** Genere en **zbib.org** las referencias APA de las fuentes metodológicas en las que se apoyó y péguelas en su lista."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Matriz de consistencia y bosquejo del instrumento",
+    "bullets": [
+      "**Tiempo: 20 minutos.** Trabajo individual. Entregable: `S05_MetodoInstrumento_Apellido`.",
+      "**Consigna literal:**",
+      "  **(1)** Llene su **matriz de consistencia** con **una fila por objetivo específico** y las cinco columnas completas.",
+      "  **(2)** Declare en **tres líneas** su enfoque, su alcance y su diseño, cada uno con media línea de justificación.",
+      "  **(3)** Redacte el **bosquejo del instrumento**: 10 ítems de cuestionario, o una guía de 8 preguntas, o la rúbrica del prototipo con 4 a 6 criterios.",
+      "  **(4)** Escriba **una línea** sobre el tratamiento ético de los datos.",
+      "**Criterio de éxito (así se verifica):**",
+      "  **No queda ninguna celda vacía** en la matriz.",
+      "  **No queda ningún ítem huérfano**: todos tienen anotado al frente el objetivo que responden.",
+      "  Un compañero puede leer su matriz y decirle qué va a hacer usted, sin que se lo explique."
+    ],
+    "note": "Mientras trabajan, **el Docente** revisa fila por fila. La pregunta que va a escuchar todo el tiempo es: \"¿ese instrumento sí mide esa variable?\"."
+  },
+  {
+    "type": "boxes",
+    "title": "Checklist de autoevaluación antes de subir a CDigital",
+    "boxes": [
+      ["info", "**Matriz:** ¿hay una fila por cada objetivo específico? ¿todas las celdas están llenas? ¿la técnica y el instrumento son cosas distintas y no la misma repetida?"],
+      ["info", "**Coherencia hacia atrás:** ¿cada variable de la matriz aparece en mi pregunta de la Sesión 02? Si aparece una variable nueva, o sobra o mi pregunta estaba incompleta."],
+      ["info", "**Instrumento:** ¿cada ítem tiene su objetivo anotado al frente? ¿ningún ítem pregunta dos cosas a la vez? ¿ninguno induce la respuesta?"],
+      ["aclaracion", "**Viabilidad:** ¿puedo realmente aplicar este instrumento con el tiempo y el acceso que tengo? Un diseño perfecto e imposible no sirve de nada."],
+      ["advertencia", "**Ética:** si hay personas de por medio, ¿está escrito el consentimiento, la anonimización y el uso exclusivo de los datos? Sin eso, la sección de Metodología queda incompleta."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Suba** `S05_MetodoInstrumento_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Trabajo autónomo (extensión de la sesión):**",
+      "  **Pruebe su instrumento con una sola persona** antes de aplicarlo en serio. Va a descubrir preguntas que nadie entiende.",
+      "  Pase su cuestionario a **Formularios de Google** si va a aplicarlo en línea: gratis, en el navegador y con las respuestas ya tabuladas.",
+      "  Si su trabajo es obra-creación, avance el **prototipo** y empiece la **bitácora de iteraciones** desde la primera decisión de diseño.",
+      "  Redacte el borrador del **consentimiento informado** en media página.",
+      "  Escriba ya la sección de **Metodología** del artículo con lo que produjo hoy: la matriz se traduce a prosa casi sola.",
+      "**En la próxima sesión** trabajamos **comunidades de práctica y co-creación**: su proyecto sale de la burbuja y recibe feedback de sus pares.",
+      "  Llegue con su avance listo para mostrarlo en tres minutos."
+    ]
+  }
+]

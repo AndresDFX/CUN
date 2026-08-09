@@ -1,0 +1,227 @@
+[
+  {
+    "type": "bullets",
+    "title": "Hoy vestimos la pregunta",
+    "bullets": [
+      "Ya tiene una pregunta. Sola, no convence a nadie: **hay que demostrar que el problema existe**.",
+      "Eso es el **planteamiento del problema**: la sección donde usted argumenta que su tema merece estudiarse.",
+      "Piénselo como un juicio: usted es quien acusa, y el lector es el jurado.",
+      "  Si dice \"creo que la red del laboratorio falla mucho\", el jurado se encoge de hombros.",
+      "  Si dice \"la bitácora institucional registró 12 interrupciones en un mes\", el jurado se sienta a escuchar.",
+      "Caso frecuente en ingeniería: dos estudiantes con el mismo problema real.",
+      "  Uno lo sustenta con **datos de un informe** y su artículo avanza.",
+      "  El otro lo sustenta con **su experiencia** y el evaluador le pide reescribir todo.",
+      "Meta de hoy: salir con **1 a 1.5 páginas escritas**, que terminen exactamente en su pregunta."
+    ],
+    "note": "Tenga abierto lo de la sesión anterior: el diagrama de causas es la materia prima de este texto."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es y qué NO es el planteamiento",
+    "bullets": [
+      "**Es** una argumentación: hechos + evidencia + consecuencias que llevan a una pregunta.",
+      "  Se escribe en **prosa continua**, no en viñetas ni en tablas.",
+      "  Cada afirmación fuerte va acompañada de un dato, un estudio o un registro.",
+      "**No es la introducción.** La introducción presenta y ubica; el planteamiento **argumenta y demuestra**.",
+      "**No es el marco teórico.** Aquí no se definen conceptos; aquí se prueba que el problema existe.",
+      "**No es la solución.** Si su texto ya está proponiendo qué hacer, se saltó una sección.",
+      "**No es un desahogo.** \"Es frustrante que...\" no es un argumento.",
+      "Función real: cuando un lector termina de leerlo, debe pensar **\"tiene razón, esto hay que estudiarlo\"**.",
+      "Extensión de trabajo para este curso: **1 a 1.5 páginas**. Ni un párrafo, ni cinco páginas."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "La estructura de embudo",
+    "bullets": [
+      "El planteamiento va **de lo ancho a lo estrecho**, como un embudo:",
+      "  Arriba, **ancho:** el estado actual del asunto, en su contexto.",
+      "  Luego se **cierra** por evidencias, causas y consecuencias.",
+      "  Se estrecha en el **vacío**: lo que todavía no se sabe.",
+      "  Y cae en **un solo punto**: su pregunta.",
+      "Por qué funciona ese orden:",
+      "  El lector necesita **ubicarse** antes de entender por qué le debe importar.",
+      "  Las causas solo tienen sentido **después** de saber qué está pasando.",
+      "  El vacío solo se nota **después** de ver todo lo que sí se sabe.",
+      "Error de orden más común: **empezar por el vacío o por la pregunta**. El lector no sabe de qué le hablan.",
+      "Regla de oro: **el último párrafo del planteamiento contiene la pregunta**, literal, sin sorpresas."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los seis componentes del planteamiento",
+    "headers": ["Componente", "Pregunta que responde", "Ejemplo del caso modelado", "Extensión"],
+    "rows": [
+      ["**Estado actual**", "¿Qué ocurre hoy?", "\"Las prácticas del laboratorio dependen de una red inestable.\"", "1 párrafo"],
+      ["**Evidencias**", "¿Cómo lo sé?", "\"La bitácora del laboratorio registra 12 caídas en un mes.\"", "Dentro de los párrafos"],
+      ["**Causas**", "¿Por qué ocurre?", "\"Cableado antiguo y saturación en las horas pico.\"", "1 párrafo (2–3 causas)"],
+      ["**Consecuencias**", "¿A quién o a qué afecta?", "\"Prácticas incompletas y repetición de sesiones.\"", "1 párrafo"],
+      ["**Vacío**", "¿Qué falta saber?", "\"No hay medición de la pérdida de paquetes en esa red.\"", "2–3 frases"],
+      ["**Pregunta**", "¿Qué me propongo responder?", "La misma pregunta de la sesión anterior, sin cambios", "1 frase final"]
+    ],
+    "note": "Los seis en ese orden. Si le falta uno, el lector siente el hueco aunque no sepa nombrarlo.",
+    "col_w": [2.2, 2.4, 4.4, 1.8]
+  },
+  {
+    "type": "table",
+    "title": "La regla dura de hoy: evidencia, no opinión",
+    "headers": ["Afirmación débil (opinión)", "Afirmación fuerte (evidencia)", "Qué la volvió fuerte"],
+    "rows": [
+      ["\"Creo que muchos estudiantes reprueban.\"", "\"El 34 % del grupo reprobó, según el reporte académico (2024).\"", "Cifra + fuente + año"],
+      ["\"La red se cae mucho.\"", "\"La bitácora del laboratorio registró 12 interrupciones en un mes.\"", "Conteo + registro verificable"],
+      ["\"Todo el mundo recibe correos falsos.\"", "\"El 61 % de los estudiantes encuestados reportó haber recibido correos que suplantan a la institución (Autor, 2023).\"", "Proporción + estudio citado"],
+      ["\"Es obvio que la retroalimentación llega tarde.\"", "\"El tiempo promedio entre la entrega y la retroalimentación fue de 9 días.\"", "Medida concreta y comparable"]
+    ],
+    "note": "Prueba de control: subraye cada afirmación fuerte de su texto. **Si no tiene cifra ni cita al lado, es opinión.**",
+    "col_w": [3.4, 4.6, 2.8]
+  },
+  {
+    "type": "bullets",
+    "title": "¿De dónde saco evidencia si todavía no recojo datos?",
+    "bullets": [
+      "No hace falta hacer trabajo de campo para respaldar el planteamiento. Fuentes al alcance:",
+      "  **Registros institucionales:** bitácoras de laboratorio, tickets de soporte, actas, reportes académicos.",
+      "  **Estadística oficial colombiana:** DANE, MinTIC, MinEducación (SNIES), MinCiencias.",
+      "  **Informes de gremios y entidades:** cámaras de comercio, observatorios, agremiaciones del sector.",
+      "  **Artículos académicos:** Google Académico, SciELO, Redalyc — la evidencia de otros también cuenta.",
+      "  **Documentación técnica:** normas, estándares, manuales de fabricante, reportes de incidentes.",
+      "Reglas de uso:",
+      "  Cite **siempre** de dónde salió el dato: **(Fuente, año)**. Un número sin origen no vale nada.",
+      "  Prefiera datos **recientes** (últimos 5 años en temas tecnológicos).",
+      "  Si el dato es de otro contexto o país, **dígalo**: no lo presente como si fuera local."
+    ],
+    "note": "Un dato de otro contexto sirve para mostrar que el fenómeno existe; **no** para afirmar que ocurre igual en su sede."
+  },
+  {
+    "type": "bullets",
+    "title": "El truco antibloqueo: primero la tabla, después la prosa",
+    "bullets": [
+      "La página en blanco no se vence escribiendo mejor: se vence **no empezando por la prosa**.",
+      "Haga primero una tabla de tres columnas: **síntoma · evidencia · consecuencia**.",
+      "  **Síntoma:** el hecho observable, en una frase corta.",
+      "  **Evidencia:** el dato, registro o estudio que lo respalda, con su fuente.",
+      "  **Consecuencia:** a quién afecta y en qué se traduce.",
+      "Por qué funciona:",
+      "  La tabla **piensa por usted**: si una casilla de evidencia queda vacía, ese síntoma todavía no se puede afirmar.",
+      "  Cada fila se convierte después en **un párrafo**, y el párrafo nace ya respaldado.",
+      "  Es imposible caer en la opinión: la columna del medio se lo impide.",
+      "Mínimo **tres filas**. Con tres filas ya tiene el esqueleto de un planteamiento completo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado (1/2): la tabla llena",
+    "headers": ["Síntoma", "Evidencia", "Consecuencia"],
+    "rows": [
+      ["La red del laboratorio X se interrumpe durante las prácticas", "La bitácora institucional registra **12 interrupciones en un mes**", "Prácticas incompletas y repetición de sesiones"],
+      ["Las interrupciones se concentran en la franja de la tarde", "El registro de soporte ubica **9 de las 12 caídas entre 2 y 5 p. m.**", "La franja de mayor ocupación es la más afectada"],
+      ["No se conoce la calidad real del enlace durante la práctica", "**No existe** ningún registro de pérdida de paquetes ni de latencia", "Las causas se atribuyen por suposición, no por medición"]
+    ],
+    "note": "Note la tercera fila: **la ausencia de datos también es evidencia** — y es justamente la que anuncia el vacío."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (2/2): del renglón al párrafo",
+    "bullets": [
+      "La fila 1 de la tabla, convertida en prosa:",
+      "  *\"Durante el último mes, la red del laboratorio X presentó doce interrupciones registradas en la bitácora institucional. Cada una de ellas obligó a suspender la práctica en curso, de modo que varios grupos no lograron completar las actividades programadas y debieron repetir la sesión en otra franja.\"*",
+      "Desármelo y vea la mecánica:",
+      "  **\"Durante el último mes\"** → delimita el tiempo. Sin tiempo, el dato flota.",
+      "  **\"doce interrupciones\"** → la cifra exacta, no \"muchas\".",
+      "  **\"registradas en la bitácora institucional\"** → la fuente, dentro de la misma frase.",
+      "  **\"obligó a suspender... debieron repetir\"** → la consecuencia, con verbos de efecto.",
+      "Conectores que encadenan los párrafos del planteamiento:",
+      "  Para causas: *esto se explica por, entre los factores asociados se encuentra*.",
+      "  Para consecuencias: *como resultado, lo que se traduce en, esto conlleva*.",
+      "  Para el vacío: *sin embargo, no se ha caracterizado / no se dispone de / no se ha documentado*."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Jerarquizar causas y cerrar en la pregunta",
+    "bullets": [
+      "**Jerarquice las causas.** Diez causas sueltas no impresionan: dispersan.",
+      "  Elija **2 o 3** que pueda respaldar con evidencia y desarróllelas.",
+      "  Las demás, si acaso, en una frase: *\"se identificaron además otros factores, que exceden el alcance de este artículo\"*.",
+      "  Criterio de selección: **la que tiene evidencia y la que se conecta con su pregunta**.",
+      "**Cierre en la pregunta**, y hágalo en dos movimientos:",
+      "  Penúltima frase → el **vacío**: *\"no se dispone de mediciones que permitan establecer...\"*.",
+      "  Última frase → la **pregunta**, literal, la misma de la sesión anterior.",
+      "Prueba de alineación (hágala antes de entregar):",
+      "  Tape todo el texto y lea solo la pregunta. Después lea solo el primer párrafo.",
+      "  **¿Hablan de lo mismo, del mismo actor y del mismo contexto?** Si no, algo se desalineó en el camino."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes al redactar el planteamiento",
+    "boxes": [
+      ["advertencia", "**Escribir lo que uno cree, sin datos.** Cada afirmación fuerte necesita una cifra, un registro o un estudio. Sin evidencia, su planteamiento es una opinión larga."],
+      ["advertencia", "**Empezar por la solución que quiere proponer.** Hoy se argumenta el problema. Si su texto ya dice \"por eso se desarrollará una aplicación...\", bórrelo: esa frase pertenece a otra sección y le quita fuerza al problema."],
+      ["aclaracion", "**El planteamiento no termina en la pregunta.** Debe caer exactamente en la pregunta que ya formuló. Si termina en otra cosa —o en una pregunta distinta—, hay una desalineación que corregir antes de seguir."],
+      ["info", "**Diez causas sin jerarquía.** Priorice 2 o 3 con evidencia. Una causa bien sustentada pesa más que ocho enunciadas al paso."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: escribirlo en 22 minutos",
+    "bullets": [
+      "**1.** Abra su documento `S05_Planteamiento_Apellido` en Google Docs y pegue arriba su **pregunta** (le sirve de brújula).",
+      "**2.** Inserte una tabla de **3 columnas** (síntoma · evidencia · consecuencia) y llene **3 filas**. ~6 minutos.",
+      "**3.** Busque en **Google Académico** un dato o estudio que respalde su **estado actual** —no su solución—. ~4 minutos.",
+      "  Consejo: busque el fenómeno + el contexto, entre comillas la frase exacta.",
+      "  Anote la referencia en APA tentativa; después la afinará con ZoteroBib.",
+      "**4.** Convierta **cada fila en un párrafo**, siguiendo el modelo: tiempo + cifra + fuente + consecuencia. ~8 minutos.",
+      "**5.** Agregue el párrafo de **causas** (2 o 3, jerarquizadas). ~2 minutos.",
+      "**6.** Escriba el **cierre**: una frase de vacío + su pregunta literal. ~2 minutos.",
+      "**7.** Al final, **borre la tabla o déjela como anexo**: en el artículo va la prosa, no la tabla de trabajo."
+    ],
+    "note": "Todo en el navegador: Google Docs y Google Académico. Escriba primero, corrija después."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Redactar el planteamiento (~22 min)",
+    "bullets": [
+      "**Consigna literal.** En el documento `S05_Planteamiento_Apellido`:",
+      "  **(1)** Llene la tabla **síntoma / evidencia / consecuencia** con **al menos tres filas**.",
+      "  **(2)** Conviértala en un planteamiento de **1 a 1.5 páginas** con los **seis componentes** en orden.",
+      "  **(3)** Al menos **una afirmación** debe apoyarse en un dato o estudio hallado en Google Académico, citado en el texto.",
+      "  **(4)** El texto debe **terminar en su pregunta**, la misma de la sesión anterior.",
+      "**Tiempo:** ~22 minutos. El Docente pasa acompañando y revisando alineación.",
+      "**Criterio de éxito (verificable):** al leer su planteamiento **sin conocer su tema**, se entiende **qué pasa**, **cómo lo sabe** y **por qué importa**; y al final aparece la pregunta.",
+      "Prueba de control rápida: cuente cuántas veces aparece un **número o una cita** en su texto. Si la respuesta es cero, todavía es opinión."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist antes de subir su entrega",
+    "bullets": [
+      "[ ] El documento se llama `S05_Planteamiento_Apellido`.",
+      "[ ] Están los **seis componentes**: estado actual, evidencias, causas, consecuencias, vacío y pregunta.",
+      "[ ] Van **en ese orden** (de lo ancho a lo estrecho, sin saltos).",
+      "[ ] Tiene **al menos un dato con fuente citada** en el cuerpo del texto.",
+      "[ ] Ninguna afirmación fuerte quedó sin respaldo: revisé una por una.",
+      "[ ] Prioricé **2 o 3 causas**, no diez enunciadas al paso.",
+      "[ ] **No** propongo ninguna solución en este texto.",
+      "[ ] Nombro a los **afectados** y digo en qué se traduce el problema para ellos.",
+      "[ ] El **último párrafo cae en mi pregunta**, exactamente la misma de la sesión anterior.",
+      "[ ] Está escrito en **prosa**, no en viñetas, y ocupa entre 1 y 1.5 páginas.",
+      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo · para la próxima sesión",
+    "bullets": [
+      "**Léalo en voz alta.** Donde se le trabe la lengua, hay una frase mal armada.",
+      "**Complete la evidencia que le faltó:** identifique las afirmaciones sin respaldo y búsqueles fuente.",
+      "**Extraiga sus constructos:** subraye en su pregunta los **2 o 3 conceptos clave**.",
+      "  Esos conceptos son los que va a rastrear en la literatura la próxima sesión.",
+      "**Verifique en CDigital** el espacio de entrega y la fecha límite de recepción de trabajos de este corte.",
+      "La próxima sesión es la más práctica del curso: **bases de datos, gestores de citas y marco teórico**.",
+      "  Traiga su planteamiento abierto: el marco **responde a esta misma pregunta**, no es un tema nuevo.",
+      "  Traiga también una lista de términos de búsqueda, en español y en inglés.",
+      "Materiales y entrega en **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  }
+]

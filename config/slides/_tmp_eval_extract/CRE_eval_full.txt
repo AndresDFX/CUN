@@ -1,0 +1,33 @@
+=== CRE full tables near evaluacion ===
+
+## TABLE 7 rows=5 cols=1
+R0: [0]ESTRATEGIAS
+R1: [0]METODOLOGÍA PEDAGOGÍA Y DIDÁCTICA
+R2: [0]Núcleos Problémicos Integradores: Estos están definidos al interior de la estructura curricular del programa, a través de una asignatura semestral denominada asignatura integradora, la cual interrelaciona los conocimientos de las demás asignaturas del semestre por medio de una pregunta o situación problematizadora de carácter disciplinar, estableciéndola como una vía para el logro del desarrollo de competencias investigativas de los estudiantes, asegurando la articulación con su saber disciplinar específico. Plan de aula: Es una propuesta de trabajo concertada en el acuerdo pedagógico a partir de una propuesta de Proceso Dialectico sobre conceptos y experiencias (con ponente del grupo o externo al grupo); Laboratorio o simulación controlada; proyectos de aprendizaje u otra herramienta ABP establecida, en desarrollo de este ejercicio el estudiante debe aplicar lo aprendido y evidenciar las experiencias vividas en el proceso enseñanza-aprendizaje con la posibilidad de ampliarlo a los campos de la investigación y la proyección social. El proceso investigativo: En el acuerdo pedagógico se desarrolla la formulación del desarrollo investigativo partiendo desde la introducción de una técnica documental y/o de campo, la cual será el motor del proceso de recolección y análisis de la información cualitativa y/o cuantitativa, sobre la cual al término del curso se esperan obtener unos resultados, los cuales serán debatidos y condensados en un producto académico. Segundo idioma: apoyar el desarrollo de la asignatura con herramientas (talleres lecturas, videos y material de clase) en un segundo idioma. Metodología BANG: Esta es una construcción propia de CUN donde se fomenta la gestión creativa de respuestas a problemáticas, planes y toma de decisiones en la vida y las organizaciones, la cual opera desde tres niveles de complejidad (Gold, Platinum y Black Titanium). Pruebas estándar: Para dar cumplimiento a los artículos 47 y 48 del reglamento estudiantil (modificado mediante acuerdo 21 de 2018), al finalizar cada corte se aplicará una prueba bajo el estándar ICFES -SABER PRO, cuyas preguntas estarán orientadas a la medición del logro de las competencias de esta unidad curricular y su escala cualitativa y cuantitativa estarán determinadas por la tabla establecida en el artículo 52 del reglamento estudiantil. Estas propuestas pueden implementarse por separado o integradas en el plan de curso y constituyen un cambio de paradigma para quienes están acostumbrados a memorizar, adicionalmente, refuerzan la aplicación del modelo pedagógico Cunista en el aula (física o virtual) de acuerdo con establecido en el PEC y desarrollado en el PEP de PAE. .
+R3: [0]METODOLOGÍAS COMPLEMENTARIAS
+R4: [0]Clase Magistral ☑; Seminario ; Seminario - Taller ; Taller ☐; Salida de campo ☐ Prácticas ☑; Proyectos tutorados ☐; Otro(s) ☐: ______________________________
+
+## TABLE 11 rows=2 cols=1
+R0: [0]MECANISMOS DE EVALUACIÓN DE LA DE UNIDAD CURRICULAR
+R1: [0]Evaluación formativa: Le permite al docente y al estudiante detectar las fortalezas y debilidades. Desarrollo de talleres continuos donde se evalúa la continuidad del proceso formativo. Evaluación sumativa: de acuerdo con la exigencia de la institución para cualificar el nivel de competencias y está compuesta por tres cortes, Primer corte 30%, segundo corte 30% y tercer corte 40% y la escala de las mismas es de 0.1 a 5.0. Desarrollo de exámenes, parciales, evaluaciones talleres, controles de lectura, simulaciones, investigaciones, ensayos, entre otros. Las actividades contaran con su respectiva rúbrica de evaluación y retroalimentación.
+
+## TABLE 12 rows=6 cols=6
+R0: [0]SISTEMA DE EVALUACIÓN || [1]SISTEMA DE EVALUACIÓN || [2]SISTEMA DE EVALUACIÓN || [3]SISTEMA DE EVALUACIÓN || [4]SISTEMA DE EVALUACIÓN || [5]SISTEMA DE EVALUACIÓN
+R1: [0]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. || [1]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. || [2]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. || [3]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. || [4]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. || [5]La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN.
+R2: [0]CORTE 1 = 30% || [1]CORTE 1 = 30% || [2]CORTE 1 = 30% || [3]CORTE 1 = 30% || [4]CORTE 1 = 30% || [5]CORTE 1 = 30%
+R3: [0]EV 01 || [1]EV 01 || [2]EV 01 || [3]EV 01 || [4]EV 01 || [5]EV 01
+R4: [0]9.0% || [1]9.0% || [2]9.0% || [3]9.0% || [4]9.0% || [5]9.0%
+R5: [0]Talleres, Quices, Proyecto. || [1]Talleres, Quices, Proyecto. || [2]Talleres, Quices, Proyecto. || [3]Talleres, Quices, Proyecto. || [4]Talleres, Quices, Proyecto. || [5]Talleres, Quices, Proyecto.
+
+## TABLE 14 rows=11 cols=3
+R0: [0]HISTÓRICO DE CAMBIOS || [1]HISTÓRICO DE CAMBIOS || [2]HISTÓRICO DE CAMBIOS
+R1: [0]CONTROL DE ACTUALIZACIÓN DEL CONTENIDO || [1]CONTROL DE ACTUALIZACIÓN DEL CONTENIDO || [2]CONTROL DE ACTUALIZACIÓN DEL CONTENIDO
+R2: [0]Fecha de actualización || [1]Descripción del Cambio || [2]Aprobado por
+R3: [0]01/07/2020 || [1]Ajuste contenidos temáticos semanales || [2]C-EMP
+R4: [0]18/11/2020 || [1]Ajuste en contenidos temáticos semanales || [2]C-EMP
+R5: [0]18/11/2020 || [1]Ajuste en sistema de evaluación || [2]C-EMP
+R6: [0]01/03/2022 || [1]Ajuste En: Descripción de la unidad curricular, propósito de formación de la unidad curricular, competencia de la unidad curricular, unidades de conocimiento, metodología pedagogía y didáctica, referencias bibliográficas, resultado de aprendizaje esperado en la unidad curricular, mecanismos de evaluación, sistema de evaluación y perfil docente. || [2]
+R7: [0] || [1] || [2]
+R8: [0] || [1] || [2]
+R9: [0] || [1] || [2]
+R10: [0] || [1] || [2]

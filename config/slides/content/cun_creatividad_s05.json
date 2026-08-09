@@ -1,0 +1,243 @@
+[
+  {
+    "type": "bullets",
+    "title": "Hoy la propuesta deja de ser un ensayo",
+    "bullets": [
+      "Hasta ahora su propuesta está **bien argumentada**: tiene usuario, tipo, grado y criterios.",
+      "  Pero sigue apoyada en **cosas que ustedes creen** y que nadie ha comprobado.",
+      "Ejemplo del caso del laboratorio: todo el proyecto se sostiene sobre una creencia —**\"el estudiante sí registraría su turno\"**—.",
+      "  Si esa creencia es falsa, no importa qué tan bien programado esté: nadie lo usa y el problema sigue igual.",
+      "Eso es un **supuesto**, y hoy aprendemos a ponerlos a prueba antes de invertir el semestre en construir.",
+      "Tres herramientas, una detrás de otra: **FODA** (radiografía), **Canvas** (cómo se sostiene), **MVP** (lo mínimo para aprender).",
+      "Y la cadena que las une: **supuesto → prueba → criterio → decisión**.",
+      "Salen de la hora con un **mini-Canvas**, un **MVP descrito en 5 líneas** y **una prueba de validación con criterio de éxito medible**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "FODA: la radiografía rápida (y su única regla)",
+    "bullets": [
+      "**FODA** = **F**ortalezas · **O**portunidades · **D**ebilidades · **A**menazas. También lo verán como **DAFO**.",
+      "La división que casi todos confunden:",
+      "  **Fortalezas y Debilidades son INTERNAS** — dependen de usted y de su equipo. Puede cambiarlas.",
+      "  **Oportunidades y Amenazas son EXTERNAS** — están en el entorno. Solo puede aprovecharlas o cubrirse.",
+      "  Error típico: poner \"falta de presupuesto de la universidad\" como debilidad. No es interna: es una **amenaza**.",
+      "**Regla de oro, única e innegociable: cada ítem debe ser específico y verificable.**",
+      "  Mal: \"Fortaleza: somos creativos.\" — no se puede comprobar, no decide nada.",
+      "  Bien: \"Fortaleza: tenemos acceso a **30 usuarios del laboratorio esta semana**.\" — concreto y comprobable.",
+      "Un FODA de **6 bullets bien escritos** vale más que uno de 20 frases genéricas.",
+      "Su función no es decorar el documento: es **decidir dónde apoyarse y qué vigilar**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "FODA: la versión que no sirve y la que sí",
+    "headers": ["Cuadrante", "Versión vacía (no sirve)", "Versión verificable (sí sirve)"],
+    "rows": [
+      ["**Fortaleza** (interna)", "\"Somos creativos y comprometidos\"", "\"Tengo acceso a **30 usuarios del laboratorio** esta semana\""],
+      ["**Debilidad** (interna)", "\"Nos falta experiencia\"", "\"**Nadie del equipo** ha hecho una entrevista de usuario antes\""],
+      ["**Oportunidad** (externa)", "\"Hay mucha tecnología disponible\"", "\"El campus **ya publica el horario** de laboratorios en un archivo abierto\""],
+      ["**Amenaza** (externa)", "\"Puede haber competencia\"", "\"El laboratorio **exige autorización escrita** para cualquier piloto\""]
+    ],
+    "note": "Prueba rápida: si un compañero **no puede comprobar su frase esta semana**, todavía es un adjetivo, no un dato.",
+    "col_w": [2.4, 3.8, 4.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Business Model Canvas: cómo se sostiene su propuesta",
+    "bullets": [
+      "El **Business Model Canvas (BMC)**, de **Alexander Osterwalder**, es un lienzo de **9 bloques**.",
+      "  Describe, en una sola página, cómo una propuesta **crea, entrega y captura valor**.",
+      "Para qué sirve en este curso: obliga a responder preguntas que la ingeniería suele saltarse.",
+      "  ¿Para quién es exactamente? ¿Cómo llega a esa persona? ¿Quién lo sostiene si nadie paga?",
+      "**Aviso importante:** hoy **no** vamos a llenar los nueve bloques, ni falta que hace.",
+      "  Un Canvas a medias pero **concreto** decide más que uno completo lleno de frases generales.",
+      "**Prioridad mínima de hoy — cuatro bloques:** propuesta de valor · segmento de clientes · canales · actividades clave.",
+      "Herramienta: **Canvanizer** (canvanizer.com/new/business-model-canvas) — gratis y en el navegador.",
+      "  **Strategyzer** solo lo miramos como referencia visual; el trabajo real se hace en Canvanizer, Excalidraw o Google Docs."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los nueve bloques del Canvas y su pregunta clave",
+    "headers": ["#", "Bloque", "Pregunta clave que responde", "Hoy"],
+    "rows": [
+      ["1", "**Segmento de clientes**", "¿Para quién es? ¿Quién **usa**?", "**Obligatorio**"],
+      ["2", "**Propuesta de valor**", "¿Qué dolor alivia o qué gana el usuario?", "**Obligatorio**"],
+      ["3", "**Canales**", "¿Cómo **llega** la propuesta al usuario?", "**Obligatorio**"],
+      ["4", "Relación con el cliente", "¿Cómo se capta y se retiene?", "Opcional"],
+      ["5", "**Actividades clave**", "¿Qué hay que hacer **sí o sí**?", "**Obligatorio**"],
+      ["6", "Recursos clave", "¿Qué se necesita: datos, gente, infraestructura?", "Opcional"],
+      ["7", "Socios clave", "¿Quién ayuda desde afuera?", "Opcional"],
+      ["8", "Estructura de costos", "¿Qué cuesta? (aunque sea cualitativo)", "Opcional"],
+      ["9", "Fuentes de ingreso", "¿Quién paga o cómo se sostiene si es social?", "Opcional"]
+    ],
+    "note": "Los cuatro obligatorios son los que **aclaran la propuesta**. Los otros cinco se llenan después, cuando ya sepa a quién le sirve.",
+    "col_w": [0.6, 3.0, 5.2, 1.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se llenan bien los cuatro bloques de hoy",
+    "bullets": [
+      "**Segmento de clientes** — una persona concreta, no una categoría.",
+      "  Vago: \"estudiantes\". Concreto: \"**estudiantes de Ingeniería de 4º semestre que cursan laboratorio los martes**\".",
+      "**Propuesta de valor** — lo que **gana el usuario**, no lo que hace su sistema.",
+      "  Vago: \"una plataforma de gestión de turnos\". Concreto: \"**llegas y ya tienes equipo asignado; dejas de perder tu hora**\".",
+      "**Canales** — el camino real por el que la propuesta llega a esa persona.",
+      "  Vago: \"redes sociales\". Concreto: \"**el docente lo anuncia al inicio del laboratorio; el aviso llega por CDigital**\".",
+      "**Actividades clave** — lo que hay que hacer **sí o sí** para que esto exista.",
+      "  Vago: \"desarrollar el sistema\". Concreto: \"**conseguir el horario real de ocupación**\" y \"**obtener el permiso del laboratorio**\".",
+      "Regla de escritura para los cuatro: si la frase le sirve igual a otro proyecto del salón, **todavía no es su Canvas**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "MVP: la maqueta, no el edificio",
+    "bullets": [
+      "**MVP = Producto Mínimo Viable.** La versión **más pequeña** que permite **aprender de un usuario real**.",
+      "La analogía que hay que recordar: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara.**",
+      "Lo que el MVP **NO** es:",
+      "  **No** es \"la app fea pero completa\".",
+      "  **No** es \"la fase 1 del software grande\".",
+      "  **No** es una versión reducida en funciones pero igual de costosa en tiempo.",
+      "La pregunta que responde un MVP **no** es \"¿funciona el código?\".",
+      "  Es: **\"¿esto le importa a alguien?\"**",
+      "Consecuencia práctica: un MVP puede **no tener nada de software**. Y sigue siendo un MVP válido.",
+      "Definición operativa que pueden usar hoy: **lo más barato que responde su duda más cara**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cuatro MVP baratos que sí caben en un semestre",
+    "headers": ["Tipo de MVP", "En qué consiste", "Qué pregunta responde", "Costo"],
+    "rows": [
+      ["**Landing page**", "Una página con la promesa y un botón de lista de espera", "¿Cuánta gente se anota? ¿A alguien le interesa?", "1 tarde"],
+      ["**Prototipo clicable**", "Pantallas enlazadas entre sí, sin backend ni datos reales", "¿La persona entiende el flujo sin que yo se lo explique?", "2–3 horas"],
+      ["**Piloto \"concierge\"**", "Usted hace **a mano** lo que después haría el sistema", "¿El usuario valora el resultado, aunque sea manual?", "1 semana"],
+      ["**Storyboard**", "4 viñetas del antes/durante/después, mostradas a 5 usuarios", "¿Reconocen el dolor? ¿La solución les hace sentido?", "1 hora"]
+    ],
+    "note": "El piloto **concierge** es el más subestimado: prueba el **valor** antes de escribir una sola línea de código.",
+    "col_w": [2.2, 3.8, 3.8, 1.2]
+  },
+  {
+    "type": "bullets",
+    "title": "La cadena de validación: cinco eslabones",
+    "bullets": [
+      "Validar no es \"mostrarle la idea a alguien\". Es una cadena corta y disciplinada:",
+      "  **Supuesto → Riesgo si es falso → Prueba → Criterio de éxito → Decisión**",
+      "**1. Supuesto** — algo que usted cree y no ha comprobado. Se escribe como **afirmación**, no como pregunta.",
+      "**2. Riesgo si es falso** — qué se cae si resulta que no era cierto. Sirve para **ordenar** cuál validar primero.",
+      "  Empiece siempre por el supuesto **más riesgoso**: el que, si es falso, **tumba el proyecto entero**.",
+      "**3. Prueba** — la acción concreta, con **cuántas personas**, **qué hacen** y **cuánto dura**.",
+      "**4. Criterio de éxito** — el número o la observación que decide. **Se fija ANTES de probar.**",
+      "  Si lo fija después, va a \"ver lo que quiere ver\". Ese sesgo no se vence con buena voluntad, se vence con anticipación.",
+      "**5. Decisión** — **seguir**, **pivotar** o **parar**. Las tres son resultados válidos del método.",
+      "Y una advertencia: **no se valida con opiniones de amigos**. Sus amigos no son el segmento y no le van a decir que no."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: la cadena completa del caso del laboratorio",
+    "bullets": [
+      "**Supuesto riesgoso:** \"Los estudiantes registrarían la reserva **si el flujo toma menos de 1 minuto**.\"",
+      "  Fíjense: está escrito como afirmación y trae una **condición medible** dentro.",
+      "**Riesgo si es falso:** nadie usa el sistema, y el problema del laboratorio **sigue exactamente igual**.",
+      "  Por eso es el primero de la lista: si esto falla, todo lo demás sobra.",
+      "**Prueba:** **5 estudiantes** cronometran el registro en un **prototipo en papel o clicable**, sin ayuda mía.",
+      "  Barata, rápida, y no requiere que exista el sistema.",
+      "**Criterio de éxito:** **≥ 4 de 5** completan en **menos de 60 segundos** **y** dicen que lo usarían **cada semana**.",
+      "  Dos condiciones: una de **tiempo** (observable con cronómetro) y una de **intención** (declarada por el usuario).",
+      "**Decisión:** si pasa → sigo y construyo. Si **3 de 5** → **no pasa**: pivoto el flujo o lo paro.",
+      "Lo importante del ejemplo: **el criterio se escribió antes de la prueba**. Por eso el resultado obliga, en vez de acomodarse."
+    ],
+    "note": "\"Voy a validar mi idea\" no es una prueba. Esta cadena, con números, sí lo es."
+  },
+  {
+    "type": "table",
+    "title": "Criterios de éxito: el que no sirve y el que sí",
+    "headers": ["Criterio que NO sirve", "Por qué falla", "Criterio reescrito"],
+    "rows": [
+      ["\"Que a la gente le guste\"", "\"Gustar\" no se observa ni se cuenta", "\"**4 de 5** dicen que lo usarían **la próxima semana**\""],
+      ["\"Que sea fácil de usar\"", "Sin umbral, cualquier resultado \"pasa\"", "\"**4 de 5** terminan el flujo **en menos de 60 s** sin ayuda\""],
+      ["\"Que muchos se interesen\"", "\"Muchos\" no es un número", "\"**Al menos 15** de 40 dejan su correo en la lista de espera\""],
+      ["\"Que funcione bien\"", "Mide el sistema, no al usuario", "\"**Ningún** usuario pregunta '¿y ahora qué hago?' durante la prueba\""]
+    ],
+    "note": "Fórmula: **[cuántos] de [cuántos]** hacen **[qué acción observable]** en **[qué condición]**. Si su criterio no cabe en esa fórmula, todavía es un deseo.",
+    "col_w": [3.0, 3.2, 4.8]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes y respuestas",
+    "boxes": [
+      ["advertencia", "**\"Mi FODA: fortaleza, somos creativos.\"** Eso no se verifica. Cámbielo por un hecho: \"acceso a 30 usuarios esta semana\"."],
+      ["advertencia", "**\"El MVP es la app terminada pero sin diseño.\"** No. El MVP es **lo más barato que responde su duda más cara**. Una landing o un prototipo en papel sirven."],
+      ["advertencia", "**\"Ya validé: a mis amigos les gustó.\"** Sus amigos **no son el segmento** y no le van a decir que no. Pruebe con usuarios reales y un criterio medible."],
+      ["advertencia", "**\"Lleno el Canvas con frases generales.\"** Un Canvas genérico no decide nada. Sea concreto en **propuesta de valor** y **segmento**."],
+      ["advertencia", "**\"¿Para qué elegir un solo supuesto?\"** Porque el tiempo es finito. Valide primero el que, **si es falso, tumba todo el proyecto**."],
+      ["aclaracion", "**Que la prueba falle es un buen resultado.** Descubrir en la semana 3 que el supuesto era falso vale mucho más que descubrirlo el día de la sustentación."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: su mini-Canvas en Canvanizer",
+    "bullets": [
+      "**1.** Abra **canvanizer.com/new/business-model-canvas** en el navegador. Es gratis y no exige instalar nada.",
+      "**2.** El lienzo aparece con los **nueve bloques** ya dibujados. No se asuste: hoy solo llena cuatro.",
+      "**3.** Empiece por **Value Proposition (propuesta de valor)** — no por el producto. Escriba lo que gana el usuario.",
+      "**4.** Siga con **Customer Segments (segmento)**. Nombre a la persona con al menos **dos rasgos** (rol + situación).",
+      "**5.** Luego **Channels (canales)**: por dónde se entera y por dónde lo usa.",
+      "**6.** Cierre con **Key Activities (actividades clave)**: máximo tres, las que sin ellas no hay proyecto.",
+      "**7.** Use **una nota por idea** (no párrafos). El Canvas se lee de un vistazo o no sirve.",
+      "**8.** Guarde el **enlace de compartir** que da Canvanizer, o tome una **captura de pantalla**.",
+      "**9.** Suba la captura o el enlace a **CDigital** junto con su MVP y su prueba.",
+      "Si Canvanizer no carga o pide cuenta: **Excalidraw** o una tabla en **Google Docs** son alternativas totalmente válidas."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Mini-Canvas + plan de MVP (22 minutos)",
+    "bullets": [
+      "Cuatro entregas, en este orden:",
+      "**(1) FODA de máximo 6 bullets en total** — todos verificables, con la división interna/externa correcta. **(4 min)**",
+      "**(2) Canvas mínimo en Canvanizer** — al menos **propuesta de valor, segmento, canales y actividades clave**. **(7 min)**",
+      "**(3) MVP descrito en 5 líneas** — qué es **lo mínimo** que van a mostrar, y a quién. **(5 min)**",
+      "**(4) Una prueba de validación** de su **supuesto más riesgoso**, con criterio **numérico u observable**. **(6 min)**",
+      "  Usen la fórmula: [cuántos] de [cuántos] hacen [qué acción] en [qué condición].",
+      "Al final, **dos personas** comparten **solo su prueba y su criterio** — no el Canvas completo.",
+      "**Criterio de éxito verificable:** su prueba tiene un criterio que **se puede medir hoy mismo**, y está escrito **antes** de ejecutarla.",
+      "  Segunda verificación: ¿su prueba **podría fallar**? Si el criterio es tan blando que siempre pasa, no es una prueba."
+    ],
+    "note": "Si se pierde llenando los nueve bloques del Canvas, deténgase: hoy solo cuatro. El resto queda para después."
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de entregar: revise usted mismo",
+    "bullets": [
+      "☐ Mi FODA tiene **máximo 6 bullets** y **cada uno se puede comprobar** esta semana.",
+      "☐ Puse Fortalezas/Debilidades en lo **interno** y Oportunidades/Amenazas en lo **externo** (revisé que no se me cruzaran).",
+      "☐ Mi **propuesta de valor** dice lo que **gana el usuario**, no lo que hace el sistema.",
+      "☐ Mi **segmento** nombra a la persona con **rol + situación**, no solo \"estudiantes\".",
+      "☐ Mi **MVP** se puede hacer **esta semana** y **no requiere programar** nada todavía.",
+      "☐ Elegí **un** supuesto y puedo explicar por qué es **el más riesgoso** de mi lista.",
+      "☐ Mi criterio de éxito tiene **un número** o una **observación** clara, y lo escribí **antes** de probar.",
+      "☐ Mi prueba dice **con cuántas personas** y **cuánto dura**.",
+      "☐ El archivo se llama **`S06_CanvasMVP_Apellido`** y está en **CDigital**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Tres ideas para llevarse de hoy:**",
+      "  1. El **FODA** solo sirve si es **verificable**.",
+      "  2. El **MVP** es la maqueta que responde la duda más cara, **no el edificio**.",
+      "  3. Validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado **antes**.",
+      "**(a)** Suban su Canvas + MVP + prueba como **`S06_CanvasMVP_Apellido`** a **CDigital**.",
+      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "**(b)** **Ejecuten la prueba** — aunque sea con **3 usuarios** — y traigan los resultados a la próxima sesión.",
+      "  Anoten lo que pasó **tal cual**, incluso si el criterio no se cumplió. Ese dato es el más valioso que van a tener.",
+      "  Traigan también su **decisión**: sigo, pivoto o paro, y por qué.",
+      "**Próxima sesión:** **Vigilancia tecnológica** — para que su MVP no viva en una burbuja y sepa contra qué compite."
+    ]
+  }
+]

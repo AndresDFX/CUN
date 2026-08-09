@@ -1,0 +1,223 @@
+[
+  {
+    "type": "bullets",
+    "title": "Una semilla buena no basta",
+    "bullets": [
+      "Una innovación **rara vez sobrevive sola**. Para pasar de prototipo a impacto necesita cosas que ustedes no tienen todavía.",
+      "  **Capital · mentoría · redes de contactos · infraestructura · marco normativo · clientes.**",
+      "La metáfora del día: una semilla buena no basta. Necesita **tierra, agua, luz y clima**.",
+      "  El **ecosistema de innovación** es ese entorno: el conjunto de **actores y reglas** que rodean a un equipo de I+D o a un emprendedor.",
+      "Por eso su trabajo **no termina** cuando suben el archivo a CDigital.",
+      "  Termina —de verdad— cuando **alguien de afuera le abre una puerta** a la propuesta.",
+      "Y para que alguien abra esa puerta, hay que saber **a quién tocarla** y **qué pedir** cuando abre.",
+      "Salen de la hora con dos cosas: un **mapa de mínimo 3 entidades reales** con un pedido concreto a cada una, y un **pitch de 60 segundos** ensayado y cronometrado."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué le puede dar el ecosistema (y qué no)",
+    "bullets": [
+      "Seis insumos que una propuesta necesita y que casi nunca se consiguen solos:",
+      "  **Capital** — dinero para materiales, licencias o dedicación. Rara vez es lo primero que falta.",
+      "  **Mentoría** — alguien que ya se equivocó antes y le ahorra tres meses de camino.",
+      "  **Redes de contactos** — el acceso a las personas correctas, que suele valer más que el dinero.",
+      "  **Infraestructura** — laboratorios, equipos, espacios, datos.",
+      "  **Marco normativo** — permisos, avales, respaldo institucional para poder probar.",
+      "  **Clientes o usuarios reales** — el insumo más escaso de todos y el que más rápido madura un proyecto.",
+      "Lo que el ecosistema **no** hace: no valida por usted, no arregla una propuesta sin usuario, y no reemplaza la evidencia.",
+      "  Si llega a una entidad sin saber qué problema resuelve, la puerta se abre y no pasa nada."
+    ],
+    "note": "Antes de buscar plata, pregúntese cuál de los seis insumos es **el que hoy le falta de verdad**. Casi nunca es el primero."
+  },
+  {
+    "type": "table",
+    "title": "El mapa de entidades: cuatro cuadrantes",
+    "headers": ["Cuadrante", "Ejemplos orientativos", "Qué suelen ofrecer"],
+    "rows": [
+      ["**Universitario**", "Unidad de emprendimiento de la CUN · semilleros de investigación · laboratorios y docentes del programa", "Mentoría, espacio, validación, contactos"],
+      ["**Público / mixto**", "Cámaras de Comercio · programas de alcaldías y gobernaciones · **iNNpulsa** · **Minciencias**", "Convocatorias, capital semilla, formación"],
+      ["**Privado / redes**", "Hubs y aceleradoras · comunidades tech · empresas ancla de su sector", "Piloto, inversión, red de clientes"],
+      ["**Internacional**", "Programas de cooperación · **open innovation** de multilatinas · plataformas de retos", "Retos abiertos, financiación, escalamiento"]
+    ],
+    "note": "Es un **mapa**, no un directorio. Los programas cambian: **verifiquen el nombre y la vigencia** el día que vayan a escribir.",
+    "col_w": [2.0, 5.2, 3.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Aprender a preguntar el encaje",
+    "bullets": [
+      "Antes de acercarse a cualquier entidad, respóndase una sola pregunta: **¿para qué me sirve ESTA entidad?**",
+      "Cinco tipos de encaje posibles. Elija **uno** por entidad — no los cinco:",
+      "  **Mentoría** — que alguien revise lo que ya hice y me diga dónde está el hueco.",
+      "  **Capital semilla** — recursos para una etapa concreta y acotada.",
+      "  **Networking** — que me conecten con quien ya trabaja en esto.",
+      "  **Infraestructura** — acceso a un espacio, un equipo o unos datos.",
+      "  **Validación** — usuarios reales para probar mi MVP en condiciones reales.",
+      "**Si usted no sabe qué pediría, la entidad todavía no le sirve.** No es la entidad la que falla: es que su propuesta aún no sabe qué le falta.",
+      "Truco para descubrirlo: vuelva a su **MVP y a su prueba de validación**. ¿Qué le faltó para ejecutarla bien? **Eso** es lo que pide."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "\"Pedir apoyo\" no es un pedido",
+    "headers": ["Pedido vago", "Por qué no funciona", "Pedido concreto"],
+    "rows": [
+      ["\"Necesito apoyo para mi proyecto\"", "El otro no sabe qué hacer con eso y archiva el correo", "\"Solicito **20 minutos** para que revisen mi Canvas y mi MVP\""],
+      ["\"Quisiera que me ayuden con usuarios\"", "No dice cuántos, ni cuándo, ni para qué", "\"Solicito acceso a **10 usuarios por 2 semanas** para probar el flujo\""],
+      ["\"Me interesa participar en convocatorias\"", "Pide información que ya es pública", "\"Solicito confirmar **fechas y requisitos** de la convocatoria vigente\""],
+      ["\"Busco financiación\"", "Sin monto ni destino, no es evaluable", "\"Solicito apoyo para **materiales de un piloto de 4 semanas**\""]
+    ],
+    "note": "Un buen pedido cabe en **un correo de 5 líneas** y le permite al otro decir **sí o no** sin tener que preguntar nada más.",
+    "col_w": [3.0, 3.4, 4.6]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: mapa de entidades del caso del laboratorio",
+    "headers": ["Entidad", "Tipo de apoyo", "Qué le pediría en un correo de 5 líneas"],
+    "rows": [
+      ["Unidad de emprendimiento de la CUN", "**Mentoría / pitch**", "Revisión del Canvas y del pitch, y **5 contactos** de estudiantes usuarios"],
+      ["Área de TI o empresa del sector", "**Piloto**", "**10 usuarios reales durante 2 semanas** para cronometrar el flujo"],
+      ["Programa público o Cámara de Comercio", "**Convocatoria**", "Confirmación de **fechas y requisitos** de postulación vigentes"]
+    ],
+    "note": "Fíjense en la tercera columna: cada fila tiene un **pedido concreto, medible y acotado en el tiempo**. Ninguna dice \"pedir ayuda\".",
+    "col_w": [3.0, 2.2, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "El pitch de 60 segundos: qué logra y qué no",
+    "bullets": [
+      "Un pitch **no es contar todo**. Es lograr que el otro **quiera una segunda conversación**. Nada más.",
+      "  Si esto lo tienen claro, el resto es fácil: todo lo que no ayude a conseguir esa segunda charla, **sobra**.",
+      "El error número uno, y el más caro: **empezar por la tecnología**.",
+      "  \"Hicimos una app con inteligencia artificial que...\" — nadie se conecta con eso, ni siquiera la gente técnica.",
+      "  La tecnología entra en el tramo 3, **como medio**, nunca como protagonista.",
+      "El pitch empieza por **la persona y su dolor**. Es lo único que todo el mundo entiende sin contexto.",
+      "Tres reglas de forma:",
+      "  **Una sola idea por tramo.** Si mete dos, se pierden las dos.",
+      "  **Números concretos** cuando los tenga (4 de 5, 30%, una hora perdida). Un número vale por tres adjetivos.",
+      "  **Termine pidiendo algo.** Un pitch sin pedido deja al otro sin saber qué hacer."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los cinco tramos del pitch de 60 segundos",
+    "headers": ["Tramo", "Contenido", "Tiempo", "Pregunta que responde"],
+    "rows": [
+      ["**1**", "**Usuario + dolor**", "~10 s", "¿A quién y qué le duele?"],
+      ["**2**", "**Insight**", "~10 s", "¿Qué observación lo cambia todo?"],
+      ["**3**", "**Propuesta + tipo de innovación**", "~15 s", "¿Qué proponen y qué cambia?"],
+      ["**4**", "**Evidencia breve**", "~15 s", "¿Por qué debería creerles?"],
+      ["**5**", "**Pedido / siguiente paso**", "~10 s", "¿Qué necesitan de mí ahora?"]
+    ],
+    "note": "El tramo 4 es el que separa un proyecto de aula de una propuesta creíble: ahí entra su **validación** o su **vigilancia**.",
+    "col_w": [1.0, 4.0, 1.4, 3.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: el pitch completo, tramo por tramo",
+    "bullets": [
+      "**Tramo 1 · Usuario + dolor:** \"Los estudiantes de Ingeniería pierden **hasta una hora** buscando un laboratorio libre.\"",
+      "  Empieza por la persona. Todavía no aparece ninguna tecnología.",
+      "**Tramo 2 · Insight:** \"Al observarlos notamos que el **70% de los choques** se concentra en **dos franjas** del día.\"",
+      "  El insight es la observación que uno no esperaba. Es lo que hace que el otro levante la cabeza.",
+      "**Tramo 3 · Propuesta + tipo:** \"Proponemos una **asignación automática desde el horario del curso**, sin trámite de reserva. Es una innovación **de proceso**.\"",
+      "  Quince segundos, y nombra el tipo. Eso muestra que sabe qué está haciendo.",
+      "**Tramo 4 · Evidencia:** \"En una prueba con 5 estudiantes, **4 de 5 completaron el flujo en menos de un minuto** y dijeron que lo usarían cada semana.\"",
+      "  Un número real vence a cualquier adjetivo. Aquí es donde su validación paga.",
+      "**Tramo 5 · Pedido:** \"Buscamos un **piloto de dos semanas con un curso** para medirlo en condiciones reales.\"",
+      "  Concreto, acotado y fácil de responder con un sí o un no.",
+      "**Sesenta segundos exactos — y empecé por la persona, no por la app.**"
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes y respuestas",
+    "boxes": [
+      ["advertencia", "**Listar entidades sin decir qué les pediría.** Una entidad sin un pedido concreto no sirve. ¿Le pide **mentoría, piloto, capital o contactos**?"],
+      ["advertencia", "**Empezar el pitch por la tecnología.** Empiece por **la persona y su dolor**. La tecnología va en el tramo 3, como medio."],
+      ["advertencia", "**Pitch de 3 minutos \"porque hay mucho que contar\".** En 60 s usted no cuenta todo: logra que quieran una **segunda charla**. Corte lo demás."],
+      ["advertencia", "**Entidades genéricas o inventadas.** Se necesita el **nombre real y correcto**. ¿Existe esa entidad y hace lo que usted dice que hace?"],
+      ["advertencia", "**Cerrar el curso sin saber qué falta.** Diga explícitamente **qué está listo y qué falta**. Eso es madurez de proyecto, no debilidad."],
+      ["aclaracion", "**Sobre cupos y financiaciones:** el Docente **no maneja** esas convocatorias y no puede prometer cupos ni recursos. Lo que sí se enseña aquí es a **identificarlas** y a **preguntar el encaje**."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: escribir y ensayar su pitch",
+    "bullets": [
+      "**1.** Abra un documento y escriba los **cinco tramos como títulos**, uno debajo del otro.",
+      "**2.** Llene **una frase por tramo**. Una sola. Si le salen dos, elija la que más se entienda sin contexto.",
+      "**3.** Léalo en voz alta con **cronómetro** (el del celular sirve). Anote el tiempo real.",
+      "  Casi todos pasan de 90 segundos en el primer intento. Es normal.",
+      "**4.** **Corte, no acelere.** Hablar más rápido no arregla un pitch largo: lo vuelve incomprensible.",
+      "  Empiece cortando adjetivos y explicaciones técnicas del tramo 3.",
+      "**5.** Repita hasta quedar **entre 55 y 60 segundos** leyendo a ritmo normal.",
+      "**6.** Ensaye **en parejas**: el compañero cronometra y luego repite **qué entendió**.",
+      "  Si no puede repetir el **dolor, el valor y el pedido**, el problema es el pitch, no el oyente.",
+      "**7.** (Opcional) Si quiere una diapositiva de apoyo, **Canva free** en el navegador. **Una sola**, con el dolor y el número de evidencia.",
+      "Regla final: **memorice la estructura, no el texto**. Un pitch recitado suena a discurso; uno estructurado suena a convicción."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Mapa de entidades + pitch de 60 s (23 minutos)",
+    "bullets": [
+      "**Paso 1 (7 min)** · Completen su **Mapa de entidades** en Google Docs: **mínimo 3 entidades reales**, con **nombre correcto**, y un **pedido concreto** a cada una.",
+      "  Verifiquen el nombre en el sitio de la entidad antes de escribirlo. Un nombre mal escrito hunde la credibilidad del documento.",
+      "**Paso 2 (7 min)** · Escriban el **guion del pitch de 60 s** siguiendo los **cinco tramos**. Pueden bocetarlo en Excalidraw.",
+      "**Paso 3 (6 min)** · **Ensayen en parejas** con cronómetro. El que escucha repite qué entendió; el que habla ajusta.",
+      "**Paso 4 (3 min)** · **Cuatro voluntarios** hacen su pitch en vivo y se les toma el tiempo.",
+      "Si quieren una diapositiva de apoyo: **Canva free**, opcional, una sola.",
+      "**Criterio de éxito verificable:** en **60 segundos** se entienden las tres cosas — **dolor, valor y pedido** — y hay **3 entidades con pedido concreto**.",
+      "  Verificación en pareja: si su compañero no puede repetir el pedido después de escucharlo, el tramo 5 está mal escrito."
+    ],
+    "note": "El cronómetro no es para presionar: es para que descubran cuánto sobra. Casi siempre sobra el tramo 3."
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de entregar: revise usted mismo",
+    "bullets": [
+      "☐ Mis **3 entidades existen** y escribí su **nombre correcto** (lo verifiqué en su sitio).",
+      "☐ Cada entidad tiene **un solo tipo de encaje**: mentoría, capital, networking, infraestructura o validación.",
+      "☐ Cada pedido es **concreto y acotado**: dice **cuánto**, **de qué** y **por cuánto tiempo**.",
+      "☐ Mi pitch **empieza por la persona y su dolor** — no por la app, la plataforma ni la IA.",
+      "☐ Mi pitch tiene **los cinco tramos**, uno por uno, y ninguno se comió al otro.",
+      "☐ En el tramo 4 hay **un número real** salido de mi validación o de mi vigilancia.",
+      "☐ El tramo 5 **pide algo** que el otro puede responder con un sí o un no.",
+      "☐ Lo cronometré y quedó **en 60 segundos o menos** leyendo a ritmo normal.",
+      "☐ Sé decir, en una frase, **qué está listo** de mi propuesta y **qué falta**.",
+      "☐ El archivo se llama **`S08_EcosistemaPitch_Apellido`** y está en **CDigital**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El hilo completo de su Propuesta de Innovación",
+    "bullets": [
+      "Miren de dónde vienen. Su propuesta ya no es una ocurrencia: es **un argumento con evidencia**.",
+      "  Partieron de **un problema real** y de un usuario con un dolor concreto.",
+      "  Lo convirtieron en un **How Might We** y en un banco de ideas del que eligieron con criterios.",
+      "  Le pusieron **nombre** con el Manual de Oslo: un tipo dominante, justificado.",
+      "  Lo **argumentaron** contra una alternativa, con una matriz y una conclusión escrita.",
+      "  Lo pusieron a prueba con un **Canvas, un MVP y una validación** con criterio fijado de antemano.",
+      "  Lo **contrastaron con el entorno** en un tablero de vigilancia, y ajustaron.",
+      "  Y hoy lo conectaron con el **afuera**: entidades reales y un pitch de 60 segundos.",
+      "Cada pieza de esa lista es un documento que ya existe. **Nada de esto hay que inventarlo ahora**: hay que consolidarlo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — cierre y paquete consolidado",
+    "bullets": [
+      "**Tres ideas para llevarse de hoy:**",
+      "  1. Una innovación **no sobrevive sola**: necesita un ecosistema que le dé lo que le falta.",
+      "  2. Una entidad **sin un pedido concreto** no le sirve todavía.",
+      "  3. Un pitch se gana **empezando por la persona**, no por la tecnología.",
+      "**Trabajo autónomo de cierre:** suban a **CDigital** el **paquete consolidado** que pida el corte, como **`S08_EcosistemaPitch_Apellido`**:",
+      "  Ficha del problema · Ficha Oslo · Matriz de tipos · Canvas y MVP con la validación · Tablero de vigilancia · Mapa de entidades · Guion del pitch.",
+      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "**Revisen en CDigital las rúbricas y los espacios de entrega (EV) del corte final** antes de subir: ahí está el formato exacto que se espera.",
+      "Y un último consejo para después del curso: **escriban uno de esos correos de cinco líneas**. La propuesta ya está lista para que alguien de afuera la lea.",
+      "Cualquier duda administrativa, por el canal del curso. **Gracias por el trabajo de todo el ciclo.**"
+    ]
+  }
+]

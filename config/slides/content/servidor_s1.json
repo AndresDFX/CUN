@@ -1,0 +1,174 @@
+[
+  {
+    "type": "bullets",
+    "title": "¿Qué es un servidor y por qué la \"pantalla negra\"?",
+    "bullets": [
+      "Un **servidor** es una computadora cuyo trabajo es **ofrecer un servicio** a otras: una web, un correo, una base de datos, archivos.",
+      "  Quien pide el servicio es el **cliente**; quien lo ofrece es el **servidor**. Son **roles**, no un hardware especial.",
+      "Corre un **sistema operativo de servidor**: casi siempre **Linux** (Ubuntu, Debian, Rocky) o **Windows Server**.",
+      "**Administrarlo** = mantenerlo vivo: crear usuarios, instalar software, dar permisos, revisar disco y logs, reiniciar servicios.",
+      "La mayoría son @@headless@@ (sin monitor, teclado ni mouse): viven en un rack o en la nube, lejos de ti.",
+      "  Como un **cajero automático sin pantalla de mantenimiento**: el técnico no le pone monitor, se conecta por dentro y por la red.",
+      "Por eso se administran **escribiendo comandos** en una consola de texto, no con clics."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "CLI vs GUI: dos formas de dar órdenes",
+    "headers": ["Aspecto", "GUI — interfaz gráfica", "CLI — línea de comandos"],
+    "rows": [
+      ["Cómo das la orden", "Clic con el mouse en íconos y menús", "Escribes un comando y presionas Enter"],
+      ["Ejemplo real", "Doble clic en una carpeta para abrirla", "`cd /var/log` para entrar a esa carpeta"],
+      ["Recursos que consume", "Muchos: dibujar ventanas gasta CPU y RAM", "Mínimos"],
+      ["Trabajo remoto", "Pesado: transmite la pantalla gráfica", "Liviano: solo viaja texto"],
+      ["Automatización", "Difícil de repetir a mano", "Se guarda en un script y se repite igual"],
+      ["Dónde reina", "El escritorio personal", "Los servidores"]
+    ],
+    "note": "La CLI vive en un programa llamado terminal / consola / shell: bash en Linux; CMD y PowerShell en Windows."
+  },
+  {
+    "type": "bullets",
+    "title": "Por qué en servidores manda la consola",
+    "bullets": [
+      "**Menos recursos:** todo el CPU y la RAM van al servicio, no a pintar escritorios.",
+      "**Remoto liviano:** el texto viaja por la red casi sin peso; una pantalla gráfica pesa muchísimo.",
+      "**Automatización:** los comandos se guardan en un **script** y se repiten mil veces sin errores.",
+      "  \"Crear 500 usuarios\" es un bucle de una línea; con el mouse serían horas de clics.",
+      "**Reproducibilidad:** un comando se copia, se pega y queda escrito en un manual; un clic, no.",
+      "**Velocidad y estabilidad:** menos software gráfico = menos fallos y menos superficie de ataque.",
+      "Por eso existe @@Windows Server Core@@ (sin escritorio) y la mayoría de servidores **Linux ni traen entorno gráfico**.",
+      "Idea para no olvidar: la GUI es la **bicicleta con rueditas**; la CLI es la **moto**. Hoy te subes a la moto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El árbol de Linux: el estándar FHS",
+    "headers": ["Directorio", "Qué guarda", "Cómo recordarlo"],
+    "rows": [
+      ["`/`", "La **raíz**: el tronco del que cuelga TODO (no existe \"unidad C:\")", "El punto cero"],
+      ["`/etc`", "Archivos de **configuración** del sistema", "El cuarto de control"],
+      ["`/var/log`", "Los **logs / registros**", "El diario del servidor: ahí va el detective"],
+      ["`/home`", "Carpetas personales (`/home/ana`, `/home/juan`)", "Los apartamentos de cada usuario"],
+      ["`/bin`", "Comandos esenciales (`ls`, `cp`, `cat`…)", "La caja de herramientas"],
+      ["`/usr`", "Programas y bibliotecas instalados", "La bodega de aplicaciones"],
+      ["`/tmp`", "Archivos temporales; se borran al reiniciar", "El bote que se vacía solo"],
+      ["`/dev`", "Dispositivos como archivos (`/dev/sda` = el disco)", "\"Todo es un archivo\""],
+      ["`/root`", "Carpeta personal del superusuario", "¡Ojo: `/root` no es `/`!"]
+    ],
+    "note": "Linux es un árbol invertido: un solo árbol que nace en la raíz `/`. Los discos y USB se \"montan\" dentro de ese árbol."
+  },
+  {
+    "type": "bullets",
+    "title": "Dos trampas y cómo dar una dirección",
+    "bullets": [
+      "**Trampa 1 — el separador:** Linux usa `/` (`/home/ana`); Windows usa `\\` (`C:\\Users\\ana`). Confundirlos rompe la ruta.",
+      "**Trampa 2 — las mayúsculas:** en @@Linux `Archivo.txt` no es igual a `archivo.txt`@@ (sí distingue); en Windows son el mismo archivo.",
+      "**Ruta absoluta:** empieza en la raíz y no deja dudas: `/var/log/syslog` o `C:\\Users\\ana\\nota.txt`.",
+      "**Ruta relativa:** parte de donde estás parado ahora: `documentos/nota.txt`.",
+      "  Absoluta = \"Calle 5 #10-20, Bogotá\"; relativa = \"dos cuadras a la derecha desde aquí\".",
+      "Atajos universales:",
+      "  `.` = el directorio actual · `..` = el directorio de arriba (el padre)",
+      "  `~` (en Linux) = tu carpeta personal (`/home/tu-usuario`)"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Windows: un árbol por cada letra de unidad",
+    "headers": ["Ruta de Windows", "Qué guarda", "Equivale en Linux a…"],
+    "rows": [
+      ["`C:\\`", "Raíz de la unidad del sistema", "(cada letra es su propia raíz)"],
+      ["`C:\\Windows`", "El sistema operativo en sí", "`/` + parte de `/usr`"],
+      ["`C:\\Windows\\System32`", "Comandos del sistema", "`/bin`, `/sbin`"],
+      ["`C:\\Program Files`", "Aplicaciones instaladas", "`/usr`, `/opt`"],
+      ["`C:\\Users`", "Carpetas personales de los usuarios", "`/home`"],
+      ["`C:\\ProgramData`", "Configuración compartida de programas", "parte de `/etc` y `/var`"],
+      ["`C:\\Windows\\Temp`", "Archivos temporales", "`/tmp`"]
+    ],
+    "note": "Windows NO tiene raíz única: cada disco es una letra (`C:`, `D:`…) y su propio árbol. El disco del sistema casi siempre es `C:`."
+  },
+  {
+    "type": "bullets",
+    "title": "Navegar y manipular: los verbos del día",
+    "bullets": [
+      "**¿Dónde estoy?** → `pwd` imprime la ruta absoluta actual (es tu GPS).",
+      "**¿Qué hay aquí?** → `ls` (nombres) · `ls -l` (permisos, tamaño, fecha) · `ls -a` (incluye ocultos).",
+      "**Moverme** → `cd Documentos` (relativa) · `cd /var/log` (absoluta) · `cd ..` (subir) · `cd ~` (a casa).",
+      "**Crear / copiar / mover:** `mkdir informes` · `cp nota.txt copia.txt` · `mv nota.txt apuntes.txt`.",
+      "  En Linux **no hay comando \"renombrar\"**: se renombra moviendo el archivo con otro nombre (`mv`).",
+      "⚠️ @@`rm` borra para siempre@@: en la consola de Linux **no hay papelera de reciclaje**.",
+      "Trucos que salvan: **Tab** autocompleta · flechas **↑/↓** repiten comandos · `--help` o `man ls` muestran la ayuda."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: un mini-recorrido por la consola",
+    "bullets": [
+      "**Meta:** crear una carpeta, meter un archivo, copiarlo, renombrarlo y borrar la copia — sin tocar el mouse.",
+      "1) `mkdir practica` crea la carpeta · `cd practica` entra en ella.",
+      "2) `echo \"hola\" > nota.txt` crea `nota.txt` con el texto \"hola\".",
+      "3) `cp nota.txt respaldo.txt` → ahora hay **dos** archivos: el original y su copia.",
+      "4) `mv nota.txt apuntes.txt` **renombra** el original (recuerda: en Linux se renombra con `mv`).",
+      "5) `rm respaldo.txt` borra la copia — @@sin papelera: es definitivo@@.",
+      "`ls -l` al final deja **un solo** archivo:",
+      "  `-rw-r--r-- 1 ana ana 5 jul 13 10:20 apuntes.txt`  (ya no existen `nota.txt` ni `respaldo.txt`)",
+      "Practica esto en una **terminal en línea** (JSLinux / Webminal); el diagrama y el quiz, en **examlab**. Tip: escribe `nota` y pulsa **Tab**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El mismo comando en Linux, CMD y PowerShell",
+    "headers": ["Acción", "Linux (bash)", "Windows CMD", "PowerShell"],
+    "rows": [
+      ["Dónde estoy", "`pwd`", "`cd`", "`pwd` / `Get-Location`"],
+      ["Listar contenido", "`ls` / `ls -l`", "`dir`", "`dir` / `Get-ChildItem`"],
+      ["Cambiar de carpeta", "`cd carpeta`", "`cd carpeta`", "`cd` / `Set-Location`"],
+      ["Crear carpeta", "`mkdir`", "`mkdir` / `md`", "`New-Item -Type Directory`"],
+      ["Copiar", "`cp origen destino`", "`copy`", "`Copy-Item`"],
+      ["Mover / renombrar", "`mv origen destino`", "`move` / `ren`", "`Move-Item` / `Rename-Item`"],
+      ["Borrar archivo", "`rm archivo`", "`del` / `erase`", "`Remove-Item`"],
+      ["Borrar carpeta", "`rm -r carpeta`", "`rmdir /s`", "`Remove-Item -Recurse`"],
+      ["Ver un archivo", "`cat archivo`", "`type archivo`", "`Get-Content` / `cat`"],
+      ["Limpiar pantalla", "`clear`", "`cls`", "`clear` / `cls`"]
+    ],
+    "note": "PowerShell trae alias (`ls`, `cp`, `mv`, `rm`, `cat`) para que quien viene de Linux se sienta en casa."
+  },
+  {
+    "type": "bullets",
+    "title": "Administración remota: tocar el servidor sin estar frente a él",
+    "bullets": [
+      "Como el servidor es headless y está lejos, se llega a él **por la red**.",
+      "**SSH (Secure Shell)** — la reina en Linux:",
+      "  `ssh ana@192.168.1.50` te deja **dentro de la consola del servidor**; cada comando se ejecuta allá.",
+      "  Es un **túnel blindado**: te sientas aquí, tus manos escriben allá y nadie espía el túnel. Todo **cifrado**, **puerto 22**.",
+      "**RDP** — escritorio gráfico remoto de Windows (`mstsc`): cómodo pero pesado; no sirve para servidores headless.",
+      "**PowerShell Remoting** — el \"SSH de Windows por texto\": `Enter-PSSession` e `Invoke-Command` (usa WinRM).",
+      "⚠️ Regla de oro: @@administración remota = conexión cifrada, siempre@@. **Telnet** (sin cifrar) está obsoleto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Comparación del acceso remoto",
+    "headers": ["Tecnología", "Sistema", "Tipo de acceso", "Puerto", "¿Cifrado?"],
+    "rows": [
+      ["**SSH**", "Linux (y Windows)", "Consola de texto remota", "22", "Sí"],
+      ["**RDP**", "Windows", "Escritorio gráfico remoto", "3389", "Sí"],
+      ["**PowerShell Remoting** (WinRM)", "Windows", "Comandos remotos por texto", "5985 / 5986", "Sí"],
+      ["**Telnet** (obsoleto)", "Antiguo", "Consola de texto remota", "23", "NO — texto plano"]
+    ],
+    "note": "Para servidores headless se usa SSH (Linux) o PowerShell Remoting (Windows): livianos y cifrados. Telnet quedó prohibido por inseguro."
+  },
+  {
+    "type": "bullets",
+    "title": "¿Qué te llevas hoy? Los 4 pilares",
+    "bullets": [
+      "**CLI vs GUI:** en servidores manda la consola de texto; son máquinas headless, sin monitor.",
+      "**Jerarquía de archivos:** Linux = un árbol desde `/` (FHS); Windows = un árbol por letra (`C:\\`).",
+      "  Config en `/etc`, logs en `/var/log`, usuarios en `/home` (o `C:\\Users`).",
+      "**Navegar y manipular:** `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm` (y sus primos en Windows).",
+      "**Administración remota:** llegar por la red, siempre cifrado: SSH (Linux), RDP y PS Remoting (Windows).",
+      "@@Si te pierdes, `pwd` es tu GPS@@: pregunta \"¿dónde estoy?\" y \"¿qué hay aquí?\" (`ls`).",
+      "**Practica** en una terminal en línea (JSLinux / Webminal) y sube tu recorrido + diagrama a **examlab**.",
+      "**Próxima sesión:** usuarios, grupos y permisos — quién puede hacer qué en el servidor."
+    ]
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "type": "bullets",
+    "title": "El control de acceso: quién puede hacer qué",
+    "bullets": [
+      "Un servidor lo usan **muchos a la vez**: personas, servicios automáticos y clientes remotos.",
+      "Si todos pudieran leer, cambiar y borrar todo, un solo error o un solo atacante lo destruye entero.",
+      "El control de acceso responde a **tres preguntas** que encajan como muñecas rusas:",
+      "  **Usuario** = identidad → ¿quién eres?",
+      "  **Grupo** = equipo → ¿de qué equipo eres?",
+      "  **Permisos** = autorización → ¿qué te dejo hacer?",
+      "Analogía del **edificio con tarjeta**: carnet (usuario), departamento (grupo) y la política de cada puerta (permisos).",
+      "El vigilante con la llave maestra que abre todo es @@root (Linux) / Administrador (Windows)@@."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Usuarios en Linux: la ficha de /etc/passwd",
+    "headers": ["Campo", "Ejemplo", "Significado"],
+    "rows": [
+      ["Usuario", "`julian`", "Nombre con el que inicia sesión"],
+      ["Contraseña", "`x`", "Está cifrada en `/etc/shadow`, no aquí"],
+      ["**UID**", "`1001`", "Número de identidad del usuario"],
+      ["**GID**", "`1001`", "Número de su grupo primario"],
+      ["Comentario", "Julian Castano", "Nombre completo / notas"],
+      ["Carpeta personal", "`/home/julian`", "Su casa"],
+      ["Shell", "`/bin/bash`", "Intérprete de comandos al entrar"]
+    ],
+    "note": "Línea: `julian:x:1001:1001:Julian Castano:/home/julian:/bin/bash`. Familias por UID: @@root = 0@@ · servicios 1–999 · personas ≥ 1000. Los grupos viven en `/etc/group` (p. ej. `desarrollo:x:1002:julian,ana,carlos`)."
+  },
+  {
+    "type": "table",
+    "title": "Crear y gestionar usuarios y grupos",
+    "headers": ["Acción", "Linux", "Windows Server"],
+    "rows": [
+      ["Crear usuario", "`useradd -m -s /bin/bash ana`", "`net user ana Passw0rd! /add`"],
+      ["Poner contraseña", "`passwd ana`", "(incluida en `net user`)"],
+      ["Crear grupo", "`groupadd desarrollo`", "`net localgroup desarrollo /add`"],
+      ["Agregar a un grupo", "`usermod -aG desarrollo ana`", "`net localgroup desarrollo ana /add`"],
+      ["Ver identidad y grupos", "`id ana` · `groups ana`", "`whoami /groups`"],
+      ["Eliminar", "`userdel` / `groupdel`", "`net user ana /delete`"]
+    ],
+    "note": "⚠️ Usa siempre @@`usermod -aG`@@ (append): sin la **a** (`-G` a secas) el usuario pierde todos sus otros grupos. El `-m` le crea su carpeta `/home`."
+  },
+  {
+    "type": "table",
+    "title": "El modelo rwx: tres permisos, tres audiencias",
+    "headers": ["Permiso", "En un **archivo**", "En una **carpeta**"],
+    "rows": [
+      ["**r** — leer", "Ver o abrir el contenido", "Listar qué hay dentro (`ls`)"],
+      ["**w** — escribir", "Modificar o borrar el contenido", "Crear, renombrar o borrar dentro"],
+      ["**x** — ejecutar", "Correrlo como programa o script", "Entrar (`cd`) y atravesarla"],
+      ["**-**", "Permiso negado", "Permiso negado"]
+    ],
+    "note": "Cada archivo reparte estos permisos a **3 audiencias**, siempre en este orden: @@dueño (u) → grupo (g) → otros (o)@@. Ojo: sin **x** en una carpeta no puedes entrar, aunque tengas `r`."
+  },
+  {
+    "type": "bullets",
+    "title": "Leer una línea con ls -l, tríada por tríada",
+    "bullets": [
+      "`ls -l` (list long) muestra los permisos. Ejemplo real:",
+      "  `-rwxr-x---  1  julian  desarrollo  4096  jul 10 09:15  deploy.sh`",
+      "**1er carácter** = tipo: `-` archivo · `d` carpeta · `l` enlace.",
+      "Los **9 siguientes** son 3 tríadas, en orden @@dueño → grupo → otros@@.",
+      "Luego aparecen el **dueño** (`julian`) y el **grupo** (`desarrollo`) del archivo.",
+      "Desglose de `rwxr-x---`:",
+      "  **Dueño `rwx`** → julian lee, escribe y ejecuta (control total).",
+      "  **Grupo `r-x`** → el grupo desarrollo lee y ejecuta, pero **no** modifica (guion donde iría la w).",
+      "  **Otros `---`** → cualquier otra persona, **nada**.",
+      "En una frase: **julian manda, su equipo usa pero no toca, el resto afuera**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Notación octal: convierte rwx en números",
+    "headers": ["Octal", "Simbólico", "Reparto (dueño / grupo / otros)", "Uso típico"],
+    "rows": [
+      ["**777**", "`rwxrwxrwx`", "Todos pueden todo", "⚠️ Peligroso: nunca en producción"],
+      ["**755**", "`rwxr-xr-x`", "Dueño total; resto lee y ejecuta", "Programas y carpetas públicas"],
+      ["**750**", "`rwxr-x---`", "Dueño total; grupo lee y ejecuta", "Script de un equipo"],
+      ["**644**", "`rw-r--r--`", "Dueño lee/escribe; resto solo lee", "Archivos y páginas web normales"],
+      ["**640**", "`rw-r-----`", "Dueño lee/escribe; grupo lee", "Config con datos sensibles"],
+      ["**600**", "`rw-------`", "Solo el dueño lee/escribe", "Claves privadas, secretos"]
+    ],
+    "note": "Nemotecnia — el octal es como un **examen**: leer vale @@4@@, escribir **2**, ejecutar **1**; suma los puntos concedidos en cada tríada. `rwx` = 7, `r-x` = 5, `---` = 0 → 750."
+  },
+  {
+    "type": "table",
+    "title": "Cambiar permisos y dueño: chmod y chown",
+    "headers": ["Comando", "Qué cambia", "Ejemplo"],
+    "rows": [
+      ["`chmod` (octal)", "Permisos, forma numérica", "`chmod 750 deploy.sh`"],
+      ["`chmod` (simbólico)", "Permisos: quién ± qué", "`chmod g+w archivo` · `chmod o-r archivo`"],
+      ["`chown`", "El dueño (y el grupo)", "`chown julian:desarrollo deploy.sh`"],
+      ["`chgrp`", "Solo el grupo", "`chgrp desarrollo deploy.sh`"]
+    ],
+    "note": "Flujo real: `groupadd` → `useradd` → `usermod -aG` → `touch` → `chown` → `chmod` → verificar con @@`ls -l`@@. Solo root puede regalar la propiedad de un archivo."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: montamos el control de acceso paso a paso",
+    "bullets": [
+      "Meta: dar a un equipo un script que puedan **usar pero no modificar**, y que nadie más vea.",
+      "Como **root**, ejecuta la secuencia en orden:",
+      "  `groupadd desarrollo` — crea el grupo.",
+      "  `useradd -m -s /bin/bash julian` — usuario con su `/home` y shell.",
+      "  `usermod -aG desarrollo julian` — lo mete al grupo (**sin olvidar la `a`**).",
+      "  `touch deploy.sh` — crea el archivo.",
+      "  `chown julian:desarrollo deploy.sh` — fija dueño y grupo.",
+      "  `chmod 750 deploy.sh` — fija los permisos.",
+      "Verifica con `ls -l deploy.sh` y obtienes:",
+      "  `-rwxr-x---  1  julian  desarrollo  ...  deploy.sh`",
+      "Lectura: **dueño control total · grupo lee y ejecuta · otros nada** = @@750@@.",
+      "Cambia a `chmod 640` y relee: `-rw-r-----` → ya es un archivo de **datos**, no un programa."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "sudo, root y su: elevar privilegios con cuidado",
+    "bullets": [
+      "**root** (UID 0) puede todo, pero trabajar siempre logueado como root es peligrosísimo.",
+      "**`sudo`** ejecuta **un comando puntual** como root, con tu **propia** contraseña:",
+      "  `sudo useradd -m ana` — solo ese comando corre elevado.",
+      "Analogía: `sudo` es **pedir la llave maestra prestada** — la usas para una puerta, queda anotado quién la pidió, y la devuelves.",
+      "Ventajas frente a loguearte como root:",
+      "  Eleva solo lo necesario · @@queda registrado quién hizo qué@@ · no repartes la clave de root.",
+      "Quién puede usar sudo lo define `/etc/sudoers` (se edita con `visudo`, nunca a mano).",
+      "Basta meter al usuario al grupo `sudo` (Debian/Ubuntu) o `wheel` (RedHat): `usermod -aG sudo julian`.",
+      "**`su`** cambia de identidad y pide la clave **del otro** usuario; `sudo` eleva un comando con la **tuya**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Windows Server: permisos NTFS y ACLs",
+    "headers": ["Permiso NTFS", "Equivale, más o menos, a…"],
+    "rows": [
+      ["**Control total**", "Todo, incluido cambiar permisos (`rwx` + dueño)"],
+      ["**Modificar**", "Leer, escribir y borrar"],
+      ["**Lectura y ejecución**", "Ver y ejecutar (≈ `r` + `x`)"],
+      ["**Lectura**", "Solo ver (≈ `r`)"],
+      ["**Escritura**", "Añadir contenido (≈ `w`)"]
+    ],
+    "note": "Se ven en **clic derecho → Propiedades → Seguridad** o con `icacls`. Una **ACL** lista qué usuario o grupo tiene qué nivel: @@misma idea que rwx@@ (identidad + autorización), con otra notación. Grupos clave: Administradores, Usuarios, Invitados."
+  },
+  {
+    "type": "bullets",
+    "title": "El principio de mínimo privilegio (la regla de oro)",
+    "bullets": [
+      "**Mínimo privilegio:** cada usuario, servicio o proceso tiene @@exactamente los permisos que necesita, ni uno más@@.",
+      "¿Por qué importa? Si una cuenta limitada es comprometida, el daño posible es **mínimo**.",
+      "Si esa cuenta era root o tenía `777` en todo, el atacante se queda con el servidor entero.",
+      "En la práctica significa:",
+      "  No trabajar como root; usar `sudo` solo cuando de verdad hace falta.",
+      "  Dar permiso al **grupo** justo, no a otros.",
+      "  Jamás usar `chmod 777` para que funcione: es dejar la casa con la puerta abierta y un cartel de \"pasen\".",
+      "La misma regla vale igual en **Linux (rwx)** y en **Windows (NTFS)**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Practica hoy: tu primer control de acceso",
+    "bullets": [
+      "Reto: crea un usuario, un grupo y un archivo con permiso **640** en un servidor Linux.",
+      "**Comandos reales — terminal en línea:** abre @@JSLinux@@ (`bellard.org/jslinux`) o Webminal y confirma que eres root con `whoami`.",
+      "  `groupadd proyecto`",
+      "  `useradd -m -s /bin/bash laura` · `usermod -aG proyecto laura` · `id laura`",
+      "  `touch informe.txt` · `chown laura:proyecto informe.txt` · `chmod 640 informe.txt`",
+      "  `ls -l informe.txt` → debe mostrar `-rw-r----- laura proyecto`.",
+      "Explica tríada por tríada: **dueño lee/escribe · grupo solo lee · otros nada** (640 = `rw-r-----`).",
+      "**Comprobar y razonar — @@examlab@@ (Test):** resuelve el quiz de permisos y octales (leer `rwx`, convertir a octal y de vuelta).",
+      "Sube a examlab tu captura de `ls -l` + la explicación escrita + el intento del quiz."
+    ]
+  }
+]

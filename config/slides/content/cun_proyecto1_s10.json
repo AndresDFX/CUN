@@ -1,0 +1,212 @@
+[
+  {
+    "type": "bullets",
+    "title": "El cronograma que promete 500 encuestas en una semana",
+    "bullets": [
+      "Un anteproyecto llega con este cronograma: **semana 1**, aplicar 500 encuestas; **semana 2**, entrevistar a 20 funcionarios; **semana 3**, entregar resultados.",
+      "  Nadie pidió permiso a la entidad. Nadie preguntó si existe la base de datos. Nadie contó cuántas horas semanales tiene realmente el equipo.",
+      "  Eso no es un plan: es **una lista de deseos con fechas encima**.",
+      "Hasta hoy usted construyó **piezas**: problema, pregunta, objetivos, marco, método, instrumento propuesto.",
+      "Hoy las miramos como **un sistema** y hacemos tres cosas:",
+      "  **Planear** — un cronograma realista de fases hasta Proyecto II.",
+      "  **Evaluar viabilidad** — la pregunta incómoda: ¿esto de verdad se puede hacer?",
+      "  **Integrar** — que el documento se lea como **un solo texto**, no como cinco archivos pegados.",
+      "Frase para llevarse: **un anteproyecto viable vale más que uno ambicioso e imposible**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es la planeación y qué debe contener",
+    "bullets": [
+      "La **planeación** es el mapa de tiempo del proyecto: qué se hace, en qué orden, quién responde y qué producto sale.",
+      "No se inventa: **se deriva de sus objetivos específicos**. Cada objetivo genera actividades; cada actividad ocupa tiempo.",
+      "Todo cronograma decente tiene cinco columnas mínimas:",
+      "  **Fase** (agrupa actividades) · **Actividad** (verbo en infinitivo) · **Producto verificable** · **Responsable** · **Tiempo**.",
+      "La columna que casi todos olvidan es **producto verificable**: si una actividad no deja evidencia, no se puede controlar.",
+      "  Mal: \"revisar literatura\". Bien: \"matriz de antecedentes con 12 fuentes fichadas\".",
+      "En Proyecto I el cronograma cubre **dos tramos**: lo que ya se hizo (anteproyecto) y lo que se **haría** en Proyecto II.",
+      "Herramientas gratuitas y en la nube: **Google Sheets** (una fila por actividad, columnas por semana) o **Canva free** para un Gantt presentable.",
+      "Regla práctica: si una actividad ocupa más de **dos semanas**, seguramente son varias actividades disfrazadas de una."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado de cronograma por fases hacia Proyecto II",
+    "headers": ["Fase", "Actividad", "Producto verificable", "Duración estimada"],
+    "rows": [
+      ["**1. Gestión de acceso**", "Solicitar aval institucional y firma de confidencialidad", "Carta de aval radicada y respondida", "3 semanas"],
+      ["**2. Validación**", "Someter el instrumento a juicio de 3 expertos", "Formatos de validación diligenciados", "2 semanas"],
+      ["**3. Ajuste**", "Corregir ítems según observaciones y hacer prueba piloto", "Instrumento versión 2 + informe de piloto", "2 semanas"],
+      ["**4. Recolección**", "Aplicar el instrumento a la muestra definida", "Base de datos anonimizada", "4 semanas"],
+      ["**5. Análisis**", "Procesar datos y codificar respuestas abiertas", "Tablas de resultados y matriz de categorías", "3 semanas"],
+      ["**6. Redacción**", "Escribir resultados, discusión y conclusiones", "Capítulos finales del informe", "3 semanas"],
+      ["**7. Sustentación**", "Preparar y presentar el trabajo final", "Documento y presentación aprobados", "2 semanas"]
+    ],
+    "note": "Observe la **fase 1**: pedir permiso toma semanas y casi nadie la incluye. Un cronograma que arranca directo en \"recolectar\" ya es irreal.",
+    "col_w": [2.4, 3.8, 3.4, 2.4]
+  },
+  {
+    "type": "table",
+    "title": "Recursos y presupuesto: los rubros que sí se piden",
+    "headers": ["Rubro", "Qué incluye", "Nota para este proyecto"],
+    "rows": [
+      ["**Talento humano**", "Horas del equipo investigador y asesorías", "Se valoriza aunque no haya pago: hora × cantidad"],
+      ["**Equipos**", "Computadores, conectividad, capacidad de cómputo", "Declare si necesita GPU o servicio en la nube"],
+      ["**Software**", "Herramientas de análisis y almacenamiento", "En este curso casi todo es **gratuito y en la nube**"],
+      ["**Transporte y logística**", "Desplazamientos a la entidad, refrigerios de grupo focal", "Cero si el trabajo es remoto: **declárelo**"],
+      ["**Papelería y reproducción**", "Impresión de consentimientos y formatos", "Bajo, pero existe si hay firmas físicas"],
+      ["**Imprevistos**", "Reserva para lo que no se anticipó", "Se estima entre **5 % y 10 %** del total"]
+    ],
+    "note": "Un presupuesto de **cero pesos** es válido si está **justificado**: \"todas las herramientas propuestas son gratuitas y de acceso web\". Lo que no se acepta es dejar la sección vacía.",
+    "col_w": [2.6, 4.4, 5.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Viabilidad: cuatro frentes y una pregunta incómoda en cada uno",
+    "bullets": [
+      "**Viabilidad técnica** — ¿tiene el equipo las competencias y las herramientas?",
+      "  Pregunta incómoda: ¿alguien del equipo **sabe hacer** el análisis que prometió, o lo va a aprender sobre la marcha?",
+      "**Viabilidad operativa o de acceso** — ¿lo dejarán entrar a esa población o a esos datos?",
+      "  Pregunta incómoda: ¿**ya habló** con alguien de la entidad, o está asumiendo que dirán que sí?",
+      "**Viabilidad temporal** — ¿alcanza el tiempo real, contando trabajo y familia?",
+      "  Pregunta incómoda: ¿cuántas horas **efectivas** por semana puede dedicar cada integrante?",
+      "**Viabilidad ética y legal** — ¿los permisos, avales y consentimientos son alcanzables?",
+      "  Pregunta incómoda: si su población son menores o pacientes, ¿cuánto tarda ese aval y quién lo firma?",
+      "Si alguno de los cuatro frentes falla, **no se maquilla: se ajusta el alcance**. Reducir es una decisión metodológica válida y madura."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Viable o deseo: enunciados reales y cómo se arreglan",
+    "headers": ["Lo que dice el anteproyecto", "Veredicto", "Cómo se arregla"],
+    "rows": [
+      ["\"Se encuestará a 500 ciudadanos en una semana\"", "**Deseo**", "Reducir a una muestra justificada y ampliar el plazo"],
+      ["\"Se analizará la base de datos de la entidad\"", "**Deseo**, si no hay aval", "Añadir la fase de solicitud de aval y un plan B con datos abiertos"],
+      ["\"Se entrevistará a 10 funcionarios en 3 semanas\"", "**Viable**", "Confirmar disponibilidad de agenda y dejar margen"],
+      ["\"Se entrenará un modelo con datos de historias clínicas\"", "**Deseo**, sin comité de ética", "Prever aval, anonimización o usar un dataset público"],
+      ["\"Se usarán herramientas gratuitas en la nube\"", "**Viable**", "Nombrar cuáles y verificar límites de la versión gratuita"],
+      ["\"El equipo dedicará 20 horas semanales cada uno\"", "**Deseo**, en un posgrado", "Ajustar a horas reales y redistribuir tareas"]
+    ],
+    "note": "Cuando un jurado lee \"500 en una semana\", no piensa \"qué ambiciosos\": piensa **\"no calcularon\"**. La credibilidad del anteproyecto se juega aquí.",
+    "col_w": [4.4, 2.6, 5.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Integrar no es pegar: cómo se ve un documento remendado",
+    "bullets": [
+      "**Integrar** significa que las secciones se lean como **una sola historia**, escrita por una sola voz.",
+      "Un documento remendado se detecta en menos de un minuto. Estas son las señales:",
+      "  Cambia la **persona gramatical**: un capítulo en \"nosotros investigamos\", otro en \"se investigó\".",
+      "  Cambian **tipografías, tamaños o interlineados** entre secciones (rastro de copiar y pegar).",
+      "  Los **objetivos** del capítulo 1 ya no coinciden con lo que promete el capítulo de método.",
+      "  Aparecen **dos versiones de la pregunta**: la vieja en la introducción, la corregida en el planteamiento.",
+      "  Hay **referencias nuevas** en el cuerpo que nunca llegaron a la lista final.",
+      "  Las **correcciones anteriores** siguen sin incorporarse: el documento va acumulando la misma deuda.",
+      "Un producto acumulativo se construye **sobre** el anterior corregido, nunca **al lado** del anterior."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El hilo completo: sección por sección, con su pregunta de control",
+    "headers": ["Sección", "Pregunta de control", "Señal de alarma"],
+    "rows": [
+      ["**Problema**", "¿Se entiende qué está mal y a quién afecta?", "Es un tema general, no un problema situado"],
+      ["**Pregunta**", "¿Es una sola pregunta, delimitada y respondible?", "Hay dos preguntas distintas en el documento"],
+      ["**Objetivos**", "¿El general responde la pregunta y los específicos lo desglosan?", "Objetivos que ya no coinciden con el método"],
+      ["**Marco referencial**", "¿Sustenta los conceptos que el método va a medir?", "Teoría que nunca se vuelve a usar"],
+      ["**Método**", "¿El enfoque se deriva del verbo de la pregunta?", "Enfoque elegido \"porque sí\""],
+      ["**Instrumento propuesto**", "¿Cada bloque cuelga de un objetivo específico?", "Ítems sueltos sin objetivo"],
+      ["**Cronograma y viabilidad**", "¿Los tiempos alcanzan para lo que el método promete?", "No aparece la gestión de permisos"],
+      ["**Referencias**", "¿Cero citas y cero referencias huérfanas?", "Fuentes nuevas que no llegaron a la lista"]
+    ],
+    "note": "Este es el **hilo**: pregunta ↔ objetivos ↔ marco ↔ método ↔ instrumento ↔ cronograma. Cualquier eslabón que no conecte es un **gap** que hay que registrar.",
+    "col_w": [2.8, 4.6, 4.6]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: matriz de coherencia con gaps y responsables",
+    "headers": ["Sección", "¿Existe?", "¿Alineada con la pregunta?", "Gap detectado", "Responsable"],
+    "rows": [
+      ["Planteamiento del problema", "Sí", "Sí", "—", "—"],
+      ["Objetivos específicos", "Sí", "**No (OE3)**", "OE3 habla de \"implementar\", pero el estudio solo propone", "Ana"],
+      ["Marco teórico", "Sí", "Parcial", "Falta la teoría que sustenta la categoría \"carga operativa\"", "Luis"],
+      ["Diseño metodológico", "Sí", "Sí", "—", "—"],
+      ["Instrumento propuesto", "Sí", "Parcial", "Los ítems 11 a 14 no cuelgan de ningún objetivo", "Ana"],
+      ["Cronograma", "**No**", "—", "Falta completo; incluir fase de aval institucional", "Camila"],
+      ["Referencias", "Sí", "Parcial", "3 referencias huérfanas y 2 citas sin referencia", "Luis"]
+    ],
+    "note": "Un **gap** sin responsable no se cierra nunca. La columna de la derecha es la que convierte el diagnóstico en trabajo real.",
+    "col_w": [2.8, 1.4, 2.2, 3.8, 1.8]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en la integración final",
+    "boxes": [
+      ["advertencia", "**Entregar un fragmento nuevo pegado al final.** El entregable de cierre es el **documento completo e integrado**, no el capítulo que faltaba enviado como anexo suelto."],
+      ["advertencia", "**No incorporar las correcciones anteriores.** El producto es **acumulativo**: si las observaciones de los avances previos siguen sin aplicarse, el documento no está integrado, está remendado."],
+      ["aclaracion", "**Objetivos que ya no cuadran con el método.** Es normal que el método evolucione. Lo que no es normal es dejar los objetivos viejos: si el método cambió, **realinee los objetivos**."],
+      ["info", "**Viabilidad de acceso sin declarar.** Si necesita permiso para llegar a esa población o a esos datos en Proyecto II, dígalo por escrito y ubíquelo en el cronograma. Callarlo no lo hace desaparecer."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: una sesión de integración de dos horas",
+    "bullets": [
+      "**1.** Junte **todo** en un solo archivo de Google Docs. Si tiene tres documentos, ya tiene un problema de integración.",
+      "**2.** Léalo **de corrido, en voz alta**, sin corregir nada. Solo marque con comentarios lo que \"suene raro\".",
+      "**3.** Unifique el formato: una sola fuente, un solo interlineado, títulos con **estilos de encabezado** (Título 1, Título 2).",
+      "**4.** Unifique la **voz**: elija impersonal (\"se propone\") o primera persona plural, y aplíquela a todo el documento.",
+      "**5.** Busque las **dos versiones de la pregunta** con Ctrl + F y deje solo la corregida, en todas partes.",
+      "**6.** Verifique que los verbos del método y del instrumento estén en **condicional**.",
+      "**7.** Inserte un **índice automático** (Insertar → Tabla de contenido): si el índice sale desordenado, sus encabezados están mal aplicados.",
+      "**8.** Corra la **verificación cruzada de referencias** con Ctrl + F, apellido por apellido.",
+      "**9.** Registre en la matriz cada gap encontrado, con **responsable** y prioridad por impacto."
+    ],
+    "note": "Priorice por impacto: un objetivo desalineado pesa mucho más que un margen mal puesto. Arregle primero lo que rompe el hilo."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Matriz de coherencia y lista de gaps (20 minutos)",
+    "bullets": [
+      "**Consigna literal**, con el documento completo abierto en un solo archivo:",
+      "  **(a)** Cree en Google Docs una tabla con cinco columnas: **Sección | ¿Existe? | ¿Alineada con la pregunta? | Gap | Responsable**.",
+      "  **(b)** Use como filas las **ocho secciones** del hilo (problema, pregunta, objetivos, marco, método, instrumento, cronograma, referencias).",
+      "  **(c)** Marque cada casilla con evidencia: si dice \"sí\", debe poder señalar **en qué página** está.",
+      "  **(d)** Convierta cada casilla en rojo o parcial en un **gap con responsable** y ordénelos por impacto.",
+      "  **(e)** Termine el bosquejo del **cronograma** con las fases que le falten, empezando por la gestión de permisos.",
+      "**Criterio de éxito verificable:** **ningún gap queda sin responsable** y las ocho secciones tienen casilla marcada.",
+      "El Docente circula por los equipos; tenga la matriz en pantalla cuando llegue su turno.",
+      "**Entrega:** suba el archivo como `S10_IntegracionViabilidad_Apellidos` en [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "Todo el anteproyecto está en **un solo archivo**, con índice automático y encabezados bien aplicados.",
+      "El documento se lee con **una sola voz** gramatical de principio a fin.",
+      "Aparece **una sola versión** de la pregunta de investigación en todo el texto.",
+      "Los **objetivos específicos** siguen alineados con el método y con el instrumento propuesto.",
+      "El **cronograma** incluye la fase de gestión de avales y permisos, no solo la recolección.",
+      "Cada actividad del cronograma tiene un **producto verificable** y un responsable.",
+      "La sección de **viabilidad** responde los cuatro frentes: técnica, acceso, tiempo y ética-legal.",
+      "Las **correcciones de los avances anteriores** están efectivamente incorporadas en el texto.",
+      "Mi lista de **gaps** está priorizada por impacto y cada uno tiene un responsable con fecha."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Autónomo de esta semana:**",
+      "  Cierre los gaps en **orden de impacto**: primero los que rompen el hilo, después los de forma.",
+      "  Termine el **cronograma** completo y, si el formato lo pide, el cuadro de recursos o presupuesto.",
+      "  Vuelva a leer el documento de corrido **después** de aplicar los cambios: cada corrección puede abrir una costura nueva.",
+      "  Guarde una versión con nombre y fecha antes de seguir editando: le servirá para comparar.",
+      "**La próxima es la última sesión sincrónica de contenido del curso:**",
+      "  **Verificación de la integración final** con checklist en mano.",
+      "  **Coevaluación y autoevaluación**: cómo dar y recibir retroalimentación con criterios, y qué se diligencia en CDigital.",
+      "  Traiga el documento **integrado**: en esa sesión lo van a leer sus compañeros."
+    ]
+  }
+]

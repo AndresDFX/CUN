@@ -1,0 +1,143 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "1.0",
+  "_fuente_tematica": "Coursera — 'Bits y Bytes de las redes informáticas' (Certificado Profesional de Soporte de TI de Google), 6 módulos = 6 clases. Ver Cursos/Electiva Complementaria 3/Temas.MD",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Cableado Estructurado",
+    "nombre_corto": "Cableado Estructurado",
+    "programa": "Ingeniería de Sistemas",
+    "carpeta_salida": "Cursos/Cableado Estructurado",
+    "estructura_salida": {
+      "presentacion": "Clases/Presentacion del curso.pptx",
+      "slides_sesion": "Clases/Sesion N/Sesion N - <Titulo>.pptx",
+      "guiones": "Guiones/Guion Docente Sesion N - <Titulo>.md",
+      "_nota": "Misma estructura de carpetas que el curso Internetworking."
+    },
+    "tipo_asignatura": "A",
+    "naturaleza": "Teórico-Práctica · redes de computadoras e infraestructura física",
+    "duracion_semanas": 2,
+    "n_sesiones": 6,
+    "modalidad_sesiones": "Sesiones sincrónicas teórico-prácticas",
+
+    "duracion_sesion_minutos": 105,
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "Las 5 fases suman 100 min de plan dirigido; la actividad individual ocupa los 15 min finales para llegar a 105 (1h45)."
+    },
+
+    "competencia": "Comprender la infraestructura física y lógica de las redes de computadoras —desde el cableado estructurado y los medios físicos hasta los servicios y la solución de problemas— para instalar, documentar y diagnosticar redes según los estándares del sector.",
+    "resultado_aprendizaje": "Describir las redes en términos del modelo de cinco capas, identificar los medios físicos y componentes del cableado estructurado, y aplicar herramientas y técnicas de diagnóstico de conectividad de extremo a extremo.",
+    "competencias_fundamentales_fesna": ["Pensamiento estructurado", "Pensamiento crítico", "Resolución de problemas"],
+
+    "niveles": {
+      "1": "El estudiante identifica los componentes físicos y lógicos de una red (capas, medios de transmisión, dispositivos y direccionamiento) y describe sus características.",
+      "2": "El estudiante analiza cómo interactúan las capas, los servicios de red y las tecnologías de acceso para llevar los datos de extremo a extremo.",
+      "3": "El estudiante diagnostica y propone soluciones a problemas de conectividad de una red, usando herramientas estándar y criterios de las tecnologías actuales y futuras."
+    },
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Fundamentos de Redes y Medios Físicos",
+        "subtitulo": "El modelo de cinco capas y el cableado que sostiene la red",
+        "nivel": 1,
+        "foco": "Identificar el modelo TCP/IP de cinco capas (y su relación con OSI), los dispositivos de red y los medios físicos: cables de par trenzado, duplexación, puertos y paneles de conexión, Ethernet, direcciones MAC y la trama.",
+        "ensenanzas": ["Modelo de red de cinco capas TCP/IP y modelo OSI", "Cables, concentradores, switches, routers, servidores y clientes", "Cómo se transfieren los bits: par trenzado, dúplex/semidúplex", "Puertos de red y paneles de conexión (patch panels)", "Ethernet, direcciones MAC, unicast/multicast/broadcast", "Análisis de la trama Ethernet", "Herramientas de cableado"],
+        "modulo_coursera": 1
+      },
+      "2": {
+        "titulo": "La Capa de Red: Direccionamiento IP y Subredes",
+        "subtitulo": "IPv4, máscaras, binario, CIDR y enrutamiento",
+        "nivel": 1,
+        "foco": "Identificar el esquema de direccionamiento IPv4, el encapsulamiento en datagramas, ARP, la división en subredes con operaciones binarias y CIDR, y los conceptos básicos de enrutamiento (tablas, IGP/EGP, IANA, espacio no enrutable).",
+        "ensenanzas": ["Direcciones IPv4, datagramas y encapsulamiento", "Clases de direcciones y ARP", "División en subredes, máscaras y matemática binaria", "CIDR", "Enrutamiento: tablas, protocolos de puerta de enlace interna/exterior", "IANA y espacio de direcciones no enrutable"],
+        "modulo_coursera": 2
+      },
+      "3": {
+        "titulo": "Capas de Transporte y Aplicación",
+        "subtitulo": "TCP/UDP, sockets, firewalls y cómo todo funciona junto",
+        "nivel": 2,
+        "foco": "Analizar el segmento TCP, las marcas de control y el protocolo de enlace de tres vías, los estados de sockets, puertos, protocolos orientados y no orientados a la conexión, firewalls y la capa de aplicación; seguir un paquete de extremo a extremo.",
+        "ensenanzas": ["La capa de transporte y el desglose del segmento TCP", "Marcas de control y protocolo de enlace de tres vías", "Estados de los sockets TCP, puertos del sistema y efímeros", "TCP vs UDP (orientado y no orientado a la conexión)", "Firewalls", "La capa de aplicación y el modelo OSI", "Todas las capas funcionan en conjunto"],
+        "modulo_coursera": 3
+      },
+      "4": {
+        "titulo": "Servicios de Red: DNS, DHCP, NAT y VPN",
+        "subtitulo": "Los servicios que hacen que la red funcione sola",
+        "nivel": 2,
+        "foco": "Analizar cómo DNS resuelve nombres (pasos, tipos de registro, zonas), cómo DHCP automatiza la configuración, y cómo NAT, las VPN y los proxies conectan y protegen las redes.",
+        "ensenanzas": ["Por qué necesitamos DNS y los pasos de la resolución de nombres", "DNS y UDP, tipos de registro, anatomía del dominio, zonas", "DHCP: resumen y funcionamiento", "NAT y la capa de transporte", "Redes privadas virtuales (VPN) y servicios de proxy"],
+        "modulo_coursera": 4
+      },
+      "5": {
+        "titulo": "Conexión a Internet: Banda Ancha, Fibra e Inalámbricas",
+        "subtitulo": "De la línea telefónica a la fibra y el Wi-Fi",
+        "nivel": 3,
+        "foco": "Evaluar las tecnologías de acceso a Internet (dial-up, T-carrier, DSL, cable, fibra), las WAN y VPN punto a punto, y las redes inalámbricas (configuraciones, canales, seguridad) y celulares, eligiendo la adecuada para cada escenario.",
+        "ensenanzas": ["Conexión telefónica, módems y banda ancha", "Tecnologías T-carrier, DSL, cable y fibra", "Redes de área extensa (WAN) y VPN punto a punto", "Redes inalámbricas: configuraciones, canales y seguridad", "Redes celulares y de dispositivos móviles"],
+        "modulo_coursera": 5
+      },
+      "6": {
+        "titulo": "Solución de Problemas de Red y el Futuro: Nube e IPv6",
+        "subtitulo": "ping, traceroute, DNS, la nube y la transición a IPv6",
+        "nivel": 3,
+        "foco": "Diagnosticar problemas de conectividad con ping, traceroute, pruebas de puertos y herramientas de resolución de nombres en Windows/macOS/Linux; evaluar la computación en la nube ('todo como servicio') y la transición IPv4→IPv6.",
+        "ensenanzas": ["Ping/ICMP, traceroute y prueba de conectividad de puertos", "Herramientas de resolución de nombres, DNS públicos y archivo hosts", "Qué es la nube y 'Todo como servicio' (XaaS)", "Direcciones, subredes y encabezados IPv6", "Armonía entre IPv6 e IPv4", "Preparación para entrevistas de soporte de redes"],
+        "modulo_coursera": 6
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "A",
+      "_nota": "Esquema vigente en plataforma, idéntico al del curso Internetworking (mismo programa y tutor).",
+      "destreza_ruta_lms": 50,
+      "prueba_rendimiento_lms": 40,
+      "asistencia": 10,
+      "opcionales": "Participación en clase +0.3 · Kahoot 1er +0.5 / 2do +0.4 / 3er +0.3",
+      "evidencia_aprendizaje": "Prueba de rendimiento en LMS + entrenamientos de la ruta de aprendizaje (destreza).",
+      "nivelacion": "Prueba de nivelación (formulario de Google) en caso de perder la asignatura."
+    },
+
+    "recursos_software": {
+      "_politica": "SIN Cisco Packet Tracer. La práctica se hace SIEMPRE en examlab (plataforma del curso) o con herramientas ONLINE de navegador (sin instalar nada).",
+      "plataforma_practica": {
+        "nombre": "examlab",
+        "url": "https://examlab.lovable.app/app",
+        "consola_red": "Taller tipo 'red consola' (módulo network): consola Cisco IOS en el navegador para configurar dispositivos (router/switch/pc/server) y verificar conectividad. Comandos disponibles: enable, configure terminal, hostname, interface, ip address, [no] shutdown, show running-config, show ip interface brief, ping (acepta abreviaturas como 'conf t', 'int g0/0', 'no shut'). Conectividad = directamente conectado (BFS sobre enlaces activos; SIN tablas de ruteo ni gateway por defecto). Calificación automática y determinista por aserciones.",
+        "pizarra_diagramas": "Pizarra (Excalidraw) y editor de diagramas (Mermaid) para diagramar el modelo de capas y las topologías.",
+        "codigo": "Editor de código (Monaco + ejecución Java/Python/JS) para scripts de apoyo, p. ej. subnetting en Python."
+      },
+      "herramientas_online": [
+        "Subnetting: subnettingpractice.com · subnetting.net · jodies.de/ipcalc",
+        "DNS en línea: nslookup.io · dnschecker.org",
+        "Validadores/compresores IPv6 en línea",
+        "Terminal del propio sistema operativo (ping, tracert/traceroute, nslookup, ipconfig/ifconfig) para diagnóstico REAL — no es un simulador, es la herramienta profesional"
+      ],
+      "recursos": ["Guiones de clase", "Videos y guías en examlab", "Curso Coursera: Los bits y bytes de las redes informáticas (Google)"],
+      "coursera_url": "https://www.coursera.org/learn/redes-informaticas",
+      "material_clases_url": "[hipervínculo que llena el docente — guiones/diapositivas/material]",
+      "herramientas_mundo_laboral": ["Wireshark (análisis de paquetes)", "GNS3 / EVE-NG", "equipos Cisco reales (IOS)", "certificadoras de cableado (Fluke)", "terminal (ping/tracert/nslookup)"]
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[N]",
+      "horario": "Lunes, Miércoles y Viernes · 6:00–7:45 PM",
+      "fechas": "13/07/2026 – 25/07/2026",
+      "hora_inicio": "6:00 PM",
+      "sesiones_fechas": ["Lun 13/07/2026", "Mié 15/07/2026", "Vie 17/07/2026", "Lun 20/07/2026", "Mié 22/07/2026", "Vie 24/07/2026"]
+    }
+  }
+}

@@ -1,0 +1,217 @@
+[
+  {
+    "type": "bullets",
+    "title": "Una palabra, cinco lectores, cinco significados distintos",
+    "bullets": [
+      "Escriba “adopción” en su anteproyecto y cinco lectores van a entender cinco cosas distintas.",
+      "  ¿Adopción es que instalen la herramienta? ¿Que la usen una vez? ¿Que la usen a diario durante un mes?",
+      "Mientras la palabra siga ambigua, el método no puede observar nada: no sabe qué buscar.",
+      "Caso de aula: un equipo prometió “evaluar la usabilidad” de un asistente.",
+      "  Al preguntarles qué era usabilidad para ellos, dieron tres respuestas distintas dentro del mismo equipo.",
+      "Hoy cerramos esa puerta con dos piezas: el **marco conceptual** (qué significan sus términos) y el **marco contextual** (dónde ocurre todo).",
+      "Con esto queda prácticamente completo el marco referencial del anteproyecto."
+    ],
+    "note": "Regla del día: si dos lectores pueden entender cosas distintas por la misma palabra, esa palabra necesita definición operativa."
+  },
+  {
+    "type": "bullets",
+    "title": "Marco conceptual: el diccionario operativo de su estudio",
+    "bullets": [
+      "Es el apartado donde ustedes fijan **cómo se entenderán, en ESTE trabajo**, sus términos clave.",
+      "  No es la definición general del término: es **su** definición de trabajo, la que van a poder usar.",
+      "Baja a tierra el marco teórico: traduce constructos abstractos a algo utilizable.",
+      "  Marco teórico: “la retroalimentación formativa orienta la mejora del desempeño”.",
+      "  Marco conceptual: “en este estudio, retroalimentación oportuna es la devolución entregada en 72 horas o menos”.",
+      "Cubre entre **cuatro y seis términos**: los que su pregunta, sus objetivos y su método usan de verdad.",
+      "No incluya términos que todo el mundo entiende igual (“estudiante”, “empresa”) salvo que su uso sea especial.",
+      "Cada definición conserva su ancla teórica: se cita al autor y enseguida se dice cómo la ajusta usted."
+    ],
+    "note": "Prueba: si un lector ajeno al equipo pudiera identificar el fenómeno con su definición en la mano, la definición sirve."
+  },
+  {
+    "type": "table",
+    "title": "Definición teórica vs. definición operativa",
+    "headers": ["", "Definición teórica", "Definición operativa"],
+    "rows": [
+      ["**Responde a**", "¿Qué es este concepto?", "¿Cómo lo reconozco en mi contexto?"],
+      ["**De dónde sale**", "De un autor, citado en APA 7", "De una decisión argumentada del equipo"],
+      ["**Nivel**", "Abstracta y general", "Concreta, con umbral o criterio observable"],
+      ["**Ejemplo**", "“Retroalimentación que orienta la mejora del desempeño (Autor, año)”", "“Devolución escrita con al menos un criterio de mejora, entregada en 72 horas o menos”"],
+      ["**Sirve para**", "Ubicar el concepto en el campo", "Que el método sepa qué observar"],
+      ["**Si falta**", "El concepto queda sin respaldo", "El método queda sin punto de apoyo"]
+    ],
+    "col_w": [2.2, 4.0, 4.4],
+    "note": "Se escriben **las dos**, y en ese orden. Una operativa sin ancla teórica es un capricho; una teórica sin operativa no se puede usar."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se redacta una definición operativa",
+    "bullets": [
+      "Fórmula: **“En este estudio, X se entiende como … y se reconoce cuando …”**.",
+      "  La primera parte fija el significado; la segunda, el criterio de reconocimiento.",
+      "El criterio debe ser **verificable por otra persona**, no por la intuición del equipo.",
+      "  “Uso frecuente” no sirve. “Al menos tres accesos por semana durante un mes” sí sirve.",
+      "Cuando el término admite grados, ponga **umbral o rango**, nunca adjetivos.",
+      "  Mal: “retroalimentación rápida”. Bien: “devolución en 72 horas hábiles o menos”.",
+      "Cuando el término es cualitativo, ponga **rasgos observables** en lugar de números.",
+      "  “Fricción de uso” = mención explícita de un obstáculo al ejecutar la tarea con la herramienta."
+    ],
+    "note": "Un umbral es una decisión, no una verdad revelada. Se sustenta con el autor, con un antecedente o con la realidad del contexto, pero se sustenta."
+  },
+  {
+    "type": "table",
+    "title": "Así queda la tabla de definiciones en el documento",
+    "headers": ["Término", "Definición teórica (con autor)", "Definición operativa (cómo la uso yo)", "Por qué le importa a la pregunta"],
+    "rows": [
+      ["**Retroalimentación oportuna**", "Devolución que llega a tiempo de influir en la siguiente entrega (Autor, año)", "Devolución escrita entregada en 72 horas hábiles o menos", "La pregunta indaga fricciones de tiempo: sin umbral no hay qué observar"],
+      ["**Fricción de uso**", "Obstáculo percibido al ejecutar una tarea con una tecnología (Autor, año)", "Mención explícita del usuario a un paso que lo detiene o lo obliga a repetir", "Es la unidad que recogerá el instrumento propuesto"],
+      ["**Asistente de IA**", "Sistema conversacional que apoya una tarea humana con lenguaje natural (Autor, año)", "Herramienta de acceso web y gratuito, sin instalación, usada por docente o estudiante", "Delimita qué herramientas entran y cuáles no en la propuesta"]
+    ],
+    "col_w": [1.9, 3.2, 3.2, 2.7],
+    "note": "Cuatro columnas y de cuatro a seis filas. **La cuarta columna es obligatoria**: sin ella la tabla es un glosario, no un marco conceptual."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — cómo se llenó la fila de “retroalimentación oportuna”",
+    "bullets": [
+      "**Paso 1 — de dónde salió el término:** aparece en la pregunta y en el objetivo específico 1. No se inventó.",
+      "**Paso 2 — definición teórica:** se tomó del autor ya trabajado en el marco teórico y se citó en APA 7.",
+      "**Paso 3 — la decisión difícil:** ¿oportuna es 24 horas, 72 horas o una semana?",
+      "  Se miraron dos cosas: qué reportan los antecedentes y **cuál es el ciclo real del curso** (una sesión semanal).",
+      "  Se decidió **72 horas hábiles**, porque permite corregir antes de la siguiente entrega.",
+      "**Paso 4 — se dejó el argumento escrito:** una línea explicando por qué ese umbral y no otro.",
+      "**Paso 5 — la cuarta columna:** “la pregunta indaga fricciones de tiempo; sin umbral, no hay qué observar”.",
+      "Resultado: cualquier lector puede aplicar esa definición y llegar a la misma clasificación que ustedes."
+    ],
+    "note": "El umbral puede cambiar en Proyecto II con la evidencia. Lo que no puede pasar es que **no exista**."
+  },
+  {
+    "type": "bullets",
+    "title": "Marco contextual: el “dónde” que el método va a necesitar",
+    "bullets": [
+      "Describe con precisión el escenario donde vive el problema: organización, aula, proceso, territorio.",
+      "  Y las **restricciones reales** de ese escenario: turnos, horarios, permisos, conectividad, personal.",
+      "El criterio para incluir un dato de contexto es uno solo: **¿el método lo va a necesitar?**",
+      "  Si digo que la planta trabaja **tres turnos**, es porque la propuesta tendrá que cubrirlos.",
+      "  Si digo que el curso tiene **una sesión semanal**, es porque eso define qué significa “oportuno”.",
+      "Lo que **no** es contexto: el panorama macro, tipo “en Colombia la IA crece a doble dígito”.",
+      "  Eso es un titular de prensa: no le dice absolutamente nada al método.",
+      "En Proyecto I el escenario se **describe**, no se interviene: hoy nadie entra a la planta ni al aula a recolectar."
+    ],
+    "note": "Extensión típica: una página. Precisa y aterrizada, nunca panorámica."
+  },
+  {
+    "type": "table",
+    "title": "Contexto útil vs. contexto de relleno",
+    "headers": ["Frase de relleno", "Qué le falta", "Versión útil"],
+    "rows": [
+      ["“En Colombia la IA está en auge.”", "No dice dónde ocurre el problema", "“La planta opera tres turnos y cada supervisor cierra su reporte al final del turno.”"],
+      ["“La empresa es líder de su sector.”", "Es publicidad, no contexto", "“El área de mantenimiento recibe los reportes en papel y los digita al día siguiente.”"],
+      ["“La educación virtual creció mucho.”", "No delimita el escenario del estudio", "“El curso es presencial, tiene una sesión semanal y entrega informe cada quince días.”"],
+      ["“La institución cuenta con tecnología moderna.”", "No dice qué hay ni qué falta", "“Las aulas tienen conexión estable; los estudiantes usan equipos propios, sin software licenciado.”"]
+    ],
+    "col_w": [2.9, 2.3, 5.4],
+    "note": "Truco de poda: pregúntele a cada frase “¿esto cambia algo del método?”. Si no cambia nada, se borra."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué se describe del contexto: lista de chequeo del escenario",
+    "bullets": [
+      "**Organización o unidad:** de qué tipo es, a qué se dedica, tamaño aproximado, ubicación.",
+      "**Proceso o práctica concreta** donde ocurre el fenómeno, descrito paso a paso.",
+      "  No la empresa entera: **la línea de empaque**. No el programa entero: **ese curso**.",
+      "**Actores y roles:** quién ejecuta, quién supervisa, quién decide y quién usa la información.",
+      "**Ritmos y tiempos:** turnos, sesiones, ciclos de entrega, periodicidad de los reportes.",
+      "**Recursos y restricciones tecnológicas:** qué herramientas hay, conectividad, permisos, políticas de datos.",
+      "**Condiciones de acceso:** qué autorizaciones haría falta gestionar más adelante para el trabajo de campo.",
+      "  Se **anticipan**, no se tramitan hoy: eso corresponde a Proyecto II."
+    ],
+    "note": "Cada viñeta debe poder responderse con un dato concreto, no con un adjetivo."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — un párrafo de contexto que sí sirve",
+    "bullets": [
+      "“El estudio se ubica en la línea de empaque de una planta de alimentos del Valle del Cauca, con operación en tres turnos diarios.",
+      "  Cada turno tiene un supervisor responsable de registrar las paradas de máquina en una planilla física al cierre.",
+      "  El área de mantenimiento digita esas planillas al día siguiente y las consolida semanalmente.",
+      "  La planta cuenta con conectividad en la oficina de mantenimiento, pero no en el piso de producción.",
+      "  El acceso a los registros requiere autorización del jefe de planta, que se gestionará en la fase de campo de Proyecto II.”",
+      "Cuenten los datos que quedaron: **tres turnos, planilla física, digitación diferida, sin conectividad en piso, autorización pendiente**.",
+      "Cada uno de esos cinco datos condiciona la propuesta. Por eso están, y por eso ninguno sobra."
+    ],
+    "note": "Compárenlo con “la empresa es líder en su sector y apuesta por la innovación”: esa frase no le sirve al método para nada."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en conceptual y contextual",
+    "boxes": [
+      ["advertencia", "**Copiar la definición del diccionario o de una enciclopedia.** No se busca la definición general del término, sino cómo lo va a usar USTED en este estudio, con umbral o con rasgos observables."],
+      ["advertencia", "**Dejar términos ambiguos.** Si “adopción”, “usabilidad” o “eficiencia” aparecen en su pregunta u objetivos sin definir, el método se cae. Primero se define; después se observa."],
+      ["aclaracion", "**Confundir conceptual con teórico.** El marco teórico **explica** el fenómeno; el conceptual **define para poder usar**. Un mismo término aparece en ambos, con distinta función."],
+      ["info", "**Contexto que el método no usará.** Si describe un dato del escenario y no puede decir en qué parte del método influye, recórtelo. El contexto sirve al método, no al conteo de páginas."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: cómo se arma esto hoy en Google Docs",
+    "bullets": [
+      "**1.** En el documento acumulativo del equipo, abra dos subtítulos: “Marco conceptual” y “Marco contextual”.",
+      "**2.** Inserte una tabla de **cuatro columnas**: Término, Definición teórica, Definición operativa, Por qué le importa a la pregunta.",
+      "**3.** Traiga los términos desde su **pregunta y sus objetivos**, no desde la imaginación: subráyelos primero.",
+      "**4.** Llene la segunda columna con las definiciones ya citadas en el marco teórico: reutilice, no reescriba.",
+      "**5.** Redacte la tercera con la fórmula “se entiende como… y se reconoce cuando…”, con umbral o rasgos.",
+      "**6.** Escriba la cuarta en una frase: qué se rompería en el estudio si ese término quedara ambiguo.",
+      "**7.** Debajo de la tabla, redacte el contexto en prosa siguiendo la lista de chequeo del escenario.",
+      "**8.** Suba el avance a CDigital como **S06_ConceptualContextual_Apellidos**."
+    ],
+    "note": "Todo desde el navegador y sin costo: Google Docs para el documento, ZoteroBib para las citas nuevas. [URL CDigital — campus del curso pendiente]"
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER (22 minutos) — definiciones operativas y contexto",
+    "bullets": [
+      "**Consigna literal:** 22 minutos, dos productos en el documento del equipo.",
+      "  **(1)** La tabla conceptual con **cuatro a seis términos** y las cuatro columnas completas.",
+      "  **(2)** Una página de **marco contextual**: organización o aula, proceso, actores, ritmos y restricciones.",
+      "Los términos se toman de la pregunta y de los objetivos: si un término no aparece allí, no va en la tabla.",
+      "El Docente circula; prioridad para los equipos que no logren ponerle umbral a sus definiciones.",
+      "**Criterio de éxito (verificable):** ningún término admite dos interpretaciones y cada dato de contexto se puede vincular a una decisión del método.",
+      "  Prueba en voz alta: el Docente lee una definición del equipo vecino y pregunta “¿esto cuenta o no cuenta?”. Debe haber una sola respuesta posible.",
+      "Suban el avance como **S06_ConceptualContextual_Apellidos**."
+    ],
+    "note": "Prohibido en este taller: definiciones copiadas de un diccionario y párrafos de contexto que empiecen por “en el mundo actual…”."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de subir el avance",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
+    "rows": [
+      ["Cada término sale de la pregunta o de los objetivos", "Lo encuentro subrayado en esos textos", "[  ]"],
+      ["Hay entre cuatro y seis términos", "Los cuento en la tabla", "[  ]"],
+      ["Cada definición teórica tiene autor y año", "Ninguna celda de la segunda columna va sin cita", "[  ]"],
+      ["Las operativas tienen umbral o rasgos", "No queda ningún adjetivo suelto: rápido, frecuente, adecuado", "[  ]"],
+      ["La cuarta columna está llena", "Cada fila dice qué se rompe si el término queda ambiguo", "[  ]"],
+      ["El contexto responde con datos", "Turnos, sesiones, roles, herramientas; no adjetivos", "[  ]"],
+      ["No hay contexto panorámico", "Ninguna frase habla del país o del mundo en general", "[  ]"],
+      ["El escenario se describe, no se interviene", "No aparece ninguna frase de recolección o de aplicación", "[  ]"]
+    ],
+    "col_w": [3.2, 5.4, 0.8],
+    "note": "Ocho casillas. La última es innegociable en Proyecto I."
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué traer a la próxima sesión",
+    "bullets": [
+      "**Terminar** la tabla conceptual con todos sus términos y con la cuarta columna redactada.",
+      "**Completar** el texto contextual y pegarlo en el documento acumulativo, después del marco teórico.",
+      "**Revisar hacia atrás:** ¿alguna definición de hoy obliga a ajustar la pregunta o un objetivo? Si es así, ajústelo ya.",
+      "  Es normal y es sano: el marco conceptual suele destapar ambigüedades de la formulación.",
+      "**Verificar** que cada cita nueva esté en APA 7, generada en ZoteroBib o con las citas de Google Docs.",
+      "**Subir** el avance a CDigital como **S06_ConceptualContextual_Apellidos**.",
+      "La próxima sesión cierra el marco referencial: **marco legal** (cuando aplica) y clínica de **citación APA 7**.",
+      "  Traigan identificadas las normas, políticas o reglamentos que tocan su contexto: datos personales, reglamento interno, lineamientos del sector."
+    ],
+    "note": "Las tutorías por equipo se acuerdan con el Docente durante la semana; el foco de esta semana es afinar definiciones."
+  }
+]

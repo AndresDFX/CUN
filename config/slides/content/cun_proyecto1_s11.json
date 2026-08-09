@@ -1,0 +1,232 @@
+[
+  {
+    "type": "bullets",
+    "title": "Su anteproyecto se va a leer de corrido: ¿historia o collage?",
+    "bullets": [
+      "Quien evalúa su anteproyecto **no lo lee por capítulos sueltos**: lo lee de principio a fin, seguido.",
+      "  Y en esa lectura corrida se nota, en dos minutos, si el documento es **una historia** o **un collage de tareas**.",
+      "Collage: el capítulo 1 promete una cosa, el método hace otra y el cronograma no menciona ninguna de las dos.",
+      "Historia: cada sección **recoge** lo que dijo la anterior y **prepara** la siguiente. No hay saltos ni sorpresas.",
+      "Hoy, en la última sesión de contenido, hacemos tres cosas concretas:",
+      "  **Verificar** la integración final con un checklist en mano, sección por sección.",
+      "  **Entrenar el ojo crítico** con una rúbrica de cuatro criterios, leyendo el trabajo de otro equipo.",
+      "  **Aplicar** los ajustes que valgan la pena en su propio documento, hoy mismo.",
+      "Lo que se corrige hoy no se corrige nunca más: después de este encuentro, el trabajo es autónomo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Las tres preguntas de oro de la integración final",
+    "bullets": [
+      "Si las tres respuestas son **sí**, su anteproyecto está listo para el entregable final.",
+      "**1. ¿El documento cuenta UNA sola historia de principio a fin?**",
+      "  Prueba: lea solo el problema y el cronograma. ¿Se nota que son del mismo proyecto?",
+      "**2. ¿El APA está estable, sin citas ni referencias huérfanas?**",
+      "  Prueba: Ctrl + F de cada apellido de la lista final dentro del cuerpo. Cero resultados = referencia huérfana.",
+      "**3. ¿Queda clarísimo que los instrumentos son PROPUESTOS y no aplicados?**",
+      "  Prueba: busque los verbos \"se aplicó\", \"aplicamos\", \"los resultados muestran\". Ninguno debería aparecer.",
+      "Un \"más o menos\" en cualquiera de las tres es un **no**. Las tres se verifican con evidencia, no con impresión.",
+      "Estas tres preguntas son exactamente las que el Docente aplica al abrir su documento."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Checklist de secciones: verificación en 30 segundos cada una",
+    "headers": ["Sección", "Qué debe existir", "Cómo lo verifico rápido"],
+    "rows": [
+      ["**Problema**", "Situación concreta, situada y con afectados", "¿Puedo nombrar dónde ocurre y a quién afecta?"],
+      ["**Pregunta**", "Una sola, delimitada y respondible", "Ctrl + F del signo \"¿\": ¿aparece una versión o dos?"],
+      ["**Objetivos**", "General que responde la pregunta + específicos que lo desglosan", "¿El verbo del general cabe dentro del alcance declarado?"],
+      ["**Marco referencial**", "Antecedentes, teórico, conceptual, contextual y legal (o su no aplicabilidad)", "¿Cada concepto del marco reaparece en el método?"],
+      ["**Método**", "Paradigma, enfoque, alcance y diseño justificados", "¿La justificación cita el verbo de mi pregunta?"],
+      ["**Instrumento propuesto**", "Ítems redactados + matriz de alineación con objetivos", "¿Todo ítem tiene objetivo y todo objetivo tiene ítems?"],
+      ["**Cronograma y viabilidad**", "Fases con productos verificables y los cuatro frentes de viabilidad", "¿Aparece la fase de avales y permisos?"],
+      ["**Referencias**", "Lista APA 7 alfabética, con sangría francesa", "Ctrl + F apellido por apellido en el cuerpo"]
+    ],
+    "note": "Imprima o copie esta tabla y **márquela sobre su propio documento** durante la clase. Lo que no pueda verificar con evidencia, cuéntelo como faltante.",
+    "col_w": [2.6, 4.6, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "La prueba del hilo: léala en voz alta, en seis frases",
+    "bullets": [
+      "Ejercicio que se hace en cinco minutos y detecta el 80 % de los problemas de coherencia.",
+      "Escriba **una sola frase** por cada eslabón, tomándola literalmente de su documento:",
+      "  **1.** \"Mi problema es que…\"",
+      "  **2.** \"Por eso mi pregunta es…\"",
+      "  **3.** \"Para responderla me apoyo en…\" (los conceptos centrales del marco).",
+      "  **4.** \"Y lo haré con un enfoque… de alcance…\" (método).",
+      "  **5.** \"Usando como instrumento propuesto…\"",
+      "  **6.** \"En un cronograma de… fases hasta Proyecto II.\"",
+      "Ahora léalas seguidas: si al pasar de una a otra usted tiene que **explicar algo que no está escrito**, ahí está el gap."
+    ],
+    "note": "Si alguna frase no se puede tomar **literal** del documento, es porque esa sección todavía no dice lo que usted cree que dice."
+  },
+  {
+    "type": "bullets",
+    "title": "Coevaluación y autoevaluación: qué son y qué NO son",
+    "bullets": [
+      "**Coevaluación** — usted valora el trabajo de sus pares con criterios explícitos.",
+      "  No es calificar la simpatía del compañero ni devolver el favor de una nota alta.",
+      "  Su valor real: **entrena el ojo crítico**. Al detectar el problema en el trabajo ajeno, aprende a verlo en el propio.",
+      "**Autoevaluación** — usted valora su propio desempeño y **argumenta** su valoración con evidencia.",
+      "  No es ponerse la nota máxima por haber entregado, ni castigarse por modestia.",
+      "  Su valor real: obliga a mirar el proceso completo, no solo el producto de la última semana.",
+      "Ambas son actividades **individuales de cierre** que cada estudiante diligencia en **CDigital**, cada una en su ventana.",
+      "  El detalle logístico y el peso de cada componente están en la **Presentación del Curso** y en la plataforma.",
+      "Lo de hoy en clase es **práctica formativa**: entrena, pero **no reemplaza** la actividad oficial de la plataforma."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Rúbrica de coevaluación: cuatro criterios, tres niveles",
+    "headers": ["Criterio", "Por mejorar", "Aceptable", "Sólido"],
+    "rows": [
+      ["**Coherencia**", "La pregunta, los objetivos y el método apuntan a cosas distintas", "El hilo se sigue, con uno o dos saltos", "Cada sección recoge la anterior sin saltos"],
+      ["**Delimitación**", "Es un tema general, sin lugar ni periodo", "Está delimitado, pero el alcance es ambicioso", "Objeto, lugar y periodo claros y alcanzables"],
+      ["**Método propuesto**", "Enfoque sin justificar o incoherente con la pregunta", "Justificado, pero el instrumento no cuelga de los objetivos", "Enfoque derivado de la pregunta e instrumento alineado"],
+      ["**APA 7**", "Citas o referencias huérfanas; formatos mezclados", "Formato correcto con dos o tres inconsistencias", "Cero huérfanas, lista alfabética con sangría francesa"]
+    ],
+    "note": "Una rúbrica sirve **antes** de entregar, no solo después de calificar. Úsela como lista de control sobre su propio trabajo.",
+    "col_w": [2.1, 3.3, 3.3, 3.3]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se da un comentario que sí sirve: la fórmula en tres partes",
+    "bullets": [
+      "Un buen comentario tiene **observación + ubicación + acción**. Si le falta alguna de las tres, no es accionable.",
+      "  **Observación concreta:** qué específicamente no funciona (no \"está flojo\").",
+      "  **Ubicación:** dónde está — página, sección, párrafo o número de ítem.",
+      "  **Acción sugerida:** qué haría usted para arreglarlo, en una frase que se pueda ejecutar.",
+      "Ejemplo aplicado a la fórmula:",
+      "  \"La pregunta (**p. 4**) no nombra el contexto donde ocurre el fenómeno; **agregue la entidad y el periodo** al final de la pregunta.\"",
+      "Tres reglas de convivencia para la coevaluación de hoy:",
+      "  Se comenta el **documento**, nunca a la persona: \"la sección no delimita\", no \"ustedes no delimitaron\".",
+      "  Si señala un problema, **proponga una salida**; y reconozca al menos una cosa que quedó bien."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Feedback vago vs. feedback accionable",
+    "headers": ["Comentario vago (no sirve)", "Comentario accionable (sí sirve)"],
+    "rows": [
+      ["\"Está bien, me gustó\"", "\"El marco conceptual (p. 12) define bien 'sesgo algorítmico'; ese mismo nivel de detalle le falta a 'carga operativa'\""],
+      ["\"Falta profundizar\"", "\"El apartado de antecedentes solo trae fuentes nacionales; agregue dos internacionales de los últimos cinco años\""],
+      ["\"No entendí el método\"", "\"El enfoque dice cualitativo pero el instrumento (p. 20) es una escala Likert; o cambia el enfoque o cambia el instrumento\""],
+      ["\"Revisen las normas APA\"", "\"Las referencias 3, 7 y 11 no aparecen citadas en el cuerpo; cítelas o retírelas de la lista\""],
+      ["\"El objetivo está mal\"", "\"El OE3 dice 'implementar', pero el estudio solo propone; cámbielo por 'diseñar' o 'formular'\""],
+      ["\"Muy ambicioso\"", "\"El cronograma asigna una semana a 500 encuestas; con la muestra que declaran serían al menos cuatro\""]
+    ],
+    "note": "El comentario de la derecha se puede **ejecutar hoy mismo**. El de la izquierda solo genera ansiedad. Esa es toda la diferencia.",
+    "col_w": [4.2, 7.8]
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que hacemos hoy y lo que se diligencia en la plataforma",
+    "boxes": [
+      ["info", "La coevaluación practicada en clase es **formativa**: entrena criterios. La actividad **oficial** de coevaluación y la de autoevaluación se diligencian de forma individual en **CDigital**, cada una en su ventana."],
+      ["advertencia", "Participar en el ejercicio de clase **no marca** la actividad de la plataforma como cumplida. Son registros distintos: si no la diligencia en CDigital, no queda."],
+      ["aclaracion", "El detalle logístico (ventanas, formato y peso de cada componente) está en la **Presentación del Curso** y publicado en [URL CDigital — campus del curso pendiente]. Revíselo apenas termine el encuentro."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: un párrafo real y tres comentarios",
+    "bullets": [
+      "**Párrafo evaluado** (tomado de un anteproyecto tipo):",
+      "  \"Se implementará un modelo de inteligencia artificial para mejorar la atención al ciudadano. Se aplicó una encuesta a los funcionarios y los resultados muestran una alta carga operativa. La investigación es de tipo descriptiva.\"",
+      "**Comentario 1 — criterio Método propuesto:**",
+      "  \"El párrafo dice 'se aplicó' y 'los resultados muestran': eso ubica el estudio como ya ejecutado. **Reescriba en condicional**: 'se aplicaría', 'permitiría identificar'.\"",
+      "**Comentario 2 — criterio Delimitación:**",
+      "  \"'Mejorar la atención al ciudadano' no dice dónde ni a quiénes. **Agregue la entidad y el periodo**: 'en la oficina de atención al ciudadano de la Alcaldía de X'.\"",
+      "**Comentario 3 — criterio Coherencia:**",
+      "  \"'Implementar' promete un producto funcionando, pero el alcance declarado es **descriptivo**. Cambie el verbo por 'diseñar' o 'proponer', o ajuste el alcance.\"",
+      "Los tres comentarios **caben en tres renglones cada uno** y se pueden aplicar de inmediato. Así son los que sirven."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluarse con criterios (sin inflarse ni castigarse)",
+    "bullets": [
+      "Autoevaluar **no es** poner un número: es sostener una valoración con evidencia del proceso.",
+      "Use los mismos cuatro criterios de la rúbrica y responda por escrito, para cada uno:",
+      "  **¿Qué hice?** — la acción concreta y verificable, no la intención.",
+      "  **¿Qué evidencia lo respalda?** — la sección, el entregable o la corrección aplicada.",
+      "  **¿Qué me faltó?** — una debilidad reconocida honestamente vale más que un elogio genérico.",
+      "Ejemplo de argumentación bien hecha:",
+      "  \"En **APA 7** me ubico en nivel sólido: regeneré todas las referencias en ZoteroBib, apliqué sangría francesa y verifiqué una por una con Ctrl + F; no quedaron huérfanas.\"",
+      "  \"En **método** me ubico en aceptable: el enfoque quedó justificado, pero cuatro ítems del instrumento todavía no cuelgan de ningún objetivo.\"",
+      "Reconocer una debilidad concreta **no baja** su valoración: demuestra que usted sabe leer su propio trabajo."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en el cierre",
+    "boxes": [
+      ["advertencia", "**Presentar los instrumentos como aplicados.** Es la frontera de Proyecto I y la que se revisa con más rigor. Deje escrito y explícito que son una **propuesta** para Proyecto II."],
+      ["advertencia", "**Devolver feedback vago.** \"Está bien\" no ayuda a nadie y desperdicia el ejercicio. Use la fórmula: observación + ubicación + acción."],
+      ["aclaracion", "**El documento suena a piezas pegadas.** Léalo de corrido en voz alta y una las costuras con frases de enlace entre secciones. La transición es parte del contenido."],
+      ["info", "**Autoevaluarse sin criterios.** Use la rúbrica de los cuatro criterios y argumente cada uno con evidencia; una nota sin argumento no es autoevaluación."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Coevaluación entre pares y ajustes (20 minutos)",
+    "bullets": [
+      "**Consigna literal**, en parejas de equipos (lectura cruzada):",
+      "  **(a)** Intercambien **una sección** del anteproyecto — de preferencia el método o el instrumento propuesto.",
+      "  **(b)** Ubique la sección recibida en la **rúbrica de cuatro criterios** y marque un nivel por criterio.",
+      "  **(c)** Escriba **tres comentarios accionables**, uno por criterio distinto, con la fórmula observación + ubicación + acción.",
+      "  **(d)** Devuelva los comentarios al equipo autor y reciba los suyos.",
+      "  **(e)** **Aplique de inmediato**, en su propio documento, al menos las mejoras que sean claramente pertinentes.",
+      "**Criterio de éxito verificable:** al cerrar el taller, su documento tiene **tres mejoras concretas aplicadas** y usted puede señalarlas en pantalla.",
+      "Los comentarios que reciba y no aplique hoy, anótelos como pendientes con responsable.",
+      "**Entrega:** suba el archivo como `S11_CierreIntegracion_Apellidos` en [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Puente a Proyecto II: lo que queda listo y lo que NO se hizo",
+    "bullets": [
+      "El cierre honesto de un anteproyecto **declara sus dos caras**, y eso se valora.",
+      "**Lo que queda listo para ejecutar apenas haya aval:**",
+      "  Problema delimitado, pregunta única y objetivos alineados.",
+      "  Marco referencial completo con referencias en APA 7 verificadas.",
+      "  Diseño metodológico justificado e instrumento propuesto, con su matriz de alineación.",
+      "  Cronograma por fases, análisis de viabilidad y previsión de permisos.",
+      "**Lo que NO se hizo, y está bien que no se haya hecho:**",
+      "  Todo el trabajo de campo: aplicación de instrumentos, recolección, análisis de datos reales y resultados.",
+      "Ese \"lo que falta\" **no es una debilidad**: es el alcance correcto de Proyecto I. Escríbalo así, con esas palabras, al cerrar el documento."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist final antes de subir el anteproyecto",
+    "bullets": [
+      "Las **tres preguntas de oro** dan sí: una sola historia, APA estable, instrumentos claramente propuestos.",
+      "Las **ocho secciones** del checklist están presentes y las puedo ubicar por página.",
+      "La **prueba del hilo** en seis frases se lee sin que yo tenga que explicar nada por fuera del texto.",
+      "Apliqué al menos **tres mejoras** surgidas de la lectura de mis pares.",
+      "Todos los verbos del método y del instrumento están en **condicional o futuro**.",
+      "El documento está en **un solo archivo**, con índice automático, formato y voz unificados.",
+      "Las **correcciones de todos los avances anteriores** están efectivamente incorporadas.",
+      "Cerré el documento con el párrafo de **alcance de Proyecto I y puente a Proyecto II**.",
+      "Diligencié la **coevaluación** y la **autoevaluación** en CDigital, cada una en su ventana."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y cierre del ciclo sincrónico",
+    "bullets": [
+      "**Autónomo hasta el cierre del curso:**",
+      "  Pulido final del anteproyecto: aplique los pendientes que anotó hoy, en orden de impacto.",
+      "  Lectura final de corrido, en voz alta, con el checklist de las ocho secciones al lado.",
+      "  Última verificación cruzada de referencias **después** de la edición final.",
+      "  Diligencie en **CDigital** la coevaluación y la autoevaluación, cada una en su ventana. Son individuales.",
+      "**Acompañamiento:** las tutorías por equipo se acuerdan durante la semana con el Docente; no hay atención sin cita previa.",
+      "  La tutoría de este encuentro es de **pulido final**: traiga el documento abierto y las dudas concretas.",
+      "Cierre del curso: sale con un anteproyecto **completo, coherente y viable**, listo para ejecutarse en Proyecto II una vez tenga el aval.",
+      "Gracias por el trabajo sostenido de todo el periodo. Nos vemos en las tutorías de cierre."
+    ]
+  }
+]

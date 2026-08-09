@@ -1,0 +1,201 @@
+[
+  {
+    "type": "bullets",
+    "title": "Hoy no se escribe: hoy se cuenta",
+    "bullets": [
+      "Cambiamos de modo. Durante todo el periodo hemos escrito; hoy cada uno va a **hablar** de su proyecto durante tres minutos.",
+      "  Y va a dar y recibir retroalimentación de sus compañeros, con una fórmula concreta.",
+      "Por qué importa: en TG3 hay **sustentación ante jurados**. Este es el primer ensayo con red.",
+      "  Público amable, tiempo corto y consecuencias bajas. Quien practica hoy llega con ventaja el próximo semestre.",
+      "Además, contar el proyecto en voz alta es el mejor detector de incoherencias que existe.",
+      "  Lo que usted no logra explicar en tres minutos, casi siempre es porque todavía no está claro en el documento.",
+      "Regla de oro para hoy, y anótela: **anotar todo, discutir nada**."
+    ],
+    "note": "Salida esperada: guion de pitch de 3 minutos escrito y notas de retroalimentación de al menos dos pares."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es un pitch de avance y qué NO es",
+    "bullets": [
+      "**Es** contar, en tres minutos, qué problema aborda, qué se preguntó, qué lleva y en qué necesita ayuda.",
+      "**Es** una versión hablada y comprimida: se dice lo esencial y se sacrifica el detalle sin culpa.",
+      "**No es** leer el documento en voz alta. Leer no comunica: quien escucha se pierde en la segunda frase.",
+      "**No es** un informe de todo lo que usted ha hecho. Nadie necesita saber cuántos artículos leyó.",
+      "**No es** una defensa: nadie lo está atacando. Es una consulta pública sobre su propio trabajo.",
+      "**No es** una presentación con veinte diapositivas: si usa apoyo visual, una pantalla basta.",
+      "Prueba rápida: si alguien que no conoce su proyecto puede repetir su pregunta después de escucharlo, el pitch funcionó."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La estructura del pitch de 3 minutos",
+    "headers": ["Bloque", "Tiempo", "Qué dice", "Error típico"],
+    "rows": [
+      ["**Problema**", "~30 s", "El dolor real, con contexto y con quién lo sufre", "Empezar por definiciones teóricas"],
+      ["**Pregunta y objetivos**", "~40 s", "La pregunta literal y los objetivos específicos en una frase", "Leer los objetivos textuales del documento"],
+      ["**Avance**", "~70 s", "Qué lleva del marco y de la metodología propuesta", "Contar el proceso en vez del resultado"],
+      ["**Pedido de feedback**", "~40 s", "En qué punto exacto quiere ayuda", "Cerrar con 'y eso es todo, gracias'"]
+    ],
+    "note": "Tres minutos son 180 segundos. La suma de los cuatro bloques da 180: si un bloque se estira, otro se queda sin aire."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se arma el guion (no se improvisa)",
+    "bullets": [
+      "Escriba **una sola frase por bloque** en Google Docs. Cuatro frases, no cuatro párrafos.",
+      "  Un guion largo se termina leyendo, y leer es exactamente lo que queremos evitar.",
+      "Empiece por el problema **con un dato o una escena**, no con una definición.",
+      "  'La mesa de ayuda clasifica los tickets a mano' entra mejor que 'la gestión de servicios TI es un campo…'.",
+      "Diga su pregunta **literal**, tal como está en el documento. Es la única frase que conviene memorizar.",
+      "En 'avance' cuente lo que **tiene**, no lo que hizo: 'llevo tres constructos y la matriz metodológica completa'.",
+      "Cierre con un pedido **específico**: 'quiero saber si mi tercer constructo sobra', no 'acepto sugerencias'.",
+      "  El pedido vago produce feedback vago. Es responsabilidad de quien presenta.",
+      "Ensaye dos veces en voz alta con cronómetro antes de presentar. Sin cronómetro no hay ensayo, hay ilusión."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: el pitch completo del caso 'mesa de ayuda'",
+    "bullets": [
+      "**Problema (30 s):** 'En una empresa de servicios de Bogotá, la mesa de ayuda recibe cerca de doscientos tickets diarios y un agente los clasifica uno por uno, a mano. Esa clasificación manual retrasa la asignación y alarga la atención.'",
+      "**Pregunta y objetivos (40 s):** 'Mi pregunta es en qué medida un clasificador automático reduce el tiempo de atención. Tengo tres objetivos: caracterizar el flujo actual de tickets, diseñar el modelo de clasificación y comparar los tiempos de atención.'",
+      "**Avance (70 s):** 'Del marco llevo tres constructos: clasificación automática de texto, gestión de servicios de soporte y tiempo de ciclo. En metodología propongo un enfoque cuantitativo con alcance correlacional y diseño cuasiexperimental, con una matriz donde cada objetivo tiene su dato, su técnica y su análisis. El instrumento propuesto es un protocolo de prueba más una encuesta de diez ítems.'",
+      "**Pedido (40 s):** 'Lo que quiero de ustedes es concreto: mi tercer constructo, tiempo de ciclo, casi no lo uso en la metodología. Díganme si lo desarrollo más o si lo saco del marco.'",
+      "  Total: tres minutos exactos, sin leer y sin una sola diapositiva.",
+      "Fíjense en lo que **no** dije: no conté cuántos artículos leí, no expliqué qué es aprendizaje supervisado y no pedí disculpas por lo que falta."
+    ],
+    "note": "Copie esta estructura con su propio contenido. La estructura se presta; el contenido es suyo."
+  },
+  {
+    "type": "bullets",
+    "title": "Feedback útil: fortaleza + pregunta + sugerencia",
+    "bullets": [
+      "Un buen comentario de par tiene tres partes y se dice en menos de un minuto.",
+      "**Fortaleza**: algo específico que funcionó. No 'está muy bien'; sí 'la pregunta se entendió a la primera'.",
+      "**Pregunta**: una duda genuina que revela un vacío. 'De dónde vas a sacar los tickets ya etiquetados?'",
+      "  La pregunta suele ser lo más valioso: señala el punto flojo sin necesidad de señalarlo.",
+      "**Sugerencia**: una acción concreta que quien presenta puede ejecutar. 'Quita el tercer constructo si no lo usas en la metodología.'",
+      "Dos cosas que no son feedback: el aplauso ('quedó chévere') y el juicio ('no me gustó').",
+      "  Ninguna de las dos le dice al compañero qué hacer el lunes siguiente.",
+      "Comente sobre el **trabajo**, nunca sobre la persona: 'el objetivo 2 no tiene método', no 'te faltó juicio'."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Feedback inútil vs. feedback accionable",
+    "headers": ["Lo que suele decirse", "Por qué no ayuda", "Versión accionable"],
+    "rows": [
+      ["'Está muy bien, felicitaciones.'", "No indica qué conservar ni qué cambiar", "'La pregunta quedó clarísima; la entendí sin que la repitieras.'"],
+      ["'No entendí nada.'", "Devuelve el problema sin ubicarlo", "'Me perdí cuando pasaste del marco al método: no vi la conexión.'"],
+      ["'Te faltó profundidad.'", "Juicio general, imposible de ejecutar", "'El tercer constructo solo tiene un párrafo; le faltan fuentes.'"],
+      ["'Yo lo haría distinto.'", "Habla del que comenta, no del proyecto", "'¿Consideraste medir también los tickets reabiertos?'"],
+      ["'Te pasaste del tiempo.'", "Cierto, pero no aporta al contenido", "'El bloque de avance se te llevó el tiempo del pedido; recórtalo.'"]
+    ],
+    "note": "Regla del comentarista: si su comentario no puede convertirse en una tarea del compañero, todavía no está terminado."
+  },
+  {
+    "type": "bullets",
+    "title": "Recibir retroalimentación sin defenderse",
+    "bullets": [
+      "El error clásico de quien presenta: rebatir cada comentario en el momento. 'No, es que usted no entendió, lo que pasa es que…'",
+      "  Cuando usted se defiende, el grupo deja de darle comentarios. Y el que pierde es usted.",
+      "La regla: **anote todo, discuta nada**. Su única respuesta durante la ronda es 'gracias, anotado'.",
+      "  Solo puede preguntar para **entender** el comentario, nunca para rebatirlo.",
+      "Anote textual, no interpretado: si escribe lo que usted cree que le quisieron decir, perdió el comentario.",
+      "Después, en frío, decida qué toma. No todo comentario debe aceptarse: usted es quien conoce el proyecto.",
+      "  Deje registro de la decisión: comentario recibido, se toma o no se toma, y por qué.",
+      "Escuchar sin defenderse es una habilidad, no un rasgo de carácter. Se entrena hoy y se cobra en la sustentación de TG3."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Qué observa quien escucha (guía de la ronda)",
+    "headers": ["Criterio", "Señal de que va bien", "Señal de alerta"],
+    "rows": [
+      ["Problema", "Se entiende quién sufre el problema y por qué duele", "Arranca con teoría o con definiciones"],
+      ["Pregunta", "Se puede repetir después de oírla una vez", "Hay que pedir que la repita"],
+      ["Objetivos", "Se ve cómo suman para responder la pregunta", "Aparece un objetivo que la pregunta no pidió"],
+      ["Avance", "Dice qué tiene, con nombres concretos", "Cuenta el proceso: 'estuve leyendo mucho…'"],
+      ["Pedido de feedback", "Señala un punto exacto donde quiere ayuda", "Cierra con 'acepto cualquier sugerencia'"],
+      ["Tiempo", "Cierra dentro de los tres minutos", "Se corta a mitad de frase por reloj"]
+    ],
+    "note": "Cada quien escucha con esta guía a la vista: así el feedback sale específico y no toca improvisarlo."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en la socialización",
+    "boxes": [
+      ["advertencia", "'Leo el documento en voz alta.' Eso no es un pitch. Cierre el documento y cuente: problema, pregunta, avance, pedido."],
+      ["advertencia", "'Discuto cada comentario que me hacen.' Anote y agradezca. Defenderse en caliente cierra la fuente de retroalimentación."],
+      ["aclaracion", "Pasarse del tiempo no es un detalle: en la sustentación de TG3 el reloj también corre, y lo que no dijo en el minuto tres ya no se dice."],
+      ["info", "Nada de lo que se comparte hoy es evaluación de sus compañeros: es práctica entre pares. La retroalimentación construye, no califica."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: preparar y dar el pitch en el encuentro virtual",
+    "bullets": [
+      "**1.** En Google Docs cree S10_Socializacion_Apellido y escriba las **cuatro frases** del guion, una por bloque.",
+      "**2.** Ponga entre paréntesis el tiempo objetivo de cada bloque: (30 s), (40 s), (70 s), (40 s).",
+      "**3.** Abra un cronómetro en el navegador y ensaye en voz alta. La primera vez siempre se pasa: recorte, no hable más rápido.",
+      "**4.** Recorte del bloque de **avance**, que es el que siempre se infla, no del pedido de feedback.",
+      "**5.** En el encuentro, encienda cámara si puede: mirar a la gente cambia por completo cómo se recibe lo que dice.",
+      "**6.** Si comparte pantalla, comparta **una sola ventana** con su guion o su matriz. Nada de recorrer el documento.",
+      "**7.** Mientras escucha a los demás, escriba su feedback en el chat o en un **Padlet** compartido para que quede registro.",
+      "**8.** Al terminar, guarde las notas recibidas y suba el archivo a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ],
+    "note": "Todo con herramientas gratuitas de navegador: Google Docs, cronómetro del navegador y Padlet para las notas compartidas."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo funciona la ronda de hoy",
+    "bullets": [
+      "Trabajamos en ronda durante unos **20 minutos**, con el cronómetro visible en pantalla.",
+      "**Turno de cada estudiante:** 3 minutos de pitch, sin interrupciones de nadie.",
+      "  Al minuto 3 el Docente corta, aunque la frase quede a la mitad. El tiempo es parte del ejercicio.",
+      "**Después del pitch:** dos compañeros dan feedback con la fórmula fortaleza + pregunta + sugerencia, un minuto cada uno.",
+      "**Quien presentó:** solo escucha y anota. Su intervención permitida es 'gracias' o una pregunta para entender.",
+      "Si el grupo es grande, se hacen dos subgrupos y cada uno presenta ante sus pares mientras el Docente rota.",
+      "Al cerrar la ronda, cada quien dedica dos minutos a marcar en sus notas qué comentarios va a incorporar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Pitch de 3 minutos y ronda de retroalimentación",
+    "bullets": [
+      "**Tiempo:** 20 minutos en ronda, moderada por el Docente.",
+      "**Archivo:** un documento en Google Docs llamado S10_Socializacion_Apellido.",
+      "**Consigna 1.** Presente su **pitch de 3 minutos** con la estructura problema → pregunta y objetivos → avance → pedido, con cronómetro a la vista.",
+      "**Consigna 2.** Dé retroalimentación a **al menos dos compañeros** con la fórmula fortaleza + pregunta + sugerencia.",
+      "**Consigna 3.** Registre en su documento el feedback que reciba, textual, y marque cuál va a incorporar y cuál no, con una razón.",
+      "**Criterio de éxito (verificable):** el pitch cierra dentro de los 3 minutos; su documento tiene el guion de cuatro frases y notas de dos pares; ninguna nota dice solo 'está bien'.",
+      "**Entrega:** suba S10_Socializacion_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "¿Mi guion cabe en cuatro frases, una por bloque, y no en cuatro párrafos?",
+      "¿Dije mi pregunta literal, sin parafrasearla ni suavizarla?",
+      "¿Mi pedido de feedback señala un punto exacto y no un 'acepto sugerencias'?",
+      "¿Presenté dentro de los tres minutos sin que me tuvieran que cortar?",
+      "¿Di feedback a dos compañeros con fortaleza, pregunta y sugerencia concretas?",
+      "¿Anoté todos los comentarios textuales, sin discutir en el momento?",
+      "¿Marqué cuáles comentarios incorporo, cuáles no, y por qué?",
+      "¿Subí el archivo a CDigital con el guion y las notas recibidas?"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar (trabajo autónomo)",
+    "bullets": [
+      "Suba S10_Socializacion_Apellido con el guion de pitch y las notas de retroalimentación recibidas.",
+      "Incorpore al documento las sugerencias que decidió tomar; deje registrada en una línea la razón de las que descartó.",
+      "Grábese dando el pitch con el celular y véase una vez: la mayoría descubre que habla demasiado rápido al comienzo.",
+      "Guarde el guion: es la base directa de la sustentación de TG3, solo que allá tendrá resultados que contar.",
+      "**Próxima sesión, la última sincrónica:** cerramos el avance de TG2 y armamos el puente hacia TG3.",
+      "  Llegue con el documento consolidado y con la lista de lo que le quedó a medias: eso se convierte en su plan del próximo semestre."
+    ]
+  }
+]

@@ -1,0 +1,168 @@
+[
+  {
+    "type": "bullets",
+    "title": "ICMP y `ping`: la primera pregunta, «¿estás ahí?»",
+    "bullets": [
+      "**ICMP** es el protocolo de **control y diagnóstico** de la red: no transporta datos de usuario, solo avisos («no pude entregar», «se agotó el tiempo»).",
+      "`ping` usa ICMP como un **sonar**: envía un **Echo Request** («¿me oyes?») y espera el **Echo Reply** («te oigo»). Si vuelve el eco, hay algo vivo al otro lado.",
+      "De cada respuesta lee **tres datos** (ej.: `Respuesta desde 8.8.8.8: bytes=32 tiempo=12ms TTL=115`):",
+      "  **tiempo** (ms) = latencia ida y vuelta: 1-30 ms red ágil; >150 ms o muy variable = lenta o congestionada.",
+      "  **TTL** = contador que baja 1 por cada router cruzado (ayuda a estimar los saltos).",
+      "  **% de pérdida** al final: @@0% = enlace sano@@; parcial = intermitente; 100% = sin respuesta.",
+      "Comportamiento por sistema operativo:",
+      "  **Windows** manda **4 paquetes y para** (`ping 8.8.8.8`); `-t` = continuo, `-n 10` = enviar diez.",
+      "  **macOS/Linux** hacen **ping continuo** hasta `Ctrl+C`; usa `ping -c 4 8.8.8.8` para limitar.",
+      "Errores a reconocer: `Tiempo de espera agotado` (salió pero no volvió) vs `Host de destino inaccesible` (no hay ruta al destino)."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "`tracert`/`traceroute`: «¿por dónde se pierde?»",
+    "bullets": [
+      "Si `ping` dice **SI** llego, `traceroute` dice **POR DÓNDE** paso: lista los **routers (saltos / hops)** hasta el destino.",
+      "**Truco del TTL**: envía un paquete con TTL=1 (el primer router lo «mata» y revela su IP), luego TTL=2, TTL=3… cada router se «queja» y deja su dirección.",
+      "Comando: `tracert google.com` (Windows, 3 sondas por salto) · `traceroute google.com` (macOS/Linux).",
+      "Ejemplo de salida (Windows) y cómo leerla:",
+      "  `1   2 ms   1 ms   1 ms   192.168.1.1` → **salto 1 = tu gateway** (router local).",
+      "  `4   *   *   *   Tiempo de espera agotado` → router **callado**; muchos ignoran las sondas por seguridad, **no siempre es falla**.",
+      "  `5   22 ms   21 ms   23 ms   142.250.78.14` → llegó al **destino** (traza completa).",
+      "@@La pista real: hasta qué salto llega bien y en cuál empiezan a fallar TODOS los siguientes@@ — ahí está el punto de quiebre."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El método del embudo: diagnosticar sin adivinar",
+    "headers": ["Paso", "Comando (Windows)", "Qué prueba", "Si falla, el problema es…"],
+    "rows": [
+      ["1", "`ping 127.0.0.1`", "El *loopback*: la pila TCP/IP del propio PC", "El software de red del equipo"],
+      ["2", "`ping <mi propia IP>`", "Que la tarjeta de red (NIC) responda", "La NIC o su configuración IP local"],
+      ["3", "`ping 192.168.1.1`", "La red local (LAN): cable, Wi-Fi, switch, router", "El cableado / Wi-Fi / router local"],
+      ["4", "`ping 8.8.8.8`", "Salida a internet por **IP** (enrutamiento)", "El proveedor (ISP) o el enrutamiento"],
+      ["5", "`ping google.com`", "Salida a internet por **NOMBRE**", "**DNS** (¡el caso más común!)"]
+    ],
+    "note": "Regla de oro: @@si el paso 4 (8.8.8.8) responde pero el paso 5 (google.com) falla, el problema es el DNS@@ — hay internet, pero el equipo no traduce nombres. Se prueba de lo cercano a lo lejano; el primer paso que falla dice qué reparar. Practica el embudo en tu **terminal real** (CMD/PowerShell/Terminal); el escenario de interfaz caída (`shutdown`→`no shutdown`) va en **examlab → Lab «red consola»**."
+  },
+  {
+    "type": "bullets",
+    "title": "Caso resuelto: «No hay internet» — bajemos por el embudo",
+    "bullets": [
+      "**Síntoma:** un usuario reporta «no me carga ninguna página». En lugar de reiniciar el router al azar, bajamos por el embudo y anotamos qué responde cada paso.",
+      "**Paso 3 —** `ping 192.168.1.1` (gateway):",
+      "  Responde `bytes=32 tiempo=1ms TTL=64` → la LAN, el cable y el Wi-Fi están **bien**.",
+      "**Paso 4 —** `ping 8.8.8.8` (internet por IP):",
+      "  Responde `bytes=32 tiempo=12ms TTL=115` → **sí hay internet**; el enrutamiento funciona.",
+      "**Paso 5 —** `ping google.com` (internet por NOMBRE):",
+      "  Falla: `No se pudo encontrar el host google.com` → aquí se rompe la cadena.",
+      "**Confirmación —** `nslookup google.com 1.1.1.1`: resuelve a `142.250.78.14` → contra Cloudflare **SÍ** traduce.",
+      "@@Diagnóstico: no es la conexión, es el DNS del equipo@@ (el paso 4 va y el 5 no). Solución: cambiar el DNS a `8.8.8.8` o `1.1.1.1`.",
+      "Reproduce esta secuencia en tu **terminal real**; el escenario `show ip interface brief`→`no shutdown`→`ping` está en **examlab → Lab «red consola»**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Prueba de puertos: «¿está vivo el SERVICIO?»",
+    "bullets": [
+      "`ping` confirma que el equipo está **encendido**, pero **no** dice si el servicio (web, correo, base de datos) está escuchando.",
+      "Cada servicio vive en un **puerto** (repaso de la Sesión 3):",
+      "  HTTP **80** · HTTPS **443** · SSH **22** · DNS **53** · correo SMTP **25**.",
+      "Analogía del banco: el banco está abierto (`ping` OK), pero si la ventanilla del **puerto 443** está cerrada, no te atienden → la web no carga.",
+      "Cómo probar un puerto:",
+      "  **Windows (PowerShell):** `Test-NetConnection google.com -Port 443`",
+      "  **macOS/Linux:** `nc -zv google.com 443` o `telnet google.com 443`",
+      "Lo que importa en la salida: @@`TcpTestSucceeded : True`@@ = puerto abierto y servicio responde; `False` = cerrado o bloqueado por un firewall."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "`nslookup` y el archivo `hosts`: interrogar al DNS",
+    "bullets": [
+      "Cuando el embudo apunta a DNS (paso 5 falla, paso 4 funciona), se **interroga al DNS** con `nslookup` (Windows/macOS/Linux) o `dig` (más detallado).",
+      "`nslookup google.com` muestra **qué servidor DNS respondió** y a qué **direcciones** resuelve el nombre (una IPv4 y una IPv6).",
+      "Registros: **A** = IPv4 · **AAAA** = IPv6. «Respuesta no autoritativa» = vino de una caché intermedia (es lo normal y correcto).",
+      "@@Truco de oro: forzar otro servidor con `nslookup google.com 1.1.1.1`@@ — si contra Cloudflare sí resuelve, el dañado es el DNS de tu equipo, no internet.",
+      "El archivo **`hosts`** se consulta **ANTES** que el DNS (fuerza que un nombre apunte a una IP):",
+      "  Windows: `C:\\Windows\\System32\\drivers\\etc\\hosts` · macOS/Linux: `/etc/hosts`",
+      "  Formato `IP  nombre` — ej. `192.168.1.10  servidor-interno.local`",
+      "Tip: si una página «no carga por más que reinicies el DNS», revisa el `hosts` (una entrada vieja o un malware pueden redirigir el nombre)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "DNS públicos que conviene saber de memoria",
+    "headers": ["Proveedor", "IPv4 primaria", "IPv4 secundaria"],
+    "rows": [
+      ["**Google Public DNS**", "`8.8.8.8`", "`8.8.4.4`"],
+      ["**Cloudflare**", "`1.1.1.1`", "`1.0.0.1`"],
+      ["**OpenDNS (Cisco)**", "`208.67.222.222`", "`208.67.220.220`"]
+    ],
+    "note": "Se usan cuando el DNS del ISP está lento o caído: se cambian en la configuración de red y muchas veces @@«arreglan el internet» en segundos@@. Piensa en el DNS como la **agenda de contactos** del teléfono: el número (IP) funciona aunque el nombre no aparezca. Cada registro tiene un **TTL** de caché: por eso un cambio de DNS «tarda en propagarse». Un dominio también deja de resolver si **vence** y no se renueva a tiempo."
+  },
+  {
+    "type": "table",
+    "title": "La nube: «Todo como servicio» (IaaS / PaaS / SaaS)",
+    "headers": ["Modelo", "Qué te dan", "Qué administras tú", "Ejemplos"],
+    "rows": [
+      ["**IaaS** (Infraestructura)", "Máquinas virtuales, almacenamiento y red «en bruto»", "SO, servidores, apps y datos", "AWS EC2, Azure VMs, Compute Engine"],
+      ["**PaaS** (Plataforma)", "Además, el SO y el entorno para desarrollar/ejecutar", "Solo tu aplicación y sus datos", "Heroku, App Engine, Azure App Service"],
+      ["**SaaS** (Software)", "El programa **ya listo para usar** en el navegador", "Solo tus datos y tu uso", "Gmail, Microsoft 365, Drive, Salesforce"]
+    ],
+    "note": "Nube = usar computadoras y programas de alguien más por internet, **pagando solo por lo que usas** (a demanda, escalable), gracias a la **virtualización**. Analogía de la pizza: IaaS = ingredientes crudos · PaaS = pizza para hornear · @@SaaS = pizza lista para comer@@. Entre más «arriba», menos administras tú."
+  },
+  {
+    "type": "bullets",
+    "title": "IPv6: por qué llega y sus dos reglas de compresión",
+    "bullets": [
+      "IPv4 usa **32 bits** → ~**4.300 millones** de direcciones, ya **agotadas** (por eso existen NAT y las IP privadas de la Sesión 4).",
+      "IPv6 usa **128 bits** → ~**340 sextillones**: en la práctica, direcciones «infinitas» para cada dispositivo del planeta.",
+      "Formato: **8 grupos de 4 dígitos hexadecimales** separados por `:` — ej. `2001:0db8:0000:0000:0000:ff00:0042:8329`.",
+      "**Regla 1 — quitar los ceros a la IZQUIERDA de cada grupo** (los de la derecha NO se tocan):",
+      "  `0db8→db8`, `0000→0`, `0042→42` ⇒ `2001:db8:0:0:0:ff00:42:8329`",
+      "**Regla 2 — reemplazar UNA sola secuencia de grupos de ceros consecutivos por `::`** (solo una vez, o sería ambiguo):",
+      "  `0:0:0 → ::` ⇒ @@`2001:db8::ff00:42:8329`@@",
+      "Direcciones especiales: **`::1`** = loopback (el `127.0.0.1` de IPv6) · **`::`** = no especificada · **`fe80::/10`** = link-local. Prefijo típico: **`/64`**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Caso resuelto: comprimir una dirección IPv6 paso a paso",
+    "bullets": [
+      "**Original** (8 grupos, sin comprimir): `2001:0db8:0000:0000:0000:ff00:0042:8329`.",
+      "**Paso 1 · Regla 1** — quitar ceros a la IZQUIERDA de cada grupo (los de la derecha se conservan):",
+      "  `0db8→db8` · `0000→0` · `ff00→ff00` (no tiene ceros a la izquierda) · `0042→42`",
+      "  Queda: `2001:db8:0:0:0:ff00:42:8329`",
+      "**Paso 2 · Regla 2** — una sola secuencia de ceros consecutivos → `::` (una única vez):",
+      "  `0:0:0 → ::` ⇒ @@`2001:db8::ff00:42:8329`@@",
+      "**Verifícalo:** pega la comprimida en un **compresor/validador IPv6 online** y comprueba que «expande» de vuelta a la original.",
+      "**Trampas frecuentes:** usar `::` **dos veces** (prohibido, sería ambiguo) o borrar ceros a la **DERECHA** de un grupo.",
+      "Practica otra: `fe80:0000:0000:0000:0202:b3ff:fe1e:8329` → `fe80::202:b3ff:fe1e:8329`."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "IPv4 vs. IPv6: la comparativa que hay que dominar",
+    "headers": ["Característica", "IPv4", "IPv6"],
+    "rows": [
+      ["Tamaño de la dirección", "**32 bits**", "@@**128 bits**@@"],
+      ["Cantidad de direcciones", "~4.300 millones (agotadas)", "~340 sextillones (ilimitadas)"],
+      ["Notación", "Decimal con puntos: `192.168.1.10`", "Hex con dos puntos: `2001:db8::1`"],
+      ["Separador / grupos", "4 octetos con `.`", "8 grupos hex con `:`"],
+      ["Máscara / prefijo", "Máscara o CIDR (`/24`)", "Longitud de prefijo (`/64`)"],
+      ["Broadcast", "Sí", "**No** (usa multicast)"],
+      ["Loopback", "`127.0.0.1`", "`::1`"],
+      ["Encabezado", "Variable (20-60 B), con checksum", "Fijo (40 B), sin checksum, más simple"],
+      ["Autoconfiguración", "Necesita DHCP", "SLAAC (se autoconfigura) + DHCPv6"]
+    ],
+    "note": "El encabezado IPv6 es **más simple y de tamaño fijo**: menos campos = routers más rápidos, y añade el campo *Flow Label* para priorizar flujos."
+  },
+  {
+    "type": "table",
+    "title": "Convivencia IPv4 ↔ IPv6: la transición",
+    "headers": ["Mecanismo", "En una frase", "Analogía"],
+    "rows": [
+      ["@@**Dual Stack**@@ (pila doble)", "El equipo/router habla **los dos protocolos a la vez**; es la solución recomendada", "Persona **bilingüe** que responde según quién le hable"],
+      ["**Tunneling** (6in4, 6to4, Teredo)", "**Encapsula** un paquete IPv6 dentro de uno IPv4 para cruzar redes que solo entienden IPv4", "Carta en español dentro de un sobre en inglés"],
+      ["**Traducción (NAT64)**", "Un intermediario **traduce** direcciones IPv6 ↔ IPv4 en vivo", "Un **intérprete** entre dos idiomas distintos"]
+    ],
+    "note": "IPv4 e IPv6 **no se entienden directamente** y no se puede apagar IPv4 de un día para otro; por eso conviven con estos tres mecanismos durante la transición."
+  }
+]

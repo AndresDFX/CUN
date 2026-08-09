@@ -1,0 +1,140 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "1.0",
+  "_fuente_tematica": "Curso de referencia interno 'Sistemas Operativos' (FESNA, tipo D Coursera) adaptado a un enfoque de ADMINISTRACIÓN DE SERVIDOR. Contexto.MD del curso estaba vacío al generar; si se llena, reajustar. Coursera base: 'Sistemas operativos y tú: convertirse en un usuario avanzado' (Google IT Support).",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Administración de Sistemas Operativos de Servidor",
+    "nombre_corto": "Administración de SO de Servidor",
+    "programa": "Ingeniería de Sistemas",
+    "carpeta_salida": "Cursos/Administración de Sistemas Operativos de Servidor",
+    "estructura_salida": {
+      "presentacion": "Clases/Presentacion del curso.pptx",
+      "slides_sesion": "Clases/Sesion N/Sesion N - <Titulo>.pptx",
+      "guiones": "Guiones/Guion Docente Sesion N - <Titulo>.md"
+    },
+    "tipo_asignatura": "D",
+    "naturaleza": "Teórico-Práctica · administración de sistemas operativos de servidor (Linux y Windows Server)",
+    "duracion_semanas": 2,
+    "n_sesiones": 6,
+    "modalidad_sesiones": "Sesiones sincrónicas teórico-prácticas",
+
+    "duracion_sesion_minutos": 105,
+    "_duracion_uniforme": "TODAS las clases del curso duran lo mismo: 105 min (1 h 45 min). No variar la duración entre sesiones.",
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "Las 5 fases suman 100 min de plan dirigido; la actividad individual ocupa los 15 min finales para llegar a 105 (1h45). Igual en las 6 sesiones."
+    },
+
+    "competencia": "Administrar sistemas operativos de servidor (Linux y Windows Server) desde la línea de comandos: gestionar archivos, usuarios y permisos, software y servicios, almacenamiento, procesos, redes y diagnóstico, aplicando buenas prácticas de seguridad y disponibilidad.",
+    "resultado_aprendizaje": "Operar y administrar un servidor por consola: navegar y gestionar el sistema de archivos, controlar el acceso, instalar y mantener software y servicios, administrar almacenamiento y procesos, y diagnosticar problemas usando logs y herramientas de red.",
+    "competencias_fundamentales_fesna": ["Pensamiento estructurado", "Resolución de problemas", "Pensamiento crítico"],
+
+    "niveles": {
+      "1": "El estudiante identifica y opera los componentes básicos de un servidor por consola (sistema de archivos, usuarios/permisos) y describe su función.",
+      "2": "El estudiante analiza y configura software, servicios y almacenamiento del servidor, relacionando cada decisión con su impacto en el sistema.",
+      "3": "El estudiante evalúa el estado del servidor (procesos, recursos, red y logs) y diagnostica/soluciona problemas aplicando buenas prácticas de seguridad y respaldo."
+    },
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Administración por Consola del Servidor",
+        "subtitulo": "CLI vs GUI, jerarquía de archivos y administración remota (Windows Server y Linux)",
+        "nivel": 1,
+        "foco": "Operar el servidor por consola: por qué la CLI manda en servidores, jerarquía del sistema de archivos (FHS de Linux y unidades de Windows), navegación y manipulación de archivos, y acceso remoto (SSH / RDP-PowerShell Remoting).",
+        "ensenanzas": ["CLI vs GUI en servidores", "Jerarquía del sistema de archivos (FHS / unidades)", "Navegación y manipulación de archivos (ls/cd/cp/mv/mkdir, dir/copy)", "Acceso remoto: SSH y PowerShell Remoting/RDP"],
+        "modulo_ref": 1
+      },
+      "2": {
+        "titulo": "Usuarios, Grupos y Permisos del Servidor",
+        "subtitulo": "Seguridad y control de acceso: sudo, grupos y ACLs",
+        "nivel": 1,
+        "foco": "Controlar quién puede hacer qué: usuarios y grupos, modelo de permisos rwx y numérico en Linux, sudo, y permisos NTFS / grupos en Windows Server; principio de mínimo privilegio.",
+        "ensenanzas": ["Usuarios y grupos (useradd/usermod, net user)", "Permisos rwx y octales (chmod/chown)", "sudo y elevación de privilegios", "Permisos NTFS y ACLs", "Principio de mínimo privilegio"],
+        "modulo_ref": 2
+      },
+      "3": {
+        "titulo": "Gestión de Software y Servicios",
+        "subtitulo": "Paquetes, repositorios y servicios (systemd / servicios de Windows)",
+        "nivel": 2,
+        "foco": "Instalar y mantener el servidor: gestores de paquetes y repositorios (apt/dnf, winget/choco), y administración de servicios/daemons con systemd (systemctl) y el gestor de servicios de Windows (arranque, estado, habilitar).",
+        "ensenanzas": ["Gestores de paquetes y repositorios (apt/dnf; winget)", "Instalar, actualizar y remover software", "Servicios/daemons con systemd (systemctl start/enable/status)", "Servicios de Windows (Get-Service/sc)"],
+        "modulo_ref": 3
+      },
+      "4": {
+        "titulo": "Almacenamiento del Servidor",
+        "subtitulo": "Sistemas de archivos, particiones y discos (LVM/RAID, montaje y cuotas)",
+        "nivel": 2,
+        "foco": "Administrar el almacenamiento: tipos de sistema de archivos (ext4/xfs/NTFS), particionado, montaje (mount/fstab), volúmenes lógicos LVM y nociones de RAID, y monitoreo de espacio (df/du).",
+        "ensenanzas": ["Sistemas de archivos (ext4/xfs/NTFS)", "Particionado y montaje (lsblk/mount/fstab)", "LVM y nociones de RAID", "Monitoreo de espacio (df/du) y cuotas"],
+        "modulo_ref": 4
+      },
+      "5": {
+        "titulo": "Procesos, Recursos y Tareas Programadas",
+        "subtitulo": "Monitoreo del servidor y automatización (cron / Programador de tareas)",
+        "nivel": 3,
+        "foco": "Vigilar y controlar la carga del servidor: procesos y señales (ps/top/htop/kill), uso de CPU/memoria, prioridades (nice), y automatización con cron/systemd timers y el Programador de tareas de Windows.",
+        "ensenanzas": ["Procesos y señales (ps/top/htop/kill)", "Recursos: CPU, memoria, carga (uptime/free)", "Prioridades (nice/renice)", "Automatización: cron, systemd timers, Programador de tareas"],
+        "modulo_ref": 5
+      },
+      "6": {
+        "titulo": "Redes, Logs, Respaldos y Troubleshooting",
+        "subtitulo": "El detective digital: diagnóstico, seguridad y disponibilidad del servidor",
+        "nivel": 3,
+        "foco": "Diagnosticar y sostener el servidor: configuración e inspección de red (ip/ping/ss, ipconfig), lectura de logs (journalctl / Visor de eventos), respaldos básicos (tar/rsync, copias), firewall y hardening mínimo, y método de troubleshooting.",
+        "ensenanzas": ["Red del servidor (ip/ping/ss; ipconfig)", "Logs: journalctl y Visor de eventos", "Respaldos (tar/rsync; copias)", "Firewall y hardening básico", "Método de troubleshooting"],
+        "modulo_ref": 6
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "D",
+      "_nota": "Esquema HEREDADO del curso de referencia 'Sistemas Operativos' (tipo D, Coursera). Si el curso de servidor no usa Coursera, cambiar a tipo A (50/40/10). Ajustar cuando se confirme la fuente en Contexto.MD.",
+      "asistencia": 10,
+      "progreso_coursera": 90,
+      "opcionales": "Participación en clase +0.3 · Kahoot 1er +0.5 / 2do +0.4 / 3er +0.3",
+      "coursera_base": "Administración de sistemas y servicios de infraestructura de TI (Google IT Support)",
+      "coursera_url": "https://www.coursera.org/learn/system-administration-it-infrastructure-services",
+      "licencias_coursera": "Activas hasta el día hábil posterior a la finalización de la asignatura (9:00 AM)."
+    },
+
+    "recursos_software": {
+      "_politica": "SIN instalar nada. La práctica se hace en terminales de servidor EN LÍNEA (navegador) y en la terminal nativa; los entregables/diagramas y la ruta de aprendizaje van en examlab.",
+      "terminales_online": [
+        "JSLinux — https://bellard.org/jslinux/ (entorno Linux principal en el navegador)",
+        "Webminal — https://www.webminal.org/ (terminal Linux con registro y ejercicios)",
+        "DistroSea — https://distrosea.com/ (probar distribuciones/servidores gráficos)",
+        "PowerShell / CMD nativo de Windows (para la parte de Windows Server)"
+      ],
+      "plataforma": {
+        "nombre": "examlab",
+        "url": "https://examlab.lovable.app/app",
+        "uso": "Ruta de aprendizaje, entregables de cada sesión, diagramas/pizarra y quizzes. NO simula terminal de SO (eso va en los terminales online)."
+      },
+      "recursos": ["Guiones de clase", "Videos y guías en examlab", "Curso base en Coursera (Google IT Support)"],
+      "material_clases_url": "[hipervínculo que llena el docente — guiones/diapositivas/material]",
+      "herramientas_mundo_laboral": ["Linux real (Ubuntu Server / RHEL)", "Windows Server", "SSH (OpenSSH / PuTTY)", "PowerShell", "systemd", "VMs (VirtualBox / VMware)"]
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[N]",
+      "horario": "Martes y Jueves 8:00–9:45 PM · Sábado 10:00–11:45 AM",
+      "fechas": "13/07/2026 – 25/07/2026",
+      "hora_inicio": "8:00 PM (sáb. 10:00 AM)",
+      "sesiones_fechas": ["Mar 14/07/2026", "Jue 16/07/2026", "Sáb 18/07/2026", "Mar 21/07/2026", "Jue 23/07/2026", "Sáb 25/07/2026"]
+    }
+  }
+}

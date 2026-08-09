@@ -1,0 +1,57 @@
+{
+  "_descripcion": "Esquema de referencia para crear un perfil de universidad nuevo. Copia fesna.json y reemplaza los valores.",
+  "_instrucciones": "Para usar este agente en otra institución: 1) Copia fesna.json, 2) Renómbralo (ej: uniandes.json), 3) Edita marca, pedagogía, evaluación y las estructuras de slides según la institución, 4) Invoca el agente diciéndole: 'Usa el perfil config/universidades/uniandes.json'.",
+
+  "_como_obtener_la_marca": "La marca de FESNA se extrajo de la GUÍA DE ESTILO del 'Template presentacion tutor.pptx' (slide final). Para otra universidad, busca su manual de marca / plantilla institucional y copia: tipografía oficial, color de acento, color de texto, y reglas de uso de color (qué color resaltar, cuáles evitar).",
+
+  "campos_requeridos": {
+    "institucion.nombre_corto":  "Nombre abreviado o comercial",
+    "institucion.acronimo":      "Siglas (ej: UNAL, EAFIT, UPB)",
+    "institucion.lms":           "Nombre de la plataforma LMS de entregas",
+    "marca.tipografia":          "Fuente oficial de la institución (ej: Barlow, Calibri, Roboto)",
+    "marca.colores.naranja_acento": "Color de ACENTO para resaltar (renombra la clave si no es naranja)",
+    "marca.colores.gris_principal": "Color del texto principal",
+    "marca.reglas_de_estilo":    "Lista de reglas de uso de color/tipografía de la institución",
+    "pedagogia.duracion_sesion_minutos": "Duración exacta de cada sesión en minutos"
+  },
+
+  "campos_opcionales": {
+    "institucion.plataforma_adicional": "Plataforma complementaria (Coursera, edX, etc.)",
+    "marca.uso_color":                  "Mapeo de qué color usar para cada propósito (resaltado, texto, fondos)",
+    "marca.emojis_seccion":             "Emojis por sección — ajústalos a la cultura de la institución",
+    "pedagogia.fases_secuencia_didactica": "Si la metodología es distinta, reemplaza estas fases",
+    "evaluacion.tipos_asignatura":      "Estructura de tipos de asignatura (puede variar por universidad)",
+    "tutor_por_defecto":                "Datos del tutor para la slide de presentación",
+    "estructura_presentacion_curso":    "Orden y contenido de los slides del deck de bienvenida del curso",
+    "estructura_slides_sesion":         "Orden y contenido de los slides por sesión"
+  },
+
+  "_nota_estructuras_slides": "Las dos estructuras de slides (estructura_presentacion_curso y estructura_slides_sesion) definen el ORDEN y CONTENIDO de cada deck. Si la nueva institución tiene plantillas oficiales propias, reescribe estas listas según sus diapositivas modelo.",
+
+  "ejemplo_minimo": {
+    "institucion": {
+      "nombre_corto": "Universidad Nueva",
+      "acronimo": "UN",
+      "lms": "Canvas"
+    },
+    "marca": {
+      "tipografia": "Calibri",
+      "fuente_titulos": "Calibri",
+      "fuente_cuerpo": "Calibri",
+      "reglas_de_estilo": [
+        "Resaltar lo importante en rojo institucional.",
+        "Texto principal en gris oscuro."
+      ],
+      "colores": {
+        "naranja_acento": "#CC0000",
+        "gris_principal": "#333333",
+        "azul_institucional": "#003366",
+        "gris_claro": "#F0F0F0",
+        "blanco": "#FFFFFF"
+      }
+    },
+    "pedagogia": {
+      "duracion_sesion_minutos": 90
+    }
+  }
+}

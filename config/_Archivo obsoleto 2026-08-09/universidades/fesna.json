@@ -1,0 +1,209 @@
+{
+  "_comentario": "Perfil de institución para el agente Diseñador Curricular. Copia este archivo y edítalo para otra institución. La marca proviene de la GUÍA DE MARCA OFICIAL de Nueva América (paleta de colores y logo extraídos de las plantillas .pptx institucionales).",
+  "_version": "3.0",
+
+  "institucion": {
+    "nombre_completo": "Nueva América — Fundación de Educación Superior",
+    "nombre_corto": "Nueva América",
+    "acronimo": "FESNA",
+    "dominio_correo": "lanuevaamerica.edu.co",
+    "pais": "Colombia",
+    "lms": "LMS institucional (backup + plataforma principal)",
+    "plataforma_adicional": "Coursera (asignaturas tipo D)"
+  },
+
+  "marca": {
+    "_fuente": "Guía de marca oficial de Nueva América (slide 'Paleta de colores' del template del tutor) + logo oficial extraído de las plantillas.",
+    "tipografia": "Barlow",
+    "fuente_titulos": "Barlow",
+    "fuente_cuerpo": "Barlow",
+    "logo": "config/slides/assets/logo_nueva_america.png",
+    "logo_blanco": "config/slides/assets/logo_nueva_america_blanco.png",
+    "motor_diapositivas": "config/slides/fesna_slides_engine.py",
+    "fotos_institucionales": {
+      "_fuente": "Extraídas del deck real 'Presentacion del curso.pptx' de Internetworking (identidad gráfica mejorada).",
+      "portada_estudiantes": "config/slides/assets/foto_portada_estudiantes.png",
+      "estudiante_tablet": "config/slides/assets/foto_estudiante_tablet.jpg",
+      "gestores_flyer": "config/slides/assets/gestores_estudiantiles.png"
+    },
+    "reglas_de_estilo": [
+      "El AZUL (#0A499C) se usa en el LOGO, en el '¡Bienvenidos estudiantes!' de la portada del curso y como VELO de las fotos (duotono, como el deck real de Internetworking). NUNCA en texto corriente ni tablas.",
+      "Utilizar el NARANJA (#FD531E) SOLO para resaltar lo más importante (1-2 elementos por slide).",
+      "PRIORIZAR la escala de grises. Gris principal #4A4A49; títulos casi negro #1A1C1D.",
+      "Títulos de contenido CENTRADOS sobre una banda gris clara (#F0F1F2) en la parte superior.",
+      "Viñetas: guion (–) en nivel 0 y círculo (●) en nivel 1.",
+      "Logo de Nueva América abajo a la derecha en portadas y cierre. SIN encabezado de texto arriba.",
+      "Tablas sin bandas azules: encabezado gris, filas alternas blanco/#E4E4E6.",
+      "PORTADAS con FOTO institucional B/N 'lavada' (19% de opacidad) en el lado derecho (course_cover y session_cover del motor).",
+      "OBJETIVOS con foto a sangre a la derecha + velo azul ~45% + tarjeta blanca con las viñetas (objectives_slide del motor).",
+      "GESTORES con el flyer institucional real como imagen centrada (image_slide + gestores_flyer)."
+    ],
+    "colores": {
+      "naranja_acento":  "#FD531E",
+      "azul_marca_logo": "#0A499C",
+      "gris_principal":  "#4A4A49",
+      "negro":           "#1A1C1D",
+      "banda_titulo":    "#F0F1F2",
+      "fila_alterna":    "#E4E4E6",
+      "gris_medio":      "#8F989D",
+      "blanco":          "#FFFFFF"
+    },
+    "colores_soporte_grises": ["#101112", "#1A1C1D", "#333639", "#656A71", "#8F989D", "#CFD1D6", "#E4E4E6", "#F0F1F2"],
+    "uso_color": {
+      "resaltado_importante": "#FD531E",
+      "texto_principal":      "#4A4A49",
+      "texto_titulos":        "#1A1C1D",
+      "fondo_slides":         "#FFFFFF",
+      "banda_titulo":         "#F0F1F2",
+      "fila_alterna_tabla":   "#E4E4E6",
+      "azul_logo_bienvenida_velo": "#0A499C"
+    },
+    "emojis_seccion": {
+      "objetivos":    "🎯",
+      "teoria":       "📖",
+      "practica":     "💻",
+      "actividad":    "🧩",
+      "sesion":       "📘",
+      "advertencia":  "⚠️",
+      "exito":        "✅",
+      "tip":          "💡"
+    }
+  },
+
+  "politica_practica": {
+    "_regla": "REGLA DE DOS NIVELES para CADA actividad práctica del curso, en este orden: (1) si se puede con los features de examlab (Test = exámenes/quizzes; Lab = red consola, editor de código y pizarra/diagramas) → hacerla EN examlab; (2) si examlab NO puede → herramienta GRATUITA online VIGENTE (sin instalar nada). NUNCA Cisco Packet Tracer ni software que se instale.",
+    "examlab_url": "https://examlab.lovable.app/app",
+    "_regla_enlace": "Siempre que se REFERENCIE examlab en cualquier material (presentaciones, guiones, insumos, recursos, actividades), usar el link EXACTO https://examlab.lovable.app/app (la entrada a la app; NO el dominio pelado). Estándar para todos los cursos, presentes y futuros.",
+    "tier1_examlab": {
+      "test_examenes": "Quizzes/exámenes para EVALUAR conceptos: preguntas de opción, respuesta abierta ('open') y de código. Usar para el chequeo de saber de cada sesión.",
+      "lab_red_consola": "Consola Cisco IOS (redes): configurar interfaces (ip address, no shutdown), verificar (show ip interface brief, ping) — solo directamente conectado, calificación automática. Para práctica de redes.",
+      "lab_codigo": "Editor de código con ejecución (Python/Java/JS): ejercicios de scripting (p. ej. calculadora de subredes o parsers en Python).",
+      "lab_pizarra_diagramas": "Pizarra (Excalidraw) y diagramas (Mermaid): esquemas de capas, topologías y flujos."
+    },
+    "tier2_online_vigente": {
+      "_nota": "Verificado vigente 2026-07. Solo navegador, gratis, sin instalar. Elegir el que aplique al tema.",
+      "terminal_linux_so": ["JSLinux — bellard.org/jslinux", "Webminal — webminal.org", "Copy.sh v86 — copy.sh/v86", "DistroSea — distrosea.com"],
+      "terminal_windows": ["PowerShell / CMD nativo del propio equipo"],
+      "subnetting_redes": ["subnettingpractice.com", "subnetting.net", "subnetipv4.com", "jodies.de/ipcalc"],
+      "simulador_red_navegador": ["NetPilot — app.netpilot.io (Cisco IOS en navegador, plan gratuito) como respaldo del lab de examlab"],
+      "dns_diagnostico": ["nslookup.io", "dnschecker.org", "terminal real del SO: ping / tracert / traceroute / nslookup / ipconfig"]
+    },
+    "no_usar": "Cisco Packet Tracer ni cualquier software que requiera instalación.",
+    "_como_aplicar": "Al diseñar cada actividad, decidir el tier explícitamente. Por ejemplo: config de red o quiz → examlab (Tier 1); comandos de shell de SO (sin terminal en examlab) → terminal online (Tier 2) + quiz de conceptos en examlab (Tier 1)."
+  },
+
+  "pedagogia": {
+    "duracion_sesion_minutos": 105,
+    "_duracion_uniforme": "Todas las clases de un curso duran lo MISMO (duración fija, por defecto 105 min). No variar la duración entre sesiones; el valor puede sobreescribirse por curso en config/cursos/<curso>.json.",
+    "distribucion_tiempo": {
+      "introduccion_minutos": 10,
+      "teoria_minutos": 35,
+      "practica_guiada_minutos": 45,
+      "actividad_individual_minutos": 15
+    },
+    "fases_secuencia_didactica": [
+      "Motivación (Inicio): preguntas y ejemplos que generan interés y conexión",
+      "Encuadre (Inicio): explicación de objetivos, ruta de aprendizaje y acuerdos",
+      "Enunciación (Comprensión)",
+      "Modelación (Comprensión): ejemplos guiados que muestran conceptos y técnicas",
+      "Ejercitación (Destreza): práctica individual usando la plataforma",
+      "Simulación (Destreza): trabajo en grupos pequeños para aplicar conceptos",
+      "Demostración (Cierre)",
+      "Conclusión (Cierre): retroalimentación, resumen y conexión con objetivos"
+    ]
+  },
+
+  "evaluacion": {
+    "tipos_asignatura": {
+      "A": {
+        "descripcion": "Materias con plataforma para desarrollo de competencias",
+        "notas_plataforma": 40,
+        "actividades_ensenanza": 40,
+        "asistencia": 20
+      },
+      "B": {
+        "descripcion": "Materias teóricas sin plataforma, con evidencias al actualizador",
+        "notas_plataforma": 40,
+        "actividades_practicas": 40,
+        "asistencia": 20
+      },
+      "C": {
+        "descripcion": "Materias del Proyecto Integrador",
+        "notas_proyecto": 40,
+        "actividades": 40,
+        "asistencia": 20
+      },
+      "D": {
+        "descripcion": "Materias con evaluación completa en Coursera",
+        "notas_plataforma": 40,
+        "progreso_coursera": 60,
+        "certificado": "Coursera"
+      }
+    },
+    "esquema_ejemplo_presentacion": {
+      "_nota": "Esquema visto en la presentación de curso real. Ajustar según tipo de asignatura.",
+      "asistencia": "10% (al final de la sesión)",
+      "entrega_final_lms": "40%",
+      "destreza_ruta_lms": "50%",
+      "participacion_opcional": "+0.3",
+      "kahoot_opcional": "1er +0.5 / 2do +0.4 / 3er +0.3"
+    },
+    "entregables_docente": {
+      "asistencia": "Cargar de forma inmediata durante la clase (backup + LMS)",
+      "notas": "Una semana a partir de la última clase para cargar notas y hacer cierre",
+      "encuesta_satisfaccion": "Enviar durante la última clase para que los estudiantes la respondan en clase"
+    }
+  },
+
+  "tutor_por_defecto": {
+    "_nota": "Tutor recurrente del workspace (aparece en los materiales y en la presentación de ejemplo). Si el curso tiene otro tutor, sobreescribir en el config de curso.",
+    "nombre": "Julian Andrés Castaño Espinosa",
+    "cargo": "Líder Técnico",
+    "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+    "correo": "julian.castano@lanuevaamerica.edu.co"
+  },
+
+  "estructura_carpetas_curso": {
+    "_regla": "Cada curso vive en Cursos/<Curso>/. La carpeta Clases/ es LA QUE SE COMPARTE AL ESTUDIANTE: solo material del estudiante (las presentaciones .pptx del curso y de cada sesión). Guiones/ es material del DOCENTE: el guion de cada sesión (.md + .docx) y una subcarpeta Guiones/Capturas/ con los pantallazos de ese curso. Las capturas viven POR CURSO junto a los guiones, NUNCA en Clases/. Notas internas (contexto, insumos de examlab) van en la raíz del curso o en Guiones/, no en Clases/.",
+    "clases_estudiante": ["Presentacion del curso.pptx", "Sesion N/Sesion N - <Titulo>.pptx"],
+    "guiones_docente": ["Guion Docente Sesion N - <Titulo>.md", "Guion Docente Sesion N - <Titulo>.docx", "Capturas/ (pantallazos del curso, embebidos en el .docx por guion_md_a_docx.py)"]
+  },
+
+  "estructura_presentacion_curso": {
+    "_descripcion": "Deck de presentación del curso (primera clase). Basado en el deck REAL 'Presentacion del curso.pptx' de Internetworking. Se genera como .pptx con course_cover() + tutor_slide() + objectives_slide() + content_slide()/table_content() + image_slide() del motor.",
+    "_portada": "course_cover(): FOTO institucional B/N lavada (19%) al lado derecho · datos del programa arriba-izquierda · '¡Bienvenidos estudiantes!' en AZUL sobre la foto · materia (oscuro) + lección (gris) · franja blanca inferior con 'Empezamos a las…' y logo Nueva América abajo-derecha.",
+    "slides": [
+      "Slide 1 — PORTADA: foto lavada + ¡Bienvenidos estudiantes! (azul) + Nombre de la materia + programa + cuatrimestre + duración (N clases) + horario + fechas + hora de inicio + logo",
+      "Slide 2 — TUTOR (¿Quién soy?): nombre como título en banda gris + credenciales + correo con ícono Gmail + logo abajo-izq. Réplica del ejemplo institucional. Usa tutor_slide().",
+      "Slide 3 — METODOLOGÍA: sesiones teórico-prácticas y los momentos por clase (motivación, encuadre, modelación, simulación, ejercitación, cierre, evaluación)",
+      "Slide 4 — OBJETIVOS: usa objectives_slide() — foto a sangre a la derecha con velo azul + tarjeta blanca con los 3 objetivos + etiqueta blanca 'Objetivos' sobre la foto",
+      "Slide 5 — EVALUACIÓN: usa el esquema_ejemplo_presentacion (Destreza 50% / Prueba de rendimiento LMS 40% / Asistencia 10%) + opcionales (participación, Kahoot). NO los genéricos de tipos de asignatura.",
+      "Slide 6 — EJEMPLO DE EVALUACIÓN: cálculo numérico de la nota final con un caso",
+      "Slide 7 — CONTENIDO: lista de las N sesiones con su título",
+      "Slide 8 — RECURSOS (enlaces): 'Material de clases: 🔗 [inserta aquí el hipervínculo]' (hipervínculo que el docente llena) + 'Curso base (Coursera): <nombre> + <URL real del curso>' + 'Guías/videos/ruta en examlab — https://examlab.lovable.app/app'.",
+      "Slide 9 — HERRAMIENTAS (3 categorías): 'En examlab' (Test/Lab/pizarra) · 'Solo online (gratuitas)' (las de navegador vigentes del tema) · 'En el mundo laboral' (herramientas profesionales reales del área, como contexto).",
+      "Slide 10 — IMPORTANTE: ventana de la prueba de rendimiento / licencias Coursera, nivelación, plazos de notas, encuesta de satisfacción",
+      "Slide 11 — GESTORES: usa image_slide() con el flyer real de gestores estudiantiles (assets/gestores_estudiantiles.png)"
+    ]
+  },
+
+  "estructura_slides_sesion": {
+    "_descripcion": "Deck por sesión (orientado al estudiante). Se genera como .pptx con session_cover() + content_slide()/table_content() + closing_slide() del motor. 9 diapositivas.",
+    "_portada": "session_cover(): etiqueta GRANDE 'SESIÓN N' (no '1 de 3') + línea de nivel + tema (oscuro) + subtítulo (gris) + frase gancho en naranja + datos de la asignatura + FOTO institucional lavada (19%) al lado derecho + barra lateral naranja + logo Nueva América abajo-derecha.",
+    "_reglas_slides": [
+      "NO incluir la diapositiva 'Recordemos la asignatura' (recordatorio de objetivo/evaluación). El desglose de evaluación va SOLO en la Presentación del Curso.",
+      "NO incluir la diapositiva '¿Cómo trabajaremos hoy?' (agenda/fases por minutos).",
+      "NUNCA recordar en las sesiones cómo se califica la clase (sin porcentajes).",
+      "Todas las clases del curso duran lo MISMO (duración uniforme, p. ej. 105 min): se muestra en la portada de sesión, no en una agenda.",
+      "DIAPOSITIVAS MIXTAS: el deck combina diapositivas de solo texto con diapositivas de imagen+texto. En ~2-3 diapositivas por sesión (los conceptos más visuales) se incrusta un DIAGRAMA de concepto relacionado con lo explicado (topología, modelo por capas, handshake/DORA, árbol, regla de bits, permisos, flujo…), usando image_text_slide(). Los diagramas se generan con config/slides/diagramas.py (paleta de marca FESNA, con Pillow, sin fotos de stock ni problemas de licencia) y se mapean por título→id en el build. Las tablas se quedan como tabla. Un diagrama que aporta información es preferible a una foto genérica."
+    ],
+    "slides": [
+      "Slide 1 — PORTADA SESIÓN: 'SESIÓN N' grande + Nivel + tema/subtítulo + frase gancho + duración + logo",
+      "Slide 2 — PROPÓSITO DE HOY: 'El propósito de la tutoría de hoy es:' (verbo infinitivo + contexto + condiciones) + niveles de logro (Nivel 1/2/3), SIN porcentajes de nota",
+      "Slides 3…N — CONTENIDO (8–10 diapositivas, EXTENSAS para la duración de la clase): un concepto por diapositiva con profundidad (viñetas, tablas, ejemplos/comandos). El deck de sesión queda en ~15 slides. El contenido puede cargarse desde config/slides/content/<slug>_s<N>.json",
+      "Slide 7 — TRABAJO AUTÓNOMO: actividad individual (15 min), práctica en examlab u online, entregable en examlab; sin ponderaciones",
+      "Slide 8 — ¿QUÉ LOGRAMOS HOY?: lo alcanzado; sin porcentajes de nota",
+      "Slide 9 — CIERRE: lo aprendido, entregable en examlab y preview de la próxima sesión"
+    ]
+  }
+}

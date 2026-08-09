@@ -1,0 +1,165 @@
+[
+  {
+    "type": "bullets",
+    "title": "La dirección IP: 32 bits, red y host",
+    "bullets": [
+      "Una **IP** es un número de **32 bits** = **4 octetos** separados por puntos; cada octeto va de **0 a 255**. Ejemplo: `192.168.10.130`.",
+      "En binario esos 32 bits se ven así: `11000000.10101000.00001010.10000010` (por eso se agrupan en octetos: son más legibles).",
+      "Nunca verás un 300 en una IP: cada octeto son 8 bits → **máximo 255**.",
+      "Con 32 bits hay ~**4.300 millones** de direcciones posibles (dato de referencia: hoy escasean → por eso IPv6, Sesión 6).",
+      "Toda IP tiene **dos partes**:",
+      "  @@Porción de RED@@ (bits de la izquierda): a qué red perteneces — el \"barrio\".",
+      "  @@Porción de HOST@@ (bits de la derecha): qué equipo eres dentro de esa red — la \"casa\".",
+      "Los vecinos de una misma red comparten la porción de red y se diferencian solo en el **host**.",
+      "**IP vs. MAC**: la MAC (Sesión 1) es física y local (una sola calle); la IP es **lógica, jerárquica y global** — la dirección postal completa que permite cruzar el mundo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Convertir a binario: solo 8 números",
+    "headers": ["Octeto", "128", "64", "32", "16", "8", "4", "2", "1"],
+    "rows": [
+      ["**192**", "1", "1", "0", "0", "0", "0", "0", "0"],
+      ["**168**", "1", "0", "1", "0", "1", "0", "0", "0"],
+      ["**10**", "0", "0", "0", "0", "1", "0", "1", "0"],
+      ["**130**", "1", "0", "0", "0", "0", "0", "1", "0"]
+    ],
+    "note": "Método \"réstele codicia\": recorre 128 → 1 y pregunta \"¿me cabe?\"; si cabe, escribe **1** y resta; si no, escribe **0**. Comprobación (el camino de regreso): suma los valores con 1 → `130` = 128 + 2. Solo hay que memorizar @@128 64 32 16 8 4 2 1@@ y toda la matemática de redes de hoy sale de ahí."
+  },
+  {
+    "type": "bullets",
+    "title": "Datagramas y encapsulamiento: muñecas rusas",
+    "bullets": [
+      "La capa de red mete los datos en un **datagrama** (paquete IP): **cabecera** (el rótulo) + **carga útil** (payload).",
+      "Campos clave de la cabecera:",
+      "  **IP origen / IP destino**: quién envía y a quién (lo que leen los routers para enrutar).",
+      "  **TTL**: contador de \"vidas\"; cada router resta 1 y, si llega a 0, descarta el paquete (evita vueltas infinitas).",
+      "  **Protocolo**: qué viaja dentro → `6`=TCP, `17`=UDP, `1`=ICMP (el del ping).",
+      "**Encapsulamiento** = cada capa envuelve a la anterior con su rótulo, como @@muñecas rusas@@:",
+      "  `Datos` → +TCP = **segmento** → +IP = **datagrama** → +MAC = **trama** → bits.",
+      "Al llegar, todo se hace al revés (**desencapsulamiento**): se van quitando sobres hasta los datos."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Clases de direcciones IPv4 (esquema histórico)",
+    "headers": ["Clase", "1er octeto", "Máscara por defecto", "Uso"],
+    "rows": [
+      ["**A**", "1 – 126", "255.0.0.0 (/8)", "Redes enormes (~16,7 M hosts)"],
+      ["**B**", "128 – 191", "255.255.0.0 (/16)", "Redes medianas (~65 mil hosts)"],
+      ["**C**", "192 – 223", "255.255.255.0 (/24)", "Redes pequeñas (254 hosts)"],
+      ["**D**", "224 – 239", "(no aplica)", "**Multicast** (a un grupo suscrito)"],
+      ["**E**", "240 – 255", "(no aplica)", "Experimental / reservada"]
+    ],
+    "note": "Hoy este esquema lo reemplaza @@CIDR@@, pero explica de dónde salen las máscaras. `127.0.0.1` = **loopback**: la dirección con la que un equipo se habla a sí mismo (por eso la clase A práctica llega a 126)."
+  },
+  {
+    "type": "bullets",
+    "title": "ARP: el traductor entre IP y MAC",
+    "bullets": [
+      "Problema: las aplicaciones conocen la **IP**, pero para **entregar** una trama en la red local se necesita la **MAC**. ¿Quién traduce?",
+      "El **ARP** (Address Resolution Protocol) resuelve @@IP → MAC@@ dentro de la misma red local:",
+      "  El emisor **grita por broadcast**: \"¿Quién tiene la IP `192.168.10.1`? Dime tu MAC.\"",
+      "  Solo el dueño de esa IP **responde** con su dirección MAC.",
+      "  El emisor guarda el par IP↔MAC en la **tabla ARP (caché)** para no volver a preguntar.",
+      "Analogía: buscas a \"Juan\" (IP) en un salón lleno; gritas \"¿quién es Juan?\", él alza la mano y anotas en qué silla está (MAC).",
+      "Míralo en tu equipo con `arp -a` (Windows/Linux): esa lista es tu libreta IP↔MAC."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Máscaras y CIDR: tabla de referencia",
+    "headers": ["CIDR", "Máscara", "Bits host", "Direcciones", "Hosts útiles", "Bloque"],
+    "rows": [
+      ["/24", "255.255.255.0", "8", "256", "254", "256"],
+      ["/25", "255.255.255.128", "7", "128", "126", "128"],
+      ["**/26**", "**255.255.255.192**", "**6**", "**64**", "**62**", "**64**"],
+      ["/27", "255.255.255.224", "5", "32", "30", "32"],
+      ["/28", "255.255.255.240", "4", "16", "14", "16"],
+      ["/29", "255.255.255.248", "3", "8", "6", "8"],
+      ["/30", "255.255.255.252", "2", "4", "2", "4"]
+    ],
+    "note": "La **máscara** es otro número de 32 bits: los **1** marcan la red, los **0** el host. **CIDR /N** = cuántos unos tiene. Hosts útiles = **2^h − 2** (se restan la red y el broadcast). Más prefijo → subred más @@pequeña@@ (/24 es MÁS grande que /26)."
+  },
+  {
+    "type": "bullets",
+    "title": "Dividir en subredes /26: paso a paso",
+    "bullets": [
+      "Meta: partir **192.168.10.0/24** en **4 subredes** iguales.",
+      "**1. Bits prestados**: 4 subredes = 2^p → **p = 2** bits. Prefijo: /24 + 2 = **/26**.",
+      "**2. Máscara**: 26 unos → último octeto `11000000` = 128 + 64 = **192** → **255.255.255.192**.",
+      "**3. Tamaño de bloque**: 256 − 192 = **64** → las subredes empiezan en **0, 64, 128, 192**.",
+      "**4. Capacidad**: bits de host = 32 − 26 = 6 → **64 direcciones** y **62 hosts** útiles (64 − 2).",
+      "Regla de oro: en cada bloque la **primera** es la red y la **última** el broadcast → @@nunca se asignan@@ a un equipo.",
+      "El procedimiento es **siempre el mismo**, cambie la red que cambie."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las 4 subredes de 192.168.10.0/26",
+    "headers": ["#", "Dirección de red", "Primer host", "Último host", "Broadcast"],
+    "rows": [
+      ["1", "192.168.10.**0**", "192.168.10.1", "192.168.10.62", "192.168.10.63"],
+      ["2", "192.168.10.**64**", "192.168.10.65", "192.168.10.126", "192.168.10.127"],
+      ["3", "192.168.10.**128**", "192.168.10.129", "192.168.10.190", "192.168.10.191"],
+      ["4", "192.168.10.**192**", "192.168.10.193", "192.168.10.254", "192.168.10.255"]
+    ],
+    "note": "Piénsalo como @@repartir 256 caramelos en 4 bolsas de 64@@: bolsas que empiezan en 0, 64, 128 y 192. La **primera** (red) y la **última** (broadcast) de cada bolsa no se dan a nadie → por eso 64 direcciones pero solo **62 hosts**."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: ¿en qué subred cae 192.168.10.130?",
+    "bullets": [
+      "Pregunta: con máscara **/26**, ¿a qué subred pertenece el host `192.168.10.130`?",
+      "**1.** Solo cambia el **último octeto** (los tres primeros los fija la máscara). Trabaja solo con el 130.",
+      "**2.** Escribe en binario el host y la máscara:",
+      "  Host `130` = `10000010`",
+      "  Máscara `192` = `11000000`",
+      "**3.** Haz el **AND** bit a bit (1 AND 1 = 1; cualquier otro caso = 0):",
+      "  `10000010` **AND** `11000000` = `10000000` = **128**",
+      "**4.** Dirección de red = **192.168.10.128** → es la subred #3 (rango de hosts .129 a .190, broadcast .191).",
+      "**5.** Como 130 está entre .129 y .190, `192.168.10.130` es un **host válido** de @@192.168.10.128/26@@. ✔",
+      "Comprueba con el **Test de examlab** o una calculadora de subredes en línea: debe dar lo mismo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Práctica en examlab: asigna una IP y compruébala",
+    "headers": ["Paso / Comando", "Qué pasa (salida esperada)"],
+    "rows": [
+      ["`interface g0/0`", "Entras a configurar la 1.ª interfaz del router."],
+      ["`ip address 192.168.10.1 255.255.255.192`", "Asignas la **1.ª IP útil** de la subred #1 con máscara /26."],
+      ["`no shutdown`", "Enciendes la interfaz."],
+      ["`show ip interface brief`", "La interfaz aparece **`up/up`** (encendida y con enlace)."],
+      ["`ping 192.168.10.1`", "**Respuesta exitosa**: la subred está bien conectada."],
+      ["`ping` a otra subred", "**Falla** → examlab @@no enruta entre subredes@@: por eso hace falta el enrutamiento."]
+    ],
+    "note": "Herramientas — **Nivel 1**: taller \"red consola\" en examlab (Lab) + quiz de subredes en examlab (Test). **Nivel 2** (solo si examlab no aplica): calculadora online (`subnettingpractice.com`, `subnetting.net`). Toda la práctica se hace **siempre en examlab**."
+  },
+  {
+    "type": "bullets",
+    "title": "CIDR y direcciones privadas",
+    "bullets": [
+      "**CIDR** (enrutamiento sin clases): la frontera red/host puede estar en **cualquier bit**, no solo en /8, /16 o /24.",
+      "**VLSM**: a cada red el tamaño justo — una oficina de 10 equipos recibe un **/28** (14 hosts), no un /24 con 254 desperdiciadas.",
+      "**Agregación de rutas** (supernetting): redes vecinas se resumen en una sola:",
+      "  `.0/26` + `.64/26` + `.128/26` + `.192/26`  →  **192.168.10.0/24**. Menos rutas = Internet más ágil.",
+      "**Direcciones privadas (RFC 1918)** — @@no enrutables@@ en Internet, se repiten sin chocar:",
+      "  `10.0.0.0/8` (empresas grandes) · `172.16.0.0/12` (medianas) · `192.168.0.0/16` (casa/oficina).",
+      "Por eso tu casa y la del vecino pueden usar ambas `192.168.1.x` sin problema.",
+      "Para salir a Internet, el router traduce la IP privada con **NAT** (Sesión 4). También es privado el loopback `127.0.0.0/8`."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Enrutamiento e IANA: la tabla de rutas",
+    "headers": ["Red destino", "CIDR", "Siguiente salto / Interfaz", "Métrica"],
+    "rows": [
+      ["192.168.10.0", "/26", "Conectada directamente (G0/0)", "0"],
+      ["192.168.10.64", "/26", "Conectada directamente (G0/1)", "0"],
+      ["10.0.0.0", "/8", "192.168.10.65 (G0/1)", "5"],
+      ["**0.0.0.0**", "**/0**", "**ISP** — ruta por defecto (G0/2)", "1"]
+    ],
+    "note": "El router elige el @@prefijo más largo@@ (la ruta más específica gana); `0.0.0.0/0` es \"para todo lo demás → ISP\". Los routers aprenden rutas con protocolos: **IGP** (OSPF, RIP) dentro de un **AS**; **BGP** (EGP) une todos los AS del mundo. La **IANA** es la fábrica mayorista que reparte bloques a **5 RIR** (distribuidores regionales) — a Colombia le toca **LACNIC**."
+  }
+]

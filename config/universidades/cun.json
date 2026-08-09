@@ -1,0 +1,177 @@
+{
+  "_comentario": "Perfil de institución para el agente Diseñador Curricular, adaptado a la CUN (Corporación Unificada Nacional de Educación Superior). A diferencia de FESNA, los TEMAS de cada sesión NO se derivan de un temario libre: se derivan de la tabla 'UNIDADES DE CONOCIMIENTO' del SYLLABUS oficial (documento SIAC) de la asignatura, o del cronograma/instructivo institucional cuando la asignatura es Proyecto I/II de Especialización (no tiene syllabus de unidades de conocimiento tradicional).",
+  "_version": "1.1",
+  "_actualizado": "2026-08-07",
+  "_advertencia_marca": "ACTUALIZADO 2026-08-07: colores y logo tomados DIRECTAMENTE de https://cun.edu.co/ (logo real descargado + colores extraídos del CSS del sitio en vivo, no de una aproximación visual de PDFs). Sigue sin ser un manual de marca PDF oficial — si consigues uno, tiene prioridad sobre esto.",
+  "_carga_2026": "Fuente editable de grupos/bloques/periodos/fechas/horarios: config/cursos/carga_academica_2026.json (+ loader config/cursos/carga_academica.py). Excel origen: Carga academica 2026.xlsx (Dia/Hora vacíos). Horarios confirmados por docente tienen prioridad: Proyecto I lun 20:00-22:00; TG2 lun 17:00-18:00; TG3 mar 17:00-18:00; Creatividad mié 17:00-18:00; Investigación jue 17:00-18:00. Cierres: Investigación 2026-09-20; Creatividad 2026-09-27; TG3 54450 2026-11-15; TG3 54466/54467 + TG2 + Proyecto I 2026-11-22.",
+  "_pendientes": [
+    "URLs Meet reales por curso (hoy placeholder: [URL Meet — mismo enlace toda la serie · <Curso>])",
+    "URL CDigital (campus) por curso (hoy placeholder: [URL CDigital — campus del curso pendiente])",
+    "URL pública plantilla APA / plantillas ACA",
+    "Syllabus SIAC de Trabajo de Grado 2 ausente",
+    "Guiones S02+ Creatividad y demás cursos al estándar minuto-a-minuto (solo Creatividad S01 reescrito como modelo en revisión)"
+  ],
+  "_regla_ajustes_generales": "Cualquier ajuste general de presentación/diseño/contexto CUN se aplica SIEMPRE a las 5 asignaturas (Proyecto I, Creatividad, Investigación, TG2, TG3) y se regeneran las 5 Presentaciones del Curso. Ver .cursor/rules/cun-docente.mdc.",
+
+  "institucion": {
+    "nombre_completo": "Corporación Unificada Nacional de Educación Superior",
+    "nombre_corto": "CUN",
+    "acronimo": "CUN",
+    "dominio_correo": "cun.edu.co",
+    "pais": "Colombia",
+    "lms": "CDigital",
+    "_lms_nota": "Nombre de la plataforma en material CUN: siempre «CDigital» (campus/aula virtual). Nunca usar la palabra «LMS» como nombre. Placeholder URL: [URL CDigital — campus del curso pendiente]. (La clave JSON se llama lms por schema compartido.)",
+    "nota_vigilancia": "Vigilada Mineducación (leyenda que aparece bajo el logo en todos los documentos oficiales)"
+  },
+
+  "docente": {
+    "nombre": "Julian Andres Castaño",
+    "nombre_completo_referencia_fesna": "Julian Andrés Castaño Espinosa",
+    "credenciales": ["Ingeniero de Sistemas", "Candidato a MSc en Inteligencia Artificial", "Líder Técnico", "Speaker Tecnológico"],
+    "correo_cun": "julian_castanoe@cun.edu.co",
+    "_correo_cun_nota": "Confirmado por el docente. En FESNA usa julian.castano@lanuevaamerica.edu.co (no mezclar en material CUN).",
+    "donde_aparece": {
+      "presentacion_del_curso": "SÍ — nombre, credenciales, correo y datos logísticos",
+      "pptx_sesion_clase": "NO — sin bio ni correo; solo tema de la sesión"
+    },
+    "_links_afi": "Los formularios AFI viven en la sección raíz `links_afi` (fuente de verdad). No duplicar URLs aquí."
+  },
+
+  "links_afi": {
+    "_nota": "FUENTE DE VERDAD de formularios y contactos AFI (Especialización Proyecto I/II). Si cambia el semestre o Coordinación emite URLs nuevos, actualiza SOLO aquí y regenera guiones P1 (`python config/slides/build_sesion_material.py proyecto1 all --guion-only`) y material que los cite. Loader: `config/cursos/sesiones_cun.py` (LINK_TUTORIAS, LINK_REGISTRO_DOCENTE_AFI, …).",
+    "formulario_registro_sesiones_docente": "https://forms.gle/6t6BXqQ2Kwmivpct8",
+    "_formulario_registro_sesiones_docente_nota": "Registro de Sesiones Sincrónicas y Tutorías Especialización — uso exclusivo docente AFI · dentro de 24h · con link de grabación. NO compartir con estudiantes. Debe aparecer en el checklist post-clase de CADA guion P1.",
+    "formulario_asistencia_tutorias_estudiante": "https://forms.gle/oZ8xCYiUo3KEWr1d9",
+    "_formulario_asistencia_tutorias_estudiante_nota": "Asistencia a tutorías del estudiante — remarcar en Presentación del Curso y recordar en tutoría de cada guion P1.",
+    "formulario_acuerdo_pedagogico": "https://forms.gle/EPHb7tbrEJTC6ey77",
+    "formulario_informe_cierre": "https://docs.google.com/forms/d/e/1FAIpQLSej5yUK3b0p617XhccE7GZrm2C4ra3lk-hzfPTx43uJM_xAmg/viewform",
+    "_acuerdo_vs_informe": "Acuerdo Pedagógico (inicio) e Informe de cierre son formularios DISTINTOS — no intercambiar URLs.",
+    "coanfitrion_meet": "investigacion_especializaciones@cun.edu.co",
+    "_meet_afi": "Grabación obligatoria; coanfitrión = coanfitrion_meet; invitados solo Coordinación + estudiantes inscritos; programar toda la serie del periodo."
+  },
+
+  "marca": {
+    "_fuente": "Logo real descargado de https://cun.edu.co/wp-content/uploads/2025/02/logocun40.png (recortado sin el sello '40 años' en config/slides/assets/logo_cun_solo.png). Colores del CSS en vivo de cun.edu.co (2026-08-07): #007433 verde marca, #91DC00 lima, #0C2340 azul marino, #FF9E1C naranja. El motor de diapositivas usa esta paleta.",
+    "tipografia": "Calibri",
+    "fuente_titulos": "Calibri",
+    "fuente_cuerpo": "Calibri",
+    "logo": "config/slides/assets/logo_cun_solo.png (wordmark 'cun' + nombre completo, sin el sello de aniversario). Versión completa con sello '40 años' en config/slides/assets/logo_cun.png por si se necesita para materiales de esta campaña puntual.",
+    "motor_diapositivas": "config/slides/cun_slides_engine.py — logo real y paleta verde/azul de abajo. Preferir fechas_inicio_fin_slide() (tarjetas INICIO/CIERRE) sobre timeline_slide(). Ejemplo: config/slides/build_cun_proyecto1.py (genérico, sin nombre de grupo).",
+    "reglas_de_estilo": [
+      "VERDE CUN (#007433) es el color de marca primario — logo, acentos de resaltado y detalles de énfasis (úsalo con moderación, 1-2 elementos por slide, como el naranja en FESNA).",
+      "AZUL MARINO (#0C2340) para encabezados de documento/diapositiva, cabeceras de tabla y bandas de título — texto en blanco sobre ese azul.",
+      "Verde lima (#91DC00) SOLO como acento puntual/decorativo (p. ej. una línea o un detalle pequeño), nunca como fondo grande ni texto de cuerpo.",
+      "Texto principal en gris oscuro / casi negro, NO en azul ni verde.",
+      "Cajas de 'Aclaración' o nota metodológica: fondo durazno/naranja muy claro (#FDECD8 aprox., del logo institucional — la figura naranja del isotipo) con borde sutil.",
+      "Cajas de 'Importante' / advertencia crítica: fondo rojo/rosado muy claro (#FBE4E4 aprox.).",
+      "Cajas de 'Principio rector' o información institucional: fondo verde muy claro (#E8F5EC aprox., variante clara del verde de marca).",
+      "Tablas con encabezado azul marino y texto blanco; filas alternas blanco / gris muy claro.",
+      "Logo CUN real (`logo_cun_solo.png`) arriba a la izquierda de cada documento/diapositiva institucional — NUNCA reconstruir el logo con texto/formas, usar siempre el PNG real."
+    ],
+    "colores": {
+      "verde_cun":                 "#007433",
+      "verde_lima_acento":         "#91DC00",
+      "azul_marino_institucional": "#0C2340",
+      "azul_slate_secundario":     "#324A6D",
+      "naranja_isotipo":           "#FF9E1C",
+      "verde_claro_caja_info":     "#E8F5EC",
+      "naranja_claro_aclaracion":  "#FDECD8",
+      "rojo_claro_advertencia":    "#FBE4E4",
+      "gris_texto_principal":      "#2B2B2B",
+      "gris_claro_fila_alterna":   "#F2F2F2",
+      "blanco":                    "#FFFFFF"
+    },
+    "uso_color": {
+      "resaltado_importante": "#007433",
+      "texto_principal":      "#2B2B2B",
+      "texto_titulos":        "#0C2340",
+      "fondo_slides":         "#FFFFFF",
+      "banda_titulo":         "#0C2340",
+      "fila_alterna_tabla":   "#F2F2F2",
+      "caja_aclaracion":      "#FDECD8",
+      "caja_advertencia":     "#FBE4E4",
+      "caja_info_institucional": "#E8F5EC"
+    },
+    "emojis_seccion": {
+      "objetivos":    "🎯",
+      "teoria":       "📖",
+      "practica":     "💻",
+      "actividad":    "🧩",
+      "sesion":       "📘",
+      "advertencia":  "⚠️",
+      "exito":        "✅",
+      "tip":          "💡"
+    }
+  },
+
+  "fuente_de_temas": {
+    "_regla": "NO deduzcas el temario libremente de archivos de referencia genéricos (a diferencia de FESNA). Usa como fuente única de los temas por sesión:",
+    "para_especializacion_proyecto_I_II": "Instructivos y cronograma en Especializacion/0. General/ (01_Instructivos_AFI_Proyecto_I_II/, 02_Cronogramas_periodo/). Ciclo inicio/cierre: Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md. Manual + Calendario en Proyecto I/. Oferta puntual en 2026/<grupo>/ (Informacion, encuentros Calendar + Entregas y hitos docentes CSV).",
+    "para_pregrado_y_otras_asignaturas": "La tabla 'UNIDADES DE CONOCIMIENTO' (columnas N°, TEMÁTICA, SUBTEMÁTICA) del syllabus oficial SIAC (.docx) de la asignatura — es la sección 'oficial' del temario, no debe alterarse en el fondo, solo desarrollarse pedagógicamente sesión por sesión.",
+    "si_no_hay_syllabus": "Si la carpeta de la asignatura no tiene su syllabus .docx (ver, p. ej., 'Trabajo de Grado 2'), AVISA al usuario explícitamente que falta el documento fuente antes de generar contenido — no inventes un temario."
+  },
+
+  "pedagogia": {
+    "_nota_duracion": "2026 confirmado: Creatividad / Investigación / TG2 / TG3 = 60 min sincrónicos. Proyecto I = ~60 min contenido + ~60 min tutoría (bloque lun 20:00-22:00). Guiones deben cubrir TODO el tiempo de clase, minuto a minuto, texto casi literal, teórico-práctico. Modelo de calidad: Creatividad Sesión 01 (guion canónico).",
+    "duracion_sesion_minutos": 60,
+    "duracion_por_tipo": {
+      "pregrado_regular_y_tg": 60,
+      "proyecto_I_contenido_mas_tutoria": 120
+    },
+    "estandar_guion": {
+      "minuto_a_minuto": true,
+      "texto_casi_literal": true,
+      "teorico_practico": true,
+      "modelo_aprobado_revision": "Pregrado/Creatividad y pensamiento innovador/Guiones/Sesion 01 - Introducción · Propuesta de Innovación · creatividad e inteligencia em.md",
+      "proyecto1_checklist_post_clase": "Cada guion P1 debe cerrar con checklist post-clase leyendo URLs desde `links_afi` (registro docente <24h + recordatorio asistencia estudiante en tutoría). Build: build_sesion_material.py.",
+      "nota": "Modelo de calidad = Creatividad S01 (canónico). Regeneradores alinean el resto al mismo estándar."
+    },
+    "fases_secuencia_didactica": [
+      "Encuadre: presentación del acuerdo pedagógico, contenidos y objetivo de la sesión",
+      "Exposición/diálogo colaborativo del concepto del día",
+      "Taller o ejercicio aplicado (según el syllabus: talleres, exposiciones, prototipado, redacción guiada)",
+      "Retroalimentación docente (cualitativa y cuantitativa cuando aplique)",
+      "Cierre: qué se avanzó y qué corresponde a la siguiente sesión"
+    ]
+  },
+
+  "evaluacion": {
+    "_nota": "La CUN tiene AL MENOS dos regímenes de evaluación distintos observados — usa el que corresponda a la asignatura, tomado de su syllabus/instructivo, NUNCA un genérico inventado.",
+    "regimen_nota_unica_afi": {
+      "aplica_a": "Proyecto I y Proyecto II de Especializaciones (Área de Formación Investigativa)",
+      "descripcion": "Nota única 100% (ESP329 cita Art. 41 §3 del Reglamento Estudiantil). Proyecto I: ACA1 25% / ACA2 25% / ACA3 42% / coevaluación 4% / autoevaluación 4% (individuales en CDigital al cierre; no aplican en Proyecto II). El estudiante diligencia; el Docente habilita y registra. Distinto de la autoevaluación institucional SIAC (acreditacion.cun.edu.co)."
+    },
+    "regimen_cortes_reglamento_52": {
+      "aplica_a": "Asignaturas regulares de pregrado (p. ej. Investigación Ciencia y Tecnología, Creatividad y Pensamiento Innovador) y Trabajo de Grado 2/3",
+      "descripcion": "Evaluación por cortes según el artículo 52 del Reglamento Estudiantil. El syllabus SIAC de cada asignatura trae su propia tabla 'SISTEMA DE EVALUACIÓN' con el desglose exacto (Corte 1/2/3, % por EV) — cópialo del syllabus, no lo inventes. Autoevaluación/coevaluación con % propio tipo AFI P1: no aplicar si el syllabus no las trae."
+    }
+  },
+
+  "estructura_carpetas_curso": {
+    "_regla": "NO usar carpeta Temas/. Dos niveles: RAÍZ genérica vs 2026/<grupo>/ oferta puntual.",
+    "esquema": [
+      "<Asignatura>/Manual del Docente…",
+      "<Asignatura>/Calendario de clases (oficial).md",
+      "<Asignatura>/Clases/Presentacion del Curso - ….pptx  (SÍ docente + correo + logística)",
+      "<Asignatura>/Clases/Sesion NN - <Tema>/Presentacion.pptx  (NO bio/correo docente)",
+      "<Asignatura>/Guiones/Sesion NN - <Tema>.md",
+      "<Asignatura>/2026/<grupo>/Informacion.txt, CSV/ICS Calendar…"
+    ],
+    "raiz_generica": "Manual del Docente (sin nombre de grupo), Calendario oficial, syllabus, Clases/ (Presentación del Curso + carpetas Sesion NN - Tema/), Guiones/. Sin código de grupo en títulos ni nombres de archivo.",
+    "oferta_puntual": "2026/<grupo>/ — Informacion.txt, roster (si aplica), CSV/ICS Calendar. Pregrado sin Guests/ATTENDEE. Proyecto I 54ES4: invitados vía Apps Script `Crear encuentros con invitados.gs` (Google al importar CSV/ICS descarta Guests/ATTENDEE). Subject encuentros: «{grupos} - {Asignatura} - Sesion NN» (+ « (autónoma)» si festivo Pregrado).",
+    "calendario": {
+      "subject_encuentro": "{grupos} - {Asignatura corta} - Sesion NN  |  sin tema largo  |  festivo Pregrado: mismo + (autónoma)  |  helper sesiones_cun.subject_encuentro  |  builds: build_pregrado_cursos.py --calendar-only · build_calendar_proyecto1_54es4.py",
+      "festivo_pregrado": "clase autónoma (no cancelar); Subject mantiene Sesion NN + (autónoma)",
+      "invitados_p1": "Apps Script Crear encuentros con invitados.gs (o Calendar API); CSV/ICS solo fechas — Google descarta invitados al importar",
+      "meet": "un solo enlace por curso; placeholder hasta URL real",
+      "builds": [
+        "config/slides/build_cun_proyecto1.py",
+        "config/slides/build_pregrado_cursos.py",
+        "config/slides/build_all_course_presentations.py",
+        "config/slides/build_sesion_material.py"
+      ],
+      "motor": "config/slides/cun_slides_engine.py"
+    }
+  }
+}
+

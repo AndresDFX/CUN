@@ -1,0 +1,215 @@
+[
+  {
+    "type": "bullets",
+    "title": "Todo el anteproyecto cuelga de una sola frase",
+    "bullets": [
+      "La **pregunta de investigación** es la pieza que sostiene todo lo demás.",
+      "  Objetivos, marco teórico y metodología no son secciones sueltas: son respuestas a esa frase.",
+      "Si la pregunta nace torcida, el error se hereda hasta el último capítulo de Proyecto II.",
+      "Caso de aula: un equipo llega diciendo “vamos a hacer un chatbot para la empresa donde trabajo”.",
+      "  Eso es una **solución**, no un problema: todavía nadie ha dicho qué le duele a quién.",
+      "Hoy recorremos el camino en el orden correcto: **dolor → problema → pregunta**. La solución llega mucho después.",
+      "Salida esperada de esta hora: dos textos escritos, un planteamiento de 8 a 12 líneas y **una** pregunta."
+    ],
+    "note": "Regla del curso: en **Proyecto I** se diseña y se propone; el trabajo de campo es Proyecto II."
+  },
+  {
+    "type": "bullets",
+    "title": "Tema, problema y pregunta: tres palabras que no son sinónimas",
+    "bullets": [
+      "**Tema** = el territorio amplio donde quiero trabajar: “IA en educación”, “IA en la industria”.",
+      "  Un tema no se investiga: se recorre. Nadie puede “responder” un territorio.",
+      "**Problema** = una tensión concreta y observable dentro de ese territorio.",
+      "  Existe solo si puedo nombrar cuatro cosas: **actor**, **síntoma**, **contexto** y **consecuencia**.",
+      "  Sin actor no hay a quién le duela; sin síntoma solo hay una buena intención.",
+      "**Pregunta** = la forma interrogativa que va a gobernar todo el método.",
+      "  No es cualquier duda: es la duda que el diseño propuesto podrá responder.",
+      "Lo que NO es un problema: que una tecnología “no se use lo suficiente”, o que a usted le parezca interesante."
+    ],
+    "note": "Orden obligatorio: primero identifico a quién le duele algo; después lo formulo como pregunta."
+  },
+  {
+    "type": "table",
+    "title": "Cuatro niveles que se confunden todo el tiempo",
+    "headers": ["Nivel", "Qué es", "Ejemplo (línea educación)", "Por qué no basta"],
+    "rows": [
+      ["**Tema**", "El territorio amplio", "“IA en educación”", "No se puede responder ni delimitar"],
+      ["**Problema**", "La tensión observable", "“Los informes del curso X se devuelven semanas después y los errores se repiten”", "Aún no está en forma de pregunta"],
+      ["**Pregunta**", "La interrogación que guía el método", "“¿Qué prácticas de retroalimentación mediadas por IA pueden proponerse para el curso X?”", "Es la única que el método puede responder"],
+      ["**Solución**", "El producto imaginado", "“Un bot que corrija informes”", "Llega al final; empezar por aquí sesga todo el trabajo"]
+    ],
+    "col_w": [1.3, 2.2, 4.6, 2.9],
+    "note": "Si su documento arranca en la fila 4, devuélvase a la fila 2: **el dolor primero**."
+  },
+  {
+    "type": "bullets",
+    "title": "Anatomía del planteamiento: las cuatro piezas",
+    "bullets": [
+      "**(a) Síntoma** — el hecho observable que alguien puede constatar hoy.",
+      "  Se escribe en presente y con evidencia: “se entrega tarde”, “se repite el mismo error”, “se registra a mano”.",
+      "**(b) Contexto** — dónde ocurre: una organización, un aula, un proceso o un turno concretos.",
+      "  “En Colombia” no es contexto: es un titular de prensa.",
+      "**(c) Actor** — quién padece el síntoma y quién decide sobre él.",
+      "  Suelen ser dos: quien lo sufre (estudiante, operario) y quien podría cambiarlo (docente, supervisor).",
+      "**(d) Consecuencia** — qué se pierde si nada cambia: tiempo, calidad, reprocesos, aprendizaje.",
+      "El planteamiento cierra conectando esas cuatro piezas con **una línea de IA del programa**."
+    ],
+    "note": "Prueba rápida: si al leer sus 10 líneas no se pueden señalar (a), (b), (c) y (d), el texto todavía no es un problema."
+  },
+  {
+    "type": "table",
+    "title": "Pregunta débil vs. pregunta fuerte",
+    "headers": ["Pregunta débil", "Por qué falla", "Versión fuerte"],
+    "rows": [
+      ["¿La IA es útil en las empresas?", "Sin actor, sin contexto y sin fenómeno; se responde “sí” y se acabó", "¿Cómo perciben los supervisores de turno de la planta X el registro de paradas de máquina y qué apoyo esperarían de un asistente de IA?"],
+      ["¿ChatGPT ayuda a estudiar?", "Pregunta de sí/no y de opinión; no delimita tarea ni población", "¿Qué prácticas de uso de un asistente conversacional reportan los estudiantes del curso X al elaborar informes de laboratorio y qué fricciones aparecen?"],
+      ["¿Cómo mejorar la educación con IA?", "Pregunta planetaria: no cabe en el tiempo del programa", "¿Qué requisitos debería cumplir una propuesta de retroalimentación asistida por IA para el curso X, según docente y estudiantes?"],
+      ["¿Hago un bot para mi empresa?", "Empieza por la solución; no hay fenómeno que estudiar", "¿Cómo funciona hoy el proceso Y en la empresa Z y qué necesidades de información revela?"]
+    ],
+    "col_w": [2.4, 2.8, 5.8],
+    "note": "Las preguntas fuertes son largas y no suenan elegantes. **Eso está bien**: una pregunta delimitada casi nunca es bonita."
+  },
+  {
+    "type": "bullets",
+    "title": "El filtro de las cinco preguntas (antes de enamorarse de la suya)",
+    "bullets": [
+      "**1. ¿Quién?** — el actor concreto. Si la respuesta es “todo el mundo”, no hay actor.",
+      "**2. ¿Dónde?** — la organización, el aula o el proceso, con nombre y frontera.",
+      "**3. ¿Qué fenómeno?** — el hecho que voy a observar, no la tecnología que me gusta.",
+      "**4. ¿En qué lapso?** — ¿cabe en el tiempo del programa? Si necesita dos años, recórtela.",
+      "**5. ¿Con qué acceso a la información?** — ¿tengo puerta de entrada a ese contexto?",
+      "  Cuidado con la trampa: tener acceso **no** significa que hoy vaya a recolectar datos.",
+      "Si alguna respuesta es “no sé” o “todos”, la pregunta está cruda: recórtela hasta que responda las cinco."
+    ],
+    "note": "Recortar no es rendirse. Una pregunta pequeña y respondible vale más que una grande e imposible."
+  },
+  {
+    "type": "table",
+    "title": "Cómo se abre una pregunta: arranques que sirven y arranques que la matan",
+    "headers": ["Arranque", "Qué tipo de respuesta pide", "Sirve cuando…"],
+    "rows": [
+      ["**¿Cómo…?**", "Describe un proceso o una práctica", "Quiere entender cómo ocurre algo hoy"],
+      ["**¿Qué factores…?**", "Identifica elementos que influyen", "Sospecha causas y quiere caracterizarlas"],
+      ["**¿Qué características…?**", "Caracteriza un fenómeno o una población", "Necesita describir antes de proponer"],
+      ["**¿Qué requisitos…?**", "Establece criterios para una propuesta", "Va a diseñar algo y debe fundamentarlo"],
+      ["**¿En qué medida…?**", "Compara o gradúa", "Ya tiene categorías o variables definidas"],
+      ["**¿Es…? / ¿Sirve…?**", "Sí o no", "**Nunca**: cierra la investigación en una palabra"],
+      ["**¿Debo hacer…?**", "Una decisión personal", "**Nunca**: eso es gestión, no investigación"]
+    ],
+    "col_w": [2.4, 4.0, 4.6],
+    "note": "Truco de reescritura: cambie “¿es…?” por “¿cómo…?”, “¿qué factores…?” o “¿en qué medida…?” y la pregunta se abre sola."
+  },
+  {
+    "type": "table",
+    "title": "Las dos líneas oficiales de IA del programa",
+    "headers": ["Línea", "De qué se ocupa", "Ejemplo de problema que encaja"],
+    "rows": [
+      ["**Uso y adaptación de IA para entornos productivos**", "IA aplicada a procesos de empresas, plantas, servicios y operación", "El registro manual de paradas de máquina en una línea de empaque impide priorizar mantenimiento"],
+      ["**Implementación de IA en la educación**", "IA aplicada a enseñanza, aprendizaje, evaluación y acompañamiento", "La retroalimentación de informes llega semanas después y pierde su función formativa"]
+    ],
+    "col_w": [3.0, 3.4, 4.6],
+    "note": "**No hay una tercera línea.** Si su tema no encaja en ninguna, se reformula: no se inventa una línea nueva. Escoja una sola."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado 1 — línea educación, paso a paso",
+    "bullets": [
+      "Punto de partida (tema crudo): “usar IA para calificar más rápido”.",
+      "**(a) Síntoma:** los informes de laboratorio se devuelven semanas después y los mismos errores reaparecen en la entrega siguiente.",
+      "**(b) Contexto:** el curso de Laboratorio de Automatización de un programa técnico, presencial, una sesión semanal.",
+      "**(c) Actores:** los estudiantes que entregan y el docente que corrige.",
+      "**(d) Consecuencia:** se pierde la función formativa de la devolución; el estudiante avanza repitiendo el error.",
+      "**Pregunta resultante:**",
+      "  “¿Qué prácticas de retroalimentación mediadas por un asistente de IA podrían proponerse para el curso de Laboratorio de Automatización, a partir de las fricciones que reportan estudiantes y docente?”",
+      "Vea lo que **no** dice: no dice “un chatbot”, no promete resultados y no afirma que la IA funcione."
+    ],
+    "note": "Actor, fenómeno y contexto están los tres en la frase. Ese es exactamente el criterio de aprobación de hoy."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado 2 — línea entornos productivos",
+    "bullets": [
+      "Punto de partida (tema crudo): “meterle IA al mantenimiento de la planta”.",
+      "**(a) Síntoma:** las paradas de máquina se anotan a mano en una planilla al cierre del turno y llegan incompletas.",
+      "**(b) Contexto:** la línea de empaque de una planta de alimentos del Valle del Cauca, tres turnos diarios.",
+      "**(c) Actores:** los supervisores de turno que registran y el equipo de mantenimiento que usa el dato.",
+      "**(d) Consecuencia:** mantenimiento no puede priorizar; se repiten fallas que nadie alcanzó a caracterizar.",
+      "**Pregunta resultante:**",
+      "  “¿Cómo se registra actualmente la información de paradas de máquina en la línea de empaque de la planta X y qué requisitos debería cumplir una propuesta de asistente de IA para apoyar ese registro, según los supervisores de turno?”",
+      "Note el orden interno de la pregunta: **describe primero, propone después**. Ese orden es lo que la hace viable."
+    ],
+    "note": "Dos líneas distintas, la misma anatomía. Si su borrador no se deja desarmar así, todavía es un tema."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes que hoy vamos a cortar de raíz",
+    "boxes": [
+      ["advertencia", "**Empezar por la solución.** “Voy a hacer un chatbot” no es un problema. Guarde la solución un minuto y responda: ¿qué le duele hoy a alguien SIN ese chatbot? Ese dolor es su problema."],
+      ["advertencia", "**Pregunta que no cabe en el periodo.** Si no puede responderla con los recursos de un semestre, recórtela a un actor y un contexto. Recortar es una decisión metodológica, no una derrota."],
+      ["aclaracion", "**Objetivo no es lo mismo que pregunta.** El objetivo empieza con verbo (“Caracterizar…”); la pregunta empieza con interrogante (“¿Cómo…?”). Van en secciones distintas del documento."],
+      ["info", "**En Proyecto I no se recolecta nada.** No hay encuestas aplicadas, ni entrevistas, ni observación en campo: hoy se diseña y se propone. El trabajo de campo llega en Proyecto II, con aval previo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: cómo lo escriben hoy en Google Docs",
+    "bullets": [
+      "**1.** Abran el documento del equipo en **Google Docs** con la plantilla APA de la CUN: uno solo, compartido con permiso de edición.",
+      "**2.** Creen tres subtítulos: “Planteamiento del problema”, “Pregunta de investigación” y “Línea de IA”.",
+      "**3.** Escriban primero las cuatro piezas en bruto, en viñetas: síntoma, contexto, actores, consecuencia.",
+      "**4.** Recién ahí redacten el párrafo corrido de 8 a 12 líneas. La viñeta se vuelve prosa, nunca al revés.",
+      "**5.** Escriban la pregunta en **una sola frase** y resáltenla; si necesita dos frases, aún no está delimitada.",
+      "**6.** Marquen debajo la línea oficial de IA en la que encaja: una sola, escrita textualmente.",
+      "**7.** Si ya consultaron alguna fuente, generen la cita en **ZoteroBib (zbib.org)** o con las citas integradas de Docs.",
+      "**8.** Suban el avance a CDigital como **S02_ProblemaPregunta_Apellidos**."
+    ],
+    "note": "Todo se hace desde el navegador, gratis y sin instalar nada. [URL CDigital — campus del curso pendiente]"
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER (18 minutos) — borrador de problema y pregunta",
+    "bullets": [
+      "**Consigna literal:** en el documento del equipo, y en 18 minutos, produzcan tres cosas.",
+      "  **(1)** De 8 a 12 líneas de planteamiento: síntoma, contexto, actores y consecuencia.",
+      "  **(2)** Su pregunta de investigación en **una sola frase**.",
+      "  **(3)** La línea oficial de IA en la que encaja, escrita tal cual aparece en el programa.",
+      "El Docente pasa por los equipos mientras escriben; levanten la mano si se atascan en el síntoma.",
+      "**Últimos 3 minutos:** tres equipos leen en voz alta **solo su pregunta**, en 20 segundos cada uno.",
+      "**Criterio de éxito (verificable):** al escuchar la pregunta se identifican **actor + fenómeno + contexto**.",
+      "  Si falta uno de los tres, la pregunta vuelve a taller: no avanza a objetivos todavía."
+    ],
+    "note": "Prohibido durante el taller: escribir la solución, prometer resultados o nombrar la herramienta que van a construir."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de subir el avance",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
+    "rows": [
+      ["Hay un actor concreto", "Puedo señalar quién sufre el síntoma, con nombre de rol", "[  ]"],
+      ["Hay un contexto delimitado", "Nombro organización, aula o proceso; no un país", "[  ]"],
+      ["El síntoma es observable", "Otra persona podría constatarlo sin creerme a mí", "[  ]"],
+      ["La pregunta cabe en una frase", "La leo en 20 segundos sin quedarme sin aire", "[  ]"],
+      ["No empieza por “¿es…?”", "Arranca con cómo, qué factores, qué características, qué requisitos o en qué medida", "[  ]"],
+      ["No propone una solución", "Las palabras app, bot o sistema no aparecen en la pregunta", "[  ]"],
+      ["Encaja en una línea oficial", "La escribí textualmente debajo de la pregunta", "[  ]"],
+      ["No aplico instrumentos", "No hay ninguna frase que diga “se aplicó” o “se encuestó”", "[  ]"]
+    ],
+    "col_w": [3.0, 5.6, 0.8],
+    "note": "Ocho casillas. Si alguna queda vacía, el avance todavía no está listo para subir a CDigital."
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué traer a la próxima sesión",
+    "bullets": [
+      "**Pulir** el planteamiento hasta que las cuatro piezas se lean sin esfuerzo, en prosa continua.",
+      "**Buscar tres referencias exploratorias** sobre su fenómeno en fuentes académicas abiertas:",
+      "  **Google Scholar**, **SciELO** y **Redalyc**, todas gratuitas y desde el navegador.",
+      "  Guarden de cada una: autor, año, título y el enlace o DOI.",
+      "**Generar la cita APA 7** de esas tres en **ZoteroBib (zbib.org)** y pegarlas al final del documento.",
+      "**Subir** el avance a CDigital como **S02_ProblemaPregunta_Apellidos**.",
+      "La próxima sesión todo cuelga de esta pregunta: escribimos **objetivo general, específicos, justificación, alcances y limitaciones**.",
+      "  Si durante la semana la pregunta cambia —es normal—, actualícenla en el documento antes del próximo encuentro."
+    ],
+    "note": "Las tutorías por equipo se acuerdan con el Docente durante la semana; no hay atención espontánea sin cita."
+  }
+]

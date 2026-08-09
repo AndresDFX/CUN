@@ -1,0 +1,123 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "1.0",
+  "_fuente_tematica": "EP oficial (PDF 'Conoce tu ruta de aprendizaje' — Redes de nueva generación 3221V) + agenda de contenidos de la plataforma (30-jul a 8-ago 2026). SON 2 CLASES sincrónicas de 1h45 (Semana 1 y Semana 2 del EP); los ~9 temas de la plataforma son las enseñanzas que se reparten entre esas 2 clases.",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Electiva de Profundización 3: Redes de nueva generación",
+    "nombre_corto": "Redes de nueva generación",
+    "codigo_examlab": "Electiva de Profundización 3: Redes de nueva generación - 3221V",
+    "asignatura": "Electiva de Profundización 3: Redes de nueva generación",
+    "programa": "Ingeniería de Sistemas",
+    "area": "Electiva - flexible",
+    "creditos": 2,
+    "carpeta_salida": "Cursos/Electiva de Profundizacion 3 - Redes de nueva generacion",
+    "estructura_salida": {
+      "presentacion": "Clases/Presentacion del curso.pptx",
+      "slides_sesion": "Clases/Clase N/Clase N - <Titulo>.pptx",
+      "guiones": "Guiones/Guion Docente Clase N - <Titulo>.md",
+      "_nota": "Solo 2 clases. Deck del estudiante en Clases/ y Clases/Clase N/; guiones del docente en Guiones/ con su subcarpeta Capturas/."
+    },
+    "tipo_asignatura": "A",
+    "naturaleza": "Teórico-Práctica · redes de nueva generación (NGN, SDN/NFV, virtualización, seguridad, QoS, sostenibilidad)",
+    "duracion_semanas": 2,
+    "n_sesiones": 2,
+    "modalidad_sesiones": "Tipo MENTORÍA: 2 encuentros sincrónicos de 1h45 centrados en RESOLVER DUDAS y acompañar (no cátedra). El material (decks/guiones) es soporte; el foco es Q&A guiado. Prompt de mentor para chat de IA: 'Prompt mentor (chat de dudas) - Redes NGN 3221V.md' en la carpeta del curso.",
+
+    "duracion_sesion_minutos": 105,
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "1h45 = 105 min. Las 5 fases suman 100 min; la actividad individual ocupa los 15 min finales."
+    },
+
+    "competencia": "Diseñar y evaluar soluciones de redes de nueva generación mediante el uso de tecnologías, protocolos y arquitecturas avanzadas, considerando criterios de desempeño, seguridad, escalabilidad y sostenibilidad en entornos organizacionales y de telecomunicaciones.",
+    "resultado_aprendizaje": "Analizar la evolución de las redes y sus tecnologías emergentes; evaluar arquitecturas y protocolos de NGN según requerimientos técnicos y funcionales; diseñar propuestas de redes avanzadas integrando virtualización, seguridad y calidad de servicio; y aplicar criterios técnicos para seleccionar tecnologías y soluciones de red en contextos reales.",
+    "competencias_fundamentales_fesna": ["Pensamiento estructurado", "Pensamiento crítico", "Resolución de problemas"],
+
+    "niveles": {
+      "1": "El estudiante identifica los conceptos básicos de las redes de nueva generación (arquitecturas NGN, SDN, NFV y QoS) y reconoce sus características generales en contextos de conectividad empresarial.",
+      "2": "El estudiante analiza e interpreta escenarios básicos de redes, aplica criterios técnicos de desempeño, virtualización y seguridad, y diferencia soluciones tradicionales frente a redes de nueva generación.",
+      "3": "El estudiante aplica de manera coherente criterios técnicos de NGN, interpreta escenarios de conectividad, desempeño y seguridad, y sustenta decisiones profesionales con lenguaje técnico propio del nivel profesional."
+    },
+
+    "objetivos_especificos": {
+      "semana_1": "Diseñar propuestas de redes de nueva generación mediante el análisis comparativo de arquitecturas y tecnologías avanzadas, considerando requerimientos de desempeño, en contextos organizacionales y de telecomunicaciones.",
+      "semana_2": "Evaluar escenarios de conectividad en redes de nueva generación mediante la aplicación de criterios avanzados de desempeño, seguridad y escalabilidad, proponiendo soluciones técnicas alineadas con principios de responsabilidad profesional."
+    },
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Diseño de redes de nueva generación: arquitecturas y tecnologías",
+        "subtitulo": "De las redes tradicionales a NGN: evolucionar, diseñar y elegir",
+        "nivel": 1,
+        "fecha": "Semana 1 · 30-jul-2026 (confirmar hora)",
+        "foco": "Comprender la evolución hacia NGN, diseñar una infraestructura NGN y seleccionar tecnologías comparando arquitecturas — objetivo de la Semana 1 (diseñar propuestas comparando arquitecturas y tecnologías).",
+        "ensenanzas": ["Evolución de arquitecturas: de redes tradicionales a NGN (cómo cambió la infraestructura moderna)", "Indicadores de desempeño usados en arquitecturas NGN", "Diseño de infraestructura NGN empresarial", "Buenas prácticas de disponibilidad y redundancia en redes modernas", "Diseño preliminar de una red NGN organizacional", "Cómo elegir tecnologías para redes NGN", "Comparativa técnica de tecnologías modernas de conectividad"],
+        "practica": "Diseñar (diagramar) una red NGN organizacional preliminar y justificar la selección de tecnologías; práctica en examlab (pizarra/diagramas Mermaid) + herramienta online de diagramado."
+      },
+      "2": {
+        "titulo": "Operación inteligente de redes NGN: virtualización, IA, desempeño, seguridad y sostenibilidad",
+        "subtitulo": "Evaluar y operar la red: SDN/NFV, automatización con IA, KPIs, QoS, seguridad y resiliencia",
+        "nivel": 2,
+        "fecha": "Semana 2 · 6-ago-2026 (confirmar hora)",
+        "foco": "Evaluar escenarios de conectividad NGN con criterios de desempeño, seguridad y escalabilidad, e integrar virtualización (SDN/NFV), IA, monitoreo/QoS y sostenibilidad — objetivo de la Semana 2 (evaluar y proponer soluciones).",
+        "ensenanzas": ["SDN, NFV y orquestación: el 'cerebro' de las redes NGN", "Automatización inteligente y administración centralizada de redes", "IA aplicada al diseño, la gestión y la optimización de telecomunicaciones", "Métricas, KPIs y monitoreo inteligente; diagnóstico técnico de una infraestructura NGN", "QoS y optimización automática/dinámica del tráfico", "Análisis de tráfico y seguridad; IA para detección de anomalías y ciberseguridad", "Sostenibilidad y resiliencia: centros de datos sostenibles y eficiencia energética", "Comunicación técnica: informes y dashboards de resultados de redes"],
+        "practica": "Evaluar/diagnosticar un escenario NGN (KPIs, QoS, seguridad) y proponer mejoras; práctica en examlab (Test + diagramas) + herramienta online; entregable: mini-informe/dashboard conceptual."
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "A",
+      "_nota": "Porcentajes CONFIRMADos por el usuario (2026-07-22), redacción 'como esta' del ejemplo real: Destreza 50% · Notas de tus evidencias 40% · Asistencia 10%.",
+      "destreza_ruta_lms": 50,
+      "notas_evidencias_lms": 40,
+      "asistencia": 10,
+      "opcionales": "Participación en clase +0.3 (opcional) · Kahoot/Reto en vivo: 🥇 +0.5 · 🥈 +0.4 · 🥉 +0.3 (opcional)",
+      "esquema_ejemplo_presentacion": [
+        "Destreza — entrenamientos en la ruta de aprendizaje (LMS) = 50%",
+        "Notas de tus evidencias — entregas del curso (LMS) = 40%",
+        "Asistencia — al final de la sesión = 10%",
+        "Participación +0.3 (opcional) · Kahoot 🥇+0.5 / 🥈+0.4 / 🥉+0.3 (opcional)"
+      ]
+    },
+
+    "recursos_software": {
+      "_politica": "SIN Cisco Packet Tracer ni software que se instale. Práctica de 2 niveles: Tier 1 examlab (Test/quiz, Reto en vivo, pizarra/diagramas Mermaid-Excalidraw para arquitecturas NGN, editor de código para scripts de apoyo); Tier 2 herramientas ONLINE de navegador (diagramado de topologías, simuladores/validadores). El foco de la práctica es de DISEÑO y EVALUACIÓN (diagramar/comparar/diagnosticar), no configurar equipos.",
+      "plataforma_practica": {
+        "nombre": "examlab",
+        "url": "https://examlab.lovable.app/app",
+        "rol": "Test de conceptos + Reto en vivo (Kahoot) por clase + pizarra/diagramas (Mermaid/Excalidraw) para las arquitecturas NGN + Taller para el entregable (diseño de red / mini-informe).",
+        "insumos_prompts": "Cursos/Electiva de Profundizacion 3 - Redes de nueva generacion/examlab - Insumos Generar con IA.md (setup + Reto en vivo + Quiz + Taller por clase + encuesta)"
+      },
+      "herramientas_online": [
+        "draw.io / diagrams.net (diagramar topologías y arquitecturas NGN)",
+        "Herramientas de diagramación/simulación de red en el navegador (sin instalar)"
+      ],
+      "recursos": ["Guiones de clase", "Ruta de aprendizaje y recursos en examlab / plataforma"],
+      "coursera_url": "[N/A o por confirmar — electiva]",
+      "material_clases_url": "[hipervínculo que llena el docente]",
+      "herramientas_mundo_laboral": ["Controladores SDN (p. ej. OpenDaylight/ONOS)", "Plataformas NFV/orquestación", "GNS3 / EVE-NG", "herramientas de monitoreo (KPIs/QoS)", "Wireshark", "dashboards de red"]
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[por confirmar]",
+      "horario": "[por confirmar] · 1 h 45 min por clase",
+      "fechas": "30/07/2026 – 08/08/2026 (ventana de contenidos en plataforma)",
+      "hora_inicio": "[por confirmar]",
+      "sesiones_fechas": ["Clase 1 — Semana 1 (≈30-jul-2026)", "Clase 2 — Semana 2 (≈6-ago-2026)"]
+    }
+  }
+}

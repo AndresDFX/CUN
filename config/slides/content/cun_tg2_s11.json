@@ -1,0 +1,221 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cerrar TG2 no es terminar el trabajo de grado",
+    "bullets": [
+      "Última sesión sincrónica del curso. Conviene aclarar de entrada qué significa 'cerrar'.",
+      "**Cerrar TG2 es** dejar un avance **limpio y coherente**: planteamiento, pregunta, objetivos, marco y metodología propuesta.",
+      "**Cerrar TG2 no es** haber terminado el trabajo de grado: faltan aplicar los instrumentos, recoger datos, analizarlos, escribir resultados y sustentar.",
+      "  Todo eso es TG3, y llega en el próximo periodo. Hoy se prepara el terreno para que allá solo haya que ejecutar.",
+      "Piénselo así: usted entrega un documento que **cualquier otra persona podría continuar** sin llamarlo.",
+      "  Ese es el estándar real de un avance bien cerrado.",
+      "Dos productos hoy: la **versión limpia** del documento y la **lista de pendientes para TG3**."
+    ],
+    "note": "Salida esperada: checklist de cierre recorrido, documento con formato de la Plantilla APA CUN y pendientes escritos en imperativo."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué significa exactamente 'versión limpia'",
+    "bullets": [
+      "'Limpio' no es una sensación: tiene condiciones que se verifican una por una.",
+      "**1. Formato aplicado**: el documento vive sobre la **Plantilla APA CUN**, no sobre un archivo en blanco con letra Arial.",
+      "**2. Citas y referencias completas**: toda cita del cuerpo tiene su referencia, y toda referencia fue citada.",
+      "**3. Sin secciones a medias sin marcar**: si algo quedó incompleto, aparece explícito en los pendientes, no escondido.",
+      "**4. Sin comentarios ni resaltados de trabajo**: se eliminan los corchetes de '[falta desarrollar]' y los amarillos del S09.",
+      "  Lo que estaba resaltado o se completó, o se pasó a la lista de pendientes. No se borra sin más.",
+      "**5. Coherencia verificada**: título, pregunta, objetivos y metodología dicen lo mismo.",
+      "**6. Metodología en propuesto**: ni un verbo en pasado prometiendo resultados que no existen."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Checklist de cierre: ítem, verificación y evidencia",
+    "headers": ["Ítem", "Cómo se verifica", "Evidencia de que está listo"],
+    "rows": [
+      ["Título coherente con el contenido", "Léalo y pregúntese si describe lo que el documento hace", "El título nombra el objeto, el propósito y el contexto"],
+      ["Pregunta y objetivos alineados", "Los objetivos, sumados, deben responder la pregunta", "Ningún objetivo sobra ni falta frente a la pregunta"],
+      ["Marco referencial completo", "Antecedentes + marco teórico + conceptual y contextual", "Cada constructo de los objetivos está definido en el marco"],
+      ["Metodología propuesta", "Enfoque, alcance, diseño y matriz pregunta–método", "La matriz tiene tantas filas como objetivos específicos"],
+      ["Instrumento y plan de análisis", "Operacionalización, ítems y qué se hará con cada dato", "Cada ítem se rastrea a un objetivo por la tabla"],
+      ["Referencias en APA 7", "Cruce la lista final contra las citas del cuerpo", "Cero citas huérfanas y cero referencias sin citar"],
+      ["Plantilla APA CUN aplicada", "Compare márgenes, interlineado, títulos y portada", "El documento se ve idéntico a la plantilla institucional"],
+      ["Redacción en propuesto", "Ctrl+F de 'se aplicó', 'se obtuvo', 'demostró'", "La búsqueda devuelve cero resultados"]
+    ],
+    "note": "Lo que no pueda marcar como listo no se esconde: pasa tal cual a la lista de pendientes para TG3."
+  },
+  {
+    "type": "bullets",
+    "title": "Aplicar la Plantilla APA CUN sin sufrir",
+    "bullets": [
+      "No se trata de imitar el formato a ojo: se trata de **escribir sobre la plantilla institucional**.",
+      "**Portada**: título, autor, programa, institución y asignatura, en el orden que trae la plantilla.",
+      "**Cuerpo**: interlineado doble, sangría de primera línea en cada párrafo, texto alineado a la izquierda (no justificado en APA 7).",
+      "**Títulos por niveles**: nivel 1 centrado y en negrita; nivel 2 al margen en negrita. Aplíquelos con **Estilos**, no a mano.",
+      "  Usar Estilos es lo que permite generar la tabla de contenido automática y que quede bien numerada.",
+      "**Tablas y figuras**: numeradas y con título arriba; la fuente va debajo. Cada una debe mencionarse en el texto.",
+      "**Referencias**: página aparte, orden alfabético y sangría francesa.",
+      "Truco práctico: copie su contenido **dentro** de la plantilla usando Pegar sin formato (Ctrl+Shift+V) para no arrastrar estilos viejos."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Errores de APA 7 que más se repiten en los avances",
+    "headers": ["Como suele quedar", "Qué está mal", "Como debe quedar"],
+    "rows": [
+      ["'Según (Pérez, 2022) la clasificación…'", "Cita narrativa con el apellido dentro del paréntesis", "'Según Pérez (2022), la clasificación…'"],
+      ["'…reduce el tiempo (Pérez).'", "Cita sin año", "'…reduce el tiempo (Pérez, 2022).'"],
+      ["Referencias en el orden en que se leyeron", "APA 7 exige orden alfabético por apellido", "Lista alfabética con sangría francesa"],
+      ["Enlace pegado como URL suelta", "Falta el formato de referencia completo", "Apellido, N. (Año). Título. Fuente. https://doi.org/…"],
+      ["Cita textual larga entre comillas y sin página", "Toda cita textual exige número de página o párrafo", "(Pérez, 2022, p. 45); si pasa de 40 palabras, va en bloque sin comillas"],
+      ["Autor citado en el texto y ausente en la lista", "Cita huérfana: el lector no puede rastrear la fuente", "Toda cita del cuerpo aparece en referencias"]
+    ],
+    "note": "Genere y corrija sus referencias en **ZoteroBib (zbib.org)**: gratis, en el navegador y sin instalar nada."
+  },
+  {
+    "type": "bullets",
+    "title": "La revisión final de coherencia: diez minutos bien invertidos",
+    "bullets": [
+      "Antes de dar por cerrado, haga esta pasada corta con el documento abierto en pantalla completa.",
+      "**1.** Lea el **título** y, sin mirar más, escriba en un papel qué esperaría encontrar adentro.",
+      "**2.** Lea la **pregunta**: ¿coincide con lo que escribió en el papel? Si no, uno de los dos está mal.",
+      "**3.** Lea los **objetivos específicos** en voz alta: ¿sumados responden la pregunta? ¿sobra alguno?",
+      "**4.** Recorra los **títulos del marco**: ¿aparecen ahí los mismos constructos de los objetivos?",
+      "**5.** Mire la **matriz metodológica**: ¿hay una fila por objetivo, sin métodos huérfanos?",
+      "**6.** Revise el **instrumento**: ¿cada bloque de ítems se conecta con alguna fila de la matriz?",
+      "  Si en cualquiera de los seis pasos dudó más de cinco segundos, ahí hay un pendiente que anotar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "La lista de pendientes para TG3: su mejor regalo del semestre",
+    "bullets": [
+      "Todo lo que quedó en propuesto o a medias **se escribe**, no se esconde.",
+      "  Esconderlo no lo desaparece: solo garantiza que en TG3 usted arranque a ciegas y perdiendo semanas.",
+      "Se escribe **en imperativo**, porque es una lista de acciones, no un diagnóstico.",
+      "  'Aplicar la encuesta propuesta a los agentes' se ejecuta; 'falta lo de la encuesta' no.",
+      "Cada pendiente lleva tres cosas: la **acción**, **por qué quedó pendiente** y **qué necesita** para poder hacerlo.",
+      "  El 'qué necesita' es clave: permiso de la empresa, acceso al histórico, contacto de un experto. Eso se gestiona con anticipación.",
+      "Ordene la lista en el orden en que deberá ejecutarla en TG3, no en el orden en que se le fue ocurriendo.",
+      "Guarde la lista al final del documento o en un archivo aparte, pero que quede en el mismo lugar que el avance."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: pendientes para TG3 del caso 'mesa de ayuda'",
+    "headers": ["Acción (en imperativo)", "Por qué quedó pendiente", "Qué necesita para ejecutarla"],
+    "rows": [
+      ["Solicitar autorización formal a la empresa", "En TG2 no hay trabajo de campo", "Carta institucional y contacto del jefe de soporte"],
+      ["Exportar el histórico de tickets del último semestre", "El dato existe pero no se ha extraído", "Acceso de consulta al sistema de mesa de ayuda"],
+      ["Aplicar la encuesta propuesta a los agentes", "El instrumento se diseñó, no se aplicó", "Instrumento validado y consentimiento informado"],
+      ["Etiquetar la muestra de tickets por categoría", "Requiere apoyo de agentes con experiencia", "Acuerdo de dos agentes y criterios de etiquetado"],
+      ["Analizar tiempos con el plan de análisis del S08", "No hay datos todavía", "Hoja de cálculo en Google Sheets con los datos recogidos"],
+      ["Redactar resultados, discusión y conclusiones", "Dependen del análisis", "Resultados del punto anterior"],
+      ["Preparar sustentación y verificar antiplagio", "Corresponde al cierre de TG3", "Documento final y herramienta institucional del campus"]
+    ],
+    "note": "Fíjese que las dos primeras acciones son de gestión, no de escritura: son las que más demoran y las que casi nadie prevé."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué le espera en TG3 (para que no lo tome por sorpresa)",
+    "bullets": [
+      "**Trabajo de campo**: aplicar los instrumentos que hoy quedaron propuestos, con los permisos correspondientes.",
+      "**Análisis de datos**: ejecutar el plan de análisis que ya escribió, sobre datos reales.",
+      "**Resultados y discusión**: capítulos nuevos. Los resultados presentan lo que salió; la discusión lo confronta con su marco.",
+      "  Aquí es donde el marco teórico se cobra: si está flojo, la discusión no tiene con qué dialogar.",
+      "**Conclusiones y recomendaciones**: responden la pregunta de forma explícita, sin inventar lo que los datos no dicen.",
+      "**Producto o prototipo**, cuando el proyecto lo contempla, con su documentación técnica.",
+      "**Verificación antiplagio** con la herramienta institucional del campus (**CDigital**) y entrega al repositorio.",
+      "**Sustentación ante jurados**: el pitch de la sesión anterior es la semilla directa de esa defensa."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en el cierre",
+    "boxes": [
+      ["advertencia", "'Ya terminé el trabajo de grado.' No: terminó el **avance**. Lo que falta está en la lista de pendientes, y es la mitad del camino."],
+      ["advertencia", "'Escondo las secciones que quedaron a medias.' Esconderlas se paga el próximo semestre con intereses. Hágalas explícitas en los pendientes."],
+      ["aclaracion", "'El antiplagio lo veo en TG3.' El hábito se cierra hoy: parafraseo propio y citas completas. Revisar al final es demasiado tarde para reescribir."],
+      ["info", "Entregar sin la Plantilla APA CUN aplicada no es un descuido menor: el formato institucional es parte de lo que se evalúa en el avance."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Antiplagio: higiene académica, no amenaza",
+    "bullets": [
+      "En TG3 el documento pasa por la **herramienta antiplagio institucional del campus (CDigital)**. No hay que buscar servicios externos.",
+      "Lo que se reporta como coincidencia casi nunca es copia deliberada: son **citas mal hechas** y **parafraseo perezoso**.",
+      "**Parafrasear no es cambiar sinónimos**: es entender la idea, cerrar la fuente y escribirla con su propia estructura.",
+      "  Si al terminar el párrafo la sintaxis del original sigue intacta, usted copió con otras palabras.",
+      "Toda idea tomada de alguien lleva cita, aunque esté parafraseada. Solo lo que es de conocimiento general no se cita.",
+      "Las citas textuales van entre comillas, con autor, año y página, y se usan con moderación.",
+      "  Un avance construido a punta de citas textuales muestra lectura, pero no muestra criterio propio.",
+      "Cierre esta semana con las referencias completas en **ZoteroBib**: es lo que evita sorpresas el próximo semestre."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Parafraseo mal hecho vs. parafraseo correcto",
+    "headers": ["Texto fuente (ficticio)", "Parafraseo perezoso", "Parafraseo correcto"],
+    "rows": [
+      ["'La clasificación manual de solicitudes incrementa el tiempo de respuesta en las mesas de servicio.'", "'La clasificación manual de peticiones aumenta el tiempo de respuesta en las mesas de servicio.'", "'Cuando las solicitudes se categorizan a mano, la mesa de servicio tarda más en responder (Pérez, 2022).'"],
+      ["'Los modelos supervisados requieren conjuntos etiquetados de calidad.'", "'Los modelos supervisados necesitan conjuntos etiquetados de calidad.'", "'Sin un conjunto de datos bien etiquetado, un modelo supervisado no alcanza un desempeño confiable (Gómez, 2021).'"]
+    ],
+    "note": "El parafraseo perezoso cambia palabras y conserva la estructura: es lo que la herramienta detecta y lo que un lector experto reconoce de inmediato."
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: dejar la versión limpia y entregarla",
+    "bullets": [
+      "**1.** Abra la **Plantilla APA CUN** y guarde una copia con el nombre de su proyecto.",
+      "**2.** Traslade su contenido sección por sección con Pegar sin formato (Ctrl+Shift+V) y aplique los **Estilos** de la plantilla.",
+      "**3.** Inserte la tabla de contenido automática y actualícela al final de todos los cambios.",
+      "**4.** Elimine los resaltados y comentarios de trabajo; lo que no se completó pasa a la lista de pendientes.",
+      "**5.** Cruce citas y referencias: recorra la lista final buscando cada apellido con Ctrl+F en el cuerpo.",
+      "**6.** Complete lo que falte en **ZoteroBib (zbib.org)** en formato APA 7 y ordene la lista alfabéticamente.",
+      "**7.** Recorra el **checklist de cierre** y marque cada ítem; lo no marcado pasa a los pendientes de TG3.",
+      "**8.** Descargue en PDF, nombre el archivo S11_CierreTG2_Apellido y súbalo a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ],
+    "note": "Todo con herramientas gratuitas: Google Docs, la Plantilla APA CUN, ZoteroBib y CDigital. Nada que instalar."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Versión limpia, checklist y pendientes para TG3",
+    "bullets": [
+      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
+      "**Archivo:** un documento en Google Docs llamado S11_CierreTG2_Apellido.",
+      "**Consigna 1.** Recorra el **checklist de cierre** ítem por ítem y marque lo que está listo y lo que no.",
+      "**Consigna 2.** Deje una **versión limpia** del avance: formato de la Plantilla APA CUN aplicado y referencias completas en APA 7.",
+      "**Consigna 3.** Escriba la **lista de pendientes para TG3** en imperativo, con por qué quedó pendiente y qué necesita para ejecutarlo.",
+      "**Criterio de éxito (verificable):** el documento se lee coherente de punta a punta; ningún ítem del checklist quedó sin marcar ni sin pasar a pendientes; cualquier persona que abra su lista sabe qué falta para TG3.",
+      "**Entrega:** suba S11_CierreTG2_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "¿Mi documento está escrito sobre la Plantilla APA CUN y no sobre un archivo en blanco?",
+      "¿El título describe lo que el documento realmente hace?",
+      "¿Los objetivos específicos siguen alineados con la pregunta y con la matriz metodológica?",
+      "¿Toda cita tiene referencia y toda referencia fue citada en el cuerpo?",
+      "¿Eliminé resaltados, corchetes y comentarios de trabajo del documento final?",
+      "¿La metodología está redactada en propuesto, sin verbos en pasado sobre datos?",
+      "¿Mi lista de pendientes está en imperativo e incluye lo que necesito gestionar (permisos, accesos)?",
+      "¿Descargué el PDF, lo nombré S11_CierreTG2_Apellido y lo subí a CDigital?"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Cierre del curso y puente a TG3",
+    "bullets": [
+      "Tres ideas para llevarse: cerrar TG2 es dejar un avance **limpio**, no terminar el grado.",
+      "  El **checklist** garantiza que nada quede a medias sin quedar marcado.",
+      "  La **lista de pendientes** es el puente: en TG3 usted retoma exactamente desde ahí.",
+      "Suba a CDigital la versión limpia, el checklist recorrido y la lista de pendientes.",
+      "Revise en **CDigital** las indicaciones de las sesiones de trabajo autónomo y de la entrega final del avance.",
+      "Guarde el documento en su unidad personal y descargue una copia en PDF: no dependa de un solo lugar.",
+      "Llegaron al curso con un proyecto disperso y se van con un avance ordenado y con una ruta escrita. Eso era exactamente lo que TG2 debía lograr.",
+      "  Nos vemos en Trabajo de Grado 3, retomando desde su propia lista de pendientes."
+    ]
+  }
+]

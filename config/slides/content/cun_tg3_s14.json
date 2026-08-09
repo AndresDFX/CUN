@@ -1,0 +1,206 @@
+[
+  {
+    "type": "bullets",
+    "title": "El jurado habló: hay que convertir eso en tareas, no en pánico",
+    "bullets": [
+      "Después de sustentar pasa siempre lo mismo: uno sale con la cabeza llena de **frases sueltas** de los jurados.",
+      "  \"Faltó discutir tal limitación\", \"revise dos referencias\", \"la figura 3 no tiene rótulo\", \"el objetivo dos quedó corto\".",
+      "Dos reacciones típicas, y las dos son malas:",
+      "  **Parálisis** — \"me lo tumbaron todo\", y no se toca el documento en dos semanas.",
+      "  **Ansiedad** — se abre el archivo y se cambian veinte cosas a la vez, sin orden ni respaldo.",
+      "Lo que funciona es aburridamente simple: **una matriz, una prioridad y una versión con respaldo**.",
+      "Atender los ajustes **no es opcional**: es condición para cerrar el trabajo y para poder cargar limpio al repositorio.",
+      "Y hay un detalle que casi nadie ve: un ajuste puede **romper la coherencia** de otras secciones que ya estaban bien.",
+      "Hoy salimos con una **matriz de ajustes priorizada** y con los ajustes **críticos ya incorporados**."
+    ],
+    "note": "Traiga sus notas de la sustentación, aunque sean tres líneas en el celular. Si no tomó notas, reconstrúyalas ahora, antes de que se le olviden."
+  },
+  {
+    "type": "bullets",
+    "title": "La matriz de ajustes: cuatro columnas que ordenan todo",
+    "bullets": [
+      "Una matriz de ajustes es una tabla en Google Docs o Sheets con **cuatro columnas fijas**:",
+      "  **1. Observación del jurado** — transcrita **tal como la dijeron**, no interpretada ni suavizada.",
+      "  **2. Cambio a realizar** — la traducción a una acción concreta y verificable sobre el documento.",
+      "  **3. Prioridad** — crítica, mayor o menor.",
+      "  **4. Estado** — pendiente, en proceso o hecho.",
+      "La columna 2 es la que hace el trabajo real: **traducir una queja en una tarea**.",
+      "  Observación vaga: \"la discusión está floja\". Cambio concreto: \"agregar dos párrafos que confronten los hallazgos 2 y 3 con autores del marco\".",
+      "  Si no logra escribir la columna 2, es señal de que **no entendió la observación**: pregúntela, no la adivine.",
+      "Regla de registro: **toda observación entra a la matriz**, incluso las que le parecen injustas o menores.",
+      "  Una observación no registrada es una observación que va a reaparecer justo antes de la fecha de recepción."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: una matriz de ajustes real",
+    "headers": ["Observación del jurado", "Cambio a realizar", "Prioridad", "Estado"],
+    "rows": [
+      ["\"No discutió la limitación del tamaño de muestra\"", "Agregar párrafo de limitaciones en la discusión, con la fórmula de tres partes", "**Crítica**", "Pendiente"],
+      ["\"El objetivo específico 2 quedó sin responder\"", "Escribir el párrafo de discusión que cierra ese objetivo", "**Crítica**", "En proceso"],
+      ["\"Revisar dos referencias que están incompletas\"", "Regenerar esas fichas en ZoteroBib y reemplazarlas", "**Mayor**", "Pendiente"],
+      ["\"La conclusión no responde la pregunta, la repite\"", "Reescribir el primer párrafo de conclusiones con la respuesta directa", "**Mayor**", "Pendiente"],
+      ["\"La figura 3 no tiene rótulo ni fuente\"", "Rotular Figura 3 y agregar la fuente al pie", "**Menor**", "**Hecho**"],
+      ["\"Hay dos párrafos con sangría distinta\"", "Unificar formato de párrafo en todo el documento", "**Menor**", "**Hecho**"]
+    ],
+    "note": "En seis filas está el plan de trabajo completo y priorizado. Lo que **no** está en la matriz, no existe: se va a olvidar.",
+    "col_w": [3.2, 3.7, 1.2, 1.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Priorizar: crítico, mayor, menor",
+    "bullets": [
+      "No todos los ajustes pesan igual. Atenderlos en desorden es la forma más rápida de perder el tiempo.",
+      "**CRÍTICO** — afecta la **validez** del trabajo o una **conclusión**.",
+      "  Ejemplos: un objetivo sin responder, una conclusión que los datos no sostienen, una limitación no reconocida.",
+      "  Es **obligatorio** resolverlo antes de cargar al repositorio. Va primero, siempre.",
+      "**MAYOR** — afecta una **sección completa**, pero no invalida el trabajo.",
+      "  Ejemplos: una discusión sin autores, referencias incompletas, un método explicado a medias.",
+      "**MENOR** — es **forma**: rótulos, sangrías, ortografía, formato de tabla.",
+      "  No se ignoran: son rápidos, suman a la calidad final y son lo primero que se ve en un documento público.",
+      "Estrategia realista de trabajo: **primero todos los críticos**, luego los mayores, y los menores en una sola pasada de forma al final.",
+      "  Hacer los menores primero da sensación de avance y es una trampa: se llega a la fecha con lo crítico sin tocar."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cómo clasificar una observación en 10 segundos",
+    "headers": ["Pregunta guía", "Si la respuesta es sí…", "Ejemplo típico"],
+    "rows": [
+      ["¿Sin este cambio alguna conclusión queda sin sustento?", "**CRÍTICO**", "Un objetivo específico sin responder"],
+      ["¿Sin este cambio el método queda mal explicado?", "**CRÍTICO**", "No se dice cómo se seleccionó el caso"],
+      ["¿Afecta una sección entera, pero no la validez?", "**MAYOR**", "Discusión sin ningún autor citado"],
+      ["¿Afecta la trazabilidad de las fuentes?", "**MAYOR**", "Referencias incompletas o huérfanas"],
+      ["¿Es un tema de presentación o formato?", "**MENOR**", "Figura sin rótulo, sangría dispareja"],
+      ["¿Es una sugerencia de estilo personal del jurado?", "**MENOR** (se valora y se decide)", "\"Yo hubiera usado otro orden de secciones\""]
+    ],
+    "note": "La última fila importa: no toda observación obliga a un cambio. Si decide **no** aplicarla, **regístrelo con su justificación**; eso también se defiende.",
+    "col_w": [3.8, 2.3, 3.4]
+  },
+  {
+    "type": "bullets",
+    "title": "El efecto dominó: un cambio nunca viaja solo",
+    "bullets": [
+      "El error silencioso de esta etapa: corregir un párrafo y **dejar inconsistente el resto del documento**.",
+      "Ejemplo concreto de dominó: el jurado pide corregir un dato de resultados —de 18 a 21 minutos—.",
+      "  Ese número aparece también en el **resumen**, en la **discusión**, en las **conclusiones** y en el **póster**.",
+      "  Si solo lo cambia en resultados, el artículo se contradice a sí mismo. Y eso sí lo ve cualquiera.",
+      "Antes de dar por hecho un ajuste, hágase tres preguntas:",
+      "  **¿Este dato o afirmación aparece en otra sección?** (Búsquelo con Ctrl+F, no de memoria.)",
+      "  **¿La conclusión sigue siendo válida** con el nuevo dato?",
+      "  **¿El resumen sigue siendo un espejo fiel** del artículo corregido?",
+      "Regla práctica: **el resumen y las conclusiones se revisan de último, siempre**, porque dependen de todo lo demás."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Mapa de dependencias: si cambia esto, revise aquello",
+    "headers": ["Si cambia…", "Debe revisar…", "Por qué"],
+    "rows": [
+      ["Un **dato de resultados**", "Discusión, conclusiones, resumen, póster", "El número se repite en las cuatro"],
+      ["Un **objetivo específico**", "Método, resultados, discusión y conclusiones", "Toda la cadena de coherencia depende de él"],
+      ["La **pregunta de investigación**", "Título, objetivos, conclusiones", "El artículo entero cuelga de la pregunta"],
+      ["Un **párrafo de discusión**", "Referencias y conclusiones", "Si suma un autor, entra a la lista"],
+      ["Una **referencia**", "Todas las citas de ese autor en el cuerpo", "Cambia el año o los apellidos citados"],
+      ["Las **limitaciones**", "Conclusiones y trabajo futuro", "Los límites definen hasta dónde se concluye"]
+    ],
+    "note": "Recorra este mapa **antes** de marcar un ajuste como \"hecho\". Un ajuste hecho a medias es peor que uno pendiente: da falsa sensación de cierre.",
+    "col_w": [2.5, 3.7, 3.3]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajar con red: historial de versiones de Google Docs",
+    "bullets": [
+      "En esta etapa se hacen cambios grandes sobre un documento que **ya estaba bien**. Hay que poder devolverse.",
+      "No hace falta software especializado ni instalar nada: **Google Docs guarda todo el historial**, gratis.",
+      "**Paso a paso:**",
+      "  **1.** Menú **Archivo → Historial de versiones → Ver historial de versiones**.",
+      "  **2.** En el panel derecho aparecen las versiones por fecha y hora, con los cambios resaltados por autor.",
+      "  **3.** Haga clic en cualquiera para **previsualizarla** completa antes de decidir.",
+      "  **4.** Si esa versión servía mejor, use **Restaurar esta versión**; el documento vuelve a ese punto.",
+      "  **5.** Y lo más útil: **Archivo → Historial de versiones → Asignar nombre a la versión actual**.",
+      "  Nómbrela así antes de empezar a corregir: **\"Versión sustentada\"**, **\"Ajustes críticos aplicados\"**, **\"Versión para repositorio\"**.",
+      "Con versiones nombradas, devolverse toma diez segundos en vez de veinte minutos de arrepentimiento.",
+      "**Nunca** trabaje los ajustes sobre un archivo local sin respaldo: es la forma clásica de perder una tarde de trabajo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se responde formalmente al jurado",
+    "bullets": [
+      "Muchos programas piden, además del documento corregido, una **relación de atención de observaciones**.",
+      "Es una tabla corta de tres columnas: **observación · qué se hizo · dónde quedó (página o sección)**.",
+      "  \"Falta discutir la limitación de muestra\" → \"Se agregó párrafo de limitaciones\" → \"Discusión, p. 14\".",
+      "  \"Revisar dos referencias\" → \"Se regeneraron en APA 7 y se corrigieron en la lista\" → \"Referencias, p. 21\".",
+      "La columna **\"dónde quedó\"** es la que le ahorra tiempo al jurado y la que más se agradece: no lo obliga a buscar.",
+      "Si decidió **no** aplicar una observación, escríbalo con respeto y con argumento:",
+      "  \"Se valoró la sugerencia de reordenar las secciones; se mantuvo la estructura por corresponder a la plantilla institucional exigida.\"",
+      "Tono: **profesional y sin justificaciones emocionales**. Ni disculpas largas ni defensas acaloradas.",
+      "Este documento es también su respaldo: deja constancia de que **cada observación fue atendida**."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en la etapa de ajustes",
+    "boxes": [
+      ["advertencia", "\"Las observaciones menores las ignoro, total son detalles.\""],
+      ["aclaracion", "Todas se **registran** y se atienden por prioridad. Las menores son de forma, se resuelven rápido y son lo primero que se ve en un documento público."],
+      ["advertencia", "\"Cambio todo lo que dijo el jurado, tal cual, sin pensar.\""],
+      ["aclaracion", "Priorice —**crítico, mayor, menor**— y revise el **efecto dominó**. Y si una sugerencia no procede, regístrela con su justificación en vez de aplicarla a ciegas."],
+      ["advertencia", "\"Modifiqué mucho y perdí la versión que estaba buena.\""],
+      ["aclaracion", "Use el **historial de versiones de Google Docs** y nombre las versiones clave antes de corregir. Nunca trabaje sin respaldo en esta etapa."],
+      ["advertencia", "\"Voy corrigiendo de memoria; ya sé qué me dijeron.\""],
+      ["aclaracion", "La memoria falla justo en las observaciones incómodas. La matriz debe mostrar **estado** (hecho / pendiente) para que ninguna se pierda."],
+      ["info", "Corrija un ajuste completo antes de pasar al siguiente. Dejar cinco cambios a medias es la mejor forma de romper la coherencia del documento."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Matriz de ajustes y versión corregida (20 minutos)",
+    "bullets": [
+      "**Consigna literal.** Entregue **S14_AjustesPost_Apellido** con:",
+      "  **(1) La matriz de ajustes completa**, con las columnas observación · cambio a realizar · prioridad · estado. Debe incluir **todas** las observaciones recibidas, sin filtrar.",
+      "  **(2) Los ajustes CRÍTICOS ya incorporados** en el documento del artículo.",
+      "  **(3) La revisión del efecto dominó** de cada ajuste crítico: qué otras secciones tocó y qué verificó en ellas.",
+      "  **(4) Una versión nombrada** en el historial de Google Docs: **\"Ajustes críticos aplicados\"**. Adjunte la captura del panel de historial.",
+      "**Tiempo:** 20 minutos. El Docente acompaña resolviendo dudas de clasificación por prioridad.",
+      "**Criterio de éxito (verificable):**",
+      "  **Cada observación** aparece en la matriz con su prioridad y su estado; **ninguna celda vacía**.",
+      "  Los ajustes **críticos** están incorporados en el documento, no solo listados.",
+      "  Para cada crítico se documentó la revisión de las secciones dependientes.",
+      "  Existe al menos **una versión nombrada** en el historial antes de los cambios."
+    ],
+    "note": "Si aún no ha sustentado, trabaje con las **observaciones del ensayo de la sesión anterior** y con lo que su propia checklist marcó como pendiente. La mecánica es exactamente la misma."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
+    "rows": [
+      ["Todas las observaciones están registradas", "Comparo la matriz con mis notas de sustentación", "☐"],
+      ["Cada observación tiene un cambio concreto", "Ninguna columna 2 dice \"mejorar\" a secas", "☐"],
+      ["Cada una tiene prioridad asignada", "Crítico / mayor / menor, sin celdas vacías", "☐"],
+      ["Los críticos están hechos, no pendientes", "Los busco dentro del documento corregido", "☐"],
+      ["Revisé el efecto dominó de cada crítico", "Ctrl+F del dato o afirmación en todo el artículo", "☐"],
+      ["El resumen sigue siendo espejo del artículo", "Lo releo después de todos los cambios", "☐"],
+      ["Las conclusiones siguen siendo válidas", "Verifico que los datos corregidos las sostienen", "☐"],
+      ["Nombré la versión en el historial", "Archivo → Historial de versiones", "☐"],
+      ["Redacté la relación de atención de observaciones", "Tabla observación · qué hice · dónde quedó", "☐"]
+    ],
+    "col_w": [3.6, 4.4, 1.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Suba** `S14_AjustesPost_Apellido` a CDigital — [URL CDigital — campus del curso pendiente], con la matriz y la versión corregida.",
+      "**Termine los ajustes mayores y menores** en trabajo autónomo, en ese orden, y actualice la columna de estado.",
+      "**Deje la matriz en cero pendientes** antes de la fecha de recepción de su grupo (consúltela en la Presentación del Curso).",
+      "**Vuelva a exportar el PDF** después de los cambios: el que ya tenía quedó desactualizado.",
+      "**Actualice el póster** si algún dato cambió; suele ser lo que todo el mundo olvida.",
+      "**Nombre una versión final** en el historial: **\"Versión para repositorio\"**.",
+      "**Próxima sesión:** **cierre administrativo y verificación de recepción** — comprobar que todo quedó cargado **y recibido**.",
+      "  Llegue con **CDigital abierto** y con la lista de todo lo que ha entregado durante el curso."
+    ]
+  }
+]

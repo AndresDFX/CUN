@@ -1,0 +1,24 @@
+Asignaciones de pregrado
+
+Periodo: 26P03
+Grupo: 53339
+Id_grupo (portal): 795383
+Asignatura: Investigación Ciencia y Tecnología — Escuela de Ingenierías
+Código: EI005
+Unidad: FINVV — FORMACIÓN INVESTIGATIVA VIRTUAL
+Modalidad: VIRTUAL
+Bloque: SEGUNDO BLOQUE
+Jornada: JORNADA ÚNICA
+Dependencia: FORMACION INVESTIGATIVA
+Horario definido: Jueves, 5:00 pm – 6:00 pm (1 hora sincrónica)
+Sede: Virtual
+Aula: Aula virtual - Google Meet
+Fecha de inicio: 10/08/2026
+Fecha máxima para recepción de trabajos: 12/09/2026
+Fecha de cierre: 20/09/2026
+Créditos / horas: 2
+Cupo / inscritos: 50 / 20
+
+Regla: si la fecha de clase cae en festivo colombiano, la sesión se cursa como clase autónoma.
+Fuente de grupos/bloque: config/cursos/carga_academica_2026.json
+Ver calendario e importación a Calendar en esta carpeta.

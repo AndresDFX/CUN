@@ -1,0 +1,217 @@
+[
+  {
+    "type": "bullets",
+    "title": "De la pregunta a los compromisos: qué cambia hoy",
+    "bullets": [
+      "La sesión pasada la pregunta **abrió** el trabajo. Hoy lo **cerramos con compromisos**.",
+      "Un objetivo es una **promesa verificable**: alguien debe poder decir “esto se cumplió” o “esto no”.",
+      "  Por eso los objetivos que escriban hoy son los que en Proyecto II se van a **tachar uno por uno**.",
+      "Caso de aula: “Objetivo específico 1: buscar artículos sobre IA”. Eso no es un objetivo, es su lunes.",
+      "  Un objetivo produce **conocimiento**; una actividad solo consume tiempo.",
+      "Hoy salen con el bloque de formulación casi completo: general, específicos, justificación, alcances y limitaciones.",
+      "Ese bloque completo, leído de corrido, debe sonar a **una sola historia sin saltos**."
+    ],
+    "note": "Si su pregunta cambió durante la semana, actualícela **ahora**: absolutamente todo lo de hoy cuelga de ella."
+  },
+  {
+    "type": "bullets",
+    "title": "Objetivo general: la pregunta dicha en afirmativo",
+    "bullets": [
+      "El **objetivo general** declara el propósito global del anteproyecto.",
+      "  Dice **lo mismo** que la pregunta, pero sin signo de interrogación y empezando por un verbo.",
+      "Estructura recomendada: **verbo + qué + en quién o dónde + para qué**.",
+      "  “**Caracterizar** las prácticas de retroalimentación **del curso X** para **proponer** un esquema asistido por IA.”",
+      "Uno solo. Si aparecen dos generales, en realidad hay dos investigaciones metidas en un mismo documento.",
+      "Prueba del espejo: lea la pregunta y enseguida el general, en voz alta.",
+      "  Si no suenan a lo mismo, algo sobra o algo falta. Casi siempre el general se fue a prometer de más."
+    ],
+    "note": "El general no puede prometer resultados que el diseño propuesto no vaya a poder producir."
+  },
+  {
+    "type": "table",
+    "title": "Objetivo general vs. objetivos específicos",
+    "headers": ["", "Objetivo general", "Objetivos específicos"],
+    "rows": [
+      ["**Cuántos**", "Uno", "Tres, normalmente (entre dos y cuatro)"],
+      ["**Qué declara**", "El propósito global del estudio", "Los escalones verificables para alcanzarlo"],
+      ["**Relación con la pregunta**", "Es la pregunta puesta en afirmativo", "Cada uno responde una parte de la pregunta"],
+      ["**Prueba de calidad**", "Suena igual que la pregunta", "Sumados, y solo sumados, dan el general"],
+      ["**Error típico**", "Prometer más de lo que se podrá cumplir", "Escribir actividades de clase o pasos administrativos"],
+      ["**Cuándo se “tacha”**", "Al cerrar Proyecto II", "Uno por uno, a medida que se cumplen"]
+    ],
+    "col_w": [2.4, 3.8, 4.8],
+    "note": "Regla de la suma: si cumplo los tres específicos y **aún así** no cumplí el general, falta un específico. Si cumplo dos y el general ya está cumplido, sobra uno."
+  },
+  {
+    "type": "table",
+    "title": "Verbos: los que puedo verificar y los que no",
+    "headers": ["Verbos que SÍ (observables)", "Qué producen", "Verbos prohibidos (no observables)"],
+    "rows": [
+      ["**Caracterizar**", "Una descripción organizada de un fenómeno", "**Conocer** — ¿cómo se ve que alguien “conoció”?"],
+      ["**Identificar**", "Un listado justificado de elementos", "**Aprender** — es un estado interno, no un resultado"],
+      ["**Analizar**", "Una descomposición con criterios explícitos", "**Entender** — nadie puede auditarlo"],
+      ["**Contrastar**", "Una comparación entre casos o fuentes", "**Interesarse** — no es un logro de investigación"],
+      ["**Diseñar / proponer**", "Un artefacto o una propuesta documentada", "**Concientizar** — es una intención, no un objetivo"],
+      ["**Establecer**", "Criterios, requisitos o relaciones", "**Profundizar** — no dice dónde termina"]
+    ],
+    "col_w": [2.6, 4.2, 4.2],
+    "note": "Prueba del verbo: si no puedo **ver** que se cumplió, no sirve. Y en Proyecto I “diseñar” y “proponer” son legítimos; “aplicar” e “implementar” todavía no."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se arman tres específicos que de verdad sumen",
+    "bullets": [
+      "Piense en **escalones**, no en tareas: cada uno deja al lector un piso más arriba.",
+      "Patrón que funciona en anteproyectos de IA:",
+      "  **Específico 1 — describir:** caracterizar la situación actual, es decir, qué pasa hoy sin la IA.",
+      "  **Específico 2 — fundamentar:** identificar criterios, requisitos o categorías desde teoría y antecedentes.",
+      "  **Específico 3 — proponer:** diseñar la propuesta o el diseño metodológico que responde la pregunta.",
+      "Cada específico se escribe con **un solo verbo**. Dos verbos significan dos objetivos escondidos.",
+      "Ninguno puede depender de datos que en Proyecto I no se van a recolectar.",
+      "  “Evaluar el impacto del asistente en los usuarios” exige campo: eso es Proyecto II."
+    ],
+    "note": "Los específicos ordenan el documento: casi siempre se corresponden con los capítulos que van a escribir."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — de la pregunta a los objetivos (línea educación)",
+    "bullets": [
+      "**Pregunta:** “¿Qué prácticas de retroalimentación mediadas por un asistente de IA podrían proponerse para el curso de Laboratorio de Automatización, a partir de las fricciones que reportan estudiantes y docente?”",
+      "**Objetivo general:**",
+      "  “**Proponer** un esquema de retroalimentación mediada por un asistente de IA para el curso de Laboratorio de Automatización, a partir de las fricciones identificadas en su proceso actual de entrega y corrección.”",
+      "**Específico 1:** “**Caracterizar** el proceso actual de entrega y retroalimentación de informes en el curso.”",
+      "**Específico 2:** “**Identificar**, desde antecedentes y marco teórico, los criterios de una retroalimentación formativa efectiva.”",
+      "**Específico 3:** “**Diseñar** la propuesta de esquema asistido por IA y su ruta de validación para Proyecto II.”",
+      "Fíjense: los tres se pueden tachar, ninguno dice “leer autores” y ninguno exige salir a campo hoy."
+    ],
+    "note": "El específico 3 termina en “ruta de validación”, no en “validación”. Así se cierra un anteproyecto honesto."
+  },
+  {
+    "type": "table",
+    "title": "El mismo hilo en la línea de entornos productivos",
+    "headers": ["Pieza", "Redacción"],
+    "rows": [
+      ["**Pregunta**", "“¿Cómo se registra hoy la información de paradas de máquina en la línea de empaque de la planta X y qué requisitos debería cumplir una propuesta de asistente de IA, según los supervisores de turno?”"],
+      ["**General**", "“Proponer los requisitos de un asistente de IA para el registro de paradas de máquina en la línea de empaque de la planta X, a partir de la caracterización del proceso actual.”"],
+      ["**Específico 1**", "“Caracterizar el procedimiento actual de registro de paradas y sus puntos de pérdida de información.”"],
+      ["**Específico 2**", "“Identificar, desde antecedentes y marco teórico, los criterios de calidad de un registro operativo asistido por IA.”"],
+      ["**Específico 3**", "“Establecer los requisitos funcionales y las restricciones de la propuesta, junto con su ruta de validación para Proyecto II.”"]
+    ],
+    "col_w": [1.5, 8.5],
+    "note": "Mismo patrón que en el ejemplo anterior: **describir → fundamentar → proponer**. Cambia el contexto, no la estructura."
+  },
+  {
+    "type": "bullets",
+    "title": "Justificación: los tres pilares (y por qué no es autobiografía)",
+    "bullets": [
+      "Responde a una sola pregunta: **¿por qué vale la pena hacer esto?**",
+      "**Pilar 1 — el vacío:** qué no se sabe todavía o qué no se resuelve bien en la práctica.",
+      "  Se apoya en los antecedentes: “se ha estudiado A y B, pero no en este contexto”.",
+      "**Pilar 2 — la relevancia:** a quién le sirve el resultado y para qué decisión concreta.",
+      "  Nombre al beneficiario: el docente del curso, el supervisor de turno, el área de mantenimiento.",
+      "**Pilar 3 — la pertinencia:** por qué encaja en la línea oficial de IA del programa.",
+      "Se argumenta el aporte **esperable**, nunca resultados obtenidos: todavía no se ha ejecutado nada.",
+      "“Me gusta la IA” y “trabajo en esa empresa” son motivaciones legítimas, pero **no** son argumentos."
+    ],
+    "note": "Extensión típica: entre media página y una. Se escribe en presente y sin promesas grandilocuentes."
+  },
+  {
+    "type": "table",
+    "title": "Justificación: frases que se caen y frases que se sostienen",
+    "headers": ["Se cae", "Por qué", "Se sostiene"],
+    "rows": [
+      ["“Este proyecto es muy importante para la sociedad.”", "Genérico: sirve igual para cualquier trabajo del mundo", "“La propuesta le da al docente del curso un criterio para devolver retroalimentación en días y no en semanas.”"],
+      ["“Me apasiona la inteligencia artificial.”", "Autobiografía; no es un argumento de investigación", "“Los antecedentes revisados abordan cursos virtuales, pero no laboratorios presenciales como el de este estudio.”"],
+      ["“Con esto la empresa ahorrará millones.”", "Promete un resultado que aún no se ha medido", "“El registro actual pierde información de turno, lo que impide priorizar mantenimiento; documentarlo es el primer paso.”"],
+      ["“Hay mucha información sobre el tema.”", "Eso justifica **no** hacerlo", "“El fenómeno está documentado a nivel internacional, pero hay poca evidencia en plantas medianas del país.”"]
+    ],
+    "col_w": [2.8, 2.4, 5.4],
+    "note": "Regla: si la frase sirve igual para el trabajo de otro equipo, bórrela. Una justificación es **intransferible**."
+  },
+  {
+    "type": "table",
+    "title": "Alcance y limitación: la promesa y la honestidad",
+    "headers": ["", "Alcance (lo que SÍ)", "Limitación (lo que NO)"],
+    "rows": [
+      ["**Qué declara**", "Hasta dónde llega el estudio", "Qué restricciones reales lo condicionan"],
+      ["**Ejemplos**", "Población objetivo, periodo, categorías o variables, tipo de producto entregado", "Acceso restringido a la organización, tiempo del programa, disponibilidad de informantes"],
+      ["**Restricción propia del curso**", "Se entrega un **diseño propuesto**", "En Proyecto I **no se aplican instrumentos** ni se recolectan datos"],
+      ["**Cómo se escribe**", "Viñetas afirmativas: “el estudio abarca…”", "Viñetas honestas: “el estudio no incluye…”"],
+      ["**Efecto en el lector**", "Sabe qué esperar y no exige de más", "Confía: quien declara sus límites conoce su trabajo"]
+    ],
+    "col_w": [2.4, 3.9, 3.9],
+    "note": "Declarar limitaciones **no** debilita el anteproyecto: lo hace creíble. Lo que sí lo debilita es prometer lo que no se podrá cumplir."
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se devuelve corregido en este bloque",
+    "boxes": [
+      ["advertencia", "**Específicos que son tareas.** “Leer autores”, “reunirnos con el equipo”, “buscar papers” son su agenda de trabajo, no objetivos. Pregúntese qué **conocimiento** produce ese paso y escriba eso."],
+      ["advertencia", "**Verbos que no se ven.** Conocer, entender, aprender, concientizar. Cámbielos por analizar, caracterizar, identificar, contrastar, establecer, diseñar o proponer."],
+      ["aclaracion", "**Alcance y limitación en el mismo párrafo.** Sepárelos en dos listas: lo que SÍ hará y lo que NO podrá. Si están revueltos, el lector no sabe qué le prometieron."],
+      ["info", "**Objetivos que exigen campo.** “Evaluar el impacto”, “medir la satisfacción”, “aplicar el instrumento” pertenecen a Proyecto II. En Proyecto I se propone el diseño y su ruta de validación."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: cómo queda el bloque de formulación en el documento",
+    "bullets": [
+      "**1.** En el documento del equipo, con la plantilla APA de la CUN, cree los subtítulos en este orden exacto:",
+      "  Planteamiento → Pregunta → Objetivo general → Objetivos específicos → Justificación → Alcances → Limitaciones.",
+      "**2.** Copie su pregunta **justo encima del general**, aunque luego la mueva: verlas juntas evita el desfase.",
+      "**3.** Escriba el general con la fórmula verbo + qué + dónde + para qué, y léalo en voz alta contra la pregunta.",
+      "**4.** Numere los específicos 1, 2 y 3, cada uno con un solo verbo al inicio.",
+      "**5.** Redacte la justificación en tres párrafos, uno por pilar: vacío, relevancia, pertinencia.",
+      "**6.** Escriba alcances y limitaciones como **dos listas** de viñetas separadas, nunca en prosa mezclada.",
+      "**7.** Suba el avance a CDigital como **S03_ObjetivosJustificacion_Apellidos**."
+    ],
+    "note": "El documento es **acumulativo**: no abran un archivo nuevo; sigan escribiendo debajo de lo de la sesión anterior. [URL CDigital — campus del curso pendiente]"
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER (20 minutos) — redacción del bloque de formulación",
+    "bullets": [
+      "**Consigna literal:** 20 minutos en el documento del equipo. Cuatro productos.",
+      "  **(1)** Objetivo general con la fórmula verbo + qué + dónde + para qué.",
+      "  **(2)** Tres específicos numerados, un verbo cada uno, en el orden describir → fundamentar → proponer.",
+      "  **(3)** De media a una página de justificación: tres párrafos, un pilar por párrafo.",
+      "  **(4)** Alcances y limitaciones en dos listas de viñetas separadas.",
+      "El Docente circula por los equipos; prioridad para quienes no logren pasar del específico 1.",
+      "**Criterio de éxito (verificable):** cada específico se puede “tachar” el día que se cumpla, y el general suena igual que la pregunta en afirmativo.",
+      "  Prueba final: tache mentalmente los tres específicos. ¿Ya quedó cumplido el general? Si no, falta uno."
+    ],
+    "note": "Prohibido en este taller: verbos no observables, objetivos que exijan recolectar datos y justificaciones que hablen de ustedes."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de subir el avance",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
+    "rows": [
+      ["El general refleja la pregunta", "Los leo seguidos y dicen lo mismo", "[  ]"],
+      ["Hay un solo objetivo general", "Cuento los verbos principales: uno", "[  ]"],
+      ["Cada específico tiene un verbo observable", "Ninguno usa conocer, entender ni aprender", "[  ]"],
+      ["Los específicos suman el general", "Al tacharlos los tres, el general queda cumplido", "[  ]"],
+      ["Ningún específico exige campo", "No aparece aplicar, medir impacto ni encuestar", "[  ]"],
+      ["La justificación tiene los tres pilares", "Señalo el párrafo del vacío, el de relevancia y el de pertinencia", "[  ]"],
+      ["Alcance y limitación están separados", "Son dos listas distintas, con título propio", "[  ]"],
+      ["Las citas van en APA 7", "Cada afirmación prestada tiene autor y año", "[  ]"]
+    ],
+    "col_w": [3.0, 5.6, 0.8],
+    "note": "Ocho casillas. Si alguna queda vacía, el bloque de formulación todavía no está listo para la entrega acumulativa."
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué traer a la próxima sesión",
+    "bullets": [
+      "**Empaquetar** el bloque completo de formulación en el documento, en el orden trabajado hoy.",
+      "  Planteamiento, pregunta, objetivos, justificación, alcances y limitaciones, con sus referencias en APA 7.",
+      "**Revisar la coherencia de punta a punta:** léanlo de corrido; debe sonar a una sola historia sin saltos.",
+      "  Ese hilo —problema, pregunta, objetivos, justificación, alcances— es exactamente lo que se evalúa.",
+      "**Generar las referencias** de lo citado en **ZoteroBib (zbib.org)** o con las citas integradas de Google Docs.",
+      "**Subir** el avance a CDigital como **S03_ObjetivosJustificacion_Apellidos**.",
+      "Para la próxima sesión: traigan **tres estudios previos** localizados en Google Scholar, SciELO o Redalyc.",
+      "  Empezamos antecedentes: estudios con autor, año, método y hallazgos. No noticias, no blogs."
+    ],
+    "note": "Cada entrega se construye encima de la anterior: no son tareas sueltas. Las tutorías por equipo se acuerdan con el Docente durante la semana."
+  }
+]

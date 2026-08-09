@@ -1,0 +1,244 @@
+[
+  {
+    "type": "bullets",
+    "title": "El problema que resolvimos... y que nadie tenía",
+    "bullets": [
+      "Escena típica de Ingeniería: el equipo entrega un sistema impecable y **nadie lo usa**.",
+      "  El código estaba bien. El problema estaba mal planteado desde el minuto uno.",
+      "Caso del campus: los estudiantes pierden hasta **una hora buscando laboratorio libre**.",
+      "  Reflejo del ingeniero: \"hago una app de reservas\". Solución elegida antes de entender el dolor.",
+      "  Al observar de verdad: el dolor no era reservar, era la **incertidumbre** de si habrá cupo.",
+      "**Design Thinking** existe para aguantar ese impulso: primero entender, después resolver.",
+      "Hoy salimos con dos productos concretos: un **How Might We** bien redactado y un **banco de mínimo 8 ideas** con 1–2 elegidas.",
+      "El músculo que entrenamos hoy —abrir muchas opciones y luego cerrar con criterio— lo van a usar toda su vida profesional."
+    ],
+    "note": "Regla del día: la primera idea que se les ocurra NO es la que van a entregar."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es Design Thinking (y qué NO es)",
+    "bullets": [
+      "**Design Thinking (DT)**: enfoque de resolución de problemas **centrado en las personas**, popularizado por la consultora **IDEO** y la **d.school de Stanford**.",
+      "Su idea central es simple pero incómoda para quien viene de Ingeniería: **la solución se pospone** hasta entender al usuario y su problema.",
+      "**No es lineal, es iterativo**: se avanza, se prueba con un usuario, se descubre que el problema estaba mal planteado y se retrocede.",
+      "  Ese ir y volver **no es fracaso**: es el método funcionando.",
+      "Lo que DT **NO** es:",
+      "  **No** es llenar una pared de post-its de colores — los post-its son el envase, no el método.",
+      "  **No** es una fase de \"creatividad\" antes del trabajo serio; es el trabajo serio.",
+      "  **No** reemplaza la Ingeniería: le pone un **destinatario** a la solución técnica.",
+      "  **No** garantiza acertar: garantiza **descubrir el error barato y temprano**, no caro y tarde."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cinco etapas del Design Thinking",
+    "headers": ["Etapa", "Pregunta que responde", "Producto mínimo que deja", "Hoy"],
+    "rows": [
+      ["**Empatizar**", "¿Qué vive y siente el usuario?", "Notas de observación o entrevista", "Ya lo traen"],
+      ["**Definir**", "¿Cuál es el problema real?", "Pregunta **How Might We (HMW)**", "**Foco fuerte**"],
+      ["**Idear**", "¿Qué alternativas existen?", "Lista amplia, sin juzgar", "**Foco fuerte**"],
+      ["**Prototipar**", "¿Cómo se ve o se toca la idea?", "Boceto, storyboard, mock feo", "Conceptual"],
+      ["**Evaluar / testear**", "¿Qué aprendimos al mostrarlo?", "3 aprendizajes del usuario", "Próximas sesiones"]
+    ],
+    "note": "No es una escalera: es un **ciclo**. Volver a Definir después de testear es lo normal, no un retroceso.",
+    "col_w": [2.0, 3.4, 3.6, 1.6]
+  },
+  {
+    "type": "bullets",
+    "title": "El doble diamante: abrir y cerrar, dos veces",
+    "bullets": [
+      "La imagen que mejor funciona: se **abre** (divergencia) y se **cierra** (convergencia)... y luego se repite.",
+      "  **Diamante 1 — el problema**: abro para explorar todo lo que le pasa al usuario; cierro para escoger **un** problema (el HMW).",
+      "  **Diamante 2 — la solución**: abro para generar muchas ideas; cierro para escoger **1 o 2** y prototiparlas.",
+      "El error clásico que verán hoy en clase: **converger a los 30 segundos**.",
+      "  Alguien propone algo y otro dice \"eso no se puede\". Ahí mataron la idea antes de que naciera.",
+      "  Idear juzgando es como **manejar con el freno de mano puesto**.",
+      "La solución no es prohibir el juicio: es **separarlo en el tiempo**.",
+      "  \"Ahora solo generamos. En cinco minutos filtramos.\" Los dos momentos son necesarios; mezclarlos no."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Divergir y converger son dos oficios distintos",
+    "headers": ["", "Pensamiento **divergente**", "Pensamiento **convergente**"],
+    "rows": [
+      ["Objetivo", "Ampliar el campo de opciones", "Filtrar y **decidir**"],
+      ["Qué importa", "La **cantidad**; se acepta la rareza", "La **calidad del argumento**"],
+      ["Regla sagrada", "**Prohibido juzgar**", "Criterios **explícitos y visibles**"],
+      ["Actitud", "\"¿Y si además...?\"", "\"¿Con qué criterio la elijo?\""],
+      ["Criterios típicos", "Ninguno todavía", "Deseabilidad · factibilidad · viabilidad"],
+      ["Señal de que va bien", "Aparecen ideas absurdas", "Se descarta algo **sin culpa**"]
+    ],
+    "note": "**Deseabilidad**: ¿lo quiere el usuario? · **Factibilidad**: ¿lo podemos hacer en el semestre? · **Viabilidad**: ¿se sostiene en el tiempo?",
+    "col_w": [1.8, 3.6, 3.6]
+  },
+  {
+    "type": "bullets",
+    "title": "How Might We: la bisagra entre problema y solución",
+    "bullets": [
+      "El **HMW** es la frase que traduce un problema en un **reto accionable**. En español: \"¿Cómo podríamos...?\".",
+      "Fórmula: **¿Cómo podríamos [acción] para [usuario] de modo que [resultado deseado]?**",
+      "Los tres ingredientes son obligatorios:",
+      "  **[usuario]** — una persona concreta, no \"la sociedad\" ni \"los usuarios\".",
+      "  **[acción]** — un verbo de cambio: reducir, evitar, acortar, facilitar, anticipar.",
+      "  **[resultado]** — lo que gana esa persona: tiempo, tranquilidad, dinero, seguridad.",
+      "Un buen HMW vive en el **punto medio**:",
+      "  Demasiado amplio: \"¿Cómo salvamos la educación?\" — no se puede atacar.",
+      "  Demasiado estrecho: \"¿Cómo hacemos un botón de reserva?\" — ya contiene la solución.",
+      "Prueba rápida: si su HMW menciona una tecnología (**app, IA, sensor, plataforma**), está mal escrito."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "HMW mal escrito vs. HMW bien escrito",
+    "headers": ["Versión mal escrita", "Qué falla", "Versión reescrita"],
+    "rows": [
+      ["\"¿Cómo hacemos una app con IA?\"", "Empieza por la **tecnología**; ya encerró la respuesta", "\"¿Cómo podríamos **reducir la incertidumbre de reserva de laboratorio** para que **el estudiante de Ingeniería** **no pierda su hora de práctica**?\""],
+      ["\"¿Cómo mejoramos la universidad?\"", "Sin usuario ni dolor; **imposible de atacar**", "\"¿Cómo podríamos **avisar la disponibilidad de equipos** a **quien va a clase de laboratorio** para que **no viaje en vano**?\""],
+      ["\"¿Cómo hacemos un botón de reserva?\"", "Ya es la **solución** disfrazada de pregunta", "\"¿Cómo podríamos **acortar el trámite de reserva** para que **el estudiante con 10 minutos entre clases** **alcance a hacerlo**?\""],
+      ["\"¿Cómo ayudamos a los usuarios?\"", "\"Usuarios\" no es nadie; \"ayudar\" no es una acción", "\"¿Cómo podríamos **evitar los choques de turno** entre **estudiantes de dos cursos** para que **ninguno pierda la práctica**?\""]
+    ],
+    "note": "Fíjense: la columna de la derecha **no** dice cómo se resuelve. Deja espacio para muchas soluciones — esa es la señal de un buen HMW.",
+    "col_w": [2.6, 2.6, 5.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (1/2): un HMW y diez ideas sin filtrar",
+    "bullets": [
+      "**HMW del caso:** \"¿Cómo podríamos reducir la incertidumbre de reserva de laboratorio para que el estudiante de Ingeniería no pierda su hora de práctica?\"",
+      "Ahora suelto **diez ideas en voz alta**, mezclando serias y disparatadas, **sin juzgar ninguna**:",
+      "  1. Tablero de disponibilidad en la puerta del laboratorio.",
+      "  2. Aviso por WhatsApp cuando se libera un equipo.",
+      "  3. Reserva por código QR pegado en cada mesa.",
+      "  4. **Un semáforo gigante** en la entrada: verde = hay cupo. (absurda a propósito)",
+      "  5. Un **mayordomo** que asigna los equipos. (absurda a propósito)",
+      "  6. Turnos fijos por curso, como el horario de clases.",
+      "  7. Lista de espera con aviso automático.",
+      "  8. **Asignación automática por horario**, sin reservar nada.",
+      "  9. Foto de la ocupación actualizada cada 15 minutos.",
+      "  10. Cupo liberado si no llegas en 10 minutos.",
+      "Miren la #8: nació de quitarle lo absurdo a la #5. **La idea loca destrabó la seria.**"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (2/2): convergemos con tres criterios",
+    "bullets": [
+      "Ya abrimos. Ahora **cierro** con criterios que escribo a la vista de todos:",
+      "  **1. ¿Cuánto alivia el dolor?** — el estudiante deja de perder la hora.",
+      "  **2. ¿La puedo probar este semestre?** — con lo que tengo, sin presupuesto.",
+      "  **3. ¿Aprendo rápido si la muestro?** — ¿en cuántos días tengo respuesta de un usuario?",
+      "**Idea 8 (asignación automática por horario)** → alivia mucho, se prueba con una hoja de cálculo, aprendo en una semana. **Pasa.**",
+      "**Idea 3 (reserva por QR)** → alivia medio, se prototipa en papel, aprendo en dos días. **Pasa como plan B.**",
+      "**Idea 4 (semáforo gigante)** → alivia poco y cuesta plata que no tengo. **La suelto sin culpa.**",
+      "Conclusión del ejercicio: **la elección se justifica con criterios, no con gusto**.",
+      "  Si una idea no pasa ningún criterio, descartarla no es perder trabajo: es haber ganado claridad."
+    ],
+    "note": "Criterio de honestidad: si sus tres criterios dan empate en todo, es que no discriminan. Cámbielos."
+  },
+  {
+    "type": "table",
+    "title": "SCAMPER: siete preguntas para no quedarse en blanco",
+    "headers": ["Letra", "Pregunta que se hace", "Aplicada al caso del laboratorio"],
+    "rows": [
+      ["**S** — Sustituir", "¿Qué pieza puedo reemplazar por otra?", "Cambiar la reserva manual por el horario del curso"],
+      ["**C** — Combinar", "¿Qué dos cosas junto en una?", "Unir la lista de asistencia con la asignación de equipo"],
+      ["**A** — Adaptar", "¿Qué copio de otro contexto?", "Los turnos del banco: te llega el llamado al celular"],
+      ["**M** — Modificar", "¿Qué agrando, achico o cambio de forma?", "Bloques de 20 minutos en vez de 2 horas"],
+      ["**P** — Poner en otro uso", "¿Para qué más sirve lo que ya existe?", "Usar el carné de la CUN como llave del equipo"],
+      ["**E** — Eliminar", "¿Qué paso quito por completo?", "**Eliminar la reserva**: el sistema asigna solo"],
+      ["**R** — Reordenar", "¿Qué pasa si invierto el orden?", "Primero llego, luego el sistema registra: sin trámite previo"]
+    ],
+    "note": "Úsenlo cuando se sequen a las 3 ideas. Cada letra les fuerza **al menos una idea más** — son siete empujones garantizados.",
+    "col_w": [2.2, 3.6, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Dos técnicas más para que hable todo el grupo",
+    "bullets": [
+      "**Brainwriting 6-3-5** — la lluvia de ideas silenciosa:",
+      "  Cada persona escribe **3 ideas** en silencio durante 5 minutos y **pasa la hoja** al de al lado.",
+      "  El siguiente **no critica**: construye sobre lo que ya está escrito y agrega 3 más.",
+      "  Por qué funciona: evita que hable solo el extrovertido y **multiplica el volumen** de ideas en minutos.",
+      "**Analogías de otra industria** — la fuente más subestimada de innovación:",
+      "  Pregunta: \"¿Cómo resuelve **otro sector** este mismo dolor?\"",
+      "  Turnos de banco, reservas de restaurante, casilleros de gimnasio, filas del aeropuerto.",
+      "  Trasplantar una solución probada de otro sector suele ser más rápido que inventar desde cero.",
+      "Si trabajan solos, el brainwriting también sirve: escriban 3 ideas, déjenlas 5 minutos y vuelvan a la hoja **sin borrar nada**."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes y mitos que hay que desarmar",
+    "boxes": [
+      ["advertencia", "**\"Design Thinking es llenar post-its de colores.\"** Los post-its son el envase. El método es **entender antes de resolver** e **iterar con el usuario**. Sin usuario, es manualidad."],
+      ["advertencia", "**\"Ya sé la solución, ¿para qué idear más?\"** Su primera idea es la más obvia — y por eso, la que ya existe. La divergencia le da 2 alternativas mejores en 10 minutos."],
+      ["advertencia", "**\"Prototipar es programar la versión 1.\"** No. Prototipar es **lo más barato que responde su duda más cara**. Un dibujo en Excalidraw es un prototipo válido hoy."],
+      ["advertencia", "**\"Esa idea es ridícula, no la anoto.\"** Anótela igual. La idea rara #7 casi siempre destraba la idea seria #8 — como pasó con el mayordomo."],
+      ["aclaracion", "**Divergir no es improvisar.** Tiene reglas: cantidad sobre calidad, cero juicio, construir sobre la idea del otro, y una sola conversación a la vez."],
+      ["info", "**Herramientas de hoy, todas gratis y en el navegador:** Excalidraw (excalidraw.com, sin cuenta), tldraw, o una plantilla free de Miro. Si Miro pide login, el plan B siempre es Excalidraw."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: su boceto en Excalidraw en 5 minutos",
+    "bullets": [
+      "Un prototipo conceptual es **lo mínimo para que otro entienda y opine**. No es arte y no es la app.",
+      "**1.** Abra **excalidraw.com** — no pide cuenta, no instala nada, funciona en el navegador.",
+      "**2.** Escriba arriba su **HMW completo** con la herramienta de texto. Es el título del tablero.",
+      "**3.** Dibuje **una caja por cada pantalla o momento** del flujo (rectángulo: tecla `R`).",
+      "  Ejemplo del caso: [Llego al laboratorio] → [El sistema me reconoce] → [Me asigna equipo] → [Trabajo].",
+      "**4.** Una las cajas con **flechas** (tecla `A`) en el orden en que el usuario las vive.",
+      "**5.** Marque con otro color **dónde desaparece el dolor** — ese es el corazón de su propuesta.",
+      "**6.** Exporte: menú → **Export image → PNG**. Esa imagen es la que sube a CDigital.",
+      "Si se traba dibujando: **cajitas y flechas, feo está bien**. El criterio no es la estética, es que otro lo entienda sin explicación."
+    ],
+    "note": "Alternativa igual de válida: un **storyboard de 4 viñetas** dibujado a mano y fotografiado."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Ideación sobre su propio problema (22 minutos)",
+    "bullets": [
+      "Trabajan sobre **SU** problema, solos o en dúo. Cuatro pasos, en este orden:",
+      "**Paso 1 (4 min)** · Redacten **su HMW** con la fórmula: ¿Cómo podríamos [acción] para [usuario] de modo que [resultado]?",
+      "**Paso 2 (8 min)** · Generen **mínimo 8 ideas** sin juzgar ninguna. Si se secan antes de 8, apliquen **SCAMPER**.",
+      "**Paso 3 (5 min)** · **Elijan 1 o 2** y justifíquenlas con los tres criterios: alivia el dolor · factible este semestre · aprendo rápido.",
+      "**Paso 4 (5 min)** · **Boceto de 1 minuto** en Excalidraw: cajitas y flechas del flujo elegido.",
+      "Al final le pido a **tres personas** que lean **solo su HMW**, en 20 segundos cada una.",
+      "**Criterio de éxito verificable:** su HMW menciona **al usuario** y **el dolor**, y **no** menciona ninguna tecnología.",
+      "  Si en su HMW aparece la palabra app, plataforma, IA o sistema, todavía no está listo: reescríbalo."
+    ],
+    "note": "Entregable de hoy: **HMW + banco de ideas + captura del boceto**, en un solo archivo."
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de entregar: revise usted mismo",
+    "bullets": [
+      "☐ Mi HMW nombra **una persona concreta**, no \"los usuarios\" ni \"la comunidad\".",
+      "☐ Mi HMW dice **qué gana** esa persona (tiempo, tranquilidad, dinero, seguridad).",
+      "☐ Mi HMW **no** contiene la palabra app, plataforma, sistema, IA ni sensor.",
+      "☐ Tengo **8 ideas o más** escritas, y **al menos una es claramente absurda** (señal de que sí divergí).",
+      "☐ Ninguna idea fue borrada durante la fase de generación.",
+      "☐ Elegí **1 o 2** ideas y escribí **por qué**, nombrando los tres criterios uno por uno.",
+      "☐ Mi boceto tiene **cajas y flechas** y se entiende sin que yo lo explique.",
+      "☐ El archivo está nombrado **`S03_Ideacion_Apellido`** y subido a **CDigital**.",
+      "Si alguna casilla queda vacía, todavía tiene trabajo — y sabe exactamente cuál."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Tres ideas para llevarse de hoy:**",
+      "  1. **Primero entiendo, después resuelvo.**",
+      "  2. **Divergir y converger son momentos distintos** — no los mezclo.",
+      "  3. Un buen **HMW mira al usuario**, no a la tecnología.",
+      "**(a)** Suban a **CDigital** su HMW + banco de ideas + boceto como **`S03_Ideacion_Apellido`**.",
+      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "**(b)** Vuelvan al boceto con **una segunda mirada** al día siguiente y mejórenlo: casi siempre sobra un paso.",
+      "**(c)** Traigan una **clasificación tentativa** de su idea en un tipo de innovación: producto, proceso, organización, marketing o social.",
+      "  No importa si se equivocan al clasificar: la próxima sesión les damos el criterio oficial.",
+      "**Próxima sesión:** Gestión de la innovación con el **Manual de Oslo (OCDE)** — el idioma común para nombrar lo que están construyendo."
+    ]
+  }
+]

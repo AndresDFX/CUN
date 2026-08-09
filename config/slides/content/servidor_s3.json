@@ -1,0 +1,165 @@
+[
+  {
+    "type": "bullets",
+    "title": "Paquete y repositorio: la tienda oficial del servidor",
+    "bullets": [
+      "En un servidor **nunca** se baja el `.exe` suelto y se da \"siguiente\": el software se pide a un catálogo oficial con @@un solo comando@@.",
+      "Un **paquete** = el programa + sus instrucciones: qué archivos copiar, versión, *scripts* y su lista de **dependencias**.",
+      "  Debian / Ubuntu: `.deb` (herramienta de bajo nivel `dpkg`).",
+      "  Red Hat / Fedora: `.rpm` (herramienta de bajo nivel `rpm`).",
+      "Un **repositorio** = servidor en internet con miles de paquetes probados y un **catálogo** (índice) de qué hay y en qué versión.",
+      "  Los repos configurados viven en `/etc/apt/sources.list` o `/etc/yum.repos.d/`.",
+      "**Infierno de dependencias:** casi ningún programa corre solo. El gestor lee el catálogo y trae el programa @@y todas sus dependencias@@ en el orden correcto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los gestores de paquetes",
+    "headers": ["Gestor", "Sistema operativo", "Formato", "Herramienta base"],
+    "rows": [
+      ["**apt**", "Debian, Ubuntu Server", "`.deb`", "`dpkg`"],
+      ["**dnf**", "Fedora, RHEL, Rocky, Alma", "`.rpm`", "`rpm`"],
+      ["**winget**", "Windows 10/11 y Server", "`.msi` `.exe` `.msix`", "Windows Installer / MSIX"]
+    ],
+    "note": "En Windows existe además **Chocolatey** (`choco`). Instalar siempre exige privilegios: @@`sudo` en Linux, consola de administrador en Windows.@@"
+  },
+  {
+    "type": "bullets",
+    "title": "¿Por qué se firman los repositorios y los paquetes?",
+    "bullets": [
+      "Bajar software de internet plantea dos riesgos que el servidor debe cerrar:",
+      "  **Integridad:** ¿alguien alteró el paquete en el camino? (un ataque *man-in-the-middle*).",
+      "  **Autenticidad:** ¿el repositorio es el oficial o uno falso montado por un atacante?",
+      "La solución es la **firma digital** con **GPG** y criptografía de clave pública:",
+      "  El mantenedor firma el catálogo y los paquetes con su **clave privada** (secreta).",
+      "  El servidor verifica esa firma con la **clave pública** que tiene guardada.",
+      "Si la firma cuadra → viene de quien dice **y** no cambió ni un bit. Si no cuadra, `apt` / `dnf` lo **rechaza** (error `NO_PUBKEY`).",
+      "La firma es @@el sello de lacre de una caja de medicamentos@@: si está roto o es de otra marca, no se toma la pastilla.",
+      "Los **checksums** (hashes) confirman además que la descarga llegó completa y sin corromperse."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El ciclo de vida del software",
+    "headers": ["Quiero…", "apt (Ubuntu)", "dnf (Fedora/RHEL)", "winget (Windows)"],
+    "rows": [
+      ["Refrescar el catálogo", "`sudo apt update`", "`sudo dnf check-update`", "(automático)"],
+      ["Buscar / ver info", "`apt search X`", "`dnf search X`", "`winget search X`"],
+      ["Instalar", "`sudo apt install X`", "`sudo dnf install X`", "`winget install X`"],
+      ["Actualizar TODO", "`sudo apt upgrade`", "`sudo dnf upgrade`", "`winget upgrade --all`"],
+      ["Remover", "`sudo apt remove X`", "`sudo dnf remove X`", "`winget uninstall X`"],
+      ["Remover + config", "`sudo apt purge X`", "`dnf remove` + limpieza", "—"]
+    ],
+    "note": "@@`update` ≠ `upgrade`@@ y `autoremove` limpia las dependencias huérfanas que ya nadie usa."
+  },
+  {
+    "type": "bullets",
+    "title": "La trampa que confunde a todos: update ≠ upgrade",
+    "bullets": [
+      "@@`apt update` NO instala nada.@@ Va al repositorio y baja la **lista** actualizada de paquetes y versiones; solo pone al día el índice local.",
+      "  Analogía: recibir el **catálogo nuevo** de la tienda, con los productos y precios de hoy.",
+      "**`apt upgrade`** sí descarga e **instala** las versiones más nuevas de lo que ya tienes.",
+      "  Analogía: ir a **comprar de verdad** los productos que viste en el catálogo.",
+      "Orden correcto y universal en Ubuntu: `sudo apt update && sudo apt upgrade`.",
+      "  Sin `update` antes, trabajas con un catálogo viejo y no ves las últimas versiones.",
+      "Higiene del servidor:",
+      "  `remove` quita el programa **pero deja su configuración** (por si lo reinstalas).",
+      "  `purge` borra también la configuración; `autoremove` elimina dependencias huérfanas."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: instalo y verifico una utilidad (paso a paso)",
+    "bullets": [
+      "**Caso:** en un servidor Ubuntu necesito la utilidad `tree` (dibuja carpetas en árbol) y confirmar que quedó bien instalada.",
+      "**1) Refresco el catálogo:** `sudo apt update`",
+      "  Baja las listas de los repos y al final avisa `... X packages can be upgraded`. @@Todavía no instaló nada.@@",
+      "**2) Instalo el paquete:** `sudo apt install tree`",
+      "  El gestor resuelve dependencias y pregunta `After this operation, 123 kB will be used [Y/n]` → confirmo con Enter.",
+      "**3) Verifico (no asumo):** `tree --version` responde `tree v2.1.0`; y `tree /etc | head` lo muestra funcionando.",
+      "Si la red no deja instalar: `sudo apt install -s tree` **simula** la operación (`-s`) y ves qué haría, sin descargar.",
+      "Regla de oro: **instalar no es verificar** — el buen administrador siempre comprueba el resultado."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Servicios (daemons) y systemd",
+    "bullets": [
+      "Un **servicio** (o ***daemon***, se dice \"dimon\") es un programa que corre en **segundo plano**, sin ventana, esperando para trabajar 24/7.",
+      "  Ejemplos: `nginx` (web), `sshd` (SSH), `cron` (tareas programadas), la base de datos.",
+      "  Muchos terminan en **\"d\"** de *daemon*: ss**h**d, cro**n**d, systemd.",
+      "Analogía: son el **personal de mantenimiento** del edificio — no los ves, pero mantienen todo funcionando de día y de noche.",
+      "**systemd** es el \"jefe de personal\": el **primer proceso del sistema (PID 1)** que arranca, detiene y vigila los servicios.",
+      "  Cada servicio se describe en una **unidad** `.service` (p. ej. `ssh.service`) en `/lib/systemd/system/`.",
+      "Le damos órdenes con @@`systemctl`@@ (antes se usaba `service` con SysVinit; hoy el estándar es `systemctl`)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "systemctl: los comandos esenciales",
+    "headers": ["Comando", "Qué hace"],
+    "rows": [
+      ["`sudo systemctl start <svc>`", "Arranca el servicio **ahora** (esta sesión)"],
+      ["`sudo systemctl stop <svc>`", "Lo detiene ahora"],
+      ["`sudo systemctl restart <svc>`", "Lo reinicia (típico tras cambiar su configuración)"],
+      ["`sudo systemctl reload <svc>`", "Recarga su configuración **sin cortarlo**"],
+      ["`systemctl status <svc>`", "Muestra su estado (no requiere `sudo`)"],
+      ["`sudo systemctl enable <svc>`", "Lo programa para arrancar **en cada boot**"],
+      ["`sudo systemctl disable <svc>`", "Quita ese arranque automático"],
+      ["`sudo systemctl enable --now <svc>`", "@@Lo habilita al boot Y lo arranca ya@@"]
+    ],
+    "note": "`systemctl list-units --type=service` lista todos los servicios activos del sistema."
+  },
+  {
+    "type": "bullets",
+    "title": "Leer systemctl status línea por línea",
+    "bullets": [
+      "Una sola pantalla te dice **todo** sobre un servicio. Ejemplo: `systemctl status ssh`.",
+      "**`●` + `ssh.service`:** el punto resume el estado (verde/lleno = activo, apagado = detenido, rojo = falló).",
+      "**`Loaded: ...; enabled`:** la palabra clave → el servicio @@arranca solo en cada inicio@@ del sistema. Si dijera `disabled`, no volvería tras reiniciar; muestra también la ruta del `.service`.",
+      "**`Active: active (running)`:** su estado **AHORA mismo** (y desde cuándo). Otros valores: `inactive (dead)` = detenido, `failed` = falló.",
+      "**`Main PID: 812 (sshd)`:** el número de proceso (enlaza con los procesos de la Sesión 5).",
+      "**`Memory` / `Tasks` / `CGroup`:** memoria que consume y procesos que agrupa.",
+      "La joya: en una pantalla ves las **dos dimensiones a la vez** → ¿arranca al boot? (`Loaded`) y ¿corre ahora? (`Active`)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los mismos servicios, ahora en Windows",
+    "headers": ["Acción", "PowerShell", "CMD (sc.exe)"],
+    "rows": [
+      ["Ver estado / listar", "`Get-Service Spooler`", "`sc query Spooler`"],
+      ["Arrancar ahora", "`Start-Service Spooler`", "`sc start Spooler`"],
+      ["Detener", "`Stop-Service Spooler`", "`sc stop Spooler`"],
+      ["Reiniciar", "`Restart-Service Spooler`", "—"],
+      ["Arranque automático (≈ enable)", "`Set-Service Spooler -StartupType Automatic`", "`sc config Spooler start= auto`"],
+      ["Deshabilitar", "`Set-Service Spooler -StartupType Disabled`", "`sc config Spooler start= disabled`"]
+    ],
+    "note": "Traducción directa: @@`Status` = el `Active` de systemd@@ (corre ahora) y `StartType` = el `Loaded enabled` (arranca al boot). `Automatic` ≈ `enable`; ojo: `Manual` no es `Disabled`."
+  },
+  {
+    "type": "table",
+    "title": "La distinción de oro: enable vs start",
+    "headers": ["Estado", "¿Corre ahora? (Active)", "¿Arranca al boot? (Loaded)", "En la práctica"],
+    "rows": [
+      ["**enabled + active**", "Sí", "Sí", "Lo normal en producción (p. ej. el servidor web)"],
+      ["**enabled + inactive**", "No", "Sí", "Apagado ahora, pero vuelve solo tras reiniciar"],
+      ["**disabled + active**", "Sí", "No", "Corre ahora, pero tras un reinicio **desaparece** (trampa)"],
+      ["**disabled + inactive**", "No", "No", "Apagado y no volverá solo"]
+    ],
+    "note": "@@`start` = sonar el despertador ahora; `enable` = programarlo para todas las mañanas.@@ Son botones independientes; el experto usa `enable --now` (las dos). Olvidar el `enable` = servidor caído tras un corte de luz."
+  },
+  {
+    "type": "bullets",
+    "title": "Tu turno: repite el ciclo (práctica)",
+    "bullets": [
+      "Practica los comandos en una **terminal Linux en línea** (no instalas nada en tu equipo): **JSLinux**, **Webminal** o **DistroSea** (Ubuntu).",
+      "  examlab @@no tiene terminal de sistema operativo@@: los comandos `apt` / `systemctl` van siempre en la terminal en línea.",
+      "**1)** `sudo apt update` → comprueba que **solo refresca** el catálogo.",
+      "**2)** Instala y **verifica** una utilidad ligera: `sudo apt install htop` (o `tree`, `cowsay`) → luego `htop --version`.",
+      "**3)** Lee `systemctl status cron` (o `ssh`): señala la línea `Active` (¿corre ahora?) y la línea `Loaded ... enabled` (¿arranca al boot?).",
+      "En **examlab** (modo **Test**) resuelve el quiz de conceptos y usa la **pizarra** para diagramar los cuatro estados de un servicio (enabled/disabled × active/inactive).",
+      "Captura cada paso: son tu evidencia de la sesión."
+    ]
+  }
+]

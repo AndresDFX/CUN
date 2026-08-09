@@ -1,0 +1,178 @@
+[
+  {
+    "type": "bullets",
+    "title": "Hoy deja de tener ideas sueltas y pasa a tener un documento",
+    "bullets": [
+      "Ya tiene pregunta, objetivos y título. Eso todavía es **material suelto**, no es un artículo.",
+      "Un artículo de resultados de investigación **no es un ensayo libre**: tiene secciones fijas, con nombre y con contenido obligatorio.",
+      "  El jurado no lee para dejarse sorprender: lee buscando cada sección en su lugar.",
+      "Lo que más castiga un evaluador en Ingeniería no es que el proyecto sea modesto: es que el documento esté **desordenado**.",
+      "  Método metido en la introducción, interpretaciones en los resultados, resumen escrito antes de tener resultados.",
+      "Hoy hacemos dos cosas: montar el **esqueleto completo** del artículo y escribir en vivo la **introducción**.",
+      "Y todo se trabaja sobre la **plantilla APA CUN abierta en Google Docs**: sin instalar nada, sin depender de Word."
+    ],
+    "note": "Salga de esta sesión con la introducción empezada, no solo con la idea de cómo se escribe."
+  },
+  {
+    "type": "table",
+    "title": "Anatomía del artículo: qué va y qué NO va en cada sección",
+    "headers": ["Sección", "Qué va ahí", "Qué NO va (error típico)"],
+    "rows": [
+      ["Resumen + palabras clave", "Síntesis de todo el artículo; **se escribe al final**", "Escribirlo primero, y meterle citas"],
+      ["**Introducción**", "Contexto → problema → vacío → pregunta → objetivos → propósito", "Arrancar \"desde la antigüedad\"; meter el método"],
+      ["Marco / referentes", "Teoría y antecedentes que sostienen la pregunta", "Un collage de definiciones apiladas"],
+      ["Metodología", "Enfoque, alcance, diseño, instrumentos, análisis", "Mezclarla con los resultados"],
+      ["Resultados", "Qué se encontró, en tono **neutral**", "Interpretar y opinar aquí"],
+      ["Discusión", "Qué significa, en diálogo con los autores", "Repetir los resultados con otras palabras"],
+      ["Conclusiones", "Responder la pregunta, límites y trabajo futuro", "Ideas nuevas sin respaldo en datos"],
+      ["Referencias", "**Mínimo 50**, en APA 7, todas citadas en el cuerpo", "Listar fuentes que nunca se citaron"]
+    ],
+    "note": "Este esqueleto se conoce como **IMRyD** (Introducción, Métodos, Resultados y Discusión), adaptado a la plantilla APA CUN.",
+    "col_w": [2.8, 4.6, 4.5]
+  },
+  {
+    "type": "bullets",
+    "title": "La regla mental que evita el 90% de las mezclas",
+    "bullets": [
+      "**Introducción = por qué.** Por qué vale la pena investigar esto y qué se propone hacer.",
+      "**Metodología = cómo.** Cómo se recogieron y analizaron los datos, con qué instrumento.",
+      "**Resultados = qué encontré.** Los datos y hallazgos, sin adjetivos ni juicios.",
+      "**Discusión = qué significa.** Qué implican esos hallazgos frente a lo que dicen otros autores.",
+      "Cada vez que dude dónde va un párrafo, pregúntese cuál de las cuatro palabras responde: **por qué, cómo, qué encontré, qué significa**.",
+      "  Si un párrafo responde dos preguntas a la vez, pártalo en dos y mande cada mitad a su sección.",
+      "Ejemplo de mezcla clásica: \"Se aplicó una encuesta de 10 ítems a los usuarios y se evidenció que el 70% desconoce el proceso\", escrito **en la introducción**.",
+      "  La primera mitad es Metodología; la segunda es Resultados. En la introducción no debía ir ninguna de las dos."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "La introducción es un embudo: de lo ancho a lo estrecho",
+    "bullets": [
+      "**1. Contexto (lo ancho)** — el escenario real donde vive el problema, con un dato o una cita que lo sostenga.",
+      "**2. Problema** — qué está fallando, a quién le duele y por qué importa.",
+      "**3. Vacío** — qué no se ha estudiado o resuelto todavía. Es el hueco donde entra su trabajo.",
+      "  Se enuncia con giros como \"sin embargo\", \"no obstante\", \"aún no se ha documentado\".",
+      "**4. Pregunta** — la misma de la Sesión 02, textual. No la reescriba distinto: se pierde la coherencia.",
+      "**5. Objetivos** — general y específicos, en prosa, no en viñetas.",
+      "**6. Propósito del artículo (lo estrecho)** — qué encontrará el lector en las siguientes páginas.",
+      "Con **3 o 4 párrafos** basta. Una introducción de dos páginas ya está invadiendo el marco teórico."
+    ],
+    "note": "El lector debe terminar la introducción sabiendo qué se pregunta usted y qué se propone hacer, sin haber leído todavía nada de teoría."
+  },
+  {
+    "type": "table",
+    "title": "Los tres o cuatro párrafos, uno por uno",
+    "headers": ["Párrafo", "Qué contiene", "Con qué se abre", "Extensión"],
+    "rows": [
+      ["**1 · Contexto**", "El escenario y su relevancia, con 1 o 2 citas", "\"El despliegue continuo de software depende de…\"", "6 a 9 líneas"],
+      ["**2 · Problema y vacío**", "Qué falla en su caso concreto y qué no se ha medido", "\"**Sin embargo**, en el área de TI las pruebas siguen siendo manuales…\"", "6 a 9 líneas"],
+      ["**3 · Pregunta y objetivos**", "La pregunta textual y los objetivos en prosa", "\"**Por ello, este artículo se pregunta** en qué medida…\"", "6 a 8 líneas"],
+      ["**4 · Propósito** (opcional)", "Qué encontrará el lector en cada sección", "\"El artículo presenta primero los referentes, luego…\"", "3 a 5 líneas"]
+    ],
+    "note": "Los conectores en negrita no son decoración: son las **señales** con las que el lector reconoce en qué parte del embudo va.",
+    "col_w": [2.4, 3.4, 4.4, 1.7]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — introducción real, párrafo a párrafo",
+    "bullets": [
+      "**Párrafo 1 (contexto):** \"El despliegue continuo de software depende de pruebas confiables que verifiquen cada cambio antes de llegar a producción. En equipos pequeños de desarrollo, sin embargo, esas pruebas suelen ejecutarse de forma manual.\"",
+      "**Párrafo 2 (problema y vacío):** \"En el área de TI de la organización estudiada, cada despliegue exige seis pasos manuales y toma en promedio 42 minutos. **No obstante**, no existe un registro que documente el efecto de esa manualidad sobre los errores en producción.\"",
+      "**Párrafo 3 (pregunta y objetivos):** \"**Por ello, este artículo se pregunta** en qué medida la automatización de pruebas reduce el tiempo de despliegue y los errores en producción del equipo. Para responderlo se propone caracterizar el proceso actual, diseñar la automatización y comparar los tiempos e incidencias antes y después.\"",
+      "**Lo que NO se hizo, y se ve:** no empezó con \"desde la antigüedad el ser humano ha buscado comunicarse\".",
+      "  Ese arranque no informa nada y le dice al jurado que usted no sabía por dónde empezar.",
+      "**Fíjese en el cierre:** el párrafo 3 aterriza exactamente en la pregunta de la Sesión 02, palabra por palabra."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "El mal arranque y el buen arranque",
+    "boxes": [
+      ["advertencia", "**Arranque de historia universal:** \"Desde la antigüedad el ser humano ha buscado optimizar sus procesos…\". No aporta nada, no se puede citar y consume el primer párrafo, que es el más leído."],
+      ["advertencia", "**Arranque de diccionario:** \"Según la RAE, automatizar significa…\". El jurado no necesita que le definan palabras del castellano común."],
+      ["aclaracion", "**Arranque correcto:** empiece en el escenario real y verificable de su problema, con una cita que lo respalde. El lector debe sentir que ya está adentro del asunto desde la primera línea."],
+      ["info", "Prueba de fuego: tape el primer párrafo. Si el artículo se entiende igual, ese párrafo sobraba."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso — trabajar sobre la plantilla APA CUN en Google Docs",
+    "bullets": [
+      "**1.** Suba `Plantilla_APA_CUN_Proyecto de grado.docx` a su Google Drive.",
+      "**2.** Clic derecho sobre el archivo → **Abrir con → Documentos de Google**. Queda una copia editable en la nube, con el formato ya resuelto.",
+      "**3.** Renombre el documento como `S03_Introduccion_Apellido`.",
+      "**4.** **No dé formato a mano.** Use los **estilos** de la plantilla (Título 1, Título 2, Texto normal) desde el menú de estilos de párrafo.",
+      "  Así los títulos de sección quedan uniformes y la tabla de contenido se genera sola.",
+      "**5.** Verifique que estén creadas todas las secciones del esqueleto, aunque queden vacías por ahora: eso es su mapa de trabajo del semestre.",
+      "**6.** Escriba **solo la introducción** hoy. Las demás secciones se llenan en las sesiones siguientes.",
+      "**7.** Para citar: busque en **Google Académico** → genere la referencia APA en **zbib.org (ZoteroBib)** → péguela en la lista de referencias y deje la cita corta en el texto.",
+      "  El flujo completo está en la guía transversal de herramientas de escritura y citación del curso.",
+      "**8.** Comparta el documento con permiso de comentario para que **el Docente** pueda dejarle observaciones."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Formato APA 7: lo mínimo que el jurado revisa",
+    "headers": ["Elemento", "Cómo debe quedar", "Dónde se resuelve"],
+    "rows": [
+      ["Cita en el texto (parafraseada)", "(Apellido, año) — por ejemplo (Ramírez, 2022)", "Se escribe a mano al final de la idea"],
+      ["Cita textual corta", "\"texto entre comillas\" (Apellido, año, p. 15)", "La página es obligatoria en la cita textual"],
+      ["Referencia completa", "Apellido, N. (año). *Título*. Fuente. URL o DOI", "Se genera en **zbib.org** y se pega"],
+      ["Interlineado y sangría", "Doble, con sangría francesa en referencias", "Ya viene en la **plantilla APA CUN**"],
+      ["Títulos de sección", "Jerarquía de niveles APA", "Con los **estilos** de la plantilla, no a mano"]
+    ],
+    "note": "Toda cita del texto debe tener su referencia en la lista, y toda referencia de la lista debe estar citada en el texto. Sin excepciones.",
+    "col_w": [3.2, 4.9, 3.8]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes de esta sesión",
+    "boxes": [
+      ["advertencia", "\"Meto un poco de método en la introducción para que se entienda.\" — No. Introducción = por qué; el cómo va en Metodología. Cada cosa en su sección."],
+      ["advertencia", "\"Escribo el resumen ahora que estoy fresco.\" — El resumen se escribe **de último**: hoy usted todavía no sabe qué resultado va a resumir."],
+      ["advertencia", "\"Doy formato a mano con negritas y sangrías.\" — Pierde horas y queda desparejo. Use la plantilla APA CUN en Google Docs; el formato ya viene resuelto."],
+      ["aclaracion", "\"¿Puedo cambiar la introducción después?\" — Sí, y de hecho la va a ajustar cuando tenga resultados. Pero necesita la versión de hoy para que el resto del documento tenga a dónde amarrarse."],
+      ["info", "La introducción y el resumen son las dos partes que **todo** jurado lee completas. Vale la pena escribirlas con cuidado."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Escriba su introducción en la plantilla APA CUN",
+    "bullets": [
+      "**Tiempo: 20 minutos.** Trabajo individual, en la plantilla APA CUN abierta en Google Docs.",
+      "**Consigna literal:** en el archivo `S03_Introduccion_Apellido`, escriba una **introducción de 3 a 4 párrafos** con el embudo contexto → problema → vacío → pregunta → objetivos → propósito.",
+      "  Debe **cerrar exactamente** en la pregunta y los objetivos que formuló en la Sesión 02, sin cambiarles la redacción.",
+      "  Incluya al menos **dos citas en APA** en el párrafo de contexto, generadas en zbib.org.",
+      "  Marque con color el conector que abre el párrafo del vacío (\"sin embargo\", \"no obstante\") para verificar que sí está.",
+      "**Criterio de éxito (así se verifica):**",
+      "  Si **el Docente** lee su introducción **sin conocer su tema**, entiende el contexto, el vacío y qué se propone usted.",
+      "  El texto termina en su pregunta, no en el aire.",
+      "  No aparece ni una palabra sobre instrumentos, muestras o resultados: eso va en otras secciones."
+    ],
+    "note": "Si se traba, escriba primero el párrafo 3 (pregunta y objetivos), que ya lo tiene resuelto, y luego devuélvase a construir el contexto."
+  },
+  {
+    "type": "boxes",
+    "title": "Checklist de autoevaluación antes de subir a CDigital",
+    "boxes": [
+      ["info", "**Embudo:** ¿mi primer párrafo es contexto real y no historia universal? ¿el segundo dice qué falla y qué no se ha estudiado? ¿el tercero aterriza en mi pregunta?"],
+      ["info", "**Coherencia:** ¿la pregunta de la introducción es idéntica a la de la Sesión 02? ¿los objetivos son los mismos tres o cuatro?"],
+      ["info", "**Pureza de sección:** ¿saqué de la introducción todo lo que sea método, resultados o interpretación?"],
+      ["aclaracion", "**Formato:** ¿usé los estilos de la plantilla APA CUN y no formato manual? ¿mis dos citas tienen su referencia completa en la lista?"],
+      ["advertencia", "**Extensión:** si su introducción pasa de página y media, seguramente ya invadió el marco teórico. Recorte."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Suba** `S03_Introduccion_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Trabajo autónomo (extensión de la sesión):**",
+      "  Deje creadas y tituladas **todas** las secciones del esqueleto en su documento, aunque estén vacías. Ese será su documento único del semestre.",
+      "  Lea la introducción de **dos artículos** de su tema en SciELO o Redalyc y marque con color dónde está el contexto, el vacío y la pregunta de cada uno.",
+      "  Copie a su bitácora los conectores que usan esos autores para anunciar el vacío: le van a servir toda la vida.",
+      "**En la próxima sesión** abrimos la **Fase I de referentes**: búsqueda sistemática, fichas de lectura y el primer mapa de diálogo entre autores, camino a las 50 referencias.",
+      "  Llegue con su pregunta a la mano: es la brújula de toda búsqueda."
+    ]
+  }
+]

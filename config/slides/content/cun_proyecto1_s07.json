@@ -1,0 +1,220 @@
+[
+  {
+    "type": "bullets",
+    "title": "Dos cosas pueden hundir un anteproyecto de IA en la última revisión",
+    "bullets": [
+      "Caso real y frecuente: un equipo propone un **modelo que clasifica PQRS** de una secretaría de salud municipal.",
+      "  Las PQRS traen nombre, cédula, teléfono y diagnóstico: eso es **dato personal**, y algunos son **datos sensibles**.",
+      "  El anteproyecto no menciona ni una norma. Resultado: la propuesta es inviable antes de empezar.",
+      "Segundo caso: el documento tiene 18 referencias al final y solo 6 aparecen citadas en el texto.",
+      "  Las otras 12 son **bibliografía huérfana**: se ven como relleno y bajan la nota de todo el marco referencial.",
+      "Hoy cerramos el **marco referencial completo** con las dos piezas que faltan:",
+      "  **Marco legal** — decidir si aplica, y si aplica, redactarlo con normas reales.",
+      "  **Clínica de APA 7** — dejar citas y referencias sin un solo cabo suelto.",
+      "Regla del día: **ninguna cita sin referencia, ninguna referencia sin cita, ninguna ley inventada**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es el marco legal (y qué NO es)",
+    "bullets": [
+      "**Es** el conjunto de normas, políticas y reglamentos que **condicionan** lo que su estudio puede o no puede hacer.",
+      "  Condicionan el acceso a los datos, el uso de la información y la difusión de los resultados.",
+      "**No es** un listado decorativo de leyes que suenan importantes.",
+      "  Si copia diez normas y ninguna toca su objeto de estudio, no tiene marco legal: tiene relleno.",
+      "**No es** el marco teórico: la teoría explica el fenómeno; la norma **autoriza o limita** su investigación.",
+      "La prueba de pertinencia de cada norma que incluya:",
+      "  ¿Puedo escribir una frase que diga **qué me obliga o qué me prohíbe** esta norma en MI estudio?",
+      "  Si no puedo escribir esa frase, la norma sobra.",
+      "En Proyecto I el marco legal se redacta pensando en el trabajo de campo que vendrá en **Proyecto II**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "¿A usted le aplica marco legal? Semáforo de decisión",
+    "headers": ["Si su estudio…", "¿Aplica?", "Qué debe quedar escrito"],
+    "rows": [
+      ["Trata datos personales (nombres, cédulas, correos, historias clínicas)", "**Sí, obligatorio**", "Protección de datos y tratamiento de la información"],
+      ["Involucra **menores de edad**", "**Sí, sin excepción**", "Protección reforzada + consentimiento del representante legal"],
+      ["Usa información propiedad de una empresa o entidad", "**Sí**", "Confidencialidad, aval institucional y uso autorizado"],
+      ["Reutiliza datasets, código o modelos de terceros", "**Sí**", "Licencias de uso y derechos de autor"],
+      ["Trabaja con información pública abierta ya anonimizada", "Parcial", "Basta con citar la fuente y su licencia de uso"],
+      ["Solo diseña una arquitectura o compara algoritmos con datos sintéticos", "**No aplica**", "Una **declaración explícita** de no aplicabilidad, argumentada"]
+    ],
+    "note": "El marco legal no depende del tema: depende de **los datos y las personas** que su estudio tocaría.",
+    "col_w": [5.2, 2.2, 4.6]
+  },
+  {
+    "type": "table",
+    "title": "Normas colombianas que más aparecen en proyectos de IA",
+    "headers": ["Norma", "De qué trata", "Cuándo la necesita"],
+    "rows": [
+      ["**Ley 1581 de 2012**", "Régimen general de protección de datos personales", "Siempre que trate datos de personas identificables"],
+      ["**Decreto 1074 de 2015**", "Reglamenta el tratamiento de datos (autorización, finalidad)", "Al describir cómo pediría la autorización"],
+      ["**Ley 1273 de 2009**", "Delitos informáticos: acceso abusivo, uso de datos ajenos", "Si accedería a sistemas o bases de una entidad"],
+      ["**Ley 1712 de 2014**", "Transparencia y acceso a la información pública", "Si sus datos vienen de una entidad del Estado"],
+      ["**Ley 1098 de 2006**", "Código de Infancia y Adolescencia", "Si la población incluye menores de edad"],
+      ["**Ley 23 de 1982** · Decisión Andina 351", "Derechos de autor sobre obras y software", "Si reutiliza código, datasets o modelos de terceros"],
+      ["**CONPES 3975 de 2019**", "Política nacional de transformación digital e IA", "Para enmarcar la política pública de IA en Colombia"]
+    ],
+    "note": "Referente internacional opcional: el **Reglamento (UE) 2024/1689 de IA**, útil si su marco conversa con estándares de riesgo.",
+    "col_w": [3.0, 4.5, 4.5]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se redacta un párrafo de marco legal (fórmula de tres tiempos)",
+    "bullets": [
+      "**Tiempo 1 — La norma:** nómbrela completa la primera vez y diga qué regula, en una frase.",
+      "**Tiempo 2 — El artículo o principio pertinente:** el pedazo concreto que lo toca a usted.",
+      "**Tiempo 3 — La implicación para SU estudio:** qué tendrá que hacer o dejar de hacer por causa de esa norma.",
+      "Ejemplo modelado, párrafo completo:",
+      "  \"La **Ley 1581 de 2012** establece el régimen general de protección de datos personales en Colombia.\"",
+      "  \"Su principio de **finalidad** exige que los datos se recolecten para un propósito informado al titular.\"",
+      "  \"En consecuencia, en **Proyecto II** los registros de PQRS se **anonimizarían** antes del análisis y se solicitaría autorización escrita a la entidad, sin conservar nombres ni números de identificación.\"",
+      "El tercer tiempo es el que casi nadie escribe — y es el único que demuestra que usted entendió la norma.",
+      "Escríbalo en **condicional** (\"se solicitaría\", \"se anonimizarían\"): en Proyecto I nada se ejecuta todavía."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Si a usted no le aplica: cómo declararlo sin quedar mal parado",
+    "boxes": [
+      ["aclaracion", "Declarar que **no aplica** es una respuesta profesional y válida. Lo que se penaliza no es la ausencia de leyes, es el silencio o la invención."],
+      ["info", "Redacción sugerida: \"El presente estudio no requiere marco legal específico, dado que su alcance se limita al **diseño metodológico** y a la comparación de algoritmos sobre **datos sintéticos**, sin tratamiento de datos personales ni intervención sobre sujetos humanos.\""],
+      ["advertencia", "Nunca copie una lista de leyes de otro trabajo \"por si acaso\". Una norma que usted no puede explicar en la sustentación es una trampa que usted mismo se puso."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El error #1 de APA: confundir la cita con la referencia",
+    "bullets": [
+      "Son dos objetos distintos y **siempre van en pareja**:",
+      "  **Cita en el texto**: va dentro del párrafo. Es corta: apellido y año. Su función es señalar.",
+      "  **Referencia**: va en la lista final. Es larga y completa. Su función es permitir que otro encuentre la fuente.",
+      "La regla de oro, en las dos direcciones:",
+      "  Toda **cita** del cuerpo debe tener su **referencia** al final → si falta, el lector no puede rastrear la fuente.",
+      "  Toda **referencia** debe estar **citada** al menos una vez → si sobra, es **bibliografía huérfana**.",
+      "Cómo se verifica en 5 minutos: tome la lista final y busque cada apellido en el documento con **Ctrl + F**.",
+      "  Cero resultados en el cuerpo = referencia huérfana: o la cita, o la borra.",
+      "Meta mínima del avance de hoy: **cero citas huérfanas y cero referencias huérfanas**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cita narrativa vs. cita parentética",
+    "headers": ["Autores", "Narrativa (el autor va DENTRO de la frase)", "Parentética (al final, entre paréntesis)"],
+    "rows": [
+      ["Uno", "**Pérez (2021)** sostiene que el sesgo algorítmico…", "…el sesgo algorítmico persiste **(Pérez, 2021)**."],
+      ["Dos", "**Pérez y Gómez (2021)** compararon dos modelos…", "…dos modelos comparables **(Pérez y Gómez, 2021)**."],
+      ["Tres o más", "**Rodríguez et al. (2022)** evaluaron el desempeño…", "…un desempeño superior **(Rodríguez et al., 2022)**."],
+      ["Institución", "El **DANE (2023)** reporta que…", "…según cifras oficiales **(DANE, 2023)**."],
+      ["Cita textual corta (< 40 palabras)", "Pérez (2021) afirma: \"el sesgo se hereda del dato\" (**p. 45**).", "…\"el sesgo se hereda del dato\" **(Pérez, 2021, p. 45)**."],
+      ["Cita textual larga (≥ 40 palabras)", "Bloque aparte, **sin comillas**, con sangría de 1,27 cm", "La referencia con página va al final del bloque"]
+    ],
+    "note": "Con **tres o más autores** se usa `et al.` **desde la primera cita** (APA 7 eliminó la lista completa inicial). En textos en español se usa «y»; APA en inglés usa «&».",
+    "col_w": [2.4, 4.8, 4.8]
+  },
+  {
+    "type": "table",
+    "title": "Plantillas de referencia APA 7 por tipo de fuente",
+    "headers": ["Tipo", "Estructura"],
+    "rows": [
+      ["**Artículo de revista**", "Apellido, N. (Año). Título del artículo. **Nombre de la Revista, vol**(núm.), pp–pp. https://doi.org/10.xxxx"],
+      ["**Libro**", "Apellido, N. (Año). **Título del libro** (n.ª ed.). Editorial.  *(APA 7 ya no pide la ciudad)*"],
+      ["**Capítulo de libro**", "Apellido, N. (Año). Título del capítulo. En N. Editor (Ed.), **Título del libro** (pp. xx–xx). Editorial."],
+      ["**Tesis o trabajo de grado**", "Apellido, N. (Año). **Título** [Tesis de especialización, Nombre de la Universidad]. Repositorio institucional. URL"],
+      ["**Informe institucional**", "Organización. (Año). **Título del informe** (Informe n.º xx). URL"],
+      ["**Página web**", "Autor. (Año, día de mes). **Título de la página**. Nombre del sitio. URL"],
+      ["**Ley colombiana**", "Congreso de la República de Colombia. (Año, día de mes). **Ley xxxx de aaaa**. Diario Oficial n.º xxxxx. URL"],
+      ["**Modelo de IA generativa**", "OpenAI. (Año). **ChatGPT** (versión) [Modelo de lenguaje grande]. URL"]
+    ],
+    "note": "Lista de referencias: **orden alfabético**, **sangría francesa de 1,27 cm** e interlineado doble. Si la fuente tiene **DOI**, el DOI manda sobre la URL.",
+    "col_w": [2.8, 9.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: un párrafo real y su referencia",
+    "bullets": [
+      "**Párrafo del cuerpo** (mezcla narrativa + parentética, como debe ser):",
+      "  \"La clasificación automática de peticiones ciudadanas ha mostrado mejoras sostenidas en tiempos de respuesta. **Hernández-Sampieri y Mendoza (2018)** advierten que toda medición requiere definir antes la variable; en esta línea, el desempeño de los clasificadores se evalúa hoy con métricas de precisión y exhaustividad **(Rodríguez et al., 2022)**.\"",
+      "**Referencias correspondientes**, en la lista final y en orden alfabético:",
+      "  Hernández-Sampieri, R. y Mendoza, C. P. (2018). **Metodología de la investigación: las rutas cuantitativa, cualitativa y mixta**. McGraw-Hill.",
+      "  Rodríguez, L., Martínez, A. y Salas, J. (2022). Clasificación automática de peticiones ciudadanas. **Revista Colombiana de Computación, 23**(1), 45–61. https://doi.org/10.29375/ejemplo",
+      "Fíjese en tres detalles que se califican:",
+      "  El **año** viaja siempre pegado al autor, en el texto y en la referencia.",
+      "  El **volumen** va en negrita/cursiva y el **número** entre paréntesis, sin negrita.",
+      "  Los apellidos de la lista van **alfabéticos**, no en el orden en que usted los citó."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes que voy a buscar en su avance",
+    "boxes": [
+      ["advertencia", "**Bibliografía huérfana.** Referencias que nunca aparecen en el texto. O la cita en el cuerpo, o la retira de la lista: no hay tercera opción."],
+      ["advertencia", "**Leyes inventadas o mal numeradas.** Verifique número y año en la fuente oficial. Una \"Ley 1518 de 2012\" en vez de la 1581 delata que copió sin leer."],
+      ["aclaracion", "**Falta el DOI o la URL.** Si la fuente lo tiene, va. Búsquelo en el propio artículo o en Google Scholar; ZoteroBib normalmente lo trae solo."],
+      ["aclaracion", "**Estilos mezclados.** Decidir es simple: ¿el autor va dentro de la frase o entre paréntesis al final? Lo importante es que el criterio sea consistente en todo el documento."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: dejar las referencias limpias con ZoteroBib (zbib.org)",
+    "bullets": [
+      "**1.** Entre a **zbib.org** en el navegador. No hay que instalar nada ni crear cuenta.",
+      "**2.** Pegue en la barra el **DOI**, la **URL**, el **ISBN** o el título exacto de la fuente y presione *Cite*.",
+      "**3.** Revise lo que trajo: nombres completos, año, revista, volumen. La herramienta acierta mucho, pero **no siempre**.",
+      "**4.** Seleccione el estilo **American Psychological Association 7th edition** en el menú de estilos.",
+      "**5.** Repita con todas sus fuentes hasta armar la lista completa; el orden alfabético lo hace la herramienta.",
+      "**6.** *Copy to clipboard* → péguelo en su Google Doc **al final del documento**.",
+      "**7.** En el Doc, aplique **sangría francesa**: Formato → Alineación y sangría → Sangría especial → **Francesa (1,27 cm)**.",
+      "**8.** Cierre con la verificación cruzada: **Ctrl + F** de cada apellido de la lista dentro del cuerpo del texto.",
+      "Alternativa integrada: en Google Docs, **Herramientas → Citas** permite insertar la cita y generar la lista sin salir del documento."
+    ],
+    "note": "Todo esto corre en el navegador y es **gratis**: no se requiere instalar ningún programa de escritorio ni complemento pago."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Limpieza legal y bibliográfica (20 minutos)",
+    "bullets": [
+      "**Consigna literal**, con su documento de avance abierto en Google Docs:",
+      "  **(a)** Decida si aplica marco legal y escriba **un párrafo con la fórmula de tres tiempos** — norma, principio pertinente, implicación para su estudio.",
+      "  **(b)** Si no aplica, escriba la **declaración argumentada de no aplicabilidad** (mínimo dos renglones, con razón explícita).",
+      "  **(c)** Regenere **todas** sus referencias en ZoteroBib con estilo APA 7 y aplique sangría francesa.",
+      "  **(d)** Haga la **verificación cruzada** con Ctrl + F: marque en amarillo toda referencia que no encuentre en el cuerpo.",
+      "**Criterio de éxito verificable:** cero resaltados en amarillo al terminar y el párrafo legal con la implicación redactada en condicional.",
+      "El Docente circula por los equipos durante el taller; levante la mano cuando llegue a la parte (d).",
+      "**Entrega:** suba el archivo como `S07_LegalAPA_Apellidos` en [URL CDigital — campus del curso pendiente].",
+      "Con esto queda cerrado el bloque referencial: antecedentes, teórico, conceptual, contextual y legal."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "Marque cada casilla sobre su propio documento. Si alguna falla, todavía está a tiempo.",
+      "  Toda cita del cuerpo tiene su referencia completa en la lista final.",
+      "  Toda referencia de la lista aparece citada **al menos una vez** en el cuerpo.",
+      "  La lista está en **orden alfabético** y con **sangría francesa** de 1,27 cm.",
+      "  Las fuentes que tienen **DOI** lo muestran en formato `https://doi.org/...`.",
+      "  Con tres o más autores uso **et al.** desde la primera cita, y de forma consistente.",
+      "  Cada norma citada viene acompañada de **su implicación** para mi estudio (o declaré que no aplica).",
+      "  Ninguna norma del documento está ahí \"por si acaso\": puedo explicar todas en voz alta.",
+      "  Los verbos del marco legal están en **condicional**, no en pasado."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Autónomo de esta semana:**",
+      "  Integre al documento las correcciones que reciba en la tutoría y deje el marco referencial cerrado.",
+      "  Vuelva a correr la verificación cruzada **después** de integrar: cada edición nueva puede crear una cita huérfana.",
+      "  Guarde una copia del documento antes de la próxima sesión: sobre él construiremos la metodología.",
+      "**En la próxima sesión damos un salto grande:** pasamos del \"qué\" al \"cómo\".",
+      "  Empezamos el **diseño metodológico**: paradigma, enfoque y alcance.",
+      "  Traiga su **pregunta de investigación** escrita y a la mano — es la que decide el método.",
+      "Recuerde: las tutorías por equipo se acuerdan durante la semana con el Docente; no hay atención sin cita previa.",
+      "Todo el material de apoyo y la plantilla APA quedan en [URL CDigital — campus del curso pendiente]."
+    ]
+  }
+]

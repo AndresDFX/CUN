@@ -1,0 +1,157 @@
+[
+  {
+    "type": "bullets",
+    "title": "El detective digital: cómo se piensa un servidor caído",
+    "bullets": [
+      "Cuando un servidor **se cae**, el profesional **no adivina**: observa la evidencia, la interpreta y sigue un método. El aficionado reinicia cosas al azar y reza.",
+      "Todo servidor deja **tres huellas** que hoy aprenderás a leer:",
+      "  **Cómo se comunica** con el mundo → herramientas de **red**: ¿tiene IP?, ¿llega el paquete?, ¿está escuchando el servicio?",
+      "  **Qué le pasó por dentro** → los **logs**: la bitácora donde el sistema anota TODO con fecha y hora.",
+      "  **Qué tan protegido y respaldado está** → **firewall, hardening y respaldos**, para que un ataque o un error no lo dejen fuera de servicio.",
+      "Es Nivel 3 (**Evaluar**): ya sabes *operar* el servidor; hoy aprendes a **juzgar su salud y arreglarlo cuando falla**.",
+      "@@Regla de oro del día: no toques nada hasta entender qué pasa; y cuando toques, toca una sola cosa.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Kit de red: las 4 preguntas de diagnóstico",
+    "headers": ["Pregunta de diagnóstico", "Linux", "Windows", "Qué confirma"],
+    "rows": [
+      ["¿Tengo IP / identidad?", "`ip a`", "`ipconfig /all`", "La interfaz está **UP** y con una dirección IP"],
+      ["¿Hay camino al destino?", "`ping <ip>`", "`ping <ip>`", "Conectividad de red: el paquete llega y vuelve"],
+      ["¿Qué puertos escucho?", "`ss -tlnp`", "`netstat -ano`", "El **servicio** está levantado y en su puerto"],
+      ["¿Responde el servicio?", "`curl -I <url>`", "`Test-NetConnection <ip> -Port <n>`", "La **aplicación** (web, etc.) responde de verdad"]
+    ],
+    "note": "Se preguntan **en este orden**: identidad → camino → escucha → respuesta. @@Un `ping` OK no significa que el servicio funcione:@@ hay que llegar hasta la última fila."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo leer las salidas de red",
+    "bullets": [
+      "**`ip a`** lista las interfaces. Busca la línea **`inet 192.168.1.50/24`**: esa es tu IP con su máscara (`/24` = 255.255.255.0).",
+      "  Si la interfaz dice **`UP`** está encendida; si dice `DOWN`, ahí está el problema. Sin línea `inet`, el servidor es un **fantasma sin dirección**.",
+      "**`ping`** mide si el paquete vuelve: `0% packet loss` = hay camino; `100% packet loss` o `Destination Host Unreachable` = no lo hay.",
+      "**`ss -tlnp`** muestra quién escucha: `t`=TCP, `l`=en escucha, `n`=números de puerto, `p`=proceso. Puertos típicos: **22** SSH, **80/443** web, **53** DNS.",
+      "**`curl -I http://...`** pide la cabecera: `200 OK` = la web responde; `Connection refused` = puerto cerrado o servicio caído.",
+      "@@Practícalo tú en una terminal en línea (JSLinux o Webminal); examlab no ejecuta comandos.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La escalera del ping: diagnóstico por pasos",
+    "headers": ["Peldaño (comando)", "Qué comprueba", "Si falla aquí..."],
+    "rows": [
+      ["1. Tu propia IP · `ping <mi-ip>`", "¿Vive mi tarjeta de red?", "Interfaz caída o sin IP → revisa `ip a`"],
+      ["2. El gateway · `ping <gateway>`", "¿Llego a mi red local?", "Cable, IP o router mal configurado"],
+      ["3. Internet · `ping 8.8.8.8`", "¿Salgo hacia afuera?", "Falta ruta o gateway hacia internet"],
+      ["4. Un nombre · `ping google.com`", "¿Funciona el DNS?", "Número OK pero nombre falla = problema de nombres"]
+    ],
+    "note": "Se sube peldaño por peldaño; **el primer peldaño que falla señala la capa rota.** @@Si la IP responde pero el nombre no, el problema es DNS, no la red.@@"
+  },
+  {
+    "type": "bullets",
+    "title": "Logs: la caja negra del servidor",
+    "bullets": [
+      "Un **log** es la bitácora donde el sistema anota **todo lo que hace**, con fecha, hora y gravedad. Cuando algo falla, la respuesta casi siempre ya está escrita ahí.",
+      "**`journalctl -u nginx`** → muestra **solo** los mensajes de ese servicio (`-u` = *unit*). Es lo primero que se mira cuando un servicio falla.",
+      "**`journalctl -xe`** → salta al **final** (lo más reciente, `e`=end) con **explicación extra** (`x`). Se usa justo tras un fallo al arrancar un servicio.",
+      "Otros filtros útiles:",
+      "  `journalctl -u ssh --since \"10 min ago\"` (por tiempo) · `journalctl -p err` (solo errores) · `journalctl -f` (seguir en vivo).",
+      "Ejemplo real: `nginx[1203]: [emerg] bind() to 0.0.0.0:80 failed (Address already in use)` → *el puerto 80 ya estaba ocupado*. El log dio la causa exacta.",
+      "@@Regla de oro: lee de abajo hacia arriba y busca `error`, `failed`, `emerg`, `denied`.@@ La primera línea roja suele ser la causa; lo demás es consecuencia."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Dónde viven los logs",
+    "headers": ["Archivo / fuente", "Qué guarda"],
+    "rows": [
+      ["`/var/log/syslog` (Debian) · `messages` (RHEL)", "Bitácora **general** del sistema"],
+      ["`/var/log/auth.log` (o `secure`)", "**Inicios de sesión y sudo** — aquí se ven los intentos de intrusión"],
+      ["`/var/log/nginx/error.log`", "Errores del servidor **web**"],
+      ["`/var/log/kern.log`", "Mensajes del **núcleo** (hardware, discos)"],
+      ["**Windows — Visor de eventos** (`eventvwr.msc`)", "Tres libros: **Sistema**, **Aplicación** y **Seguridad**; cada evento tiene Id., nivel y descripción"]
+    ],
+    "note": "En Linux se leen con `tail -f`, `less` o `grep \"Failed password\" /var/log/auth.log`. @@Windows no usa archivos de texto: guarda los logs en una base de datos que consultas con el Visor de eventos o `Get-WinEvent`.@@"
+  },
+  {
+    "type": "bullets",
+    "title": "Respaldar: tar y rsync",
+    "bullets": [
+      "Un servidor **sin respaldo** es un accidente esperando ocurrir: un disco muere, un `rm -rf` mal escrito, un ransomware... y los datos se pierden para siempre.",
+      "**`tar` — empaquetar y comprimir** (el \"ZIP\" de Linux):",
+      "  `tar czf /backup/etc-2026-07-11.tar.gz /etc` → `c`=crear, `z`=comprimir gzip, `f`=archivo de salida. Respaldar **`/etc`** (la configuración) es prioritario.",
+      "  Mnemotecnia: **C**rear (`czf`) · e**X**traer (`xzf`) · lis**T**ar (`tzf`), siempre con `zf`.",
+      "**`rsync -a` — sincronizar carpetas** copiando solo lo que cambió:",
+      "  `rsync -a /var/www/ /backup/www/` → `-a` preserva permisos, dueños, fechas y enlaces. Ideal para respaldos periódicos y por red. En Windows: `robocopy origen destino /MIR`.",
+      "Automatiza los respaldos (con `cron` o el Programador de tareas) y, sobre todo, **pruébalos restaurando** de vez en cuando.",
+      "@@Un respaldo que nunca se ha restaurado no es un respaldo: es una esperanza.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La regla 3-2-1 del respaldo",
+    "headers": ["Número", "Significa", "Por qué"],
+    "rows": [
+      ["**3**", "Tener **3 copias** de los datos", "El original + 2 respaldos: si una copia falla, quedan otras"],
+      ["**2**", "En **2 tipos de medio** distintos", "Disco interno + disco externo/nube: si un medio muere, el otro no"],
+      ["**1**", "**1 copia fuera del sitio** (offsite)", "Un incendio, robo o inundación no se lleva las 3 a la vez"]
+    ],
+    "note": "@@Un respaldo en el mismo disco NO cumple la regla:@@ si ese disco muere, se van el original y la copia juntos. Es no poner todos los huevos en la misma canasta: 3 copias, 2 canastas, 1 en otra casa."
+  },
+  {
+    "type": "bullets",
+    "title": "Firewall: el portero del servidor",
+    "bullets": [
+      "**Firewall (cortafuegos):** el **portero** — solo entra quien está en la lista de puertos permitidos; el resto, afuera.",
+      "Buena práctica: **cerrar todo por defecto y abrir solo lo necesario** (*deny-by-default*). Web + SSH → abrir el **22** y el **80/443**, y nada más.",
+      "**Linux — `ufw`** (el sencillo de Ubuntu): `ufw default deny incoming` · `ufw allow 22/tcp` · `ufw allow 80/tcp` · `ufw enable` · `ufw status`.",
+      "**Linux — `firewalld`** (RHEL/CentOS, por zonas): `firewall-cmd --add-service=http --permanent` · `firewall-cmd --reload`.",
+      "  El `--permanent` hace que la regla **sobreviva a los reinicios**.",
+      "**Windows — Firewall de Windows Defender:** por interfaz (`wf.msc`) o `New-NetFirewallRule -DisplayName \"Web\" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow`.",
+      "@@El firewall bien configurado no hace lento al servidor; apagarlo es dejar todas las puertas abiertas.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Hardening: endurecer el servidor",
+    "headers": ["Práctica", "Qué se hace"],
+    "rows": [
+      ["**Actualizar siempre**", "`apt update && apt upgrade` / Windows Update: cerrar los agujeros conocidos"],
+      ["**Mínimo de servicios abiertos**", "Apagar/desinstalar lo que no se usa: menos puertos escuchando = menos puertas"],
+      ["**Mínimo privilegio**", "No trabajar como `root`/Administrador; usar `sudo` de forma puntual"],
+      ["**SSH endurecido**", "Deshabilitar el login de `root` y usar **llaves** en vez de contraseña"],
+      ["**Contraseñas fuertes + `fail2ban`**", "Bloquear IPs tras varios intentos fallidos (se ven en `auth.log`)"],
+      ["**Logs y respaldos activos**", "Sin bitácora no hay diagnóstico; sin respaldo no hay recuperación"]
+    ],
+    "note": "**Hardening** = cerrar las puertas y ventanas que no se usan, no solo poner una alarma. @@Reduce la superficie de ataque.@@"
+  },
+  {
+    "type": "bullets",
+    "title": "El método de troubleshooting: 5 pasos para cualquier fallo",
+    "bullets": [
+      "Diagnosticar **no es probar al azar**: es un **método de 5 pasos** que sirve para una web caída, un login que falla o un disco lleno.",
+      "**1. Reproducir / delimitar:** confirma que falla y cuándo. *¿Siempre o a veces? ¿Para todos o para uno? ¿Desde cuándo?*",
+      "**2. Mirar los logs:** ve a la evidencia (`journalctl -xe`, `/var/log`, Visor de eventos). La causa suele estar escrita.",
+      "**3. Aislar la capa:** ¿red, servicio, aplicación, permisos o disco? Descarta capa por capa (`ip a`, `ss -tlnp`, `systemctl status`, `df -h`).",
+      "**4. Cambiar UNA sola cosa** y probar. Nunca varios cambios a la vez, o no sabrás cuál lo arregló.",
+      "**5. Verificar y documentar:** repite la prueba original y escribe qué pasó, qué lo causó y cómo se resolvió.",
+      "@@El servidor es un paciente y tú el médico: examina antes de recetar y cambia un solo medicamento a la vez.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: \"la web no responde\" (los 5 pasos en vivo)",
+    "bullets": [
+      "**1. Reproducir:** `curl -I http://localhost` → **`Connection refused`**. Falla siempre. No toco nada aún.",
+      "**2. Logs:** `journalctl -u nginx -xe` → `[emerg] bind() to 0.0.0.0:80 failed (Address already in use)`. El servidor dio la causa.",
+      "**3. Aislar la capa:**",
+      "  `ip a` → sí hay IP: la **red está bien**.",
+      "  `ss -tlnp` → el puerto **80 lo tiene otro proceso**, no nginx. Es un conflicto de servicio, no de red.",
+      "**4. Cambiar UNA sola cosa:** libero el puerto 80 y `systemctl restart nginx`. Una única acción.",
+      "**5. Verificar y documentar:** `curl -I` → **`200 OK`**; escribo fecha, síntoma, causa (puerto 80 ocupado) y solución.",
+      "  Practica esta secuencia en una terminal en línea (JSLinux/Webminal); la evidencia y el quiz van en **examlab (Test)**.",
+      "@@Si no puedes explicar por qué se arregló, no lo arreglaste: tuviste suerte.@@"
+    ]
+  }
+]

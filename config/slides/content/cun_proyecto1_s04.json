@@ -1,0 +1,220 @@
+[
+  {
+    "type": "bullets",
+    "title": "Por qué nadie investiga desde cero",
+    "bullets": [
+      "Antes de proponer algo hay que saber **qué ya se intentó** y con qué resultado.",
+      "  Sin esa revisión, un anteproyecto corre el riesgo de reinventar lo que ya está resuelto.",
+      "Caso de aula: un equipo propone un asistente de IA para clasificar tickets de soporte.",
+      "  Al buscar en Scholar aparecen cinco estudios recientes sobre eso… y dos dicen exactamente dónde falla.",
+      "  Ese hallazgo no arruina el proyecto: **lo salva**, porque le da un ángulo propio y defendible.",
+      "Los **antecedentes** son ese mapa de lo ya investigado. Hoy empezamos a construirlo.",
+      "Antes, veinte minutos sobre la retroalimentación de la primera entrega: los comentarios son instrucciones, no una nota disfrazada."
+    ],
+    "note": "Meta orientativa del programa: **mínimo 6 antecedentes**, mezclando estudios nacionales e internacionales."
+  },
+  {
+    "type": "bullets",
+    "title": "Con qué criterios se leyó su primer avance",
+    "bullets": [
+      "**Criterio 1 — Coherencia:** ¿pregunta, objetivos y justificación cuentan la misma historia?",
+      "  El desfase más común: el específico 2 responde algo que la pregunta nunca preguntó.",
+      "**Criterio 2 — Delimitación:** ¿aparecen actor, fenómeno y contexto, con frontera clara?",
+      "  Si el actor sigue siendo “los usuarios” o “la comunidad”, la observación va a pedir un recorte.",
+      "**Criterio 3 — APA 7 básica:** citación en el texto, referencias completas y formato de la plantilla.",
+      "No se corrigieron comas ni se reescribieron párrafos: cada comentario es **una instrucción accionable**.",
+      "  “Delimite el actor”, “el específico 2 no responde la pregunta”, “esta afirmación necesita fuente”.",
+      "Léanlos como un mapa de ruta. El documento es acumulativo: lo que no se corrija ahora, se arrastra."
+    ],
+    "note": "Son dos o tres observaciones por equipo, no veinte. Las que están, son las que de verdad cambian el documento."
+  },
+  {
+    "type": "table",
+    "title": "Cómo se traduce cada comentario de la retroalimentación",
+    "headers": ["Si el comentario dice…", "Significa que…", "Lo que hay que hacer"],
+    "rows": [
+      ["“Delimite el actor”", "El texto habla de un grupo demasiado amplio", "Nombrar el grupo concreto: qué curso, qué área, qué turno"],
+      ["“Este objetivo no responde la pregunta”", "Hay un escalón que sobra o que apunta a otro lado", "Reescribir el específico o ajustar la pregunta, no ambos a la vez"],
+      ["“Justificación sin argumento”", "Se apoya en gusto personal o en frases genéricas", "Reemplazar por vacío + beneficiario + línea del programa"],
+      ["“Esto exige trabajo de campo”", "El objetivo o el alcance prometen aplicar instrumentos", "Bajarlo a diseño y proponer la ruta de validación para Proyecto II"],
+      ["“Falta fuente”", "Hay una afirmación prestada sin autor", "Citar en APA 7 o borrar la afirmación"],
+      ["“Alcance y limitación mezclados”", "Están en el mismo párrafo", "Partirlos en dos listas, cada una con su título"]
+    ],
+    "col_w": [3.0, 3.4, 4.6],
+    "note": "Marquen en el documento cada corrección aplicada: en la tutoría se revisan justamente esas."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es un antecedente de investigación",
+    "bullets": [
+      "Un **antecedente** es un **estudio previo comparable** al que ustedes proponen.",
+      "  Tiene, sin excepción: **autor**, **año**, **objetivo**, **método** y **hallazgos**.",
+      "Comparable significa que comparte con su trabajo al menos una de estas tres cosas:",
+      "  el **fenómeno** (retroalimentación, registro operativo, clasificación de texto);",
+      "  el **contexto** (aula, planta, servicio de salud, entidad pública);",
+      "  o el **enfoque metodológico** que ustedes piensan proponer.",
+      "Lo que un antecedente **no** es: una noticia, un blog, una definición de enciclopedia o el folleto de un proveedor de IA.",
+      "Y falta lo más importante: cada antecedente cierra diciendo **“esto le aporta a mi pregunta porque…”**."
+    ],
+    "note": "Sin esa última frase, un antecedente es decoración: ocupa página y no sostiene nada."
+  },
+  {
+    "type": "table",
+    "title": "¿Es antecedente o no lo es?",
+    "headers": ["Fuente", "¿Antecedente?", "Por qué"],
+    "rows": [
+      ["Artículo de revista arbitrada con método y resultados", "**Sí**", "Es investigación verificable y citable"],
+      ["Tesis o trabajo de grado de posgrado", "**Sí**", "Tiene estructura investigativa completa"],
+      ["Ponencia en memorias de congreso académico", "**Sí, con cuidado**", "Verifique que reporte método y hallazgos, no solo la idea"],
+      ["Informe técnico de entidad pública o gremio", "**A veces**", "Sirve si documenta metodología; si no, es dato de contexto"],
+      ["Noticia de prensa sobre IA", "**No**", "Reporta un hecho; no investiga un fenómeno"],
+      ["Entrada de blog o publicación en redes", "**No**", "Sin método, sin revisión, sin trazabilidad"],
+      ["Página comercial de un proveedor", "**No**", "Es publicidad: sus “resultados” no son verificables"],
+      ["Wikipedia o un diccionario", "**No**", "Sirve para orientarse, nunca para citar como antecedente"]
+    ],
+    "col_w": [4.0, 2.0, 4.5],
+    "note": "Duda razonable: si no puede decir **qué método usaron**, no es antecedente."
+  },
+  {
+    "type": "table",
+    "title": "Antecedente vs. marco teórico (la confusión número uno)",
+    "headers": ["", "Antecedentes (hoy)", "Marco teórico (próxima sesión)"],
+    "rows": [
+      ["**Qué reúne**", "Estudios previos", "Teorías, modelos y constructos"],
+      ["**Pregunta que responde**", "¿Qué se ha **investigado** sobre esto?", "¿Con qué **lentes** se explica esto?"],
+      ["**Unidad mínima**", "Un estudio con autor, año, método y hallazgo", "Un concepto con su definición y su autor"],
+      ["**Cómo se organiza**", "Por fenómeno, por contexto o por cronología", "Por concepto, de lo general a lo específico"],
+      ["**Qué aporta**", "Muestra el vacío que su pregunta viene a ocupar", "Da el vocabulario con el que va a mirar el fenómeno"]
+    ],
+    "col_w": [2.4, 3.9, 3.9],
+    "note": "Un mismo autor puede aparecer en ambos, con **función distinta**: como estudio comparable aquí, como definidor de un constructo allá. Hoy: solo estudios."
+  },
+  {
+    "type": "bullets",
+    "title": "Dónde buscar: bases abiertas, gratis y desde el navegador",
+    "bullets": [
+      "**Google Scholar** (scholar.google.com) — el buscador más amplio; incluye artículos, tesis y ponencias.",
+      "  Truco: el enlace “Citado por” muestra quién retomó ese estudio después; ahí suele estar lo más reciente.",
+      "**SciELO** (scielo.org) — producción académica de América Latina, en español y portugués, de acceso abierto.",
+      "  Es su mejor ruta para conseguir la parte **nacional y regional** que pide el programa.",
+      "**Redalyc** (redalyc.org) — red de revistas de Iberoamérica; muy fuerte en educación y ciencias sociales.",
+      "**Biblioteca virtual de la CUN** — acceso institucional a bases suscritas, con las credenciales de estudiante.",
+      "Ninguna exige instalar software ni pagar: todo el trabajo de hoy se hace en el navegador."
+    ],
+    "note": "Si un artículo aparece bloqueado por pago, busque su título exacto en Scholar: con frecuencia hay una versión abierta del mismo texto."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo buscar de verdad: la receta de términos",
+    "bullets": [
+      "**1.** Escriba su pregunta y subraye los **sustantivos clave**: esos son sus términos de búsqueda.",
+      "**2.** Traduzca esos términos al **inglés**: la mayor parte de la producción sobre IA está en inglés.",
+      "  “retroalimentación automatizada” pasa a “automated feedback”; “paradas de máquina” pasa a “machine downtime”.",
+      "**3.** Use **comillas** para frases exactas: “automated feedback” evita resultados sueltos.",
+      "**4.** Combine con **AND** y **OR**: “automated feedback” AND (engineering OR laboratory).",
+      "**5.** Filtre por **año** (últimos cinco a siete), salvo que busque el estudio fundacional del tema.",
+      "**6.** Si no aparece nada, el problema casi nunca es el tema: son los **sinónimos**. Pruebe tres variantes antes de rendirse."
+    ],
+    "note": "Una búsqueda que no da resultados en español muchas veces sí los da en inglés, y al revés. Hagan siempre las dos."
+  },
+  {
+    "type": "table",
+    "title": "La ficha de antecedente: cinco casillas, ni una más",
+    "headers": ["Casilla", "Qué se escribe", "Extensión"],
+    "rows": [
+      ["**1. Autor y año**", "Apellidos y año, más el DOI o el enlace estable", "Una línea"],
+      ["**2. Objetivo del estudio**", "Qué se propusieron los autores, redactado por usted", "Una o dos líneas"],
+      ["**3. Método**", "Enfoque, población y técnica que usaron", "Dos líneas"],
+      ["**4. Hallazgo clave**", "El resultado principal, no todos los resultados", "Dos líneas"],
+      ["**5. Vínculo con mi pregunta**", "“Esto le aporta a mi pregunta porque…”", "Dos o tres líneas"]
+    ],
+    "col_w": [2.4, 5.8, 1.8],
+    "note": "La casilla 5 es la que distingue una revisión de una lista de enlaces. **Es obligatoria** y se redacta de su puño y letra."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — una ficha llena (demostración de aula)",
+    "bullets": [
+      "**1. Autor y año:** Autores L. y M. (2023), revista latinoamericana de educación en ingeniería; DOI pegado al final de la ficha.",
+      "**2. Objetivo del estudio:** describir cómo cambia el desempeño en informes de laboratorio cuando la devolución llega en menos de 72 horas.",
+      "**3. Método:** enfoque cuantitativo descriptivo; dos grupos de un curso de ingeniería; comparación de rúbricas a lo largo de un semestre.",
+      "**4. Hallazgo clave:** la rapidez de la devolución se asoció con menos reincidencia en el mismo tipo de error; la extensión del comentario no mostró efecto.",
+      "**5. Vínculo con mi pregunta:** “esto le aporta a mi pregunta porque confirma que el problema no es la **cantidad** de comentarios sino el **tiempo** de devolución, que es justo la fricción reportada en el curso de Laboratorio de Automatización”.",
+      "Cinco casillas, media página, y ya sé qué buscar en el siguiente estudio.",
+      "**Ojo:** esta ficha es una demostración. Ustedes fichan estudios **reales** que hayan leído."
+    ],
+    "note": "Nunca fichen solo a partir del resumen: si no leyeron la sección de método, no pueden llenar la casilla 3."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes con los antecedentes",
+    "boxes": [
+      ["advertencia", "**Traer una noticia o un blog.** Si el texto no reporta método ni resultados, no es antecedente. Vuelva a Scholar o SciELO y busque un estudio; una nota de prensa a lo sumo sirve como dato de contexto, citada como tal."],
+      ["advertencia", "**Listar estudios sin decir qué aportan.** Una ficha sin la frase “esto le sirve a mi pregunta porque…” es decoración. Si no logra escribir esa frase, ese estudio no va en su documento."],
+      ["aclaracion", "**Copiar el resumen del artículo tal cual.** Resuma con sus palabras propósito, método y hallazgo. El copiar y pegar dispara el índice de similitud del documento y compromete la entrega."],
+      ["info", "**Solo fuentes internacionales, o solo nacionales.** El programa pide equilibrio entre unas y otras. SciELO y Redalyc son la mejor ruta para la parte latinoamericana y colombiana."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: de la búsqueda a la cita APA 7",
+    "bullets": [
+      "**1.** Busque en **Google Scholar** con sus términos en español y en inglés; abra tres candidatos.",
+      "**2.** Lea, como mínimo, **resumen, método y conclusiones**. Si no hay método, descarte y siga.",
+      "**3.** Copie el **DOI** o la URL estable del artículo, no el enlace de la página de resultados.",
+      "**4.** Abra **ZoteroBib** en zbib.org: gratis, en el navegador, sin cuenta y sin instalar nada.",
+      "**5.** Pegue el DOI o la URL en la barra de citación; ZoteroBib arma la referencia solo.",
+      "**6.** Seleccione el estilo **American Psychological Association 7th edition** y copie la referencia.",
+      "**7.** Péguela en su lista de referencias y **revísela a mano**: los gestores fallan con mayúsculas y apellidos compuestos.",
+      "**8.** Escriba debajo, en el cuerpo del avance, la ficha de cinco casillas de ese estudio."
+    ],
+    "note": "Alternativa integrada: en Google Docs, menú **Herramientas → Citas**, con estilo APA. No se requiere ningún programa de escritorio."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER (20 minutos) — búsqueda y fichaje",
+    "bullets": [
+      "**Consigna literal:** 20 minutos de búsqueda y fichaje en el documento del equipo.",
+      "  **(1)** Localicen **al menos dos antecedentes** nuevos en Google Scholar, SciELO o Redalyc.",
+      "  **(2)** Al menos uno debe ser **latinoamericano o colombiano**.",
+      "  **(3)** Llenen la ficha de cinco casillas de cada uno, con la casilla 5 redactada por ustedes.",
+      "  **(4)** Generen las dos referencias en APA 7 con ZoteroBib y péguenlas al final del documento.",
+      "El Docente pasa resolviendo dudas de términos de búsqueda y de vínculo con la pregunta.",
+      "**Criterio de éxito (verificable):** al leer cada ficha queda claro **qué método usó el estudio** y **por qué le sirve a esta pregunta**.",
+      "  Van rumbo a seis: dos hoy, el resto en trabajo autónomo."
+    ],
+    "note": "Si en 20 minutos consiguen solo un antecedente bien fichado, eso vale más que cinco enlaces pegados sin leer."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de subir el avance",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
+    "rows": [
+      ["Cada fuente es un estudio", "Puedo nombrar el método que usaron", "[  ]"],
+      ["Ninguna es noticia, blog o publicidad", "Reviso el tipo de fuente una por una", "[  ]"],
+      ["Hay equilibrio nacional e internacional", "Cuento cuántas son de la región y cuántas de fuera", "[  ]"],
+      ["Las fichas tienen las cinco casillas", "Ninguna se queda sin método ni sin hallazgo", "[  ]"],
+      ["La casilla 5 está redactada por mí", "Contiene la frase “le aporta a mi pregunta porque…”", "[  ]"],
+      ["No hay párrafos copiados", "Todo está parafraseado con mis palabras", "[  ]"],
+      ["Las referencias están en APA 7", "Revisé a mano la salida de ZoteroBib", "[  ]"],
+      ["Apliqué las correcciones recibidas", "Cada comentario tiene un cambio visible en el documento", "[  ]"]
+    ],
+    "col_w": [3.0, 5.6, 0.8],
+    "note": "La última casilla es la que más pesa: la siguiente entrega se construye encima de la anterior."
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué traer a la próxima sesión",
+    "bullets": [
+      "**Completar** las seis fichas mínimas, cuidando la mezcla nacional e internacional.",
+      "**Aplicar**, una por una, las correcciones de la retroalimentación sobre el documento acumulativo.",
+      "  Marquen cada corrección aplicada; en tutoría se revisan justamente esas.",
+      "**Organizar** los antecedentes por fenómeno o por contexto, no en el orden en que los descargaron.",
+      "**Cerrar** el apartado con un párrafo propio: qué se ha investigado ya y **qué vacío queda** para su pregunta.",
+      "**Subir** el avance a CDigital como **S04_Antecedentes_Apellidos**.",
+      "Para la próxima sesión traigan subrayados los **tres conceptos** que su pregunta obliga a definir.",
+      "  Son la semilla del marco teórico: pasamos de “qué se investigó” a “con qué lentes se explica”."
+    ],
+    "note": "Las tutorías por equipo se acuerdan con el Docente durante la semana. [URL CDigital — campus del curso pendiente]"
+  }
+]

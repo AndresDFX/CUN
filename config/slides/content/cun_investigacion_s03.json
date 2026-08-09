@@ -1,0 +1,201 @@
+[
+  {
+    "type": "bullets",
+    "title": "Bajemos la ansiedad: el avance no es media tesis",
+    "bullets": [
+      "Hoy es una **sesión bisagra**: se trabaja la prueba escrita parcial y el **1.er avance del artículo**.",
+      "Lo primero que hay que desmontar: nadie espera veinte páginas.",
+      "  El avance es un **borrador mínimo viable**: cuatro piezas bien planteadas.",
+      "  Es el equivalente al **prototipo funcional** en ingeniería: no es el producto, pero ya se puede probar.",
+      "Lema del curso, y se va a repetir todo el periodo: **calidad > extensión**.",
+      "  Media página con un problema claro vale más que cinco páginas de relleno histórico.",
+      "  El relleno se detecta rápido: si un párrafo se puede borrar y nada cambia, era relleno.",
+      "Meta de hoy: **salir con el borrador empezado**, no con la intención de empezarlo en casa."
+    ],
+    "note": "Traiga abierto lo de las sesiones anteriores: su **tema** y su **línea** son el punto de partida de este avance."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es y qué NO es el primer avance",
+    "bullets": [
+      "**Sí es:** un texto corto donde ya se ve **qué se va a investigar y por qué**.",
+      "  Tiene título, una introducción breve, el problema convertido en pregunta y las primeras referencias.",
+      "  Está escrito en prosa: párrafos, no viñetas sueltas ni un esquema.",
+      "**No es:** un resumen de todo lo que ha leído.",
+      "  No es la metodología (eso viene después).",
+      "  No es el marco teórico completo (eso se trabaja al final del ciclo).",
+      "  No es un pantallazo de ChatGPT pegado sin revisar: se nota, y no cita fuentes reales.",
+      "Sirve para algo muy concreto: **detectar temprano si su tema es investigable**.",
+      "  Un avance mal enfocado se corrige en una semana; un artículo completo mal enfocado, no."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cuatro piezas del avance (y su error típico)",
+    "headers": ["Pieza", "Qué debe contener", "Extensión", "Error típico"],
+    "rows": [
+      ["**Título tentativo**", "Actor + fenómeno + contexto", "≤ 20 palabras", "Título-eslogan sin variables (\"La revolución de la IA\")"],
+      ["**Introducción breve**", "Contexto → vacío → propósito", "3 párrafos", "Arrancar con \"desde la antigüedad el ser humano...\""],
+      ["**Problema y pregunta**", "El vacío convertido en una pregunta investigable", "1 párrafo + 1 pregunta", "Pregunta que se responde con sí o no"],
+      ["**Referencias iniciales**", "2 a 3 fuentes en **APA 7**", "Al final del texto", "Pegar URLs sueltas sin formato ni autor"]
+    ],
+    "note": "Solo cuatro piezas. Si le sobra tiempo, **no agregue piezas: mejore las cuatro**.",
+    "col_w": [2.4, 4.0, 1.8, 4.0]
+  },
+  {
+    "type": "bullets",
+    "title": "El título: fórmula y ejemplos",
+    "bullets": [
+      "Un título de artículo no vende: **describe**. Su fórmula mínima:",
+      "  **Actor** (¿quién o qué se estudia?) + **fenómeno** (¿qué le pasa?) + **contexto** (¿dónde, cuándo?).",
+      "Máximo **20 palabras**; sin signos de admiración; sin juegos de palabras.",
+      "Comparemos:",
+      "  Débil: *\"La inteligencia artificial: el futuro que ya llegó\"* → no dice actor, ni fenómeno, ni contexto.",
+      "  Débil: *\"Mi app para el laboratorio\"* → anuncia una solución, no un objeto de estudio.",
+      "  **Fuerte:** *\"Detección de correos de phishing dirigidos a estudiantes universitarios mediante clasificación automática\"*.",
+      "  **Fuerte:** *\"Pérdida de paquetes y su efecto en las prácticas de un laboratorio de redes universitario\"*.",
+      "Prueba rápida: si al leer su título alguien pregunta \"¿de qué se trata?\", el título todavía no sirve."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "La introducción en tres párrafos: contexto → vacío → propósito",
+    "bullets": [
+      "**Párrafo 1 — Contexto.** Dónde ocurre lo que va a estudiar y por qué importa allí.",
+      "  Arranca en **su** problema real, no en la historia de la humanidad.",
+      "  Verbos útiles: *se realizan, dependen de, se ha incorporado, opera con*.",
+      "**Párrafo 2 — Vacío.** Qué no se sabe todavía, o qué no se ha medido, o qué no se ha documentado.",
+      "  Este párrafo casi siempre empieza con un giro: *\"Sin embargo...\", \"No obstante...\", \"A pesar de ello...\"*.",
+      "  Sin vacío no hay artículo: si ya todo está resuelto, no hay nada que investigar.",
+      "**Párrafo 3 — Propósito.** Qué se propone hacer usted en este artículo.",
+      "  Un solo verbo de propósito: *describir, caracterizar, comparar, evaluar, identificar*.",
+      "  Ojo: **no prometa** lo que no podrá hacer este periodo.",
+      "Cada párrafo: 4 a 6 líneas. Los tres juntos caben en menos de media página."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: introducción escrita completa",
+    "bullets": [
+      "**Párrafo 1 (contexto):** *\"En los laboratorios de redes de la universidad se realizan prácticas que dependen de una conexión estable entre los equipos y el servidor del aula. Estas prácticas tienen tiempos definidos y se evalúan durante la misma sesión.\"*",
+      "**Párrafo 2 (vacío):** *\"Sin embargo, no se ha caracterizado con datos la pérdida de paquetes que se presenta en el laboratorio X durante las horas de mayor uso, de modo que las interrupciones se atribuyen a causas supuestas y no verificadas.\"*",
+      "**Párrafo 3 (propósito):** *\"Este artículo se propone describir el comportamiento de la pérdida de paquetes en ese laboratorio y su relación con la interrupción de las prácticas programadas.\"*",
+      "Ahora observe lo que **no** se hizo:",
+      "  No se empezó con \"desde la antigüedad el ser humano se comunica\".",
+      "  No se anunció una solución (\"instalaremos fibra óptica\").",
+      "  No se usó ninguna palabra decorativa: cada frase aporta un dato del caso.",
+      "Ese es el estándar del curso: **entrar por el problema real, en la primera línea**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Tipos de conocimiento (esto suele caer en el parcial)",
+    "headers": ["Tipo", "Cómo se obtiene", "¿Se verifica?", "Ejemplo", "¿Sostiene el artículo?"],
+    "rows": [
+      ["**Cotidiano / vulgar**", "Por experiencia inmediata y sentido común", "No", "\"Sé que llueve porque me mojé\"", "No"],
+      ["**Empírico**", "Por observación repetida, sin sistematizar", "Parcialmente", "\"Llevo un año y siempre se cae la red a las 3 p.m.\"", "Solo como indicio inicial"],
+      ["**Científico**", "Con método, medición y evidencia documentada", "**Sí, por otros**", "\"La bitácora registra 12 caídas en un mes\"", "**Sí**"]
+    ],
+    "note": "La diferencia entre empírico y científico no es la verdad: es que el científico **se puede verificar y repetir** porque quedó registrado el cómo."
+  },
+  {
+    "type": "table",
+    "title": "Tipos de fuente: primaria, secundaria y terciaria",
+    "headers": ["Tipo", "Qué es", "Ejemplos", "Cómo se usa en su artículo"],
+    "rows": [
+      ["**Primaria**", "El estudio original, donde se generó el conocimiento", "Artículo de investigación, tesis, dataset, norma técnica, informe oficial", "**Es su fuente principal**; se cita como autoridad"],
+      ["**Secundaria**", "Interpreta, sintetiza o comenta las primarias", "Libro de texto, artículo de revisión, estado del arte", "Útil para entender el panorama y ubicar primarias"],
+      ["**Terciaria**", "Índices y compilaciones que llevan a las otras dos", "Enciclopedias, catálogos, buscadores, Wikipedia", "**Solo para orientarse**; no se cita como autoridad"]
+    ],
+    "note": "Truco: si el texto cuenta un estudio que **alguien más** hizo, es secundaria; si cuenta lo que **sus autores** hicieron, es primaria."
+  },
+  {
+    "type": "boxes",
+    "title": "Wikipedia, blogs e IA generativa: qué se puede y qué no",
+    "boxes": [
+      ["aclaracion", "**Wikipedia sí sirve, pero como puerta.** Léala para entender un concepto y luego baje a la sección de **referencias** del artículo: allí están las fuentes reales que sí puede citar."],
+      ["advertencia", "**Un blog o un video no son fuente del artículo.** Pueden explicarle bien un tema, pero no pasaron revisión. Si lo que dice el blog es cierto, existe una fuente académica que lo respalda: busque esa."],
+      ["advertencia", "**La IA generativa inventa referencias.** Puede darle un autor, un año y un título que suenan perfectos y no existen. Regla: **si no abrió el documento, no lo cita**."],
+      ["info", "**Verifique siempre en la fuente original.** Abra el artículo, confirme autor, año y revista, y solo entonces genere la cita. Una referencia falsa en un artículo es una falta grave, no un descuido."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué evalúa la prueba parcial",
+    "bullets": [
+      "La prueba **no** pide memorizar definiciones textuales: pide **distinguir y aplicar**.",
+      "Conceptos que se evalúan:",
+      "  Diferenciar los **tres tipos de conocimiento** a partir de un enunciado dado.",
+      "  Clasificar una fuente como **primaria, secundaria o terciaria** viendo su descripción.",
+      "  Reconocer las **partes de un artículo** y qué va en cada una.",
+      "  Detectar si una **pregunta es investigable** o si se responde con sí/no.",
+      "  Identificar el **vacío** dentro de una introducción de ejemplo.",
+      "Formato típico de pregunta: se le da un caso corto y se le pide clasificarlo o corregirlo.",
+      "Cómo prepararse en poco tiempo: repase las **dos tablas** de esta sesión y explíqueselas en voz alta a alguien.",
+      "El detalle oficial de la evaluación del corte está publicado en **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: sus referencias en APA 7 con ZoteroBib",
+    "bullets": [
+      "**ZoteroBib** (zbib.org) genera citas en APA 7 **sin instalar nada y sin crear cuenta**. Es la opción del curso.",
+      "**1.** Abra en el navegador **zbib.org**.",
+      "**2.** En el estilo de cita, seleccione **American Psychological Association 7th edition**.",
+      "**3.** Copie el **DOI** del artículo (es el código que empieza por `10.` en la primera página) y péguelo en la barra.",
+      "  Si no hay DOI, pegue el **título exacto** o la URL del artículo.",
+      "**4.** Pulse *Cite*: ZoteroBib arma la referencia completa.",
+      "**5.** **Revise a mano** lo que armó: nombres, año, mayúsculas del título y nombre de la revista.",
+      "  ZoteroBib acierta mucho, pero **no siempre**; el responsable de la cita es usted.",
+      "**6.** Use *Copy to clipboard* y péguela en su documento, bajo el título **Referencias**, en orden alfabético.",
+      "**7.** En el cuerpo del texto, cite así: **(Apellido, año)**; y si es cita textual, agregue la página: **(Apellido, año, p. 12)**."
+    ],
+    "note": "Nada de Mendeley ni Zotero de escritorio: no hace falta instalar programas para este curso."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Escribir el 1.er avance (~22 min)",
+    "bullets": [
+      "**Consigna literal.** En un documento llamado `S03_Avance1_Apellido` escriba las cuatro piezas:",
+      "  **(1) Título tentativo** con actor + fenómeno + contexto, en 20 palabras o menos.",
+      "  **(2) Introducción** de exactamente **3 párrafos**: contexto → vacío → propósito.",
+      "  **(3) El problema convertido en pregunta**, en una sola frase, que no se responda con sí o no.",
+      "  **(4) Dos referencias en APA 7** generadas con ZoteroBib, de fuentes que usted abrió.",
+      "**Tiempo:** ~22 minutos. Escriba primero y corrija después: no se quede puliendo la primera frase.",
+      "**Criterio de éxito (verificable):** si otra persona lee su introducción **sin conocer su tema**, puede decirle cuál es el contexto, cuál es el vacío y qué se propone usted.",
+      "Prueba de control: subraye el vacío. Si no puede subrayarlo, **no lo escribió**.",
+      "Se prefiere **media página impecable a tres páginas de relleno**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist antes de subir su entrega",
+    "bullets": [
+      "[ ] El documento se llama `S03_Avance1_Apellido`.",
+      "[ ] Mi título tiene actor, fenómeno y contexto, y no pasa de 20 palabras.",
+      "[ ] Mi introducción tiene **3 párrafos**, no uno largo ni cinco cortos.",
+      "[ ] El párrafo 2 tiene un giro (\"sin embargo\", \"no obstante\") y **nombra lo que no se sabe**.",
+      "[ ] El párrafo 3 tiene **un** verbo de propósito (describir, caracterizar, comparar, evaluar).",
+      "[ ] No empecé con \"desde la antigüedad\" ni con una definición de diccionario.",
+      "[ ] Mi pregunta empieza por **cómo, qué, cuál o en qué medida** (no por \"¿es...?\" o \"¿existe...?\").",
+      "[ ] Mis 2 referencias son **primarias o secundarias**, no un blog ni Wikipedia.",
+      "[ ] **Abrí** los dos documentos que cito: no los tomé del listado de resultados.",
+      "[ ] Las referencias están en APA 7, en orden alfabético, al final.",
+      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo · para la próxima sesión",
+    "bullets": [
+      "**Relea su avance en voz alta.** Lo que no se puede leer de corrido, está mal escrito.",
+      "**Repase para el parcial** con las dos tablas de hoy: tipos de conocimiento y tipos de fuente.",
+      "  Ejercicio de 10 minutos: tome 5 fuentes cualesquiera y clasifíquelas en primaria/secundaria/terciaria.",
+      "**Consulte en CDigital** el detalle de la evaluación de este corte y el espacio de entrega.",
+      "La próxima sesión trabajamos el **corazón del artículo**: identificar el problema y formular la pregunta.",
+      "  Traiga su avance: vamos a **someter su pregunta a prueba** con espina de pescado y árbol de problemas.",
+      "  Si su pregunta cambia la próxima sesión, no es un fracaso: es exactamente para lo que sirve el avance.",
+      "Todo el material y las entregas viven en **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  }
+]

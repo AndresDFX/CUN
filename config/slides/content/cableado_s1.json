@@ -1,0 +1,170 @@
+[
+  {
+    "type": "bullets",
+    "title": "¿Qué es una red? Todo se piensa por capas",
+    "bullets": [
+      "Una **red** = dos o más dispositivos conectados para intercambiar datos.",
+      "  Tu celular hablando con el router de casa ya es una red; internet es \"la red de todas las redes\".",
+      "Conectar equipos es complejísimo: cables, señales, direcciones, programas, seguridad.",
+      "La solución de la industria: **dividir el problema en capas** — @@una capa, una tarea@@.",
+      "  Cada capa hace SU trabajo y confía en la de al lado, sin saber cómo lo hizo.",
+      "Analogía: enviar un paquete por mensajería — tú solo pones la dirección; moto, camión o avión son \"otras capas\".",
+      "Hoy (Nivel 1) el objetivo es **nombrar y ubicar** cada pieza: su capa, su dispositivo y su medio físico."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El modelo de cinco capas de TCP/IP",
+    "headers": ["#", "Capa (TCP/IP)", "Se encarga de", "Unidad", "Dirección", "Ejemplo"],
+    "rows": [
+      ["**1**", "**Física**", "Mover bits por el medio (cobre, fibra o aire)", "Bits", "—", "El cable, Wi-Fi"],
+      ["**2**", "**Enlace**", "Comunicar equipos en la MISMA red local", "Trama", "**MAC**", "El switch, Ethernet"],
+      ["**3**", "**Red**", "Llevar datos entre redes distintas", "Paquete", "**IP**", "El router, internet"],
+      ["**4**", "**Transporte**", "Entregar a la app correcta y sin errores", "Segmento", "Puerto", "TCP / UDP"],
+      ["**5**", "**Aplicación**", "Los programas que usa la persona", "Datos", "—", "Navegador, correo"]
+    ],
+    "note": "Nemotecnia: @@\"Físicamente Enlazamos Redes Transportando Aplicaciones\"@@. Hoy trabajamos sobre todo las capas **1** (cable) y **2** (trama)."
+  },
+  {
+    "type": "bullets",
+    "title": "Dos mapas del mismo territorio: TCP/IP y OSI",
+    "bullets": [
+      "No compiten: describen **lo mismo** con distinto nivel de detalle.",
+      "**TCP/IP (5 capas)**: el que domina en la práctica; el que debes memorizar.",
+      "**OSI (7 capas)**: el marco \"de referencia\"; aparece en certificaciones y entrevistas.",
+      "OSI abre la cima de TCP/IP en tres capas:",
+      "  La **Aplicación** de TCP/IP = Aplicación + Presentación + Sesión en OSI.",
+      "  Las capas 1 a 4 se corresponden una a una en ambos modelos.",
+      "Ejemplo de entrevista: \"¿en qué capa OSI vive HTTP?\" → capa 7 (Aplicación).",
+      "Nemotecnia OSI (de abajo arriba): @@\"Por Favor No Toques Sus Papeles Ajenos\"@@.",
+      "Para hoy basta dominar las **cinco de TCP/IP**; a OSI solo hay que reconocerlo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los dispositivos de red y en qué capa viven",
+    "headers": ["Dispositivo", "Capa", "Qué hace", "Piensa con"],
+    "rows": [
+      ["Cable / medio", "1", "Transporta los bits; no es inteligente", "—"],
+      ["Hub (concentrador)", "1", "Repite la señal a **todos** los puertos → colisiones; **obsoleto**", "—"],
+      ["**Switch**", "**2**", "Envía la trama solo al puerto del destinatario", "**MAC**"],
+      ["**Router**", "**3**", "Conecta redes distintas y elige la ruta", "**IP**"],
+      ["Servidor / cliente", "5 (rol)", "Uno ofrece el servicio, el otro lo pide", "nombre / IP / puerto"]
+    ],
+    "note": "Regla de oro: @@el hub grita a todos, el switch susurra al destinatario, el router cruza fronteras@@."
+  },
+  {
+    "type": "bullets",
+    "title": "La capa física: el bit, el par trenzado y el dúplex",
+    "bullets": [
+      "Un **bit** es un 1 o un 0. Cómo viaja según el medio:",
+      "  Cobre: cambios de **voltaje** · Fibra: pulsos de **luz** · Wi-Fi: ondas de **radio**.",
+      "La velocidad a la que se envían = **ancho de banda**, en bits por segundo (Mbps, Gbps).",
+      "**Par trenzado (UTP)**: 8 hilos de cobre en 4 pares; conector **RJ45**.",
+      "  El trenzado @@cancela la interferencia@@: el ruido afecta a ambos hilos por igual y se anula.",
+      "**Dúplex** = ¿se puede hablar y escuchar a la vez?",
+      "  **Símplex**: un solo sentido, como una radio (solo escuchas).",
+      "  **Semidúplex**: por turnos, como un walkie-talkie; así trabajaban los **hubs**.",
+      "  **Full-duplex**: los dos a la vez, como una llamada; así trabajan los **switches**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cable UTP: categorías y la regla de los 100 m",
+    "headers": ["Categoría", "Velocidad típica", "Uso hoy"],
+    "rows": [
+      ["Cat 5", "100 Mbps", "Obsoleta"],
+      ["**Cat 5e**", "1 Gbps (1000 Mbps)", "Muy usada aún"],
+      ["**Cat 6**", "1 Gbps a 100 m · 10 Gbps en tramos cortos (~55 m)", "Estándar actual"],
+      ["**Cat 6a**", "10 Gbps a 100 m", "Instalaciones nuevas exigentes"]
+    ],
+    "note": "Número sagrado del cableado: @@100 m máximo por tramo@@ (90 m fijos + 10 m de patch cords). Cable **directo** (T568B–T568B) une equipos distintos; **cruzado** (T568A–T568B) une iguales — hoy Auto-MDIX lo ajusta solo."
+  },
+  {
+    "type": "bullets",
+    "title": "Puertos, RJ45 y paneles de conexión (patch panels)",
+    "bullets": [
+      "**Puerto de red**: el enchufe físico del cable (en el PC, el switch o la pared). Conector estándar: **RJ45** (8 pines).",
+      "**Patch panel**: el tablero que ordena y rotula todos los cables del edificio.",
+      "  Imagina 200 puntos de red: llegan ordenados por detrás del panel (Oficina 101, 102...).",
+      "  Un **patch cord** corto une cada punto al switch por el frente.",
+      "¿Para qué tanto orden? Para @@diagnosticar y mover la red sin caos@@.",
+      "  Si la Oficina 101 se muda, el técnico mueve un patch cord; no persigue un cable por el techo.",
+      "En el panel y las tomas de pared no se usa RJ45: los hilos se rematan con **punch down** (herramienta de impacto).",
+      "Esto es, literalmente, **cableado estructurado**: documentar y rotular cada punto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El kit del técnico: herramientas de cableado",
+    "headers": ["Herramienta", "Para qué sirve", "Cuándo la usas"],
+    "rows": [
+      ["**Ponchadora** (crimping tool)", "Fija un conector **RJ45** al extremo del cable UTP", "Armar un patch cord"],
+      ["Pelacables (stripper)", "Retira la cubierta sin dañar los 8 hilos", "Antes de ponchar o rematar"],
+      ["Herramienta de impacto (punch down)", "\"Clava\" cada hilo en un patch panel o toma de pared", "Rematar en el panel / pared"],
+      ["**Probador de cable** (tester)", "Verifica continuidad y que los 8 hilos vayan a su pin", "Al terminar, para confirmar"],
+      ["Generador de tono (toner)", "Encuentra y rotula qué cable es cuál entre muchos", "Rastrear un cable en el manojo"]
+    ],
+    "note": "@@Un cable mal ponchado es la causa n.º 1 de fallas de red@@; el probador convierte un misterio de horas en una respuesta de 5 segundos."
+  },
+  {
+    "type": "bullets",
+    "title": "Ethernet y la dirección MAC: física vs. lógica",
+    "bullets": [
+      "**Ethernet**: las reglas de cómo se comunican los equipos dentro de la red local por cable. Vive en la **Capa 2**.",
+      "Cada tarjeta de red tiene una **dirección MAC**:",
+      "  **48 bits = 6 octetos** en hexadecimal, así: `3C:5A:B4:01:23:45`.",
+      "  Es **única en el mundo** y viene grabada de fábrica (\"dirección física\").",
+      "  Los **3 primeros octetos** = fabricante (**OUI**, asignado por la IEEE); los 3 últimos, la serie.",
+      "**MAC vs. IP** = @@cédula vs. dirección de casa@@:",
+      "  MAC: física, local, no cambia (Capa 2, la usa el switch).",
+      "  IP: lógica, global, cambia si te mudas de red (Capa 3, la usa el router).",
+      "Ver una MAC real: `ipconfig /all` en la terminal del sistema (o `ip a` en Linux)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La trama Ethernet, campo por campo",
+    "headers": ["Campo", "Tamaño", "Para qué sirve"],
+    "rows": [
+      ["Preámbulo + SFD", "8 bytes", "Avisa \"ahí viene una trama\" y sincroniza al receptor"],
+      ["**MAC destino**", "6 bytes", "A quién va dirigida"],
+      ["**MAC origen**", "6 bytes", "Quién la envía"],
+      ["(Etiqueta VLAN 802.1Q)", "4 bytes (opcional)", "Separa redes lógicas"],
+      ["EtherType", "2 bytes", "Qué protocolo va adentro (p. ej. IPv4)"],
+      ["**Datos (payload)**", "46 – 1500 bytes", "La carga útil (el paquete IP de arriba)"],
+      ["FCS (CRC)", "4 bytes", "Verifica que la trama no llegó corrupta"]
+    ],
+    "note": "La trama es un **sobre**: destinatario, remitente, carta y sello. @@MTU = 1500 bytes@@ (máximo de datos); si el FCS no coincide al recalcularlo, la trama se descarta."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: enciende y verifica una interfaz",
+    "bullets": [
+      "Meta: darle IP a un router y comprobar que la interfaz quede viva. En **examlab · Lab \"red consola\"**.",
+      "**Paso 1** · Entra al modo configuración:",
+      "  `enable` → `configure terminal`",
+      "**Paso 2** · Configura la interfaz `g0/0`:",
+      "  `interface g0/0`",
+      "  `ip address 192.168.1.1 255.255.255.0`",
+      "  `no shutdown` — toda interfaz nace apagada; hay que levantarla.",
+      "**Paso 3** · Verifica el estado con `show ip interface brief`:",
+      "  `GigabitEthernet0/0   192.168.1.1   YES manual   up   up`",
+      "  Estado @@up/up@@ = interfaz viva (línea física y protocolo arriba).",
+      "**Paso 4** · Prueba conectividad y observa la MAC:",
+      "  `ping 192.168.1.2` → responde: 5 enviados, 5 recibidos.",
+      "  `ipconfig /all` (terminal del SO) → **MAC** real `3C:5A:B4:01:23:45` (6 octetos)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "¿A cuántos les hablo? Unicast, multicast y broadcast",
+    "headers": ["Tipo", "¿A quién va?", "Analogía", "MAC destino"],
+    "rows": [
+      ["**Unicast**", "A UN solo destinatario", "Carta con nombre y dirección", "Una MAC específica"],
+      ["**Multicast**", "A un GRUPO de interesados", "Circular a \"los del comité\"", "Rango reservado (`01:00:5E...`)"],
+      ["**Broadcast**", "A TODOS los de la red local", "Anuncio por el altavoz", "@@`FF:FF:FF:FF:FF:FF`@@"]
+    ],
+    "note": "Memoriza la de broadcast: `FF:FF:FF:FF:FF:FF` (todos los bits en 1). Se usa con cuidado porque molesta a todos (ej.: ARP preguntando \"¿quién tiene esta IP?\", que verás en la Sesión 2)."
+  }
+]

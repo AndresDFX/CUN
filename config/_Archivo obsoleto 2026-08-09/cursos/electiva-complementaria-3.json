@@ -1,0 +1,91 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "1.0",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Electiva Complementaria III. Política Económica en Colombia",
+    "nombre_corto": "Electiva Complementaria 3",
+    "programa": "Transversal (Administración de Empresas / Contaduría Pública y afines)",
+    "carpeta_salida": "Cursos/Electiva Complementaria 3/Clases",
+    "tipo_asignatura": "C",
+    "naturaleza": "Teórico-Práctica · hace parte del Proyecto Integrador Profesional",
+    "duracion_semanas": 1,
+    "n_sesiones": 3,
+    "modalidad_sesiones": "Sesiones sincrónicas teóricas",
+
+    "duracion_sesion_minutos": 105,
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "Las 5 fases suman 100 min de plan dirigido; la actividad individual ocupa los 15 min finales para llegar a 105 (1h45)."
+    },
+
+    "competencia": "Fomentar visión crítica y capacidad de interpretar, evaluar y gestionar dentro de la realidad económica y política del país.",
+    "resultado_aprendizaje": "Analizar los indicadores económicos clave de Colombia y su relevancia para los emprendimientos.",
+    "competencias_fundamentales_fesna": ["Pensamiento crítico", "Pensamiento estructurado", "Comunicación efectiva"],
+    "nivel_proyectado": "P. crítico Nivel 1 (intermedio) · P. estructurado Nivel 1 (intermedio)",
+
+    "niveles": {
+      "1": "El estudiante identifica los indicadores económicos clave de Colombia y describe sus características principales.",
+      "2": "El estudiante analiza la evolución de los indicadores económicos clave de Colombia y su impacto en los diferentes sectores económicos.",
+      "3": "El estudiante evalúa la viabilidad de un emprendimiento en el contexto económico colombiano, utilizando los indicadores económicos clave."
+    },
+
+    "enseñanzas": [
+      "Introducción a la política económica en Colombia: conceptos básicos (objetivos, oferta y demanda, inflación, desempleo, crecimiento económico), política fiscal/monetaria/cambiaria e impacto en los emprendimientos.",
+      "Políticas macroeconómicas: tipos (fiscal, monetaria, cambiaria), ciclos económicos y efectos en empresas y emprendimientos.",
+      "Políticas microeconómicas y sectoriales: políticas relevantes para diferentes sectores y análisis de casos.",
+      "Economía colombiana: retos y oportunidades — tendencias, interpretación de indicadores e impacto sectorial."
+    ],
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Los Indicadores Económicos de Colombia: El Tablero de Control del País",
+        "nivel": 1,
+        "foco": "Identificar y describir los indicadores económicos clave (PIB, inflación/IPC, desempleo, tasa de cambio, tasa de interés de política) y quién los mide (DANE, Banco de la República).",
+        "enseñanzas": ["Conceptos básicos de economía", "Introducción a la política económica", "Indicadores económicos clave de Colombia"]
+      },
+      "2": {
+        "titulo": "Política Económica en Movimiento: Cómo las Decisiones del Estado Mueven los Sectores",
+        "nivel": 2,
+        "foco": "Analizar la política fiscal, monetaria y cambiaria, los ciclos económicos y la evolución de los indicadores, y su impacto diferenciado en los sectores económicos y los emprendimientos.",
+        "enseñanzas": ["Políticas macroeconómicas", "Políticas microeconómicas y sectoriales", "Ciclos económicos", "Impacto en sectores"]
+      },
+      "3": {
+        "titulo": "¿Es Viable mi Emprendimiento? Evaluar una Idea de Negocio con los Indicadores",
+        "nivel": 3,
+        "foco": "Evaluar la viabilidad de un emprendimiento en el contexto económico colombiano usando los indicadores; retos y oportunidades. Construye el entregable del proyecto integrador.",
+        "enseñanzas": ["Economía colombiana: retos y oportunidades", "Aplicación de indicadores a la viabilidad de un emprendimiento"]
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "C",
+      "_nota": "Esquema vigente en plataforma (el que se muestra al estudiante). La guía de tipos de asignatura describe el Tipo C como 40/40/20, pero el aplicado en LMS es 50/40/10.",
+      "destreza_ruta_lms": 50,
+      "entrega_final_lms": 40,
+      "asistencia": 10,
+      "opcionales": "Participación en clase +0.3 · Kahoot 1er +0.5 / 2do +0.4 / 3er +0.3",
+      "evidencia_aprendizaje": "Caso aplicado / proyecto integrador: evaluar la viabilidad de un emprendimiento en el contexto económico colombiano usando los indicadores económicos clave (Entrega final en LMS).",
+      "nivelacion": "Prueba de máximo 30 preguntas de selección múltiple (5 conceptuales, 5 de argumentación, 5 de comprensión aplicada por nivel)."
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[N]",
+      "horario": "[DÍAS Y HORA]",
+      "fechas": "[INICIO] – [FIN]"
+    }
+  }
+}

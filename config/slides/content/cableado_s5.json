@@ -1,0 +1,162 @@
+[
+  {
+    "type": "bullets",
+    "title": "La última milla: cómo entra Internet a tu casa",
+    "bullets": [
+      "La **fibra troncal** que cruza océanos va casi a la velocidad de la luz; el cuello de botella es el tramo final del proveedor (ISP) hasta tu casa: la @@última milla@@.",
+      "Ejemplo concreto: mira el cablecito que entra a tu router — ese medio (**cobre, coaxial, vidrio o aire**) decide tu velocidad y tu precio.",
+      "**El Wi-Fi NO es la última milla:** solo reparte adentro el Internet que ya llegó por DSL, cable, fibra o celular.",
+      "Hoy estamos en **Nivel 3 (Evaluar):** no se trata de memorizar siglas, sino de **elegir** la tecnología correcta para cada terreno.",
+      "Criterios para decidir:",
+      "  **Disponibilidad** — qué hay en la zona (cobre, coaxial, fibra, señal celular).",
+      "  **Velocidad** y **simetría** — ¿sube tan rápido como baja?",
+      "  **Costo** y **seguridad**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Del dial-up a la banda ancha",
+    "bullets": [
+      "**Dial-up (años 90):** viajaba por la línea de voz (**POTS**); un **módem** (**MO**dulador-**DEM**odulador) convertía los bits en los pitidos que el teléfono sí transporta.",
+      "  Como un **traductor de idioma:** pasa de 'idioma digital' a 'idioma de sonidos telefónicos' y viceversa (por eso los pitidos).",
+      "Sus dos límites: apenas **56 kbps** (estándar V.90/V.92) y **ocupaba la línea** — no podías navegar y llamar a la vez.",
+      "**T-carrier (T1/T3):** líneas digitales **dedicadas** de empresa — **T1 = 1.544 Mbps** (24 canales de 64 kbps), **T3 ≈ 45 Mbps**. Capacidad garantizada, no compartida.",
+      "@@Banda ancha@@ = todo lo más rápido que el dial-up: **siempre conectada**, mucho más veloz y **sin ocupar el teléfono** (voz y datos en frecuencias distintas del mismo medio).",
+      "Bajo ese paraguas caen **DSL, cable y fibra**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "DSL vs. Cable: banda ancha por infraestructura existente",
+    "headers": ["Aspecto", "DSL", "Cable"],
+    "rows": [
+      ["Medio", "Par de **cobre** del teléfono", "**Coaxial** de la TV (hoy HFC: fibra + coaxial)"],
+      ["Equipo / estándar", "Módem DSL ↔ **DSLAM** en la central", "Cable módem ↔ **CMTS**; estándar **DOCSIS** 3.0/3.1"],
+      ["Velocidad típica", "1 – 100+ Mbps (VDSL)", "100 Mbps – 1 Gbps o más"],
+      ["Simetría", "**ADSL** asimétrico · **SDSL** simétrico", "Asimétrico (baja rápido, sube lento)"],
+      ["Punto clave", "Depende de la **distancia** a la central (> ~5 km rinde mal)", "El ancho de banda @@se comparte con los vecinos@@ (baja en horas pico)"]
+    ],
+    "note": "Las dos reutilizan cableado ya instalado (teléfono / TV). DSL deja hablar y navegar a la vez porque usa frecuencias más altas que la voz humana. El cable es como una piscina del conjunto: si todos se meten en la noche, el agua no alcanza."
+  },
+  {
+    "type": "bullets",
+    "title": "Fibra óptica y FTTX",
+    "bullets": [
+      "La fibra transmite los datos como **pulsos de luz** por un hilo de vidrio más fino que un cabello.",
+      "  Como **linternas** que mandan mensajes por un tubo de vidrio: rapidísimo, llega lejísimos y no le afectan rayos ni motores.",
+      "Tres ventajas enormes:",
+      "  **Ancho de banda gigante:** de 100 Mbps a **10 Gbps** o más, y suele ser **simétrica**.",
+      "  **Distancias enormes** con muy poca pérdida (la luz se atenúa mucho menos que la electricidad en cobre).",
+      "  **Inmune a la interferencia** electromagnética — no le afectan motores, rayos ni cables de energía.",
+      "El equipo en casa es la **ONT**, que convierte la luz en señal eléctrica para tu router.",
+      "**FTTX** (Fiber To The X) indica hasta dónde llega la fibra antes de pasar a cobre:",
+      "  **FTTH / FTTP** — fibra pura hasta la vivienda (la mejor).",
+      "  **FTTB** — hasta el edificio; cobre a cada apartamento.",
+      "  **FTTC / FTTN** — hasta un gabinete del barrio; los últimos metros en cobre.",
+      "Regla: cuanto más cerca de la casa termina la fibra (@@FTTH@@), más rápido y estable."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Conectar sedes lejanas: WAN y VPN punto a punto",
+    "bullets": [
+      "Una **WAN** (Red de Área Extensa) une **sedes geográficamente distantes** (p. ej. Bogotá ↔ Medellín) para que trabajen como una sola red; normalmente se contrata al proveedor.",
+      "Formas de armar una WAN:",
+      "  **Enlace punto a punto** (línea arrendada/dedicada): directo y confiable, pero **caro**.",
+      "  **MPLS:** red del proveedor que encamina el tráfico con calidad de servicio.",
+      "  **SD-WAN:** administra por software varios enlaces (incluido Internet común) para abaratar.",
+      "@@VPN punto a punto (site-to-site)@@: **túnel cifrado** (típicamente **IPsec**) que une dos sedes enteras a través de Internet público — mucho más barata que una línea dedicada.",
+      "No confundir: **VPN punto a punto** conecta **dos redes/sedes enteras** · **VPN de acceso remoto** conecta **un solo usuario** desde su casa.",
+      "Analogía: la línea dedicada es una carretera privada; la VPN punto a punto es un **camión blindado** por la vía pública — usas la vía de todos, pero tu carga va cifrada."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Wi-Fi: la sopa de letras de los estándares 802.11",
+    "headers": ["Estándar", "Nombre comercial", "Banda", "Velocidad máx. teórica"],
+    "rows": [
+      ["802.11b / a", "—", "2.4 / 5 GHz", "11 / 54 Mbps"],
+      ["802.11g", "—", "2.4 GHz", "54 Mbps"],
+      ["802.11n", "**Wi-Fi 4**", "2.4 y 5 GHz", "600 Mbps (MIMO)"],
+      ["802.11ac", "**Wi-Fi 5**", "5 GHz", "~3.5 Gbps (MU-MIMO)"],
+      ["802.11ax", "@@Wi-Fi 6 / 6E@@", "2.4 / 5 / 6 GHz", "~9.6 Gbps (OFDMA)"],
+      ["802.11be", "**Wi-Fi 7**", "2.4 / 5 / 6 GHz", "decenas de Gbps"]
+    ],
+    "note": "Wi-Fi 6 (OFDMA) no solo es más veloz: atiende **muchos dispositivos a la vez** sin degradarse — ideal para hogares/oficinas llenos e IoT. El punto de acceso (AP) va integrado en el router; el nombre visible de la red es el **SSID**."
+  },
+  {
+    "type": "bullets",
+    "title": "Canales 1, 6 y 11: los únicos que no se pisan",
+    "bullets": [
+      "La banda **2.4 GHz** se divide en canales (1 al 11 en América); sus centros están a solo **5 MHz**: canal 1 = `2412 MHz`, canal 6 = `2437 MHz`, canal 11 = `2462 MHz`.",
+      "**Problema:** cada canal necesita ~**22 MHz** de ancho —más que la separación entre vecinos—, así que **los canales adyacentes (1, 2, 3…) se solapan e interfieren**.",
+      "**Solución:** hacen falta unos 5 números de canal de distancia → los únicos que no chocan entre sí son @@1 · 6 · 11@@.",
+      "  Como **tres personas hablando desde las tres esquinas del cuarto**: no se pisan la voz.",
+      "**Bandas:** 2.4 GHz más alcance pero lenta y congestionada · 5 GHz más rápida pero menor alcance · 6 GHz nueva y muy limpia.",
+      "**Configuraciones:** **infraestructura** (todo pasa por un **AP**, lo normal) · **ad-hoc** (equipos entre sí) · **malla/mesh** (varios AP con el mismo SSID cubren toda la casa)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Seguridad Wi-Fi: de WEP (roto) a WPA3",
+    "headers": ["Protocolo", "Cifrado", "Estado hoy", "Comentario"],
+    "rows": [
+      ["**WEP** · 1997", "RC4, clave estática", "Roto / obsoleto", "Se descifra en minutos — **no usar jamás**"],
+      ["**WPA** · 2003", "TKIP", "Débil", "Parche temporal de urgencia sobre WEP"],
+      ["**WPA2** · 2004", "**AES-CCMP**", "Mínimo aceptable hoy", "Fue el estándar por más de una década"],
+      ["**WPA3** · 2018", "AES + **SAE**", "El más seguro", "Frena ataques de diccionario; el recomendado"]
+    ],
+    "note": "Configúralo en el panel del router (`192.168.1.1` en el navegador): elige @@WPA3@@ (o mínimo WPA2-AES) y una contraseña larga. Modos: **Personal (PSK)** una clave para toda la red (casa) · **Enterprise (802.1X/RADIUS)** credenciales por usuario (empresa/universidad)."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: asegura tu router paso a paso",
+    "bullets": [
+      "**Mini-caso:** acabas de instalar el router y quieres una red rápida y segura. Sigue la secuencia:",
+      "  **1.** Abre el navegador y entra al panel: `192.168.1.1` (usuario y clave del equipo).",
+      "  **2. SSID** → ponle un nombre propio, p. ej. `Casa-Lopez` (evita dejar la marca del router a la vista).",
+      "  **3. Canal** (2.4 GHz) → cambia de `Auto` a `6`; si un vecino ya usa el 6, elige `1` u `11`.",
+      "  **4. Banda** → activa 5 GHz para lo cercano y 2.4 GHz para lo lejano (doble red).",
+      "  **5. Seguridad** → elige @@WPA3@@ (o mínimo `WPA2-AES`); nunca WEP, WPA ni 'Open'.",
+      "  **6. Contraseña** → larga, tipo frase (12+ caracteres). Guarda y reconecta.",
+      "**Resultado esperado:** red con nombre claro, sin choque de canales y con todo el tráfico cifrado.",
+      "Practica: repasa estos pasos en el **quiz de examlab (Test)**; para explorar un panel de verdad, usa una **demo de router online**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Redes celulares: Internet por el aire",
+    "bullets": [
+      "El territorio se divide en **celdas**, cada una servida por una **antena/torre**; las frecuencias se **reutilizan** en celdas no vecinas para no interferir.",
+      "  Como un **panal de abejas**: el mapa son celdas hexagonales; al moverte pasas de una torre a otra sin colgar (**handoff**).",
+      "Generaciones: **1G** voz analógica → **2G** voz digital + SMS → **3G** datos móviles → **4G LTE** banda ancha móvil → @@5G@@ alta velocidad, baja latencia e IoT masivo.",
+      "**El celular (4G/5G) es una tecnología de acceso válida** — y a menudo la única viable en **zonas rurales** sin cobre, coaxial ni fibra, porque solo requiere cobertura de antena.",
+      "**IoT:** además de Wi-Fi y celular usa **Bluetooth LE, Zigbee, Z-Wave** (corto alcance) y **LoRaWAN, NB-IoT** (largo alcance, bajo consumo)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Resumen para EVALUAR: ¿qué tecnología elijo?",
+    "headers": ["Tecnología", "Medio", "Velocidad típica", "¿Simétrica?", "Cuándo elegirla"],
+    "rows": [
+      ["Dial-up", "Cobre telefónico", "hasta 56 kbps", "No", "Obsoleta; solo referencia histórica"],
+      ["T-carrier (T1/T3)", "Cobre dedicado", "1.5 / ~45 Mbps", "Sí", "Enlaces empresariales legado, capacidad garantizada"],
+      ["DSL", "Cobre telefónico", "1 – 100+ Mbps", "ADSL no · SDSL sí", "Hogar cerca de la central (< ~5 km)"],
+      ["Cable", "Coaxial / HFC", "100 Mbps – 1+ Gbps", "No", "Hogar urbano; ancho de banda compartido"],
+      ["Fibra (FTTH)", "Vidrio (luz)", "100 Mbps – 10 Gbps", "Suele ser sí", "Máxima velocidad y distancia; hogar y empresa"],
+      ["Celular (4G/5G)", "Radio (torres)", "decenas Mbps – Gbps", "—", "Movilidad y @@zonas rurales@@ sin cableado"]
+    ],
+    "note": "El **Wi-Fi (802.11) no es última milla:** reparte dentro del sitio lo que llega por DSL/cable/fibra/celular. Elegir siempre se **justifica** con 2-3 criterios: disponibilidad, velocidad/simetría, costo y seguridad."
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo resuelto: elige la última milla en 3 escenarios",
+    "headers": ["Escenario", "Elección", "Por qué (justificación)"],
+    "rows": [
+      ["Vereda rural sin cables", "**Celular 4G/5G** fijo (o satélite)", "No llega cobre, coaxial ni fibra; el acceso por **radio** solo necesita cobertura de antena, no cablear cada casa"],
+      ["Empresa con 2 sedes, presupuesto ajustado", "Internet en cada sede + **VPN punto a punto**", "Une las sedes de forma **segura** (túnel IPsec) sobre Internet; mucho más barata que una línea dedicada"],
+      ["Apartamento urbano, teletrabajo", "**Fibra FTTH** + **Wi-Fi** adentro", "Alta velocidad y simétrica para videollamadas; distribuye con Wi-Fi 6, 5 GHz cercano + 2.4 GHz canal 6 y @@WPA3@@"]
+    ],
+    "note": "El razonamiento de Nivel 3: elegir la **última milla** MÁS cómo se distribuye adentro, justificando con 2-3 criterios. Practícalo en **examlab (Test + pizarra)**; si no dispones de él, usa una herramienta de diagramas **online**."
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "type": "bullets",
+    "title": "La regla de oro de hoy: nadie manda todavía ese formulario",
+    "bullets": [
+      "Empiezo por lo que más se rompe en este punto del curso, y no es un detalle menor.",
+      "  Un equipo entusiasta arma un Google Form y lo envía \"de prueba\" a cuarenta personas de una empresa.",
+      "  Cree que adelantó trabajo. En realidad **recolectó datos personales sin aval institucional ni consentimiento informado**.",
+      "  Eso no es avance de Proyecto I: es un riesgo ético y legal que puede invalidar todo el proyecto.",
+      "**En Proyecto I se PROPONE el instrumento. En Proyecto II, con aval, se aplica.** Esa frontera no tiene excepciones.",
+      "Hoy usted va a dejar por escrito, en condicional:",
+      "  **A quiénes** estudiaría (población y muestra) y **con qué criterios** los elegiría.",
+      "  **Con qué** los estudiaría (técnica) y **con qué herramienta concreta** (instrumento).",
+      "Al final del bloque tendrá un bosquejo de instrumento **alineado a sus objetivos**, listo para revisión."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de la muestra: ¿cuál es su unidad de análisis?",
+    "bullets": [
+      "La pregunta que casi nadie se hace primero: **¿qué es exactamente lo que voy a estudiar, uno por uno?**",
+      "  Esa cosa que se cuenta de a una es la **unidad de análisis**.",
+      "En proyectos de IA la unidad **no siempre es una persona**:",
+      "  Puede ser una **persona** (un analista, un docente, un usuario del servicio).",
+      "  Puede ser un **registro** (una PQRS, una transacción, una historia clínica anonimizada).",
+      "  Puede ser un **documento** (un acta, una política institucional, un artículo científico).",
+      "  Puede ser un **evento del sistema** (una sesión de uso, una consulta al modelo, una línea de log).",
+      "Si su unidad son registros o documentos, **el consentimiento no desaparece**: cambia de forma (aval de la entidad, anonimización, licencia del dataset).",
+      "Definir mal la unidad arrastra el error a toda la sección: la muestra, el instrumento y el análisis quedan torcidos."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Población, muestra y muestreo: tres cosas distintas",
+    "headers": ["Concepto", "Qué es", "Error típico", "Ejemplo (proyecto de IA)"],
+    "rows": [
+      ["**Unidad de análisis**", "El elemento que se estudia de a uno", "Confundirla con la fuente de información", "Una PQRS radicada"],
+      ["**Población**", "El **total** de unidades que interesan al estudio", "Escribirla sin delimitar tiempo ni lugar", "Las PQRS radicadas en la Alcaldía de X durante un año"],
+      ["**Marco muestral**", "La lista real desde la cual se puede seleccionar", "Suponer que existe cuando nadie la tiene", "El registro digital de radicación de la entidad"],
+      ["**Muestra**", "El **subconjunto** que efectivamente se estudiaría", "Decir \"algunas\" sin número ni criterio", "380 PQRS seleccionadas del registro"],
+      ["**Muestreo**", "El **procedimiento** para elegir esa muestra", "Nombrar el tipo sin explicar cómo se ejecutaría", "Aleatorio simple sobre el registro anonimizado"]
+    ],
+    "note": "Población y muestra se escriben **delimitadas**: quiénes, **dónde** y en **qué periodo**. \"Los funcionarios públicos\" no es una población: es un tema.",
+    "col_w": [2.4, 3.2, 3.0, 3.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Criterios de inclusión y exclusión: sin ellos, la muestra es un deseo",
+    "bullets": [
+      "**Inclusión** = las condiciones que alguien (o algo) debe cumplir **para entrar** al estudio.",
+      "**Exclusión** = las condiciones que, aun cumpliendo las de inclusión, **lo dejan por fuera**.",
+      "No son opuestos ni la misma lista al revés: cada una responde una pregunta diferente.",
+      "Ejemplo modelado, redactado como debe quedar:",
+      "  **Inclusión:** \"Funcionarios de la oficina de atención al ciudadano con **mínimo seis meses** de antigüedad y **contacto directo** con el sistema de radicación.\"",
+      "  **Exclusión:** \"Personal en periodo de prueba, contratistas temporales de menos de tres meses y quienes no otorguen consentimiento informado.\"",
+      "Cada criterio debe ser **verificable por un tercero**: si dos personas leen su criterio y clasifican distinto, el criterio está mal escrito.",
+      "\"Los que quieran participar\" **no es un criterio de inclusión**: es la ausencia de criterio.",
+      "Cierre siempre con una frase de **participación voluntaria y consentimiento informado**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Tipos de muestreo: probabilístico y no probabilístico",
+    "headers": ["Tipo", "Cómo se selecciona", "Cuándo se propone"],
+    "rows": [
+      ["**Aleatorio simple** (prob.)", "Todos tienen la misma probabilidad; sorteo sobre la lista", "Hay marco muestral completo y accesible"],
+      ["**Estratificado** (prob.)", "Se divide en estratos y se muestrea dentro de cada uno", "Interesa comparar subgrupos (áreas, sedes, tipos)"],
+      ["**Sistemático** (prob.)", "Se toma cada k-ésimo elemento de la lista", "Registros ordenados, como radicados o logs"],
+      ["**Por conveniencia** (no prob.)", "Los que están disponibles y accesibles", "Estudios exploratorios; se declara la limitación"],
+      ["**Por criterio o experto** (no prob.)", "Se eligen por su conocimiento del fenómeno", "Entrevistas a quienes sí saben del proceso"],
+      ["**Bola de nieve** (no prob.)", "Un participante recomienda al siguiente", "Poblaciones difíciles de identificar"],
+      ["**Teórico / por saturación** (no prob.)", "Se suma gente hasta que no aparece información nueva", "Investigación cualitativa"]
+    ],
+    "note": "El muestreo **no probabilístico no está prohibido**: está permitido si se **declara** y si se reconoce su límite (no generaliza). Lo que no se acepta es esconderlo.",
+    "col_w": [3.2, 4.4, 4.4]
+  },
+  {
+    "type": "bullets",
+    "title": "¿De qué tamaño debe ser la muestra?",
+    "bullets": [
+      "**Si es cuantitativa** y hay población finita conocida, se justifica con **fórmula de tamaño muestral**.",
+      "  Se declaran tres cosas: **nivel de confianza** (típico 95 %), **margen de error** (típico 5 %) y **variabilidad** (0,5 si no se conoce).",
+      "  Se puede calcular con una calculadora en línea gratuita o con una hoja de Google Sheets; lo que se evalúa es que **declare los parámetros**.",
+      "**Si es cualitativa**, no hay fórmula: el criterio es la **saturación teórica**.",
+      "  \"Se realizarían entrevistas hasta alcanzar saturación; se estima un rango de **8 a 12 participantes**.\"",
+      "  Un rango estimado con criterio vale más que un número inventado con falsa precisión.",
+      "**Si su unidad son registros o documentos**, el tamaño se justifica por **periodo y cobertura**: \"todas las PQRS de un año\", no \"unas cuantas\".",
+      "Nunca escriba un número sin explicar **de dónde salió**. El número solo no significa nada.",
+      "En Proyecto I esta cifra es **propuesta y estimada**; puede ajustarse en Proyecto II con la realidad del terreno."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Técnica e instrumento no son sinónimos",
+    "boxes": [
+      ["aclaracion", "La **técnica** es el procedimiento general (encuestar, entrevistar, observar, analizar documentos). El **instrumento** es la herramienta concreta que usted construye y adjunta (el cuestionario, la guía, la rúbrica, la ficha)."],
+      ["info", "Analogía de aula: la técnica es \"tomar una fotografía\"; el instrumento es **la cámara específica** con sus ajustes. En el anteproyecto se evalúa sobre todo el instrumento, porque es lo que usted diseñó."],
+      ["advertencia", "Escribir solo \"se aplicará una encuesta\" no es un instrumento propuesto. Sin ítems redactados, no hay nada que revisar ni que validar."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "De la técnica al instrumento: qué produce cada ruta",
+    "headers": ["Técnica", "Instrumento", "Qué produce", "Encaja con"],
+    "rows": [
+      ["Encuesta", "**Cuestionario** (ítems cerrados, escalas)", "Frecuencias, promedios, correlaciones", "Cuantitativo"],
+      ["Entrevista semiestructurada", "**Guía de entrevista** (preguntas abiertas)", "Relatos, percepciones, categorías", "Cualitativo"],
+      ["Grupo focal", "**Guía de moderación** (ejes de discusión)", "Consensos y tensiones del grupo", "Cualitativo"],
+      ["Observación", "**Lista de chequeo** o ficha de registro", "Conductas y eventos observados", "Ambos"],
+      ["Análisis documental", "**Matriz de análisis** (filas: documento; columnas: categorías)", "Comparación sistemática de contenidos", "Ambos"],
+      ["Análisis de datos o logs", "**Protocolo de extracción** (variables, filtros, periodo)", "Métricas y series de datos", "Cuantitativo"],
+      ["Juicio de expertos", "**Formato de validación** por pertinencia y claridad", "Ajustes al instrumento antes de aplicarlo", "Ambos"]
+    ],
+    "note": "Puede proponer **más de una técnica**, pero cada una necesita **su propio instrumento** bosquejado. No se vale nombrar tres y adjuntar cero.",
+    "col_w": [2.6, 4.0, 3.2, 2.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Las cuatro declaraciones obligatorias de todo instrumento propuesto",
+    "bullets": [
+      "**1. Propósito** — qué información busca obtener y a qué objetivo específico responde.",
+      "  \"Este cuestionario busca caracterizar la percepción de los analistas sobre el tiempo de gestión, en respuesta al objetivo específico 2.\"",
+      "**2. Estructura** — cuántos bloques, cuántos ítems, de qué tipo y con qué escala.",
+      "  \"Tres bloques, 14 ítems: 4 de caracterización, 6 en escala Likert de 5 puntos y 4 de respuesta abierta.\"",
+      "**3. Validación tentativa** — cómo **se validaría** antes de aplicarlo en Proyecto II.",
+      "  \"Se sometería a **juicio de tres expertos** (pertinencia, claridad y suficiencia) y a una **prueba piloto** con 5 sujetos ajenos a la muestra.\"",
+      "**4. Plan de análisis** — qué se haría con los datos una vez recolectados.",
+      "  \"Los ítems cerrados se analizarían con estadística descriptiva en Google Sheets; las respuestas abiertas, por **categorización temática**.\"",
+      "Sin estas cuatro declaraciones, el instrumento está incompleto — aunque tenga cincuenta preguntas."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Matriz de alineación: cada ítem cuelga de un objetivo",
+    "headers": ["Objetivo específico", "Categoría / variable", "Bloque del instrumento", "Ítems"],
+    "rows": [
+      ["OE1. Caracterizar el flujo actual de atención de PQRS", "Tiempos y etapas del proceso", "Bloque A — Proceso actual", "1 a 4"],
+      ["OE2. Identificar la percepción del personal sobre la carga operativa", "Percepción de carga", "Bloque B — Escala Likert", "5 a 10"],
+      ["OE3. Establecer requisitos de un clasificador automático", "Requisitos funcionales esperados", "Bloque C — Preguntas abiertas", "11 a 14"],
+      ["— (sin objetivo asociado)", "—", "\"¿Le gusta la inteligencia artificial?\"", "**Ítem que sobra**"]
+    ],
+    "note": "Regla en dos direcciones: **ítem sin objetivo → se elimina**; **objetivo sin ítems → falta instrumento**. Esta matriz es la evidencia de que su instrumento no salió de la intuición.",
+    "col_w": [4.0, 2.8, 3.2, 2.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: ítems reales de los dos tipos de instrumento",
+    "bullets": [
+      "**Cuestionario — Bloque B (escala Likert de 5: 1 = totalmente en desacuerdo … 5 = totalmente de acuerdo)** → responde a OE2:",
+      "  5. \"El volumen diario de PQRS que debo clasificar manualmente supera el tiempo disponible en mi jornada.\"",
+      "  6. \"La clasificación manual de peticiones genera errores de asignación al área competente.\"",
+      "  7. \"Contar con una sugerencia automática de categoría agilizaría mi trabajo.\"",
+      "**Guía de entrevista semiestructurada** → responde a OE3:",
+      "  1. \"Cuénteme cómo es un día normal de trabajo con el sistema de radicación, desde que llega la petición.\"",
+      "  2. \"¿En qué momento del proceso siente que se pierde más tiempo? ¿Por qué cree que ocurre?\"",
+      "  3. \"Si un asistente automático le sugiriera la categoría de cada petición, ¿qué necesitaría para confiar en esa sugerencia?\"",
+      "Note el contraste: la Likert **mide magnitud**; la entrevista **abre relato**. Nunca ponga una pregunta abierta dentro de una escala."
+    ],
+    "note": "Todo esto se redacta como **propuesta**: \"el cuestionario se aplicaría\", \"la entrevista se realizaría\". Nada se envía a nadie en esta fase."
+  },
+  {
+    "type": "boxes",
+    "title": "Ética y datos: lo que su instrumento debe prever desde ya",
+    "boxes": [
+      ["advertencia", "**Consentimiento informado.** Todo instrumento dirigido a personas debe prever un texto de consentimiento: propósito, uso de los datos, carácter voluntario y posibilidad de retirarse. Se **redacta ahora**, se **usa en Proyecto II**."],
+      ["info", "**Anonimización.** Si su unidad son registros, el protocolo debe decir cómo se eliminarían nombres, cédulas y contactos antes del análisis (Ley 1581 de 2012). Un dataset con datos personales identificables no se manipula \"para mirar\"."],
+      ["advertencia", "**Menores de edad.** Si la población incluye menores, se requiere autorización del representante legal y asentimiento del menor. No hay atajo posible."],
+      ["aclaracion", "**Aval institucional.** Si va a acceder a datos de una entidad, prevea la carta de solicitud y el compromiso de confidencialidad. Gestionarlo temprano evita que el proyecto se caiga en la fase de campo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso para bosquejar su instrumento en Google Docs",
+    "bullets": [
+      "**1.** Cree un documento nuevo titulado `Instrumento propuesto — <nombre de su proyecto>`.",
+      "**2.** Escriba primero la **matriz de alineación** (objetivo → categoría → bloque → ítems). Antes de redactar ítems, decida qué mide cada bloque.",
+      "**3.** Redacte los ítems **bloque por bloque**, siguiendo el orden de la matriz.",
+      "**4.** Revise cada ítem con tres filtros: ¿es **claro**?, ¿es **una sola idea**?, ¿está **libre de sesgo** (no induce la respuesta)?",
+      "**5.** Elimine los ítems dobles (\"¿es rápido y confiable?\" son dos preguntas, no una).",
+      "**6.** Agregue al inicio el **texto de consentimiento informado** propuesto.",
+      "**7.** Cierre con las **cuatro declaraciones**: propósito, estructura, validación tentativa y plan de análisis.",
+      "**8.** Pase todo el documento a **condicional**: busque \"apliqué\", \"realizamos\", \"se aplicó\" y reescríbalos.",
+      "  \"Se aplicó el cuestionario a 40 funcionarios\" → \"El cuestionario **se aplicaría** a 40 funcionarios en la fase de campo de Proyecto II\"."
+    ],
+    "note": "Todo en el navegador y gratis. **No cree el formulario en Google Forms todavía**: el bosquejo va en un documento, no en una herramienta lista para enviar."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Bosquejo de instrumento (20 minutos)",
+    "bullets": [
+      "**Consigna literal**, con el documento de instrumento abierto:",
+      "  **(a)** Escriba **población** y **muestra** delimitadas (quiénes, dónde, en qué periodo) más los criterios de **inclusión** y **exclusión**.",
+      "  **(b)** Declare el **tipo de muestreo** propuesto y por qué es el pertinente para su enfoque.",
+      "  **(c)** Bosqueje su instrumento: si es **cuestionario**, entre **10 y 15 ítems**; si es **guía de entrevista**, **8 preguntas** abiertas.",
+      "  **(d)** Al lado de cada bloque, escriba **a qué objetivo específico responde**.",
+      "  **(e)** Cierre con un párrafo de **plan de análisis** (mínimo tres renglones).",
+      "**Criterio de éxito verificable:** **ningún ítem queda sin objetivo** y **ningún objetivo queda sin ítems**; todo el texto está en condicional.",
+      "El Docente circula por los equipos y frena cualquier intento de aplicación anticipada.",
+      "**Entrega:** suba el archivo como `S09_InstrumentosPropuestos_Apellidos` en [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "Mi **unidad de análisis** está nombrada explícitamente (persona, registro, documento o evento).",
+      "**Población** y **muestra** están delimitadas por lugar y periodo, y no se confunden entre sí.",
+      "Escribí criterios de **inclusión** y de **exclusión** separados, y ambos son verificables por un tercero.",
+      "Declaré el **tipo de muestreo** y, si es no probabilístico, reconocí su limitación.",
+      "El **tamaño** de la muestra tiene una justificación explícita (parámetros, saturación o cobertura).",
+      "Cada bloque del instrumento indica **a qué objetivo específico responde**.",
+      "Ningún ítem induce la respuesta ni mezcla dos preguntas en una.",
+      "Incluí las **cuatro declaraciones**: propósito, estructura, validación tentativa y plan de análisis.",
+      "Dejé **escrito y explícito** que el instrumento es una **propuesta para Proyecto II**, y no envié nada a nadie."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Autónomo de esta semana:**",
+      "  Termine los ítems que quedaron a medias y redacte el **consentimiento informado** propuesto.",
+      "  Pídale a un compañero de otro equipo que lea tres ítems: si los interpreta distinto a usted, reescríbalos.",
+      "  Deje una frase explícita al inicio de la sección: \"Los instrumentos aquí presentados constituyen una **propuesta**; su aplicación corresponde a Proyecto II\".",
+      "**En la próxima sesión miramos el proyecto como un sistema completo:**",
+      "  **Cronograma** de fases hacia Proyecto II y **viabilidad** real (acceso, permisos, tiempo, recursos).",
+      "  **Integración** del anteproyecto: dejar de tener piezas sueltas y tener un solo documento.",
+      "  Traiga su documento **completo** en un solo archivo — trabajaremos sobre él, no sobre fragmentos.",
+      "Las tutorías por equipo se acuerdan durante la semana con el Docente; no hay atención sin cita previa."
+    ]
+  }
+]

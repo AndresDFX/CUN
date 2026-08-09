@@ -1,0 +1,198 @@
+[
+  {
+    "type": "bullets",
+    "title": "Su tema todavía no tiene apellido",
+    "bullets": [
+      "En la sesión anterior cada uno dejó un **tema tentativo**: \"phishing\", \"deserción\", \"la red del laboratorio\".",
+      "Un tema suelto no se puede investigar: **no dice dónde buscar, ni con quién dialogar, ni con qué palabras**.",
+      "Hoy le ponemos apellido: lo ubicamos en una **línea de investigación**.",
+      "Caso concreto: dos estudiantes escriben \"seguridad informática\".",
+      "  El primero la trabaja como **Inteligencia Artificial** → busca *phishing detection*, *classifier*, *dataset*.",
+      "  El segundo la trabaja como **Telemática** → busca *firewall*, *segmentación de red*, *latencia*.",
+      "  Mismo tema, **dos bibliografías que casi no se cruzan** y dos artículos distintos.",
+      "Elegir bien la línea le ahorra semanas de búsqueda perdida; elegirla mal lo obliga a reescribir el marco."
+    ],
+    "note": "Al final de esta sesión usted sale con **una línea elegida y justificada por escrito**, no con una intención."
+  },
+  {
+    "type": "bullets",
+    "title": "MinCiencias: qué es y por qué le importa a su artículo",
+    "bullets": [
+      "**MinCiencias** = Ministerio de Ciencia, Tecnología e Innovación de Colombia.",
+      "Coordina el **Sistema Nacional de CTeI**: la red de grupos, semilleros, universidades y centros que produce investigación en el país.",
+      "Su función clave para usted: **organiza el conocimiento por áreas y líneas**.",
+      "  Esa organización orienta convocatorias, financiación, categorización de grupos y revistas indexadas.",
+      "Lo que MinCiencias **NO** es:",
+      "  No es un requisito de trámite que se llena y se olvida.",
+      "  No es una lista de temas permitidos; es un mapa de **comunidades de conocimiento**.",
+      "Traducción práctica: la línea define **el vocabulario que usará, los autores que citará y las revistas donde buscará**.",
+      "Investigar sin línea es entrar a una biblioteca gigante sin saber en qué pasillo pararse."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las 6 líneas de Ingeniería del programa",
+    "headers": ["Línea", "De qué trata", "Palabras clave para buscar", "Pregunta de ejemplo"],
+    "rows": [
+      ["**IoT** (Internet de las Cosas)", "Sensores y dispositivos conectados que capturan el mundo físico", "sensor, telemetría, ESP32, MQTT", "¿Cómo monitorear el consumo eléctrico de un laboratorio con sensores?"],
+      ["**Big Data**", "Analítica de grandes volúmenes de datos ya existentes", "dataset, ETL, minería de datos, dashboard", "¿Qué patrones de deserción revelan los datos de matrícula?"],
+      ["**Inteligencia Artificial**", "Modelos que aprenden de datos y clasifican o predicen", "clasificador, entrenamiento, precisión, sesgo", "¿Puede un clasificador detectar correos de phishing institucionales?"],
+      ["**Cloud / FinTech**", "Servicios en la nube y servicios financieros digitales", "SaaS, migración, disponibilidad, pasarela de pago", "¿Qué riesgos de seguridad tiene migrar los pagos a la nube?"],
+      ["**Aplicaciones**", "Desarrollo de software y experiencia de uso", "usabilidad, requisitos, prototipo, accesibilidad", "¿Qué barreras de usabilidad tiene el portal X para adultos mayores?"],
+      ["**Telemática**", "Redes, protocolos y comunicaciones", "latencia, ancho de banda, pérdida de paquetes, topología", "¿Cómo afecta la latencia a las clases sincrónicas en la sede Y?"]
+    ],
+    "note": "Léala como un menú de **ángulos**, no de temas: casi cualquier tema cabe en varias líneas, pero se trabaja desde **una**.",
+    "col_w": [2.2, 3.2, 2.8, 4.0]
+  },
+  {
+    "type": "bullets",
+    "title": "La misma palabra, cuatro artículos distintos",
+    "bullets": [
+      "Tomemos una sola palabra: **\"seguridad\"**. Vea en qué se convierte según la línea:",
+      "  **IA** → detectar fraude o phishing con un modelo entrenado; se habla de *falsos positivos* y *precisión*.",
+      "  **Telemática** → proteger la red; se habla de *segmentación*, *firewall* y *tráfico anómalo*.",
+      "  **Cloud** → proteger datos alojados en un tercero; se habla de *cifrado en reposo* y *disponibilidad*.",
+      "  **Aplicaciones** → que el software no exponga al usuario; se habla de *validación de entradas* y *permisos*.",
+      "Conclusión que hay que anotar: **la línea decide el ángulo, y el ángulo decide todo lo demás**.",
+      "Efecto sobre el artículo:",
+      "  Cambia el **marco teórico** (qué conceptos hay que definir).",
+      "  Cambian los **antecedentes** (qué autores son referencia obligada).",
+      "  Cambia la **evidencia** que le van a exigir (un log de red no sirve para argumentar un modelo de IA)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los tres criterios para elegir su línea",
+    "headers": ["Criterio", "Pregunta de control que debe responderse", "Señal de alerta"],
+    "rows": [
+      ["**Afinidad**", "¿Esta línea conserva lo que a mí me interesa del tema, o lo desvía?", "Tiene que forzar el tema para que quepa"],
+      ["**Viabilidad de fuentes**", "¿Encuentro hoy, en Google Académico, al menos 2 artículos usables de este ángulo?", "Busca 10 minutos y no aparece nada pertinente"],
+      ["**Pertinencia local**", "¿Le sirve a algo de mi entorno: mi sede, mi empresa, mi barrio, mi práctica?", "Solo tiene sentido en un país o una escala que no puede observar"]
+    ],
+    "note": "Regla de oro: **una sola línea principal**. Puede mencionar que su tema roza otra, pero el marco se escribe para una."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (1/2): del tema al dilema",
+    "bullets": [
+      "**Tema tentativo real:** \"phishing en los correos de los estudiantes\".",
+      "Ese enunciado admite por lo menos dos líneas, y hay que decidir:",
+      "  **Opción A — Inteligencia Artificial:** entrenar o evaluar un clasificador que separe correo legítimo de correo malicioso.",
+      "  **Opción B — Telemática:** filtrar el correo malicioso en la infraestructura de red y de servidor.",
+      "Antes de decidir por gusto, se llena una **tabla de decisión** en Google Docs con los tres criterios.",
+      "  No es burocracia: escribir la comparación obliga a mirar si de verdad hay fuentes.",
+      "El siguiente bloque muestra la tabla llena, con el resultado del caso."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado (2/2): la tabla de decisión resuelta",
+    "headers": ["Criterio", "Opción A — Inteligencia Artificial", "Opción B — Telemática"],
+    "rows": [
+      ["Afinidad con el tema", "Alta: el interés es reconocer el correo malicioso", "Media: el interés se desplaza a la infraestructura"],
+      ["¿Hay fuentes accesibles?", "**Sí**: mucha literatura y datasets públicos de phishing", "Sí, pero más orientada a configuración que a investigación"],
+      ["¿Hay datos que yo pueda ver?", "**Sí**: corpus públicos de correos, sin pedir permisos", "Requiere acceso a la red institucional (permiso incierto)"],
+      ["Pertinencia local", "Alta: afecta a los estudiantes de la sede", "Alta, pero la decisión la toma el área de TI, no yo"],
+      ["**Decisión**", "**Gana: viabilidad de datos y de literatura**", "Se menciona como línea que roza, no como principal"]
+    ],
+    "note": "Fíjese en cuál fue el criterio que desempató: **no la moda, sino de dónde puedo sacar fuentes y datos este periodo**."
+  },
+  {
+    "type": "boxes",
+    "title": "Cuatro mitos que hay que desactivar hoy",
+    "boxes": [
+      ["advertencia", "**\"Elijo IA porque está de moda.\"** La moda no le entrega fuentes. Si busca 10 minutos y no aparecen artículos de su ángulo, esa línea no es viable para usted este periodo, por popular que sea."],
+      ["advertencia", "**\"Puedo trabajar tres líneas a la vez.\"** No. Tres líneas = tres vocabularios = ningún marco sólido. Una principal; las demás, a lo sumo, una frase de contexto."],
+      ["aclaracion", "**\"La línea es un requisito administrativo.\"** Es lo contrario: define su vocabulario y sus referentes. Cambiarla en la mitad del periodo obliga a reescribir el marco teórico completo."],
+      ["info", "**\"Mi tema no cabe en ninguna línea.\"** Casi siempre cabe. Pregúntese qué duele en su tema: ¿los **datos**, la **red**, el **software**, el **dispositivo** o el **servicio en la nube**? Esa respuesta ya es la línea."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: elegir su línea con herramientas gratis",
+    "bullets": [
+      "**1.** Abra su documento en **Google Docs** y titúlelo `S02_LineaInvestigacion_Apellido`.",
+      "**2.** Copie arriba su **tema tentativo** tal como lo escribió en la sesión anterior.",
+      "**3.** Haga una tabla de 4 columnas: *Línea candidata · Afinidad · ¿Hay fuentes? · Pertinencia local*.",
+      "**4.** Escriba **dos** líneas candidatas (no una: para elegir hay que comparar).",
+      "**5.** Abra **Google Académico** (scholar.google.com) y busque con el vocabulario de cada línea.",
+      "  Use comillas para la frase exacta: `\"phishing detection\"` y agregue un término de contexto.",
+      "  Si no encuentra nada en español, **busque en inglés**: casi toda la literatura técnica está allí.",
+      "**6.** Anote en la tabla **cuántos resultados usables** halló por línea (no cuántos resultados totales).",
+      "**7.** Marque la ganadora y escriba una frase: **\"Elijo X porque ___ y descarto Y porque ___\"**.",
+      "**8.** Guarde **dos referencias exploratorias** de la línea ganadora, en APA tentativa."
+    ],
+    "note": "Si Google Académico responde \"tráfico inusual\", cambie de red o pídale al Docente que proyecte la búsqueda."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se escribe el párrafo de justificación",
+    "bullets": [
+      "No es un párrafo libre: tiene **tres movimientos obligatorios**, uno por criterio.",
+      "  **Movimiento 1 — Afinidad:** \"Mi tema es ___ y lo abordo desde la línea ___ porque lo que quiero entender es ___.\"",
+      "  **Movimiento 2 — Fuentes:** \"Esta línea es viable porque encontré ___ y ___, que tratan el mismo ángulo.\"",
+      "  **Movimiento 3 — Pertinencia local:** \"Es pertinente en mi contexto porque ___ ocurre en ___ y afecta a ___.\"",
+      "Cierre con la línea descartada: **\"Descarto ___ porque ___\"** (una sola frase, pero explícita).",
+      "Extensión: **un párrafo de 6 a 10 líneas**. Ni una viñeta suelta, ni una página.",
+      "Escriba en **presente y en primera persona del plural o impersonal**, como se escribe un artículo.",
+      "  Sí: \"se aborda desde la línea de Inteligencia Artificial porque...\"",
+      "  No: \"a mí me gusta la IA y me parece chévere el tema\"."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (3/3): el párrafo terminado",
+    "bullets": [
+      "Así queda el caso del phishing, ya redactado:",
+      "  *\"El tema de este artículo es la detección de correos de phishing dirigidos a estudiantes universitarios. Se aborda desde la línea de **Inteligencia Artificial** porque el interés está en distinguir automáticamente el correo legítimo del malicioso a partir de sus características, y no en la configuración de la infraestructura. La línea es viable porque existe literatura abundante sobre clasificación de correo malicioso y conjuntos de datos públicos que pueden analizarse sin solicitar permisos institucionales. Es pertinente en el contexto local porque la comunidad estudiantil recibe con frecuencia mensajes que suplantan a la institución. Se descarta la línea de **Telemática** porque exigiría acceso a la red institucional, cuyo permiso no está garantizado dentro del periodo.\"*",
+      "Compruebe qué tiene ese párrafo:",
+      "  Dice **qué se investiga**, no solo qué tema le gusta.",
+      "  Justifica con **disponibilidad real de fuentes y datos**.",
+      "  Ancla el problema en **un contexto concreto**.",
+      "  **Descarta** explícitamente la alternativa: eso demuestra que hubo decisión, no azar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Línea elegida + justificación (~20 min)",
+    "bullets": [
+      "**Consigna literal.** En su documento `S02_LineaInvestigacion_Apellido` escriba:",
+      "  **(1)** La **línea elegida**, con su nombre exacto de las seis del programa.",
+      "  **(2)** Un **párrafo de justificación** con los tres movimientos: afinidad, fuentes y pertinencia local, más la línea descartada.",
+      "  **(3)** **Dos referentes exploratorios** encontrados en Google Académico, en APA tentativa (autor, año, título, fuente).",
+      "  **(4)** La **tabla de decisión** con las dos líneas candidatas comparadas.",
+      "**Tiempo:** ~20 minutos de trabajo individual; el Docente pasa acompañando.",
+      "**Criterio de éxito (verificable):** al leer solo su párrafo, sin conocer su tema, se entiende **por qué esa línea y no la otra**, y los dos referentes demuestran que ya existe literatura para trabajarla.",
+      "Si sus dos referentes no aparecen, la justificación **no está terminada**: el criterio de fuentes no se cumplió."
+    ],
+    "note": "Herramientas: Google Docs + Google Académico. Todo gratis y en el navegador; no se instala nada."
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist antes de subir su entrega",
+    "bullets": [
+      "[ ] El documento se llama exactamente `S02_LineaInvestigacion_Apellido`.",
+      "[ ] Elegí **una sola** línea principal, con el nombre exacto de la lista de seis.",
+      "[ ] Mi párrafo responde a los **tres criterios**, no solo a uno.",
+      "[ ] Digo explícitamente **qué línea descarto y por qué**.",
+      "[ ] Mis **2 referentes existen**: los abrí, no solo vi el título en la lista de resultados.",
+      "[ ] Cada referente trae autor, año, título y dónde se publicó.",
+      "[ ] Mi justificación no dice \"porque me gusta\" ni \"porque está de moda\".",
+      "[ ] La tabla de decisión está en el documento (es evidencia de que comparé).",
+      "[ ] Subí el archivo a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo · para la próxima sesión",
+    "bullets": [
+      "**Afinar los referentes:** de los 2 que halló, léales al menos el **resumen (abstract)** completo y anote en una frase de qué trata cada uno.",
+      "**Ampliar a 3 o 4** referentes si puede: son la semilla de su bibliografía.",
+      "**Revisar el vocabulario:** anote 5 términos técnicos propios de su línea; los va a necesitar para buscar mejor.",
+      "**Traiga listos** a la próxima sesión: su tema, su línea y sus referentes.",
+      "La próxima sesión es bisagra: **prueba parcial y primer avance del artículo**.",
+      "  Lo que escriba hoy es **materia prima directa** de ese avance: si la línea queda floja, el avance queda flojo.",
+      "Toda la entrega y los materiales viven en **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  }
+]

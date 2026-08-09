@@ -1,0 +1,37 @@
+Asignaciones de especialización
+
+Programa: ESPECIALIZACIÓN EN INTELIGENCIA ARTIFICIAL
+Periodo: 26ES4
+Código: ESP329
+Modalidad: VIRTUAL
+Grupo: 54ES4
+Bloque: N/A (no aplica / no figura en Carga academica 2026.xlsx — oferta de especialización)
+Día y horario (franja AFI): Lunes, elegir entre 19:00-21:00 h o 20:00-22:00 h
+Horario definido: Lunes, 8:00 pm - 10:00 pm (2 horas) — cumple la franja oficial 19:00-22:00h.
+  Nota: el CONTENIDO NUEVO que se prepara por sesión está dimensionado para 1 hora;
+  la 2ª hora del encuentro se usa para tutoría/taller en vivo con los equipos.
+Sede: Virtual
+Aula: Aula virtual - Google Meet
+Fecha de inicio: 03/08/2026
+Recepción de trabajos: 14/11/2026
+Fecha de cierre: 22/11/2026
+Docente: Julian Andres Castaño · julian_castanoe@cun.edu.co
+Fuente de metadatos: config/cursos/carga_academica_2026.json
+
+Google Meet (AFI / correo Coordinación 6/08/2026):
+  - Un solo enlace para toda la serie: [URL Meet — mismo enlace toda la serie · Proyecto I]
+  - Coanfitrión obligatorio: investigacion_especializaciones@cun.edu.co
+  - Habilitar grabación en cada encuentro
+  - Invitados: solo Coordinación + estudiantes inscritos (no otros)
+  - Programar todos los encuentros del periodo 26ES4
+  - Lunes 10/08/2026: clase debe realizarse y grabarse
+
+Formularios AFI (distintos):
+  - Acuerdo Pedagógico: https://forms.gle/EPHb7tbrEJTC6ey77
+  - Informe de cierre: https://docs.google.com/forms/d/e/1FAIpQLSej5yUK3b0p617XhccE7GZrm2C4ra3lk-hzfPTx43uJM_xAmg/viewform
+
+Nota: la última clase sincrónica (calculada con festivos colombianos + ventanas ACA oficiales)
+cae el 09/11/2026, no el 22/11 (esa es la fecha de cierre del sistema, que es domingo).
+Ver el calendario completo en "..\..\Calendario de clases (oficial).md" (raíz de PROYECTO I).
+Los archivos de este grupo (roster + CSV/ICS Calendar + hitos docentes) están en esta carpeta; ver "LEEME - Importar encuentros a Calendar.md".
+Ciclo inicio/cierre: Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md

@@ -1,0 +1,152 @@
+[
+  {
+    "type": "bullets",
+    "title": "¿Qué es un proceso?",
+    "bullets": [
+      "Un **proceso** es un programa **en ejecución**: el programa es la receta guardada en el disco; el proceso es esa receta **cocinándose ahora** en memoria, consumiendo CPU y RAM.",
+      "Al nacer recibe un **PID** (identificador único), como el **número de turno del banco**: así lo llamamos para darle órdenes.",
+      "Todo proceso tiene un **padre** (**PPID**) que lo lanzó → juntos forman un **árbol**; `pstree` lo dibuja y `ps -ef` muestra la columna PPID.",
+      "  El ancestro de todos es **PID 1** = `systemd` en Linux moderno (antes `init`); si muere, cae el sistema.",
+      "Un **daemon** (servicio) es un proceso que corre en **segundo plano**, sin terminal: el servidor web, la base de datos, el correo.",
+      "@@Vigilar los procesos = saber qué consume tu servidor y decidir qué hacer con él.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ver los procesos",
+    "bullets": [
+      "`ps aux` — **foto fija** de todos los procesos: `USER`, `PID`, `%CPU`, `%MEM`, `STAT` (estado) y `COMMAND`.",
+      "  Truco de oro: `ps aux --sort=-%cpu | head` ordena por CPU y deja arriba a los que más consumen (cambia a `-%mem` para memoria).",
+      "`top` / `htop` — el mismo mapa pero **en vivo**, refrescándose solo (la torre de control). Dentro: `P` ordena por CPU, `M` por memoria, `k` mata, `q` sale.",
+      "`ps aux | grep nginx` — encontrar un proceso concreto por nombre.",
+      "**Windows:** `Get-Process` en PowerShell o el Administrador de tareas (Ctrl+Shift+Esc); `Get-Process | Sort-Object CPU -Descending | Select-Object -First 5`.",
+      "@@El que queda arriba al ordenar por CPU es el sospechoso número uno del servidor lento.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Estados de un proceso",
+    "headers": ["Estado", "Significado", "Analogía"],
+    "rows": [
+      ["**R** running", "Usando la CPU, o listo esperando turno", "Cliente en la caja, o el siguiente en la fila"],
+      ["**S** sleeping", "Dormido esperando un evento (lo más común)", "Empleado esperando que suene el teléfono"],
+      ["**D**", "Espera ininterrumpible de disco/hardware", "Empleado dentro de la bóveda: no se le interrumpe"],
+      ["**T** stopped", "Pausado por una señal o un depurador", "Empleado en pausa hasta nueva orden"],
+      ["**Z** zombie", "Terminó, pero su padre no lo ha recogido", "Fantasma que ya murió y sigue en la lista"]
+    ],
+    "note": "A un **zombie** no se le mata (ya está muerto): se avisa o se reinicia al **padre** (PPID). Muchos zombies o procesos en **D** son @@señal de un problema que hay que investigar@@."
+  },
+  {
+    "type": "table",
+    "title": "Señales: cómo se le habla a un proceso",
+    "headers": ["Señal", "Comando", "Qué hace"],
+    "rows": [
+      ["**SIGTERM** (15)", "`kill PID`", "Termina **ordenadamente**: guarda y cierra limpio (es la señal por defecto)"],
+      ["**SIGKILL** (9)", "`kill -9 PID`", "Muere **ya**, sin limpiar nada; no se puede atrapar ni ignorar"],
+      ["**SIGHUP** (1)", "`kill -HUP PID`", "Recarga la configuración sin reiniciar el servicio"],
+      ["**SIGINT** (2)", "`Ctrl + C`", "Interrumpe el proceso que corre en primer plano"],
+      ["**SIGSTOP / CONT**", "`kill -STOP` / `-CONT PID`", "Pausa / reanuda un proceso"]
+    ],
+    "note": "@@Una señal es un mensaje corto del kernel al proceso.@@ `pkill nombre` y `killall nombre` actúan por nombre en vez de por PID."
+  },
+  {
+    "type": "bullets",
+    "title": "SIGTERM vs. SIGKILL: la regla de oro",
+    "bullets": [
+      "`kill PID` (sin número) → **SIGTERM (15)**: un \"termina **por favor**\". El proceso alcanza a guardar datos, cerrar la base de datos y borrar temporales. **Siempre primero.**",
+      "`kill -9 PID` → **SIGKILL (9)**: el \"tiro de gracia\". El kernel lo elimina al instante y el proceso **no limpia nada**.",
+      "  Riesgo real: puede dejar **archivos corruptos** o datos a medio escribir.",
+      "@@Regla de oro: `-9` es el ÚLTIMO recurso, nunca el primero.@@ Primero se pide con SIGTERM; solo si no obedece, SIGKILL.",
+      "**Windows:** `Stop-Process -Id 4821` (educado) y `Stop-Process -Name notepad -Force` (el equivalente a `-9`)."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Prioridades: nice y renice",
+    "bullets": [
+      "La **prioridad** (niceness) decide cuánta CPU recibe un proceso cuando hay competencia; no siempre hay que matar, a veces basta con **bajarle la prioridad**.",
+      "Va de **-20** (máxima prioridad, el más egoísta) a **+19** (mínima, el más amable). Por defecto: **0**.",
+      "  Ojo, el nombre engaña: **-20 es la MÁS alta**, no la más baja.",
+      "`nice -n 10 respaldo.sh` — **lanzar** una tarea pesada ya con prioridad baja para que no estorbe.",
+      "`renice -n 5 -p 4821` — **cambiar** la prioridad de un proceso que ya está corriendo.",
+      "  Solo `root` / `sudo` puede subir la prioridad (valores negativos); cualquiera puede bajar la suya.",
+      "@@Analogía: nice es la fila del banco con turnos preferenciales@@ — nice alto cede el paso a todos; negativo pasa primero."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Recursos del servidor: carga y memoria",
+    "bullets": [
+      "**Carga (load average):** `uptime` da 3 números = cuántos procesos quieren CPU en promedio en los últimos **1, 5 y 15 minutos**.",
+      "  Regla clave: compara el load con los **núcleos** (`nproc`). Load 4 en 4 núcleos = lleno sin fila; load 4 en 1 núcleo = atasco brutal.",
+      "  Tendencia: si el número de 1 min supera al de 15 min, la carga **está subiendo ahora mismo**.",
+      "**Memoria:** `free -h` → mira la columna `available`, **no** `free` (Linux usa la RAM libre como caché de disco: que `free` se vea bajo es normal).",
+      "  Si el servidor usa mucho **swap** (memoria en disco), va lentísimo → le falta RAM.",
+      "**Windows:** `Get-Counter '\\Processor(_Total)\\% Processor Time'` (CPU) y `Get-Counter '\\Memory\\Available MBytes'` (memoria); no usa load average.",
+      "@@Diagnóstico: compara la carga con los núcleos, y mira la memoria disponible, no la libre.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: \"el servidor va lento\"",
+    "bullets": [
+      "**Síntoma:** el servidor responde lento. En vez de adivinar, diagnosticamos y decidimos con datos.",
+      "**1 · Medir la carga:** `uptime` → `load average: 7.80, 6.10, 3.05` · `nproc` → `4`.",
+      "  Load 7.8 en **4 núcleos** = casi el doble del techo, y el de 1 min supera al de 15 → **saturado y subiendo**.",
+      "**2 · Hallar al culpable:** `ps aux --sort=-%cpu | head` → arriba: `PID 4821  respaldo.sh  99% CPU`.",
+      "**3 · Decidir sin matar aún:** no es crítico y quiero conservarlo → `renice -n 15 -p 4821` le baja la prioridad para que ceda CPU.",
+      "**4 · Si sigue ahogando:** pedir cierre limpio con `kill 4821` (SIGTERM) y verificar con `ps aux | grep 4821` que desapareció.",
+      "@@Pensar como administrador: no \"va lento\", sino \"PID 4821 al 99% con carga 7.8 sobre 4 núcleos: lo repricé y lo cerré\".@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Automatizar con cron",
+    "bullets": [
+      "**cron** es un **demonio** que cada minuto revisa si hay una tarea programada que ejecutar; es el **despertador programable** del servidor.",
+      "`crontab -e` edita tus tareas · `crontab -l` las lista.",
+      "Cada línea = **5 campos de tiempo + el comando**, en orden: `min  hora  día-mes  mes  día-semana  comando`.",
+      "Símbolos de cada campo: `*` = cada/todos · `,` = lista · `-` = rango · `/` = paso (`*/10` = cada 10).",
+      "  Ejemplo diario: `0 1 * * * /opt/respaldo.sh` = **todos los días a la 1:00 AM** (minuto 0, hora 1, y tres asteriscos = siempre).",
+      "@@`crontab.guru` traduce cualquier línea a lenguaje humano — en línea, no se instala nada.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "cron: leer una línea campo por campo",
+    "headers": ["Campo", "Valor en `30 2 * * 1`", "Se lee"],
+    "rows": [
+      ["1 · Minuto (0–59)", "`30`", "en el minuto 30"],
+      ["2 · Hora (0–23)", "`2`", "de las 2 de la madrugada"],
+      ["3 · Día del mes (1–31)", "`*`", "cualquier día del mes"],
+      ["4 · Mes (1–12)", "`*`", "cualquier mes"],
+      ["5 · Día de semana (0–7)", "`1`", "pero solo si es **lunes**"]
+    ],
+    "note": "`30 2 * * 1` = @@\"a las 2:30 AM, todos los lunes\"@@. Trampa clásica: el **primer campo es el minuto**, no la hora. Y `* * * * *` = cada minuto, siempre."
+  },
+  {
+    "type": "table",
+    "title": "Otras formas de automatizar",
+    "headers": ["Concepto", "Linux clásico", "Linux moderno", "Windows Server"],
+    "rows": [
+      ["Herramienta", "**cron** (`crontab -e`)", "**systemd timer** (`.timer` + `.service`)", "**Programador de tareas** (`schtasks`)"],
+      ["Definir \"cuándo\"", "5 campos de tiempo", "`OnCalendar=`", "`/sc daily /st 02:30`"],
+      ["Ver programadas", "`crontab -l`", "`systemctl list-timers`", "`schtasks /query`"],
+      ["Registros", "log/correo del sistema", "`journalctl`", "Visor de eventos"]
+    ],
+    "note": "Los **systemd timers** son más robustos: guardan logs y, con `Persistent=true`, recuperan tareas perdidas si el servidor estaba apagado. @@La lógica siempre es la misma: qué + cuándo + con qué frecuencia.@@"
+  },
+  {
+    "type": "bullets",
+    "title": "Práctica de hoy (2 niveles)",
+    "bullets": [
+      "**Tier 1 — examlab (Test):** resuelve el **quiz** de conceptos: PID, SIGTERM vs. SIGKILL, `nice`, load average vs. núcleos y campos de cron.",
+      "  Opcional (editor de código): un pequeño script en **Python** que un cron \"ejecutaría\".",
+      "**Tier 2 — terminal Linux en línea** (JSLinux / Webminal / Copy.sh / DistroSea): aquí se teclean los comandos reales, en el navegador.",
+      "  Ciclo completo: `ps aux --sort=-%cpu | head` → lanza `sleep 600 &` → mátalo con `kill PID` → lee `uptime`, `nproc`, `free -h` → escribe una línea de `crontab -e`.",
+      "**Windows:** todo el lado PowerShell (`Get-Process`, `Stop-Process`, `schtasks`) es nativo, no se instala nada.",
+      "@@Entregable a examlab: capturas + tu línea de cron explicada campo por campo.@@",
+      "  Nunca instales software: todo corre en el navegador (examlab o en línea)."
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "type": "bullets",
+    "title": "La sección donde más se rellena por miedo",
+    "bullets": [
+      "El marco teórico es la sección más larga del avance y, casi siempre, la más floja.",
+      "  Razón: se escribe con miedo a \"quedar corto\", y el miedo se llena con definiciones que nadie pidió.",
+      "Resultado típico: ocho páginas donde el lector no encuentra ninguna idea que sirva para responder la pregunta.",
+      "Un evaluador detecta el relleno en un minuto: busca si cada párrafo **hace algo** por la investigación.",
+      "Regla del día: **cada cita debe trabajar**. Si una cita no ayuda a responder la pregunta, sobra —por prestigioso que sea el autor—.",
+      "Hoy se sale con dos productos: un **mapa de constructos** y **una a dos páginas** de marco donde cada párrafo cierra conectando con la pregunta.",
+      "Insumos sobre la mesa: la pregunta de la sesión 02 y las cuatro fichas de antecedentes de la sesión 04."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es —y qué no es— el marco teórico",
+    "bullets": [
+      "**Es** el conjunto de teorías, modelos y conceptos que hacen falta para **entender y responder su pregunta**.",
+      "  Es el lente con el que usted mira el problema; sin lente, todo lo que vea después es opinión.",
+      "**No es** un collage de definiciones bonitas encontradas en internet.",
+      "**No es** un resumen de los antecedentes: esos ya se hicieron y son estudios previos, no teoría.",
+      "**No es** un capítulo de libro de texto: no hay que explicar el área entera, solo lo que su pregunta exige.",
+      "Prueba de necesidad, párrafo por párrafo: **\"¿qué parte de mi pregunta ilumina esto?\"**",
+      "  Si la respuesta es \"ninguna\", se borra sin negociar.",
+      "  Si la respuesta es \"la palabra X de mi pregunta\", entonces ese párrafo tiene lugar y se queda."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cita que trabaja frente a cita que adorna",
+    "headers": ["Párrafo que adorna", "Por qué no sirve", "Párrafo que trabaja"],
+    "rows": [
+      ["\"Según la RAE, un algoritmo es un conjunto ordenado de operaciones.\"", "Definición general que no cambia nada en el proyecto", "\"La clasificación supervisada asigna categorías a partir de ejemplos etiquetados (Autor, 2023); en este proyecto, esos ejemplos son el histórico de tickets ya categorizados.\""],
+      ["\"La inteligencia artificial ha revolucionado el mundo moderno.\"", "Afirmación de relleno, sin fuente ni consecuencia", "\"El desempeño de estos modelos depende del balance entre categorías (Autor, 2022), lo que anticipa un problema con las categorías poco frecuentes de la empresa X.\""],
+      ["\"Existen muchos tipos de aprendizaje automático: supervisado, no supervisado…\"", "Enumeración de catálogo: no elige ninguno", "\"Se opta por el enfoque supervisado porque el área ya cuenta con categorías definidas por los analistas (Autor, 2021).\""]
+    ],
+    "note": "Fórmula del párrafo que trabaja: **idea del autor + cita + para qué me sirve en MI proyecto**. Las tres partes, siempre.",
+    "col_w": [3.4, 2.9, 5.6]
+  },
+  {
+    "type": "bullets",
+    "title": "El constructo: la unidad con la que se arma el marco",
+    "bullets": [
+      "**Constructo** = un concepto clave que aparece en su pregunta y que necesita explicación teórica para entenderse.",
+      "Cómo se extraen, en dos minutos:",
+      "  **1.** Escriba su pregunta en una línea.",
+      "  **2.** Subraye los sustantivos técnicos, no las palabras de relleno.",
+      "  **3.** Agrupe los sinónimos: si \"modelo\" y \"clasificador\" apuntan a lo mismo, es un solo constructo.",
+      "En la pregunta de los tickets quedan tres: **clasificación supervisada**, **gestión de mesa de ayuda** y **tiempo de atención**.",
+      "El marco se ordena **por constructo**: para cada uno, qué dicen las fuentes y para qué lo necesito.",
+      "  Nunca por autor (\"Pérez dice… López dice…\") ni por orden cronológico: eso produce un listado, no un argumento."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Mapa de constructos del caso de los tickets",
+    "headers": ["Constructo", "Cuántas fuentes", "Para qué lo necesito", "Se conecta con"],
+    "rows": [
+      ["**Clasificación supervisada**", "2 o 3", "Fundamenta el método que se propone", "El objetivo específico de diseñar el modelo"],
+      ["**Gestión de mesa de ayuda**", "1 o 2", "Explica el proceso donde vive el problema", "El objetivo de caracterizar el flujo actual"],
+      ["**Tiempo de atención**", "1 o 2", "Define la variable que se va a medir", "El objetivo de comparar tiempos"]
+    ],
+    "note": "Este mapa se hace **antes** de escribir un solo párrafo. Es el esqueleto del marco: sin él se escribe a ciegas.",
+    "col_w": [3.0, 1.7, 3.6, 3.6]
+  },
+  {
+    "type": "bullets",
+    "title": "La regla de los tres constructos",
+    "bullets": [
+      "**Tres constructos bien desarrollados valen más que ocho superficiales.** En un avance no hay espacio para más.",
+      "Si le salen **ocho**, el problema no es el marco: es que la pregunta quedó sin delimitar. Vuelva a la pregunta.",
+      "Si le salen **menos de dos**, la pregunta es demasiado sencilla o falta precisión técnica en su redacción.",
+      "Extensión razonable por constructo: **dos a cuatro párrafos**, cada uno con al menos una cita.",
+      "Cada constructo se cierra con una frase de enlace hacia la pregunta:",
+      "  \"Esta noción es la que permite, en el presente proyecto, definir qué se considerará una clasificación correcta.\"",
+      "Orden sugerido de presentación: del constructo más general al más específico de su caso.",
+      "Prueba final: si borra un constructo y la pregunta se sigue entendiendo completa, ese constructo sobraba."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: un párrafo de marco, escrito completo",
+    "bullets": [
+      "**Constructo:** clasificación supervisada.",
+      "\"La clasificación supervisada es una tarea de aprendizaje automático en la que un modelo aprende a asignar categorías a partir de ejemplos previamente etiquetados (Autor, 2023). A diferencia de los enfoques no supervisados, requiere un histórico ya categorizado, condición que la mesa de ayuda de la empresa X cumple porque los analistas asignan una categoría a cada ticket.\"",
+      "\"Diversos trabajos reportan que el desempeño de estos modelos desciende cuando las categorías están desbalanceadas (Autor, 2022), es decir, cuando unas pocas concentran la mayoría de los registros. **En este proyecto**, esa advertencia obliga a revisar la distribución de categorías antes de proponer el modelo.\"",
+      "Anatomía de lo anterior: cada oración con su idea y su cita; la última frase amarra la teoría con **su** proyecto.",
+      "Ninguna oración está ahí para llenar espacio: las dos hacen avanzar el argumento.",
+      "Observe también que **no hay resultados**: el marco discute teoría, no hallazgos propios.",
+      "Repita esta misma estructura con los otros dos constructos y el marco queda armado."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Parafrasear, citar textual y copiar: no son lo mismo",
+    "headers": ["Modo", "Cómo se hace", "Cuándo se usa"],
+    "rows": [
+      ["**Paráfrasis** (lo normal)", "Se lee, se cierra la fuente y se escribe con palabras propias + (Autor, año)", "En el 90 % del marco teórico"],
+      ["**Cita textual corta**", "Frase entre comillas + (Autor, año, p. 45)", "Solo para definiciones clave que no conviene reformular"],
+      ["**Cita en bloque**", "40 palabras o más: párrafo aparte, con sangría y sin comillas", "Excepcional; una en todo el avance ya es mucho"],
+      ["**Copiar sin citar**", "No existe como opción: es plagio", "Nunca"]
+    ],
+    "note": "Técnica infalible para parafrasear: lea, **cierre la pestaña** y escriba de memoria. Si no puede escribirlo sin mirar, no lo entendió todavía.",
+    "col_w": [3.0, 5.6, 3.3]
+  },
+  {
+    "type": "bullets",
+    "title": "Citar en el texto en APA 7: los cuatro casos que va a usar",
+    "bullets": [
+      "**Forma entre paréntesis:** \"…el desempeño desciende con categorías desbalanceadas (Ramírez, 2022).\"",
+      "**Forma narrativa:** \"Ramírez (2022) reporta que el desempeño desciende…\"  → úsela cuando el autor importa.",
+      "**Dos autores:** siempre los dos, unidos por \"y\" en el texto: Ramírez y Gómez (2022).",
+      "**Tres o más autores:** primer apellido seguido de et al. desde la primera vez: Ramírez et al. (2022).",
+      "**Cita textual:** las comillas y el número de página son obligatorios: (Ramírez, 2022, p. 45).",
+      "Todo lo citado en el texto debe aparecer en Referencias, y todo lo que está en Referencias debe estar citado.",
+      "  Una referencia que nadie citó es una alarma: parece bibliografía inflada.",
+      "Genere cada entrada en **ZoteroBib** (zbib.org) con estilo APA 7 y revísela a mano antes de pegarla."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se corrige en esta sesión",
+    "boxes": [
+      ["advertencia", "**\"Copio párrafos y después veo si cito.\"** — Eso es plagio, y el hábito se corrige ahora: en el trabajo final hay verificación antiplagio institucional."],
+      ["advertencia", "**\"El marco es pegar todas las definiciones que encuentre.\"** — Cada cita debe ayudar a responder la pregunta. Si no lo hace, se borra."],
+      ["aclaracion", "**\"Organizo el marco autor por autor.\"** — Organícelo por constructos: para cada concepto clave, qué dicen las fuentes y para qué lo necesita."],
+      ["info", "**\"Tengo siete constructos.\"** — Se dispersó. Vuelva a la pregunta y quédese con los tres conceptos centrales; el resto no es marco, es antojo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: del mapa al párrafo, en el navegador",
+    "bullets": [
+      "**1.** Escriba su pregunta en la parte superior del documento y subraye los sustantivos técnicos.",
+      "**2.** Elija **tres constructos** y póngalos como subtítulos con el estilo Título 2 de la plantilla.",
+      "**3.** Haga la tabla del mapa: constructo → fuentes → para qué lo necesito (Insertar → Tabla, 3 columnas).",
+      "**4.** Busque en **Google Académico** **cada constructo por separado**, no el tema completo.",
+      "  Buscar \"clasificación supervisada\" y \"gestión de mesa de ayuda\" por aparte trae fuentes precisas; buscar todo junto trae ruido.",
+      "**5.** Complete la tabla con dos o tres fuentes por constructo antes de redactar nada.",
+      "**6.** Convierta cada fila en párrafos: idea + cita + frase de conexión con su pregunta.",
+      "**7.** Genere las referencias en **ZoteroBib**, revíselas y péguelas en la sección Referencias en orden alfabético."
+    ],
+    "note": "Herramienta opcional para visualizar el mapa: **Excalidraw** o **tldraw**, gratis y en el navegador."
+  },
+  {
+    "type": "bullets",
+    "title": "Taller — 20 minutos para dejar el marco arrancado",
+    "bullets": [
+      "**Consigna:** en un documento llamado `S05_MarcoTeorico_Apellido`:",
+      "  **(1)** Defina sus **tres constructos** a partir de la pregunta, subrayándolos en ella.",
+      "  **(2)** Arme el **mapa**: constructo → fuentes → para qué lo necesito.",
+      "  **(3)** Redacte **una a dos páginas** de marco, parafraseando y citando en APA 7.",
+      "  **(4)** Cierre cada constructo con una frase que lo conecte con su pregunta.",
+      "**Tiempo:** 20 minutos; el Docente revisa constructo por constructo y corrige paráfrasis dudosas.",
+      "**Criterio de éxito:** todo párrafo tiene al menos una cita y termina conectando con la pregunta; no queda ninguna definición suelta.",
+      "Autocontrol rápido: cuente los párrafos sin cita. Deben ser cero."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación antes de subir el archivo",
+    "bullets": [
+      "Los constructos son exactamente tres y todos aparecen en la pregunta.",
+      "El mapa está completo: cada constructo tiene fuentes y una razón de uso.",
+      "El marco está organizado por constructo, no por autor ni por fecha.",
+      "Cada párrafo tiene al menos una cita en APA 7.",
+      "Ninguna frase quedó igual a la del autor sin comillas y sin página.",
+      "Cada constructo cierra con una frase que lo conecta con la pregunta.",
+      "Toda referencia citada está en la lista, y toda la lista está citada.",
+      "El archivo se llama `S05_MarcoTeorico_Apellido`."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene la próxima sesión",
+    "bullets": [
+      "**Entrega:** suba `S05_MarcoTeorico_Apellido` a **CDigital** con el mapa y el avance de marco.",
+      "  [URL CDigital — campus del curso pendiente]",
+      "**Autónomo 1:** complete el tercer constructo hasta dejarlo con dos párrafos citados.",
+      "**Autónomo 2:** relea el marco buscando párrafos sin cita y decida: o los cita, o los borra.",
+      "**Autónomo 3:** anote los cuatro términos que su marco usa todo el tiempo sin haberlos definido: son el insumo de la próxima clase.",
+      "**Próxima sesión:** se cierra el marco referencial con lo **conceptual y lo contextual**: definiciones operativas y el escenario real, acotado.",
+      "  Traiga esa lista de términos: se convierte directo en la tabla de definiciones."
+    ]
+  }
+]

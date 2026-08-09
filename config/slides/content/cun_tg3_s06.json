@@ -1,0 +1,194 @@
+[
+  {
+    "type": "bullets",
+    "title": "El aislamiento es el peor enemigo del trabajo de grado",
+    "bullets": [
+      "Hoy cambiamos de ritmo: su proyecto **sale de la burbuja** y se expone a otros ojos.",
+      "Los proyectos que se caen en la sustentación casi nunca se caen por falta de esfuerzo: se caen porque **nadie los miró antes**.",
+      "  El autor deja de ver los huecos de su propio texto después de la tercera lectura. Es un efecto conocido y le pasa a todo el mundo.",
+      "Un compañero que no conoce su tema detecta en tres minutos lo que usted no vio en tres semanas.",
+      "  \"No entendí qué mide su instrumento\" dicho hoy vale oro; dicho por un jurado, cuesta la nota.",
+      "El grupo de este curso **es** una comunidad de práctica: personas distintas trabajando el mismo oficio de investigar.",
+      "El reto de la sesión: **nutrirse sin perder autoría**. Recibir mucho, registrar todo, seguir siendo el autor."
+    ],
+    "note": "Traiga su avance a la mano —matriz, instrumento o prototipo—: hoy se muestra, no se cuenta."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es una comunidad de práctica",
+    "bullets": [
+      "Concepto popularizado por **Wenger**: un grupo de personas que comparte un interés y **aprende junto al hacer**.",
+      "No es cualquier grupo. Tiene tres ingredientes:",
+      "  **Dominio** — un tema común que a todos les importa. Aquí: investigar y escribir un artículo de grado.",
+      "  **Comunidad** — se interactúa de verdad: se pregunta, se responde, se discute. Un chat mudo no es comunidad.",
+      "  **Práctica** — se comparten recursos, plantillas, trucos y errores. Lo que uno aprende, el otro no lo repite.",
+      "**No es** un grupo de trabajo con un entregable común: aquí cada quien mantiene **su** proyecto y **su** autoría.",
+      "**No es** un club de elogios: si todos dicen \"está muy bien\", la comunidad no está funcionando.",
+      "En Ingeniería esto ya existe y usted lo usa: foros de desarrolladores, repositorios abiertos, comunidades de una tecnología. Es lo mismo, aplicado a la investigación."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Co-creación vs. copia: la línea que no se cruza",
+    "headers": ["Situación", "Co-crear (correcto)", "Copiar (falta grave)"],
+    "rows": [
+      ["Un compañero le sugiere una idea", "La adapta a su proyecto y la **registra en la bitácora**: \"aporte de X\"", "La usa como propia y no la menciona en ninguna parte"],
+      ["Encuentra una frase perfecta en un artículo", "La cita entre comillas con autor, año y página", "La pega en su texto y le cambia dos palabras"],
+      ["Ve una figura útil en otro trabajo", "Rehace su propia versión y cita la fuente de origen", "Le pone captura de pantalla sin decir de dónde salió"],
+      ["Trabaja con un compañero en el mismo escenario", "Cada uno escribe su artículo y declara qué se compartió", "Entregan textos con párrafos idénticos"],
+      ["Usa una plantilla o un script de un tercero", "Declara la fuente y explica qué modificó", "La presenta como desarrollo propio"]
+    ],
+    "note": "La diferencia práctica es sencilla: **co-crear se declara, copiar se esconde**. Todo lo que hoy registre en la bitácora es lo que después lo protege.",
+    "col_w": [2.8, 4.6, 4.5]
+  },
+  {
+    "type": "bullets",
+    "title": "El feedback vago no sirve — hay que pedirlo bien",
+    "bullets": [
+      "\"Opinen sobre mi proyecto\" produce siempre la misma respuesta: **\"está bien\"**. Y eso no le sirve para nada.",
+      "El problema no es la gente: es que usted no le dio **algo concreto** sobre qué opinar.",
+      "Para que el feedback sirva hay que hacer dos cosas:",
+      "  **Dar contexto suficiente** para que el otro entienda el proyecto en pocos minutos.",
+      "  **Terminar con un pedido específico**: \"necesito que me digan si mi instrumento realmente mide el tiempo de despliegue\".",
+      "Un pedido específico convierte una conversación de cortesía en una asesoría de verdad.",
+      "Ejemplos de pedidos que funcionan:",
+      "  \"¿Se entiende mi pregunta sin que yo la explique?\"",
+      "  \"¿Alguno de estos 10 ítems les parece que no responde a ninguno de mis objetivos?\"",
+      "  \"¿Este título les suena a lo que acabo de contar, o suena a otro proyecto?\""
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El pitch de 3 minutos, bloque por bloque",
+    "headers": ["Bloque", "Segundos", "Qué se dice", "Ejemplo"],
+    "rows": [
+      ["**Problema**", "30 s", "El dolor concreto, con actor y contexto", "\"En el área de TI los despliegues toman 42 minutos y tienen 6 pasos manuales.\""],
+      ["**Pregunta y objetivos**", "30 s", "Qué se propone responder", "\"Me pregunto en qué medida automatizar las pruebas reduce ese tiempo y los errores.\""],
+      ["**Avance**", "60 s", "Dónde va hoy: método, instrumento, prototipo", "\"Ya tengo la matriz de consistencia y una bitácora de 6 campos.\""],
+      ["**Pedido concreto**", "60 s", "Qué necesita del otro, en una sola frase", "\"Necesito que me digan si esa bitácora mide de verdad el tiempo de despliegue.\""]
+    ],
+    "note": "Los 60 segundos del pedido son los más valiosos y son los que casi todo el mundo se salta. Practíquelos con cronómetro: en la sustentación el tiempo también es nota.",
+    "col_w": [2.4, 1.3, 3.4, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — pitch con cronómetro corriendo",
+    "bullets": [
+      "**Segundo 0 a 30 (problema):** \"En el área de TI de la organización, cada despliegue a producción toma 42 minutos y exige seis pasos manuales. Cuando alguien se equivoca en un paso, el error llega a producción.\"",
+      "**Segundo 30 a 60 (pregunta y objetivos):** \"Me pregunto en qué medida la automatización de pruebas reduce el tiempo de despliegue y los errores. Para eso caracterizo el proceso actual, diseño la automatización y comparo antes y después.\"",
+      "**Segundo 60 a 120 (avance):** \"Ya tengo la matriz de consistencia con tres filas y un instrumento: una bitácora con fecha de inicio, fecha de fin, pasos manuales e incidencias de las 24 horas siguientes. El prototipo va en la primera iteración.\"",
+      "**Segundo 120 a 180 (pedido concreto):** \"Lo que necesito de ustedes es específico: **¿esta bitácora mide de verdad el tiempo de despliegue, o me está faltando un campo?** No necesito opiniones sobre el tema; necesito eso.\"",
+      "**Qué pasó:** al pedir algo específico, las respuestas dejaron de ser \"está bien\" y se volvieron accionables.",
+      "  Uno dijo: \"le falta registrar si el despliegue fue exitoso o se devolvió\". Ese campo faltaba de verdad."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Feedback vago vs. feedback accionable",
+    "headers": ["Lo que suele decirse", "Por qué no sirve", "Cómo decirlo para que sirva"],
+    "rows": [
+      ["\"Está muy bien, me gustó\"", "No se puede hacer nada con eso", "\"El objetivo 2 me quedó claro; el 3 no entendí qué va a comparar\""],
+      ["\"Le falta profundidad\"", "No dice dónde ni de qué tipo", "\"En el problema no dijo cuántas personas afecta ni con qué frecuencia\""],
+      ["\"Yo lo haría distinto\"", "Habla del otro proyecto, no del suyo", "\"Con su alcance descriptivo, la comparación antes/después va a costar; ¿lo tuvo en cuenta?\""],
+      ["\"Está muy largo\"", "No indica qué sobra", "\"Los primeros 40 segundos fueron contexto general; empiece en el dato de los 42 minutos\""]
+    ],
+    "note": "Fórmula para dar feedback: **\"Cuando dijo X, yo entendí Y; si su intención era Z, considere W.\"** Describe lo que le pasó a usted como oyente, no juzga a la persona.",
+    "col_w": [3.0, 3.3, 5.6]
+  },
+  {
+    "type": "bullets",
+    "title": "La bitácora de co-creación: su evidencia y su blindaje",
+    "bullets": [
+      "Todo lo que reciba hoy se registra. No de memoria: **por escrito y en el momento**.",
+      "Cuatro columnas, ni una más:",
+      "  **Aporte** — qué le dijeron, en una frase concreta.",
+      "  **De quién** — nombre de quien lo aportó, o la fuente si vino de un texto.",
+      "  **Decisión** — adoptar, adaptar o descartar. Las tres son válidas.",
+      "  **Por qué** — la razón de su decisión. Esta columna es la que demuestra que usted pensó.",
+      "**Descartar es una decisión legítima** y bien vista, siempre que esté justificada: \"lo descarto porque no responde a ninguno de mis objetivos\".",
+      "Para qué sirve esta bitácora, en concreto:",
+      "  Es **evidencia del proceso** y hace parte de lo que se evalúa en el componente de proceso del curso.",
+      "  **Protege su autoría**: deja negro sobre blanco qué fue aporte externo y qué fue decisión suya.",
+      "  Le da material real para la sección de agradecimientos y para responder al jurado cuando pregunte cómo evolucionó el proyecto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Bitácora de co-creación — ejemplo con tres filas",
+    "headers": ["Aporte recibido", "De quién", "Decisión", "Por qué"],
+    "rows": [
+      ["\"Agregue un campo de incidencias en producción a la bitácora\"", "Compañera de curso", "**Adopto**", "Cubre el objetivo 3, que tenía flojo el instrumento"],
+      ["\"Cambie la encuesta por entrevistas a los desarrolladores\"", "Compañero de curso", "**Adapto**", "Mantengo la bitácora, pero agrego 2 entrevistas cortas para entender el porqué"],
+      ["\"Amplíe el estudio a toda la empresa\"", "Compañero de curso", "**Descarto**", "Excede el alcance del semestre y mi pregunta se limita a un equipo"]
+    ],
+    "note": "Fíjese que la columna **Por qué** siempre se amarra a un objetivo o al alcance. Ese es el criterio para decidir, no el gusto ni la simpatía.",
+    "col_w": [4.0, 2.0, 1.9, 4.0]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes de esta sesión",
+    "boxes": [
+      ["advertencia", "\"Le pido feedback al grupo y me dicen 'está bien'.\" — Ese es un síntoma de mal pedido, no de mal grupo. Haga un pedido concreto después de un pitch de 3 minutos."],
+      ["advertencia", "\"Un compañero me dio una idea buenísima, la uso y ya.\" — Regístrela en la bitácora como aporte de esa persona. Co-crear no es apropiarse."],
+      ["advertencia", "\"Me defiendo de cada comentario que me hacen.\" — Ponerse a la defensiva cierra puertas y la gente deja de decirle lo que necesita oír. **Primero anote, después decida.**"],
+      ["advertencia", "\"No anoto nada de la socialización.\" — Sin bitácora no hay evidencia del proceso ni protección de su autoría. Lo que no se registra, no ocurrió."],
+      ["aclaracion", "\"¿Y si me dicen algo que está equivocado?\" — Lo registra igual y anota 'descarto, porque…'. Su criterio también es parte del proceso y se evalúa."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso — cómo se organiza la socialización",
+    "bullets": [
+      "**1.** Ármense en **parejas o tríos**. Con más de tres personas nadie alcanza a hablar.",
+      "**2.** Abran un cronómetro visible (el del celular sirve). Los 3 minutos se respetan: es entrenamiento para la sustentación.",
+      "**3.** Turno 1: uno da su pitch completo. **Los demás no interrumpen**: solo escuchan y anotan.",
+      "**4.** Terminado el pitch, los oyentes responden **primero al pedido concreto** y solo después agregan otras observaciones.",
+      "**5.** El que expuso **no discute**: agradece y anota literal. La discusión interna viene después, al decidir.",
+      "**6.** Rotan y repiten hasta que todos hayan expuesto.",
+      "**7.** Cada quien llena su bitácora con las cuatro columnas, **mientras todavía recuerda** lo que le dijeron.",
+      "**8.** Si el grupo quiere dejar el intercambio visible, publiquen problema y propuesta en **cinco líneas** en un tablero de **Padlet** y cada uno comenta el de otro.",
+      "  Padlet es gratis, funciona en el navegador y deja la evidencia lista para adjuntar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Pitch de 3 minutos y bitácora de co-creación",
+    "bullets": [
+      "**Tiempo: 20 minutos.** En parejas o tríos, por turnos. Entregable individual: `S06_CoCreacion_Apellido`.",
+      "**Consigna literal:**",
+      "  **(1)** Dé su **pitch de 3 minutos** con la estructura problema → pregunta → avance → **pedido concreto**.",
+      "  **(2)** Cuando le toque escuchar, dé feedback **sobre lo que el compañero pidió**, no sobre sus gustos.",
+      "  **(3)** Registre en su documento: el pedido que hizo, **tres aprendizajes accionables** que recibió, y qué decide con cada uno (adoptar / adaptar / descartar) **con su razón**.",
+      "**Criterio de éxito (así se verifica):**",
+      "  La bitácora deja claro **qué es aporte externo y qué es decisión propia**, con una razón en cada caso.",
+      "  Ninguno de los tres aprendizajes está redactado como \"me dijeron que estaba bien\".",
+      "  Su pitch cupo en los 3 minutos y terminó en un pedido específico, no en \"bueno, eso es todo\"."
+    ],
+    "note": "Mientras trabajan, **el Docente** modera los turnos y corta a los 3 minutos exactos. Pasarse de tiempo hoy es gratis; en la sustentación, no."
+  },
+  {
+    "type": "boxes",
+    "title": "Checklist de autoevaluación antes de subir a CDigital",
+    "boxes": [
+      ["info", "**Pedido:** ¿mi pedido fue una pregunta concreta y respondible, o fue un 'opinen'? ¿lo dejé escrito textual en el documento?"],
+      ["info", "**Aprendizajes:** ¿tengo tres y son accionables? Un aprendizaje accionable se puede convertir en una tarea concreta esta misma semana."],
+      ["info", "**Decisiones:** ¿cada aporte tiene su decisión (adoptar/adaptar/descartar) y su razón? ¿la razón se amarra a un objetivo o al alcance del proyecto?"],
+      ["aclaracion", "**Autoría:** ¿queda claro en mi bitácora qué idea vino de quién? Si mañana alguien pregunta de dónde salió un cambio, ¿puedo mostrarlo?"],
+      ["advertencia", "**Actitud:** si en toda la sesión no anotó ni una sola observación crítica, o no expuso de verdad, o se estuvo defendiendo. Vuelva a intentarlo con otro compañero."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Suba** `S06_CoCreacion_Apellido` con su bitácora a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Trabajo autónomo (extensión de la sesión):**",
+      "  **Aplique de verdad** los aportes que marcó como \"adopto\" o \"adapto\". Una bitácora sin cambios en el documento es papel mojado.",
+      "  Busque **una persona externa al curso** —del área donde investiga, o de otro semestre— y repítale el pitch de 3 minutos. El feedback de afuera es distinto.",
+      "  Deje la bitácora **abierta y viva**: cada vez que reciba un aporte de aquí en adelante, agregue una fila.",
+      "  Si su marco lo permite, busque en Google Académico **un referente sobre comunidades de práctica o co-creación** y agréguelo a sus fichas.",
+      "**En la próxima sesión** pasamos a la **experiencia creativa y el análisis de datos**: cómo convertir datos en bruto en hallazgos que respondan a sus objetivos.",
+      "  Llegue con lo que haya recogido con su instrumento, aunque sean pocos registros: con eso se trabaja."
+    ]
+  }
+]

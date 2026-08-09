@@ -1,0 +1,185 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "2.0",
+  "_refactor": "2026-07-22 — El contenido anterior (fundamentos de Kotlin) DUPLICABA el curso complementario 'Introduccion a Kotlin'. Se refactoriza: Moviles 1 ASUME Kotlin (visto en el complementario, que queda como prerrequisito) y enseña DESARROLLO DE APPS con Jetpack Compose. Entorno practico: Compose Multiplatform for Web (Kotlin/Wasm) — se ve en el navegador sin instalar. El material v2 anterior (Kotlin basico) se archivo en Clases/_v2-kotlin-basico (archivado)/.",
+  "_fuente_tematica": "Propuesta de 9 sesiones de desarrollo movil con Compose (aprobada por el usuario 2026-07-22). Ver plan: Cursos/Desarrollo de Aplicaciones Moviles 1/_Plan refactor (contenido + entorno practico).md",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Desarrollo de Aplicaciones Móviles 1",
+    "nombre_corto": "Desarrollo de Aplicaciones Móviles 1",
+    "codigo_examlab": "Desarrollo de Aplicaciones Móviles 1-3274V",
+    "asignatura": "Desarrollo de Aplicaciones Móviles 1",
+    "programa": "Ingeniería de Sistemas",
+    "prerrequisito": "Introducción a Kotlin (curso complementario) — cubre los fundamentos del lenguaje (variables, control de flujo, funciones, POO, colecciones). Móviles 1 NO repite esto.",
+    "carpeta_salida": "Cursos/Desarrollo de Aplicaciones Moviles 1",
+    "estructura_salida": {
+      "presentacion": "Clases/Version vigente (nuevo dictado 2026)/Presentacion del curso.pptx",
+      "slides_sesion": "Clases/Version vigente (nuevo dictado 2026)/Sesion N/Sesion N - <Titulo>.pptx",
+      "guiones": "Clases/Version vigente (nuevo dictado 2026)/Guiones/Guion Docente Sesion N - <Titulo>.md",
+      "_nota": "v2 = material NUEVO (desarrollo movil con Compose), dentro de Clases del curso. El v2 anterior (Kotlin basico) se archivo en Clases/_v2-kotlin-basico (archivado)/. Deck del estudiante en Clases/Version vigente (nuevo dictado 2026)/ y Clases/Version vigente (nuevo dictado 2026)/Sesion N/; guiones del docente en Clases/Version vigente (nuevo dictado 2026)/Guiones/ con su subcarpeta Capturas/."
+    },
+    "tipo_asignatura": "B",
+    "naturaleza": "Teórico-Práctica · desarrollo de aplicaciones móviles con Kotlin y Jetpack Compose",
+    "duracion_semanas": 3,
+    "n_sesiones": 9,
+    "modalidad_sesiones": "Sesiones sincrónicas teórico-prácticas",
+
+    "duracion_sesion_minutos": 105,
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "Ma/Ju 6:00-7:45 PM y Sá 8:00-9:45 AM = 105 min (1h45). Las 5 fases suman 100 min; la actividad individual ocupa los 15 min finales."
+    },
+
+    "competencia": "Construir aplicaciones móviles con interfaz de usuario moderna usando Kotlin y Jetpack Compose: componer pantallas declarativas, gestionar estado e interacción, mostrar listas y formularios, navegar entre pantallas y aplicar temas de Material Design, integrando datos en una app funcional.",
+    "resultado_aprendizaje": "Desarrollar una aplicación móvil con Jetpack Compose que combine varias pantallas con navegación, componentes de UI (texto, botones, listas, formularios), manejo de estado y un tema de Material Design, y que consuma o persista datos, demostrando el resultado en el navegador (Compose para Web).",
+    "competencias_fundamentales_fesna": ["Pensamiento estructurado", "Resolución de problemas", "Pensamiento crítico"],
+
+    "niveles": {
+      "1": "El estudiante compone interfaces básicas con Jetpack Compose (composables, modifiers y layouts) y las previsualiza.",
+      "2": "El estudiante gestiona estado e interacción, muestra listas y captura entrada del usuario con formularios validados.",
+      "3": "El estudiante navega entre pantallas, aplica temas de Material Design e integra datos en una app final."
+    },
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Introducción al desarrollo móvil y tu primera app",
+        "subtitulo": "De programar Kotlin a construir apps con Compose (en el navegador)",
+        "nivel": 1,
+        "foco": "Panorama del desarrollo móvil y primer composable, con el entorno de práctica en el navegador (Compose para Web).",
+        "ensenanzas": ["Qué es una app móvil; Android/iOS; el rol de Kotlin y Jetpack Compose", "Anatomía de un proyecto de app: dónde vive la UI y el punto de entrada", "Qué es un @Composable (una función que describe UI)", "Tu primer 'Hola': Text() dentro de un composable + @Preview", "Entorno de práctica: Compose Multiplatform para Web (Kotlin/Wasm) — ver la app en el navegador sin instalar (Kotlin Playground / plantilla)"],
+        "practica_examlab": "Tier 2: Compose para Web (Kotlin Playground / plantilla en el navegador) — primer composable. Demo del docente: app Android nativa en Google AI Studio (emulador en el navegador). Tier 1 examlab: Test + Reto en vivo."
+      },
+      "2": {
+        "titulo": "UI declarativa con Jetpack Compose",
+        "subtitulo": "Describir la interfaz como funciones",
+        "nivel": 1,
+        "foco": "Composables básicos y Modifier para construir y estilizar la UI.",
+        "ensenanzas": ["UI declarativa vs imperativa (describir el 'qué', no el 'cómo')", "Composables básicos: Text, Button, Image, Spacer", "Modifier: tamaño, padding, background, clickable", "Estilos: color, tipografía básica", "@Preview para ver la UI mientras se construye"],
+        "practica_examlab": "Tier 2: Compose para Web (componer una tarjeta con Text/Button/Image). Tier 1 examlab: Test + Reto en vivo."
+      },
+      "3": {
+        "titulo": "Layouts y organización de la pantalla",
+        "subtitulo": "Column, Row y Box: armar la pantalla por bloques",
+        "nivel": 1,
+        "foco": "Organizar y alinear la UI con los contenedores de Compose.",
+        "ensenanzas": ["Column, Row y Box", "Arrangement y Alignment; espaciado (spacedBy, padding)", "Anidar layouts para componer pantallas", "Diseño responsivo básico: weight, fillMaxWidth/Height"],
+        "practica_examlab": "Tier 2: Compose para Web (maquetar una pantalla con Column/Row/Box). Tier 1 examlab: Test + Reto en vivo + Taller (entregable: enlace del preview / repo)."
+      },
+      "4": {
+        "titulo": "Estado e interacción",
+        "subtitulo": "Que la interfaz reaccione al usuario",
+        "nivel": 2,
+        "foco": "Estado en Compose y recomposición ante eventos del usuario.",
+        "ensenanzas": ["Qué es el estado de la UI y qué es la recomposición", "remember + mutableStateOf", "Eventos: onClick, onValueChange", "State hoisting (elevar el estado) — idea básica", "Ejemplo: contador / interruptor (toggle)"],
+        "practica_examlab": "Tier 2: Compose para Web (contador/toggle con estado). Tier 1 examlab: Test + Reto en vivo."
+      },
+      "5": {
+        "titulo": "Listas y datos en pantalla",
+        "subtitulo": "Mostrar colecciones con LazyColumn",
+        "nivel": 2,
+        "foco": "Renderizar listas de datos de forma eficiente.",
+        "ensenanzas": ["LazyColumn / LazyRow para listas", "items() y la importancia de key", "Tarjetas (Card) y filas de lista", "Mostrar una lista de objetos (data class) en la UI", "Separar el dato de su presentación"],
+        "practica_examlab": "Tier 2: Compose para Web (lista de tarjetas desde una lista de objetos). Tier 1 examlab: Test + Reto en vivo + Taller (entregable)."
+      },
+      "6": {
+        "titulo": "Entrada del usuario y formularios",
+        "subtitulo": "Capturar y validar datos en la app",
+        "nivel": 2,
+        "foco": "Campos de texto, estado del formulario y validación.",
+        "ensenanzas": ["TextField / OutlinedTextField y su estado", "Manejar varios campos", "Habilitar/deshabilitar el botón según la validez", "Validación (requerido, formato, longitud) y mensajes de error", "Enlazar el formulario con el estado de la pantalla"],
+        "practica_examlab": "Tier 2: Compose para Web (formulario con validación). Tier 1 examlab: Test + Reto en vivo + Taller (entregable)."
+      },
+      "7": {
+        "titulo": "Navegación entre pantallas",
+        "subtitulo": "Varias pantallas y el paso de datos",
+        "nivel": 3,
+        "foco": "Navegación con navigation-compose y back stack.",
+        "ensenanzas": ["Concepto de múltiples pantallas y back stack", "navigation-compose: NavHost, composable(route), NavController", "navController.navigate(...) y volver atrás", "Pasar argumentos entre pantallas", "Estructurar una app de varias pantallas"],
+        "practica_examlab": "Tier 2: Compose para Web (2-3 pantallas con navegación). Tier 1 examlab: Test + Reto en vivo."
+      },
+      "8": {
+        "titulo": "Temas, Material Design y recursos",
+        "subtitulo": "Que la app se vea profesional",
+        "nivel": 3,
+        "foco": "Material 3, temas y recursos de la app.",
+        "ensenanzas": ["Material 3: MaterialTheme, colorScheme, typography", "Tema claro/oscuro", "Íconos (Material Icons) e imágenes", "Recursos: strings y valores centralizados", "Coherencia visual y accesibilidad básica"],
+        "practica_examlab": "Tier 2: Compose para Web (aplicar tema Material 3 + modo oscuro). Tier 1 examlab: Test + Reto en vivo."
+      },
+      "9": {
+        "titulo": "Datos externos y Proyecto integrador",
+        "subtitulo": "Una app completa de principio a fin",
+        "nivel": 3,
+        "foco": "Integrar datos (API o persistencia simple) y construir la app final.",
+        "ensenanzas": ["Consumir datos: función suspend / llamada a una API (idea) o persistencia local simple", "Estados de la UI: cargando, éxito, error", "Integrar UI + estado + listas + navegación + tema", "Proyecto integrador: app de varias pantallas funcional", "Presentar/entregar el resultado (preview web / repositorio)"],
+        "practica_examlab": "Tier 2: Compose para Web — Proyecto final integrador. Demo docente en Google AI Studio. Tier 1 examlab: Reto en vivo + Proyecto (entregable: enlace del preview / repo)."
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "B",
+      "_nota": "ESQUEMA REAL vigente (NO el 50/40/10 por defecto del perfil). PREVALECE. La evaluación completa va SOLO en la Presentación del Curso.",
+      "coursera_progreso_ruta": 90,
+      "asistencia": 10,
+      "opcionales": "Participación en clase +0.3 (opcional) · Kahoot/Reto en vivo: 1er +0.5 / 2do +0.4 / 3er +0.3 (opcional)",
+      "evidencia_aprendizaje": "Progreso del curso base en Coursera (90%) + asistencia (10%). Los Test y Talleres de examlab son formativos/de refuerzo salvo que el docente decida ponderarlos.",
+      "esquema_ejemplo_presentacion": [
+        "Progreso Coursera = 90%",
+        "Asistencia (al final de la sesión) = 10%",
+        "Participación en clase = +0.3 (opcional)",
+        "Kahoot/Reto en vivo (bono por puesto) = 🥇 +0.5 · 🥈 +0.4 · 🥉 +0.3 (opcional)"
+      ]
+    },
+
+    "recursos_software": {
+      "_politica": "SIN software que se instale. Entorno práctico principal: Compose Multiplatform para Web (Kotlin/Wasm) — el estudiante construye UI Compose real y la ve EN EL NAVEGADOR, gratis y sin instalar (mismo Compose que Android). Tier 1 examlab = evaluación. NO se usa Firebase Studio (Google lo está descontinuando: registros nuevos deshabilitados desde jun-2026, cierre mar-2027).",
+      "plataforma_practica": {
+        "nombre": "examlab",
+        "url": "https://examlab.lovable.app/app",
+        "rol": "Capa evaluativa: Test de conceptos + Reto en vivo (Kahoot) por sesión + Taller/Proyecto para recibir el entregable (enlace del preview web de Compose / repo / .kt). examlab NO ejecuta Kotlin/Compose: los quizzes de código son de lectura ('¿qué muestra este composable?') con el snippet embebido.",
+        "insumos_prompts": "Cursos/examlab - Insumos IA (Web-2422V + Moviles-3274V).md (archivo CONSOLIDADO; sección 'CURSO 2 · Desarrollo de Aplicaciones Móviles 1-3274V').",
+        "compatibilidad": "Cursos/Desarrollo de Aplicaciones Moviles 1/examlab - Compatibilidad y validacion.md"
+      },
+      "entorno_practico_principal": {
+        "nombre": "Compose Multiplatform para Web (Kotlin/Wasm)",
+        "que_es": "El mismo Jetpack Compose de Android compilado a WebAssembly: la UI corre y se ve en una pestaña del navegador, sin emulador ni instalación.",
+        "como": ["Ejercicios cortos: Kotlin Playground (https://play.kotlinlang.org/) con previews de Compose", "Proyecto: plantilla de repositorio que se abre en GitHub Codespaces o Gitpod (gratis) y se previsualiza en el navegador"],
+        "por_que": "Gratis, sin instalar, se muestra a los estudiantes en vivo, y es transferible a Android (mismo toolkit)."
+      },
+      "demos_docente": {
+        "nombre": "Google AI Studio (Build mode)",
+        "url": "https://aistudio.google.com/",
+        "uso": "Demostración del docente: genera una app Android nativa (Kotlin/Compose) y la corre en un emulador dentro del navegador, para mostrar 'cómo se ve en un teléfono'. No es el entorno de trabajo del alumno."
+      },
+      "herramientas_online": [
+        "Kotlin Playground (https://play.kotlinlang.org/) — Compose para Web / snippets",
+        "GitHub Codespaces o Gitpod — abrir la plantilla del proyecto Compose Web en el navegador (free tier)",
+        "Google AI Studio (https://aistudio.google.com/) — demo de app Android nativa con emulador web"
+      ],
+      "recursos": ["Guiones de clase", "Videos y ruta de aprendizaje en examlab", "Coursera (curso base de Android/Kotlin/Compose — confirmar cuál)", "Documentación: Jetpack Compose https://developer.android.com/jetpack/compose y Compose Multiplatform https://www.jetbrains.com/compose-multiplatform/"],
+      "coursera_url": "PROPUESTO (confirmar URL exacta): 'Meta Android UI Development' (Especialización, Coursera) — beginner-friendly, enseña UI de Android con Jetpack Compose desde cero. Alternativas: 'Meta Android Developer' (Professional Certificate) o, gratis y oficial fuera de Coursera, 'Android Basics with Compose' de Google (developer.android.com). NO usar cursos de fundamentos de Kotlin: eso es el complementario 'Introducción a Kotlin'.",
+      "material_clases_url": "[hipervínculo que llena el docente — guiones/diapositivas/material]",
+      "herramientas_mundo_laboral": ["Android Studio (IDE profesional, local)", "Jetpack Compose en Android", "Gradle", "Git/GitHub", "emuladores/dispositivos Android", "Google Play Console"]
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[20 — CONFIRMAR con coordinación; el dictado anterior fue el No. 19]",
+      "horario": "Martes y Jueves 6:00–7:45 PM · Sábado 8:00–9:45 AM",
+      "fechas": "27/07/2026 – 15/08/2026",
+      "hora_inicio": "6:00 PM (martes 28-jul); sábados 8:00 AM",
+      "sesiones_fechas": ["Mar 28/07/2026", "Jue 30/07/2026", "Sáb 01/08/2026", "Mar 04/08/2026", "Jue 06/08/2026", "Sáb 08/08/2026", "Mar 11/08/2026", "Jue 13/08/2026", "Sáb 15/08/2026"]
+    }
+  }
+}

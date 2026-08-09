@@ -1,0 +1,177 @@
+[
+  {
+    "type": "bullets",
+    "title": "\"Tiempo de atención\" no significa lo mismo para dos personas",
+    "bullets": [
+      "Pregunte en una mesa de ayuda qué es el tiempo de atención y saldrán tres respuestas distintas.",
+      "  El analista dirá \"desde que abro el ticket hasta que lo cierro\".",
+      "  El usuario dirá \"desde que llamé hasta que me solucionaron\".",
+      "  El jefe dirá \"desde que entra al sistema hasta que se factura\".",
+      "Si su documento no dice cuál de las tres es, cualquier medición posterior queda sin piso.",
+      "Ese es el trabajo de hoy: **fijar el significado de sus términos** y **acotar dónde ocurre** el problema.",
+      "Dos secciones cortas —conceptual y contextual— pero son las que sostienen toda la metodología que viene después.",
+      "Con esto queda **cerrado el marco referencial**: antecedentes, teoría, conceptos y contexto."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Marco conceptual = definiciones operativas, no de diccionario",
+    "bullets": [
+      "**Es** la definición de sus términos clave **tal como los usa su proyecto**.",
+      "**No es** copiar la entrada de un diccionario, de una enciclopedia en línea ni de la primera página del buscador.",
+      "**Definición operativa** = una definición acotada que dice **cómo se reconocería o mediría** el término en la práctica.",
+      "  \"Tiempo de atención\" no es \"lo que se demora un servicio\"; es \"minutos transcurridos entre la apertura y el cierre del ticket en el sistema X\".",
+      "La diferencia no es de estilo: la primera no se puede medir y la segunda sí.",
+      "Prueba de la definición operativa: **\"si dos personas distintas midieran esto, ¿darían el mismo número?\"**",
+      "  Si la respuesta es no, la definición todavía está floja.",
+      "El marco conceptual va **después** del teórico y suele ocupar una tabla más un par de párrafos: es corto y decisivo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Del diccionario a lo operativo: cuatro términos del caso",
+    "headers": ["Término", "Definición de diccionario (insuficiente)", "Definición operativa (útil)"],
+    "rows": [
+      ["Ticket", "\"Una solicitud\"", "Registro de incidente creado por un usuario en la mesa de ayuda, con identificador único y fecha de apertura"],
+      ["Tiempo de atención", "\"Lo que tarda un servicio\"", "Minutos transcurridos entre la apertura y el cierre del ticket, según el registro del sistema X"],
+      ["Clasificación correcta", "\"Un acierto\"", "Coincidencia entre la categoría asignada por el modelo y la que asignó el analista al mismo ticket"],
+      ["Categoría frecuente", "\"Las más comunes\"", "Categoría que concentra al menos el 5 % de los tickets del periodo analizado"],
+      ["Analista de soporte", "\"Quien atiende\"", "Persona del área de soporte TI con perfil habilitado para asignar categoría y cerrar tickets en el sistema X"]
+    ],
+    "note": "Note el patrón de la tercera columna: siempre aparece **qué se observa**, **en qué unidad** y **de dónde sale el dato**.",
+    "col_w": [2.4, 3.7, 5.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Anatomía de una definición operativa: cuatro piezas",
+    "bullets": [
+      "**1. Qué se observa** — el hecho concreto, no la idea abstracta: la apertura y el cierre de un ticket.",
+      "**2. En qué unidad** — minutos, número de casos, porcentaje, sí/no. Si no tiene unidad, no es operativa.",
+      "**3. De dónde sale el dato** — el registro del sistema, el acta, el reporte del área. La fuente debe existir hoy.",
+      "**4. Con qué límite** — el criterio que separa un caso de otro: \"al menos el 5 %\", \"dentro del horario laboral\".",
+      "Cuando una definición cumple las cuatro, el término queda listo para convertirse en variable.",
+      "Cuándo se cita y cuándo no:",
+      "  Si toma la definición de un autor, **cite en APA 7** y luego adáptela a su caso.",
+      "  Si la construye usted para su proyecto, dígalo: \"para efectos de este proyecto se entenderá por…\"."
+    ],
+    "note": "Ambas rutas son válidas. Lo que no es válido es una definición sin origen y sin límites."
+  },
+  {
+    "type": "bullets",
+    "title": "Marco contextual: dónde ocurre, con lupa y no con mapa",
+    "bullets": [
+      "**Es** la descripción del escenario real donde vive el problema: la organización, el área y el proceso.",
+      "**No es** un capítulo sobre Colombia, ni sobre el sector TI del país, ni sobre la historia de la empresa desde su fundación.",
+      "Los tres niveles y dónde debe aterrizar el suyo:",
+      "  **Macro** — el sector o el país. Máximo dos frases, solo si aporta pertinencia.",
+      "  **Meso** — la organización: tamaño, actividad, estructura relevante para el problema.",
+      "  **Micro** — el área y el proceso concretos. **Aquí vive el 80 % de su marco contextual.**",
+      "Regla de proporción: si el proyecto ocurre en un área de una empresa, el país no puede ocupar más renglones que el área.",
+      "Lo que sí debe quedar claro al terminar: qué área, cuántas personas, qué proceso, con qué sistema y con qué volumen aproximado."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Contexto mal acotado frente a contexto bien acotado",
+    "headers": ["Como suele llegar", "Qué falla", "Cómo debe quedar"],
+    "rows": [
+      ["\"Colombia es un país en vías de digitalización…\"", "Nivel macro que no toca el problema", "\"La empresa X, del sector servicios, opera con un área de soporte TI centralizada.\""],
+      ["\"El sector TI mueve millones de dólares al año.\"", "Dato de relleno sin relación con la pregunta", "\"El área atiende solicitudes de las tres sedes por correo, teléfono y formulario web.\""],
+      ["\"La empresa fue fundada hace treinta años y ha crecido…\"", "Historia irrelevante para el problema", "\"El equipo lo conforman los analistas de soporte, que registran cada solicitud en el sistema X.\""],
+      ["\"Todos los usuarios tienen problemas con el sistema.\"", "Afirmación sin fuente ni medida", "\"Según el informe interno del área, se reciben en promedio N solicitudes diarias.\""]
+    ],
+    "note": "Todo dato de contexto necesita origen: informe interno, página institucional o fuente citada en APA 7. Sin origen, es suposición.",
+    "col_w": [3.7, 3.0, 5.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: párrafo de contexto, escrito completo",
+    "bullets": [
+      "\"El presente proyecto se desarrolla en la empresa X, organización del sector servicios con tres sedes en Bogotá. El estudio se concentra en su **área de soporte TI**, responsable de atender las solicitudes tecnológicas de los usuarios internos.\"",
+      "\"El área recibe solicitudes por tres canales —correo, teléfono y formulario web— que se consolidan en el sistema X, donde cada ticket queda registrado con identificador, fecha de apertura y categoría asignada manualmente por el analista. Según el informe interno del área, se registran en promedio N solicitudes diarias, atendidas por un equipo de M analistas.\"",
+      "\"El proceso objeto de estudio es específicamente la **clasificación del ticket**, paso previo a su asignación y resolución.\"",
+      "Qué hace bien este párrafo: nombra organización, área, proceso, sistema, canales, volumen y equipo.",
+      "Qué no hace: no habla del país, no cuenta la historia de la empresa, no adelanta ninguna conclusión.",
+      "Extensión total: **una página es suficiente**. Más de eso suele ser relleno.",
+      "En este avance el contexto se construye con **información ya existente** —informes, documentación del área, fuentes publicadas—; el levantamiento en campo corresponde al semestre siguiente."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Por qué esto sostiene el próximo semestre",
+    "headers": ["Definición operativa (hoy)", "Variable (metodología)", "Indicador", "Fuente del dato"],
+    "rows": [
+      ["Minutos entre apertura y cierre del ticket", "Tiempo de atención", "Promedio de minutos por ticket", "Registro histórico del sistema X"],
+      ["Coincidencia entre categoría del modelo y del analista", "Acierto de clasificación", "Porcentaje de coincidencias", "Comparación de ambas categorías"],
+      ["Categoría con al menos el 5 % de los tickets", "Frecuencia de categoría", "Distribución de tickets por categoría", "Reporte de categorías del periodo"]
+    ],
+    "note": "Lea la tabla de izquierda a derecha: **un término mal definido hoy es un instrumento imposible mañana**. Por eso esta sesión, aunque corta, decide la metodología.",
+    "col_w": [4.0, 2.6, 2.9, 2.4]
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se corrige en esta sesión",
+    "boxes": [
+      ["advertencia", "**\"Copié la definición de la enciclopedia en línea.\"** — No sirve para medir y además es fuente débil. Construya la definición operativa de su caso."],
+      ["advertencia", "**\"Mi contexto es Colombia y el sector TI.\"** — Baje a la organización, el área y el proceso. El país cabe en dos frases, no en dos páginas."],
+      ["aclaracion", "**\"Definí el término tan amplio que sirve para todo.\"** — Si sirve para todo, no mide nada. Agréguele unidad, fuente del dato y límite."],
+      ["info", "**\"¿Conceptual y contextual no son lo mismo?\"** — No: el conceptual define los términos; el contextual describe el lugar y el proceso donde ocurren."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: construir las dos secciones en el navegador",
+    "bullets": [
+      "**1.** Liste los términos que su documento repite sin haber definido; escoja **al menos cuatro**.",
+      "**2.** Para cada uno, busque en **Google Académico**, **SciELO** o **Redalyc** **dos definiciones** de autores distintos.",
+      "**3.** Compárelas y elija la que **se pueda operacionalizar**, no la más elegante ni la más larga.",
+      "**4.** Adáptela a su caso agregando las cuatro piezas: qué se observa, unidad, fuente del dato y límite.",
+      "**5.** Arme la tabla de tres columnas en Google Docs: término · definición del autor (citada) · definición operativa del proyecto.",
+      "**6.** Genere las referencias de las definiciones citadas en **ZoteroBib** (zbib.org) en APA 7.",
+      "**7.** Escriba el contexto en el orden organización → área → proceso, con un dato con origen por párrafo.",
+      "**8.** Revise proporciones: si el nivel macro ocupa más que el micro, recorte el macro."
+    ],
+    "note": "Si le ayuda ver el contexto antes de escribirlo, dibuje el flujo del proceso en **Excalidraw** o **tldraw**: gratis, en el navegador, y la imagen se pega en el documento."
+  },
+  {
+    "type": "bullets",
+    "title": "Taller — 20 minutos para cerrar el marco referencial",
+    "bullets": [
+      "**Consigna:** en un documento llamado `S06_ConceptualContextual_Apellido`:",
+      "  **(1)** Una **tabla de mínimo cuatro términos** con su definición operativa, siguiendo las cuatro piezas.",
+      "  **(2)** **Una página de contexto** que describa organización, área y proceso concretos.",
+      "  **(3)** Las citas en **APA 7** de las definiciones que haya tomado de autores.",
+      "  **(4)** Un dato con origen por cada párrafo de contexto (informe, documento del área o fuente citada).",
+      "**Tiempo:** 20 minutos; el Docente revisa término por término si la definición es medible.",
+      "**Criterio de éxito:** cada término se puede medir tal como está escrito, y el contexto describe un lugar concreto —no un país—.",
+      "Prueba en pareja, si alcanza el tiempo: intercambien definiciones y verifiquen si ambos medirían igual."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación antes de subir el archivo",
+    "bullets": [
+      "La tabla tiene al menos cuatro términos, y todos aparecen en la pregunta o en los objetivos.",
+      "Cada definición dice qué se observa, en qué unidad, de dónde sale el dato y con qué límite.",
+      "Dos personas distintas medirían lo mismo con cada definición.",
+      "Las definiciones tomadas de autores están citadas en APA 7; las propias dicen \"para efectos de este proyecto…\".",
+      "El contexto nombra organización, área y proceso concretos, con volumen y sistema.",
+      "El nivel macro (país o sector) no ocupa más de dos frases.",
+      "Ningún dato de contexto está sin origen.",
+      "El archivo se llama `S06_ConceptualContextual_Apellido`."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene la próxima sesión",
+    "bullets": [
+      "**Entrega:** suba `S06_ConceptualContextual_Apellido` a **CDigital**.",
+      "  [URL CDigital — campus del curso pendiente]",
+      "**Autónomo 1:** integre la tabla y el contexto en el documento general: con esto el **marco referencial queda armado completo**.",
+      "**Autónomo 2:** relea el marco teórico y reemplace los términos vagos por los que acaba de definir.",
+      "**Autónomo 3:** para cada definición operativa anote, en una línea, con qué dato existente se podría verificar.",
+      "**Próxima sesión:** el salto al **diseño metodológico propuesto**: enfoque, tipo y alcance con los que se responderá la pregunta.",
+      "  Traiga la tabla de definiciones: de ahí salen directamente las variables del método."
+    ]
+  }
+]

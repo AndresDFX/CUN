@@ -1,0 +1,215 @@
+[
+  {
+    "type": "bullets",
+    "title": "Dos preguntas de IA que NO se pueden investigar igual",
+    "bullets": [
+      "Hasta hoy trabajamos el **qué**: problema, pregunta, objetivos, marco. Desde hoy trabajamos el **cómo**.",
+      "Lea estas dos preguntas y note que suenan parecidas, pero exigen métodos opuestos:",
+      "  **A.** \"¿**En qué medida** un clasificador automático reduce el tiempo de respuesta a las PQRS de una alcaldía?\"",
+      "  **B.** \"¿**Cómo experimentan** los analistas de una IPS la incorporación de un asistente de IA en su rutina diaria?\"",
+      "La **A** pide números, comparación y medición → ruta **cuantitativa**.",
+      "La **B** pide relatos, significados y experiencia vivida → ruta **cualitativa**.",
+      "Si usted responde la B con una encuesta de escalas cerradas, no está investigando: está **forzando** el dato.",
+      "Ese desajuste **pregunta–método** es el error más caro del anteproyecto, porque obliga a rehacerlo entero.",
+      "Aviso permanente: hoy **proponemos** el diseño. Aplicarlo es trabajo de **Proyecto II**, con aval."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Cuatro decisiones distintas que la gente confunde en una sola",
+    "bullets": [
+      "**Paradigma** — su postura sobre qué es el conocimiento y cómo se accede a él.",
+      "  Responde: ¿la realidad se mide o se interpreta? Es el nivel más filosófico y el más corto de escribir.",
+      "**Enfoque** — cuantitativo, cualitativo o mixto. Define **qué tipo de dato** buscará.",
+      "  No se elige por gusto ni por facilidad: se **deriva de la pregunta**.",
+      "**Alcance** — hasta dónde llega su conocimiento: exploratorio, descriptivo, correlacional o explicativo.",
+      "  Responde: ¿voy a explorar, a retratar, a relacionar o a explicar la causa?",
+      "**Diseño** — el plan concreto de obtención de evidencia (experimental, no experimental, estudio de caso…).",
+      "  Es el más operativo: dice qué se haría, con quién y en qué momento.",
+      "Las cuatro deben **conversar entre sí**. Si una contradice a otra, el capítulo no se sostiene."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los paradigmas, en el idioma del aula",
+    "headers": ["Paradigma", "Supuesto sobre la realidad", "Qué busca producir", "Encaja con"],
+    "rows": [
+      ["**Positivista / pospositivista**", "Hay una realidad medible, aproximable con datos", "Medir, comparar, generalizar", "Enfoque cuantitativo"],
+      ["**Interpretativo (constructivista)**", "La realidad se construye en el sentido que le dan las personas", "Comprender significados y experiencias", "Enfoque cualitativo"],
+      ["**Sociocrítico**", "La realidad está atravesada por relaciones de poder", "Transformar una situación con los participantes", "Cualitativo participativo (IAP)"],
+      ["**Pragmático**", "Vale lo que responde mejor la pregunta", "Combinar rutas por utilidad y no por dogma", "Enfoque mixto"]
+    ],
+    "note": "En un anteproyecto de especialización, el paradigma se declara y se justifica en **un párrafo**. No se escribe un ensayo de epistemología.",
+    "col_w": [3.0, 3.6, 2.8, 2.6]
+  },
+  {
+    "type": "bullets",
+    "title": "El enfoque se DERIVA de la pregunta: los verbos la delatan",
+    "bullets": [
+      "Lea su pregunta en voz alta y subraye el verbo y el conector. Ellos ya decidieron por usted.",
+      "**Señales de ruta cuantitativa:** \"en qué medida\", \"cuánto\", \"qué relación existe\", \"qué diferencia hay\", \"qué efecto tiene\".",
+      "  Implican **variables medibles**, instrumentos estandarizados y análisis estadístico.",
+      "**Señales de ruta cualitativa:** \"cómo viven\", \"qué sentido le dan\", \"cómo se configuran\", \"qué percepciones\", \"cómo se experimenta\".",
+      "  Implican **categorías**, entrevistas o documentos y análisis de contenido o codificación.",
+      "**Señales de ruta mixta:** la pregunta tiene **dos cláusulas** que piden cosas distintas.",
+      "  Ejemplo: \"¿en qué medida mejora el tiempo de respuesta **y cómo perciben** los analistas ese cambio?\"",
+      "Prueba rápida: si la respuesta ideal a su pregunta es **un número o una tabla**, es cuantitativa.",
+      "  Si la respuesta ideal es **una descripción densa o un relato organizado**, es cualitativa."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cuantitativo · Cualitativo · Mixto, frente a frente",
+    "headers": ["Criterio", "Cuantitativo", "Cualitativo", "Mixto"],
+    "rows": [
+      ["Lógica", "Deductiva: de la teoría al dato", "Inductiva: del dato a la categoría", "Ambas, en secuencia o en paralelo"],
+      ["Qué se estudia", "**Variables** e indicadores", "**Categorías** y significados", "Variables + categorías"],
+      ["Dato típico", "Escalas, conteos, métricas, logs", "Entrevistas, documentos, observación", "Los dos, integrados"],
+      ["Muestra", "Grande, busca representatividad", "Pequeña, busca profundidad y saturación", "Una de cada tipo, justificadas"],
+      ["Análisis", "Estadística descriptiva e inferencial", "Codificación y análisis de contenido", "Integración o \"triangulación\""],
+      ["Resultado", "Cifras, tablas, correlaciones", "Categorías, patrones, citas textuales", "Convergencias y divergencias"],
+      ["Riesgo típico", "Medir lo fácil y no lo importante", "Perder rigor por falta de sistematicidad", "Hacer dos estudios flojos en vez de uno bueno"]
+    ],
+    "note": "**Mixto no es \"un poquito de cada uno\".** Cuesta el doble: exige justificar por qué una sola ruta es insuficiente para responder su pregunta.",
+    "col_w": [1.9, 3.4, 3.4, 3.3]
+  },
+  {
+    "type": "table",
+    "title": "El alcance: hasta dónde llega su estudio (Hernández-Sampieri)",
+    "headers": ["Alcance", "Pregunta típica", "Qué produce", "Ejemplo en IA"],
+    "rows": [
+      ["**Exploratorio**", "¿Qué está pasando con…? (tema poco estudiado)", "Primer mapa, hipótesis por formular", "Uso de IA generativa en juzgados municipales"],
+      ["**Descriptivo**", "¿Cómo es? ¿Cuáles son sus características?", "Un retrato con dimensiones y frecuencias", "Caracterizar el flujo actual de PQRS y sus tiempos"],
+      ["**Correlacional**", "¿Qué relación hay entre X y Y?", "Grado y sentido de la asociación", "Relación entre calidad del dato y precisión del modelo"],
+      ["**Explicativo**", "¿Por qué ocurre? ¿Qué efecto produce X sobre Y?", "Explicación causal, casi siempre con diseño experimental", "Efecto de la clasificación automática sobre el tiempo de respuesta"]
+    ],
+    "note": "Los alcances son **acumulativos**: un estudio correlacional describe antes de correlacionar. En una especialización, lo honesto suele ser **descriptivo** o **correlacional**.",
+    "col_w": [2.0, 3.4, 3.0, 3.6]
+  },
+  {
+    "type": "boxes",
+    "title": "Enfoque y alcance no son lo mismo: la confusión que más se repite",
+    "boxes": [
+      ["aclaracion", "Son **dos ejes independientes**. El enfoque dice de qué material está hecho su dato (números o significados); el alcance dice qué tan lejos llega su conclusión (describir, relacionar, explicar)."],
+      ["info", "Se combinan: existe un estudio **cualitativo descriptivo** y también uno **cuantitativo descriptivo**. \"Descriptivo\" no significa \"cualitativo\", aunque suene parecido."],
+      ["advertencia", "Una frase como \"mi investigación es de enfoque descriptivo\" es un error de categoría, y se nota. Lo correcto: \"enfoque **cuantitativo**, alcance **descriptivo**\"."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Diseños que se proponen con más frecuencia en proyectos de IA",
+    "headers": ["Enfoque", "Diseño", "En qué consiste", "Cuándo conviene"],
+    "rows": [
+      ["Cuanti", "**No experimental transversal**", "Se mide una sola vez, sin manipular nada", "Caracterizar una situación actual"],
+      ["Cuanti", "**No experimental longitudinal**", "Se mide el mismo objeto en varios momentos", "Ver evolución de una métrica en el tiempo"],
+      ["Cuanti", "**Cuasiexperimental**", "Hay comparación entre grupos, sin asignación aleatoria", "Comparar proceso con y sin apoyo de IA"],
+      ["Cuali", "**Estudio de caso**", "Análisis profundo de una unidad delimitada", "Una entidad, un área, un sistema concreto"],
+      ["Cuali", "**Fenomenológico**", "Recupera la experiencia vivida de los participantes", "\"¿Cómo experimentan…?\""],
+      ["Cuali", "**Teoría fundamentada**", "Construye categorías desde el dato hasta saturar", "Fenómenos poco teorizados"],
+      ["Cuali", "**Análisis documental**", "El dato son documentos, actas, logs o repositorios", "Cuando no hay acceso a personas"],
+      ["Mixto", "**Explicativo secuencial**", "Primero mide, luego explica con entrevistas", "El número muestra algo raro y hay que entenderlo"]
+    ],
+    "note": "Elija **uno** y descríbalo. Un anteproyecto que lista cuatro diseños \"posibles\" es un anteproyecto que aún no decidió.",
+    "col_w": [1.3, 2.7, 4.0, 4.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: la misma idea, dos rutas distintas",
+    "bullets": [
+      "Idea de partida: **IA aplicada a la atención de peticiones ciudadanas en una alcaldía municipal.**",
+      "**Versión A — pregunta cuantitativa:**",
+      "  \"¿Qué relación existe entre la **calidad de los datos de entrada** y la **precisión** de un clasificador de PQRS en la Alcaldía de X?\"",
+      "  Enfoque **cuantitativo** · Alcance **correlacional** · Diseño **no experimental transversal**.",
+      "  Técnica propuesta: análisis de un corpus histórico de PQRS **anonimizado**; análisis con estadística descriptiva y correlación.",
+      "**Versión B — pregunta cualitativa:**",
+      "  \"¿**Cómo perciben** los funcionarios de ventanilla la incorporación de un clasificador automático en su rutina de trabajo?\"",
+      "  Enfoque **cualitativo** · Alcance **descriptivo** · Diseño **estudio de caso**.",
+      "  Técnica propuesta: entrevista semiestructurada a funcionarios; análisis por **categorías** y codificación."
+    ],
+    "note": "Misma idea, dos investigaciones legítimas y **completamente distintas**. Lo que cambió no fue el gusto del equipo: fue el **verbo de la pregunta**."
+  },
+  {
+    "type": "table",
+    "title": "La matriz de coherencia: su herramienta de control",
+    "headers": ["Pregunta", "Enfoque", "Alcance", "Técnica propuesta", "Por qué es coherente"],
+    "rows": [
+      ["¿Qué relación hay entre calidad del dato y precisión del clasificador?", "Cuantitativo", "Correlacional", "Análisis de corpus histórico anonimizado", "Pide **relación entre dos variables medibles**"],
+      ["¿Cómo perciben los funcionarios el uso del clasificador?", "Cualitativo", "Descriptivo", "Entrevista semiestructurada", "Pide **significados**, no magnitudes"],
+      ["¿Cuáles son las características actuales del flujo de PQRS?", "Cuantitativo", "Descriptivo", "Análisis documental de registros y tiempos", "Pide **retrato**, no explicación causal"],
+      ["¿Qué efecto tiene el clasificador sobre el tiempo de respuesta?", "Cuantitativo", "Explicativo", "Cuasiexperimento con dos grupos", "Pide **causa–efecto**, exige comparación"],
+      ["¿Cómo perciben el cambio **y** cuánto varía el tiempo?", "Mixto", "Descriptivo + correlacional", "Entrevistas + registros de tiempo", "**Dos cláusulas** distintas en una pregunta"]
+    ],
+    "note": "La última columna, **\"por qué es coherente\"**, es la que se califica. Es la única que demuestra que usted derivó el método y no lo escogió al azar.",
+    "col_w": [3.6, 1.5, 1.9, 2.6, 2.4]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en el capítulo metodológico",
+    "boxes": [
+      ["advertencia", "**\"Elegí cualitativo porque me gusta más\" / \"porque es más fácil\".** El enfoque se deriva de la pregunta. Si no puede derivarlo, el problema no es el método: es que la pregunta todavía está mal formulada."],
+      ["advertencia", "**Pregunta cualitativa con encuesta de escalas.** Si busca significados, entreviste. Una escala Likert nunca le va a contar cómo vive alguien un cambio."],
+      ["aclaracion", "**\"Mixto\" sin justificación.** Escriba explícitamente qué parte de su pregunta no responde la ruta cuantitativa y qué parte no responde la cualitativa. Sin eso, mixto es una excusa para no decidir."],
+      ["advertencia", "**Aplicar el instrumento \"solo para probar\".** En Proyecto I el diseño se **propone**. Recolectar datos sin aval es un riesgo real, no un adelanto."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso para redactar el capítulo metodológico",
+    "bullets": [
+      "**1.** Copie su **pregunta** al inicio del capítulo, como encabezado de trabajo. Todo lo demás se deriva de ella.",
+      "**2.** Escriba el **paradigma** en un párrafo: cuál asume y por qué es congruente con lo que busca conocer.",
+      "**3.** Declare el **enfoque** y justifíquelo citando **el verbo de su propia pregunta**.",
+      "**4.** Declare el **alcance** y diga qué se compromete a entregar: retrato, relación o explicación.",
+      "**5.** Nombre el **diseño** y descríbalo en dos o tres renglones operativos.",
+      "**6.** Añada un párrafo de **coherencia** que amarre objetivos específicos con la ruta metodológica.",
+      "**7.** Revise los **verbos**: todo el capítulo va en condicional o futuro (\"se aplicaría\", \"se analizaría\").",
+      "**8.** Cite el respaldo metodológico: **Hernández-Sampieri y Mendoza (2018)** es el texto guía del curso.",
+      "**9.** Relea de corrido: si algún párrafo se puede borrar sin que nada cambie, era relleno."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Su ficha metodológica (20 minutos)",
+    "bullets": [
+      "**Consigna literal:** en un Google Doc nuevo, arme la tabla de cinco columnas de la matriz de coherencia.",
+      "  Columnas: **Pregunta | Enfoque | Alcance | Técnica propuesta | Por qué es coherente**.",
+      "  Llene **una sola fila**, con SU pregunta real. No con la del ejemplo.",
+      "  Debajo de la tabla, escriba el **párrafo de paradigma** (mínimo cuatro renglones) y el **párrafo de justificación del enfoque**.",
+      "  En la justificación debe aparecer **citado el verbo de su pregunta**: \"dado que la pregunta indaga *en qué medida*…\".",
+      "**Criterio de éxito verificable:** un lector que solo vea su tabla puede **predecir el tipo de instrumento** que usted usaría.",
+      "Si al llenar la fila descubre que su pregunta no encaja en ninguna ruta, no fuerce el método: **corrija la pregunta**. Eso también es avance.",
+      "El Docente circula por los equipos; tenga la pregunta visible en pantalla cuando llegue su turno.",
+      "**Entrega:** suba el archivo como `S08_DisenoMetodologico_Apellidos` en [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "Mi pregunta está copiada literalmente al inicio del capítulo metodológico.",
+      "Declaré **paradigma, enfoque, alcance y diseño** por separado, sin mezclarlos en una sola frase.",
+      "Mi justificación del enfoque **cita el verbo de mi pregunta**, no dice \"porque es el más adecuado\".",
+      "No confundo enfoque con alcance: escribí, por ejemplo, \"cuantitativo, de alcance descriptivo\".",
+      "Si escribí **mixto**, expliqué qué parte de la pregunta no responde cada ruta por separado.",
+      "Elegí **un solo diseño** y lo describí en términos operativos, no como lista de opciones.",
+      "Todos los verbos del capítulo están en **condicional o futuro**: nada aparece como ya ejecutado.",
+      "Mis **objetivos específicos** siguen alineados con la ruta que acabo de elegir.",
+      "Respaldé la elección metodológica con **al menos una cita** al texto guía, en APA 7."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Autónomo de esta semana:**",
+      "  Convierta la fila de su matriz en **prosa**: el capítulo metodológico se entrega redactado, la tabla es su borrador de control.",
+      "  Revise si algún **objetivo específico** quedó huérfano de método; si lo hay, o se ajusta el objetivo o se amplía la técnica.",
+      "  Anote las dudas metodológicas concretas para llevarlas a la tutoría de la semana.",
+      "**En la próxima sesión aterrizamos el método a personas y herramientas:**",
+      "  **Población y muestra** propuestas, con criterios de inclusión y exclusión.",
+      "  **Técnicas e instrumentos** — que en Proyecto I se **bosquejan y proponen**, nunca se aplican.",
+      "  Traiga decidida su **técnica tentativa**: es el insumo con el que empezaremos.",
+      "Las tutorías por equipo se acuerdan durante la semana con el Docente; no hay atención sin cita previa."
+    ]
+  }
+]

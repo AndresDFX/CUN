@@ -1,0 +1,168 @@
+[
+  {
+    "type": "bullets",
+    "title": "La capa de transporte: el director de tráfico",
+    "bullets": [
+      "Tu computador tiene **una sola IP**, pero decenas de programas hablan a la vez: navegador con 2 pestañas, Spotify, WhatsApp Web.",
+      "Cuando llega un dato, ¿para cuál de todos es? Lo decide el **puerto**: @@IP = edificio; puerto = apartamento@@.",
+      "Un **socket** es la dirección exacta de una conversación: **IP + puerto** (p. ej. `190.85.1.10:443`).",
+      "Hace tres trabajos clave:",
+      "  **Multiplexar** con puertos: reparte cada dato al programa correcto.",
+      "  Entrega **de extremo a extremo**: conecta el programa de origen con el de destino, de punta a punta.",
+      "  **Fiabilidad** (solo con TCP): que los datos lleguen completos, sin errores y en orden.",
+      "Dos protocolos de personalidad opuesta: **TCP** (formal, con garantías) y **UDP** (rápido, sin garantías)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Anatomía del segmento TCP",
+    "headers": ["Campo del encabezado", "¿Para qué sirve? (ejemplo)"],
+    "rows": [
+      ["**Puerto origen / destino**", "De qué programa sale y a cuál llega: origen `51000` (efímero) → destino `443` (web segura)."],
+      ["**Número de secuencia**", "Numera cada byte para **rearmar los datos en orden**: byte 1, 2, 3…"],
+      ["**Número de acuse (ACK)**", "El recibo: “recibí hasta el byte 1460, mándame el 1461”."],
+      ["**Banderas de control**", "Seis bits que indican el tipo de segmento (SYN, ACK, FIN…)."],
+      ["**Ventana (window)**", "Cuántos datos acepta el otro lado sin saturarse (control de flujo)."],
+      ["**Checksum**", "Un número para detectar si el segmento **llegó dañado**."]
+    ],
+    "note": "TCP no solo lleva datos: lleva @@contabilidad@@ (secuencia + acuse) para que nada se pierda y todo llegue en orden. UDP casi no lleva nada de esto: por eso es más liviano."
+  },
+  {
+    "type": "bullets",
+    "title": "El protocolo de enlace de tres vías (handshake)",
+    "bullets": [
+      "Antes de enviar datos, TCP **abre la conexión** con un saludo de tres pasos. Ejemplo: tu navegador abriendo la web del **banco**.",
+      "**1. SYN →** el cliente: “quiero hablar, empiezo mi numeración en `seq=100`”.",
+      "**2. ← SYN-ACK** el servidor: “recibido; confirmo (`ack=101`) y empiezo en `seq=300`”.",
+      "**3. ACK →** el cliente: “perfecto, confirmo tu `ack=301`. Empecemos”.",
+      "Recién aquí la conexión queda @@ESTABLISHED@@ y viajan los datos reales (la página del banco).",
+      "Es como una **llamada telefónica**: “¿me escuchas?” → “sí, ¿y tú?” → “sí, hablemos”. Nadie da la noticia antes de confirmar que hay línea.",
+      "Para cerrar ordenadamente se usa **FIN**; ante un error o puerto cerrado, **RST** (corte seco)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las seis banderas de control (flags)",
+    "headers": ["Bandera", "Nombre", "Cuando está activada (1)…"],
+    "rows": [
+      ["**SYN**", "Synchronize", "Inicia la conexión y sincroniza los números de secuencia."],
+      ["**ACK**", "Acknowledgment", "Confirma lo recibido: el número de acuse es válido."],
+      ["**FIN**", "Finish", "“Terminé de enviar; cerremos la conexión ordenadamente”."],
+      ["**RST**", "Reset", "Corta la conexión de inmediato (algo falló o el puerto está cerrado)."],
+      ["**PSH**", "Push", "“Entrega estos datos a la aplicación YA, no los guardes en el búfer”."],
+      ["**URG**", "Urgent", "Hay datos urgentes; usa el puntero urgente (poco usado hoy)."]
+    ],
+    "note": "Con solo dos de ellas —@@SYN y ACK@@— se arma el saludo de tres vías; si tocas un puerto cerrado, te devuelven un **RST**."
+  },
+  {
+    "type": "bullets",
+    "title": "Estados de un socket TCP",
+    "bullets": [
+      "Un **socket** (IP + puerto) va cambiando de estado a medida que avanza la conexión:",
+      "  **LISTEN** — el servidor espera llamadas en un puerto.",
+      "  **SYN_SENT / SYN_RECEIVED** — se está intercambiando el saludo de tres vías.",
+      "  @@ESTABLISHED@@ — ¡conexión abierta! los datos fluyen en ambos sentidos.",
+      "  **FIN_WAIT / CLOSE_WAIT** — uno de los dos pidió cerrar; se termina ordenadamente.",
+      "  **TIME_WAIT** — pausa breve para asegurar que no queden segmentos sueltos.",
+      "  **CLOSED** — conexión cerrada; el socket ya no existe.",
+      "En la práctica no son teoría: puedes **verlos en vivo** en tu propia máquina (siguiente diapositiva)."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: espía tus conexiones con `netstat`",
+    "bullets": [
+      "En tu **propia PC** abre la terminal y escribe `netstat -an`: lista **todos los sockets** (IP:puerto local y remoto) y su **estado**.",
+      "Salida real (recortada) mientras navegas:",
+      "  `TCP  192.168.1.15:51000  142.251.42.14:443  ESTABLISHED`",
+      "  `TCP  192.168.1.15:50988  142.251.42.14:443  TIME_WAIT`",
+      "  `TCP  0.0.0.0:135         0.0.0.0:0          LISTENING`",
+      "Cómo leerla, línea por línea:",
+      "  **ESTABLISHED** al puerto `443` = una pestaña del navegador hablando con una web por **HTTPS**.",
+      "  El `51000` es el **puerto efímero** que tu PC tomó prestado; el `443` es el puerto fijo del servidor.",
+      "  **TIME_WAIT** = una conexión que @@acaba de cerrarse@@ y espera un momento por seguridad.",
+      "  **LISTENING** = un servicio de tu equipo esperando llamadas (aquí, el puerto `135`).",
+      "Windows muestra `LISTENING`; en Linux/Mac el mismo comando dice `LISTEN`."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Puertos: del sistema, registrados y efímeros",
+    "headers": ["Rango", "Nombre", "Uso (ejemplos)"],
+    "rows": [
+      ["**0 – 1023**", "Del sistema (well-known)", "Servicios estándar: `80` HTTP, `443` HTTPS, `22` SSH, `53` DNS, `25` SMTP."],
+      ["**1024 – 49151**", "Registrados", "Asignados a aplicaciones específicas de fabricantes."],
+      ["**49152 – 65535**", "Efímeros (dinámicos)", "El **cliente** los toma prestados por una conexión y los libera al terminar."]
+    ],
+    "note": "Regla de oro: el @@servidor vive en un puerto fijo y conocido@@ (el `443` de una web); el cliente toca la puerta desde un puerto efímero cualquiera que solo dura la conversación."
+  },
+  {
+    "type": "table",
+    "title": "TCP vs UDP: dos personalidades del transporte",
+    "headers": ["Característica", "TCP", "UDP"],
+    "rows": [
+      ["Tipo de conexión", "**Orientado** a la conexión", "**Sin** conexión"],
+      ["Handshake previo", "Sí (tres vías)", "No"],
+      ["¿Garantiza entrega?", "Sí (ACK + retransmisión)", "No"],
+      ["¿Ordena los datos?", "Sí (n.º de secuencia)", "No"],
+      ["Velocidad / peso", "Más lento, más overhead", "@@Más rápido y liviano@@"],
+      ["Analogía", "Correo **certificado** con acuse", "**Volante** al buzón"],
+      ["Usos típicos", "Web, correo, archivos, SSH", "Video, VoIP, juegos, DNS"]
+    ],
+    "note": "No existe “el mejor”, existe el adecuado: una transferencia bancaria no puede perder un byte (TCP); una videollamada prefiere saltarse un cuadro antes que congelarse (UDP). Por eso Netflix se pixela pero no se congela."
+  },
+  {
+    "type": "bullets",
+    "title": "Firewalls: el portero que filtra por puerto",
+    "bullets": [
+      "Un **firewall** decide, según reglas, qué tráfico pasa y cuál se bloquea; se sienta entre tu red e Internet.",
+      "Sus reglas se basan sobre todo en **puertos** y **direcciones IP** (lo de hoy y lo de la Sesión 2). Por eso el firewall aparece justo aquí.",
+      "Ejemplo real: una empresa **deja salir** el puerto `443` (web segura) y **bloquea** el `23` (Telnet, inseguro).",
+      "Tipos: **de red** (protege toda la organización) y **de host** (el de tu propio Windows).",
+      "@@Un firewall NO es un antivirus@@: el firewall controla **conexiones** (quién entra/sale y por qué puerto); el antivirus busca **archivos maliciosos** ya dentro.",
+      "Analogía: el firewall es el **portero del edificio** que decide quién cruza y por cuál puerta."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La capa de aplicación: protocolos que usas a diario",
+    "headers": ["Protocolo", "¿Para qué?", "Puerto", "TCP/UDP"],
+    "rows": [
+      ["**HTTP / HTTPS**", "Navegar la web (HTTPS = cifrada)", "80 / 443", "TCP"],
+      ["**DNS**", "Traducir `google.com` a una IP", "53", "UDP"],
+      ["**SMTP / IMAP / POP3**", "Enviar y recibir correo", "25 / 143 / 110", "TCP"],
+      ["**FTP**", "Transferir archivos", "20 / 21", "TCP"],
+      ["**SSH**", "Administrar equipos de forma remota y segura", "22", "TCP"],
+      ["**DHCP**", "Asignar direcciones IP automáticamente", "67 / 68", "UDP"]
+    ],
+    "note": "En el modelo OSI, esta única capa hace el trabajo de **tres**: @@Aplicación + Presentación + Sesión@@."
+  },
+  {
+    "type": "bullets",
+    "title": "Todas las capas juntas: el viaje de un dato",
+    "bullets": [
+      "@@Encapsulamiento@@: al bajar, cada capa envuelve el dato de la de arriba en su propio “sobre” (le agrega su encabezado).",
+      "**BAJADA** (en el que envía, se empaca), capa por capa:",
+      "  **Aplicación** → Datos: el navegador crea el mensaje HTTP (`GET /`).",
+      "  **Transporte** → Segmento: agrega los puertos (destino `443`), tras el handshake.",
+      "  **Red** → Paquete: agrega la **IP** de origen y destino.",
+      "  **Enlace** → Trama: agrega la **MAC** de origen y destino + control de errores.",
+      "  **Física** → Bits: pulsos eléctricos, de luz o de radio por el medio.",
+      "**SUBIDA** (desencapsulamiento): en el destino, cada capa abre su sobre y sube el contenido hasta los Datos.",
+      "Como **muñecas rusas**: sobres dentro de sobres hasta llegar al mensaje original."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Tu turno: dibuja el viaje de un dato",
+    "bullets": [
+      "**Reto:** representa qué pasa cuando abres `https://miweb.com`, de un extremo al otro.",
+      "**Nivel 1 — examlab:** resuelve primero el **quiz** de conceptos en el módulo **Test** (puertos, banderas, handshake, TCP vs UDP).",
+      "  Luego arma el diagrama en la @@pizarra de examlab@@: dos torres de 5 capas, emisor y receptor.",
+      "**Nivel 2 — online (si no tienes examlab):** usa **Draw.io** (`app.diagrams.net`) como respaldo.",
+      "Para **cada capa**, rotula la **PDU** y el dato que agrega: Segmento **+puerto** `443`, Paquete **+IP**, Trama **+MAC**, Bits.",
+      "Muestra el **encapsulamiento** al bajar y el **desencapsulamiento** al subir en el receptor.",
+      "Añade una nota: ¿tu ejemplo usa **TCP o UDP** y por qué? (web → TCP: la página no puede perder información)."
+    ]
+  }
+]

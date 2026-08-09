@@ -1,0 +1,206 @@
+[
+  {
+    "type": "bullets",
+    "title": "Subir al repositorio no es entregar una tarea: es publicar",
+    "bullets": [
+      "Durante todo el semestre usted subió archivos a CDigital para que **el Docente** los leyera.",
+      "Lo de hoy es distinto: el **repositorio institucional** es un espacio **público y permanente**.",
+      "  Lo que quede ahí lo puede leer un empleador, un profesor de otra universidad o un investigador de otro país.",
+      "  Y lo puede leer **dentro de diez años**: los repositorios no se borran cada semestre.",
+      "Esto tiene una consecuencia práctica inmediata: **un descuido de forma también queda público**.",
+      "  Una tabla sin rótulo, una referencia mal escrita o un título con error de digitación quedan ahí, con su nombre.",
+      "Y tiene una consecuencia agradable: su trabajo pasa a ser **citable**. Alguien puede citarlo a usted.",
+      "  Ese es el cierre real de un trabajo de grado: entrar a la conversación académica, no solo aprobar una materia.",
+      "Hoy armamos el **paquete completo**, verificamos los **metadatos** y hacemos la **revisión de forma final**."
+    ],
+    "note": "La ruta de carga, los formatos y el instructivo son los **oficiales del semestre**, publicados en CDigital — [URL CDigital — campus del curso pendiente]. No se usan enlaces de terceros."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es un repositorio institucional y qué le da a usted",
+    "bullets": [
+      "Es el **archivo digital** donde la universidad preserva y da visibilidad a su producción académica.",
+      "No es una carpeta compartida ni una nube personal: es una **plataforma de preservación** con reglas.",
+      "Tres cosas concretas que gana su trabajo al quedar allí:",
+      "  **Permanencia** — el documento se conserva aunque cambien las plataformas o los correos institucionales.",
+      "  **Visibilidad** — los repositorios son **indexados por buscadores académicos**, incluido Google Scholar.",
+      "  **Identificador estable** — un enlace permanente que no se rompe y que otros pueden citar.",
+      "Por eso los repositorios exigen un **paquete formal**, no un archivo suelto: preservar exige orden.",
+      "Y por eso piden **metadatos**: sin ellos, el sistema no sabe cómo describir ni clasificar su trabajo.",
+      "Cierre del hilo del semestre: el artículo que empezó como una pregunta en la Sesión 02 termina **publicado**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El paquete de entregables: piezas fijas",
+    "headers": ["Entregable", "Qué debe cumplir", "De dónde sale"],
+    "rows": [
+      ["**Artículo final (PDF)**", "Plantilla APA CUN, extensión y número de fuentes exigidos por el programa", "Sesiones 03 a 10"],
+      ["**Metadatos**", "Título, autoría, resumen y palabras clave UNESCO", "Sesión 10"],
+      ["**Autorización de publicación**", "Formato institucional, diligenciado y firmado", "Instructivo del semestre"],
+      ["**Anexos / evidencias**", "Rotulados (A, B, C…) y referenciados desde el cuerpo", "Sesión 11"],
+      ["**Constancia antiplagio**", "Generada por la ruta institucional en CDigital", "Sesión 11"],
+      ["**Póster (si aplica)**", "PDF de una página, legible a un metro", "Sesión 11"]
+    ],
+    "note": "Falta **una sola pieza** y el paquete no se puede radicar. La que más se atrasa siempre es la **autorización firmada**: tramítela primero, no de último.",
+    "col_w": [2.4, 4.5, 2.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Metadatos: los datos que hacen visible (o invisible) su trabajo",
+    "bullets": [
+      "**Metadato = dato que describe al documento.** Es lo que el buscador lee para saber de qué se trata su artículo.",
+      "Analogía: el artículo es el libro; los metadatos son la **ficha de la biblioteca**. Sin ficha, el libro existe pero nadie lo encuentra.",
+      "Campos que casi siempre pide un repositorio:",
+      "  **Título** — exactamente igual al del documento, sin abreviar ni \"mejorar\" en el formulario.",
+      "  **Autoría** — nombres completos, en el mismo orden del artículo, sin apodos ni iniciales sueltas.",
+      "  **Programa y año** — los datos institucionales que ubican el trabajo.",
+      "  **Resumen** — el mismo de la Sesión 10, pegado completo.",
+      "  **Palabras clave** — las mismas 4 o 5 del tesauro UNESCO. **Deben coincidir con el artículo.**",
+      "  **Tipo de documento** y **licencia** de publicación.",
+      "Regla que evita el 90 % de los problemas: **los metadatos no se reescriben, se copian** del artículo ya aprobado."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: una ficha de metadatos bien diligenciada",
+    "bullets": [
+      "**Título:** Automatización de pruebas de regresión y tiempo de despliegue en un equipo pequeño de desarrollo de software.",
+      "  Copiado tal cual del artículo. Sin punto final, sin mayúsculas sostenidas, sin \"Trabajo de grado presentado para…\".",
+      "**Autoría:** apellidos y nombres completos, en el orden en que aparecen en la portada.",
+      "**Resumen:** se pega el resumen íntegro de ~210 palabras que se escribió en la Sesión 10, sin recortarlo para que \"quepa\".",
+      "**Palabras clave:** automatización de pruebas; integración continua; ingeniería de software; pequeñas y medianas empresas.",
+      "  Las mismas cuatro del artículo, en minúscula, separadas por punto y coma. **Sin agregar ninguna nueva aquí.**",
+      "**Tipo de documento:** artículo de trabajo de grado.",
+      "**Licencia:** la que indique el instructivo institucional del semestre, aceptada conscientemente (léala antes de marcar).",
+      "Resultado de una ficha así: quien busque \"automatización de pruebas\" **encuentra este trabajo**. Ese es todo el punto."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El mismo trabajo, con metadatos malos y con metadatos buenos",
+    "headers": ["Campo", "Mal diligenciado", "Bien diligenciado"],
+    "rows": [
+      ["Título", "\"Trabajo de grado — proyecto final 2026\"", "El título real y completo del artículo"],
+      ["Autoría", "\"Juan y equipo\"", "Nombres completos, en el orden de la portada"],
+      ["Resumen", "\"Ver documento adjunto\"", "El resumen completo, ~200–250 palabras"],
+      ["Palabras clave", "\"tecnología, innovación, futuro\"", "Los 4 términos UNESCO usados en el artículo"],
+      ["Nombre de archivo", "\"final_final_v3_ESTE SÍ.pdf\"", "Según la norma institucional del semestre"],
+      ["Licencia", "Se marca sin leer", "Se lee y se elige conscientemente"]
+    ],
+    "note": "Consecuencia real de la columna del medio: un buen artículo que **nunca aparece** en una búsqueda. Trabajo invisible = trabajo perdido.",
+    "col_w": [1.9, 3.6, 4.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Autorización y licencia: qué está firmando",
+    "bullets": [
+      "La **autorización de publicación** es el documento donde usted permite que la universidad difunda su trabajo.",
+      "  Sin ella, el repositorio **no puede publicar** nada: es un requisito legal, no un formalismo.",
+      "Se diligencia en el **formato institucional del semestre**, no en un formato hecho por uno mismo.",
+      "Puntos que conviene leer antes de firmar, con calma:",
+      "  **Alcance de la difusión** — si el acceso será abierto o restringido.",
+      "  **Autoría** — usted sigue siendo el autor; la autorización es de difusión, no de cesión de la autoría.",
+      "  **Coautores** — si el trabajo es de dos, **ambos** deben firmar.",
+      "  **Datos sensibles** — si su trabajo incluye datos de personas o de una empresa, verifique que cuenta con la autorización correspondiente antes de publicarlos.",
+      "Si algo del formato no le queda claro, **pregúntelo antes de firmar**, no después de cargar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Revisión de forma: la última pasada antes de cargar",
+    "bullets": [
+      "Se carga **la versión final**, no un borrador \"que después cambio\". En el repositorio, lo que sube queda.",
+      "Recorrido de revisión, en este orden (toma unos 20 minutos y evita observaciones):",
+      "  **1. Portada** — título correcto, autoría completa, programa e institución según la plantilla APA CUN.",
+      "  **2. Numeración de páginas** — continua, sin saltos, empezando donde debe.",
+      "  **3. Tablas y figuras** — todas rotuladas (**Tabla 1**, **Figura 1**), con fuente, y **mencionadas** en el texto.",
+      "  **4. Títulos y niveles** — jerarquía APA consistente; no un título en negrita y el siguiente en cursiva.",
+      "  **5. Referencias** — APA 7, orden alfabético, sangría francesa y **cero huérfanas** en ambas direcciones.",
+      "  **6. Anexos** — rotulados y referenciados desde el cuerpo (\"ver Anexo A\").",
+      "  **7. Ortografía** — pasada final con el corrector de Google Docs, apellidos incluidos.",
+      "  **8. Exportación** — Archivo → Descargar → **PDF**, y **abrir el PDF** para verificar que no se corrieron las tablas.",
+      "  **9. Nombre del archivo** — según la norma institucional del semestre, sin tildes ni caracteres raros."
+    ],
+    "note": "Truco que funciona: haga la revisión sobre el **PDF exportado**, no sobre el documento editable. Los errores de maquetación solo aparecen ahí."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes al armar el paquete",
+    "boxes": [
+      ["advertencia", "\"Subo el borrador ahora y después lo reemplazo por el bueno.\""],
+      ["aclaracion", "Se carga la **versión final**. Lo que entra al repositorio es público y permanente, y reemplazar un documento ya publicado no siempre es posible."],
+      ["advertencia", "\"Los metadatos son opcionales, lo importante es el PDF.\""],
+      ["aclaracion", "Sin metadatos su artículo es **invisible**: título, resumen y palabras clave UNESCO son lo que leen los buscadores. El PDF sin ficha no lo encuentra nadie."],
+      ["advertencia", "\"No encontré la URL del repositorio; busco una por internet o pongo cualquiera.\""],
+      ["aclaracion", "**No se inventan URLs ni formularios.** Use la ruta y el instructivo institucional del semestre publicados en CDigital; si no aparece, pregunte antes de cargar."],
+      ["advertencia", "\"El nombre del archivo da lo mismo, con que se entienda.\""],
+      ["aclaracion", "Debe seguir la **norma institucional**. Un nombre desordenado complica la recepción, la trazabilidad y la búsqueda posterior del documento."],
+      ["info", "Las palabras clave del formulario y las del artículo **deben ser idénticas**. Cambiar una \"para que suene mejor\" rompe la coherencia del registro."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso para armar el paquete hoy",
+    "bullets": [
+      "**1.** Cree una carpeta en su Drive llamada **Paquete_Repositorio_Apellido**.",
+      "**2.** Meta ahí, y solo ahí, las piezas definitivas: artículo PDF, anexos, póster, autorización y constancia de antiplagio.",
+      "**3.** Abra el **instructivo institucional del semestre** en CDigital y compare pieza por pieza con lo que tiene.",
+      "**4.** Arme el **checklist de entregables** en Google Docs, con una columna de **estado**: listo / falta / en trámite.",
+      "**5.** Redacte la **ficha de metadatos** copiando del artículo: título, autoría, resumen y palabras clave.",
+      "**6.** Haga la **revisión de forma** sobre el PDF exportado, con los nueve puntos del recorrido.",
+      "**7.** Renombre cada archivo según la norma institucional y verifique que abren correctamente.",
+      "**8.** Anote qué le falta y **quién** debe resolverlo (usted, un coautor, una firma).",
+      "**9.** Suba el paquete y su checklist a CDigital por la ruta del curso."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Paquete para el repositorio (20 minutos)",
+    "bullets": [
+      "**Consigna literal.** Entregue **S13_PaqueteRepositorio_Apellido** con:",
+      "  **(1) El checklist de entregables** en tabla, con columnas entregable · requisito · **estado (listo / falta / en trámite)** · responsable. Debe cubrir las seis piezas del paquete.",
+      "  **(2) La ficha de metadatos** completa: título, autoría, resumen íntegro y las palabras clave UNESCO, copiados del artículo.",
+      "  **(3) El acta de revisión de forma**: los nueve puntos del recorrido, cada uno marcado como revisado o corregido, hecho **sobre el PDF exportado**.",
+      "  **(4)** La **ruta institucional de carga** del semestre, anotada tal como aparece en CDigital.",
+      "**Tiempo:** 20 minutos. El Docente acompaña resolviendo dudas del instructivo.",
+      "**Criterio de éxito (verificable):**",
+      "  El checklist muestra **sin ambigüedad** qué falta y quién lo resuelve; ninguna casilla vacía.",
+      "  Los metadatos están **completos y copiados del artículo**, no reescritos.",
+      "  La versión revisada es la **final** en PDF, no un borrador.",
+      "  Las palabras clave de la ficha coinciden **exactamente** con las del artículo."
+    ],
+    "note": "Si le falta una firma o un formato en trámite, eso **también es un resultado válido** del taller: quedó identificado y con responsable, que es justamente el punto."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de cargar",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
+    "rows": [
+      ["Es la versión final, no un borrador", "No tengo cambios pendientes anotados", "☐"],
+      ["El PDF abre bien y nada se corrió", "Lo abro y recorro todas las páginas", "☐"],
+      ["La portada sigue la plantilla APA CUN", "Comparo con la plantilla del programa", "☐"],
+      ["Tablas y figuras rotuladas y citadas", "Cada una tiene número y se menciona en el texto", "☐"],
+      ["Referencias sin huérfanas", "Ctrl+F de cada apellido de la lista en el cuerpo", "☐"],
+      ["Anexos rotulados y referenciados", "\"ver Anexo\" aparece para cada uno", "☐"],
+      ["Metadatos completos y copiados", "Título, autoría, resumen y keywords idénticos", "☐"],
+      ["Autorización firmada por todos", "Incluye a los coautores si los hay", "☐"],
+      ["Constancia de antiplagio adjunta", "Generada por la ruta institucional", "☐"],
+      ["Nombre de archivo según la norma", "Sin tildes ni \"v3_final_final\"", "☐"]
+    ],
+    "col_w": [3.6, 4.4, 1.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Suba** `S13_PaqueteRepositorio_Apellido` a CDigital — [URL CDigital — campus del curso pendiente].",
+      "**Resuelva los \"falta\"** de su checklist esta misma semana, empezando por lo que dependa de terceros (firmas, formatos, constancias).",
+      "**Guarde una copia** del paquete completo en su Drive personal: cuando termine el semestre, el acceso institucional cambia.",
+      "**Verifique** una última vez que las palabras clave del artículo, del resumen y de la ficha son las mismas tres veces.",
+      "**Deje anotada** la ruta institucional de carga: la va a necesitar en la verificación final.",
+      "**Próxima sesión:** **ajustes finales y seguimiento post-sustentación** — cómo convertir las observaciones del jurado en cambios ordenados.",
+      "  Llegue con las **notas de su sustentación**: lo que dijeron los jurados, aunque estén sueltas o incompletas."
+    ]
+  }
+]

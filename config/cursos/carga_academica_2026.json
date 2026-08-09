@@ -1,0 +1,397 @@
+{
+  "fuente_excel": "Carga academica 2026.xlsx",
+  "actualizado": "2026-08-07",
+  "notas": [
+    "En el Excel, Dia / Hora_inicial / Hora_final / Nom_aula vienen vacíos (por programar).",
+    "Los horarios de `horario` tienen prioridad: confirmados por el docente.",
+    "Proyecto I (especialización) NO aparece en el Excel; se mantiene con datos del portal/grupo 54ES4.",
+    "recepcion no viene en el Excel: se conserva la fecha operativa ya usada en el proyecto (típicamente ~8 días antes del cierre).",
+    "Inicio operativo del semestre 2026 (pedido docente / clase AFI 10/08): 2026-08-10 en todos los cursos.",
+    "Fechas de entrega ACA: cálculo regenerable en config/cursos/fechas_entrega_aca.py (no hardcodear en enunciados).",
+    "Edita este archivo si cambia bloque/horario/grupo y regenera: python config/slides/build_all_course_presentations.py",
+    "Carpetas de asignatura en Formato Oración (p. ej. Especializacion/Proyecto I, Pregrado/Creatividad y pensamiento innovador).",
+    "Correo de bienvenida (interno · 2026/<grupo>/; nunca en Clases/): python config/slides/build_correo_bienvenida.py (también vía sync_clases_estudiantes.py)."
+  ],
+  "columnas_excel": [
+    "Cod_periodo",
+    "Num_nivel",
+    "Cod_unidad",
+    "Nom_unidad",
+    "Cod_pensum",
+    "Cod_materia",
+    "Nom_materia",
+    "Creditos",
+    "Marca",
+    "Id_grupo",
+    "Num_grupo",
+    "Porcentaje Ocupacion Aula",
+    "Capacidad",
+    "Num_inscritos",
+    "Inscritos_neto",
+    "Check_moodle",
+    "Check_docente",
+    "Num_identificacion",
+    "Nom_largo",
+    "Correo Institucional",
+    "Fec_inicio_grupo",
+    "Fec_finn_grupo",
+    "Id_sede",
+    "Nom_sede",
+    "Id_regional",
+    "Nom_regional",
+    "Dia",
+    "Hora_inicial",
+    "Hora_final",
+    "Id_aula",
+    "Nom_aula",
+    "Num_capacidad",
+    "Nom_bloque",
+    "Modulo",
+    "Primer Corte",
+    "Segundo Corte",
+    "Tercer Corte",
+    "Nota Unica",
+    "Nom_sede",
+    "Jornada",
+    "Dependencia",
+    "Afirmada Aula",
+    "Eva_estudiante"
+  ],
+  "docente": {
+    "nombre": "Julian Andres Castaño",
+    "correo": "julian_castanoe@cun.edu.co",
+    "nombre_portal": "CASTAÑO ESPINOSA JULIAN ANDRES",
+    "identificacion": "1144194156"
+  },
+  "cursos": {
+    "proyecto1": {
+      "key": "proyecto1",
+      "nivel": "especializacion",
+      "en_excel": false,
+      "folder": "Especializacion/Proyecto I",
+      "titulo_corto": "PROYECTO I",
+      "titulo_largo": "Proyecto I — Especialización en Inteligencia Artificial",
+      "codigo": "ESP329",
+      "cod_materia_excel": null,
+      "creditos": null,
+      "programa": "ESPECIALIZACIÓN EN INTELIGENCIA ARTIFICIAL",
+      "modalidad": "VIRTUAL",
+      "unidad": null,
+      "pensum": null,
+      "dependencia": "AFI / Especializaciones",
+      "jornada": null,
+      "sede_portal": null,
+      "sede_entrega": "Virtual",
+      "aula": "Aula virtual - Google Meet",
+      "periodos_nota": "26ES4",
+      "bloque_portada": null,
+      "horario": {
+        "texto": "Lunes, 8:00 pm – 10:00 pm (2 horas)",
+        "texto_corto": "Lunes, 8:00 pm – 10:00 pm",
+        "weekday": 0,
+        "hora_ini": "8:00 PM",
+        "hora_fin": "10:00 PM",
+        "hora_ics": [
+          "200000",
+          "220000"
+        ],
+        "fuente": "confirmado_docente",
+        "excel_dia": null,
+        "excel_hora_inicial": null,
+        "excel_hora_final": null
+      },
+      "inicio": "2026-08-10",
+      "recepcion": "2026-11-14",
+      "cierre": "2026-11-22",
+      "groups": [
+        "54ES4"
+      ],
+      "grupos": {
+        "54ES4": {
+          "id_grupo": null,
+          "periodo": "26ES4",
+          "num_nivel": null,
+          "bloque": null,
+          "inicio": "2026-08-10",
+          "recepcion": "2026-11-14",
+          "cierre": "2026-11-22",
+          "capacidad": null,
+          "inscritos": null,
+          "en_excel": false
+        }
+      }
+    },
+    "creatividad": {
+      "key": "creatividad",
+      "nivel": "pregrado",
+      "en_excel": true,
+      "folder": "Pregrado/Creatividad y pensamiento innovador",
+      "titulo_corto": "CREATIVIDAD Y PENSAMIENTO INNOVADOR",
+      "titulo_largo": "Creatividad y Pensamiento Innovador — Escuela de Ingenierías",
+      "codigo": "EI004",
+      "cod_materia_excel": "EI004",
+      "creditos": 2,
+      "programa": "Escuela de Ingenierías",
+      "modalidad": "VIRTUAL",
+      "unidad": {
+        "cod": "FINVV",
+        "nom": "FORMACIÓN INVESTIGATIVA VIRTUAL"
+      },
+      "pensum": "FINVI",
+      "dependencia": "FORMACION INVESTIGATIVA",
+      "jornada": "JORNADA ÚNICA",
+      "sede_portal": "BOGOTA CENTRO",
+      "regional": "Regional Bogotá",
+      "sede_entrega": "Virtual",
+      "aula": "Aula virtual - Google Meet",
+      "periodos_nota": "26V04",
+      "bloque_portada": "PRIMER BLOQUE",
+      "horario": {
+        "texto": "Miércoles, 5:00 pm – 6:00 pm (1 hora sincrónica)",
+        "texto_corto": "Miércoles, 5:00 pm – 6:00 pm",
+        "weekday": 2,
+        "hora_ini": "5:00 PM",
+        "hora_fin": "6:00 PM",
+        "hora_ics": [
+          "170000",
+          "180000"
+        ],
+        "fuente": "confirmado_docente",
+        "excel_dia": null,
+        "excel_hora_inicial": null,
+        "excel_hora_final": null
+      },
+      "inicio": "2026-08-10",
+      "recepcion": "2026-09-19",
+      "cierre": "2026-09-27",
+      "groups": [
+        "54408"
+      ],
+      "grupos": {
+        "54408": {
+          "id_grupo": 801143,
+          "periodo": "26V04",
+          "num_nivel": 5,
+          "bloque": "PRIMER BLOQUE",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-09-19",
+          "cierre": "2026-09-27",
+          "capacidad": 50,
+          "inscritos": 50,
+          "en_excel": true
+        }
+      }
+    },
+    "investigacion": {
+      "key": "investigacion",
+      "nivel": "pregrado",
+      "en_excel": true,
+      "folder": "Pregrado/Investigacion en ciencia y tecnologia",
+      "titulo_corto": "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA",
+      "titulo_largo": "Investigación Ciencia y Tecnología — Escuela de Ingenierías",
+      "codigo": "EI005",
+      "cod_materia_excel": "EI005",
+      "creditos": 2,
+      "programa": "Escuela de Ingenierías",
+      "modalidad": "VIRTUAL",
+      "unidad": {
+        "cod": "FINVV",
+        "nom": "FORMACIÓN INVESTIGATIVA VIRTUAL"
+      },
+      "pensum": "FINVI",
+      "dependencia": "FORMACION INVESTIGATIVA",
+      "jornada": "JORNADA ÚNICA",
+      "sede_portal": "BOGOTA CENTRO",
+      "regional": "Regional Bogotá",
+      "sede_entrega": "Virtual",
+      "aula": "Aula virtual - Google Meet",
+      "periodos_nota": "26P03",
+      "bloque_portada": "SEGUNDO BLOQUE",
+      "horario": {
+        "texto": "Jueves, 5:00 pm – 6:00 pm (1 hora sincrónica)",
+        "texto_corto": "Jueves, 5:00 pm – 6:00 pm",
+        "weekday": 3,
+        "hora_ini": "5:00 PM",
+        "hora_fin": "6:00 PM",
+        "hora_ics": [
+          "170000",
+          "180000"
+        ],
+        "fuente": "confirmado_docente",
+        "excel_dia": null,
+        "excel_hora_inicial": null,
+        "excel_hora_final": null
+      },
+      "inicio": "2026-08-10",
+      "recepcion": "2026-09-12",
+      "cierre": "2026-09-20",
+      "groups": [
+        "53339"
+      ],
+      "grupos": {
+        "53339": {
+          "id_grupo": 795383,
+          "periodo": "26P03",
+          "num_nivel": 5,
+          "bloque": "SEGUNDO BLOQUE",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-09-12",
+          "cierre": "2026-09-20",
+          "capacidad": 50,
+          "inscritos": 20,
+          "en_excel": true
+        }
+      }
+    },
+    "tg2": {
+      "key": "tg2",
+      "nivel": "pregrado",
+      "en_excel": true,
+      "folder": "Pregrado/Trabajo de grado 2",
+      "titulo_corto": "TRABAJO DE GRADO 2",
+      "titulo_largo": "Trabajo de Grado 2 — Modelos de Innovación (Ing. Sistemas)",
+      "codigo": "94453",
+      "codigo_display": "94453 · Opción de grado II",
+      "cod_materia_excel": "94453",
+      "creditos": 2,
+      "programa": "Ingeniería de Sistemas",
+      "modalidad": "VIRTUAL",
+      "unidad": {
+        "cod": "OPCGV",
+        "nom": "OPCIONES DE GRADO VIRTUAL"
+      },
+      "pensum": "OPGVI",
+      "dependencia": "VICERRECTORIA ACAD. Y DE INVESTIGACION",
+      "jornada": "JORNADA ÚNICA",
+      "sede_portal": "BOGOTA CENTRO",
+      "regional": "Regional Bogotá",
+      "sede_entrega": "Virtual",
+      "aula": "Aula virtual - Google Meet",
+      "periodos_nota": "26V04",
+      "bloque_portada": "BLOQUE UNICO",
+      "sin_syllabus": true,
+      "horario": {
+        "texto": "Lunes, 5:00 pm – 6:00 pm (1 hora sincrónica)",
+        "texto_corto": "Lunes, 5:00 pm – 6:00 pm",
+        "weekday": 0,
+        "hora_ini": "5:00 PM",
+        "hora_fin": "6:00 PM",
+        "hora_ics": [
+          "170000",
+          "180000"
+        ],
+        "fuente": "confirmado_docente",
+        "excel_dia": null,
+        "excel_hora_inicial": null,
+        "excel_hora_final": null
+      },
+      "inicio": "2026-08-10",
+      "recepcion": "2026-11-14",
+      "cierre": "2026-11-22",
+      "groups": [
+        "54448"
+      ],
+      "grupos": {
+        "54448": {
+          "id_grupo": 813242,
+          "periodo": "26V04",
+          "num_nivel": 2,
+          "bloque": "BLOQUE UNICO",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-11-14",
+          "cierre": "2026-11-22",
+          "capacidad": 50,
+          "inscritos": 50,
+          "en_excel": true
+        }
+      }
+    },
+    "tg3": {
+      "key": "tg3",
+      "nivel": "pregrado",
+      "en_excel": true,
+      "folder": "Pregrado/Trabajo de grado 3",
+      "titulo_corto": "TRABAJO DE GRADO 3",
+      "titulo_largo": "Trabajo de Grado 3 — Modelos de Innovación (Ing. Sistemas)",
+      "codigo": "94532",
+      "cod_materia_excel": "94532",
+      "creditos": 2,
+      "programa": "Ingeniería de Sistemas",
+      "modalidad": "VIRTUAL",
+      "unidad": {
+        "cod": "OPCGV",
+        "nom": "OPCIONES DE GRADO VIRTUAL"
+      },
+      "pensum": "OPGVI",
+      "dependencia": "VICERRECTORIA ACAD. Y DE INVESTIGACION",
+      "jornada": "JORNADA ÚNICA",
+      "sede_portal": "BOGOTA CENTRO",
+      "regional": "Regional Bogotá",
+      "sede_entrega": "Virtual",
+      "aula": "Aula virtual - Google Meet",
+      "periodos_nota": "26P04 / 26V04",
+      "bloque_portada": "BLOQUE UNICO",
+      "horario": {
+        "texto": "Martes, 5:00 pm – 6:00 pm (1 hora sincrónica)",
+        "texto_corto": "Martes, 5:00 pm – 6:00 pm",
+        "weekday": 1,
+        "hora_ini": "5:00 PM",
+        "hora_fin": "6:00 PM",
+        "hora_ics": [
+          "170000",
+          "180000"
+        ],
+        "fuente": "confirmado_docente",
+        "excel_dia": null,
+        "excel_hora_inicial": null,
+        "excel_hora_final": null
+      },
+      "inicio": "2026-08-10",
+      "recepcion": "2026-11-14",
+      "cierre": "2026-11-22",
+      "groups": [
+        "54450",
+        "54466",
+        "54467"
+      ],
+      "grupos": {
+        "54450": {
+          "id_grupo": 805692,
+          "periodo": "26P04",
+          "num_nivel": 3,
+          "bloque": "BLOQUE UNICO",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-11-07",
+          "cierre": "2026-11-15",
+          "capacidad": 50,
+          "inscritos": 11,
+          "en_excel": true
+        },
+        "54466": {
+          "id_grupo": 803509,
+          "periodo": "26V04",
+          "num_nivel": 3,
+          "bloque": "BLOQUE UNICO",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-11-14",
+          "cierre": "2026-11-22",
+          "capacidad": 50,
+          "inscritos": 50,
+          "en_excel": true
+        },
+        "54467": {
+          "id_grupo": 813244,
+          "periodo": "26V04",
+          "num_nivel": 3,
+          "bloque": "BLOQUE UNICO",
+          "inicio": "2026-08-10",
+          "recepcion": "2026-11-14",
+          "cierre": "2026-11-22",
+          "capacidad": 50,
+          "inscritos": 50,
+          "en_excel": true
+        }
+      }
+    }
+  }
+}

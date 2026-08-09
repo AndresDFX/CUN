@@ -1,0 +1,206 @@
+[
+  {
+    "type": "bullets",
+    "title": "Buenas secciones no hacen un buen documento",
+    "bullets": [
+      "Hasta hoy escribimos por partes: una semana el problema, otra el marco, otra la metodología.",
+      "  El riesgo es conocido: cada sección se ve decente y el documento completo **no cuenta una sola historia**.",
+      "Caso real y frecuente: el problema habla de tiempos de atención, el marco desarrolla teoría de gestión del cambio y la metodología mide exactitud de un modelo.",
+      "  Tres secciones bien escritas, tres proyectos distintos en el mismo archivo.",
+      "Hoy no hay tema nuevo: hoy es sesión de **costura**. Se lee todo de corrido y se cose lo que no encaja.",
+      "Dos herramientas: el **semáforo por sección** para ver el estado real y la **matriz de gaps** para convertirlo en acciones.",
+      "  Y un criterio duro que va a guiar toda la sesión: **coherencia antes que pulido**."
+    ],
+    "note": "Salida esperada: semáforo diligenciado, matriz de gaps priorizada y el gap más grave ya empezado."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es coherencia global (y qué no es)",
+    "bullets": [
+      "**Coherencia global** es que cada sección exista **por causa** de la anterior y **para** la siguiente.",
+      "  El problema justifica la pregunta; la pregunta genera los objetivos; el marco da el lenguaje para responderla; la metodología dice cómo.",
+      "**No es** ortografía, ni redacción bonita, ni cantidad de páginas.",
+      "**No es** que todas las secciones existan: existir y encajar son cosas diferentes.",
+      "Las tres preguntas de verificación de hoy, en este orden:",
+      "  1) ¿El **marco** responde a mi pregunta o desarrolla temas que nunca vuelvo a usar?",
+      "  2) ¿Los **objetivos** siguen siendo los mismos que dice el título y el planteamiento?",
+      "  3) ¿La **metodología** responde a esos objetivos, uno por uno?",
+      "Si alguna se rompe, ahí hay trabajo real, y no se arregla cambiando comas."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cadenas de coherencia y su síntoma cuando se rompen",
+    "headers": ["Eslabón", "Pregunta de verificación", "Síntoma de ruptura"],
+    "rows": [
+      ["Problema → Pregunta", "¿La pregunta apunta al dolor descrito?", "El problema habla de costos y la pregunta habla de satisfacción"],
+      ["Pregunta → Objetivos", "¿Los objetivos, sumados, responden la pregunta?", "Sobra un objetivo que la pregunta nunca pidió"],
+      ["Objetivos → Marco", "¿Cada concepto clave de los objetivos está en el marco?", "Aparece un constructo en los objetivos que el marco no define"],
+      ["Marco → Metodología", "¿Las variables del marco son las que se van a medir?", "El marco define tres variables y la metodología mide otra"],
+      ["Objetivos → Matriz", "¿Cada objetivo tiene su fila con dato, técnica y análisis?", "Un objetivo sin método, o un método sin objetivo"],
+      ["Todo → Título", "¿El título describe lo que realmente hace el documento?", "El título promete un modelo y el documento solo caracteriza un proceso"]
+    ],
+    "note": "Recorra la tabla de arriba abajo con su documento abierto. Cada síntoma detectado es una fila de su matriz de gaps."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se lee un documento propio de corrido",
+    "bullets": [
+      "Leerlo como lo escribió no sirve: usted completa mentalmente lo que falta. Hay que leerlo de otra manera.",
+      "**Técnica 1 — Lectura de títulos.** Lea solo los títulos y subtítulos en orden. ¿Se entiende el proyecto? Si no, la estructura falla, no la redacción.",
+      "**Técnica 2 — Primera frase de cada párrafo.** Léalas seguidas: deberían formar un resumen razonable del documento.",
+      "  Si al hacerlo aparecen saltos bruscos, ahí faltan párrafos de enlace.",
+      "**Técnica 3 — Lectura en voz alta.** Lo que no se puede leer en voz alta sin trabarse casi siempre está mal escrito.",
+      "**Técnica 4 — Prueba del extraño.** Pásele el documento a alguien que no sepa del tema y pídale que le diga en una frase qué está haciendo usted.",
+      "  Si le devuelve algo distinto de su pregunta, el documento no está comunicando lo que usted cree.",
+      "Lea de corrido **sin corregir nada**: solo marque con color. Corregir mientras lee hace perder la visión de conjunto."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El semáforo por sección: criterios, no sensaciones",
+    "bullets": [
+      "**Verde** = la sección está completa, es coherente con el resto y está citada. No requiere trabajo estructural.",
+      "**Amarillo** = existe y se entiende, pero le falta algo concreto y nombrable: un constructo, una justificación, dos referencias.",
+      "**Rojo** = falta, está a medias o contradice otra sección. Es lo que hunde el avance si no se atiende.",
+      "El semáforo obliga a decidir con un criterio, no con el ánimo del día.",
+      "  Trampa frecuente: pintar todo verde para sentirse bien. El semáforo solo sirve si es honesto.",
+      "  Trampa opuesta: pintar todo rojo por perfeccionismo, y entonces no se sabe por dónde empezar.",
+      "Se hace en una tabla de tres columnas en **Google Docs**: sección, color, qué le falta exactamente.",
+      "  Use el color de fondo de celda (Formato → Tabla) para verlo de un vistazo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: semáforo del avance del caso 'mesa de ayuda'",
+    "headers": ["Sección", "Semáforo", "Qué le falta exactamente"],
+    "rows": [
+      ["Introducción y planteamiento", "**Verde**", "Nada estructural; revisar solo redacción al final"],
+      ["Pregunta y objetivos", "**Verde**", "Alineados entre sí y con el título"],
+      ["Antecedentes (Fase I)", "**Amarillo**", "Hay cinco referentes, pero ninguno de los últimos tres años"],
+      ["Marco teórico", "**Amarillo**", "Dos constructos desarrollados; el tercero está apenas enunciado"],
+      ["Marco conceptual y contextual", "**Amarillo**", "Faltan las definiciones operativas de dos términos usados en objetivos"],
+      ["Diseño metodológico", "**Rojo**", "La matriz no incluye el objetivo 3 y no hay justificación del alcance"],
+      ["Instrumentos y plan de análisis", "**Rojo**", "Existe el instrumento, pero no hay plan de análisis escrito"],
+      ["Referencias", "**Amarillo**", "Dos citas del texto no tienen su referencia al final"]
+    ],
+    "note": "Con esta foto ya sé algo valioso: hoy no toco la introducción. Voy directo a los dos rojos de metodología."
+  },
+  {
+    "type": "bullets",
+    "title": "La matriz de gaps: convertir el color en acción",
+    "bullets": [
+      "Cada amarillo y cada rojo se vuelve **una fila** con cuatro columnas: qué falta, prioridad, acción concreta y evidencia de cierre.",
+      "**Qué falta**: nombrado con precisión. No 'el marco'; sí 'la definición operativa de tiempo de atención'.",
+      "**Prioridad**: alta si rompe la coherencia, media si debilita el argumento, baja si es cosmética.",
+      "**Acción concreta**: un verbo que se pueda ejecutar hoy. 'Redactar', 'buscar', 'agregar fila', 'formatear'.",
+      "  Compare: 'mejorar el marco' no es acción; 'redactar dos párrafos del tercer constructo con dos fuentes' sí lo es.",
+      "**Evidencia de cierre**: cómo sabrá que lo terminó. 'La matriz tiene tres filas' es verificable; 'quedó mejor' no.",
+      "En TG2 el dueño de cada gap es usted mismo, pero escribirlo obliga a comprometerse en vez de anotar lamentos."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: matriz de gaps priorizada",
+    "headers": ["Qué falta", "Prioridad", "Acción concreta", "Evidencia de cierre"],
+    "rows": [
+      ["Plan de análisis inexistente", "**Alta**", "Redactarlo desde la matriz del S07: dato, tipo, análisis, objetivo", "Tabla de plan de análisis con una fila por tipo de dato"],
+      ["El objetivo 3 no está en la matriz metodológica", "**Alta**", "Agregar la fila con dato, técnica y análisis", "La matriz tiene tantas filas como objetivos específicos"],
+      ["Alcance sin justificación", "**Alta**", "Escribir un párrafo que empiece con 'se declara descriptivo porque…'", "Párrafo de justificación presente y citado"],
+      ["Tercer constructo del marco apenas enunciado", "**Media**", "Redactar dos párrafos con dos fuentes de los últimos cinco años", "Dos párrafos nuevos con dos citas en APA 7"],
+      ["Antecedentes sin fuentes recientes", "**Media**", "Buscar dos artículos de los últimos tres años en Scholar o SciELO", "Dos referentes recientes incorporados"],
+      ["Dos citas sin referencia final", "**Media**", "Generarlas en ZoteroBib y pegarlas en la lista", "Toda cita del texto aparece en referencias"],
+      ["Interlineado inconsistente en dos páginas", "**Baja**", "Aplicar el formato de la Plantilla APA CUN", "Documento con formato uniforme"]
+    ],
+    "note": "Se ataca de arriba abajo. Terminar los tres de prioridad alta vale más que cerrar los cuatro de abajo."
+  },
+  {
+    "type": "table",
+    "title": "Gap vago vs. gap accionable",
+    "headers": ["Como lo escribe casi todo el mundo", "Por qué no sirve", "Como debería quedar"],
+    "rows": [
+      ["'Mejorar el marco teórico'", "No dice qué, ni cuánto, ni con qué", "'Redactar dos párrafos del constructo usabilidad con dos fuentes de los últimos cinco años'"],
+      ["'Revisar la metodología'", "Revisar no produce nada verificable", "'Agregar la fila del objetivo 3 a la matriz pregunta–método'"],
+      ["'Arreglar las referencias'", "No se sabe cuáles ni cuántas", "'Generar en ZoteroBib las dos referencias faltantes de las citas de la página 7'"],
+      ["'Redactar mejor'", "No tiene evidencia de cierre posible", "'Reescribir el párrafo del planteamiento partiéndolo en dos ideas'"]
+    ],
+    "note": "Regla práctica: si no puede decir cómo verificará que el gap quedó cerrado, todavía no lo escribió bien."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en la sesión de integración",
+    "boxes": [
+      ["advertencia", "'Empiezo corrigiendo ortografía y comas.' Es la forma más elegante de perder la clase: lo cosmético va al final, después de cerrar los rojos estructurales."],
+      ["advertencia", "'Mis secciones son buenas, entonces el documento está bien.' Buenas partes no producen un conjunto coherente. Léalo de corrido antes de afirmarlo."],
+      ["aclaracion", "Pintar todo verde no acelera nada: solo traslada el problema a TG3, cuando ya no hay tiempo para reescribir el marco ni la metodología."],
+      ["info", "Esta sesión no agrega contenido nuevo al documento: reordena, conecta y completa. Si termina con menos texto pero más coherente, ganó."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: consolidar el documento en un solo archivo",
+    "bullets": [
+      "**1.** Cree en Google Docs un único documento con todas sus secciones pegadas en el orden final del avance.",
+      "**2.** Aplique **Estilos** (Título 1 para secciones, Título 2 para subsecciones): sin estilos no hay índice automático.",
+      "**3.** Inserte → Tabla de contenido. El índice le muestra la estructura real, y suele delatar secciones perdidas o repetidas.",
+      "**4.** Marque con resaltado amarillo todo lo que quedó a medias, con una nota entre corchetes de qué falta.",
+      "**5.** Haga la lectura de corrido con las cuatro técnicas y llene el **semáforo** sin corregir todavía.",
+      "**6.** Convierta cada amarillo y rojo en una fila de la **matriz de gaps**.",
+      "**7.** Empiece por el gap de prioridad más alta y ciérrelo hasta su evidencia de cierre.",
+      "**8.** Suba el documento a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Higiene de citas: el gap silencioso",
+    "bullets": [
+      "Al pegar secciones escritas en semanas distintas aparecen dos fallas casi siempre:",
+      "  **Cita huérfana**: aparece Autor (2022) en el texto y no está en las referencias.",
+      "  **Referencia huérfana**: está en la lista final y nunca se citó en el cuerpo. También es error.",
+      "Verificación rápida: recorra la lista de referencias y busque cada apellido con Ctrl+F en el cuerpo del documento.",
+      "  Si el apellido no aparece, esa referencia sobra o falta citarla.",
+      "Complete lo que falte en **ZoteroBib (zbib.org)**: pegue el DOI o el enlace, elija **APA 7** y copie el resultado.",
+      "Revise también el orden alfabético y la sangría francesa de la lista final.",
+      "Esta higiene no es cosmética: una cita huérfana en TG3 se lee como texto sin respaldo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Semáforo y matriz de gaps de su propio avance",
+    "bullets": [
+      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
+      "**Archivo:** un documento en Google Docs llamado S09_Integracion_Apellido.",
+      "**Consigna 1.** Lea su documento de corrido usando al menos dos de las cuatro técnicas y llene el **semáforo** por sección.",
+      "**Consigna 2.** Construya la **matriz de gaps**: cada amarillo y cada rojo con prioridad, acción concreta y evidencia de cierre.",
+      "**Consigna 3.** Empiece aquí mismo a cerrar el gap de **prioridad más alta**, no el más fácil.",
+      "**Criterio de éxito (verificable):** el semáforo refleja el estado real sin autoengaño; ningún gap está escrito como 'mejorar X'; el gap de prioridad alta ya tiene avance visible en el documento.",
+      "**Entrega:** suba S09_Integracion_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "¿Leí el documento completo de corrido, sin corregir mientras leía?",
+      "¿Mi semáforo tiene al menos un amarillo o un rojo? (Si está todo verde, no fui honesto.)",
+      "¿Cada gap tiene prioridad, acción concreta y evidencia de cierre verificable?",
+      "¿Verifiqué que el marco use los mismos constructos que aparecen en mis objetivos?",
+      "¿La matriz metodológica tiene exactamente tantas filas como objetivos específicos?",
+      "¿Toda cita del cuerpo tiene su referencia y toda referencia fue citada?",
+      "¿Ataqué primero un rojo estructural en vez de la ortografía?",
+      "¿El documento consolidado tiene estilos aplicados e índice automático?"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar (trabajo autónomo)",
+    "bullets": [
+      "Suba S09_Integracion_Apellido con el semáforo y la matriz de gaps completos.",
+      "Cierre durante la semana **todos los gaps de prioridad alta**; deje los bajos para el final del periodo.",
+      "Cada vez que cierre uno, cambie su color en el semáforo: verá el avance real y eso sostiene la motivación.",
+      "Pídale a un compañero la prueba del extraño: que le diga en una frase qué hace su proyecto.",
+      "**Próxima sesión:** cambiamos de modo — **socialización de avances**. Va a contar su proyecto en tres minutos y a dar y recibir retroalimentación.",
+      "  Llegue con el documento a la mano y con claro **en qué quiere que le ayuden**: ese pedido es parte del ejercicio."
+    ]
+  }
+]

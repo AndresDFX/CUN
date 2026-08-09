@@ -1,0 +1,196 @@
+---
+description: Docente CUN, estructura de carpetas, carga 2026, calendarios y estándar de material
+alwaysApply: true
+---
+
+# Docente CUN (dato fijo interno)
+
+- **Titular real (interno · Calendar / Meet / firma / carga académica):** Julian Andres Castaño · `julian_castanoe@cun.edu.co`
+- **Material proyectado (slides, PPTX de sesión, bullets de contenido, LEEME estudiantes):** referirse a **«el Docente»** / **«Docente»** — **no** poner el nombre propio en pantalla.
+- Credenciales de perfil en `tutor_slide` (sin nombre grande): Ingeniero de Sistemas · Candidato a MSc en IA · Líder Técnico · Speaker Tecnológico.
+- **Correo en `tutor_slide` / contacto:** `julian_castanoe@cun.edu.co` (canal de contacto; no sustituye el título genérico «Docente»).
+- Correo FESNA/La Nueva América (referencia cruzada, NO usar en material CUN salvo que el usuario lo pida): `julian.castano@lanuevaamerica.edu.co`
+
+## REGLA PERMANENTE — ajustes generales → las 5 asignaturas
+
+Los **5 cursos** de este workspace son: **Proyecto I · Creatividad · Investigación · TG2 · TG3**.
+
+Cualquier **ajuste general** de presentación, diseño, marca, nomenclatura o contexto CUN (pie de página, subtítulos del docente, nombre de la plataforma, placeholders de URL, tipografía/colores, estructura de slides del curso, etc.) se aplica **SIEMPRE a los 5**, no solo al curso que el usuario esté mirando en ese momento. Los **`.docx` de `Clases/` y builds** (LEEME, ACAs, fichas) llevan **estilo de marca CUN** (logo + `#007433` / `#91DC00` / `#0C2340` vía `config/slides/cun_docx_brand.py` + `guion_md_a_docx`).
+
+Tras el cambio: regenerar/actualizar las **5 Presentaciones del Curso** (y el motor/builds compartidos). Builds: `build_cun_proyecto1.py` + `build_pregrado_cursos.py` (o `build_all_course_presentations.py`).
+
+### Estándar vigente de slides (los 5)
+
+1. **Pie de página = hora de inicio efectivo** (horario oficial de clase **+ 10 min**), en **todas** las slides (Presentación del Curso + Presentaciones de Sesión), p. ej. `Inicio 8:10 pm` / `Inicio 5:10 pm`. Helper: `footer_inicio_efectivo(key)` en `carga_academica.py` → `set_footer(...)` en el build. **Sin** nombre del curso ni “Curso · Escuela…” en el pie. El nº de slide (idx) puede quedarse a la derecha. Logo CUN sí puede usarse (p. ej. en `tutor_slide`).
+2. **`tutor_slide`:** título genérico **«Docente»** + bullets de perfil + correo. **Sin** nombre propio grande. **Sin** subtítulo «Docente · &lt;curso&gt;».
+3. Plataforma = **CDigital** (nunca la palabra “LMS” como nombre). Placeholder: `[URL CDigital — campus del curso pendiente]`.
+4. Presentación del curso: **grupo(s) solo en la portada** (primera slide), slide docente genérico, **slide rompehielos “Preséntate” con QR** (`config/slides/assets/qr_presentacion_estudiantes.png` · helper `icebreaker_qr_slide`), **slide CONTENIDO** con listado `**Sesión N** — tema` en **UNA sola slide** (helper `contenido_sesiones_slide`; tipografía compacta o 2 columnas en la misma slide si hace falta; sin fechas ni tablas de cronograma), recursos con links/placeholders (sin grupo ni nombre propio), cierre **sin fechas de calendario** (sí día/hora semanal) y sin grupo.
+5. En cuerpo de slides / guiones de clase proyectables: **«el Docente»** (no «Julian…»). Correo de contacto sí puede aparecer en portada/`tutor_slide`/recursos.
+6. **Datos de periodo/semestre en negrita** en Presentación del Curso (markup `**…**` → motor `_rich`): periodo, grupo(s) **solo en portada**, bloque, fechas de inicio/recepción/cierre si aparecen, horario de esa oferta, placeholders Meet y CDigital. **No** forzar negrita en correo, temario/syllabus, textos pedagógicos ni marca CUN. Helper: `bold_var()` / `cover_meta_lines()` en `config/cursos/carga_academica.py`.
+7. **QR presentación estudiantes:** en las 5 Presentaciones del Curso **y** en la deck de Sesión 01; apunta al Padlet oficial `https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7`. Consigna: **Escanea o abre** + URL + **Ahora (~7 min)** (asset `qr_presentacion_estudiantes.png` · helper `icebreaker_qr_slide`). Es **el mismo tablero y el mismo momento** (la Sesión 01 es la sesión de presentación): no son dos rompehielos distintos.
+
+## REGLA PERMANENTE — SESIÓN 01 = ENCUADRE (los 5 cursos)
+
+La **primera sesión de todos los cursos no desarrolla tema académico**. Es la sesión de presentación: **el curso · el Docente · los estudiantes (Padlet) · las ACAs** (qué se entrega, cuánto pesa, dónde se sube), más los acuerdos de trabajo y el encargo autónomo. El contenido curricular **arranca en la Sesión 02**.
+
+- Título fijo de la Sesión 01: **«Presentación del curso · docente · estudiantes · ACAs»**.
+- En `config/cursos/sesiones_cun.py`, la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y `"unidad_diferida"` (qué unidad del sílabo pasa a **lectura autónoma** y se retoma al abrir la Sesión 02). La unidad **no se borra** del sílabo: queda registrada ahí.
+- Deck: `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → Preséntate/Padlet → ACAs → acuerdos → autónomo → cierre). El guion de S01 es de **encuadre**, sin fundamento teórico de unidad.
+- Fechas y % de las ACAs **no** van en la deck de S01: viven en `Clases/Recursos/ACAs/` y en la Presentación del Curso (evita arrastrar una fecha que quede vieja).
+
+## REGLA PERMANENTE — tutorías por grupo (solo Proyecto I / AFI)
+
+Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG3, Creatividad ni Investigación salvo que el syllabus lo diga explícitamente (no había fuente syllabus para esa consigna en TG2/TG3).
+
+- **Texto canónico (estudiantes / slides / LEEME / ACA de P1):** «Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita).»
+- Constante: `MSG_TUTORIAS_POR_GRUPO` en `config/cursos/sesiones_cun.py` (alcance = `proyecto1` / `CURSOS_CON_TUTORIAS_POR_GRUPO`).
+- En P1: la **2.ª hora** del encuentro es tutoría/taller en vivo; tutorías adicionales/por equipo se acuerdan en la semana **+** registrar asistencia en `links_afi.formulario_asistencia_tutorias_estudiante` cuando corresponda. No contradecir el formulario.
+- Incluirlo de forma **consistente solo en P1** (Presentación del Curso · guiones con bloque de tutoría · LEEME/ACA/Manual si mencionan tutorías). Builds de pregrado (`build_pregrado_cursos.py`, `_regen_guiones_pregrado.py`) **no** inyectan esta viñeta en TG2/TG3.
+
+## Dónde va (y no va) la bio / el grupo
+
+- **PPTX de clase/sesión** (`Clases/Sesion NN - <Tema>/Presentacion.pptx`): **NO** bio, correo ni nombre propio — solo **tema de esa clase** + nº de sesión discreto (p. ej. «Sesión 01»). **Sin fechas** de periodo/referencia, **sin mapa completo** del curso, **sin códigos de grupo**.
+- **Presentación del curso** (`Clases/Presentacion del Curso - ….pptx`): portada con logística + **grupo(s)** (único lugar de slides con grupo) + contacto del Docente (correo); `tutor_slide` genérico; Meet, **CDigital**, evaluación, fechas de oferta en **negrita**; slide **CONTENIDO** = **1 slide** con todo el listado `Sesión N — tema`. Resto de slides **sin** mencionar grupo(s). Cierre genérico **sin fechas de calendario** (sí día/hora semanal).
+
+# Carga académica 2026 (config editable)
+
+- Fuente Excel: `Carga academica 2026.xlsx` (día/hora/aula vienen vacíos en el Excel).
+- Config canónica: `config/cursos/carga_academica_2026.json` + loader `config/cursos/carga_academica.py`.
+- **Inicio operativo 2026:** `2026-08-10`. **Fechas de entrega ACA:** `config/cursos/fechas_entrega_aca.py` (pesos + día de clase sobre [inicio–recepción]; no hardcodear en enunciados).
+- Incluye bloque, periodo, grupos, fechas de inicio/recepción/cierre.
+- En Presentación del Curso, esos datos de oferta (y horario/placeholders Meet·CDigital) van en **negrita** para señalar qué actualizar el próximo periodo.
+- **Horarios confirmados por el docente** (tienen prioridad sobre el Excel vacío). Pie de slides = horario + 10 min (`footer_inicio_efectivo`):
+  - **Proyecto I:** lun 8:00–10:00 pm → pie `Inicio 8:10 pm`
+  - **TG2:** lun 5:00–6:00 pm → pie `Inicio 5:10 pm`
+  - **TG3:** mar 5:00–6:00 pm → pie `Inicio 5:10 pm`
+  - **Creatividad:** mié 5:00–6:00 pm → pie `Inicio 5:10 pm`
+  - **Investigación:** jue 5:00–6:00 pm → pie `Inicio 5:10 pm`
+
+# Estructura de carpetas (NO usar `Temas/`)
+
+```text
+<Asignatura>/
+  Manual del Docente…                    ← interno docente
+  Calendario de clases (oficial).md      ← interno
+  Clases/                                ← ÚNICA carpeta compartida con estudiantes
+    LEEME - Material para estudiantes.docx
+    Presentacion del Curso - ….pptx
+    Recursos/
+      Plantilla_APA_CUN_Proyecto de grado.docx
+      ACAs/
+        ACA N - <título corto>.docx      ← enunciados para estudiantes
+    Sesion 01 - <Tema>/
+      Presentacion.pptx
+      (fichas / capturas de apoyo al estudiante · .docx)
+    Sesion 02 - …
+  Guiones/                               ← interno docente
+    Sesion 01 - <Tema>.md                ← solo Markdown (sin .docx)
+    Capturas/                            ← pantallazos docentes (no en Clases/)
+  2026/<grupo>/                          ← interno / Calendar
+    Informacion.txt, CSV/ICS Calendar… · Correo de bienvenida.docx
+  Correo de bienvenida.docx              ← solo si multi-grupo (copia en raíz; interno)
+```
+
+- **Carpeta compartida con estudiantes = solo `Clases/`.** Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
+- **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`.
+- **ACAs (estudiantes):** convención única los 5 cursos → `Clases/Recursos/ACAs/ACA N - <título corto>.docx`. Build: `python config/slides/build_acas_estudiantes.py`. Guiones docentes pueden remitir a esa ruta **sin** duplicar el enunciado largo.
+- **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
+- **NO meter en `Clases/`:** Guiones docentes, Manual del Docente, CSV/ICS Calendar con roster, formularios solo-docente AFI, `Informacion.txt` de grupo, **`Correo de bienvenida.docx`**, builds/`config/`, ni archivos `.md`.
+- **Raíz** = material genérico/reutilizable (sin código de grupo en títulos ni nombres de archivo de sesión).
+- **`2026/<grupo>/`** = oferta puntual (Informacion, roster si aplica, Calendar, correo de bienvenida para pegar/enviar).
+- Grupos en **slides:** solo portada de la Presentación del Curso. En **Calendar** (Subject) sí van códigos de grupo. No en títulos de Sesión NN ni en el resto de diapositivas.
+
+# Calendario y Meet
+
+- **Subject de encuentros** (CSV/ICS de clase, no hitos), patrón único los 5 cursos:
+  `{grupos} - {Asignatura corta} - Sesion NN`  
+  Varios grupos: `54450/54466/54467` (códigos unidos con `/`). **Sin** nombre largo del tema (el tema va en Description).  
+  Helper: `subject_encuentro()` en `sesiones_cun.py`.
+  Ej.: `54ES4 - Proyecto I - Sesion 01` · `54450/54466/54467 - Trabajo de Grado 3 - Sesion 03`
+- **Festivo Pregrado** = clase **autónoma** (no cancelar; queda en Calendar) con el mismo patrón de Subject + ` (autónoma)`.
+- **Google Meet:** un solo enlace por curso (toda la serie). Mientras no exista el real: `[URL Meet — mismo enlace toda la serie · <Curso>]`.
+- **Pregrado CSV/ICS:** sin invitados/estudiantes (sin Guests/ATTENDEE). Description corta (tema en 1–2 líneas); Location vacío hasta Meet real.
+- **Proyecto I 54ES4 — invitados:** Google Calendar al **Importar** `.ics`/`.csv` **descarta** ATTENDEE/Guests (limitación conocida). Flujo que sí funciona: **`Crear encuentros con invitados.gs`** (Apps Script → `createEncuentrosP1`) o `create_encuentros_p1_calendar_api.py`. El ICS sigue llevando ATTENDEE por compatibilidad Outlook/otros, pero **no** es el flujo Google. Coanfitrión en Description corta + guests del script = roster + `investigacion_especializaciones@cun.edu.co`.
+- Description encuentros (los 5): **2–4 líneas máx.** (sesión/tema; P1 + form tutorías URL + coanfitrión). Sin párrafos de política ni Meet duplicado en Location+Description.
+- Builds encuentros: `build_calendar_proyecto1_54es4.py` · `build_pregrado_cursos.py --calendar-only`.
+- **CSV hitos docentes** (`Entregas y hitos docentes…`, build `build_hitos_docentes_calendar.py`) = solo ACA (deadlines) + trámites AFI/esenciales (Acuerdo, 1 recordatorio registro AFI, recepción/cierre, informe). **No** duplicar encuentros semanales Sesión NN (esos van en CSV/ICS Encuentros…).
+- Cierres oficiales (referencia rápida): Investigación 20/09 · Creatividad 27/09 · TG3 54450 → 15/11 · TG3 54466/54467, TG2 y P1 → 22/11.
+
+# Autoevaluación / coevaluación (validado)
+
+- **Solo Proyecto I (AFI · ESP329 / Art. 41):** autoevaluación **4%** + coevaluación **4%**, individuales, en **CDigital**, ventanas de cierre tras ACA 3 (`fechas_entrega_aca.py`; 26ES4: coev. 10–16/11 · autoev. 17–22/11). El estudiante diligencia; el Docente habilita y registra nota. **No** aplican en Proyecto II ni en pregrado Art. 52 (syllabus por cortes) — no inventar %. Distinto de la autoevaluación institucional SIAC ([acreditacion.cun.edu.co](https://acreditacion.cun.edu.co/)).
+- Checklists de cierre (estudiantes/directivos): `Especializacion/Checklist de cierre de curso a satisfaccion.docx` · `Pregrado/Checklist de cierre de curso a satisfaccion.docx`.
+
+# Proyecto I — fuente curricular y enlaces AFI
+
+- **Fuente primaria (syllabus ESP329):** `Especializacion/Proyecto I/Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx` — propósito, 7 unidades, evaluación, estrategia didáctica. Material de Proyecto I se alinea a este archivo; Instructivo/Cronograma AFI solo como cruce operativo **sin contradecir** el ESP329.
+- **Links AFI (fuente de verdad editable):** `config/universidades/cun.json` → sección `links_afi`. Si cambia el semestre o Coordinación emite URLs nuevos, **actualiza solo ahí** y regenera material. Claves:
+  - `formulario_asistencia_tutorias_estudiante` — estudiante (Presentación del Curso + recordatorio en tutoría)
+  - `formulario_registro_sesiones_docente` — solo docente · <24h · con grabación · **checklist post-clase de cada guion P1**
+  - `formulario_acuerdo_pedagogico` / `formulario_informe_cierre` — **distintos** (no intercambiar)
+  - `coanfitrion_meet`
+- Loader Python: `config/cursos/sesiones_cun.py` (`LINK_TUTORIAS`, `LINK_REGISTRO_DOCENTE_AFI`, …). No hardcodear URLs dispersos en guiones/builds.
+- **Guiones P1:** cada `Guiones/Sesion NN - ….md` cierra con checklist post-clase leyendo esos links. Regen (solo `.md`): `python Especializacion/Proyecto I/Guiones/_regen_guiones_proyecto1.py` o `python config/slides/build_sesion_material.py proyecto1 all --guion-only`.
+- **Meet AFI:** grabación obligatoria; coanfitrión = `links_afi.coanfitrion_meet`; invitados solo ese correo + estudiantes inscritos; programar toda la serie del periodo.
+- Ciclo inicio/cierre AFI: `Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`
+- Plantilla APA local: `Plantilla_APA_CUN_Proyecto de grado.docx`
+- Presentación del curso: `Especializacion/Proyecto I/Clases/Presentacion del Curso - Proyecto I.pptx`
+- Build: `config/slides/build_cun_proyecto1.py` · motor: `config/slides/cun_slides_engine.py` (`tutor_slide` + `icebreaker_qr_slide`; sin subtítulo de curso en tutor)
+
+# Práctica de clase = gratis + nube (SIEMPRE)
+
+- Toda **actividad práctica** (taller, demo en pantalla, entregable de sesión) usa **solo componentes gratis y en la nube**: browser-based / SaaS free tier.
+- **Sí:** Excalidraw, tldraw, diagrams.net, Miro free, Canva free, Canvanizer, Google Docs/Slides/Forms, Google Scholar, SciELO/Redalyc, **ZoteroBib** (zbib.org), citas nativas de Google Docs, CodePen/CodeSandbox/Colab, biblioteca CUN web, CDigital, **Padlet** (tablero oficial de presentación).
+- **Tablero colaborativo (rompehielos / Preséntate):** **Padlet** oficial — `https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7` (mismo enlace en los 5 cursos). Constante: `PADLET_PRESENTACION_URL` en `cun_slides_engine.py`. Sin instrucciones de “Clear posts” / reutilizar borrando posts / “3 padlets del plan gratis”.
+- **Rompehielos en Presentación del Curso (los 5):** slide “Preséntate” con QR + URL; **Sesión 01 = esa presentación** para el Padlet (no “retomar más tarde” ni duplicar en la deck de Sesión 01).
+- **No exigir:** Packet Tracer / Cisco desktop, Visual Studio desktop, Office desktop obligatorio, Adobe de pago, Mendeley Desktop / Mendeley Cite en Word, Zotero Desktop obligatorio, instalaciones locales pesadas ni “abre el .exe”.
+- Teoría/metodología sin tool no cambia. La **plantilla APA CUN** (`.docx`) se abre preferente en **Google Docs** / Word Online — no se exige Office de escritorio.
+- Matriz canónica: `Guías docentes - Matriz herramientas prácticas.md`.
+
+# Guiones docentes (estándar de calidad)
+
+- Cubren **todo el tiempo de clase**: Creatividad / Inv / TG = **60 min**; Proyecto I ≈ **60 min contenido + 60 min tutoría**.
+- Minuto a minuto, texto casi literal, teórico-práctico.
+- **Solo el tema de ESA sesión:** fundamento + guion + práctica + entregable de hoy. Referenciar slides de **esa** `Presentacion.pptx`. **Sin** mapa completo del curso, políticas largas del semestre ni bio (eso va en Presentación del Curso / Manual).
+- **Sin fechas de periodo** en el guion de sesión (reutilizable). Plataforma = **CDigital**.
+- **Proyecto I (especialización):** cierre obligatorio con **checklist post-clase / seguimiento AFI** — registro docente (`links_afi.formulario_registro_sesiones_docente`, <24h + grabación) + recordatorio breve del formulario estudiante en tutoría (`links_afi.formulario_asistencia_tutorias_estudiante`). URLs desde `cun.json`, no pegados a mano.
+- Builds: `config/slides/build_sesion_material.py` (PPTX estudiante + invoca regeneradores de guion `.md`; `--guion-only` = solo md, sin docx).
+- Regeneradores ricos (minuto a minuto, solo `.md`): P1 `_regen_guiones_proyecto1.py` · Creatividad `_regen_guiones_creatividad.py` · Inv/TG2/TG3 `config/slides/_regen_guiones_pregrado.py`.
+- **Modelo de calidad (guion de tema):** Creatividad **Sesión 02** (Design Thinking) — fases con protagonista propio, «GUION LITERAL» completo por fase, tabla de errores/preguntas trampa y tabla de acompañamiento en el taller. *(Antes el modelo era la S01 de Creatividad; dejó de serlo el 2026-08-09, cuando la S01 pasó a ser sesión de encuadre en los 5 cursos.)*
+- **Guion de Sesión 01 = encuadre** (los 5 cursos): cómo abrir el curso, presentarse, conducir el Padlet, explicar las ACAs y los acuerdos. Sin fundamento teórico de unidad.
+
+# Decks de sesión (estándar de densidad)
+
+- La deck **se basta a sí misma para exponer**: el docente proyecta y explica desde ahí. **12–16 slides** por sesión, dimensionadas para **dos horas** aunque el encuentro oficial sea de 1 h (el resto = extensión / trabajo autónomo).
+- Anatomía: gancho → definiciones explicadas (qué es y qué **no** es) → tabla comparativa → desarrollo por partes → **ejemplo modelado con el texto real** → errores/mitos en cajas → paso a paso accionable → taller con consigna literal, tiempo y criterio de éxito → checklist del estudiante → autónomo.
+- **Prohibido el relleno genérico:** «Comprender: \<título\>», «Explicación + ejemplo modelado + práctica guiada», «Aplica el concepto de hoy a tu propio proyecto», «Salir con dudas concretas». Si una viñeta sirve igual para cualquier sesión de cualquier curso, está mal escrita.
+- **Contenido rico por sesión:** `config/slides/content/cun_<curso>_s<NN>.json` (bloques `bullets` / `table` / `boxes`), renderizado por `config/slides/cun_contenido_sesion.py`. Para enriquecer una sesión se edita **ese JSON**, no el builder. La deck es la versión proyectable del guion de esa misma sesión.
+
+# Builds clave y marca
+
+- `config/slides/build_cun_proyecto1.py`
+- `config/slides/build_pregrado_cursos.py` / `build_all_course_presentations.py`
+- `config/slides/build_sesion_material.py`
+- `config/slides/build_acas_estudiantes.py` · `build_correo_bienvenida.py` · `sync_clases_estudiantes.py`
+- Motor: `config/slides/cun_slides_engine.py`
+- Marca: [cun.edu.co](https://cun.edu.co/) — `#007433`, `#91DC00`, `#0C2340` (ver `config/universidades/cun.json`)
+
+# Agentes de este workspace (CUN)
+
+| Agente | Uso |
+| :--- | :--- |
+| `disenador-curricular-cun` | Generar material (sílabo → presentación + guiones + slides) |
+| `cun-dudas-material` | Consultas rápidas sobre normas, ACAs, cronogramas (no genera material) |
+
+- Cursor: `.cursor/agents/*.md` · Claude: `.claude/agents/*.md`
+- Edita primero en `.cursor/agents/`, luego: `python config/sync_agents_cursor_claude.py`
+- El diseñador FESNA vive en `G:\Mi unidad\Trabajos\Empleo\FESNA\Cursos` (no aquí).
+- **examlab / práctica:** canon en `C:\Projects\Personal\examlab` → `/examlab-practica` (multi-universidad; carga este workspace cuando el curso es CUN).
+
+# Pendientes conocidos (no inventar)
+
+- URLs Meet reales por curso
+- URL CDigital (campus) por curso — placeholder: `[URL CDigital — campus del curso pendiente]`
+- URL pública plantilla APA
+- Syllabus SIAC de TG2 ausente (ACAs TG2 = orientativas 30/30/40 hasta cargar SIAC)
+- Desglose EV exacto Corte 1–3 en tablas SIAC de Creatividad/Investigación (confirmar en CDigital)

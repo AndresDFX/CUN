@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CUN//Pregrado Encuentros//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-08-13@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260813T170000
+DTEND;TZID=America/Bogota:20260813T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 01
+DESCRIPTION:Sesión 01 — Presentación del curso · docente · estudiantes · ACAs
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-08-20@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260820T170000
+DTEND;TZID=America/Bogota:20260820T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 02
+DESCRIPTION:Sesión 02 — MinCiencias · 6 líneas de Ingeniería · elección de línea
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-08-27@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260827T170000
+DTEND;TZID=America/Bogota:20260827T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 03
+DESCRIPTION:Sesión 03 — Prueba parcial · 1.er avance del artículo
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-09-03@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260903T170000
+DTEND;TZID=America/Bogota:20260903T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 04
+DESCRIPTION:Sesión 04 — Identificación de problemas y pregunta de investigación
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-09-10@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260910T170000
+DTEND;TZID=America/Bogota:20260910T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 05
+DESCRIPTION:Sesión 05 — Formulación del planteamiento del problema
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cun-pregrado-investigacion-53339-2026-09-17@cun.edu.co
+DTSTAMP:20260809T224523Z
+DTSTART;TZID=America/Bogota:20260917T170000
+DTEND;TZID=America/Bogota:20260917T180000
+SUMMARY:53339 - Investigación Ciencia y Tecnología - Sesion 06
+DESCRIPTION:Sesión 06 — Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12)
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

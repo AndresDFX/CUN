@@ -1,0 +1,200 @@
+[
+  {
+    "type": "bullets",
+    "title": "Del 'qué' al 'cómo': hoy se decide la ruta",
+    "bullets": [
+      "Ya tienen el **qué**: problema, pregunta, objetivos y marco. Falta lo primero que pregunta un jurado: **¿y cómo lo va a responder?**",
+      "  Un marco impecable con una metodología floja no sostiene un trabajo de grado.",
+      "Caso que usaremos toda la sesión: una empresa de servicios de Bogotá **clasifica a mano los tickets** de su mesa de ayuda y la atención se demora.",
+      "  Pregunta del proyecto: ¿en qué medida un clasificador automático reduce el tiempo de atención de los tickets?",
+      "El **diseño metodológico** es el plan para conseguir y analizar la evidencia que responde esa pregunta.",
+      "Regla que atraviesa toda la sesión: en TG2 la metodología se **propone**; el trabajo de campo es de TG3.",
+      "  Hoy se escribe 'se propone', 'se aplicará', 'se seleccionará'. Nunca 'se aplicó'."
+    ],
+    "note": "Salida esperada de hoy: una ficha metodológica (enfoque + alcance + diseño) y una matriz pregunta–método completa."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es y qué NO es el diseño metodológico",
+    "bullets": [
+      "**Es** una cadena de decisiones que conecta la pregunta con la evidencia: enfoque → alcance → diseño → población/datos → técnicas.",
+      "  Cada eslabón se justifica por el anterior: nada se elige 'porque sí' ni 'porque así lo hizo el compañero'.",
+      "**No es** un capítulo copiado de un libro de metodología con las definiciones de manual.",
+      "  Transcribir qué es 'enfoque cuantitativo' sin decir por qué el suyo lo es no es metodología: es relleno.",
+      "**No es** el cronograma, ni la lista de programas que piensa usar.",
+      "**No es** una promesa de resultados: 'se demostrará que el modelo mejora el proceso' prejuzga lo que aún no se mide.",
+      "Prueba de calidad: alguien que lea su metodología debería poder **repetir su proyecto** sin llamarlo a usted."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cinco decisiones encadenadas de la metodología",
+    "headers": ["Decisión", "Pregunta que resuelve", "Opciones típicas", "Qué la determina"],
+    "rows": [
+      ["**Enfoque**", "¿Mido o interpreto?", "Cuantitativo · cualitativo · mixto", "La forma de su pregunta"],
+      ["**Alcance**", "¿Qué tanto se sabe ya?", "Exploratorio · descriptivo · correlacional · explicativo", "Lo que encontró en antecedentes"],
+      ["**Diseño**", "¿Intervengo o solo observo?", "Experimental · cuasiexperimental · no experimental · estudio de caso", "Si puede o no manipular variables"],
+      ["**Población / datos**", "¿Sobre qué o quiénes?", "Personas, procesos, registros, logs, documentos", "La unidad de análisis de la pregunta"],
+      ["**Técnicas**", "¿Con qué recojo la evidencia?", "Encuesta, entrevista, observación, prueba de sistema", "El tipo de dato que necesita"]
+    ],
+    "note": "Se leen de arriba abajo: si usted cambia el enfoque, cambian obligatoriamente las cuatro filas siguientes."
+  },
+  {
+    "type": "table",
+    "title": "Cuantitativo, cualitativo o mixto: cómo elegir sin adivinar",
+    "headers": ["Criterio", "Cuantitativo", "Cualitativo", "Mixto"],
+    "rows": [
+      ["Forma de la pregunta", "¿Cuánto? ¿en qué medida? ¿hay diferencia?", "¿Cómo? ¿por qué? ¿qué significa para ellos?", "Las dos preguntas conviven"],
+      ["Dato que produce", "Números, métricas, conteos", "Textos, relatos, observaciones", "Números + texto"],
+      ["Técnica típica", "Encuesta cerrada, log del sistema, prueba de rendimiento", "Entrevista semiestructurada, grupo focal", "Encuesta + entrevista"],
+      ["Análisis típico", "Descriptiva, comparación de medias, correlación", "Codificación y análisis temático", "Triangulación de ambas fuentes"],
+      ["En el caso de la mesa de ayuda", "Comparar minutos de atención antes y después", "Entender por qué los agentes desconfían del clasificador", "Medir tiempos y además entrevistar agentes"]
+    ],
+    "note": "Si su pregunta dice 'en qué medida', ya es cuantitativa. El enfoque sale de la pregunta, no de la comodidad ni de la moda."
+  },
+  {
+    "type": "bullets",
+    "title": "El alcance: hasta dónde llega lo que usted promete",
+    "bullets": [
+      "**Exploratorio**: el tema casi no se ha estudiado; usted abre camino y no promete conclusiones firmes.",
+      "  Señal de que es el suyo: en la búsqueda de antecedentes encontró muy poco y disperso.",
+      "**Descriptivo**: caracteriza cómo se comporta algo, sin buscar causas.",
+      "  'Caracterizar el flujo actual de tickets de la mesa de ayuda' es descriptivo, y está bien que lo sea.",
+      "**Correlacional**: mide si dos variables se mueven juntas, sin afirmar que una causa la otra.",
+      "  'Relación entre el volumen diario de tickets y el tiempo de respuesta'.",
+      "**Explicativo**: busca causa-efecto y exige controlar otras variables.",
+      "  Decir 'el clasificador **reduce** el tiempo' es una afirmación explicativa: prepárese a defenderla."
+    ],
+    "note": "El alcance sube de nivel con lo que ya se sabe: nadie puede explicar lo que todavía nadie ha descrito."
+  },
+  {
+    "type": "bullets",
+    "title": "Diseño, población y unidad de análisis",
+    "bullets": [
+      "**No experimental**: se observa el fenómeno tal como ocurre, sin intervenir. Es lo más común en avances de pregrado.",
+      "**Cuasiexperimental**: hay medición antes y después, pero los grupos no se asignan al azar.",
+      "  El caso de los tickets encaja aquí: se compararían tiempos antes y después del clasificador propuesto.",
+      "**Estudio de caso**: una sola unidad estudiada a fondo — una empresa, un área, un sistema.",
+      "**Población**: todo el conjunto sobre el que quiere concluir (por ejemplo, los tickets del último año).",
+      "**Muestra propuesta**: la parte que se analizará, con criterio explícito de selección.",
+      "  Escriba el criterio, no un número mágico: 'se propone tomar los tickets del último semestre por disponibilidad del histórico'.",
+      "**Unidad de análisis**: qué es exactamente un caso — ¿un ticket? ¿un agente? ¿un día de operación?"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "La matriz pregunta–método: la herramienta del día",
+    "bullets": [
+      "Una fila por **objetivo específico**. Al frente, tres columnas: qué **dato** necesito, cómo lo **consigo**, cómo lo **analizo**.",
+      "Sirve para ver de un vistazo dos fallas que en prosa no se notan:",
+      "  **Objetivo huérfano**: un objetivo sin método. Lo prometió y no dijo cómo lo cumple.",
+      "  **Método huérfano**: una técnica que no responde a ningún objetivo. Sobra, y hace ruido en la sustentación.",
+      "Se llena de izquierda a derecha y se verifica leyéndola de derecha a izquierda.",
+      "Se arma en una tabla de **Google Docs** (Insertar → Tabla → 4 columnas): gratis, en la nube y editable desde cualquier equipo.",
+      "Arreglar una incoherencia aquí cuesta veinte minutos; arreglarla en TG3 puede costarle un semestre."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: matriz del caso 'mesa de ayuda'",
+    "headers": ["Objetivo específico", "Dato que necesito", "Cómo lo consigo (propuesto)", "Cómo lo analizo (propuesto)"],
+    "rows": [
+      ["1. Caracterizar el flujo actual de tickets", "Histórico con hora de apertura y cierre de cada ticket", "Se exportará el histórico del sistema de mesa de ayuda", "Estadística descriptiva: promedio y dispersión de minutos por ticket"],
+      ["2. Diseñar el modelo de clasificación", "Conjunto de tickets etiquetados por categoría", "Se etiquetará una muestra del histórico con apoyo de dos agentes", "Entrenamiento supervisado y medición de exactitud"],
+      ["3. Comparar el tiempo de atención", "Tiempos de atención antes y después del modelo", "Se registrarán los tiempos en una prueba controlada propuesta", "Comparación de medias entre los dos momentos"]
+    ],
+    "note": "Tres objetivos, tres métodos, ninguno suelto. Y todos los verbos en futuro: es una propuesta, no un informe de resultados."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se escribe en 'propuesto': antes y después",
+    "bullets": [
+      "**Mal:** 'Se aplicó una encuesta a los agentes y se obtuvo un nivel alto de satisfacción.'",
+      "**Bien:** 'Se propone aplicar una encuesta a los agentes de la mesa de ayuda; la satisfacción se medirá en escala de 1 a 5.'",
+      "**Mal:** 'El modelo demostró que reduce el tiempo de atención.'",
+      "**Bien:** 'Se comparará el tiempo de atención antes y después con el fin de establecer si existe reducción.'",
+      "Verbos que sí puede usar en TG2: **se propone, se aplicará, se seleccionará, se registrará, se analizará**.",
+      "Haga Ctrl+F en su documento y busque 'se aplicó', 'se obtuvo', 'demostró': casi siempre es una promesa que no puede sostener.",
+      "  Corregirlo no es cosmético: define en qué fase del trabajo de grado está usted parado."
+    ],
+    "note": "Un lector que encuentra resultados en un avance de TG2 concluye que el estudiante no entendió la fase en la que va."
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes al proponer la metodología",
+    "boxes": [
+      ["advertencia", "'Elijo enfoque cualitativo porque suena más fácil.' Se elige por la pregunta, no por comodidad. Pregúntese si su pregunta **mide** o **interpreta**: eso decide."],
+      ["advertencia", "'Tengo un método, pero no sé a qué objetivo responde.' Es un método huérfano: o lo conecta con un objetivo en la matriz, o lo elimina del documento."],
+      ["aclaracion", "Enfoque, alcance y diseño **no son sinónimos**: el enfoque dice si mide o interpreta; el alcance, qué tanto se sabe ya; el diseño, si manipula variables o solo observa."],
+      ["info", "En TG2 la metodología se **propone**: no se recogen datos, no se entrevista a nadie, no se corren pruebas de campo. La aplicación real es de TG3."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: armar su ficha metodológica en Google Docs",
+    "bullets": [
+      "**1.** Abra su documento de avance y cree la sección 'Diseño metodológico (propuesto)' con Estilos → Título 1.",
+      "**2.** Pegue arriba su pregunta y sus objetivos: serán su control de coherencia mientras escribe.",
+      "**3.** Escriba el **enfoque** y una línea de justificación que empiece literalmente con 'porque la pregunta…'.",
+      "**4.** Escriba el **alcance** con justificación anclada a lo que encontró en antecedentes.",
+      "**5.** Escriba **diseño**, **población**, **muestra propuesta** y **unidad de análisis**, cada uno en un párrafo corto.",
+      "**6.** Inserte una tabla de 4 columnas y llene **una fila por objetivo específico**.",
+      "**7.** Revise con Ctrl+F los verbos en pasado y páselos a futuro o a 'se propone'.",
+      "**8.** Suba el archivo al espacio de la sesión en **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ],
+    "note": "Todo con herramientas gratuitas de navegador: Google Docs, Google Scholar, SciELO, Redalyc y ZoteroBib (zbib.org)."
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: buscar un referente metodológico y citarlo",
+    "bullets": [
+      "**1.** Entre a **Google Scholar** (scholar.google.com); no requiere instalar nada.",
+      "**2.** Busque por método, no por tema: 'clasificación automática de tickets soporte metodología'.",
+      "**3.** Filtre por los últimos cinco años y abra dos o tres artículos de acceso libre.",
+      "  Si el texto está de pago, búsquelo en **SciELO** o **Redalyc**, que son abiertos.",
+      "**4.** Vaya directo a la sección de metodología y anote tres cosas: enfoque, técnica de recolección y análisis.",
+      "**5.** Copie la **lógica** del método, jamás el texto: reescríbalo con los datos de su propio caso.",
+      "**6.** Genere la referencia en **ZoteroBib (zbib.org)**: pegue el DOI o el enlace, elija APA 7 y copie.",
+      "**7.** Cítela justo donde justifica su decisión: '…enfoque cuantitativo, coherente con lo propuesto por Autor (2023)'."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Ficha metodológica y matriz de coherencia",
+    "bullets": [
+      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
+      "**Archivo:** un documento en Google Docs llamado S07_Metodologia_Apellido.",
+      "**Consigna 1.** Defina **enfoque, alcance y diseño**, cada uno con una línea de justificación que empiece con 'porque'.",
+      "**Consigna 2.** Arme la **matriz pregunta–método**: una fila por objetivo específico, con dato / técnica / análisis.",
+      "**Consigna 3.** Redacte todo en **propuesto**: ni un verbo en pasado referido a datos.",
+      "**Criterio de éxito (verificable):** todos sus objetivos específicos tienen fila; ninguna técnica queda huérfana; Ctrl+F de 'se aplicó' y 'se obtuvo' devuelve cero resultados.",
+      "**Entrega:** suba S07_Metodologia_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "bullets": [
+      "¿Mi enfoque se justifica con la forma de mi pregunta y no con mi comodidad?",
+      "¿El alcance que declaro corresponde a lo que realmente hallé en antecedentes?",
+      "¿Definí población, muestra propuesta y unidad de análisis, o hablé solo en general?",
+      "¿Cada objetivo específico aparece como una fila de la matriz?",
+      "¿Cada técnica de la matriz responde a algún objetivo concreto?",
+      "¿Todos los verbos sobre datos están en futuro o en 'se propone'?",
+      "¿Cité al menos un referente metodológico en APA 7, con su referencia completa al final?",
+      "¿El archivo quedó nombrado S07_Metodologia_Apellido y cargado en CDigital?"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar (trabajo autónomo)",
+    "bullets": [
+      "Termine y suba S07_Metodologia_Apellido con la ficha y la matriz completas.",
+      "Verifique que la matriz no contradiga sus objetivos ya escritos: si chocan, ajuste **los dos**, no solo uno.",
+      "Lea la metodología de un artículo de su área y subraye cómo justifican cada decisión: esa forma de argumentar es la que se imita.",
+      "Deje anotado en el documento aquello que todavía no sabe cómo medir: será materia prima de la próxima sesión.",
+      "**Próxima sesión:** bajamos la metodología a lo concreto — **instrumentos y plan de análisis propuestos**.",
+      "  Traiga la matriz abierta: cada celda de 'dato que necesito' se convertirá en ítems del instrumento."
+    ]
+  }
+]

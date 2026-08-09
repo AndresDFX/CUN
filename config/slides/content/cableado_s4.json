@@ -1,0 +1,173 @@
+[
+  {
+    "type": "bullets",
+    "title": "DNS: la guía telefónica de Internet",
+    "bullets": [
+      "El **DNS** (Domain Name System) @@traduce nombres de dominio a direcciones IP@@ y viceversa: tú escribes `google.com`, la red necesita `142.250.190.68`.",
+      "Analogía: la **guía telefónica**. Conoces el nombre, no el número de memoria; el DNS te da el número.",
+      "Si un sitio **cambia de IP** (migra de servidor), tú sigues usando el mismo nombre: nada se rompe.",
+      "Tres razones por las que es clave:",
+      "  **Memorabilidad**: nadie escribiría `142.250.190.68` para entrar a Google.",
+      "  **Flexibilidad**: mover el servicio a otra IP sin romper los enlaces.",
+      "  **Escala y balanceo**: un mismo nombre puede resolver a varias IP (varios servidores).",
+      "Es **jerárquico y distribuido**: no hay una guía única; está repartida en millones de servidores con forma de árbol."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Resolución de un nombre, paso a paso",
+    "bullets": [
+      "Escribes `www.example.com` y presionas Enter. Este es el recorrido (el corazón del Nivel 2):",
+      "  1. **Caché local** y archivo `hosts`: si ya se resolvió hace poco, termina aquí.",
+      "  2. **Servidor recursivo (resolver)**: tu ISP o uno público como `8.8.8.8` o `1.1.1.1`. Es 'el bibliotecario'.",
+      "  3. El resolver pregunta al **servidor raíz** (`.`): 'no sé la IP, pero a `.com` lo manejan allá'.",
+      "  4. Pregunta al **servidor TLD** de `.com`: 'el autoritativo de example.com es aquel'.",
+      "  5. Pregunta al **servidor autoritativo**: responde con el **registro A** → `93.184.216.34`.",
+      "  6. El resolver **cachea** la respuesta (según el **TTL**) y te la entrega; recién ahí abre la conexión TCP.",
+      "Todo ocurre en @@milisegundos@@; gracias a la caché, casi siempre se resuelve sin molestar a la raíz.",
+      "**Consulta recursiva**: tu PC pide al resolver 'resuélvemelo TODO'. **Iterativa**: el resolver va servidor por servidor (raíz → TLD → autoritativo)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Tipos de registro DNS",
+    "headers": ["Registro", "¿Para qué sirve?", "Ejemplo (nombre → valor)"],
+    "rows": [
+      ["@@A@@", "Nombre → dirección **IPv4**", "`example.com → 93.184.216.34`"],
+      ["**AAAA**", "Nombre → dirección **IPv6** (quad-A)", "`example.com → 2606:2800:220:1::`"],
+      ["**CNAME**", "**Alias**: apunta a otro nombre", "`www.example.com → example.com`"],
+      ["@@MX@@", "**Servidor de correo** (lleva prioridad)", "`example.com → 10 mail.example.com`"],
+      ["**NS**", "Servidores **autoritativos** de la zona", "`example.com → ns1.example.com`"],
+      ["**TXT**", "Texto: verificación de dominio y antispam (SPF/DKIM)", "`\"v=spf1 include:...\"`"],
+      ["**PTR**", "**DNS inverso**: IP → nombre", "`...in-addr.arpa → example.com`"],
+      ["**SRV**", "Host y **puerto** de un servicio (VoIP, chat)", "`_sip._tcp → servidor:5060`"]
+    ],
+    "note": "El registro **SOA** (Start of Authority) encabeza cada zona: servidor primario, correo del responsable y temporizadores."
+  },
+  {
+    "type": "bullets",
+    "title": "Anatomía del dominio y zonas DNS",
+    "bullets": [
+      "Un **FQDN** (nombre completamente calificado) se lee @@de derecha a izquierda@@, de lo general a lo específico: `www.tienda.example.com.`",
+      "  `com` = **TLD** · `example` = **SLD** (lo que registra la empresa) · `tienda` / `www` = **subdominios/hosts**.",
+      "  El **punto final** (`.`) es la **raíz**, casi siempre implícita. Cada etiqueta ≤ **63** caracteres; el nombre ≤ **255**.",
+      "El DNS viaja sobre **UDP puerto 53** (rápido y liviano); usa **TCP 53** solo para respuestas grandes y transferencias de zona.",
+      "Una **zona** es la porción del árbol que administra un servidor autoritativo (su archivo de zona con los registros).",
+      "  **Delegación** (registros NS): `ventas.empresa.com` puede ser una zona aparte en otro servidor.",
+      "  **Primario vs. secundario**: copia maestra editable + copias de respaldo que dan redundancia.",
+      "  **Zona directa** (nombre → IP) vs. **inversa** (IP → nombre, con el dominio `in-addr.arpa`)."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: nslookup paso a paso",
+    "bullets": [
+      "Abre el **símbolo del sistema** (Windows) o la **terminal** (Linux/macOS) y escribe un solo comando:",
+      "  `nslookup google.com`",
+      "Lee la salida de arriba abajo:",
+      "  `Servidor:  dsldevice.lan` ← @@quién respondió@@: tu resolver (el DNS que te dio el DHCP).",
+      "  `Address:  192.168.1.1`",
+      "  `Respuesta no autoritativa:` ← vino de la **caché** del resolver, no del dueño de la zona.",
+      "  `Nombre:  google.com`",
+      "  `Addresses:  142.250.190.68` ← el número que buscaba tu navegador: es el **registro A**.",
+      "Cambia el tipo de registro: `nslookup -type=MX gmail.com` devuelve el **servidor de correo** (MX) con su prioridad, no una IP.",
+      "Practica en dos niveles: **Tier 1** conceptos en el **quiz de examlab (Test)**; **Tier 2** obsérvalo en la **terminal real** o, si no tienes, en `nslookup.io` / `dnschecker.org`."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "DHCP: el arrendador de direcciones IP",
+    "bullets": [
+      "Al conectarte al Wi-Fi recibes en segundos: **IP**, **máscara**, **puerta de enlace** y **servidores DNS**. Tú no configuraste nada: fue el **DHCP**.",
+      "Analogía: el **arrendador de apartamentos**. Te asigna una IP libre, te entrega las 'reglas del edificio' (máscara, gateway, DNS) y te la presta por un plazo.",
+      "La IP se entrega en **arriendo (lease)**: @@te la arriendan, no te la regalan@@. Por eso puede cambiar de un día a otro.",
+      "  **Renovación**: el cliente intenta renovar a la mitad del plazo (**T1**); si el servidor no responde, reintenta cerca del vencimiento (**T2**).",
+      "Tipos de asignación:",
+      "  **Dinámica**: cualquier IP libre del rango (lo normal en Wi-Fi público).",
+      "  **Automática**: intenta darle siempre la misma IP a un equipo conocido.",
+      "  **Reserva**: fija una IP concreta a una **dirección MAC** (impresoras, servidores).",
+      "Compruébalo con `ipconfig /all`: verás tu **servidor DHCP** y la **concesión** (obtenida / expira)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El baile DORA: los 4 pasos del DHCP",
+    "headers": ["Paso", "Mensaje", "¿Qué ocurre?"],
+    "rows": [
+      ["**D** — Discover", "**DHCPDISCOVER** (broadcast)", "El equipo aún sin IP grita a `255.255.255.255` (desde `0.0.0.0`): '¿hay algún servidor DHCP?'"],
+      ["**O** — Offer", "**DHCPOFFER**", "El servidor reserva una IP de su rango y la ofrece con máscara, puerta de enlace y DNS."],
+      ["**R** — Request", "**DHCPREQUEST** (broadcast)", "El equipo acepta esa oferta; los demás servidores DHCP liberan las suyas."],
+      ["**A** — Acknowledge", "**DHCPACK**", "El servidor confirma: 'es tuya por X tiempo (el lease)'. El equipo ya puede navegar."]
+    ],
+    "note": "DHCP usa **UDP**: el servidor escucha en el **puerto 67** y el cliente en el **68**. Recuérdalo como @@DORA@@."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: ipconfig /all, tu arriendo en vivo",
+    "bullets": [
+      "Comprueba que el baile DORA ya ocurrió en tu equipo. Escribe:",
+      "  `ipconfig /all`",
+      "Busca estas líneas: nada de esto lo escribiste tú, te lo entregó el DHCP.",
+      "  `Dirección IPv4 . . : 192.168.1.50` ← tu IP arrendada.",
+      "  `Máscara de subred  : 255.255.255.0`",
+      "  `Puerta de enlace . : 192.168.1.1` ← el **router** de salida (gateway).",
+      "  `Servidores DNS . . : 192.168.1.1` ← quién traduce tus nombres.",
+      "  `Servidor DHCP  . . : 192.168.1.1` ← el **arrendador** que te configuró.",
+      "  `Concesión obtenida : lun 13/07/2026 8:15` ← inicio del **lease**.",
+      "  `Concesión expira . : mar 14/07/2026 8:15` ← @@fin del arriendo: hay que renovar@@.",
+      "En Linux/macOS usa `ip a` y `cat /etc/resolv.conf` para ver lo mismo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "NAT: el recepcionista del edificio",
+    "bullets": [
+      "Las IPv4 se **agotaron**: no hay una IP pública única para cada dispositivo del mundo.",
+      "Solución: **rangos privados (RFC 1918)** reutilizables en cada red sin pedir permiso a nadie:",
+      "  `10.0.0.0/8` (empresas grandes) · `172.16.0.0/12` (medianas) · `192.168.0.0/16` (hogar y oficinas pequeñas).",
+      "Pero esas IP **no son enrutables** en Internet: nadie afuera sabe llegar a tu `192.168.1.50`.",
+      "**NAT** (Network Address Translation): el router traduce las IP privadas a la **única IP pública** de salida (y viceversa), paquete a paquete.",
+      "Analogía: el **recepcionista**. Una sola línea pública, muchas extensiones internas.",
+      "**PAT / NAT con sobrecarga**: como todos salen con la misma IP pública, @@el router usa los puertos de la capa de transporte (Sesión 3)@@ para devolver cada respuesta.",
+      "Ojo: NAT **oculta** la red interna, pero **no es un firewall** (NAT traduce direcciones; el firewall filtra por reglas)."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "NAT/PAT: la tabla de traducción",
+    "headers": ["IP:puerto interno", "IP:puerto público", "Destino"],
+    "rows": [
+      ["`192.168.1.50:51000`", "`200.1.2.3:40001`", "`google.com:443`"],
+      ["`192.168.1.51:49500`", "`200.1.2.3:40002`", "`youtube.com:443`"]
+    ],
+    "note": "Cuando vuelve la respuesta a `200.1.2.3:40001`, el router consulta la tabla y la reenvía a `192.168.1.50:51000`. Así @@cientos de equipos comparten una IP pública@@, distinguidos por el puerto (la libreta del recepcionista)."
+  },
+  {
+    "type": "bullets",
+    "title": "VPN y proxy: conectar y proteger",
+    "bullets": [
+      "**VPN** (Red Privada Virtual): un **túnel cifrado** a través de Internet; te conecta a una red privada como si estuvieras físicamente dentro de ella.",
+      "  Analogía: el **túnel blindado**. Los datos viajan por la vía pública, pero nadie de afuera ve ni toca el contenido.",
+      "  Usa **protocolos de tunelización** que **encapsulan** el paquete original dentro de otro cifrado.",
+      "  **Acceso remoto** (usuario → red): un empleado desde casa entra a la red de la empresa; suele exigir @@doble factor de autenticación@@.",
+      "  **Sitio a sitio** (red → red): une dos oficinas como una sola LAN (se profundiza en la Sesión 5).",
+      "**Proxy**: un **intermediario** entre el cliente y el destino; habla con el sitio en tu nombre.",
+      "  Ejemplo: el navegador configurado para salir por `proxy.empresa.com:8080`.",
+      "  **Forward** (delante de los clientes): filtra/bloquea sitios, cachea páginas y da anonimato.",
+      "  **Reverse** (delante de los servidores): balancea la carga, termina el cifrado HTTPS y protege los servidores reales."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "VPN vs. proxy: ¿en qué se diferencian?",
+    "headers": ["Aspecto", "VPN", "Proxy"],
+    "rows": [
+      ["¿Qué hace?", "**Túnel cifrado** de extremo a extremo", "**Intermediario** que habla por ti"],
+      ["Alcance", "**TODO** el tráfico del equipo", "Normalmente **una app** (el navegador)"],
+      ["Cifrado", "**Siempre** cifra", "**No siempre** cifra"],
+      ["Nivel", "Sistema operativo (túnel completo)", "Aplicación"],
+      ["Analogía", "@@Túnel blindado@@", "@@Portero / mensajero@@"]
+    ],
+    "note": "Regla para no confundirlos: la **VPN** protege todo el equipo; el **proxy** intermedia una tarea puntual."
+  }
+]

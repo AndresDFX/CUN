@@ -1,0 +1,209 @@
+[
+  {
+    "type": "bullets",
+    "title": "Empieza la batalla de las 50 referencias — pero con método",
+    "bullets": [
+      "El Syllabus exige **mínimo 50 referencias** citadas en el cuerpo del artículo. Esa cifra asusta solo si se busca al azar.",
+      "  Con método, cada sesión de búsqueda de una hora produce entre 5 y 8 fichas útiles. Haga la cuenta: es alcanzable.",
+      "Lo que hunde a los estudiantes no es la cantidad: es haber acumulado **títulos que nunca leyeron** y no poder decir qué aporta cada uno.",
+      "Caso típico en Ingeniería: alguien llega con 60 enlaces de un buscador comercial y ninguno responde a su pregunta.",
+      "  Otro llega con 12 fuentes bien fichadas y en la discusión escribe párrafos que el jurado celebra.",
+      "Hoy trabajamos la **Fase I: los referentes** — quién más ha estudiado su problema y qué encontró.",
+      "Herramientas de hoy, todas gratuitas y en el navegador: **Google Académico**, **SciELO**, **Redalyc**, **zbib.org** y **Google Docs**."
+    ],
+    "note": "Tenga a la mano su pregunta de la Sesión 02: es la brújula de cada búsqueda que hagamos hoy."
+  },
+  {
+    "type": "table",
+    "title": "Tres palabras que todo el mundo confunde",
+    "headers": ["Concepto", "Qué responde", "Cuándo se trabaja", "Ejemplo"],
+    "rows": [
+      ["**Antecedentes / referentes**", "¿Quién más lo ha estudiado y qué encontró?", "**Hoy — Fase I**", "\"Ramírez (2022) midió el efecto de automatizar pruebas en 3 equipos ágiles\""],
+      ["**Marco teórico**", "¿Qué conceptos y teorías sostienen mi pregunta?", "Se cierra más adelante en el curso", "\"Qué se entiende por integración continua y por tiempo de despliegue\""],
+      ["**Estado del arte**", "¿Qué es lo más reciente y avanzado del tema?", "Se alimenta durante todo el proceso", "\"Las herramientas de automatización publicadas en los últimos 2 años\""]
+    ],
+    "note": "Hoy NO estamos construyendo el marco teórico. Estamos levantando el **mapa de quién ya caminó por aquí**.",
+    "col_w": [2.6, 3.1, 2.6, 3.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué hace que una fuente sea un buen referente",
+    "bullets": [
+      "**Pertinencia:** toca alguna de las variables de su pregunta. Si no la toca, no entra, así sea un artículo famoso.",
+      "**Trazabilidad:** tiene autor identificable, año y una fuente verificable (revista, editorial, repositorio, DOI).",
+      "  Un blog anónimo o un video sin autor no es un referente académico. Puede inspirarlo, pero no lo cita.",
+      "**Vigencia:** en temas tecnológicos, priorice los **últimos 5 años**. En teorías fundacionales, la fecha no importa.",
+      "  Nadie le va a reclamar que cite a Wenger de 1998 para comunidades de práctica; sí le van a reclamar una herramienta de 2011.",
+      "**Verificabilidad:** usted puede acceder al texto completo. Citar solo por el resumen es riesgoso y se nota.",
+      "**Aporte declarable:** usted puede escribir en una línea qué le aporta a **su** proyecto. Si no puede escribir esa línea, la fuente sobra.",
+      "Cantidad sin pertinencia no cuenta: 50 referencias de relleno pesan menos que 30 bien elegidas."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La ficha de lectura: el ladrillo de todo lo que viene",
+    "headers": ["Campo", "Qué contiene", "Ejemplo real"],
+    "rows": [
+      ["**Dato bibliográfico (APA 7)**", "Autor, año, título, fuente, DOI o URL", "Ramírez, L. (2022). *Automatización de pruebas en equipos ágiles*. Revista de Ingeniería, 18(2), 45-60."],
+      ["**Idea principal**", "En **una sola frase** y con **sus** palabras", "\"Automatizar la fase de pruebas redujo el tiempo de despliegue en los tres equipos observados.\""],
+      ["**Cita textual**", "Una frase clave, entre comillas y **con página**", "\"el tiempo promedio de despliegue descendió de 40 a 12 minutos\" (p. 52)"],
+      ["**Relación con mi pregunta**", "Confirma / contradice / extiende / aporta método", "\"**Confirma** mi hipótesis y además me da la métrica: minutos por despliegue.\""]
+    ],
+    "note": "Nadie cita bien lo que no leyó. Si usted no logra escribir la **última fila** de la ficha, esa fuente no entra a su artículo.",
+    "col_w": [2.7, 3.2, 6.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Buscar con método: los operadores que cambian todo",
+    "bullets": [
+      "**Comillas** — `\"tiempo de despliegue\"` busca la frase exacta, no las palabras sueltas por separado.",
+      "**AND** — `\"automatización de pruebas\" AND \"tiempo de despliegue\"` exige que aparezcan las dos ideas.",
+      "**OR** — `\"despliegue continuo\" OR \"integración continua\"` cubre los sinónimos que usan distintos autores.",
+      "**El signo menos** — `pruebas -manuales` excluye resultados que le están contaminando la búsqueda.",
+      "**Filtro por año** — en Google Académico, panel izquierdo: \"Desde 2020\". Obligatorio en temas de tecnología.",
+      "**Buscar en el título** — `intitle:` centra la búsqueda en artículos dedicados al tema, no que lo mencionan de paso.",
+      "Busque también **en inglés**: la mayor parte de la literatura de Ingeniería de Sistemas está publicada en ese idioma.",
+      "  `\"deployment time\" AND \"test automation\"` le abre un universo que en español no existe."
+    ],
+    "note": "Escriba sus búsquedas en el documento. Una búsqueda bien registrada se puede repetir y defender ante el jurado; una búsqueda de memoria, no."
+  },
+  {
+    "type": "table",
+    "title": "Dónde buscar: cada fuente sirve para algo distinto",
+    "headers": ["Fuente", "Qué le da", "Cuándo usarla"],
+    "rows": [
+      ["**Google Académico** (scholar.google.com)", "Cobertura amplia, enlace \"citado por\", versiones en PDF", "Siempre primero, para abrir el panorama"],
+      ["**SciELO** (scielo.org)", "Producción científica de América Latina, en español, en acceso abierto", "Para el contexto latinoamericano y colombiano"],
+      ["**Redalyc** (redalyc.org)", "Revistas iberoamericanas revisadas por pares, texto completo gratis", "Cuando necesita el PDF completo sin barreras"],
+      ["**Biblioteca CUN**", "Bases suscritas con acceso institucional", "Cuando un artículo clave está detrás de pago"],
+      ["**zbib.org (ZoteroBib)**", "La referencia en APA 7 ya formateada, sin instalar nada", "Al final, para armar la lista de referencias"]
+    ],
+    "note": "Todo lo de esta tabla es **gratis y en el navegador**. En este curso no se instala software de escritorio para gestionar bibliografía.",
+    "col_w": [3.5, 4.6, 3.8]
+  },
+  {
+    "type": "bullets",
+    "title": "El truco del \"citado por\": buscar en bola de nieve",
+    "bullets": [
+      "Debajo de cada resultado de Google Académico aparece el enlace **\"Citado por (N)\"**. Ese enlace es oro puro.",
+      "**Hacia adelante:** \"citado por\" le muestra los trabajos **posteriores** que usaron ese artículo. Le da lo más reciente del tema.",
+      "**Hacia atrás:** la lista de referencias del propio artículo le muestra de dónde salió. Le da los trabajos fundacionales.",
+      "Método práctico en tres movimientos:",
+      "  **1.** Encuentre **un** artículo realmente pertinente para su pregunta (el \"artículo semilla\").",
+      "  **2.** Abra su \"citado por\" y revise títulos: de ahí salen 5 a 10 fuentes útiles sin volver a buscar.",
+      "  **3.** Revise su lista de referencias y anote los autores que se repiten: esos son los imprescindibles de su campo.",
+      "Si un mismo autor aparece citado en casi todos los artículos de su tema, **tiene que estar** en su marco. Su ausencia se nota."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado — una búsqueda real y una ficha completa",
+    "bullets": [
+      "**Búsqueda ejecutada:** en Google Académico escribo `\"tiempo de despliegue\" AND \"automatización de pruebas\"` y filtro **Desde 2020**.",
+      "  De 340 resultados sin filtro pasé a 27 con filtro. De esos, 6 títulos me sirven de verdad.",
+      "**Artículo semilla elegido:** el segundo resultado. Abro su **\"Citado por (18)\"** y encuentro otros cuatro estudios pertinentes.",
+      "**Ficha llena, campo por campo:**",
+      "  *Dato:* Ramírez, L. (2022). Automatización de pruebas en equipos ágiles. Revista de Ingeniería, 18(2), 45-60.",
+      "  *Idea principal:* \"Automatizar la fase de pruebas redujo el tiempo de despliegue en los tres equipos observados.\"",
+      "  *Cita textual:* \"el tiempo promedio de despliegue descendió de 40 a 12 minutos\" (p. 52).",
+      "  *Relación con mi pregunta:* **confirma** el efecto que yo espero medir y además me entrega la métrica —minutos por despliegue— para mi instrumento.",
+      "**El descarte también se modela:** un artículo sobre automatización industrial en plantas de manufactura sale, porque mi variable es despliegue de software, no producción física."
+    ],
+    "note": "Note que la última línea de la ficha es la que más trabajo cuesta y la que más valor tiene. Si no sale, la fuente se descarta sin culpa."
+  },
+  {
+    "type": "bullets",
+    "title": "El mapa de diálogo: los autores no se apilan, se ponen a conversar",
+    "bullets": [
+      "Un marco malo dice: \"Pérez dice esto. Luego González dice aquello. Luego Ramírez dice lo otro.\" Eso es un **collage**, no un argumento.",
+      "El mapa de diálogo agrupa a los autores por **lo que hacen entre ellos**:",
+      "  **Confirman** — coinciden en el mismo hallazgo. Se citan juntos: (Ramírez, 2022; Pérez, 2021).",
+      "  **Contradicen** — encuentran lo contrario. Es su mejor material: ahí hay una tensión que discutir.",
+      "  **Extienden** — uno lleva más lejos lo del otro, o lo aplica a un contexto nuevo.",
+      "  **Aportan método** — no le interesa su resultado, sino cómo midieron. Sirven para su metodología.",
+      "Ese mapa que arme hoy es el **borrador de la discusión** que escribirá más adelante en el curso.",
+      "Dibújelo en **Excalidraw** o en **tldraw** si le sirve verlo espacialmente: círculos por postura y flechas entre autores."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Mapa de diálogo — ejemplo con cuatro autores",
+    "headers": ["Postura", "Autores", "Qué sostienen", "Para qué me sirve"],
+    "rows": [
+      ["**Confirman**", "Ramírez (2022); Pérez (2021)", "Automatizar pruebas reduce el tiempo de despliegue", "Sostiene mi expectativa y mi justificación"],
+      ["**Contradicen**", "Gómez (2023)", "El ahorro se pierde por el costo de mantener los scripts", "Me obliga a medir también el esfuerzo de mantenimiento"],
+      ["**Extienden**", "Torres (2024)", "El efecto crece cuando el equipo tiene menos de 6 personas", "Me delimita mejor el contexto de mi caso"],
+      ["**Aportan método**", "Pérez (2021)", "Usó bitácora de despliegues durante 8 semanas", "Copio la **lógica** del instrumento, no el texto"]
+    ],
+    "note": "Cuando llegue a la discusión, cada fila de esta tabla se convierte en un párrafo: \"mis hallazgos **confirman** a X, pero **contradicen** a Y porque…\".",
+    "col_w": [2.2, 2.7, 3.8, 3.2]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes de esta sesión",
+    "boxes": [
+      ["advertencia", "\"Cito un artículo por el título, sin leerlo.\" — Se nota en la discusión y es riesgo de plagio o de citar algo que dice lo contrario de lo que usted cree. Haga la ficha antes de citar."],
+      ["advertencia", "\"Junto 20 citas seguidas y ese es mi marco.\" — Eso es un collage. Agrupe por lo que dicen los autores: quién confirma, quién contradice, quién extiende."],
+      ["advertencia", "\"Busco solo en un buscador comercial.\" — Vaya a Google Académico, SciELO, Redalyc y a la biblioteca CUN; use comillas, AND/OR y filtro por año."],
+      ["advertencia", "\"Meto cualquier fuente para llegar a 50.\" — Cantidad sin pertinencia no cuenta, y una referencia listada pero no citada en el cuerpo es una alarma para el jurado."],
+      ["aclaracion", "\"¿Y si mi tema es tan nuevo que no hay nada publicado?\" — Casi nunca es cierto. Amplíe a los conceptos vecinos, busque en inglés y revise el 'citado por' de lo poco que encuentre."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso — del hallazgo en Scholar a la referencia en su documento",
+    "bullets": [
+      "**1.** En Google Académico, arme la consulta con comillas y AND, y aplique el filtro de año.",
+      "**2.** Revise **títulos y resúmenes** primero. No abra PDFs a lo loco: seleccione 6 a 8 candidatos.",
+      "**3.** Abra el texto completo. Si está bloqueado, búsquelo en SciELO, Redalyc o con el acceso institucional de la biblioteca CUN.",
+      "**4.** Lea al menos **resumen, introducción y conclusiones**. Con eso ya puede escribir la idea principal con sus palabras.",
+      "**5.** Llene la ficha en su documento de Google Docs: los cuatro campos, sin saltarse la relación con su pregunta.",
+      "**6.** En Google Académico, use el ícono de **comillas** debajo del resultado → copie la cita en APA como punto de partida.",
+      "**7.** Verifíquela y complétela en **zbib.org (ZoteroBib)**: pegue el DOI o la URL, elija estilo **APA 7.ª edición** y copie la referencia formateada.",
+      "  Revise siempre lo que genera la herramienta: suele equivocarse con mayúsculas y con los nombres de revista.",
+      "**8.** Pegue la referencia en la sección de Referencias de su documento y deje la cita corta —(Ramírez, 2022)— donde use la idea."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Fichas de lectura y primer mapa de diálogo",
+    "bullets": [
+      "**Tiempo: 20 minutos.** Trabajo individual. Entregable: `S04_ReferentesFaseI_Apellido`.",
+      "**Consigna literal:**",
+      "  **(1)** Escriba en **una línea** su **criterio de inclusión**: años, idioma y qué debe tocar la fuente para entrar.",
+      "  **(2)** Busque en Google Académico y en SciELO o Redalyc y seleccione **4 a 6 fuentes** pertinentes.",
+      "  **(3)** Haga **una ficha de lectura por fuente**, con los cuatro campos completos.",
+      "  **(4)** Esboce el **mapa de diálogo**: agrupe quién confirma, quién contradice, quién extiende y quién le aporta método.",
+      "**Criterio de éxito (así se verifica):**",
+      "  Cada ficha tiene escrita su línea de **\"relación con mi pregunta\"**; ninguna quedó en blanco.",
+      "  Cada idea principal está redactada con **sus** palabras, no copiada del resumen del artículo.",
+      "  El mapa muestra a los autores **conversando entre sí**, no una lista apilada."
+    ],
+    "note": "Si una fuente no le deja escribir la cuarta fila de la ficha, descártela en el momento y busque otra. Descartar temprano es ganar tiempo."
+  },
+  {
+    "type": "boxes",
+    "title": "Checklist de autoevaluación antes de subir a CDigital",
+    "boxes": [
+      ["info", "**Método:** ¿registré las consultas exactas que usé, con comillas y operadores? ¿apliqué filtro de año en las fuentes tecnológicas?"],
+      ["info", "**Fichas:** ¿tengo entre 4 y 6? ¿todas tienen dato en APA, idea principal con mis palabras, cita textual con página y relación con mi pregunta?"],
+      ["info", "**Lectura real:** ¿puedo explicar de memoria qué encontró cada autor? Si no, no la leí y esa ficha es falsa."],
+      ["aclaracion", "**Mapa:** ¿hay al menos una fuente que contradiga o matice a las otras? Un mapa donde todos están de acuerdo suele significar que leyó poco."],
+      ["advertencia", "**Referencias:** toda fuente fichada debe quedar en la lista APA de su documento. Y toda referencia de la lista debe terminar citada en el cuerpo del artículo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Suba** `S04_ReferentesFaseI_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Trabajo autónomo (extensión de la sesión):**",
+      "  Fije una **meta semanal de fichas** (por ejemplo, 6 por semana) y cúmplala: así se llega a las 50 sin trasnochos de última hora.",
+      "  Repita la búsqueda **en inglés** con los términos equivalentes de su tema y agregue al menos dos fuentes internacionales.",
+      "  Aplique la técnica del **\"citado por\"** sobre su mejor artículo y sume tres fuentes más al mapa de diálogo.",
+      "  Mantenga la lista de referencias en APA actualizada en el mismo documento del artículo: no la deje para el final.",
+      "**En la próxima sesión** diseñamos el **instrumento y el desarrollo metodológico**: la matriz de consistencia que amarra objetivos, técnica, instrumento y análisis.",
+      "  Llegue con sus objetivos específicos abiertos: sobre ellos se construye la matriz."
+    ]
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "type": "bullets",
+    "title": "El corazón del artículo: si esto queda bien, el resto casi se escribe solo",
+    "bullets": [
+      "Hoy se decide la suerte del artículo: el **problema** y la **pregunta**.",
+      "  Si quedan bien, el planteamiento, el marco y la metodología salen casi en cadena.",
+      "  Si quedan mal, todo lo demás cojea, por bien redactado que esté.",
+      "La trampa número uno en ingeniería, y hay que nombrarla de una vez:",
+      "  *\"El problema es que no existe una app que...\"*",
+      "  Eso **no es un problema de investigación**: es que usted quiere hacer una app.",
+      "Un problema de investigación es un **hecho observable que produce consecuencias**.",
+      "  \"Los tutores dan retroalimentación tarde y los estudiantes repiten el mismo error\" → eso sí duele, y se puede medir.",
+      "La app, el modelo o el dispositivo son **posibles respuestas**; nunca el problema."
+    ],
+    "note": "Meta de hoy: salir con **una pregunta investigable escrita en una sola frase**, respaldada por un diagrama de causas."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es (y qué no es) un problema de investigación",
+    "bullets": [
+      "**Es** un hecho que se puede **observar, describir o medir** en un lugar y un tiempo concretos.",
+      "  Tiene **afectados**: alguien pierde algo (tiempo, dinero, calidad, oportunidades).",
+      "  Tiene **causas** que se pueden nombrar, y **efectos** que se pueden rastrear.",
+      "  Deja **huella**: hay registros, bitácoras, quejas, tiempos, cifras, o al menos testimonios.",
+      "**No es** la ausencia de su solución favorita.",
+      "**No es** un tema (\"la inteligencia artificial\" es un tema, no un problema).",
+      "**No es** una molestia personal sin consecuencias verificables.",
+      "**No es** un problema de ingeniería a resolver esta semana: es algo que **falta comprender**.",
+      "Prueba de control: pregúntese **\"¿qué duele hoy, si mi solución nunca existiera?\"**. La respuesta es su problema."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Deseo de producto vs. problema de investigación",
+    "headers": ["Lo que suele escribirse (deseo de producto)", "Lo que sí es problema de investigación"],
+    "rows": [
+      ["\"No existe una app que avise de los cortes de red.\"", "\"Las prácticas del laboratorio se interrumpen y no se conoce con qué frecuencia ni por qué.\""],
+      ["\"Falta un chatbot que responda dudas de los estudiantes.\"", "\"La retroalimentación llega días después y los estudiantes repiten el mismo error.\""],
+      ["\"Hay que implementar un sistema de sensores en la sede.\"", "\"No se sabe cuánta energía consumen los laboratorios en horas pico ni qué la dispara.\""],
+      ["\"Se necesita un dashboard de deserción.\"", "\"La deserción del programa se detecta cuando ya ocurrió, sin señales tempranas identificadas.\""],
+      ["\"Deberíamos migrar todo a la nube.\"", "\"Se desconocen los riesgos y costos que asumiría la institución al migrar los pagos a la nube.\""]
+    ],
+    "note": "Fíjese en el patrón: la columna izquierda empieza con **\"falta / no existe / hay que\"**; la derecha empieza con **un hecho y sus consecuencias**.",
+    "col_w": [5.2, 5.6]
+  },
+  {
+    "type": "table",
+    "title": "Tres herramientas para ordenar el problema",
+    "headers": ["Herramienta", "Qué produce", "Cuándo usarla", "Qué necesita para empezar"],
+    "rows": [
+      ["**Espina de pescado** (Ishikawa)", "Familias de causas de un mismo efecto", "Hay muchas causas dispersas y no sabe cuál pesa", "El efecto escrito en una frase"],
+      ["**Árbol de problemas**", "Causas → problema central → efectos", "Confunde lo que causa con lo que resulta", "Una lista cruda de hechos"],
+      ["**Método 3D**", "Descripción acotada + pregunta", "El tema está demasiado amplio", "Un tema y algo de contexto"]
+    ],
+    "note": "No se usan las tres: **elija una** según lo que le esté fallando. Las tres terminan en el mismo punto: la pregunta."
+  },
+  {
+    "type": "bullets",
+    "title": "Espina de pescado: abrir familias de causas",
+    "bullets": [
+      "La **cabeza** del pescado es el **efecto**: el hecho que duele, escrito en una frase.",
+      "Las **espinas** son **familias de causas**. Para problemas de ingeniería funcionan bien estas cuatro:",
+      "  **Personas** — quiénes intervienen y con qué carga (tutores saturados, turnos, rotación).",
+      "  **Proceso** — cómo está definido el flujo (sin fecha límite, sin responsable, sin protocolo).",
+      "  **Tecnología** — equipos, software, infraestructura (no hay registro de entregas, equipos antiguos).",
+      "  **Entorno** — condiciones alrededor (grupos grandes, horarios pico, espacio compartido).",
+      "En cada espina se cuelgan **causas concretas**, no adjetivos: \"faltan tutores\" es vago; \"un tutor por cada 45 estudiantes\" es una causa.",
+      "Regla práctica: **mínimo tres familias con al menos una causa cada una**.",
+      "  Si todo le cabe en una sola familia, no ha abierto el problema: ha repetido su hipótesis."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Árbol de problemas y método 3D",
+    "bullets": [
+      "**Árbol de problemas** — tres niveles, y el orden importa:",
+      "  **Raíces** = causas. Se llega a ellas preguntando **\"¿por qué ocurre?\"**",
+      "  **Tronco** = el problema central, en una sola frase.",
+      "  **Ramas** = efectos. Se llega a ellos preguntando **\"¿qué provoca esto?\"**",
+      "  Bonito detalle: el árbol se puede **voltear** a árbol de objetivos (cada causa negativa se convierte en un objetivo).",
+      "**Método 3D** — para temas demasiado grandes, tres movimientos:",
+      "  **Describir:** ¿qué pasa exactamente? Escríbalo sin adjetivos, como si narrara una escena.",
+      "  **Dimensionar:** ¿cuánto, a cuántos, cada cuánto, desde cuándo? Aquí entran las cifras.",
+      "  **Decidir:** de todo lo anterior, ¿qué parte puedo estudiar **este periodo** con las fuentes que tengo?",
+      "El 3D es el mejor antídoto contra la pregunta planetaria: obliga a bajar a escala."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (1/2): la espina llena, en vivo",
+    "bullets": [
+      "**Punto de partida (mal):** *\"Quiero hacer un chatbot que responda las dudas del laboratorio.\"*",
+      "**Cabeza del pescado (el efecto):** *\"Los estudiantes repiten los mismos errores en las prácticas del laboratorio X.\"*",
+      "Ahora las cuatro espinas, con causas concretas:",
+      "  **Personas:** un solo tutor acompaña a los tres grupos de la franja.",
+      "  **Proceso:** la retroalimentación no tiene fecha límite definida; llega cuando llega.",
+      "  **Tecnología:** no hay registro de qué entregó cada estudiante ni de qué se le observó.",
+      "  **Entorno:** grupos de más de 40 estudiantes en la misma franja horaria.",
+      "Observe el hallazgo: el chatbot **no aparece por ningún lado**, porque era una respuesta, no una causa.",
+      "Y aparece algo que no estaba en la idea inicial: el **tiempo de respuesta** de la retroalimentación."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (2/2): de la espina sale la pregunta",
+    "bullets": [
+      "Se toma **una** espina —la de proceso— y se convierte en pregunta:",
+      "  **Pregunta final:** *\"¿En qué medida el tiempo de respuesta de la retroalimentación influye en la repetición de errores de los estudiantes del laboratorio X?\"*",
+      "Desarmémosla para ver por qué funciona:",
+      "  **Actor:** los estudiantes del laboratorio X (no \"los estudiantes\" en abstracto).",
+      "  **Variable que se observa:** el tiempo de respuesta de la retroalimentación.",
+      "  **Fenómeno de interés:** la repetición de errores.",
+      "  **Fórmula de apertura:** \"en qué medida\" → obliga a describir o comparar, no a contestar sí o no.",
+      "Y lo más importante: **la pregunta salió de una causa del diagrama**, no de la ocurrencia inicial.",
+      "  Ese es el trabajo de hoy: que su pregunta sea **consecuencia de un análisis**, no de un antojo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Anatomía de una pregunta investigable",
+    "headers": ["Atributo", "Qué significa", "Prueba de control"],
+    "rows": [
+      ["**Clara**", "Se entiende sin que usted la explique", "Se la lee a alguien ajeno al tema y la repite con sus palabras"],
+      ["**Delimitada**", "Tiene actor, contexto y alcance", "Puede señalar en el texto **quién**, **dónde** y **qué se observa**"],
+      ["**Viable**", "Existen fuentes y datos a su alcance", "Busca 2 términos en Google Académico y **aparece literatura**"],
+      ["**Relevante**", "A alguien le importa la respuesta", "Puede nombrar quién usaría el resultado"],
+      ["**Abierta**", "No se contesta con sí o no", "Empieza por **cómo / qué / cuál / en qué medida**"]
+    ],
+    "note": "Los cinco atributos se cumplen a la vez. Si falla uno, la pregunta todavía no está lista para el planteamiento."
+  },
+  {
+    "type": "table",
+    "title": "Preguntas mal formuladas y su reformulación",
+    "headers": ["Como la escriben", "Qué falla", "Reformulada"],
+    "rows": [
+      ["\"¿Es útil la inteligencia artificial?\"", "Sí/no + planetaria: sin actor ni contexto", "\"¿En qué medida un clasificador reduce los correos de phishing que llegan a los estudiantes de la sede X?\""],
+      ["\"¿Existe deserción en el programa?\"", "Sí/no; además ya se sabe la respuesta", "\"¿Qué factores académicos anteceden la deserción en los dos primeros semestres del programa X?\""],
+      ["\"¿Cómo hacer una app para el laboratorio?\"", "Pregunta de diseño, no de investigación", "\"¿Qué barreras enfrentan los estudiantes al registrar sus prácticas en el sistema actual?\""],
+      ["\"¿Cuál es la mejor tecnología para la nube?\"", "\"Mejor\" sin criterio ni contexto", "\"¿Qué criterios de disponibilidad y costo priorizan las pymes de Bogotá al migrar servicios a la nube?\""]
+    ],
+    "note": "Patrón de la corrección: **agregar actor y lugar**, y cambiar el verbo de apertura por *qué*, *cómo* o *en qué medida*.",
+    "col_w": [3.2, 2.4, 5.2]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes al formular el problema",
+    "boxes": [
+      ["advertencia", "**\"El problema es que no existe mi aplicación.\"** Eso es un deseo de producto. Pregúntese: si su app nunca existiera, ¿qué seguiría doliendo? Esa respuesta es el problema."],
+      ["advertencia", "**Confundir causas con efectos.** Ubíquelas con dos preguntas distintas: *¿por qué ocurre?* señala una **causa**; *¿qué provoca esto?* señala un **efecto**. En el árbol: causas abajo, efectos arriba."],
+      ["aclaracion", "**\"Una sola causa lo explica todo.\"** Casi nunca. Abra la espina en al menos tres familias: personas, proceso, tecnología, entorno. Si solo ve una, está defendiendo su hipótesis, no analizando."],
+      ["info", "**La pregunta puede cambiar, y está bien.** Es normal reformularla dos o tres veces. Lo que no puede pasar es que quede como estaba el primer día sin haber sido puesta a prueba."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: el diagrama en Excalidraw y la prueba de viabilidad",
+    "bullets": [
+      "**1.** Abra **excalidraw.com** en el navegador. Es gratis, **no requiere cuenta** ni instalación.",
+      "**2.** Escriba primero **el efecto** en un cuadro a la derecha: esa es la cabeza del pescado.",
+      "**3.** Trace la línea horizontal (la espina dorsal) y cuatro diagonales: personas, proceso, tecnología, entorno.",
+      "**4.** Cuelgue **una o dos causas concretas** en cada diagonal. Sin adjetivos: hechos.",
+      "**5.** Marque con color **la causa que puede observar o medir** con las fuentes a su alcance.",
+      "**6.** Exporte con *Export image* → PNG y pegue la imagen en su documento de Google Docs.",
+      "**7. Prueba de viabilidad:** tome los **dos términos principales** de su pregunta y búsquelos en **Google Académico**.",
+      "  Si aparecen artículos que hablan de eso, su pregunta es **investigable**: hay con qué dialogar.",
+      "  Si no aparece nada, no abandone: **cambie el vocabulario** (busque en inglés, use términos técnicos) antes de cambiar la pregunta."
+    ],
+    "note": "Todo en el navegador: Excalidraw, Google Docs y Google Académico. Sin instalar programas."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Problema y pregunta (~20 min)",
+    "bullets": [
+      "**Consigna literal.** En un documento llamado `S04_ProblemaPregunta_Apellido`:",
+      "  **(1)** Describa el problema en **8 a 12 líneas**, como un hecho con consecuencias, **no** como la falta de su solución.",
+      "  **(2)** Haga un diagrama en **Excalidraw** —espina de pescado o árbol de problemas— y pegue la captura en el documento.",
+      "  **(3)** Escriba la pregunta en **una sola frase** investigable.",
+      "  **(4)** Anote los **dos términos** con los que probó la viabilidad en Google Académico y qué encontró.",
+      "**Tiempo:** ~20 minutos. Empiece por el diagrama: pensar dibujando desatasca más rápido que pensar escribiendo.",
+      "**Criterio de éxito (verificable):** su pregunta **tiene actor y contexto**, **no** se responde con sí/no, y el diagrama muestra **al menos tres causas** en familias distintas.",
+      "Prueba final antes de entregar: lea su pregunta a un compañero. Si tiene que explicársela, todavía no es clara."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist antes de subir su entrega",
+    "bullets": [
+      "[ ] El documento se llama `S04_ProblemaPregunta_Apellido` y trae la imagen del diagrama pegada.",
+      "[ ] Mi problema está escrito como **hecho + consecuencias**, no como \"falta un/una...\".",
+      "[ ] En ningún lado del problema aparece **mi solución** (app, modelo, sensor, plataforma).",
+      "[ ] Nombro a los **afectados**: quién pierde qué.",
+      "[ ] Mi diagrama tiene **al menos tres familias de causas** con contenido real.",
+      "[ ] Distinguí causas de efectos (causas abajo o a la izquierda; efectos arriba o a la derecha).",
+      "[ ] Mi pregunta empieza por **cómo, qué, cuál o en qué medida**.",
+      "[ ] Mi pregunta tiene **actor** y **contexto** explícitos, y cabe en una sola frase.",
+      "[ ] Probé la viabilidad: busqué 2 términos en Google Académico y **sí apareció literatura**.",
+      "[ ] Mi pregunta es coherente con el **tema y la línea** que ya elegí.",
+      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo · para la próxima sesión",
+    "bullets": [
+      "**Deje reposar la pregunta un día y vuelva a leerla.** Casi siempre se le puede quitar una palabra vaga.",
+      "**Guarde el diagrama:** las causas que dibujó hoy se convierten mañana en el cuerpo del planteamiento.",
+      "**Empiece a coleccionar evidencia:** cualquier cifra, bitácora, informe o queja documentada sobre su problema.",
+      "  Anote de dónde salió cada dato; sin la fuente, el dato no sirve.",
+      "**Marque las 2 o 3 causas más fuertes** del diagrama: son las que va a defender con evidencia.",
+      "La próxima sesión tomamos esta pregunta y la desarrollamos en el **planteamiento del problema** completo.",
+      "  Traiga su pregunta y su diagrama: sin ellos no hay con qué trabajar.",
+      "Entrega y materiales en **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  }
+]

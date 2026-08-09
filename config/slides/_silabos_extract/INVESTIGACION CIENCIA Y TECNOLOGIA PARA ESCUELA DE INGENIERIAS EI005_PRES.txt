@@ -1,0 +1,316 @@
+0|DATOS GENERALES DE LA UNIDAD CURRICULAR
+1|Fecha de actualización: 01/03/2022
+2|Versión: 
+3|NIVEL DE FORMACIÓN
+4|Técnico Profesional ☐
+5|Tecnológico ☐
+6|CRÉDITOS
+7|Profesional ☑
+8|Especialización ☐
+9|2
+10|METODOLOGÍA
+11|Presencial ☑  
+12|Distancia ☐
+13|Virtual ☐
+14|Horas de trabajo presencial o Tutorial con Docente:
+15|32
+16|32
+17|32
+18|Horas de Trabajo Autónomo y Colaborativo:
+19|64
+20|64
+21|64
+22|PROGRAMA ACADÉMICO/ÁREA QUE OFERTA
+23|ÁREA DE FORMACIÓN INVESTIGATIVA
+24|UNIDAD CURRICULAR (ASIGNATURA)
+25|INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA PARA LA ESCUELA DE INGENIERÍA
+26|CÓDIGO
+27|SÍAC:
+28|EI005
+29|TIPOLOGÍA
+30|Teórico ☐
+31|Teórico-Práctico ☑
+32|Práctico ☐
+33|DESCRIPCIÓN DE LA UNIDAD CURRICULAR
+34|Teniendo en cuenta el marco del Sistema Nacional de Ciencia, Tecnología e innovación. Las políticas nacionales de fomento a la investigación y la innovación, buscan promover el des arrollo de la cultura científica y tecnológica, resulta pertinente incorporar a los estudiantes de educación superior del ciclo profesional, en los contenidos temáticos de las asignaturas del programa y la investigación. 
+35|La asignatura investigación, ciencia y tecnología para la Escuela de Ingeniería busca que el estudiante pueda conocer, comprender, identificar y aplicar las etapas que estructuran el método científico, con miras a elaborar una construcción monográfica o de ensayo científico, según las líneas disciplinares que soportan y especifican los programas académicos de la Escuela. Aplicando diferentes herramientas y métodos de selección, recolección, y organización de la información que apoyen la elaboración de un protocolo de investigación de carácter monográfico y/o de producción ensayística de corte científico. 
+36|La asignatura Investigación, Ciencia y Tecnología profundiza en el concepto de Investigación académica o formal, aclarando sus significados básicos y reflexionando sobre su sentido y aplica ción en el contexto colombiano desde la ingeniería. Así mismo, se les proporcionará a los estudiantes las principales herramientas para formular proyectos y recolectar e interpretar información con un propósito específico, de manera que desarrolle análisis pertinentes y adecuados para la práctica y el ejercicio profesional bajo el marco establecido para la generación de nuevo conocimiento y las directrices del Ministerio de Ciencia, Tecnología e Innovación. 
+37|Desarrollar en los estudiantes habilidades, tanto epistemológicas como procedimentales, para que la investigación en los programas de formación sea una actividad que connota la calidad y el compromiso de la CUN con la sociedad.
+38|PROPÓSITO DE FORMACIÓN DE LA UNIDAD CURRICULAR
+39|Aplicar el método científico a una temática escogida por el estudiante que se relacione con su entorno empresarial o contexto particular, en el marco de seis líneas estratégicas disciplinares de la Ingeniería que pretenden ubicar al estudiante en el top de la ciencia y la tecnología en su programa académico. 
+40|Aplicar la metodología de investigación mediante el aprendizaje basado en problemas (ABP) que comprende la identificación de una problemática asociado a su entorno laboral o vivencial y la propuesta de una solución que resuelva la pregunta de investigación.
+41|Explorar diferentes herramientas y métodos de selección, recolección, y organización de la información que apoyen la elaboración de un producto de investigación que pueda considerarse como un artículo de nuevo conocimiento, toda vez que es inédito y aborda una solución desde la perspectiva única del estudiante. 
+42|Conocer y comprender determinado contexto disciplinar, analizar conceptos o posturas teóricas, identificar problemas, definir variables, formular hipótesis y plantear perspectivas teóricas. 
+43|Afianzar y/o fortalecer procesos de investigación científica transdisciplinares, procesos lecto-escriturales, entre otros.
+44|COMPETENCIA DE LA UNIDAD CURRICULAR
+45|GENERALES: De carácter interpretativo, argumentativo y propositivo: 
+46|Identifica a partir de las líneas estratégicas propuestas para Ingeniería, las problemáticas que son susceptibles a ser estudiadas o investigadas en su entorno laboral o vivencial. 
+47|Revisa, selecciona, organiza y analiza distintas fuentes relevantes de información asociada al tema de estudio/investigación disciplinar. 
+48|Utiliza métodos de investigación para dar soporte científico al tema de estudio o de investigación. 
+49|Propone una postura de análisis frente a las teorías contemporáneas asociadas al tema de estudio. 
+50|Reflexiona y propone una solución que resuelva la pregunta de investigación asociada a la problemática que seleccionó de su entorno laboral o vivencial. 
+51|ESPECIFICAS: 
+52|Identifica problemas susceptibles de ser investigados en su contexto disciplinar según las líneas estratégicas propuestas. 
+53|Diseña estrategias y métodos de selección de información que le permitan dar elementos de análisis a su problemática y soluciones planteadas. 
+54|Reconoce la estructura para el planteamiento de un problema de i nvestigación, identificado en su entorno laboral y vivencial. 
+55|Desarrolla acciones propositivas que le permitan aportar con soluciones prácticas en el planteamiento de problemas de investigación, a partir de formación en Ingeniería y conocimiento de la ci encia y tecnología que se encuentra a la vanguardia de su Programa Curricular. 
+56|Identifica la importancia del método científico de investigación y los fundamentos necesarios en la construcción teórica de un ensayo científico. 
+57|Desarrolla habilidades de trabajo en grupo que permitan construir de forma colectiva un documento coherente con soporte en procesos de investigación.
+58|ELEMENTOS DE COMPETENCIA
+59|N°
+60|RELACIÓN DE ELEMENTOS DE LA UNIDAD CURRICULAR
+61|1
+62|SABER: 
+63|Desarrolla el tema de investigación acorde a sus alcances disciplinares y líneas de investigación de su programa académico acorde a procesos de diseño de investigación. 
+64|Identifica problemas de investigación conforme la necesidad de su entorno y define los objetivos bajo contextos de avance y jerarquización, definiendo el uso correcto de procedimientos básicos para la elaboración de proyectos de investigación.
+65|Establece la organización de un marco teórico, sus enfoques y argumentaciones sobre el tema que aborda, de acuerdo con los estándares metodológicos de la investigación científica, demostrando coherencia y dominio del tema.
+66|Propone una hipótesis y los resultados esperados de acuerdo al método y los objetivos definidos en su proyecto de investigación.
+67|Aplicar y define los métodos y las técnicas de investigación más adecuados para el desarrollo de su propuesta de investigación. 
+68|Desarrolla y establece procesos de viabilidad bajo contextos del marco administrativo, sustentando su proyecto de investigación, haciendo uso pertinente de las herramientas tecnológicas de presentación efectiva y del formato establecido institucionalmente, demostrando dominio y conocimiento del tema investigado.
+69|2
+70|HACER:
+71|Utilizar diversas fuentes de información, bajo normas de redacción científica, en la elaboración de documentos de investigación.
+72|Organizar, redactar y establecer el desarrollo teórico, bajo normas y procesos de especificación investigativa, que den cuenta de las alternativas de solución al problema de investigación, de acuerdo a fuentes de información primarias y secundarias. 
+73|Presentar y sustentar de manera argumentativa desde las habilidades disciplinares la propuesta de investigación e innovación tecnológica, según requerimientos iniciales.
+74|3
+75|SER:
+76|Reconoce y mantiene la escritura de su proceso de investigación bajo parámetros del respecto de los derechos de autor.
+77|PRERREQUISITOS Y CORREQUISITOS (UNIDAD CURRICULAR)
+78|N°
+79|PRERREQUISITOS
+80|CORREQUISITOS
+81|1
+82|Técnico profesional 
+83|Explorar para investigar 
+84|2
+85|Tecnológico 
+86|Creatividad y pensamiento innovador para escuela de ingenierías 
+87|3
+88|Profesional 
+89|No aplica 
+90|4
+91|Posgrado
+92|No aplica 
+93|UNIDADES DE CONOCIMIENTO
+94|N°
+95|TEMÁTICA
+96|SUBTEMÁTICA
+97|1
+98|Establecer parámetros de interacción docente-estudiante, estudiante-estudiante que garantice el desarrollo de la asignatura. 
+99|Introducción al curso
+100|1.Presentación y contextualización del syllabus: competencias, ejes temáticos, trabajos y evaluación de aprendizaje. 
+101|2.Explicación del producto final de la asignatura que consiste en la estructuración de un artículo de nuevo conocimiento que se entrega al docente, quien, en calidad de coautor, continuará con su proceso de sometimiento a publicación.
+102|2
+103|Fundamentos básicos: Método científico de investigación
+104|Método científico: Versión popular del método. 
+105|Etapas del método científico: 
+106|a. Planteamiento del problema 
+107|b. obtención de datos 
+108|c. procesamiento de la información 
+109|d. Análisis e interpretación de datos. 
+110|3
+111|4
+112|Exploración del máximo ente regulador de la investigación en el país, como lo es el Ministerio de Ciencia, Tecnología e Innovación. 
+113|Identificación de las 6 líneas estructurales en Ingeniería que soportan el proyecto del curso: 
+114|1. Internet de las cosas 
+115|2. Big Data 
+116|3. Inteligencia Artificial 
+117|4. Servicios de ingeniería (cloud; FinTech) 
+118|5. Uso de aplicaciones 
+119|6. Telemática
+120|Elección de una línea temática para desarrollo del proyecto en el curso: 
+121|Temática libre 
+122|Problemática en la empresa donde labora
+123|1. Indagar sobre los actores del SNCTI que regulan la investigación en el país, así mismo sobre los 8 focos estratégicos propuestos por la Misión de Sabios para desarrollar investigación y contribuir al crecimiento de la ciencia en el país. 
+124|2. Explorar oportunidades para realizar gestión de recursos a través de la presentación de proyectos de Investigación en Convocatorias, aplicación para becas, opciones de formación, movilidad internacional y otras opciones de financiación 
+125|3.Exposición por parte del docente de los temas estructurales de Ingeniería 
+126|5
+127|Tema de sesión: Prueba escrita parcial
+128|Talleres, sustentaciones, otros, asociadas con tipos de conocimiento, fuentes de información y caracterización del problema de investigación. 
+129|Primera entrega del avance del documento escrito tipo artículo de nuevo conocimiento. 
+130|6
+131|Método de identificación de problemas y sus causas 
+132|La pregunta de investigación: Sobre qué investigar.
+133|Técnicas para identificación de problemas y sus causas: espina de pescado, árbol de problemas. 
+134|Formulación de la pregunta de investigación según alcance del proyecto y capacidad para dar respuesta en el curso. Explicación sobre preguntas cerradas, abiertas, compuestas. 
+135|Identificación de las fuentes confiables y reconocidas en cada tema escogido. Fuentes oficiales que son la autoridad y los llamados a publicar. 
+136|Distinción del tipo de información que se requiere para dar marco a un problema de investigación: método de las 3D 
+137|7
+138|Formulación y estructuración del planteamiento del problema a partir de definiciones o enunciados propios disciplinares en relación al método científico.
+139|En relación a la formulación del problema, identificar, analizar, y responder: 
+140|¿Cuál es el estado actual?, ¿Cuáles son las evidencias visibles?, ¿Cuáles son las causas o implicaciones?, ¿Qué es necesario hacer para dar solución al problema?, ¿Cuáles son las posibles soluciones?
+141|8
+142|Identificación de bases de datos. Uso y aplicación de herramientas para recopilación y clasificación de información (ejemplo: Mendeley)
+143|Exploración en biblioteca de la CUN de al menos una de las siguientes bases de datos: EBSCO, SCIELO, REDALYC, LATINDEX. 
+144|Entrenamiento en herramientas para organización de información: Mendeley, Refworks, entre otras. 
+145|10
+146|Identificar posturas teóricas dentro del contexto disciplinar que conduzcan al planteamiento y resolución de problemas con carácter investigativo.
+147|En relación a la formulación del problema en tres capítulos según la metodología de las 3D:
+148|Definir 
+149|Dimensionamiento 
+150|11
+151|12
+152|Tema de sesión: Prueba escrita parcial
+153|Talleres, sustentaciones, otros, asociadas con tipos de conocimiento, fuentes de información y caracterización del problema de investigación. 
+154|Primera entrega del avance del documento escrito tipo artículo de nuevo conocimiento. 
+155|Identificar el contexto teórico según el tema de estudio: Revisión de literatura en fuentes documentales o fuentes de datos numéricas. 
+156|Métodos de recopilación y organización de la información mediante el uso de formatos especializados: Rea, otros. 
+157|Marco Teórico: antecedentes, bases teóricas, variables, definición de términos
+158|Revisión bibliográfica y consulta de fuentes en bases de datos o directorios en (Recursos electrónicos Cun: Scielo, Ebsco, Business Searching Interface, ProQuest, ISCI, Informe de Moda de Inexmoda, SaludLeyex.info, otras). 
+159|ESTRATEGIAS
+160|METODOLOGÍA PEDAGOGÍA Y DIDÁCTICA
+161|Núcleos Problémicos Integradores: Estos están definidos al interior de la estructura curricular del programa, a través de una asignatura semestral denominada asignatura integradora, la cual interrelaciona los conocimientos de las demás asignaturas del semestre por medio de una pregunta o situación problematizadora de carácter disciplinar, estableciéndola como una vía para el logro del desarrollo de competencias investigativas de los estudiantes, asegurando la articulación con su saber disciplinar específico.
+162|Plan de aula: Es una propuesta de trabajo concertada en el acuerdo pedagógico a partir de una propuesta de Proceso Dialectico sobre conceptos y experiencias (con ponente del grupo o externo al grupo); Laboratorio o simulación controlada; proyectos de aprendizaje u otra herramienta ABP establecida, en desarrollo de este ejercicio el estudiante debe aplicar lo aprendido y evidenciar las experiencias vividas en el proceso enseñanza-aprendizaje con la posibilidad de ampliarlo a los campos de la investigación y la proyección social.
+163|El proceso investigativo: En el acuerdo pedagógico se desarrolla la formulación del desarrollo investigativo partiendo desde la introducción de una técnica documental y/o de campo, la cual será el motor del proceso de recolección y análisis de la información cualitativa y/o cuantitativa, sobre la cual al término del curso se esperan obtener unos resultados, los cuales serán debatidos y condensados en un producto académico.
+164|Segundo idioma: apoyar el desarrollo de la asignatura con herramientas (talleres lecturas, videos y material de clase) en un segundo idioma.
+165|Metodología BANG: Esta es una construcción propia de CUN donde se fomenta la gestión creativa de respuestas a problemáticas, planes y toma de decisiones en la vida y las organizaciones, la cual opera desde tres niveles de complejidad (Gold, Platinum y Black Titanium).
+166|Pruebas estándar: Para dar cumplimiento a los artículos 47 y 48 del reglamento estudiantil (modificado mediante acuerdo 21 de 2018), al finalizar cada corte se aplicará una prueba bajo el estándar ICFES -SABER PRO, cuyas preguntas estarán orientadas a la medición del logro de las competencias de esta unidad curricular y su escala cualitativa y cuantitativa estarán determinadas por la tabla establecida en el artículo 52 del reglamento estudiantil.
+167| 
+168|Estas propuestas pueden implementarse por separado o integradas en el plan de curso y constituyen un cambio de paradigma para quienes están acostumbrados a memorizar, adicionalmente, refuerzan la aplicación del modelo pedagógico Cunista en el aula (física o virtual) de acuerdo con establecido en el PEC y desarrollado en el PEP de PAE.
+169|METODOLOGÍAS COMPLEMENTARIAS
+170|Clase Magistral ☑; Seminario ☐; Seminario - Taller ☑; Taller ☐; Salida de campo ☐
+171|Prácticas ☐; Proyectos tutorados ☐; Otro(s) ☐: ______________________________ 
+172|MEDIOS Y AYUDAS EDUCATIVAS
+173|Aula estándar ☑; Auditorio ☐; Laboratorios ☐; Centro de prácticas ☐; Sala de Sistemas ☐
+174|Uso de software especializado ☐ - ¿Cuál software?
+175|Otros ☑ - Ms. Excel (DASHBOARD); Suite Google-online ; Simulador Empresarial BUSINESS GLOBAL / GLOBAL2020 / TECHCOMPANY / BOLSAMILLONARIA / 
+176|RECURSOS BIBLIOGRÁFICOS
+177|REFERENCIAS BIBLIOGRÁFICAS
+178|Alvarez, A. B., Alvarez, H., Cedeño, J. G., & Sanz Bobi, J. de D. (2018). Relación Entre la Investigación y la Docencia Activa. Un Punto de Vista Cualitativo de Estudiantes de Ingeniería. 2518-6841 ; KnE Engineering; 6th Engineering, Science and Technology Conference - Panama 2017 (ESTEC 2017); 129-14 https://doi.org/10.18502/keg.v3i1.1420 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsbas&AN=edsbas.E4B93AA2&lang=es&site=eds-live 
+179|Alvira, L. E. (2018). La co-creación como herramienta y trabajo con comunidades. Experiencias para el abordaje de la investigación: herramientas para jóvenes investigadores. (pp. 15-33). Corporación Unificada Nacional de Educación Superior. 
+180| 
+181|Bazeley, P. (2015). Mixed Methods in Management Research: Implications for the Field. Electronic Journal of Business Research Methods, 13(1), 27–35. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=111882762&lang=es&site=eds-live
+182|Catherine Fraser. (2018). Love the Questions: Reclaiming Research with Curiosity and Passion. Stenhouse Publishers. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1906446&lang=es&site=eds-live
+183|Cecilia Navia Antezana, & Ana Hirsch Adler. (2019). Articulaciones diversas entre las labores de investigación y de docencia según los académicos de posgrado de la UNAM. Perfiles Educativos, 41, 8–20. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.doi.dedup.....3e53f5ffc8ebbf5b6b65455358eb713d&lang=es&site=eds-live
+184|Cen, C. A. M., Pérez, G. Z., & May-Cen, I. D. J. (2018). El Proyecto Integrador, Estrategia Que Fortalece La Práctica Profesional Y Laboral Del Ingeniero en Formación. https://doi.org/10.13140/rg.2.2.13325.03045 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.doi...........d0e6cfcc3942d0cb2f36b311cba290c7&lang=es&site=eds-live   
+185|Chikahiko Yata, Tadashi Ohtani, & Masataka Isobe. (2020). Conceptual framework of STEM based on Japanese subject principles. International Journal of STEM Education, 7(1), 1–10. https://doi.org/10.1186/s40594-020-00205-8 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsdoj&AN=edsdoj.8fefcffa45304501a35c4eb420ac87f2&lang=es&site=eds-live  
+186|Chittaranjan Andrade. (2021). The Limitations of Quasi-Experimental Studies, and Methods for Data Analysis When a Quasi-Experimental Research Design Is Unavoidable. Indian Journal of Psychological Medicine, 43. https://doi.org/10.1177/02537176211034707. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsdoj&AN=edsdoj.332a9946c824490da122fd6fb271707c&lang=es&site=eds-live
+187|Colciencias. (2019). Tipología de proyectos calificados como de carácter científico, tecnológico e innovación. Versión 5. Recuperado de https://www.colciencias.gov.co/innovacion/beneficios-tributarios/tipologia-proyectos  
+188|Colciencias. (Noviembre de 2018). Modelo de medición de grupos de investigación, desarrollo tecnológico o de innovación y de reconocimiento de investigadores del sistema nacional de ciencia, tecnología e innovación, Año 2018. Recuperado de https://www.colciencias.gov.co/convocatorias/investigacion/convocatoria -nacional-para-elreconocimiento-y-medicion-grupos-0  
+189|Cortina, J. M. (2020). On the Whys and Hows of Quantitative Research. Journal of Business Ethics, 167(1), 19–29. https://doi.org/10.1007/s10551-019-04195-8. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=146636556&lang=es&site=eds-live
+190|Difference between Quantitative and Qualitative Research Question- PICO vs. SPIDER. (2021). American Academic Scientific Research Journal for Engineering, Technology, and Sciences; Vol 77 No 1 (2021); 188-199. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsoai&AN=edsoai.on1243449887&lang=es&site=eds-live
+191|Eugene F. Stone-Romero. (2020). Research Methods in Human Resource Management: Toward Valid Research-Based Inferences. Information Age Publishing. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2474006&lang=es&site=eds-live
+192|Flora Hammond, M., James Malec, P., & Todd G. Nick, P. (2015). Handbook for Clinical Research : Design, Statistics, and Implementation. Demos Medical. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=844462&lang=es&site=eds-live
+193|Gauch, H. G. (2012). Scientific Method in Brief. Cambridge University Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=527886&lang=es&site=eds-live 
+194|Godwill, E. A. (2015). Fundamentals of Research Methodology : A Holistic Guide for Research Completion, Management, Validation and Ethics. Nova Science Publishers, Inc. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1023403&lang=es&site=eds-live
+195|Gómez-Escorcha, J. A., Isea Araque, N., & López Lara, V. de las M. (2020). Competencias investigativas y su influencia en la formulación de proyectos de investigación en la Universidad Valle del Momboy. Actualidades Pedagógicas. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsbas&AN=edsbas.8AEEA780&lang=es&site=eds-live 
+196|Gray, D. M. (2022). Doing Qualitative Research in a Digital World. Academy of Management Learning & Education, 21(2), 340–342. https://doi.org/10.5465/amle.2021.0459.https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=157698655&lang=es&site=eds-live
+197|Guía resumen del Estilo APA. Séptima edición. Recuperado de Organización para la Cooperación y Desarrollo Económicos. OCDE. (2002). Manual de Frascati. Medición de las actividades científicas y tecnológicas. Propuesta de norma práctica para encuestas de investigación y desarrollo experimental. Fundación Española para la Ciencia y Tecnología (FECYT): Madrid. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsbas&AN=edsbas.5BD5A9D4&lang=es&site=eds-live 
+198|Hernandez, J. S. (2018). La observación como técnica: Una propuesta de análisis para los jóvenes investigadores. Experiencias para el abordaje de la investigación: herramientas para jóvenes investigadores. (pp. 24-43). Corporación Unificada Nacional de Educación Superior. 
+199|Hernández-Sampieri, R., Fernández, C. y Baptista, P. (2014). El inicio del proceso cualitativo: planteamiento del problema, revisión de la literatura, surgimiento de las hipótesis e inmersión en el campo. Recuperado de https://administracionpublicauba.files.wordpress.com/2016/03/hernc3a1ndez-samipieri-cap-12-el-inicio-delproceso-cualitativo.pdf  
+200|Hernández-Sampieri, R., Fernández, C. y Baptista, P. (2014). Metodología de la Investigación. 6a ed. México: Mc Graw Hill. 
+201|John Adams, Hafiz T. A. Khan, & Robert Raeside. (2014). Research Methods for Business and Social Science Students: Vol. Second edition. Sage Publications Pvt. Ltd. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=784882&lang=es&site=eds-live
+202|Jones, E. P., Brennan, E. A., & Davis, A. (2020). Evaluation of literature searching and article selection skills of an evidence-based practice team. Journal of the Medical Library Association, 108(3), 487–493. https://doi.org/10.5195/jmla.2020.865. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=lxh&AN=144426211&lang=es&site=eds-live
+203|Juntunen, M., & Lehenkari, M. (2021). A Narrative Literature Review Process for an Academic Business Research Thesis. Studies in Higher Education, 46(2), 330–342. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=eric&AN=EJ1283992&lang=es&site=eds-live
+204|Koen van der Gaast, Machiel Keestra, Laura Koenders, Steph Menken, & Ger Post. (2020). Chapters on Interdisciplinary Research and Research Skills. Amsterdam University Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2669163&lang=es&site=eds-live
+205|Leatherdale, S. T. (2019). Natural Experiment Methodology for Research: A Review of How Different Methods Can Support Real-World Research. International Journal of Social Research Methodology, 22(1), 19–35. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=eric&AN=EJ1200117&lang=es&site=eds-live
+206|MAHOOD, Q., VAN EERD, D., & IRVIN, E. (2014). Searching for grey literature for systematic reviews: challenges and benefits. Research Synthesis Methods (Print), 5(3), 221–234. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edscal&AN=edscal.28803313&lang=es&site=eds-live
+207|Maldonado, J. E.(2018). Metodologia de la investigación social. Ediciones de la U.
+208|Marco J. Haenssgen. (2019). Interdisciplinary Qualitative Research in Global Development : A Concise Guide. Emerald Publishing Limited. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2255570&lang=es&site=eds-live 
+209|Marianne Fallon. (2016). Writing up Quantitative Research in the Social and Behavioral Sciences. Brill. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1288374&lang=es&site=eds-live
+210|Martinez Garcia, M., & Romero Faz, D. (2016). Aprendizaje Basado en Problemas mediante un modelo de Teleenseñanza. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsred&AN=edsred.10366.132129&lang=es&site=eds-live 
+211|McConville, M., & Chui, W. H. (2017). Research Methods for Law: Vol. Second edition. EUP. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1584996&lang=es&site=eds-live
+212|Neupane, N. (2021). Conceptualizing the Pathways of Literature Review in Research. Journal of Practical Studies in Education, 2(1), 1–7. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=eric&AN=EJ1315477&lang=es&site=eds-live
+213|Parra, B. (2013). Proyecto integrador como estrategia formativa para el fortalecimiento de competencias específicas y transversales en la Facultad de Ingeniería. Colombia.
+214|Patil, S. (2020). Research Methodology in Social Sciences. NIPA. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2377709&lang=es&site=eds-live
+215|Patricia Leavy PhD. (2014). The Oxford Handbook of Qualitative Research. Oxford University Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=779511&lang=es&site=eds-live
+216|Paul Levay, & Jenny Craven. (2019). Systematic Searching : Practical Ideas for Improving Results. Facet Publishing. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1817128&lang=es&site=eds-live
+217|Phil Bradley. (2017). Expert Internet Searching: Vol. Fifth edition. Facet Publishing. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1548700&lang=es&site=eds-live
+218|Publication manual of the American Psychological Association (7th ed.). (2020). https://doi.org/10.1037/0000165-000 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.doi...........5bc2aca41596a8a7372f0a79f2e78cad&lang=es&site=eds-live 
+219|Rajen K. Gupta, & Richa Awasthy. (2015). Qualitative Research in Management : Methods and Experiences. Sage Publications Pvt. Ltd. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=971813&lang=es&site=eds-live
+220|Reddy, C. D. (2020). Teaching Research Methodology: Everything’s a Case. Electronic Journal of Business Research Methods, 18(2), 178–188. https://doi.org/10.34190/JBRM.18.2.009. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=148198919&lang=es&site=eds-live
+221|Robert Nola, & Howard Sankey. (2014). Theories of Scientific Method : An Introduction. Routledge. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=929387&lang=es&site=eds-live
+222|Rodríguez, M.; Domínguez de la Rosa, L.; Pérez J.; Molina, J. (2016). El aprendizaje basado en problemas en estudiantes de terapia ocupacional. Opción, vol. 32, núm. 10, 2016, pp. 458-568. 
+223|S. Prasitpong, & S. Rakkapao. (2019). Investigation of Thai university students’ scientific reasoning abilities. Journal of Physics: Conference Series, 1287, 012020. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.doi...........f0d7c44069babe17c792e0a0461e1c84&lang=es&site=eds-live 
+224|Skoczylas, M. J. (2019). Congruence in Research Question, Design, and Analysis: A Tutorial on the Measurement of Change in Clinical Speech and Language Research. Language, Speech, and Hearing Services in Schools, 50(2), 167–178. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=eric&AN=EJ1213920&lang=es&site=eds-live
+225|Vélez Villavicencio, C. E., Universidad San Gregorio de Portoviejo, & Zambrano Montes, L. C. (2019). Diseño curricular de la carrera de Educación Inicial: hacia la interdisciplinariedad e integración de saberes. https://doi.org/10.36097/rsan.v0i28 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.od......3056..df945143c986331444b53267e41e1725&lang=es&site=eds-live 
+226|Xing Lu, Xing Wei Liu, & Wei Zhang. (2020). Diversities of learners’ interactions in different MOOC courses: How these diversities affects communication in learning. Computers & Education, 151, 103873. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsair&AN=edsair.doi...........079e2aecb732e12f49f6fd6c0ed00836&lang=es&site=eds-live 
+227|Zuluaga, C. P. & Alvira, L. E. (2018). Moda sostenible: retos del siglo XXI en la enseñanza-aprendizaje. Corporación Unificada Nacional de Educación superior CUN
+228|Zyphur, M. J., & Pierides, D. C. (2020). Making Quantitative Research Work: From Positivist Dogma to Actual Social Scientific Inquiry. Journal of Business Ethics, 167(1), 49–62. https://doi.org/10.1007/s10551-019-04189-6. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=146636555&lang=es&site=eds-live
+229|RESULTADO DE APRENDIZAJE ESPERADO DE UNIDAD CURRICULAR
+230|Como resultado de aprendizaje se espera la construcción de un proyecto de investigación, a través del uso de bases de datos especializadas y el diseño e implementación de metodologías y enfoques propios del ejercicio investigativo que responda al contexto particular de la Escuela de Ingeniería. Dicho proyecto está enmarcado en un contexto académico y debe obedecer tanto a los lineamientos del Ministerio de Ciencia y Tecnología como de la institución.
+231|MECANISMOS DE EVALUACIÓN DE LA DE UNIDAD CURRICULAR
+232|1. Evaluación formativa: Le permite al docente y al estudiante detectar las fortalezas y debilidades. Desarrollo de talleres continuos donde se evalúa la continuidad del proceso formativo. 
+233|2. Evaluación sumativa: de acuerdo con la exigencia de la institución para cualificar el nivel de competencias y está compuesta por tres cortes, Primer corte 30%, segundo corte 30% y tercer corte 40% y la escala de las mismas es de 0.1 a 5.0. 
+234|3. Establecimiento de problema de investigación, selección de protocolo de investigación, seguimiento y evaluación a protocolo de investigación. Presentación oral o escrita de protocolo de investigación. 
+235|4. Lo anterior debe estar directamente relacionado con la metodología ABP, los acuerdos pedagógicos logrados al inicio del curso y lo consagrado en el reglamento estudiantil. Alcance de los propósitos de formación establecidos para cada corte del período académico.
+236|SISTEMA DE EVALUACIÓN
+237|La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN.
+238|CORTE 1 = 30%
+239|CORTE 1 = 30%
+240|CORTE 1 = 30%
+241|EV 01
+242|EV 01
+243|EV 01
+244|EV 01
+245|EV 01
+246|EV 01
+247|9.0%
+248|9.0%
+249|9.0%
+250|9.0%
+251|9.0%
+252|9.0%
+253|Talleres, Quices, Proyecto.
+254|Talleres, Quices, Proyecto.
+255|Talleres, Quices, Proyecto.
+256|Talleres, Quices, Proyecto.
+257|Talleres, Quices, Proyecto.
+258|Talleres, Quices, Proyecto.
+259|Nota: Los porcentajes de cada uno de los parciales y examen final deben cumplir los artículos 47 y 48 del Reglamento Estudiantil.
+260|PERFIL DOCENTE
+261|ACADÉMICO: El docente-tutor debe contar con formación investigativa y académica en áreas relacionadas a la Ingeniería. Se espera cuente con formación posgradual y/o experiencia soportada en el desarrollo de proyectos de investigación. 
+262|OBSERVACIONES: Deberá contar con una experiencia en Investigación mínima de un (1) año y experiencia en Docencia Universitaria mínima de dos (2) años. 
+263|EXPERIENCIA: Por excepción y según los intereses de la Institución se seleccionarán personas con menor tiempo de experiencia.
+264|HISTÓRICO DE CAMBIOS
+265|CONTROL DE ACTUALIZACIÓN DEL CONTENIDO
+266|Fecha de actualización
+267|Descripción del Cambio
+268|Aprobado por
+269|01/07/2020
+270|Ajuste contenidos temáticos semanales
+271|C-EMP
+272|18/11/2020
+273|Ajuste en contenidos temáticos semanales
+274|C-EMP
+275|18/11/2020
+276|Ajuste en sistema de evaluación 
+277|C-EMP
+278|01/03/2022
+279|Ajuste En: Descripción de la unidad curricular, propósito de formación de la unidad curricular, competencia de la unidad curricular, unidades de conocimiento, metodología pedagogía y didáctica, referencias bibliográficas, resultado de aprendizaje esperado en la unidad curricular, mecanismos de evaluación, sistema de evaluación y perfil docente. 
+280|CONTROL DE APROBACIÓN
+281|Realizado por
+282|Validado por
+283|Aprobado por
+284|Fecha de Aprobación
+285|CONTROL DE CAMBIOS 
+286|FECHA
+287|VERSIÓN DEL DOCUMENTO QUE SE MODIFICA
+288|VERSIÓN ACTUAL DEL DOCUMENTO
+289|DESCRIPCIÓN DE LA MODIFICACIÓN
+290|02/06/2016
+291|-
+292|00
+293|Versión inicial del documento.
+294|10/12/2018
+295|00
+296|01
+297|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas.
+298|01/07/2020
+299|01
+300|02
+301|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas.
+302|07/10/2020
+303|02
+304|03
+305|Actualización general del formato por la versión vigente, cambio en algunas denominaciones y lineamientos brindados.
+306|01/03/2022
+307|03
+308|04
+309|Actualización general del formato por la versión vigente, cambio en algunas denominaciones y lineamientos brindados.
+310|ELABORÓ: Dirección de Aseguramiento de la Calidad Institucional y Gestión Académica.
+311|REVISÓ: Dirección de Planeación y Aseguramiento.
+312|APROBÓ: Dirección de Aseguramiento de la Calidad Institucional y Gestión Académica, Dirección de Planeación y Aseguramiento.
+313|FECHA: 27/02/2022
+314|FECHA: 28/02/2022
+315|FECHA: 01/03/2022

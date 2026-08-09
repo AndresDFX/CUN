@@ -1,0 +1,223 @@
+[
+  {
+    "type": "bullets",
+    "title": "Doce minutos que valen un semestre",
+    "bullets": [
+      "La sustentación es la **evaluación final** del trabajo de grado, ante pares y ante los **jurados** asignados por la Dirección del Programa.",
+      "  Su peso dentro de la evaluación está definido en la Presentación del Curso: revíselo, porque no es un trámite.",
+      "El desbalance que hay que asumir: **un semestre de trabajo se defiende en 10 a 12 minutos**.",
+      "  Todo lo que no quepa ahí, simplemente no será escuchado.",
+      "La escena típica: usted expone, los jurados escuchan sin gesticular, y al final vienen **tres o cuatro preguntas**.",
+      "  Muchos trabajos buenos pierden puntos en esas preguntas, no en la exposición.",
+      "Dato que tranquiliza: **los jurados preguntan casi siempre lo mismo**. Se pueden anticipar.",
+      "Hoy es el **ensayo**, no la defensa real. Aquí se equivoca uno gratis; allá no.",
+      "Salimos con dos productos: un **guion oral cronometrado** y **cinco preguntas difíciles ya respondidas**."
+    ],
+    "note": "Tenga a la mano su artículo, su póster y un **cronómetro** (el del celular). Hoy el reloj manda."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué evalúa realmente el jurado (y qué no)",
+    "bullets": [
+      "**1. Dominio del tema** — ¿entiende lo que hizo o lo está recitando?",
+      "  Se detecta al instante: quien domina explica con sus palabras; quien no, repite frases del documento.",
+      "**2. Claridad** — ¿un jurado de otra línea de énfasis entiende su trabajo?",
+      "  Si necesita definir cinco siglas para llegar al problema, perdió claridad.",
+      "**3. Coherencia del artículo** — ¿pregunta, objetivos, método, resultados y conclusiones cuentan la misma historia?",
+      "  Aquí es donde se paga cualquier objetivo huérfano de la Sesión 09.",
+      "**4. Capacidad de defensa** — ¿sostiene sus decisiones cuando lo cuestionan, sin ponerse a la defensiva?",
+      "**Lo que NO evalúa:** lo bonitas que sean sus diapositivas, cuántas animaciones tienen, ni cuánto texto lograron caber.",
+      "  Consecuencia directa: **las diapositivas se apoyan, no se leen**. Si usted lee, el jurado concluye que no domina.",
+      "Una frase para memorizar: **la slide muestra, la voz explica**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Reparto del guion oral: 10–12 minutos, bloque por bloque",
+    "headers": ["Bloque", "Min.", "Qué se dice exactamente"],
+    "rows": [
+      ["**Problema y pregunta**", "2", "Por qué importa el problema y cuál fue la pregunta, textual"],
+      ["**Objetivos**", "1", "El general y los específicos, sin leerlos de la slide"],
+      ["**Método**", "2–3", "Enfoque, población o caso, instrumento y por qué ese diseño"],
+      ["**Resultados y hallazgos**", "3", "Los hallazgos, con **1 o 2 datos fuertes** que se recuerden"],
+      ["**Discusión y conclusión**", "2–3", "Qué significa y la respuesta directa a la pregunta"],
+      ["**Aporte y cierre**", "1", "Qué le deja al conocimiento y a quién le sirve"]
+    ],
+    "note": "El tiempo **cuenta**: pasarse resta y quedarse muy corto también. El bloque que más se infla siempre es el **método**; el que más se descuida, el **aporte**.",
+    "col_w": [2.6, 0.9, 6.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se escribe un guion oral (no es leer el artículo)",
+    "bullets": [
+      "Un guion oral es **texto para decir**, no texto para leer. Se escribe distinto:",
+      "  Frases **cortas**, de una sola idea. Si al decirla se le acaba el aire, es muy larga.",
+      "  Voz activa: \"medí doce despliegues\", no \"fueron medidos doce despliegues\".",
+      "  Sin subordinadas encadenadas ni conectores académicos (*por consiguiente*, *en virtud de lo cual*).",
+      "Escríbalo en Google Docs **por bloques**, con el minuto anotado al margen de cada uno.",
+      "**Abra fuerte:** la primera frase decide si el jurado le presta atención los once minutos siguientes.",
+      "  Mala apertura: \"Buenas tardes, mi nombre es… y voy a hablar de mi trabajo de grado sobre…\".",
+      "  Buena apertura: \"En el equipo que estudié, poner una versión en producción tomaba 42 minutos y fallaba una de cada tres veces.\"",
+      "**Cierre fuerte:** la última frase es la que queda sonando cuando empiezan a preguntar.",
+      "Marque en el guion **tres o cuatro datos memorizables**: el dato del problema, el dato del resultado, el número de fuentes, una cita clave."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: los primeros dos minutos, palabra por palabra",
+    "bullets": [
+      "**(00:00)** \"Buenas tardes, jurados. Voy a contarles un problema muy concreto: en el equipo de desarrollo que estudié, **poner una versión en producción tomaba 42 minutos** y dependía de que alguien corriera las pruebas a mano.\"",
+      "**(00:25)** \"Eso tenía dos costos: tiempo perdido y errores que se colaban cuando había afán.\"",
+      "**(00:40)** \"De ahí salió mi pregunta de investigación: **¿en qué medida automatizar las pruebas de regresión reduce el tiempo de despliegue en un equipo pequeño?**\"",
+      "**(01:00)** \"Mi objetivo general fue evaluar ese efecto. Para lograrlo me propuse tres objetivos específicos: caracterizar el proceso actual, implementar la suite automatizada y medir el cambio.\"",
+      "**(01:30)** \"Ahora les cuento cómo lo hice.\" → **transición al bloque de método.**",
+      "Observe lo que hace el guion y lo que **no** hace:",
+      "  Empieza con un **dato**, no con una presentación personal larga.",
+      "  Enuncia la pregunta **textual**, tal como está en el artículo.",
+      "  Los objetivos se dicen **en tres palabras cada uno**, no se leen completos de la diapositiva.",
+      "  Cierra el bloque con una **transición explícita**: el jurado siempre sabe en qué parte va."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las preguntas que el jurado hace casi siempre",
+    "headers": ["Pregunta típica", "Qué está evaluando", "Respuesta modelo (corta)"],
+    "rows": [
+      ["¿Por qué eligió ese método?", "Coherencia interna", "\"Porque responde al objetivo específico 2; lo alineé en la matriz de consistencia.\""],
+      ["¿Cuáles son las limitaciones?", "Honestidad y criterio", "\"El tamaño de muestra y el contexto de un solo equipo; por eso no generalizo.\""],
+      ["¿Qué aporta su trabajo?", "Conciencia del aporte", "\"Evidencia local sobre X y un prototipo replicable en equipos similares.\""],
+      ["¿Cómo garantiza la validez?", "Rigor", "\"Instrumento alineado a los objetivos y triangulación con datos reales del proceso.\""],
+      ["¿Por qué no usó una muestra mayor?", "Manejo de la crítica", "\"Fue una limitación de alcance del periodo; lo dejo planteado como trabajo futuro.\""],
+      ["¿Qué autor sustenta esa afirmación?", "Dominio del marco", "\"X (2022), que reporta el mismo efecto en equipos de menos de diez personas.\""],
+      ["Si volviera a empezar, ¿qué cambiaría?", "Reflexión crítica", "\"Mediría desde la primera semana; empecé la línea base tarde.\""]
+    ],
+    "note": "Lleve **tres citas memorizadas** (autor y año). Poder decir \"eso lo sostiene X (2022)\" en vivo es la señal más fuerte de dominio del marco.",
+    "col_w": [2.7, 2.0, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "El \"no sé\": la respuesta que salva o hunde",
+    "bullets": [
+      "Le van a preguntar algo que no midió, no leyó o no previó. **A todos les pasa.** No es una falla; es una pregunta.",
+      "**Fórmula de tres partes** para responder sin inventar:",
+      "  **1. Reconocimiento breve** — \"Eso no lo medí en este estudio.\" (Una frase. Sin disculpas largas.)",
+      "  **2. Reconducción** — \"Lo que sí observé fue…\" y trae un hallazgo que sí domina.",
+      "  **3. Proyección** — \"Sería un trabajo futuro pertinente, porque…\".",
+      "**Respuesta que hunde:** inventar un número, un autor o un resultado. Un jurado con experiencia lo detecta en la repregunta, y ahí sí se acabó la credibilidad.",
+      "**Respuesta que también hunde:** ponerse a la defensiva —\"es que usted no entendió mi trabajo\"—.",
+      "  Si la pregunta parte de un malentendido, se aclara con calma: \"Permítame precisar: lo que medí fue…\".",
+      "Cuando no entienda la pregunta, **pida que se la repitan**. Es preferible a responder otra cosa.",
+      "Y algo simple que funciona: **respire y cuente hasta dos antes de responder**. Dos segundos de silencio se leen como reflexión, no como duda."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Las diapositivas de apoyo: reglas que sí se cumplen",
+    "bullets": [
+      "Número razonable para 10–12 minutos: **entre 8 y 12 diapositivas**. Más de eso obliga a correr.",
+      "**Una idea por diapositiva.** Si tiene dos ideas, son dos diapositivas.",
+      "**Prohibido el párrafo.** Si hay un párrafo en pantalla, usted lo va a leer y el jurado también: los dos hacen lo mismo y nadie escucha.",
+      "  Máximo **seis líneas** y **seis palabras por línea** como norte, no como ley.",
+      "La diapositiva más valiosa de toda la sustentación es la del **hallazgo con el gráfico**. Déle tiempo y no la tape con texto.",
+      "Incluya siempre estas cuatro: **pregunta**, **método en un esquema**, **resultado principal**, **conclusión/aporte**.",
+      "Deje una **diapositiva de reserva** al final con datos de detalle (tabla completa, ficha del instrumento).",
+      "  No se muestra en la exposición: se saca **solo si un jurado pregunta**. Ese gesto proyecta preparación.",
+      "El póster de la sesión anterior ya le resolvió el trabajo de síntesis: **reutilice sus bloques**."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes en la sustentación",
+    "boxes": [
+      ["advertencia", "\"Leo las diapositivas: así no se me olvida nada.\""],
+      ["aclaracion", "Las diapositivas **se apoyan, no se leen**. El jurado evalúa dominio, y leer es la evidencia más clara de que no lo hay. Si teme olvidar, lleve fichas con palabras clave, no párrafos."],
+      ["advertencia", "\"Si me preguntan algo que no sé, improviso algo que suene bien.\""],
+      ["aclaracion", "**Nunca invente.** Reconozca en una frase, reconduzca a lo que sí domina y proyéctelo como trabajo futuro. La honestidad breve suma; la invención se descubre en la repregunta."],
+      ["advertencia", "\"El tiempo no importa tanto; si me extiendo es porque tengo mucho que decir.\""],
+      ["aclaracion", "El tiempo **es parte de la evaluación**. Pasarse muestra falta de síntesis. Ensaye con cronómetro hasta caber en 10–12 minutos con margen."],
+      ["advertencia", "\"Meto todo el artículo en las diapositivas para no dejar nada por fuera.\""],
+      ["aclaracion", "Diapositivas con párrafos = lectura garantizada. Use frases y visuales; **el contenido lo pone su voz**, no la pantalla."],
+      ["info", "Ensayar en voz alta, de pie y con reloj es la única preparación que de verdad funciona. Leer el guion en silencio no cuenta como ensayo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso del ensayo (lo que haremos ahora mismo)",
+    "bullets": [
+      "**1.** Abra su guion oral por bloques y ponga el cronómetro del celular a la vista.",
+      "**2.** Póngase **de pie** y expóngalo **en voz alta**, completo, sin detenerse a corregir.",
+      "**3.** Su pareja anota tres cosas: **el tiempo de cada bloque**, **cuándo usted leyó la slide** y **qué no se entendió**.",
+      "**4.** Al terminar, revisen juntos: ¿qué bloque se pasó? Casi siempre es el método o la contextualización.",
+      "**5.** **Recorte ahí**, no en los resultados. Los resultados son lo que el jurado vino a escuchar.",
+      "**6.** Su pareja le hace **dos preguntas difíciles** de la lista de preguntas típicas, sin avisar cuáles.",
+      "**7.** Responda con la fórmula de tres partes. Su pareja anota si usted **inventó** algo.",
+      "**8.** Cambien de rol y repitan el ciclo completo.",
+      "**9.** Cada uno anota sus **tres correcciones prioritarias** y las aplica en el guion antes de entregar."
+    ],
+    "note": "Grabarse con la grabadora de voz del celular y escucharse después es incómodo y es, de lejos, el ejercicio que más rápido mejora la exposición."
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Guion oral y preguntas anticipadas (20 minutos, en parejas)",
+    "bullets": [
+      "**Consigna literal.** Trabajen en parejas y entregue **S12_GuionSustentacion_Apellido** con:",
+      "  **(1) El guion oral por bloques**, con los **minutos asignados** a cada uno y el tiempo real que le tomó en el ensayo.",
+      "  **(2) Cinco preguntas difíciles** que anticipa del jurado, **cada una con su respuesta corta** (máximo cuatro líneas).",
+      "  **(3)** Al menos **una** de las cinco debe ser una pregunta que usted **no sabe responder**, resuelta con la fórmula de tres partes.",
+      "  **(4) Las tres correcciones** que su pareja le señaló y qué hizo con cada una.",
+      "**Dinámica:** uno sustenta con cronómetro mientras el otro toma notas de tiempo y claridad; a los 10 minutos, cambian.",
+      "**Criterio de éxito (verificable):**",
+      "  El guion completo **cabe en 10–12 minutos** cronometrados de verdad, no estimados.",
+      "  Durante el ensayo **no leyó ninguna diapositiva** (su pareja lo certifica).",
+      "  Las cinco respuestas son **concretas, cortas y honestas**; ninguna inventa un dato.",
+      "  Puede decir **tres citas (autor, año)** de memoria."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Rúbrica de autoobservación: cómo se ve un ensayo bien hecho",
+    "headers": ["Aspecto", "Todavía flojo", "Listo para jurados"],
+    "rows": [
+      ["**Tiempo**", "Se pasa o no llega; no lo midió", "10–12 min cronometrados, con margen"],
+      ["**Uso de la slide**", "La lee; le da la espalda al jurado", "Mira al frente; la slide solo apoya"],
+      ["**Dato fuerte**", "No hay un número memorable", "1–2 datos que el jurado repetiría"],
+      ["**Marco teórico**", "\"Según varios autores…\"", "Cita 3 autores con apellido y año"],
+      ["**Respuesta al no sé**", "Inventa o se queda callado", "Reconoce, reconduce y proyecta"],
+      ["**Cierre**", "\"Bueno, eso sería todo\"", "Frase de aporte, clara y preparada"],
+      ["**Postura**", "Sentado, voz baja, muletillas", "De pie, pausas, ritmo controlado"]
+    ],
+    "col_w": [2.2, 3.6, 3.7]
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist de autoevaluación antes de sustentar",
+    "bullets": [
+      "☐ Mi guion está **escrito por bloques** y cada bloque tiene su minuto asignado.",
+      "☐ Lo **cronometré completo** al menos dos veces y cabe en el tiempo con margen.",
+      "☐ Puedo enunciar mi **pregunta de investigación de memoria**, textual.",
+      "☐ Tengo **1 o 2 datos fuertes** listos para decir sin mirar la pantalla.",
+      "☐ Sé responder **por qué elegí ese método**, en una frase.",
+      "☐ Tengo mis **limitaciones** claras y las digo yo antes de que me las pregunten.",
+      "☐ Preparé **cinco preguntas difíciles** con respuesta corta.",
+      "☐ Memoricé **tres citas** (autor y año) que sostienen mis afirmaciones clave.",
+      "☐ Mis diapositivas **no tienen párrafos** y son entre 8 y 12.",
+      "☐ Tengo una **diapositiva de reserva** con datos de detalle por si preguntan.",
+      "☐ Ensayé **de pie y en voz alta**, no leyendo en silencio.",
+      "☐ Verifiqué que mi **aporte** queda dicho de forma explícita en el cierre."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Suba** `S12_GuionSustentacion_Apellido` a CDigital — [URL CDigital — campus del curso pendiente].",
+      "**Ensaye tres veces más** en casa: de pie, en voz alta y con reloj. La tercera vez suele ser la primera buena.",
+      "**Grábese** con el celular y escúchese: cuente sus muletillas y los momentos donde se apura.",
+      "**Amplíe su lista de preguntas** de cinco a diez; entre más anticipe, menos improvisará.",
+      "**Repase el marco teórico** por última vez: la pregunta \"¿qué autor sustenta eso?\" llega casi siempre.",
+      "**Prepare lo logístico** de la defensa real: conexión, archivo del PPT en la nube y una copia en PDF por si falla el original.",
+      "**Próxima sesión:** armamos los **entregables para el repositorio institucional**, que es donde su artículo queda publicado.",
+      "  Llegue con el **artículo final**, los **anexos rotulados** y la **constancia de antiplagio**."
+    ]
+  }
+]

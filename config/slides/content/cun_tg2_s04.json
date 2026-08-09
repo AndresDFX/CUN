@@ -1,0 +1,193 @@
+[
+  {
+    "type": "bullets",
+    "title": "Antes de escribir su solución: ¿alguien ya la intentó?",
+    "bullets": [
+      "Escena frecuente en Ingeniería de Sistemas: se invierten semanas en una idea y aparece un artículo de 2021 que ya la probó… y que además dice por qué falló.",
+      "  Ese artículo no le quita el proyecto: le ahorra el error y le da vocabulario técnico.",
+      "**Antecedentes** = estudios previos que abordaron un problema parecido al suyo: qué hicieron, cómo y qué encontraron.",
+      "Sirven para dos cosas muy concretas:",
+      "  **Demostrar que su problema es real** y que otros ya lo reconocieron.",
+      "  **No repetir lo ya hecho** y, sobre todo, ubicar el **vacío** que su proyecto viene a llenar.",
+      "Hoy se sale con **cuatro fichas** de antecedentes bien hechas y un **párrafo puente** que las hila.",
+      "El flujo detallado de búsqueda y citación está en la guía práctica de herramientas de la carpeta del curso."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las tres piezas del marco referencial no son lo mismo",
+    "headers": ["Pieza", "Qué contiene", "Pregunta que responde", "Ejemplo del caso tickets"],
+    "rows": [
+      ["**Antecedentes**", "Estudios previos parecidos al suyo", "¿Quién ya hizo algo así y qué halló?", "Un estudio que clasificó tickets con aprendizaje automático en 2022"],
+      ["**Marco teórico**", "Teorías y modelos de fondo", "¿Con qué teoría entiendo el fenómeno?", "Qué es y cómo funciona la clasificación supervisada"],
+      ["**Marco conceptual**", "Definiciones operativas de sus términos", "¿Qué significa exactamente cada palabra en MI proyecto?", "\"Tiempo de atención\" = minutos entre apertura y cierre"],
+      ["**Marco contextual**", "El escenario real y acotado", "¿Dónde ocurre esto exactamente?", "El área de soporte TI de la empresa X"]
+    ],
+    "note": "Hoy solo se trabaja la primera fila. Confundir antecedentes con teoría es el error que más devoluciones genera en esta sección.",
+    "col_w": [2.2, 2.9, 3.2, 3.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué cuenta como antecedente y qué no",
+    "bullets": [
+      "**Sí cuentan:** artículos de revistas académicas, tesis y trabajos de grado, ponencias de congresos, informes técnicos de entidades reconocidas.",
+      "  Todos tienen algo en común: dicen **qué método usaron** y **qué encontraron**.",
+      "**No cuentan como antecedente:** blogs, videos de opinión, páginas comerciales de productos, ni respuestas de un asistente de inteligencia artificial.",
+      "  Un texto sin método verificable no es un estudio previo; es una opinión.",
+      "**Ventana temporal recomendada: últimos 5 años**, salvo que sea un trabajo fundacional del área.",
+      "  En tecnología, un estudio de hace diez años describe un estado del arte que ya no existe.",
+      "Un antecedente debe **parecerse a su proyecto** en al menos una de tres cosas: el problema, el método o el tipo de organización.",
+      "  Si no se parece en ninguna, es lectura interesante, pero no es antecedente suyo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La ficha de antecedente: cinco campos, ninguno opcional",
+    "headers": ["Campo", "Pregunta que responde", "Extensión sugerida"],
+    "rows": [
+      ["Referencia en APA 7", "¿De dónde salió?", "Una línea, generada en ZoteroBib"],
+      ["Objetivo del estudio", "¿Qué buscaban los autores?", "Una o dos líneas, con sus palabras"],
+      ["Método", "¿Cómo lo hicieron? (enfoque, muestra, técnica)", "Dos líneas"],
+      ["Hallazgo principal", "¿Qué encontraron?", "Dos líneas; incluya el dato si lo hay"],
+      ["**Aporte a mi proyecto**", "**¿Para qué me sirve a mí?**", "Una línea, obligatoria"]
+    ],
+    "note": "Sin la última línea la ficha es decorativa: se convierte en una lista de lecturas, no en un argumento. Empiécela siempre con \"Me aporta…\".",
+    "col_w": [3.0, 5.1, 3.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Nacional e internacional: por qué la mezcla es obligatoria",
+    "bullets": [
+      "**Fuente nacional o local** → demuestra **pertinencia**: que el problema también ocurre en el contexto colombiano.",
+      "  Sin ella, el lector pregunta \"¿y eso aplica aquí?\" y el proyecto pierde justificación.",
+      "**Fuente internacional** → trae el **estado del arte**: los métodos y resultados más recientes del área.",
+      "  Sin ella, el proyecto parece atrasado frente a lo que ya se hace en el mundo.",
+      "Buscar solo en español limita el volumen disponible; buscar solo en inglés desconecta del contexto local.",
+      "Dónde buscar, todo gratis y desde el navegador:",
+      "  **Google Académico** (scholar.google.com) — el barrido más amplio, ideal para arrancar.",
+      "  **SciELO** y **Redalyc** — producción académica iberoamericana y colombiana, en español.",
+      "  **Bases de datos de la biblioteca CUN** — con su usuario institucional, acceso a texto completo."
+    ],
+    "note": "Mínimo del entregable: al menos una fuente nacional o local y al menos una internacional."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se busca de verdad: consultas que sí traen resultados",
+    "bullets": [
+      "**Extraiga 3 a 5 palabras clave de su pregunta.** No busque la pregunta completa: los buscadores académicos no la entienden.",
+      "  De \"¿en qué medida un clasificador supervisado reduce el tiempo de clasificación de tickets?\" salen: clasificación · tickets · soporte · aprendizaje supervisado.",
+      "**Comillas** para frase exacta: \"clasificación de tickets\" trae menos resultados y mucho mejores.",
+      "**Filtro de años** en el panel izquierdo de Google Académico: desde hace cinco años.",
+      "**Traduzca los términos al inglés** y repita la búsqueda: ticket classification, help desk, supervised learning.",
+      "  Casi siempre hay tres veces más literatura en inglés sobre el mismo problema.",
+      "Si la búsqueda trae **miles** de resultados, está muy amplia: agregue el contexto (sector, tipo de organización).",
+      "Si trae **cero**, está muy estrecha: quite la palabra más específica y vuelva a intentar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Lectura estratégica: no se lee el artículo completo",
+    "bullets": [
+      "**Paso 1 — resumen (abstract):** en 30 segundos decide si el artículo se parece a su problema. Si no, se descarta sin culpa.",
+      "**Paso 2 — conclusiones:** ahí está el hallazgo principal, escrito por los propios autores.",
+      "**Paso 3 — método:** solo si el artículo sobrevivió a los pasos 1 y 2. Ahí saca enfoque, muestra y técnica.",
+      "**Paso 4 — referencias del artículo:** la mina de oro. Los autores ya hicieron la búsqueda por usted.",
+      "  Esta técnica se llama **bola de nieve**: de un buen artículo salen tres más.",
+      "Criterio de descarte sin remordimiento: si no puede escribir la línea \"me aporta…\", el artículo no entra a su documento.",
+      "Anote de una vez la referencia mientras lo tiene abierto; buscarla otra vez después cuesta el triple."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: una ficha completa, escrita",
+    "bullets": [
+      "**Referencia (APA 7):** apellido del autor, inicial. (2022). Título del estudio sobre clasificación automática de solicitudes de soporte. Nombre de la revista, volumen(número), páginas.",
+      "**Objetivo del estudio:** determinar si un modelo de clasificación automática mejora la asignación de solicitudes en una mesa de ayuda universitaria.",
+      "**Método:** enfoque cuantitativo; se entrenó un clasificador con el histórico de solicitudes de dos años y se comparó su categoría con la asignada por los analistas.",
+      "**Hallazgo principal:** el modelo coincidió con el analista en la mayoría de las categorías frecuentes, y falló en las categorías con pocos registros.",
+      "**Me aporta:** el criterio de \"coincidencia con el analista\" como forma de medir el acierto, que puedo adaptar a mi caso; y la advertencia de que las categorías poco frecuentes necesitan tratamiento aparte.",
+      "Note que **nada** está copiado del resumen original: todo está reescrito con palabras propias.",
+      "Note también que el aporte es **específico**: no dice \"me sirve de referencia\", dice qué se lleva."
+    ],
+    "note": "Regla de honestidad: si una frase quedó igual a la del autor, va entre comillas y con el número de página."
+  },
+  {
+    "type": "bullets",
+    "title": "El párrafo puente: lo que convierte la lista en argumento",
+    "bullets": [
+      "Cuatro fichas pegadas una tras otra son un catálogo. El **párrafo puente** las vuelve un razonamiento.",
+      "Fórmula de tres movimientos: **coinciden en… · difieren en… · ninguno abordó…**",
+      "**Ejemplo literal:** \"Los estudios revisados coinciden en que la clasificación automática reduce el tiempo de asignación en mesas de ayuda, y difieren en la técnica empleada y en el volumen de datos requerido. Sin embargo, ninguno se desarrolló en una mesa de ayuda de una empresa mediana colombiana, con categorías definidas localmente. Ese vacío es el que aborda el presente proyecto.\"",
+      "El tercer movimiento —el **vacío**— es la razón de ser de todo el bloque de antecedentes.",
+      "  Es lo que justifica que su proyecto exista y no sea una repetición.",
+      "Vacíos válidos y frecuentes: **contexto** no estudiado, **población** distinta, **método** no aplicado antes, **actualización** de un estudio viejo.",
+      "El párrafo puente va **después** de las fichas y **antes** del marco teórico: es la bisagra entre ambos."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se corrige en esta sesión",
+    "boxes": [
+      ["advertencia", "**\"Pego el resumen del artículo tal cual.\"** — Eso es plagio, aunque cite. Reescriba con sus palabras y agregue la línea \"me aporta…\"."],
+      ["advertencia", "**\"Antecedentes y marco teórico son lo mismo.\"** — No: antecedentes son estudios previos parecidos; el marco es la teoría de fondo del fenómeno."],
+      ["aclaracion", "**\"Cito ocho estudios y ya.\"** — Ocho fichas sueltas no son un argumento. Mejor cuatro bien hechas más el párrafo puente que muestra el vacío."],
+      ["info", "**\"Solo encuentro fuentes en español.\"** — Traduzca los términos técnicos y repita la búsqueda en inglés; luego integre ambas en el mismo párrafo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: de Google Académico a su documento, en APA 7",
+    "bullets": [
+      "**1.** Busque en **Google Académico** con 3 a 5 palabras clave, la frase exacta entre comillas y el filtro de los últimos cinco años.",
+      "**2.** Abra el resultado; lea resumen y conclusiones. Si sirve, guarde el enlace o el DOI.",
+      "**3.** Entre a **ZoteroBib** (zbib.org) y pegue el DOI, el ISBN o el enlace en la barra de búsqueda.",
+      "**4.** Seleccione el estilo **APA 7.ª edición** en la lista de estilos.",
+      "**5.** Revise la referencia generada: mayúsculas, año y nombre de la revista. La herramienta se equivoca y usted responde.",
+      "**6.** Copie con \"Copiar al portapapeles\" y pegue en su Google Docs **sin formato** (Ctrl+Shift+V).",
+      "**7.** En el texto, cite así: forma narrativa **Autor (2022) encontró que…** o forma entre paréntesis **(Autor, 2022)**.",
+      "**8.** Repita hasta tener las cuatro fichas y escriba el párrafo puente al final del bloque."
+    ],
+    "note": "El paso a paso ampliado está en la guía práctica de herramientas de escritura y citación de la carpeta del curso."
+  },
+  {
+    "type": "bullets",
+    "title": "Taller — 20 minutos de búsqueda y fichaje",
+    "bullets": [
+      "**Consigna:** en un documento llamado `S04_Antecedentes_Apellido`:",
+      "  **(1)** Busque y elija **cuatro antecedentes**, con al menos **uno nacional o local** y **uno internacional**.",
+      "  **(2)** Haga una **ficha** por cada uno con los cinco campos, redactada con sus palabras.",
+      "  **(3)** Genere las cuatro referencias en **APA 7** con ZoteroBib y péguelas en la sección Referencias.",
+      "  **(4)** Escriba el **párrafo puente** con la fórmula coinciden / difieren / vacío.",
+      "**Tiempo:** 20 minutos; el Docente acompaña la búsqueda de quienes no encuentren resultados.",
+      "**Criterio de éxito:** cada ficha tiene su línea \"me aporta…\" y el párrafo puente nombra explícitamente el vacío que llena su proyecto.",
+      "Si una búsqueda no da nada en tres intentos, cambie una palabra clave: el problema casi siempre es el vocabulario."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación antes de subir el archivo",
+    "bullets": [
+      "Hay cuatro fichas, con al menos una fuente nacional o local y una internacional.",
+      "Ninguna ficha contiene texto copiado del resumen original.",
+      "Las cinco casillas están llenas en las cuatro fichas, incluida \"me aporta…\".",
+      "Cada aporte es específico: dice qué se lleva, no \"sirve de referencia\".",
+      "Todas las fuentes son estudios con método verificable (nada de blogs ni páginas comerciales).",
+      "Las cuatro referencias están en APA 7 y revisadas a mano después de ZoteroBib.",
+      "El párrafo puente tiene los tres movimientos y termina nombrando el vacío.",
+      "El archivo se llama `S04_Antecedentes_Apellido`."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene la próxima sesión",
+    "bullets": [
+      "**Entrega:** suba `S04_Antecedentes_Apellido` a **CDigital** con las cuatro fichas y el párrafo puente.",
+      "  [URL CDigital — campus del curso pendiente]",
+      "**Autónomo 1:** aplique la técnica de bola de nieve: entre a las referencias de su mejor artículo y sume dos fuentes más.",
+      "**Autónomo 2:** pegue las fichas en la sección de marco referencial del documento que armó con la plantilla.",
+      "**Autónomo 3:** subraye en sus fichas los tres conceptos que más se repiten; serán la materia prima de la próxima sesión.",
+      "**Próxima sesión:** se pasa de los estudios previos a la **teoría de fondo**: el marco teórico organizado por constructos.",
+      "  Traiga abiertas su pregunta y estas cuatro fichas: de ahí salen los constructos."
+    ]
+  }
+]

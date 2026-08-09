@@ -1,0 +1,173 @@
+{
+  "_comentario": "Config de CURSO. Sobreescribe los defaults del perfil de universidad (config/universidades/fesna.json). Precedencia: usuario en chat > este archivo > perfil de universidad.",
+  "_version": "1.0",
+  "_fuente_tematica": "Curso propio FESNA 'Desarrollo de Aplicaciones Web' (9 sesiones). Front-end: JavaScript+DOM (S1-S3) y React+Hooks+Redux (S4-S9). Base Coursera: 'Interactividad con JavaScript' + 'Desarrollo de aplicaciones frontales con React'. Material anterior en Clases/*.gslides (Google Slides, solo en linea, no legibles localmente) -> se REGENERA desde este mapa.",
+  "perfil_universidad": "config/universidades/fesna.json",
+
+  "curso": {
+    "nombre": "Desarrollo de Aplicaciones Web",
+    "nombre_corto": "Desarrollo de Aplicaciones Web",
+    "programa": "Ingeniería de Sistemas",
+    "carpeta_salida": "Cursos/Desarrollo de Aplicaciones Web",
+    "estructura_salida": {
+      "presentacion": "Clases/Version vigente (nuevo dictado 2026)/Presentacion del curso.pptx",
+      "slides_sesion": "Clases/Version vigente (nuevo dictado 2026)/Sesion N/Sesion N - <Titulo>.pptx",
+      "guiones": "Clases/Version vigente (nuevo dictado 2026)/Guiones/Guion Docente Sesion N - <Titulo>.md",
+      "_nota": "v2 = material NUEVO mejorado, dentro de la carpeta Clases del curso (lo pidió el usuario). Deck del estudiante en Clases/Version vigente (nuevo dictado 2026)/ y Clases/Version vigente (nuevo dictado 2026)/Sesion N/; guiones del docente en Clases/Version vigente (nuevo dictado 2026)/Guiones/ con su subcarpeta Capturas/."
+    },
+    "tipo_asignatura": "B",
+    "naturaleza": "Teórico-Práctica · desarrollo de software front-end (JavaScript, DOM y React)",
+    "duracion_semanas": 3,
+    "n_sesiones": 9,
+    "modalidad_sesiones": "Sesiones sincrónicas teórico-prácticas",
+
+    "duracion_sesion_minutos": 105,
+    "distribucion_tiempo": {
+      "motivacion_encuadre_minutos": 15,
+      "enunciacion_minutos": 25,
+      "modelacion_minutos": 25,
+      "ejercitacion_simulacion_minutos": 25,
+      "cierre_minutos": 10,
+      "actividad_individual_minutos": 15,
+      "_nota": "6:00-7:45 PM = 105 min (1h45). Las 5 fases suman 100 min de plan dirigido; la actividad individual ocupa los 15 min finales."
+    },
+
+    "competencia": "Desarrollar interfaces web interactivas del lado del cliente, manipulando el DOM con JavaScript y construyendo aplicaciones de página única con React, sus Hooks y la gestión de estado global, según las buenas prácticas actuales del front-end.",
+    "resultado_aprendizaje": "Construir una aplicación web front-end funcional: manipular el DOM con JavaScript puro, componer interfaces con componentes y props de React, gestionar estado con useState/useEffect, manejar formularios con validación y centralizar el estado con Redux.",
+    "competencias_fundamentales_fesna": ["Pensamiento estructurado", "Resolución de problemas", "Pensamiento crítico"],
+
+    "niveles": {
+      "1": "El estudiante manipula el DOM y maneja datos con JavaScript puro (variables, tipos, eventos, arreglos, bucles y funciones).",
+      "2": "El estudiante construye interfaces con React: componentes, props, estado (useState) y efectos/consumo de APIs (useEffect).",
+      "3": "El estudiante integra formularios con validación y centraliza el estado global de la aplicación con Redux."
+    },
+
+    "mapa_sesiones": {
+      "1": {
+        "titulo": "Introducción a JavaScript y manipulación del DOM",
+        "subtitulo": "El lenguaje de la web y cómo cambiar la página en vivo",
+        "nivel": 1,
+        "foco": "Fundamentos de JavaScript y primeras manipulaciones del DOM: variables, tipos, funciones y seleccionar/cambiar elementos de la página.",
+        "ensenanzas": ["Qué es JavaScript, dónde se ejecuta (navegador) y cómo se incluye (<script>)", "Variables let/const/var y tipos primitivos (string, number, boolean, null, undefined)", "Operadores, template literals y == vs ===", "Funciones (parámetros, return) y console.log para depurar", "Qué es el DOM: árbol de nodos del HTML", "Seleccionar elementos: getElementById, querySelector/querySelectorAll", "textContent vs innerHTML; cambiar estilos y atributos", "Crear e insertar nodos: createElement, appendChild"],
+        "practica_examlab": "Tier 1: editor de código JavaScript de examlab (lógica pura, console.log). Tier 2: DOM en CodePen (entregable = link en Taller S1)."
+      },
+      "2": {
+        "titulo": "Eventos del usuario y programación interactiva",
+        "subtitulo": "Hacer que la página responda a clics, tecleo y formularios",
+        "nivel": 1,
+        "foco": "Modelo de eventos del navegador y cómo responder a la interacción del usuario cambiando el DOM.",
+        "ensenanzas": ["Qué es un evento y el modelo de eventos del navegador", "addEventListener / removeEventListener", "El objeto event: target, type, preventDefault()", "Eventos comunes: click, input, change, submit, mouseover, keydown", "Handlers y callbacks; funciones anónimas y arrow como handler", "Leer valores del usuario (input.value) y responder cambiando el DOM", "Nociones de propagación (bubbling)"],
+        "practica_examlab": "Tier 2: eventos + DOM en CodePen (entregable = link en Taller S2). En examlab: Test + Reto en vivo."
+      },
+      "3": {
+        "titulo": "Estructuras de datos: Arreglos y bucles en JavaScript",
+        "subtitulo": "Guardar, recorrer y transformar colecciones de datos",
+        "nivel": 1,
+        "foco": "Arreglos, bucles y métodos funcionales para procesar datos (lógica pura, sin DOM).",
+        "ensenanzas": ["Arreglos: creación, índice, length, push/pop/shift/unshift, indexOf/includes", "Bucles: for clásico, while, for...of", "Métodos funcionales: forEach, map, filter, reduce (qué devuelve cada uno)", "Funciones que reciben/retornan arreglos; arrow functions", "Objetos básicos y arreglos de objetos", "Buenas prácticas: map/filter vs mutar con push"],
+        "practica_examlab": "Tier 1 (100%): editor de código JavaScript de examlab; Taller con preguntas tipo 'codigo' (JavaScript) calificable en la plataforma."
+      },
+      "4": {
+        "titulo": "Introducción a React, ES6 y sintaxis JSX",
+        "subtitulo": "De manipular el DOM a describir la UI por componentes",
+        "nivel": 2,
+        "foco": "Qué problema resuelve React, el ES6 esencial y la sintaxis JSX.",
+        "ensenanzas": ["Qué resuelve React (UI declarativa por componentes) frente a JS + DOM manual", "ES6 esencial: arrow functions, destructuring, spread/rest, módulos import/export", "Qué es JSX: HTML dentro de JS; se transpila; expresiones con {}", "Reglas de JSX: un solo nodo raíz o Fragment, className, camelCase", "Componente funcional que retorna JSX (nombre en Mayúscula)", "CodeSandbox/StackBlitz para React sin instalar nada"],
+        "practica_examlab": "Tier 1: ES6 puro en el editor de código JS de examlab. Tier 2: React + JSX en CodeSandbox (entregable = link en Taller S4)."
+      },
+      "5": {
+        "titulo": "Componentes en React: Props y paso de datos",
+        "subtitulo": "Reutilizar piezas de UI y pasarles información",
+        "nivel": 2,
+        "foco": "Componer componentes reutilizables y pasar datos con props (flujo unidireccional).",
+        "ensenanzas": ["Componentes funcionales reutilizables y composición", "Props: pasar datos de padre a hijo; solo lectura", "Desestructurar props; valores por defecto", "props.children", "Renderizar listas con map y la importancia de key", "Flujo de datos unidireccional (top-down)"],
+        "practica_examlab": "Tier 2: CodeSandbox (entregable = Taller S5). Opcional Tier 1: pizarra/Mermaid con el árbol de componentes."
+      },
+      "6": {
+        "titulo": "Gestión del estado dinámico con el Hook useState",
+        "subtitulo": "Que la interfaz cambie sola cuando cambian los datos",
+        "nivel": 2,
+        "foco": "Estado local con useState y re-render.",
+        "ensenanzas": ["Qué es el estado y por qué re-renderiza la UI", "useState(inicial): lectura y actualización con el setter", "No mutar el estado directamente", "Actualización basada en el estado previo: setValor(prev => ...)", "Estado con objetos/arreglos: copiar con spread", "Reglas de los Hooks"],
+        "practica_examlab": "Tier 2: CodeSandbox (contador / lista interactiva, entregable = Taller S6)."
+      },
+      "7": {
+        "titulo": "Efectos secundarios y consumo de APIs con useEffect",
+        "subtitulo": "Traer datos del servidor y sincronizar la UI",
+        "nivel": 2,
+        "foco": "useEffect, dependencias y consumo de APIs con fetch.",
+        "ensenanzas": ["Qué es un efecto secundario y para qué sirve useEffect", "Arreglo de dependencias: [] (al montar), [dep] (cuando cambia), sin arreglo (cada render)", "Función de limpieza (cleanup)", "Consumo de API con fetch dentro de useEffect; async/await; manejo de errores", "Estados de una petición: cargando, éxito, error", "Relación con el ciclo de vida del componente"],
+        "practica_examlab": "Tier 2: CodeSandbox con fetch a una API pública (entregable = Taller/Proyecto S7). Opcional Tier 1: Mermaid del flujo del fetch."
+      },
+      "8": {
+        "titulo": "Manejo de Formularios y validación en React",
+        "subtitulo": "Capturar y validar datos del usuario correctamente",
+        "nivel": 3,
+        "foco": "Formularios controlados y validación en React.",
+        "ensenanzas": ["Componentes controlados: value + onChange enlazados al estado", "Manejar varios campos; onSubmit y preventDefault", "Validación: requeridos, formato (email), longitud; mensajes de error", "Estado del formulario y del error; deshabilitar el botón si es inválido", "Componente controlado vs no controlado (idea general)"],
+        "practica_examlab": "Tier 2: CodeSandbox (formulario controlado + validación, entregable = Taller S8)."
+      },
+      "9": {
+        "titulo": "Introducción a Redux y gestión de estado global",
+        "subtitulo": "Una única fuente de verdad para toda la aplicación",
+        "nivel": 3,
+        "foco": "Estado global con Redux: store, actions, reducers, dispatch.",
+        "ensenanzas": ["Por qué el estado global; problema del prop drilling", "Conceptos: store (única fuente de verdad), state, actions, reducers, dispatch", "Flujo unidireccional: dispatch(action) -> reducer -> nuevo state -> UI", "Reducers puros e inmutabilidad", "Redux Toolkit (slices) y conectar React (Provider, useSelector/useDispatch)"],
+        "practica_examlab": "Tier 2: CodeSandbox — Proyecto final que integre componentes + estado + Redux (entregable = Proyecto S9). Opcional Tier 1: Mermaid del flujo unidireccional."
+      }
+    },
+
+    "evaluacion": {
+      "tipo": "B",
+      "_nota": "ESQUEMA REAL vigente de este curso (NO el 50/40/10 por defecto del perfil). PREVALECE. La evaluación completa va SOLO en la Presentación del Curso.",
+      "coursera_progreso_ruta": 90,
+      "asistencia": 10,
+      "opcionales": "Participación en clase +0.3 (opcional) · Kahoot/Reto en vivo: 1er +0.5 / 2do +0.4 / 3er +0.3 (opcional)",
+      "evidencia_aprendizaje": "Progreso de los cursos base en Coursera (90%) + asistencia (10%). Los Test y Talleres de examlab son formativos/de refuerzo salvo que el docente decida ponderarlos.",
+      "esquema_ejemplo_presentacion": [
+        "Progreso Coursera = 90%",
+        "Asistencia (al final de la sesión) = 10%",
+        "Participación en clase = +0.3 (opcional)",
+        "Kahoot/Reto en vivo (bono por puesto) = 🥇 +0.5 · 🥈 +0.4 · 🥉 +0.3 (opcional)"
+      ]
+    },
+
+    "recursos_software": {
+      "_politica": "SIN software que se instale para evaluar. Práctica de 2 niveles: Tier 1 examlab (Test, Reto en vivo, editor de código JS, pizarra/Mermaid, Taller/Proyecto); Tier 2 herramientas ONLINE de navegador (CodePen para DOM; CodeSandbox/StackBlitz para React). LÍMITE CLAVE: el editor de código de examlab ejecuta Java/Python/JavaScript EN CONSOLA (sin DOM, sin React) -> solo JS de lógica pura; DOM y React se practican en CodePen/CodeSandbox y el entregable se adjunta como Taller/Proyecto en examlab.",
+      "plataforma_practica": {
+        "nombre": "examlab",
+        "url": "https://examlab.lovable.app/app",
+        "codigo": "Editor de código (Monaco + JDoodle): Java/Python/JavaScript en consola. Úsalo para JS de lógica pura (S1, S3, ES6 de S4).",
+        "test": "Exámenes/quizzes (cerrada/cerrada_multi/abierta) por sesión (formativos).",
+        "reto_en_vivo": "Kahoot por sesión (2-4 opciones, 1 correcta; la correcta se baraja); leaderboard del curso para el bono por puesto.",
+        "taller_proyecto": "Talleres/Proyecto para recibir el link de CodePen/CodeSandbox (o ZIP); calificación IA + manual con rúbrica.",
+        "insumos_prompts": "Cursos/examlab - Insumos IA (Web-2422V + Moviles-3274V).md (archivo CONSOLIDADO de ambos cursos; sección 'CURSO 1 · Desarrollo de Aplicaciones Web-2422V').",
+        "compatibilidad": "Cursos/Desarrollo de Aplicaciones Web/examlab - Compatibilidad y validacion.md"
+      },
+      "herramientas_online": [
+        "CodePen (https://codepen.io/) — pruebas rápidas de JavaScript, HTML y DOM",
+        "CodeSandbox (https://codesandbox.io/) — proyectos React sin instalar",
+        "StackBlitz — alternativa online para React"
+      ],
+      "recursos": ["Guiones de clase", "Videos y ruta de aprendizaje en examlab", "Coursera: 'Interactividad con JavaScript' y 'Desarrollo de aplicaciones frontales con React'"],
+      "coursera_url": "[URL del curso base en Coursera — confirmar con coordinación]",
+      "material_clases_url": "[hipervínculo que llena el docente — guiones/diapositivas/material]",
+      "herramientas_mundo_laboral": ["Visual Studio Code + Node.js", "React (create-react-app / Vite)", "Redux Toolkit", "Git/GitHub", "Chrome DevTools", "navegadores modernos"]
+    },
+
+    "tutor": {
+      "nombre": "Julian Andrés Castaño Espinosa",
+      "cargo": "Líder Técnico",
+      "formacion": "Ingeniero de Sistemas · Candidato a MsC en IA",
+      "correo": "julian.castano@lanuevaamerica.edu.co"
+    },
+
+    "logistica": {
+      "cuatrimestre": "[20 — CONFIRMAR con coordinación; el dictado anterior fue el No. 19]",
+      "horario": "Lunes, Miércoles y Viernes · 6:00–7:45 PM",
+      "fechas": "27/07/2026 – 15/08/2026",
+      "hora_inicio": "6:00 PM",
+      "sesiones_fechas": ["Lun 27/07/2026", "Mié 29/07/2026", "Vie 31/07/2026", "Lun 03/08/2026", "Mié 05/08/2026", "Vie 07/08/2026", "Lun 10/08/2026", "Mié 12/08/2026", "Vie 14/08/2026"]
+    }
+  }
+}

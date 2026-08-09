@@ -1,0 +1,228 @@
+[
+  {
+    "type": "bullets",
+    "title": "La cabeza y la cola: lo que se escribe de último y se lee de primero",
+    "bullets": [
+      "El cuerpo del artículo ya está. Falta lo que el lector ve **antes** y **después** de todo.",
+      "Orden real de lectura de un evaluador o de un investigador que encuentra su artículo:",
+      "  **1.** Lee el **título**. **2.** Lee el **resumen**. **3.** Mira las **palabras clave**. **4.** Salta a las **conclusiones**.",
+      "  Solo si algo de eso lo engancha, se devuelve a leer el método y los resultados.",
+      "Consecuencia incómoda: puede tener un excelente trabajo y que **nadie pase del resumen**.",
+      "Y hay algo más duro todavía: si sus **palabras clave** están mal elegidas, el artículo simplemente **no aparece** en las búsquedas.",
+      "Un trabajo invisible en un repositorio es, en la práctica, un trabajo que no existe.",
+      "Hoy escribimos cuatro piezas que se redactan **al final** y por buenas razones:",
+      "  **resumen**, **palabras clave UNESCO**, **conclusiones** y **lista de referencias**."
+    ],
+    "note": "Requisito de hoy: tener el artículo completo abierto. No se puede resumir lo que todavía no existe."
+  },
+  {
+    "type": "bullets",
+    "title": "El resumen (abstract): qué es y por qué va de último",
+    "bullets": [
+      "**El resumen es un espejo del artículo completo en ~200–250 palabras.** No es una introducción corta.",
+      "Se escribe al final por una razón práctica: **solo ahora sabe cuál fue su resultado principal**.",
+      "  Quien lo escribe en la Sesión 03 termina resumiendo un artículo que nunca ocurrió.",
+      "Debe **entenderse solo**, sin leer nada más: es la única parte que muchos leerán.",
+      "**Qué NO lleva un resumen:**",
+      "  **Citas**: nada de (Pérez, 2021) adentro. El resumen sintetiza su trabajo, no el de otros.",
+      "  **Abreviaturas sin definir**: si dice CI/CD, escríbalo completo la primera vez o no lo use.",
+      "  **Frases de anuncio**: \"en este artículo se hablará de…\", \"a continuación se presentará…\".",
+      "  **Tablas, figuras, viñetas o subtítulos**: es un párrafo continuo.",
+      "Prueba de calidad: si alguien lee solo el resumen, debe poder decir **qué hizo usted y qué encontró**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cinco piezas del resumen y cuánto ocupa cada una",
+    "headers": ["Pieza", "Qué responde", "Extensión aprox."],
+    "rows": [
+      ["**1. Contexto**", "¿Cuál es el problema y por qué importa?", "1–2 frases (~15 %)"],
+      ["**2. Objetivo**", "¿Qué se propuso este estudio?", "1 frase (~15 %)"],
+      ["**3. Método**", "¿Cómo se hizo? (enfoque, población, instrumento)", "1–2 frases (~25 %)"],
+      ["**4. Resultado principal**", "¿Qué se encontró? Con el dato fuerte", "1–2 frases (~30 %)"],
+      ["**5. Conclusión**", "¿Qué se concluye y para quién sirve?", "1 frase (~15 %)"]
+    ],
+    "note": "Truco de escritura: redacte **una frase por pieza**, en ese orden, y después una las cinco. Nunca empiece a escribir el resumen \"a ver qué sale\".",
+    "col_w": [2.2, 4.8, 2.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: un resumen armado pieza por pieza",
+    "bullets": [
+      "**Contexto:** \"El despliegue continuo de software depende de la confiabilidad de las pruebas; en equipos pequeños, las pruebas manuales alargan los tiempos de entrega y aumentan el riesgo de error.\"",
+      "**Objetivo:** \"Este estudio evaluó el efecto de automatizar las pruebas de regresión sobre el tiempo de despliegue de un equipo de desarrollo.\"",
+      "**Método:** \"Se aplicó un diseño cuasi-experimental de medición antes-después en un equipo de ocho desarrolladores, registrando doce despliegues y aplicando un cuestionario de percepción de confianza en la suite de pruebas.\"",
+      "**Resultado:** \"El tiempo promedio de despliegue se redujo de 42 a 18 minutos y la percepción de confianza aumentó, aunque se registraron dos fallos nuevos en producción.\"",
+      "**Conclusión:** \"La automatización de pruebas reduce significativamente el tiempo de despliegue en equipos pequeños, siempre que la cobertura de la suite se mantenga vigilada.\"",
+      "**Verificación final:** se cuenta con Herramientas → Recuento de palabras en Google Docs. Total: **211 palabras**. Dentro del rango.",
+      "  Si le sobran palabras, el recorte casi siempre está en el contexto, no en el resultado.",
+      "  Si le faltan, revise: probablemente omitió el **método** o el **dato** del resultado."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Tres resúmenes que se rechazan (y cómo se arreglan)",
+    "boxes": [
+      ["advertencia", "\"En el presente artículo se hablará sobre la importancia de la automatización de pruebas en el desarrollo de software moderno, tema de gran relevancia hoy en día.\""],
+      ["aclaracion", "Anuncia en vez de informar y no dice **nada** del estudio: ni objetivo, ni método, ni resultado. Arréglelo empezando por el problema concreto y llegando al dato."],
+      ["advertencia", "\"Según Pérez (2021) y Gómez (2020), la automatización mejora los tiempos; en este trabajo se confirma dicha postura.\""],
+      ["aclaracion", "El resumen **no cita**. Los autores viven en el marco y en la discusión. Aquí solo va lo que usted hizo y encontró."],
+      ["advertencia", "\"Se implementó CI/CD con TDD y BDD sobre un stack MERN aplicando KPI de MTTR.\""],
+      ["aclaracion", "Sopa de siglas sin definir: el lector de otra área lo abandona en la primera línea. Defina o reformule en lenguaje llano."],
+      ["info", "Cuente sus palabras antes de entregar. Un resumen de 90 palabras está incompleto; uno de 400 dejó de ser resumen."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Palabras clave: por qué NO se inventan",
+    "bullets": [
+      "Las palabras clave son las **etiquetas de búsqueda** de su artículo dentro de repositorios y bases de datos.",
+      "No se eligen por bonitas: se toman de un **vocabulario controlado**, y el estándar en educación superior es el **tesauro de la UNESCO**.",
+      "**¿Qué es un vocabulario controlado?** Una lista normalizada donde cada concepto tiene **un solo término oficial**.",
+      "  Si un autor escribe *software libre*, otro *código abierto* y otro *open source*, los tres trabajos quedan **dispersos** y nadie los encuentra juntos.",
+      "  El tesauro decide cuál es el término normalizado, y todos usan ese.",
+      "Beneficio directo para usted: su artículo **aparece** cuando alguien busca por el término oficial de su campo.",
+      "Cantidad: **3 a 5 términos**, no más. Cada palabra clave debe abrir una puerta distinta al trabajo.",
+      "Buena práctica: combinar **tema** + **método** + **contexto** (p. ej. un término del objeto, uno del enfoque y uno del sector).",
+      "Regla dura: **una palabra clave que ya está en el título aporta poco**; use las keywords para lo que el título no alcanzó a decir."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso para elegir palabras clave que sí funcionen",
+    "bullets": [
+      "**1.** Escriba en bruto 8 a 10 términos que describan su trabajo, tal como se le vengan a la cabeza.",
+      "**2.** Táchelos si son demasiado generales (*tecnología*, *sistemas*, *investigación*) o demasiado locales (el nombre de la empresa).",
+      "**3.** Busque cada término sobreviviente en el **tesauro UNESCO** y quédese con la forma **normalizada** que aparezca allí.",
+      "**4.** Contraste en **Google Scholar**: escriba el término y mire cuántos resultados relevantes salen.",
+      "  Si casi no hay resultados, nadie lo usa: cambie de término.",
+      "  Si salen miles pero de otro campo, el término es ambiguo: precíselo.",
+      "**5.** Verifique en **SciELO** o **Redalyc** cómo nombran ese mismo concepto los autores latinoamericanos: es el público que más lo va a buscar.",
+      "**6.** Deje **4 términos definitivos**, en minúscula, separados por punto y coma, en el orden de mayor a menor especificidad.",
+      "**7.** Guárdelos: los mismos términos irán después en los **metadatos del repositorio** (Sesión 13). Deben coincidir exactamente."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Del término inventado al término que sí se busca",
+    "headers": ["Lo que el estudiante escribió", "Problema", "Término normalizado propuesto"],
+    "rows": [
+      ["\"pruebitas automáticas\"", "Coloquial; no existe en ningún tesauro", "**automatización de pruebas**"],
+      ["\"tecnología\"", "Tan amplio que no filtra nada", "**ingeniería de software**"],
+      ["\"la empresa XYZ S.A.S.\"", "Local; nadie busca por ahí", "**pequeñas y medianas empresas**"],
+      ["\"cositas de calidad\"", "Impreciso y no académico", "**control de calidad**"],
+      ["\"CI/CD\"", "Sigla sin desarrollar", "**integración continua**"],
+      ["\"innovación disruptiva total\"", "Adjetivación de marketing", "**innovación tecnológica**"]
+    ],
+    "note": "Prueba definitiva: escriba su palabra clave en Scholar. Si los resultados **no se parecen a su trabajo**, no es su palabra clave.",
+    "col_w": [3.0, 2.8, 3.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Conclusiones: responden la pregunta, no repiten los resultados",
+    "bullets": [
+      "Error casi universal: pegar los resultados otra vez y llamarlo conclusiones. **No es lo mismo.**",
+      "Una conclusión **responde la pregunta de investigación** que usted formuló en la Sesión 02.",
+      "Cuatro piezas obligatorias, en este orden:",
+      "  **1. Respuesta a la pregunta**, en una frase directa.",
+      "  **2. Cumplimiento de los objetivos**: qué se logró de lo que se prometió.",
+      "  **3. Limitaciones**: hasta dónde llega lo que se puede afirmar.",
+      "  **4. Trabajo futuro**: qué debería hacer el siguiente investigador (o usted en otro momento).",
+      "Prohibiciones: **ni ideas nuevas ni datos que no aparecieron antes**. Nada puede estrenarse en las conclusiones.",
+      "**Conclusión pobre:** \"Se logró reducir el tiempo de despliegue de 42 a 18 minutos.\" → eso es un resultado, ya lo dijo.",
+      "**Conclusión correcta:** \"Automatizar las pruebas de regresión **sí reduce** el tiempo de despliegue en equipos pequeños; los tres objetivos específicos se cumplieron, aunque la evidencia se limita a un equipo y doce despliegues, por lo que se propone replicar la medición en varios equipos y durante un semestre completo.\""
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cuatro secciones de cierre: qué debe tener cada una",
+    "headers": ["Sección", "Qué debe tener", "Error típico que la hunde"],
+    "rows": [
+      ["**Resumen**", "Contexto → objetivo → método → resultado → conclusión, ~200–250 palabras", "Escribirlo primero; meterle citas"],
+      ["**Palabras clave**", "3–5 términos del tesauro UNESCO, verificados en Scholar", "Inventar términos \"bonitos\" o repetir el título"],
+      ["**Conclusiones**", "Respuesta a la pregunta + objetivos + límites + trabajo futuro", "Repetir resultados o traer ideas nuevas"],
+      ["**Referencias**", "APA 7, orden alfabético, sangría francesa, sin huérfanas", "Citas en el cuerpo que no están en la lista (y viceversa)"]
+    ],
+    "note": "Estas cuatro secciones son las que un jurado revisa **primero** cuando abre el documento. Son también las más rápidas de corregir: no se llegue con ellas a medias.",
+    "col_w": [1.9, 4.0, 3.1]
+  },
+  {
+    "type": "bullets",
+    "title": "Referencias sin huérfanas: el flujo con ZoteroBib (gratis, sin instalar)",
+    "bullets": [
+      "**Referencia huérfana** = desajuste entre el cuerpo y la lista. Ocurre en dos direcciones:",
+      "  **Tipo A:** cité a alguien en el texto y **no está** en la lista final. (El jurado lo lee como cita inventada.)",
+      "  **Tipo B:** hay una entrada en la lista que **nunca** se citó en el cuerpo. (Se lee como bibliografía de relleno.)",
+      "Requisitos de forma de la lista final: **APA 7**, **orden alfabético**, **sangría francesa**, y el **mínimo de fuentes** que exige la plantilla del programa.",
+      "Flujo en **ZoteroBib (zbib.org)** — navegador, gratis, sin cuenta ni instalación:",
+      "  **1.** Pegue el DOI, el ISBN o la URL de cada fuente y ZoteroBib arma la ficha sola.",
+      "  **2.** Corrija a mano lo que quede mal (mayúsculas del título, autores incompletos): la herramienta **ayuda**, no adivina.",
+      "  **3.** Seleccione el estilo **APA 7ª edición** y el idioma **español**.",
+      "  **4.** Copie la bibliografía completa y péguela en su documento; queda ordenada alfabéticamente.",
+      "  **5.** Aplique sangría francesa en Google Docs (Formato → Alinear y aplicar sangría → Opciones de sangría → Francesa, 1,27 cm).",
+      "**Auditoría anti-huérfanas:** recorra la lista final y busque cada apellido con **Ctrl+F** en el cuerpo. Cero coincidencias = entrada de más."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes de la sesión de cierre",
+    "boxes": [
+      ["advertencia", "\"Voy escribiendo el resumen desde ya para ir adelantando.\""],
+      ["aclaracion", "El resumen se escribe **al final**: solo cuando existe el resultado se sabe qué resumir. Adelantarlo produce un resumen que promete lo que el artículo no cumple."],
+      ["advertencia", "\"Pongo como palabras clave las que suenan más profesionales.\""],
+      ["aclaracion", "Elíjalas del **tesauro UNESCO** y verifíquelas en Scholar. Son vocabulario controlado para que el artículo sea **encontrable**, no adorno."],
+      ["advertencia", "\"En las conclusiones repito los resultados, que es lo importante.\""],
+      ["aclaracion", "Las conclusiones **responden la pregunta** e incluyen límites y trabajo futuro. Repetir resultados es desperdiciar la última sección que el jurado lee."],
+      ["advertencia", "\"Tengo citas en el cuerpo que no alcancé a poner en la lista, pero se entiende.\""],
+      ["aclaracion", "Son **huérfanas**: toda cita va en la lista y toda entrada se cita. Cuádrelo en ZoteroBib antes de cerrar; es media hora que evita una observación del jurado."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Cierre del artículo (20 minutos)",
+    "bullets": [
+      "**Consigna literal.** En un documento llamado **S10_CierreArticulo_Apellido**:",
+      "  **(1)** Escriba el **resumen** de su artículo, **~200–250 palabras**, con las cinco piezas en orden. Anote al final el conteo real de palabras.",
+      "  **(2)** Elija **4 o 5 palabras clave**, verificadas en el tesauro UNESCO y contrastadas en Scholar. Al lado de cada una, escriba cuántos resultados relevantes arrojó la búsqueda.",
+      "  **(3)** Redacte las **conclusiones** con las cuatro piezas: respuesta a la pregunta, cumplimiento de objetivos, limitaciones y trabajo futuro.",
+      "  **(4)** Revise sus **referencias** en ZoteroBib: conteo de fuentes, estilo APA 7, orden alfabético y **auditoría anti-huérfanas** en las dos direcciones.",
+      "**Tiempo:** 20 minutos. El Docente acompaña y revisa resúmenes en voz alta.",
+      "**Criterio de éxito (verificable):**",
+      "  El resumen **se entiende sin leer el artículo** y cae dentro del rango de palabras.",
+      "  Las palabras clave existen como términos reales y arrojan resultados pertinentes en Scholar.",
+      "  Las conclusiones **responden la pregunta** de investigación, no repiten datos.",
+      "  **Cero huérfanas**: cada apellido de la lista aparece en el cuerpo y viceversa."
+    ],
+    "note": "Ejercicio de control en pareja: intercambien resúmenes. Si su compañero no puede decir qué hizo usted y qué encontró, el resumen todavía no está listo."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
+    "rows": [
+      ["El resumen tiene las 5 piezas", "Marco con color contexto, objetivo, método, resultado, conclusión", "☐"],
+      ["El resumen está en rango de palabras", "Herramientas → Recuento de palabras en Docs", "☐"],
+      ["El resumen no cita a nadie", "Ctrl+F por \"(\" : no debe haber citas APA", "☐"],
+      ["No hay siglas sin definir", "Leo el resumen como si fuera de otra carrera", "☐"],
+      ["Las palabras clave son términos normalizados", "Cada una verificada en tesauro UNESCO + Scholar", "☐"],
+      ["Las conclusiones responden la pregunta", "Ubico la frase que responde y la subrayo", "☐"],
+      ["Hay limitaciones y trabajo futuro", "Ambas aparecen explícitas en el texto", "☐"],
+      ["La lista está en APA 7 y alfabética", "Generada en ZoteroBib, con sangría francesa", "☐"],
+      ["Cero referencias huérfanas", "Ctrl+F de cada apellido de la lista dentro del cuerpo", "☐"]
+    ],
+    "col_w": [3.6, 4.4, 1.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Suba** `S10_CierreArticulo_Apellido` a CDigital — [URL CDigital — campus del curso pendiente].",
+      "Con esto, **el artículo debería quedar completo**: introducción, marco, método, resultados, discusión, conclusiones y referencias.",
+      "**Tarea de cierre en casa:** lea su artículo **de corrido y en voz alta**, de principio a fin. Los saltos de coherencia se oyen antes de verse.",
+      "**Guarde** sus 4 palabras clave en un lugar visible del documento: las va a volver a necesitar en los metadatos del repositorio.",
+      "**Termine** de cuadrar la lista de referencias: es lo más tedioso y lo que peor sale a última hora.",
+      "**Próxima sesión:** pasamos a la divulgación —**póster, evidencias y verificación antiplagio**—.",
+      "  Traiga su artículo terminado y las **evidencias del prototipo o de la obra-creación** (capturas, bitácora, instrumento)."
+    ]
+  }
+]

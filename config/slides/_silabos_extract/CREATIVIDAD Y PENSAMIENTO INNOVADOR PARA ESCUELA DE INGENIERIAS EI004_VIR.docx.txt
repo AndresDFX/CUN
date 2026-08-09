@@ -1,0 +1,391 @@
+0|DATOS GENERALES DE LA UNIDAD CURRICULAR
+1|Fecha de actualización: 27/12/2022
+2|Versión: 
+3|NIVEL DE FORMACIÓN
+4|Técnico Profesional ☐
+5|Tecnológico ☑
+6|CRÉDITOS
+7|Profesional ☐
+8|Especialización ☐
+9|2
+10|METODOLOGÍA
+11|Presencial ☐   
+12|Distancia ☐
+13|Virtual ☑
+14|Horas de trabajo presencial o Tutorial con Docente:
+15|32
+16|32
+17|32
+18|Horas de Trabajo Autónomo y Colaborativo:
+19|64
+20|64
+21|64
+22|PROGRAMA ACADÉMICO/ÁREA QUE OFERTA
+23|Unidad de Emprendimiento e Innovación C-EMP
+24|UNIDAD CURRICULAR (ASIGNATURA)
+25|CREATIVIDAD Y PENSAMIENTO
+26|INNOVADOR PARA LA ESCUELA DE
+27|CIENCIAS ADMINISTRATIVAS
+28|CÓDIGO
+29|SÍAC:
+30|AE003
+31|TIPOLOGÍA
+32|Teórico ☐
+33|Teórico-Práctico ☑
+34|Práctico ☐
+35|DESCRIPCIÓN DE LA UNIDAD CURRICULAR
+36|La asignatura Creatividad y Pensamiento Innovador para la Escuela de Ciencias Administrativas, busca desarrollar en los estudiantes el autoconocimiento de sus competencias de creatividad y pensamiento innovador para aprovechar las oportunidades que ofrecen los cambios en el entorno.
+37|Adicionalmente, generar un pensamiento creativo a través de los escenarios de aprendizaje para el desarrollo de competencias propias de la investigación. Esto a partir del reconocimiento de los problemas sociales en los diferentes campos de acción.
+38|La asignatura brinda espacios de reflexión referente al entorno del estudiante permitiéndole el reconocimiento de problemas de investigación que pueden ser resueltos a través de procesos de innovación.
+39|PROPÓSITO DE FORMACIÓN DE LA UNIDAD CURRICULAR
+40|La asignatura de Creatividad y Pensamiento Innovador para la Escuela de Ciencias Administrativas, permite que el estudiante mediante técnicas de autoconocimiento identifique sus habilidades en el contexto de la creatividad e innovación generando procesos de mejora individual que lo conduzcan a la formulación de planes o proyectos de innovación utilizando las distintas metodologías para generar ideas y llevarlas a la acción en forma de soluciones relevantes para el ámbito empresarial, social, económico, académico, científico y personal, entre otros.
+41|Desarrolla habilidades relacionadas con la curiosidad y la indagación a través de los escenarios de aprendizaje para potenciar competencias propias de la investigación. Esto a partir del reconocimiento de los problemas sociales en los diferentes campos de acción, incorporando discursos científicos que impacten en un contexto determinado para el desarrollo social y sostenible en los ámbitos local, regional, nacional e internacional.
+42|Algunos elementos centrales:
+43|El proceso investigativo se desarrolla de manera gradual, modificando estructuras de pensamiento ancladas en la memorización y promoviendo espacios de apropiación y construcción de nuevo conocimiento. Involucra actividades, técnicas y estrategias conducentes a resignificar la investigación y potenciar los espacios disciplinares e interdisciplinares en la generación de conocimiento.
+44|Política de Investigación y Creación Artística y Cultural, como documento central de la concepción, organización y práctica investigativa en la CUN. Entre los aspectos más importantes se encuentran los elementos centrales de la investigación institucional (formación investigativa, investigación formativa, investigación básica y aplicada, investigación-creación y experiencias y prácticas I+D+E+e+i, es decir, investigación, desarrollo, educación, emprendimiento e innovación).
+45|Proyecto de aula: se trata de un espacio de investigación formativa en el cual el eje investigativo se circunscribe a las prácticas docentes y experiencias propias de la relación enseñanza-          
+46|aprendizaje.
+47|Núcleos Integradores Problémicos: se definen como un espacio académico de carácter articulador que promueve la interrelación de conocimientos con las demás asignaturas del semestre por medio de una pregunta o situación problematizadora de carácter disciplinar, garantizando la promoción de competencias y habilidades investigativas.
+48|Segundo idioma: como un componente fundamental para el desarrollo de habilidades
+49|comunicativas (lecto-escriturales).
+50|COMPETENCIA DE LA UNIDAD CURRICULAR
+51|Competencias generales.
+52|• Afianzar las habilidades y destrezas de los estudiantes en relación con la gestión del autoconocimiento y su aplicación en procesos de mejoramiento de la realidad observada.
+53|•• Aplicar métodos y herramientas para el diseño de ideas creativas e innovadoras en escenarios profesionales.
+54|Competencias específicas
+55|• Reconocer la importancia de la práctica investigativa para su formación académica, profesional, social y cultural.
+56|• Identificar mediante el autoconocimiento las habilidades relacionadas con la inteligencia emocional y su incidencia en los procesos creativos y de innovación.
+57|• Contrastar los conceptos de creatividad e innovación en el diseño de proyectos de Investigación en innovación.
+58|• Implementar métodos y estrategias creativas e innovadoras para el estudio y análisis de problemáticas específicas de escenarios profesionales.
+59|• Identificar procesos y procedimientos en contextos socio-económicos afines a su formación.
+60|• Proponer alternativas de solución según criterio profesional.
+61|• Diseña estrategias creativas e innovadoras para el estudio y análisis de problemáticas específicas de escenarios profesionales
+62|• Desarrolla argumentos sólidos, con premisas explícitas y conclusiones que se desprenden lógicamente de las premisas analizadas.
+63|• Evalúa la solución dada a un problema, las estrategias utilizadas y el impacto de su implementación en el contexto o situación planteado.. 
+64|ELEMENTOS DE COMPETENCIA
+65|N°
+66|RELACIÓN DE ELEMENTOS DE LA UNIDAD CURRICULAR
+67|1
+68|SABER: 
+69|Interpreta conceptos fundamentales de la Investigación, y los tipos de investigación.
+70|Identifica la investigación y su aplicación en contextos reales nacionales acorde a parámetros de desarrollo e innovación empresarial.
+71|Comprende los elementos que requiere la investigación conforme las particularidades administrativas que promuevan la innovación organizacional acorde a parámetros de formación, para la selección y definición de procesos de investigación y su impacto en la generación de conocimiento. 
+72|Comprende la gestión de la innovación bajo el reconocimiento y el desarrollo de la creatividad y la aplicación de estrategias en las organizaciones, productos, procesos de manera diversa acorde a las necesidades reales nacionales con visión internacional.  
+73|2
+74|HACER:
+75|Proponer procesos de investigación que involucren elementos propios del entorno a través de la selección y definición del tema de investigación, el planteamiento, la formulación y el enunciado del problema de investigación.
+76|Desarrollar aspectos investigativos en donde adelanta la escritura de hipótesis, justificación de la investigación y sus aspectos metodológicos, y los conceptos de población y muestra, en un modelo de trabajo metodológico.
+77|3
+78|SER:
+79|Reconoce procesos técnicos que facilitan el respeto por los derechos de autor bajo propósitos del procesamiento, para la recolección de la información en la investigación.
+80|PRERREQUISITOS Y CORREQUISITOS (UNIDAD CURRICULAR)
+81|N°
+82|PRERREQUISITOS
+83|CORREQUISITOS
+84|1
+85|Técnico Profesional 
+86|Explorar para investigar 
+87|2
+88|Tecnológico 
+89|No aplica
+90|3
+91|Profesional 
+92|No aplica
+93|4
+94|Posgrado 
+95|No aplica 
+96|UNIDADES DE CONOCIMIENTO
+97|N°
+98|TEMÁTICA
+99|SUBTEMÁTICA
+100|1
+101|Introducción al curso 
+102|Presentación y contextualización del syllabus:
+103|competencias, ejes temáticos, trabajos y evaluación de aprendizaje.
+104|Explicación del trabajo final de la asignatura: Propuesta de Innovación.
+105|Socialización de los acuerdos pedagógicos
+106|2
+107|La inteligencia emocional y
+108|su incidencia en la
+109|innovación y la creatividad.
+110|Identificar la inteligencia emocional como un insumo fundamental para la creatividad e innovación generando procesos de reconocimiento personal de los bloqueadores y ensanchadores.
+111|Recursos docentes:
+112|Talleres de aplicación
+113|Mapa de utilidad para generar procesos de reconocimiento personal de bloqueadores y ensanchadores.
+114|3
+115|Identifica los conceptos de
+116|creatividad e innovación en el
+117|diseño de proyectos de
+118|Investigación y Desarrollo
+119|(I+D).
+120|Metodología de identificación
+121|de necesidades
+122|Afianzar la solución creativa de problemas: Pensamiento divergente y pensamiento convergente. Reconocer la aplicación de la solución creativa de problemas y diferentes técnicas y/o metodologías orientadas al reconocimiento de necesidades de innovación (Desingthinking árbol de problemas, seis sombreros, técnica scamper, océano azul, entre otros).
+123|Objeto de innovación, necesidad de innovar, justificación de la innovación, propuesta de valor al objeto de innovación (plus)
+124|Recursos docentes 
+125|Talleres de ideación o prototipado, o de pensamiento centrado en el usuario.
+126|4
+127|Gestión de la Innovación:
+128|Reconocer y aplicar métodos
+129|de gestión de innovación que
+130|permitan desarrollar y
+131|sostener la creatividad en una
+132|organización, en un producto,
+133|en procesos, en innovación
+134|social y en marketing,
+135|tomando en cuenta diversos
+136|contextos.
+137|Analizar y aplicar métodos de gestión de la innovación a situaciones del entorno.
+138|Revisión del manual de Oslo y de la OCDE.
+139|Recursos docentes:
+140|Técnicas didácticas activas. 
+141|El proceso de aprendizaje de esta unidad bajo la metodología de aprendizaje autónomo y a través de ambientes virtuales de aprendizaje.
+142|Lecturas relacionadas con:
+143|El entorno innovador, el entorno y la creatividad como palancas para la innovación, la actitud innovadora, el entorno positivo, generación de Entornos Innovadores en Innovación y creatividad, empresas, entorno empresarial y territorio: introducción a conceptos de redes, innovación.
+144|5
+145|Tipos de innovación:
+146|Procesos, producto,
+147|organización, marketing,
+148|Innovación social. Identifica
+149|y propone mejoras puntuales
+150|en procesos y
+151|procedimientos en contextos socio-económicos afines a su
+152|formación.
+153|Analiza diferentes fuentes relacionadas con el tema.
+154|Elabora un cuadro comparativo indicando las diferencias que existen en cada uno de los tipos de innovación.
+155|Recursos docentes:
+156|Taller, Cuadro comparativo, revisión de lecturas o videos afines al tema, plenarias
+157|6
+158|Técnica de análisis de
+159|negocios
+160|Aplica técnicas de análisis de
+161|negocio e
+162|Implementa ideas de
+163|innovación.
+164|Validación. Sustentación
+165|propuesta de innovación
+166|Propósito: Validar propuestas
+167|innovadoras con
+168|metodologías diseñadas para
+169|la evaluación de la factibilidad
+170|de la propuesta de innovación
+171|Elaboración de estructura de
+172|costos y financiera para el
+173|desarrollo del proyecto de
+174|innovación.
+175|Aplicar de técnicas de análisis e implementación de idea de innovación como: Foda, Came, Matriz de los Cinco Elementos,
+176|el embudo de las Ideas, Macro, Micro filtros, y mapa de utilidad.
+177|Talleres de aplicación, para generar innovaciones.
+178|Recursos docentes:
+179|Talleres de aplicación, mapa de utilidad para generar innovaciones.
+180|Metodología
+181|Foda, Came, Matriz de los Cinco Elementos, el embudo de las Ideas, Macro, Micro filtros, y mapa de utilidad.
+182|Reconocimiento de distintas herramientas pensadas para validar propuestas de innovación.
+183|Estructura de costos y financiera para la ejecución de propuesta de innovación. 
+184|Herramientas de validación: Canvas, Journey Map, producto mínimo viable, testeo, focus group, etc.
+185|7
+186|Vigilancia tecnológica 
+187|Obtención de información y análisis sistemático de datos de valor estratégico sobre tecnologías y sus tendencias previsibles, para la toma de decisiones empresariales.
+188|Recursos docentes
+189|Exposición dialógica y taller:
+190|A partir de revisión de lecturas o videos afines al tema.
+191|Realiza un mapa mental sobre las lecturas
+192|8
+193|La innovación en los ámbitos
+194|locales,
+195|regionales, nacionales
+196|e internacionales
+197|Propósito: Comparar los
+198|procesos de innovación y los
+199|retos, locales, regionales e
+200|internacionales y la relación
+201|con las distintas áreas de
+202|conocimiento en especial en
+203|la comunicación y las bellas
+204|artes
+205|Entidades que apoyan la
+206|innovación a nivel local,
+207|nacional e internacional
+208|Propósito: Conocer los entes
+209|privados y públicos que
+210|regulan y apoyan las
+211|innovaciones a nivel nacional
+212|e internacional.
+213|Diferenciar los tipos de
+214|impacto de las innovaciones y
+215|su importancia en el
+216|desarrollo de un país.
+217|Elabora una presentación identificando los entes privados y públicos que regulan la innovación en el país y en el extranjero: Cidei,
+218|CEPAL, ANSPE, OCDE...
+219|Puesta en común de los programas y proyectos para jóvenes innovadores desarrollados por el Ministerio de Ciencia, Tecnología e Innovación
+220|Determinar el efecto específico que ha tenido la articulación de premios con experiencias exitosas para potenciar el desarrollo este tipo de iniciativas en Colombia. Exposición dialógica y taller: Elabora una presentación identificando los entes privados y públicos que regulan la innovación en el país y en el extranjero: Cidei, MinCiencias, CEPAL, ANSPE, OCDE.
+221|ESTRATEGIAS
+222|METODOLOGÍA PEDAGOGÍA Y DIDÁCTICA
+223|Núcleos Problémicos Integradores: Estos están definidos al interior de la estructura curricular del programa, a través de una asignatura semestral denominada asignatura integradora, la cual interrelaciona los conocimientos de las demás asignaturas del semestre por medio de una pregunta o situación problematizadora de carácter disciplinar, estableciéndola como una vía para el logro del desarrollo de competencias investigativas de los estudiantes, asegurando la articulación con su saber disciplinar específico.
+224|Plan de aula: Es una propuesta de trabajo concertada en el acuerdo pedagógico a partir de una propuesta de Proceso Dialectico sobre conceptos y experiencias (con ponente del grupo o externo al grupo); Laboratorio o simulación controlada; proyectos de aprendizaje u otra herramienta ABP establecida, en desarrollo de este ejercicio el estudiante debe aplicar lo aprendido y evidenciar las experiencias vividas en el proceso enseñanza-aprendizaje con la posibilidad de ampliarlo a los campos de la investigación y la proyección social.
+225|El proceso investigativo: En el acuerdo pedagógico se desarrolla la formulación del desarrollo investigativo partiendo desde la introducción de una técnica documental y/o de campo, la cual será el motor del proceso de recolección y análisis de la información cualitativa y/o cuantitativa, sobre la cual al término del curso se esperan obtener unos resultados, los cuales serán debatidos y condensados en un producto académico.
+226|Segundo idioma: apoyar el desarrollo de la asignatura con herramientas (talleres lecturas, videos y material de clase) en un segundo idioma.
+227|Metodología BANG: Esta es una construcción propia de CUN donde se fomenta la gestión creativa de respuestas a problemáticas, planes y toma de decisiones en la vida y las organizaciones, la cual opera desde tres niveles de complejidad (Gold, Platinum y Black Titanium).
+228|Pruebas estándar: Para dar cumplimiento a los artículos 47 y 48 del reglamento estudiantil (modificado mediante acuerdo 21 de 2018), al finalizar cada corte se aplicará una prueba bajo el estándar ICFES -SABER PRO, cuyas preguntas estarán orientadas a la medición del logro de las competencias de esta unidad curricular y su escala cualitativa y cuantitativa estarán determinadas por la tabla establecida en el artículo 52 del reglamento estudiantil.
+229| 
+230|Estas propuestas pueden implementarse por separado o integradas en el plan de curso y constituyen un cambio de paradigma para quienes están acostumbrados a memorizar, adicionalmente, refuerzan la aplicación del modelo pedagógico Cunista en el aula (física o virtual) de acuerdo con establecido en el PEC y desarrollado en el PEP de PAE.
+231|.
+232|METODOLOGÍAS COMPLEMENTARIAS
+233|Clase Magistral ☑; Seminario ☐; Seminario - Taller ☐; Taller ☐; Salida de campo ☐
+234|Prácticas ☑; Proyectos tutorados ☐; Otro(s) ☐: ______________________________ 
+235|MEDIOS Y AYUDAS EDUCATIVAS
+236|Aula estándar ☑; Auditorio ☐; Laboratorios ☐; Centro de prácticas ☐; Sala de Sistemas ☐
+237|Uso de software especializado ☐ - ¿Cuál software?
+238|Otros ☐ - Ms. Excel (DASHBOARD); Suite Google-online ; Simulador Empresarial BUSINESS GLOBAL / GLOBAL2020 / TECHCOMPANY / BOLSAMILLONARIA / 
+239|RECURSOS BIBLIOGRÁFICOS
+240|REFERENCIAS BIBLIOGRÁFICAS
+241|Aguilar Yuste, M. (2021). Leadership and Emotional Intelligence during a Crisis. Revista de Relaciones Internacionales, Estrategia y Seguridad, 16(2), 47–60. https://doi.org/10.18359/ries.5619 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=fua&AN=154914020&lang=es&site=eds-live
+242|Anastasia Misseyanni, Miltiadis D. Lytras, Paraskevi Papadopoulou, & Christina Marouli. (2018). Active Learning Strategies in Higher Education : Teaching for Leadership, Innovation, and Creativity: Vol. First edition. Emerald Publishing Limited. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1624263&lang=es&site=eds-live
+243|Barker, Joel. (1999) Los Paradigmas. [Cinta cinematográfica]. E.E.U.U: Star Thrower.  Recuperado de: http://www.dailymotion.com/video/xm11pg
+244|Bogotá Emprende. “Que es innovación y como innovan las empresas”. Bogotá. Febrero de 2010. 
+245|Bono, E. de: "El pensamiento creativo", Paidós Editorial. Barcelona. 1992. Goleman Daniel.  Inteligencia emocional. Qué es la inteligencia emocional y por qué el control de las emociones es la clave para el éxito personal y profesional  
+246|Bono, Edward, de. Seis sombreros para pensar. Ministerio de Ciencia, Tecnología y Telecomunicaciones.  
+247|Brian Pete, & Robin Fogarty. (2017). Everyday Problem-Based Learning : Quick Projects to Build Problem-Solving Fluency. ASCD. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1616313&lang=es&site=eds-live
+248|Brunelle, J. F., Frisk, D., Mayer, B., Randall, P., & Sheikh, A. (2020). Measuring the Impact of INNOVATION ACTIVITIES IN GOVERNMENT. Defense Acquisition Research Journal: A Publication of the Defense Acquisition University, 27(4), 398–435. https://doi.org/10.22594/dau.19-849.27.04 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=148741726&lang=es&site=eds-live
+249|Capa Bataglin, J., Semprebon, E., Vilela Carvalho, A. C., & Porsse, M. (2021). Social Innovation: A Study of International Scientific Publication through Network Analysis. Brazilian Business Review (Portuguese Edition), 18(4), 450–467. https://doi.org/10.15728/bbr.2021.18.4.6 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=151987856&lang=es&site=eds-live
+250|Carolina Machado, & J. Paulo Davim. (2015). Innovation Management : In Research and Industry. De Gruyter. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=984320&lang=es&site=eds-live
+251|da Costa, S., Páez, D., Sánchez, F., Garaigordobil, M., & Gondim, S. (2015). Personal factors of creativity: A second order meta-analysis. Revista de Psicologia Del Trabajo y de Las Organizaciones, 31(3), 165–173. https://doi.org/10.1016/j.rpto.2015.06.002 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edssci&AN=edssci.S1576.59622015000300005&lang=es&site=eds-live
+252|Dekkers, R. (2018). Innovation Management and New Product Development for Engineers, Volume I : Basic Concepts. Momentum Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1881426&lang=es&site=eds-live
+253|Desogus, M., & Casu, E. (2018). Essays in Innovative Risk Management Methods : Based on Deterministic, Stochastic and Quantum Approaches. Anaphora Literary Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1949527&lang=es&site=eds-live
+254|Expósito, A., & Sanchis-Llopis, J. A. (2019). The relationship between types of innovation and SMEs’ performance: a multi-dimensional empirical assessment. Eurasian Business Review, 9(2), 115–135. https://doi.org/10.1007/s40821-018-00116-3 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=136800532&lang=es&site=eds-live
+255|FÁBIO DE OLIVEIRA PAULA, & JORGE FERREIRA DA SILVA. (2020). The impact of different types of innovation and governmental support in the performance of firms: the case of Central and Eastern Europe manufacturing SMEs. Cadernos EBAPE.BR, 17(4), 923–939. https://doi.org/10.1590/1679-395174365x https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsdoj&AN=edsdoj.0752017e98c3418ba2fdf074ca2c2752&lang=es&site=eds-live
+256|Ferro. E. R., Muñoz, H. H., Muñoz H, J.A. & Osorio. M, R.C. (2018). Retos del Sector Empresarial en el proceso de convergencia al marco normativo Contable y de aseguramiento de la información Financiera. Proceso empresarial y aplicación tecnológica en Colombia como oportunidad para el emprendimiento. Capítulo 26. P. 402- 416. Ediciones Unisinu https://www.unisinu.edu.co/wp-content/uploads/Libro-Retos-del-sector-empresarial-2018.pdf
+257|Goleman, Daniel. (2008). What makes a leader? En: Daniel Goleman. Best of Harvard Business  Review on Emotionally Intelligent, Leadership. 2nd Edition. Boston: Harvard. 
+258|Goleman, Daniel. (2011) ¿Qué hace a un líder? En: Harvard Business Review, Diciembre.  Recuperado de https://www.falconi.com/wp-content/uploads/2015/11/artigo_04.pdf 
+259|GORZELANY-DZIADKOWIEC, M., GORZELANY, J., STAUSKIS, G., HERNIK, J., VAN ASSCHE, K., & NOSZCZYK, T. (2019). The Innovation Process in Local Development -- the Material, Institutional, and Intellectual Infrastructure Shaping and Shaped by Innovation. Technological and Economic Development of Economy, 25(6), 1232–1258. https://doi.org/10.3846/tede.2019.11094 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=140386292&lang=es&site=eds-live
+260|GREGOIRE, M. (2016). Exploring Various Approaches of Social Innovation: A Francophone Literature Review and a Proposal of Innovation Typology. Revista de Administração Mackenzie, 17(6), 45–71. https://doi.org/10.1590/1678-69712016/administracao.v17n6p45-71 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=121051348&lang=es&site=eds-live
+261|Helmut Anheier, Gorgi Krlev, & Georg Mildenberger. (2019). Social Innovation : Comparative Perspectives. Routledge. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsebk&AN=1925719&lang=es&site=eds-live
+262|Hinestroza, E; Preston, C & Redhiben, L. (1997). Diseño de Software educativo o de software  escolar. En: Informática Educativa Vol. 10, No. 1. Universidad de los Andes. 
+263|Hoorn, J. (2014). Creative Confluence. John Benjamins Publishing Company. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=771938&lang=es&site=eds-live
+264|Instituto Tecnológico de Monterrey (2016). EduTrends – Gamificación. Observatorio de  Innovación Educativa. En: http://eduteka.icesi.edu.co/pdfdir/edutrends-gamificacion.pdf
+265|JAGODA-SOBALAK, D., & CZERWIŃSKA-LUBSZCZYK, A. (2020). Hybrid Model for Innovation Process Management. Scientific Papers of Silesian University of Technology. Organization & Management / Zeszyty Naukowe Politechniki Slaskiej. Seria Organizacji i Zarzadzanie, 149, 249–261. https://doi.org/10.29119/1641-3466.2020.149.22 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edb&AN=151725723&lang=es&site=eds-live
+266|Jennifer Yaros. (2018). Conditioning Your Mind : To Fuel Creativity. Smart Business Books.
+267|Jiménez Arenas, S. (2014). Gamificación, generando compromiso con la cultura. En: Anuario  AC/E de Cultura Digital. https://www.accioncultural.es/media/Default%20Files/activ/2014/Adj/Anuario_ACE_2014/3Gam ificacion_SJimenez.pdf
+268|Jiménez Sierra, D., Rincón Acevedo, A., & Pérez Suescún, L. (2018). Análisis del liderazgo social de las pymes de Santa Marta —Colombia—, para el post-acuerdo desde el enfoque de la Responsabilidad Social Empresarial. Revista Escuela De Administración De Negocios, 85(1), 105–124. https://doi.org/10.21158/01208160.n85.2018.2051
+269|Jin Kang Moller. (2020). The Simplicity Playbook for Innovators. Marshall Cavendish International. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2648180&lang=es&site=eds-live
+270|Jon-Arild Johannessen, & Hanne Stokvik. (2019). Evidence-Based Innovation Leadership : Creating Entrepreneurship and Innovation in Organizations: Vol. First edition. Emerald Publishing Limited https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1884514&lang=es&site=eds-live
+271|Larizadeh, Avid. (2013). Forget Business School: Why An Emotional Education Is Indispensible.  En: Forbes 7/08/2013. Recuperado de:  http://www.forbes.com/sites/avidlarizadeh/2013/07/08/forget-business-school-why-an emotional-education-is-indispensible/
+272|López, D.C et al (2004). “Los inhibidores personales como principal obstáculo para el desarrollo  de la creatividad a nivel empresarial”. En: Revista Creando Año 2 No. 3. Universidad Nacional  de Colombia. Sede Manizales. Disponible en:  https://dialnet.unirioja.es/servlet/articulo?codigo=3693414
+273|Ludovino, E. M. (2017). Emotional Intelligence for IT Professionals. Packt Publishing. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1607079&lang=es&site=eds-live
+274|M. Pilar Opazo. (2016). Appetite for Innovation : Creativity and Change at ElBulli. Columbia University Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1260447&lang=es&site=eds-live
+275|Maiguel Ortega A. S. (2014).Estimación de oferta y demanda laboral; sector logística portuaria y construcción" En Colombia. Editorial PNUD
+276|Maldonado, J. E. (2018). RSE en la industria manufacturera colombiana. Editorial Académica Española.
+277|Maldonado, J. E.(2018). Habilidades Gerenciales. Ediciones de la U.
+278|Margulis, L. (2007). El aspecto lúdico del e-learning: el juego en entornos virtuales de  aprendizaje. En: Revista digital de Investigación en Docencia Universitaria Vol. 3 No. 1.  Universidad Peruana de Ciencias Aplicadas. Disponible en:  http://revistas.upc.edu.pe/index.php/docencia/article/view/23/171 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsbas&AN=edsbas.50DBD15D&lang=es&site=eds-live
+279|Marinescu Paul, Constantin Ionut &Toma Sorin-George (2016), Creativity, Innovation and the  Perspectives of Management. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsdoj&AN=edsdoj.3c3bd292a194821b518108e50fc12df&lang=es&site=eds-live
+280|Méndez, C. (2009). Reflexión sobre la planificación de los recursos humanos. Y la autonomía de gestión en los hospitales de chile. Rev. Esp Salud Pública. 83: 371-378. Valdivia/ Chile:  Universidad Austral de Chile.  https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsdoj&AN=edsdoj.3338543fceb0478fb541c7f6853c9522&lang=es&site=eds-live
+281|Morales, M. y Leon, A. (2013). Adiós a los mitos de la innovación: una guía práctica para innovar  en América Latina. San José: Innovaré. 270 págs. Recuperado de:  http://www.librodeinnovacion.com/ 
+282|Nanbing Xiao. (2020). Influence of Emotional Intelligence of Employees on Their Innovative Behaviour and the Mediating Effect of Internal Social Capital. Revista Argentina de Clínica Psicológica, 29(2), 1–8. https://doi.org/10.24205/03276716.2020.201 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=fua&AN=141468414&lang=es&site=eds-live
+283|Nessler, D. (2016). “How to apply a design thinking, HCD, UX or any creative process from  scratch”, 19 May.  Available at: https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd ux-or-any-creative-process-from-scratch-b8786efbf812. [Accessed 27 March , 2018]. 
+284|Newton, K. (2016). Problem-Solving: Strategies, Challenges and Outcomes. Nova. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1350692&lang=es&site=eds-live
+285|Organización para la Cooperación y Desarrollo Económicos OCDE (2006). Manual de Oslo.  Guía para la recogida e interpretación de datos sobre innovación. Tercera Edición. Disponible  en: http://www.dgi.ubiobio.cl/dgi/wp-content/uploads/2010/07/manualdeoslo.pdf
+286|Ousghir, S., & Daoud, M. (2022). Exploratory Study on Innovation Management in Startups, an Attempt to Design It through the Business Model. Eastern-European Journal of Enterprise Technologies, 115(13), 20–26. https://doi.org/10.15587/1729-4061.2022.251845 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edb&AN=155566719&lang=es&site=eds-live
+287|Parodi, T. A., Romero, M. E., Prieto, F. H., & Arrieta, N. S. (2018). Los retos del docente frente al desarrollo de una cultura que valore los emprendimientos sostenibles enfocados en el contexto local: Una visión desde los Objetivos de Desarrollo Sostenible.  Innovar, Estrategia de Sostenibilidad para el Crecimiento y Desarrollo Empresarial. (v. , p.617 - 632).
+288|Ramus, T., La Cara, B., Vaccaro, A., & Brusoni, S. (2018). Social or Commercial? Innovation Strategies in Social Enterprises at Times of Turbulence. Business Ethics Quarterly, 28(4), 463–492. https://doi.org/10.1017/beq.2017.55 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=131997990&lang=es&site=eds-live
+289|Raz, S., & Zysberg, L. (2014). Emotional Intelligence : Current Evidence From Psychophysiological, Educational and Organizational Perspectives. Nova Science Publishers, Inc. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=941571&lang=es&site=eds-live
+290|Restrepo, L. C. Principios de calidad en los procesos de acompañamiento . Procesos de acompañamiento: Docente Una mirada a las instituciones educativas rurales. (p- 28 -32). Ediciones Unisinú. https://www.unisinu.edu.co/wp-content/uploads/Libro-Procesos-de-Acompa%C3%B1amiento.pdf
+291|Richard Brynteson. (2013). Innovation at Work : 55 Activities to Spark Your Team’s Creativity. AMACOM. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=481921&lang=es&site=eds-live
+292|Rodrigues Marques, H., Sebastião Ávila, E., Morais Pereira, R., & Luiz Zambalde, A. (2022). Open Innovation and Implementation of Different Types of Innovation: An Analysis Based on Panel Data. Brazilian Business Review (Portuguese Edition), 19(1), 39–58. https://doi.org/10.15728/bbr.2022.19.1.3 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=155230712&lang=es&site=eds-live
+293|Rodríguez Herrera, A. y Alvarado, H. (2008). Claves de la Innovación Social en América Latina y el Caribe. Naciones Unidas – Cepal. Disponible en línea:  
+294|Ronald A. Beghetto. (2018). What If? : Building Students’ Problem-Solving Skills Through Complex Challenges. ASCD. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1885825&lang=es&site=eds-live
+295|Rosing Agostini, M., D’Agostini, M., Morás, C., & Alves Carra, L. V. (2020). An Overview of the Theme of Social Innovation in the Three Sectors: A Research in the Studies of the Gaucho Universities. Brazilian Journal of Management / Revista de Administração Da UFSM, 13, 1571–1590. https://doi.org/10.5902/1983465944270 https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=150181264&lang=es&site=eds-live
+296|Ross Rynehart. (2018). Boosting Impact and Innovation in Higher Education : The Knowledge Entrepreneur and High Diversity Groups in Universities. Emerald Publishing Limited. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1651571&lang=es&site=eds-live
+297|Teixeira Aurora A.C & Silva José Miguel (2013), The intellectual and scientific basis of science,  technology and innovation research  https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=93257890&lang=es&site=eds-live
+298|Téllez, G. M., Montealegre, A., & Velásquez, W. R. (n.d.). Comunicación y educación Comunicación y educación para la construcción.
+299|The Staff of Entrepreneur Media, & Jonathan Small. (2018). Entrepreneur Voices on Emotional Intelligence. Entrepreneur Press. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=1885448&lang=es&site=eds-live
+300|Ulate Soto, I. (2010). “La innovación que potencia el desarrollo”. En: Revista Nacional de Administración Vol. 1 No. 2. Universidad Estatal a Distancia. Costa Rica. Disponible en línea:   https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=edsbas&AN=edsbas.F0AB3651&lang=es&site=eds-live 
+301|Vargas, R (2005). “Proyecto de vida y planeamiento estratégico personal”. Lima. 
+302|Williamson, C., & Shuttleworth, C. (2021). A Social Innovation Model as Bridge-Builder Between Academia Administration, 52(2), 100–127. https://login.zproxy.cun.edu.co/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=153863218&lang=es&site=eds-live
+303|Zuniga, L. M. (2016). Inteligencia de los Negocios. Colombia Clio América. V.10 fasc.20 p.1 - 18.
+304|RESULTADO DE APRENDIZAJE ESPERADO DE UNIDAD CURRICULAR
+305|Al culminar la asignatura el estudiante debe generar un pensamiento investigativo con las competencias propias de la investigación. Esto a partir del reconocimiento de los problemas sociales en los diferentes campos de acción.
+306|Desarrollará habilidades y competencias que le permitirán participar de equipos de trabajo orientados al logro, utilizando las herramientas y métodos de selección, recolección y organización de la información que apoyen la estructuración y presentación de propuestas de innovación.
+307|MECANISMOS DE EVALUACIÓN DE LA DE UNIDAD CURRICULAR
+308|Evaluación formativa: Le permite al docente y al estudiante detectar las fortalezas y debilidades. Desarrollo de talleres continuos donde se evalúa la continuidad del proceso formativo.
+309|Evaluación sumativa: de acuerdo con la exigencia de la institución para cualificar el nivel de competencias y está compuesta por tres cortes, Primer corte 30%, segundo corte 30% y tercer corte 40% y la escala de las mismas es de 0.1 a 5.0. Desarrollo de exámenes, parciales, evaluaciones talleres, controles de lectura, simulaciones, investigaciones, ensayos, entre otros. Las actividades contaran con su respectiva rúbrica de evaluación y retroalimentación.
+310|SISTEMA DE EVALUACIÓN
+311|La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN.
+312|CORTE 1 = 30%
+313|CORTE 1 = 30%
+314|CORTE 1 = 30%
+315|EV 01
+316|EV 01
+317|EV 01
+318|EV 01
+319|EV 01
+320|EV 01
+321|9.0%
+322|9.0%
+323|9.0%
+324|9.0%
+325|9.0%
+326|9.0%
+327|Talleres, Quices, Proyecto.
+328|Talleres, Quices, Proyecto.
+329|Talleres, Quices, Proyecto.
+330|Talleres, Quices, Proyecto.
+331|Talleres, Quices, Proyecto.
+332|Talleres, Quices, Proyecto.
+333|Nota: Los porcentajes de cada uno de los parciales y examen final deben cumplir los artículos 47 y 48 del Reglamento Estudiantil.
+334|PERFIL DOCENTE
+335|El docente-tutor debe contar con formación investigativa y académica en alguna de las
+336|siguientes áreas: ciencias administración y económicas, ingeniería y afines. Se espera
+337|tenga formación posgradual. Deberá contar con una experiencia en Investigación
+338|mínima de un (1) año y experiencia en Docencia Universitaria mínima de dos (2) años.
+339|HISTÓRICO DE CAMBIOS
+340|CONTROL DE ACTUALIZACIÓN DEL CONTENIDO
+341|Fecha de actualización
+342|Descripción del Cambio
+343|Aprobado por
+344|01/07/2020
+345|Ajuste contenidos temáticos semanales
+346|C-EMP
+347|18/11/2020
+348|Ajuste en contenidos temáticos semanales
+349|C-EMP
+350|18/11/2020
+351|Ajuste en sistema de evaluación 
+352|C-EMP
+353|01/03/2022
+354|Ajuste En: Descripción de la unidad curricular, propósito de formación de la unidad curricular, competencia de la unidad curricular, unidades de conocimiento, metodología pedagogía y didáctica, referencias bibliográficas, resultado de aprendizaje esperado en la unidad curricular, mecanismos de evaluación, sistema de evaluación y perfil docente. 
+355|CONTROL DE APROBACIÓN
+356|Realizado por
+357|Validado por
+358|Aprobado por
+359|Fecha de Aprobación
+360|CONTROL DE CAMBIOS 
+361|FECHA
+362|VERSIÓN DEL DOCUMENTO QUE SE MODIFICA
+363|VERSIÓN ACTUAL DEL DOCUMENTO
+364|DESCRIPCIÓN DE LA MODIFICACIÓN
+365|02/06/2016
+366|-
+367|00
+368|Versión inicial del documento.
+369|10/12/2018
+370|00
+371|01
+372|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas.
+373|01/07/2020
+374|01
+375|02
+376|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas.
+377|07/10/2020
+378|02
+379|03
+380|Actualización general del formato por la versión vigente, cambio en algunas denominaciones y lineamientos brindados.
+381|01/03/2022
+382|03
+383|04
+384|Actualización general del formato por la versión vigente, cambio en algunas denominaciones y lineamientos brindados.
+385|ELABORÓ: Dirección de Aseguramiento de la Calidad Institucional y Gestión Académica.
+386|REVISÓ: Dirección de Planeación y Aseguramiento.
+387|APROBÓ: Dirección de Aseguramiento de la Calidad Institucional y Gestión Académica, Dirección de Planeación y Aseguramiento.
+388|FECHA: 27/02/2022
+389|FECHA: 28/02/2022
+390|FECHA: 01/03/2022

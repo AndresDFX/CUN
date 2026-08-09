@@ -1,0 +1,197 @@
+[
+  {
+    "type": "bullets",
+    "title": "Hoy no se escribe contenido nuevo: se ordena el envase",
+    "bullets": [
+      "Situación típica: hay pregunta y objetivos, se abre un documento en blanco… y aparece el bloqueo.",
+      "  El bloqueo casi nunca es falta de ideas: es **no saber en qué sección va cada idea**.",
+      "El documento de avance no se inventa. Ya existe un mapa: la **Plantilla APA CUN de proyecto de grado**.",
+      "  Su trabajo es **llenarla**, no diseñarla. Reordenar secciones solo genera devoluciones.",
+      "Al terminar la sesión usted sabrá dos cosas: **qué va en cada sección** y —más importante— **qué NO va**.",
+      "Y sale con un **outline** completo: todo el documento en viñetas, listo para convertirse en prosa.",
+      "Regla del día: nadie escribe bien un párrafo si no sabe qué está haciendo ese párrafo en el documento."
+    ],
+    "note": "El outline de hoy es el andamio de todas las sesiones que siguen: antecedentes, marco y metodología caen sobre él."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es la Plantilla APA CUN y qué le resuelve",
+    "bullets": [
+      "**Es** el documento institucional que ya trae el **orden de las secciones** y el **formato de citas y referencias**.",
+      "  Se abre y se trabaja en **Google Docs**, desde el navegador: no exige Word de escritorio ni ninguna instalación.",
+      "**No es** una camisa de fuerza de contenido: usted decide qué dice, la plantilla decide dónde lo dice.",
+      "**No es** opcional: el avance se evalúa sobre esa estructura, y un documento reordenado se devuelve.",
+      "Qué le ahorra:",
+      "  Decidir el orden de las secciones (ya está decidido).",
+      "  Configurar márgenes, interlineado y estilos de título (ya vienen puestos).",
+      "  Recordar cómo se arma la lista de referencias (el formato ya está definido).",
+      "Lo que sí es su responsabilidad: que **cada sección diga lo que le corresponde** y nada más."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Sección por sección: qué va y qué no va",
+    "headers": ["Sección", "Qué va exactamente", "Error típico"],
+    "rows": [
+      ["Introducción", "Contexto → problema → propósito, en ese orden", "Arrancar \"desde la antigüedad, el ser humano…\""],
+      ["Planteamiento y pregunta", "El problema argumentado con datos y fuentes, que aterriza en la pregunta", "Meter aquí la solución que ya se escogió"],
+      ["Objetivos", "General (uno) + específicos (tres)", "Verbos no medibles: conocer, entender"],
+      ["Marco referencial", "Antecedentes + marco teórico + conceptual y contextual", "Collage de definiciones sin relación con la pregunta"],
+      ["Diseño metodológico", "Enfoque, tipo, alcance, población e instrumentos **propuestos**", "Mezclarlo con hallazgos o resultados"],
+      ["Referencias", "APA 7, en orden alfabético, solo lo que se citó en el texto", "URLs sueltas pegadas sin formato"]
+    ],
+    "note": "Prueba de ubicación: si una idea puede ir en dos secciones, es que está mal redactada. Reescríbala hasta que solo quepa en una.",
+    "col_w": [2.6, 5.2, 4.1]
+  },
+  {
+    "type": "bullets",
+    "title": "La introducción es un embudo, no una enciclopedia",
+    "bullets": [
+      "**Párrafo 1 — contexto:** el escenario real donde vive el problema, con un dato verificable.",
+      "  \"Las mesas de ayuda de TI gestionan volúmenes crecientes de solicitudes por canales múltiples…\"",
+      "**Párrafo 2 — problema:** qué está fallando y a quién le duele.",
+      "  \"En la empresa X, la clasificación manual de cada ticket consume tiempo del analista antes de resolverlo.\"",
+      "**Párrafo 3 — propósito:** qué se propone hacer el proyecto y para qué sirve.",
+      "  \"Este avance propone diseñar un modelo de clasificación supervisada y estimar su efecto sobre ese tiempo.\"",
+      "El embudo va de lo general a **su** caso, en tres párrafos, no en tres páginas.",
+      "Prohibido el arranque histórico universal: la introducción no empieza en la prehistoria, empieza en el contexto del problema."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El error rey del avance: mezclar método con resultados",
+    "bullets": [
+      "En este curso **todavía no hay resultados**: el trabajo de campo pertenece al semestre siguiente.",
+      "Por eso la metodología se escribe en **propuesto**: \"se propone\", \"se aplicará\", \"se seleccionará\".",
+      "  Si en la sección de método aparece un porcentaje, un hallazgo o una conclusión, algo está fuera de lugar.",
+      "Por qué importa tanto: quien evalúa lee la metodología para saber **si el plan es realizable**, no para conocer conclusiones.",
+      "  Un dato colado en el método hace dudar de todo lo demás: parece que se inventaron cifras.",
+      "Lo que sí puede aparecer: datos **de contexto** ya publicados o registros institucionales existentes, siempre citados.",
+      "  \"El área reporta un promedio de N tickets diarios según su informe interno\" es contexto, no resultado propio.",
+      "Frase de control: si la oración responde \"¿qué encontré?\", no va en método. Si responde \"¿qué voy a hacer?\", sí va."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Tiempo verbal: cómo se escribe cada cosa en el avance",
+    "headers": ["Frase que NO va todavía", "Cómo se escribe en este avance"],
+    "rows": [
+      ["\"Se aplicó una encuesta a 30 analistas.\"", "\"Se propone aplicar una encuesta a los analistas del área de soporte.\""],
+      ["\"Los resultados muestran una reducción del 40 %.\"", "\"Se espera comparar el tiempo de clasificación con y sin el modelo propuesto.\""],
+      ["\"Se concluye que el modelo es eficiente.\"", "\"El avance concluye con el diseño del modelo; su evaluación empírica queda planteada.\""],
+      ["\"La muestra estuvo conformada por…\"", "\"La población objeto sería el equipo de soporte; la muestra se definiría por conveniencia.\""],
+      ["\"Se observó que los tickets de red demoran más.\"", "\"Se propone verificar si el tiempo varía entre categorías de ticket.\""]
+    ],
+    "note": "Buscador rápido en Google Docs (Ctrl+B / Buscar): \"se aplicó\", \"se obtuvo\", \"los resultados\", \"se concluye\". Cada coincidencia en la metodología es una alarma.",
+    "col_w": [5.9, 6.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Outline antes que prosa: la técnica que quita el bloqueo",
+    "bullets": [
+      "**Outline** = cada sección del documento con **3 a 5 viñetas** de lo que irá adentro. Nada de párrafos todavía.",
+      "Por qué funciona: una viñeta mal ubicada se arregla en diez segundos; un párrafo mal ubicado cuesta media página reescrita.",
+      "Cada viñeta debe ser una **afirmación**, no una etiqueta.",
+      "  Mal: \"contexto\". Bien: \"la mesa de ayuda recibe tickets por tres canales distintos y sin categoría previa\".",
+      "Marque con color las secciones que hoy están **vacías**: ese color es su lista de tareas de las próximas semanas.",
+      "Estime al lado de cada sección cuántos párrafos necesita; así detecta a tiempo si el marco se le está desbordando.",
+      "Cuando el outline esté completo, escribir deja de ser \"inventar\" y pasa a ser **traducir viñetas a párrafos**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: outline del caso de los tickets",
+    "bullets": [
+      "**Introducción** — (1) las mesas de ayuda concentran las solicitudes de TI; (2) en la empresa X la clasificación es manual; (3) el avance propone un clasificador y estimar su efecto.",
+      "**Planteamiento y pregunta** — (1) tiempo perdido antes de resolver; (2) tres canales sin categoría unificada; (3) pregunta: ¿en qué medida un clasificador supervisado reduce ese tiempo?",
+      "**Objetivos** — general: evaluar el efecto del modelo · específicos: caracterizar el flujo, diseñar el modelo, comparar tiempos.",
+      "**Marco referencial** — (1) antecedentes de clasificación automática de tickets; (2) teoría de clasificación supervisada; (3) definiciones operativas de \"ticket\" y \"tiempo de atención\".",
+      "**Diseño metodológico** — (1) enfoque cuantitativo; (2) **se propone** medir tiempos con el histórico del sistema; (3) **se aplicaría** una comparación antes/después.",
+      "**Referencias** — bloque en APA 7 alimentado desde ZoteroBib a medida que se cita.",
+      "Observe: en metodología aparece \"se propone\" y **no hay un solo número de resultado**."
+    ],
+    "note": "Con este esqueleto, la próxima vez que se siente a escribir no verá una hoja en blanco: verá viñetas esperando párrafo."
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se corrige en esta sesión",
+    "boxes": [
+      ["advertencia", "**\"Pongo mis resultados en la metodología.\"** — En este avance aún no hay resultados: el método se escribe en \"se propone / se aplicará\", sin hallazgos."],
+      ["advertencia", "**\"Escribo directo en párrafos, sin plan.\"** — Primero el outline: 3 a 5 viñetas por sección. La prosa viene después y sale en la mitad del tiempo."],
+      ["aclaracion", "**\"Reordené las secciones a mi gusto.\"** — El orden ya existe en la Plantilla APA CUN. Reinventarlo no suma originalidad: genera devolución."],
+      ["info", "**\"La introducción arranca con la historia de la humanidad.\"** — Arranque en el contexto real del problema: contexto → problema → propósito, tres párrafos."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: montar la plantilla en Google Docs",
+    "bullets": [
+      "**1.** Abra la **Plantilla APA CUN de proyecto de grado** y use Archivo → Hacer una copia. Nunca trabaje sobre el original.",
+      "**2.** Renombre la copia como `S03_EstructuraAvance_Apellido`.",
+      "**3.** Verifique que los títulos usen los **estilos** de la plantilla (Título 1, Título 2…), no negrita puesta a mano.",
+      "  Solo así el índice se genera solo en Insertar → Índice y se actualiza con un clic.",
+      "**4.** Pegue en su sección el bloque de pregunta y objetivos que ya trae de la sesión anterior.",
+      "**5.** Escriba el outline: bajo cada título, 3 a 5 viñetas afirmativas.",
+      "**6.** Resalte en color las secciones vacías y déjelas visibles: son su plan de trabajo.",
+      "**7.** Deje creada la sección **Referencias** y péguele las citas que ya tenga desde **ZoteroBib** (zbib.org)."
+    ],
+    "note": "Todo ocurre en el navegador: Google Docs y ZoteroBib. Sin instalaciones y sin costo."
+  },
+  {
+    "type": "table",
+    "title": "Formato APA 7 que la plantilla ya trae (no lo cambie)",
+    "headers": ["Elemento", "Cómo debe quedar"],
+    "rows": [
+      ["Márgenes", "2,54 cm en los cuatro lados"],
+      ["Interlineado", "Doble en todo el cuerpo del documento"],
+      ["Fuente", "Una sola fuente legible en todo el texto (por ejemplo, 12 pt tipo Times New Roman o 11 pt tipo Arial)"],
+      ["Sangría", "Primera línea de cada párrafo a 1,27 cm"],
+      ["Referencias", "Orden alfabético y sangría francesa de 1,27 cm"],
+      ["Numeración", "Número de página en la esquina superior derecha"],
+      ["Niveles de título", "Nivel 1 centrado y en negrita · Nivel 2 al margen izquierdo en negrita · Nivel 3 al margen izquierdo, negrita y cursiva"]
+    ],
+    "note": "Si algo del formato se ve distinto a esto, probablemente se pegó texto \"con formato de origen\". Use Ctrl+Shift+V para pegar sin formato.",
+    "col_w": [3.3, 8.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Taller — 20 minutos para dejar el documento armado",
+    "bullets": [
+      "**Consigna:** haga una copia de la **Plantilla APA CUN** en Google Docs, llámela `S03_EstructuraAvance_Apellido` y complete el **outline de todo el documento**.",
+      "  **(1)** Cada sección con 3 a 5 viñetas afirmativas de lo que irá.",
+      "  **(2)** La metodología escrita en \"se propone / se aplicará\", sin ningún resultado.",
+      "  **(3)** Las secciones aún vacías resaltadas en color.",
+      "  **(4)** La sección Referencias creada, aunque tenga solo una entrada.",
+      "**Tiempo:** 20 minutos; el Docente revisa mientras tanto ubicación de ideas y tiempo verbal.",
+      "**Criterio de éxito:** al leer solo su outline se entiende el documento completo de un vistazo, y no hay un solo resultado colado en la metodología.",
+      "Si le sobran minutos: convierta en párrafo únicamente el **primer punto de la introducción**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación antes de subir el archivo",
+    "bullets": [
+      "La copia de la plantilla está hecha y renombrada correctamente.",
+      "Todas las secciones de la plantilla existen, incluso las que están vacías.",
+      "Cada sección tiene entre 3 y 5 viñetas, y cada viñeta afirma algo (no es una etiqueta).",
+      "La metodología está redactada en tiempo **propuesto** y no contiene cifras propias.",
+      "Ninguna idea del outline podría ir igual de bien en otra sección.",
+      "La introducción sigue el orden contexto → problema → propósito.",
+      "Los títulos usan los estilos de la plantilla y el índice se genera automáticamente.",
+      "El archivo se llama `S03_EstructuraAvance_Apellido`."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene la próxima sesión",
+    "bullets": [
+      "**Entrega:** suba `S03_EstructuraAvance_Apellido` a **CDigital** con la plantilla copiada y el outline completo.",
+      "  [URL CDigital — campus del curso pendiente]",
+      "**Autónomo 1:** convierta a prosa la sección de introducción, siguiendo sus propias viñetas.",
+      "**Autónomo 2:** revise su metodología con el buscador y elimine todo verbo en pasado.",
+      "**Autónomo 3:** liste tres términos de su pregunta con los que buscará estudios previos la próxima semana.",
+      "**Próxima sesión:** empieza el llenado real del marco con los **antecedentes y referentes (Fase I)**: quién ya trabajó algo parecido y qué encontró.",
+      "  Traiga sesión iniciada en las bases de datos de la biblioteca CUN y en Google Académico."
+    ]
+  }
+]

@@ -1,0 +1,195 @@
+[
+  {
+    "type": "bullets",
+    "title": "Sin pregunta no hay proyecto: solo hay un tema",
+    "bullets": [
+      "Un **tema** —\"inteligencia artificial en soporte técnico\"— no se puede investigar: es un campo, no un problema.",
+      "Una **pregunta** sí se investiga: acota qué se busca, sobre qué y dónde.",
+      "  Del tema salen mil trabajos distintos; de la pregunta sale **uno**: el suyo.",
+      "Síntoma de que falta pregunta: el documento crece pero no avanza; se agregan páginas sin saber si sobran o faltan.",
+      "Caso de Ingeniería de Sistemas: una mesa de ayuda en Bogotá recibe unos 120 tickets diarios y el analista gasta minutos **clasificando** cada uno antes de resolverlo.",
+      "  Tema: \"IA en soporte\". Pregunta: \"¿en qué medida un clasificador supervisado reduce el tiempo de clasificación de esos tickets?\".",
+      "Hoy se sale con **tres piezas escritas**: pregunta, objetivo general con tres específicos y título provisional."
+    ],
+    "note": "Si la pregunta y los objetivos quedan bien, el resto del documento casi se ordena solo."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué es —y qué no es— una pregunta de investigación",
+    "bullets": [
+      "**Es** la brújula del documento: marco, método y resultados existen para responderla.",
+      "**No es** el título, ni el objetivo, ni la solución que usted ya decidió aplicar.",
+      "  Si la pregunta ya nombra la solución (\"¿cómo implementar Python para…?\"), no está investigando: está justificando lo que ya escogió.",
+      "**No es** una consulta de buscador (\"¿qué es machine learning?\"): eso se responde leyendo, no investigando.",
+      "Cuatro exigencias, y las cuatro al tiempo:",
+      "  **Clara**: se entiende sin que usted la explique en voz alta.",
+      "  **Delimitada**: nombra actor, fenómeno y contexto.",
+      "  **Viable**: hay fuentes y acceso; cabe en el tiempo del curso.",
+      "  **Abierta**: no se contesta con sí o con no."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Preguntas que no sirven y su versión investigable",
+    "headers": ["Pregunta como llega", "Qué falla", "Versión investigable"],
+    "rows": [
+      ["¿Sirve la IA para la empresa?", "Se responde sí/no; sin actor ni contexto", "**¿En qué medida** un clasificador supervisado reduce el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X?"],
+      ["¿Qué es el aprendizaje automático?", "Es consulta, no investigación: ya está en los libros", "**¿Qué relación** existe entre el volumen diario de tickets y el tiempo de respuesta en el área de soporte de X?"],
+      ["¿Cómo implementar Python en la empresa?", "La solución ya está decidida; no hay problema", "**¿Cómo** afecta la clasificación manual de tickets la carga de trabajo del analista de soporte de X?"],
+      ["¿Cómo mejorar los procesos de las empresas colombianas?", "Contexto imposible de abarcar", "**¿Cómo** varía el tiempo de atención entre categorías de ticket en el área de soporte de X?"],
+      ["¿Es mejor Java o Python?", "Comparación de opinión, sin criterio ni contexto", "**¿En qué medida** difieren los tiempos de desarrollo entre dos enfoques en el equipo de X, según el histórico del repositorio?"]
+    ],
+    "note": "Arranques que casi siempre funcionan: **¿en qué medida…?**, **¿cómo…?**, **¿qué relación…?**  ·  Arranques peligrosos: **¿es…?**, **¿sirve…?**, **¿debería…?**",
+    "col_w": [3.1, 2.9, 5.9]
+  },
+  {
+    "type": "bullets",
+    "title": "Anatomía de la pregunta: cuatro piezas que deben verse",
+    "bullets": [
+      "**Fenómeno** — qué se estudia: \"el tiempo de clasificación de tickets\".",
+      "**Actor o unidad** — sobre quién o qué se mide: \"los analistas de la mesa de ayuda\".",
+      "**Contexto** — dónde ocurre: \"el área de soporte TI de la empresa X\".",
+      "**Relación o efecto** — qué se quiere establecer: \"el efecto de un clasificador supervisado\".",
+      "Aplique el **test del subrayado**: subraye las cuatro piezas en su pregunta.",
+      "  Si falta una, la pregunta está incompleta y después el método no sabrá qué medir.",
+      "En Ingeniería de Sistemas el fenómeno casi siempre es un **proceso medible**: tiempos, errores, cobertura, disponibilidad, número de incidentes.",
+      "  \"Mejorar la experiencia\" no es un fenómeno medible; \"minutos entre apertura y cierre del ticket\" sí lo es."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Verbos: los que no se pueden evaluar y sus reemplazos",
+    "headers": ["Evite (no medible)", "Por qué falla", "Use (observable)"],
+    "rows": [
+      ["Conocer", "Nadie puede verificar cuánto conoció usted", "Identificar · caracterizar"],
+      ["Entender / comprender", "Ocurre dentro de su cabeza; no deja evidencia", "Analizar · comparar"],
+      ["Aprender sobre", "Describe su formación, no el proyecto", "Describir · clasificar"],
+      ["Ver · mirar · revisar", "No produce ningún producto verificable", "Evaluar · medir"],
+      ["Profundizar en", "No tiene punto final: nunca se sabe si terminó", "Diseñar · proponer"],
+      ["Concientizar · sensibilizar", "Resultado subjetivo, sin forma de constatarlo", "Documentar · sistematizar"]
+    ],
+    "note": "Prueba rápida: si no puede decir **con qué evidencia** demostraría que cumplió el verbo, el verbo está mal escogido.",
+    "col_w": [3.2, 5.0, 3.7]
+  },
+  {
+    "type": "bullets",
+    "title": "El objetivo general: la pregunta convertida en propósito",
+    "bullets": [
+      "Fórmula: **verbo observable + qué + sobre qué o en quién + en qué contexto**.",
+      "  \"**Evaluar** el efecto de un modelo de clasificación supervisada sobre el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X.\"",
+      "**Regla del espejo**: la pregunta y el general dicen lo mismo —uno en interrogación, el otro en propósito—.",
+      "  Si al leerlos seguidos suenan a dos investigaciones distintas, algo se desalineó y manda la pregunta.",
+      "**Un solo verbo** en el general. \"Evaluar y diseñar\" son dos proyectos, no uno.",
+      "El general no se cumple \"en parte\": o el documento lo alcanza o no lo alcanza.",
+      "Truco de redacción: escriba primero la pregunta; luego bórrele el signo de interrogación y póngale un verbo al frente."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Los específicos: tres pasos, tres secciones, una coherencia",
+    "bullets": [
+      "**Regla práctica: 1 general + 3 específicos.** Cada específico se convertirá en una sección del documento.",
+      "Cada específico es un **paso hacia** el general, no un tema aparte que le pareció interesante.",
+      "**Coherencia vertical** — la prueba que se hace en voz alta:",
+      "  ¿Los tres específicos, sumados, alcanzan el general? Si sobra o falta uno, se reescribe.",
+      "  ¿El general responde la pregunta? Si responde otra cosa, se corrige el objetivo, no la pregunta.",
+      "Orden natural de los tres: **diagnosticar → construir → contrastar**.",
+      "  (1) caracterizar lo que hay hoy · (2) diseñar o proponer · (3) comparar, evaluar o validar.",
+      "Seis específicos no significan más trabajo: significan dispersión. Se recortan a tres."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: el caso de los tickets, escrito completo",
+    "bullets": [
+      "**Pregunta:** ¿En qué medida un modelo de clasificación supervisada reduce el tiempo de clasificación de tickets de soporte en la mesa de ayuda de la empresa X?",
+      "**Objetivo general:** Evaluar el efecto de un modelo de clasificación supervisada sobre el tiempo de clasificación de tickets de soporte en la mesa de ayuda de la empresa X.",
+      "**Específico 1:** **Caracterizar** el flujo actual de recepción y clasificación de tickets en la mesa de ayuda.",
+      "**Específico 2:** **Diseñar** el modelo de clasificación supervisada a partir del histórico de categorías de ticket.",
+      "**Específico 3:** **Comparar** el tiempo de clasificación con y sin el modelo propuesto.",
+      "**Título provisional:** Clasificación automática de tickets de soporte mediante aprendizaje supervisado en la mesa de ayuda de la empresa X.",
+      "Revisión en vivo: tape la pregunta y lea solo los objetivos. ¿Se reconstruye qué se investiga? Entonces está bien armado."
+    ],
+    "note": "En Trabajo de Grado 2 el modelo se **propone y diseña**; ejecutarlo con datos reales es trabajo del semestre siguiente."
+  },
+  {
+    "type": "table",
+    "title": "El título provisional: eslogan frente a título académico",
+    "headers": ["Título como llega", "Diagnóstico", "Título corregido"],
+    "rows": [
+      ["Una solución innovadora con IA", "Eslogan: no dice qué, ni sobre qué, ni dónde", "Clasificación automática de tickets de soporte mediante aprendizaje supervisado en la mesa de ayuda de la empresa X"],
+      ["Software para la empresa", "No hay fenómeno ni actor identificable", "Prototipo de módulo de registro de incidentes para el área de soporte TI de la empresa X"],
+      ["Big Data y el futuro de Colombia", "Contexto inabarcable y tono de conferencia", "Análisis de los tiempos de respuesta de la mesa de ayuda de una empresa de servicios en Bogotá"],
+      ["Estudio sobre redes", "\"Estudio sobre\" no agrega información", "Evaluación de la disponibilidad de la red inalámbrica en la sede administrativa de la empresa X"]
+    ],
+    "note": "Tope: **21 palabras**. Deben verse **actor, fenómeno y contexto**. Sin signos de admiración, sin metáforas, sin la palabra \"innovador\". Es provisional: se afina al cierre del curso.",
+    "col_w": [3.1, 3.1, 5.7]
+  },
+  {
+    "type": "boxes",
+    "title": "Lo que más se corrige en esta sesión",
+    "boxes": [
+      ["advertencia", "**\"Mi objetivo es conocer sobre machine learning.\"** — \"Conocer\" no se mide. Cámbielo por identificar, caracterizar o analizar algo concreto."],
+      ["advertencia", "**\"¿Sirve la IA para la empresa?\"** — Se agota en un sí o un no. Reformule con \"¿en qué medida…?\" o \"¿qué relación…?\", con actor y contexto."],
+      ["aclaracion", "**\"Tengo seis objetivos específicos.\"** — El documento se dispersa. Deje tres que, sumados, respondan al general: cada uno será una sección."],
+      ["info", "**\"El título es provisional, ¿lo puedo cambiar?\"** — Sí, se ajusta al cierre. Pero un título vago hoy produce un marco vago mañana."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: de la pregunta al título, todo en el navegador",
+    "bullets": [
+      "**1.** Abra su documento de avance en **Google Docs** y cree el bloque \"Pregunta / Objetivos / Título\".",
+      "**2.** Escriba la pregunta en **una sola frase**. Si necesita dos, todavía no está delimitada.",
+      "**3.** Subraye en ella fenómeno, actor y contexto. Lo que no quede subrayado, sobra.",
+      "**4.** Abra **Google Académico** y busque el fenómeno entre comillas; de los títulos que aparezcan tome **tres términos técnicos** con los que la comunidad nombra su tema.",
+      "**5.** Convierta la pregunta en objetivo general: quite el signo de interrogación y ponga un verbo observable al frente.",
+      "**6.** Derive los tres específicos con el orden caracterizar → diseñar → comparar.",
+      "**7.** Redacte el título con los términos del paso 4 y cuente las palabras en Herramientas → Contar palabras: tope **21**.",
+      "**8.** Guarde en **ZoteroBib** (zbib.org) una referencia que sostenga que el problema existe."
+    ],
+    "note": "Todo se resuelve con Google Docs, Google Académico y ZoteroBib: gratis y en el navegador, sin instalar nada."
+  },
+  {
+    "type": "bullets",
+    "title": "Taller — 20 minutos sobre su propio proyecto",
+    "bullets": [
+      "**Consigna:** en un documento de Google Docs llamado `S02_PreguntaObjetivos_Apellido` escriba:",
+      "  **(1)** La **pregunta** de su proyecto, en una sola frase investigable.",
+      "  **(2)** Un **objetivo general** que la refleje, con un solo verbo observable.",
+      "  **(3)** **Tres objetivos específicos** con verbos medibles, en orden de pasos.",
+      "  **(4)** Un **título provisional** de máximo 21 palabras.",
+      "**Tiempo:** 20 minutos de trabajo individual; el Docente pasa revisando caso por caso.",
+      "**Criterio de éxito:** si se tapa la pregunta y se leen solo los objetivos, un compañero puede reconstruir qué se va a investigar.",
+      "Resalte en amarillo la parte de la que **más duda**: eso es lo que se revisa primero en el acompañamiento."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación antes de subir el archivo",
+    "bullets": [
+      "La pregunta **no** se contesta con sí o con no.",
+      "En la pregunta se identifican fenómeno, actor y contexto (test del subrayado).",
+      "El objetivo general empieza con un verbo observable, y con **uno solo**.",
+      "Ningún objetivo usa conocer, entender, aprender, profundizar o concientizar.",
+      "Los tres específicos, sumados, alcanzan el general.",
+      "Cada específico se puede convertir en una sección del documento.",
+      "El título tiene **21 palabras o menos** y no lleva adjetivos publicitarios.",
+      "El archivo se llama `S02_PreguntaObjetivos_Apellido` y está compartido con permiso de lectura."
+    ],
+    "note": "Si alguna casilla no se puede marcar, ese es exactamente el punto que hay que reescribir antes de entregar."
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene la próxima sesión",
+    "bullets": [
+      "**Entrega:** suba `S02_PreguntaObjetivos_Apellido` a **CDigital**.",
+      "  [URL CDigital — campus del curso pendiente]",
+      "**Autónomo 1:** relea su pregunta 24 horas después. Lo que ese día no se entienda, tampoco lo entenderá el lector.",
+      "**Autónomo 2:** busque en Google Académico dos artículos con título parecido al suyo y anote cómo nombran ellos el fenómeno.",
+      "**Autónomo 3:** deje lista en ZoteroBib, en APA 7, la referencia que sostiene la pertinencia del problema.",
+      "**Próxima sesión:** la **estructura completa del documento de avance** con la Plantilla APA CUN: qué va en cada sección y qué no va.",
+      "  Traiga este bloque de pregunta y objetivos abierto: es el primer contenido que se pega en la plantilla."
+    ]
+  }
+]

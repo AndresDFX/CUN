@@ -1,0 +1,158 @@
+[
+  {
+    "type": "bullets",
+    "title": "El recorrido del almacenamiento (el hilo de hoy)",
+    "bullets": [
+      "**DISCO → PARTICIÓN → FORMATO → MONTAJE**: el camino del hierro físico hasta la carpeta donde ves tus archivos.",
+      "  **Disco:** hardware que guarda datos aunque se apague (**HDD** mecánico o **SSD** de estado sólido); en Linux es un archivo en `/dev` (`/dev/sda`, `/dev/sdb`); en Windows, una letra (C:, D:).",
+      "  **Partición:** cada trozo lógico en que se divide el disco (`/dev/sda1`, `/dev/sda2`) — la letra es el disco, el número es la partición.",
+      "  **Formatear:** escribir el sistema de archivos dentro de la partición (`mkfs.ext4`); sin esto la partición está vacía y \"muda\".",
+      "  **Montar:** enchufar el sistema de archivos a una carpeta, el **punto de montaje**, con `mount`.",
+      "Analogía de la bodega: el disco es el edificio, las particiones son bodegas con muros, formatear instala estantes y catálogo, montar pone la puerta.",
+      "@@Si entiendes este recorrido, ya dominas el 70% de la sesión.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Partición vs. punto de montaje (¡no son lo mismo!)",
+    "bullets": [
+      "En Linux **no hay C: ni D:**: todo cuelga de una sola raíz, la barra `/`. Para usar una partición hay que **montarla** en una carpeta.",
+      "**Partición** (`/dev/sdb1`): el espacio físico del disco, donde de verdad están los datos — la **bodega**.",
+      "**Punto de montaje** (`/datos`, `/var/lib/mysql`): la carpeta del árbol de Linux por la que ENTRAS a esos datos — la **puerta**.",
+      "  La partición es *dónde están* los datos; el punto de montaje es *por dónde entro* a ellos.",
+      "  Una carpeta vacía no ocupa espacio por sí sola: solo es puerta cuando le montas una partición.",
+      "En Windows es más directo: cada partición formateada recibe una **letra** (D:) que es, a la vez, su puerta.",
+      "@@Confundir la bodega con la puerta es el error más común: no lo cometas.@@"
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Sistemas de archivos: ¿cuál elijo?",
+    "headers": ["Sistema", "SO / uso típico", "Journaling", "Dato clave"],
+    "rows": [
+      ["**ext4**", "Linux de propósito general (web, archivos); por defecto en Ubuntu/Debian", "Sí", "Robusto y equilibrado; se agranda y (con cuidado) se reduce"],
+      ["**xfs**", "Linux con bases de datos y mucha escritura; por defecto en RHEL/Rocky", "Sí", "Alto rendimiento; se agranda pero @@NO se reduce@@"],
+      ["**NTFS**", "Windows Server (nativo)", "Sí", "Trae permisos/ACLs, cifrado y compresión"],
+      ["**exFAT**", "USB y discos externos entre Windows, Linux y Mac", "No", "Sin permisos ni journaling; no sirve para un servidor"]
+    ],
+    "note": "**FAT32** es el abuelo de exFAT: no guarda archivos de más de **4 GB**, y por eso se reemplazó."
+  },
+  {
+    "type": "bullets",
+    "title": "Journaling y cómo elegir (esto es \"Analizar\")",
+    "bullets": [
+      "**Journaling** = un cuaderno: el sistema **anota lo que va a hacer antes de hacerlo**. Si se corta la luz a mitad de una escritura, al reiniciar lee el diario y repara en segundos.",
+      "  Lo tienen **ext4, xfs y NTFS**; **exFAT y FAT32 no**.",
+      "Servidor Linux de propósito general (web, archivos) → **ext4** (robusto y equilibrado).",
+      "Servidor Linux con base de datos grande o mucha escritura → **xfs** (rendimiento; recuerda: no se achica).",
+      "Servidor Windows → **NTFS** siempre, por sus permisos e integración.",
+      "Solo mover archivos entre un Windows y un Linux por USB → **exFAT** (ambos lo leen).",
+      "@@Decidir con criterio según el escenario es la habilidad del Nivel 2.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ver el mapa primero: lsblk",
+    "bullets": [
+      "Antes de tocar nada, un buen administrador **mira**. `lsblk` (\"list block devices\") dibuja en árbol los discos, sus particiones, el tamaño y dónde monta cada uno.",
+      "Salida típica, leída como un árbol:",
+      "  `sda 40G` → `sda1 38G /` (el sistema operativo) y `sda2 2G [SWAP]` (colchón en disco cuando la RAM se llena)",
+      "  `sdb 100G` → `sdb1 100G /var/lib/mysql` (los datos de la base de datos)",
+      "La columna **MOUNTPOINT** conecta el mundo físico (la partición) con el árbol de carpetas (el punto de montaje): el recorrido de hoy, hecho realidad.",
+      "Comando hermano: `blkid` muestra el **UUID** de cada partición (identificador único y permanente) que se usa para montar de forma fiable.",
+      "@@Si no sabes leer `lsblk` y `df -h`, administras el servidor a ciegas.@@"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Recorrido práctico: de un disco nuevo a una carpeta usable",
+    "bullets": [
+      "**1. Mirar:** `lsblk` confirma que `sdb` existe y está vacío.",
+      "**2. Particionar:** `sudo fdisk /dev/sdb` (crear con `n`, guardar con `w`) → nace `/dev/sdb1`.",
+      "  Esquemas: **MBR** (`fdisk`; hasta 2 TB y 4 particiones) vs **GPT** (`parted`/`gdisk`; discos enormes) — en servidores nuevos, GPT.",
+      "**3. Formatear:** `sudo mkfs.ext4 /dev/sdb1` escribe la estructura ext4 (@@¡borra lo que hubiera!@@).",
+      "**4. Crear la puerta:** `sudo mkdir /datos` (solo la carpeta vacía).",
+      "**5. Montar:** `sudo mount /dev/sdb1 /datos` conecta la partición a la carpeta.",
+      "**6. Verificar:** `df -h` y `lsblk` deben mostrar `/dev/sdb1` en `/datos`.",
+      "En Windows es gráfico: el **Administrador de discos** (`diskmgmt.msc`) crea un *Volumen simple* = partición + formato NTFS + letra; por consola, `diskpart` o `New-Partition`/`Format-Volume`."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "/etc/fstab: que el montaje sobreviva al reinicio",
+    "headers": ["Campo", "Qué es", "Ejemplo"],
+    "rows": [
+      ["1 · dispositivo", "Qué se monta (mejor por **UUID**, no `/dev/sdb1`, porque las letras cambian)", "`UUID=1a2b-3c4d…`"],
+      ["2 · punto de montaje", "En qué carpeta", "`/datos`"],
+      ["3 · tipo de FS", "Qué sistema de archivos", "`ext4`"],
+      ["4 · opciones", "Cómo se monta", "`defaults`, `ro`, `noatime`"],
+      ["5 · dump", "Copia de respaldo (casi siempre 0)", "`0`"],
+      ["6 · pass", "Orden de revisión al arrancar", "`1` raíz · `2` resto · `0` no"]
+    ],
+    "note": "`mount` dura solo hasta el reinicio; `/etc/fstab` lo hace permanente. @@Antes de reiniciar, prueba con `sudo mount -a`@@: un error aquí puede impedir que el servidor arranque."
+  },
+  {
+    "type": "bullets",
+    "title": "LVM: volúmenes que crecen (PV → VG → LV)",
+    "bullets": [
+      "**El problema:** las particiones son **rígidas**; si `/datos` se llena, no puedes \"estirarla\" sin malabares peligrosos.",
+      "**La solución — LVM** (Logical Volume Manager): una capa de flexibilidad; deja de pensar en particiones fijas y piensa en un **almacén común** del que sacas volúmenes que se agrandan.",
+      "**PV** — Physical Volume: un disco o partición que se entrega a LVM → `pvcreate /dev/sdb`.",
+      "**VG** — Volume Group: la bolsa común que junta uno o varios PV → `vgcreate datos_vg /dev/sdb /dev/sdc`.",
+      "**LV** — Logical Volume: el trozo que sacas, formateas y montas como una partición normal → `lvcreate -L 50G -n datos_lv datos_vg`.",
+      "  Ventaja clave: lo **agrandas después** con `lvextend`, tomando espacio de la bolsa, @@sin apagar el servidor@@.",
+      "Analogía: los PV son botellas, el VG es el tanque donde las vacías, el LV es el vaso que llenas (y rellenas) del tanque."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "RAID 0 / 1 / 5: proteger y/o acelerar",
+    "headers": ["Nivel", "Cómo funciona", "Mín. discos", "Qué gana / qué arriesga"],
+    "rows": [
+      ["**RAID 0** (striping)", "Parte los datos y los reparte entre discos, en paralelo", "2", "Máxima velocidad y toda la capacidad, pero **cero protección**: si falla 1 disco se pierde TODO"],
+      ["**RAID 1** (mirror)", "Copia idéntica en dos discos (espejo)", "2", "Máxima seguridad; solo aprovechas la mitad (el resto se \"desperdicia\")"],
+      ["**RAID 5** (paridad)", "Reparte los datos y guarda paridad para reconstruir", "3", "Equilibrio: sobrevive a la falla de **1** disco y usa (N−1); el favorito en servidores"]
+    ],
+    "note": "Analogía de los meseros: RAID 0 reparten platos (rápido, pero si uno cae, cae medio pedido); RAID 1 llevan el pedido duplicado; RAID 5 reconstruyen con su \"libreta de pistas\". @@RAID no es un respaldo:@@ si borras un archivo, se borra en todos los discos (el backup llega en la Sesión 6)."
+  },
+  {
+    "type": "table",
+    "title": "Monitorear el espacio: df -h y du -sh",
+    "headers": ["Comando", "Pregunta que responde", "Ejemplo de lectura"],
+    "rows": [
+      ["`df -h`", "¿Cuánto cabe y cuánto queda por sistema de archivos montado?", "`/var/lib/mysql` casi lleno → alerta: ampliar o liberar"],
+      ["`du -sh /var/*`", "¿Qué carpeta se está comiendo el espacio?", "`/var/log` con **28G** → ese es el culpable"],
+      ["`lsblk`", "¿Qué discos y particiones hay, y dónde montan?", "La foto en árbol del almacenamiento"]
+    ],
+    "note": "La dupla de oro del troubleshooting: @@`df` dice QUÉ disco está lleno; `du` dice QUÉ carpeta lo llenó.@@ En Windows: `Get-Volume` y `Get-ChildItem`."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo resuelto: disco al 100% a las 2 a.m.",
+    "bullets": [
+      "**Escenario:** suena el teléfono, la web está caída, la base de datos no puede escribir. Primera sospecha: **disco lleno**.",
+      "**Paso 1 — ¿qué disco?** Ejecutas `df -h`:",
+      "  `/dev/sda1   40G   39G   0.8G   97%   /`  → @@97%: la raíz casi sin espacio@@",
+      "  `tmpfs      2.0G     0   2.0G    0%   /dev/shm`  → memoria, no molesta",
+      "**Paso 2 — ¿qué carpeta lo llenó?** Ejecutas `du -sh /var/*`:",
+      "  `28G  /var/log`  ·  `1.2G  /var/cache`  ·  `256M  /var/lib`  → **culpable: `/var/log`**",
+      "**Paso 3 — actuar:** rotar/limpiar los logs viejos y comprobar con `df -h` que baja el Use%; a futuro, mover `/var/log` a su propio volumen (LVM: `lvextend` sin apagar).",
+      "@@`df` te dice QUÉ disco; `du` te dice QUÉ carpeta:@@ esa dupla resuelve casi cualquier susto de espacio."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "El recorrido y su herramienta (memorízala)",
+    "headers": ["Paso", "Qué es", "Linux", "Windows"],
+    "rows": [
+      ["Ver el mapa", "Foto de discos y particiones", "`lsblk`, `blkid`", "Administrador de discos / `Get-Disk`"],
+      ["Particionar", "Dividir el disco en trozos", "`fdisk` (MBR) / `parted` (GPT)", "Administrador de discos / `diskpart`"],
+      ["Formatear", "Crear el sistema de archivos", "`mkfs.ext4`, `mkfs.xfs`", "Formatear a NTFS"],
+      ["Montar", "Enchufar el FS a una carpeta", "`mount`, `/etc/fstab`", "Asignar letra (C:, D:)"],
+      ["Flexibilizar", "Volúmenes que crecen", "LVM: `pvcreate`→`vgcreate`→`lvcreate`", "Storage Spaces"],
+      ["Proteger / acelerar", "Combinar discos", "RAID 0/1/5 (`mdadm`)", "Storage Spaces"],
+      ["Monitorear", "Ver espacio y cazar culpables", "`df -h`, `du -sh`", "`Get-Volume`"]
+    ],
+    "note": "Practica los **conceptos** en @@examlab (Test)@@ y los **comandos** en un terminal en línea (JSLinux / Webminal); no instalas nada."
+  }
+]

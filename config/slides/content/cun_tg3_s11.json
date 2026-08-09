@@ -1,0 +1,235 @@
+[
+  {
+    "type": "bullets",
+    "title": "Un metro y un minuto: la regla que define el póster",
+    "bullets": [
+      "Imagine el pasillo de una jornada de investigación: veinte pósteres colgados y gente que camina.",
+      "  Nadie se detiene a leer un documento pegado en la pared. **Nadie.**",
+      "Su póster tiene **un metro de distancia y un minuto de atención** para lograr que alguien se acerque a preguntar.",
+      "Por eso el póster **no** es el artículo en miniatura: es una **pieza de divulgación visual**.",
+      "Prueba brutal y honesta: proyecte su póster, **aléjese un metro de la pantalla** y trate de leerlo.",
+      "  Lo que no se lee, sobra. No se achica la fuente: **se corta el texto**.",
+      "Hoy trabajamos tres cosas que van juntas en la recta final:",
+      "  **1.** El **póster** de divulgación. **2.** Las **evidencias y anexos** de la obra-creación. **3.** La **verificación antiplagio**.",
+      "Y desmontamos de entrada el pánico: **el antiplagio no muerde si usted cita bien**."
+    ],
+    "note": "Herramientas de hoy: **Canva free** o **Google Slides** para el póster; ambas gratis, en el navegador, sin instalar nada."
+  },
+  {
+    "type": "bullets",
+    "title": "El póster: qué es y qué NO es",
+    "bullets": [
+      "**Es** una síntesis visual que cuenta lo esencial de su investigación de un vistazo.",
+      "**Es** una invitación a conversar: el póster abre la puerta, usted da la explicación en vivo.",
+      "**NO es** el artículo con letra 8 y márgenes de 5 mm (el error clásico, y se detecta a tres metros).",
+      "**NO es** un afiche publicitario: no lleva eslóganes, ni frases de motivación, ni fondos que compitan con el texto.",
+      "**NO es** el lugar de la bibliografía completa: **máximo 3 citas**, las imprescindibles.",
+      "Proporción sana de un póster: **≈ 40 % texto, 40 % elementos visuales, 20 % espacio en blanco**.",
+      "  El espacio en blanco no es desperdicio: es lo que hace legible lo demás.",
+      "Elementos visuales que sí funcionan: **un gráfico de su resultado**, un diagrama del método, una foto del prototipo.",
+      "  Un diagrama sencillo se puede armar gratis en **Excalidraw** o **tldraw** y exportarse como imagen."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Anatomía del póster: bloque por bloque",
+    "headers": ["Bloque", "Qué contiene", "Extensión", "Dónde va"],
+    "rows": [
+      ["**Título + autoría**", "Título corto y legible de lejos; autor y programa", "1 línea, fuente muy grande", "Cabecera, todo el ancho"],
+      ["**Problema y pregunta**", "Por qué importa y qué se preguntó", "2–3 líneas", "Columna 1, arriba"],
+      ["**Método**", "Diagrama o **3 pasos** numerados", "3 viñetas o 1 esquema", "Columna 1–2"],
+      ["**Hallazgo principal**", "**1 gráfico + 1 frase** con el dato fuerte", "El elemento más grande", "Columna 2, centro visual"],
+      ["**Conclusión**", "La respuesta a la pregunta", "1–2 líneas", "Columna 3"],
+      ["**Referencias clave**", "Máximo 3, en APA 7 abreviada", "3 líneas pequeñas", "Pie del póster"]
+    ],
+    "note": "El **centro visual** es donde el ojo cae primero. Ahí va el hallazgo, no el logo ni el título. Si su gráfico no está en el centro, el póster está mal armado.",
+    "col_w": [1.9, 3.3, 1.9, 1.9]
+  },
+  {
+    "type": "bullets",
+    "title": "Jerarquía visual: cómo se guía el ojo del que pasa",
+    "bullets": [
+      "El lector recorre el póster en **tres saltos**, no leyendo línea por línea:",
+      "  **Salto 1 (3 segundos):** el título y la imagen grande. Decide si se queda.",
+      "  **Salto 2 (20 segundos):** el hallazgo y la conclusión. Decide si le interesa.",
+      "  **Salto 3 (1 minuto):** problema y método, si ya se enganchó.",
+      "Diseñe **en ese orden de importancia**, no en el orden del artículo.",
+      "Escala de tamaños que funciona a un metro de distancia:",
+      "  **Título:** el doble de grande que cualquier otro texto de la pieza.",
+      "  **Subtítulos de bloque:** claramente mayores que el cuerpo y siempre del mismo tamaño entre sí.",
+      "  **Cuerpo:** frases cortas; si un bloque pasa de 5 líneas, sobra texto.",
+      "Contraste: **texto oscuro sobre fondo claro** gana casi siempre. Los fondos con foto matan la legibilidad.",
+      "Use **máximo dos colores** además del negro, y úselos para señalar, no para decorar."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: montar el póster en Canva free o Google Slides",
+    "bullets": [
+      "**1.** Abra **Canva free** y busque la plantilla \"Póster académico\" o \"Research poster\"; o cree una diapositiva única en **Google Slides**.",
+      "**2.** En Slides, defina el tamaño en Archivo → Configuración de página → Personalizado (formato vertical tipo A1 o A0, según pida el evento).",
+      "**3.** Dibuje primero la **retícula**: cabecera + tres columnas. Sin retícula, el póster queda desordenado sin remedio.",
+      "**4.** Escriba el título **antes que nada** y hágalo corto: si no cabe en una línea, acórtelo.",
+      "**5.** Pegue el **gráfico del hallazgo** en el centro y agrándelo hasta que sea el elemento dominante.",
+      "**6.** Redacte cada bloque con la regla de **una idea por bloque**: problema, método, hallazgo, conclusión.",
+      "**7.** Corte texto hasta que cada bloque quepa sin achicar la letra. **Achicar fuente es hacer trampa consigo mismo.**",
+      "**8.** Agregue máximo **3 referencias** al pie, en tamaño pequeño.",
+      "**9.** Exporte a **PDF** (Canva free y Slides exportan a PDF sin costo) y **pruebe el metro**: proyecte y aléjese.",
+      "**10.** Suba el PDF a CDigital — [URL CDigital — campus del curso pendiente]."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: el mismo proyecto, en versión póster",
+    "bullets": [
+      "**Título:** \"Automatización de pruebas y tiempo de despliegue en un equipo pequeño de desarrollo\".",
+      "  Nótese: dice el **qué** y el **dónde**, en once palabras, sin subtítulos ni dos puntos decorativos.",
+      "**Problema y pregunta:** \"Los despliegues manuales tardan y fallan. **¿En qué medida automatizar las pruebas de regresión reduce el tiempo de despliegue?**\"",
+      "**Método (3 pasos):** \"1) Medición base de 12 despliegues manuales. 2) Implementación de la suite automatizada. 3) Nueva medición y cuestionario de confianza.\"",
+      "**Hallazgo principal (centro, con gráfico de barras):** \"**42 → 18 minutos.** El tiempo promedio de despliegue se redujo a la mitad.\"",
+      "  Debajo del gráfico, una sola línea: \"Se registraron además 2 fallos nuevos en producción.\"",
+      "**Conclusión:** \"Automatizar reduce el tiempo de entrega en equipos pequeños, pero exige vigilar la cobertura de la suite.\"",
+      "**Total de palabras del póster: menos de 120.** El resto es aire, un gráfico y jerarquía.",
+      "Contraejemplo real que hay que evitar: pegar los cuatro párrafos de la discusión en la columna 3. Nadie los va a leer de pie."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Evidencias y anexos: qué se anexa y qué no",
+    "bullets": [
+      "Los **anexos** respaldan el proceso; son la prueba de que el trabajo realmente ocurrió.",
+      "Qué se anexa típicamente en un trabajo de Ingeniería:",
+      "  **Instrumento** diseñado (cuestionario, guía de entrevista, ficha de observación).",
+      "  **Capturas del prototipo** o de la obra-creación, fechadas.",
+      "  **Bitácora** del proceso, con las decisiones y sus fechas.",
+      "  **Formatos de consentimiento** o autorización, cuando aplique.",
+      "  **Tablas de datos crudos** que no cabían en el cuerpo.",
+      "**Qué NO se anexa:** \"todo lo que tengo por si acaso\". Un anexo que nadie referencia es ruido y resta.",
+      "Tres reglas no negociables de un anexo bien puesto:",
+      "  **Rotulado** — cada uno con letra y nombre: *Anexo A. Cuestionario de percepción de confianza*.",
+      "  **Referenciado** desde el cuerpo — en el texto debe aparecer \"(ver Anexo A)\". Si nunca se menciona, no debería estar.",
+      "  **Legible** — capturas nítidas, no fotos de pantalla tomadas con el celular en diagonal."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Cómo se arma la lista de anexos",
+    "headers": ["Anexo", "Contenido", "Se referencia en…", "Estado"],
+    "rows": [
+      ["**Anexo A**", "Cuestionario de percepción de confianza (instrumento completo)", "Sección de método", "Listo"],
+      ["**Anexo B**", "Capturas del pipeline automatizado, con fecha", "Sección de resultados", "Falta rotular"],
+      ["**Anexo C**", "Bitácora de implementación (semana a semana)", "Método y discusión", "Listo"],
+      ["**Anexo D**", "Tabla completa de los 12 despliegues medidos", "Resultados, Tabla 2", "Listo"],
+      ["**Anexo E**", "Autorización de uso de datos del equipo", "Consideraciones éticas", "Pendiente firma"]
+    ],
+    "note": "Arme esta tabla en Google Docs y úsela como control. La columna **\"Se referencia en…\"** es la que delata los anexos de relleno: si queda vacía, el anexo sale.",
+    "col_w": [1.4, 3.6, 2.5, 1.5]
+  },
+  {
+    "type": "bullets",
+    "title": "Antiplagio: qué mide de verdad y qué NO mide",
+    "bullets": [
+      "El software de similitud **mide coincidencia textual** entre su documento y un conjunto de fuentes.",
+      "  Eso es todo. Es un comparador de cadenas de texto, no un juez.",
+      "**Lo que NO hace:** no distingue entre una cita bien hecha y un párrafo copiado.",
+      "  Una **cita textual correcta, entrecomillada y referenciada, también aparece marcada como coincidencia**.",
+      "  Por eso un porcentaje **no es** un veredicto de plagio: es un punto de partida para revisar.",
+      "**Lo que sí revela un porcentaje alto**, casi siempre:",
+      "  **Parafraseo deficiente**: se cambiaron tres palabras y se dejó la estructura del original.",
+      "  **Falta de citación**: se tomó una idea o un texto y no se dio crédito.",
+      "  **Exceso de citas textuales**: el trabajo cita demasiado y argumenta demasiado poco.",
+      "  Coincidencias legítimas y esperables: títulos de secciones, nombres de normas, referencias en la lista.",
+      "La verificación se hace por la **ruta institucional disponible en CDigital**, no por páginas de terceros."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Diagnóstico honesto de un porcentaje alto",
+    "headers": ["Qué está marcado", "Causa real", "Qué hacer (legítimo)"],
+    "rows": [
+      ["Un párrafo casi idéntico a la fuente", "Parafraseo de tres palabras", "**Reescribir la idea con voz propia y citar igual**"],
+      ["Muchas comillas seguidas", "Exceso de cita textual", "Convertir a paráfrasis; dejar solo la cita imprescindible"],
+      ["Frases sin ninguna cita cerca", "Se tomó la idea sin dar crédito", "**Agregar la cita**; es lo único que falta"],
+      ["La lista de referencias completa", "Coincidencia esperable y legítima", "Nada: es normal, se excluye del análisis"],
+      ["Definiciones de normas o estándares", "Texto normativo de redacción fija", "Citarlo textual y entrecomillado, con la fuente"]
+    ],
+    "note": "Ninguna fila de esta tabla dice \"aplicar trucos\". Cambiar sinónimos con un traductor, insertar caracteres invisibles o alterar letras es **fraude académico** y hoy se detecta.",
+    "col_w": [3.1, 2.5, 3.9]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: cómo baja la similitud de forma legítima",
+    "bullets": [
+      "**Fuente original (autor X, 2022):** \"La automatización de las pruebas de regresión reduce de manera significativa el tiempo requerido para desplegar nuevas versiones en equipos de desarrollo de tamaño reducido.\"",
+      "**Parafraseo FALSO (lo que hace la mayoría):** \"La automatización de las pruebas de regresión disminuye de forma importante el tiempo necesario para desplegar nuevas versiones en equipos de desarrollo pequeños.\"",
+      "  Diagnóstico: se cambiaron cuatro palabras y se mantuvo la estructura completa. **El detector lo marca igual, y con razón.**",
+      "**Parafraseo REAL + cita:** \"Cuando un equipo pequeño deja de correr sus pruebas a mano, el cuello de botella del despliegue prácticamente desaparece; X (2022) documentó ese efecto en organizaciones con menos de diez desarrolladores.\"",
+      "  Diagnóstico: la **idea** se conserva, la **estructura y las palabras** son suyas, y **el crédito sigue estando** en la cita.",
+      "**Regla de oro para parafrasear bien:** lea el párrafo, **cierre la fuente**, y escríbalo de memoria con sus palabras. Después vuelva a abrirla y verifique que no distorsionó la idea.",
+      "Y siempre, siempre: **parafrasear no elimina la obligación de citar**. La cita reconoce la idea, no solo las palabras."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Mitos que hay que enterrar hoy",
+    "boxes": [
+      ["advertencia", "\"Pego el artículo completo en el póster, así no falta nada.\""],
+      ["aclaracion", "El póster es **divulgación visual**, no el artículo en miniatura. Si no se lee a un metro, sobra texto. Lo que falte, lo dice usted en vivo."],
+      ["advertencia", "\"Tengo 40 % de similitud: voy a hacer trucos para bajarlo.\""],
+      ["aclaracion", "Los trucos son **fraude** y se detectan. El porcentaje baja de forma legítima reescribiendo con sus palabras y citando bien: revise primero qué está marcado y por qué."],
+      ["advertencia", "\"Parafrasear es cambiar tres o cuatro palabras por sinónimos.\""],
+      ["aclaracion", "Parafrasear es **reexpresar la idea completa** con su propia estructura y voz, y **aun así citar** la fuente. La prueba: hágalo con la fuente cerrada."],
+      ["advertencia", "\"Anexo todo lo que tengo, por si el jurado lo pide.\""],
+      ["aclaracion", "Anexe solo lo que **sustenta**, rotulado y referenciado desde el cuerpo (\"ver Anexo A\"). Un anexo que nadie menciona resta orden al documento."],
+      ["info", "Todo lo prestado se cita: **texto, ideas, imágenes, gráficos y código**. Una figura tomada de internet sin fuente es tan citable como un párrafo."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Póster, anexos y revisión de similitud (20 minutos)",
+    "bullets": [
+      "**Consigna literal.** Entregue **S11_PosterEvidencias_Apellido** con tres productos:",
+      "  **(1) Póster de una página** en Canva free o Google Slides, con los bloques problema · método · hallazgo · conclusión, un gráfico en el centro y máximo 3 referencias al pie. Exportado en PDF.",
+      "  **(2) Lista de anexos** en tabla, con las columnas anexo · contenido · dónde se referencia · estado. Mínimo tres anexos reales de su proyecto.",
+      "  **(3) Un párrafo reescrito:** identifique en su artículo el párrafo con mayor riesgo de similitud, transcríbalo, y debajo escriba su **paráfrasis real con la cita** correspondiente.",
+      "  **(4)** Anote la **ruta institucional de verificación de similitud** que use el curso en CDigital.",
+      "**Tiempo:** 20 minutos. El Docente pasa haciendo la \"prueba del metro\" a los pósteres.",
+      "**Criterio de éxito (verificable):**",
+      "  El póster **se entiende a un metro de distancia** y tiene menos de ~150 palabras.",
+      "  Cada anexo tiene rótulo y una sección del cuerpo donde se referencia; **ninguna celda \"se referencia en\" vacía**.",
+      "  El párrafo reescrito **conserva la idea**, no comparte la estructura del original y **mantiene la cita**."
+    ],
+    "note": "Ejercicio de control en pareja: muéstrele su póster a un compañero durante **30 segundos** y quítelo. Si no puede repetirle su hallazgo principal, el póster todavía no funciona."
+  },
+  {
+    "type": "table",
+    "title": "Checklist de autoevaluación antes de entregar",
+    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
+    "rows": [
+      ["El póster pasa la prueba del metro", "Lo proyecto y me alejo un metro: leo todo", "☐"],
+      ["El hallazgo es el elemento más grande", "El gráfico domina el centro visual", "☐"],
+      ["Ningún bloque pasa de 5 líneas", "Los cuento uno por uno", "☐"],
+      ["Máximo 3 referencias en el póster", "Están al pie, en APA abreviada", "☐"],
+      ["Cada anexo está rotulado (A, B, C…)", "Tienen letra y nombre descriptivo", "☐"],
+      ["Cada anexo se referencia en el cuerpo", "Ctrl+F: \"ver Anexo\" aparece para todos", "☐"],
+      ["Las imágenes ajenas tienen fuente", "Reviso cada figura del artículo y del póster", "☐"],
+      ["Mi párrafo de riesgo fue reescrito y citado", "Comparo original y paráfrasis: estructura distinta", "☐"],
+      ["Conozco la ruta de verificación en CDigital", "La tengo anotada en el documento", "☐"]
+    ],
+    "col_w": [3.6, 4.4, 1.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Trabajo autónomo y qué viene después",
+    "bullets": [
+      "**Suba** `S11_PosterEvidencias_Apellido` a CDigital — [URL CDigital — campus del curso pendiente].",
+      "**Corra la verificación de similitud** por la ruta institucional del curso y **guarde la constancia**: la va a necesitar para el paquete del repositorio.",
+      "**Revise el informe completo, no solo el porcentaje**: entre a ver **qué** quedó marcado y decida qué reescribir y qué citar.",
+      "**Termine de rotular** los anexos y de referenciarlos desde el cuerpo del artículo.",
+      "**Imprima o proyecte** su póster una vez más y hágale la prueba del metro a otra persona.",
+      "**Próxima sesión, la más exigente del curso: el ensayo de la sustentación ante jurados.**",
+      "  Llegue con el **artículo, el póster y un cronómetro** (el del celular sirve).",
+      "  Vaya pensando en voz alta cómo contaría su trabajo completo en **10 a 12 minutos**."
+    ]
+  }
+]

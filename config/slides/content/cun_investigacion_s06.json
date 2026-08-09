@@ -1,0 +1,231 @@
+[
+  {
+    "type": "bullets",
+    "title": "La sesión más de laboratorio del curso",
+    "bullets": [
+      "Hoy se combinan tres unidades del Syllabus en un solo encuentro: **bases de datos, gestores de citas y marco teórico**.",
+      "Es una sesión de manos en el teclado: se busca, se cita y se escribe en vivo.",
+      "Todo con herramientas **gratis y en el navegador**: nada de instalar programas ni comprar licencias.",
+      "El problema que resuelve esta sesión es muy concreto:",
+      "  Un estudiante busca en Google normal, encuentra tres blogs y una nota de prensa, y su marco no aguanta revisión.",
+      "  Otro busca en **Google Académico**, filtra por año, baja el texto completo desde la **biblioteca CUN** y en 40 minutos tiene cinco fuentes citables.",
+      "  Misma pregunta, mismo tiempo invertido: **la diferencia fue saber dónde y cómo buscar**.",
+      "Con lo de hoy queda cerrado el esqueleto del artículo: tema, línea, problema, pregunta, planteamiento y marco."
+    ],
+    "note": "Tenga abierto su planteamiento: el marco **responde a la misma pregunta**, no es un tema nuevo."
+  },
+  {
+    "type": "table",
+    "title": "Buscador ≠ base de datos: cuándo usar cada uno",
+    "headers": ["Recurso", "Qué es", "Fortaleza", "Límite"],
+    "rows": [
+      ["**Google Académico** (scholar.google.com)", "Buscador académico amplio", "Arranque rápido, cobertura enorme, enlace **\"citado por\"**", "Mezcla calidades; muchos resultados sin texto completo"],
+      ["**SciELO** (scielo.org)", "Base de acceso abierto regional", "Fuerte en español y portugués, texto completo gratis", "Menos cobertura en temas muy técnicos o recientes"],
+      ["**Redalyc** (redalyc.org)", "Red de revistas iberoamericanas abiertas", "Revistas de la región, descarga libre", "Cobertura desigual por área"],
+      ["**Biblioteca CUN** (web, login institucional)", "Acceso a bases **suscritas** por la institución", "**Texto completo** de artículos de pago", "Requiere iniciar sesión con la cuenta institucional"],
+      ["**ZoteroBib** (zbib.org)", "Generador de citas en línea", "APA 7 al instante, sin instalar ni registrarse", "No guarda su biblioteca: copie lo que genere"]
+    ],
+    "note": "Google normal **no** está en esta lista. Sirve para orientarse, no para sostener un artículo.",
+    "col_w": [2.8, 2.4, 3.2, 2.6]
+  },
+  {
+    "type": "bullets",
+    "title": "La estrategia en tres movimientos",
+    "bullets": [
+      "**Movimiento 1 — Abrir en Google Académico.** Busque amplio, con sus constructos y sin filtros.",
+      "  Objetivo: descubrir **cómo llama la literatura a su fenómeno**. Anote los términos que se repiten.",
+      "  Use el enlace **\"citado por\"** para saltar de un artículo bueno a los que lo continuaron.",
+      "**Movimiento 2 — Afinar en SciELO o Redalyc.** Aquí busca lo regional y en español.",
+      "  Objetivo: encontrar estudios de **contexto latinoamericano o colombiano**, que le den pertinencia local.",
+      "  Filtre por área y país; contraste lo que encuentre con lo hallado en Scholar.",
+      "**Movimiento 3 — Cerrar en la biblioteca CUN.** Cuando un artículo esté detrás de un muro de pago.",
+      "  Entre con su **login institucional** y descargue el texto completo desde las bases suscritas.",
+      "  Nunca pague por un artículo: primero verifique si la institución ya lo tiene.",
+      "Ese orden ahorra horas: **descubrir → contextualizar → obtener el texto**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Operadores de búsqueda que ahorran horas",
+    "headers": ["Operador / filtro", "Qué hace", "Cómo se escribe"],
+    "rows": [
+      ["**Comillas**", "Busca la **frase exacta**, en ese orden", "`\"pérdida de paquetes\"`"],
+      ["**AND**", "Exige que aparezcan **ambos** términos", "`\"pérdida de paquetes\" AND laboratorio`"],
+      ["**OR**", "Amplía: sirve cualquiera de los dos (útil para sinónimos)", "`phishing OR \"correo malicioso\"`"],
+      ["**Signo menos**", "**Excluye** un término que le ensucia los resultados", "`redes -sociales`"],
+      ["**Filtro por año**", "Limita a lo reciente: en tecnología, **últimos 5 años**", "Panel izquierdo de Scholar: *Desde 2021*"],
+      ["**\"Citado por\"**", "Muestra quién retomó ese artículo después", "Enlace bajo cada resultado en Scholar"]
+    ],
+    "note": "Regla práctica: **empiece amplio y vaya cerrando**. Si arranca con cinco filtros, no encontrará nada y creerá que su tema no existe."
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: una búsqueda real, paso a paso",
+    "bullets": [
+      "**Pregunta de partida:** *\"¿En qué medida la pérdida de paquetes afecta las prácticas del laboratorio de redes?\"*",
+      "**Intento 1 (mal):** `problemas de internet en la universidad` → miles de resultados irrelevantes, ninguno académico.",
+      "  Falla porque usa **lenguaje cotidiano**, no el vocabulario de la disciplina.",
+      "**Intento 2:** `\"pérdida de paquetes\" AND laboratorio` → mejor, pero pocos resultados en español.",
+      "**Intento 3 (bueno):** `\"packet loss\" AND \"network laboratory\"`, filtro **desde 2021**.",
+      "  Aparecen artículos con método, medición y datos: eso sí es citable.",
+      "**Intento 4 (contexto local):** el mismo tema en **SciELO**, en español, filtrando por Colombia o Latinoamérica.",
+      "  Un solo artículo regional le da pertinencia local a todo su marco.",
+      "Lección para anotar: **si no encuentra nada, casi nunca es que el tema no exista: es que buscó con las palabras equivocadas**.",
+      "  Antídoto: tome los términos técnicos de los artículos que sí sirvieron y vuelva a buscar con ellos."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El filtro de 60 segundos: ¿me quedo con esta fuente?",
+    "bullets": [
+      "Antes de descargar nada, revise cinco cosas. Si falla más de una, siga de largo.",
+      "  **Autoría:** ¿hay autores identificables y una institución detrás? Sin autor, no se cita.",
+      "  **Año:** en temas tecnológicos, prefiera los **últimos 5 años**; en teoría de base, la antigüedad no descalifica.",
+      "  **Dónde se publicó:** ¿revista, congreso, repositorio universitario? Un PDF suelto en un sitio desconocido no basta.",
+      "  **¿Tiene método?** Si el texto explica **cómo** llegó a sus resultados, es una fuente fuerte.",
+      "  **Pertinencia:** ¿responde a alguno de **sus constructos**? Si no, es interesante pero no entra.",
+      "Truco de lectura rápida, en este orden: **título → resumen → conclusiones → método**.",
+      "  Con eso decide en un minuto si vale la pena leer el artículo completo.",
+      "Y una advertencia de honestidad: **si solo leyó el resumen, no cite el interior del artículo**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: citar en APA 7 con ZoteroBib",
+    "bullets": [
+      "**1.** Abra **zbib.org**. No pide cuenta, no instala nada, es gratis.",
+      "**2.** Seleccione el estilo **American Psychological Association 7th edition**.",
+      "**3.** Pegue el **DOI** del artículo (el código que empieza por `10.`). Si no tiene DOI, pegue el **título exacto** o la URL.",
+      "**4.** Pulse *Cite*: ZoteroBib arma la referencia completa.",
+      "**5.** **Revísela a mano**, siempre. Los fallos típicos son:",
+      "  Nombres de autor incompletos o invertidos.",
+      "  Título en mayúsculas sostenidas (en APA 7 va en minúscula, salvo la inicial y nombres propios).",
+      "  Falta el nombre de la revista, el volumen o el DOI.",
+      "**6.** *Copy to clipboard* y pegue en su documento, bajo **Referencias**, en **orden alfabético**.",
+      "**7.** En el cuerpo del texto cite **(Apellido, año)**; para cita textual agregue la página: **(Apellido, año, p. 12)**.",
+      "**8.** Repita por cada fuente. Cinco fuentes toman menos de diez minutos."
+    ],
+    "note": "Cada referencia del listado debe estar citada en el texto, y cada cita del texto debe estar en el listado."
+  },
+  {
+    "type": "boxes",
+    "title": "Cuatro advertencias sobre fuentes y citación",
+    "boxes": [
+      ["advertencia", "**No instale Mendeley ni Zotero de escritorio.** No hace falta para este curso, y en muchos equipos institucionales ni siquiera se puede. **ZoteroBib** en el navegador genera el mismo APA 7."],
+      ["advertencia", "**Citar sin haber leído se nota, y es riesgo de plagio.** Si toma una idea de un artículo que cita a otro, cite el que usted leyó. Haga la ficha de lectura antes de citar: sin ficha, no hay cita."],
+      ["aclaracion", "**Wikipedia y los blogs orientan, no sostienen.** Úselos para entender un concepto y luego vaya a las referencias que ellos citan. El marco se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN."],
+      ["info", "**La IA generativa fabrica referencias creíbles y falsas.** Puede darle autor, año, revista y DOI de un artículo que no existe. Regla innegociable: **si no abrió el documento, no lo cita**."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El marco teórico responde a la pregunta, no decora",
+    "bullets": [
+      "**No es** un collage de definiciones copiadas una detrás de otra.",
+      "**No es** un capítulo de historia del tema.",
+      "**No es** un desfile de autores famosos que no tienen que ver con su caso.",
+      "**Es** el conjunto de conceptos y hallazgos previos que le permiten **entender y responder su pregunta**.",
+      "  Se organiza por **constructos** (los conceptos clave de la pregunta), no por autores ni por fechas.",
+      "  Cada fuente entra por una sola razón: **porque ayuda a responder algo de su pregunta**.",
+      "  Si una fuente no ayuda, **no entra**, por interesante que sea.",
+      "Prueba de control: al lado de cada párrafo del marco, escriba a qué parte de su pregunta responde.",
+      "  Si hay un párrafo al que no le puede escribir nada, ese párrafo sobra."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Constructos: cómo salen de su propia pregunta",
+    "bullets": [
+      "Un **constructo** es un concepto clave que su artículo necesita definir y sostener con literatura.",
+      "Se extraen subrayando la pregunta. Veámoslo con el caso modelado:",
+      "  Pregunta: *\"¿En qué medida la **pérdida de paquetes** afecta las **prácticas de laboratorio** en un laboratorio de redes universitario?\"*",
+      "  **Constructo 1:** pérdida de paquetes (qué es, cómo se mide, qué valores se consideran críticos).",
+      "  **Constructo 2:** prácticas de laboratorio (qué son, qué condiciones requieren, cómo se evalúan).",
+      "Segundo ejemplo, con otra línea:",
+      "  Pregunta sobre phishing → **Constructo 1:** phishing y sus rasgos; **Constructo 2:** clasificación automática de correo.",
+      "Reglas prácticas:",
+      "  **Dos o tres constructos** bastan para un artículo de este curso. Cinco es dispersión.",
+      "  Busque literatura **por constructo**, no \"sobre el tema en general\".",
+      "  Cada constructo se vuelve un **subtítulo** del marco: así el texto se ordena solo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "La ficha de lectura: campos y qué escribir",
+    "headers": ["Campo", "Qué se escribe", "Ejemplo (caso modelado)"],
+    "rows": [
+      ["**Referencia APA 7**", "La cita completa generada en ZoteroBib", "Apellido, A. (2022). Título del artículo. *Nombre de la Revista*, 14(2), 45–58."],
+      ["**Constructo al que responde**", "Cuál de sus 2–3 constructos aborda", "Constructo 1: pérdida de paquetes"],
+      ["**Idea principal**", "Una frase, con sus propias palabras", "Mide el efecto de la pérdida de paquetes sobre aplicaciones en tiempo real"],
+      ["**Cita textual + página**", "Máximo 2 líneas, entre comillas, con página", "\"Por encima del 2 % de pérdida, la sesión se degrada de forma perceptible\" (p. 51)"],
+      ["**Relación con mi pregunta**", "Por qué esta fuente entra en **mi** marco", "Aporta un umbral de referencia para juzgar las mediciones del laboratorio X"]
+    ],
+    "note": "El último campo es el que decide. **Si no puede llenarlo, la fuente no entra en su marco.**",
+    "col_w": [2.4, 3.0, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se redacta un párrafo de marco (con su plantilla)",
+    "bullets": [
+      "Un párrafo de marco no es una definición suelta: es un **argumento con respaldo**.",
+      "Estructura en cuatro movimientos:",
+      "  **1. Enuncie el concepto:** *\"La pérdida de paquetes se entiende como la proporción de paquetes que no llegan a destino (Apellido, 2022).\"*",
+      "  **2. Amplíe o matice con otra fuente:** *\"Otros autores señalan que su efecto depende del tipo de aplicación (Apellido, 2021).\"*",
+      "  **3. Contraste o acumule:** *\"Ambos coinciden en que...\"* o *\"a diferencia del anterior, ...\"*",
+      "  **4. Amarre a su caso:** *\"Este umbral sirve como referencia para interpretar las interrupciones del laboratorio X.\"*",
+      "El movimiento 4 es el que separa un marco de un resumen: **siempre vuelva a su pregunta**.",
+      "Señales de que su marco está mal:",
+      "  Un párrafo = un autor, en fila india, sin conversación entre ellos.",
+      "  Aparecen definiciones que después **nunca se usan** en el artículo.",
+      "  Hay citas textuales largas y poco texto propio: el marco lo escribe usted, no los autores."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Búsqueda, fichas y página de marco (~22 min)",
+    "bullets": [
+      "**Consigna literal.** En un documento llamado `S06_MarcoRevision_Apellido`:",
+      "  **(1)** Busque en **Google Académico** y en **SciELO o Redalyc**, y elija **5 fuentes** pertinentes.",
+      "  **(2)** Haga **una ficha de lectura por fuente**, con los cinco campos de la tabla.",
+      "  **(3)** Genere las **5 citas en APA 7** con **ZoteroBib** y revíselas a mano.",
+      "  **(4)** Escriba **una página de marco** organizada por sus **constructos** (un subtítulo por constructo), citando esas fuentes.",
+      "**Tiempo:** ~22 minutos. Reparta: 8 de búsqueda, 6 de fichas, 8 de redacción.",
+      "**Criterio de éxito (verificable):** cada fuente responde a **un constructo de su pregunta**, las 5 citas están en APA 7 y el marco **no es un collage: se lee como argumento**.",
+      "Prueba de control: al lado de cada párrafo, escriba a qué constructo pertenece. Si un párrafo no pertenece a ninguno, sobra."
+    ],
+    "note": "Herramientas: Google Académico, SciELO, Redalyc, biblioteca CUN, ZoteroBib y Google Docs. Todo en el navegador."
+  },
+  {
+    "type": "bullets",
+    "title": "Checklist antes de subir su entrega",
+    "bullets": [
+      "[ ] El documento se llama `S06_MarcoRevision_Apellido`.",
+      "[ ] Tengo **5 fuentes** y **abrí las cinco**: ninguna salió solo del listado de resultados.",
+      "[ ] Al menos **una fuente es de acceso abierto regional** (SciELO o Redalyc), para contexto latinoamericano.",
+      "[ ] Ninguna de mis fuentes es un blog, un video o Wikipedia.",
+      "[ ] Cada fuente tiene su **ficha de lectura** con los cinco campos llenos.",
+      "[ ] El campo **\"relación con mi pregunta\"** está lleno en las cinco fichas.",
+      "[ ] Mis **5 citas en APA 7** están revisadas a mano (autores, año, revista, mayúsculas).",
+      "[ ] Mi marco está organizado por **constructos**, con subtítulos, no por autores ni por fechas.",
+      "[ ] Cada párrafo del marco **vuelve a mi caso** en su última frase.",
+      "[ ] Todo lo citado en el texto aparece en Referencias, y viceversa.",
+      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Cierre del ciclo · trabajo autónomo",
+    "bullets": [
+      "Con lo de hoy queda armado el **esqueleto completo del artículo**:",
+      "  Tema → línea → problema → pregunta → planteamiento → marco.",
+      "  Cada pieza responde a la anterior; si una se mueve, hay que revisar las demás.",
+      "**Trabajo autónomo:**",
+      "  Amplíe de 5 a **8 fuentes** y hágales su ficha: es la diferencia entre un marco justo y uno sólido.",
+      "  Relea su planteamiento y su marco **seguidos**: deben hablar de lo mismo y usar el mismo vocabulario.",
+      "  Unifique términos: si en el planteamiento dice \"caídas\" y en el marco \"interrupciones\", elija uno.",
+      "  Verifique que **cada cita del texto** tenga su referencia y que no sobre ninguna.",
+      "Consulte en **CDigital** el detalle de la evaluación del corte final y el espacio de entrega.",
+      "Plataforma del curso: [URL CDigital — campus del curso pendiente]"
+    ]
+  }
+]

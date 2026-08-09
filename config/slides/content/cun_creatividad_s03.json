@@ -1,0 +1,226 @@
+[
+  {
+    "type": "bullets",
+    "title": "Tener ideas es barato; convertirlas en valor, no",
+    "bullets": [
+      "La sesión pasada salieron con un banco de ideas y una o dos elegidas. Eso es **chispa**.",
+      "  La creatividad produce chispas. La **gestión** decide **cuáles chispas se vuelven fuego y cuáles se apagan a tiempo**.",
+      "Escena real en Ingeniería: proyectos técnicamente brillantes que mueren porque **nadie gestionó el ritmo de validación**.",
+      "  No murieron por falta de talento. Murieron porque nadie preguntó a tiempo \"¿esto le importa a alguien?\".",
+      "Segundo problema: cuando decimos \"esto es innovador\", cada quien entiende algo distinto.",
+      "  Sin un lenguaje común, la discusión se vuelve una pelea de opiniones.",
+      "Hoy resolvemos las dos cosas: **gestión mínima** (quién hace qué esta semana) y un **idioma común** para nombrar su innovación.",
+      "Producto de la hora: una **Ficha Oslo** de su propuesta — tipo dominante, novedad, valor y dos actividades con fecha."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué significa \"gestionar\" la innovación",
+    "bullets": [
+      "**Gestionar la innovación** = el conjunto de **decisiones, procesos y roles** que permiten pasar de ideas a **valor** de forma **repetible**.",
+      "  La palabra clave es **repetible**: acertar una vez es suerte; acertar con método es gestión.",
+      "Lo que gestionar **NO** es:",
+      "  **No** es tener un departamento mágico de innovación en el organigrama.",
+      "  **No** es una lluvia de ideas los viernes por la tarde.",
+      "  **No** es hacer más reuniones. Una reunión **sin decisión** no gestiona nada.",
+      "  **No** es medir actividad (\"hicimos 40 reuniones\"): eso mide movimiento, no avance.",
+      "Lo que sí es, en una frase: **imponer un ritmo de aprendizaje** — priorizar, prototipar barato, medir, decidir.",
+      "Y la decisión más difícil de todas: **decidir cuándo parar** una idea que no funciona."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Las cuatro preguntas que se hace un gestor de innovación",
+    "bullets": [
+      "**1. ¿Qué problema priorizamos... y cuáles dejamos ir?**",
+      "  Priorizar no es hacer una lista: es **renunciar** explícitamente a algo. Si todo es prioritario, nada lo es.",
+      "**2. ¿Con qué recursos contamos de verdad?**",
+      "  Tiempo, datos, personas, dinero. En este curso el recurso escaso es **el tiempo del semestre**.",
+      "**3. ¿Cómo medimos aprendizaje, no actividad?**",
+      "  Actividad: \"hablé con 3 personas\". Aprendizaje: \"descubrí que el 70% ya tiene su propio arreglo casero\".",
+      "**4. ¿Cuándo paramos?**",
+      "  Definir la señal de parada **antes** de empezar evita el proyecto zombi que nadie se atreve a enterrar.",
+      "Aplicado a ustedes esta semana: elijan **un** problema, con **dos** actividades fechadas, y digan **qué van a aprender** con ellas."
+    ],
+    "note": "Gestionar no es burocracia: es la disciplina de decidir con la información que sí se tiene."
+  },
+  {
+    "type": "bullets",
+    "title": "El Manual de Oslo: el idioma común de la innovación",
+    "bullets": [
+      "El **Manual de Oslo** es el documento de referencia de la **OCDE** (Organización para la Cooperación y el Desarrollo Económicos).",
+      "  Orienta cómo **medir y clasificar** la innovación en empresas y en sistemas económicos completos.",
+      "  Es lo que permite que un país compare sus cifras de innovación con otro **usando las mismas definiciones**.",
+      "En este curso **no** lo usamos como norma contable ni estadística. Lo usamos como **taxonomía**: un vocabulario.",
+      "  ¿Para qué? Para dejar de discutir en abstracto si algo \"es innovador o no\".",
+      "  En vez de eso decimos **de qué tipo** es. La discusión se vuelve concreta y verificable.",
+      "**Nota de versión:** la edición más reciente (2018) agrupa todo en **producto** y **proceso de negocio**.",
+      "  En el curso mantenemos **cinco categorías** porque son más fáciles de usar como vocabulario y porque nos interesa visibilizar el impacto **social**."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los cinco tipos de innovación (taxonomía del curso)",
+    "headers": ["Tipo", "Qué cambia", "Señal de que \"sí es\" ese tipo", "Ejemplo en Ingeniería / negocio"],
+    "rows": [
+      ["**Producto**", "Un bien o servicio nuevo o mejorado", "El usuario **percibe una función nueva**", "Módulo o servicio digital que resuelve un dolor concreto"],
+      ["**Proceso**", "El método de producción o de entrega", "Baja el **tiempo, el error o el costo**", "Automatizar las pruebas o el despliegue de software"],
+      ["**Organización**", "Prácticas, roles y relaciones de trabajo", "**El equipo se coordina distinto**", "Pasar de sprints caóticos a Kanban con rituales"],
+      ["**Marketing**", "Diseño, precio, promoción o canal", "Cambia la **adopción** o el posicionamiento", "Nuevo canal de onboarding para un servicio digital"],
+      ["**Social**", "El valor público o comunitario", "Mejora un **bien común medible**", "App gratuita que articula a la comunidad con la alcaldía"]
+    ],
+    "note": "La columna del medio es la que decide. No pregunte \"¿de qué tipo se ve?\"; pregunte **\"¿qué cambia realmente?\"**.",
+    "col_w": [1.8, 3.0, 3.4, 4.4]
+  },
+  {
+    "type": "table",
+    "title": "El caso difícil: ¿producto o proceso?",
+    "headers": ["Pregunta de desempate", "Si la respuesta es...", "Entonces es"],
+    "rows": [
+      ["¿El usuario ve algo que antes no existía?", "Sí, una función nueva", "**Producto**"],
+      ["¿Lo que cambia es cuánto tarda o cuánto falla?", "Sí, el mismo servicio pero más rápido", "**Proceso**"],
+      ["¿Cambió lo que se entrega o cómo se entrega?", "**Qué** se entrega", "**Producto**"],
+      ["¿Cambió lo que se entrega o cómo se entrega?", "**Cómo** se entrega", "**Proceso**"],
+      ["¿El cambio lo notaría alguien de afuera?", "Solo lo nota el equipo interno", "**Proceso** u **organización**"],
+      ["¿Lo que cambió fue quién decide y con quién habla?", "Sí, la coordinación", "**Organización**"]
+    ],
+    "note": "Truco: si su propuesta se puede describir sin nombrar una función nueva, casi seguro **no** es producto.",
+    "col_w": [4.6, 3.4, 2.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Las dos condiciones que casi todos olvidan",
+    "bullets": [
+      "Oslo exige **dos** cosas para que algo pueda llamarse innovación. Faltando una, no cuenta.",
+      "**1. Novedad** — algo **nuevo o significativamente mejorado**.",
+      "  Y aquí viene el alivio: novedad **no** significa \"único en el mundo\".",
+      "  Basta con que sea nuevo **para la firma**, **para el campus**, **para su área** o **para su usuario**.",
+      "  \"Significativamente mejorado\" tampoco es un adjetivo: implica poder decir **en qué** y **cuánto**.",
+      "**2. Implementación** — **se puso en marcha**, salió del papel.",
+      "  Una idea en una presentación **no es** una innovación: es una **intención**.",
+      "  Por eso en este curso deben apuntar, como mínimo, a un **prototipo o piloto pequeño** que demuestre que la idea existe fuera del documento.",
+      "Frase para memorizar: **sin novedad e implementación, sigue siendo una idea, no una innovación.**"
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: clasificamos tres casos en vivo",
+    "bullets": [
+      "**Caso 1 · Una empresa pasa de sprints caóticos a Kanban con rituales.**",
+      "  ¿Producto nuevo? No. ¿Tecnología nueva? Tampoco. Lo que cambió es **cómo se coordina la gente**.",
+      "  → Dominante: **Organización**. Secundario: proceso (los tiempos de entrega también bajan).",
+      "**Caso 2 · Una universidad lanza un chatbot de matrícula.**",
+      "  Aparece un **servicio que antes no existía** y que el usuario usa directamente.",
+      "  → Dominante: **Producto** (servicio digital). Secundario: proceso (menos carga en ventanilla).",
+      "**Caso 3 · App gratuita para reportar huecos en las vías, articulada con la alcaldía.**",
+      "  Sí, hay una app. Pero lo importante es el **bien común**: conectar ciudadanos con la entidad que repara.",
+      "  → Dominante: **Social**. Secundario: producto (la app es el vehículo, no el eje).",
+      "Fíjense en el patrón: **la tecnología visible casi nunca decide el tipo**. Decide **qué cambió para quién**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Dominante y secundario: sí hay capas, pero hay que decidir",
+    "bullets": [
+      "Casi toda propuesta real tiene **varios tipos a la vez**. Eso es normal y no es un problema.",
+      "El problema es usar las capas como excusa para **no decidir**: \"es de todos los tipos\" no es una respuesta.",
+      "**Tipo dominante** = el eje que usted **defiende en la sustentación**.",
+      "  Prueba: si le quita ese cambio a su propuesta, **la propuesta pierde el sentido**.",
+      "**Tipo secundario** = un matiz que enriquece, pero que podría desaparecer sin matar la idea.",
+      "  Va en la ficha como una línea, no como un empate.",
+      "Por qué importa decidir:",
+      "  Fija **qué evidencia** tiene que buscar (un producto se valida distinto que un proceso).",
+      "  Fija **qué métrica** demuestra el valor (¿función nueva usada? ¿minutos ahorrados? ¿personas beneficiadas?).",
+      "  Fija **el relato** con el que va a defender el proyecto: un eje, no cinco."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Errores frecuentes y respuestas",
+    "boxes": [
+      ["advertencia", "**\"Innovación = tecnología nueva, ¿no?\"** No. Cambiar la forma de coordinar un equipo (**organización**) o de entregar (**proceso**) es innovación **sin ningún gadget**."],
+      ["advertencia", "**\"Mi proyecto es de todos los tipos.\"** Puede tener capas, pero elija **uno dominante**. En sustentación se defiende **un eje**, no cinco a la vez."],
+      ["advertencia", "**\"Es un producto tech\"** — cuando el cambio real es de flujo. Pregunta de desempate: ¿el usuario ve una **función nueva** o el proceso **tarda menos**? Si es lo segundo, es **proceso**."],
+      ["advertencia", "**\"Gestionar es hacer más reuniones.\"** Gestionar es imponer un **ritmo de aprendizaje**: prototipar, medir, decidir. Una reunión sin decisión no gestiona nada."],
+      ["advertencia", "**\"Ya lo pensé bien, con eso basta.\"** Oslo pide **implementación**. Sin un piloto o un prototipo, usted sigue teniendo una idea."],
+      ["aclaracion", "**Novedad no es originalidad absoluta.** Nueva para su campus, su área o su usuario ya cuenta. Lo que no cuenta es \"nuevo\" sin decir **para quién**."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: cómo llenar su Ficha Oslo",
+    "bullets": [
+      "Se hace en **Google Docs** o en **Excalidraw** — gratis y en el navegador. Seis campos, en este orden:",
+      "**1. Tipo dominante** · Escriba el tipo **y una frase de justificación** que empiece por \"porque lo que cambia es...\".",
+      "**2. Tipo secundario** (opcional) · Una sola línea. Si duda, déjelo vacío antes que empatar.",
+      "**3. Novedad** · Complete la frase: \"Es nuevo **para** ______ porque antes ______ y ahora ______\".",
+      "**4. Valor esperado** · Una frase sobre lo que **gana el usuario**: tiempo, dinero, tranquilidad, seguridad.",
+      "  Ojo: el valor **no** es la característica técnica. \"Usa un algoritmo de asignación\" no es valor; \"no pierde su hora de práctica\" sí.",
+      "**5. Dos actividades de gestión** · Cada una con **responsable** y **fecha real**. Una actividad sin fecha es un deseo, no gestión.",
+      "**6. Riesgo #1** · La cosa que, si sale mal, **detiene el proyecto**. Una sola, la más peligrosa.",
+      "Regla de escritura: si un campo sirve igual para cualquier proyecto del salón, está mal escrito."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Ficha Oslo modelo — caso del laboratorio",
+    "headers": ["Campo", "Contenido de la ficha"],
+    "rows": [
+      ["**Tipo dominante**", "**Proceso** — porque lo que cambia no es un servicio nuevo, sino el **método de asignación**: se elimina el trámite de reserva"],
+      ["**Tipo secundario**", "Producto (aparece una pantalla de consulta, pero es el vehículo, no el eje)"],
+      ["**Novedad**", "Nueva **para el campus**: antes cada docente asignaba a mano en su cuaderno; ahora se asigna desde el horario del curso"],
+      ["**Valor esperado**", "El estudiante **deja de perder hasta una hora** por semana buscando equipo libre"],
+      ["**Actividad 1**", "Levantar el horario real de ocupación de 2 laboratorios — responsable: yo — semana 1"],
+      ["**Actividad 2**", "Probar el flujo en papel con 5 estudiantes y cronómetro — responsable: yo + 1 compañero — semana 2"],
+      ["**Riesgo #1**", "Que la ocupación real no siga el horario oficial: si el desfase es alto, la asignación automática falla"]
+    ],
+    "note": "Observen las actividades: tienen **verbo, alcance, responsable y momento**. Eso es gestión mínima, y cabe en dos líneas.",
+    "col_w": [2.2, 8.0]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER — Ficha Oslo de su propuesta (20 minutos)",
+    "bullets": [
+      "Completen la **Ficha Oslo** de su propuesta en Google Docs o Excalidraw, con los **seis campos**:",
+      "  (1) **tipo dominante** · (2) tipo **secundario** opcional · (3) **novedad** — ¿nueva para quién? · (4) **valor esperado** en una frase · (5) **dos actividades de gestión** con responsable y fecha · (6) **riesgo #1**.",
+      "**Minutos 0–6** · Decidan el tipo dominante y escriban la justificación con \"porque lo que cambia es...\".",
+      "**Minutos 6–12** · Novedad y valor. Escriban el valor **desde el usuario**, no desde la técnica.",
+      "**Minutos 12–18** · Las dos actividades, con nombre y fecha, y el riesgo #1.",
+      "**Minutos 18–20** · Relean y borren toda frase que sirva para cualquier proyecto.",
+      "Al final leo **tres fichas** en voz alta y corregimos juntos las clasificaciones dudosas.",
+      "**Criterio de éxito verificable:** el tipo dominante está **justificado** con una razón (no solo nombrado) **y** las dos actividades tienen **fecha real**."
+    ],
+    "note": "Si duda entre dos tipos, use la tabla de desempate: ¿función nueva, o menos tiempo/error?"
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de entregar: revise usted mismo",
+    "bullets": [
+      "☐ Escribí **un** tipo dominante, no dos ni cinco.",
+      "☐ Mi justificación empieza por **\"porque lo que cambia es...\"** y nombra el cambio concreto.",
+      "☐ En \"novedad\" digo **para quién** es nuevo (mi área, mi campus, mi usuario) — no escribí \"es único\".",
+      "☐ Mi \"valor\" está escrito **desde el usuario** y no menciona ninguna característica técnica.",
+      "☐ Mis **dos actividades** tienen **verbo + responsable + fecha**. Ninguna dice solo \"investigar\".",
+      "☐ Mi riesgo #1 es de verdad el que **tumbaría** el proyecto, no un inconveniente menor.",
+      "☐ Releí la ficha buscando frases genéricas y las reescribí.",
+      "☐ El archivo se llama **`S04_FichaOslo_Apellido`** y está en **CDigital**.",
+      "Prueba final: si le muestro su ficha a un compañero, ¿sabría decir de qué se trata su proyecto? Si no, falta concreción."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para continuar — trabajo autónomo",
+    "bullets": [
+      "**Tres ideas para llevarse de hoy:**",
+      "  1. Gestionar innovación es imponer **ritmo y criterio**, no hacer más reuniones.",
+      "  2. El **Manual de Oslo** nos da **cinco tipos** para hablar el mismo idioma.",
+      "  3. Sin **novedad e implementación**, sigue siendo una idea, no una innovación.",
+      "**(a)** Suban su ficha como **`S04_FichaOslo_Apellido`** a **CDigital**.",
+      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "**(b)** Traigan un **cuadro comparativo** de su tipo elegido **contra un tipo alternativo que descartaron**, explicando **por qué no**.",
+      "  Ejemplo: \"elegí proceso y descarté producto, porque el usuario no recibe una función nueva sino el mismo servicio más rápido\".",
+      "  Ese cuadro es exactamente el punto de partida de la próxima sesión, así que llévenlo escrito.",
+      "**Próxima sesión:** Tipos de innovación a fondo — **incremental vs. radical** y cómo **argumentar** su elección con criterios."
+    ]
+  }
+]

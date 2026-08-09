@@ -1,0 +1,286 @@
+0| 
+1|1. DATOS GENERALES DE LA UNIDAD CURRICULAR 
+2|Fecha de actualización:  
+3|Versión: 
+4|NIVEL DE FORMACIÓN 
+5|Técnico Profesional ☐ 
+6|Tecnológico ☐ 
+7|CRÉDITOS 
+8|Profesional ☑ 
+9|Especialización ☐ 
+10| 
+11|METODOLOGÍA 
+12|Presencial ☑    
+13|Distancia ☐ 
+14|V
+15|irtual ☑    
+16|Horas de trabajo presencial o Tutorial con Docente: 
+17|32 
+18| 
+19| 
+20|Horas de Trabajo Autónomo y Colaborativo: 
+21|64 
+22| 
+23| 
+24|PROGRAMA 
+25|ACADÉMICO/ÁREA QUE OFERTA 
+26|OPCIONES DE GRADO
+27| 
+28|UNIDAD 
+29|CURRICULAR 
+30|(ASIGNATURA) 
+31|TRABAJO DE GRADO 3 - MODELOS DE INNOVACIÓN INGENIERÍA DE SISTEMAS
+32|CÓDIGO SÍAC: 
+33|94532
+34|TIPOLOGÍA 
+35|Teórico ☑ 
+36|Teórico-Práctico ☑ 
+37|Práctico ☐ 
+38| 
+39|2. DESCRIPCIÓN DE LA UNIDAD CURRICULAR 
+40|La asignatura Trabajo de Grado III – Modelos de Innovación (Ingeniería de Sistemas) corresponde al espacio académico en el que se orienta el desarrollo del trabajo de grado del nivel profesional. En este, y conforme a las directrices institucionales, se lleva a cabo un ejercicio de profundización en un tema de estudio pertinente al contexto y al entorno social, económico, político, estético y cultural, en estrecha relación con las problemáticas de los estudiantes.
+41|Dicho ejercicio se materializa, de manera argumentada y crítica, en un artículo derivado de un proceso de investigación-creación.
+42| 
+43|3. PROPÓSITO DE FORMACIÓN DE LA UNIDAD CURRICULAR 
+44|Al finalizar la asignatura, el estudiante estará en capacidad de formular y desarrollar una propuesta con sustento investigativo, ya sea de carácter temático o derivada del planteamiento de una idea, que le permita articular sus habilidades en el nivel profesional. Este proceso podrá orientarlo hacia la participación en semilleros de investigación o introducirlo en la documentación de un proceso metodológico, basado en los principios y fundamentos de su perfil ocupacional, para evidenciar el objeto de diseño en la elaboración de productos multimediales.
+45|El soporte investigativo corresponderá a un artículo resultado de investigación, entendido como un documento en el que se analizan, sistematizan e integran resultados de investigaciones, publicadas o no, en un campo de la ciencia o la tecnología, con el fin de dar cuenta de avances y tendencias de desarrollo. Este tipo de documento se caracteriza por presentar una revisión bibliográfica rigurosa de, al menos, 50 referencias (Colciencias, 2009, p. 9).
+46|La extensión del artículo no será inferior a cuatro mil palabras, en concordancia con el alcance y la profundidad de la revisión realizada, e incluirá consultas bibliográficas actualizadas, debidamente incorporadas en el cuerpo del documento.
+47|4. COMPETENCIA DE LA UNIDAD CURRICULAR 
+48|Definir y desarrollar un producto orientado a la generación de nuevo conocimiento, a partir de las fases de preproducción, producción y posproducción de un proyecto de comunicación visual, que evidencie el desempeño profesional en la solución de problemáticas sociales, económicas y tecnológicas. 
+49| 
+50| 
+51|5. ELEMENTOS DE COMPETENCIA 
+52|N° 
+53|RELACIÓN DE ELEMENTOS DE LA UNIDAD CURRICULAR 
+54|1 
+55|Analizar información que permita solucionar un problema de comunicación visual.   
+56|2 
+57|Decidir qué información utilizar conforme a una función comunicativa para crear un artículo resultado de investigación. 
+58|3 
+59|Argumentar en procesos de investigación para el ejercicio de la expresión gráfica y las publicaciones. 
+60| 
+61|PRERREQUISITOS Y CORREQUISITOS (UNIDAD CURRICULAR) 
+62|N° 
+63|PRERREQUISITOS 
+64|CORREQUISITOS 
+65|1 
+66|Opción de grado II 
+67| 
+68|2 
+69| 
+70| 
+71|3 
+72| 
+73| 
+74| 
+75|UNIDADES DE CONOCIMIENTO 
+76|N° 
+77|TEMÁTICA 
+78|SUBTEMÁTICA 
+79|1 
+80|Revisión de casos de éxito derivados de investigación enfocados en Obra creación, acorde a nivel profesional
+81|Presentación del acuerdo pedagógico 
+82|Presentación de los contenidos de la materia 
+83| 
+84|2 
+85|Definición de tema de estudio o presentación de proyecto realizado en semestres 
+86|anteriores,  
+87|Exposición de Casos, descripción del contexto enfocado al planteamiento del problema acorde a competencias de IX semestre. 
+88| 
+89|3 
+90|Formulación de pregunta de investigación acorde a la descripción del problema,  
+91|Exposición y taller, definición de variables en la pregunta problema, para formulación de objetivos de investigación. Título inicial de la investigación. 
+92|4 
+93|Estructura de artículo de investigación. Taller de redacción de Introducción acorde a contexto, descripción de problema, pregunta y objetivos. 
+94|Taller, Planteamiento metodológico de la investigación acorde a los objetivos formulados. Relación con investigación en diseño y métodos a utilizar para la documentación. 
+95| 
+96|5 
+97|Fase I de Referentes de investigación acorde a variables presentes en el tema de estudio.  
+98|Exposición y diálogo colaborativo,  
+99|6 
+100|Diseño de instrumento de investigación desde el prototipado de obra creación. 
+101|Desarrollo metodológico. 
+102| 
+103| 
+104|El diseño metodológico: la lectura del problema, el abordaje, las dimensiones espaciales, temporales y de recursos para llevar a cabo una obra-creación, los alcances y el propósito de la obra-creación 
+105| 
+106|UNIDADES DE CONOCIMIENTO 
+107|N° 
+108|TEMÁTICA 
+109|SUBTEMÁTICA 
+110|7 
+111|Fase II, Comunidades de práctica y co-creación para aplicación en instrumento de investigación. 
+112|Exposición y diálogo colaborativo; La idea: jornada de socialización de problemas hallados y propuestas de intervenciones 
+113| 
+114|8 
+115|Experiencia creativa enfocada hacia el análisis de datos acorde al desarrollo metodológico y el énfasis en obra-creación. 
+116|La idea del producto de diseño: jornada de socialización de problemas hallados y presentaciones con correcciones aplicadas a partir del diálogo en clase. 
+117| 
+118| 
+119|9 
+120|Fase III de Referentes: culminación de la redacción en el marco teórico del artículo de investigación. 
+121|Exposiciones de los estudiantes; presentación del cuerpo del documento (revisión literaria) 
+122|10 
+123|Resultado del proceso metodológico y discusión en el artículo de investigación, relacionando los principales referentes del tema de estudio frente al significado de los hallazgos. 
+124|El diseño metodológico: la lectura del problema, el abordaje, las dimensiones espaciales, temporales y de recursos para llevar a cabo una obra-creación, los alcances y el propósito de la obra-creación. 
+125| 
+126|11 
+127|El resumen del artículo, palabras clave acorde a tesauro UNESCO. 
+128|Culminación del artículo en las conclusiones y referencias. 
+129|Revisión individual por el docente,  
+130|12 
+131|Diseño de póster para sustentación de proyecto, alistamiento de evidencias de obra y creación para anexos. Verificación de artículo en software antiplagio. 
+132|Exposición de casos 
+133|13 
+134|Sustentación de proyecto con jurados. 
+135|sustentación 
+136|14 
+137|Verificación de entregables para repositorio institucional correspondiente al trabajo de grado. 
+138| 
+139| 
+140|6. ESTRATEGIAS 
+141|METODOLOGÍA PEDAGOGÍA Y DIDÁCTICA 
+142|Núcleos Problémicos Integradores: Estos están definidos al interior de la estructura curricular del programa, a través de una asignatura semestral denominada asignatura integradora, la cual interrelaciona los conocimientos de las demás asignaturas del semestre por medio de una pregunta o situación 
+143|problematizadora de carácter disciplinar, estableciendo una vía para el logro del desarrollo de competencias investigativas de los estudiantes, asegurando la articulación con su saber disciplinar específico. 
+144| 
+145|Plan de aula: Es una propuesta de trabajo concertada en el acuerdo pedagógico a partir de una propuesta de Proceso Dialectico sobre conceptos y experiencias (con ponente del grupo o externo al grupo); Laboratorio o simulación controlada; proyectos de aprendizaje u otra herramienta ABP establecida, en desarrollo de este ejercicio el estudiante debe aplicar lo aprendido y evidenciar las experiencias vividas en el proceso enseñanza-aprendizaje con la posibilidad de ampliarlo a los campos de la investigación y la proyección social. 
+146| 
+147|El proceso investigativo: En el acuerdo pedagógico se desarrolla la formulación del desarrollo investigativo partiendo desde la introducción de una técnica documental y/o de campo, la cual será el motor del proceso de recolección y análisis de la información cualitativa y/o cuantitativa, sobre la cual al término del curso se esperan obtener unos resultados, los cuales serán debatidos y condensados en un producto académico. 
+148| 
+149|Segundo idioma: apoyar el desarrollo de la asignatura con herramientas (talleres lecturas, videos y material de clase) en un segundo idioma. 
+150| 
+151|Metodología BANG: Esta es una construcción propia de CUN donde se fomenta la gestión creativa de respuestas a problemáticas, planes y toma de decisiones en la vida y las organizaciones, la cual opera desde tres niveles de complejidad (Gold, Platinum y Black Titanium). 
+152| 
+153|Pruebas estándar: Para dar cumplimiento a los artículos 47 y 48 del reglamento estudiantil (modificado mediante acuerdo 21 de 2018), al finalizar cada corte se aplicará una prueba bajo el estándar ICFES -SABER PRO, cuyas preguntas están orientadas a la medición del logro de las competencias de Opción de grado III como unidad curricular, y su escala cualitativa y cuantitativa estarán determinadas por la tabla establecida en el artículo 52 del reglamento estudiantil. 
+154|  
+155|Estas propuestas pueden implementarse por separado o integradas en el plan de curso y constituyen un cambio de paradigma para quienes están acostumbrados a memorizar, adicionalmente, refuerzan la aplicación del modelo pedagógico Cunista en el aula (física o virtual) de acuerdo con establecido en el PEC y desarrollado en el PEP de PAE. 
+156| 
+157|METODOLOGÍAS COMPLEMENTARIAS 
+158|Clase Magistral ; Seminario ; Seminario - Taller ☐; Taller ☐; Salida de campo ☐ 
+159|Prácticas ☐; Proyectos tutorados ☐; Otro(s) ☐: ______________________________  
+160| 
+161| 
+162|MEDIOS Y AYUDAS EDUCATIVAS 
+163|Aula estándar ; Auditorio ☐; Laboratorios ☐; Centro de prácticas ☐; Sala de Sistemas ☐ 
+164|Uso de software especializado ☐ - ¿Cuál software? Biblioteca 
+165|Otros ☐ - Ms. Excel (DASHBOARD); Suite Google-online ; aplicación Mendeley / GLOBAL2020 /  
+166| 
+167|7. RECURSOS BIBLIOGRÁFICOS 
+168|REFERENCIAS BIBLIOGRÁFICAS 
+169|● 
+170|Bonilla Castro E., Hurtado Prieto J. & Jaramillo Herrera C. (2009). La investigación. Aproximaciones a la construcción del conocimiento científico. Colombia: Alfaomega. 
+171|● 
+172|Cassany D. (1993). La cocina de la escritura. Barcelona: Editorial Empúries. 
+173|● 
+174|Chaves, N. (2001). El oficio de diseñar propuestas a la conciencia crítica de los que comienzan. Gustavo Gili. 
+175|● 
+176|Eco U. (1994). Cómo se hace una tesis: técnicas y procedimientos de estudio. Barcelona: Gedisa. 
+177|● 
+178|Gutiérrez, J., & Delgado, J. M. (1999). Métodos y técnicas cualitativas de investigación en ciencias sociales. España. Síntesis.  
+179|● 
+180|Hurtado de Barrera, J. (1998). Metodología de la investigación holística. Venezuela: Fundación Sypal 
+181|● 
+182|Létourneau, J. (2009) La caja de herramientas del joven investigador: guía de iniciación al trabajo intelectual. Medellín: La Carreta Editores. 
+183|● 
+184|Osorio, F. (2001). Investigar para innovar y crear. Armenia: Gestionar 
+185|● 
+186|PiscitelliI A. (2005). Internet: La imprenta del Siglo XXI. Barcelona: Editorial Gedisa.  
+187| 
+188|8. RESULTADO DE APRENDIZAJE ESPERADO DE UNIDAD CURRICULAR 
+189|Divulga resultados de investigación que da evidencia epistemológica y procedimental, a partir de un producto de comunicación visual que permite solucionar un problema en una comunidad específica y expone las habilidades de un profesional.
+190| 
+191|9. MECANISMOS DE EVALUACIÓN DE LA DE UNIDAD CURRICULAR 
+192|Se evaluará la calidad argumentativa de los artículos de resultados de investigación.  
+193|La evaluación será dada por el docente y por jurados asignados por la Dirección del Programa. 
+194| 
+195|11. HISTÓRICO DE CAMBIOS 
+196|CONTROL DE ACTUALIZACIÓN DEL CONTENIDO 
+197| 
+198|10. SISTEMA DE EVALUACIÓN 
+199|La evaluación del logro de las competencias del estudiante se desarrollará bajo el criterio definido en el artículo 52 del reglamento estudiantil de la CUN. 
+200|CORTE ÚNICO = 100% 
+201|EV 05 
+202|EXAM 
+203|50% 
+204|50% 
+205|Sustentación del procesos académico. 
+206|sustentación ante pares 
+207|Nota: Los porcentajes de cada uno de los parciales y examen final deben cumplir los artículos 47 y 48 del Reglamento Estudiantil. 
+208| 
+209|10. PERFIL DOCENTE 
+210| 
+211|Fecha de actualización 
+212|Descripción del Cambio 
+213|Aprobado por 
+214| 
+215| 
+216| 
+217| 
+218| 
+219| 
+220| 
+221| 
+222| 
+223| 
+224| 
+225| 
+226| 
+227| 
+228| 
+229| 
+230| 
+231| 
+232| 
+233| 
+234| 
+235| 
+236|CONTROL DE APROBACIÓN 
+237|Realizado por 
+238|Validado por 
+239|Aprobado por 
+240|Fecha de Aprobación 
+241| 
+242| 
+243| 
+244| 
+245| 
+246| 
+247| 
+248| 
+249|CONTROL DE CAMBIOS  
+250| 
+251|FECHA 
+252| 
+253|VERSIÓN DEL 
+254|DOCUMENTO QUE SE MODIFICA 
+255|VERSIÓN ACTUAL DEL DOCUMENTO 
+256| 
+257|DESCRIPCIÓN DE LA MODIFICACIÓN 
+258|02/06/2016 
+259|- 
+260|00 
+261|Versión inicial del documento. 
+262|10/12/2018 
+263|00 
+264|01 
+265|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas. 
+266|01/07/2020 
+267|01 
+268|02 
+269|Se realiza modificación del formato en su totalidad, cambiando las requisiciones expuestas. 
+270|07/10/2020 
+271|02 
+272|03 
+273|Actualización general del formato por la versión vigente, cambio en algunas denominaciones y lineamientos brindados. 
+274| 
+275|ELABORÓ: Dirección de 
+276|Aseguramiento de la Calidad 
+277|Institucional y Gestión Académica.  
+278|REVISÓ: Dirección de Planeación y Aseguramiento. 
+279|APROBÓ: Dirección de 
+280|Aseguramiento de la Calidad 
+281|Institucional y Gestión Académica, Dirección de Planeación y Aseguramiento. 
+282|FECHA: 05/10/2020 
+283|FECHA: 06/10/2020 
+284|FECHA: 07/10/2020 
+285| 
