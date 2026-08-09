@@ -77,6 +77,52 @@ REGLA_RESUMEN = (
     "Fuente: config/cursos/fechas_entrega_aca.py + carga_academica_2026.json."
 )
 
+# ─────────────────────────────────────────────────────────────────────────────
+# PROYECTO I — fechas OFICIALES, no calculadas.
+#
+# Para Proyecto I (AFI/ESP329) las ventanas NO se derivan del reparto por pesos:
+# las fija la Coordinación de Gestión del Conocimiento en el
+# `Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf`, y esa es la fuente que
+# el docente adoptó (2026-08-09) para el Manual, el Calendario oficial y el CSV
+# de hitos. El cálculo por pesos se desviaba (daba 31/08 · 28/09 · 09/11 frente a
+# los 30/08 · 04/10 · 08/11 reales), lo que ponía fechas equivocadas en los
+# enunciados de ACA que reciben los estudiantes. Si cambia el periodo, se
+# actualiza ESTA tabla — no se vuelve al cálculo.
+#
+# (apertura, entrega/cierre, fecha límite de nota docente)
+CRONOGRAMA_OFICIAL_P1: dict[str, tuple[date, date, date]] = {
+    "aca1": (date(2026, 8, 3), date(2026, 8, 30), date(2026, 9, 7)),
+    "aca2": (date(2026, 9, 7), date(2026, 10, 4), date(2026, 10, 12)),
+    "aca3": (date(2026, 10, 12), date(2026, 11, 8), date(2026, 11, 16)),
+    "coev": (date(2026, 11, 9), date(2026, 11, 15), date(2026, 11, 22)),
+    "auto": (date(2026, 11, 16), date(2026, 11, 22), date(2026, 11, 22)),
+}
+REGLA_OFICIAL_P1 = (
+    "Fechas OFICIALES de Coordinación (Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf); "
+    "no se calculan por pesos. Cierre y registro de todas las notas: 22/11/2026."
+)
+
+
+def _entregas_oficiales_p1() -> list[EntregaAca]:
+    """Proyecto I: ventanas tomadas del cronograma institucional (ver arriba)."""
+    out: list[EntregaAca] = []
+    for comp in ACA_COMPONENTES["proyecto1"]:
+        ap, ent, nota = CRONOGRAMA_OFICIAL_P1[comp["id"]]
+        out.append(
+            EntregaAca(
+                id=comp["id"],
+                code=comp["code"],
+                label=comp["label"],
+                weight=comp["weight"],
+                kind=comp["kind"],
+                apertura=ap,
+                entrega=ent,
+                nota_docente=nota,
+                regla=REGLA_OFICIAL_P1,
+            )
+        )
+    return out
+
 
 @dataclass(frozen=True)
 class EntregaAca:
@@ -238,11 +284,11 @@ def entregas_para_grupo(key: str, grupo: str | None = None) -> list[EntregaAca]:
         recepcion = _parse_date(c["recepcion"])
         cierre = _parse_date(c["cierre"])
         grupo = None
-    weekday = int(c["horario"]["weekday"])
-    acas = _repartir_acas(inicio, recepcion, weekday, comps, grupo=grupo)
     if key == "proyecto1":
-        return acas + _ventanas_p1(acas, cierre, weekday)
-    return acas
+        # Fechas institucionales, no calculadas (ver CRONOGRAMA_OFICIAL_P1).
+        return _entregas_oficiales_p1()
+    weekday = int(c["horario"]["weekday"])
+    return _repartir_acas(inicio, recepcion, weekday, comps, grupo=grupo)
 
 
 def entregas_curso(key: str) -> list[EntregaAca] | dict[str, list[EntregaAca]]:
