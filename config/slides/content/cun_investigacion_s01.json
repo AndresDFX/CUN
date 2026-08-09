@@ -1,0 +1,170 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cómo trabajamos: una hora en vivo, el resto en su documento",
+    "bullets": [
+      "Este curso tiene **una hora sincrónica por semana** y **seis encuentros** en total. El tiempo de clase es corto: por eso no se usa para dictar.",
+      "**Antes de cada encuentro:** usted revisa el material que el Docente deja en CDigital (10–20 min) y llega sabiendo de qué se va a hablar.",
+      "**Durante el encuentro:** explicación breve, un ejemplo modelado en pantalla y **taller sobre su propio documento**. No se toma dictado.",
+      "**Después del encuentro:** usted termina el avance y lo sube a CDigital antes de la siguiente clase.",
+      "**Qué traer siempre**, sin excepción:",
+      "  Su documento del artículo **abierto** en Google Docs.",
+      "  Una **duda concreta escrita** (no “no entendí nada”).",
+      "  Con qué escribir: si se conecta desde el celular, tenga a mano dónde redactar."
+    ],
+    "note": "Regla del curso: **se trabaja sobre lo que ya existe**. Quien llega sin documento abierto pierde la hora de taller."
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso: las 6 sesiones de un vistazo",
+    "headers": ["Sesión", "De qué se ocupa", "Con qué sale usted de ahí"],
+    "rows": [
+      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)", "El encuadre completo y su encargo autónomo"],
+      ["**02**", "MinCiencias y las 6 líneas de Ingeniería del programa", "Su línea elegida y justificada por escrito"],
+      ["**03**", "Prueba parcial y 1.er avance del artículo", "El borrador mínimo viable del artículo"],
+      ["**04**", "Identificación de problemas y pregunta de investigación", "Su pregunta redactada y su diagrama del problema"],
+      ["**05**", "Formulación del planteamiento del problema", "El planteamiento escrito y sostenido con evidencia"],
+      ["**06**", "Bases de datos, gestores de citas y marco teórico (sesión combinada)", "Fichas de lectura y una página de marco citada"]
+    ],
+    "note": "Las unidades **U1 y U2** del Syllabus no desaparecen: pasan a **lectura autónoma** y se retoman al abrir la Sesión 02.",
+    "col_w": [1.2, 5.6, 5.1]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué se llevan al final: un artículo, no seis talleres sueltos",
+    "bullets": [
+      "El producto de este curso es **un artículo de investigación** escrito por usted.",
+      "No son seis entregas independientes: **cada sesión agrega una sección al mismo documento**.",
+      "Al cerrar el periodo, ese archivo debe contener como mínimo:",
+      "  Un **título** y una **introducción** breves.",
+      "  El **problema** y la **pregunta** de investigación.",
+      "  Un **marco / revisión de literatura** con fuentes citadas.",
+      "  La **lista de referencias** completa en APA 7.",
+      "Para qué le sirve después: es la **semilla de su trabajo de grado**, sirve para postularse a un semillero y le enseña a sostener una idea con evidencia, no con opinión."
+    ],
+    "note": "Lema del curso: **calidad sobre extensión**. Media página bien planteada vale más que cinco de relleno."
+  },
+  {
+    "type": "boxes",
+    "title": "Este es un periodo corto: qué implica para usted",
+    "boxes": [
+      ["info", "**Son seis encuentros.** Faltar a uno es perder cerca de la sexta parte del curso. Si falta, revise CDigital ese mismo día: la consigna queda publicada."],
+      ["aclaracion", "**Una sesión combina varias unidades** del Syllabus (bases de datos + gestores + marco teórico). Es la más densa del periodo: a esa se llega con las lecturas hechas."],
+      ["advertencia", "**Los avances se acumulan.** Si no entrega el de una sesión, el de la siguiente sale mal, porque se construye encima. Aquí no hay “me pongo al día la última semana”."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las ACAs, una por una: qué se entrega y qué se mira",
+    "headers": ["ACA", "Qué entrega", "Qué mira el Docente", "Flojo vs. bueno"],
+    "rows": [
+      ["**ACA 1**", "Primer avance del artículo: título, introducción breve, problema y primeras referencias", "Que el problema se entienda sin conocerlo a usted y que las fuentes existan de verdad", "Flojo: párrafos largos sin problema visible · Bueno: media página donde se ve contexto, vacío y propósito"],
+      ["**ACA 2**", "Planteamiento del problema y pregunta de investigación", "Coherencia entre problema, pregunta y evidencia; que la pregunta sea investigable", "Flojo: pregunta que se responde sí/no · Bueno: pregunta con “cómo”, “qué” o “en qué medida”, anclada a un contexto"],
+      ["**ACA 3**", "Avance consolidado: marco / revisión con fuentes y referencias en APA 7", "Que cada fuente ayude a responder la pregunta y que el documento se lea como un todo", "Flojo: collage de definiciones copiadas · Bueno: fuentes agrupadas por concepto y usadas como argumento"]
+    ],
+    "note": "Enunciado completo, criterios y **fechas exactas**: `Clases/Recursos/ACAs/`. No se copian aquí para que nunca queden desactualizadas.",
+    "col_w": [1.0, 3.0, 3.4, 4.5]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se entrega, paso a paso",
+    "bullets": [
+      "**1.** Escriba en **Google Docs**, sobre la **plantilla APA CUN** que está en `Clases/Recursos/` (ábrala con *Archivo → Abrir con → Documentos de Google*).",
+      "**2.** Nombre el archivo así: `SNN_Tema_Apellido`. Ejemplo: `S02_LineaInvestigacion_Perez`.",
+      "**3.** Exporte a **PDF** al entregar (*Archivo → Descargar → PDF*), salvo que el Docente pida el enlace del documento.",
+      "**4.** Suba el archivo a **CDigital**, en el espacio de esa sesión: [URL CDigital — campus del curso pendiente]",
+      "**5.** Verifique el estado: **subido no es lo mismo que entregado**. Si el campus lo permite, guarde la captura del envío.",
+      "**Si entrega tarde:** avise al Docente **antes** del cierre, no después. Se recibe, pero se califica sobre lo que haya dentro del plazo.",
+      "**Lo que no está en CDigital, no está entregado.** No se reciben trabajos por WhatsApp ni por correo personal."
+    ],
+    "note": "Un solo archivo por entrega, con su apellido. Nada de `final_final_v3.docx`."
+  },
+  {
+    "type": "bullets",
+    "title": "Integridad académica: citar es parte del trabajo",
+    "bullets": [
+      "Todo lo que no es suyo se **cita en APA 7**: ideas, datos, tablas, figuras y código.",
+      "**Parafrasear** es reescribir con sus palabras **y citar igual**. Cambiar dos palabras no es parafrasear.",
+      "Cuenta como **plagio**:",
+      "  Copiar y pegar sin comillas ni referencia.",
+      "  Traducir un texto ajeno y presentarlo como propio.",
+      "  Entregar un trabajo de otro estudiante, o uno suyo de otro semestre, como si fuera nuevo.",
+      "Si se detecta plagio se activa el **debido proceso institucional**: no es algo que el Docente resuelva en privado.",
+      "Cómo evitarlo sin sufrir: **anote la fuente en el instante** en que pega algo en su documento. Recuperarla después cuesta el triple."
+    ],
+    "note": "Herramienta del curso para citar: **ZoteroBib (zbib.org)** — gratis, en el navegador, sin instalar nada."
+  },
+  {
+    "type": "boxes",
+    "title": "Inteligencia artificial generativa: reglas de la casa",
+    "boxes": [
+      ["info", "**Sí se puede usar** para entender un concepto, ordenar ideas o mejorar la redacción de un párrafo que ya escribió usted."],
+      ["aclaracion", "**Se declara.** Al final del documento, una línea: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."],
+      ["advertencia", "**Verifique cada fuente: estos modelos inventan citas, autores y DOIs.** Si no abrió el artículo, no lo cite. Y si el Docente pregunta “¿por qué escribió esto?” y usted no puede explicarlo en voz alta, ese párrafo no le sirve."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Herramientas del curso: todas gratis, todas en el navegador",
+    "headers": ["Herramienta", "Para qué la usamos", "Cuándo aparece"],
+    "rows": [
+      ["**CDigital**", "Entrega oficial, materiales, avisos y notas", "Siempre"],
+      ["**Google Docs**", "Escribir el artículo sobre la plantilla APA CUN", "Todas las sesiones"],
+      ["**Google Académico**", "Buscar literatura y ver quién cita a quién", "Desde la Sesión 02"],
+      ["**SciELO y Redalyc**", "Fuentes abiertas en español y portugués de Iberoamérica", "Sesión de búsqueda y marco"],
+      ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es de acceso abierto"],
+      ["**ZoteroBib (zbib.org)**", "Generar referencias en APA 7 sin instalar ni registrarse", "Cada vez que cite"],
+      ["**Excalidraw**", "Diagramar el problema (espina de pescado, árbol de problemas)", "Sesión de problema y pregunta"],
+      ["**Padlet**", "Tablero donde nos presentamos como grupo", "Hoy"]
+    ],
+    "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Con un navegador basta.",
+    "col_w": [2.6, 5.9, 3.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo pedir ayuda (y cómo pedirla bien)",
+    "bullets": [
+      "**Canal oficial:** el espacio de mensajes o foro del curso en **CDigital**. Lo académico queda ahí, con registro y a la vista de todos.",
+      "**Correo del Docente** (el de la slide *Docente*): para novedades personales — incapacidad, cruce de horario, situación de fuerza mayor.",
+      "**Tiempo de respuesta:** en días hábiles y, en todo caso, **antes del siguiente encuentro**. No espere respuesta a medianoche del día de cierre.",
+      "**En clase:** los últimos minutos son de dudas. Si la suya es larga, escríbala en el foro y se responde con detalle.",
+      "**Una buena pregunta trae contexto:**",
+      "  Mal: “Docente, no entendí la ACA”.",
+      "  Bien: “Subí mi párrafo del problema: ¿la pregunta que escribí es investigable o sigue siendo un tema?”.",
+      "Si va a faltar, avise **antes** y revise CDigital ese mismo día: material y consigna quedan publicados."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Acuerdos de convivencia del encuentro virtual",
+    "boxes": [
+      ["info", "**Puntualidad.** Se empieza a la hora que indica el pie de estas diapositivas: los primeros minutos son el encuadre de la sesión, y quien llega tarde llega sin consigna."],
+      ["aclaracion", "**Cámara** encendida al saludar y durante el taller si su conexión lo permite; no es obligatoria. **Micrófono** apagado mientras alguien expone. Si no quiere hablar, escriba en el chat: se lee todo."],
+      ["advertencia", "**Respeto en el foro y en el tablero.** Se comenta el texto, nunca a la persona. Un comentario útil dice qué mejorar y cómo, no solo qué está mal."]
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Preguntas frecuentes del primer día",
+    "boxes": [
+      ["info", "**“¿Esta materia se pierde fácil?”** No, si entrega. Se evalúa por avances acumulados: quien entrega cada corte, pasa. El riesgo no es la dificultad, es dejar todo para la última semana."],
+      ["aclaracion", "**“¿Puedo trabajar solo o tiene que ser en grupo?”** El artículo de este curso es **individual**, salvo que el enunciado de la ACA diga otra cosa. **“¿Y si aún no tengo tema?”** Hoy sale con uno tentativo; en la Sesión 02 se afina."],
+      ["advertencia", "**“¿Me sirve un trabajo de otro semestre?”** Puede **partir** de un tema suyo anterior, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Lo que debe tener listo para la Sesión 02",
+    "bullets": [
+      "**Lectura autónoma (obligatoria):** unidades **U1 y U2** del Syllabus — presentación del Syllabus y producto final (el artículo) y **fundamentos del método científico**.",
+      "  Hoy no se dictaron: se leen en casa y se **retoman al abrir la Sesión 02** con sus dudas en la mano.",
+      "  Dónde: material de la Sesión 01 en CDigital — [URL CDigital — campus del curso pendiente]",
+      "  Cuánto: 30–40 minutos. Anote **dos dudas** para plantearlas al inicio de la próxima clase.",
+      "**Escriba su tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una sola frase con **actor + fenómeno + contexto**.",
+      "  Agregue 2–3 líneas de **por qué le importa** ese problema.",
+      "  Agregue **una fuente exploratoria** de Google Académico: autor, año y título.",
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/`, con sus fechas."
+    ],
+    "note": "La Sesión 02 arranca con los temas de ustedes en pantalla: quien llegue sin tema escrito trabaja esa hora en blanco."
+  }
+]

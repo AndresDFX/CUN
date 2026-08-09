@@ -7,7 +7,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **07** · **Tema:** Marco legal · citación APA 7
-- **Detalle:** ESP329 U4 · Marco legal si aplica · citación/referencias · cierre ACA2 28/09.
+- **Detalle:** ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de ACA2 (dom 04/10).
 - **PPTX estudiante:** `Clases/Sesion 07 - Marco legal · citación APA 7/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
 

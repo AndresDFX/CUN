@@ -5,14 +5,18 @@ from pathlib import Path
 from pptx import Presentation
 
 sys.stdout.reconfigure(encoding="utf-8")
-root = Path(r"G:\Mi unidad\Trabajos\Empleo\CUN\Cursos")
+# Raíz derivada del propio archivo (antes «G:\Mi unidad\…», que rompe cuando Google
+# Drive monta la unidad en inglés «G:\My Drive»). Corregido 2026-08-09.
+root = Path(__file__).resolve().parents[2]
 url = "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7"
 paths = sorted(
     set(list(root.rglob("Presentacion del Curso*.pptx")) + list(root.rglob("Sesion 01*/Presentacion.pptx"))),
     key=lambda p: str(p),
 )
 for p in paths:
-    if "Temas" in str(p):
+    # "Temas" = carpetas legacy de PPTX sueltos; "_Archivo obsoleto" = material ya
+    # retirado (no debe generar falsas alarmas de esta auditoría).
+    if "Temas" in str(p) or "_Archivo obsoleto" in str(p):
         continue
     prs = Presentation(str(p))
     blob = []

@@ -7,7 +7,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **03** · **Tema:** Objetivos, justificación, alcances y limitaciones
-- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · cierre ACA1 31/08.
+- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · ACA1 ya cerró (dom 30/08); la última sincrónica antes del cierre es la Sesión 02.
 - **PPTX estudiante:** `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
 

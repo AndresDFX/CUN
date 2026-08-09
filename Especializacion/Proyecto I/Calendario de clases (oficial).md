@@ -38,25 +38,29 @@ Cruzando el cronograma oficial con los festivos colombianos de 2026, la ventana 
 
 ## 📚 Las sesiones de clase reales (lunes) — alineadas a ESP329
 
-Fuente curricular: `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx` (7 unidades). Calendario AFI desarrolla esas unidades.
+Fuente de las **fechas de sesión**: `config/cursos/sesiones_cun.py` → `COURSES["proyecto1"]["sesiones"]` (la misma que alimenta el CSV/ICS de encuentros que se importa a Calendar). Fuente **curricular**: `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx` (7 unidades).
+
+> ✅ **Corregido el 2026-08-09:** esta tabla estaba **desfasada una sesión** (arrancaba el 03/08, lunes anterior al inicio del periodo, lo que contradecía el «Inicio del periodo: 10/08/2026» de este mismo archivo). Ya está alineada con la fuente. Las fechas de ACA y la tabla «Cronograma OFICIAL» **no se tocaron**.
 
 | # | Fecha | Bloque | Unidad ESP329 | Contenido |
 |---|---|---|---|---|
-| 1 | **03/08/2026** | ACA 1 | U1 | Presentación del curso y fundamentos de investigación · encuadre P-I→P-II · rompehielos QR/Padlet. |
-| 2 | **10/08/2026** | ACA 1 | U2 | Problema y pregunta de investigación · líneas IA del programa. |
-| 3 | **24/08/2026** | ACA 1 | U3 | Objetivos, justificación, alcances y limitaciones. **Última clase antes del cierre ACA1 (30/08)** — equipos en Moodle a más tardar esta semana. |
-| — | *31/08 y 07/09: usa la primera sesión de ACA2 para retroalimentar* | | | |
-| 4 | **07/09/2026** | ACA 2 (abre) | U4 | Retroalimentación ACA1 · Antecedentes (mín. 6 nacionales/internacionales). |
+| 1 | **10/08/2026** | Encuadre | — (U1 → lectura autónoma) | **Presentación del curso · docente · estudiantes · ACAs.** No se dicta tema: se presentan el curso, el Docente, los estudiantes (rompehielos en Padlet) y las ACAs (qué se entrega, peso, cómo se entrega). ⚠️ **La U1 (Fundamentos y enfoque de investigación) pasa a LECTURA AUTÓNOMA** y se retoma al abrir la Sesión 02. |
+| — | *17/08: festivo (Asunción). Sin sincrónico — trabajo autónomo en CDigital.* | | | |
+| 2 | **24/08/2026** | ACA 1 | U2 | Problema y pregunta de investigación · líneas IA del programa. **Última sincrónica antes del cierre de ACA 1 (dom 30/08)** — equipos conformados en CDigital a más tardar esta semana. |
+| 3 | **31/08/2026** | ACA 1 | U3 | Objetivos, justificación, alcances y limitaciones. ⚠️ Cae **después** del cierre de ACA 1 (30/08) y **antes** de la fecha límite de nota (07/09): úsela para cerrar coherencia problema ↔ objetivos y preparar la retroalimentación. |
+| 4 | **07/09/2026** | ACA 2 (abre) | U4 | Retroalimentación ACA 1 · antecedentes (mín. 6 nacionales/internacionales). |
 | 5 | **14/09/2026** | ACA 2 | U4 | Marco teórico. |
 | 6 | **21/09/2026** | ACA 2 | U4 | Marco conceptual y marco contextual. |
-| 7 | **28/09/2026** | ACA 2 | U4 | Marco legal (si aplica) · citación APA 7 · cierre ACA2 04/10. |
-| 8 | **05/10/2026** | Puente ACA2→ACA3 | U5 | Diseño metodológico: paradigma, enfoque y alcance — última sesión antes de festivos de ACA3. |
+| 7 | **28/09/2026** | ACA 2 | U4 | Marco legal (si aplica) · citación APA 7. **Última sincrónica antes del cierre de ACA 2 (dom 04/10).** |
+| 8 | **05/10/2026** | Puente ACA2→ACA3 | U5 | Diseño metodológico: paradigma, enfoque y alcance — última sesión antes de los festivos de ACA 3. |
+| — | *12/10: festivo (Día de la Raza). Sin sincrónico.* | | | |
 | 9 | **19/10/2026** | ACA 3 (#1 de 2) | U5 | Población/muestra, técnicas e instrumentos (**propuestos, NO aplicados**). Tutoría extra recomendada. |
-| 10 | **26/10/2026** | ACA 3 (#2 de 2) | U6–U7 | Planeación, viabilidad e integración del anteproyecto. Última sincrónica antes del cierre ACA3 (08/11). |
-| 11 | **09/11/2026** | Cierre | U7 | Integración y evaluación · coevaluación (09–15/11) y autoevaluación (16–22/11). **Última sesión sincrónica** (16/11 festivo). |
-| — | 16/11 y 22/11 | Autoevaluación | — | Sin sincrónico (16/11 festivo); trabajo autónomo en CDigital hasta cierre 22/11. |
+| 10 | **26/10/2026** | ACA 3 (#2 de 2) | U6–U7 | Planeación, viabilidad e integración del anteproyecto. **Última sincrónica antes del cierre de ACA 3 (dom 08/11).** |
+| — | *02/11: festivo (Todos los Santos). Sin sincrónico.* | | | |
+| 11 | **09/11/2026** | Cierre | U7 | Integración y evaluación · coevaluación (09–15/11) y autoevaluación (16–22/11). **Última sesión sincrónica** (16/11 es festivo). |
+| — | *16/11 y 22/11: sin sincrónico (16/11 festivo); trabajo autónomo en CDigital hasta el cierre del 22/11.* | | | |
 
-**Total: 9 sesiones de clase + 2 sesiones "puente"/cierre = 11 lunes con actividad, dentro de 12 lunes no-festivos del periodo** (queda 1 lunes, 09/11, ya contado como cierre/coevaluación).
+**Total: 11 sesiones sincrónicas = los 11 lunes no festivos del periodo (10/08 → 09/11).** Cuadra exacto: entre el 10/08 y el 22/11 hay **15 lunes**; menos los **4 festivos** (17/08, 12/10, 02/11, 16/11) quedan **11**. No sobra ni falta ningún lunes.
 
 ## 🎯 Fechas institucionales resumen
 - Inicio del periodo: **10/08/2026**

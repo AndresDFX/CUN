@@ -1,0 +1,14 @@
+# Bytecode de Python (regenerable)
+__pycache__/
+*.py[cod]
+
+# Secretos OAuth de Calendar API (ver config/slides/secrets/README.md)
+config/slides/secrets/credentials.json
+config/slides/secrets/token*.json
+
+# Temporales de sistema / Google Drive
+.DS_Store
+Thumbs.db
+desktop.ini
+*~$*
+~$*

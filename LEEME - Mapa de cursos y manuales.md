@@ -108,7 +108,7 @@ Cada asignatura puede tener `<Asignatura>/_Archivo obsoleto 2026-08-09/` (espejo
 
 En **los 5 cursos** la primera sesión **no dicta tema**: presenta el curso, al Docente, a los estudiantes (Padlet) y las ACAs, más acuerdos de trabajo. El contenido curricular arranca en la **Sesión 02**.
 - Título fijo: `Sesion 01 - Presentación del curso · docente · estudiantes · ACAs` (carpeta en `Clases/` y guion en `Guiones/`).
-- Fuente: `config/cursos/sesiones_cun.py` → la sesión 1 lleva `presentacion: True`, `bloque: "Encuadre"` y `unidad_diferida` (la unidad del sílabo que pasa a **lectura autónoma** y se retoma al abrir la S02 — no se elimina del sílabo).
+- Fuente: `config/cursos/sesiones_cun.py` → la sesión 1 lleva `presentacion: True`, `bloque: "Encuadre"` y `unidad_diferida` (la unidad del Syllabus que pasa a **lectura autónoma** y se retoma al abrir la S02 — no se elimina del Syllabus).
 - Deck: `build_pptx_presentacion()` en `build_sesion_material.py`. El builder rico de tema de Creatividad S01 quedó obsoleto (archivado en `config/_Archivo obsoleto 2026-08-09/slides/`).
 - Los artefactos de S01 con el título viejo están en `<Curso>/_Archivo obsoleto 2026-08-09/`.
 

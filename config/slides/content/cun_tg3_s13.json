@@ -81,7 +81,7 @@
     "title": "El mismo trabajo, con metadatos malos y con metadatos buenos",
     "headers": ["Campo", "Mal diligenciado", "Bien diligenciado"],
     "rows": [
-      ["Título", "\"Trabajo de grado — proyecto final 2026\"", "El título real y completo del artículo"],
+      ["Título", "\"Trabajo de grado — proyecto final\"", "El título real y completo del artículo"],
       ["Autoría", "\"Juan y equipo\"", "Nombres completos, en el orden de la portada"],
       ["Resumen", "\"Ver documento adjunto\"", "El resumen completo, ~200–250 palabras"],
       ["Palabras clave", "\"tecnología, innovación, futuro\"", "Los 4 términos UNESCO usados en el artículo"],

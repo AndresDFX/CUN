@@ -3,6 +3,13 @@ description: Docente CUN, estructura de carpetas, carga 2026, calendarios y est�
 alwaysApply: true
 ---
 
+# Terminología obligatoria — se escribe «Syllabus», nunca la forma castellanizada
+
+El documento institucional de la asignatura se escribe **Syllabus** (mayúscula inicial, doble «l») en **todo** el material del workspace: guiones, diapositivas, manuales, LEEME, calendarios, enunciados de ACA, correos y agentes. **Queda prohibida la forma castellanizada** (la que empieza por «síl…»/«sil…», en singular o plural).
+
+- **Única excepción:** el `.docx` oficial de la CUN y sus extractos crudos, que conservan la redacción de la universidad — no se altera un documento institucional. Tampoco se corrige el título de una cita bibliográfica ajena.
+- **Verificación:** `python config/slides/_check_padlet_syllabus.py` recorre las Presentaciones del Curso y las decks de Sesión 01 y marca `CHK` si aparece la forma castellanizada. **Su regex contiene esa forma a propósito: no la "corrijas"**, es el detector que hace cumplir esta regla.
+
 # Docente CUN (dato fijo interno)
 
 - **Titular real (interno · Calendar / Meet / firma / carga académica):** Julian Andres Castaño · `julian_castanoe@cun.edu.co`
@@ -34,7 +41,7 @@ Tras el cambio: regenerar/actualizar las **5 Presentaciones del Curso** (y el mo
 La **primera sesión de todos los cursos no desarrolla tema académico**. Es la sesión de presentación: **el curso · el Docente · los estudiantes (Padlet) · las ACAs** (qué se entrega, cuánto pesa, dónde se sube), más los acuerdos de trabajo y el encargo autónomo. El contenido curricular **arranca en la Sesión 02**.
 
 - Título fijo de la Sesión 01: **«Presentación del curso · docente · estudiantes · ACAs»**.
-- En `config/cursos/sesiones_cun.py`, la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y `"unidad_diferida"` (qué unidad del sílabo pasa a **lectura autónoma** y se retoma al abrir la Sesión 02). La unidad **no se borra** del sílabo: queda registrada ahí.
+- En `config/cursos/sesiones_cun.py`, la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y `"unidad_diferida"` (qué unidad del Syllabus pasa a **lectura autónoma** y se retoma al abrir la Sesión 02). La unidad **no se borra** del Syllabus: queda registrada ahí.
 - Deck: `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → Preséntate/Padlet → ACAs → acuerdos → autónomo → cierre). El guion de S01 es de **encuadre**, sin fundamento teórico de unidad.
 - Fechas y % de las ACAs **no** van en la deck de S01: viven en `Clases/Recursos/ACAs/` y en la Presentación del Curso (evita arrastrar una fecha que quede vieja).
 
@@ -179,7 +186,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 
 | Agente | Uso |
 | :--- | :--- |
-| `disenador-curricular-cun` | Generar material (sílabo → presentación + guiones + slides) |
+| `disenador-curricular-cun` | Generar material (Syllabus → presentación + guiones + slides) |
 | `cun-dudas-material` | Consultas rápidas sobre normas, ACAs, cronogramas (no genera material) |
 
 - Cursor: `.cursor/agents/*.md` · Claude: `.claude/agents/*.md`

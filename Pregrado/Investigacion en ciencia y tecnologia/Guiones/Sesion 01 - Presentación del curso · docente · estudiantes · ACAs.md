@@ -1,7 +1,8 @@
 ### GUIÓN DOCENTE — Sesión 01: Presentación del curso · docente · estudiantes · ACAs
 
-> **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
-> Estudie primero el Fundamento Teórico. **Duración: 60 minutos**.
+> **Uso:** guion de la sesión de **encuadre**. Hoy **no se dicta tema**: se presenta el curso, el Docente, el grupo y las ACAs.
+> El contenido del Syllabus arranca en la **Sesión 02**; las unidades **U1–U2** quedan como **lectura autónoma** de esta semana.
+> Léalo en voz alta casi literal. **Duración: 60 minutos**.
 > Logística de semestre → Presentación del Curso / Manual. **Sin fechas de periodo.**
 > **PPTX:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 
@@ -11,66 +12,85 @@
 - **PPTX estudiante:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-> **Rompehielos Padlet:** slide **PRESÉNTATE** de la Presentación del Curso (Sesión 01 = presentación). URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7. No duplicar en esta deck.
+> **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck de **encuadre**, 21 slides — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX | Fase |
+| :---: | :--- | :---: |
+| **1** | Portada — Sesión 01 | 1 |
+| **2** | AGENDA DE HOY | 1 |
+| **3** | Docente | 1 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
+| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **6** | Cómo trabajamos: una hora en vivo, el resto en su documento | 3 |
+| **7** | Mapa del curso: las 6 sesiones | 3 |
+| **8** | Qué se llevan al final: un artículo | 3 |
+| **9** | Este es un periodo corto: qué implica | 3 |
+| **10** | Las ACAs, una por una | 4 |
+| **11** | Cómo se entrega, paso a paso | 4 |
+| **12** | Integridad académica | 4 |
+| **13** | Inteligencia artificial generativa | 4 |
+| **14** | Herramientas del curso | 4 |
+| **15** | Cómo pedir ayuda | 4 |
+| **16** | Acuerdos de convivencia | 5 |
+| **17** | Preguntas frecuentes del primer día | 5 |
+| **18** | Lo que debe tener listo para la Sesión 02 | 5 |
+| **19** | ACUERDOS DE TRABAJO | 5 |
+| **20** | PARA LA PRÓXIMA SESIÓN | 5 |
+| **21** | Cierre — Sesión 01 | 5 |
 
 🎯 **Objetivos de la sesión**
-1. **Comprender** que el producto del curso es UN **artículo de investigación** y que cada sesión aporta a ese mismo documento.
-2. **Distinguir** ciencia, tecnología e investigación, y ordenar las **etapas del método científico** (problema → datos → procesamiento → análisis → comunicación).
-3. **Dejar** en Padlet una expectativa + tema de interés y redactar una **ficha de tema tentativo** (actor + fenómeno + contexto) en Google Docs.
+1. **Encuadrar** el curso: cómo se usa la hora sincrónica, qué se hace en trabajo autónomo y cuál es el producto final (**un artículo**).
+2. **Presentar** al Docente y conocer al grupo, dejando a cada estudiante en el Padlet oficial.
+3. **Explicar** las ACAs, la ruta de entrega en CDigital y las reglas de integridad académica y de uso de IA generativa.
+4. **Cerrar** con acuerdos de trabajo y con el encargo autónomo: **lectura de U1–U2** + ficha de tema tentativo.
 
 ---
 
-📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
+🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*
 
-> Este apartado asume que usted **no** es especialista en metodología. Léalo completo: son las ideas y analogías que dirá en voz alta.
+> Esta sesión se cae si el Padlet no abre, si el espacio de entrega no existe o si usted no sabe dónde está el enunciado de la ACA 1. Todo lo de abajo se deja listo **antes** de entrar al Meet.
 
-#### 1. El producto del curso es UN artículo (no talleres sueltos)
-El hilo conductor de EI005 es un **artículo de investigación**. No son actividades aisladas: cada sesión agrega una sección al mismo documento. Distinga dos tipos: el artículo de **nuevo conocimiento** (reporta datos propios) y el de **revisión** (sistematiza lo ya publicado). En un curso de una hora sincrónica y periodo corto, la meta realista es un artículo **breve y bien planteado**, no una tesis.
-
-#### 2. Ciencia, tecnología e investigación (no son sinónimos)
-- **Ciencia:** cuerpo de conocimiento que busca **explicar** por qué ocurren los fenómenos.
-- **Tecnología:** **aplicación** de ese conocimiento para resolver un problema (una app, un dispositivo IoT, un protocolo).
-- **Investigación:** el **método sistemático** que produce conocimiento nuevo y confiable.
-
-Analogía de clase: la ciencia es el **mapa** (explica el terreno), la tecnología es el **vehículo** (te lleva a algún lado), y la investigación es el **proceso de levantar ese mapa con rigor**.
-
-#### 3. Método científico operable (cada etapa es una sección de su artículo)
-Traducción del detalle del Syllabus — problema → datos → procesamiento → análisis:
-
-| Etapa | Qué se hace | Dónde aparece en el artículo |
-| :--- | :--- | :--- |
-| Observación / problema | Detectar un hecho que inquieta | Introducción / planteamiento |
-| Pregunta y propósito | Delimitar qué se quiere saber | Pregunta y objetivos |
-| Datos | Recoger evidencia (propia o publicada) | Método / fuentes |
-| Procesamiento | Ordenar, tabular, depurar | Método / resultados |
-| Análisis | Interpretar a la luz de la pregunta | Resultados y discusión |
-| Comunicación | Escribir y compartir | **El artículo completo** |
-
-#### 4. Criterio de un buen tema tentativo
-Fórmula: **actor + fenómeno + contexto**. "La IA" no es un tema; "detección de fraude con IA en una fintech local" sí lo es, porque tiene quién, qué y dónde.
-
-#### Ejemplo modelo para clase
-'Redes' → 'pérdida de paquetes en el laboratorio de redes X de la CUN y su impacto en las prácticas de los estudiantes'.
-
-#### Errores frecuentes
-| Error frecuente / pregunta trampa | Qué responde el docente |
+#### 1. Qué debe tener abierto y probado
+| Qué | Para qué lo necesita hoy |
 | :--- | :--- |
-| “Ciencia es solo lo del laboratorio con bata.” | La ingeniería también hace ciencia: medir, modelar y explicar un sistema es ciencia. |
-| “Investigar es buscar en Google.” | Buscar es un insumo; investigar es método sistemático con pregunta, datos y análisis. |
-| “Mi tema es la inteligencia artificial.” | Demasiado amplio: pida actor + fenómeno + contexto en una sola frase. |
-| “El artículo se escribe al final del curso.” | Se construye desde hoy; cada sesión agrega una sección al mismo documento. |
+| Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo; nada de “luego les aviso” |
+| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y logística de periodo (grupo, fechas, evaluación) |
+| **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 21 slides, en orden |
+| **Padlet oficial** abierto y probado en una pestaña | Rompehielos; el link se pega en el chat apenas empiece |
+| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Ábralos en pantalla: las **fechas exactas viven ahí**, no en la deck |
+| **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs, sin instalar Office |
+| **Meet** de la serie, 10 minutos antes | Recibir a quien llega temprano y probar audio |
+| Lista del grupo | Saludar por nombre y registrar asistencia |
+
+#### 2. Qué NO se hace hoy
+**No se dicta tema.** Si alguien pregunta por el método científico o por qué el producto es un artículo, la respuesta es: *“eso es exactamente la lectura de esta semana y lo abrimos en la Sesión 02”*. Adelantar U1–U2 hoy deja la próxima sesión sin sustancia y el encuadre a medias.
+
+#### 3. Los tres mensajes que deben quedar grabados
+1. **El producto del curso es un artículo**, y se empieza a construir esta misma semana.
+2. **Se entrega en CDigital**, siempre, con la plantilla APA CUN.
+3. **Son seis encuentros**: en periodo corto no existe la semana de recuperación.
+
+#### 4. Tono del primer día
+Es la única clase donde usted “vende” el curso. Hable despacio, use el nombre de quien participa y explique cada acuerdo **con la razón detrás**, no como lista de prohibiciones. Un encuadre bien hecho ahorra medio periodo de preguntas repetidas.
+
+#### Qué proyectar en pantalla (y en qué orden)
+Deje **cuatro pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 abierto → **4.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
+Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.
+
+#### Si un estudiante pregunta… (dudas reales del primer día)
+| Si un estudiante pregunta… | Usted responde… |
+| :--- | :--- |
+| “¿Hoy no vamos a ver tema?” | “Hoy es el encuadre: cómo trabajamos, cómo se evalúa y quiénes somos. El tema arranca la próxima sesión, y la lectura de esta semana es la base.” |
+| “¿Esta materia se pierde fácil?” | “Se pierde por no entregar, casi nunca por escribir mal. Quien entrega los tres cortes, pasa; el riesgo es dejar todo para la última semana.” |
+| “¿Puedo trabajar solo o toca en grupo?” | “El artículo de este curso es individual, salvo que el enunciado de la ACA diga otra cosa. Está en `Clases/Recursos/ACAs/`.” |
+| “¿Me sirve un trabajo de otro semestre?” | “Puede partir de un tema suyo, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica.” |
+| “¿La clase se graba?” | Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre publicados en CDigital”. |
+| “¿Puedo usar ChatGPT para escribir?” | “Como apoyo sí, y se declara en una línea al final del documento. Pero verifique las fuentes: inventa citas. Lo que usted no pueda explicar en voz alta, no le sirve.” |
+| “Todavía no tengo tema, ¿estoy mal?” | “No. Hoy nadie tiene tema definitivo. Salga con una frase tentativa; en la Sesión 02 la afinamos con la línea de investigación.” |
+| “¿Dónde entrego?” | “Solo en CDigital, en el espacio de la sesión. Lo que llegue por WhatsApp o correo personal no cuenta como entregado.” |
 
 ---
 
@@ -78,104 +98,118 @@ Fórmula: **actor + fenómeno + contexto**. "La IA" no es un tema; "detección d
 
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
-| 1️⃣ Encuadre + Preséntate (Padlet en Presentación del Curso) | 12 | min 00:00 – 12:00 |
-| 2️⃣ Producto final = artículo + método científico | 14 | min 12:00 – 26:00 |
-| 3️⃣ Modelación de tema tentativo | 10 | min 26:00 – 36:00 |
-| 4️⃣ Taller: ficha de tema tentativo | 16 | min 36:00 – 52:00 |
-| 5️⃣ Cierre | 8 | min 52:00 – 60:00 |
+| 1️⃣ Apertura, agenda y presentación del Docente | 10 | min 00:00 – 10:00 |
+| 2️⃣ Preséntate: rompehielos en Padlet | 10 | min 10:00 – 20:00 |
+| 3️⃣ Recorrido del curso: cómo trabajamos y qué se llevan | 14 | min 20:00 – 34:00 |
+| 4️⃣ Las ACAs, cómo se entrega e integridad académica | 18 | min 34:00 – 52:00 |
+| 5️⃣ Acuerdos, encargo autónomo y cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
 ---
 
-#### 1️⃣ Encuadre + Preséntate (Padlet en Presentación del Curso) (~12 min) — Slides 1–2
-**Protagonista:** Docente (encuadre) → Estudiantes (Padlet).
-
-**GUION LITERAL:**
-> “Buenas tardes y bienvenidos a Investigación, Ciencia y Tecnología. Esta clase es virtual, una hora los jueves, y tiene una sola meta grande: que al final del periodo cada uno tenga **su propio artículo de investigación**. No son talleres sueltos; todo lo que hagamos alimenta ese mismo documento.”
-
-> “Miren la **Slide 2 — OBJETIVOS**. Hoy vamos a: (1) entender qué es ese artículo; (2) ordenar las etapas del método científico; y (3) salir con un **tema tentativo escrito**, no en la cabeza.”
-
-> “Antes de la teoría, quiero conocerlos. En la **Presentación del Curso** está la slide **PRESÉNTATE**: abran el Padlet, escaneen el QR o peguen el link que dejo en el chat de Meet, y suban un post-it con (a) una expectativa del curso y (b) un tema o problema de ingeniería que les interese. Tienen ~7 minutos; yo leo 3 o 4 en voz alta, sin juzgar.” QR/URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-
-#### 2️⃣ Producto final = artículo + método científico (~14 min) — Slides 3–4
-**Protagonista:** Docente (exposición).
-
-**GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primera idea, escríbanla: **investigar no es googlear**. Google es un insumo; investigar es un método con pregunta, datos y análisis.”
-
-> “Segunda idea: separemos tres palabras que se confunden. **Ciencia** explica, **tecnología** aplica, **investigación** es el método. Ejemplo de ingeniería: la ciencia explica *por qué* se pierden paquetes en una red; la tecnología es el router que los reenvía; la investigación es el estudio ordenado que mide, prueba y concluye.”
-
-> “**Slide 4 — ENFOQUE DE HOY.** Tercera idea, la más práctica: el método científico tiene etapas y **cada etapa es una sección de su artículo**. Problema → datos → procesamiento → análisis → comunicación. Cuando escriban, no están 'redactando bonito': están vaciando el método en papel.”
-
-Pregunte a 2 estudiantes: “de su post-it del Padlet, ¿eso es ciencia, tecnología o investigación?”. Corrija con amabilidad.
-
-#### 3️⃣ Modelación de tema tentativo (~10 min) — Modelación en pantalla
-**Protagonista:** Docente (modela en pantalla).
-
-**En pantalla (Google Docs):** abra un documento en blanco titulado "Ficha de tema tentativo".
-
-**GUION LITERAL:**
-> “Voy a modelar en vivo cómo pasar de una idea vaga a un tema. Alguien en el Padlet escribió 'redes'. Eso todavía no es un tema. Lo arreglamos con la fórmula **actor + fenómeno + contexto**.”
-
-> “Escribo: actor = estudiantes que usan el laboratorio de redes; fenómeno = pérdida de paquetes y caídas de conexión; contexto = las prácticas del laboratorio X de la CUN. Uniendo: 'pérdida de paquetes en el laboratorio de redes X y su impacto en las prácticas'. ¿Ven la diferencia? Ya se puede investigar.”
-
-> “Ahora abro **Google Académico** en otra pestaña y busco dos palabras del tema, solo para comprobar que existe literatura. No busco la solución; busco señales de que el tema es investigable.”
-
-![Padlet — Preséntate (tablero oficial)](Capturas/Sesion 01/inv_s01_padlet.png)
-
-> **En pantalla:** Abrir el tablero de la Presentación del Curso; pegar URL en el chat de Meet; leer 3–4 posts. ~7 min. No duplicar Padlet en esta deck.
-
-![Google Docs — ficha de tema tentativo](Capturas/inv_google_docs.png)
-
-> **En pantalla:** Documento en blanco titulado 'Ficha de tema tentativo'; campos actor / fenómeno / contexto / por qué importa.
-
-#### 4️⃣ Taller: ficha de tema tentativo (~16 min) — Slide 5
-**Protagonista:** Estudiantes (taller) · Docente acompaña.
-
-**GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** Tienen ~16 minutos. En un Google Doc llamado `S01_TemaTentativo_Apellido` escriban: (1) el tema en una frase con **actor + fenómeno + contexto**; (2) por qué les importa (el dolor real, en 2–3 líneas); (3) una fuente exploratoria que encuentren en Google Académico (título + autor + año). Al final pido a 3 personas leer solo su frase de tema, en 20 segundos.”
-
-> “Criterio de éxito: si yo leo su frase **sin conocerlos**, entiendo quién sufre el problema y dónde ocurre.”
-
-**Acompañamiento (mientras trabajan):**
-| Si el estudiante… | Usted responde… |
-| :--- | :--- |
-| Escribe "la IA" o "las redes" | “Póngale actor y lugar: ¿quién y dónde?” |
-| Salta a la solución ("haré una app") | “Primero el problema; la app viene después.” |
-| Copia un tema famoso de internet | “¿Cuál es SU versión local, observable este periodo?” |
-| No encuentra fuentes | “Cambie a términos más simples o en inglés; con 1 título basta hoy.” |
-
-![Google Académico — exploración rápida](Capturas/inv_google_scholar.png)
-
-> **En pantalla:** Buscar 2–3 palabras del tema; mostrar 1 resultado usable (no la solución). Si sale 'tráfico inusual', usar el navegador del docente.
-
-
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 1️⃣ Apertura, agenda y presentación del Docente (~10 min) — Slides 1–3 (Portada · AGENDA · Docente)
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cerramos. Tres ideas de hoy: (1) el curso produce **un artículo**, y ya empezamos; (2) ciencia explica, tecnología aplica, investigación es el método; (3) un buen tema es **actor + fenómeno + contexto**.”
+> “Buenas tardes y bienvenidos a Investigación, Ciencia y Tecnología. Soy el Docente que los va a acompañar este periodo. Aclaro algo de una vez: **hoy no vamos a ver tema**. Hoy vamos a entender cómo funciona este curso, qué se entrega, cómo se evalúa y quién es quién. El contenido arranca en la próxima sesión.”
 
-> “**Slide 6 — PARA CONTINUAR.** Trabajo autónomo: suban a CDigital su `S01_TemaTentativo_Apellido` y mejoren la frase de tema con una observación real de su entorno. La próxima sesión conectamos su tema con las **líneas de investigación de MinCiencias**.”
+> “**Slide 2 — AGENDA DE HOY.** El orden es este: les cuento de qué se trata el curso y cómo trabajamos; me presento; se presentan ustedes en un tablero; vemos las ACAs, es decir qué se entrega y cuánto pesa; y cerramos con los acuerdos y con la tarea de esta semana. Una hora exacta, sin dictado.”
 
-> “**Slide 7 — Cierre.** Gracias, buen trabajo, y nos vemos el próximo jueves en el mismo Meet.”
+> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le están escribiendo.” [Preséntese con las credenciales de la slide: formación, experiencia y una frase de por qué le interesa la investigación aplicada.] “Mi correo está en pantalla: úsenlo para novedades personales. Todo lo académico va por CDigital, porque ahí queda registro y lo ven todos.”
+
+**Cómo se maneja este arranque:** salude por nombre a quien va entrando (no solo “presentes”); es el primer gesto de que aquí nadie es un número. Si el grupo está frío, no llene el silencio con más discurso: pase de una vez al Padlet.
+
+#### 2️⃣ Preséntate: rompehielos en Padlet (~10 min) — Slide 4 (PRESÉNTATE — Padlet)
+**Protagonista:** Estudiantes (Padlet) · Docente conduce.
+
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, con el QR. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+
+**GUION LITERAL:**
+> “**Slide 4 — PRESÉNTATE.** Ahora los quiero conocer. En pantalla hay un QR y un enlace; lo dejo también en el chat del Meet. Es un tablero colaborativo: pongan un post-it con (a) su nombre, (b) qué esperan de este curso y (c) una idea o un problema de ingeniería que les dé curiosidad. Una frase por punto, no un ensayo. Tienen unos siete minutos y no hay respuestas malas.”
+
+> [Mientras escriben, deje el tablero proyectado y ponga **usted** el primer post-it, narrándolo en voz alta.] “Yo pongo el mío para romper el hielo.”
+
+> “Voy a leer tres o cuatro en voz alta.” [Lea, agradezca por nombre y conecte cada post-it con el curso: *“esto que escribió [nombre] ya suena a tema investigable; lo trabajamos en la Sesión 02”*.]
+
+**Si nadie escribe** — pasa casi siempre el primer día virtual:
+| Situación | Qué hace el Docente |
+| :--- | :--- |
+| Silencio total a los 2 minutos | Escribe un segundo post-it de ejemplo y dice en voz alta lo que está escribiendo. |
+| “No me abre el link” | Pega el URL otra vez en el chat y ofrece que lo digan por micrófono; usted lo transcribe al tablero. |
+| Post-its de una palabra (“ninguna”) | Pregunta directo, por nombre: “¿qué le gustaría que le sirviera de este curso?”. |
+| Alguien pone algo de broma | Se agradece con humor y se reencauza; **no se borra en vivo** delante del grupo. |
+
+![Padlet — Preséntate (tablero oficial)](Capturas/Sesion 01/inv_s01_padlet.png)
+
+> **En pantalla:** Tablero de la Presentación del Curso. Pegue el URL en el chat, ponga usted el primer post-it y lea 3–4 en voz alta (~7 min).
+
+#### 3️⃣ Recorrido del curso: cómo trabajamos y qué se llevan (~14 min) — Slides 6–9 (cómo trabajamos · mapa · producto · periodo corto)
+**Protagonista:** Docente (recorrido de la deck).
+
+**GUION LITERAL:**
+> “**Slide 6 — Cómo trabajamos.** Este curso son seis encuentros de una hora. Con seis horas no se aprende a investigar oyendo: se aprende escribiendo. El trato es este: ustedes llegan con la lectura hecha, yo explico el criterio en diez o quince minutos, y el resto lo usamos para que cada uno escriba su documento mientras yo paso resolviendo. Por eso les pido siempre dos cosas: el documento abierto y una duda concreta.”
+
+> “**Slide 7 — Mapa del curso.** Miren las seis sesiones. Fíjense en la última columna: ninguna sesión termina en apuntes, todas terminan en algo escrito —la línea, el avance, la pregunta, el planteamiento, el marco—. Y lean la nota de abajo: las unidades 1 y 2 del Syllabus no desaparecen; son la **lectura de esta semana** y las retomamos al abrir la Sesión 02.”
+
+> “**Slide 8 — Qué se llevan al final.** El producto es **un artículo**. No seis trabajos sueltos: uno solo, que crece. Al final debe tener título, introducción, problema, pregunta, marco con fuentes citadas y lista de referencias. ¿Para qué sirve de verdad? Es la semilla de su trabajo de grado y la prueba de que usted puede sostener una idea con evidencia y no con opinión.”
+
+> “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, revisen CDigital ese mismo día: la consigna queda publicada.”
+
+**Pregunte a dos estudiantes:** “¿en qué semana creen que se empieza a escribir el artículo?”. Conviene que la respuesta —**esta semana**— la digan ellos.
+
+#### 4️⃣ Las ACAs, cómo se entrega e integridad académica (~18 min) — Slides 5 y 10–15 (ACAs · entrega · integridad · IA · herramientas · ayuda)
+**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+
+**GUION LITERAL:**
+> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: son tres entregas, una por corte, y ahí ven cuánto pesa cada una. Los porcentajes son del reglamento. Las **fechas exactas no están en esta presentación a propósito**, porque se desactualizan: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital.”
+
+> “**Slide 10 — Las ACAs una por una.** Lo importante es qué se mira en cada una; lean la última columna, la de *flojo contra bueno*. La ACA 1 no pide páginas, pide que el problema se entienda sin conocerlos. La ACA 2 se juega en la pregunta: si se responde con sí o no, está mal formulada. La ACA 3 pide que las fuentes trabajen, no que decoren.”
+
+> “**Slide 11 — Cómo se entrega.** Esto es puro procedimiento y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre de archivo `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Apellido en el nombre del archivo, PDF, CDigital. Y verifiquen el estado: **subido no es entregado**.”
+
+> “**Slide 12 — Integridad académica.** Citar no es un adorno: es lo que separa un trabajo académico de un texto de internet. Todo lo que no es suyo se cita en APA 7. Copiar y pegar sin comillas, traducir un texto ajeno o entregar el trabajo de otro es plagio, y eso tiene **debido proceso institucional**; no es algo que yo arregle en privado. El truco práctico es simple: anoten la fuente en el mismo instante en que pegan algo.”
+
+> “**Slide 13 — Inteligencia artificial.** Hablemos claro, porque todos la van a usar. Sí se puede usar para entender un concepto o pulir la redacción de un párrafo que ya escribieron. Se declara en una línea al final del documento. Y hay una regla que no negocio: **verifiquen las fuentes**, porque estas herramientas inventan citas y DOIs que no existen. Si yo les pregunto por qué escribieron algo y no lo pueden explicar, ese párrafo no les sirve.”
+
+> “**Slide 14 — Herramientas.** Todas gratis y en el navegador: Docs, Google Académico, SciELO, Redalyc, la biblioteca CUN, ZoteroBib para las citas, Excalidraw para diagramar y CDigital para entregar. Nadie tiene que comprar ni instalar nada.”
+
+> “**Slide 15 — Cómo pedir ayuda.** Foro de CDigital para lo académico, correo para lo personal, respuesta en días hábiles y siempre antes del siguiente encuentro. Y una petición: pregunten con contexto, con el texto en la mano. Miren los dos ejemplos de la slide y noten la diferencia.”
+
+![Google Docs — plantilla APA CUN](Capturas/inv_google_docs.png)
+
+> **En pantalla:** Modele en vivo: abrir la plantilla con *Archivo → Abrir con → Documentos de Google*, nombrar el archivo `SNN_Tema_Apellido` y descargar como PDF.
+
+
+#### 5️⃣ Acuerdos, encargo autónomo y cierre (~8 min) — Slides 16–21 (convivencia · dudas · Sesión 02 · acuerdos · cierre)
+**Protagonista:** Docente.
+
+**GUION LITERAL:**
+> “**Slides 16 y 17 — Convivencia y dudas frecuentes.** Dos minutos de acuerdos: empezamos a la hora, micrófono apagado mientras alguien habla, cámara si su conexión da, y respeto en el foro —se comenta el texto, nunca a la persona—. En la siguiente slide dejé las dudas que siempre salen el primer día; léanlas con calma después.”
+
+> “**Slide 18 — Lo que debe tener listo para la Sesión 02.** Esta es la tarea, y es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 del Syllabus, publicadas en CDigital. Media hora de lectura y traen **dos dudas anotadas**. Segundo, escriban su **tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una frase con actor, fenómeno y contexto; dos o tres líneas de por qué les importa; y una fuente que encuentren en Google Académico. Súbanlo a CDigital antes de la próxima clase.”
+
+> “**Slides 19 y 20 — Acuerdos y para la próxima.** Resumo el trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7. Con esas tres, este curso funciona.”
+
+> “**Slide 21 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y quién es quién. La próxima sesión abre con los temas de ustedes en pantalla y con las dudas de la lectura. Gracias, y nos vemos el próximo jueves en el mismo Meet.”
 
 ---
 
-🧩 **Entregable de hoy**
-1. En Google Docs: tema tentativo (actor + fenómeno + contexto) + por qué importa (2–3 líneas) + 1 fuente exploratoria de Google Académico en APA tentativa.
-2. Archivo en CDigital: `S01_TemaTentativo_Apellido` en CDigital (Google Doc o PDF).
+🧩 **Encargo autónomo (para la Sesión 02)**
+1. **No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** publicadas en CDigital y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.
+2. Archivo en CDigital: `S01_TemaTentativo_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.
 3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
-- [ ] Fundamento teórico leído
-- [ ] PPTX `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
-- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)
-- [ ] Presentación del Curso (Preséntate / Padlet): https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-- [ ] Espacio de entrega en CDigital
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
+- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
+- [ ] **Lectura autónoma U1–U2 publicada en CDigital** (sin eso el encargo de hoy no se puede cumplir)
+- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)
+- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 21 slides)
+- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs
+- [ ] Lista del grupo para saludar por nombre y registrar asistencia
+- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)
 
 ---
 *Fin del Guión — Sesión 01. Autocontenido para dictar 60 minutos.*

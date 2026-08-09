@@ -1,0 +1,170 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cómo trabajamos: el encuentro tiene dos mitades",
+    "bullets": [
+      "Nos vemos **una vez por semana, dos horas**. No son dos horas de exposición.",
+      "  **Primera hora — contenido:** el Docente explica el punto de la semana y modela un ejemplo en pantalla.",
+      "  **Segunda hora — tutoría en vivo:** cada equipo trabaja su avance y el Docente pasa por los equipos.",
+      "El curso funciona **al revés de lo que se acostumbra**: se lee y se escribe **antes** de llegar al encuentro.",
+      "  A cada sesión se **trae el avance escrito**. Aquí se corrige lo que ya existe; no se empieza de cero en clase.",
+      "  Quien llega sin nada escrito pierde la segunda hora: no hay avance que revisar.",
+      "Se trabaja en **equipos de máximo 3 personas**, los mismos durante todo el curso.",
+      "  Un solo integrante sube la entrega grupal, pero la nota es del equipo, no de quien subió el archivo.",
+      "  ¿Prefieren trabajar solos? Se puede, y la carga es la misma. Decídanlo esta semana, no en octubre."
+    ],
+    "note": "Regla de oro: la clase avanza sobre el documento del equipo. Si el documento no crece, el curso no avanza."
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso: qué pasa en cada uno de los 11 encuentros",
+    "headers": ["Sesión", "De qué se ocupa", "Bloque"],
+    "rows": [
+      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (hoy)", "Encuadre"],
+      ["**02**", "Problema y pregunta de investigación", "ACA 1"],
+      ["**03**", "Objetivos, justificación, alcances y limitaciones", "ACA 1"],
+      ["**04**", "Retroalimentación de la ACA 1 · antecedentes de investigación", "ACA 2"],
+      ["**05**", "Marco teórico", "ACA 2"],
+      ["**06**", "Marco conceptual y marco contextual", "ACA 2"],
+      ["**07**", "Marco legal · citación en APA 7", "ACA 2"],
+      ["**08**", "Diseño metodológico: paradigma, enfoque y alcance", "Puente"],
+      ["**09**", "Población y muestra, técnicas e instrumentos **propuestos**", "ACA 3"],
+      ["**10**", "Planeación, viabilidad e integración del anteproyecto", "ACA 3"],
+      ["**11**", "Integración y evaluación · coevaluación y autoevaluación", "Cierre"]
+    ],
+    "col_w": [1.1, 7.3, 2.6],
+    "note": "La unidad de **fundamentos y enfoque de investigación (U1 del programa)** pasa a **lectura autónoma**: hoy hacemos encuadre y la retomamos al abrir la Sesión 02. Fechas exactas de cada encuentro: calendario del curso en CDigital."
+  },
+  {
+    "type": "bullets",
+    "title": "El producto del curso: qué archivo entregan al final",
+    "bullets": [
+      "Al terminar el curso ustedes suben **un solo documento: el anteproyecto** de su investigación.",
+      "  No son tres trabajos sueltos: es **un mismo archivo que crece** entrega tras entrega.",
+      "  La ACA 3 es ese archivo completo e integrado, no un fragmento nuevo escrito la última semana.",
+      "Va en la **plantilla APA CUN de proyecto de grado**, la misma desde el primer día.",
+      "  Está en `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`; ábranla en Google Docs y trabajen ahí.",
+      "**¿Para qué les sirve después?** Es el punto de partida de **Proyecto II**, donde el proyecto se ejecuta.",
+      "  Y es la base de lo que sustentarán al cerrar el programa: no es un trabajo que se archiva y se olvida.",
+      "Frontera del curso, sin excepciones: en **Proyecto I los instrumentos se proponen; nunca se aplican**."
+    ],
+    "note": "Piénsenlo así: todo el semestre queda en un archivo. Cuídenlo, guarden versiones y compártanlo con todo el equipo desde hoy."
+  },
+  {
+    "type": "table",
+    "title": "Las tres ACAs: qué se entrega y qué separa un buen trabajo de uno flojo",
+    "headers": ["ACA", "Qué se entrega", "Qué distingue un buen entregable de uno flojo"],
+    "rows": [
+      ["**ACA 1** — Formulación del problema", "Planteamiento del problema, pregunta, objetivo general y específicos, justificación, alcances y limitaciones, con referencias en APA 7.", "**Bueno:** se puede señalar a quién le duele algo y dónde ocurre. **Flojo:** describe una tecnología de moda y nunca dice a quién le sirve ni en qué contexto."],
+      ["**ACA 2** — Fundamentación referencial", "Antecedentes (mínimo 6, nacionales e internacionales), marco teórico, conceptual, contextual y legal si aplica; correcciones de la ACA 1 incorporadas.", "**Bueno:** cada fuente responde a la pregunta y se nota qué se corrigió. **Flojo:** una fila de resúmenes pegados que no se hablan entre sí ni con el problema."],
+      ["**ACA 3** — Anteproyecto final", "Documento completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad.", "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos escritos por personas distintas, con tres preguntas de investigación diferentes."]
+    ],
+    "col_w": [1.9, 4.3, 5.2],
+    "note": "Los pesos están en la slide anterior. **Enunciado completo, criterios y fechas exactas: `Clases/Recursos/ACAs/` y CDigital.** Al cierre se suman coevaluación y autoevaluación, cada una con su propio enunciado en esa misma carpeta."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se entrega: paso a paso en CDigital",
+    "bullets": [
+      "**1.** Trabajen la **plantilla APA CUN en Google Docs**: un documento por equipo, con permiso de edición para todos.",
+      "**2.** Antes de entregar, **descarguen como PDF**: así nadie recibe un documento a medio formatear.",
+      "**3.** Nombren el archivo **ACA1_Apellido1-Apellido2-Apellido3** (y ACA2 / ACA3 en las siguientes entregas).",
+      "**4.** **Un solo integrante** lo sube en el espacio de esa ACA en **CDigital**; los demás verifican que quedó cargado.",
+      "**5.** Revisen que la portada traiga los **nombres completos de todos**: si falta alguien, esa persona no tiene nota.",
+      "**Lo que no está en CDigital, no está entregado.** Correo, chat o WhatsApp no son canal de entrega.",
+      "**Entrega tardía:** el espacio cierra a la hora publicada en el enunciado. Si algo pasa, se avisa **antes** del cierre.",
+      "  Quedarse sin internet a las 11:50 p. m. no es un imprevisto: es haber esperado hasta las 11:50 p. m."
+    ],
+    "note": "Consejo del Docente: suban una versión el día anterior. Mientras el espacio esté abierto siempre se puede reemplazar por una mejor."
+  },
+  {
+    "type": "boxes",
+    "title": "Integridad académica: la línea que no se cruza",
+    "boxes": [
+      ["advertencia", "**Plagio es tomar lo ajeno y no decirlo.** Cuenta como plagio pegar texto de una fuente sin comillas ni cita, traducir un párrafo ajeno y firmarlo, reusar un trabajo propio de otro semestre como si fuera nuevo, y entregar el documento de otro equipo con la portada cambiada."],
+      ["info", "**Citar no debilita el trabajo: lo sostiene.** En este curso se cita en **APA 7**, dentro del texto y en la lista final de referencias. Una idea que no es suya y no está citada es un problema; esa misma idea citada es un argumento con respaldo."],
+      ["aclaracion", "**Si se detecta, hay debido proceso.** No depende del ánimo del Docente: es un procedimiento institucional, con notificación y derecho a descargos. Por eso siempre conviene preguntar antes que improvisar."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "IA generativa: se puede usar, con tres condiciones",
+    "bullets": [
+      "En este curso **no se prohíbe** usar IA generativa. Se exige usarla con criterio y decirlo por escrito.",
+      "**Condición 1 — Declararla.** Una nota al final del documento: qué herramienta usaron y para qué (ideas, redacción, tablas).",
+      "**Condición 2 — Verificar todo.** Cada dato y cada fuente que sugiera la herramienta se comprueba en el original.",
+      "  Los modelos **inventan referencias** con apariencia impecable: autor creíble, año creíble, enlace que no existe.",
+      "  Citar una referencia inexistente no es un error de formato: es una fuente falsa dentro de un trabajo académico.",
+      "**Condición 3 — La autoría es suya.** La decisión, el criterio y la defensa del documento son del equipo.",
+      "  Si no pueden explicar en voz alta un párrafo de su propio anteproyecto, ese párrafo todavía no es suyo.",
+      "Uso sensato: ordenar ideas, mejorar redacción, sugerir ejemplos. Uso inútil: pedirle el trabajo entero."
+    ],
+    "note": "Prueba rápida antes de entregar: abran el documento en cualquier página y explíquenla con sus palabras. Si no pueden, reescríbanla."
+  },
+  {
+    "type": "table",
+    "title": "Herramientas del curso: todas gratis y desde el navegador",
+    "headers": ["Herramienta", "Para qué la usamos en este curso"],
+    "rows": [
+      ["**CDigital**", "Aula oficial: material, espacios de entrega de las ACAs y retroalimentación. Único canal de entrega válido."],
+      ["**Google Docs**", "Donde se escribe el anteproyecto, en equipo y a la vez, sobre la plantilla APA CUN. Guarda historial de versiones."],
+      ["**Google Scholar**", "Buscador académico general: artículos, tesis y libros. Punto de partida para rastrear antecedentes."],
+      ["**SciELO y Redalyc**", "Repositorios abiertos en español: producción latinoamericana, clave para los antecedentes nacionales y regionales."],
+      ["**ZoteroBib (zbib.org)**", "Genera la referencia en APA 7 pegando un enlace o un DOI. Sin instalar nada y sin crear cuenta."],
+      ["**Excalidraw**", "Pizarra para dibujar el proceso, el contexto o la idea cuando el texto solo no alcanza para explicarla."],
+      ["**Padlet**", "El tablero colaborativo donde nos presentamos hoy y donde el Docente deja consignas breves."],
+      ["**Google Meet**", "El encuentro sincrónico semanal: mismo enlace toda la serie. La sesión se graba."]
+    ],
+    "col_w": [3.0, 8.0],
+    "note": "**Nada de esto cuesta ni exige instalación.** Súmenle la **biblioteca virtual de la CUN** con su usuario institucional. Si una herramienta les pide pagar para continuar, no es la que estamos usando: pregunten antes."
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo pedir ayuda: canales, tutorías y tiempos de respuesta",
+    "bullets": [
+      "**En clase:** la segunda hora es tutoría en vivo. Es el canal más rápido y ya está dentro de su horario.",
+      "**Tutorías por equipo:** se **acuerdan en la semana** con el Docente. No hay atención espontánea sin cita.",
+      "  Al pedirla, digan qué necesitan y qué tienen escrito; se agenda y se atiende con el documento abierto.",
+      "**Cada estudiante que asiste a tutoría registra su asistencia** en el formulario del curso:",
+      "  **https://forms.gle/oZ8xCYiUo3KEWr1d9** — también queda publicado en CDigital.",
+      "  Ese registro es **su evidencia** de acompañamiento ante el programa: sin registro, la tutoría no consta.",
+      "**Foro y mensajería de CDigital:** para dudas que le sirven a todo el curso. Respuesta en días hábiles.",
+      "**Antes de preguntar:** revisen el enunciado de la ACA y la plantilla. La mitad de las dudas ya está resuelta ahí.",
+      "Pregunta bien hecha = sección concreta + qué intentaron + qué no les cuadra. «No entendí nada» no se puede responder."
+    ],
+    "note": "Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita)."
+  },
+  {
+    "type": "boxes",
+    "title": "Acuerdos de convivencia del encuentro",
+    "boxes": [
+      ["info", "**Puntualidad y cámara.** Empezamos a la hora en punto. Cámara encendida al menos en la presentación y en la tutoría de su equipo: revisar un avance a ciegas no funciona. Micrófono en silencio mientras alguien expone."],
+      ["aclaracion", "**Participar es parte del método.** Cuando el Docente pregunta, el silencio también es una respuesta: alarga la clase. Interrumpan para preguntar; es preferible una duda a destiempo que un capítulo entero mal escrito."],
+      ["advertencia", "**Respeto en el foro y en el chat.** Se critica el documento, nunca a la persona. La retroalimentación entre equipos se escribe con la misma cortesía con la que quisieran recibirla. El encuentro se graba."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Antes de la Sesión 02: lectura autónoma y qué traer",
+    "bullets": [
+      "**Lectura autónoma de esta semana:** la unidad de **fundamentos y enfoque de investigación (U1 del programa)**.",
+      "  Está en el documento del curso publicado en CDigital. Hoy no la dictamos: la leen ustedes y la retomamos al abrir la Sesión 02.",
+      "  Mientras leen, anoten **tres términos** que no les queden claros. Con esos tres arrancamos la próxima clase.",
+      "**Confirmen su equipo** (máximo 3 personas) y avísenlo. Si aún no tienen con quién, díganlo esta semana y el Docente ayuda a armarlo.",
+      "**Abran el enunciado de la ACA 1** en `Clases/Recursos/ACAs/` y léanlo completo, incluida la lista de criterios.",
+      "**Creen el documento del equipo** en Google Docs con la plantilla APA CUN y compártanlo con todos los integrantes.",
+      "**Traigan a la Sesión 02** una idea de tema escrita **en una frase** y el contexto donde ocurre (empresa, aula, proceso).",
+      "  Con eso trabajamos en clase. Quien llegue sin la frase se pasará la sesión viendo trabajar a los demás."
+    ],
+    "note": "Nada de esto se califica hoy, pero todo se nota en la Sesión 02: la clase avanza sobre lo que ustedes traigan escrito."
+  },
+  {
+    "type": "boxes",
+    "title": "Las preguntas que siempre salen el primer día",
+    "boxes": [
+      ["info", "**«¿Esta materia se pierde fácil?»** No se pierde por dificultad: se pierde por entregar tarde o por entregar un documento que nadie leyó antes de subirlo. Quien trae avance cada semana llega al final con el anteproyecto prácticamente listo."],
+      ["aclaracion", "**«¿Puedo trabajar solo?»** Sí, pero el equipo es de máximo 3 y la carga de trabajo es la misma para uno que para tres. Decídanlo esta semana: después de la ACA 1 no conviene cambiar de equipo ni de tema."],
+      ["advertencia", "**«¿Sirve un trabajo de otro semestre?»** Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso."]
+    ]
+  }
+]

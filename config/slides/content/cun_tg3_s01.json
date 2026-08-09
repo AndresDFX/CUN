@@ -1,0 +1,191 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cómo trabajamos: una hora semanal para cerrar el trabajo de grado",
+    "bullets": [
+      "**Una hora sincrónica por semana** y quince encuentros. TG3 **no empieza nada**: termina lo que usted viene construyendo desde el semestre anterior.",
+      "**Antes de cada encuentro:** revisa en CDigital lo que el Docente publica y avanza la sección de la semana.",
+      "**Durante el encuentro:** criterio y ejemplo en pocos minutos, y luego **revisión sobre su documento real**. Aquí se corrige texto, no se toma dictado.",
+      "**Después:** cierra la sección y la sube a CDigital antes de la siguiente clase.",
+      "**Qué traer siempre:**",
+      "  Su **artículo abierto**, en la versión vigente (una sola, no cinco copias).",
+      "  Su **lista de referencias** tal como va hoy, con el conteo real.",
+      "  Una duda concreta: “esta discusión no dialoga con los autores”, no “ayúdeme con el artículo”."
+    ],
+    "note": "El calendario aprieta al final: quien avanza una sección por semana llega a sustentar con dominio; quien deja todo para el cierre, sustenta lo que alcanzó a leer."
+  },
+  {
+    "type": "bullets",
+    "title": "Qué se llevan al final: artículo, sustentación y repositorio",
+    "bullets": [
+      "El producto de TG3 son **tres cosas encadenadas**, y las tres se anuncian hoy para que nadie se entere en la recta final:",
+      "  **1. Un artículo resultado de investigación**, con revisión bibliográfica amplia (el Syllabus habla de **al menos 50 referencias**) y una **extensión no inferior a 4.000 palabras**.",
+      "  **2. Una sustentación ante jurados**: defensa oral de su trabajo, no una lectura de diapositivas.",
+      "  **3. La carga al repositorio institucional**, con los entregables que exija el instructivo del programa.",
+      "Si su opción de grado incluye un **producto de ingeniería** (prototipo, sistema, modelo, dataset), el producto no reemplaza al artículo: se **documenta e investiga** dentro de él.",
+      "Para qué le sirve después: es lo que queda publicado con su nombre. Un artículo bien hecho se muestra en una entrevista, se cita y abre la puerta a posgrado.",
+      "Regla del curso: **cada sesión alimenta ese mismo artículo**. No hay talleres isla."
+    ],
+    "note": "Extensión y número de referencias son mínimos del Syllabus 94532, no metas opcionales. Se alcanzan sumando cada semana, nunca la última."
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso (1/2): escribir el artículo",
+    "headers": ["Sesión", "De qué se ocupa", "Qué queda listo"],
+    "rows": [
+      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)", "Encuadre, acuerdo pedagógico y encargo autónomo"],
+      ["**02**", "Formulación de pregunta, objetivos y título", "Pregunta y objetivos definitivos, con variables visibles"],
+      ["**03**", "Estructura del artículo · taller de introducción", "Introducción de 3–4 párrafos en plantilla APA CUN"],
+      ["**04**", "Fase I de referentes de investigación", "Primeras fichas y mapa de literatura"],
+      ["**05**", "Diseño de instrumento · desarrollo metodológico", "Método e instrumento coherentes con los objetivos"],
+      ["**06**", "Comunidades de práctica y co-creación", "Bitácora de retroalimentación de pares"],
+      ["**07**", "Experiencia creativa · análisis de datos", "Tabla de hallazgos con lectura escrita"],
+      ["**08**", "Fase III de referentes · cierre del marco teórico", "Marco cerrado, sin huecos pendientes"]
+    ],
+    "note": "Tres tramos: **escribir** el artículo (02–10), **alistar** póster y antiplagio (11) y **defender y cerrar** (12–15).",
+    "col_w": [1.1, 5.4, 5.4]
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso (2/2): cerrar, defender y entregar",
+    "headers": ["Sesión", "De qué se ocupa", "Qué queda listo"],
+    "rows": [
+      ["**09**", "Resultados, discusión y relación con referentes", "Borrador de resultados y discusión"],
+      ["**10**", "Resumen, palabras clave UNESCO, conclusiones y referencias", "Artículo completo de punta a punta"],
+      ["**11**", "Póster · evidencias · verificación antiplagio", "Póster de una página y revisión de similitud"],
+      ["**12**", "Sustentación ante jurados", "Defensa presentada"],
+      ["**13**", "Entregables para repositorio institucional", "Paquete final verificado"],
+      ["**14**", "Ajustes finales · seguimiento post-sustentación", "Correcciones del jurado incorporadas"],
+      ["**15**", "Cierre administrativo · recepción", "Todo cargado y confirmado como recibido"]
+    ],
+    "note": "El plazo de **recepción y cierre varía según su grupo**: consúltelo en la Presentación del Curso y anótelo hoy en su calendario.",
+    "col_w": [1.1, 5.4, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "El acuerdo pedagógico: qué pactamos hoy",
+    "bullets": [
+      "Es el **pacto de trabajo del curso** y se deja por escrito hoy, en el espacio del curso en CDigital.",
+      "Qué contiene:",
+      "  **Ritmo:** una sección del artículo por sesión, subida antes del siguiente encuentro.",
+      "  **Formato:** plantilla APA CUN abierta en Google Docs, con referencias en APA 7 desde el primer día.",
+      "  **Canal:** CDigital para todo lo que se entrega, se comenta y se califica.",
+      "  **Retroalimentación:** el Docente comenta sobre lo entregado. Sin texto entregado no hay corrección posible.",
+      "  **Sustentación:** se prepara desde ahora, no la semana anterior; el guion de defensa nace del artículo.",
+      "No es un formalismo: es lo que se invoca cuando alguien dice “yo no sabía”. Léalo antes de aceptarlo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las dos ACAs: qué se entrega y qué se mira",
+    "headers": ["ACA", "Qué entrega", "Qué mira el Docente / el jurado", "Flojo vs. bueno"],
+    "rows": [
+      ["**ACA 1 · EV05** (proceso académico)", "El artículo y sus avances por sesión: introducción, marco, método, resultados, discusión y referencias", "Coherencia de cabo a rabo (problema → pregunta → objetivos → método → resultados → discusión) y referencias realmente citadas en el cuerpo", "Flojo: 50 referencias listadas y ninguna citada; resultados que no responden la pregunta · Bueno: cada sección se apoya en la anterior y la discusión dialoga con autores"],
+      ["**ACA 2 · EXAM** (sustentación)", "Defensa oral ante jurados, con el apoyo visual y las evidencias que pida el programa", "Dominio del propio trabajo: que explique decisiones, límites y hallazgos sin leer", "Flojo: leer diapositivas y no saber por qué eligió ese método · Bueno: contar el trabajo en 10 minutos y responder preguntas difíciles con calma"]
+    ],
+    "note": "Enunciados completos, criterios y **fechas exactas** por grupo: `Clases/Recursos/ACAs/` y CDigital. La defensa pesa tanto como todo el trabajo escrito: no se improvisa.",
+    "col_w": [2.2, 3.2, 3.2, 3.3]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se entrega, paso a paso",
+    "bullets": [
+      "**1.** Escriba en **Google Docs** sobre la **plantilla APA CUN** de `Clases/Recursos/` (*Archivo → Abrir con → Documentos de Google*).",
+      "**2.** Trabaje **siempre en el mismo documento**: el artículo es un texto que crece, no una carpeta de archivos sueltos.",
+      "**3.** Nombre cada entrega `SNN_Tema_Apellido`. Ejemplo: `S03_Introduccion_Perez`.",
+      "**4.** Entregue en **PDF** (*Archivo → Descargar → PDF*), salvo que el Docente pida el enlace del documento.",
+      "**5.** Suba a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]",
+      "**6.** Verifique el estado: **subido no es entregado**. Guarde la captura del envío si el campus lo permite.",
+      "**Si entrega tarde:** avise **antes** del cierre. Se recibe, pero se califica lo que exista dentro del plazo.",
+      "**Recepción y cierre varían por grupo.** Revise el suyo en la Presentación del Curso y anótelo hoy en su calendario."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Integridad académica: aquí sí pasa por antiplagio",
+    "bullets": [
+      "Todo lo que no es suyo se **cita en APA 7**: ideas, datos, tablas, figuras, código y su propio texto de semestres anteriores.",
+      "**Parafrasear** es reescribir con sus palabras **y citar igual**. La cita textual es la excepción, y siempre con página.",
+      "Cuenta como plagio:",
+      "  Copiar y pegar sin comillas ni referencia.",
+      "  Traducir un texto ajeno y firmarlo como propio.",
+      "  Reutilizar su trabajo de TG2 sin declararlo (**autoplagio**).",
+      "En este curso el documento pasa por la **herramienta antiplagio institucional del campus** antes de la sustentación: no es una amenaza, es un paso del cronograma.",
+      "Si se detecta plagio se activa el **debido proceso institucional**, y en opción de grado el costo es la titulación, no una nota."
+    ],
+    "note": "Regla práctica: **anote la fuente en el instante** en que pega algo. Con 50 referencias, reconstruir de memoria es imposible."
+  },
+  {
+    "type": "boxes",
+    "title": "Inteligencia artificial generativa: reglas de la casa",
+    "boxes": [
+      ["info", "**Sí se puede usar** para entender un concepto, ordenar la estructura de una sección o pulir la redacción de un párrafo que usted ya escribió."],
+      ["aclaracion", "**Se declara.** Una línea al final del documento: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."],
+      ["advertencia", "**Verifique cada referencia: estos modelos inventan autores, títulos y DOIs**, y esa bibliografía va al repositorio institucional. Además, frente a jurados usted defiende cada párrafo: lo que no pueda explicar en voz alta se nota en un minuto."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Herramientas del curso: todas gratis, todas en el navegador",
+    "headers": ["Herramienta", "Para qué la usamos", "Cuándo aparece"],
+    "rows": [
+      ["**CDigital**", "Entrega oficial, materiales, antiplagio institucional y notas", "Siempre"],
+      ["**Google Docs**", "Escribir el artículo sobre la plantilla APA CUN, con historial de versiones", "Todas las sesiones"],
+      ["**Google Académico**", "Buscar referentes, ver “citado por” y cerrar huecos del marco", "Fases de referentes y discusión"],
+      ["**SciELO y Redalyc**", "Fuentes abiertas iberoamericanas para el contexto local", "Marco teórico y discusión"],
+      ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es abierto"],
+      ["**ZoteroBib (zbib.org)**", "Generar y ordenar las referencias en APA 7 sin instalar nada", "Cada vez que cite"],
+      ["**Google Slides / Canva free**", "Póster de divulgación y apoyo visual de la sustentación", "Alistamiento y defensa"],
+      ["**Padlet**", "Tablero donde nos presentamos como grupo", "Hoy"]
+    ],
+    "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Un navegador y su cuenta institucional bastan.",
+    "col_w": [2.8, 5.7, 3.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo pedir ayuda (y cómo pedirla bien)",
+    "bullets": [
+      "**Canal oficial:** el espacio de mensajes o foro del curso en **CDigital**. Ahí queda registro de lo preguntado y lo respondido.",
+      "**Correo del Docente** (el de la slide *Docente*): novedades personales — incapacidad, cruce de horario, fuerza mayor.",
+      "**Tiempo de respuesta:** en días hábiles y, en todo caso, **antes del siguiente encuentro**.",
+      "**En el encuentro:** la revisión uno a uno se hace sobre su documento. Llegue con la sección abierta y el párrafo señalado.",
+      "**Una buena pregunta trae el texto:**",
+      "  Mal: “profe, ¿cómo hago la discusión?”.",
+      "  Bien: “tengo este hallazgo y estos dos autores que dicen lo contrario: ¿cómo lo escribo sin contradecirme?”.",
+      "En trámites de sustentación y repositorio, **pregunte temprano**: los pasos administrativos no se resuelven la víspera."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Acuerdos de convivencia del encuentro virtual",
+    "boxes": [
+      ["info", "**Puntualidad.** Se empieza a la hora del pie de estas diapositivas: en una hora semanal, diez minutos tarde son la sexta parte de la clase. **Micrófono** apagado mientras alguien expone."],
+      ["aclaracion", "**Compartir pantalla es parte del curso.** Se proyectan borradores reales, propios y ajenos; la **cámara** se agradece si su conexión lo permite. Nadie se burla de un texto a medio hacer: para eso venimos."],
+      ["advertencia", "**Retroalimentación exigente y respetuosa.** Se comenta el trabajo, nunca a la persona, y siempre con una propuesta concreta. Así es exactamente como pregunta un jurado."]
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Preguntas frecuentes del primer día",
+    "boxes": [
+      ["advertencia", "**“¿Puedo cambiar de tema?”** No a estas alturas, salvo fuerza mayor hablada con el Docente. TG3 **culmina** un proyecto: cambiarlo aquí es no llegar a sustentar."],
+      ["info", "**“¿50 referencias no es imposible?”** No: se arrastran las de TG2 y se suman las nuevas cada semana. Lo imposible es reunirlas la última semana. **“¿Me sirve lo de TG2?”** Sí: se reutiliza lo bueno y se reescribe lo débil."],
+      ["aclaracion", "**“¿La sustentación es en vivo y ante quién?”** Ante jurados, en la fecha que fije su grupo. Se prepara desde ahora: cada sesión escrita es material de esa defensa."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Lo que debe tener listo para la Sesión 02",
+    "bullets": [
+      "**Lectura autónoma (obligatoria):** unidades **U1 y U2** del Syllabus — **casos de éxito** y **retomar el proyecto** (contexto y planteamiento).",
+      "  Hoy no se dictaron: se leen en casa y se **retoman al abrir la Sesión 02**.",
+      "  Dónde: material de la Sesión 01 en CDigital — [URL CDigital — campus del curso pendiente]",
+      "**Arme su matriz de herencia** en un Google Doc llamado `S01_AcuerdoRetoma_Apellido`, con tres columnas:",
+      "  **Reutilizo tal cual · Reescribo · Creo de cero**, sección por sección de lo que trae de TG2.",
+      "  **Cuente sus referencias reales**: cuántas están citadas hoy en el cuerpo y cuántas le faltan.",
+      "  **Tres compromisos** concretos suyos para las próximas dos semanas.",
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra los enunciados de las ACAs** en `Clases/Recursos/ACAs/`, con las fechas de su grupo."
+    ],
+    "note": "Cuente las referencias **citadas en el cuerpo**, no las de la lista final: esa diferencia es el trabajo real que queda por delante."
+  }
+]

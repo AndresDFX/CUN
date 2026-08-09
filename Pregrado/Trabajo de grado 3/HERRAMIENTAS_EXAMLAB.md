@@ -241,7 +241,7 @@ Cinco. Ninguna se tapa con otra pieza sin perder algo.
 
 ### 6.1 Gestión de referencias y ayuda APA — **no existe**
 
-Cero. No hay biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de citas, ni detección de duplicados. Lo único parecido es un campo de texto libre "Bibliografía sugerida" del sílabo, que llena el Admin y es una sola cadena por asignatura.
+Cero. No hay biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de citas, ni detección de duplicados. Lo único parecido es un campo de texto libre "Bibliografía sugerida" del Syllabus, que llena el Admin y es una sola cadena por asignatura.
 
 **Por qué duele en TG3 específicamente:** el producto exige **≥ 50 referencias**. Las fichas de la S04, el cierre de marco de la S08 y las referencias APA de la S10 son el esqueleto del semestre. **El camino sigue siendo ZoteroBib + Google Académico**, tal como ya lo tiene escrito la guía de herramientas del curso — ExamLab no aporta nada acá y no debe presentarse como si lo hiciera. El Tutor IA puede explicar cómo se cita, pero **no consulta bases externas ni formatea citas como dato**.
 

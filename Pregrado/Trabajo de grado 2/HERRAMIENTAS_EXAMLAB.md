@@ -256,7 +256,7 @@ Sin maquillar. Cada una con lo que sí se puede hacer y lo que no.
 
 Cero. No hay biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de
 cita, ni detección de duplicados. Lo único parecido es un campo de texto libre *"Bibliografía sugerida"* en
-el panel del Admin, que es del sílabo institucional.
+el panel del Admin, que es del Syllabus institucional.
 
 **Impacto en este curso:** alto y directo. La S04 pide 4 fichas de antecedentes, el ACA 2 es marco
 referencial completo y el ACA 3 lo integra. **ZoteroBib sigue siendo obligatorio y externo**, tal como está

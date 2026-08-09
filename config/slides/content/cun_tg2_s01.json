@@ -1,0 +1,198 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cómo trabajamos: TG2 es un taller de escritura, no una clase magistral",
+    "bullets": [
+      "**Una hora sincrónica por semana** y once encuentros. Usted **no empieza de cero**: trae un proyecto y lo lleva a un avance consolidado.",
+      "**Antes de cada encuentro:** revisa en CDigital lo que el Docente deja y **escribe algo**, aunque sea imperfecto.",
+      "**Durante el encuentro:** 15 minutos de criterio y ejemplo, y el resto **escribiendo o corrigiendo su propio documento** con el Docente al lado.",
+      "**Después:** termina la sección y la sube a CDigital antes de la siguiente clase.",
+      "**Qué traer siempre:**",
+      "  Su **documento de trabajo de grado abierto**, en la versión más reciente.",
+      "  La sección de la semana anterior ya escrita (aunque esté fea).",
+      "  Una duda concreta: “este párrafo no me cuadra”, no “no sé por dónde empezar”."
+    ],
+    "note": "Principio del curso: **solo cuenta lo escrito**. “Lo tengo en la cabeza” no es un avance, es una intención."
+  },
+  {
+    "type": "boxes",
+    "title": "Aviso honesto sobre este curso",
+    "boxes": [
+      ["advertencia", "**Trabajo de Grado 2 no tiene Syllabus SIAC cargado** en la carpeta del programa. El temario que verá a continuación es **orientativo**: se construyó a partir del Manual del Docente y de la ruta que sigue TG3."],
+      ["aclaracion", "Por lo mismo, los porcentajes de los tres cortes (**30 / 30 / 40**) están marcados con asterisco: son la regla general del reglamento, y se **confirman en CDigital**, que es la fuente oficial de este grupo."],
+      ["info", "Qué significa esto en la práctica: **el orden de los temas puede ajustarse**, pero el producto final y los tres momentos de entrega no cambian. Si algo se mueve, el Docente lo avisa en CDigital, no de palabra."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso (1/2): del tema al marco referencial",
+    "headers": ["Sesión", "De qué se ocupa", "Qué queda escrito"],
+    "rows": [
+      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)", "Encuadre, acuerdo pedagógico y encargo autónomo"],
+      ["**02**", "Pregunta, objetivos y título provisional", "El esqueleto del avance en una página"],
+      ["**03**", "Estructura del documento / artículo de avance", "Índice de secciones y plantilla APA CUN aplicada"],
+      ["**04**", "Antecedentes y referentes (Fase I)", "Fichas de lectura de los primeros referentes"],
+      ["**05**", "Marco teórico — avance", "Bases teóricas organizadas por concepto"],
+      ["**06**", "Marco conceptual y contextual", "Definiciones operativas y contexto concreto"]
+    ],
+    "note": "Cuando un lunes sea **festivo**, esa sesión es **clase autónoma**: no se cancela, la actividad queda publicada en CDigital.",
+    "col_w": [1.1, 5.4, 5.4]
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso (2/2): del método al cierre del avance",
+    "headers": ["Sesión", "De qué se ocupa", "Qué queda escrito"],
+    "rows": [
+      ["**07**", "Diseño metodológico (propuesto)", "Enfoque, tipo y alcance, escritos en futuro"],
+      ["**08**", "Instrumentos y plan de análisis (propuestos)", "Bosquejo de instrumento y plan de análisis"],
+      ["**09**", "Integración del avance · correcciones", "Documento consolidado y coherente"],
+      ["**10**", "Socialización de avances", "Pitch de 3 minutos y retroalimentación de pares"],
+      ["**11**", "Cierre del avance · preparación para TG3", "Versión limpia y lista de pendientes para TG3"]
+    ],
+    "note": "Las once sesiones construyen **un solo documento**. Si falta a una, la siguiente le va a pedir algo que no escribió.",
+    "col_w": [1.1, 5.4, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué se llevan al final: el avance escrito que alimenta TG3",
+    "bullets": [
+      "El producto de TG2 es **un solo documento**: el avance consolidado de su trabajo de grado.",
+      "Terminar TG2 **no** es terminar el trabajo de grado. Es dejarlo listo para que en TG3 solo quede **ejecutar y sustentar**.",
+      "Al cerrar el periodo su documento debe tener:",
+      "  **Planteamiento del problema**, pregunta y objetivos definitivos.",
+      "  **Marco referencial**: antecedentes, marco teórico, conceptual y contextual, citados en APA 7.",
+      "  **Metodología propuesta** (en futuro: “se aplicará”, “se propone”), con instrumentos bosquejados.",
+      "  Una **lista de pendientes para TG3**, explícita y en imperativo.",
+      "Para qué le sirve después: quien llega a TG3 con esto hecho **arranca ejecutando**; quien llega sin esto, repite TG2 dentro de TG3 y no alcanza a sustentar."
+    ],
+    "note": "Aquí no hay resultados todavía: el trabajo de campo es de TG3. Prometer hallazgos en este avance es el error que más se arrastra."
+  },
+  {
+    "type": "bullets",
+    "title": "El acuerdo pedagógico: qué pactamos hoy",
+    "bullets": [
+      "Es el **pacto de trabajo del curso**, y se deja por escrito hoy en el espacio del curso en CDigital.",
+      "Qué contiene, punto por punto:",
+      "  **Ritmo:** una sección escrita por sesión, subida antes del siguiente encuentro.",
+      "  **Formato:** plantilla APA CUN, abierta en Google Docs.",
+      "  **Canal:** CDigital para todo lo que se entrega y se califica.",
+      "  **Festivos:** lunes festivo = **clase autónoma**, con actividad publicada.",
+      "  **Retroalimentación:** el Docente comenta sobre lo entregado; sin entrega no hay retroalimentación posible.",
+      "No es un trámite: es lo que se invoca cuando alguien dice “yo no sabía”. Léalo antes de aceptarlo."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las ACAs, una por una: qué se entrega y qué se mira",
+    "headers": ["ACA", "Qué entrega", "Qué mira el Docente", "Flojo vs. bueno"],
+    "rows": [
+      ["**ACA 1**", "Delimitación y formulación: tema delimitado, problema, pregunta, objetivos y título provisional", "Que el tema tenga foco y que objetivos y pregunta hablen de lo mismo", "Flojo: “IA en las empresas” · Bueno: actor, fenómeno y contexto en una sola frase, con objetivos que responden a la pregunta"],
+      ["**ACA 2**", "Marco referencial: antecedentes, marco teórico, conceptual y contextual con citas en APA 7", "Que las fuentes se usen como argumento y no como adorno; que estén citadas en el cuerpo", "Flojo: definiciones copiadas una tras otra · Bueno: tres o cuatro conceptos hilados, cada uno sosteniendo una parte de la pregunta"],
+      ["**ACA 3**", "Metodología propuesta e integración del avance en una versión limpia", "Coherencia objetivo → método → instrumento, y que el documento se lea como un todo", "Flojo: método “porque sí” y secciones pegadas · Bueno: matriz donde cada objetivo tiene su método, y un documento sin costuras"]
+    ],
+    "note": "Enunciado completo, criterios y **fechas exactas** de cada corte: `Clases/Recursos/ACAs/` y CDigital.",
+    "col_w": [1.0, 3.2, 3.2, 4.5]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se entrega, paso a paso",
+    "bullets": [
+      "**1.** Escriba en **Google Docs** sobre la **plantilla APA CUN** de `Clases/Recursos/` (*Archivo → Abrir con → Documentos de Google*).",
+      "**2.** Trabaje **siempre en el mismo documento**: TG2 se evalúa por versiones de un texto que crece, no por archivos sueltos.",
+      "**3.** Nombre el archivo `SNN_Tema_Apellido`. Ejemplo: `S02_PreguntaObjetivos_Perez`.",
+      "**4.** Entregue en **PDF** (*Archivo → Descargar → PDF*), salvo que el Docente pida el enlace.",
+      "**5.** Suba a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]",
+      "**6.** Verifique el estado: **subido no es entregado**. Guarde la captura del envío si el campus la permite.",
+      "**Si entrega tarde:** avise **antes** del cierre. Se recibe, pero se califica lo que exista dentro del plazo.",
+      "**Lo que no está en CDigital, no está entregado.** No hay entregas por WhatsApp ni por correo personal."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Integridad académica: en trabajo de grado se revisa de verdad",
+    "bullets": [
+      "Todo lo que no es suyo se **cita en APA 7**: ideas, datos, tablas, figuras, código y fragmentos de su propio trabajo anterior.",
+      "**Parafrasear** es reescribir con sus palabras **y citar igual**; cambiar dos palabras no es parafrasear.",
+      "Cuenta como plagio:",
+      "  Copiar y pegar sin comillas ni referencia.",
+      "  Traducir un texto ajeno y firmarlo como propio.",
+      "  Reutilizar un trabajo de otro semestre sin declararlo (**autoplagio**).",
+      "En TG3 el documento pasa por la **herramienta antiplagio institucional del campus**: el hábito se corrige aquí, no allá.",
+      "Si se detecta plagio se activa el **debido proceso institucional**, con consecuencias sobre la opción de grado."
+    ],
+    "note": "Regla práctica: **anote la fuente en el instante** en que pega algo. En un documento que crece seis meses, reconstruirla es imposible."
+  },
+  {
+    "type": "boxes",
+    "title": "Inteligencia artificial generativa: reglas de la casa",
+    "boxes": [
+      ["info", "**Sí se puede usar** para entender un concepto, ordenar la estructura de una sección o mejorar la redacción de un párrafo que usted ya escribió."],
+      ["aclaracion", "**Se declara.** Una línea al final del documento: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."],
+      ["advertencia", "**Verifique cada referencia: estos modelos inventan autores, títulos y DOIs.** Y recuerde que en TG3 hay sustentación ante jurados: un párrafo que usted no puede explicar en voz alta le va a costar caro."]
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Herramientas del curso: todas gratis, todas en el navegador",
+    "headers": ["Herramienta", "Para qué la usamos", "Cuándo aparece"],
+    "rows": [
+      ["**CDigital**", "Entrega oficial, materiales, avisos y notas", "Siempre"],
+      ["**Google Docs**", "Escribir el avance sobre la plantilla APA CUN, con historial de versiones", "Todas las sesiones"],
+      ["**Google Académico**", "Buscar antecedentes y referentes; ver quién cita a quién", "Desde la sesión de antecedentes"],
+      ["**SciELO y Redalyc**", "Fuentes abiertas iberoamericanas, útiles para el contexto local", "Marco referencial"],
+      ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es abierto"],
+      ["**ZoteroBib (zbib.org)**", "Generar referencias en APA 7 sin instalar ni registrarse", "Cada vez que cite"],
+      ["**Excalidraw**", "Diagramar el problema o el diseño metodológico", "Sesiones de problema y método"],
+      ["**Padlet**", "Tablero donde nos presentamos como grupo", "Hoy"]
+    ],
+    "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Un navegador y su cuenta institucional bastan.",
+    "col_w": [2.6, 5.9, 3.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo pedir ayuda (y cómo pedirla bien)",
+    "bullets": [
+      "**Canal oficial:** el espacio de mensajes o foro del curso en **CDigital**. Ahí queda registro de lo que se preguntó y se respondió.",
+      "**Correo del Docente** (el de la slide *Docente*): novedades personales — incapacidad, cruce de horario, fuerza mayor.",
+      "**Tiempo de respuesta:** en días hábiles y, en todo caso, **antes del siguiente encuentro**.",
+      "**En el encuentro:** el taller es el momento de revisión uno a uno. Llegue con el párrafo abierto y señalado.",
+      "**Una buena pregunta trae el texto:**",
+      "  Mal: “profe, ¿cómo hago el marco teórico?”.",
+      "  Bien: “tengo estos tres conceptos y estas cuatro fuentes: ¿sobra alguno o falta uno?”.",
+      "Si va a faltar, avise **antes** y revise CDigital ese mismo día: en TG2 una semana perdida se nota en el avance."
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Acuerdos de convivencia del encuentro virtual",
+    "boxes": [
+      ["info", "**Puntualidad.** Se empieza a la hora del pie de estas diapositivas. La primera parte fija el criterio de la sesión: sin eso, el taller no rinde. **Micrófono** apagado mientras alguien expone."],
+      ["aclaracion", "**Compartir pantalla es parte del curso.** En las revisiones se proyecta el documento de alguien; la **cámara** se agradece si su conexión lo permite. Nadie se burla de un borrador: todos mostramos texto a medio hacer."],
+      ["advertencia", "**Respeto en la retroalimentación.** Se comenta el texto, no a la persona, y siempre con una propuesta concreta: qué cambiar y por qué."]
+    ]
+  },
+  {
+    "type": "boxes",
+    "title": "Preguntas frecuentes del primer día",
+    "boxes": [
+      ["info", "**“¿Esto se pierde fácil?”** Se pierde por no entregar, casi nunca por escribir mal. El documento se corrige; la entrega que no llegó, no. **“¿Puedo trabajar solo?”** Según lo que autorice el programa: consúltelo hoy, no a mitad de periodo."],
+      ["advertencia", "**“¿Puedo cambiar de tema?”** **Reformular** (afinar el foco) sí, y hoy mismo. **Cambiar de proyecto entero** cuesta semanas que este periodo no tiene: solo por fuerza mayor y hablado con el Docente."],
+      ["aclaracion", "**“¿Me sirve lo que hice en el semestre anterior?”** Sí, esa es la idea: TG2 continúa lo que ya existe. Pero se revisa, se actualiza y se cita si reutiliza fragmentos propios."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Lo que debe tener listo para la Sesión 02",
+    "bullets": [
+      "**Lectura autónoma (obligatoria):** **delimitación y reformulación del tema** — cómo se pasa de un tema amplio a uno investigable.",
+      "  Hoy no se dictó: se lee en casa y se **retoma al abrir la Sesión 02**.",
+      "  Dónde: material de la Sesión 01 en CDigital — [URL CDigital — campus del curso pendiente]",
+      "**Haga el inventario de su proyecto** en un Google Doc llamado `S01_EstadoProyecto_Apellido`:",
+      "  Una **matriz de estado**: para cada sección (tema, problema, objetivos, marco, metodología) marque **lista / a medias / inexistente** y pegue la **evidencia** (el párrafo o el enlace).",
+      "  Su **tema delimitado** en una sola frase: actor + fenómeno + contexto.",
+      "  **Tres compromisos** concretos suyos para las próximas dos semanas.",
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/`."
+    ],
+    "note": "“A medias” e “inexistente” son respuestas honestas y válidas. Lo que no sirve es el “más o menos” sin nada escrito debajo."
+  }
+]

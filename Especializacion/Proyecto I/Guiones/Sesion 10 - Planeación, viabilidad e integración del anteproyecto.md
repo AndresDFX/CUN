@@ -7,7 +7,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **10** · **Tema:** Planeación, viabilidad e integración del anteproyecto
-- **Detalle:** ESP329 U6–U7 · Cronograma, presupuesto e integración · cierre ACA3 09/11.
+- **Detalle:** ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de ACA3 (dom 08/11).
 - **PPTX estudiante:** `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
 

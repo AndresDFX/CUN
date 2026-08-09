@@ -1,0 +1,185 @@
+[
+  {
+    "type": "bullets",
+    "title": "Cómo trabajamos: una hora juntos, el resto por su cuenta",
+    "bullets": [
+      "El curso son **2 créditos**: unas **32 horas** de acompañamiento y unas **64 horas** de trabajo autónomo.",
+      "  Traducción honesta: lo que decide su nota **no pasa en la hora de clase**, pasa entre semana.",
+      "El encuentro sincrónico es de **una hora**. No alcanza para dictar todo y además hacer el taller.",
+      "  Por eso trabajamos en **aula invertida**: usted llega leído y la hora se usa para **aplicar**, no para leerle diapositivas.",
+      "**Antes del encuentro:** leer el material de la unidad publicado en **CDigital**.",
+      "**Durante el encuentro:** un ejemplo modelado por el Docente + taller sobre **su propia propuesta** + preguntas.",
+      "**Después del encuentro:** terminar el avance de la semana y guardarlo para el paquete del corte.",
+      "Traiga siempre su **documento de trabajo abierto**: se trabaja sobre lo que ya está escrito, no sobre lo que recuerda."
+    ],
+    "note": "Regla del curso: cada sesión **alimenta el mismo documento**. Aquí ningún taller es una isla."
+  },
+  {
+    "type": "table",
+    "title": "Mapa del curso: las 7 sesiones de un vistazo",
+    "headers": ["Sesión", "Tema del encuentro", "Qué sale de esa sesión"],
+    "rows": [
+      ["**01** (hoy)", "Encuadre: el curso, el Docente, ustedes y las ACAs", "Reglas claras + encargo de lectura autónoma"],
+      ["**02**", "Creatividad e innovación en I+D · **Design Thinking** y técnicas", "Su reto bien planteado y un banco de ideas"],
+      ["**03**", "Gestión de la innovación (**Manual de Oslo** / OCDE)", "Su propuesta clasificada y justificada"],
+      ["**04**", "Tipos de innovación", "Cuadro comparativo aplicado a su caso"],
+      ["**05**", "Análisis de negocios · validación de la propuesta", "FODA, Canvas y MVP de su propuesta"],
+      ["**06**", "Vigilancia tecnológica", "Tablero de señales, fuentes e implicaciones"],
+      ["**07**", "Innovación local–internacional · entidades de apoyo", "Mapa de entidades + pitch de 60 segundos"]
+    ],
+    "note": "Ocho unidades del Syllabus en siete encuentros: **U1–U2 se leen de forma autónoma** y las retomamos al abrir la Sesión 02.",
+    "col_w": [1.4, 5.6, 4.9]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué se llevan al final: la Propuesta de Innovación",
+    "bullets": [
+      "Este curso tiene **un solo producto**: una **Propuesta de Innovación** escrita, construida por partes desde hoy.",
+      "No es un ensayo *sobre* innovación: es **su** propuesta, sobre un problema real, con un usuario concreto.",
+      "El documento final responde, en este orden: **problema → usuario → propuesta de valor → tipo de innovación → validación → vigilancia → siguiente paso**.",
+      "  Extensión orientativa: **8–12 páginas** más un **pitch de una página**.",
+      "Para qué le sirve cuando el curso termine:",
+      "  Es la base de una **idea de emprendimiento** o de un proyecto de mejora dentro de la empresa donde trabaja.",
+      "  Es material real para una **entrevista de trabajo**: muestra criterio, no solo herramientas.",
+      "  Puede ser la semilla de su **opción de grado** o de una postulación a una convocatoria de apoyo."
+    ],
+    "note": "Si al terminar solo tiene un archivo para la nota, desperdició el semestre."
+  },
+  {
+    "type": "table",
+    "title": "Las tres ACAs: qué se entrega en cada corte",
+    "headers": ["ACA", "Qué entrega exactamente", "Qué se evalúa ahí"],
+    "rows": [
+      ["**ACA 1** · Corte 1", "Ficha problema–oportunidad + mapa de bloqueadores y ensanchadores + síntesis de ideación (3–6 págs.).", "Que el problema sea **real, observable y de alguien concreto**."],
+      ["**ACA 2** · Corte 2", "Propuesta tipificada + cuadro comparativo + **FODA**, **Canvas** y **MVP** + sustentación breve (6–10 págs.).", "Que la propuesta esté **clasificada y validada**, no solo descrita."],
+      ["**ACA 3** · Corte 3", "Propuesta consolidada + vigilancia tecnológica + entidades de apoyo + **pitch de 1 página** (8–12 págs.).", "Que el hilo **cierre**: del problema al siguiente paso, sin saltos."]
+    ],
+    "note": "Enunciado completo, rúbrica y fechas de cada ACA: `Clases/Recursos/ACAs/` y el espacio de entrega en CDigital.",
+    "col_w": [1.5, 6.0, 4.4]
+  },
+  {
+    "type": "table",
+    "title": "Qué separa un entregable fuerte de uno flojo",
+    "headers": ["Aspecto", "Entregable flojo", "Entregable fuerte"],
+    "rows": [
+      ["Usuario", "“la sociedad”, “las empresas”, “los usuarios”", "Una persona concreta, en un contexto concreto"],
+      ["Problema", "Se deduce de la solución que ya había elegido", "Se describe con un síntoma que se puede observar"],
+      ["Evidencia", "“todo el mundo sabe que…”", "Un dato, una observación o una frase del usuario"],
+      ["Fuentes", "Copiadas de un blog sin autor ni fecha", "Citadas en **APA 7** y verificables"],
+      ["Avance", "Escrito la noche anterior, de una sola pieza", "Se nota el hilo de varias sesiones encima"],
+      ["Presentación", "Sin formato, sin títulos, sin numerar", "Plantilla APA CUN, ordenado y legible"]
+    ],
+    "note": "El Docente no evalúa **cuánto** escribió: evalúa si **se entiende, se sostiene y avanzó** respecto al corte anterior.",
+    "col_w": [1.8, 4.9, 5.2]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se entrega: paso a paso en CDigital",
+    "bullets": [
+      "**1.** Escriba en la **plantilla APA CUN** (`Clases/Recursos/`): ábrala en **Google Docs** y trabaje ahí. No necesita Office instalado.",
+      "**2.** Abra el enunciado del ACA en `Clases/Recursos/ACAs/` y marque su **checklist de criterios** antes de dar por cerrado el texto.",
+      "**3.** Exporte a **PDF**, salvo que el enunciado pida otro formato.",
+      "**4.** Nombre el archivo así: **CRE_ACA1_Apellido** (cambie el número del ACA y su apellido).",
+      "**5.** Suba el archivo al **espacio de entrega del corte en CDigital**, no al foro y no al chat del encuentro.",
+      "**6.** Verifique que quedó cargado y **ábralo desde la plataforma**: un archivo vacío o corrupto cuenta como no entregado.",
+      "**Entrega oficial = CDigital.** No se reciben trabajos por correo, por WhatsApp ni por mensaje privado.",
+      "  ¿Se le complicó la fecha? Se habla con el Docente **antes** del cierre del espacio, nunca después. Cerrado el espacio, la nota es la que hay."
+    ],
+    "note": "Lo que no esté en CDigital **no está entregado**, por más que exista en su computador."
+  },
+  {
+    "type": "boxes",
+    "title": "Integridad académica: la línea que no se cruza",
+    "boxes": [
+      ["info", "Todo lo que no sea suyo **se cita en APA 7**: texto, datos, imágenes, código y también las ideas que resumió con sus palabras. Citar no le resta mérito: demuestra que leyó."],
+      ["advertencia", "Cuenta como **plagio** copiar y pegar sin comillas ni fuente, parafrasear sin citar, traducir un texto ajeno y presentarlo como propio, o entregar un trabajo comprado o hecho por otra persona."],
+      ["aclaracion", "Si aparece plagio, el caso **no se arregla entre usted y el Docente**: sigue el conducto que fija el Reglamento Estudiantil de la CUN. Por eso conviene preguntar antes, no explicar después."]
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "IA generativa: se usa, se declara y se verifica",
+    "bullets": [
+      "La IA generativa **no está prohibida** en este curso: está **regulada**. Es una herramienta más, como el buscador.",
+      "**Declárela.** Al final del documento, una nota corta: qué herramienta usó, para qué y qué hizo usted con la salida.",
+      "  Declararlo **no baja la nota**. Ocultarlo sí es una falta de integridad académica.",
+      "**Verifique toda cita que le entregue la IA.** El error número uno son las **referencias inventadas**: autor y año que suenan bien y no existen.",
+      "  Si no logró abrir el documento original en Scholar, SciELO o Redalyc, esa fuente **no entra** en su entregable.",
+      "La IA **no puede hacer** lo que este curso evalúa: observar a un usuario real, elegir un problema y defender un criterio propio.",
+      "  Un texto impecable sobre un problema que usted nunca miró se cae en la primera pregunta del Docente.",
+      "Usted firma el entregable: **responde por cada frase**, la haya escrito usted o una herramienta."
+    ],
+    "note": "Buen uso: pedirle que le discuta el problema o le ordene ideas. Mal uso: pedirle el entregable y copiarlo sin leer."
+  },
+  {
+    "type": "table",
+    "title": "Herramientas del curso: gratis y desde el navegador",
+    "headers": ["Herramienta", "Para qué la usamos", "Cuenta / acceso"],
+    "rows": [
+      ["**CDigital**", "Material, anuncios, foro y **entrega oficial** de las ACAs", "Login institucional CUN"],
+      ["**Google Docs / Slides**", "Escribir la propuesta y armar el pitch (plantilla APA CUN)", "Cuenta CUN o Gmail"],
+      ["**Padlet**", "Tablero de presentación y lluvias de ideas rápidas", "Sin cuenta, entra por el enlace"],
+      ["**Excalidraw** (excalidraw.com)", "Bocetos, mapas y diagramas: feos pero claros", "Sin cuenta"],
+      ["**Canvanizer**", "Business Model Canvas de su propuesta (Corte 2)", "Gratis en el navegador"],
+      ["**Scholar · SciELO · Redalyc**", "Buscar fuentes serias, antecedentes y referentes", "Sin cuenta"],
+      ["**ZoteroBib** (zbib.org)", "Armar las referencias en APA 7 sin instalar nada", "Sin cuenta"],
+      ["**Canva free** (opcional)", "Una diapositiva de pitch presentable, si la quiere", "Cuenta gratuita"]
+    ],
+    "note": "Regla del curso: **nada de pagar ni de instalar**. Si una herramienta le pide tarjeta, no es la que estamos pidiendo.",
+    "col_w": [3.1, 5.3, 3.5]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo pedir ayuda (y recibir respuesta pronto)",
+    "bullets": [
+      "**En el encuentro:** los últimos minutos son para dudas. Es el canal más rápido y el que menos se usa.",
+      "**Foro del curso en CDigital:** para dudas que le sirven a todo el grupo (formato, entrega, alcance de un ACA).",
+      "  Lo que se pregunta en el foro queda respondido para los demás; por eso se responde primero ahí.",
+      "**Correo institucional del Docente:** para lo personal (una situación particular, una nota, una dificultad).",
+      "  Asunto sugerido: **EI004 – su nombre – el tema en cuatro palabras**. Sin asunto claro, la respuesta tarda más.",
+      "**Tiempo de respuesta:** en días hábiles, normalmente entre **24 y 48 horas**. No hay atención de madrugada ni domingo.",
+      "Formule la duda **concreta**: qué intentó, qué parte no le cuadra y qué necesita decidir.",
+      "  “No entendí nada” no se puede responder. “No sé si mi usuario es el estudiante o el laboratorista” sí."
+    ],
+    "note": "Escribir la víspera de la entrega es válido, pero a esa hora ya no queda tiempo de arreglar mucho."
+  },
+  {
+    "type": "bullets",
+    "title": "Acuerdos de convivencia del encuentro",
+    "bullets": [
+      "**Puntualidad:** empezamos a la hora en punto y dura una hora. Quien llega tarde entra sin interrumpir.",
+      "**Nombre real** en la sala: si no sé quién es, no puedo registrar su participación ni llamarlo por su nombre.",
+      "**Micrófono** en silencio por defecto y abierto para participar. **Cámara**: bienvenida, no obligatoria.",
+      "  Si no puede abrir cámara ni micrófono, participe por el chat. Lo que no funciona es **estar conectado y ausente**.",
+      "**Participar es parte del método:** aquí se piensa en voz alta y se muestran borradores a medio hacer.",
+      "  Ninguna idea se ridiculiza. Las ideas se **critican con criterio**; a las personas no se las critica.",
+      "**Respeto en el foro:** se responde a la idea, no a quien la escribió, y no se publican datos ni capturas de terceros.",
+      "Si el encuentro se graba, se avisa al inicio y la grabación queda en **CDigital** para quien no pudo conectarse."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Para la Sesión 02: lectura autónoma y qué traer",
+    "bullets": [
+      "**Lectura autónoma (obligatoria):** unidades **U1–U2** del Syllabus — *Propuesta de Innovación* y *creatividad e inteligencia emocional*.",
+      "  El material está en **CDigital**. Las retomamos en los primeros minutos de la Sesión 02: se repasan, no se dictan completas.",
+      "  Léalas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**",
+      "**Abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/` y léalo entero, checklist incluido.",
+      "**Traiga escrito** (con tres líneas basta): un problema real que le moleste, **a quién** le pasa y **dónde** lo vio.",
+      "  No traiga una solución: traiga un problema. La solución es el trabajo del resto del curso.",
+      "**Cree su documento de trabajo** en Google Docs con la plantilla APA CUN y déjelo listo para escribir encima.",
+      "**Sesión 02:** *Creatividad e innovación en I+D · Design Thinking y técnicas* — se trabaja sobre lo que usted traiga."
+    ],
+    "note": "Sin un problema propio, la Sesión 02 se le vuelve teoría. Con un problema propio, sale de ella con su reto ya planteado."
+  },
+  {
+    "type": "boxes",
+    "title": "Preguntas del primer día",
+    "boxes": [
+      ["info", "**¿Esta materia se pierde fácil?** No, si entrega. Se pierde por no entregar y por dejarlo todo para el Corte 3, que pesa el 40%."],
+      ["aclaracion", "**¿Puedo trabajar solo o en grupo?** Puede trabajar en dúo si comparten el mismo problema, pero **cada uno entrega** su documento en CDigital."],
+      ["advertencia", "**¿Sirve un trabajo de otro semestre?** Puede partir de un proyecto suyo si lo declara y lo lleva más lejos. Volver a entregar lo mismo es autoplagio."],
+      ["info", "**¿Necesito saber programar o diseñar?** No. Aquí se evalúa criterio, no herramientas."]
+    ]
+  }
+]

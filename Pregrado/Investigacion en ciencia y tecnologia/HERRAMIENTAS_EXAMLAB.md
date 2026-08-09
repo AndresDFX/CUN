@@ -337,7 +337,7 @@ En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la c
 
 ### 6.1 Gestor de referencias y ayuda de citación APA — **no existe**
 
-No hay nada: ni biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de cita, ni detección de duplicados, ni validación de formato APA. Lo único parecido es un campo de texto libre "Bibliografía sugerida" en el panel del Admin, que es una sola cadena por asignatura del sílabo institucional.
+No hay nada: ni biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de cita, ni detección de duplicados, ni validación de formato APA. Lo único parecido es un campo de texto libre "Bibliografía sugerida" en el panel del Admin, que es una sola cadena por asignatura del Syllabus institucional.
 
 **Impacto directo en este curso:** el ACA 3 (40%) pide una **matriz de fuentes** (autor, año, aporte, relación con tu pregunta); la S03 pide 3 referencias APA; la S06 pide 5 fichas de lectura y enseña gestores. **Ninguna de esas cosas tiene apoyo en la plataforma.** Se recogen como texto y se revisan a ojo.
 

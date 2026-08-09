@@ -1,7 +1,8 @@
 ### GUIÓN DOCENTE — Sesión 01: Presentación del curso · docente · estudiantes · ACAs
 
-> **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
-> Estudie primero el Fundamento Teórico. **Duración: 60 minutos**.
+> **Uso:** guion de la sesión de **encuadre**. Hoy **no se dicta tema**: se presenta el curso, el Docente, el grupo y las ACAs, y se deja por escrito el **acuerdo pedagógico**.
+> El temario arranca en la **Sesión 02**; la **delimitación / reformulación del tema** queda como **lectura autónoma** de esta semana.
+> Léalo en voz alta casi literal. **Duración: 60 minutos**.
 > Logística de semestre → Presentación del Curso / Manual. **Sin fechas de periodo.**
 > **PPTX:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 
@@ -11,63 +12,87 @@
 - **PPTX estudiante:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-> **Rompehielos Padlet:** slide **PRESÉNTATE** de la Presentación del Curso (Sesión 01 = presentación). URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7. No duplicar en esta deck.
+> **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck de **encuadre**, 23 slides — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX | Fase |
+| :---: | :--- | :---: |
+| **1** | Portada — Sesión 01 | 1 |
+| **2** | AGENDA DE HOY | 1 |
+| **3** | Docente | 1 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
+| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **6** | Cómo trabajamos: TG2 es un taller de escritura | 3 |
+| **7** | Aviso honesto sobre este curso (sin Syllabus SIAC) | 3 |
+| **8–9** | Mapa del curso (1/2 y 2/2): los 11 encuentros | 3 |
+| **10** | Qué se llevan al final: el avance escrito | 3 |
+| **11** | El acuerdo pedagógico: qué pactamos hoy | 3 |
+| **12** | Las ACAs, una por una | 4 |
+| **13** | Cómo se entrega, paso a paso | 4 |
+| **14** | Integridad académica | 4 |
+| **15** | Inteligencia artificial generativa | 4 |
+| **16** | Herramientas del curso | 4 |
+| **17** | Cómo pedir ayuda | 4 |
+| **18** | Acuerdos de convivencia | 5 |
+| **19** | Preguntas frecuentes del primer día | 5 |
+| **20** | Lo que debe tener listo para la Sesión 02 | 5 |
+| **21** | ACUERDOS DE TRABAJO | 5 |
+| **22** | PARA LA PRÓXIMA SESIÓN | 5 |
+| **23** | Cierre — Sesión 01 | 5 |
 
 🎯 **Objetivos de la sesión**
-1. **Lograr:** Diagnosticar estado del proyecto y fijar acuerdo pedagógico del encuentro.
-2. **Producir** un avance observable en CDigital.
-3. **Salir** con tarea autónoma clara.
+1. **Encuadrar** TG2 como **continuación**: qué se hace en la hora sincrónica, qué en autónomo y cuál es el producto (**el avance escrito** que alimenta TG3).
+2. **Presentar** al Docente y conocer el estado real de cada proyecto a través del Padlet.
+3. **Explicar** las ACAs, la ruta de entrega en CDigital, la integridad académica y el uso de IA generativa.
+4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura sobre delimitación + matriz de estado del proyecto.
 
 ---
 
-📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
+🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*
 
-> Este apartado asume que usted recibe estudiantes que **ya vienen con un proyecto** (de TG1 o de un semestre anterior). Su trabajo hoy no es dar tema nuevo, sino **diagnosticar** dónde están y ordenar el trabajo.
+> Recuerde el punto de partida de este grupo: **cada estudiante llega con un proyecto a medias**, congelado o mal delimitado, y casi ninguno tiene claro qué se espera de TG2. El encuadre debe responder esa ansiedad antes de que se convierta en deserción.
 
-#### 1. TG2 es continuación, no arranque de cero
-Trabajo de Grado 2 toma un proyecto que ya existe —a medias, congelado o reformulado— y lo lleva a un **avance consolidado** del documento de grado (planteamiento, pregunta, objetivos, marco y diseño metodológico) para que en TG3 solo quede ejecutar y sustentar. La primera trampa es creer que "ya casi está": casi siempre hay huecos que el estudiante no ve.
-
-#### 2. El diagnóstico honesto: matriz de estado
-No se puede planear sin inventario. La herramienta del día es una **matriz de estado** que clasifica cada sección del documento en tres estados y exige **evidencia** (un enlace, un párrafo escrito, un archivo), no un "sí, lo tengo en la cabeza". Analogía: es el inventario de bodega antes de reabrir la tienda.
-
-| Sección del documento | Estado | Evidencia exigible |
-| :--- | :--- | :--- |
-| Tema / título | Lista / a medias / inexistente | Frase escrita en el Doc |
-| Problema y pregunta | Lista / a medias / inexistente | Párrafo o pregunta redactada |
-| Objetivos | Lista / a medias / inexistente | Lista de verbos + metas |
-| Marco / antecedentes | Lista / a medias / inexistente | Fichas o citas en APA |
-| Metodología | Lista / a medias / inexistente | Enfoque descrito |
-
-"A medias" es un estado honesto y válido; "inexistente" también. Lo que no se acepta es el limbo del "más o menos".
-
-#### 3. Delimitar o reformular el tema (sin volver a cero)
-Reformular no es cambiar de proyecto: es **afinar el foco**. Use la fórmula **actor + fenómeno + contexto** y alinéela al perfil de Ingeniería de Sistemas. "IA en las empresas" no es un tema; "clasificación automática de tickets de soporte con IA en la mesa de ayuda de la empresa X" sí lo es. Cambiar de proyecto entero a esta altura cuesta semanas que el periodo no tiene.
-
-#### 4. El acuerdo pedagógico
-Es el pacto de trabajo del curso: ritmo de entregas por sesión, formato (Plantilla APA CUN abierta en Google Docs), canal de entrega (CDigital) y una regla logística clave de este grupo: **si el lunes es festivo, la sesión es clase autónoma en CDigital**. Déjelo por escrito para que nadie alegue desconocimiento.
-
-#### Ejemplo modelo para clase
-‘IA en las empresas’ → ‘clasificación automática de tickets de soporte con IA en la mesa de ayuda de la empresa X’, con marco ‘a medias’ y problema ‘inexistente’ en la matriz.
-
-#### Errores frecuentes
-| Error frecuente / pregunta trampa | Qué responde el docente |
+#### 1. Qué debe tener abierto y probado
+| Qué | Para qué lo necesita hoy |
 | :--- | :--- |
-| “Tengo todo en la cabeza, ya casi termino.” | En TG2 solo cuenta lo escrito: pídale evidencia en el Doc, sección por sección. |
-| “Voy a cambiar de tema por completo.” | Reformular ≠ empezar de cero. Afine el foco del tema actual; cambiarlo cuesta semanas que no hay. |
-| “Mi tema es la inteligencia artificial en las empresas.” | Demasiado amplio: exija actor + fenómeno + contexto en una sola frase. |
-| “El acuerdo pedagógico es puro trámite.” | Es el pacto de trabajo: define entregas, formato APA CUN y que el festivo del lunes es clase autónoma. |
+| Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
+| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística del periodo |
+| **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
+| **Padlet oficial** abierto y probado | Rompehielos: aquí se diagnostica el estado del grupo |
+| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Las **fechas exactas viven ahí**, no en la deck |
+| **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
+| Texto del **acuerdo pedagógico** y el espacio donde va a quedar registrado en CDigital | Hoy se firma: no puede improvisarse al minuto 50 |
+| **Meet** de la serie, 10 minutos antes · lista del grupo | Recibir, saludar por nombre y registrar asistencia |
+
+#### 2. Qué NO se hace hoy
+**No se dicta tema.** Si alguien pide ayuda con su delimitación, respóndale: *“esa es exactamente la lectura de esta semana; la abrimos en la Sesión 02 con su matriz de estado en la mano”*. Tampoco se revisan proyectos uno por uno hoy: no alcanza la hora y el encuadre se pierde.
+
+#### 3. La honestidad que este curso exige
+TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Docente + ruta de TG3) y los pesos 30/30/40 llevan asterisco. Dígalo con todas sus letras en la Slide 7: reconocerlo genera más confianza que fingir un temario oficial, y deja claro cuál es la fuente que manda (**CDigital**). Añada la regla operativa del grupo: **lunes festivo = clase autónoma**, no clase cancelada.
+
+#### 4. Los tres mensajes que deben quedar grabados
+1. **TG2 continúa, no empieza de cero**: y en trabajo de grado **solo cuenta lo escrito**.
+2. **El producto es el avance consolidado** que en TG3 solo habrá que ejecutar y sustentar.
+3. **Se entrega en CDigital**, con plantilla APA CUN, y lo acordado hoy queda por escrito.
+
+#### Qué proyectar en pantalla (y en qué orden)
+Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.
+
+#### Si un estudiante pregunta… (dudas reales del primer día)
+| Si un estudiante pregunta… | Usted responde… |
+| :--- | :--- |
+| “¿Hoy no vamos a ver tema?” | “Hoy es el encuadre: cómo trabajamos, qué se entrega y qué pactamos. Delimitar el tema es su lectura de esta semana y lo abrimos en la Sesión 02.” |
+| “¿Esto se pierde fácil?” | “Se pierde por no entregar, casi nunca por escribir mal. El documento se corrige; la entrega que no llegó, no.” |
+| “¿Puedo trabajar solo o toca en grupo?” | “Según lo que autorice el programa para su opción de grado. Consúltelo hoy y lo dejamos escrito en el acuerdo pedagógico, no a mitad de periodo.” |
+| “¿Puedo cambiar de tema por completo?” | “Reformular sí, y hoy mismo: es afinar el foco. Cambiar de proyecto entero cuesta semanas que este periodo no tiene; solo por fuerza mayor y hablado conmigo.” |
+| “¿Me sirve lo que hice el semestre pasado?” | “Sí, esa es justamente la idea: TG2 continúa. Pero se revisa, se actualiza y se cita si reutiliza fragmentos propios.” |
+| “Casi no tengo nada escrito, ¿arranco mal?” | “No. Marque ‘inexistente’ con honestidad en su matriz: ese es su punto de partida real y con eso se puede planear. Lo que no sirve es el ‘más o menos’.” |
+| “¿Y si el lunes es festivo?” | “La sesión no se cancela: es **clase autónoma**, con la actividad publicada en CDigital. Cuenta igual.” |
+| “¿La clase se graba?” | Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre publicados en CDigital”. |
+| “¿Puedo usar ChatGPT?” | “Como apoyo sí, y se declara en una línea al final del documento. Verifique las referencias: inventa autores y DOIs. En TG3 usted defiende ese texto ante jurados.” |
 
 ---
 
@@ -75,102 +100,121 @@ Es el pacto de trabajo del curso: ritmo de entregas por sesión, formato (Planti
 
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
-| 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición del concepto | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller aplicado al proyecto | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
+| 1️⃣ Apertura, agenda y presentación del Docente | 10 | min 00:00 – 10:00 |
+| 2️⃣ Preséntate: rompehielos y diagnóstico en Padlet | 10 | min 10:00 – 20:00 |
+| 3️⃣ Recorrido del curso, producto final y acuerdo pedagógico | 15 | min 20:00 – 35:00 |
+| 4️⃣ Las ACAs, cómo se entrega e integridad académica | 17 | min 35:00 – 52:00 |
+| 5️⃣ Acuerdos, encargo autónomo y cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
-**Protagonista:** Docente (encuadre) → Estudiantes (Padlet).
-
-**GUION LITERAL:**
-> “Buenas tardes y bienvenidos a Trabajo de Grado 2. Nos vemos los lunes de 5 a 6, una hora sincrónica. Aclaro algo desde ya: este curso **no empieza de cero**. Ustedes traen un proyecto —de TG1 o de un semestre anterior— y mi trabajo es ayudarlos a llevarlo a un **avance consolidado** que en TG3 solo haya que ejecutar y sustentar.”
-
-> “Miren la **Slide 2 — OBJETIVOS**. Hoy vamos a: (1) hacer un diagnóstico honesto de dónde está su proyecto; (2) delimitar o reformular el tema si hace falta; y (3) firmar un acuerdo de trabajo.”
-
-> “Antes de la teoría, quiero saber en qué punto llega cada uno. En la **Presentación del Curso** está la slide **PRESÉNTATE**: abran el Padlet con el QR o el link que dejo en el chat de Meet y suban un post-it con (a) su nombre y (b) en una línea, el estado real de su proyecto —‘lo tengo casi listo’, ‘está congelado’, ‘quiero reformularlo’—. Tienen ~7 minutos; leo 3 o 4 en voz alta.” QR/URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
-**Protagonista:** Docente (exposición).
-
-**GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primera idea, y la repito todo el semestre: en Trabajo de Grado **solo cuenta lo que está escrito**. ‘Lo tengo en la cabeza’ no es un avance; es una intención. Así que hoy ponemos el proyecto sobre la mesa, en un documento, tal como está.”
-
-> “Para eso usamos una **matriz de estado**. Cada sección del documento —tema, problema, objetivos, marco, metodología— se marca en uno de tres estados: **lista, a medias o inexistente**. Y cada estado pide una **evidencia**: un párrafo, un enlace, una ficha. ‘A medias’ es una respuesta honesta y válida; lo que no acepto es el ‘más o menos’ sin nada escrito.”
-
-> “**Slide 4 — ENFOQUE DE HOY.** Segunda idea: si su tema está muy amplio, hoy lo **reformulamos**, que no es lo mismo que cambiarlo. Reformular es afinar el foco con actor + fenómeno + contexto, alineado a Ingeniería de Sistemas. Cambiar de proyecto entero a esta altura cuesta semanas que el periodo no tiene.”
-
-Pregunte a 2 estudiantes: “de su proyecto, ¿qué sección diría que está ‘lista’ de verdad y cuál está ‘inexistente’?”. Anote los patrones del grupo.
-
-#### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
-**Protagonista:** Docente (modela en pantalla).
-
-**En pantalla (Google Docs):** abra un documento titulado "S01 — Estado del proyecto" con la matriz de estado en una tabla.
-
-**GUION LITERAL:**
-> “Modelo el diagnóstico con un caso. Un estudiante dice: ‘mi tema es la inteligencia artificial en las empresas’. Lo llevo a la matriz. Tema: **a medias**, porque está enunciado pero sin foco. Lo reformulo en vivo: actor = la mesa de ayuda de la empresa X; fenómeno = clasificación automática de tickets de soporte con IA; contexto = el área de TI de esa empresa. Escribo: ‘clasificación automática de tickets de soporte con IA en la mesa de ayuda de la empresa X’. ¿Ven cómo pasó de nube a algo investigable?”
-
-> “Sigo con las demás filas: problema —‘inexistente’, no hay párrafo—; objetivos —‘inexistente’—; marco —‘a medias’, tiene dos lecturas pero sin fichas—. Y abajo escribo **tres compromisos** concretos para las próximas dos semanas. Eso es un diagnóstico: no es juzgar, es saber por dónde empezar.”
-
-![Padlet — Preséntate / estado del proyecto](Capturas/Sesion 01/tg_padlet.png)
-
-> **En pantalla:** Presentación del Curso → PRESÉNTATE. Nombre + estado del proyecto en una línea (~7 min). No duplicar Padlet en esta deck.
-
-![Google Académico — ancla del tema](Capturas/Sesion 01/tg_scholar.png)
-
-> **En pantalla:** Si el tema flota, buscar 1 referente y anclar el vocabulario del tema reformulado.
-
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
-**Protagonista:** Estudiantes (taller) · Docente acompaña.
-
-**GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** Tienen ~20 minutos. En un Google Doc llamado `S01_EstadoProyecto_Apellido` hagan tres cosas: (1) la **matriz de estado** con sus secciones marcadas lista/a medias/inexistente y su evidencia; (2) el **tema delimitado** en una sola frase con actor + fenómeno + contexto; (3) **tres compromisos** de trabajo con fecha propia para las próximas dos semanas. Al final pido a 3 personas leer su frase de tema en 20 segundos.”
-
-> “Criterio de éxito: si yo leo su matriz **sin conocer su proyecto**, entiendo qué tiene y qué le falta; y su frase de tema me dice quién, qué y dónde.”
-
-**Acompañamiento (mientras trabajan):**
-| Si el estudiante… | Usted responde… |
-| :--- | :--- |
-| Marca todo como "listo" | “Muéstreme la evidencia de cada uno; si no hay párrafo, es ‘a medias’.” |
-| Quiere cambiar de tema entero | “Reformule el actual: ¿cuál es el foco fino? Cambiarlo cuesta semanas.” |
-| Escribe "IA en las empresas" | “Póngale actor y lugar: ¿quién y dónde ocurre?” |
-| No tiene nada escrito | “Empiece por marcar ‘inexistente’ con honestidad; ese es su punto de partida.” |
-
-![ZoteroBib — cita de ancla](Capturas/Herramientas/tg_zoterobib.png)
-
-> **En pantalla:** Generar 1 APA 7 del referente ancla y pegarla en el Doc de estado.
-
-
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 1️⃣ Apertura, agenda y presentación del Docente (~10 min) — Slides 1–3 (Portada · AGENDA · Docente)
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cerramos. Tres ideas de hoy: (1) TG2 es **continuación**, y solo cuenta lo escrito; (2) la matriz de estado dice dónde estamos parados; (3) reformular es afinar el foco, no cambiar de proyecto.”
+> “Buenas tardes y bienvenidos a Trabajo de Grado 2. Nos vemos los lunes de cinco a seis, una hora sincrónica. Aclaro dos cosas de entrada. La primera: **hoy no vamos a ver tema**; hoy encuadramos el curso, vemos qué se entrega y pactamos cómo vamos a trabajar. La segunda, más importante: **este curso no empieza de cero**. Ustedes traen un proyecto, y mi trabajo es ayudarlos a llevarlo a un avance consolidado.”
 
-> “**Slide 6 — PARA CONTINUAR.** Trabajo autónomo: suban a CDigital su `S01_EstadoProyecto_Apellido` con la matriz, la frase de tema y los tres compromisos. La próxima sesión convertimos ese tema en **pregunta, objetivos y título provisional** —el esqueleto del avance—.”
+> “**Slide 2 — AGENDA DE HOY.** El orden: les cuento cómo trabajamos y cuál es el producto; me presento; se presentan ustedes en un tablero; vemos las ACAs y cómo se entrega; y cerramos con los acuerdos y con la tarea de esta semana.”
 
-> “**Slide 7 — Cierre.** Gracias, buen inicio. Recuerden: si un lunes cae festivo, esa sesión es **clase autónoma** en CDigital; el resto nos vemos en el mismo Meet.”
+> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia dirigiendo trabajos de grado.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro.”
+
+**Cómo se maneja este arranque:** salude por nombre a quien va entrando. Y no arranque preguntando “¿cómo van con el proyecto?” en abierto: casi nadie confiesa un atraso por micrófono el primer día. Ese diagnóstico se hace por escrito, en el Padlet, que resulta mucho más cómodo.
+
+#### 2️⃣ Preséntate: rompehielos y diagnóstico en Padlet (~10 min) — Slide 4 (PRESÉNTATE — Padlet)
+**Protagonista:** Estudiantes (Padlet) · Docente conduce.
+
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, con el QR. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+
+**GUION LITERAL:**
+> “**Slide 4 — PRESÉNTATE.** Quiero conocerlos y, sobre todo, saber en qué punto llega cada proyecto. En pantalla está el QR y el enlace; lo dejo también en el chat del Meet. Suban un post-it con (a) su nombre, (b) el tema de su proyecto en una frase y (c) el estado real en el que llega: ‘lo tengo casi listo’, ‘está congelado’, ‘quiero reformularlo’, ‘la verdad, no tengo casi nada’. Tienen unos siete minutos.”
+
+> “Y les pido algo: **sean honestos**. Aquí nadie califica el post-it. Si usted dice que está en cero, yo sé por dónde empezar con usted; si dice que está listo y no lo está, perdemos las dos primeras semanas.”
+
+> [Deje el tablero proyectado, ponga usted el primer post-it y lea tres o cuatro en voz alta, agradeciendo por nombre. Anote mentalmente el patrón del grupo: ¿mayoría congelados? ¿mayoría sin problema escrito? Eso le dice cómo dosificar las próximas sesiones.]
+
+**Si nadie escribe** — pasa casi siempre el primer día virtual:
+| Situación | Qué hace el Docente |
+| :--- | :--- |
+| Silencio total a los 2 minutos | Escribe un post-it de ejemplo con un caso típico (“tema amplio, sin pregunta escrita”) y lo narra en voz alta. |
+| “No me abre el link” | Pega el URL otra vez en el chat y ofrece que lo digan por micrófono; usted lo transcribe. |
+| Todos escriben “voy bien” | Repregunta en abierto: “¿quién tiene ya el planteamiento **escrito**, no pensado?”. El silencio es el diagnóstico. |
+| Alguien confiesa que abandonó el proyecto | Agradece la honestidad en público y ofrece revisar el caso al terminar la sesión. |
+
+![Padlet — Preséntate / estado del proyecto](Capturas/Sesion 01/tg_padlet.png)
+
+> **En pantalla:** Tablero de la Presentación del Curso. Consigna: nombre + tema en una frase + estado real del proyecto (~7 min). Lea 3–4 en voz alta.
+
+#### 3️⃣ Recorrido del curso, producto final y acuerdo pedagógico (~15 min) — Slides 6–11 (cómo trabajamos · aviso honesto · mapa · producto · acuerdo)
+**Protagonista:** Docente (recorrido de la deck).
+
+**GUION LITERAL:**
+> “**Slide 6 — Cómo trabajamos.** Once encuentros de una hora. En una hora no se escribe un trabajo de grado oyendo hablar al profesor, así que el trato es: yo doy criterio y ejemplo en quince minutos, y el resto lo usamos para que ustedes escriban o corrijan **su** documento mientras yo paso revisando. Traigan siempre el documento abierto y la sección de la semana anterior ya escrita, aunque esté fea. Aquí hay un principio que voy a repetir todo el periodo: **solo cuenta lo escrito**.”
+
+> “**Slide 7 — Aviso honesto.** Les debo una aclaración: esta asignatura **no tiene Syllabus SIAC cargado** en la carpeta del programa. El temario que van a ver es orientativo; lo construí con el Manual del Docente y con la ruta que sigue TG3. Los porcentajes 30, 30 y 40 son la regla general del reglamento y por eso llevan asterisco: la fuente que manda es **CDigital**. Si algo se ajusta, se los aviso ahí, no de palabra.”
+
+> “**Slides 8 y 9 — Mapa del curso.** Miren las once sesiones y fíjense en la última columna: ninguna termina en apuntes, todas terminan en algo escrito. Y ojo con la nota: cuando un lunes sea festivo, esa sesión es **clase autónoma**, no clase cancelada; la actividad queda publicada en CDigital.”
+
+> “**Slide 10 — Qué se llevan al final.** El producto de TG2 es **un solo documento**: planteamiento, pregunta, objetivos, marco referencial y metodología propuesta. Terminar TG2 no es terminar el trabajo de grado; es dejarlo listo para que en TG3 solo quede ejecutar y sustentar. Y sean claros con esto: aquí todavía **no hay resultados**; el trabajo de campo es de TG3.”
+
+> “**Slide 11 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: ritmo de una sección por sesión, formato con plantilla APA CUN en Google Docs, entrega por CDigital, festivo igual a clase autónoma, y retroalimentación sobre lo entregado. No es un trámite: es lo que invoco cuando alguien me diga ‘yo no sabía’. Léanlo antes de aceptarlo y pregunten ahora.”
+
+#### 4️⃣ Las ACAs, cómo se entrega e integridad académica (~17 min) — Slides 5 y 12–17 (ACAs · entrega · integridad · IA · herramientas · ayuda)
+**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+
+**GUION LITERAL:**
+> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: tres entregas, una por corte, con su peso. Las **fechas exactas no están en la presentación a propósito**: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital, que es donde no se desactualizan.”
+
+> “**Slide 12 — Las ACAs una por una.** Lo importante es qué se mira. Lean la última columna, la de *flojo contra bueno*. La ACA 1 se juega en el foco del tema: ‘IA en las empresas’ no es un tema. La ACA 2 se juega en que las fuentes trabajen, no en cuántas hay. La ACA 3 se juega en la coherencia: que cada objetivo tenga su método y que el documento se lea sin costuras.”
+
+> “**Slide 13 — Cómo se entrega.** Puro procedimiento, y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla de TG2: **trabajen siempre sobre el mismo documento**. Aquí se evalúa un texto que crece, no una carpeta de archivos sueltos.”
+
+> “**Slide 14 — Integridad académica.** En trabajo de grado esto se revisa de verdad. Todo lo que no es suyo se cita en APA 7, incluidos los fragmentos de su propio trabajo anterior: reutilizarlos sin declararlo es **autoplagio**. En TG3 el documento pasa por la herramienta antiplagio institucional del campus, así que el hábito lo corregimos aquí. Y el consejo práctico: anoten la fuente en el instante en que pegan algo; en un documento que crece seis meses, reconstruirla después es imposible.”
+
+> “**Slide 15 — Inteligencia artificial.** Hablemos claro. Sí se puede usar para entender un concepto, ordenar una sección o pulir un párrafo que ustedes ya escribieron. Se declara en una línea al final. Y verifiquen cada referencia, porque estas herramientas inventan autores y DOIs. Piensen en el semestre que viene: en TG3 hay sustentación ante jurados, y un párrafo que usted no pueda explicar en voz alta le va a costar caro.”
+
+> “**Slide 16 — Herramientas.** Todas gratis y en el navegador: Docs, Google Académico, SciELO, Redalyc, biblioteca CUN, ZoteroBib para las citas, Excalidraw para diagramar y CDigital para entregar. No hay que instalar ni comprar nada.”
+
+> “**Slide 17 — Cómo pedir ayuda.** Foro de CDigital para lo académico, correo para lo personal, respuesta en días hábiles y siempre antes del siguiente encuentro. Y pidan ayuda **con el texto en la mano**: miren los dos ejemplos de la slide.”
+
+![ZoteroBib (zbib.org) — citar sin instalar nada](Capturas/Herramientas/tg_zoterobib.png)
+
+> **En pantalla:** Muestre 30 segundos: pegar un DOI o título → APA 7 → copiar al Doc. Es la respuesta a “¿con qué gestor de citas trabajamos?”.
+
+
+#### 5️⃣ Acuerdos, encargo autónomo y cierre (~8 min) — Slides 18–23 (convivencia · dudas · Sesión 02 · acuerdos · cierre)
+**Protagonista:** Docente.
+
+**GUION LITERAL:**
+> “**Slides 18 y 19 — Convivencia y dudas frecuentes.** Dos minutos: empezamos a la hora, micrófono apagado mientras alguien expone, y compartir pantalla es parte del curso —vamos a proyectar borradores reales, y aquí nadie se burla de un texto a medio hacer, porque todos estamos mostrando lo mismo—. En la siguiente slide están las dudas que siempre salen el primer día.”
+
+> “**Slide 20 — Lo que debe tener listo para la Sesión 02.** La tarea es doble. Primero, la **lectura autónoma** sobre delimitación y reformulación del tema, publicada en CDigital. Segundo, y esto es lo que quiero ver: hagan el inventario de su proyecto en un Doc llamado `S01_EstadoProyecto_Apellido`. Una **matriz de estado** donde cada sección —tema, problema, objetivos, marco, metodología— se marca como **lista, a medias o inexistente**, con la **evidencia** pegada: el párrafo o el enlace. Más su **tema delimitado en una sola frase** y **tres compromisos** suyos para las próximas dos semanas.”
+
+> “Y les repito: ‘a medias’ e ‘inexistente’ son respuestas válidas y honestas. Lo único que no me sirve es ‘más o menos’ sin nada escrito debajo.”
+
+> “**Slides 21 y 22 — Acuerdos y para la próxima.** Resumo el trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7.”
+
+> “**Slide 23 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y qué pactamos. La próxima sesión abrimos con sus matrices en pantalla y convertimos ese tema en pregunta, objetivos y título. Recuerden: si un lunes cae festivo, esa sesión es autónoma; el resto nos vemos en el mismo Meet.”
 
 ---
 
-🧩 **Entregable de hoy**
-1. En Google Docs (`S01_EstadoProyecto_Apellido`): matriz de estado (secciones lista/a medias/inexistente + evidencia) + tema delimitado en una frase (actor + fenómeno + contexto) + 3 compromisos con fecha.
-2. Archivo en CDigital: `S01_EstadoProyecto_Apellido` en CDigital (Google Doc o PDF).
+🧩 **Encargo autónomo (para la Sesión 02)**
+1. **No se hace en clase, es trabajo autónomo:** leer el material sobre **delimitación / reformulación del tema** publicado en CDigital; y llenar en Google Docs la **matriz de estado** del proyecto (sección · lista/a medias/inexistente · evidencia), el **tema delimitado** en una frase (actor + fenómeno + contexto) y **3 compromisos** para las próximas dos semanas.
+2. Archivo en CDigital: `S01_EstadoProyecto_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.
 3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
-- [ ] Fundamento teórico leído
-- [ ] PPTX `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
-- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)
-- [ ] Presentación del Curso (Preséntate / Padlet): https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-- [ ] Espacio de entrega en CDigital
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
+- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
+- [ ] **Lectura autónoma sobre delimitación del tema publicada en CDigital** (sin eso el encargo no se puede cumplir)
+- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)
+- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)
+- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 23 slides)
+- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs
+- [ ] Verificado qué lunes del periodo caen en festivo (esas sesiones son **clase autónoma**)
+- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano
 
 ---
 *Fin del Guión — Sesión 01. Autocontenido para dictar 60 minutos.*
