@@ -14,6 +14,7 @@ from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
 from fechas_entrega_aca import blocks_para_slide, entrega_por_id, fmt_entrega
 
 OUT_DIR = os.path.join(COURSES["proyecto1"]["folder"], "Clases")
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
 OUT = os.path.join(OUT_DIR, "Presentacion del Curso - Proyecto I.pptx")
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -32,7 +33,9 @@ RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 URL_PLANTILLA_ACA = "Clases/Recursos/ACAs/ (enunciados ACA 1–3 · autoevaluación · coevaluación)"
 # Enlace real si existe en carga_academica_2026.json → cursos.proyecto1.meet; si no, placeholder.
 URL_MEET = meet_url("proyecto1", "Proyecto I")
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# URL real del aula desde carga_academica_2026.json → cursos.<key>.cdigital
+# (auditada en CDigital el 2026-08-10). Si falta, `cdigital_url` da el placeholder.
+URL_CDIGITAL = cdigital_url("proyecto1")
 FUENTE_ESP329 = "Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx"
 
 set_footer("")

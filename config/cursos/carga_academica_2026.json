@@ -121,7 +121,8 @@
           "inscritos": null,
           "en_excel": false
         }
-      }
+      },
+      "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=130378"
     },
     "creatividad": {
       "key": "creatividad",
@@ -183,7 +184,8 @@
           "inscritos": 50,
           "en_excel": true
         }
-      }
+      },
+      "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=115463"
     },
     "investigacion": {
       "key": "investigacion",
@@ -245,7 +247,8 @@
           "inscritos": 20,
           "en_excel": true
         }
-      }
+      },
+      "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=111070"
     },
     "tg2": {
       "key": "tg2",
@@ -309,7 +312,8 @@
           "inscritos": 50,
           "en_excel": true
         }
-      }
+      },
+      "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=129268"
     },
     "tg3": {
       "key": "tg3",
@@ -371,7 +375,8 @@
           "cierre": "2026-11-15",
           "capacidad": 50,
           "inscritos": 11,
-          "en_excel": true
+          "en_excel": true,
+          "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=112321"
         },
         "54466": {
           "id_grupo": 803509,
@@ -383,7 +388,8 @@
           "cierre": "2026-11-22",
           "capacidad": 50,
           "inscritos": 50,
-          "en_excel": true
+          "en_excel": true,
+          "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=116387"
         },
         "54467": {
           "id_grupo": 813244,
@@ -395,9 +401,11 @@
           "cierre": "2026-11-22",
           "capacidad": 50,
           "inscritos": 50,
-          "en_excel": true
+          "en_excel": true,
+          "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=129270"
         }
-      }
+      },
+      "cdigital": "https://cdigital.cun.edu.co/course/view.php?id=112321"
     }
   }
 }

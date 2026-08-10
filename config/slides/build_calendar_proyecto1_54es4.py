@@ -99,14 +99,44 @@ def _js_str(s: str) -> str:
 
 
 def load_roster_emails(ods: Path) -> list[str]:
-    if not ods.is_file():
+    """Correos del grupo. Prioriza el roster extraído de CDigital sobre el .ods histórico.
+
+    El `.ods` que subió el docente se quedó en 40 estudiantes; la matrícula real en el aula
+    (auditada el 2026-08-10) es de 50. Se lee el primer archivo disponible en la carpeta del
+    grupo por orden de confianza y, si hay varios, se toma el que más correos aporte.
+    """
+    carpeta = ods.parent
+    candidatos = [
+        carpeta / "Correos estudiantes (invitados Calendar).txt",
+        carpeta / "Listado estudiantes (CDigital).csv",
+        ods,
+    ]
+    mejor: list[str] = []
+    for f in candidatos:
+        if not f.is_file():
+            continue
+        try:
+            if f.suffix.lower() in {".ods", ".xlsx"}:
+                with zipfile.ZipFile(f) as z:
+                    data = " ".join(
+                        z.read(n).decode("utf-8", "replace")
+                        for n in z.namelist() if n.endswith(".xml")
+                    )
+            else:
+                data = f.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        hallados = sorted(set(re.findall(
+            r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}", data)))
+        if len(hallados) > len(mejor):
+            mejor = hallados
+    if not mejor:
         raise FileNotFoundError(
-            f"No se encontró el roster ODS en {ods}. "
-            "Debe vivir en Especializacion/Proyecto I/2026/54ES4/."
+            f"No se encontró roster con correos en {carpeta}. "
+            "Debe existir «Correos estudiantes (invitados Calendar).txt» "
+            "o «Listado estudiantes.ods»."
         )
-    with zipfile.ZipFile(ods) as z:
-        data = z.read("content.xml").decode("utf-8", errors="replace")
-    return sorted(set(re.findall(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}", data)))
+    return mejor
 
 
 def build_calendar_payload(grupo: Path | None = None) -> dict:

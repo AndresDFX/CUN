@@ -32,11 +32,15 @@ from guion_md_a_docx import convert as md_to_docx
 from build_acas_estudiantes import build_course as build_acas, catalog_for_leeme
 from build_correo_bienvenida import build_course as build_correo, CORREO_NAME
 from carga_academica import curso as carga_curso
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 APA_SRC = os.path.join(ROOT, "Plantilla_APA_CUN_Proyecto de grado.docx")
 APA_NAME = "Plantilla_APA_CUN_Proyecto de grado.docx"
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# Placeholder de respaldo: los usos por curso deben llamar a
+# `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
+# en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
+URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 
 LEEME_NAME = "LEEME - Material para estudiantes.docx"
 FICHA_CREATIVIDAD_NAME = "Ficha_problema_oportunidad.docx"
@@ -168,7 +172,7 @@ La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo 
 | :--- | :--- |
 | **Padlet** (rompehielos / Preséntate) | {PADLET_PRESENTACION_URL} |
 | **Google Meet** (mismo enlace toda la serie) | {meet} |
-| **CDigital** (campus del curso) | {URL_CDIGITAL} |
+| **CDigital** (campus del curso) | {cdigital_url(key)} |
 | **Plantilla APA CUN** | `Recursos/{APA_NAME}` (ábrela en Google Docs / Word Online) |
 
 {tutorias_bloque}

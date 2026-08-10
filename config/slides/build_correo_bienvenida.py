@@ -36,7 +36,11 @@ from carga_academica import (  # noqa: E402
 )
 from sesiones_cun import COURSES, meet_url  # noqa: E402
 
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# Placeholder de respaldo: los usos por curso deben llamar a
+# `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
+# en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
 
 CORREO_NAME = "Correo de bienvenida.docx"
@@ -85,7 +89,7 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         f"| **Primera clase** | {bold_var(primera)} — sesión de **encuadre**: presento el curso, "
         "las ACAs y nos conocemos. **No se dicta tema**; el contenido arranca en la Sesión 02. |",
         f"| **Google Meet** (mismo enlace toda la serie) | {meet_url(key, c['titulo_corto'])} |",
-        f"| **Aula CDigital** (entregas y notas) | {URL_CDIGITAL} |",
+        f"| **Aula CDigital** (entregas y notas) | {cdigital_url(key)} |",
     ]
     if grupo:
         meta = (c.get("grupos") or {}).get(grupo) or {}

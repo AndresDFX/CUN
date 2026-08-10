@@ -15,7 +15,11 @@ from sesiones_cun import (
 )
 from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
 
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# Placeholder de respaldo: los usos por curso deben llamar a
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+# `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
+# en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
+URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 # La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
 # estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
 # build_acas_estudiantes.py). Decisión del docente 2026-08-10.
@@ -67,7 +71,7 @@ def build_proyecto1(course):
     _i += 1
     content_slide(prs, "RECURSOS Y PLANTILLAS", [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
-        f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
+        f"**CDigital (campus del curso):** {bold_var(cdigital_url('proyecto1'))}",
         f"**Tutorías:** @@{LINK_TUTORIAS}@@",
         MSG_TUTORIAS_POR_GRUPO,
         f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url('proyecto1', 'Proyecto I'))}",
@@ -118,7 +122,7 @@ def build_pregrado(course, filename):
     _i = 4 + _n_cont
     content_slide(prs, "RECURSOS", [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
-        f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
+        f"**CDigital (campus del curso):** {bold_var(cdigital_url(key))}",
         f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url(course['key'], course['titulo']))}",
         f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",

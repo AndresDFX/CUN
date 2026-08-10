@@ -127,6 +127,24 @@ def meet_url(course_key: str, curso_corto: str | None = None) -> str:
     return meet_placeholder(corto)
 
 
+# Aula del curso en CDigital (Moodle institucional, https://cdigital.cun.edu.co/).
+# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.cdigital
+# (cadena vacía = aún no se tiene el enlace del aula ⇒ se muestra el placeholder).
+# NO hardcodear la URL en los builds: usar `cdigital_url(course_key)`.
+CDIGITAL_PLACEHOLDER = "[URL CDigital — campus del curso pendiente]"
+
+
+def cdigital_url(course_key: str) -> str:
+    """Enlace del aula en CDigital: el real si está en config, si no el placeholder."""
+    url = ""
+    if _carga_curso is not None:
+        try:
+            url = (_carga_curso(course_key).get("cdigital") or "").strip()
+        except Exception:
+            url = ""
+    return url or CDIGITAL_PLACEHOLDER
+
+
 # Convención carpetas (raíz de asignatura, GENÉRICO — sin código de grupo):
 #   Clases/Presentacion del Curso - ....pptx
 #   Clases/Sesion 01 - <Nombre del tema>/Presentacion.pptx  ← numerada + tema

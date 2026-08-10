@@ -51,11 +51,15 @@ ROOT = Path(__file__).resolve().parents[2] / "Pregrado"
 D = date
 DOCENTE, DOCENTE_CORREO = _docente_pair()
 from sesiones_cun import DOCENTE_CREDS  # noqa: E402  (fuente única del perfil proyectado)
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
 # La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
 # estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
 # build_acas_estudiantes.py). Decisión del docente 2026-08-10.
 RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# Placeholder de respaldo: los usos por curso deben llamar a
+# `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
+# en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
+URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 DIAS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
 
 
@@ -116,7 +120,7 @@ def recursos_items(course_key: str, titulo_corto: str, *extra: str) -> list[str]
     """
     items = [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
-        f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
+        f"**CDigital (campus del curso):** {bold_var(cdigital_url(course_key))}",
         f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet(course_key, titulo_corto))}",
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",

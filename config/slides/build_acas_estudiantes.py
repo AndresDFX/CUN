@@ -43,7 +43,11 @@ from fechas_entrega_aca import (  # noqa: E402
 )
 from carga_academica import curso as carga_curso  # noqa: E402
 
-URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
+# Placeholder de respaldo: los usos por curso deben llamar a
+from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+# `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
+# en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
+URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 APA_REL = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 ACAS_REL = "Recursos/ACAs"
 
@@ -88,12 +92,12 @@ def write_md_as_docx(
             os.remove(tmp)
 
 
-def _header(curso: str, codigo: str, fuente: str) -> str:
+def _header(curso: str, codigo: str, fuente: str, aula: str = CDIGITAL_PLACEHOLDER) -> str:
     return f"""# Enunciado para estudiantes
 
 **Curso:** {curso}  
 **Código:** {codigo}  
-**Entrega oficial:** solo por **CDigital** ({URL_CDIGITAL})  
+**Entrega oficial:** solo por **CDigital** ({aula})  
 **Fuente curricular:** {fuente}
 
 > Lee este enunciado completo antes de empezar. Si hay duda de peso, rúbrica o ventana de entrega, confirma con **el Docente** y lo publicado en CDigital.
@@ -102,13 +106,14 @@ def _header(curso: str, codigo: str, fuente: str) -> str:
 """
 
 
-def _header_instrumento(curso: str, codigo: str, fuente: str, nombre: str) -> str:
+def _header_instrumento(curso: str, codigo: str, fuente: str, nombre: str,
+                        aula: str = CDIGITAL_PLACEHOLDER) -> str:
     """Encabezado de los instrumentos individuales de cierre (NO son ACAs)."""
     return f"""# Instructivo para estudiantes — instrumento individual de cierre
 
 **Curso:** {curso}
 **Código:** {codigo}
-**Qué es:** un **formulario individual** que **tú diligencias** en **CDigital** ({URL_CDIGITAL})
+**Qué es:** un **formulario individual** que **tú diligencias** en **CDigital** ({aula})
 **No es una ACA:** no se sube documento, no usa la plantilla APA y no es entrega de equipo
 **Fuente curricular:** {fuente}
 
@@ -186,9 +191,10 @@ def acas_proyecto1() -> list[dict]:
         "ESP329 (evaluación Art. 41: ACA1 25% · ACA2 25% · ACA3 42% · "
         "autoevaluación 4% · coevaluación 4%) · Manual del Docente / AFI (contenido de cada entrega)"
     )
+    aula_p1 = cdigital_url("proyecto1")
     curso = "PROYECTO I — Especialización en Inteligencia Artificial"
     codigo = "ESP329"
-    h = _header(curso, codigo, fuente)
+    h = _header(curso, codigo, fuente, cdigital_url("proyecto1"))
 
     a1 = h + f"""## 1. Título / código
 
@@ -318,8 +324,8 @@ Integrar el **anteproyecto completo** (ESP329 U5–U7): metodología **diseñada
 )}
 """
 
-    h_auto = _header_instrumento(curso, codigo, fuente, "autoevaluación")
-    h_coev = _header_instrumento(curso, codigo, fuente, "coevaluación")
+    h_auto = _header_instrumento(curso, codigo, fuente, "autoevaluación", cdigital_url("proyecto1"))
+    h_coev = _header_instrumento(curso, codigo, fuente, "coevaluación", cdigital_url("proyecto1"))
 
     auto = h_auto + f"""## 1. Qué es este documento (y qué NO es)
 
@@ -342,7 +348,7 @@ Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para val
 | Pregunta | Respuesta |
 | :--- | :--- |
 | **¿Quién?** | **Cada estudiante, de forma individual.** Si el equipo tiene 3 integrantes, se diligencian 3 autoevaluaciones. |
-| **¿Dónde?** | En el aula del curso en **CDigital** ({URL_CDIGITAL}), actividad «Autoevaluación». Ningún otro canal cuenta. |
+| **¿Dónde?** | En el aula del curso en **CDigital** ({aula_p1}), actividad «Autoevaluación». Ningún otro canal cuenta. |
 | **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba. El Docente la habilita al abrir y la cierra al terminar. |
 | **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
 
@@ -398,7 +404,7 @@ Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para val
 | Pregunta | Respuesta |
 | :--- | :--- |
 | **¿Quién?** | **Cada estudiante, de forma individual**, sobre sus compañeros de equipo. Nadie la diligencia por otro. |
-| **¿Dónde?** | En el aula del curso en **CDigital** ({URL_CDIGITAL}), actividad «Coevaluación». Ningún otro canal cuenta. |
+| **¿Dónde?** | En el aula del curso en **CDigital** ({aula_p1}), actividad «Coevaluación». Ningún otro canal cuenta. |
 | **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba (abre justo después de la ACA 3). |
 | **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
 
@@ -461,7 +467,7 @@ def acas_investigacion() -> list[dict]:
     )
     curso = "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA — Escuela de Ingenierías"
     codigo = "EI005"
-    h = _header(curso, codigo, fuente)
+    h = _header(curso, codigo, fuente, cdigital_url("investigacion"))
 
     c1 = h + f"""## 1. Título / código
 
@@ -587,7 +593,7 @@ def acas_creatividad() -> list[dict]:
     )
     curso = "CREATIVIDAD Y PENSAMIENTO INNOVADOR — Escuela de Ingenierías"
     codigo = "EI004"
-    h = _header(curso, codigo, fuente)
+    h = _header(curso, codigo, fuente, cdigital_url("creatividad"))
 
     c1 = h + f"""## 1. Título / código
 
@@ -713,7 +719,7 @@ def acas_tg2() -> list[dict]:
     )
     curso = "TRABAJO DE GRADO 2 — Modelos de Innovación (Ing. Sistemas)"
     codigo = "94453"
-    h = _header(curso, codigo, fuente)
+    h = _header(curso, codigo, fuente, cdigital_url("tg2"))
 
     c1 = h + f"""## 1. Título / código
 
@@ -841,7 +847,7 @@ def acas_tg3() -> list[dict]:
     )
     curso = "TRABAJO DE GRADO 3 — Modelos de Innovación (Ing. Sistemas)"
     codigo = "94532"
-    h = _header(curso, codigo, fuente)
+    h = _header(curso, codigo, fuente, cdigital_url("tg3"))
 
     ev05 = h + f"""## 1. Título / código
 
