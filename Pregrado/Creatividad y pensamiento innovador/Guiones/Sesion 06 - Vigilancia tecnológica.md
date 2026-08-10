@@ -11,6 +11,19 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Vigilancia tecnológica/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 3** | Cuestionario | 3 | 4% | **Cierra hoy** — se aplica en clase (~10 min reservados en el plan) |
+| **ACA Final** | Tarea | 3 | 32,8% | Abierto: **cierra antes del próximo encuentro** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA Final** es la **tarea** del corte 3 y **cierra antes del próximo encuentro**: pesa **32,8%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
+
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**10 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **23 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -101,9 +114,10 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre + puente desde la sesión anterior | 5 | min 00:00 – 05:00 |
 | 2️⃣ Qué es vigilancia tecnológica + fuentes | 12 | min 05:00 – 17:00 |
-| 3️⃣ Modelación: buscar y fichar una señal en vivo | 13 | min 17:00 – 30:00 |
-| 4️⃣ Taller: tablero de vigilancia de su tema | 22 | min 30:00 – 52:00 |
-| 5️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
+| 3️⃣ Modelación: buscar y fichar una señal en vivo | 12 | min 17:00 – 29:00 |
+| 4️⃣ Taller: tablero de vigilancia de su tema | 13 | min 29:00 – 42:00 |
+| 5️⃣ Quiz 3 en CDigital (se aplica en clase) | 10 | min 42:00 – 52:00 |
+| 6️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -147,7 +161,7 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 
 > **En pantalla:** Columnas: señal / fuente / implicación para mi propuesta.
 
-#### 3️⃣ Modelación: buscar y fichar una señal en vivo (~13 min) — Protagonista: Docente
+#### 3️⃣ Modelación: buscar y fichar una señal en vivo (~12 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** demostrar la búsqueda y el llenado de una ficha de señal.
@@ -168,11 +182,11 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 
 > **En pantalla:** Abrir https://scholar.google.com/; anotar 3 señales tecnológicas.
 
-#### 4️⃣ Taller: tablero de vigilancia de su tema (~22 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: tablero de vigilancia de su tema (~13 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Abran Google Scholar y Google Patents en otra pestaña y armen su **Tablero de vigilancia** en Google Docs con **mínimo 3 fichas de señal**: título, fuente con fecha y enlace, hallazgo en 2 líneas, implicación y nivel de confianza. **Al menos una** señal debe obligarlos a **ajustar algo**: alcance, usuario, tecnología o riesgo. Al final, dos personas comparten solo la **implicación** de una señal. Éxito: 3 señales con fuente y fecha + 1 decisión explícita.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **13 minutos**. Abran Google Scholar y Google Patents en otra pestaña y armen su **Tablero de vigilancia** en Google Docs con **mínimo 3 fichas de señal**: título, fuente con fecha y enlace, hallazgo en 2 líneas, implicación y nivel de confianza. **Al menos una** señal debe obligarlos a **ajustar algo**: alcance, usuario, tecnología o riesgo. Al final, dos personas comparten solo la **implicación** de una señal. Éxito: 3 señales con fuente y fecha + 1 decisión explícita.”
 
 **Tabla de acompañamiento:**
 
@@ -186,7 +200,33 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 
 ---
 
-#### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
+#### 5️⃣ Quiz 3 en CDigital (se aplica en clase) (~10 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **10 min** y por eso se recortan: Modelación: buscar y fichar una señal en vivo 13→12 min, Taller: tablero de vigilancia de su tema 22→13 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 3** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **diez minutos** son para **Quiz 3**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **4%** del curso dentro del **corte 3**, que vale **40%**. El resto del corte 3 lo aportan **ACA Final** (32,8%), **Autoevaluación** (1,6%), **Coevaluación** (1,6%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 3** del aula, y abren el ítem **Quiz 3**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~7 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **Todavía del corte 3:** **ACA Final** cierra antes del próximo encuentro. Anúncielo aquí, no en el minuto final.
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -216,6 +256,8 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 3** (Cuestionario · 4% · corte 3) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
+- [ ] Anunciar en clase que **ACA Final** (Tarea · 32,8%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 06 - Vigilancia tecnológica/Presentacion.pptx`

@@ -41,7 +41,9 @@ from carga_academica import (  # noqa: E402
     pregrado_build_dict,
 )
 from fechas_entrega_aca import (  # noqa: E402
-    blocks_para_slide, blocks_tg3_slide, entrega_por_id, fmt_entrega,
+    VENTANAS_POR_GRUPO, blocks_para_slide, blocks_tg3_slide, componentes_curso,
+    desglose_corte_texto, entrega_por_id, entregas_para_grupo, fmt_entrega,
+    fmt_peso, peso_corte,
 )
 
 # Ruta derivada del propio archivo (config/slides/ → ../../Pregrado). Antes estaba
@@ -89,28 +91,245 @@ def _meet(course_key: str, titulo_corto: str) -> str:
     return _meet_url(course_key, titulo_corto)
 
 
-def add_eval_scope_pregrado(prs, idx: int, regimen: str) -> int:
-    """Bloque claro: evaluación por cortes Art. 52; auto/coeval con % propio no aplica.
+def add_eval_scope_pregrado(prs, idx: int, regimen: str, course_key: str | None = None) -> int:
+    """Alcance de la evaluación con la estructura REAL del aula (CDigital).
 
-    Distingue de la autoevaluación institucional SIAC (calidad de programas).
+    Antes esta slide afirmaba que la autoevaluación y la coevaluación «no aplican» en
+    pregrado (se apoyaba en el instructivo AFI). La auditoría del libro de
+    calificaciones (2026-08-10) mostró que **existen en los cinco cursos**: la
+    autoevaluación es un cuestionario y la coevaluación es un **foro**, cada una con su
+    peso dentro del tercer corte. El desglose se lee del modelo, no se escribe a mano.
     """
-    content_slide(
-        prs,
-        "ALCANCE DE LA EVALUACIÓN",
-        [
-            regimen,
-            "Autoevaluación y coevaluación **con porcentaje propio** (modelo AFI Proyecto I: "
-            "4% + 4% según ESP329): **no aplican** en esta asignatura según el syllabus SIAC / Art. 52.",
-            "No confundir con la autoevaluación **institucional** SIAC (calidad de programas en "
-            "acreditacion.cun.edu.co): esa no es una nota del curso.",
-            "Entregas, rúbricas EV y publicación de notas: solo por **CDigital**.",
-            "Si Coordinación publica un instrumento formativo sin peso propio, se anuncia en el aula; "
-            "no inventamos % fuera del syllabus.",
-        ],
-        idx=idx,
-        size=13,
+    bullets = [regimen]
+    if course_key:
+        items = {e.id: e for e in entregas_para_grupo(course_key)}
+        auto, coev = items.get("auto"), items.get("coev")
+        # El desglose ítem por ítem ya va en la tabla «CÓMO SE CALIFICA» (slide anterior):
+        # aquí solo se recuerda dónde está, para no repetir 200 caracteres de porcentajes.
+        bullets.append(
+            "**Cada corte se compone de ítems concretos del aula** — nombre exacto, tipo de "
+            "actividad, peso y cierre: en la tabla «CÓMO SE CALIFICA» de esta presentación."
+        )
+        if auto and coev:
+            bullets.append(
+                f"**Autoevaluación ({auto.weight_pct}, cuestionario)** y "
+                f"**coevaluación ({coev.weight_pct}, foro)** **sí hacen parte** de la nota "
+                "de este curso: van en el tercer corte y se diligencian/participan en el aula."
+            )
+        bullets.append(
+            "Los **quices y parciales** son cuestionarios en CDigital y cierran en día de clase; "
+            "la **ACA Final** es una tarea (documento) y cierra en la fecha máxima de recepción."
+        )
+    bullets.extend([
+        "No confundir con la autoevaluación **institucional** SIAC (calidad de programas en "
+        "acreditacion.cun.edu.co): esa no es una nota del curso.",
+        "Entregas, rúbricas y publicación de notas: solo por **CDigital**.",
+        "Si un peso o una ventana del aula no coincide con este material, **manda el aula**: "
+        "se corrige aquí y se avisa en clase.",
+    ])
+    content_slide(prs, "ALCANCE DE LA EVALUACIÓN", bullets, idx=idx, size=13)
+    return idx + 1
+
+
+def nota_cortes_slide(course_key: str, grupo: str | None = None, extra: str = "") -> str:
+    """Nota de la slide de cronograma, leída del modelo (no escrita a mano).
+
+    Las tarjetas de la slide son por CORTE (con 8 ítems por curso no caben); esta nota
+    es la que dice qué ítems hay dentro de cada corte y cuándo cierra el documento.
+    """
+    items = {e.id: e for e in entregas_para_grupo(course_key, grupo)}
+    af = items["aca_final"]
+    dia = DIAS[COURSES[course_key]["weekday"]]
+    txt = (
+        f"{desglose_corte_texto(course_key)} — libro de calificaciones de **CDigital**. "
+        f"Quices y parciales: **cuestionarios** que cierran en día de clase ({dia}). "
+        f"**ACA Final** (tarea/documento) cierra {bold_var(fmt_entrega(af.entrega, largo=False))}. "
+        "Enunciados: Clases/Recursos/ACAs/."
+    )
+    return f"{txt} {extra}".strip()
+
+
+def items_aula_rows(course_key: str, groups: list[str] | None = None) -> list[list[str]]:
+    """Filas de la tabla de evaluación: **un ítem del libro de calificaciones por fila**.
+
+    Nombre exacto del ítem en CDigital, tipo de actividad, corte (con el peso del corte),
+    peso del ítem y fecha de cierre. Todo sale de `fechas_entrega_aca` (auditoría
+    2026-08-10): en esta slide no se escribe a mano ningún peso ni ninguna fecha.
+
+    En cursos cuyas ventanas varían por grupo (TG3) la columna «Cierre» desglosa
+    `fecha (grupos)` **solo** en los ítems cuya fecha difiere; si los tres grupos
+    coinciden se muestra una sola fecha (nombrar a un grupo haría pensar a los otros
+    dos que no les aplica).
+    """
+    gs = list(groups or [])
+    if (VENTANAS_POR_GRUPO.get(course_key) or {}) and len(gs) > 1:
+        data = {g: entregas_para_grupo(course_key, g) for g in gs}
+    else:
+        data = {None: entregas_para_grupo(course_key)}
+    rows: list[list[str]] = []
+    for comp in componentes_curso(course_key):
+        por_fecha: dict[date, list[str]] = {}
+        muestra: dict[date, object] = {}
+        for g, items in data.items():
+            e = next(x for x in items if x.id == comp["id"])
+            por_fecha.setdefault(e.entrega, []).append(g)
+            muestra[e.entrega] = e
+        if len(por_fecha) == 1:
+            cierre = fmt_entrega(next(iter(por_fecha)), largo=False)
+        else:
+            cierre = " · ".join(
+                f"{fmt_entrega(d, largo=False)} ({'/'.join(sorted(x for x in por_fecha[d] if x))})"
+                for d in sorted(por_fecha)
+            )
+        e = muestra[sorted(por_fecha)[0]]
+        rows.append([
+            f"**{e.code}**",
+            e.tipo_label,
+            f"{e.corte} ({fmt_peso(peso_corte(course_key, e.corte))})",
+            f"**{e.weight_pct}**",
+            cierre,
+        ])
+    return rows
+
+
+def tabla_items_aula_slide(prs, course_key: str, idx: int) -> int:
+    """Slide-tabla «CÓMO SE CALIFICA»: los tres cortes con sus ítems reales del aula.
+
+    La slide de tarjetas (`fechas_inicio_fin_slide`) muestra el periodo de cada corte;
+    esta muestra **de qué está hecho** cada corte: quices, parciales, ACA Final,
+    autoevaluación y coevaluación, con tipo de actividad, peso y cierre. Es la slide que
+    el estudiante necesita para encontrar el ítem en el libro de calificaciones.
+
+    La ficha de origen y la suma van en el **subtítulo**, no en la nota al pie: con 8
+    ítems la tabla llega hasta 6,9" y el pie de `table_content` (fijo en 6,65") le
+    quedaría encima. Lo que decía esa nota —qué se sube, qué se resuelve, qué es foro—
+    lo dice la slide siguiente («ALCANCE DE LA EVALUACIÓN»).
+    """
+    groups = list(COURSES[course_key]["groups"])
+    rows = items_aula_rows(course_key, groups)
+    items = entregas_para_grupo(course_key)
+    total = fmt_peso(sum(e.weight for e in items))
+    docs = [e.code for e in items if e.es_documento]
+    sub = (
+        "**Libro de calificaciones del aula** (CDigital) · cortes "
+        f"{' / '.join(fmt_peso(peso_corte(course_key, c)) for c in (1, 2, 3))} · "
+        f"los pesos suman **{total}**"
+    )
+    note = None
+    if len(rows) <= 6:   # con más filas la tabla ocupa el sitio de la nota al pie
+        note = (
+            f"Se **sube** documento únicamente en **{', '.join(docs)}** (tarea); los "
+            "**cuestionarios se resuelven en el aula** y la **coevaluación es un foro**."
+        )
+    table_content(
+        prs, "CÓMO SE CALIFICA — LOS ÍTEMS DEL AULA (CDIGITAL)",
+        ["Ítem en CDigital", "Tipo", "Corte (peso)", "Peso del ítem", "Cierre"],
+        rows,
+        sub=sub,
+        note=note,
+        col_w=[2.3, 1.5, 1.5, 1.4, 4.6], idx=idx, fs_body=11,
     )
     return idx + 1
+
+
+def eval_por_fecha(course_key: str, groups: list[str] | None = None) -> dict[str, list[str]]:
+    """`dd/mm/YYYY` → ítems del libro de calificaciones que **cierran** ese día.
+
+    Sirve para marcar en el «Calendario de clases (oficial)» en qué sesión cae cada
+    quiz y cada parcial: son cuestionarios de CDigital y cierran en día de clase, así
+    que el docente necesita verlos junto al tema de la sesión, no en otra tabla.
+
+    En cursos con ventanas por grupo (TG3) la etiqueta nombra los grupos **solo** si la
+    fecha difiere entre ellos; si coincide, se deja sin sufijo (nombrar a uno haría
+    pensar a los otros que no les aplica).
+    """
+    porg = VENTANAS_POR_GRUPO.get(course_key) or {}
+    gs = list(groups or [])
+    if porg and len(gs) > 1:
+        data = {g: entregas_para_grupo(course_key, g) for g in gs}
+    else:
+        data = {(gs[0] if len(gs) == 1 else None): entregas_para_grupo(
+            course_key, gs[0] if len(gs) == 1 else None)}
+    out: dict[str, list[str]] = {}
+    for comp in componentes_curso(course_key):
+        por_fecha: dict[date, list[str]] = {}
+        muestra: dict[date, object] = {}
+        for g, items in data.items():
+            e = next(x for x in items if x.id == comp["id"])
+            por_fecha.setdefault(e.entrega, []).append(g)
+            muestra[e.entrega] = e
+        unico = len(por_fecha) == 1
+        for d, gg in por_fecha.items():
+            e = muestra[d]
+            etiquetas = sorted(x for x in gg if x)
+            sufijo = "" if (unico or not etiquetas) else f" · grupos {' / '.join(etiquetas)}"
+            verbo = "Cierra" if not e.es_instrumento_cierre else "Cierra la ventana de"
+            out.setdefault(d.strftime("%d/%m/%Y"), []).append(
+                f"**{verbo} {e.code}** ({e.tipo_label.lower()} · {e.weight_pct} · "
+                f"corte {e.corte}){sufijo}"
+            )
+    return out
+
+
+def tabla_eval_calendario(course_key: str, groups: list[str] | None = None) -> list[str]:
+    """Bloque markdown «Evaluación en el aula»: ítem → cierre → sesión en que cae.
+
+    Se genera desde `fechas_entrega_aca` (libro de calificaciones de CDigital); ninguna
+    fecha ni peso se escribe a mano aquí.
+    """
+    temas = tema_por_fecha(course_key)
+    porg = VENTANAS_POR_GRUPO.get(course_key) or {}
+    gs = list(groups or [])
+    if porg and len(gs) > 1:
+        data = {g: entregas_para_grupo(course_key, g) for g in gs}
+    else:
+        data = {(gs[0] if len(gs) == 1 else None): entregas_para_grupo(
+            course_key, gs[0] if len(gs) == 1 else None)}
+    lines = [
+        "## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem",
+        "",
+        "Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en "
+        "`config/cursos/fechas_entrega_aca.py`. **No editar a mano** — regenerar con "
+        "`python config/slides/build_pregrado_cursos.py --calendar-only`.",
+        "",
+        "| Ítem | Tipo | Corte | Peso | Cierre | Sesión en que cae |",
+        "| :--- | :--- | :---: | ---: | :--- | :--- |",
+    ]
+    for comp in componentes_curso(course_key):
+        por_fecha: dict[date, list[str]] = {}
+        muestra: dict[date, object] = {}
+        for g, items in data.items():
+            e = next(x for x in items if x.id == comp["id"])
+            por_fecha.setdefault(e.entrega, []).append(g)
+            muestra[e.entrega] = e
+        unico = len(por_fecha) == 1
+        for d in sorted(por_fecha):
+            e = muestra[d]
+            etiquetas = sorted(x for x in por_fecha[d] if x)
+            sufijo = "" if (unico or not etiquetas) else f" ({' / '.join(etiquetas)})"
+            fecha_txt = d.strftime("%d/%m/%Y")
+            ses = temas.get(fecha_txt)
+            if ses and ses.get("n"):
+                donde = f"**S{int(ses['n']):02d}** — {ses['titulo']}"
+            elif e.es_documento:
+                donde = "— (no cae en día de clase: es la fecha máxima de recepción de trabajos)"
+            else:
+                donde = "— (no cae en día de clase: ventana hasta el cierre de notas)"
+            lines.append(
+                f"| **{e.code}**{sufijo} | {e.tipo_label} | {e.corte} | {e.weight_pct} | "
+                f"{fecha_txt} | {donde} |"
+            )
+    lines += [
+        "",
+        f"**Cortes:** {desglose_corte_texto(course_key)}.",
+        "",
+        "> Los **quices y parciales** son cuestionarios: caen en día de clase y su ventana "
+        "abre en la sesión anterior. La **ACA Final** es una tarea (documento) y cierra en la "
+        "fecha máxima de recepción de trabajos. **Autoevaluación** (cuestionario) y "
+        "**coevaluación** (foro) van de la última semana al cierre de notas. La **Sesión 01 "
+        "es de encuadre y no evalúa.**",
+    ]
+    return lines
 
 
 def recursos_items(course_key: str, titulo_corto: str, *extra: str) -> list[str]:
@@ -232,15 +451,17 @@ def build_investigacion(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Clases/Recursos/ACAs/. Fechas fijadas por el Docente, siempre en el día de clase (jue).",
+        note=nota_cortes_slide("investigacion"),
         sub=f"Periodo {bold_var('26P03')} · inicio {bold_var('10/08/2026')} · cierre {bold_var('20/09/2026')}",
         idx=_i,
     )
     _i += 1
+    _i = tabla_items_aula_slide(prs, "investigacion", _i)
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** · "
-        "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
+        "**Régimen:** Art. 52 del Reglamento Estudiantil · "
+        "**Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%**.",
+        course_key="investigacion",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_inv_h)} por Google Meet. El enlace se publica en el aula virtual."),
@@ -297,15 +518,17 @@ def build_creatividad(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Clases/Recursos/ACAs/. Fechas fijadas por el Docente, siempre en el día de clase (mié).",
+        note=nota_cortes_slide("creatividad"),
         sub=f"Periodo {bold_var('26V04')} · inicio {bold_var('10/08/2026')} · cierre {bold_var('27/09/2026')}",
         idx=_i,
     )
     _i += 1
+    _i = tabla_items_aula_slide(prs, "creatividad", _i)
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** · "
-        "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
+        "**Régimen:** Art. 52 del Reglamento Estudiantil · "
+        "**Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%**.",
+        course_key="creatividad",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_cre_h)} por Google Meet."),
@@ -367,21 +590,21 @@ def build_tg2(out: Path):
     blocks = blocks_para_slide("tg2")
     _tg2_h = COURSES["tg2"]["horario_corto"]
     fechas_inicio_fin_slide(
-        prs, "EVALUACIÓN (ART. 52) — ORIENTATIVA",
+        # Los pesos ya NO son orientativos: están en el libro de calificaciones del aula
+        # (auditoría 2026-08-10). Lo que sigue ausente es el Syllabus SIAC de TG2.
+        prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note=(
-            "*Pesos típicos Art. 52 (30/30/40). CONFIRMAR en Syllabus/CDigital. "
-            "Enunciados: Clases/Recursos/ACAs/. Fechas = día de clase (lun). "
-            f"Recepción máx.: {bold_var('14/11/2026')}."
-        ),
+        note=nota_cortes_slide("tg2", extra=f"Recepción máx. de trabajos: {bold_var('14/11/2026')}."),
         sub=f"Inicio {bold_var('10/08/2026')} · cierre {bold_var('22/11/2026')}",
         idx=_i,
     )
     _i += 1
+    _i = tabla_items_aula_slide(prs, "tg2", _i)
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 · pesos orientativos **30% / 30% / 40%** hasta cargar Syllabus SIAC de TG2 "
-        "(confirmar en CDigital).",
+        "**Régimen:** Art. 52 · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%**, "
+        "tomados del libro de calificaciones del aula (sigue sin cargarse el Syllabus SIAC de TG2).",
+        course_key="tg2",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_tg2_h)} por Google Meet. El Meet es el mismo enlace para toda la serie."),
@@ -434,28 +657,38 @@ def build_tg3(out: Path):
     blocks = blocks_tg3_slide()
     _tg3_h = COURSES["tg3"]["horario_corto"]
     fechas_inicio_fin_slide(
-        prs, "EVALUACIÓN — CORTE ÚNICO 100%",
+        # TG3 NO es «corte único 100% EV05/EXAM» como decía su Syllabus: el aula tiene
+        # tres cortes 30/30/40 (auditoría CDigital 2026-08-10).
+        # `blocks_tg3_slide()` trae las ventanas del grupo de referencia (54466 = 54467).
+        # La ACA Final difiere por grupo, así que la nota la desglosa explícitamente:
+        # 15/11 y 22/11 son cierres de NOTAS, no fechas de entrega.
+        prs, "EVALUACIÓN — TRES CORTES (ART. 52)",
         blocks,
-        # OJO: `blocks_tg3_slide()` trae las fechas de UN solo grupo (54466). El EXAM
-        # difiere por grupo, así que la nota lo desglosa explícitamente. Antes decía
-        # "grupo 54450: 15/11 (EXAM anticipado)", pero 15/11 y 22/11 son los cierres de
-        # NOTAS del curso, no entregas: un estudiante de 54450 podía creer que su EXAM
-        # era el 15/11 cuando vence el 03/11. Corregido 2026-08-10.
-        note=(
-            "EV05 50% + EXAM 50%. Enunciados: Recursos/ACAs/. "
-            f"**EXAM por grupo** — 54450: {bold_var(fmt_entrega(entrega_por_id('tg3', 'exam', '54450').entrega, largo=False))} · "
-            f"54466 y 54467: {bold_var(fmt_entrega(entrega_por_id('tg3', 'exam', '54466').entrega, largo=False))}. "
-            f"(El cierre de notas del curso es posterior: 54450 {bold_var('15/11/2026')}, "
-            f"54466/54467 {bold_var('22/11/2026')}.)"
+        note=nota_cortes_slide(
+            "tg3", "54466",
+            extra=(
+                "**ACA Final por grupo** — 54450: "
+                f"{bold_var(fmt_entrega(entrega_por_id('tg3', 'aca_final', '54450').entrega, largo=False))} · "
+                "54466 y 54467: "
+                f"{bold_var(fmt_entrega(entrega_por_id('tg3', 'aca_final', '54466').entrega, largo=False))}. "
+                f"(El cierre de notas es posterior: 54450 {bold_var('15/11/2026')}, "
+                f"54466/54467 {bold_var('22/11/2026')}.)"
+            ),
         ),
         sub=f"Art. 52 · inicio {bold_var('10/08/2026')} · día de clase mar",
         idx=_i,
     )
     _i += 1
+    # TG3: la columna «Cierre» de esta tabla desglosa por grupo los tres ítems cuyas
+    # ventanas difieren (ACA Final, autoevaluación y coevaluación en 54450); el cierre
+    # de notas por grupo ya lo dice la nota de la slide de cortes.
+    _i = tabla_items_aula_slide(prs, "tg3", _i)
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 · **corte único 100%** = EV05 (proceso) **50%** + EXAM (sustentación) **50%** "
-        "(syllabus SIAC TG3).",
+        "**Régimen:** Art. 52 · **tres cortes 30% / 30% / 40%** según el libro de "
+        "calificaciones del aula (el Syllabus SIAC 94532 declaraba «corte único 100%»: "
+        "manda el aula).",
+        course_key="tg3",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         (
@@ -621,12 +854,15 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
         "> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).",
         "> CSV/ICS **sin invitados** estudiantes. Description corta; Location vacío hasta Meet real.",
         "",
-        "| # | Fecha | Tipo | Subject (Calendar) |",
-        "|---|---|---|---|",
+        "| # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |",
+        "|---|---|---|---|---|",
     ]
+    evals = eval_por_fecha(course_key, groups_for_event)
     for i, d, tipo, tema_txt, subject in cal_md_rows:
+        ev_txt = " · ".join(evals.get(d.strftime("%d/%m/%Y"), [])) or "—"
         lines.append(
-            f"| {i} | {d.strftime('%d/%m/%Y')} ({DIAS[d.weekday()]}) | {tipo} | {subject} |"
+            f"| {i} | {d.strftime('%d/%m/%Y')} ({DIAS[d.weekday()]}) | {tipo} | {subject} "
+            f"| {ev_txt} |"
         )
     # Fechas institucionales del/los grupos de este archivo
     meta_bits = []
@@ -651,6 +887,8 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
         "3. Location vacío: tras importar, añade Meet (mismo enlace en toda la serie) y publícalo en CDigital.",
         "4. Subject corto: grupos - asignatura - Sesion NN. Description = una línea con el tema.",
         f"5. Placeholder Meet de referencia (no va en el ICS): {meet}.",
+        "",
+        *tabla_eval_calendario(course_key, groups_for_event),
         "",
         f"Regenerar (sin PPTX): `python config/slides/build_pregrado_cursos.py --calendar-only`",
     ]
@@ -709,10 +947,14 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
         "> **Evento** = fila del CSV/ICS (incluye las clases autónomas por festivo). "
         "**Sesión** = numeración del catálogo, la que usan el guion, el `.pptx` y el Subject "
         "de Calendar. En cursos con festivos los dos números NO coinciden.",
+        "> La columna **Evaluación (aula CDigital)** marca qué ítem del libro de "
+        "calificaciones cierra ese día (quices y parciales son cuestionarios y cierran en día "
+        "de clase). Detalle completo en «Evaluación en el aula» al final de este archivo.",
         "",
-        "| Evento | Sesión | Fecha | Tipo | Tema (Syllabus / plan) |",
-        "|---|---|---|---|---|",
+        "| Evento | Sesión | Fecha | Tipo | Tema (Syllabus / plan) | Evaluación (aula CDigital) |",
+        "|---|---|---|---|---|---|",
     ]
+    evals = eval_por_fecha(course_key, course["groups"])
     for i, d in enumerate(sessions, 1):
         fecha_txt = d.strftime("%d/%m/%Y")
         ses = temas.get(fecha_txt)
@@ -729,15 +971,21 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
                 f"{ses.get('bloque', '')}: {ses['titulo']}".strip(": ")
                 if ses else "Encuentro sincrónico (ver Manual / Syllabus)"
             )
+        ev_txt = " · ".join(evals.get(fecha_txt, [])) or "—"
         lines.append(
-            f"| {i} | {n_ses} | {fecha_txt} ({DIAS[d.weekday()]}) | {tipo} | {tema_txt} |"
+            f"| {i} | {n_ses} | {fecha_txt} ({DIAS[d.weekday()]}) | {tipo} | {tema_txt} "
+            f"| {ev_txt} |"
         )
         # La unidad que pasó a lectura autónoma vive en el catálogo y solo la documentaba
         # Proyecto I; sin esta fila el calendario deja «desaparecidas» U1–U2.
         if ses and ses.get("unidad_diferida"):
             lines.append(
-                f"| — | — | (misma semana) | ⚠️ Lectura autónoma | {ses['unidad_diferida']} |"
+                f"| — | — | (misma semana) | ⚠️ Lectura autónoma | {ses['unidad_diferida']} | — |"
             )
+
+    # Los ítems que NO cierran en día de clase (ACA Final, auto y coevaluación) no
+    # aparecerían en la tabla de sesiones: van completos en el bloque de evaluación.
+    lines += ["", *tabla_eval_calendario(course_key, course["groups"])]
 
     if syllabus.get("unidades_syllabus"):
         lines += ["", "## Unidades del Syllabus (completas — no se eliminan)", ""]

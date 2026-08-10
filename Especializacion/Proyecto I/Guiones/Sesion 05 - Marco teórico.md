@@ -13,6 +13,13 @@
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+**Hoy no cierra ni abre ningún ítem del libro de calificaciones.** La sesión es de contenido y avance; lo único que sigue corriendo es lo que está abajo.
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA 1** (Tarea · 25% · corte 2). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -125,7 +132,7 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 
 **GUION LITERAL:**
 > “En autónomo, completen el apartado teórico a partir del mapa y traigan a la Sesión 06 definiciones operativas tentativas de sus términos. Suban el avance como `S05_MarcoTeorico_Apellidos`.”
-> “Recuerden que todo esto acumula hacia ACA2. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
+> “Recuerden que todo esto acumula hacia la **ACA 1**, la entrega del segundo corte. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
 
 
 

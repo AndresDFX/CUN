@@ -90,8 +90,9 @@ QUE TRAER A LA SESION 02
 ------------------------
 1. La lectura hecha, con la pregunta guia respondida: ¿que de esto me sirve
    para el problema que voy a elegir?
-2. El ENUNCIADO DE LA ACA 1 leido entero, checklist incluido:
-   esta en Clases/Recursos/ACAs/.
+2. Las dos GUIAS DEL PRIMER CORTE leidas: 'Quiz 1 (6%) - guia del cuestionario'
+   y 'Parcial 1 (24%) - guia del cuestionario', en Clases/Recursos/ACAs/.
+   Son cuestionarios que se resuelven en el aula: no se sube archivo.
 3. ESCRITO (con tres lineas basta): un problema real que le moleste, A QUIEN le
    pasa y DONDE lo vio. No traiga una solucion: traiga un problema. La solucion
    es el trabajo del resto del curso.

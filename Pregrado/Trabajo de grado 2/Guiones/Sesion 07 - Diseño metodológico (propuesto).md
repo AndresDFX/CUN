@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 07 - Diseño metodológico (propuesto)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 2** | Cuestionario | 2 | 9% | **Cierra hoy** — se aplica en clase (~15 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**15 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -83,10 +93,11 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición del concepto | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller aplicado al proyecto | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición del concepto | 10 | min 06:00 – 16:00 |
+| 3️⃣ Modelación en vivo | 10 | min 16:00 – 26:00 |
+| 4️⃣ Taller aplicado al proyecto | 11 | min 26:00 – 37:00 |
+| 5️⃣ Quiz 2 en CDigital (se aplica en clase) | 15 | min 37:00 – 52:00 |
+| 6️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -100,7 +111,7 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 
 > “**OBJETIVOS.** Salir con una ficha metodológica coherente: enfoque, alcance, diseño y una matriz que conecte cada objetivo con su método. Tengan abiertos sus objetivos del `S02`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición del concepto (~10 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -110,7 +121,7 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 
 > “**ENFOQUE DE HOY.** Y la regla que no se les puede olvidar: escriban todo en **propuesto**. ‘Se aplicará’, ‘se propone’, ‘se seleccionará’. En TG2 no hay campo; prometer resultados aquí es un error que se arrastra hasta la sustentación.”
 
-#### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
+#### 3️⃣ Modelación en vivo (~10 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
 
 **En pantalla (Google Docs):** la matriz pregunta–método.
@@ -124,11 +135,11 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 
 > **En pantalla:** Buscar 1 artículo con un método similar; copiar la lógica, no el texto.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
+#### 4️⃣ Taller aplicado al proyecto (~11 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. En `S07_Metodologia_Apellido`: (1) definan **enfoque, alcance y diseño** con una línea de justificación cada uno; (2) armen la **matriz pregunta–método**: una fila por objetivo específico con dato / técnica / análisis; (3) redacten todo en **propuesto**.”
+> “**TALLER.** ~11 minutos. En `S07_Metodologia_Apellido`: (1) definan **enfoque, alcance y diseño** con una línea de justificación cada uno; (2) armen la **matriz pregunta–método**: una fila por objetivo específico con dato / técnica / análisis; (3) redacten todo en **propuesto**.”
 
 > “Criterio de éxito: cada objetivo tiene su método en la matriz, no sobra ni falta ninguno, y no hay un solo verbo en pasado.”
 
@@ -145,7 +156,31 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 > **En pantalla:** Citar el referente metodológico en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Quiz 2 en CDigital (se aplica en clase) (~15 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **15 min** y por eso se recortan: Exposición del concepto 14→10 min, Modelación en vivo 12→10 min, Taller aplicado al proyecto 20→11 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 2** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **quince minutos** son para **Quiz 2**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **9%** del curso dentro del **corte 2**, que vale **30%**. El resto del corte 2 lo aportan **Parcial 2** (21%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 2** del aula, y abren el ítem **Quiz 2**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~12 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -164,6 +199,7 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 2** (Cuestionario · 9% · corte 2) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 07 - Diseño metodológico (propuesto)/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

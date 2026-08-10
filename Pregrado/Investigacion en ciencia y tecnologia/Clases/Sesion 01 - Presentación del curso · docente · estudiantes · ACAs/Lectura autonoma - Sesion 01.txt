@@ -97,8 +97,9 @@ QUE TRAER A LA SESION 02
    - 2-3 lineas de POR QUE LE IMPORTA ese problema.
    - UNA FUENTE EXPLORATORIA de Google Academico: autor, ano y titulo.
 3. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
-4. El ENUNCIADO DE LA ACA 1 abierto y leido, con sus fechas:
-   esta en Clases/Recursos/ACAs/.
+4. Las dos GUIAS DEL PRIMER CORTE leidas: 'Quiz 1 (6%) - guia del cuestionario'
+   y 'Parcial 1 (24%) - guia del cuestionario', en Clases/Recursos/ACAs/.
+   Son cuestionarios que se resuelven en el aula: no se sube archivo.
 
 La Sesion 02 arranca con los temas de ustedes en pantalla: quien llegue sin tema
 escrito trabaja esa hora en blanco.

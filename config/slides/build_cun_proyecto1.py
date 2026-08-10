@@ -11,7 +11,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from cun_slides_engine import *
 from sesiones_cun import COURSES, DOCENTE_CORREO, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO, meet_url
 from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
-from fechas_entrega_aca import blocks_para_slide, entrega_por_id, fmt_entrega
+from fechas_entrega_aca import (
+    blocks_para_slide,
+    entrega_por_id,
+    entregas_para_grupo,
+    fmt_entrega,
+    fmt_peso,
+    peso_corte,
+)
 
 OUT_DIR = os.path.join(COURSES["proyecto1"]["folder"], "Clases")
 from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
@@ -46,7 +53,11 @@ _p1_raw = cover_meta_lines("proyecto1", horario_suffix=" (2 horas)")
 _p1_meta = [
     _p1_raw[0],
     "**Programa:** Especialización en Inteligencia Artificial",
-    "**Código SIAC:** ESP329 · Virtual · 2 créditos · Nota única",
+    # El aula compone la nota en tres cortes (auditoría CDigital 2026-08-10): decirlo aquí
+    # evita la contradicción con la tabla de evaluación, que ya no es de «nota única».
+    "**Código SIAC:** ESP329 · Virtual · 2 créditos · "
+    + " / ".join(fmt_peso(peso_corte("proyecto1", c)) for c in (1, 2, 3))
+    + " en tres cortes",
     f"**Fuente curricular:** {FUENTE_ESP329}",
     *_p1_raw[1:],
 ]
@@ -135,7 +146,9 @@ content_slide(
         "**Aprendizaje basado en proyectos** + acompañamiento tutorial.",
         "Sesiones sincrónicas: orientaciones metodológicas, ejemplos, discusión y talleres aplicados al anteproyecto.",
         "Trabajo autónomo: búsqueda/lectura crítica, escritura progresiva, revisión entre pares e incorporación de retro.",
-        "ACA 1, 2 y 3 son **avances acumulativos del mismo producto** (no tareas aisladas).",
+        "Los tres cortes trabajan **un mismo producto acumulativo** (no tareas aisladas): el "
+        "corte 1 lo comprueba un **Quiz** en el aula y los cortes 2 y 3 se **suben** como "
+        "**ACA 1** y **ACA FINAL**.",
         "Mediación: encuentros sincrónicos, tutorías, recursos en **CDigital** y atención asincrónica.",
         MSG_TUTORIAS_POR_GRUPO,
         "IA generativa: apoyo permitido solo con supervisión humana, verificación, declaración transparente y protección de datos.",
@@ -177,32 +190,68 @@ _ses = COURSES["proyecto1"]["sesiones"]
 _n_cont = contenido_sesiones_slide(prs, _ses, idx=11)
 _i = 11 + _n_cont  # siguiente idx libre
 
-# ---------- EVALUACIÓN ESP329 ----------
+# ---------- EVALUACIÓN ESP329 — ítems REALES del aula ----------
+# La tabla se genera desde `fechas_entrega_aca` (libro de calificaciones de CDigital,
+# auditoría 2026-08-10): ni un peso escrito a mano. El aula NO nombra los componentes
+# «ACA 1 / 2 / 3»: el primer corte es un **Quiz** (cuestionario), el segundo la **ACA 1**
+# (tarea) y el tercero la **ACA FINAL** + autoevaluación (cuestionario) + coevaluación
+# (foro). El documento de `Recursos/ACAs/` que prepara cada ítem se declara en la fila,
+# para que el estudiante encuentre el ítem en el gradebook (renombrado de enunciados:
+# pendiente de material, auditoría §5.1).
+QUE_VALORA_P1 = {
+    "quiz": "Comprobación individual en CDigital de las sesiones 02–03: problema, "
+            "pregunta, objetivos y justificación (guía: documento «ACA 1»).",
+    "aca1": "Documento del equipo: correcciones + marco referencial — antecedentes, "
+            "teórico, conceptual, contextual y legal (guía: documento «ACA 2»).",
+    "aca_final": "Anteproyecto completo e integrado: metodología, instrumentos "
+                 "propuestos, cronograma, presupuesto y viabilidad (guía: «ACA 3»).",
+    "auto": "Tu valoración de tu propio proceso y de tu aporte al equipo (individual).",
+    "coev": "Valoración de los aportes de tus pares del equipo: se participa en el foro.",
+}
+_p1_items = entregas_para_grupo("proyecto1")
 table_content(
-    prs, "EVALUACIÓN — NOTA ÚNICA (ESP329 / Art. 41)",
-    ["Componente", "%", "Qué valora"],
+    prs, "EVALUACIÓN — LOS TRES CORTES EN EL AULA (ESP329 / Art. 41)",
+    ["Ítem en CDigital", "Tipo", "Corte (peso)", "Peso", "Qué valora"],
     [
-        ["ACA 1", "25%", "Avance: problema, pregunta, objetivos, justificación…"],
-        ["ACA 2", "25%", "Avance: marco referencial (antecedentes, teórico, etc.)"],
-        ["ACA 3 (anteproyecto)", "42%", "Producto consolidado + metodología + planeación"],
-        ["Autoevaluación", "4%", "Individual (cierre)"],
-        ["Coevaluación", "4%", "Individual (cierre)"],
+        [
+            f"**{e.code}**",
+            e.tipo_label,
+            f"{e.corte} ({fmt_peso(peso_corte('proyecto1', e.corte))})",
+            f"**{e.weight_pct}**",
+            QUE_VALORA_P1[e.id],
+        ]
+        for e in _p1_items
     ],
-    note="Seguimiento formativo de un producto único y acumulativo. Si ACA 3 evidencia correcciones y resultados, el docente puede ajustar favorablemente ACA 1/2 con trazabilidad en CDigital.",
-    idx=_i, fs_body=12, col_w=[3.2, 1.0, 6.7],
+    note=(
+        f"Estructura, tipo de actividad y pesos = **libro de calificaciones del aula**; "
+        f"suman {bold_var(fmt_peso(sum(e.weight for e in _p1_items)))}. ESP329 declara nota "
+        f"única: el aula la compone en **tres cortes "
+        f"({' / '.join(fmt_peso(peso_corte('proyecto1', c)) for c in (1, 2, 3))})**. "
+        "Producto único y acumulativo: si el anteproyecto final evidencia correcciones y "
+        "resultados, el Docente puede ajustar favorablemente los avances previos, con "
+        "trazabilidad en CDigital."
+    ),
+    idx=_i, fs_body=11, col_w=[2.1, 1.4, 1.5, 1.0, 5.9],
 )
 _i += 1
 
-# ---------- AUTO / COEVALUACIÓN (solo P1 AFI) ----------
+# ---------- AUTO / COEVALUACIÓN ----------
+# Ya NO se presentan como exclusivas de Proyecto I: la auditoría del libro de
+# calificaciones (2026-08-10) las encontró en los CINCO cursos. Lo propio de Proyecto I
+# es el peso (4% + 4% según ESP329 / Art. 41), no la existencia del instrumento.
 content_slide(
     prs,
     "AUTOEVALUACIÓN Y COEVALUACIÓN — CÓMO FUNCIONAN",
     [
-        "**Aplican solo en Proyecto I** (ESP329 · Art. 41 · cronograma AFI). **No** en Proyecto II ni en pregrado Art. 52.",
-        "**Autoevaluación (4%):** tú valoras tu proceso, aportes al equipo y logro del anteproyecto. Individual y honesta.",
-        "**Coevaluación (4%):** valoras el trabajo colaborativo / aportes de pares de tu equipo (respeto + criterio académico).",
-        "**Dónde:** actividad individual en **CDigital**. Instructivos en tu carpeta: `Recursos/ACAs/`.",
-        # Ventanas leídas del CRONOGRAMA OFICIAL (fechas_entrega_aca.CRONOGRAMA_OFICIAL_P1);
+        # Pesos leídos del libro de calificaciones (antes estaban escritos a mano).
+        f"**En Proyecto I pesan {entrega_por_id('proyecto1', 'auto').weight_pct} + "
+        f"{entrega_por_id('proyecto1', 'coev').weight_pct}** (ESP329 · Art. 41 · cronograma AFI), "
+        "dentro del tercer corte. Existen también en los demás cursos del Docente, con otro peso: "
+        "lo que cambia es el porcentaje, no el instrumento.",
+        f"**Autoevaluación ({entrega_por_id('proyecto1', 'auto').weight_pct}):** tú valoras tu proceso, aportes al equipo y logro del anteproyecto. Individual y honesta. En el aula es un **cuestionario**.",
+        f"**Coevaluación ({entrega_por_id('proyecto1', 'coev').weight_pct}):** valoras el trabajo colaborativo / aportes de pares de tu equipo (respeto + criterio académico). En el aula es un **foro**: se participa, no se sube archivo.",
+        "**Dónde:** actividades individuales en **CDigital**. Instructivos en tu carpeta: `Recursos/ACAs/`.",
+        # Ventanas leídas del CRONOGRAMA OFICIAL (fechas_entrega_aca.VENTANAS["proyecto1"]);
         # antes estaban escritas a mano y se habían desfasado un día (10–16/11 · 17–22/11).
         f"**Cuándo (26ES4):** coevaluación "
         f"{bold_var(fmt_entrega(entrega_por_id('proyecto1', 'coev').apertura, largo=False) + '–' + fmt_entrega(entrega_por_id('proyecto1', 'coev').entrega, largo=False))} · "
@@ -210,7 +259,7 @@ content_slide(
         f"{bold_var(fmt_entrega(entrega_por_id('proyecto1', 'auto').apertura, largo=False) + '–' + fmt_entrega(entrega_por_id('proyecto1', 'auto').entrega, largo=False))} "
         f"(cierre notas {bold_var('22/11/2026')}).",
         "**Quién califica:** el estudiante diligencia el instrumento; el Docente habilita la ventana, verifica y registra la nota en el gradebook.",
-        "**Evidencia:** completar la actividad en la ventana. No sustituye ACA 3 (anteproyecto).",
+        "**Evidencia:** completar la actividad en la ventana. No sustituye el anteproyecto final (**ACA FINAL** en el aula).",
     ],
     idx=_i,
     size=13,
@@ -263,8 +312,9 @@ box_note_slide(
     prs, "AVISO IMPORTANTE",
     [
         ("advertencia",
-         "ACA 3 (42%) solo tiene 2 lunes sincrónicos (19/10 y 26/10). Apóyate en tutorías adicionales "
-         f"acordadas en la semana con el Docente y registra cada una en el formulario."),
+         f"La **ACA FINAL** ({entrega_por_id('proyecto1', 'aca_final').weight_pct}, el anteproyecto "
+         "integrado) solo tiene 2 lunes sincrónicos (19/10 y 26/10). Apóyate en tutorías adicionales "
+         "acordadas en la semana con el Docente y registra cada una en el formulario."),
         ("info", MSG_TUTORIAS_POR_GRUPO),
         ("aclaracion",
          "ESP329 / AFI: en Proyecto I se **diseña** la metodología (instrumentos propuestos); "
@@ -274,17 +324,33 @@ box_note_slide(
 )
 _i += 1
 
-# ---------- QUÉ ENTREGA CADA ACA (cruce ESP329 unidades + AFI) ----------
+# ---------- QUÉ SE PREPARA EN CADA CORTE (cruce ESP329 unidades + ítem del aula) ----------
+# Los documentos de `Recursos/ACAs/` siguen titulados ACA 1 / 2 / 3; el aula califica
+# Quiz · ACA 1 · ACA FINAL. La primera columna publica el puente para que nadie busque
+# en el gradebook un ítem que no existe (pesos y tipo, del modelo).
+_p1_puente = [
+    ("quiz", "ACA 1", "U2–U3 (+alcances): problema, pregunta, objetivos, justificación, "
+                      "alcances/limitaciones. Se comprueba en el **Quiz** del aula."),
+    ("aca1", "ACA 2", "U4: correcciones + marco referencial (antecedentes, teórico, "
+                      "conceptual, contextual, legal). Se **sube** como ACA 1 del aula."),
+    ("aca_final", "ACA 3", "U5–U7: correcciones + metodología + cronograma/presupuesto + "
+                           "anteproyecto FINAL integrado. Se **sube** como ACA FINAL."),
+]
 table_content(
-    prs, "QUÉ ENTREGA CADA EQUIPO EN CADA ACA",
-    ["ACA", "Contenido (unidades ESP329)"],
+    prs, "QUÉ SE PREPARA EN CADA CORTE (Y CÓMO SE LLAMA EN EL AULA)",
+    ["Documento en Recursos/ACAs", "Ítem del aula", "Contenido (unidades ESP329)"],
     [
-        ["ACA 1 (25%)", "U2–U3 (+alcances): problema, pregunta, objetivos, justificación, alcances/limitaciones."],
-        ["ACA 2 (25%)", "U4: correcciones ACA1 + marco referencial (antecedentes, teórico, conceptual, contextual, legal)."],
-        ["ACA 3 (42%)", "U5–U7: correcciones + metodología + cronograma/presupuesto + anteproyecto FINAL integrado."],
+        [
+            f"**{doc}**",
+            f"**{entrega_por_id('proyecto1', item_id).code}** "
+            f"({entrega_por_id('proyecto1', item_id).tipo_label.lower()} · "
+            f"{entrega_por_id('proyecto1', item_id).weight_pct})",
+            texto,
+        ]
+        for item_id, doc, texto in _p1_puente
     ],
     note="Equipos máx. 3 (AFI). Formato: Plantilla APA CUN – Proyecto de Grado (APA 7). Criterios: coherencia, pertinencia, rigor, fuentes, escritura, integridad y viabilidad (ESP329).",
-    idx=_i,
+    idx=_i, fs_body=11, col_w=[2.6, 2.4, 6.9],
 )
 _i += 1
 

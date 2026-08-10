@@ -14,6 +14,18 @@
 
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **ACA Final** | Tarea | 3 | 32,8% | **Abre hoy** la ventana en CDigital |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32,8%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
+
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck de **encuadre**, 23 slides — no es el mapa del curso)
 
 | Slide | Título en el PPTX | Fase |
@@ -60,7 +72,8 @@
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística del periodo |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
 | **Padlet oficial** abierto y probado | Rompehielos: aquí se diagnostica el estado del grupo |
-| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Las **fechas exactas viven ahí**, no en la deck |
+| **Libro de calificaciones** del aula, en otra pestaña | De ahí salen los nombres, los tipos y los pesos que va a anunciar: los ítems se muestran, no se citan de memoria |
+| Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental del curso: la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
 | Texto del **acuerdo pedagógico** y el espacio donde va a quedar registrado en CDigital | Hoy se firma: no puede improvisarse al minuto 50 |
 | **Meet** de la serie, 10 minutos antes · lista del grupo | Recibir, saludar por nombre y registrar asistencia |
@@ -78,7 +91,7 @@ TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Do
 
 #### Qué proyectar en pantalla (y en qué orden)
 Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
 Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.
 
 #### Si un estudiante pregunta… (dudas reales del primer día)
@@ -103,7 +116,7 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 | 1️⃣ Apertura, agenda y presentación del Docente | 10 | min 00:00 – 10:00 |
 | 2️⃣ Preséntate: rompehielos y diagnóstico en Padlet | 10 | min 10:00 – 20:00 |
 | 3️⃣ Recorrido del curso, producto final y acuerdo pedagógico | 15 | min 20:00 – 35:00 |
-| 4️⃣ Las ACAs, cómo se entrega e integridad académica | 17 | min 35:00 – 52:00 |
+| 4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad | 17 | min 35:00 – 52:00 |
 | 5️⃣ Acuerdos, encargo autónomo y cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
@@ -160,13 +173,15 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 
 > “**Slide 11 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: ritmo de una sección por sesión, formato con plantilla APA CUN en Google Docs, entrega por CDigital, festivo igual a clase autónoma, y retroalimentación sobre lo entregado. No es un trámite: es lo que invoco cuando alguien me diga ‘yo no sabía’. Léanlo antes de aceptarlo y pregunten ahora.”
 
-#### 4️⃣ Las ACAs, cómo se entrega e integridad académica (~17 min) — Slides 5 y 12–17 (ACAs · entrega · integridad · IA · herramientas · ayuda)
-**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+#### 4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad (~17 min) — Slides 5 y 12–17 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)
+**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
-> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: tres entregas, una por corte, con su peso. Las **fechas exactas no están en la presentación a propósito**: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital, que es donde no se desactualizan.”
+> “**Slide 5 — Cómo se evalúa TG2.** Volvamos a esta tabla, pero con los nombres que van a ver en el aula, que es lo que importa a la hora de la nota: **Quiz 1 6% + Parcial 1 24%** en el primer corte, **Quiz 2 9% + Parcial 2 21%** en el segundo y **ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%** en el tercero. Ojo con la lectura que suele hacerse mal: aquí **no hay tres trabajos escritos**; hay cuatro cuestionarios de plataforma, una sola entrega documental —la **ACA Final**— y dos actividades individuales de cierre.”
 
-> “**Slide 12 — Las ACAs una por una.** Lo importante es qué se mira. Lean la última columna, la de *flojo contra bueno*. La ACA 1 se juega en el foco del tema: ‘IA en las empresas’ no es un tema. La ACA 2 se juega en que las fuentes trabajen, no en cuántas hay. La ACA 3 se juega en la coherencia: que cada objetivo tenga su método y que el documento se lea sin costuras.”
+> “Y el dato que cambia cómo se organizan: los **cuestionarios suman 65,6% del curso**, y el **Parcial 1** solo vale 24%. Un avance escrito impecable no compensa un parcial no presentado.”
+
+> “**Slide 12 — ítem por ítem.** Los quices y los parciales **caen en día de clase**: se abren en el encuentro, tienen tiempo y cierran ese mismo día; el que falte ese día pierde el ítem, no lo ‘recupera después’. La **ACA Final** es el documento acumulativo: el mismo texto que venimos escribiendo, en PDF, subido a CDigital. La **autoevaluación** se diligencia y la **coevaluación** es un **foro**: se escribe en él, con criterio, o no cuenta.”
 
 > “**Slide 13 — Cómo se entrega.** Puro procedimiento, y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla de TG2: **trabajen siempre sobre el mismo documento**. Aquí se evalúa un texto que crece, no una carpeta de archivos sueltos.”
 
@@ -206,13 +221,15 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **ACA Final** (Tarea · 32,8% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
 - [ ] **Lectura autónoma sobre delimitación del tema publicada en CDigital** (sin eso el encargo no se puede cumplir)
 - [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)
 - [ ] **Padlet** oficial probado y el link listo para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 - [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)
 - [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 23 slides)
-- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs
+- [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar
+- [ ] **Plantilla APA CUN** lista para mostrar en Google Docs
 - [ ] Verificado qué lunes del periodo caen en festivo (esas sesiones son **clase autónoma**)
 - [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano
 

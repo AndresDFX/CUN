@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 05 - Marco teórico — avance/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Parcial 1** | Cuestionario | 1 | 24% | **Cierra hoy** — se aplica en clase (~22 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**22 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -82,10 +92,11 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición del concepto | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller aplicado al proyecto | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición del concepto | 8 | min 06:00 – 14:00 |
+| 3️⃣ Modelación en vivo | 8 | min 14:00 – 22:00 |
+| 4️⃣ Taller aplicado al proyecto | 8 | min 22:00 – 30:00 |
+| 5️⃣ Parcial 1 en CDigital (se aplica en clase) | 22 | min 30:00 – 52:00 |
+| 6️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -99,7 +110,7 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 
 > “**OBJETIVOS.** Salir con un mapa de constructos y una a dos páginas de marco donde **cada cita trabaje**. Tengan abierta su pregunta del `S02` y sus fichas del `S04`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición del concepto (~8 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -109,7 +120,7 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 
 > “**ENFOQUE DE HOY.** Y una regla práctica: **tres constructos**. Tres bien hilados valen más que ocho superficiales. Si les salen ocho, no delimitaron la pregunta. Además: todo se parafrasea y se cita en APA 7; copiar sin citar es plagio, y en TG3 hay antiplagio institucional. El hábito se corrige ahora.”
 
-#### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
+#### 3️⃣ Modelación en vivo (~8 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
 
 **En pantalla (Google Docs):** mapa de constructos y un párrafo de marco.
@@ -123,11 +134,11 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 
 > **En pantalla:** Buscar por cada constructo por separado, no por ‘todo el tema’.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
+#### 4️⃣ Taller aplicado al proyecto (~8 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. En `S05_MarcoTeorico_Apellido`: (1) definan sus **3 constructos** a partir de la pregunta; (2) hagan el **mapa** constructo → fuentes → para qué lo necesito; (3) redacten **1 a 2 páginas** de marco parafraseando y citando en APA 7, cerrando cada constructo con su conexión a la pregunta.”
+> “**TALLER.** ~8 minutos. En `S05_MarcoTeorico_Apellido`: (1) definan sus **3 constructos** a partir de la pregunta; (2) hagan el **mapa** constructo → fuentes → para qué lo necesito; (3) redacten **1 a 2 páginas** de marco parafraseando y citando en APA 7, cerrando cada constructo con su conexión a la pregunta.”
 
 > “Criterio de éxito: leo su marco y cada párrafo tiene cita y termina conectando con su pregunta; no hay definición suelta que no sirva.”
 
@@ -144,7 +155,31 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 > **En pantalla:** Citas de los 3 constructos en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Parcial 1 en CDigital (se aplica en clase) (~22 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **22 min** y por eso se recortan: Exposición del concepto 14→8 min, Modelación en vivo 12→8 min, Taller aplicado al proyecto 20→8 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Parcial 1** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **veintidós minutos** son para **Parcial 1**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **24%** del curso dentro del **corte 1**, que vale **30%**. El resto del corte 1 lo aportan **Quiz 1** (6%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 1** del aula, y abren el ítem **Parcial 1**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~19 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -163,6 +198,7 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Parcial 1** (Cuestionario · 24% · corte 1) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 05 - Marco teórico — avance/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

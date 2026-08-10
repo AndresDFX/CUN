@@ -1,21 +1,39 @@
 # -*- coding: utf-8 -*-
-"""Genera enunciados ACA (.docx) para estudiantes en los 5 cursos CUN.
+"""Documentos del estudiante para los ítems REALES del aula (los 5 cursos CUN).
 
-Convención (única, los 5):
-  <Asignatura>/Clases/Recursos/ACAs/ACA N - <título corto>.docx
+Salida (única convención, los 5 cursos):
+  <Asignatura>/Clases/Recursos/ACAs/<Ítem del aula> (<peso>) - <qué es>.docx
 
-Excepción — Proyecto I: además de las **tres** ACAs, la carpeta lleva dos
-documentos que **no son ACAs**: los instructivos de la **autoevaluación (4%)**
-y la **coevaluación (4%)**, instrumentos individuales que cada estudiante
-*diligencia* en CDigital al cierre (no llevan prefijo «ACA» ni son entregables
-con rúbrica). Se distinguen por ``kind``:
+Cada documento corresponde **1 a 1** a un ítem del libro de calificaciones de
+CDigital (auditoría 2026-08-10), leído de `config/cursos/fechas_entrega_aca.py`.
+Ya **no** existen los «ACA 1 / ACA 2 / ACA 3» de pregrado ni «EV05 / EXAM» de TG3:
+el aula no los tiene. Tres familias de documento, distinguidas por ``kind``:
 
-  kind="aca"          → enunciado de entregable evaluado (ACA 1/2/3, EV05/EXAM)
-  kind="instrumento"  → instructivo de instrumento individual de cierre
+  kind="aca"          → la **tarea** documental: la que se sube (ACA Final; en
+                        Proyecto I, ACA 1 y ACA FINAL). Lleva rúbrica y plantilla APA.
+  kind="guia"         → guía de un **cuestionario** del aula (quices y parciales):
+                        qué cubre, cómo prepararse, qué confirma el Docente. No se
+                        sube documento.
+  kind="instrumento"  → instructivo de **autoevaluación** (cuestionario) y
+                        **coevaluación** (FORO: se participa, no se llena un
+                        formulario). Existen en los CINCO cursos.
 
-Fuente de pesos/estructura: syllabus / Manual (no inventar % que contradigan).
-ESP329: ACA 1 25% · ACA 2 25% · ACA 3 42% · autoevaluación 4% · coevaluación 4%
-(las ACAs son tres; auto/coev son instrumentos, no una cuarta y quinta ACA).
+Nada de evaluación se escribe a mano aquí: peso, tipo de actividad, corte y
+ventana salen de `fechas_entrega_aca`. Lo que no consta en ninguna fuente
+(número de intentos, tiempo límite, tipo de pregunta) **no se inventa**: el
+documento dice que lo confirma el Docente en la actividad del aula.
+
+Consumidores:
+  · `catalog_for_leeme(key)` devuelve **todo** el catálogo, con ``kind``, para que el
+    LEEME de estudiantes (`sync_clases_estudiantes.leeme_md`) separe tareas / guías /
+    instrumentos. ⚠️ Ese LEEME todavía filtra solo ``aca`` e ``instrumento``: hasta que
+    se actualice, las **guías** de quices y parciales no salen listadas en su tabla
+    (los .docx sí quedan en la carpeta).
+  · `acas_for(key)` se conserva por compatibilidad y **excluye las guías** por defecto
+    (``incluir_guias=True`` devuelve todo): quien hable de «ACAs» no debe recibir un
+    cuestionario en la lista. La slide de evaluación de la Sesión 01 ya no lo usa: lee
+    el modelo directamente (`build_sesion_material._evaluacion_rows`).
+
 Lenguaje al estudiante: «el Docente» (sin nombre propio).
 Sin .md en Clases/ — se genera .docx vía guion_md_a_docx.
 
@@ -27,7 +45,17 @@ from __future__ import annotations
 
 import os
 import sys
+
+# Consola de Windows en cp1252: sin esto, imprimir «→» en el resumen final aborta el
+# build con UnicodeEncodeError DESPUÉS de haber escrito los .docx (defensa que ya
+# tenían los demás builders del repo).
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 import tempfile
+import unicodedata
+from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -36,9 +64,22 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from sesiones_cun import COURSES, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO  # noqa: E402
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
 from fechas_entrega_aca import (  # noqa: E402
+    IDS_INSTRUMENTO_CIERRE,
+    KIND_CUESTIONARIO,
+    KIND_FORO,
+    KIND_LABEL,
+    KIND_TAREA,
     REGLA_OFICIAL_P1,
     REGLA_RESUMEN,
     REGLA_VENTANAS_DOCENTE,
+    componente,
+    componentes_curso,
+    desglose_corte_texto,
+    entrega_por_id,
+    entregas_curso,
+    fmt_dmy,
+    fmt_peso,
+    peso_corte,
     texto_fecha_curso,
 )
 from carga_academica import curso as carga_curso  # noqa: E402
@@ -51,30 +92,52 @@ URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 APA_REL = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 ACAS_REL = "Recursos/ACAs"
 
-# id de fechas_entrega_aca.py → cada documento del catálogo.
-# Los `code` coinciden con `ACA_COMPONENTES` de config/cursos/fechas_entrega_aca.py
-# (allí auto/coev ya están marcados kind="ventana", no kind="aca").
-ACA_ID_BY_CODE = {
-    "proyecto1": {
-        "ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3",
-        "Autoevaluación": "auto", "Coevaluación": "coev",
-    },
-    "investigacion": {"ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3"},
-    "creatividad": {"ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3"},
-    "tg2": {"ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3"},
-    "tg3": {"ACA 1 (EV05)": "ev05", "ACA 2 (EXAM)": "exam"},
-}
+# Familias de documento (valor de ``kind`` en el catálogo).
+KIND_ACA = "aca"                  # tarea documental del aula
+KIND_GUIA = "guia"                # guía de un cuestionario (quiz / parcial)
+KIND_INSTRUMENTO = "instrumento"  # auto (cuestionario) / coevaluación (foro)
 
-# Nombres anteriores que ya no deben existir en Clases/Recursos/ACAs/
-# (se borran al regenerar para no dejar duplicados en manos de estudiantes).
+# Nombres anteriores que ya no corresponden a ningún ítem del aula. Se borran al
+# regenerar para no dejar en manos de estudiantes un «ACA 2» que el libro de
+# calificaciones no tiene. (Además, `_purge_obsoletos` limpia cualquier .docx de
+# las familias generadas que ya no esté en el catálogo: p. ej. si cambia el peso
+# que va en el nombre del archivo.)
 LEGACY_FILENAMES = {
     "proyecto1": [
-        "ACA Autoevaluacion.docx",   # ahora: Autoevaluacion individual (4%) - instructivo.docx
-        "ACA Coevaluacion.docx",     # ahora: Coevaluacion individual (4%) - instructivo.docx
+        "ACA Autoevaluacion.docx",     # → Autoevaluacion individual (4%) - instructivo.docx
+        "ACA Coevaluacion.docx",       # → Coevaluacion individual (4%) - instructivo.docx
+        "ACA 1 - Formulacion del problema.docx",          # el corte 1 del aula es un Quiz
+        "ACA 2 - Fundamentacion referencial.docx",        # → ACA 1 (25%) del aula
+        "ACA 3 - Diseno metodologico y anteproyecto final.docx",   # → ACA FINAL (42%)
+    ],
+    "investigacion": [
+        "ACA 1 - Corte 1 - Fundamentos y primer avance.docx",
+        "ACA 2 - Corte 2 - Pregunta y planteamiento.docx",
+        "ACA 3 - Corte 3 - Fuentes marco y avance consolidado.docx",
+    ],
+    "creatividad": [
+        "ACA 1 - Corte 1 - Problema oportunidad y base creativa.docx",
+        "ACA 2 - Corte 2 - Tipologia gestion y validacion.docx",
+        "ACA 3 - Corte 3 - Propuesta de Innovacion final.docx",
+    ],
+    "tg2": [
+        "ACA 1 - Corte 1 - Delimitacion y formulacion.docx",
+        "ACA 2 - Corte 2 - Marco referencial.docx",
+        "ACA 3 - Corte 3 - Metodologia e integracion.docx",
+    ],
+    "tg3": [
+        "ACA 1 - EV05 Proceso academico (articulo).docx",
+        "ACA 2 - EXAM Sustentacion ante jurados.docx",
     ],
 }
 
+# Prefijos de archivo que este build gobierna (para limpiar renombrados).
+_PREFIJOS_GENERADOS = ("ACA ", "Quiz", "Parcial", "Autoevaluacion", "Coevaluacion", "Guia ")
 
+
+# ---------------------------------------------------------------------------
+# Utilidades
+# ---------------------------------------------------------------------------
 def write_md_as_docx(
     md_text: str,
     docx_path: str,
@@ -92,47 +155,280 @@ def write_md_as_docx(
             os.remove(tmp)
 
 
-def _header(curso: str, codigo: str, fuente: str, aula: str = CDIGITAL_PLACEHOLDER) -> str:
-    return f"""# Enunciado para estudiantes
+def _ascii(s: str) -> str:
+    """«Autoevaluación» → «Autoevaluacion» (los nombres de archivo van sin tildes)."""
+    return "".join(
+        ch for ch in unicodedata.normalize("NFKD", s) if not unicodedata.combining(ch)
+    )
 
-**Curso:** {curso}  
-**Código:** {codigo}  
-**Entrega oficial:** solo por **CDigital** ({aula})  
-**Fuente curricular:** {fuente}
 
-> Lee este enunciado completo antes de empezar. Si hay duda de peso, rúbrica o ventana de entrega, confirma con **el Docente** y lo publicado en CDigital.
+def _cierre(course_key: str, item_id: str) -> date:
+    """Cierre del ítem (grupo de referencia en cursos con ventanas por grupo)."""
+    return entrega_por_id(course_key, item_id).entrega
 
----
+
+def _cierres_texto(course_key: str, item_id: str) -> str:
+    """«12/09» o «07/11 / 14/11» (TG3, cuando el cierre depende del grupo)."""
+    data = entregas_curso(course_key)
+    if isinstance(data, dict):
+        fechas = sorted({e.entrega for items in data.values() for e in items if e.id == item_id})
+        return " / ".join(fmt_dmy(d) for d in fechas)
+    return fmt_dmy(_cierre(course_key, item_id))
+
+
+def _cuestionarios(course_key: str) -> list[dict]:
+    """Quices y parciales del aula (cuestionarios que NO son la autoevaluación)."""
+    items = [
+        c for c in componentes_curso(course_key)
+        if c["kind"] == KIND_CUESTIONARIO and c["id"] not in IDS_INSTRUMENTO_CIERRE
+    ]
+    return sorted(items, key=lambda c: (_cierre(course_key, c["id"]), c["corte"]))
+
+
+def _tareas(course_key: str) -> list[dict]:
+    items = [c for c in componentes_curso(course_key) if c["kind"] == KIND_TAREA]
+    return sorted(items, key=lambda c: (_cierre(course_key, c["id"]), c["corte"]))
+
+
+def _items_del_corte(course_key: str, corte: int) -> list[dict]:
+    return [c for c in componentes_curso(course_key) if int(c["corte"]) == int(corte)]
+
+
+def _tareas_txt(course_key: str) -> str:
+    """«la **ACA Final** (la tarea documental del curso)» / «las tareas … (A y B)»."""
+    tareas = _tareas(course_key)
+    if len(tareas) == 1:
+        return f"la **{tareas[0]['code']}** (la tarea documental del curso)"
+    codes = " y ".join(f"**{t['code']}**" for t in tareas)
+    return f"las tareas documentales del curso ({codes})"
+
+
+def _peso_item_txt(course_key: str, item_id: str, *, con_code: bool = True) -> str:
+    """«**Parcial 1 = 24%** del curso (corte 1 = 30%, repartido entre 2 ítems)».
+
+    Reemplaza los «esta ACA vale 30%» del material viejo: el 30% es el peso del
+    CORTE y en el aula casi siempre lo reparten varios ítems (cuando no, se dice).
+    """
+    c = componente(course_key, item_id)
+    n = len(_items_del_corte(course_key, c["corte"]))
+    reparto = "es el único ítem del corte" if n == 1 else f"repartido entre {n} ítems"
+    cabeza = f"**{c['code']} = {fmt_peso(c['weight'])}**" if con_code else f"**{fmt_peso(c['weight'])}**"
+    return (
+        f"{cabeza} de la nota del curso "
+        f"(corte {c['corte']} = {fmt_peso(peso_corte(course_key, c['corte']))}, {reparto})"
+    )
+
+
+def _aviso_reparto_corte(course_key: str, item_id: str) -> str:
+    """Frase honesta sobre el corte: depende de cuántos ítems lo compongan."""
+    c = componente(course_key, item_id)
+    otros = [x for x in _items_del_corte(course_key, c["corte"]) if x["id"] != item_id]
+    if not otros:
+        return (
+            f"Es el **único** ítem del corte {c['corte']}: lo que saques aquí es la nota de ese "
+            "corte. Revisa la tabla del punto 8 para ver cómo se compone el resto del curso."
+        )
+    lista = " + ".join(f"**{x['code']}** {fmt_peso(x['weight'])}" for x in otros)
+    return (
+        f"El corte {c['corte']} **no** se juega en un solo ítem: también lo componen {lista}. "
+        "Revisa la tabla del punto 8 antes de sacar conclusiones sobre tu nota."
+    )
+
+
+def _tabla_items_md(course_key: str) -> str:
+    """Tabla «así se califica el curso» tomada del libro de calificaciones."""
+    lines = [
+        "| Ítem en CDigital | Tipo | Corte | Peso | Cierre |",
+        "| :--- | :--- | :---: | ---: | :--- |",
+    ]
+    for c in componentes_curso(course_key):
+        lines.append(
+            f"| **{c['code']}** | {KIND_LABEL[c['kind']]} | {c['corte']} | "
+            f"{fmt_peso(c['weight'])} | {_cierres_texto(course_key, c['id'])} |"
+        )
+    lines.append("")
+    lines.append(f"**Cortes:** {desglose_corte_texto(course_key)}.")
+    return "\n".join(lines)
+
+
+def _nota_curso_block(course_key: str, item_id: str, n: int) -> str:
+    """Sección «dónde encaja en la nota», idéntica en los tres tipos de documento."""
+    c = componente(course_key, item_id)
+    return f"""## {n}. Dónde encaja en la nota del curso
+
+Este documento corresponde a **un** ítem: **{c['code']}** ({KIND_LABEL[c['kind']]}, {fmt_peso(c['weight'])}). El resto de la nota lo registran los demás ítems del aula:
+
+{_tabla_items_md(course_key)}
+
+> Tabla generada del libro de calificaciones del aula (auditoría 2026-08-10). Si en CDigital ves un ítem distinto, **manda CDigital** y avísale al Docente.
 """
 
 
-def _header_instrumento(curso: str, codigo: str, fuente: str, nombre: str,
-                        aula: str = CDIGITAL_PLACEHOLDER) -> str:
-    """Encabezado de los instrumentos individuales de cierre (NO son ACAs)."""
-    return f"""# Instructivo para estudiantes — instrumento individual de cierre
+# ---------------------------------------------------------------------------
+# Temario cubierto (se deriva del catálogo de sesiones + la ventana del ítem)
+# ---------------------------------------------------------------------------
+def _sesiones_dictadas(course_key: str) -> list[dict]:
+    """Sesiones que **sí dictan tema** (la 01 es de encuadre), ordenadas por fecha."""
+    out: list[dict] = []
+    for s in COURSES[course_key].get("sesiones") or []:
+        if s.get("presentacion"):
+            continue
+        try:
+            f = datetime.strptime(str(s["fecha"]), "%d/%m/%Y").date()
+        except Exception:
+            continue
+        out.append({"n": int(s["n"]), "titulo": s["titulo"], "fecha": f})
+    return sorted(out, key=lambda x: x["fecha"])
+
+
+def _lista_sesiones(sesiones: list[dict]) -> str:
+    if not sesiones:
+        return "- (todavía no se ha dictado tema antes de este cierre: revisa la lectura autónoma y lo publicado en CDigital)"
+    return "\n".join(
+        f"- **Sesión {s['n']:02d}** ({fmt_dmy(s['fecha'])}) — {s['titulo']}" for s in sesiones
+    )
+
+
+def _temario_block(course_key: str, item_id: str, n: int) -> str:
+    """«Qué cubre» de un quiz/parcial: sesiones dictadas hasta su cierre.
+
+    El alcance se **deriva** del calendario (no se inventa): todo lo trabajado en
+    clase hasta la fecha de cierre del cuestionario, señalando qué se vio desde el
+    cierre del cuestionario anterior. El detalle fino (número de preguntas, tipo,
+    recorte de temas) lo publica el Docente en la actividad del aula.
+    """
+    cuest = _cuestionarios(course_key)
+    ids = [c["id"] for c in cuest]
+    pos = ids.index(item_id)
+    cierre = _cierre(course_key, item_id)
+    previo = cuest[pos - 1] if pos > 0 else None
+    cierre_previo = _cierre(course_key, previo["id"]) if previo else None
+
+    ses = _sesiones_dictadas(course_key)
+    hasta = [s for s in ses if s["fecha"] <= cierre]
+    nuevas = [s for s in hasta if cierre_previo is None or s["fecha"] > cierre_previo]
+
+    if previo is None:
+        detalle = (
+            "Es el **primer** cuestionario del curso: entra todo lo trabajado hasta su cierre."
+        )
+    elif nuevas:
+        rango = ", ".join(f"Sesión {s['n']:02d}" for s in nuevas)
+        detalle = (
+            f"**Nuevo desde el cierre de {previo['code']}** ({fmt_dmy(cierre_previo)}): {rango}. "
+            "Lo anterior sigue siendo base — el curso es acumulativo."
+        )
+    else:
+        detalle = (
+            f"Entre el cierre de {previo['code']} ({fmt_dmy(cierre_previo)}) y este cierre no hay "
+            "sesión nueva: el cuestionario recoge lo ya trabajado."
+        )
+
+    diferida = ""
+    for s in COURSES[course_key].get("sesiones") or []:
+        if s.get("presentacion") and s.get("unidad_diferida"):
+            diferida = (
+                f"\nLa **Sesión 01** fue de **encuadre** (no dictó tema). Su unidad quedó como "
+                f"**lectura autónoma** y se retomó al abrir la Sesión 02, así que también hace "
+                f"parte del temario: {s['unidad_diferida']}\n"
+            )
+            break
+
+    return f"""## {n}. Qué cubre
+
+Temario trabajado en clase **hasta el cierre** ({fmt_dmy(cierre)}):
+
+{_lista_sesiones(hasta)}
+
+{detalle}
+{diferida}
+> El **recorte exacto** de temas, el número de preguntas y el tipo de pregunta los publica **el Docente** en la actividad del aula. Este documento no los inventa: si CDigital dice otra cosa, manda CDigital.
+"""
+
+
+# ---------------------------------------------------------------------------
+# Bloques comunes
+# ---------------------------------------------------------------------------
+def _header(course_key: str, item_id: str, curso: str, codigo: str, fuente: str) -> str:
+    c = componente(course_key, item_id)
+    return f"""# Enunciado para estudiantes — {c['code']}
 
 **Curso:** {curso}
 **Código:** {codigo}
-**Qué es:** un **formulario individual** que **tú diligencias** en **CDigital** ({aula})
-**No es una ACA:** no se sube documento, no usa la plantilla APA y no es entrega de equipo
+**Ítem en CDigital:** **{c['code']}** · {KIND_LABEL[c['kind']]} · {fmt_peso(c['weight'])} de la nota (corte {c['corte']})
+**Entrega oficial:** solo por **CDigital** ({cdigital_url(course_key)})
 **Fuente curricular:** {fuente}
 
-> Las ACAs de este curso son **tres** (ACA 1, ACA 2 y ACA 3). La {nombre} es un **instrumento individual de cierre**: se diligencia dentro de su ventana en CDigital. Si tienes dudas, confirma con **el Docente** y con lo publicado en el aula.
+> Lee este enunciado completo antes de empezar. Si hay duda de peso, rúbrica o ventana de entrega, confirma con **el Docente** y con lo publicado en CDigital.
 
 ---
 """
 
 
-def _fecha_block(course_key: str, aca_id: str, *, kind: str = "aca") -> str:
-    titulo = "Ventana para diligenciarla" if kind == "instrumento" else "Fecha de entrega"
+def _header_guia(course_key: str, item_id: str, curso: str, codigo: str, fuente: str) -> str:
+    c = componente(course_key, item_id)
+    return f"""# Guía para estudiantes — {c['code']} ({KIND_LABEL[c['kind']]})
+
+**Curso:** {curso}
+**Código:** {codigo}
+**Ítem en CDigital:** **{c['code']}** · {KIND_LABEL[c['kind']]} · {fmt_peso(c['weight'])} de la nota (corte {c['corte']})
+**Qué haces:** resuelves el **{KIND_LABEL[c['kind']].lower()}** dentro de su ventana en **CDigital** ({cdigital_url(course_key)})
+**No es una entrega documental:** no subes archivo y no usa la plantilla APA
+**Fuente curricular:** {fuente}
+
+> Esta guía es **orientación de estudio**. La actividad que califica es la del aula: lo que diga CDigital sobre intentos, tiempo y preguntas es lo que aplica.
+
+---
+"""
+
+
+def _header_instrumento(course_key: str, item_id: str, curso: str, codigo: str,
+                        fuente: str) -> str:
+    """Encabezado de autoevaluación / coevaluación (NO son ACAs).
+
+    El tipo real de la actividad sale del aula (auditoría 2026-08-10): la
+    autoevaluación es un **cuestionario** y la coevaluación es un **foro**.
+    """
+    c = componente(course_key, item_id)
+    verbo = (
+        "**participas** en el foro" if c["kind"] == KIND_FORO
+        else "**diligencias** la actividad"
+    )
+    return f"""# Instructivo para estudiantes — {c['code']} (instrumento individual de cierre)
+
+**Curso:** {curso}
+**Código:** {codigo}
+**Ítem en CDigital:** **{c['code']}** · {KIND_LABEL[c['kind']]} · {fmt_peso(c['weight'])} de la nota (corte {c['corte']})
+**Qué haces:** {verbo}, de forma **individual**, en **CDigital** ({cdigital_url(course_key)})
+**No es una ACA:** no se sube documento, no usa la plantilla APA y no es entrega de equipo
+**Fuente curricular:** {fuente}
+
+> Existe en **los cinco cursos** del Docente, no solo en Proyecto I (así está creada en las aulas). Lo que cambia entre cursos es el **peso**.
+
+---
+"""
+
+
+def _fecha_block(course_key: str, item_id: str) -> str:
+    """Bloque de fecha del ítem. El título depende del tipo real de actividad."""
+    c = componente(course_key, item_id)
+    if c["id"] in IDS_INSTRUMENTO_CIERRE:
+        titulo = (
+            "Ventana para participar en el foro" if c["kind"] == KIND_FORO
+            else "Ventana para diligenciarla"
+        )
+    elif c["kind"] == KIND_TAREA:
+        titulo = "Fecha de entrega"
+    else:
+        titulo = "Ventana del cuestionario"
     return f"""## {titulo}
 
-{texto_fecha_curso(course_key, aca_id)}
+{texto_fecha_curso(course_key, item_id)}
 
 """
 
 
-def _tools_block(*extra: str) -> str:
+def _tools_block(*extra: str, n: int = 6) -> str:
     base = [
         "Google Docs / Word Online (abre la plantilla APA ahí; no se exige Office de escritorio)",
         "Google Scholar, SciELO, Redalyc, biblioteca virtual CUN",
@@ -141,7 +437,7 @@ def _tools_block(*extra: str) -> str:
     ]
     base.extend(extra)
     lines = "\n".join(f"- {x}" for x in base)
-    return f"""## 6. Herramientas (solo gratis + nube)
+    return f"""## {n}. Herramientas (solo gratis + nube)
 
 {lines}
 
@@ -149,60 +445,303 @@ def _tools_block(*extra: str) -> str:
 """
 
 
-def _footer_sesiones(relacion: str, *, regla: str | None = None) -> str:
-    """Cierre del enunciado.
+def _relacion_block(texto: str, *, n: int, regla: str | None = None) -> str:
+    """Cierre del documento: relación con las sesiones + de dónde salen las fechas."""
+    return f"""## {n}. Relación con sesiones
 
-    `regla` = de dónde salen REALMENTE las fechas de este curso, para no decirle
-    al estudiante que se «calculan» cuando no es así:
-      · Proyecto I            → REGLA_OFICIAL_P1 (cronograma de Coordinación).
-      · Creatividad / Invest. → REGLA_VENTANAS_DOCENTE (tabla fijada por el Docente).
-      · TG2 / TG3             → None ⇒ cálculo regenerable por pesos (único caso en
-                                que la frase «cálculo regenerable» es cierta).
-    """
-    nota = (
-        f"> Fechas de este enunciado: {regla}"
-        if regla
-        else f"> Fechas de este enunciado: cálculo regenerable (`config/cursos/fechas_entrega_aca.py`) · {REGLA_RESUMEN}"
+{texto}
+
+> Fechas de este documento: {regla or REGLA_RESUMEN}
+"""
+
+
+# ---------------------------------------------------------------------------
+# Guías de cuestionario (quices y parciales) — se generan del modelo
+# ---------------------------------------------------------------------------
+def _guia_md(
+    course_key: str,
+    item_id: str,
+    *,
+    curso: str,
+    codigo: str,
+    fuente: str,
+    preparacion: list[str],
+    aviso_ventana: str = "",
+    relacion: str,
+    regla: str,
+) -> str:
+    c = componente(course_key, item_id)
+    prep = "\n".join(f"- {x}" for x in preparacion)
+    aviso = f"\n{aviso_ventana}\n" if aviso_ventana else ""
+    return (
+        _header_guia(course_key, item_id, curso, codigo, fuente)
+        + f"""## 1. Qué es este documento (y qué NO es)
+
+**{c['code']}** es un **{KIND_LABEL[c['kind']].lower()}** del aula: se resuelve **en CDigital**, dentro de su ventana, y la nota queda registrada al enviarlo.
+
+- **No** es una entrega documental: no subes archivo ni usas la plantilla APA.
+- **No** reemplaza {_tareas_txt(course_key)} ni al revés: son ítems distintos y todos pesan.
+- Esta guía **no** es el cuestionario: es orientación para que estudies lo correcto.
+{aviso}
+## 2. Cuánto pesa y en qué corte
+
+{_peso_item_txt(course_key, item_id)}.
+
+{_aviso_reparto_corte(course_key, item_id)}
+
+{_temario_block(course_key, item_id, 3)}
+## 4. Formato: lo que confirma el Docente en el aula
+
+Estos parámetros los define la actividad en CDigital y **este documento no los inventa**:
+
+| Parámetro | Dónde se confirma |
+| :--- | :--- |
+| Número de intentos | Descripción de la actividad **{c['code']}** en CDigital |
+| Tiempo límite | idem |
+| Cantidad y tipo de preguntas | idem |
+| Material permitido (a libro abierto o no) | idem |
+| Si se puede retomar un intento interrumpido | idem |
+
+**Antes de pulsar «Intentar»:** lee la descripción de la actividad. Por regla general, en un cuestionario con tiempo límite el reloj **empieza a correr al abrir el intento** y sigue corriendo aunque cierres el navegador.
+
+**Requisitos técnicos:** navegador actualizado, sesión iniciada con tu **cuenta institucional CUN** y conexión estable. No resuelvas un cuestionario con tiempo desde una conexión que sabes inestable.
+
+## 5. Cómo prepararte
+
+{prep}
+- Resuélvelo **sin** dejarlo para la última hora de la ventana: si algo falla, necesitas margen para avisarle al Docente.
+
+## 6. Si no lo presentas
+
+- El peso de **{c['code']}** ({fmt_peso(c['weight'])}) queda en **cero**: no hay trabajo extra que lo reemplace.
+- La ventana cierra en la fecha indicada arriba y **no se reabre** por olvido.
+- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre. Supletorios y habilitaciones se rigen por el **Reglamento Estudiantil** y los define el programa: no los define este documento.
+
+## 7. Integridad académica
+
+- Es **individual**, salvo que la actividad diga expresamente otra cosa.
+- Suplantación, copia o compartir preguntas y respuestas tiene **debido proceso** disciplinario.
+- Si usas IA para estudiar, úsala para **entender**, no para transcribir: el cuestionario pregunta por comprensión.
+
+{_nota_curso_block(course_key, item_id, 8)}
+{_relacion_block(relacion, n=9, regla=regla)}"""
     )
-    return f"""## 7. Relación con sesiones
-
-{relacion}
-
-{nota}
-"""
-
-
-def _footer_instrumento(relacion: str) -> str:
-    """Cierre de los instructivos de Proyecto I: sus ventanas son OFICIALES."""
-    return f"""## 7. Relación con sesiones
-
-{relacion}
-
-> Ventanas de este instructivo: {REGLA_OFICIAL_P1}
-"""
 
 
 # ---------------------------------------------------------------------------
-# Catálogo: course_key → list[{code, title, filename, weight, source, md}]
+# Instructivos de autoevaluación / coevaluación (los 5 cursos)
 # ---------------------------------------------------------------------------
+def _instrumento_md(
+    course_key: str,
+    item_id: str,
+    *,
+    curso: str,
+    codigo: str,
+    fuente: str,
+    contexto: str,
+    relacion: str,
+    regla: str,
+) -> str:
+    c = componente(course_key, item_id)
+    es_foro = c["kind"] == KIND_FORO
+    tarea = _tareas(course_key)[-1]["code"]
+    otro_id = "coev" if item_id == "auto" else "auto"
+    otro = componente(course_key, otro_id)
 
-def acas_proyecto1() -> list[dict]:
+    if es_foro:
+        que_es = (
+            f"**{c['code']}** es un **foro** del aula (así está creada la actividad en "
+            f"CDigital): **participas publicando tu aporte**, en el que valoras el trabajo "
+            f"colaborativo y los aportes de tus compañeros con criterio académico y respeto."
+        )
+        no_es = [
+            "**No** es un formulario de preguntas: es un **foro**. Si no publicas, no participaste.",
+            "**No** se sube documento ni se usa la plantilla APA: no hay archivo que entregar.",
+            "**No** la publica un vocero por el equipo: cada quien escribe su propio aporte.",
+            f"**No** sustituye la **{tarea}** ni cambia la calificación de las entregas documentales.",
+        ]
+        pasos = [
+            "Revisa en CDigital el **aviso de apertura** de la ventana (lo publica el Docente).",
+            f"Entra al **foro «{c['code']}»** del aula y lee la consigna y la escala publicadas.",
+            "**Publica tu aporte** siguiendo esa consigna (una intervención por estudiante, salvo que el Docente pida réplicas).",
+            "Valora **hechos** del trabajo conjunto: entregas cumplidas, reparto de tareas, calidad de los aportes. Nunca la persona.",
+            "Recuerda que el foro **lo leen otros**: escribe lo que sostendrías de frente, con respeto.",
+            "Verifica que tu mensaje quedó **publicado** dentro de la ventana (en un foro, un borrador sin enviar no cuenta).",
+        ]
+        evidencia = "tu **participación publicada en el foro** (queda con fecha y hora)"
+        canal = f"**CDigital (Moodle)** — foro **«{c['code']}»** del aula. Único canal válido."
+        checklist = [
+            "Publicaste **tú** tu aporte en el foro, dentro de la ventana",
+            "La valoración es respetuosa y está fundamentada en el trabajo del equipo",
+            f"Tienes claro que **no** reemplaza ni compensa la **{tarea}**",
+        ]
+    else:
+        que_es = (
+            f"**{c['code']}** es un **cuestionario** del aula: **lo diligencias tú**, de forma "
+            f"individual, para valorar tu propia trayectoria en el periodo (compromiso, aportes "
+            f"y avance del producto del curso)."
+        )
+        no_es = [
+            "**No** se sube documento ni se usa la plantilla APA: no hay archivo que entregar.",
+            "**No** es grupal: no la diligencia un vocero por el equipo.",
+            f"**No** sustituye la **{tarea}** ni compensa una entrega no hecha o con baja nota.",
+            "**No es** la autoevaluación institucional SIAC (acreditacion.cun.edu.co): esa no suma nota en este curso.",
+        ]
+        pasos = [
+            "Revisa en CDigital el **aviso de apertura** de la ventana (lo publica el Docente).",
+            f"Entra a la actividad **«{c['code']}»** del aula.",
+            "Diligénciala **con honestidad**, según tu participación real en el periodo (no según lo que hubieras querido hacer).",
+            "**Envía** dentro de la ventana; conserva acuse o captura si el aula lo permite.",
+            "Dudas sobre los ítems o la escala: pregunta al Docente **antes** del cierre, no después.",
+        ]
+        evidencia = "la actividad **completada** en CDigital (queda con fecha y hora)"
+        canal = f"**CDigital (Moodle)** — actividad **«{c['code']}»** del aula. Único canal válido."
+        checklist = [
+            "La diligenciaste **tú**, dentro de la ventana",
+            "Las respuestas son coherentes con tu participación real",
+            f"Tienes claro que **no** reemplaza ni compensa la **{tarea}**",
+        ]
+
+    no_es_md = "\n".join(f"- {x}" for x in no_es)
+    pasos_md = "\n".join(f"{i}. {x}" for i, x in enumerate(pasos, 1))
+    checklist_md = "\n".join(f"  - [ ] {x}" for x in checklist)
+
+    return (
+        _header_instrumento(course_key, item_id, curso, codigo, fuente)
+        + f"""## 1. Qué es este documento (y qué NO es)
+
+**{c['code']}** · **{fmt_peso(c['weight'])}** de la nota del curso · corte {c['corte']} · instrumento individual de cierre.
+
+{que_es}
+
+{no_es_md}
+
+{contexto}
+
+Con **{otro['code']}** ({KIND_LABEL[otro['kind']]}, {fmt_peso(otro['weight'])}) forman los **dos** instrumentos individuales que cierran el corte {c['corte']}: son actividades distintas y cada una tiene su propia ventana. Hacer una no cuenta como haber hecho la otra.
+
+## 2. Quién, dónde y cuándo
+
+| Pregunta | Respuesta |
+| :--- | :--- |
+| **¿Quién?** | **Cada estudiante, de forma individual.** Nadie lo hace por otro. |
+| **¿Dónde?** | En el aula del curso en **CDigital** ({cdigital_url(course_key)}), actividad «{c['code']}». Ningún otro canal cuenta. |
+| **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba. El Docente la habilita al abrir y la cierra al terminar. |
+| **¿Qué queda como evidencia?** | {evidencia.capitalize()}. |
+
+## 3. Paso a paso
+
+{pasos_md}
+
+## 4. Qué pasa si no lo haces
+
+- Ese **{fmt_peso(c['weight'])}** queda en **cero**: no hay entregable alternativo ni trabajo extra que lo reemplace.
+- La ventana cierra en la fecha indicada y **no se reabre**: la nota debe quedar registrada antes del cierre de notas del periodo.
+- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre de la ventana.
+
+## 5. Evidencia y registro de la nota
+
+- La **evidencia oficial** es {evidencia}.
+- El Docente habilita la ventana, verifica el cumplimiento y registra el **{fmt_peso(c['weight'])}** en el libro de calificaciones antes del cierre de notas.
+- Checklist rápido:
+{checklist_md}
+
+## 6. Canal y requisitos
+
+- {canal}
+- Navegador actualizado y sesión iniciada con tu **cuenta institucional CUN**.
+- No requiere instalar nada, ni pagar, ni usar la plantilla APA (no hay documento que subir).
+
+{_nota_curso_block(course_key, item_id, 7)}
+{_relacion_block(relacion, n=8, regla=regla)}"""
+    )
+
+
+# ---------------------------------------------------------------------------
+# Catálogos por curso
+# ---------------------------------------------------------------------------
+def _doc(
+    course_key: str,
+    item_id: str,
+    *,
+    kind: str,
+    title: str,
+    md: str,
+    source: str,
+    slug: str | None = None,
+) -> dict:
+    """Fila del catálogo. El nombre de archivo se **deriva** del ítem del aula."""
+    c = componente(course_key, item_id)
+    peso = fmt_peso(c["weight"])
+    code = _ascii(c["code"])
+    if kind == KIND_INSTRUMENTO:
+        filename = f"{code} individual ({peso}) - instructivo.docx"
+    elif kind == KIND_GUIA:
+        filename = f"{code} ({peso}) - guia del cuestionario.docx"
+    else:
+        filename = f"{code} ({peso}) - {slug or _ascii(title)}.docx"
+    return {
+        "item": item_id,
+        "code": c["code"],
+        "title": title,
+        "filename": filename,
+        "weight": peso,
+        "tipo": KIND_LABEL[c["kind"]],
+        "corte": c["corte"],
+        "source": source,
+        "kind": kind,
+        "md": md,
+    }
+
+
+# ---------- PROYECTO I 54ES4 ----------
+def docs_proyecto1() -> list[dict]:
+    key = "proyecto1"
     fuente = (
-        "ESP329 (evaluación Art. 41: ACA1 25% · ACA2 25% · ACA3 42% · "
-        "autoevaluación 4% · coevaluación 4%) · Manual del Docente / AFI (contenido de cada entrega)"
+        "ESP329 (Art. 41: nota única del periodo) · **libro de calificaciones del aula "
+        f"(CDigital, auditoría 2026-08-10):** {desglose_corte_texto(key)} · "
+        "ventanas del **cronograma oficial de Coordinación (AFI)** · Manual del Docente / "
+        "Instructivo Proyecto I (contenido de cada entrega)"
     )
-    aula_p1 = cdigital_url("proyecto1")
     curso = "PROYECTO I — Especialización en Inteligencia Artificial"
     codigo = "ESP329"
-    h = _header(curso, codigo, fuente, cdigital_url("proyecto1"))
+    regla = REGLA_OFICIAL_P1
 
-    a1 = h + f"""## 1. Título / código
+    quiz = _guia_md(
+        key, "quiz", curso=curso, codigo=codigo, fuente=fuente,
+        preparacion=[
+            "Repasa el deck y tus apuntes de cada sesión (`Clases/Sesion NN - …/Presentacion.pptx`).",
+            "Ten claros los **fundamentos de investigación** de la unidad diferida (lectura autónoma de la Sesión 01).",
+            "Distingue con tus palabras **problema, pregunta, objetivo general y objetivos específicos**: es lo que más se confunde.",
+            "Repasa qué hace **viable** una pregunta en el alcance de Proyecto I → Proyecto II (se **diseña**, no se aplica).",
+            "Revisa las **líneas de IA** del programa y por qué tu tema encaja en una.",
+        ],
+        aviso_ventana=(
+            "> **Ojo con la ventana:** la fija la **Coordinación** (cronograma AFI) y abre "
+            "**antes** de que el tema se trabaje en clase. Revisa el temario del punto 3 antes "
+            "de abrir el intento: puedes resolverlo cualquier día de la ventana, no hace falta "
+            "hacerlo el primero."
+        ),
+        relacion=(
+            "El tema entra con la **Sesión 02** (problema y pregunta de investigación); la "
+            "**Sesión 03** (objetivos, justificación, alcances) cae **después** del cierre, así "
+            "que para el Quiz apóyate en la Sesión 02, en la lectura autónoma y en la **tutoría "
+            "acordada de la semana**. La **Sesión 01** fue de encuadre."
+        ),
+        regla=regla,
+    )
 
-**ACA 1 — Formulación del problema** · **25%** de la nota del curso
+    aca1 = (
+        _header(key, "aca1", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
+
+**ACA 1 — Formulación del problema y fundamentación referencial** · {_peso_item_txt(key, 'aca1', con_code=False)}.
+
+Es la **primera de las dos tareas documentales** del curso: se sube en CDigital y se califica con rúbrica. La segunda es la **ACA FINAL** (anteproyecto integrado). El corte 1 **no** tiene tarea: lo califica el **Quiz** ({fmt_peso(componente(key, 'quiz')['weight'])}).
 
 ## 2. Propósito / competencia que evalúa
 
-Delimitar una situación problemática pertinente al campo de la especialización y convertirla en un avance coherente del anteproyecto: problema, pregunta, objetivos, justificación, alcances y limitaciones (unidades ESP329 U1–U3).
+Delimitar una situación problemática pertinente al campo de la especialización y sostenerla con literatura: problema, pregunta, objetivos, justificación, alcances y limitaciones (ESP329 U2–U3) **más** el marco referencial (U4).
 
 Macrocompetencia ESP329: formular un anteproyecto pertinente mediante delimitación del problema, revisión crítica inicial y definición de objetivos.
 
@@ -216,73 +755,52 @@ Trabajo **por equipo** (máx. 3 integrantes, según AFI). Un solo integrante sub
 4. Escribe el **objetivo general** y los **objetivos específicos** (verbos medibles, alineados a la pregunta).
 5. Desarrolla la **justificación** (teórica, práctica y/o social, según aplique).
 6. Define **alcances y limitaciones** del estudio.
-7. Incluye **referencias en APA 7** (mínimo las usadas en este avance).
-8. Revisa coherencia: contexto ↔ problema ↔ pregunta ↔ objetivos.
+7. Elabora **antecedentes** (mínimo **6**, nacionales e internacionales) alineados a tu pregunta.
+8. Desarrolla el **marco teórico** (bases alineadas a variables/categorías), el **marco conceptual** (definiciones operativas) y el **marco contextual** (dónde se aplica); añade **marco legal** si aplica.
+9. Verifica que el marco «responda» a la pregunta: no es un listado desconectado.
+10. Cierra con **referencias en APA 7** (citas en texto + lista final).
 
 ## 4. Producto entregable
 
-- Documento en **Plantilla APA CUN – Proyecto de Grado** (`{APA_REL}`), abierto preferente en Google Docs.
+- Documento en **Plantilla APA CUN – Proyecto de Grado** (`{APA_REL}`), preferible en Google Docs.
 - Portada con nombres completos de **todos** los integrantes.
-- Extensión orientativa: **6–10 páginas** de cuerpo (sin contar portada/referencias), suficiente para U2–U3.
+- Extensión orientativa: **12–20 páginas** de cuerpo (formulación + marco referencial), sin contar portada ni referencias.
 - Formato: PDF o DOCX según indique CDigital.
 - **No** recolectes datos ni apliques instrumentos en Proyecto I.
 
 ## 5. Criterios de evaluación / checklist (ESP329)
 
-- [ ] Coherencia entre problema, pregunta y objetivos  
-- [ ] Pertinencia del problema al campo / líneas del programa  
-- [ ] Justificación argumentada (no solo opinión)  
-- [ ] Alcances y limitaciones realistas  
-- [ ] Escritura académica e integridad (citas, sin plagio)  
-- [ ] Referencias APA 7  
+- [ ] Coherencia entre problema, pregunta y objetivos
+- [ ] Pertinencia del problema al campo / líneas del programa
+- [ ] Justificación argumentada (no solo opinión)
+- [ ] Alcances y limitaciones realistas
+- [ ] Antecedentes ≥ 6 (nacionales e internacionales)
+- [ ] Marco teórico, conceptual y contextual pertinentes y actualizados
+- [ ] Escritura académica e integridad (citas, sin plagio)
+- [ ] Referencias APA 7
 
 {_tools_block(
+    "ZoteroBib / Google Docs para citas",
+    "Biblioteca virtual CUN + Scholar / SciELO / Redalyc",
     f"Formulario de asistencia a tutorías (estudiante): {LINK_TUTORIAS}",
     MSG_TUTORIAS_POR_GRUPO,
 )}
-{_footer_sesiones("Se construye tras la **Sesión 02** (problema y pregunta de investigación): es la última sesión sincrónica antes del cierre. La **Sesión 01** es de encuadre y la unidad de fundamentos va como lectura autónoma. Objetivos, justificación y alcances se trabajan en la **tutoría acordada de esa semana**; la **Sesión 03** (31/08) los amplía ya después del cierre del 30/08. Cierre de avance ACA 1 según ventana en CDigital.", regla=REGLA_OFICIAL_P1)}
-"""
+{_nota_curso_block(key, "aca1", 7)}
+{_relacion_block(
+    "La formulación se trabaja en **Sesiones 02–03**; el marco referencial en "
+    "**Sesiones 04–07** (retro · antecedentes · teórico · conceptual/contextual · legal y APA). "
+    "La **Sesión 07** (28/09) es la última sincrónica antes del cierre.",
+    n=8, regla=regla,
+)}"""
+    )
 
-    a2 = h + f"""## 1. Título / código
+    aca_final = (
+        _header(key, "aca_final", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
 
-**ACA 2 — Fundamentación referencial** · **25%** de la nota del curso
+**ACA FINAL — Anteproyecto integrado** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
 
-## 2. Propósito / competencia que evalúa
-
-Construir el **marco referencial** del anteproyecto (ESP329 U4): antecedentes, marco teórico, conceptual, contextual y legal (si aplica), con fuentes académicas de calidad y citación APA 7. Incorporar las correcciones de ACA 1.
-
-## 3. Consigna (paso a paso)
-
-1. Incorpora **todas** las correcciones y observaciones de ACA 1 (trazabilidad visible en el documento).
-2. Elabora **antecedentes** (mínimo **6**, nacionales e internacionales) alineados a tu pregunta.
-3. Desarrolla el **marco teórico** (bases alineadas a variables/categorías de la pregunta).
-4. Completa **marco conceptual** (definiciones operativas) y **marco contextual** (dónde se aplica).
-5. Si aplica, añade **marco legal / normativo** breve y pertinente.
-6. Actualiza referencias APA 7 (citas en texto + lista final).
-7. Verifica que el marco “responde” a la pregunta (no es un listado desconectado).
-
-## 4. Producto entregable
-
-- Mismo documento acumulativo en plantilla APA CUN (`{APA_REL}`).
-- Extensión orientativa del bloque referencial: **8–15 páginas** adicionales o integradas, según profundidad.
-- Portada con todos los integrantes · un solo envío grupal en CDigital.
-
-## 5. Criterios de evaluación / checklist (ESP329)
-
-- [ ] Correcciones de ACA 1 incorporadas  
-- [ ] Antecedentes ≥ 6 (nacionales e internacionales)  
-- [ ] Marco teórico pertinente y actualizado  
-- [ ] Conceptual + contextual claros  
-- [ ] Calidad de fuentes y citación APA 7  
-- [ ] Coherencia con pregunta y objetivos  
-
-{_tools_block("ZoteroBib / Google Docs para citas", "Biblioteca virtual CUN + Scholar / SciELO / Redalyc")}
-{_footer_sesiones("Se desarrolla en **Sesiones 04–07** (retro ACA1 · antecedentes · teórico · conceptual/contextual · legal/APA).", regla=REGLA_OFICIAL_P1)}
-"""
-
-    a3 = h + f"""## 1. Título / código
-
-**ACA 3 — Diseño metodológico y anteproyecto FINAL** · **42%** de la nota del curso
+Es la **entrega de cierre** del curso: el anteproyecto completo, no un fragmento. Junto con la **Autoevaluación** ({fmt_peso(componente(key, 'auto')['weight'])}) y la **Coevaluación** ({fmt_peso(componente(key, 'coev')['weight'])}) cierra el corte {componente(key, 'aca_final')['corte']}.
 
 ## 2. Propósito / competencia que evalúa
 
@@ -290,7 +808,7 @@ Integrar el **anteproyecto completo** (ESP329 U5–U7): metodología **diseñada
 
 ## 3. Consigna (paso a paso)
 
-1. Incorpora correcciones de **ACA 1 y ACA 2**.
+1. Incorpora **todas** las correcciones de la **ACA 1** (trazabilidad visible en el documento).
 2. Completa la **metodología**: paradigma/enfoque, tipo y alcance, diseño, población/muestra o unidades de análisis, variables/categorías, técnicas e **instrumentos propuestos** (no aplicados), plan de análisis, ética.
 3. Elabora **cronograma** y **presupuesto** (o recursos) viables para la continuidad del proyecto.
 4. Integra todo el anteproyecto en un solo documento coherente (de portada a referencias).
@@ -300,751 +818,762 @@ Integrar el **anteproyecto completo** (ESP329 U5–U7): metodología **diseñada
 ## 4. Producto entregable
 
 - **Anteproyecto FINAL integrado** (no un fragmento suelto) en plantilla APA CUN (`{APA_REL}`).
-- Extensión orientativa: documento completo típico de anteproyecto de especialización (cuerpo suficiente para U2–U7).
+- Extensión orientativa: documento completo típico de anteproyecto de especialización (U2–U7).
 - Instrumentos solo **propuestos** (anexos opcionales); **sin** recolección de datos en Proyecto I.
+- Un solo envío grupal; portada con todos los integrantes.
 
 ## 5. Criterios de evaluación / checklist (ESP329)
 
-- [ ] Correcciones previas incorporadas  
-- [ ] Metodología coherente con pregunta y objetivos  
-- [ ] Instrumentos propuestos (no aplicados)  
-- [ ] Cronograma y presupuesto/viabilidad  
-- [ ] Coherencia global del anteproyecto  
-- [ ] Escritura, fuentes, integridad y viabilidad  
+- [ ] Correcciones de la ACA 1 incorporadas
+- [ ] Metodología coherente con pregunta y objetivos
+- [ ] Instrumentos propuestos (no aplicados)
+- [ ] Cronograma y presupuesto/viabilidad
+- [ ] Coherencia global del anteproyecto
+- [ ] Escritura, fuentes, integridad y viabilidad
 
 {_tools_block(
     f"Tutorías: registra asistencia en {LINK_TUTORIAS}",
     MSG_TUTORIAS_POR_GRUPO,
 )}
-{_footer_sesiones(
-    "Puente metodológico en **Sesión 08**; desarrollo ACA 3 en **Sesiones 09–10**; "
-    "integración/cierre en **Sesión 11**. Usa tutorías acordadas en la semana con el Docente: "
-    "hay pocas sesiones sincrónicas en esta fase.",
-    regla=REGLA_OFICIAL_P1,
-)}
-"""
+{_nota_curso_block(key, "aca_final", 7)}
+{_relacion_block(
+    "Puente metodológico en **Sesión 08**; desarrollo en **Sesiones 09–10** (la 10 es la última "
+    "sincrónica antes del cierre); integración y evaluación en **Sesión 11**. Usa las tutorías "
+    "acordadas en la semana: en esta fase hay pocas sesiones sincrónicas.",
+    n=8, regla=regla,
+)}"""
+    )
 
-    h_auto = _header_instrumento(curso, codigo, fuente, "autoevaluación", cdigital_url("proyecto1"))
-    h_coev = _header_instrumento(curso, codigo, fuente, "coevaluación", cdigital_url("proyecto1"))
-
-    auto = h_auto + f"""## 1. Qué es este documento (y qué NO es)
-
-**Autoevaluación individual** · **4%** de la nota única del curso · instrumento de cierre.
-
-Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para valorar tu propia trayectoria en el periodo: compromiso, aportes al equipo y avance del anteproyecto.
-
-**No es una ACA.** Las ACAs de Proyecto I son **tres** — ACA 1 (25%), ACA 2 (25%) y ACA 3 / anteproyecto consolidado (42%) —, y son entregas documentales por equipo con rúbrica. La autoevaluación (4%) y la coevaluación (4%) completan el 100% de la nota única (Art. 41), pero **no** son una cuarta ni una quinta ACA:
-
-- **No** subes documento ni usas la plantilla APA: no hay archivo que entregar.
-- **No** es grupal: no la diligencia un vocero por el equipo.
-- **No sustituye la ACA 3** ni compensa una ACA no entregada o con baja calificación.
-- **No es** la autoevaluación institucional SIAC (acreditacion.cun.edu.co): esa no suma nota en este curso.
-- **Solo existe en Proyecto I.** No aplica en Proyecto II ni en los cursos de pregrado (Art. 52).
-
-**Fuente:** ESP329 («MECANISMOS Y ESTRATEGIAS DE EVALUACIÓN») · Art. 41 Reglamento Estudiantil (nota única) · cronograma AFI / Instructivo Proyecto I.
-
-## 2. Quién la diligencia, dónde y cuándo
-
-| Pregunta | Respuesta |
-| :--- | :--- |
-| **¿Quién?** | **Cada estudiante, de forma individual.** Si el equipo tiene 3 integrantes, se diligencian 3 autoevaluaciones. |
-| **¿Dónde?** | En el aula del curso en **CDigital** ({aula_p1}), actividad «Autoevaluación». Ningún otro canal cuenta. |
-| **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba. El Docente la habilita al abrir y la cierra al terminar. |
-| **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
-
-## 3. Paso a paso
-
-1. Revisa en CDigital el **aviso de apertura** de la ventana (la publica el Docente).
-2. Entra a la actividad **Autoevaluación** del aula (formulario / tarea individual en Moodle).
-3. Diligénciala **con honestidad**, según tu participación real en el periodo (no según lo que quisieras haber hecho).
-4. **Envía** dentro de la ventana; conserva acuse o captura si el aula lo permite.
-5. Dudas sobre los ítems o la escala: pregunta al Docente **antes** del cierre, no después.
-
-## 4. Qué pasa si no la diligencias
-
-- Ese **4% queda en cero**: no hay entregable alternativo ni trabajo extra que lo reemplace.
-- La ventana cierra en la fecha indicada y **no se reabre**: la nota debe quedar registrada antes del cierre de notas del periodo.
-- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre de la ventana.
-
-## 5. Evidencia y registro de la nota
-
-- La **evidencia oficial** es la actividad completada en CDigital (queda con fecha y hora).
-- El Docente habilita la ventana, verifica el cumplimiento y registra el **4%** en el gradebook antes del cierre de notas.
-- Checklist rápido:
-  - [ ] Diligenciaste **tú** la autoevaluación dentro de la ventana
-  - [ ] Respuestas coherentes con tu participación real
-  - [ ] Tienes claro que **no** reemplaza ni compensa la ACA 3
-
-## 6. Canal y requisitos
-
-- **CDigital (Moodle)** — actividad «Autoevaluación» del aula. Único canal válido.
-- Navegador actualizado y sesión iniciada con tu **cuenta institucional CUN**.
-- No requiere instalar nada, ni pagar, ni usar la plantilla APA (no hay documento que subir).
-
-{_footer_instrumento("Se comenta en la **Sesión 11** (integración y evaluación). La ventana abre después de la ACA 3, en la fase final del periodo.")}
-"""
-
-    coev = h_coev + f"""## 1. Qué es este documento (y qué NO es)
-
-**Coevaluación individual** · **4%** de la nota única del curso · instrumento de cierre.
-
-Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para valorar el trabajo colaborativo y los aportes de **tus compañeros de equipo** (máx. 3), con criterio académico y respeto.
-
-**No es una ACA.** Las ACAs de Proyecto I son **tres** — ACA 1 (25%), ACA 2 (25%) y ACA 3 / anteproyecto consolidado (42%) —, y son entregas documentales por equipo con rúbrica. La coevaluación (4%) y la autoevaluación (4%) completan el 100% de la nota única (Art. 41), pero **no** son una cuarta ni una quinta ACA:
-
-- **No** subes documento ni usas la plantilla APA: no hay archivo que entregar.
-- **No** la diligencia el equipo en bloque: cada integrante diligencia la suya.
-- **No sustituye la ACA 3** ni cambia la calificación docente de las entregas grupales.
-- **Solo existe en Proyecto I.** No aplica en Proyecto II ni en los cursos de pregrado (Art. 52).
-
-**Fuente:** ESP329 · Art. 41 Reglamento Estudiantil (nota única) · cronograma AFI / Instructivo Proyecto I (obligatoria al cierre de Proyecto I; **no** en Proyecto II).
-
-## 2. Quién la diligencia, dónde y cuándo
-
-| Pregunta | Respuesta |
-| :--- | :--- |
-| **¿Quién?** | **Cada estudiante, de forma individual**, sobre sus compañeros de equipo. Nadie la diligencia por otro. |
-| **¿Dónde?** | En el aula del curso en **CDigital** ({aula_p1}), actividad «Coevaluación». Ningún otro canal cuenta. |
-| **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba (abre justo después de la ACA 3). |
-| **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
-
-## 3. Paso a paso
-
-1. Revisa en CDigital el **aviso de apertura** de la ventana (la publica el Docente).
-2. Entra a la actividad **Coevaluación** del aula.
-3. Diligénciala **individualmente**, siguiendo las instrucciones y la escala publicadas.
-4. Sé objetivo: valora **hechos** del trabajo conjunto (entregas cumplidas, reparto de tareas, calidad de los aportes), nunca la persona.
-5. **Envía** dentro de la ventana; conserva evidencia si el aula lo permite.
-
-## 4. Qué pasa si no la diligencias
-
-- Ese **4% queda en cero**: no hay entregable alternativo ni trabajo extra que lo reemplace.
-- La ventana cierra en la fecha indicada y **no se reabre**: la nota debe quedar registrada antes del cierre de notas del periodo.
-- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre de la ventana.
-
-## 5. Evidencia y registro de la nota
-
-- La **evidencia oficial** es la actividad completada en CDigital (queda con fecha y hora).
-- El Docente habilita la ventana, verifica el cumplimiento y registra el **4%** en el gradebook antes del cierre de notas.
-- Checklist rápido:
-  - [ ] Diligenciaste **tú** la coevaluación dentro de la ventana
-  - [ ] Valoración respetuosa y fundamentada en el trabajo del equipo
-  - [ ] Cada integrante diligenció la suya (es individual)
-
-## 6. Canal y requisitos
-
-- **CDigital (Moodle)** — actividad «Coevaluación» del aula. Único canal válido.
-- Navegador actualizado y sesión iniciada con tu **cuenta institucional CUN**.
-- No requiere instalar nada, ni pagar, ni usar la plantilla APA (no hay documento que subir).
-
-{_footer_instrumento("Se comenta en la **Sesión 11**. La ventana cierra **antes** de la de autoevaluación (ver fechas oficiales del periodo).")}
-"""
+    contexto_p1 = (
+        "**Contexto:** en Proyecto I la nota es **única** (Art. 41 Reglamento Estudiantil) y este "
+        "instrumento vale **{peso}** (ESP329 · «MECANISMOS Y ESTRATEGIAS DE EVALUACIÓN»). Es "
+        "obligatorio al cierre de Proyecto I (cronograma AFI / Instructivo Proyecto I)."
+    )
+    auto = _instrumento_md(
+        key, "auto", curso=curso, codigo=codigo, fuente=fuente,
+        contexto=contexto_p1.format(peso=fmt_peso(componente(key, "auto")["weight"])),
+        relacion=(
+            "Se comenta en la **Sesión 11** (integración y evaluación). La ventana abre después "
+            "de la ACA FINAL, en la fase final del periodo."
+        ),
+        regla=regla,
+    )
+    coev = _instrumento_md(
+        key, "coev", curso=curso, codigo=codigo, fuente=fuente,
+        contexto=contexto_p1.format(peso=fmt_peso(componente(key, "coev")["weight"])),
+        relacion=(
+            "Se comenta en la **Sesión 11**. Su ventana cierra **antes** que la de la "
+            "autoevaluación (fechas oficiales del periodo)."
+        ),
+        regla=regla,
+    )
 
     return [
-        {"code": "ACA 1", "title": "Formulación del problema", "filename": "ACA 1 - Formulacion del problema.docx",
-         "weight": "25%", "source": fuente, "kind": "aca", "md": a1},
-        {"code": "ACA 2", "title": "Fundamentación referencial", "filename": "ACA 2 - Fundamentacion referencial.docx",
-         "weight": "25%", "source": fuente, "kind": "aca", "md": a2},
-        {"code": "ACA 3", "title": "Anteproyecto final", "filename": "ACA 3 - Diseno metodologico y anteproyecto final.docx",
-         "weight": "42%", "source": fuente, "kind": "aca", "md": a3},
-        # NO son ACAs: instrumentos individuales de cierre (se diligencian en
-        # CDigital). Orden cronológico de sus ventanas: coevaluación → autoevaluación.
-        {"code": "Coevaluación", "title": "Coevaluación individual (instructivo)",
-         "filename": "Coevaluacion individual (4%) - instructivo.docx",
-         "weight": "4%", "source": fuente, "kind": "instrumento", "md": coev},
-        {"code": "Autoevaluación", "title": "Autoevaluación individual (instructivo)",
-         "filename": "Autoevaluacion individual (4%) - instructivo.docx",
-         "weight": "4%", "source": fuente, "kind": "instrumento", "md": auto},
+        _doc(key, "quiz", kind=KIND_GUIA,
+             title="Corte 1 · fundamentos, problema y pregunta", md=quiz, source=fuente),
+        _doc(key, "aca1", kind=KIND_ACA,
+             title="Formulación del problema y fundamentación referencial",
+             slug="Formulacion del problema y fundamentacion referencial",
+             md=aca1, source=fuente),
+        _doc(key, "aca_final", kind=KIND_ACA,
+             title="Anteproyecto integrado", slug="Anteproyecto integrado",
+             md=aca_final, source=fuente),
+        _doc(key, "coev", kind=KIND_INSTRUMENTO,
+             title="Coevaluación individual (instructivo)", md=coev, source=fuente),
+        _doc(key, "auto", kind=KIND_INSTRUMENTO,
+             title="Autoevaluación individual (instructivo)", md=auto, source=fuente),
     ]
 
 
-def acas_investigacion() -> list[dict]:
+# ---------- Bloques compartidos por los 4 cursos de pregrado ----------
+def _contexto_pregrado(course_key: str, item_id: str, codigo_fuente: str) -> str:
+    c = componente(course_key, item_id)
+    return (
+        f"**Contexto:** el curso se califica en **tres cortes** (Art. 52) y este instrumento "
+        f"vale **{fmt_peso(c['weight'])}** dentro del corte {c['corte']}. Está creado así en el "
+        f"aula ({codigo_fuente}); no es un añadido de este documento."
+    )
+
+
+def _guias_pregrado(
+    course_key: str,
+    *,
+    curso: str,
+    codigo: str,
+    fuente: str,
+    preparacion: list[str],
+    relaciones: dict[str, str],
+) -> list[dict]:
+    """Una guía por cuestionario del aula (Quiz 1/2/3, Parcial 1/2)."""
+    out = []
+    for c in _cuestionarios(course_key):
+        md = _guia_md(
+            course_key, c["id"], curso=curso, codigo=codigo, fuente=fuente,
+            preparacion=preparacion,
+            relacion=relaciones.get(c["id"], ""),
+            regla=REGLA_VENTANAS_DOCENTE,
+        )
+        out.append(
+            _doc(course_key, c["id"], kind=KIND_GUIA,
+                 title=f"Corte {c['corte']} · {KIND_LABEL[c['kind']].lower()} del aula",
+                 md=md, source=fuente)
+        )
+    return out
+
+
+def _instrumentos_pregrado(
+    course_key: str,
+    *,
+    curso: str,
+    codigo: str,
+    fuente: str,
+    codigo_fuente: str,
+    relacion: str,
+) -> list[dict]:
+    out = []
+    for item_id, title in (
+        ("auto", "Autoevaluación individual (instructivo)"),
+        ("coev", "Coevaluación individual (instructivo)"),
+    ):
+        md = _instrumento_md(
+            course_key, item_id, curso=curso, codigo=codigo, fuente=fuente,
+            contexto=_contexto_pregrado(course_key, item_id, codigo_fuente),
+            relacion=relacion, regla=REGLA_VENTANAS_DOCENTE,
+        )
+        out.append(_doc(course_key, item_id, kind=KIND_INSTRUMENTO, title=title,
+                        md=md, source=fuente))
+    return out
+
+
+def _ruta_cortes_block(course_key: str, etapas: list[tuple[int, str, str]], n: int) -> str:
+    """«Ruta de trabajo por cortes»: avances formativos + quién pone la nota del corte.
+
+    ``etapas`` = [(corte, título del avance, qué se produce)]. La nota de cada corte
+    la registran los ítems reales del aula, así que el texto los nombra: sin esto el
+    estudiante lee «avance del corte 1» y cree que hay una entrega calificada ahí.
+    """
+    lines = [f"## {n}. Ruta de trabajo (avances por corte)", ""]
+    lines.append(
+        "En el aula **no** hay una tarea por corte: la única tarea documental es la "
+        f"**{_tareas(course_key)[-1]['code']}**. Los avances de abajo son **formativos**: se "
+        "revisan en clase o en tutoría y son los que hacen posible la entrega final. La **nota** "
+        "de cada corte la registran los ítems que aparecen entre paréntesis."
+    )
+    lines.append("")
+    for corte, titulo, produce in etapas:
+        items = [
+            f"{c['code']} {fmt_peso(c['weight'])}"
+            for c in componentes_curso(course_key) if c["corte"] == corte
+        ]
+        lines.append(
+            f"- **Corte {corte} — {titulo}.** {produce} "
+            f"*(la nota del corte la ponen: {' + '.join(items)})*"
+        )
+    lines.append("")
+    lines.append(
+        "> Llegar a la entrega final sin los avances es la forma más común de perderla: el "
+        "documento es acumulativo."
+    )
+    return "\n".join(lines)
+
+
+# ---------- INVESTIGACIÓN 53339 ----------
+def docs_investigacion() -> list[dict]:
+    key = "investigacion"
     fuente = (
         "Syllabus SIAC EI005_PRES · Art. 52: Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. "
-        "Mecanismos: problema, protocolo, seguimiento y presentación oral/escrita. "
-        "Producto: avance de artículo de nuevo conocimiento. "
-        "Esta ACA evalúa el **100% de su corte**: no se subdivide en varios EV."
+        f"**Libro de calificaciones del aula (CDigital, auditoría 2026-08-10):** "
+        f"{desglose_corte_texto(key)}. Producto del curso: artículo de nuevo conocimiento, que "
+        "se entrega como **ACA Final** (única tarea calificada); quices y parciales son "
+        "**cuestionarios** del aula."
     )
     curso = "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA — Escuela de Ingenierías"
     codigo = "EI005"
-    h = _header(curso, codigo, fuente, cdigital_url("investigacion"))
+    regla = REGLA_VENTANAS_DOCENTE
 
-    c1 = h + f"""## 1. Título / código
+    aca_final = (
+        _header(key, "aca_final", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
 
-**ACA 1 — Corte 1 · Fundamentos y 1.er avance del artículo** · **30%** del curso
+**ACA Final — Artículo de nuevo conocimiento** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
 
-## 2. Propósito / competencia que evalúa
-
-Aplicar fundamentos del método científico, ubicar el tema en una de las **6 líneas** de Ingeniería y entregar el **primer avance** del artículo/protocolo (Syllabus U1–U5).
-
-## 3. Consigna (paso a paso)
-
-1. Elige una temática ligada a tu entorno y a una línea (IoT, Big Data, IA, cloud/FinTech, aplicaciones, telemática).
-2. Resume en 1 página: tema, línea, motivación y pregunta tentativa.
-3. Elabora el **1.er avance del artículo** (portada + introducción breve + problema tentativo + fuentes iniciales).
-4. Prepárate para la **prueba / talleres** del corte (tipos de conocimiento, fuentes, caracterización del problema) según lo indique el Docente en CDigital.
-
-## 4. Producto entregable
-
-- Avance documental en plantilla APA CUN (`{APA_REL}`) o estructura equivalente en Google Docs.
-- Extensión orientativa: **4–7 páginas** de avance.
-- Nombre sugerido de archivo: `INV_ACA1_Apellido`.
-
-## 5. Criterios / checklist
-
-- [ ] Línea de Ingeniería explícita  
-- [ ] Problema/tema delimitado de forma preliminar  
-- [ ] Avance escrito comprensible y con fuentes iniciales  
-- [ ] Integridad académica (citas)  
-- [ ] Cumplimiento de talleres/quices del corte en CDigital  
-
-{_tools_block("Padlet solo para rompehielos de presentación — no sustituye esta entrega")}
-{_footer_sesiones("Tras **Sesiones 02–03** (MinCiencias y las 6 líneas de Ingeniería · prueba parcial y 1.er avance del artículo). La **Sesión 01** es de encuadre: las unidades U1–U2 (Syllabus y producto final · fundamentos del método científico) van como lectura autónoma.", regla=REGLA_VENTANAS_DOCENTE)}
-"""
-
-    c2 = h + f"""## 1. Título / código
-
-**ACA 2 — Corte 2 · Pregunta y planteamiento del problema** · **30%** del curso
+Es la **única entrega documental calificada** del curso: el artículo/protocolo consolidado que venías construyendo desde la primera semana. Los quices y parciales de los cortes 1 y 2 son cuestionarios; aquí se califica el **documento**.
 
 ## 2. Propósito / competencia que evalúa
 
-Identificar el problema, formular la pregunta y redactar el **planteamiento del problema** completo (Syllabus U6–U7), avanzando el artículo.
+Aplicar el método científico a un problema de tu entorno dentro de una de las **6 líneas de Ingeniería** (MinCiencias) y sostener por escrito problema, pregunta y revisión de literatura (Syllabus U1–U8 · U10–U12).
 
-## 3. Consigna (paso a paso)
+{_ruta_cortes_block(key, [
+    (1, "tema, línea y 1.er avance",
+     "Elige la temática y la línea (IoT, Big Data, IA, cloud/FinTech, aplicaciones, telemática) y escribe el primer avance: portada, introducción breve, problema tentativo y fuentes iniciales."),
+    (2, "pregunta y planteamiento del problema",
+     "Analiza causas (espina de pescado, árbol de problemas o método 3D), formula la pregunta y redacta el planteamiento completo: estado actual, evidencias, causas y posibles vías de solución."),
+    (3, "fuentes, marco y consolidación",
+     "Busca en biblioteca CUN + Scholar / SciELO / Redalyc, organiza citas con ZoteroBib, arma la matriz de fuentes y redacta el avance de marco teórico / revisión de literatura."),
+], 3)}
 
-1. Usa herramientas vistas (espina de pescado, árbol de problemas o método 3D) para analizar causas.
-2. Formula la **pregunta de investigación**.
-3. Redacta el planteamiento: estado actual, evidencias, causas, posibles vías de solución.
-4. Actualiza el documento del artículo (introducción + problema + pregunta).
-5. Incorpora retroalimentación del Corte 1.
+## 4. Consigna (qué debe contener la entrega)
 
-## 4. Producto entregable
+1. **Título** y datos de autoría.
+2. **Introducción**: tema, línea de Ingeniería elegida y motivación.
+3. **Problema y pregunta**: planteamiento con evidencias y causas; pregunta clara y viable.
+4. **Objetivos** (si tu ruta los exige) alineados a la pregunta.
+5. **Marco teórico / revisión de literatura** en progreso, con la **matriz de fuentes** (autor, año, aporte, relación con tu pregunta) como sección o anexo.
+6. **Referencias en APA 7**: citas en texto + lista final.
+7. **Incorpora** la retroalimentación recibida en los cortes anteriores.
 
-- Avance actualizado del artículo/protocolo (plantilla APA CUN).
-- Extensión orientativa: **6–10 páginas** acumuladas.
-- Archivo: `INV_ACA2_Apellido`.
+## 5. Producto entregable
 
-## 5. Criterios / checklist
+- Documento consolidado en plantilla APA CUN (`{APA_REL}`) o estructura equivalente en Google Docs.
+- Extensión orientativa: **10–15 páginas** acumuladas (avance realista del periodo corto).
+- Nombre sugerido: `INV_ACAFinal_Apellido`.
+- Formato: PDF o DOCX según indique CDigital.
 
-- [ ] Problema argumentado con evidencias  
-- [ ] Pregunta clara y viable  
-- [ ] Planteamiento estructurado (U7)  
-- [ ] Mejoras respecto al 1.er avance  
-- [ ] Citas APA / integridad  
+## 6. Criterios de evaluación / checklist
 
-{_tools_block()}
-{_footer_sesiones("Tras la **Sesión 04** (identificación de problemas y pregunta de investigación), última sesión antes del cierre de este corte.", regla=REGLA_VENTANAS_DOCENTE)}
-"""
+- [ ] Línea de Ingeniería explícita y pertinente
+- [ ] Problema argumentado con evidencias
+- [ ] Pregunta clara y viable
+- [ ] Fuentes confiables y matriz de fuentes completa
+- [ ] Marco/revisión alineado a la pregunta (no un listado desconectado)
+- [ ] Citas y referencias APA 7 · integridad académica
+- [ ] Mejoras respecto a los avances previos
 
-    c3 = h + f"""## 1. Título / código
+{_tools_block("ZoteroBib (zbib.org)", "Biblioteca virtual CUN (login institucional)", n=7)}
+{_nota_curso_block(key, "aca_final", 8)}
+{_relacion_block(
+    "Se construye a lo largo de **Sesiones 02–05** y se cierra en la fecha de recepción de "
+    "trabajos. La **Sesión 06** (bases de datos CUN · gestores de citas · marco teórico y "
+    "revisión, que concentra U8+U10–12 por periodo corto) cae **después** del cierre: sirve de "
+    "refuerzo y para el **Quiz 3**, no es requisito de esta entrega. La **Sesión 01** fue de encuadre.",
+    n=9, regla=regla,
+)}"""
+    )
 
-**ACA 3 — Corte 3 · Fuentes, marco y avance consolidado del artículo** · **40%** del curso
-
-## 2. Propósito / competencia que evalúa
-
-Usar bases de datos / gestores de citas y avanzar el **marco teórico / revisión de literatura**, consolidando el producto del curso (Syllabus U8 + U10–U12; en periodo corto pueden ir combinados).
-
-## 3. Consigna (paso a paso)
-
-1. Busca fuentes en biblioteca CUN + Scholar / SciELO / Redalyc.
-2. Organiza citas con **ZoteroBib** o Google Docs.
-3. Elabora matriz de fuentes (autor, año, aporte, relación con tu pregunta).
-4. Redacta avance de **marco teórico / revisión**.
-5. Entrega el **paquete consolidado** del artículo hasta donde alcance el periodo (problema + pregunta + marco en progreso).
-6. Cumple talleres/quices residuales del corte en CDigital.
-
-## 4. Producto entregable
-
-- Documento consolidado (plantilla APA CUN) + matriz de fuentes (puede ir como anexo o sección).
-- Extensión orientativa: **10–15 páginas** acumuladas (según avance realista del periodo).
-- Archivo: `INV_ACA3_Apellido`.
-
-## 5. Criterios / checklist
-
-- [ ] Fuentes confiables y pertinentes  
-- [ ] Citas/referencias correctas  
-- [ ] Marco/revisión alineado a la pregunta  
-- [ ] Coherencia del avance global  
-- [ ] Entrega completa en CDigital  
-
-{_tools_block("ZoteroBib (zbib.org)", "Biblioteca virtual CUN (login institucional)")}
-{_footer_sesiones("Tras la **Sesión 05** (formulación del planteamiento del problema). La **Sesión 06** (bases de datos CUN · gestores de citas · marco teórico y revisión, que concentra U8+U10–12 por periodo corto) es **posterior** al cierre de este corte: sirve de refuerzo, no es requisito de la entrega.", regla=REGLA_VENTANAS_DOCENTE)}
-"""
-
-    return [
-        {"code": "ACA 1", "title": "Corte 1 · 1.er avance del artículo",
-         "filename": "ACA 1 - Corte 1 - Fundamentos y primer avance.docx",
-         "weight": "30%", "source": fuente, "md": c1},
-        {"code": "ACA 2", "title": "Corte 2 · Planteamiento del problema",
-         "filename": "ACA 2 - Corte 2 - Pregunta y planteamiento.docx",
-         "weight": "30%", "source": fuente, "md": c2},
-        {"code": "ACA 3", "title": "Corte 3 · Marco y avance consolidado",
-         "filename": "ACA 3 - Corte 3 - Fuentes marco y avance consolidado.docx",
-         "weight": "40%", "source": fuente, "md": c3},
+    prep = [
+        "Repasa el deck y tus apuntes de cada sesión (`Clases/Sesion NN - …/Presentacion.pptx`).",
+        "Ten a mano la **lectura autónoma de la Sesión 01** (fundamentos del método científico) y lo que el Docente publique en CDigital.",
+        "Ten claro cómo distinguir **tipos de conocimiento**, **tipos de fuente** y qué hace confiable una fuente.",
+        "Repasa las **6 líneas de Ingeniería** de MinCiencias y en cuál se ubica tu tema.",
+        "Ten claro con tus palabras: **problema ≠ pregunta ≠ objetivo**, y qué es una pregunta viable.",
     ]
+    relaciones = {
+        "quiz1": "Cierra el día de la **Sesión 02** (MinCiencias · 6 líneas de Ingeniería): entra esa sesión y la lectura autónoma de la Sesión 01.",
+        "parcial1": "Cierra el día de la **Sesión 03** (prueba parcial · 1.er avance del artículo): es el parcial del corte 1 y acumula lo trabajado hasta ahí.",
+        "quiz2": "Cierra el día de la **Sesión 04** (identificación de problemas y pregunta de investigación).",
+        "parcial2": "Cierra el día de la **Sesión 05** (formulación del planteamiento del problema): cierra el corte 2 junto con el Quiz 2.",
+        "quiz3": "Cierra el día de la **Sesión 06** (bases de datos CUN · gestores de citas · marco teórico y revisión, U8+U10–12): es el último cuestionario del curso.",
+    }
+
+    docs = [_doc(key, "aca_final", kind=KIND_ACA,
+                 title="Artículo de nuevo conocimiento",
+                 slug="Articulo de nuevo conocimiento", md=aca_final, source=fuente)]
+    docs += _guias_pregrado(key, curso=curso, codigo=codigo, fuente=fuente,
+                            preparacion=prep, relaciones=relaciones)
+    docs += _instrumentos_pregrado(
+        key, curso=curso, codigo=codigo, fuente=fuente,
+        codigo_fuente="Syllabus SIAC EI005_PRES + libro de calificaciones",
+        relacion=(
+            "Van al final del periodo, después de la recepción de trabajos y antes del cierre "
+            "de notas. La **Sesión 06** es la última sesión sincrónica del curso."
+        ),
+    )
+    return docs
 
 
-def acas_creatividad() -> list[dict]:
+# ---------- CREATIVIDAD 54408 ----------
+def docs_creatividad() -> list[dict]:
+    key = "creatividad"
     fuente = (
         "Syllabus SIAC EI004_VIR · Art. 52: Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. "
-        "Producto conductor: Propuesta de Innovación (desde semana 1). "
-        "Mecanismos: talleres, parciales, simulaciones, etc. con rúbrica. "
-        "Esta ACA evalúa el **100% de su corte**: no se subdivide en varios EV."
+        f"**Libro de calificaciones del aula (CDigital, auditoría 2026-08-10):** "
+        f"{desglose_corte_texto(key)}. Producto conductor: Propuesta de Innovación (desde la "
+        "semana 1), que se entrega como **ACA Final** (única tarea calificada); quices y "
+        "parciales son **cuestionarios** del aula."
     )
     curso = "CREATIVIDAD Y PENSAMIENTO INNOVADOR — Escuela de Ingenierías"
     codigo = "EI004"
-    h = _header(curso, codigo, fuente, cdigital_url("creatividad"))
+    regla = REGLA_VENTANAS_DOCENTE
 
-    c1 = h + f"""## 1. Título / código
+    aca_final = (
+        _header(key, "aca_final", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
 
-**ACA 1 — Corte 1 · Problema–oportunidad y base creativa** · **30%** del curso
+**ACA Final — Propuesta de Innovación** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
 
-## 2. Propósito / competencia que evalúa
-
-Identificar habilidades de creatividad/inteligencia emocional y formular el **punto de partida** de la Propuesta de Innovación (Syllabus U1–U3).
-
-## 3. Consigna (paso a paso)
-
-1. Completa la **ficha problema–oportunidad** (usuario concreto, dolor, evidencia, tipo tentativo Oslo, valor esperado).
-2. Elabora un **mapa de utilidad / bloqueadores–ensanchadores** (Sesión 02).
-3. Aplica una técnica de ideación o Design Thinking (empatía → definición → ideas) y documenta 3 ideas.
-4. Elige 1 idea como semilla de tu Propuesta de Innovación.
-5. Sube el paquete del corte a CDigital (y cumple talleres/quices del corte).
-
-## 4. Producto entregable
-
-- Paquete Corte 1 en Google Docs (o PDF): ficha + mapa + síntesis de ideación (3–6 páginas orientativas).
-- Archivo: `CRE_ACA1_Apellido`.
-- La ficha de Sesión 01 (`Ficha_problema_oportunidad.docx` en la carpeta de sesión) puede reutilizarse como insumo.
-
-## 5. Criterios / checklist
-
-- [ ] Usuario y problema concretos (no genéricos)  
-- [ ] Evidencia o síntoma observable  
-- [ ] Tipo de innovación tentativo (Oslo)  
-- [ ] Ideación documentada  
-- [ ] Claridad y entrega a tiempo en CDigital  
-
-{_tools_block("Excalidraw / tldraw / Miro free", "Google Docs")}
-{_footer_sesiones("Tras **Sesiones 02–03** (Design Thinking y técnicas de ideación · gestión de la innovación / Manual de Oslo). La **Sesión 01** es de encuadre: las unidades U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) van como lectura autónoma.", regla=REGLA_VENTANAS_DOCENTE)}
-"""
-
-    c2 = h + f"""## 1. Título / código
-
-**ACA 2 — Corte 2 · Tipología, gestión y validación de la propuesta** · **30%** del curso
+Es la **única entrega documental calificada** del curso: la Propuesta de Innovación consolidada, del problema–oportunidad hasta la vigilancia tecnológica. Los quices y parciales son cuestionarios; aquí se califica el **documento**.
 
 ## 2. Propósito / competencia que evalúa
 
-Clasificar y gestionar la innovación (Manual de Oslo/OCDE), tipificar la propuesta y **validarla** con herramientas de análisis de negocios (Syllabus U4–U6).
+Convertir una oportunidad detectada en una **propuesta de innovación** tipificada, validada y situada en su ecosistema (Syllabus U1–U8).
 
-## 3. Consigna (paso a paso)
+{_ruta_cortes_block(key, [
+    (1, "problema–oportunidad y base creativa",
+     "Completa la ficha problema–oportunidad (usuario concreto, dolor, evidencia, tipo tentativo Oslo, valor esperado), el mapa de utilidad / bloqueadores–ensanchadores y una ideación con al menos 3 ideas; elige la semilla de tu propuesta."),
+    (2, "tipología, gestión y validación",
+     "Tipifica la innovación (producto, proceso, organización, marketing, social) con cuadro comparativo y valida con FODA + Canvas (BMC) + definición de MVP; prepara un pitch breve."),
+    (3, "vigilancia tecnológica y cierre",
+     "Haz una vigilancia tecnológica breve (tendencias, patentes/documentos, referentes), identifica entidades de apoyo pertinentes e integra todo el recorrido en un solo documento."),
+], 3)}
 
-1. Actualiza tu propuesta con tipo(s) de innovación (producto, proceso, organización, marketing, social).
-2. Elabora un **cuadro comparativo** de tipos y justifica el tuyo.
-3. Aplica al menos: **FODA** + **Canvas (BMC)** + definición de **MVP**.
-4. Prepara una **sustentación breve** (oral o video corto / slides 1 página) de la validación.
-5. Entrega el paquete del corte en CDigital.
+## 4. Consigna (qué debe contener la entrega)
 
-## 4. Producto entregable
+1. **Problema–oportunidad**: usuario concreto, dolor y evidencia observable.
+2. **Propuesta de valor** y **tipo(s) de innovación** justificados con el Manual de Oslo / OCDE.
+3. **Validación**: FODA + Canvas (BMC) + **MVP** definido y verificable.
+4. **Vigilancia tecnológica**: tendencias, referentes o patentes, con fuentes citadas.
+5. **Ecosistema**: entidades de apoyo (locales, nacionales o internacionales) pertinentes.
+6. **Siguiente paso** realista de la propuesta.
+7. **Pitch de 1 página** (Docs / Slides / Canva free) como anexo o sección.
+8. **Referencias** de todo lo que citaste.
 
-- Documento/slides: propuesta actualizada + FODA + Canvas + MVP (orientativo 6–10 páginas o equivalente visual + 1 pág. pitch).
-- Herramientas sugeridas: Canvanizer / Excalidraw / Google Docs o Slides.
-- Archivo: `CRE_ACA2_Apellido`.
+## 5. Producto entregable
 
-## 5. Criterios / checklist
+- **Propuesta de Innovación consolidada** (documento) + pitch de 1 página.
+- Extensión orientativa: **8–12 páginas** de documento.
+- Nombre sugerido: `CRE_ACAFinal_Apellido`.
+- La ficha de la Sesión 01 (`Ficha_problema_oportunidad.docx`, en la carpeta de esa sesión) es insumo válido.
 
-- [ ] Tipo de innovación bien justificado  
-- [ ] FODA y Canvas coherentes con el problema  
-- [ ] MVP claro y verificable  
-- [ ] Sustentación comprensible  
-- [ ] Mejora respecto al Corte 1  
+## 6. Criterios de evaluación / checklist
 
-{_tools_block("Canvanizer (BMC)", "Excalidraw", "Google Docs / Slides")}
-{_footer_sesiones("Tras **Sesiones 04–05** (tipos de innovación · análisis de negocios y validación de la propuesta).", regla=REGLA_VENTANAS_DOCENTE)}
-"""
+- [ ] Usuario y problema concretos (no genéricos)
+- [ ] Tipo de innovación bien justificado (Oslo)
+- [ ] FODA y Canvas coherentes con el problema
+- [ ] MVP claro y verificable
+- [ ] Vigilancia tecnológica con fuentes
+- [ ] Entidades de apoyo identificadas
+- [ ] Pitch claro · presentación cuidada · integridad académica
 
-    c3 = h + f"""## 1. Título / código
+{_tools_block(
+    "Excalidraw / tldraw / Miro free",
+    "Canvanizer (BMC)",
+    "Google Scholar / Google Patents (web)",
+    "Canva free (opcional, para el pitch)",
+    n=7,
+)}
+{_nota_curso_block(key, "aca_final", 8)}
+{_relacion_block(
+    "Se construye a lo largo de **Sesiones 02–06** (Design Thinking e ideación · Oslo · tipos de "
+    "innovación · FODA/Canvas/MVP · vigilancia tecnológica). La **Sesión 06** es la última antes "
+    "del cierre; la **Sesión 07** (innovación local–internacional · entidades de apoyo) cierra el "
+    "curso **después** de la recepción y sirve de refuerzo. La **Sesión 01** fue de encuadre.",
+    n=9, regla=regla,
+)}"""
+    )
 
-**ACA 3 — Corte 3 · Propuesta de Innovación final** · **40%** del curso
-
-## 2. Propósito / competencia que evalúa
-
-Consolidar la **Propuesta de Innovación** con vigilancia tecnológica y articulación a ecosistemas/entidades de apoyo (Syllabus U7–U8). Producto final del curso.
-
-## 3. Consigna (paso a paso)
-
-1. Realiza una **vigilancia tecnológica** breve (tendencias, patentes/docs, competidores o referentes).
-2. Identifica **entidades de apoyo** (locales/nacionales/internacionales) pertinentes a tu propuesta.
-3. Integra: problema → propuesta de valor → tipo de innovación → validación → vigilancia → siguiente paso.
-4. Entrega el **paquete final** + pitch de 1 página (Docs/Slides/Canva free).
-5. Cumple actividades residuales del corte en CDigital.
-
-## 4. Producto entregable
-
-- **Propuesta de Innovación consolidada** (documento) + pitch 1 página.
-- Extensión orientativa del documento: **8–12 páginas**.
-- Archivo: `CRE_ACA3_Apellido`.
-
-## 5. Criterios / checklist
-
-- [ ] Propuesta completa y coherente  
-- [ ] Vigilancia tecnológica con fuentes  
-- [ ] Ecosistema/entidades de apoyo identificados  
-- [ ] Pitch claro  
-- [ ] Integridad y calidad de presentación  
-
-{_tools_block("Google Scholar / Patents (web)", "Canva free (opcional)", "Google Docs / Slides")}
-{_footer_sesiones("Tras la **Sesión 06** (vigilancia tecnológica), última sesión antes del cierre. La **Sesión 07** (innovación local–internacional · entidades de apoyo) es el cierre del curso y va **después** de la recepción.", regla=REGLA_VENTANAS_DOCENTE)}
-"""
-
-    return [
-        {"code": "ACA 1", "title": "Corte 1 · Problema–oportunidad",
-         "filename": "ACA 1 - Corte 1 - Problema oportunidad y base creativa.docx",
-         "weight": "30%", "source": fuente, "md": c1},
-        {"code": "ACA 2", "title": "Corte 2 · Validación de la propuesta",
-         "filename": "ACA 2 - Corte 2 - Tipologia gestion y validacion.docx",
-         "weight": "30%", "source": fuente, "md": c2},
-        {"code": "ACA 3", "title": "Corte 3 · Propuesta de Innovación final",
-         "filename": "ACA 3 - Corte 3 - Propuesta de Innovacion final.docx",
-         "weight": "40%", "source": fuente, "md": c3},
+    prep = [
+        "Repasa el deck y tus apuntes de cada sesión (`Clases/Sesion NN - …/Presentacion.pptx`).",
+        "Ten a mano la **lectura autónoma de la Sesión 01** (Propuesta de Innovación · creatividad e inteligencia emocional).",
+        "Distingue **creatividad** de **innovación** y **pensamiento divergente** de **convergente**, con ejemplos propios.",
+        "Repasa los **tipos de innovación** del Manual de Oslo / OCDE y para qué sirve cada herramienta (Design Thinking, FODA, Canvas, MVP, vigilancia tecnológica).",
+        "Ten fresca **tu propia propuesta**: varios ítems se responden mejor pensando en tu caso.",
     ]
+    relaciones = {
+        "quiz1": "Cierra el día de la **Sesión 02** (creatividad/innovación en I+D · Design Thinking y técnicas de ideación).",
+        "parcial1": "Cierra el día de la **Sesión 03** (gestión de la innovación · Manual de Oslo / OCDE): es el parcial del corte 1.",
+        "quiz2": "Cierra el día de la **Sesión 04** (tipos de innovación).",
+        "parcial2": "Cierra el día de la **Sesión 05** (análisis de negocios · validación: FODA, Canvas, MVP): cierra el corte 2.",
+        "quiz3": "Cierra el día de la **Sesión 06** (vigilancia tecnológica): es el último cuestionario del curso.",
+    }
+
+    docs = [_doc(key, "aca_final", kind=KIND_ACA,
+                 title="Propuesta de Innovación", slug="Propuesta de Innovacion",
+                 md=aca_final, source=fuente)]
+    docs += _guias_pregrado(key, curso=curso, codigo=codigo, fuente=fuente,
+                            preparacion=prep, relaciones=relaciones)
+    docs += _instrumentos_pregrado(
+        key, curso=curso, codigo=codigo, fuente=fuente,
+        codigo_fuente="Syllabus SIAC EI004_VIR + libro de calificaciones",
+        relacion=(
+            "Van al final del periodo, después de la recepción de trabajos y antes del cierre de "
+            "notas. La **Sesión 07** es la última sesión del curso."
+        ),
+    )
+    return docs
 
 
-def acas_tg2() -> list[dict]:
+# ---------- TG2 54448 ----------
+def docs_tg2() -> list[dict]:
+    key = "tg2"
     fuente = (
-        "Manual del Docente TG2 (⚠️ sin Syllabus SIAC en carpeta). "
-        "Evaluación orientativa Art. 52: 30/30/40 — CONFIRMAR en CDigital. "
-        "Producto: avance consolidado del proyecto/artículo hacia TG3. "
-        "Plantilla APA CUN."
+        "Manual del Docente TG2 (⚠️ sin Syllabus SIAC en carpeta) · Art. 52: tres cortes "
+        f"30/30/40. **Libro de calificaciones del aula (CDigital, auditoría 2026-08-10):** "
+        f"{desglose_corte_texto(key)} — ya verificado en el aula, no orientativo. Producto: "
+        "avance consolidado del proyecto/artículo hacia TG3, que se entrega como **ACA Final** "
+        "(única tarea calificada); quices y parciales son **cuestionarios** del aula. Plantilla APA CUN."
     )
     curso = "TRABAJO DE GRADO 2 — Modelos de Innovación (Ing. Sistemas)"
     codigo = "94453"
-    h = _header(curso, codigo, fuente, cdigital_url("tg2"))
+    regla = REGLA_VENTANAS_DOCENTE
 
-    c1 = h + f"""## 1. Título / código
+    aca_final = (
+        _header(key, "aca_final", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
 
-**ACA 1 — Corte 1 · Delimitación y formulación** · **30%** (orientativo)
+**ACA Final — Avance consolidado hacia TG3** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
 
-> Confirmar peso exacto en CDigital / Syllabus cuando esté disponible.
-
-## 2. Propósito / competencia que evalúa
-
-Retomar el proyecto de semestres anteriores, delimitar/reformular tema y problema, y fijar pregunta, objetivos y título provisional + estructura del documento.
-
-## 3. Consigna (paso a paso)
-
-1. Diagnostica el estado actual de tu proyecto (qué tienes / qué falta).
-2. Delimita o reformula el **problema** alineado a Ingeniería de Sistemas.
-3. Formula **pregunta, objetivos y título provisional**.
-4. Arma la estructura del documento en plantilla APA CUN.
-5. Entrega el avance del Corte 1 en CDigital.
-
-## 4. Producto entregable
-
-- Avance en `{APA_REL}` (abrir en Google Docs).
-- Extensión orientativa: **6–10 páginas**.
-- Archivo: `TG2_ACA1_Apellido`.
-
-## 5. Criterios / checklist
-
-- [ ] Estado del proyecto explícito  
-- [ ] Problema y pregunta coherentes  
-- [ ] Objetivos alineados  
-- [ ] Estructura APA iniciada  
-- [ ] Integridad académica  
-
-{_tools_block()}
-{_footer_sesiones("Tras **Sesiones 02–04** (pregunta, objetivos y título provisional · estructura del documento / artículo de avance · antecedentes y referentes). La **Sesión 01** es de encuadre — allí se firma el acuerdo pedagógico — y la delimitación/reformulación del tema va como lectura autónoma.")}
-"""
-
-    c2 = h + f"""## 1. Título / código
-
-**ACA 2 — Corte 2 · Marco referencial** · **30%** (orientativo)
+Es la **única entrega documental calificada** del curso: el avance de tu trabajo de grado integrado y listo para continuar en **Trabajo de Grado 3**. Los quices y parciales son cuestionarios; aquí se califica el **documento**.
 
 ## 2. Propósito / competencia que evalúa
 
-Consolidar antecedentes y marcos (teórico, conceptual, contextual) del avance de grado.
+Retomar el proyecto de semestres anteriores, delimitarlo, sostenerlo con literatura y dejar **diseñada** la metodología, de modo que TG3 pueda ejecutar y sustentar.
 
-## 3. Consigna (paso a paso)
+{_ruta_cortes_block(key, [
+    (1, "delimitación y formulación",
+     "Diagnostica el estado del proyecto (qué tienes / qué falta), delimita o reformula el problema, formula pregunta, objetivos y título provisional, y arma la estructura del documento en plantilla APA CUN."),
+    (2, "marco referencial",
+     "Amplía antecedentes y referentes (Fase I) con bases CUN + Scholar y avanza marco teórico, conceptual y contextual, con referencias APA 7 al día."),
+    (3, "metodología e integración",
+     "Completa enfoque, tipo, alcance y diseño metodológico propuesto, define instrumentos y plan de análisis (propuestos), integra el documento y cierra con un apartado «listo para TG3»."),
+], 3)}
 
-1. Incorpora retroalimentación del Corte 1.
-2. Amplía **antecedentes / referentes** (Fase I) con bases CUN + Scholar.
-3. Avanza **marco teórico**, conceptual y contextual.
-4. Actualiza referencias APA 7.
-5. Entrega en CDigital.
+## 4. Consigna (qué debe contener la entrega)
 
-## 4. Producto entregable
+1. **Título provisional**, problema delimitado y **pregunta** de investigación.
+2. **Objetivos** general y específicos, alineados a la pregunta.
+3. **Antecedentes / referentes** pertinentes al campo de Ingeniería de Sistemas.
+4. **Marco teórico, conceptual y contextual** articulados a la pregunta.
+5. **Diseño metodológico propuesto**: enfoque, tipo, alcance, diseño.
+6. **Instrumentos y plan de análisis** propuestos (no aplicados en TG2).
+7. Apartado **«listo para TG3»**: qué queda por ejecutar y por sustentar.
+8. **Referencias APA 7** y trazabilidad de las correcciones recibidas.
 
-- Documento acumulativo (plantilla APA CUN).
-- Extensión orientativa: **10–18 páginas** acumuladas.
-- Archivo: `TG2_ACA2_Apellido`.
+## 5. Producto entregable
 
-## 5. Criterios / checklist
+- Avance consolidado en `{APA_REL}` (ábrelo en Google Docs).
+- Extensión orientativa: documento integrado del avance TG2 (típicamente **18–30 páginas**).
+- Nombre sugerido: `TG2_ACAFinal_Apellido`.
 
-- [ ] Correcciones previas  
-- [ ] Antecedentes pertinentes  
-- [ ] Marcos alineados a la pregunta  
-- [ ] Citas APA 7  
-- [ ] Coherencia global  
+## 6. Criterios de evaluación / checklist
 
-{_tools_block("ZoteroBib", "Biblioteca CUN / Scholar")}
-{_footer_sesiones("Tras **Sesiones 05–08** (marco teórico · marco conceptual y contextual · diseño metodológico propuesto · instrumentos y plan de análisis).")}
-"""
+- [ ] Estado del proyecto y delimitación explícitos
+- [ ] Problema, pregunta y objetivos coherentes
+- [ ] Antecedentes y marcos pertinentes y actualizados
+- [ ] Metodología propuesta coherente con la pregunta
+- [ ] Instrumentos y plan de análisis definidos (propuestos)
+- [ ] Documento integrado (no fragmentos pegados)
+- [ ] Preparación explícita para TG3 · APA 7 · integridad académica
 
-    c3 = h + f"""## 1. Título / código
+{_tools_block("ZoteroBib", "Biblioteca CUN / Scholar", n=7)}
+{_nota_curso_block(key, "aca_final", 8)}
+{_relacion_block(
+    "Se construye a lo largo de **Sesiones 02–11**: formulación (02–04), marcos (05–06), "
+    "metodología e instrumentos (07–08), integración y correcciones (09), socialización (10) y "
+    "cierre/preparación para TG3 (11). La **Sesión 11** (09/11) es la última sincrónica antes de "
+    "la recepción. La **Sesión 01** fue de encuadre y allí se firmó el acuerdo pedagógico.",
+    n=9, regla=regla,
+)}"""
+    )
 
-**ACA 3 — Corte 3 · Metodología e integración del avance** · **40%** (orientativo)
-
-## 2. Propósito / competencia que evalúa
-
-Avanzar el diseño metodológico (propuesto), instrumentos/plan de análisis e integrar el documento listo para continuidad en **Trabajo de Grado 3**.
-
-## 3. Consigna (paso a paso)
-
-1. Completa enfoque, tipo, alcance y diseño metodológico **propuesto**.
-2. Define instrumentos y plan de análisis (propuestos).
-3. Integra el avance completo y socializa (según indique el Docente).
-4. Cierra con un apartado “listo para TG3” (qué falta ejecutar/sustentar).
-5. Entrega final del periodo en CDigital.
-
-## 4. Producto entregable
-
-- Avance consolidado (plantilla APA CUN).
-- Extensión orientativa: documento integrado del avance TG2.
-- Archivo: `TG2_ACA3_Apellido`.
-
-## 5. Criterios / checklist
-
-- [ ] Metodología coherente  
-- [ ] Instrumentos/plan propuestos  
-- [ ] Documento integrado  
-- [ ] Preparación explícita para TG3  
-- [ ] Integridad académica  
-
-{_tools_block()}
-{_footer_sesiones("Tras **Sesiones 09–11** (integración del avance y correcciones · socialización de avances · cierre del avance y preparación para TG3).")}
-"""
-
-    return [
-        {"code": "ACA 1", "title": "Corte 1 · Delimitación y formulación",
-         "filename": "ACA 1 - Corte 1 - Delimitacion y formulacion.docx",
-         "weight": "30%*", "source": fuente, "md": c1},
-        {"code": "ACA 2", "title": "Corte 2 · Marco referencial",
-         "filename": "ACA 2 - Corte 2 - Marco referencial.docx",
-         "weight": "30%*", "source": fuente, "md": c2},
-        {"code": "ACA 3", "title": "Corte 3 · Metodología e integración",
-         "filename": "ACA 3 - Corte 3 - Metodologia e integracion.docx",
-         "weight": "40%*", "source": fuente, "md": c3},
+    prep = [
+        "Repasa el deck y tus apuntes de cada sesión (`Clases/Sesion NN - …/Presentacion.pptx`).",
+        "Ten a mano la **lectura autónoma de la Sesión 01** (delimitación / reformulación del tema).",
+        "Ten claras las **partes del documento de grado** y qué va en cada una (problema, marcos, metodología, instrumentos, plan de análisis).",
+        "Repasa **APA 7**: cita en texto, referencia final y qué constituye plagio.",
+        "Piensa las respuestas **sobre tu propio proyecto**: varios ítems se responden mejor con tu caso a la vista.",
     ]
+    relaciones = {
+        "quiz1": "Cierra el día de la **Sesión 03** (estructura del documento / artículo de avance). Recuerda que el 17/08 fue clase autónoma por festivo.",
+        "parcial1": "Cierra el día de la **Sesión 05** (marco teórico — avance): es el parcial del corte 1 y acumula desde la Sesión 02.",
+        "quiz2": "Cierra el día de la **Sesión 07** (diseño metodológico propuesto).",
+        "parcial2": "Cierra el día de la **Sesión 08** (instrumentos y plan de análisis propuestos): cierra el corte 2.",
+        "quiz3": "Cierra el día de la **Sesión 10** (socialización de avances): es el último cuestionario del curso.",
+    }
+
+    docs = [_doc(key, "aca_final", kind=KIND_ACA,
+                 title="Avance consolidado hacia TG3", slug="Avance consolidado hacia TG3",
+                 md=aca_final, source=fuente)]
+    docs += _guias_pregrado(key, curso=curso, codigo=codigo, fuente=fuente,
+                            preparacion=prep, relaciones=relaciones)
+    docs += _instrumentos_pregrado(
+        key, curso=curso, codigo=codigo, fuente=fuente,
+        codigo_fuente="Manual del Docente TG2 + libro de calificaciones",
+        relacion=(
+            "Van en la fase de cierre, alrededor de la **Sesión 11** y de la recepción de "
+            "trabajos, antes del cierre de notas."
+        ),
+    )
+    return docs
 
 
-def acas_tg3() -> list[dict]:
+# ---------- TG3 54450 / 54466 / 54467 ----------
+def docs_tg3() -> list[dict]:
+    key = "tg3"
     fuente = (
-        "Syllabus SIAC 94532 · Corte único 100%: EV05 50% (proceso académico) + "
-        "EXAM 50% (sustentación ante pares/jurados). "
-        "Artículo ≥ 50 referencias; extensión no inferior a 4.000 palabras. "
+        "Syllabus SIAC 94532 (declara «corte único 100%: EV05 50% + EXAM 50%») frente al "
+        "**libro de calificaciones del aula (CDigital, auditoría 2026-08-10), que es el que "
+        f"califica:** {desglose_corte_texto(key)}. El artículo se entrega como **ACA Final** "
+        "(tarea); la sustentación ante jurados sigue siendo requisito del proceso pero **no "
+        "tiene ítem propio** en el aula. Artículo ≥ 50 referencias y ≥ 4.000 palabras. "
         "Cierre: póster, antiplagio, repositorio."
     )
     curso = "TRABAJO DE GRADO 3 — Modelos de Innovación (Ing. Sistemas)"
     codigo = "94532"
-    h = _header(curso, codigo, fuente, cdigital_url("tg3"))
+    regla = REGLA_VENTANAS_DOCENTE
 
-    ev05 = h + f"""## 1. Título / código
+    aca_final = (
+        _header(key, "aca_final", curso, codigo, fuente)
+        + f"""## 1. Qué es y cuánto pesa
 
-**ACA 1 — EV05 · Proceso académico (artículo)** · **50%** del curso
+**ACA Final — Artículo de investigación** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
+
+Es la **única entrega documental calificada** del curso. Ojo con el Syllabus: dice «corte único 100% (EV05 + EXAM)», pero **el aula califica en tres cortes** (ver punto 9) y **EV05/EXAM no existen** como ítems. La **sustentación ante jurados** sigue siendo requisito del proceso de grado (punto 7) aunque no tenga ítem propio en el libro de calificaciones.
+
+**Tu fecha depende del grupo:** el 54450 recibe una semana antes que el 54466 y el 54467 (ver arriba).
 
 ## 2. Propósito / competencia que evalúa
 
-Desarrollar y consolidar el **artículo resultado de investigación** (o investigación-creación) con calidad argumentativa, bajo acompañamiento del Docente (Syllabus U1–U12 / proceso).
+Desarrollar y consolidar el **artículo resultado de investigación** (o investigación-creación) con calidad argumentativa, bajo acompañamiento del Docente (Syllabus U1–U14).
 
-## 3. Consigna (paso a paso)
+{_ruta_cortes_block(key, [
+    (1, "formulación y estructura del artículo",
+     "Retoma o define el proyecto, formula pregunta, objetivos y título, y redacta introducción y estructura del artículo en plantilla APA CUN (contexto, problema, pregunta, objetivos)."),
+    (2, "referentes, metodología y análisis",
+     "Desarrolla las fases de referentes, diseña el instrumento o el prototipado/obra-creación, ejecuta tu ruta metodológica y trabaja el análisis de datos y la experiencia creativa."),
+    (3, "cierre del artículo y alistamiento",
+     "Cierra marco teórico, resultados y discusión, resumen, palabras clave UNESCO, conclusiones y referencias; alista póster, evidencias/anexos y la verificación antiplagio institucional."),
+], 3)}
 
-1. Retoma/define el proyecto y formula pregunta, objetivos y título.
-2. Redacta introducción y estructura del artículo (plantilla APA CUN).
-3. Desarrolla referentes (fases), metodología/instrumento y análisis según tu ruta.
-4. Cierra marco teórico, resultados/discusión, resumen, palabras clave UNESCO, conclusiones y referencias.
-5. Alista póster, evidencias/anexos y **verificación antiplagio** institucional antes de la sustentación.
-6. Entrega los avances de proceso en las actividades EV05 de CDigital (según hitos del Docente).
+## 4. Consigna (qué debe contener la entrega)
 
-## 4. Producto entregable
+1. **Título**, resumen y **palabras clave UNESCO**.
+2. **Introducción**: contexto, problema, pregunta y objetivos.
+3. **Marco teórico / referentes** (fases completas) articulados a la pregunta.
+4. **Metodología** e instrumento (o prototipado / obra-creación) efectivamente trabajados.
+5. **Resultados y discusión**, con relación explícita a los referentes.
+6. **Conclusiones** y **referencias**: mínimo **50**, en APA 7.
+7. **Anexos/evidencias** y **póster** según indique el Docente.
+8. **Verificación antiplagio** institucional realizada antes de la sustentación.
+
+## 5. Producto entregable
 
 - Artículo en plantilla APA CUN (`{APA_REL}`).
-- Requisitos syllabus: **≥ 50 referencias** · **≥ 4.000 palabras**.
+- Requisitos del Syllabus: **≥ 50 referencias** · **≥ 4.000 palabras**.
 - Póster + evidencias para anexos (formato que indique el Docente).
-- Archivo sugerido: `TG3_EV05_Articulo_Apellido`.
+- Nombre sugerido: `TG3_ACAFinal_Articulo_Apellido`.
 
-## 5. Criterios / checklist
+## 6. Criterios de evaluación / checklist
 
-- [ ] Coherencia problema–pregunta–objetivos–método–resultados  
-- [ ] Revisión bibliográfica rigurosa (≥ 50 refs)  
-- [ ] Extensión ≥ 4.000 palabras  
-- [ ] APA 7 e integridad (antiplagio)  
-- [ ] Póster/evidencias listos  
-- [ ] Calidad argumentativa (evaluación docente + preparación a jurados)  
+- [ ] Coherencia problema–pregunta–objetivos–método–resultados
+- [ ] Revisión bibliográfica rigurosa (≥ 50 referencias)
+- [ ] Extensión ≥ 4.000 palabras
+- [ ] APA 7 e integridad académica (antiplagio verificado)
+- [ ] Resultados y discusión sostenidos en evidencia
+- [ ] Póster y evidencias listos
+
+## 7. Sustentación ante jurados (requisito del proceso, sin ítem propio en el aula)
+
+La sustentación **no** aparece como ítem del libro de calificaciones, pero **sí** es parte del proceso de grado: la evalúan los pares/jurados que asigna la Dirección del Programa (Syllabus U13) y su preparación se refleja en la calidad de este artículo.
+
+1. Confirma **fecha, modalidad y requisitos** con el Docente / el programa.
+2. Prepara la exposición: póster + síntesis del artículo (problema, método, hallazgos, aporte).
+3. Ensaya tiempos y respuestas a preguntas de jurados.
+4. Realiza la **sustentación**.
+5. Carga los **entregables al repositorio institucional** según el checklist oficial (Syllabus U14).
+
+- [ ] Dominio del contenido del artículo
+- [ ] Claridad y argumentación en la defensa
+- [ ] Material visual (póster) adecuado
+- [ ] Entregables de repositorio completos
 
 {_tools_block(
     "ZoteroBib",
-    "Google Docs",
-    "Herramienta antiplagio institucional (ruta oficial del semestre en CDigital — no inventar URL)",
-)}
-{_footer_sesiones("Proceso a lo largo de **Sesiones 02–11** (del artículo hasta el póster y la verificación de similitud; la **Sesión 01** es de encuadre y U1–U2 van como lectura autónoma). Los hitos parciales los define el Docente dentro de EV05.")}
-"""
-
-    exam = h + f"""## 1. Título / código
-
-**ACA 2 — EXAM · Sustentación ante jurados** · **50%** del curso
-
-## 2. Propósito / competencia que evalúa
-
-Sustentar oralmente el trabajo de grado ante pares/jurados asignados por la Dirección del Programa (Syllabus U13) y completar entregables de repositorio (U14).
-
-## 3. Consigna (paso a paso)
-
-1. Confirma fecha, modalidad y requisitos de sustentación con el Docente / programa.
-2. Prepara exposición (póster + síntesis del artículo: problema, método, hallazgos, aporte).
-3. Ensaya tiempos y respuestas a preguntas de jurados.
-4. Realiza la **sustentación**.
-5. Carga los **entregables al repositorio institucional** según checklist oficial (U14).
-
-## 4. Producto entregable
-
-- Sustentación oral (evidencia según protocolo del programa).
-- Paquete final para repositorio (artículo + anexos que exija la institución).
-- Archivo de apoyo sugerido: `TG3_EXAM_Sustentacion_Apellido` (slides/póster).
-
-## 5. Criterios / checklist
-
-- [ ] Dominio del contenido del artículo  
-- [ ] Claridad y argumentación en la defensa  
-- [ ] Respuesta a jurados  
-- [ ] Material visual (póster) adecuado  
-- [ ] Entregables de repositorio completos  
-
-{_tools_block(
     "Google Slides / Canva free (póster)",
+    "Herramienta antiplagio institucional (ruta oficial del semestre en CDigital — no inventar URL)",
     "CDigital / repositorio institucional",
+    n=8,
 )}
-{_footer_sesiones("**Sesión 12** = sustentación ante jurados · **Sesión 13** = entregables para repositorio institucional · **Sesiones 14–15** son buffer de calendario, solo si el calendario del grupo las contempla (el grupo 54450 no tiene la Sesión 15).")}
-"""
+{_nota_curso_block(key, "aca_final", 9)}
+{_relacion_block(
+    "Proceso a lo largo de **Sesiones 02–11** (formulación → referentes → instrumento → análisis "
+    "→ cierre del artículo → póster y antiplagio). **Sesión 12** = sustentación ante jurados · "
+    "**Sesión 13** = entregables para repositorio · **Sesiones 14–15** son buffer de calendario "
+    "(el grupo 54450 no tiene la Sesión 15). La **Sesión 01** fue de encuadre y allí se firmó el "
+    "acuerdo pedagógico.",
+    n=10, regla=regla,
+)}"""
+    )
 
-    return [
-        {"code": "ACA 1 (EV05)", "title": "Proceso académico (artículo)",
-         "filename": "ACA 1 - EV05 Proceso academico (articulo).docx",
-         "weight": "50%", "source": fuente, "md": ev05},
-        {"code": "ACA 2 (EXAM)", "title": "Sustentación ante jurados",
-         "filename": "ACA 2 - EXAM Sustentacion ante jurados.docx",
-         "weight": "50%", "source": fuente, "md": exam},
+    prep = [
+        "Repasa el deck y tus apuntes de cada sesión (`Clases/Sesion NN - …/Presentacion.pptx`).",
+        "Ten a mano la **lectura autónoma de la Sesión 01** (casos de éxito · retomar el proyecto · contexto y planteamiento).",
+        "Ten claras las **partes del artículo científico** (resumen, introducción, referentes, metodología, resultados, discusión, conclusiones) y qué va en cada una.",
+        "Repasa **APA 7** (cita, referencia, parafraseo) y qué cuenta como plagio.",
+        "Piensa las respuestas **sobre tu propio artículo**: varios ítems se responden mejor con tu caso a la vista.",
     ]
+    relaciones = {
+        "quiz1": "Cierra el día de la **Sesión 03** (estructura del artículo · taller de introducción).",
+        "parcial1": "Cierra el día de la **Sesión 06** (comunidades de práctica y co-creación): es el parcial del corte 1 y acumula desde la Sesión 02.",
+        "quiz2": "Cierra el día de la **Sesión 08** (Fase III de referentes · cierre del marco teórico).",
+        "parcial2": "Cierra el día de la **Sesión 10** (resumen, palabras clave UNESCO, conclusiones y referencias): cierra el corte 2.",
+        "quiz3": "Cierra el día de la **Sesión 12** (sustentación ante jurados): es el último cuestionario del curso.",
+    }
+
+    docs = [_doc(key, "aca_final", kind=KIND_ACA,
+                 title="Artículo de investigación", slug="Articulo de investigacion",
+                 md=aca_final, source=fuente)]
+    docs += _guias_pregrado(key, curso=curso, codigo=codigo, fuente=fuente,
+                            preparacion=prep, relaciones=relaciones)
+    docs += _instrumentos_pregrado(
+        key, curso=curso, codigo=codigo, fuente=fuente,
+        codigo_fuente="Syllabus SIAC 94532 + libro de calificaciones",
+        relacion=(
+            "Van en la fase de cierre, tras la sustentación (**Sesión 12**) y los entregables de "
+            "repositorio (**Sesión 13**). **Las fechas dependen de tu grupo:** el 54450 cierra "
+            "una semana antes que el 54466 y el 54467."
+        ),
+    )
+    return docs
 
 
-ACAS_BY_COURSE = {
-    "proyecto1": acas_proyecto1,
-    "investigacion": acas_investigacion,
-    "creatividad": acas_creatividad,
-    "tg2": acas_tg2,
-    "tg3": acas_tg3,
+DOCS_BY_COURSE = {
+    "proyecto1": docs_proyecto1,
+    "investigacion": docs_investigacion,
+    "creatividad": docs_creatividad,
+    "tg2": docs_tg2,
+    "tg3": docs_tg3,
 }
+# Alias histórico (algunos builds lo importaban por nombre).
+ACAS_BY_COURSE = DOCS_BY_COURSE
 
 
-def acas_for(key: str) -> list[dict]:
-    """Catálogo del curso con ``kind`` normalizado.
-
-    ``kind="aca"`` → enunciado de entregable evaluado (por defecto).
-    ``kind="instrumento"`` → instructivo de instrumento individual de cierre
-    (autoevaluación / coevaluación de Proyecto I): NO son ACAs.
-    """
-    items = ACAS_BY_COURSE[key]()
+# ---------------------------------------------------------------------------
+# API pública
+# ---------------------------------------------------------------------------
+def documentos_for(key: str) -> list[dict]:
+    """Catálogo completo del curso, en orden cronológico de cierre del ítem."""
+    items = DOCS_BY_COURSE[key]()
     for a in items:
-        a.setdefault("kind", "aca")
-    return items
+        a.setdefault("kind", KIND_ACA)
+    return sorted(items, key=lambda a: (_cierre(key, a["item"]), a["corte"], a["code"]))
+
+
+def acas_for(key: str, *, incluir_guias: bool = False) -> list[dict]:
+    """Catálogo para consumidores que hablan de «ACAs».
+
+    Por defecto **excluye las guías** de quices y parciales: así la slide «LAS ACAs»
+    de la Sesión 01 sigue listando solo las tareas documentales (``kind="aca"``) y
+    rotulando aparte los instrumentos de cierre (``kind="instrumento"``), sin
+    llamar «ACA» a un cuestionario. Con ``incluir_guias=True`` devuelve todo.
+    """
+    items = documentos_for(key)
+    if incluir_guias:
+        return items
+    return [a for a in items if a["kind"] != KIND_GUIA]
 
 
 def catalog_for_leeme(key: str) -> list[dict]:
-    """Filas para el LEEME de estudiantes.
+    """Filas para el LEEME de estudiantes — **todos** los documentos del curso.
 
-    Cada ítem: ``{code, title, rel, fecha, weight, kind}``. ``kind`` permite al
-    consumidor separar las ACAs de los instrumentos individuales de cierre
-    (auto/coevaluación de Proyecto I), que **no** deben listarse como una ACA más.
+    Cada ítem: ``{code, title, rel, fecha, weight, kind, tipo, corte, item}``.
+    ``kind`` separa las tres familias (``aca`` / ``guia`` / ``instrumento``) y
+    ``fecha`` es el cierre del ítem REAL del aula (en TG3, las fechas de los dos
+    calendarios de grupo separadas por « / »).
     """
-    from fechas_entrega_aca import entrega_por_id, entregas_curso, fmt_dmy
-
-    items = acas_for(key)
     out = []
-    for a in items:
-        aca_id = ACA_ID_BY_CODE[key][a["code"]]
-        data = entregas_curso(key)
-        if isinstance(data, dict):
-            dates = sorted({
-                e.entrega for items_g in data.values() for e in items_g if e.id == aca_id
-            })
-            fecha_txt = " / ".join(fmt_dmy(d) for d in dates)
-        else:
-            fecha_txt = fmt_dmy(entrega_por_id(key, aca_id).entrega)
+    for a in documentos_for(key):
         out.append({
             "code": a["code"],
             "title": a["title"],
             "rel": f"{ACAS_REL}/{a['filename']}",
-            "fecha": fecha_txt,
-            "weight": a.get("weight") or "—",
+            "fecha": _cierres_texto(key, a["item"]),
+            "weight": a["weight"],
             "kind": a["kind"],
+            "tipo": a["tipo"],
+            "corte": a["corte"],
+            "item": a["item"],
         })
     return out
 
 
-def _inject_fecha(md: str, course_key: str, code: str, kind: str = "aca") -> str:
-    aca_id = ACA_ID_BY_CODE[course_key][code]
-    bloque = _fecha_block(course_key, aca_id, kind=kind)
+def _inject_fecha(md: str, course_key: str, item_id: str) -> str:
+    """Inserta el bloque de fecha justo después del encabezado (primer `---`)."""
+    bloque = _fecha_block(course_key, item_id)
     if "\n---\n" in md:
         pre, post = md.split("\n---\n", 1)
         return pre + "\n---\n\n" + bloque + post.lstrip("\n")
     return bloque + md
 
 
+_SUBTITULO = {
+    KIND_ACA: "Enunciado de entrega (tarea del aula)",
+    KIND_GUIA: "Guía de cuestionario del aula",
+    KIND_INSTRUMENTO: "Instrumento individual de cierre (no es una ACA)",
+}
+
+
+def _purge_obsoletos(out_dir: Path, key: str, escritos: set[str]) -> list[str]:
+    """Borra los .docx que este build gobierna y que ya no están en el catálogo.
+
+    Dos vías, complementarias:
+      · `LEGACY_FILENAMES` — renombrados conocidos (documenta el cambio).
+      · barrido por prefijo — cualquier «ACA … / Quiz … / Parcial … / Auto… / Coev…»
+        que sobre, p. ej. si cambia el peso que va en el nombre del archivo.
+    Nunca toca otros tipos de archivo (`desktop.ini` de Drive, PDFs del Docente).
+    """
+    borrados: list[str] = []
+    for name in LEGACY_FILENAMES.get(key, ()):
+        old = out_dir / name
+        if old.is_file() and name not in escritos:
+            old.unlink()
+            borrados.append(name)
+            print("RM obsoleto", old)
+    for p in sorted(out_dir.glob("*.docx")):
+        if p.name in escritos or p.name in borrados:
+            continue
+        if p.name.startswith(_PREFIJOS_GENERADOS):
+            p.unlink()
+            borrados.append(p.name)
+            print("RM obsoleto", p)
+    return borrados
+
+
 def build_course(key: str) -> list[str]:
-    if key not in ACAS_BY_COURSE:
+    if key not in DOCS_BY_COURSE:
         raise KeyError(key)
     c = COURSES[key]
     cc = carga_curso(key)
     out_dir = Path(c["folder"]) / "Clases" / "Recursos" / "ACAs"
     out_dir.mkdir(parents=True, exist_ok=True)
-    written = []
-    for a in acas_for(key):
+    written: list[str] = []
+    for a in documentos_for(key):
         path = out_dir / a["filename"]
-        if a["kind"] == "instrumento":
-            subtitle = f"Instrumento individual de cierre · {cc['titulo_corto']}"
-            footer = (
-                f"CUN · {cc['titulo_corto']} · Instrumento individual de cierre "
-                "(no es una ACA) · Vigilada Mineducación"
-            )
-        else:
-            subtitle = f"Enunciado ACA · {cc['titulo_corto']}"
-            footer = f"CUN · {cc['titulo_corto']} · Enunciado ACA · Vigilada Mineducación"
-        md = _inject_fecha(a["md"], key, a["code"], a["kind"])
+        etiqueta = _SUBTITULO[a["kind"]]
+        subtitle = f"{etiqueta} · {cc['titulo_corto']}"
+        footer = f"CUN · {cc['titulo_corto']} · {etiqueta} · Vigilada Mineducación"
+        md = _inject_fecha(a["md"], key, a["item"])
         write_md_as_docx(md, str(path), subtitle=subtitle, footer=footer)
         written.append(str(path))
-        print("OK", "INSTRUMENTO" if a["kind"] == "instrumento" else "ACA", key, a["filename"])
+        print("OK", a["kind"].upper(), key, a["filename"])
     for p in out_dir.glob("*.md"):
         p.unlink()
         print("RM", p)
-    # Nombres viejos (p. ej. "ACA Autoevaluacion.docx"): se borran para no dejar
-    # duplicados que sigan llamando ACA a lo que no lo es.
-    for name in LEGACY_FILENAMES.get(key, ()):
-        old = out_dir / name
-        if old.is_file():
-            old.unlink()
-            print("RM obsoleto", old)
+    _purge_obsoletos(out_dir, key, {Path(p).name for p in written})
     return written
 
 
 def main(argv: list[str] | None = None) -> None:
     argv = list(argv or sys.argv[1:])
-    keys = argv if argv else list(ACAS_BY_COURSE.keys())
+    keys = argv if argv else list(DOCS_BY_COURSE.keys())
+    resultado: dict[str, list[str]] = {}
     for key in keys:
-        build_course(key)
+        resultado[key] = build_course(key)
+    print()
+    print("=== Clases/Recursos/ACAs/ por curso ===")
+    for key, paths in resultado.items():
+        docs = {d["filename"]: d for d in documentos_for(key)}
+        print(f"\n{key} · {carga_curso(key)['titulo_corto']}")
+        for p in paths:
+            name = Path(p).name
+            d = docs[name]
+            print(
+                f"  [{d['kind']:11}] {name}"
+                f"   → {d['code']} ({d['tipo']}, {d['weight']}, corte {d['corte']}) "
+                f"cierra {_cierres_texto(key, d['item'])}"
+            )
     print(
-        "Listo: enunciados ACA en Clases/Recursos/ACAs/ (los cursos solicitados). "
-        "Proyecto I incluye además los instructivos de autoevaluación y coevaluación "
-        "(instrumentos individuales de cierre, NO son ACAs)."
+        "\nListo: un documento por ítem evaluable del aula. Las guías de quices y parciales "
+        "no inventan intentos ni tiempo límite: los confirma el Docente en CDigital."
     )
 
 

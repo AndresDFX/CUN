@@ -34,26 +34,60 @@ Prerrequisito: Opción de grado II.
 | U13–U14 | **S12–S13** | Sustentación ante jurados · repositorio institucional |
 | — | S14–S15 | Buffer de calendario (el grupo 54450 no tiene la S15) |
 
-## 3. Evaluación
-**Corte único = 100%** · EV05 50% (proceso) + EXAM 50% (sustentación ante pares/jurados).
-**Enunciados estudiantes:** `Clases/Recursos/ACAs/` (ACA 1 = EV05 · ACA 2 = EXAM).
+## 3. Evaluación — estructura REAL del aula (CDigital)
+
+**Fuente:** libro de calificaciones del aula en CDigital (auditoría 2026-08-10), cargado en `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — regenerar con `python config/cursos/sync_manuales_fechas.py tg3`.
+
+Régimen: **Art. 52 · tres cortes** — **Corte 1 = 30%** · **Corte 2 = 30%** · **Corte 3 = 40%**. Configúralo así en CDigital: estos son los ítems que **ya existen** en el libro de calificaciones, con este tipo de actividad y este peso.
+
+| Corte | Ítem en el aula | Tipo de actividad | Peso |
+| :---: | :--- | :--- | ---: |
+| **1** (30%) | **Quiz 1** | Cuestionario | 6% |
+|  | **Parcial 1** | Cuestionario | 24% |
+| **2** (30%) | **Quiz 2** | Cuestionario | 9% |
+|  | **Parcial 2** | Cuestionario | 21% |
+| **3** (40%) | **ACA Final** | Tarea | 32% |
+|  | **Quiz 3** | Cuestionario | 4% |
+|  | **Autoevaluación** | Cuestionario | 2% |
+|  | **Coevaluación** | Foro | 2% |
+
+### Qué desmiente esto del material anterior
+
+- **No hay tres ACAs.** El aula tiene **una sola «ACA Final»** (tarea) en el tercer corte. Los antiguos enunciados ACA 1 / ACA 2 / ACA 3 no correspondían a tres ítems del libro de calificaciones; ya se rehicieron como **un documento por ítem real** (2026-08-10).
+- **Queda anulada la regla «cada ACA evalúa el 100% de su corte»** (decisión del 2026-08-10, derogada el mismo día por la auditoría): el desglose real existe y está en la tabla de arriba.
+- **Autoevaluación y coevaluación SÍ hacen parte de la nota de este curso** — no son exclusivas de Proyecto I. La **coevaluación es un FORO** (se participa, no se entrega documento) y la **autoevaluación un cuestionario**.
+- **Los quices y parciales existen y pesan.** El **Parcial 1 vale 24%** por sí solo. Ya tienen guía para el estudiante en `Clases/Recursos/ACAs/` (`Quiz N (…) - guía del cuestionario.docx` · `Parcial N (…) - guía del cuestionario.docx`), pero en el aula **existen solo como ítem del libro de calificaciones**: falta **crear la actividad** (cuestionario + banco de preguntas) antes de su ventana.
+- **TG3 no es «corte único = 100%».** El Syllabus 94532 decía corte único con **EV05 50% + EXAM 50%**; el aula tiene **tres cortes 30/30/40** y ni EV05 ni EXAM existen como ítems. Manda el aula.
+
+### Notas de este curso
+
+- **Producto documental del curso:** el **artículo** (≥ 50 referencias, ≥ 4.000 palabras) + sustentación ante jurados + carga a repositorio. Se entrega como **ACA Final** (tarea) en el tercer corte.
+- **Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem del aula**. Los antiguos «ACA 1 (EV05)» y «ACA 2 (EXAM)» se refundieron en el enunciado de la **ACA Final**, que es el único entregable documental del aula.
+- La **sustentación ante jurados** sigue siendo obligatoria (Sesión 12) y se califica dentro de la **ACA Final**: en el aula no existe un ítem «EXAM» separado.
+
+Ventanas (apertura · cierre · límite de nota) y en qué sesión cae cada cuestionario: «Fechas de entrega ACA / cortes» más abajo y `Calendario de clases (oficial).md` → «Evaluación en el aula».
 
 ## Fechas de entrega ACA / cortes
 
 Fuente en vivo: `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — regenerar con `python config/cursos/sync_manuales_fechas.py tg3`.
 
-| Componente | Entrega | Apertura | Nota docente | Regla |
-| :--- | :--- | :--- | :--- | :--- |
-| **ACA 1 (EV05)** (54450) | 22/09/2026 | 10/08/2026 | 29/09/2026 | pesos + día de clase |
-| **ACA 2 (EXAM)** (54450) | 03/11/2026 | 29/09/2026 | 10/11/2026 | pesos + día de clase |
-| **ACA 1 (EV05)** (54466) | 22/09/2026 | 10/08/2026 | 29/09/2026 | pesos + día de clase |
-| **ACA 2 (EXAM)** (54466) | 10/11/2026 | 29/09/2026 | 17/11/2026 | pesos + día de clase |
-| **ACA 1 (EV05)** (54467) | 22/09/2026 | 10/08/2026 | 29/09/2026 | pesos + día de clase |
-| **ACA 2 (EXAM)** (54467) | 10/11/2026 | 29/09/2026 | 17/11/2026 | pesos + día de clase |
+| Ítem | Tipo | Corte | Peso | Apertura | Cierre | Nota docente |
+| :--- | :--- | :---: | ---: | :--- | :--- | :--- |
+| **Quiz 1** | Cuestionario | 1 | 6% | 18/08/2026 | 25/08/2026 | 01/09/2026 |
+| **Parcial 1** | Cuestionario | 1 | 24% | 08/09/2026 | 15/09/2026 | 22/09/2026 |
+| **Quiz 2** | Cuestionario | 2 | 9% | 22/09/2026 | 29/09/2026 | 06/10/2026 |
+| **Parcial 2** | Cuestionario | 2 | 21% | 06/10/2026 | 13/10/2026 | 20/10/2026 |
+| **ACA Final** (54450) | Tarea | 3 | 32% | 11/08/2026 | 07/11/2026 | 15/11/2026 |
+| **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 11/08/2026 | 14/11/2026 | 22/11/2026 |
+| **Quiz 3** | Cuestionario | 3 | 4% | 20/10/2026 | 27/10/2026 | 03/11/2026 |
+| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 03/11/2026 | 15/11/2026 | 15/11/2026 |
+| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 10/11/2026 | 22/11/2026 | 22/11/2026 |
+| **Coevaluación** (54450) | Foro | 3 | 2% | 03/11/2026 | 15/11/2026 | 15/11/2026 |
+| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 10/11/2026 | 22/11/2026 | 22/11/2026 |
 
-> Periodo [inicio–recepción] repartido por pesos del componente; entrega = día de clase semanal en o antes del fin de tramo (ultimo item <= recepcion). P1: coev/autoev tras ACA 3 hasta cierre. Fuente: config/cursos/fechas_entrega_aca.py + carga_academica_2026.json. Grupo 54450.
-> Periodo [inicio–recepción] repartido por pesos del componente; entrega = día de clase semanal en o antes del fin de tramo (ultimo item <= recepcion). P1: coev/autoev tras ACA 3 hasta cierre. Fuente: config/cursos/fechas_entrega_aca.py + carga_academica_2026.json. Grupo 54466.
-> Periodo [inicio–recepción] repartido por pesos del componente; entrega = día de clase semanal en o antes del fin de tramo (ultimo item <= recepcion). P1: coev/autoev tras ACA 3 hasta cierre. Fuente: config/cursos/fechas_entrega_aca.py + carga_academica_2026.json. Grupo 54467.
+**Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32% + Quiz 3 4% + Autoevaluación 2% + Coevaluación 2%.
+
+> Ventanas fijadas por el Docente (2026-08-10) sobre la estructura real del aula en CDigital: los quices y parciales son cuestionarios y cierran en día de clase (la Sesión 01 es de encuadre y no evalúa); la ACA Final es una tarea y cierra en la fecha máxima de recepción de trabajos; auto y coevaluación van de la última semana al cierre de notas.
 
 ## 4. Grupos 2026
 Fuente editable: `config/cursos/carga_academica_2026.json` (Excel: `Carga academica 2026.xlsx`).

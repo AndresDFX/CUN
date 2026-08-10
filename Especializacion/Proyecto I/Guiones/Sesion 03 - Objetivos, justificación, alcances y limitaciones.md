@@ -7,11 +7,24 @@
 
 📌 **De esta sesión**
 - **Sesión:** **03** · **Tema:** Objetivos, justificación, alcances y limitaciones
-- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · ACA1 ya cerró (dom 30/08); la última sincrónica antes del cierre es la Sesión 02.
+- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · Quiz ya cerró; la última sincrónica antes del cierre es la Sesión 02.
 - **PPTX estudiante:** `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
+
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz** | Cuestionario | 1 | 25% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**Quiz** ya cerró. La nota queda en el libro de calificaciones del aula y hoy les devuelvo lo importante: dónde se equivocó el grupo y qué no se puede repetir en la entrega que cierra el curso. Lo que revisamos aquí no cambia la nota; evita que se repita.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
@@ -58,8 +71,8 @@ Responde a la pregunta “¿por qué vale la pena?”. Se apoya en tres pilares:
 #### 3. Alcances y limitaciones
 El **alcance** es la promesa: hasta dónde llega el estudio (población objetivo, periodo, variables o categorías, tipo de producto). La **limitación** es la honestidad: restricciones reales de acceso, de tiempo, de recursos, y la restricción estructural de que en Proyecto I no se aplican instrumentos. Declarar limitaciones no debilita el trabajo: lo hace creíble.
 
-#### 4. Coherencia como hilo (cierre de ACA1)
-Al terminar esta unidad, el bloque de formulación debe leerse como una sola historia sin saltos: problema → pregunta → objetivo general → específicos → justificación → alcances/limitaciones. Ese hilo es exactamente lo que se evalúa en ACA1.
+#### 4. Coherencia como hilo (primer bloque de la ACA 1)
+Al terminar esta unidad, el bloque de formulación debe leerse como una sola historia sin saltos: problema → pregunta → objetivo general → específicos → justificación → alcances/limitaciones. Ese hilo es la **primera mitad de la ACA 1** (la entrega del segundo corte) y es lo que el Docente revisa en la retroalimentación de la Sesión 04. Ojo con no confundir instrumentos: la nota del **primer corte** no sale de este texto, sale del **Quiz** (cuestionario en CDigital) que cierra antes de la Sesión 03.
 
 #### 5. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -93,7 +106,7 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 03**. Antes de arrancar: si su pregunta de S02 cambió durante la semana, es normal —actualícenla ahora en su documento, porque todo lo de hoy cuelga de esa pregunta—. Dos o tres equipos, díganme en una frase su pregunta actual.”
-> “Hoy cerramos el bloque de formulación: **objetivos, justificación, alcances y limitaciones**. Cuando salgan de la primera hora, tendrán casi listo lo que compone la entrega de ACA1.”
+> “Hoy cerramos el bloque de formulación: **objetivos, justificación, alcances y limitaciones**. Cuando salgan de la primera hora tendrán escrita la **primera mitad de la ACA 1**, que es la entrega del segundo corte.”
 
 #### 2️⃣ Objetivos y verbos (~12 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE
@@ -126,8 +139,8 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “En autónomo, empaqueten el bloque completo de formulación para la entrega de ACA1 siguiendo las indicaciones de CDigital: problema, pregunta, objetivos, justificación, alcances y limitaciones, con sus referencias en APA 7. Suban el avance de clase como `S03_ObjetivosJustificacion_Apellidos`.”
-> “Recuerden que ACA1 es la primera de las tres entregas del mismo documento acumulativo; no es una tarea suelta. Pasamos a tutoría para revisar la coherencia pregunta–objetivos equipo por equipo.”
+> “En autónomo, empaqueten el bloque completo de formulación —problema, pregunta, objetivos, justificación, alcances y limitaciones, con sus referencias en APA 7— siguiendo las indicaciones de CDigital. Suban el avance de clase como `S03_ObjetivosJustificacion_Apellidos`.”
+> “Dos recordatorios de plataforma antes de la tutoría. Uno: esto que acaban de escribir **no es una tarea suelta**, es la primera mitad de la **ACA 1** del segundo corte, el mismo documento que va a seguir creciendo. Dos: la nota del **primer corte** es el **Quiz**, y ese cuestionario **ya cerró o está por cerrar**; si alguien no lo ha presentado, revísenlo ahora mismo en el aula, no mañana. Pasamos a tutoría para revisar la coherencia pregunta–objetivos equipo por equipo.”
 
 
 
@@ -141,7 +154,7 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 **GUION LITERAL (apertura tutoría):**
 > “Segunda hora: **tutoría**. Cada equipo trabaja su avance. Yo circule. Cada estudiante que esté en tutoría diligencia su asistencia: https://forms.gle/oZ8xCYiUo3KEWr1d9 — lo pego en el chat. Recuerden: Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita).”
 
-**Foco de hoy en tutoría:** coherencia pregunta–objetivos; preparar cierre de bloque formulación (ACA1).
+**Foco de hoy en tutoría:** coherencia pregunta–objetivos; cerrar el bloque de formulación (primera mitad de la ACA 1) y verificar equipo por equipo que el Quiz del primer corte quedó presentado.
 
 **Rutina por equipo (≈8–12 min c/u si hay varios):**
 1. ¿Qué trajeron escrito? (pantalla compartida o párrafo en el chat).
@@ -159,6 +172,7 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 2. **Éxito:** específicos con verbo preciso y alineados a la pregunta.
 
 ✅ **Checklist antes de clase**
+- [ ] Nota de **Quiz** (25%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

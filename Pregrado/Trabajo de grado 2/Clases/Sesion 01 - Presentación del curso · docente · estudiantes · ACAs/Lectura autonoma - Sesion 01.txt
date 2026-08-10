@@ -99,7 +99,9 @@ QUE TRAER A LA SESION 02
    - Su TEMA DELIMITADO en una sola frase: actor + fenomeno + contexto.
    - TRES COMPROMISOS concretos suyos para las proximas dos semanas.
 2. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
-3. El ENUNCIADO DE LA ACA 1 abierto y leido: esta en Clases/Recursos/ACAs/.
+3. Las dos GUIAS DEL PRIMER CORTE leidas: 'Quiz 1 (6%) - guia del cuestionario'
+   y 'Parcial 1 (24%) - guia del cuestionario', en Clases/Recursos/ACAs/.
+   Son cuestionarios que se resuelven en el aula: no se sube archivo.
 4. Su DOCUMENTO DE TRABAJO DE GRADO abierto, en la version mas reciente.
 
 "A medias" e "inexistente" son respuestas honestas y validas. Lo que no sirve es

@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Estructura del artículo · taller de introducción/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 1** | Cuestionario | 1 | 6% | **Cierra hoy** — se aplica en clase (~12 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**12 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -89,10 +99,11 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición / criterios | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición / criterios | 11 | min 06:00 – 17:00 |
+| 3️⃣ Modelación | 11 | min 17:00 – 28:00 |
+| 4️⃣ Taller | 12 | min 28:00 – 40:00 |
+| 5️⃣ Quiz 1 en CDigital (se aplica en clase) | 12 | min 40:00 – 52:00 |
+| 6️⃣ Cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -106,7 +117,7 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 
 > “**OBJETIVOS.** Conocer la anatomía del artículo en la plantilla APA CUN, entender qué va en cada sección para no mezclarlas, y salir con la introducción empezada. Abran ya la **plantilla APA CUN en Google Docs**; hoy trabajamos sobre ella.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición / criterios (~11 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -116,7 +127,7 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 
 > “Y una nota de forma: trabajamos sobre la **plantilla APA CUN en Google Docs**. Nada de dar formato a mano ni de depender de Word instalado; el formato ya viene resuelto.”
 
-#### 3️⃣ Modelación (~12 min) — Modelación en pantalla
+#### 3️⃣ Modelación (~11 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en la plantilla APA CUN, en Google Docs).
 
 **En pantalla (Google Docs + plantilla APA CUN):** escriba una introducción de 3–4 párrafos en vivo.
@@ -130,11 +141,11 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 
 > **En pantalla:** Abrir plantilla APA CUN en Google Docs; modelar gancho → vacío → propósito.
 
-#### 4️⃣ Taller (~20 min) — Taller
+#### 4️⃣ Taller (~12 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. En la plantilla APA CUN (Google Docs), archivo `S03_Introduccion_Apellido`: escriban una **introducción de 3–4 párrafos** con el embudo contexto → problema → vacío → pregunta → objetivos → propósito. Debe cerrar exactamente en la pregunta y los objetivos de la Sesión 02.”
+> “**TALLER.** ~12 minutos. En la plantilla APA CUN (Google Docs), archivo `S03_Introduccion_Apellido`: escriban una **introducción de 3–4 párrafos** con el embudo contexto → problema → vacío → pregunta → objetivos → propósito. Debe cerrar exactamente en la pregunta y los objetivos de la Sesión 02.”
 
 > “Criterio de éxito: si leo su introducción sin conocer su tema, entiendo el contexto, el vacío y qué se proponen; y termina en su pregunta, no en el aire.”
 
@@ -151,7 +162,31 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 > **En pantalla:** Citas de la introducción.
 
 
-#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Quiz 1 en CDigital (se aplica en clase) (~12 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **12 min** y por eso se recortan: Exposición / criterios 14→11 min, Modelación 12→11 min, Taller 20→12 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 1** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **doce minutos** son para **Quiz 1**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **6%** del curso dentro del **corte 1**, que vale **30%**. El resto del corte 1 lo aportan **Parcial 1** (24%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 1** del aula, y abren el ítem **Quiz 1**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~9 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -170,6 +205,7 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 1** (Cuestionario · 6% · corte 1) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 03 - Estructura del artículo · taller de introducción/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

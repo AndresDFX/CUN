@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Estructura del documento artículo de avance/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 1** | Cuestionario | 1 | 6% | **Cierra hoy** — se aplica en clase (~12 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**12 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -83,10 +93,11 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición del concepto | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller aplicado al proyecto | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición del concepto | 11 | min 06:00 – 17:00 |
+| 3️⃣ Modelación en vivo | 11 | min 17:00 – 28:00 |
+| 4️⃣ Taller aplicado al proyecto | 12 | min 28:00 – 40:00 |
+| 5️⃣ Quiz 1 en CDigital (se aplica en clase) | 12 | min 40:00 – 52:00 |
+| 6️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -100,7 +111,7 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 
 > “**OBJETIVOS.** Dominar la estructura de la Plantilla APA CUN y salir con un **outline** de todo el documento: cada sección con viñetas de lo que irá. Tengan abierto su `S02`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición del concepto (~11 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -110,7 +121,7 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 
 > “**ENFOQUE DE HOY.** Y ahora el **error rey** de TG2: mezclar método y resultados. En este curso casi nunca hay resultados —el campo es de TG3—. Por eso la metodología se escribe en **propuesto**: ‘se aplicará’, ‘se propone’. Si aparece un hallazgo en la sección de método, algo está fuera de lugar.”
 
-#### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
+#### 3️⃣ Modelación en vivo (~11 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en pantalla).
 
 **En pantalla (Google Docs / Plantilla APA CUN):** abra la plantilla y muestre las secciones; en un Doc aparte arme el outline.
@@ -124,11 +135,11 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 
 > **En pantalla:** Abrir la Plantilla_APA_CUN_Proyecto de grado en Google Docs (nube); recorrer el orden de secciones.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
+#### 4️⃣ Taller aplicado al proyecto (~12 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. Abran una copia de la **Plantilla APA CUN** en Google Docs y, en `S03_EstructuraAvance_Apellido`, hagan el **outline** completo: cada sección del documento con 3–5 viñetas de lo que irá. En metodología, escriban en ‘propuesto/se aplicará’. Marquen con color las secciones que hoy están vacías.”
+> “**TALLER.** ~12 minutos. Abran una copia de la **Plantilla APA CUN** en Google Docs y, en `S03_EstructuraAvance_Apellido`, hagan el **outline** completo: cada sección del documento con 3–5 viñetas de lo que irá. En metodología, escriban en ‘propuesto/se aplicará’. Marquen con color las secciones que hoy están vacías.”
 
 > “Criterio de éxito: leo su outline y entiendo el documento entero de un vistazo, sin que haya un solo resultado colado en la metodología.”
 
@@ -145,7 +156,31 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 > **En pantalla:** Dejar la sección de referencias lista en APA para ir llenándola.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Quiz 1 en CDigital (se aplica en clase) (~12 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **12 min** y por eso se recortan: Exposición del concepto 14→11 min, Modelación en vivo 12→11 min, Taller aplicado al proyecto 20→12 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 1** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **doce minutos** son para **Quiz 1**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **6%** del curso dentro del **corte 1**, que vale **30%**. El resto del corte 1 lo aportan **Parcial 1** (24%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 1** del aula, y abren el ítem **Quiz 1**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~9 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -164,6 +199,7 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 1** (Cuestionario · 6% · corte 1) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 03 - Estructura del documento artículo de avance/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

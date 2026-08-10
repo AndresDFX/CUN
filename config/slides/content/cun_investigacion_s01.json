@@ -25,7 +25,7 @@
     "rows": [
       [
         "**01**",
-        "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)",
+        "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (**hoy**)",
         "El encuadre completo y su encargo autónomo"
       ],
       [
@@ -96,39 +96,39 @@
   },
   {
     "type": "table",
-    "title": "Las ACAs, una por una: qué se entrega y qué se mira",
+    "title": "Corte por corte: qué hay en el aula y qué se prepara",
     "headers": [
-      "ACA",
-      "Qué entrega",
-      "Qué mira el Docente",
+      "Corte",
+      "Qué hay en el aula (CDigital)",
+      "Qué se prepara para eso",
       "Flojo vs. bueno"
     ],
     "rows": [
       [
-        "**ACA 1**",
-        "Primer avance del artículo: título, introducción breve, problema y primeras referencias",
-        "Que el problema se entienda sin conocerlo a usted y que las fuentes existan de verdad",
+        "**Corte 1**",
+        "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.",
+        "Línea de investigación elegida y justificada + primer avance del artículo: título, introducción breve, problema y primeras referencias. Guías: `Quiz 1 (6%)` y `Parcial 1 (24%)`.",
         "Flojo: párrafos largos sin problema visible · Bueno: media página donde se ve contexto, vacío y propósito"
       ],
       [
-        "**ACA 2**",
-        "Planteamiento del problema y pregunta de investigación",
-        "Coherencia entre problema, pregunta y evidencia; que la pregunta sea investigable",
+        "**Corte 2**",
+        "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.",
+        "Planteamiento del problema y pregunta de investigación, sostenidos con evidencia. Guías: `Quiz 2 (9%)` y `Parcial 2 (21%)`.",
         "Flojo: pregunta que se responde sí/no · Bueno: pregunta con “cómo”, “qué” o “en qué medida”, anclada a un contexto"
       ],
       [
-        "**ACA 3**",
-        "Avance consolidado: marco / revisión con fuentes y referencias en APA 7",
-        "Que cada fuente ayude a responder la pregunta y que el documento se lea como un todo",
+        "**Corte 3**",
+        "**ACA Final** (tarea: el único documento que se sube) + **Quiz 3** + **autoevaluación** (cuestionario) y **coevaluación** (foro).",
+        "El artículo consolidado: marco / revisión con fuentes citadas y referencias en APA 7. Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`.",
         "Flojo: collage de definiciones copiadas · Bueno: fuentes agrupadas por concepto y usadas como argumento"
       ]
     ],
-    "note": "Enunciado completo, criterios y **fechas exactas**: `Clases/Recursos/ACAs/`. No se copian aquí para que nunca queden desactualizadas.",
+    "note": "El peso de cada ítem está en la slide «CÓMO SE EVALÚA» de esta sesión. Enunciados y criterios: `Clases/Recursos/ACAs/`; **fechas exactas**, en la Presentación del Curso y en el aula — no se copian aquí para que nunca queden viejas.",
     "col_w": [
-      1.0,
-      3.0,
+      0.9,
       3.4,
-      4.5
+      3.6,
+      4.0
     ]
   },
   {
@@ -239,7 +239,7 @@
       "**Tiempo de respuesta:** en días hábiles y, en todo caso, **antes del siguiente encuentro**. No espere respuesta a medianoche del día de cierre.",
       "**En clase:** los últimos minutos son de dudas. Si la suya es larga, escríbala en el foro y se responde con detalle.",
       "**Una buena pregunta trae contexto:**",
-      "  Mal: “Docente, no entendí la ACA”.",
+      "  Mal: “Docente, no entendí la ACA Final”.",
       "  Bien: “Subí mi párrafo del problema: ¿la pregunta que escribí es investigable o sigue siendo un tema?”.",
       "Si va a faltar, avise **antes** y revise CDigital ese mismo día: material y consigna quedan publicados."
     ]
@@ -268,11 +268,11 @@
     "boxes": [
       [
         "info",
-        "**“¿Esta materia se pierde fácil?”** No, si entrega. Se evalúa por avances acumulados: quien entrega cada corte, pasa. El riesgo no es la dificultad, es dejar todo para la última semana."
+        "**“¿Esta materia se pierde fácil?”** No, si trabaja al día. La nota se arma con **quices y parciales** que se resuelven en el aula y una **ACA Final** que acumula lo escrito: el riesgo no es la dificultad, es dejar pasar una ventana o armar el artículo la última semana."
       ],
       [
         "aclaracion",
-        "**“¿Puedo trabajar solo o tiene que ser en grupo?”** El artículo de este curso es **individual**, salvo que el enunciado de la ACA diga otra cosa. **“¿Y si aún no tengo tema?”** Hoy sale con uno tentativo; en la Sesión 02 se afina."
+        "**“¿Puedo trabajar solo o tiene que ser en grupo?”** El artículo de este curso es **individual**, salvo que el enunciado diga otra cosa. **“¿Y si aún no tengo tema?”** Hoy sale con uno tentativo; en la Sesión 02 se afina."
       ],
       [
         "advertencia",
@@ -291,7 +291,7 @@
       "**Escriba su tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una sola frase con **actor + fenómeno + contexto**.",
       "  Agregue 2–3 líneas de **por qué le importa** ese problema.",
       "  Agregue **una fuente exploratoria** de Google Académico: autor, año y título.",
-      "**Súbalo a CDigital antes de la Sesión 02** y **abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/`, con sus fechas."
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra las dos guías del primer corte** en `Clases/Recursos/ACAs/`: `Quiz 1 (6%)` y `Parcial 1 (24%)`, que es lo que se pregunta."
     ],
     "note": "La Sesión 02 arranca con los temas de ustedes en pantalla: quien llegue sin tema escrito trabaja esa hora en blanco."
   }

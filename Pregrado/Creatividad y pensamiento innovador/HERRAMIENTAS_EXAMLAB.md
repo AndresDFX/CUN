@@ -9,9 +9,29 @@
 | Modalidad | **Virtual** · Google Meet · 7 encuentros sincrónicos, miércoles 5:00–6:00 pm (arranque real 5:10) |
 | Créditos | 2 · 32 h docente + **64 h autónomas** |
 | Docente | Julian Andrés Castaño · `julian_castanoe@cun.edu.co` |
-| Evaluación | Art. 52 — Corte 1 30% · Corte 2 30% · Corte 3 40%. Autoevaluación/coevaluación **no aplican** |
-| Fecha del documento | 2026-08-08 |
+| Evaluación | Art. 52 — Corte 1 30% (Quiz 1 6% + Parcial 1 24%) · Corte 2 30% (Quiz 2 9% + Parcial 2 21%) · Corte 3 40% (**ACA Final** 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%, **foro**) |
+| Fecha del documento | 2026-08-08 · **revisado 2026-08-10** contra el aula |
 | Estado | **Borrador para decisión docente** |
+
+---
+
+> ## ⚠️ Corrección del 2026-08-10 — la evaluación de este documento estaba mal
+>
+> Este análisis se escribió el 08/08 asumiendo la estructura de nuestro material. El **10/08 se auditó el libro de calificaciones del aula** (`AUDITORIA CDigital 2026-08-10.md` §2) y **tres supuestos resultaron falsos**. Donde el cuerpo del documento diga lo contrario, manda este recuadro:
+>
+> | Lo que decía este documento | Lo que hay en el aula |
+> |---|---|
+> | «Tres ACAs, una por corte, cada una al 100% de su corte (19/08 · 02/09 · 16/09)» | **8 ítems.** Corte 1 = Quiz 1 (6%) + **Parcial 1 (24%)** · Corte 2 = Quiz 2 (9%) + **Parcial 2 (21%)** · Corte 3 = **ACA Final** (tarea, 32,8%) + Quiz 3 (4%) + Autoevaluación (1,6%) + Coevaluación (1,6%) |
+> | «Autoevaluación y coevaluación **no aplican**» | **Sí pesan** (1,6% cada una). La **coevaluación es un FORO** — deja de ser una brecha de ExamLab y pasa a ser un ítem obligatorio de CDigital |
+> | «Las tres ventanas de ACA: 19/08, 02/09, 16/09» | Esas son las fechas de **Quiz 1, Quiz 2 y Quiz 3**. La **ACA Final** (el único documento) cierra el **19/09** (recepción) y su nota va hasta el **27/09** |
+>
+> **Ventanas reales** (fuente: `config/cursos/fechas_entrega_aca.py`): Quiz 1 → **19/08** (S02) · Parcial 1 → **26/08** (S03) · Quiz 2 → **02/09** (S04) · Parcial 2 → **09/09** (S05) · Quiz 3 → **16/09** (S06) · **ACA Final → 19/09** · Autoevaluación y Coevaluación 23/09 → **27/09**.
+>
+> **Qué cambia para el montaje en ExamLab:**
+> - Los **cortes** ya no son «una actividad al 100%»: hay que configurar los 8 ítems con su peso real.
+> - La **prueba tipo SABER PRO por corte** que este documento proponía como hueco del material **ya existe en el aula**: son el **Parcial 1 y el Parcial 2** (24% y 21%). El banco de preguntas de ExamLab deja de ser un extra y pasa a ser el insumo directo para redactarlos. Ojo: **la nota oficial sigue siendo la del cuestionario de CDigital.**
+> - La **coevaluación** deja de ser brecha «sin nota»: pesa 1,6% y es un **foro de CDigital**, no de ExamLab.
+> - Los **recordatorios programados** hay que reescribirlos: no son tres fechas de ACA, son **seis** cierres (19/08 · 26/08 · 02/09 · 09/09 · 16/09 · 19/09) más la ventana de auto/coevaluación.
 
 ---
 
@@ -19,7 +39,7 @@
 >
 > Esto es un análisis de **HERRAMIENTAS**, no de entregas.
 >
-> **La entrega oficial y la nota siguen viviendo en CDigital.** Nada de lo que sigue la sustituye, la duplica ni la mueve. Los porcentajes 30/30/40 del Art. 52, la nomenclatura `CRE_ACAN_Apellido` y las tres ventanas de ACA (19/08, 02/09, 16/09) quedan exactamente donde están.
+> **La entrega oficial y la nota siguen viviendo en CDigital.** Nada de lo que sigue la sustituye, la duplica ni la mueve. Los porcentajes 30/30/40 del Art. 52, la nomenclatura `CRE_ACAN_Apellido` y las ventanas del aula (Quiz 1 19/08 · Parcial 1 26/08 · Quiz 2 02/09 · Parcial 2 09/09 · Quiz 3 16/09 · **ACA Final 19/09** · auto y coevaluación 23–27/09) quedan exactamente donde están.
 >
 > Lo que se analiza es lo otro: **con qué trabajan el estudiante y el docente durante la sesión y entre sesiones.** El lienzo donde se idea, el foro donde se pregunta el jueves, el asistente que responde a las 11 pm, el material que el estudiante realmente recibe, la señal de quién no arrancó. Cuando una herramienta de ExamLab necesita "existir" en la nota, el puente es registrar la actividad como **externa** con el enlace a CDigital — el archivo se sube allá, acá solo queda la nota y la observación para que el semáforo de riesgo y el consolidado del corte tengan de qué agarrarse.
 >
@@ -59,7 +79,7 @@ Las 13 necesidades genéricas del análisis del curso (§4 del material):
 | 8 | Material organizado por sesión, acceso directo | **Contenidos + Tablero** (allowlist de archivos por sesión) | **Lista** |
 | 9 | Cronómetro proyectable con consigna y criterio | — | **No existe** |
 | 10 | Asistente acotado al material del curso | **Tutor IA** por curso | **Lista** |
-| 11 | Pitch grabado + coevaluación de pares | Proyecto con **video de sustentación** + factor | **Parcial** — coevaluación no existe |
+| 11 | Pitch grabado + coevaluación de pares | Proyecto con **video de sustentación** + factor | **Parcial** — la coevaluación de ExamLab no existe, pero **la del curso sí pesa (1,6%) y es un FORO de CDigital**: se cumple allá, no acá |
 | 12 | Señal de si el estudiante abrió el material | **Progreso de material** (`abriste N de M archivos`) | **Lista** |
 | 13 | Calendario unificado que llegue al estudiante | **Sync Google / Microsoft 365** con invitados + **.ics suscribible** | **Lista** |
 
@@ -67,7 +87,7 @@ Y las necesidades que el syllabus exige pero el material no planifica:
 
 | Exigencia del syllabus | Herramienta | Estado |
 |---|---|---|
-| Prueba estándar tipo SABER PRO por corte | Taller `cerrada`/`cerrada_multi` (sin proctoring) desde el Banco de preguntas | **Lista** |
+| **Parcial 1 (24%) y Parcial 2 (21%)** del aula, tipo SABER PRO — hay que redactarlos | Banco de preguntas → ensayo en Taller `cerrada`/`cerrada_multi` (sin proctoring); **el cuestionario que cuenta es el de CDigital** | **Lista** |
 | Rúbrica por actividad | `expected_rubric` como **tabla markdown en el enunciado** (se renderiza formateada) | **Con workaround** — la rúbrica no es dato, es texto |
 | Mapa de utilidad / bloqueadores–ensanchadores (U2, sin sesión asignada) | `diagrama` mermaid **`quadrantChart`** (matriz 2×2 nativa) | **Con workaround** |
 | Material en segundo idioma | Contenidos con IA acepta `language` en el generador | **Lista** |
@@ -93,7 +113,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | Cargar el cronograma de 7 encuentros | **Generador de sesiones** o **importación CSV de 8 columnas** | El CSV lleva `session_date, title, start_time, end_time, meeting_url, cut_name, recording_url, session_type`. El generador conoce los festivos de Colombia (Ley Emiliani + Pascua calculada) y ofrece política `incluir / saltar / mover` |
 | Regla "festivo → clase autónoma, no cancelación" | **`session_type = autonoma`** | Se marca **en la misma columna del CSV**. Un proceso automático detecta la hora de inicio de la sesión autónoma y **notifica + envía correo** a los matriculados; el estudiante "asiste" marcando el material como revisado. **[INFERIDO]** — no verifiqué si algún miércoles del 12/08 al 23/09 cae festivo; el Manual declara la regla, así que dejo la pieza lista |
 | Subir el material | **Contenidos** | Se puede seleccionar **la carpeta `Clases/` completa**. Tope 25 MB por archivo, 100 MB por lote |
-| Configurar 30/30/40 | **Cortes del curso** | Tres cortes con sus fechas y pesos; dentro de cada uno, cuánto pesan talleres, exámenes, proyectos y asistencia. La tabla del Syllabus venía truncada (`CORTE 1 = 30% / EV 01 / 9,0%`). **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV. |
+| Configurar 30/30/40 | **Cortes del curso** | Tres cortes con sus fechas y pesos; dentro de cada uno, cuánto pesan talleres, exámenes, proyectos y asistencia. La tabla del Syllabus venía truncada (`CORTE 1 = 30% / EV 01 / 9,0%`), pero **el aula ya trae el desglose completo** (auditoría 2026-08-10): Corte 1 = Quiz 1 6% + Parcial 1 24% · Corte 2 = Quiz 2 9% + Parcial 2 21% · Corte 3 = ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%. Son **8 ítems**, no tres. |
 | Escala 0,1–5,0 y nota de aprobación | **Configuración de la institución** | La escala y la nota mínima se configuran a nivel institución. **La nota de aprobación no está en el material del curso** — confirmar con CDigital |
 | Sincronizar el calendario | **Google / Microsoft 365** | El docente conecta su cuenta una vez; el sistema crea los eventos **con los 50 como invitados** y genera el enlace de Meet. Esto cierra el defecto textual del material (*"los CSV/ICS de Pregrado no incluyen invitados/estudiantes"*): hoy el estudiante nunca recibe la invitación |
 | Sembrar el Tutor IA | **Prompts de IA → override del curso** | Pegar en el prompt del curso las 4 respuestas típicas de la tabla de acompañamiento del guion S01 y el criterio *"si alguien externo entiende el dolor sin pedir aclaración, sirve"* |
@@ -121,7 +141,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 ---
 
-### Sesión 02 — 19/08 · Design Thinking y técnicas · *(vence ACA 1)*
+### Sesión 02 — 19/08 · Design Thinking y técnicas · *(cierra **Quiz 1**, 6%)*
 
 **Lo que pide el guion:** **22 min** — redactar 1 *How Might We*, listar **mínimo 8 ideas**, elegir 1–2 justificando con 3 criterios, boceto de 1 min. 3 comparten el HMW.
 
@@ -132,7 +152,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | El mapa de utilidad (U2, huérfano) | **`diagrama`** → mermaid `quadrantChart` | Matriz 2×2 nativa. Cierra el instrumento de la Unidad 2 que el material tiene como archivo suelto (`s02_mapa_utilidad_modelo.html`) sin sesión que lo acoja. El ACA 1 lo exige |
 | El boceto de 1 min | **Mensajería 1-a-1 o el hilo del foro** | **Brecha:** no se puede subir una imagen como respuesta de taller. Los compañeros del mismo curso **sí** pueden mensajearse entre ellos con adjuntos, y el docente también. Es un rodeo |
 | SCAMPER | **Sin plantilla** | El catálogo de 44 figuras de la pizarra no la tiene. Se dicta como lista de verbos y el estudiante la aplica en el mapa mental. Ver §6 |
-| ACA 1 vence hoy | **Actividad externa** | Registrar en ExamLab un taller `externo` con el enlace a CDigital, para que la nota entre al corte y al semáforo |
+| **Quiz 1** cierra hoy (cuestionario, 6%) | **Actividad externa** | Registrar en ExamLab un ítem `externo` con el enlace a CDigital, para que la nota entre al corte y al semáforo. El quiz se aplica en **CDigital**; ExamLab sirve para el ensayo previo desde el Banco de preguntas |
 
 ---
 
@@ -149,7 +169,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 ---
 
-### Sesión 04 — 02/09 · Tipos de innovación · *(vence ACA 2)*
+### Sesión 04 — 02/09 · Tipos de innovación · *(cierra **Quiz 2**, 9%; el **Parcial 1** —24%— cerró en la S03)*
 
 **Lo que pide el guion:** **21 min** — matriz comparativa tipo elegido vs. alternativo, **mínimo 5 criterios** + conclusión en 4 líneas.
 
@@ -158,7 +178,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | La matriz de 5 criterios | **Encuesta mixta con 5 campos** (uno por criterio) + 1 campo de conclusión | **Aquí ExamLab no tiene lo que el curso pide.** No existe un tipo de pregunta tabular: no hay grilla filas × columnas. El formulario de 5 campos es lo más cerca, y tiene la ventaja de que el docente lee "criterio 3" de los 50 juntos. Lo que se pierde es que el estudiante vea su matriz como matriz |
 | Alternativa visual | **`diagrama`** → mermaid `quadrantChart` | Incremental ↔ radical en un eje, y el criterio que el docente elija en el otro. Es la lectura que el guion busca (*"contexto socio-económico"*) mejor que una tabla |
 | Repaso | **Reto en vivo** | *"mi innovación es radical" como adorno* es el error del banco que corresponde a esta sesión |
-| ACA 2 vence hoy | **Actividad externa** + hilo de retroalimentación | Igual que el ACA 1 |
+| **Quiz 2** cierra hoy (9%) y el **Parcial 1** (24%) cerró el 26/08 | **Actividad externa** + hilo de retroalimentación | Igual que el Quiz 1. El Parcial 1 es el ítem más pesado de los dos primeros cortes: registrar su nota acá o el semáforo queda ciego |
 
 ---
 
@@ -178,7 +198,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 ---
 
-### Sesión 06 — 16/09 · Vigilancia tecnológica · *(vence ACA 3)*
+### Sesión 06 — 16/09 · Vigilancia tecnológica · *(cierra **Quiz 3**, 4%; la **ACA Final** —32,8%— cierra el 19/09)*
 
 **Lo que pide el guion:** **22 min** — tablero de vigilancia con **mínimo 3 fichas de señal** (título, fuente + fecha + enlace, hallazgo en 2 líneas, implicación, nivel de confianza); ≥1 señal debe forzar un ajuste. 2 comparten la implicación.
 
@@ -188,7 +208,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | El ajuste forzado por una señal | Cuarta pregunta `abierta` | Es el criterio de aprobación del taller |
 | Las fuentes con fecha y enlace | — | **Brecha real, ver §6.** No hay gestor de referencias ni ayuda de citación. El estudiante pega la URL a mano y nadie valida el formato |
 | El ciclo observar→analizar→comunicar→usar | **`diagrama`** → flowchart | Modelado en vivo por el docente en la pizarra de sesión |
-| ACA 3 vence hoy | **Actividad externa** | Es el 40% del curso: si no queda registrado acá, el semáforo de riesgo queda ciego para el corte más pesado |
+| **Quiz 3** cierra hoy (4%) y la **ACA Final** (tarea, 32,8%) cierra el **19/09** | **Actividad externa** | El tercer corte es el 40% del curso y la ACA Final es el 32,8%: si no queda registrada acá, el semáforo queda ciego justo en el corte más pesado. Recordar en clase la ventana de **autoevaluación y coevaluación** (23–27/09) |
 
 ---
 
@@ -212,7 +232,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 | Qué | Herramienta | Cadencia |
 |---|---|---|
-| **Prueba tipo SABER PRO por corte** (exigida por el syllabus, inexistente en el material) | **Taller `cerrada` / `cerrada_multi`** desde el Banco de preguntas, **sin proctoring**, con varios intentos | Tres, uno al cierre de cada corte |
+| **Parcial 1 y Parcial 2** del aula (24% y 21%), tipo SABER PRO — existen como ítem del libro de calificaciones pero **no hay actividad creada ni preguntas escritas** | Escribirlos en el **Banco de preguntas** de ExamLab y publicarlos como **cuestionario de CDigital** (ahí está la nota); en ExamLab queda el ensayo `cerrada`/`cerrada_multi` sin proctoring | Dos parciales + tres quices. Es la tarea más urgente: el primero cierra el **19/08** |
 | **Quién no arrancó** | **Alerta temprana** (Estadísticas) + progreso de material | Revisar el lunes antes de cada sesión |
 | **Dudas de la semana** | **Foro** con ventana por sesión, hilo de la consigna **fijado arriba** y el criterio del docente marcado como **respuesta oficial** | 7 foros, uno por sesión |
 | **Recordatorio de ACA** | **Mensaje programado** con difusión al curso | Escrito una vez en la semana 0, programado para el domingo anterior a 19/08, 02/09 y 16/09 |
@@ -334,7 +354,7 @@ Matriz sesiones × estudiantes. Cada sesión lleva fecha, título, hora, duraci�
 
 `ExternalGradesEditor` lista a los 50 matriculados con columnas **Nota + Observación** por estudiante, para actividades que ocurrieron fuera de la plataforma. Los cortes se configuran con peso propio y cuatro bolsas internas (talleres, exámenes, proyectos, asistencia), y la asistencia de un corte se deriva por fechas de sesión.
 
-**Aplicación:** **este es el puente correcto para los tres ACA.** El archivo se sube a CDigital; en ExamLab queda el enlace, la nota y la observación por estudiante. Con eso, y solo con eso, funcionan Alerta temprana, el consolidado y los informes.
+**Aplicación:** **este es el puente correcto para los 8 ítems del aula** (5 cuestionarios + ACA Final + auto + coevaluación). El cuestionario se aplica y el archivo se sube en CDigital; en ExamLab queda el enlace, la nota y la observación por estudiante. Con eso, y solo con eso, funcionan Alerta temprana, el consolidado y los informes.
 
 **Límite:** una actividad sin nota **cuenta como 0** con su peso original, no se reescala. Es deliberado (refleja "lo que debe y no entregó es nota perdida hasta que aparezca"), pero sorprende a quien espera un promedio parcial.
 
@@ -380,7 +400,7 @@ Matriz sesiones × estudiantes. Cada sesión lleva fecha, título, hora, duraci�
 - **Ensayo en parejas (S07):** dos matriculados del mismo curso **sí pueden mensajearse entre ellos, con adjuntos**. Se intercambian el guion del pitch por mensajería.
 - **Comentarios de pares:** un hilo de foro por estudiante donde los compañeros comentan.
 
-**Costo:** sin pauta, sin asignación automática de quién revisa a quién, sin registro de que la revisión ocurrió, sin nota. Y el foro no admite adjuntos, así que el trabajo hay que pegarlo como texto. **Atenuante:** este curso declara que autoevaluación y coevaluación **no aplican** con peso propio, así que la ausencia bloquea la actividad formativa, no la nota.
+**Costo:** sin pauta, sin asignación automática de quién revisa a quién, sin registro de que la revisión ocurrió, sin nota. Y el foro no admite adjuntos, así que el trabajo hay que pegarlo como texto. **Ojo (corregido 2026-08-10):** este curso **sí tiene coevaluación con peso propio (1,6%)**, y en el aula es un **FORO de CDigital**. Es decir: la nota se cumple allá, y lo que falta en ExamLab es solo la capa formativa (pauta, asignación de revisores, registro). No presentarla como «no aplica».
 
 ### 4.5 La rúbrica que el syllabus exige
 
@@ -396,7 +416,7 @@ Matriz sesiones × estudiantes. Cada sesión lleva fecha, título, hora, duraci�
 
 **Workaround (es la práctica correcta, no un parche):** por cada ACA, crear en ExamLab un taller marcado como **externo** con el enlace a CDigital, y cargar las notas con el editor de notas externas (nota + observación por estudiante).
 
-**Costo:** cargar 50 notas × 3 ACA. Con `is_external` la pantalla esconde todo lo que no aplica, así que es una tabla de 50 filas con dos columnas. **Sin esto, Alerta temprana y el consolidado quedan ciegos** — y el ACA 3 es el 40% del curso.
+**Costo:** cargar 50 notas por ítem. No son 3 cargas sino hasta 8; en la práctica bastan los **6 con peso apreciable** (Quiz 1, Parcial 1, Quiz 2, Parcial 2, Quiz 3, ACA Final). Con `is_external` la pantalla esconde todo lo que no aplica, así que es una tabla de 50 filas con dos columnas. **Sin esto, Alerta temprana y el consolidado quedan ciegos** — y el tercer corte es el 40% del curso.
 
 ### 4.7 Asistencia justificada
 
@@ -447,7 +467,7 @@ Este curso no es un posgrado. 50 estudiantes de nivel tecnológico, virtual, con
 | **Las tres URL bloqueantes del curso siguen pendientes** (CDigital, Meet, plantilla APA) | **Medio** | No es un riesgo de ExamLab, pero lo hereda: sin la URL de CDigital, las actividades externas no tienen adónde apuntar |
 | **Contenido generado con IA con errores conceptuales** | **Medio** | Revisar los 6 paquetes antes de publicarlos. El curso enseña a distinguir innovación de tecnología: un material generado que confunda eso es peor que un PPTX genérico |
 | **Cuota de IA agotada** | **Medio** | El Tutor IA consume por mensaje y 50 estudiantes en semana de ACA generan picos. Hay lista de claves de respaldo con rotación automática — verificar que esté configurada |
-| ~~El desglose EV del syllabus está truncado~~ — **resuelto 2026-08-10** | — | **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV. Cambiarlo a mitad de bloque recalcularía todas las notas: no tocar |
+| ~~El desglose EV del syllabus está truncado~~ — **resuelto 2026-08-10 por la auditoría del aula** | — | El libro de calificaciones ya trae el desglose: Quiz 1 6% + Parcial 1 24% · Quiz 2 9% + Parcial 2 21% · ACA Final 32,8% + Quiz 3 4% + auto 1,6% + coev 1,6%. La regla intermedia «cada ACA vale el 100% de su corte» **quedó anulada**: nunca llegó a configurarse en el aula, así que no hay notas que recalcular |
 | **Ausencia justificada sin dónde registrarse** | **Bajo-medio** | Con 7 encuentros, un ausente justificado se va al rojo. Marcar presente y dejar constancia por otra vía (§4.7) |
 | **Sobrecarga: 13 herramientas para 7 sesiones** | **Alto, y es el riesgo real** | Ver §7. La recomendación es empezar con **cinco**, no con trece |
 
@@ -465,7 +485,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 2. **Encuesta mixta** — que las 7 fichas se llenen estructuradas y el docente lea las 50, no 3.
 3. **Foro por sesión** — el espacio asíncrono que hoy no existe en ningún archivo del curso.
 4. **Tutor IA** — el acompañamiento de las 64 horas autónomas.
-5. **Actividades externas + Alerta temprana** — los tres ACA registrados, para que el semáforo vea algo.
+5. **Actividades externas + Alerta temprana** — los ítems del aula registrados (empezando por Quiz 1 y **Parcial 1**, que se juegan el 30% en las tres primeras semanas), para que el semáforo vea algo.
 
 **Segundo anillo, si el primero funciona** (a partir de la S03): Reto en vivo, pregunta tipo `diagrama` para la ideación, y el proyecto con video de sustentación para el pitch de la S07.
 
@@ -480,7 +500,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 - [ ] Conseguir el listado de los 50 estudiantes (no está en el material del curso) y armar el CSV de importación.
 - [ ] Confirmar las tres URL pendientes: **CDigital**, **Google Meet** y plantilla APA pública.
 - [ ] Verificar que el **modo de procesamiento de IA** esté en inmediato (si está en diferido, la generación de contenidos se encola).
-- [ ] Configurar los cortes con **una ACA por corte** (30/30/40), sin subdividir en EV — decidido 2026-08-10.
+- [ ] Configurar los cortes con **los 8 ítems reales del aula** (Quiz 1 6% + Parcial 1 24% · Quiz 2 9% + Parcial 2 21% · ACA Final 32,8% + Quiz 3 4% + auto 1,6% + coev 1,6%) — auditoría 2026-08-10.
 - [ ] Confirmar la **nota de aprobación** y la escala institucional.
 - [ ] Importar el cronograma de 7 encuentros con la columna de modalidad de sesión.
 - [ ] Probar la autorización del calendario institucional. Si falla, plan B con `.ics` + mensajes programados.
@@ -493,7 +513,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 - [ ] Sembrar el override del prompt del Tutor IA con la tabla de acompañamiento del guion S01.
 - [ ] Crear los **7 foros**, uno por sesión, con su ventana.
 - [ ] Armar las **7 fichas como formularios** (empezar por la de la S01, 6 campos obligatorios).
-- [ ] Programar los tres recordatorios de ACA (domingos anteriores al 19/08, 02/09 y 16/09).
+- [ ] Programar los recordatorios de **cada cierre**: 19/08 (Quiz 1) · 26/08 (Parcial 1) · 02/09 (Quiz 2) · 09/09 (Parcial 2) · 16/09 (Quiz 3) · **19/09 (ACA Final)** · 23–27/09 (auto y coevaluación).
 
 **Segundo anillo — después de la sesión 02**
 
@@ -501,7 +521,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 - [ ] **Probar un render de mapa mental y de matriz 2×2** en una pregunta tipo `diagrama` antes de usarla en clase (§4.2, nivel 1 — está inferido, no verificado visualmente).
 - [ ] Preparar los 5 fragmentos de código base de diagrama (mapa mental, matriz 2×2, flujo del ciclo de vigilancia, mapa de entidades).
 - [ ] Armar el Reto en vivo de la S03 con 6 preguntas.
-- [ ] Escribir las rúbricas como tabla markdown para los tres instrumentos que van a los ACA.
+- [ ] Escribir las rúbricas como tabla markdown para los instrumentos que alimentan la **ACA Final**, y las preguntas de **Quiz 1–3 y Parcial 1–2** en el Banco.
 - [ ] Crear el proyecto de pitch de la S07 con video de sustentación.
 
 **Hábito semanal — todo el bloque**
@@ -528,7 +548,8 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 | Manual del docente (regla de festivos, hilo conductor) | `Manual del Docente - Creatividad y Pensamiento Innovador.md` |
 | Calendario de los 7 encuentros | `Calendario de clases (oficial).md` |
 | Guiones de las 7 sesiones (fases al minuto, talleres, criterios) | `Guiones/Sesion 0N - ….md` |
-| Enunciados de los 3 ACA | `Clases/Recursos/ACAs/` |
+| Enunciados — **un documento por ítem del aula** (guía de cada quiz y parcial, ACA Final, instructivos de auto y coevaluación; realineados 2026-08-10) | `Clases/Recursos/ACAs/` |
+| Estructura real del aula (ítems, tipos, pesos, ventanas) | `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` |
 | Presentación del curso (cortes 30/30/40, acuerdos) | `Presentacion del Curso….pptx` |
 | Instrumento huérfano de la Unidad 2 | `Guiones/Capturas/Sesion 02/s02_mapa_utilidad_modelo.html` |
 | Índice de material para estudiantes | `LEEME - Material para estudiantes.docx` |

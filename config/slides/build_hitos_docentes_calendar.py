@@ -28,7 +28,7 @@ from sesiones_cun import (  # type: ignore
     LINK_TUTORIAS,
     meet_url,
 )
-from fechas_entrega_aca import ACA_COMPONENTES  # type: ignore  # noqa: E402
+from fechas_entrega_aca import ACA_COMPONENTES, desglose_corte_texto  # type: ignore  # noqa: E402
 
 OUT_NAME = "Entregas y hitos docentes - Importar a Calendar.csv"
 
@@ -47,19 +47,19 @@ def fecha_encuadre(course_key: str, fallback: date) -> date:
 
 
 def texto_evaluacion(course_key: str) -> str:
-    """Esquema de evaluación real del curso (no asumir 30/30/40 en todos)."""
-    comps = ACA_COMPONENTES.get(course_key) or []
-    if course_key == "tg3":
-        return (
-            "Evaluación: corte único 100% · EV05 50% (proceso) + EXAM 50% (sustentación) "
-            "— Syllabus 94532. "
-        )
-    if not comps:
+    """Esquema de evaluación REAL del aula (libro de calificaciones, auditoría 2026-08-10).
+
+    Antes esta función afirmaba «cada ACA evalúa el 100% de su corte» y, para TG3,
+    «corte único 100% EV05/EXAM». Las dos cosas eran falsas: el gradebook tiene quices,
+    parciales, una ACA Final, autoevaluación (cuestionario) y coevaluación (foro).
+    El desglose se lee de ACA_COMPONENTES, no se escribe a mano.
+    """
+    if not (ACA_COMPONENTES.get(course_key) or []):
         return ""
-    detalle = " · ".join(f"{c['label']} {c['weight']}%" for c in comps if c["kind"] == "aca")
     return (
-        f"Evaluación Art. 52: {detalle}; cada ACA evalúa el 100% de su corte "
-        "(sin subdividir en varios EV) — decidido 2026-08-10, configurar así en CDigital. "
+        f"Evaluación (libro de calificaciones CDigital): {desglose_corte_texto(course_key)}. "
+        "Los quices y parciales son cuestionarios, la ACA Final es una tarea y la "
+        "coevaluación es un foro: verificar que las actividades existan en el aula. "
     )
 
 HEADERS = [

@@ -12,8 +12,26 @@
 | Fechas clave | Inicio 10/08/2026 · recepción máx. 14/11/2026 · cierre **22/11/2026** |
 | Plataforma oficial CUN | **CDigital (Moodle)** — no negociable |
 | Herramienta evaluada | **ExamLab** (`examlab.lovable.app`) |
-| Fecha | 2026-08-08 |
+| Evaluación | Art. 52 — **tres cortes 30 / 30 / 40** · Corte 1 = Quiz 1 6% + **Parcial 1 24%** · Corte 2 = Quiz 2 9% + **Parcial 2 21%** · Corte 3 = **ACA Final 32,8%** + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6% (**foro**) |
+| Fecha | 2026-08-08 · **revisado 2026-08-10** contra el aula |
 | Estado | **Borrador para aprobación docente** |
+
+> ## ⚠️ Corrección del 2026-08-10 — los pesos ya no están «sin confirmar»
+>
+> Este análisis se escribió el 08/08 cuando la evaluación de TG2 era una reconstrucción por analogía con TG3, a la espera del Syllabus SIAC. El **10/08 se auditó el libro de calificaciones del aula** (`AUDITORIA CDigital 2026-08-10.md` §2): **la estructura está ahí, completa**. Donde el cuerpo diga lo contrario, manda este recuadro:
+>
+> | Lo que decía este documento | Lo que hay en el aula |
+> |---|---|
+> | «Pesos 30/30/40 **sin confirmar** — **bloqueante**, no crear cortes hasta tener el SIAC (R4)» | **Confirmados y desglosados.** Ya no hay bloqueo: el SIAC solo falta para el **temario** |
+> | «Tres ACAs, una por corte, entregadas el 07/09 · 05/10 · 09/11» | **8 ítems.** Quiz 1 6% → **31/08** (S03) · **Parcial 1 24%** → **14/09** (S05) · Quiz 2 9% → **28/09** (S07) · **Parcial 2 21%** → **05/10** (S08) · Quiz 3 4% → **26/10** (S10) · **ACA Final 32,8%** (tarea) → **14/11** (recepción) · Autoevaluación 1,6% y Coevaluación 1,6% → 09–22/11 |
+> | «Autoevaluación y coevaluación **con peso propio no aplican** aquí» | **Sí aplican** (1,6% cada una). La **coevaluación es un FORO de CDigital**: la nota se cumple allá, y lo que falta en ExamLab es solo la capa formativa |
+>
+> **Lo que esto cambia:**
+> - **R4 deja de ser bloqueante.** Los cortes se pueden crear hoy, con los 8 ítems reales.
+> - **Aparece la tarea más urgente del curso, que este documento no contemplaba:** redactar **Quiz 1–3 y Parcial 1–2** (64% de la nota). En el aula existen como ítem del libro de calificaciones **sin actividad ni preguntas**; el primero cierra el **31/08**. El **Banco de preguntas** de ExamLab es el insumo natural — la nota oficial sigue siendo la del cuestionario de CDigital.
+> - **R3 se atenúa:** con cinco cuestionarios entre agosto y octubre, el estudiante ya no queda «reprobado hasta noviembre» a la espera de un único entregable.
+
+---
 
 > ### Alcance de este documento: HERRAMIENTAS, no entregas
 >
@@ -21,9 +39,10 @@
 > material por sesión, asistente sobre el material, foro, encuesta en vivo, lienzo de diagramas,
 > calendario, seguimiento de avance, banco de preguntas.
 >
-> **No** analiza dónde se sube el archivo final ni los porcentajes de la nota. **La entrega oficial y el
-> registro de notas siguen en CDigital, sin excepción** — así lo declaran los 3 enunciados ACA, el
-> `LEEME` del estudiante y el Manual del Docente. Nada de lo que sigue mueve eso.
+> **No** analiza dónde se sube el archivo final ni los porcentajes de la nota. **La entrega oficial, la
+> aplicación de los cuestionarios y el registro de notas siguen en CDigital, sin excepción** — así lo
+> declaran los enunciados ACA, el `LEEME` del estudiante y el Manual del Docente. Nada de lo que sigue
+> mueve eso.
 >
 > Todo lo marcado *(inferido)* es reconstrucción propia, no está en el material del curso.
 
@@ -79,7 +98,7 @@ Las 11 necesidades son las declaradas en el análisis del curso, más la de las 
 | 12 | **Las 4 clases autónomas vacías** | `session_type = 'autonoma'` + notificación automática + foro con ventana | **Lista (el contenedor)** |
 | — | Gestor de referencias y ayuda de citación APA | — | **No existe** |
 | — | Rúbrica como **dato** (criterios × niveles × puntaje) | — | **No existe** |
-| — | Coevaluación con rúbrica y nota | — | **No existe** |
+| — | Revisión por pares con rúbrica y registro *(la **coevaluación con nota** del curso —1,6%— **sí existe**, pero es un **foro de CDigital**)* | — | **No existe en ExamLab** |
 | — | Historial de versiones del documento (ACA1→2→3) | — | **No existe** |
 | — | Que el **estudiante** cree una encuesta (sesión 08) | — | **No existe (bloqueado en RLS)** |
 | — | Cronómetro proyectable con consigna y criterio a la vista | — | **No existe** |
@@ -102,7 +121,7 @@ Esto no es contexto de color; es lo que decide qué herramienta tiene sentido.
 | **Pregrado, no posgrado** | Menos autonomía: *"no sabía que era hoy"* y *"no encontré la consigna"* son causas reales de no-entrega |
 | **4 de 15 encuentros son autónomos y están vacíos** | El 27% del curso depende de que el estudiante se autoorganice sin consigna |
 | **Estructura idéntica en las 11 sesiones** (6+14+12+20+8) | La modelación en vivo son 12 min × 11 = **132 minutos** de demo repetible, grabables una vez |
-| **Falta el syllabus SIAC oficial** | Pesos 30/30/40 **sin confirmar**. Bloquea configurar cortes (ver §7 R4) |
+| **Falta el syllabus SIAC oficial** | Falta el **temario**. Los **pesos ya no son un problema**: salen del libro de calificaciones del aula (auditoría 2026-08-10) y se pueden configurar hoy |
 
 Dos cifras que aparecen solas al hacer la cuenta y que el material no resuelve:
 
@@ -134,14 +153,14 @@ las 3 ventanas ACA. Detalle en §8.
 | **01** | 10/08 | Acuerdo pedagógico · delimitación. **Taller:** matriz de estado (secciones listas / a medias / inexistentes) + 3 compromisos. Rompehielos en Padlet | **Encuesta `mixed`** que reemplaza a Padlet y al Doc de estado: 1 campo cerrado por sección del APA (Planteamiento · Objetivos · Marco · Metodología → *listo / a medias / inexistente*) + 1 abierto para los 3 compromisos. El docente la lee **agrupada por campo y con el nombre del autor** → tiene el semáforo de los 50 en la misma clase. Ventaja sobre Padlet: queda por curso (hoy el Padlet es **el mismo enlace en los 5 cursos** del docente) y los nombres se resuelven |
 | **02** | 24/08 | Pregunta, objetivos y título ≤21 palabras. **Taller:** bloque pregunta + general + 3 específicos + título | **Taller formativo** con 4 preguntas abiertas + **rúbrica escrita como tabla markdown en el enunciado** (el estudiante la ve *antes* de responder) + calificación IA formativa + hilo de retro por pieza. **Reto en vivo** de 6–8 preguntas cerradas sobre el error nombrado en el guion: verbos *"conocer / entender"* en objetivos |
 | **03** | 31/08 | Estructura del documento / artículo de avance. **Taller:** outline con bullets por sección | **Pregunta `diagrama`** (mermaid `mindmap`): el mapa de secciones del APA queda **persistido por estudiante, calificable y consultable después** — hoy se dibuja en Excalidraw suelto y se pierde. Contenidos: la `Plantilla_APA_CUN` asignada a esta sesión alimenta al Tutor IA |
-| **04** | 07/09 | Antecedentes y referentes (Fase I). **Taller:** 4 fichas + párrafo puente. **ACA 1 se entrega hoy** | **Taller formativo**: 1 pregunta abierta por ficha (autor · año · aporte · relación con mi pregunta) con la rúbrica de la ficha en el enunciado, + hilo de retro por ficha. **Registro de ACA 1** como taller externo (nota + observación). **Brecha:** la citación APA sigue en ZoteroBib, fuera de ExamLab (§6.1) |
+| **04** | 07/09 | Antecedentes y referentes (Fase I). **Taller:** 4 fichas + párrafo puente. *(el **Quiz 1**, 6%, cerró el 31/08 en la S03; el **Parcial 1**, 24%, cierra el 14/09 en la S05)* | **Taller formativo**: 1 pregunta abierta por ficha (autor · año · aporte · relación con mi pregunta) con la rúbrica de la ficha en el enunciado, + hilo de retro por ficha. **Registro del Quiz 1** como ítem externo (nota + observación) y **repaso del Parcial 1**, que es el ítem más pesado del primer corte. **Brecha:** la citación APA sigue en ZoteroBib, fuera de ExamLab (§6.1) |
 | **05** | 14/09 | Marco teórico — avance. **Taller:** mapa de constructos + 1–2 páginas | **Pregunta `diagrama`** (mermaid `mindmap` o `flowchart`) = el mapa de constructos, exactamente lo que pide el guion. **Tutor IA** para la duda típica de esta semana: *"¿esto es marco teórico o conceptual?"* — respondida a las 11 pm del domingo, no 7 días después |
 | **06** | 21/09 | Marco conceptual y contextual. **Taller:** tabla de términos + 1 página contextual | **Encuesta `mixed`** para la tabla de términos (término · definición operativa · fuente), o **foro** — con el dato fino de que **en el foro una tabla markdown sí renderiza como tabla**, mientras que en la respuesta de un taller sale en texto plano (§6.2). Error a atajar: *"contexto = país entero"* |
 | **07** | 28/09 | Diseño metodológico (propuesto). **Taller:** ficha metodológica (matriz pregunta–método) | **Encuesta `mixed`** con la ficha como formulario de campos fijos (enfoque · tipo · alcance · población · técnica · instrumento). Es el caso de mayor valor de esta pieza: el docente ve **los 50 enfoques agrupados por campo**, no 50 textos. Alternativa para la matriz: `diagrama` tipo `quadrantChart` |
-| **08** | 05/10 | Instrumentos y plan de análisis. **Taller:** bosquejo de instrumento (10 ítems o guía de 8 preguntas). **ACA 2 se entrega hoy** | **Brecha explícita: el estudiante NO puede crear una encuesta en ExamLab** — la RLS lo bloquea (§6.5). Workaround: el **docente** construye una encuesta `mixed` de demostración —que es *literalmente* el instrumento que se está enseñando a diseñar— y los 50 la responden para ver cómo se comporta; el bosquejo propio va como pregunta abierta. **Registro de ACA 2** |
+| **08** | 05/10 | Instrumentos y plan de análisis. **Taller:** bosquejo de instrumento (10 ítems o guía de 8 preguntas). **cierra el Parcial 2 (21%)** | **Brecha explícita: el estudiante NO puede crear una encuesta en ExamLab** — la RLS lo bloquea (§6.5). Workaround: el **docente** construye una encuesta `mixed` de demostración —que es *literalmente* el instrumento que se está enseñando a diseñar— y los 50 la responden para ver cómo se comporta; el bosquejo propio va como pregunta abierta. **Registro del Parcial 2** (21%) como ítem externo |
 | **09** | 19/10 | Integración del avance · correcciones. **Taller:** matriz de gaps + dueños ("semáforo por sección") | **Proyecto con 1 slot por sección del APA** (§5.1): cada sección tiene rúbrica, nota y **hilo de retro propio**, y el **diagnóstico del curso** da la matriz estudiante × sección con 5 estados de celda. Es la técnica que el guion ya usa en clase, convertida en tablero |
 | **10** | 26/10 | Socialización de avances. **Pitch 3 min + 3 comentarios de pares** | **La sesión no cabe** (150 min en 60). Se vuelve asíncrona: el alumno graba 3 min y el enlace va en `defense_video_url`; **un hilo de foro por estudiante** donde 3 pares comentan. En vivo se hace una muestra de ~10, repartida con una **encuesta `slot`**. **Brecha:** no hay asignación automática de revisores, ni rúbrica de par, ni nota de par — el docente lista a mano quién comenta a quién (§6.3) |
-| **11** | 09/11 | Cierre del avance · preparación para TG3. **Taller:** pendientes TG3 + versión limpia. **ACA 3 se entrega hoy** | **Registro de ACA 3.** **Banco de preguntas** de sustentación etiquetado por sección, que se hereda a TG3. Export del consolidado de notas → digitación en CDigital. **Alerta temprana** final: a quién hay que buscar antes del cierre del 22/11 |
+| **11** | 09/11 | Cierre del avance · preparación para TG3. **Taller:** pendientes TG3 + versión limpia. *(la **ACA Final**, 32,8%, cierra el **14/11** — recepción máx.; auto y coevaluación 09–22/11)* | **Última sincrónica antes de la ACA Final**: recordarla, y explicar que la **coevaluación es un foro** de CDigital. **Banco de preguntas** de sustentación etiquetado por sección, que se hereda a TG3. Export del consolidado de notas → digitación en CDigital. **Alerta temprana** final: a quién hay que buscar antes del cierre del 22/11 |
 
 ### Las 4 clases autónomas (hoy vacías)
 
@@ -151,9 +170,9 @@ y el recordatorio**; la consigna la sigue escribiendo el docente.
 | Fecha | Festivo | Ubicación en el hilo | Herramienta + qué falta |
 |---|---|---|---|
 | **17/08** | Asunción | Entre S01 (estado) y S02 (pregunta/objetivos) | Sesión marcada `autonoma`: al llegar la fecha **notifica y emaila sola** a los 50, y el alumno marca el material como revisado (queda como asistencia). Material asignado + **foro con ventana 17/08–23/08**. *Falta la consigna* — sugerida *(inferido)*: subir el borrador de pregunta al foro y comentar 1 de un compañero |
-| **12/10** | Día de la Raza | Justo después de ACA 2 (05/10), antes de S09 (integración) | Ídem. Ventana de foro 12/10–18/10. *Falta la consigna* — sugerida *(inferido)*: leer la retro del ACA 2 y publicar los 3 gaps propios, que es el insumo del taller de S09 |
+| **12/10** | Día de la Raza | Justo después del **Parcial 2** (05/10), antes de S09 (integración) | Ídem. Ventana de foro 12/10–18/10. *Falta la consigna* — sugerida *(inferido)*: leer la retro del Parcial 2 y publicar los 3 gaps propios, que es el insumo del taller de S09 |
 | **02/11** | Todos los Santos | Entre S10 (socialización) y S11 (cierre) | Ídem. Ventana 02/11–08/11. *Falta la consigna* — sugerida *(inferido)*: incorporar los comentarios de pares recibidos en S10 y publicar qué cambió |
-| **16/11** | Indep. Cartagena | Después de S11 y de la recepción máx. (14/11) | Es la semana de **nota docente del ACA 3** según el Manual. Uso realista: **registro y cierre docente**, no actividad nueva. Difusión programada con el estado de notas antes del cierre del 22/11 |
+| **16/11** | Indep. Cartagena | Después de S11 y de la recepción máx. (14/11) | Es la semana de cierre: **nota de la ACA Final** y ventanas de auto/coevaluación abiertas hasta el 22/11. Uso realista: **registro y cierre docente**, no actividad nueva. Difusión programada con el estado de notas antes del cierre del 22/11 |
 
 > **Nota honesta:** marcar las 4 como `autonoma` se hace **en el mismo CSV de importación** del cronograma
 > (la columna `session_type` viaja en la plantilla), no una por una. Pero eso resuelve la *logística*, no el
@@ -176,7 +195,7 @@ lo mismo.
 | 5 | **Encuestas** | **Opción única/múltiple** para el pulso en vivo (resultados con nombres). **`mixed`** = formulario de campos (abiertos y cerrados, con obligatorio y tope de caracteres) que el alumno llena campo por campo y el docente lee **agrupado por campo, con autor**. **`slot`** tipo Doodle con reserva de cupo atómica | El pulso en vivo hoy es *"1 pregunta a 2 estudiantes"* = 2 de 50. Y `mixed` es lo que convierte las fichas y matrices del curso (S01, S06, S07) en algo legible de un vistazo |
 | 6 | **Pregunta `diagrama`** | Editor mermaid **dentro del taller del estudiante**: cada alumno produce su diagrama, se guarda con su entrega, lleva rúbrica y puntaje. Verificado: **sin whitelist de tipo**, y mermaid 11.15 trae `mindmap`, `quadrantChart`, `journey` y `timeline` además de los de ingeniería | Soporta 4 talleres del curso: mapa de secciones (S03), mapa de constructos (S05), matriz pregunta–método (S07) y semáforo por sección (S09). Hoy se dibuja en Excalidraw suelto y **se pierde al cerrar la pestaña** |
 | 7 | **Calendario** | El docente conecta Google **o Microsoft 365** y sincroniza las sesiones **con los 50 como invitados** (`sendUpdates=all`), generando el enlace de Meet. El alumno además se suscribe a un `.ics` privado con sesiones y actividades | Cierra un defecto textual del material: *"Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes"*. Hoy el estudiante **nunca recibe la invitación** |
-| 8 | **Registro de notas + observación** | Editor de actividades externas: grilla de los 50 con **Nota + Observación** por estudiante. Alimenta cortes, alerta temprana, informes y actas | Los 3 ACAs se entregan en CDigital y se **registran** aquí: costo cero para el estudiante, y habilita el semáforo y el consolidado |
+| 8 | **Registro de notas + observación** | Editor de actividades externas: grilla de los 50 con **Nota + Observación** por estudiante. Alimenta cortes, alerta temprana, informes y actas | Los ítems del aula (5 cuestionarios + ACA Final) se aplican/entregan en CDigital y se **registran** aquí: costo cero para el estudiante, y habilita el semáforo y el consolidado |
 | 9 | **Alerta temprana** | Semáforo por estudiante con motivos discretos (inasistencia · reprobadas · no entregadas · promedio bajo). Rojo solo con **2 señales independientes**. Justificado sale del denominador; tarde cuenta como asistió | Los 550 entregables contra 1 hora semanal. Se mira **antes** de la clase para decidir a quién buscar. *Advertencia:* hay que **abrir Estadísticas** — no llega como alerta |
 | 10 | **Progreso de material + videos** | "Abriste N de M archivos" y "Seguías en…". Biblioteca de videos por curso | Distingue *"no entendió"* de *"no abrió nada"*. Y los **12 min × 11 sesiones** de modelación en vivo, grabados una vez, vuelven al taller |
 
@@ -258,8 +277,7 @@ Cero. No hay biblioteca de referencias por estudiante, ni importación de DOI/Bi
 cita, ni detección de duplicados. Lo único parecido es un campo de texto libre *"Bibliografía sugerida"* en
 el panel del Admin, que es del Syllabus institucional.
 
-**Impacto en este curso:** alto y directo. La S04 pide 4 fichas de antecedentes, el ACA 2 es marco
-referencial completo y el ACA 3 lo integra. **ZoteroBib sigue siendo obligatorio y externo**, tal como está
+**Impacto en este curso:** alto y directo. La S04 pide 4 fichas de antecedentes y la **ACA Final** (32,8%) exige el marco referencial completo e integrado. **ZoteroBib sigue siendo obligatorio y externo**, tal como está
 hoy en la *Guía práctica de herramientas de escritura y citación*. ExamLab no lo reemplaza ni lo mejora.
 
 ### 6.2 Rúbrica como dato — **no existe**
@@ -276,8 +294,8 @@ Cero código y cero tablas. Y es estructural: **un estudiante no puede leer la e
 impide por diseño). No hay tabla de asignación de revisores, ni de comentario de par, ni de nota de par.
 
 **Impacto:** la S10 pide *"3 comentarios de pares con criterio"*. El sustituto es el foro (§5.3): funciona
-como actividad, no como instrumento. **Atenuante:** el material del curso declara que autoevaluación y
-coevaluación **con peso propio no aplican** aquí, así que la ausencia no bloquea la nota — bloquea la
+como actividad, no como instrumento. **Corregido 2026-08-10:** el curso **sí tiene coevaluación con peso
+propio (1,6%)**, y en el aula es un **foro de CDigital** — la nota se cumple allá; lo que falta acá es la
 actividad formativa.
 
 ### 6.4 Historial de versiones del documento — **no existe**
@@ -285,7 +303,7 @@ actividad formativa.
 Una entrega por actividad, **sobrescrita**. No hay tabla de versiones ni de hitos. Si el avance se modelara
 como una sola actividad reentregable, la V2 pisaría la V1, su retro y su feedback.
 
-**Impacto:** el ACA 2 exige *"incorporar retroalimentación del Corte 1"*, y el ACA 3 integra los dos
+**Impacto:** la **ACA Final** integra todo el avance del periodo y exige incorporar la retroalimentación de los
 anteriores. **No hay forma de ver si se incorporó.** Workaround: tres entidades separadas (ACA1, ACA2,
 ACA3) en tres cortes — se conservan las tres notas y las tres retros, se pierde el diff.
 
@@ -338,8 +356,8 @@ Ponderados para **pregrado**: menos autonomía, más estudiantes por hora, y una
 |---|---|---|---|
 | **R1** | **Cuarta plataforma para 50 estudiantes de pregrado.** Ya usan CDigital, Meet, Google Docs y Padlet | **Alto** | Alcance mínimo **no duplicativo** (§1). Presentarla como *"donde está el material y donde preguntás"*, no como "otra plataforma de entrega". Si en la S03 menos de 35 de 50 entraron, retirar todo salvo material y tutor |
 | **R2** | **Doble trabajo:** hacer el taller en ExamLab **y** subirlo a CDigital | **Alto** | **No espejar los 11 entregables.** Donde ExamLab pida texto (§5.1), pedir un **párrafo de estado**, nunca la sección completa |
-| **R3** | **Un ítem sin nota cuenta como 0** con su peso original. Con ACA 3 al 40% cerrando el 09/11, todo estudiante se ve reprobado hasta noviembre | **Alto** en pregrado (desmotiva y genera consultas) | Los formativos van con **peso 0**. Explicarlo en la S01. Registrar los ACAs apenas se califican, no al final |
-| **R4** | **Falta el syllabus SIAC.** Los pesos 30/30/40 son reconstrucción por analogía con TG3 | **Alto** | **Bloqueante: resolver antes de crear los cortes.** Un corte mal fechado desplaza sesiones de corte y desvía el consolidado. Mientras tanto, no publicar notas ponderadas al estudiante |
+| **R3** | **Un ítem sin nota cuenta como 0** con su peso original. La **ACA Final** (32,8%) no cierra hasta el 14/11 | **Medio** *(bajó de Alto el 2026-08-10: con cinco cuestionarios calificados entre agosto y octubre, el estudiante ya no se ve reprobado hasta noviembre)* | Los formativos van con **peso 0**. Explicarlo en la S01. Registrar cada ítem apenas se califica, no al final |
+| ~~**R4**~~ | ~~Falta el syllabus SIAC; los pesos 30/30/40 son reconstrucción~~ → **cerrado 2026-08-10** | — | El libro de calificaciones del aula trae la estructura completa (8 ítems con su peso y su ventana). **Ya no bloquea:** los cortes se crean hoy. Del SIAC sigue faltando solo el **temario** |
 | **R5** | Los estudiantes entienden que el avance se entrega en ExamLab | **Alto** | Slide explícita en la S01: *"la entrega oficial es y sigue siendo CDigital"*. No crear en ExamLab ningún ítem que parezca recibir el archivo final |
 | **R6** | **Fricción de alta:** 50 cuentas, clave temporal y cambio forzado en el primer ingreso | Medio-alto | Importar los 50 por CSV **antes** del 10/08 (el correo de bienvenida sale solo). Dejar el Padlet para el rompehielos de la S01 y estrenar ExamLab en la S02 (§5.5) |
 | **R7** | El Tutor IA **le escribe el trabajo** al estudiante | Medio-alto en pregrado | El prompt sembrado ya es anti-atajo (*"NO resolverle los ejercicios"*). Reforzarlo con el override por curso y alinearlo con el checklist de integridad académica de los ACAs. Decirlo en voz alta en la S01 |
@@ -375,7 +393,8 @@ Ponderados para **pregrado**: menos autonomía, más estudiantes por hora, y una
 **Bloqueante — antes de configurar nada**
 
 - [ ] Docente aprueba este documento (veredicto + alcance de las 7 piezas).
-- [ ] **Conseguir el syllabus SIAC** o confirmar con Coordinación los pesos (30/30/40) y las 3 fechas ACA (07/09 · 05/10 · 09/11). Sin esto no se crean cortes (R4).
+- [x] ~~Conseguir el syllabus SIAC para confirmar pesos y fechas~~ → **resuelto 2026-08-10**: salen del aula. Crear los **tres cortes 30/30/40** con los 8 ítems (Quiz 1 6% + Parcial 1 24% · Quiz 2 9% + Parcial 2 21% · ACA Final 32,8% + Quiz 3 4% + auto 1,6% + coev 1,6%).
+- [ ] **Redactar el Quiz 1 antes del 31/08 y el Parcial 1 antes del 14/09** en el Banco de preguntas: en el aula existen como ítem del libro de calificaciones, sin actividad ni preguntas.
 - [ ] Verificar que el OAuth de calendario conecta con la cuenta institucional (R12).
 - [ ] Confirmar que hay clave de IA configurada y modo **síncrono** — si está en asíncrono, el tutor y la generación no responden en clase.
 
@@ -405,13 +424,13 @@ Ponderados para **pregrado**: menos autonomía, más estudiantes por hora, y una
 - [ ] S02: Reto en vivo de verbos de objetivo + rúbrica en el enunciado.
 - [ ] S05: **decidir** si va el proyecto de N slots (§5.1).
 - [ ] Cada lunes antes de clase: revisar alerta temprana + progreso de material (R15).
-- [ ] Por corte: registrar ACA con nota + observación → exportar → digitar en CDigital (R14).
+- [ ] Por ítem del aula (Quiz 1–3, Parcial 1–2, ACA Final): registrar nota + observación → exportar → digitar en CDigital (R14).
 - [ ] S10: abrir los 50 hilos de pitch y publicar la asignación de pares (§5.3).
 - [ ] Antes del 22/11: generar el consolidado y **descargar la evidencia**.
 
 **Fuera de alcance de este periodo** *(inferido — registrar para decidir después)*
 
-- [ ] Coevaluación con rúbrica y nota (§6.3) — requiere desarrollo.
+- [ ] Revisión por pares con rúbrica y registro en ExamLab (§6.3) — requiere desarrollo. *(La coevaluación con nota del curso se cumple en el **foro de CDigital**, 1,6%.)*
 - [ ] Que el estudiante cree encuestas (§6.5) — requiere migración.
 - [ ] Rúbrica como dato (§6.2) y historial de versiones (§6.4).
 

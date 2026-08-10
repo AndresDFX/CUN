@@ -108,19 +108,24 @@ def leeme_md(key: str) -> str:
     pptx_curso = PRESENTACION_CURSO[key]
     meet = meet_url(key, c["titulo"])
     aca_rows = catalog_for_leeme(key)
+    # La tabla lista los **ítems reales del libro de calificaciones** (auditoría
+    # CDigital 10/08/2026), no solo las tareas: en pregrado 5 de los 8 ítems son
+    # cuestionarios (quices y parciales) y antes no aparecían en ningún lado.
     aca_table = "\n".join(
-        f"| **{r['code']}** — {r['title']} | **{r['fecha']}** | `{r['rel']}` |"
+        f"| **{r['code']}** — {r['title']} | {r['corte']} | {r['tipo']} · **{r['weight']}** "
+        f"| **{r['fecha']}** | `{r['rel']}` |"
         for r in aca_rows
-        if r["kind"] == "aca"
     )
-    # Auto/coevaluación (solo Proyecto I): NO son ACAs — van aparte y rotuladas
-    # como instrumentos individuales de cierre, cada uno con su instructivo.
+    # Auto/coevaluación: existen en los 5 cursos (no solo Proyecto I). NO son ACAs
+    # — van aparte y rotuladas como instrumentos individuales de cierre.
     instrumentos = [r for r in aca_rows if r["kind"] == "instrumento"]
+    documental = [r for r in aca_rows if r["kind"] == "aca"]
     instrumentos_bloque = ""
     arbol_instrumentos = ""
     if instrumentos:
+        pesos = " / ".join(dict.fromkeys(r["weight"] for r in instrumentos))
         arbol_instrumentos = (
-            "\n      Autoevaluacion / Coevaluacion individual (4%) - instructivo.docx"
+            f"\n      Autoevaluacion / Coevaluacion individual ({pesos}) - instructivo.docx"
             "   ← no son ACAs"
         )
         lineas = "\n".join(
@@ -132,7 +137,9 @@ def leeme_md(key: str) -> str:
             "\n### Autoevaluación y coevaluación — **no son ACAs**\n\n"
             "Al cierre del curso hay además dos **instrumentos individuales**: no se entrega documento "
             "ni se usa la plantilla APA. **Cada estudiante los diligencia** (tipo formulario) en **CDigital**, "
-            "dentro de su ventana. **No sustituyen la ACA 3**; si no los diligencias, ese porcentaje queda en cero.\n\n"
+            "dentro de su ventana. **No sustituyen "
+            + (f"la {documental[-1]['code']}" if documental else "el entregable del corte 3")
+            + "**; si no los diligencias, ese porcentaje queda en cero.\n\n"
             f"{lineas}\n"
         )
     tutorias_bloque = ""
@@ -178,12 +185,12 @@ La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo 
 {tutorias_bloque}
 ---
 
-## ACAs / entregas evaluadas (enunciados)
+## Lo que se evalúa (los ítems de CDigital, uno por uno)
 
-Los enunciados completos viven en **`Recursos/ACAs/`** (archivos `.docx` con identidad CUN). Léelos antes de cada entrega. Las notas oficiales se registran en **CDigital**.
+Esta tabla es **el libro de calificaciones de tu aula**: cada fila es un ítem que existe en **CDigital** y tiene su propio documento en **`Recursos/ACAs/`**. Los cuestionarios (quices y parciales) **se resuelven en el aula, no se sube archivo**; su documento es la **guía** que te dice qué entra. Las tareas sí se suben. Léelo antes de cada fecha: las notas oficiales solo salen de CDigital.
 
-| ACA | Fecha de entrega | Archivo |
-| :--- | :--- | :--- |
+| Ítem del aula | Corte | Tipo · peso | Cierre | Documento |
+| :--- | :---: | :--- | :--- | :--- |
 {aca_table}
 {instrumentos_bloque}
 ---
@@ -197,7 +204,8 @@ Clases/
   Recursos/
     {APA_NAME}
     ACAs/
-      ACA N - ….docx{arbol_instrumentos}
+      Quiz / Parcial N (peso) - guia del cuestionario.docx   ← qué entra; se resuelve en el aula
+      ACA … (peso) - ….docx                                  ← tarea: esto sí se sube{arbol_instrumentos}
   Sesion 01 - …/
     Presentacion.pptx
     Lectura autonoma - Sesion 01.txt       ← qué leer, para cuándo y dónde está

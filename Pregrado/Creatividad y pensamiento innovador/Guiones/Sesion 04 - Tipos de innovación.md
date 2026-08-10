@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Tipos de innovación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 2** | Cuestionario | 2 | 9% | **Cierra hoy** — se aplica en clase (~15 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**15 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -97,10 +107,11 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre + puente desde la sesión anterior | 5 | min 00:00 – 05:00 |
-| 2️⃣ Profundizar tipos + incremental/radical | 14 | min 05:00 – 19:00 |
-| 3️⃣ Modelación con matriz comparativa | 12 | min 19:00 – 31:00 |
-| 4️⃣ Taller: matriz de su propuesta | 21 | min 31:00 – 52:00 |
-| 5️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Profundizar tipos + incremental/radical | 10 | min 05:00 – 15:00 |
+| 3️⃣ Modelación con matriz comparativa | 11 | min 15:00 – 26:00 |
+| 4️⃣ Taller: matriz de su propuesta | 11 | min 26:00 – 37:00 |
+| 5️⃣ Quiz 2 en CDigital (se aplica en clase) | 15 | min 37:00 – 52:00 |
+| 6️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -123,7 +134,7 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 
 ---
 
-#### 2️⃣ Profundizar tipos + incremental/radical (~14 min) — Protagonista: Docente
+#### 2️⃣ Profundizar tipos + incremental/radical (~10 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** distinguir tipo (qué cambia) de grado (cuánto rompe) y anclar el contexto socio-económico.
@@ -147,7 +158,7 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 
 > **En pantalla:** Filas = tipos Oslo; columnas = ejemplo / su propuesta.
 
-#### 3️⃣ Modelación con matriz comparativa (~12 min) — Protagonista: Docente
+#### 3️⃣ Modelación con matriz comparativa (~11 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** mostrar cómo se llena y cómo se lee una matriz de comparación.
@@ -176,11 +187,11 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 
 > **En pantalla:** Mejora socio-económica vs. tipo elegido.
 
-#### 4️⃣ Taller: matriz de su propuesta (~21 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: matriz de su propuesta (~11 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **21 minutos**. Armen su **Matriz comparativa**: su **tipo elegido** contra un **tipo alternativo** que descartaron. Mínimo **5 criterios**. Terminen con una **conclusión de 4 líneas** que explique, con base en los criterios, por qué se quedan con el tipo A. Al final, dos personas leen solo su conclusión. Criterio de éxito: la conclusión se apoya en los criterios, no en ‘me gusta más’.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **11 minutos**. Armen su **Matriz comparativa**: su **tipo elegido** contra un **tipo alternativo** que descartaron. Mínimo **5 criterios**. Terminen con una **conclusión de 4 líneas** que explique, con base en los criterios, por qué se quedan con el tipo A. Al final, dos personas leen solo su conclusión. Criterio de éxito: la conclusión se apoya en los criterios, no en ‘me gusta más’.”
 
 **Tabla de acompañamiento:**
 
@@ -194,7 +205,31 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 
 ---
 
-#### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
+#### 5️⃣ Quiz 2 en CDigital (se aplica en clase) (~15 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **15 min** y por eso se recortan: Profundizar tipos + incremental/radical 14→10 min, Modelación con matriz comparativa 12→11 min, Taller: matriz de su propuesta 21→11 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 2** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **quince minutos** son para **Quiz 2**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **9%** del curso dentro del **corte 2**, que vale **30%**. El resto del corte 2 lo aportan **Parcial 2** (21%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 2** del aula, y abren el ítem **Quiz 2**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~12 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -224,6 +259,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 2** (Cuestionario · 9% · corte 2) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 04 - Tipos de innovación/Presentacion.pptx`

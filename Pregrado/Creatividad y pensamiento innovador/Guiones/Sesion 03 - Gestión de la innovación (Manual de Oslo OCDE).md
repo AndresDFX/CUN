@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Gestión de la innovación (Manual de Oslo OCDE)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Parcial 1** | Cuestionario | 1 | 24% | **Cierra hoy** — se aplica en clase (~22 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**22 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -97,10 +107,11 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre + puente desde la sesión anterior | 5 | min 00:00 – 05:00 |
-| 2️⃣ Gestionar la innovación + Manual de Oslo | 15 | min 05:00 – 20:00 |
-| 3️⃣ Modelación: clasificar 3 casos en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller: ficha Oslo de su propuesta | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Gestionar la innovación + Manual de Oslo | 8 | min 05:00 – 13:00 |
+| 3️⃣ Modelación: clasificar 3 casos en vivo | 8 | min 13:00 – 21:00 |
+| 4️⃣ Taller: ficha Oslo de su propuesta | 9 | min 21:00 – 30:00 |
+| 5️⃣ Parcial 1 en CDigital (se aplica en clase) | 22 | min 30:00 – 52:00 |
+| 6️⃣ Cierre + trabajo autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -123,7 +134,7 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 
 ---
 
-#### 2️⃣ Gestionar la innovación + Manual de Oslo (~15 min) — Protagonista: Docente
+#### 2️⃣ Gestionar la innovación + Manual de Oslo (~8 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que entiendan qué es gestionar y que dominen la taxonomía de cinco tipos.
@@ -147,7 +158,7 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 
 > **En pantalla:** Clasificar 3 casos en producto/proceso/organización/marketing/social.
 
-#### 3️⃣ Modelación: clasificar 3 casos en vivo (~12 min) — Protagonista: Docente
+#### 3️⃣ Modelación: clasificar 3 casos en vivo (~8 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** que vean cómo se clasifica y por qué a veces hay tipo dominante + secundario.
@@ -174,11 +185,11 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 
 > **En pantalla:** Tipo dominante + secundario + 1 justificación.
 
-#### 4️⃣ Taller: ficha Oslo de su propuesta (~20 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: ficha Oslo de su propuesta (~9 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **20 minutos**. Completen la **Ficha Oslo** de su propuesta en Google Docs o Excalidraw con seis campos: (1) **tipo dominante**; (2) tipo **secundario** opcional; (3) **novedad** —¿nueva para quién: para usted, para el campus, para el mercado?—; (4) **valor esperado** en una frase; (5) **dos actividades de gestión** con responsable y fecha; (6) **riesgo #1**. Al final leo tres fichas en voz alta. Criterio de éxito: el tipo dominante está **justificado** y las dos actividades tienen **fecha real**.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **9 minutos**. Completen la **Ficha Oslo** de su propuesta en Google Docs o Excalidraw con seis campos: (1) **tipo dominante**; (2) tipo **secundario** opcional; (3) **novedad** —¿nueva para quién: para usted, para el campus, para el mercado?—; (4) **valor esperado** en una frase; (5) **dos actividades de gestión** con responsable y fecha; (6) **riesgo #1**. Al final leo tres fichas en voz alta. Criterio de éxito: el tipo dominante está **justificado** y las dos actividades tienen **fecha real**.”
 
 **Tabla de acompañamiento:**
 
@@ -192,7 +203,31 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 
 ---
 
-#### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
+#### 5️⃣ Parcial 1 en CDigital (se aplica en clase) (~22 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **22 min** y por eso se recortan: Gestionar la innovación + Manual de Oslo 15→8 min, Modelación: clasificar 3 casos en vivo 12→8 min, Taller: ficha Oslo de su propuesta 20→9 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Parcial 1** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **veintidós minutos** son para **Parcial 1**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **24%** del curso dentro del **corte 1**, que vale **30%**. El resto del corte 1 lo aportan **Quiz 1** (6%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 1** del aula, y abren el ítem **Parcial 1**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~19 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -222,6 +257,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Parcial 1** (Cuestionario · 24% · corte 1) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 03 - Gestión de la innovación (Manual de Oslo OCDE)/Presentacion.pptx`

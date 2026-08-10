@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 05 - Análisis de negocios · validación de la propuesta/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Parcial 2** | Cuestionario | 2 | 21% | **Cierra hoy** — se aplica en clase (~22 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**22 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **26 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -115,10 +125,11 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre + puente desde la sesión anterior | 5 | min 00:00 – 05:00 |
-| 2️⃣ FODA + Business Model Canvas + MVP | 14 | min 05:00 – 19:00 |
-| 3️⃣ Modelación de validación (supuesto → prueba) | 12 | min 19:00 – 31:00 |
-| 4️⃣ Taller: mini-Canvas + plan MVP | 22 | min 31:00 – 53:00 |
-| 5️⃣ Cierre + pista de sustentación | 7 | min 53:00 – 60:00 |
+| 2️⃣ FODA + Business Model Canvas + MVP | 8 | min 05:00 – 13:00 |
+| 3️⃣ Modelación de validación (supuesto → prueba) | 9 | min 13:00 – 22:00 |
+| 4️⃣ Taller: mini-Canvas + plan MVP | 9 | min 22:00 – 31:00 |
+| 5️⃣ Parcial 2 en CDigital (se aplica en clase) | 22 | min 31:00 – 53:00 |
+| 6️⃣ Cierre + pista de sustentación | 7 | min 53:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -141,7 +152,7 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 
 ---
 
-#### 2️⃣ FODA + Business Model Canvas + MVP (~14 min) — Protagonista: Docente
+#### 2️⃣ FODA + Business Model Canvas + MVP (~8 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que sepan qué es cada herramienta y para qué sirve, sin convertirlo en teoría de administración.
@@ -169,7 +180,7 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 
 > **En pantalla:** Solo referencia; el trabajo se hace en Canvanizer/Excalidraw/Docs.
 
-#### 3️⃣ Modelación de validación: supuesto → prueba (~12 min) — Protagonista: Docente
+#### 3️⃣ Modelación de validación: supuesto → prueba (~9 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** mostrar la cadena completa de validación con un ejemplo cronometrable.
@@ -200,11 +211,11 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 
 > **En pantalla:** Pegar captura o texto del Canvas y subir a CDigital.
 
-#### 4️⃣ Taller: mini-Canvas + plan MVP (~22 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: mini-Canvas + plan MVP (~9 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Cuatro entregas: (1) un **FODA** de máximo 6 bullets en total, todos verificables; (2) un **Canvas mínimo** en Canvanizer con al menos propuesta de valor, segmento, canales y actividades clave; (3) su **MVP descrito en 5 líneas** —qué es lo mínimo que van a mostrar—; (4) **una prueba de validación** de su supuesto más riesgoso, con criterio numérico u observable. Al final dos personas comparten solo su prueba y su criterio. Éxito: la prueba tiene un criterio que se pueda medir.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **9 minutos**. Cuatro entregas: (1) un **FODA** de máximo 6 bullets en total, todos verificables; (2) un **Canvas mínimo** en Canvanizer con al menos propuesta de valor, segmento, canales y actividades clave; (3) su **MVP descrito en 5 líneas** —qué es lo mínimo que van a mostrar—; (4) **una prueba de validación** de su supuesto más riesgoso, con criterio numérico u observable. Al final dos personas comparten solo su prueba y su criterio. Éxito: la prueba tiene un criterio que se pueda medir.”
 
 **Tabla de acompañamiento:**
 
@@ -218,7 +229,31 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 
 ---
 
-#### 5️⃣ Cierre + pista de sustentación (~7 min) — Protagonista: Docente
+#### 5️⃣ Parcial 2 en CDigital (se aplica en clase) (~22 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **22 min** y por eso se recortan: FODA + Business Model Canvas + MVP 14→8 min, Modelación de validación: supuesto → prueba 12→9 min, Taller: mini-Canvas + plan MVP 22→9 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Parcial 2** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **veintidós minutos** son para **Parcial 2**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **21%** del curso dentro del **corte 2**, que vale **30%**. El resto del corte 2 lo aportan **Quiz 2** (9%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 2** del aula, y abren el ítem **Parcial 2**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~19 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + pista de sustentación (~7 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -249,6 +284,7 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Parcial 2** (Cuestionario · 21% · corte 2) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 05 - Análisis de negocios · validación de la propuesta/Presentacion.pptx`

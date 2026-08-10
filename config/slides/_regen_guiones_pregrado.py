@@ -3,6 +3,11 @@
 
 Duración: 60 min. Modelo: Creatividad Sesión 01.
 Incluye pantallazos embebidos (`![…](Capturas/…)`) en demos/prácticas.
+
+Evaluación: cada guion recibe, desde `guion_evaluacion.py` (que lee el modelo único
+`config/cursos/fechas_entrega_aca.py` = libro de calificaciones de CDigital), el aviso de
+qué ítem cierra o abre ese día y —si ese día cae un **quiz o un parcial**— una fase con
+minutos reservados dentro de los 60 (las demás fases se recortan; la hora no crece).
 Uso:
   python _regen_guiones_pregrado.py                  # los 3 cursos
   python _regen_guiones_pregrado.py investigacion
@@ -22,6 +27,15 @@ sys.path.insert(0, CURSOS)
 
 from sesiones_cun import COURSES, meet_url  # noqa: E402
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_evaluacion import (  # noqa: E402
+    KIND_CUESTIONARIO,
+    desglose,
+    inyectar_evaluacion,
+    items_corte_txt,
+    peso_corte_txt,
+    peso_item,
+    peso_tipo,
+)
 from guion_slides import (  # noqa: E402
     NOTA_MOMENTOS,
     ajustar_mapa_manual,
@@ -126,7 +140,7 @@ _spec(
 3. **Explicar** las ACAs, la ruta de entrega en CDigital y las reglas de integridad académica y de uso de IA generativa.
 4. **Cerrar** con acuerdos de trabajo y con el encargo autónomo: **lectura de U1–U2** + ficha de tema tentativo.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
-    fundamento="""> Esta sesión se cae si el Padlet no abre, si el espacio de entrega no existe o si usted no sabe dónde está el enunciado de la ACA 1. Todo lo de abajo se deja listo **antes** de entrar al Meet.
+    fundamento=f"""> Esta sesión se cae si el Padlet no abre, si el espacio de entrega no existe o si usted no puede mostrar en pantalla los **ítems reales del libro de calificaciones** ({items_corte_txt('investigacion', 1)} en el primer corte). Todo lo de abajo se deja listo **antes** de entrar al Meet.
 
 #### 1. Qué debe tener abierto y probado
 | Qué | Para qué lo necesita hoy |
@@ -135,7 +149,8 @@ _spec(
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y logística de periodo (grupo, fechas, evaluación) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 21 slides, en orden |
 | **Padlet oficial** abierto y probado en una pestaña | Rompehielos; el link se pega en el chat apenas empiece |
-| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Ábralos en pantalla: las **fechas exactas viven ahí**, no en la deck |
+| **Libro de calificaciones** del aula, abierto en otra pestaña | Es la fuente de los nombres, tipos y pesos que va a anunciar hoy: los ítems se muestran, no se describen de memoria |
+| Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Es la única entrega documental del curso; la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs, sin instalar Office |
 | **Meet** de la serie, 10 minutos antes | Recibir a quien llega temprano y probar audio |
 | Lista del grupo | Saludar por nombre y registrar asistencia |
@@ -151,9 +166,9 @@ _spec(
 #### 4. Tono del primer día
 Es la única clase donde usted “vende” el curso. Hable despacio, use el nombre de quien participa y explique cada acuerdo **con la razón detrás**, no como lista de prohibiciones. Un encuadre bien hecho ahorra medio periodo de preguntas repetidas.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
-    ejemplo="""Deje **cuatro pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 abierto → **4.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
-Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.""",
+    ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer en pantalla los ítems con su nombre y su peso → **4.** `Clases/Recursos/ACAs/` con el enunciado de la **ACA Final** → **5.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
+Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
     errores=[
@@ -162,7 +177,9 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
         ("“¿Esta materia se pierde fácil?”",
          "“Se pierde por no entregar, casi nunca por escribir mal. Quien entrega los tres cortes, pasa; el riesgo es dejar todo para la última semana.”"),
         ("“¿Puedo trabajar solo o toca en grupo?”",
-         "“El artículo de este curso es individual, salvo que el enunciado de la ACA diga otra cosa. Está en `Clases/Recursos/ACAs/`.”"),
+         "“El artículo de este curso es individual, salvo que el enunciado de la **ACA Final** diga otra cosa. Y los cuestionarios —quices y parciales— son **siempre individuales**.”"),
+        ("“¿Los quices y los parciales son en clase?”",
+         "“Sí: son cuestionarios de CDigital que cierran el mismo día de la sesión, y por eso les reservo tiempo en clase. El que falte ese día pierde el ítem, así que la asistencia aquí sí pesa en la nota.”"),
         ("“¿Me sirve un trabajo de otro semestre?”",
          "“Puede partir de un tema suyo, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica.”"),
         ("“¿La clase se graba?”",
@@ -178,14 +195,14 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
         ("2️⃣ Preséntate: rompehielos en Padlet", 10),
         ("3️⃣ Recorrido del curso: cómo trabajamos y qué se llevan", 14),
-        ("4️⃣ Las ACAs, cómo se entrega e integridad académica", 18),
+        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 18),
         ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
         "Slide 4 (PRESÉNTATE — Padlet)",
         "Slides 6–9 (cómo trabajamos · mapa · producto · periodo corto)",
-        "Slides 5 y 10–15 (ACAs · entrega · integridad · IA · herramientas · ayuda)",
+        "Slides 5 y 10–15 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 16–21 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
     ],
     s01_padlet=True,
@@ -229,12 +246,16 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
 > “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, revisen CDigital ese mismo día: la consigna queda publicada.”
 
 **Pregunte a dos estudiantes:** “¿en qué semana creen que se empieza a escribir el artículo?”. Conviene que la respuesta —**esta semana**— la digan ellos.""",
-    fase4_texto="""**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+    fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
-> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: son tres entregas, una por corte, y ahí ven cuánto pesa cada una. Los porcentajes son del reglamento. Las **fechas exactas no están en esta presentación a propósito**, porque se desactualizan: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital.”
+> “**Slide 5 — Cómo se evalúa este curso.** Miren la tabla, pero escuchen esto porque es lo que decide la nota: en el aula **no hay tres trabajos escritos**. hay **{items_corte_txt('investigacion', 1)}** en el primer corte, **{items_corte_txt('investigacion', 2)}** en el segundo y **{items_corte_txt('investigacion', 3)}** en el tercero. Los quices y los parciales son **cuestionarios de CDigital**; la ACA Final es la **única tarea con documento**; y la **coevaluación es un foro**, o sea que hay que escribir en él.”
 
-> “**Slide 10 — Las ACAs una por una.** Lo importante es qué se mira en cada una; lean la última columna, la de *flojo contra bueno*. La ACA 1 no pide páginas, pide que el problema se entienda sin conocerlos. La ACA 2 se juega en la pregunta: si se responde con sí o no, está mal formulada. La ACA 3 pide que las fuentes trabajen, no que decoren.”
+> “Lo voy a decir de la forma que a ustedes les importa: los **cuestionarios suman {peso_tipo('investigacion', KIND_CUESTIONARIO)} del curso**, más que el documento. El **Parcial 1**, solo él, vale {peso_item('investigacion', 'parcial1')}. Quien viene a clase y responde, pasa; quien se guarda todo para el documento del final, no alcanza.”
+
+> “**Slide 10 — ítem por ítem.** Los quices y los parciales caen **en día de clase**: se abren aquí, tienen tiempo y cierran el mismo día, así que faltar a esa sesión es perder ese ítem. La **ACA Final** es distinta: es el documento acumulativo, se sube en PDF y cierra en la fecha de recepción del periodo. La **autoevaluación** se diligencia y la **coevaluación** se participa; las dos abren al final y son individuales.”
+
+> “Las **fechas exactas no están en esta presentación a propósito**, porque se desactualizan: viven en el ítem de CDigital y en el enunciado. Ábranlas hoy mismo y pásenlas a su calendario con alarma.”
 
 > “**Slide 11 — Cómo se entrega.** Esto es puro procedimiento y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre de archivo `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Apellido en el nombre del archivo, PDF, CDigital. Y verifiquen el estado: **subido no es entregado**.”
 
@@ -264,7 +285,8 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
         "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 21 slides)",
-        "- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs",
+        "- [ ] **Libro de calificaciones** del aula abierto (nombres, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar",
+        "- [ ] **Plantilla APA CUN** lista para mostrar en Google Docs",
         "- [ ] Lista del grupo para saludar por nombre y registrar asistencia",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
     ],
@@ -830,7 +852,8 @@ _spec(
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística del periodo |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
 | **Padlet oficial** abierto y probado | Rompehielos: aquí se diagnostica el estado del grupo |
-| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Las **fechas exactas viven ahí**, no en la deck |
+| **Libro de calificaciones** del aula, en otra pestaña | De ahí salen los nombres, los tipos y los pesos que va a anunciar: los ítems se muestran, no se citan de memoria |
+| Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental del curso: la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
 | Texto del **acuerdo pedagógico** y el espacio donde va a quedar registrado en CDigital | Hoy se firma: no puede improvisarse al minuto 50 |
 | **Meet** de la serie, 10 minutos antes · lista del grupo | Recibir, saludar por nombre y registrar asistencia |
@@ -847,7 +870,7 @@ TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Do
 3. **Se entrega en CDigital**, con plantilla APA CUN, y lo acordado hoy queda por escrito.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
 Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -875,14 +898,14 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
         ("2️⃣ Preséntate: rompehielos y diagnóstico en Padlet", 10),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
-        ("4️⃣ Las ACAs, cómo se entrega e integridad académica", 17),
+        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
         ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
         "Slide 4 (PRESÉNTATE — Padlet)",
         "Slides 6–11 (cómo trabajamos · aviso honesto · mapa · producto · acuerdo)",
-        "Slides 5 y 12–17 (ACAs · entrega · integridad · IA · herramientas · ayuda)",
+        "Slides 5 y 12–17 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 18–23 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
     ],
     s01_padlet=True,
@@ -926,12 +949,14 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 > “**Slide 10 — Qué se llevan al final.** El producto de TG2 es **un solo documento**: planteamiento, pregunta, objetivos, marco referencial y metodología propuesta. Terminar TG2 no es terminar el trabajo de grado; es dejarlo listo para que en TG3 solo quede ejecutar y sustentar. Y sean claros con esto: aquí todavía **no hay resultados**; el trabajo de campo es de TG3.”
 
 > “**Slide 11 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: ritmo de una sección por sesión, formato con plantilla APA CUN en Google Docs, entrega por CDigital, festivo igual a clase autónoma, y retroalimentación sobre lo entregado. No es un trámite: es lo que invoco cuando alguien me diga ‘yo no sabía’. Léanlo antes de aceptarlo y pregunten ahora.”""",
-    fase4_texto="""**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+    fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
-> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: tres entregas, una por corte, con su peso. Las **fechas exactas no están en la presentación a propósito**: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital, que es donde no se desactualizan.”
+> “**Slide 5 — Cómo se evalúa TG2.** Volvamos a esta tabla, pero con los nombres que van a ver en el aula, que es lo que importa a la hora de la nota: **{items_corte_txt('tg2', 1)}** en el primer corte, **{items_corte_txt('tg2', 2)}** en el segundo y **{items_corte_txt('tg2', 3)}** en el tercero. Ojo con la lectura que suele hacerse mal: aquí **no hay tres trabajos escritos**; hay cuatro cuestionarios de plataforma, una sola entrega documental —la **ACA Final**— y dos actividades individuales de cierre.”
 
-> “**Slide 12 — Las ACAs una por una.** Lo importante es qué se mira. Lean la última columna, la de *flojo contra bueno*. La ACA 1 se juega en el foco del tema: ‘IA en las empresas’ no es un tema. La ACA 2 se juega en que las fuentes trabajen, no en cuántas hay. La ACA 3 se juega en la coherencia: que cada objetivo tenga su método y que el documento se lea sin costuras.”
+> “Y el dato que cambia cómo se organizan: los **cuestionarios suman {peso_tipo('tg2', KIND_CUESTIONARIO)} del curso**, y el **Parcial 1** solo vale {peso_item('tg2', 'parcial1')}. Un avance escrito impecable no compensa un parcial no presentado.”
+
+> “**Slide 12 — ítem por ítem.** Los quices y los parciales **caen en día de clase**: se abren en el encuentro, tienen tiempo y cierran ese mismo día; el que falte ese día pierde el ítem, no lo ‘recupera después’. La **ACA Final** es el documento acumulativo: el mismo texto que venimos escribiendo, en PDF, subido a CDigital. La **autoevaluación** se diligencia y la **coevaluación** es un **foro**: se escribe en él, con criterio, o no cuenta.”
 
 > “**Slide 13 — Cómo se entrega.** Puro procedimiento, y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla de TG2: **trabajen siempre sobre el mismo documento**. Aquí se evalúa un texto que crece, no una carpeta de archivos sueltos.”
 
@@ -964,7 +989,8 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 23 slides)",
-        "- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs",
+        "- [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar",
+        "- [ ] **Plantilla APA CUN** lista para mostrar en Google Docs",
         "- [ ] Verificado qué lunes del periodo caen en festivo (esas sesiones son **clase autónoma**)",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
@@ -2129,7 +2155,7 @@ _tg3(
 """,
     objetivos="""1. **Encuadrar** TG3 como **culminación**: cómo se usa la hora sincrónica, qué se hace en autónomo y cuál es el producto (**artículo + sustentación + repositorio**).
 2. **Presentar** al Docente y conocer el estado real de cada proyecto a través del Padlet.
-3. **Explicar** las dos ACAs (proceso y sustentación), la ruta de entrega en CDigital, la integridad académica con antiplagio institucional y el uso de IA generativa.
+3. **Explicar** la evaluación real del aula (quices y parciales por corte + **ACA Final** + auto y coevaluación) y la sustentación ante jurados, la ruta de entrega en CDigital, la integridad académica con antiplagio institucional y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura U1–U2 + matriz de herencia de lo que traen de TG2.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
     fundamento="""> Este grupo llega con dos cargas: un proyecto heredado que casi nadie tiene ordenado y la ansiedad de la **sustentación ante jurados**. El encuadre tiene que nombrar las dos cosas hoy; nadie debería enterarse en la sesión 12 de que hay defensa oral.
@@ -2141,7 +2167,8 @@ _tg3(
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística por grupo (recepción y cierre) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 22 slides, en orden |
 | **Padlet oficial** abierto y probado | Rompehielos y diagnóstico del estado de cada proyecto |
-| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`: EV05 y EXAM) | Las **fechas exactas por grupo viven ahí**, no en la deck |
+| **Libro de calificaciones** del aula **de cada grupo**, abierto en otra pestaña | TG3 **no** es corte único EV05/EXAM: son tres cortes con quices, parciales y **ACA Final**, y las ventanas cambian por grupo. Los ítems se muestran, no se citan de memoria |
+| Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental: la **fecha exacta por grupo vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
 | Texto del **acuerdo pedagógico** y el espacio donde quedará registrado en CDigital | Hoy se firma: no puede improvisarse al minuto 50 |
 | Fechas de **recepción y cierre de cada grupo** (Presentación del Curso) | Este curso tiene **grupos con cierres distintos**: no dé una sola fecha para todos |
@@ -2159,7 +2186,7 @@ _tg3(
 Aquí hay **tres grupos con calendarios de recepción y cierre distintos**. Cuando alguien pregunte por fechas, remita a la Presentación del Curso y a CDigital, y pida que cada quien anote **la de su grupo**. Dar una sola fecha en voz alta es el error administrativo más caro de este curso.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con los enunciados de EV05 y EXAM → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
 Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -2187,14 +2214,14 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
         ("2️⃣ Preséntate: rompehielos y diagnóstico en Padlet", 10),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
-        ("4️⃣ Las ACAs, cómo se entrega e integridad académica", 17),
+        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
         ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
         "Slide 4 (PRESÉNTATE — Padlet)",
         "Slides 6–10 (cómo trabajamos · producto · mapa · acuerdo)",
-        "Slides 5 y 11–16 (ACAs · entrega · integridad · IA · herramientas · ayuda)",
+        "Slides 5 y 11–16 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 17–22 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
     ],
     fase1_texto="""**Protagonista:** Docente.
@@ -2235,12 +2262,14 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 > “**Slides 8 y 9 — Mapa del curso.** Miren los quince encuentros en tres tramos: escribir el artículo, alistar póster y antiplagio, y defender y cerrar. Fíjense en la última columna: cada sesión deja algo listo. Y lean la nota: **la recepción y el cierre varían según su grupo**; busque el suyo en la Presentación del Curso y anótelo hoy.”
 
 > “**Slide 10 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: una sección por sesión, plantilla APA CUN en Google Docs, entrega por CDigital, retroalimentación solo sobre lo entregado, y la sustentación se prepara desde ahora. Léanlo antes de aceptarlo y pregunten ahora, no en noviembre.”""",
-    fase4_texto="""**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+    fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
-> “**Slide 5 — LAS ACAs.** Volvamos a esta tabla. En TG3 son dos: el **proceso académico**, que es el artículo y sus avances, y el **examen**, que es la sustentación ante jurados. Ahí ven el peso de cada una. Las **fechas exactas no están en la presentación a propósito** y además cambian por grupo: viven en `Clases/Recursos/ACAs/` y en CDigital.”
+> “**Slide 5 — Cómo se evalúa TG3.** Aquí tengo que corregir algo que circula desde semestres pasados: **TG3 no es un corte único de 100%** con un ‘proceso’ y un ‘examen’. Abran su aula y miren el libro de calificaciones: son **tres cortes**, y los ítems son **{items_corte_txt('tg3', 1)}** en el primero, **{items_corte_txt('tg3', 2)}** en el segundo y **{items_corte_txt('tg3', 3)}** en el tercero. Si alguien les dijo otra cosa, la fuente que manda es CDigital.”
 
-> “**Slide 11 — Las dos ACAs en detalle.** Lean la última columna, la de *flojo contra bueno*. En el artículo lo que se mira es la **coherencia de cabo a rabo**: que los resultados respondan la pregunta y que las referencias estén citadas en el cuerpo, no solo listadas al final. En la sustentación lo que se mira es **dominio**: que usted explique por qué eligió ese método, qué límites tiene su trabajo y qué encontró, sin leer.”
+> “Lo que eso significa para ustedes: los **cuestionarios suman {peso_tipo('tg3', KIND_CUESTIONARIO)} del curso**, y caen **en día de clase**. El artículo —la **ACA Final**, {peso_item('tg3', 'aca_final')}— sigue siendo la pieza grande, pero no es la única, y no se puede llegar al final con todo pendiente. Y las **fechas cambian por grupo**: cada quien anota la de su aula, no la del compañero.”
+
+> “**Slide 11 — ítem por ítem.** En los quices y parciales se evalúa que ustedes dominen lo que están escribiendo: son cuestionarios, individuales, con tiempo, y cierran ese mismo día. En la **ACA Final** lo que se mira es la **coherencia de cabo a rabo**: que los resultados respondan la pregunta y que las referencias estén citadas en el cuerpo, no solo listadas al final. Y la **sustentación ante jurados** —que preparamos desde ahora— es el hito donde se juega el **dominio**: explicar por qué eligió ese método, qué límites tiene su trabajo y qué encontró, sin leer.”
 
 > “**Slide 12 — Cómo se entrega.** Procedimiento puro.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla: **un solo documento que crece**. El artículo no es una carpeta de archivos sueltos.”
 
@@ -2272,7 +2301,8 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 22 slides)",
-        "- [ ] Enunciados de las **ACAs** (EV05 y EXAM) abiertos en `Clases/Recursos/ACAs/` y **plantilla APA CUN** lista en Google Docs",
+        "- [ ] **Libro de calificaciones** del aula de cada grupo abierto (tres cortes: quices, parciales, **ACA Final**, auto y coevaluación) y enunciado de la **ACA Final** listo para proyectar",
+        "- [ ] **Plantilla APA CUN** lista en Google Docs",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
     shots_fase2=[
@@ -2635,7 +2665,7 @@ El feedback vago ("está bien", "me gusta") no sirve. Para que sirva, hay que **
 | Pedido concreto | 60 s | "Necesito feedback sobre X" |
 
 #### 4. La bitácora de co-creación
-Todo lo que reciben se registra: quién aportó qué, qué decidieron hacer con eso (adoptar, adaptar, descartar) y por qué. La bitácora es evidencia del proceso (parte del componente EV05) y protege su autoría: deja claro qué es aporte externo y qué es decisión propia.""",
+Todo lo que reciben se registra: quién aportó qué, qué decidieron hacer con eso (adoptar, adaptar, descartar) y por qué. La bitácora es evidencia del proceso —insumo directo de la **ACA Final**— y protege su autoría: deja claro qué es aporte externo y qué es decisión propia.""",
     ejemplo="Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunta→avance→pedido concreto) y, en un Doc, mostrar una fila de bitácora de co-creación: 'aporte de X → decisión: adaptar → por qué'.",
     errores=[
         ("“Le pido feedback al grupo y me dicen 'está bien'.”",
@@ -2645,7 +2675,7 @@ Todo lo que reciben se registra: quién aportó qué, qué decidieron hacer con 
         ("“Me defiendo de cada comentario que me hacen.”",
          "Primero escuche y anote; la defensa cierra puertas. El objetivo es nutrir el proyecto."),
         ("“No anoto nada de la socialización.”",
-         "La bitácora es evidencia del proceso (EV05) y protege su autoría. Registre aportes y decisiones."),
+         "La bitácora es evidencia del proceso y alimenta la **ACA Final**; además protege su autoría. Registre aportes y decisiones."),
     ],
     fase1_texto="""**Protagonista:** Docente.
 
@@ -3099,10 +3129,14 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
 
 _tg3(
     12,
-    fundamento="""> Sesión decisiva: la sustentación **es el EXAM (50% de la nota)**, ante pares y jurados. Hoy se ensaya. Léalo completo.
+    fundamento=f"""> Sesión decisiva: se ensaya la **sustentación ante pares y jurados**, el hito académico que valida el trabajo del periodo. Léalo completo.
 
-#### 1. Qué es y cuánto pesa
-Según el Manual y el Syllabus 94532, la evaluación es de **corte único 100%**: **EV05 50%** (proceso) + **EXAM 50%** (**sustentación ante pares/jurados**). Es decir, defender bien vale la mitad de la nota final. El jurado evalúa **dominio del tema, claridad, coherencia del artículo y capacidad de defensa** (no la belleza de las diapositivas). Hoy es el **ensayo**; la sustentación real es ante los jurados asignados por la Dirección del Programa.
+#### 1. Qué es y dónde se registra la nota
+El Syllabus 94532 describía una evaluación de «corte único» con dos componentes (EV05 / EXAM). **El aula no funciona así**: el libro de calificaciones de CDigital tiene **tres cortes** y estos ítems — {desglose('tg3')}. La sustentación es **requisito académico del programa**, y su valoración la registra el Docente dentro de los ítems del **tercer corte** ({items_corte_txt('tg3', 3)}), que es el corte que cierra el periodo.
+
+> **Antes de dictar esta sesión:** confirme con la Dirección del Programa **en qué ítem** del aula queda la nota de la sustentación y dígalo así de claro en clase. Lo que **no** se puede hacer es anunciar «la sustentación vale el 50%»: ese porcentaje no existe en el libro de calificaciones de ninguno de los tres grupos.
+
+El jurado evalúa **dominio del tema, claridad, coherencia del artículo y capacidad de defensa** (no la belleza de las diapositivas). Hoy es el **ensayo**; la sustentación real es ante los jurados asignados por la Dirección del Programa.
 
 #### 2. Estructura del guion oral (10–12 min)
 El tiempo es nota: pasarse o quedarse corto resta. Reparto sugerido:
@@ -3139,10 +3173,10 @@ Las diapositivas se **apoyan**, no se leen. Ante una pregunta que no sabe: hones
         ("“Meto todo el artículo en las diapositivas.”",
          "Diapositivas con párrafos = lectura. Use frases y visuales; el contenido lo pone su voz."),
     ],
-    fase1_texto="""**Protagonista:** Docente.
+    fase1_texto=f"""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 12. Hoy ensayamos la **sustentación ante jurados**, y necesito que entiendan el peso: la sustentación **es el EXAM, el 50% de la nota final**. La otra mitad, el EV05, es el proceso que venimos construyendo. O sea: defender bien vale tanto como todo el trabajo del semestre.”
+> “Sesión 12. Hoy ensayamos la **sustentación ante jurados**. Y quiero ser exacto con lo que les digo de la nota, porque circulan cifras viejas: en el aula, el **tercer corte** vale {peso_corte_txt('tg3', 3)} y está compuesto por **{items_corte_txt('tg3', 3)}**. La sustentación es el hito con el que el programa valida su trabajo, y lo que ustedes defiendan ahí es lo mismo que quedó escrito en la **ACA Final**. No hay un ítem llamado ‘examen’ que valga la mitad del curso: eso era del Syllabus viejo.”
 
 > “**Slide 2 — OBJETIVOS.** Armar un guion oral de 10–12 minutos, **anticipar las preguntas** del jurado y ensayar con cronómetro. Esto es un simulacro: la defensa real es ante los jurados que asigna la Dirección del Programa. Tengan su artículo y su póster listos.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -3178,7 +3212,7 @@ Las diapositivas se **apoyan**, no se leen. Ante una pregunta que no sabe: hones
     fase5_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) la sustentación es el EXAM, la mitad de la nota; (2) el jurado evalúa dominio, no diapositivas —no se lee—; (3) anticipar las preguntas y ensayar con cronómetro quita el miedo.”
+> “Cierre. Tres ideas: (1) la sustentación es el hito que valida el trabajo del periodo, y lo que se defiende es la **ACA Final** que ya vienen escribiendo; (2) el jurado evalúa dominio, no diapositivas —no se lee—; (3) anticipar las preguntas y ensayar con cronómetro quita el miedo.”
 
 > “**Slide 6 — PARA CONTINUAR.** Suban `S12_GuionSustentacion_Apellido` a CDigital y sigan ensayando en voz alta, con reloj. La próxima sesión preparamos los **entregables para el repositorio institucional**.”
 
@@ -3700,7 +3734,9 @@ def build_guion(course_key: str, ses: dict) -> str:
         md, _ = ajustar_mapa_manual(
             md, titulos_pptx(deck_path(COURSES[course_key]["folder"], label_for(n, titulo)))
         )
-    return md
+    # Evaluación REAL del aula (quices, parciales, ACA Final, auto y coevaluación): aviso,
+    # reserva de minutos en el plan y checklist. Sale del modelo, no se escribe a mano.
+    return inyectar_evaluacion(md, course_key, n)
 
 
 def main(argv=None):

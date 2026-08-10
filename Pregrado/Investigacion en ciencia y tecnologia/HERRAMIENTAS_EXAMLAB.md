@@ -11,16 +11,34 @@
 | Modalidad | **Virtual** (Google Meet) — ⚠️ el syllabus marca `Presencial ☑`; ver §7-R14 |
 | Encuentros | **6 sincrónicos**, jueves **5:00–6:00 pm** (13/08 · 20/08 · 27/08 · 03/09 · 10/09 · 17/09) |
 | Docente | Julian Andres Castaño · `julian_castanoe@cun.edu.co` |
-| Fecha del documento | 2026-08-08 |
+| Evaluación | Art. 52 — Corte 1 30% (Quiz 1 6% + Parcial 1 24%) · Corte 2 30% (Quiz 2 9% + Parcial 2 21%) · Corte 3 40% (**ACA Final** 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%, **foro**) |
+| Fecha del documento | 2026-08-08 · **revisado 2026-08-10** contra el aula |
 | Estado | **Borrador para decisión docente** |
+
+---
+
+> ## ⚠️ Corrección del 2026-08-10 — la evaluación de este documento estaba mal
+>
+> Este análisis se escribió el 08/08 sobre la estructura de nuestro material. El **10/08 se auditó el libro de calificaciones del aula** (`AUDITORIA CDigital 2026-08-10.md` §2). Donde el cuerpo diga lo contrario, manda este recuadro:
+>
+> | Lo que decía este documento | Lo que hay en el aula |
+> |---|---|
+> | «Tres ACAs, una por corte; el ACA 1 (30%) vence el 20/08» | **8 ítems.** El **20/08** lo que cierra es el **Quiz 1 (6%)**. El grueso del primer corte es el **Parcial 1 (24%)**, que cierra el **27/08** |
+> | «La **prueba parcial** que el syllabus exige (U5, U11–12) **no existe** como artefacto» | **Sí existe en el aula:** son el **Parcial 1 (24%)** y el **Parcial 2 (21%)**. Lo que falta es **redactarlos** — el ítem ya está creado en el libro de calificaciones, sin actividad |
+> | «La tabla EV del syllabus está truncada; hay que decidir el desglose» | El aula **ya trae el desglose completo**. No hay nada que decidir; la regla intermedia «cada ACA vale el 100% de su corte» **quedó anulada** |
+> | (no lo mencionaba) | **Autoevaluación (1,6%)** y **coevaluación (1,6%, FORO)** pesan en este curso. La coevaluación deja de ser una brecha «sin nota» de ExamLab: se cumple en el foro de CDigital |
+>
+> **Ventanas reales** (fuente: `config/cursos/fechas_entrega_aca.py`): Quiz 1 → **20/08** (S02) · Parcial 1 → **27/08** (S03) · Quiz 2 → **03/09** (S04) · Parcial 2 → **10/09** (S05) · **ACA Final → 12/09** (recepción) · Quiz 3 → **17/09** (S06) · Autoevaluación y Coevaluación 17/09 → **20/09**.
+>
+> **Qué cambia para el montaje:** el **Banco de preguntas** deja de ser «un extra formativo» y pasa a ser el insumo directo de los dos parciales y los tres quices del aula — la necesidad #3 de este documento es ahora la más urgente, y su primer vencimiento es el **20/08**. La nota oficial sigue siendo la del cuestionario de CDigital.
 
 ---
 
 > ### Este documento es sobre HERRAMIENTAS, no sobre entregas
 >
-> **La entrega oficial y la publicación de notas siguen en CDigital, sin excepción.** Lo dicen los tres ACAs (*"Entrega oficial: solo por CDigital"*), el `LEEME` y la slide 8 del deck de encuadre. Nada de lo que aparece abajo la sustituye, la duplica ni la compite.
+> **La entrega oficial y la publicación de notas siguen en CDigital, sin excepción.** Lo dicen los enunciados ACA (*"Entrega oficial: solo por CDigital"*), el `LEEME` y la slide 8 del deck de encuadre. Nada de lo que aparece abajo la sustituye, la duplica ni la compite.
 >
-> Lo que sí se discute acá es **con qué trabaja el estudiante o el docente en la sesión y entre sesiones**: dónde vive el material, dónde se dibuja el árbol de problemas, dónde queda la duda del jueves a las 9 pm, con qué se practica el vocabulario del método científico, y cómo se ve —antes del ACA 1— quién todavía no arrancó.
+> Lo que sí se discute acá es **con qué trabaja el estudiante o el docente en la sesión y entre sesiones**: dónde vive el material, dónde se dibuja el árbol de problemas, dónde queda la duda del jueves a las 9 pm, con qué se practica el vocabulario del método científico, y cómo se ve —antes del **Parcial 1**, que se juega el 24%— quién todavía no arrancó.
 >
 > Los porcentajes 30/30/40 del Art. 52 se mencionan **solo** cuando definen dónde poner el peso del acompañamiento. No se propone mover ni un punto.
 
@@ -34,7 +52,7 @@ Tres hechos condicionan todo lo demás, y ninguno es de la plataforma:
 
 1. **Quedan 5 días hasta la primera sesión** (hoy 08/08; S01 el jueves 13/08). No hay margen para montar todo.
 2. **El curso es 6 h sincrónicas contra 64 h autónomas.** El 91% del tiempo del estudiante ocurre sin docente, y hoy ese tramo no tiene ninguna herramienta: ni foro, ni asistente, ni forma de ver quién se descolgó. Ahí es donde ExamLab aporta casi todo su valor.
-3. **El ACA 1 (30%) vence el 20/08**, o sea la semana 2. Lo que no esté listo antes del 13/08 no alcanza a influir en el primer corte.
+3. **El primer corte (30%) se juega entre el 20/08 y el 27/08**: Quiz 1 (6%) el 20/08 y **Parcial 1 (24%)** el 27/08, o sea las semanas 2 y 3. Lo que no esté listo antes del 13/08 no alcanza a influir en él.
 
 Con 20 inscritos —el grupo más pequeño de los cuatro cursos— casi todo lo que en un curso de 111 sería inviable acá es manejable. La restricción real es el calendario del docente, no la escala.
 
@@ -46,7 +64,7 @@ Las 11 necesidades del análisis del corpus, más tres que aparecieron al cruzar
 |---|---|---|---|
 | 1 | Material organizado por sesión, con la consigna real (no la slide plantilla) | Contenidos + Tablero del curso (`content_file_paths` por sesión) | **Lista** |
 | 2 | Asistente sobre el material del curso para las 64 h autónomas | Tutor IA por curso + override del prompt | **Lista** |
-| 3 | Ejercicios autocorregibles (la "prueba parcial" que el syllabus exige y no existe) | Banco de preguntas → Taller `cerrada`/`cerrada_multi` + Reto en vivo | **Lista** |
+| 3 | **Escribir el Parcial 1 (24%) y el Parcial 2 (21%)** del aula — el ítem existe en el libro de calificaciones, la actividad y las preguntas no | Banco de preguntas (redacción + ensayo) → cuestionario **en CDigital**, que es donde cuenta; Taller `cerrada`/`cerrada_multi` + Reto en vivo para practicar | **Lista** — la más urgente: el Quiz 1 cierra el 20/08 y el Parcial 1 el 27/08 |
 | 4 | Discusión asíncrona anclada a la sesión | Foros (por sesión, con hilo fijado + respuesta oficial) | **Lista** |
 | 5 | Ver quién se está quedando, semana a semana | Alerta temprana + progreso de material + diagnóstico del curso | **Lista** (hay que abrirlo, no llega solo) |
 | 6 | Pulso rápido en vivo durante el encuentro | Encuesta `single`/`multiple` + Reto en vivo | **Lista** |
@@ -70,7 +88,7 @@ Las 11 necesidades del análisis del corpus, más tres que aparecieron al cruzar
 Para no proponer sobre lo que ya funciona:
 
 - Los 6 guiones docentes están completos, con reloj al minuto y estructura idéntica: **Encuadre (6–12) → Exposición (12–16) → Modelación en pantalla (10–12) → Taller (16–22) → Cierre (8) = 60 min exactos.** Este documento no propone cambiar esa estructura; propone qué herramienta ocupa cada fase.
-- Los 3 ACAs existen con consigna, entregable, checklist y fecha.
+- El material del estudiante existe con consigna, entregable, checklist y fecha, y desde el 2026-08-10 hay **un documento por ítem del aula**: guía de `Quiz 1/2/3`, guía de `Parcial 1/2`, enunciado de la `ACA Final` e instructivos de auto y coevaluación.
 - Hay manual del docente, calendario oficial, calendario por grupo, CSV/ICS y correo de bienvenida.
 
 Y los cuatro defectos del material que sí condicionan las decisiones de abajo:
@@ -78,8 +96,8 @@ Y los cuatro defectos del material que sí condicionan las decisiones de abajo:
 | Defecto (del análisis del corpus) | Consecuencia para la herramienta |
 |---|---|
 | §6.1 — Las slides 4, 5 y 6 son **textualmente idénticas** en las 6 sesiones; la consigna real vive solo en `Guiones/`, que no se comparte | El estudiante que revisa la presentación después de clase **no recupera la consigna**. Es la necesidad #1 |
-| §6.2 — La **prueba parcial no existe** como artefacto, aunque el syllabus la exige en U5 y U11–12 y la metodología la pide por corte con estándar ICFES-SABER PRO | La S03 tiene un hueco de contenido, no solo de herramienta. Es la necesidad #3 |
-| §6.3 — No hay rúbricas: 5 casillas binarias por ACA, y la tabla EV del syllabus está **truncada en el origen** (llega hasta `CORTE 1 / EV 01 / 9.0%`) | Cualquier configuración de pesos en ExamLab exige decidir antes el desglose. Ver §8-checklist |
+| §6.2 — La **prueba parcial no está redactada**, aunque el syllabus la exige en U5 y U11–12 **y el aula ya tiene los ítems creados** (Parcial 1 24% · Parcial 2 21%) | La S03 tiene un hueco de contenido, no solo de herramienta — y ahora con fecha: el Parcial 1 cierra el **27/08**. Es la necesidad #3 |
+| §6.3 — No hay rúbricas: 5 casillas binarias por ACA. *(La tabla EV del syllabus venía truncada, pero eso **ya no bloquea nada**: el desglose real sale del aula)* | Configurar en ExamLab los **8 ítems** con su peso real, no tres cortes al 100%. Ver §8-checklist |
 | §6.9 — No hay material para las clases autónomas ni para las ~26 h que el bloque corto no entrega | Es la necesidad #10, y tiene una herramienta específica y poco obvia (§4.6) |
 
 ---
@@ -118,7 +136,7 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 | Exposición | Las 6 líneas: IoT, Big Data, IA, servicios de ingeniería, uso de aplicaciones, telemática | **Encuesta `single`** con las 6 líneas → el docente ve **en vivo** cómo se reparten los 20. Eso decide dónde pone el acompañamiento las siguientes 4 semanas | **[L]** |
 | Taller (20) | Línea elegida + párrafo de justificación + 2 referentes con APA tentativa → `S02_LineaInvestigacion_Apellido` | **Encuesta `mixed`**: 1 pregunta `cerrada` (la línea) + 2 `abierta` (justificación, referentes) | **[L]** |
 | Repaso | — | **Reto en vivo**: 6 preguntas de 20 s sobre el método científico (S01). Reemplaza el *"1 pregunta a 2 estudiantes"* que hoy deja sin señal a 18 de 20 | **[L]** |
-| Hito | **Cierra ACA 1 (30%)** | Registrar como actividad `is_external` con el enlace a CDigital → entra al gradebook y a Alerta temprana **sin duplicar la entrega** | **[L]** |
+| Hito | **Cierra Quiz 1 (6%)** — el **Parcial 1 (24%)** cierra la semana siguiente | Registrar como actividad `is_external` con el enlace a CDigital → entra al gradebook y a Alerta temprana **sin duplicar la entrega** | **[L]** |
 
 ---
 
@@ -133,9 +151,9 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 | Modelación (12) | Estructura mínima del avance: título, intro de 3 párrafos (contexto → vacío → propósito), pregunta, 3 referencias | Pizarra de sesión | **[L]** |
 | **Prueba parcial** | *No existe en el material* | **Banco de preguntas → Taller** con preguntas `cerrada`/`cerrada_multi`, **sin proctoring** y con varios intentos. Contenido: etapas del método, tipos de conocimiento, distinguir problema de solución, reconocer una fuente confiable, reconocer una cita APA correcta | **[L]** — el instrumento hay que escribirlo (§8) |
 | Taller (22) | Borrador del 1.er avance en plantilla APA → `S03_Avance1_Apellido` | La redacción va en Google Docs / Word Online (plantilla APA, restricción del curso). ExamLab aporta: **rúbrica visible** en el enunciado (§5.3) + **Tutor IA** para las preguntas de las 64 h | **[W]** |
-| Hito | **Fecha límite de nota del ACA 1** | **Hilo de retroalimentación** sobre el ítem externo del ACA 1: la observación queda anclada a lo que hay que corregir, y no en un correo | **[L]** |
+| Hito | **Cierra el Parcial 1 (24%)** — y vence la nota del Quiz 1 | **Hilo de retroalimentación** sobre el ítem externo: la observación queda anclada a lo que hay que corregir, y no en un correo | **[L]** |
 
-> ⚠️ **Nudo de calendario que el material ya tiene y la herramienta no arregla:** el ACA 2 obliga a *"incorporar retroalimentación del Corte 1"*, pero la fecha límite de nota del ACA 1 es el **mismo 27/08** en que cierra el ACA 2. La retroalimentación tiene que salir antes de esa fecha o el requisito es imposible. Es una decisión del docente, no una función que falte.
+> ⚠️ **Nudo de calendario (reescrito 2026-08-10):** con la estructura real ya no hay choque entre dos ACAs, pero sí un tramo muy cargado — **20/08 Quiz 1 · 27/08 Parcial 1 (24%) · 03/09 Quiz 2 · 10/09 Parcial 2 (21%)**: cuatro cuestionarios en cuatro semanas seguidas, en un curso de **6 sesiones**, con el 60% de la nota en juego. La retroalimentación de cada uno tiene que salir antes del siguiente o el estudiante no puede corregir. Es una decisión del docente, no una función que falte.
 
 ---
 
@@ -164,7 +182,7 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 | Exposición (14) | ¿Estado actual? ¿evidencias visibles? ¿causas/implicaciones? ¿qué hacer? ¿posibles soluciones? | Contenidos | **[L]** |
 | **Modelación (12)** | **Tabla síntoma / evidencia / consecuencia** antes de pasar a prosa | Dos caminos: **(a)** encuesta `mixed` con 3 campos —el docente lee las 20 en columna—; **(b)** el estudiante pega la tabla en markdown en un **hilo del foro**, donde **sí se renderiza como tabla real** con bordes | **[W]** — §5.2 |
 | Taller (22) | Planteamiento de 1–1.5 páginas → `S05_Planteamiento_Apellido` | Google Docs (plantilla APA) + **Tutor IA** con el criterio del guion cargado + rúbrica visible | **[W]** |
-| Hito | **Cierra ACA 3 (40%)** | Actividad `is_external` con enlace a CDigital | **[L]** |
+| Hito | **Cierra Quiz 3 (4%)**; la **ACA Final** (32,8%) cerró el **12/09** y las ventanas de **autoevaluación y coevaluación** corren 17→20/09 | Actividad `is_external` con enlace a CDigital. Recordar en clase que la coevaluación es un **foro** de CDigital | **[L]** |
 
 > ⚠️ **Ojo con el camino (b):** una respuesta de taller se muestra en texto plano monoespaciado —los pipes de la tabla salen crudos—. En el **foro** sí renderiza como tabla. Si la tabla se quiere ver formateada, va al foro; si se quiere que lleve nota, va al taller y se lee cruda.
 
@@ -325,11 +343,11 @@ En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la c
 
 **Situación:** los ACAs se entregan y califican en CDigital. Pero si no existen en ExamLab, Alerta temprana no los ve y el gradebook queda incompleto.
 
-**Workaround:** crear cada ACA como actividad **externa** con el enlace a CDigital y registrar la nota en el editor de notas externas (columna Nota + columna **Observación** por estudiante). Configurar los cortes 30 / 30 / 40.
+**Workaround:** crear cada ítem del aula como actividad **externa** con el enlace a CDigital y registrar la nota en el editor de notas externas (columna Nota + columna **Observación** por estudiante). Configurar los cortes 30 / 30 / 40 **con sus 8 ítems**, no con tres actividades al 100%.
 
-**Costo:** transcribir 20 notas tres veces = ~15 min por corte. **Lo que se gana:** los tres ACAs alimentan Alerta temprana, el gradebook y los informes, y sobre el ítem externo se puede colgar el **hilo de retroalimentación** que el ACA 2 exige.
+**Costo:** transcribir 20 notas por ítem = ~5 min cada uno; con los 6 que pesan (Quiz 1–3, Parcial 1–2, ACA Final) son ~30 min en todo el bloque. **Lo que se gana:** todo alimenta Alerta temprana, el gradebook y los informes, y sobre cada ítem externo se puede colgar el **hilo de retroalimentación**.
 
-La tabla del Syllabus venía truncada en el origen (llega hasta `CORTE 1 / EV 01 / 9.0%`). **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV.
+La tabla del Syllabus venía truncada en el origen (llega hasta `CORTE 1 / EV 01 / 9.0%`), pero **la auditoría del 2026-08-10 la resolvió leyendo el aula**: Corte 1 = Quiz 1 6% + Parcial 1 24% · Corte 2 = Quiz 2 9% + Parcial 2 21% · Corte 3 = ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%. La regla intermedia «cada ACA vale el 100% de su corte» **quedó anulada**.
 
 ---
 
@@ -382,7 +400,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 
 | # | Riesgo | Impacto | Mitigación |
 |---|---|---|---|
-| **R1** | **Solo quedan 5 días hasta la S01** (hoy 08/08 · S01 el 13/08) y el ACA 1 vence el 20/08 | **Alto** | Montar únicamente la **Fase 0** de §8. Todo lo demás entra en marcha, después del 13/08 |
+| **R1** | **Solo quedan 5 días hasta la S01** (hoy 08/08 · S01 el 13/08); el **Quiz 1** cierra el 20/08 y el **Parcial 1 (24%)** el 27/08 | **Alto** | Montar únicamente la **Fase 0** de §8. Todo lo demás entra en marcha, después del 13/08 |
 | **R2** | **Fatiga de herramientas**: CDigital + Meet + Google Docs + plantilla APA + ZoteroBib + Excalidraw + **ExamLab**. Siete superficies para seis encuentros | **Alto** | Presentar ExamLab como **una sola cosa**: *"acá está el material de cada sesión y acá se preguntan las dudas"*. No mencionar módulos que no se van a usar. Nunca pedir la misma cosa en dos lugares |
 | **R3** | **Doble entrega**: si ExamLab pide entregar lo que ya va a CDigital, el estudiante entrega donde le califican y el resto queda vacío | **Alto** | Regla explícita desde la S01: **lo que vale nota va a CDigital; lo de ExamLab es práctica y borrador**. Los ACAs se registran como actividad **externa con enlace**, nunca como entrega |
 | **R4** | **El estudiante de pregrado no entra por iniciativa propia.** Sin una razón semanal, la plataforma queda muerta en la semana 3 | **Alto** | Un motivo por semana, dicho en clase: el foro de la sesión (con el hilo fijado), el material del jueves siguiente, y el Reto en vivo que ya se anunció |
@@ -392,7 +410,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 | **R8** | **Un PDF escaneado es invisible al Tutor IA.** Si el material clave del curso llega como imagen, el tutor responde sin él | **Medio** | Revisar los PDFs del corpus: si al seleccionar texto no se selecciona nada, no tiene capa de texto. Subir en su lugar el `.docx`/`.pptx` original |
 | **R9** | **La espina de pescado no tiene camino limpio** por estudiante dentro de la plataforma (§5.1) | **Medio** | Probar el editor de diagramas con un árbol de ejemplo **antes del 03/09**. Si no convence, dejar la espina en Excalidraw suelto y decirlo en la consigna |
 | **R10** | **El ACA 3 pide matriz de fuentes y no hay gestor de referencias** (§6.1) | **Medio** | Seguir con ZoteroBib. Recoger la matriz como taller de 5 preguntas `abierta` con rúbrica |
-| **R11** | **La retroalimentación del ACA 1 vence el mismo día que cierra el ACA 2** (27/08), y el ACA 2 obliga a incorporarla | **Medio** | Adelantar la retroalimentación del ACA 1 a la semana del 24/08, o ajustar el requisito. Es decisión docente, no de herramienta |
+| **R11** | **Cuatro cuestionarios en cuatro semanas seguidas** (20/08 · 27/08 · 03/09 · 10/09) en un curso de 6 sesiones, con el 60% de la nota en juego | **Medio** | Calificar y devolver cada uno **antes** del siguiente; usar el Banco de preguntas para reutilizar y corregir rápido. Es decisión docente, no de herramienta |
 | **R12** | **Reto en vivo:** nadie entra después de que arranca, el correo debe ser el institucional exacto, y un dispositivo con la hora desfasada ve las preguntas ya vencidas | **Bajo** | Dar 2 min de lobby. Anunciar "usá tu correo `@cun.edu.co`". Si a alguien "no le cargan las preguntas", revisar la hora de su teléfono |
 | **R13** | **El OAuth de calendario puede estar bloqueado** por la política de la CUN para apps de terceros | **Bajo** | Probarlo primero. Si no conecta, el estudiante se suscribe a la URL `.ics` (no requiere permisos institucionales) |
 | **R14** | **Contradicción documental de modalidad**: el syllabus marca `Presencial ☑` y el archivo se llama `_PRES`, pero la asignación del grupo dice **Virtual** | **Bajo** | Operativamente se resuelve marcando las 6 sesiones como `virtual` con el enlace de Meet. La contradicción del syllabus **no la arregla ninguna herramienta** y conviene reportarla |
@@ -428,8 +446,9 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 
 - [ ] **Override del prompt del Tutor IA** para este curso: pegar el criterio de calidad de los guiones (qué hace viable una pregunta de investigación, qué separa problema de solución).
 - [ ] Crear **un foro por sesión**, con ventana de la semana, hilo fijado con la consigna y el criterio como respuesta oficial.
-- [ ] Configurar los **cortes 30 / 30 / 40** con **una ACA por corte**, sin subdividir en EV (decidido 2026-08-10).
-- [ ] Registrar **ACA 1, 2 y 3** como actividades **externas** con enlace a CDigital.
+- [ ] Configurar los **cortes 30 / 30 / 40** con **los 8 ítems reales del aula** (Quiz 1 6% + Parcial 1 24% · Quiz 2 9% + Parcial 2 21% · ACA Final 32,8% + Quiz 3 4% + auto 1,6% + coev 1,6%) — auditoría 2026-08-10.
+- [ ] Registrar **los 6 ítems con peso apreciable** (Quiz 1–3, Parcial 1–2, ACA Final) como actividades **externas** con enlace a CDigital.
+- [ ] **Redactar el Parcial 1 antes del 27/08 y el Parcial 2 antes del 10/09**: existen como ítem del libro de calificaciones, pero sin actividad ni preguntas.
 - [ ] Sincronizar el **calendario** con los 20 como invitados; si el OAuth no conecta, publicar la URL `.ics`.
 - [ ] Subir las consignas `.md` de las sesiones 02 a 06.
 - [ ] Crear las **6 sesiones autónomas** semanales (importables en el mismo CSV, columna `session_type`).
@@ -467,6 +486,8 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 | `Guiones/Sesion 01–06 ….md` | Estructura de 60 min, actividades por fase, nombres de entregable, tabla de remediación |
 | `Clases/Sesion 01–06 …/Presentacion.pptx` (6) · `Presentacion del Curso….pptx` | Contenido visible al estudiante; evidencia de las slides idénticas |
 | `Clases/Recursos/ACAs/ACA 1, 2, 3 ….docx` | Consignas, checklists, restricción "solo gratis + nube", "entrega oficial: solo por CDigital" |
+| `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` | **Estructura real del aula**: ítems, tipos, pesos y ventanas (fuente de verdad de la evaluación) |
+| `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` | **Estructura real del aula**: ítems, tipos, pesos y ventanas (fuente de verdad de la evaluación) |
 | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Formato obligatorio (y su origen de posgrado) |
 | `Clases/LEEME - Material para estudiantes.docx` | Qué se comparte y qué no; el Padlet compartido entre 5 cursos |
 

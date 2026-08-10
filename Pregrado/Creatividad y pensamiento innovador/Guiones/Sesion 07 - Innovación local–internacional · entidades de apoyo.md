@@ -11,6 +11,22 @@
 - **PPTX estudiante:** `Clases/Sesion 07 - Innovación local–internacional · entidades de apoyo/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Autoevaluación** | Cuestionario | 3 | 1,6% | **Abre hoy** — se diligencia en clase (~4 min reservados) |
+| **Coevaluación** | Foro | 3 | 1,6% | **Abre hoy** — se participa en el foro en clase (~4 min reservados) |
+| **ACA Final** | Tarea | 3 | 32,8% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA Final** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**8 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **23 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -102,8 +118,9 @@ El error número uno es **empezar por la tecnología** (“hicimos una app con I
 | 1️⃣ Encuadre de cierre | 5 | min 00:00 – 05:00 |
 | 2️⃣ Ecosistema local–internacional | 12 | min 05:00 – 17:00 |
 | 3️⃣ Modelación: mapa de entidades + pitch 60 s | 12 | min 17:00 – 29:00 |
-| 4️⃣ Taller: pitch + plan de siguiente paso | 23 | min 29:00 – 52:00 |
-| 5️⃣ Cierre del curso | 8 | min 52:00 – 60:00 |
+| 4️⃣ Taller: pitch + plan de siguiente paso | 15 | min 29:00 – 44:00 |
+| 5️⃣ Autoevaluación · Coevaluación en el aula | 8 | min 44:00 – 52:00 |
+| 6️⃣ Cierre del curso | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -175,11 +192,11 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 
 > **En pantalla:** Ensayar con cronómetro; 4 voluntarios. Canva free opcional para 1 slide.
 
-#### 4️⃣ Taller: pitch + plan de siguiente paso (~23 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: pitch + plan de siguiente paso (~15 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **23 minutos**. Cuatro pasos: (1) completen su **Mapa de entidades** en Google Docs con **mínimo 3 entidades reales** —nombre correcto— y un pedido concreto a cada una; (2) escriban el **guion del pitch de 60 s** siguiendo los cinco tramos (pueden bocetarlo en Excalidraw); (3) **ensayen en parejas** con cronómetro; (4) al final, **4 voluntarios** pichan en vivo y les tomo el tiempo. Si necesitan una diapositiva de apoyo, Canva free —opcional—. Criterio de éxito: si en 60 segundos entendemos **dolor + valor + pedido**, sirve.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **15 minutos**. Cuatro pasos: (1) completen su **Mapa de entidades** en Google Docs con **mínimo 3 entidades reales** —nombre correcto— y un pedido concreto a cada una; (2) escriban el **guion del pitch de 60 s** siguiendo los cinco tramos (pueden bocetarlo en Excalidraw); (3) **ensayen en parejas** con cronómetro; (4) al final, **4 voluntarios** pichan en vivo y les tomo el tiempo. Si necesitan una diapositiva de apoyo, Canva free —opcional—. Criterio de éxito: si en 60 segundos entendemos **dolor + valor + pedido**, sirve.”
 
 **Tabla de acompañamiento:**
 
@@ -193,7 +210,23 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 
 ---
 
-#### 5️⃣ Cierre del curso (~8 min) — Protagonista: Docente
+#### 5️⃣ Autoevaluación · Coevaluación en el aula (~8 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **8 min** y por eso se recortan: Taller: pitch + plan de siguiente paso 23→15 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte el aula en pantalla para que nadie diga después que no encontró la actividad.
+
+**GUION LITERAL:**
+> “Los últimos **ocho minutos** son de ustedes y de la plataforma: **Autoevaluación** y **Coevaluación** ya están en CDigital y entre las dos valen **3,2%** del curso. Se pierden por no entrar, que es la forma más tonta de perder nota.”
+> “La **autoevaluación** es un **cuestionario**: se diligencia una vez, con criterios. No es ponerse cinco: es sustentar con qué evidencia se pone la nota que se pone — cumplimiento, calidad del avance y participación.”
+> “La **coevaluación** es un **foro**: hay que **escribir** en él. No se «diligencia»: se participa. Un comentario por compañero o por equipo, con un criterio concreto y algo accionable. ‘Buen trabajo’ no es coevaluar y no cuenta como participación.”
+
+**Operativa del Docente en esta fase:** abrir el aula en pantalla, mostrar la ruta de cada actividad, pedir que la abran **ahora** desde el celular o el computador y confirmar en voz alta quién ya la ve. Es el momento con más deserción silenciosa del periodo: se resuelve haciéndolo en clase, no anunciándolo.
+
+**Qué NO se hace:** dejar la coevaluación como «tarea de la casa» sin haberla abierto en clase, ni pedir que se coevalúen por el chat del Meet — lo que no queda en el foro de CDigital no existe para el libro de calificaciones.
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre del curso (~8 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -223,6 +256,9 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Autoevaluación** (Cuestionario · 1,6%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] **Coevaluación** (Foro · 1,6%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] Nota de **ACA Final** (32,8%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 07 - Innovación local–internacional · entidades de apoyo/Presentacion.pptx`

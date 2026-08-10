@@ -111,8 +111,9 @@ QUE TRAER A LA SESION 02
    Aclaracion: los tres terminos salen de la LECTURA 1 o de la LECTURA 2.
 2. Su EQUIPO confirmado (maximo 3 personas) y avisado al Docente. Si aun no
    tienen con quien, diganlo esta semana y el Docente ayuda a armarlo.
-3. El ENUNCIADO DE LA ACA 1 leido completo, incluida la lista de criterios:
-   esta en Clases/Recursos/ACAs/.
+3. La GUIA DEL PRIMER CORTE leida completa, incluida la lista de criterios:
+   'Quiz (25%) - guia del cuestionario', en Clases/Recursos/ACAs/. El corte 1
+   es un cuestionario que se resuelve en el aula: no se sube archivo.
 4. El DOCUMENTO DEL EQUIPO ya creado en Google Docs, con la plantilla APA CUN
    de proyecto de grado, compartido con todos los integrantes.
 5. Una IDEA DE TEMA escrita EN UNA FRASE y el contexto donde ocurre (empresa,

@@ -20,19 +20,19 @@
     "title": "Mapa del curso: qué pasa en cada uno de los 11 encuentros",
     "headers": ["Sesión", "De qué se ocupa", "Bloque"],
     "rows": [
-      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (hoy)", "Encuadre"],
-      ["**02**", "Problema y pregunta de investigación", "ACA 1"],
-      ["**03**", "Objetivos, justificación, alcances y limitaciones", "ACA 1"],
-      ["**04**", "Retroalimentación de la ACA 1 · antecedentes de investigación", "ACA 2"],
-      ["**05**", "Marco teórico", "ACA 2"],
-      ["**06**", "Marco conceptual y marco contextual", "ACA 2"],
-      ["**07**", "Marco legal · citación en APA 7", "ACA 2"],
+      ["**01**", "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (hoy)", "Encuadre"],
+      ["**02**", "Problema y pregunta de investigación", "Corte 1 · **Quiz**"],
+      ["**03**", "Objetivos, justificación, alcances y limitaciones", "Corte 1 · **Quiz**"],
+      ["**04**", "Retroalimentación del corte 1 · antecedentes de investigación", "Corte 2 · **ACA 1**"],
+      ["**05**", "Marco teórico", "Corte 2 · **ACA 1**"],
+      ["**06**", "Marco conceptual y marco contextual", "Corte 2 · **ACA 1**"],
+      ["**07**", "Marco legal · citación en APA 7", "Corte 2 · **ACA 1**"],
       ["**08**", "Diseño metodológico: paradigma, enfoque y alcance", "Puente"],
-      ["**09**", "Población y muestra, técnicas e instrumentos **propuestos**", "ACA 3"],
-      ["**10**", "Planeación, viabilidad e integración del anteproyecto", "ACA 3"],
-      ["**11**", "Integración y evaluación · coevaluación y autoevaluación (instrumentos individuales, no son ACAs)", "Cierre"]
+      ["**09**", "Población y muestra, técnicas e instrumentos **propuestos**", "Corte 3 · **ACA FINAL**"],
+      ["**10**", "Planeación, viabilidad e integración del anteproyecto", "Corte 3 · **ACA FINAL**"],
+      ["**11**", "Integración y evaluación · coevaluación (foro) y autoevaluación (cuestionario): instrumentos individuales", "Cierre"]
     ],
-    "col_w": [1.1, 7.3, 2.6],
+    "col_w": [1.0, 6.9, 3.1],
     "note": "La unidad de **fundamentos y enfoque de investigación (U1 del programa)** pasa a **lectura autónoma**: hoy hacemos encuadre y la retomamos al abrir la Sesión 02. Fechas exactas de cada encuentro: calendario del curso en CDigital."
   },
   {
@@ -40,8 +40,8 @@
     "title": "El producto del curso: qué archivo entregan al final",
     "bullets": [
       "Al terminar el curso ustedes suben **un solo documento: el anteproyecto** de su investigación.",
-      "  No son tres trabajos sueltos: es **un mismo archivo que crece** entrega tras entrega.",
-      "  La ACA 3 es ese archivo completo e integrado, no un fragmento nuevo escrito la última semana.",
+      "  No son trabajos sueltos: es **un mismo archivo que crece** corte tras corte.",
+      "  La **ACA FINAL** del aula es ese archivo completo e integrado, no un fragmento nuevo escrito la última semana.",
       "Va en la **plantilla APA CUN de proyecto de grado**, la misma desde el primer día.",
       "  Está en `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`; ábranla en Google Docs y trabajen ahí.",
       "**¿Para qué les sirve después?** Es el punto de partida de **Proyecto II**, donde el proyecto se ejecuta.",
@@ -52,15 +52,15 @@
   },
   {
     "type": "table",
-    "title": "Las tres ACAs: qué se entrega y qué separa un buen trabajo de uno flojo",
-    "headers": ["ACA", "Qué se entrega", "Qué distingue un buen entregable de uno flojo"],
+    "title": "Corte por corte: qué hay en el aula y qué separa un buen trabajo de uno flojo",
+    "headers": ["Corte", "Qué hay en el aula (CDigital)", "Qué se prepara para eso", "Bueno vs. flojo"],
     "rows": [
-      ["**ACA 1** — Formulación del problema", "Planteamiento del problema, pregunta, objetivo general y específicos, justificación, alcances y limitaciones, con referencias en APA 7.", "**Bueno:** se puede señalar a quién le duele algo y dónde ocurre. **Flojo:** describe una tecnología de moda y nunca dice a quién le sirve ni en qué contexto."],
-      ["**ACA 2** — Fundamentación referencial", "Antecedentes (mínimo 6, nacionales e internacionales), marco teórico, conceptual, contextual y legal si aplica; correcciones de la ACA 1 incorporadas.", "**Bueno:** cada fuente responde a la pregunta y se nota qué se corrigió. **Flojo:** una fila de resúmenes pegados que no se hablan entre sí ni con el problema."],
-      ["**ACA 3** — Anteproyecto final", "Documento completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad.", "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos escritos por personas distintas, con tres preguntas de investigación diferentes."]
+      ["**Corte 1**", "**Quiz**: cuestionario individual que se resuelve en el aula, dentro de su ventana. No se sube archivo.", "Formulación del problema: planteamiento, pregunta, objetivos, justificación, alcances y limitaciones. Guía: `Quiz (25%)`.", "**Bueno:** se puede señalar a quién le duele algo y dónde ocurre. **Flojo:** una tecnología de moda sin decir a quién le sirve."],
+      ["**Corte 2**", "**ACA 1**: tarea del equipo — se **sube** el documento.", "Fundamentación referencial: antecedentes (mín. 6), marco teórico, conceptual, contextual y legal, con las correcciones del corte 1. Guía: `ACA 1 (25%)`.", "**Bueno:** cada fuente responde a la pregunta y se nota qué se corrigió. **Flojo:** resúmenes pegados que no se hablan entre sí."],
+      ["**Corte 3**", "**ACA FINAL** (tarea del equipo) + **autoevaluación** (cuestionario) y **coevaluación** (foro), individuales.", "Anteproyecto completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad. Guía: `ACA FINAL (42%)`.", "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos con tres preguntas de investigación distintas."]
     ],
-    "col_w": [1.9, 4.3, 5.2],
-    "note": "Los pesos están en la slide anterior. **Enunciado completo, criterios y fechas exactas: `Clases/Recursos/ACAs/` y CDigital.** Las ACAs son estas **tres**: la coevaluación (4%) y la autoevaluación (4%) del cierre **no son ACAs**, son instrumentos individuales que cada quien diligencia en CDigital (instructivo en esa misma carpeta)."
+    "col_w": [0.9, 3.2, 4.0, 3.8],
+    "note": "Los pesos y el tipo de cada ítem están en la slide «CÓMO SE EVALÚA» de esta sesión. Autoevaluación y coevaluación **no son entregables**: se diligencian y se participa en el aula al cierre (instructivo en `Clases/Recursos/ACAs/`, junto con los enunciados y las fechas)."
   },
   {
     "type": "bullets",
@@ -68,8 +68,9 @@
     "bullets": [
       "**1.** Trabajen la **plantilla APA CUN en Google Docs**: un documento por equipo, con permiso de edición para todos.",
       "**2.** Antes de entregar, **descarguen como PDF**: así nadie recibe un documento a medio formatear.",
-      "**3.** Nombren el archivo **ACA1_Apellido1-Apellido2-Apellido3** (y ACA2 / ACA3 en las siguientes entregas).",
-      "**4.** **Un solo integrante** lo sube en el espacio de esa ACA en **CDigital**; los demás verifican que quedó cargado.",
+      "**3.** Nombren el archivo con el ítem del aula: **ACA1_Apellido1-Apellido2-Apellido3** en el corte 2 y **ACAFinal_Apellido1-Apellido2-Apellido3** en el cierre.",
+      "**4.** **Un solo integrante** lo sube en el espacio de ese ítem en **CDigital**; los demás verifican que quedó cargado.",
+      "  **El Quiz del corte 1 no se sube:** es un cuestionario individual que se resuelve en el aula dentro de su ventana.",
       "**5.** Revisen que la portada traiga los **nombres completos de todos**: si falta alguien, esa persona no tiene nota.",
       "**Lo que no está en CDigital, no está entregado.** Correo, chat o WhatsApp no son canal de entrega.",
       "**Entrega tardía:** el espacio cierra a la hora publicada en el enunciado. Si algo pasa, se avisa **antes** del cierre.",
@@ -106,7 +107,7 @@
     "title": "Herramientas del curso: todas gratis y desde el navegador",
     "headers": ["Herramienta", "Para qué la usamos en este curso"],
     "rows": [
-      ["**CDigital**", "Aula oficial: material, espacios de entrega de las ACAs y retroalimentación. Único canal de entrega válido."],
+      ["**CDigital**", "Aula oficial: material, **quiz**, espacios de entrega de ACA 1 y ACA FINAL, foro de coevaluación y retroalimentación. Único canal válido."],
       ["**Google Docs**", "Donde se escribe el anteproyecto, en equipo y a la vez, sobre la plantilla APA CUN. Guarda historial de versiones."],
       ["**Google Scholar**", "Buscador académico general: artículos, tesis y libros. Punto de partida para rastrear antecedentes."],
       ["**SciELO y Redalyc**", "Repositorios abiertos en español: producción latinoamericana, clave para los antecedentes nacionales y regionales."],
@@ -128,7 +129,7 @@
       "  **https://forms.gle/oZ8xCYiUo3KEWr1d9** — también queda publicado en CDigital.",
       "  Ese registro es **su evidencia** de acompañamiento ante el programa: sin registro, la tutoría no consta.",
       "**Foro y mensajería de CDigital:** para dudas que le sirven a todo el curso. Respuesta en días hábiles.",
-      "**Antes de preguntar:** revisen el enunciado de la ACA y la plantilla. La mitad de las dudas ya está resuelta ahí.",
+      "**Antes de preguntar:** revisen el enunciado del corte y la plantilla. La mitad de las dudas ya está resuelta ahí.",
       "Pregunta bien hecha = sección concreta + qué intentaron + qué no les cuadra. «No entendí nada» no se puede responder."
     ],
     "note": "Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita)."
@@ -151,7 +152,7 @@
       "  **Dónde está:** ya viene en tu carpeta del curso, en `Sesion 01 - …/` (los PDF `Lectura 1 (obligatoria)…`, `Lectura 2 (guia)…` y `Lectura 3 (recomendada)…`, más el archivo `Lectura autonoma - Sesion 01.txt` con la cita, el enlace y qué traer). También queda publicada en CDigital.",
       "  Mientras leen, anoten **tres términos** que no les queden claros. Con esos tres arrancamos la próxima clase.",
       "**Confirmen su equipo** (máximo 3 personas) y avísenlo. Si aún no tienen con quién, díganlo esta semana y el Docente ayuda a armarlo.",
-      "**Abran el enunciado de la ACA 1** en `Clases/Recursos/ACAs/` y léanlo completo, incluida la lista de criterios.",
+      "**Abran la guía del primer corte** en `Clases/Recursos/ACAs/` — `Quiz (25%)` — y léanla completa, criterios incluidos: eso es lo que comprueba el **Quiz**.",
       "**Creen el documento del equipo** en Google Docs con la plantilla APA CUN y compártanlo con todos los integrantes.",
       "**Traigan a la Sesión 02** una idea de tema escrita **en una frase** y el contexto donde ocurre (empresa, aula, proceso).",
       "  Con eso trabajamos en clase. Quien llegue sin la frase se pasará la sesión viendo trabajar a los demás."
@@ -163,7 +164,7 @@
     "title": "Las preguntas que siempre salen el primer día",
     "boxes": [
       ["info", "**«¿Esta materia se pierde fácil?»** No se pierde por dificultad: se pierde por entregar tarde o por entregar un documento que nadie leyó antes de subirlo. Quien trae avance cada semana llega al final con el anteproyecto prácticamente listo."],
-      ["aclaracion", "**«¿Puedo trabajar solo?»** Sí, pero el equipo es de máximo 3 y la carga de trabajo es la misma para uno que para tres. Decídanlo esta semana: después de la ACA 1 no conviene cambiar de equipo ni de tema."],
+      ["aclaracion", "**«¿Puedo trabajar solo?»** Sí, pero el equipo es de máximo 3 y la carga de trabajo es la misma para uno que para tres. Decídanlo esta semana: después del primer corte no conviene cambiar de equipo ni de tema."],
       ["advertencia", "**«¿Sirve un trabajo de otro semestre?»** Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso."]
     ]
   }

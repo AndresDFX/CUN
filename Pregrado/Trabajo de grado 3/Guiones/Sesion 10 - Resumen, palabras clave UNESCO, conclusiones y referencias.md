@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 10 - Resumen, palabras clave UNESCO, conclusiones y referencias/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Parcial 2** | Cuestionario | 2 | 21% | **Cierra hoy** — se aplica en clase (~22 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**22 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -90,10 +100,11 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición / criterios | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición / criterios | 8 | min 06:00 – 14:00 |
+| 3️⃣ Modelación | 8 | min 14:00 – 22:00 |
+| 4️⃣ Taller | 8 | min 22:00 – 30:00 |
+| 5️⃣ Parcial 2 en CDigital (se aplica en clase) | 22 | min 30:00 – 52:00 |
+| 6️⃣ Cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -107,7 +118,7 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 
 > “**OBJETIVOS.** Redactar un resumen que sea espejo del artículo, elegir palabras clave del **tesauro UNESCO**, escribir conclusiones que respondan la pregunta y cuadrar las referencias en APA 7 sin huérfanas. Tengan el artículo completo a la vista.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición / criterios (~8 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -117,7 +128,7 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 
 > “**ENFOQUE DE HOY.** Las **conclusiones** responden la pregunta —no repiten resultados— e incluyen límites y trabajo futuro. Y las **referencias**: mínimo 50, APA 7, orden alfabético y **sin huérfanas**: toda cita del cuerpo está en la lista, y toda entrada de la lista se cita. ZoteroBib les cuadra eso sin instalar nada.”
 
-#### 3️⃣ Modelación (~12 min) — Modelación en pantalla
+#### 3️⃣ Modelación (~8 min) — Modelación en pantalla
 **Protagonista:** Docente (modela resumen + keywords).
 
 **En pantalla (Google Docs + Scholar):** un resumen en construcción y una búsqueda de términos.
@@ -131,11 +142,11 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 
 > **En pantalla:** Pegar bibliografía completa; revisar duplicados.
 
-#### 4️⃣ Taller (~20 min) — Taller
+#### 4️⃣ Taller (~8 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. En `S10_CierreArticulo_Apellido`: (1) escriban el **resumen** (~200–250 palabras, cinco piezas); (2) elijan **4–5 palabras clave** del tesauro UNESCO; (3) redacten las **conclusiones** respondiendo la pregunta, con límites y trabajo futuro; (4) revisen las **referencias** en ZoteroBib: conteo hacia 50, APA 7 y sin huérfanas.”
+> “**TALLER.** ~8 minutos. En `S10_CierreArticulo_Apellido`: (1) escriban el **resumen** (~200–250 palabras, cinco piezas); (2) elijan **4–5 palabras clave** del tesauro UNESCO; (3) redacten las **conclusiones** respondiendo la pregunta, con límites y trabajo futuro; (4) revisen las **referencias** en ZoteroBib: conteo hacia 50, APA 7 y sin huérfanas.”
 
 > “Criterio de éxito: el resumen se entiende solo, las keywords son términos reales, las conclusiones responden la pregunta y la lista de referencias no tiene huérfanas.”
 
@@ -152,7 +163,31 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 > **En pantalla:** Contrastar términos con uso en Scholar; 3–5 keywords.
 
 
-#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Parcial 2 en CDigital (se aplica en clase) (~22 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **22 min** y por eso se recortan: Exposición / criterios 14→8 min, Modelación 12→8 min, Taller 20→8 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Parcial 2** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **veintidós minutos** son para **Parcial 2**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **21%** del curso dentro del **corte 2**, que vale **30%**. El resto del corte 2 lo aportan **Quiz 2** (9%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 2** del aula, y abren el ítem **Parcial 2**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~19 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -171,6 +206,7 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Parcial 2** (Cuestionario · 21% · corte 2) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 10 - Resumen, palabras clave UNESCO, conclusiones y referencias/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

@@ -4,11 +4,23 @@
 **Orientado a:** estudiantes y directivos / Coordinación (también útil al Docente)  
 **Plataforma oficial de notas y entregas:** CDigital  
 **Marca / institución:** Corporación Unificada Nacional de Educación Superior — CUN  
-**Fuentes:** ESP329 · Instructivos AFI · Cronograma Proyecto I/II · Reglamento Estudiantil (Art. 41 nota única) · `config/universidades/cun.json` (links AFI)
+**Fuentes:** **libro de calificaciones del aula 54ES4 en CDigital** (auditoría `AUDITORIA CDigital 2026-08-10.md` §2 → `config/cursos/fechas_entrega_aca.py`) · ESP329 · Instructivos AFI · Cronograma Proyecto I/II · Reglamento Estudiantil (Art. 41 nota única) · `config/universidades/cun.json` (links AFI)
 
 > Ítems **verificables**. Marca cada casilla cuando haya evidencia en CDigital, formularios institucionales o actas. Distingue lo que aplica a **Proyecto I** (auto/coevaluación) de lo que aplica a **Proyecto II** (sin auto/coeval).
 >
-> **Terminología:** las **ACAs son tres** (ACA 1, ACA 2, ACA 3). La **autoevaluación (4%)** y la **coevaluación (4%)** de Proyecto I **no son ACAs**: son instrumentos individuales de cierre que el estudiante diligencia en CDigital.
+> **Terminología:** las **ACAs son tres** (ACA 1, ACA 2, ACA 3). La **autoevaluación (4%)** y la **coevaluación (4%)** de Proyecto I **no son ACAs**: son instrumentos individuales de cierre — la autoevaluación se **diligencia** como cuestionario y la coevaluación se **participa** en un **foro**.
+>
+> ⚠️ **Actualizado el 2026-08-10.** La auditoría del aula corrigió dos cosas: (1) el aula **nombra los ítems distinto** — corte 1 = **«Quiz»** (cuestionario, 25%), nuestra ACA 2 es la **«ACA 1»** del aula y nuestra ACA 3 es la **«ACA FINAL»**; (2) la auto/coevaluación **no es exclusiva de Proyecto I**: existe también en los 4 cursos de pregrado, con peso menor. **Las fechas no cambiaron** (siguen las de Coordinación).
+
+### Puente material ↔ aula (verifícalo antes de calificar)
+
+| Componente (material / ESP329) | Ítem en el aula | Tipo | Peso | Corte |
+|---|---|---|---:|:---:|
+| ACA 1 — formulación del problema | **Quiz** | Cuestionario | 25% | 1 (25%) |
+| ACA 2 — fundamentación referencial | **ACA 1** | Tarea | 25% | 2 (25%) |
+| ACA 3 — anteproyecto consolidado | **ACA FINAL** | Tarea | 42% | 3 (50%) |
+| Autoevaluación (no es ACA) | **Autoevaluación** | Cuestionario | 4% | 3 (50%) |
+| Coevaluación (no es ACA) | **Coevaluación** | **Foro** | 4% | 3 (50%) |
 
 ---
 
@@ -16,27 +28,29 @@
 
 - [ ] El curso correspondiente (Proyecto I o II) está identificado con periodo, grupo y Docente en CDigital.
 - [ ] Estudiantes y Coordinación conocen la **fecha de recepción** (máx. trabajos) y la **fecha de cierre de notas** de la oferta.
-- [ ] Queda claro el régimen: **nota única 100%** (Art. 41) — no cortes Art. 52 de pregrado.
+- [ ] Queda claro el régimen: **nota única 100%** (Art. 41), operada en el aula como **tres cortes 25 / 25 / 50** — no es el 30/30/40 de pregrado Art. 52.
 
 ---
 
 ## 2. Entregas ACA y productos (Proyecto I)
 
-- [ ] **ACA 1, ACA 2 y ACA 3** entregadas por equipos (máx. 3) en CDigital, con plantilla APA CUN.
-- [ ] Cada ACA tiene calificación y retroalimentación cualitativa/cuantitativa registrada **antes** del límite de nota docente.
+- [ ] **ACA 1, ACA 2 y ACA 3** entregadas por equipos (máx. 3) en CDigital, con plantilla APA CUN — cada una **en el ítem del aula que le corresponde** (Quiz · ACA 1 · ACA FINAL; ver el puente de arriba).
+- [ ] Cada ACA tiene calificación y retroalimentación cualitativa/cuantitativa registrada **antes** del límite de nota docente (**07/09** · **12/10** · **16/11**).
 - [ ] ACA 3 = anteproyecto consolidado (metodología **propuesta**, sin trabajo de campo aplicado).
 - [ ] Enunciados de las **tres** ACAs disponibles en `Clases/Recursos/ACAs/`.
 - [ ] Queda claro que **las ACAs son tres**: autoevaluación y coevaluación no son ACAs (ver siguiente bloque).
+- [ ] Resuelto cómo se opera el ítem **«Quiz»** del primer corte, que en el aula es un **cuestionario** y en el material es un documento (ACA 1) — decisión tomada y comunicada antes del **30/08**.
 
-### Autoevaluación y coevaluación — **no son ACAs** (solo Proyecto I)
+### Autoevaluación y coevaluación — **no son ACAs**
 
-Son **instrumentos individuales de cierre**: cada estudiante los **diligencia** (tipo formulario) en CDigital dentro de su ventana. No hay documento que subir, no llevan rúbrica de entregable ni prefijo «ACA»; el Docente los habilita, verifica y registra.
+Son **instrumentos individuales de cierre**: la **autoevaluación** se diligencia como **cuestionario** y la **coevaluación** se **participa en un foro**, en CDigital, dentro de su ventana. No hay documento que subir, no llevan rúbrica de entregable ni prefijo «ACA»; el Docente los habilita, verifica y registra.
 
-- [ ] **Coevaluación (4%)** habilitada y diligenciada en su ventana (Cronograma OFICIAL 26ES4: **09–15/11/2026**).
-- [ ] **Autoevaluación (4%)** habilitada y diligenciada en su ventana (Cronograma OFICIAL 26ES4: **16–22/11/2026**).
+- [ ] **Coevaluación (4%)** habilitada **como foro** y con participación registrada en su ventana (Cronograma OFICIAL 26ES4: **09–15/11/2026**).
+- [ ] **Autoevaluación (4%)** habilitada **como cuestionario** y diligenciada en su ventana (Cronograma OFICIAL 26ES4: **16–22/11/2026**).
 - [ ] Instructivos disponibles para el estudiante en `Clases/Recursos/ACAs/`: `Autoevaluacion individual (4%) - instructivo.docx` y `Coevaluacion individual (4%) - instructivo.docx`.
 - [ ] Notas de auto/coevaluación registradas en el gradebook de CDigital.
 - [ ] Estudiantes informados de que auto/coeval **no son una cuarta y quinta ACA**, **no sustituyen** ACA 3 y **no aplican en Proyecto II**.
+- [ ] Si el material o la clase las presentan como «exclusivas de Proyecto I», **corregirlo**: existen también en los 4 cursos de pregrado (auditoría 2026-08-10), allá con 1,6% o 2% cada una.
 
 > Proyecto II: verificar régimen **75% metodólogo + 25% jurados** (desde 26ES4) y ausencia de auto/coevaluación.
 
@@ -74,8 +88,9 @@ Son **instrumentos individuales de cierre**: cada estudiante los **diligencia** 
 
 | Verificable | Evidencia esperada |
 |---|---|
-| Nota única desglosada (P1) | Gradebook: 3 ACAs (ACA1 25% · ACA2 25% · ACA3 42%) + 2 instrumentos individuales (coev. 4% · autoev. 4%) |
-| Ventanas auto/coeval | Actividades individuales en CDigital con fechas de apertura/cierre (no son entregas ACA) |
+| Nota única desglosada (P1) | Gradebook con **5 ítems**: Quiz 25% (corte 1) · ACA 1 25% (corte 2) · ACA FINAL 42% + Autoevaluación 4% + Coevaluación 4% (corte 3) = cortes 25 / 25 / 50 |
+| Nombres correctos | Cada ACA del material calificada en **su** ítem del aula (ver el puente del encabezado); ningún ítem sin actividad asociada |
+| Ventanas auto/coeval | Coevaluación como **foro** y autoevaluación como **cuestionario**, con fechas de apertura/cierre (no son entregas ACA) |
 | Tutorías AFI | Forms estudiante + docente + grabaciones Meet |
 | Cierre formal | Notas al cierre + informe de cierre AFI |
 | Sin auto/coeval en P-II | Syllabus/instructivo vigente del periodo |
@@ -84,6 +99,9 @@ Son **instrumentos individuales de cierre**: cada estudiante los **diligencia** 
 
 ## Fuentes citadas (rutas / URLs)
 
+- **`AUDITORIA CDigital 2026-08-10.md` §2** (raíz del workspace) — estructura real del libro de calificaciones del aula 54ES4
+- **`config/cursos/fechas_entrega_aca.py`** → `ACA_COMPONENTES["proyecto1"]` y `VENTANAS["proyecto1"]` (= el cronograma oficial de Coordinación)
+- `Especializacion/Proyecto I/Calendario de clases (oficial).md` → «📅 Cronograma OFICIAL» con la columna «Ítem en el aula»
 - `Especializacion/Proyecto I/Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx`
 - `Especializacion/0. General/01_Instructivos_AFI_Proyecto_I_II/`
 - `Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`

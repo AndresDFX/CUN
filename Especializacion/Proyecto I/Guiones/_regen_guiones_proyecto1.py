@@ -7,6 +7,11 @@ Modelo de calidad: Creatividad Sesión 01.
 Fuente curricular: ESP329 · Manual del Docente · sesiones_cun.py.
 URLs AFI: desde sesiones_cun (cun.json → links_afi).
 
+Evaluación: `guion_evaluacion.py` inyecta los ítems reales del aula — **Quiz** (25%, corte 1),
+ACA 1 (25%, corte 2), ACA FINAL (42%) + auto y coevaluación —. El Quiz no cierra en día de
+clase, así que se anuncia con guion literal en las sesiones que lo rodean en vez de reservarle
+tiempo; sí se reservan minutos el día que abre la coevaluación.
+
 Uso:
   python _regen_guiones_proyecto1.py          # todas
   python _regen_guiones_proyecto1.py 3        # solo sesión 3
@@ -30,6 +35,11 @@ from sesiones_cun import (  # noqa: E402
     meet_url,
 )
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_evaluacion import (  # noqa: E402
+    inyectar_evaluacion,
+    items_corte_txt,
+    peso_item,
+)
 from guion_slides import (  # noqa: E402
     NOTA_MOMENTOS,
     ajustar_mapa_manual,
@@ -126,7 +136,8 @@ def tutoria_block(foco: str) -> str:
 def guion_01(ses):
     """Sesión 01 = ENCUADRE (no se dicta tema). Guion de presentación del curso.
 
-    Cubre: el curso · el Docente · los estudiantes (Padlet) · las ACAs. La unidad
+    Cubre: el curso · el Docente · los estudiantes (Padlet) · la evaluación real del
+    aula (Quiz del primer corte, ACA 1, ACA FINAL, auto y coevaluación). La unidad
     del programa que antes ocupaba esta sesión pasa a LECTURA AUTÓNOMA y se retoma
     al abrir la Sesión 02 (campo `unidad_diferida` en sesiones_cun.py).
     """
@@ -186,7 +197,7 @@ def guion_01(ses):
 🎯 **Objetivos de la sesión**
 1. **Dejar claro** cómo funciona el curso: dos mitades del encuentro, avance escrito semanal y equipos de máximo 3.
 2. **Mostrar** el mapa de los 11 encuentros y el producto final: un único anteproyecto que crece entrega tras entrega.
-3. **Explicar** las tres ACAs, el procedimiento de entrega en CDigital y las reglas de integridad académica y uso de IA.
+3. **Explicar** cómo se califica el curso en CDigital —**Quiz** (primer corte), **ACA 1** (segundo) y **ACA FINAL** con auto y coevaluación (tercero)—, el procedimiento de entrega y las reglas de integridad académica y uso de IA.
 4. **Cerrar** con equipos tentativos conformados, canal de ayuda claro y el encargo de lectura autónoma para la Sesión 02.
 
 ---
@@ -197,14 +208,15 @@ def guion_01(ses):
 | :--- | :--- | :--- |
 | **Aula en CDigital** | Abierta, con el material de la sesión publicado y los tres espacios de entrega de ACA visibles | Los estudiantes van a preguntar dónde se sube; se muestra en pantalla, no se describe |
 | **Padlet del rompehielos** | Abierto en una pestaña y con el enlace copiado para pegar en el chat | El QR falla en celulares viejos; el enlace debe estar listo en 3 segundos |
-| **Enunciados de las ACAs** | Los tres abiertos desde `Clases/Recursos/ACAs/` | Se proyecta el enunciado real de la ACA 1, no un resumen |
+| **Libro de calificaciones del aula** | Abierto en otra pestaña | De ahí salen los nombres, tipos y pesos que se anuncian hoy. **El primer corte es un Quiz (cuestionario), no una entrega escrita**: hay que mostrarlo en pantalla |
+| **Enunciados de las ACAs** | `Clases/Recursos/ACAs/` (ACA 1 y ACA FINAL) | Se proyecta el enunciado real, no un resumen |
 | **Plantilla APA CUN** | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` abierta en Google Docs | Se modela en vivo cómo se trabaja el documento del equipo |
 | **Meet** | Iniciado 5 minutos antes, **grabación activada** y coanfitrión asignado | Se anuncia la grabación al abrir; sin grabación no hay evidencia de la sesión |
 | **Deck de Sesión 01** | `Clases/{label}/Presentacion.pptx` en modo presentador | 21 slides: el guion las referencia por número |
 | **Formulario de asistencia** | {LINK_TUTORIAS} copiado para el chat | Se pega apenas empieza la segunda hora |
 
 **Decisiones que el Docente debe traer tomadas (no se improvisan en el aula):**
-- Cómo nombrar los archivos de entrega (este guion usa `ACA1_Apellido1-Apellido2-Apellido3`).
+- Cómo nombrar los archivos de entrega (este guion usa `ACA1_Apellido1-Apellido2-Apellido3` para la ACA 1 y `ACAFinal_Apellido1-Apellido2-Apellido3` para la ACA FINAL).
 - Franja tentativa para las tutorías por equipo de la semana, para poder proponerla al cierre.
 - Qué hacer con quien llegue sin equipo: se anota su nombre y el Docente arma pareja/trío en la segunda hora.
 
@@ -226,7 +238,7 @@ def guion_01(ses):
 
 > "**Slide 1.** Esta primera sesión es distinta a todas las demás: **hoy no vemos tema**. Hoy usamos la hora en dejar clarísimo cómo funciona el curso, quién los acompaña, quiénes son ustedes y qué se les va a evaluar. El contenido del programa arranca la próxima sesión, y arranca en firme."
 
-> "**Slide 2 — AGENDA.** Cinco cosas: el curso, el Docente, ustedes, las ACAs y los acuerdos. La primera hora es esto. La segunda hora es tutoría: conformamos equipos y resolvemos dudas uno a uno."
+> "**Slide 2 — AGENDA.** Cinco cosas: el curso, el Docente, ustedes, **cómo se califica** y los acuerdos. La primera hora es esto. La segunda hora es tutoría: conformamos equipos y resolvemos dudas uno a uno."
 
 **Qué hacer:** verificar audio y pantalla compartida (1 min) · confirmar grabación en voz alta (30 s) · recorrer la agenda señalando cada punto (3 min).
 
@@ -277,11 +289,13 @@ def guion_01(ses):
 
 > "Los equipos son de **máximo tres personas** y se mantienen todo el curso. Sube un solo integrante, pero la nota es del equipo. ¿Se puede trabajar solo? Sí, y la carga es exactamente la misma. Decídanlo esta semana."
 
-> "**Slides 7 y 8 — el mapa completo.** Son once encuentros. Hoy, encuadre. De la 02 a la 03, problema, pregunta y objetivos: eso es la ACA 1. De la 04 a la 07, todo el marco referencial: antecedentes, teórico, conceptual, contextual y citación: eso es la ACA 2. De la 08 a la 10, la metodología y la integración: eso es la ACA 3. La 11 cierra con coevaluación y autoevaluación."
+> "**Slides 7 y 8 — el mapa completo.** Son once encuentros. Hoy, encuadre. De la 02 a la 03, problema, pregunta y objetivos. De la 04 a la 07, todo el marco referencial: antecedentes, teórico, conceptual, contextual y citación; **todo eso junto es lo que se entrega en la ACA 1**, la del segundo corte. De la 08 a la 10, la metodología y la integración: eso es la **ACA FINAL**. La 11 cierra con coevaluación y autoevaluación."
+
+> "Y falta la pieza que casi nadie ve venir: el **primer corte no es un documento, es un Quiz** —un cuestionario en CDigital que vale el **{peso_item('proyecto1', 'quiz')} del curso** y que **cierra antes de la Sesión 03**—. Ya está abierto. Lo repito porque es el error más caro de este curso: la primera nota no se gana entregando un archivo, se gana entrando al aula y respondiendo ese cuestionario."
 
 > "Fíjense en algo: **cada sesión alimenta una entrega**. No hay clases decorativas. Si falta a una sesión, no perdió una charla: perdió un pedazo de su propio documento."
 
-> "**Slide 9 — qué se llevan al final.** Un solo archivo: **el anteproyecto**. No son tres trabajos distintos, es el mismo documento que crece. La ACA 3 es ese documento completo, no algo nuevo escrito la última semana. Va en la **plantilla APA CUN**, desde hoy, y les sirve después como punto de partida de **Proyecto II** y como base de lo que sustentarán al cerrar el programa."
+> "**Slide 9 — qué se llevan al final.** Un solo archivo: **el anteproyecto**. No son trabajos distintos, es el mismo documento que crece: lo que entregan en la **ACA 1** es su primera mitad, y la **ACA FINAL** es ese documento completo, no algo nuevo escrito la última semana. Va en la **plantilla APA CUN**, desde hoy, y les sirve después como punto de partida de **Proyecto II** y como base de lo que sustentarán al cerrar el programa."
 
 > "Y la frontera del curso, que repito ahora y voy a repetir todo el semestre: en **Proyecto I los instrumentos se proponen, nunca se aplican**. Aquí se diseña la encuesta; aplicarla es Proyecto II."
 
@@ -293,17 +307,21 @@ def guion_01(ses):
 **Slides:** 5 (LAS ACAs — QUÉ SE EVALÚA) → 10 (Las tres ACAs en detalle) → 11 (Cómo se entrega)
 
 **GUION LITERAL:**
-> "**Slide 5.** Estos son los pesos. No los memoricen: lo que importa es que **la última entrega es, por lejos, la que más pesa de las tres**, y que no es un trabajo nuevo: es todo lo anterior corregido e integrado. Quien haga bien las dos primeras ya tiene medio camino de la tercera."
+> "**Slide 5.** Estos son los pesos, y los nombres que van a ver en el aula son estos: **{items_corte_txt('proyecto1', 1)}** en el primer corte, **{items_corte_txt('proyecto1', 2)}** en el segundo y **{items_corte_txt('proyecto1', 3)}** en el tercero. Retengan dos cosas: la **ACA FINAL es, por lejos, la que más pesa**, y no es un trabajo nuevo —es todo lo anterior corregido e integrado—; y el **primer corte se juega en un cuestionario**, no en un documento."
 
-> "**Slide 10 — qué se entrega en cada una y qué separa un buen trabajo de uno flojo.** ACA 1: problema, pregunta, objetivos, justificación, alcances y limitaciones. Un buen entregable permite señalar **a quién le duele algo y dónde**; uno flojo describe una tecnología de moda y nunca dice a quién le sirve. ACA 2: antecedentes —mínimo seis, nacionales e internacionales— y todo el marco. Un buen entregable **usa** cada fuente para responder a su pregunta; uno flojo pega resúmenes que no se hablan entre sí. ACA 3: el anteproyecto integrado. Un buen entregable se lee de portada a referencias sin contradecirse; uno flojo son tres capítulos escritos por tres personas con tres preguntas distintas."
+> "Esa es la sorpresa que quiero quitarles hoy: el **Quiz** ya está **abierto** en CDigital y **cierra antes de la Sesión 03**. Vale {peso_item('proyecto1', 'quiz')}, o sea el primer corte completo. Entren esta semana, mírenlo y resuélvanlo con tiempo: no hay reapertura por olvido."
 
-> "Las **fechas exactas y los criterios completos** no los voy a dictar: están en el enunciado de cada ACA, en `Clases/Recursos/ACAs/` y en CDigital. Ábranlos hoy mismo. — [proyectar el enunciado de la ACA 1 en pantalla]"
+> "**Slide 10 — qué se entrega y qué separa un buen trabajo de uno flojo.** La **ACA 1** recoge dos bloques: la formulación —problema, pregunta, objetivos, justificación, alcances y limitaciones— y el marco referencial con sus antecedentes, mínimo seis, nacionales e internacionales. Un buen entregable permite señalar **a quién le duele algo y dónde** y **usa** cada fuente para responder a su pregunta; uno flojo describe una tecnología de moda, nunca dice a quién le sirve y pega resúmenes que no se hablan entre sí. La **ACA FINAL** es el anteproyecto integrado: un buen entregable se lee de portada a referencias sin contradecirse; uno flojo son tres capítulos escritos por tres personas con tres preguntas distintas."
+
+> "Y el **Quiz** del primer corte no es un documento: es un cuestionario individual, con tiempo, sobre lo que trabajemos en las primeras sesiones. Se responde en la plataforma, y cuando terminen deben ver el mensaje de **enviado**: un intento abierto y sin enviar cuenta como no presentado."
+
+> "Las **fechas exactas y los criterios completos** no los voy a dictar: están en cada ítem de CDigital y en el enunciado, en `Clases/Recursos/ACAs/`. Ábranlos hoy mismo. — [proyectar en pantalla el **Quiz** dentro del aula y el enunciado de la **ACA 1**]"
 
 > "**Slide 11 — cómo se entrega, paso a paso.** Uno: trabajan la plantilla APA en **Google Docs**, un documento por equipo, con permiso de edición para todos. Dos: antes de entregar, **descargan en PDF**. Tres: nombran el archivo `ACA1_Apellido1-Apellido2-Apellido3`. Cuatro: **un solo integrante** lo sube en CDigital y los demás verifican que quedó cargado. Cinco: la portada lleva los **nombres completos de todos**; si falta uno, esa persona no tiene nota."
 
 > "Y la regla que evita el 90% de los problemas: **lo que no está en CDigital, no está entregado.** No recibo entregas por correo ni por WhatsApp. Si algo pasa, se avisa **antes** del cierre, no al día siguiente."
 
-**Qué hacer:** mostrar en vivo el espacio de entrega de la ACA 1 en CDigital · preguntar en voz alta "¿alguien no ve el espacio de entrega?" y esperar respuesta.
+**Qué hacer:** mostrar en vivo, en CDigital, **el Quiz del primer corte** y el espacio de entrega de la **ACA 1** · preguntar en voz alta "¿alguien no ve el Quiz en su aula?" y esperar respuesta: si alguien no lo ve, es un problema de matrícula o de grupo que hay que resolver esta misma semana.
 
 ---
 
@@ -349,7 +367,7 @@ def guion_01(ses):
 
 > "**Uno: lectura autónoma.** {diferida}. Está publicada en CDigital. Hoy no la dictamos, la leen ustedes y **la retomamos al abrir la Sesión 02**. Mientras leen, anoten **tres términos** que no les queden claros: con esos tres arrancamos la próxima clase, así que tráiganlos escritos."
 
-> "**Dos:** confirmen su equipo, máximo tres personas. **Tres:** abran y lean completo el enunciado de la ACA 1. **Cuatro:** creen el documento del equipo en Google Docs con la plantilla APA y compártanlo con todos. **Cinco:** traigan una idea de tema **en una frase** y el contexto donde ocurre: una empresa, un aula, un proceso concreto."
+> "**Dos:** confirmen su equipo, máximo tres personas. **Tres:** entren al aula, **abran el Quiz del primer corte** para ver cuántas preguntas tiene y cuánto tiempo da, y lean completo el enunciado de la **ACA 1**. **Cuatro:** creen el documento del equipo en Google Docs con la plantilla APA y compártanlo con todos. **Cinco:** traigan una idea de tema **en una frase** y el contexto donde ocurre: una empresa, un aula, un proceso concreto."
 
 > "**Slide 18.** Y estas son las preguntas que siempre salen el primer día; las respondo ahora para que nadie se quede con la duda… [recorrer las tres cajas]. ¿Alguna otra antes de pasar a tutoría?"
 
@@ -362,7 +380,8 @@ def guion_01(ses):
 | Si un estudiante pregunta… | Usted responde… |
 | :--- | :--- |
 | "¿Esta materia se pierde fácil?" | "No se pierde por difícil: se pierde por entregar tarde o por subir un documento que nadie leyó antes. Quien trae avance cada semana llega al cierre del curso con el anteproyecto prácticamente listo." |
-| "¿Puedo trabajar solo?" | "Sí, pero la carga es la misma para uno que para tres y el equipo es de máximo tres. Decídalo esta semana: después de la ACA 1 no conviene cambiar de equipo ni de tema." |
+| "¿Puedo trabajar solo?" | "Sí, pero la carga es la misma para uno que para tres y el equipo es de máximo tres. Decídalo esta semana: una vez avanzada la ACA 1 no conviene cambiar de equipo ni de tema." |
+| "¿El Quiz también es en equipo?" | "No. El **Quiz es individual**, igual que la autoevaluación y la coevaluación. En equipo se entregan la **ACA 1** y la **ACA FINAL**." |
 | "¿Sirve un trabajo de otro semestre?" | "Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso." |
 | "¿La clase se graba?" | "Sí, el encuentro completo, y la grabación queda en CDigital. Si falta a una sesión puede verla, pero la tutoría de su equipo no se recupera con un video." |
 | "¿Ya puedo aplicar mi encuesta?" | "En Proyecto I no. Aquí se **propone** el instrumento; aplicarlo es Proyecto II, con aval previo. Si aplica algo ahora, no cuenta y le desordena el anteproyecto." |
@@ -382,7 +401,7 @@ def guion_01(ses):
 
 **Rutina de esta primera tutoría:**
 1. **Equipos (≈20 min).** Quien ya tenga equipo lo escribe en el chat: nombres completos, máximo tres. A quien esté solo, el Docente lo empareja según el tema tentativo que dejó en el Padlet.
-2. **Plataforma (≈15 min).** Con pantalla compartida: dónde está el material, dónde el espacio de entrega de la ACA 1, dónde la plantilla APA y cómo se comparte el documento del equipo en Google Docs.
+2. **Plataforma (≈15 min).** Con pantalla compartida: dónde está el material, **dónde está el Quiz del primer corte** —que ya corre—, dónde el espacio de entrega de la ACA 1, dónde la plantilla APA y cómo se comparte el documento del equipo en Google Docs.
 3. **Temas tentativos (≈15 min).** Dos o tres equipos leen su idea en una frase. El Docente devuelve **una sola** pregunta a cada uno: ¿quién tiene ese problema y dónde ocurre? No se corrige la idea todavía: eso es Sesión 02.
 4. **Agenda (≈10 min).** Se propone la franja de tutorías de la semana y cada equipo indica su disponibilidad. Se cierra con un acuerdo observable por equipo: llegar a la Sesión 02 con la frase de tema y el contexto escritos.
 
@@ -400,7 +419,7 @@ def guion_01(ses):
 ✅ **Checklist antes de clase**
 - [ ] Aula de CDigital abierta, con material publicado y espacios de entrega de ACA visibles
 - [ ] Padlet abierto y enlace copiado para el chat: {PADLET_PRESENTACION_URL}
-- [ ] Los tres enunciados de ACA abiertos desde `Clases/Recursos/ACAs/`
+- [ ] **Libro de calificaciones** del aula abierto (Quiz · ACA 1 · ACA FINAL · auto · coevaluación) y los enunciados de ACA en `Clases/Recursos/ACAs/`
 - [ ] Plantilla APA CUN abierta en Google Docs para mostrarla en vivo
 - [ ] PPTX `Clases/{label}/Presentacion.pptx` en modo presentador (21 slides)
 - [ ] Link del formulario de asistencia listo para el chat: {LINK_TUTORIAS}
@@ -414,7 +433,10 @@ def guion_01(ses):
     md, _ = ajustar_mapa_manual(
         md, titulos_pptx(deck_path(COURSES["proyecto1"]["folder"], label))
     )
-    return md
+    # Evaluación real del aula. En la S01 solo entra el aviso (es encuadre: no se le
+    # inserta fase ni se le toca el plan), y ese aviso es justo el que faltaba: el
+    # **Quiz** del primer corte ya está abierto y cierra antes de la Sesión 03.
+    return inyectar_evaluacion(md, "proyecto1", n)
 
 
 def _slides_map(label: str) -> str:
@@ -481,7 +503,11 @@ def _body(n, titulo, detalle, label, objetivos, fundamento, fases_plan, fases_te
     # La narración de estas sesiones venía de la plantilla de 7 slides: sus números no
     # corresponden al deck real (17–19 slides). Se retiran; queda el nombre del momento.
     md, _ = limpiar_referencias(md)
-    return md
+    # Evaluación real del aula: aviso de lo que corre en esta sesión (el Quiz del primer
+    # corte, la ACA 1, la ACA FINAL, auto y coevaluación) + checklist. En Proyecto I
+    # ningún cuestionario cierra en día de clase, así que no se reserva tiempo salvo el
+    # bloque de auto/coevaluación de la última sesión.
+    return inyectar_evaluacion(md, "proyecto1", n)
 
 
 def guion_02(ses):
@@ -586,8 +612,8 @@ Responde a la pregunta “¿por qué vale la pena?”. Se apoya en tres pilares:
 #### 3. Alcances y limitaciones
 El **alcance** es la promesa: hasta dónde llega el estudio (población objetivo, periodo, variables o categorías, tipo de producto). La **limitación** es la honestidad: restricciones reales de acceso, de tiempo, de recursos, y la restricción estructural de que en Proyecto I no se aplican instrumentos. Declarar limitaciones no debilita el trabajo: lo hace creíble.
 
-#### 4. Coherencia como hilo (cierre de ACA1)
-Al terminar esta unidad, el bloque de formulación debe leerse como una sola historia sin saltos: problema → pregunta → objetivo general → específicos → justificación → alcances/limitaciones. Ese hilo es exactamente lo que se evalúa en ACA1.
+#### 4. Coherencia como hilo (primer bloque de la ACA 1)
+Al terminar esta unidad, el bloque de formulación debe leerse como una sola historia sin saltos: problema → pregunta → objetivo general → específicos → justificación → alcances/limitaciones. Ese hilo es la **primera mitad de la ACA 1** (la entrega del segundo corte) y es lo que el Docente revisa en la retroalimentación de la Sesión 04. Ojo con no confundir instrumentos: la nota del **primer corte** no sale de este texto, sale del **Quiz** (cuestionario en CDigital) que cierra antes de la Sesión 03.
 
 #### 5. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -610,7 +636,7 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 03**. Antes de arrancar: si su pregunta de S02 cambió durante la semana, es normal —actualícenla ahora en su documento, porque todo lo de hoy cuelga de esa pregunta—. Dos o tres equipos, díganme en una frase su pregunta actual.”
-> “**Slide 2.** Hoy cerramos el bloque de formulación: **objetivos, justificación, alcances y limitaciones**. Cuando salgan de la primera hora, tendrán casi listo lo que compone la entrega de ACA1.”
+> “**Slide 2.** Hoy cerramos el bloque de formulación: **objetivos, justificación, alcances y limitaciones**. Cuando salgan de la primera hora tendrán escrita la **primera mitad de la ACA 1**, que es la entrega del segundo corte.”
 
 #### 2️⃣ Objetivos y verbos (~12 min) — Protagonista: Docente
 **Slides:** 3 (CONTENIDO CLAVE)
@@ -643,8 +669,8 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 **Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, empaqueten el bloque completo de formulación para la entrega de ACA1 siguiendo las indicaciones de CDigital: problema, pregunta, objetivos, justificación, alcances y limitaciones, con sus referencias en APA 7. Suban el avance de clase como `S03_ObjetivosJustificacion_Apellidos`.”
-> “**Slide 7.** Recuerden que ACA1 es la primera de las tres entregas del mismo documento acumulativo; no es una tarea suelta. Pasamos a tutoría para revisar la coherencia pregunta–objetivos equipo por equipo.”
+> “**Slide 6.** En autónomo, empaqueten el bloque completo de formulación —problema, pregunta, objetivos, justificación, alcances y limitaciones, con sus referencias en APA 7— siguiendo las indicaciones de CDigital. Suban el avance de clase como `S03_ObjetivosJustificacion_Apellidos`.”
+> “**Slide 7.** Dos recordatorios de plataforma antes de la tutoría. Uno: esto que acaban de escribir **no es una tarea suelta**, es la primera mitad de la **ACA 1** del segundo corte, el mismo documento que va a seguir creciendo. Dos: la nota del **primer corte** es el **Quiz**, y ese cuestionario **ya cerró o está por cerrar**; si alguien no lo ha presentado, revísenlo ahora mismo en el aula, no mañana. Pasamos a tutoría para revisar la coherencia pregunta–objetivos equipo por equipo.”
 """
     return _body(
         n, titulo, detalle, label,
@@ -654,15 +680,18 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
         fundamento, fases_plan, fases_texto, "objetivos",
         """1. Sección objetivos + justificación + alcances/limitaciones en CDigital.
 2. **Éxito:** específicos con verbo preciso y alineados a la pregunta.""",
-        "coherencia pregunta–objetivos; preparar cierre de bloque formulación (ACA1).",
+        "coherencia pregunta–objetivos; cerrar el bloque de formulación (primera mitad de la ACA 1) y verificar equipo por equipo que el Quiz del primer corte quedó presentado.",
     )
 
 
 def guion_04(ses):
     n, titulo, detalle = ses["n"], ses["titulo"], ses["detalle"]
     label = label_for(n, titulo)
-    fundamento = """#### 1. Cómo dar retroalimentación de ACA1 (en 60+60)
-Priorice dos cosas: **coherencia** (¿pregunta ↔ objetivos ↔ justificación cuentan la misma historia?) y **viabilidad**. No reescriba el texto del estudiante ni corrija comas: señale dos o tres hallazgos accionables por equipo, redactados como instrucción concreta (“delimite el actor”, “el específico 2 no responde la pregunta”). La retro es un mapa de ruta, no una calificación disfrazada.
+    fundamento = """#### 1. Cómo retroalimentar el bloque de formulación (en 60+60)
+Priorice dos cosas: **coherencia** (¿pregunta ↔ objetivos ↔ justificación cuentan la misma historia?) y **viabilidad**. No reescriba el texto del estudiante ni corrija comas: señale dos o tres hallazgos accionables por equipo, redactados como instrucción concreta (“delimite el actor”, “el específico 2 no responde la pregunta”). La retro es un mapa de ruta, no una calificación disfrazada — y aquí, literalmente, no hay nota que devolver: la formulación es **avance** de la ACA 1, que cierra en el segundo corte.
+
+#### 1.b Lo que sí tiene nota en esta sesión: el Quiz del primer corte
+El **Quiz** (cuestionario en CDigital) ya cerró y su nota debe quedar registrada en el libro de calificaciones dentro de este corte. Dedique dos o tres minutos a una **devolución de grupo** —los dos errores más repetidos, sin nombres y sin leer notas en voz alta— y deje claro que el cuestionario no se reabre. Si algún equipo confunde «entregué el avance» con «presenté el Quiz», corríjalo hoy: son dos instrumentos distintos.
 
 #### 2. Qué es un antecedente de investigación (y qué no)
 Un **antecedente** es un ESTUDIO PREVIO comparable —una investigación con autor, año, objetivo, método y hallazgos— que muestra qué se ha investigado ya sobre el fenómeno. NO es una noticia, un blog ni una definición de diccionario. La meta orientativa del programa es **mínimo 6**, con presencia nacional e internacional. Cada antecedente se ficha con: propósito, método, hallazgo clave y —lo más importante— **su relación explícita con la pregunta propia**.
@@ -683,17 +712,17 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 | Confunde antecedente con teoría | “El antecedente es un estudio; la teoría llega en la próxima sesión. Hoy, estudios.” |
 """
     fases_plan = [
-        ("1️⃣ Encuadre + criterios de retro ACA1", 10),
+        ("1️⃣ Encuadre + retro del bloque de formulación y del Quiz", 10),
         ("2️⃣ Qué es un antecedente (y qué no)", 12),
         ("3️⃣ Modelación de ficha de antecedente", 10),
         ("4️⃣ Taller de búsqueda y fichas", 20),
         ("5️⃣ Cierre", 8),
     ]
-    fases_texto = f"""#### 1️⃣ Encuadre + criterios de retro ACA1 (~10 min) — Protagonista: Docente
+    fases_texto = f"""#### 1️⃣ Encuadre + retro del bloque de formulación y del Quiz (~10 min) — Protagonista: Docente
 **Slides:** 1 (Portada) → 2 (OBJETIVOS)
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 04**. Ya cerró ACA1. Hoy hago dos cosas: primero les explico con qué criterios la leí, y segundo abrimos el marco referencial empezando por los **antecedentes**.”
+> “Buenas tardes, **Sesión 04**. Dos cosas antes del tema. Primera: **ya cerró el Quiz del primer corte**; les devuelvo en dos minutos los errores que más se repitieron, sin nombres, y la nota queda en el libro de calificaciones del aula. Segunda: leí su bloque de formulación y les explico con qué criterios lo leí, porque eso es la **primera mitad de la ACA 1** y esas correcciones no son opcionales.”
 > “**Slide 2.** Los criterios de mi retro son tres: coherencia (que pregunta, objetivos y justificación digan lo mismo), delimitación (actor, fenómeno, contexto) y APA básica. Cuando lean mis comentarios, léanlos como un mapa de correcciones, no como un regaño: cada observación es una instrucción concreta para mejorar el documento acumulativo.”
 
 #### 2️⃣ Qué es un antecedente (y qué no) (~12 min) — Protagonista: Docente
@@ -727,8 +756,8 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 **Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, completen las seis fichas mínimas y, en paralelo, vayan aplicando las correcciones de mi retro de ACA1 sobre el documento. Suban el avance como `S04_Antecedentes_Apellidos`.”
-> “**Slide 7.** Recuerden: ACA2 acumula sobre ACA1, así que las correcciones no son opcionales. Pasamos a tutoría para revisar una o dos fichas por equipo.”
+> “**Slide 6.** En autónomo, completen las seis fichas mínimas y, en paralelo, vayan aplicando sobre el documento las correcciones que les devolví de la formulación. Suban el avance como `S04_Antecedentes_Apellidos`.”
+> “**Slide 7.** Recuerden cómo se acumula esto: los antecedentes y el marco se suman a la formulación corregida **dentro de la misma ACA 1**, la del segundo corte. No es una entrega nueva: es el mismo archivo, más grande y mejor. Pasamos a tutoría para revisar una o dos fichas por equipo.”
 """
     return _body(
         n, titulo, detalle, label,
@@ -738,7 +767,7 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
         fundamento, fases_plan, fases_texto, "antecedentes",
         """1. Avance de fichas de antecedentes en CDigital.
 2. **Éxito:** cada ficha incluye vínculo explícito a la pregunta.""",
-        "retro puntual ACA1 + revisar 1–2 fichas de antecedentes por equipo.",
+        "retro puntual del bloque de formulación (avance de la ACA 1) + revisar 1–2 fichas de antecedentes por equipo; confirmar que todos presentaron el Quiz.",
     )
 
 
@@ -812,7 +841,7 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 
 **GUION LITERAL:**
 > “**Slide 6.** En autónomo, completen el apartado teórico a partir del mapa y traigan a la Sesión 06 definiciones operativas tentativas de sus términos. Suban el avance como `S05_MarcoTeorico_Apellidos`.”
-> “**Slide 7.** Recuerden que todo esto acumula hacia ACA2. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
+> “**Slide 7.** Recuerden que todo esto acumula hacia la **ACA 1**, la entrega del segundo corte. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
 """
     return _body(
         n, titulo, detalle, label,
@@ -923,7 +952,7 @@ Son las normas, políticas o marcos que **condicionan** el estudio: protección 
 ZoteroBib (zbib.org), las citas integradas de Google Docs, y la plantilla APA CUN en Google Docs o Word en línea. No se exige ningún plugin de escritorio.
 
 #### 4. Cierre del marco referencial
-Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. La meta mínima: cero citas huérfanas en el avance.
+Esta sesión cierra el marco referencial completo —antecedentes, teórico, conceptual, contextual y legal, con referencias limpias— que junto con la formulación corregida compone la **ACA 1**, la entrega del segundo corte. La meta mínima: cero citas huérfanas en el avance.
 
 #### 5. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -945,7 +974,7 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 **Slides:** 1 (Portada) → 2 (OBJETIVOS)
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 07**. Hoy cerramos el marco referencial completo, que es el corazón de ACA2. Dos frentes: el **marco legal** —si su proyecto lo necesita— y una **clínica de APA 7** para dejar las citas impecables.”
+> “Buenas tardes, **Sesión 07**. Hoy cerramos el marco referencial completo, que es el corazón de la **ACA 1** —la entrega del segundo corte, y cierra pronto—. Dos frentes: el **marco legal** —si su proyecto lo necesita— y una **clínica de APA 7** para dejar las citas impecables.”
 > “**Slide 2.** Meta de hoy: decidir si aplica marco legal y redactarlo con pertinencia, y normalizar todas sus citas y referencias sin citas huérfanas.”
 
 #### 2️⃣ Marco legal pertinente (~12 min) — Protagonista: Docente
@@ -979,8 +1008,8 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 **Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 6.** Con esto queda listo el marco referencial completo para ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones y dejen cero citas huérfanas.”
-> “**Slide 7.** La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos de ACA3. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
+> “**Slide 6.** Con esto queda listo el marco referencial completo de la **ACA 1**: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones, dejen cero citas huérfanas y **suban el documento a la tarea de la ACA 1 en CDigital**: cierra antes de nuestro próximo encuentro, así que no lo dejen para el último día.”
+> “**Slide 7.** La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos del tramo final, que es cuando se arma la **ACA FINAL**. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
 """
     return _body(
         n, titulo, detalle, label,
@@ -1007,7 +1036,7 @@ def guion_08(ses):
 El error más caro es el desajuste pregunta–método. Una pregunta que busca comprender significados (“¿cómo VIVEN los docentes…?”) con una encuesta de escalas cerradas está rota; y una pregunta que busca magnitudes (“¿en qué MEDIDA…?”) con tres entrevistas también. El enfoque no se elige por gusto: se deriva de la pregunta.
 
 #### 3. Por qué se adelanta aquí (sesión puente)
-Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3, que por los festivos tienen solo dos lunes sincrónicos. Adelantar hoy da colchón para las tutorías extra de esas semanas.
+Esta sesión anticipa la metodología antes de las semanas más cargadas del tramo de la **ACA FINAL**, que por los festivos tienen solo dos lunes sincrónicos. Adelantar hoy da colchón para las tutorías extra de esas semanas.
 
 #### 4. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -1029,7 +1058,7 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 **Slides:** 1 (Portada) → 2 (OBJETIVOS)
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 08**. Cerramos el marco referencial y hoy damos el salto al **diseño metodológico**. Adelantamos a propósito, porque las semanas de ACA3 tienen menos lunes por los festivos.”
+> “Buenas tardes, **Sesión 08**. Cerramos el marco referencial —que ya quedó entregado en la **ACA 1**— y hoy damos el salto al **diseño metodológico**. Adelantamos a propósito, porque las semanas de la **ACA FINAL** tienen menos lunes por los festivos.”
 > “**Slide 2.** Hoy eligen el ‘cómo’ tentativo de su investigación: paradigma, enfoque y alcance. Insisto en ‘tentativo’ y en ‘propuesto’: hoy no aplicamos absolutamente nada.”
 
 #### 2️⃣ Enfoque y alcance (~14 min) — Protagonista: Docente
@@ -1148,7 +1177,7 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 
 **GUION LITERAL:**
 > “**Slide 6.** En autónomo, completen el instrumento y dejen explícito, por escrito, que es una PROPUESTA para Proyecto II. Suban `S09_InstrumentosPropuestos_Apellidos`.”
-> “**Slide 7.** La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para ACA3. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
+> “**Slide 7.** La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para la **ACA FINAL**. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
 """
     return _body(
         n, titulo, detalle, label,
@@ -1169,7 +1198,7 @@ def guion_10(ses):
 La **planeación** es el cronograma realista de fases hasta Proyecto II (con recursos y, si el formato lo pide, presupuesto). La **viabilidad** es la pregunta honesta: ¿de verdad se puede? ¿Hay acceso a la población? ¿Hay permisos? ¿Alcanza el tiempo? Viabilidad no es optimismo: un cronograma que promete encuestar a 500 personas en una semana NO es viable, es un deseo.
 
 #### 2. Integración del anteproyecto
-ACA3 exige el documento **completo e integrado**, no un fragmento nuevo pegado al final. “Integrar” significa que la formulación corregida, el marco referencial, el método y la planeación se lean como UN solo texto coherente, con las correcciones de ACA1 y ACA2 ya incorporadas.
+La **ACA FINAL** exige el documento **completo e integrado**, no un fragmento nuevo pegado al final. “Integrar” significa que la formulación corregida, el marco referencial, el método y la planeación se lean como UN solo texto coherente, con las correcciones de la **ACA 1** ya incorporadas.
 
 #### 3. Checklist de coherencia final (previo a S11)
 El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ método ↔ instrumento propuesto ↔ cronograma. Cualquier eslabón que no conecte es un “gap” que hay que registrar y asignar a un responsable del equipo.
@@ -1178,8 +1207,8 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 | El estudiante… | Usted responde… |
 | :--- | :--- |
 | Cronograma irreal (todo en una semana) | “¿Eso se puede de verdad? Ajústelo a tiempos y accesos reales.” |
-| Pega ACA3 como fragmento nuevo | “ACA3 es el documento COMPLETO integrado, no un anexo suelto.” |
-| No incorporó las correcciones previas | “Las correcciones de ACA1 y ACA2 no son opcionales; el producto es acumulativo.” |
+| Pega la ACA FINAL como fragmento nuevo | “La ACA FINAL es el documento COMPLETO integrado, no un anexo suelto.” |
+| No incorporó las correcciones previas | “Las correcciones de la ACA 1 no son opcionales; el producto es acumulativo.” |
 | Objetivos que ya no coinciden con el método | “Revise el hilo: si el método cambió, ¿siguen alineados los objetivos?” |
 | Ignora la viabilidad de acceso | “¿Tiene permiso para llegar a esa población en Proyecto II? Declárelo.” |
 """
@@ -1194,7 +1223,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 **Slides:** 1 (Portada) → 2 (OBJETIVOS)
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 10**. Ya tienen todas las piezas sueltas; hoy las miramos como un SISTEMA. Trabajamos planeación, viabilidad e integración del anteproyecto de cara a ACA3, que es el producto de cierre.”
+> “Buenas tardes, **Sesión 10**. Ya tienen todas las piezas sueltas; hoy las miramos como un SISTEMA. Trabajamos planeación, viabilidad e integración del anteproyecto de cara a la **ACA FINAL**, que es el producto de cierre y la entrega que más pesa del curso.”
 > “**Slide 2.** Meta de hoy: construir un cronograma y una viabilidad realistas, integrar el documento completo y detectar los ‘gaps’ de coherencia antes del cierre.”
 
 #### 2️⃣ Cronograma y viabilidad (~14 min) — Protagonista: Docente
@@ -1208,7 +1237,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 **Slides:** 4 (RECUERDA)
 
 **GUION LITERAL:**
-> “**Slide 4.** ACA3 NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de ACA1 y ACA2 ya metidas.”
+> “**Slide 4.** La **ACA FINAL** NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de la ACA 1 ya metidas.”
 > “Recuerden que el producto es acumulativo: si no incorporaron mis correcciones anteriores, el documento no está integrado, está remendado. Hoy detectamos esos remiendos.”
 
 #### 4️⃣ Taller: matriz de coherencia + gaps (~20 min) — Protagonista: Estudiantes
@@ -1220,7 +1249,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
 | Cronograma irreal | “Ajústelo a accesos y tiempos reales; menos es más.” |
-| Pega ACA3 como anexo | “Es el documento completo integrado, no un fragmento.” |
+| Pega la ACA FINAL como anexo | “Es el documento completo integrado, no un fragmento.” |
 | No metió correcciones | “El producto es acumulativo; incorpórelas ahora.” |
 | Método y objetivos no cuadran | “Revise el hilo: si el método cambió, realinee.” |
 
@@ -1247,10 +1276,10 @@ def guion_11(ses):
     n, titulo, detalle = ses["n"], ses["titulo"], ses["detalle"]
     label = label_for(n, titulo)
     fundamento = """#### 1. Integración final
-Es la lectura de cierre del anteproyecto con tres preguntas: ¿el documento cuenta UNA sola historia de principio a fin?, ¿el APA está estable (sin citas huérfanas)?, ¿queda clarísimo que los instrumentos son PROPUESTOS y no aplicados? Si las tres respuestas son sí, el anteproyecto está listo para ACA3.
+Es la lectura de cierre del anteproyecto con tres preguntas: ¿el documento cuenta UNA sola historia de principio a fin?, ¿el APA está estable (sin citas huérfanas)?, ¿queda clarísimo que los instrumentos son PROPUESTOS y no aplicados? Si las tres respuestas son sí, el anteproyecto está listo para la **ACA FINAL**.
 
 #### 2. Coevaluación y autoevaluación (ESP329)
-Son componentes individuales de cierre (coevaluación 4% y autoevaluación 4%; ventanas y detalle logístico en la Presentación del Curso y en CDigital). En clase se practica una coevaluación **formativa** con una rúbrica breve —entrena el ojo crítico—, pero esa práctica NO sustituye la actividad oficial que cada estudiante diligencia en Moodle en su ventana.
+Son componentes individuales de cierre (**coevaluación**, un **foro**, y **autoevaluación**, un **cuestionario**; los pesos exactos están en el libro de calificaciones y las ventanas, en la Presentación del Curso y en CDigital). En clase se practica una coevaluación **formativa** con una rúbrica breve —entrena el ojo crítico—, pero esa práctica NO sustituye la actividad oficial que cada estudiante diligencia en Moodle en su ventana.
 
 #### 3. Puente a Proyecto II
 Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y qué NO se hizo (todo el trabajo de campo). Ese “qué falta” no es una debilidad: es el alcance correcto de Proyecto I.
@@ -1283,7 +1312,7 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 
 **GUION LITERAL:**
 > “**Slide 3.** Vamos a pasar el checklist en voz alta, y cada equipo va marcando en su documento: ¿está el problema?, ¿la pregunta?, ¿los objetivos?, ¿el marco referencial completo?, ¿el método?, ¿los instrumentos propuestos?, ¿el cronograma?, ¿las referencias en APA?”
-> “Tres preguntas de oro para la integración: ¿el documento cuenta una sola historia?, ¿el APA está estable sin citas huérfanas?, ¿queda clarísimo que los instrumentos son PROPUESTOS? Si las tres dan sí, están listos para ACA3.”
+> “Tres preguntas de oro para la integración: ¿el documento cuenta una sola historia?, ¿el APA está estable sin citas huérfanas?, ¿queda clarísimo que los instrumentos son PROPUESTOS? Si las tres dan sí, están listos para la **ACA FINAL**.”
 
 #### 3️⃣ Coevaluación formativa (modelo) (~12 min) — Protagonista: Docente
 **Slides:** 4 (RECUERDA)
@@ -1309,7 +1338,7 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 **Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 6.** No olviden las ventanas de coevaluación y autoevaluación en CDigital —el detalle logístico está en la Presentación del Curso—; cada una es individual y vale su porcentaje. En autónomo, pulido final del anteproyecto para ACA3.”
+> “**Slide 6.** No olviden las ventanas de **coevaluación** y **autoevaluación** en CDigital —el detalle logístico está en la Presentación del Curso—: la coevaluación es un **foro** en el que hay que escribir y la autoevaluación un **cuestionario**; cada una es individual y vale su porcentaje del tercer corte. En autónomo, pulido final del anteproyecto para la **ACA FINAL**.”
 > “**Slide 7.** La tutoría de hoy es de pulido final. Gracias por el trabajo de todo el periodo: salen con un anteproyecto completo, viable y listo para ejecutar en Proyecto II tras el aval. Nos vemos en las tutorías de cierre.”
 """
     return _body(

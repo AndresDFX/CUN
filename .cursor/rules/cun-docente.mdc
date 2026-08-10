@@ -63,7 +63,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 
 - Fuente Excel: `Carga academica 2026.xlsx` (día/hora/aula vienen vacíos en el Excel).
 - Config canónica: `config/cursos/carga_academica_2026.json` + loader `config/cursos/carga_academica.py`.
-- **Inicio operativo 2026:** `2026-08-10`. **Fechas de entrega ACA:** `config/cursos/fechas_entrega_aca.py` (pesos + día de clase sobre [inicio–recepción]; no hardcodear en enunciados).
+- **Inicio operativo 2026:** `2026-08-10`. **Evaluación y ventanas:** `config/cursos/fechas_entrega_aca.py` — **tablas explícitas** copiadas del libro de calificaciones del aula (ya **no** hay cálculo por pesos ni «snap» al día de clase). No hardcodear ítems, pesos ni fechas en enunciados, manuales o calendarios: leerlos del módulo (ver «REGLA VIGENTE DE EVALUACIÓN»).
 - Incluye bloque, periodo, grupos, fechas de inicio/recepción/cierre.
 - En Presentación del Curso, esos datos de oferta (y horario/placeholders Meet·CDigital) van en **negrita** para señalar qué actualizar el próximo periodo.
 - **Horarios confirmados por el docente** (tienen prioridad sobre el Excel vacío). El **inicio efectivo** = horario + 10 min (`hora_inicio_efectiva`) y se muestra **solo en la portada de la Presentación del Curso** (no en el pie — ver estándar de slides, punto 1):
@@ -101,7 +101,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - **Carpeta compartida con estudiantes = solo `Clases/`.** Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
 - **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`.
 - **ACAs (estudiantes):** convención única los 5 cursos → `Clases/Recursos/ACAs/ACA N - <título corto>.docx`. Build: `python config/slides/build_acas_estudiantes.py`. Guiones docentes pueden remitir a esa ruta **sin** duplicar el enunciado largo.
-- **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%)** y la **coevaluación (4%)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; `kind="ventana"` en `config/cursos/fechas_entrega_aca.py`). Solo existen en Proyecto I.
+- **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%, cuestionario)** y la **coevaluación (4%, foro)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* o en los que *participa* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; ids `auto` / `coev` con `kind="cuestionario"` / `"foro"` en `config/cursos/fechas_entrega_aca.py`). **No son exclusivas de Proyecto I:** existen en los 4 cursos de pregrado con peso menor (ver «REGLA VIGENTE DE EVALUACIÓN»). Los cursos de pregrado **todavía no tienen instructivo** para ellas — pendiente.
 - **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
 - **NO meter en `Clases/`:** Guiones docentes, Manual del Docente, CSV/ICS Calendar con roster, formularios solo-docente AFI, `Informacion.txt` de grupo, **`Correo de bienvenida.docx`**, builds/`config/`, ni archivos `.md`.
 - **Raíz** = material genérico/reutilizable (sin código de grupo en títulos ni nombres de archivo de sesión).
@@ -121,13 +121,44 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - **Proyecto I 54ES4 — invitados:** Google Calendar al **Importar** `.ics`/`.csv` **descarta** ATTENDEE/Guests (limitación conocida). Flujo que sí funciona: **`Crear encuentros con invitados.gs`** (Apps Script → `createEncuentrosP1`) o `create_encuentros_p1_calendar_api.py`. El ICS sigue llevando ATTENDEE por compatibilidad Outlook/otros, pero **no** es el flujo Google. Coanfitrión en Description corta + guests del script = roster + `investigacion_especializaciones@cun.edu.co`.
 - Description encuentros (los 5): **2–4 líneas máx.** (sesión/tema; P1 + form tutorías URL + coanfitrión). Sin párrafos de política ni Meet duplicado en Location+Description.
 - Builds encuentros: `build_calendar_proyecto1_54es4.py` · `build_pregrado_cursos.py --calendar-only`.
-- **CSV hitos docentes** (`Entregas y hitos docentes…`, build `build_hitos_docentes_calendar.py`) = solo ACA (deadlines) + trámites AFI/esenciales (Acuerdo, 1 recordatorio registro AFI, recepción/cierre, informe). **No** duplicar encuentros semanales Sesión NN (esos van en CSV/ICS Encuentros…).
+- **CSV hitos docentes** (`Entregas y hitos docentes…`, build `build_hitos_docentes_calendar.py`) = deadlines de **todos los ítems del libro de calificaciones** (quices, parciales, ACA Final, auto y coevaluación: cierre + límite de nota) + trámites AFI/esenciales (Acuerdo, 1 recordatorio registro AFI, recepción/cierre, informe). **No** duplicar encuentros semanales Sesión NN (esos van en CSV/ICS Encuentros…).
 - Cierres oficiales (referencia rápida): Investigación 20/09 · Creatividad 27/09 · TG3 54450 → 15/11 · TG3 54466/54467, TG2 y P1 → 22/11.
 
-# Autoevaluación / coevaluación (validado)
+# REGLA VIGENTE DE EVALUACIÓN — manda el libro de calificaciones del aula (CDigital)
 
-- **Solo Proyecto I (AFI · ESP329 / Art. 41):** autoevaluación **4%** + coevaluación **4%**, individuales, en **CDigital**, ventanas de cierre tras ACA 3 (`fechas_entrega_aca.py`; 26ES4: coev. 10–16/11 · autoev. 17–22/11). El estudiante diligencia; el Docente habilita y registra nota. **No** aplican en Proyecto II ni en pregrado Art. 52 (syllabus por cortes) — no inventar %. Distinto de la autoevaluación institucional SIAC ([acreditacion.cun.edu.co](https://acreditacion.cun.edu.co/)).
-- Checklists de cierre (estudiantes/directivos): `Especializacion/Checklist de cierre de curso a satisfaccion.docx` · `Pregrado/Checklist de cierre de curso a satisfaccion.docx`.
+**Fuente única, desde el 2026-08-10:** el **libro de calificaciones de cada aula en CDigital**, auditado en `AUDITORIA CDigital 2026-08-10.md` §2 y cargado en `config/cursos/fechas_entrega_aca.py` (`ACA_COMPONENTES` = ítem · tipo · corte · peso; `VENTANAS` / `VENTANAS_POR_GRUPO` = apertura · cierre · límite de nota). **Nada se recalcula por pesos** y **nada se copia a mano**: cualquier %, tipo de actividad o fecha que aparezca en material, manual, calendario o checklist se **lee del módulo**. Si el aula y nuestro material se contradicen, **manda el aula**.
+
+**Los 4 cursos de pregrado (Art. 52 · tres cortes 30 / 30 / 40):**
+
+| Corte | Ítems del aula (tipo · peso) |
+|---|---|
+| **1 — 30%** | Quiz 1 (cuestionario · 6%) + Parcial 1 (cuestionario · 24%) |
+| **2 — 30%** | Quiz 2 (cuestionario · 9%) + Parcial 2 (cuestionario · 21%) |
+| **3 — 40%** | **ACA Final** (tarea · 32,8%; TG3 **32%**) + Quiz 3 (cuestionario · 4%) + Autoevaluación (cuestionario · 1,6%; TG3 **2%**) + Coevaluación (**foro** · 1,6%; TG3 **2%**) |
+
+**Proyecto I 54ES4 (estructura propia · Art. 41 nota única, operada en 3 cortes 25 / 25 / 50):** corte 1 = **Quiz** (cuestionario · 25%) · corte 2 = **ACA 1** (tarea · 25%) · corte 3 = **ACA FINAL** (tarea · 42%) + **Autoevaluación** (cuestionario · 4%) + **Coevaluación** (**foro** · 4%). Sus fechas son las **OFICIALES de Coordinación** (cronograma AFI) y no se tocan.
+
+## Lo que queda RETIRADO (no volver a escribirlo en ningún archivo)
+
+- ❌ «**Cada ACA evalúa el 100% de su corte**» (ACA 1 = Corte 1 · ACA 2 = Corte 2 · ACA 3 = Corte 3). Fue una decisión del 2026-08-10 **derogada el mismo día** por la auditoría: el desglose real existe (6/24 · 9/21 · 32,8/4/1,6/1,6).
+- ❌ «**Las tres ACAs de pregrado**». En pregrado hay **una sola «ACA Final»** (tarea) en el tercer corte. Los enunciados **ya se realinearon** (2026-08-10): `Clases/Recursos/ACAs/` tiene **un `.docx` por ítem del aula** — `Quiz N (…) - guía del cuestionario.docx`, `Parcial N (…) - guía del cuestionario.docx`, `ACA Final (…) - <producto>.docx` y los instructivos de auto y coevaluación. Catálogo en `build_acas_estudiantes.py`.
+- ❌ «**TG3 = corte único 100% · EV05 50% + EXAM 50%**». Lo decía su Syllabus 94532; el aula tiene **tres cortes 30/30/40** y no existen ítems «EV05» ni «EXAM». La sustentación se califica dentro de la **ACA Final**.
+- ❌ «**Autoevaluación y coevaluación solo existen en Proyecto I**» / «no aplican en pregrado Art. 52». **Existen en los 5 cursos.** La **coevaluación es un FORO** (se participa, no se entrega documento); la autoevaluación, un cuestionario.
+- ❌ «**Los pesos de TG2 son orientativos hasta cargar el SIAC**». Los pesos salen del aula; lo que falta del SIAC es el **temario**.
+- ❌ Pedir «confirmar el desglose EV» de Creatividad / Investigación: las tablas SIAC venían truncadas, pero el aula ya trae el desglose completo.
+
+## Quices y parciales — existen, pesan y no tienen enunciado
+
+El **Parcial 1 vale 24%** por sí solo. Hoy los quices y parciales están en el libro de calificaciones **sin actividad creada** en el aula y **sin enunciado** en `Clases/Recursos/ACAs/`. Al hablar de evaluación en cualquier material, mencionarlos: no son opcionales y son la mayor parte de los dos primeros cortes.
+
+## Ventanas (criterio del Docente, 2026-08-10 · no recalcular)
+
+Quices y parciales son **cuestionarios**: cierran **en día de clase**, con la ventana abierta desde la sesión anterior. La **ACA Final** es una **tarea** (documento) y cierra en la **fecha máxima de recepción de trabajos**. **Auto y coevaluación** van de la última semana al **cierre de notas**. La **Sesión 01 es de encuadre y no evalúa**. **TG3 varía por grupo** (54450 recibe y cierra una semana antes que 54466/54467). En qué sesión cae cada ítem: `<Curso>/Calendario de clases (oficial).md` → «Evaluación en el aula».
+
+No confundir nada de esto con la autoevaluación **institucional** SIAC ([acreditacion.cun.edu.co](https://acreditacion.cun.edu.co/)), que no es nota de curso.
+
+- Regeneración: `python config/cursos/sync_manuales_fechas.py` (manuales de pregrado: sección 3 + tabla de fechas) · `python config/slides/build_pregrado_cursos.py --calendar-only` (calendarios) · `build_hitos_docentes_calendar.py` (CSV de hitos) · `build_acas_estudiantes.py` (enunciados).
+- Checklists de cierre (estudiantes/directivos): `Especializacion/Checklist de cierre de curso a satisfaccion.md` (+ `.docx`) · `Pregrado/Checklist de cierre de curso a satisfaccion.md` (+ `.docx`).
 
 # Proyecto I — fuente curricular y enlaces AFI
 
@@ -200,5 +231,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - URLs Meet reales por curso
 - URL CDigital (campus) por curso — placeholder: `[URL CDigital — campus del curso pendiente]`
 - URL pública plantilla APA
-- Syllabus SIAC de TG2 ausente (ACAs TG2 = orientativas 30/30/40 hasta cargar SIAC)
-- **Desglose EV (resuelto 2026-08-10):** las tablas SIAC de Creatividad e Investigación venían truncadas (solo `EV 01` con un % parcial). Decisión del docente: **cada ACA evalúa el 100% de su corte** — ACA 1 = Corte 1 (30%), ACA 2 = Corte 2 (30%), ACA 3 = Corte 3 (40%). No se subdivide en varios EV. No volver a pedir «confirmar desglose EV».
+- **Syllabus SIAC de TG2 ausente** — falta el **temario**; la **evaluación ya no depende de él** (sale del aula).
+- **Crear en el aula los quices y parciales**: existen solo como **ítem del libro de calificaciones**, sin la actividad (cuestionario + banco de preguntas). El primero cierra el **19/08** (Creatividad). El material del estudiante ya está listo; lo que falta es el aula.
+- ~~Realineación de los enunciados~~ → **hecha el 2026-08-10**: `Clases/Recursos/ACAs/` tiene un documento por ítem real en los 5 cursos, y auto/coevaluación de pregrado ya tienen instructivo.
+- ~~**Desglose EV**~~ → **resuelto 2026-08-10 por la auditoría del aula.** Las tablas SIAC de Creatividad e Investigación venían truncadas, pero el libro de calificaciones trae el desglose completo (Quiz 1 6% + Parcial 1 24% · Quiz 2 9% + Parcial 2 21% · ACA Final 32,8% + Quiz 3 4% + auto 1,6% + coev 1,6%). La regla intermedia «cada ACA evalúa el 100% de su corte» **quedó anulada**; no volver a proponerla ni a pedir «confirmar desglose EV».

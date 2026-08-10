@@ -11,6 +11,26 @@
 - **PPTX estudiante:** `Clases/Sesion 15 - Cierre administrativo · recepción (hasta 22 nov)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Autoevaluación** | Cuestionario | 3 | 2% | Abierto: **cierra después de este último encuentro** — si no se anuncia hoy, ya no hay clase donde anunciarlo |
+| **Coevaluación** | Foro | 3 | 2% | Abierto: **cierra después de este último encuentro** — si no se anuncia hoy, ya no hay clase donde anunciarlo |
+| **ACA Final** | Tarea | 3 | 32% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**Autoevaluación** (cuestionario, **2%**) queda abierta y **cierra después de este último encuentro**. Entren desde el aula; no se recupera después.”
+> “**Coevaluación** (foro, **2%**) queda abierta y **cierra después de este último encuentro**. Entren desde el aula; no se recupera después.”
+> “**ACA Final** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> ⚠️ **Este curso tiene grupos con ventanas distintas.** La tabla de arriba es la del grupo de referencia (**54466**). En los demás cambia así:
+> - **Grupo 54450:** **Autoevaluación** ya cerró; **Coevaluación** ya cerró; **ACA Final** hoy no aplica.
+> Antes de anunciar una fecha, ábrala en el libro de calificaciones **del aula de ese grupo**: es la única fuente que no se equivoca de grupo.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -170,6 +190,9 @@ En pantalla, recorrer el checklist de recepción confirmando cada entregable en 
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] Anunciar en clase que **Autoevaluación** (Cuestionario · 2%) cierra **después de este último encuentro** (la fecha exacta, leída desde CDigital)
+- [ ] Anunciar en clase que **Coevaluación** (Foro · 2%) cierra **después de este último encuentro** (la fecha exacta, leída desde CDigital)
+- [ ] Nota de **ACA Final** (32%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 15 - Cierre administrativo · recepción (hasta 22 nov)/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

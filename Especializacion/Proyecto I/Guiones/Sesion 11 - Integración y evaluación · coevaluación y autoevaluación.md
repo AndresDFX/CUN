@@ -13,6 +13,23 @@
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Coevaluación** | Foro | 3 | 4% | **Abre hoy** — se participa en el foro en clase (~4 min reservados) |
+| **Autoevaluación** | Cuestionario | 3 | 4% | Abierto: **cierra después de este último encuentro** — si no se anuncia hoy, ya no hay clase donde anunciarlo |
+| **ACA FINAL** | Tarea | 3 | 42% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**Autoevaluación** (cuestionario, **4%**) queda abierta y **cierra después de este último encuentro**. Entren desde el aula; no se recupera después.”
+> “**ACA FINAL** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**6 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -49,10 +66,10 @@
 📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
 
 #### 1. Integración final
-Es la lectura de cierre del anteproyecto con tres preguntas: ¿el documento cuenta UNA sola historia de principio a fin?, ¿el APA está estable (sin citas huérfanas)?, ¿queda clarísimo que los instrumentos son PROPUESTOS y no aplicados? Si las tres respuestas son sí, el anteproyecto está listo para ACA3.
+Es la lectura de cierre del anteproyecto con tres preguntas: ¿el documento cuenta UNA sola historia de principio a fin?, ¿el APA está estable (sin citas huérfanas)?, ¿queda clarísimo que los instrumentos son PROPUESTOS y no aplicados? Si las tres respuestas son sí, el anteproyecto está listo para la **ACA FINAL**.
 
 #### 2. Coevaluación y autoevaluación (ESP329)
-Son componentes individuales de cierre (coevaluación 4% y autoevaluación 4%; ventanas y detalle logístico en la Presentación del Curso y en CDigital). En clase se practica una coevaluación **formativa** con una rúbrica breve —entrena el ojo crítico—, pero esa práctica NO sustituye la actividad oficial que cada estudiante diligencia en Moodle en su ventana.
+Son componentes individuales de cierre (**coevaluación**, un **foro**, y **autoevaluación**, un **cuestionario**; los pesos exactos están en el libro de calificaciones y las ventanas, en la Presentación del Curso y en CDigital). En clase se practica una coevaluación **formativa** con una rúbrica breve —entrena el ojo crítico—, pero esa práctica NO sustituye la actividad oficial que cada estudiante diligencia en Moodle en su ventana.
 
 #### 3. Puente a Proyecto II
 Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y qué NO se hizo (todo el trabajo de campo). Ese “qué falta” no es una debilidad: es el alcance correcto de Proyecto I.
@@ -76,8 +93,9 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 | 1️⃣ Encuadre de cierre | 8 | min 00:00 – 08:00 |
 | 2️⃣ Checklist de integración final | 12 | min 08:00 – 20:00 |
 | 3️⃣ Coevaluación formativa (modelo) | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller: rúbrica entre pares + ajustes | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre del encuentro sincrónico | 8 | min 52:00 – 60:00 |
+| 4️⃣ Taller: rúbrica entre pares + ajustes | 14 | min 32:00 – 46:00 |
+| 5️⃣ Coevaluación en el aula | 6 | min 46:00 – 52:00 |
+| 6️⃣ Cierre del encuentro sincrónico | 8 | min 52:00 – 60:00 |
 
 > **Suma bloque contenido:** **60 minutos**.
 > Luego: **60 min tutoría** (2.ª hora del encuentro).
@@ -96,7 +114,7 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 
 **GUION LITERAL:**
 > “Vamos a pasar el checklist en voz alta, y cada equipo va marcando en su documento: ¿está el problema?, ¿la pregunta?, ¿los objetivos?, ¿el marco referencial completo?, ¿el método?, ¿los instrumentos propuestos?, ¿el cronograma?, ¿las referencias en APA?”
-> “Tres preguntas de oro para la integración: ¿el documento cuenta una sola historia?, ¿el APA está estable sin citas huérfanas?, ¿queda clarísimo que los instrumentos son PROPUESTOS? Si las tres dan sí, están listos para ACA3.”
+> “Tres preguntas de oro para la integración: ¿el documento cuenta una sola historia?, ¿el APA está estable sin citas huérfanas?, ¿queda clarísimo que los instrumentos son PROPUESTOS? Si las tres dan sí, están listos para la **ACA FINAL**.”
 
 #### 3️⃣ Coevaluación formativa (modelo) (~12 min) — Protagonista: Docente
 **Momento del deck:** RECUERDA
@@ -105,11 +123,11 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 > “Vamos a practicar feedback con una rúbrica de cuatro criterios: coherencia, delimitación, método propuesto y APA. Les modelo cómo se da un comentario ACCIONABLE: no ‘está bien’, sino ‘la pregunta no nombra el contexto; agregue dónde ocurre’.”
 > “Aclaro algo importante: esta práctica de hoy NO reemplaza la coevaluación oficial que cada uno diligencia en Moodle en su ventana. Lo de hoy entrena el ojo; lo oficial va en CDigital, y vale su porcentaje.”
 
-#### 4️⃣ Taller: rúbrica entre pares + ajustes (~20 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: rúbrica entre pares + ajustes (~14 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “Veinte minutos. Intercambien una sección de su anteproyecto con otro equipo —o hagan lecturas cruzadas— y devuelvan tres comentarios accionables usando la rúbrica de cuatro criterios. Después, apliquen los ajustes que valgan la pena en su propio documento. Yo circulo. Suban como `S11_CierreIntegracion_Apellidos`.”
+> “Catorce minutos. Intercambien una sección de su anteproyecto con otro equipo —o hagan lecturas cruzadas— y devuelvan tres comentarios accionables usando la rúbrica de cuatro criterios. Después, apliquen los ajustes que valgan la pena en su propio documento. Yo circulo. Suban como `S11_CierreIntegracion_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -118,18 +136,33 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 | Presenta instrumentos como aplicados | “Marque que son PROPUESTOS; esa es la frontera.” |
 | El texto suena a piezas pegadas | “Léalo de corrido y una las costuras.” |
 
-#### 5️⃣ Cierre del encuentro sincrónico (~8 min) — Protagonista: Docente
+#### 5️⃣ Coevaluación en el aula (~6 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **6 min** y por eso se recortan: Taller: rúbrica entre pares + ajustes 20→14 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte el aula en pantalla para que nadie diga después que no encontró la actividad.
+
+**GUION LITERAL:**
+> “Los últimos **seis minutos** son de ustedes y de la plataforma: **Coevaluación** ya está en CDigital y vale **4%** del curso. Se pierde por no entrar, que es la forma más tonta de perder nota.”
+> “La **coevaluación** es un **foro**: hay que **escribir** en él. No se «diligencia»: se participa. Un comentario por compañero o por equipo, con un criterio concreto y algo accionable. ‘Buen trabajo’ no es coevaluar y no cuenta como participación.”
+
+**Operativa del Docente en esta fase:** abrir el aula en pantalla, mostrar la ruta de cada actividad, pedir que la abran **ahora** desde el celular o el computador y confirmar en voz alta quién ya la ve. Es el momento con más deserción silenciosa del periodo: se resuelve haciéndolo en clase, no anunciándolo.
+
+**Qué NO se hace:** dejar la coevaluación como «tarea de la casa» sin haberla abierto en clase, ni pedir que se coevalúen por el chat del Meet — lo que no queda en el foro de CDigital no existe para el libro de calificaciones.
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre del encuentro sincrónico (~8 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “No olviden las ventanas de coevaluación y autoevaluación en CDigital —el detalle logístico está en la Presentación del Curso—; cada una es individual y vale su porcentaje. En autónomo, pulido final del anteproyecto para ACA3.”
+> “No olviden las ventanas de **coevaluación** y **autoevaluación** en CDigital —el detalle logístico está en la Presentación del Curso—: la coevaluación es un **foro** en el que hay que escribir y la autoevaluación un **cuestionario**; cada una es individual y vale su porcentaje del tercer corte. En autónomo, pulido final del anteproyecto para la **ACA FINAL**.”
 > “La tutoría de hoy es de pulido final. Gracias por el trabajo de todo el periodo: salen con un anteproyecto completo, viable y listo para ejecutar en Proyecto II tras el aval. Nos vemos en las tutorías de cierre.”
 
 
 
 ---
 
-#### 6️⃣ Tutoría / taller por equipos (~60 min) — Protagonista: Equipos + Docente
+#### 7️⃣ Tutoría / taller por equipos (~60 min) — Protagonista: Equipos + Docente
 **Sin slides nuevas** (sigue abierta la deck de hoy o la plantilla APA en Google Docs).
 
 > **Acuerdo:** Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita). Esta 2.ª hora del encuentro es el bloque de tutoría/taller en vivo; tutorías adicionales por equipo se agendan en la semana. En cada una, el estudiante registra asistencia en el formulario.
@@ -155,6 +188,9 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 2. **Éxito:** 3 mejoras concretas aplicadas tras pares.
 
 ✅ **Checklist antes de clase**
+- [ ] **Coevaluación** (Foro · 4%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] Anunciar en clase que **Autoevaluación** (Cuestionario · 4%) cierra **después de este último encuentro** (la fecha exacta, leída desde CDigital)
+- [ ] Nota de **ACA FINAL** (42%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 11 - Integración y evaluación · coevaluación y autoevaluación/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

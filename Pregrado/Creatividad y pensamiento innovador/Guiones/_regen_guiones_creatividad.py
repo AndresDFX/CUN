@@ -11,6 +11,11 @@ Por eso la S01 **ya no se protege**: se regenera como cualquier otra sesión en 
 (el modelo de calidad del curso es hoy la Sesión 02). El flag ``--force-s01`` se sigue
 aceptando por compatibilidad con pipelines antiguos, pero **no cambia nada**.
 
+Evaluación: `guion_evaluacion.py` inyecta el aviso del ítem real del aula (Quiz 1, Parcial 1,
+…, ACA Final, auto y coevaluación) y, cuando ese ítem cierra en día de clase, una fase con
+minutos reservados dentro de los 60. Los datos salen del libro de calificaciones
+(`config/cursos/fechas_entrega_aca.py`): aquí no se escribe ningún peso ni fecha a mano.
+
 Uso:
     python _regen_guiones_creatividad.py            # todas las sesiones (incluida S01)
     python _regen_guiones_creatividad.py 1          # solo la Sesión 01
@@ -26,6 +31,13 @@ sys.path.insert(0, CURSOS)
 
 from sesiones_cun import COURSES, meet_url  # noqa: E402
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_evaluacion import (  # noqa: E402
+    KIND_CUESTIONARIO,
+    inyectar_evaluacion,
+    items_corte_txt,
+    peso_item,
+    peso_tipo,
+)
 from guion_slides import (  # noqa: E402
     NOTA_MOMENTOS,
     ajustar_mapa_manual,
@@ -280,7 +292,7 @@ def guion_01(meta):
         ("2️⃣ Quién es el Docente", 4, 9),
         ("3️⃣ Rompehielos Padlet — que se presenten ellos", 9, 18),
         ("4️⃣ Cómo trabajamos, recorrido del curso y su producto final", 11, 29),
-        ("5️⃣ Las ACAs y cómo se entrega", 12, 41),
+        ("5️⃣ Cómo se evalúa el curso (quices, parciales y ACA Final) y cómo se entrega", 12, 41),
         ("6️⃣ Integridad académica y uso de IA", 7, 48),
         ("7️⃣ Herramientas, canales de ayuda y acuerdos", 7, 55),
         ("8️⃣ Encargo autónomo y cierre", 5, 60),
@@ -288,11 +300,11 @@ def guion_01(meta):
     return header(*meta, uso=USO_SESION_ENCUADRE) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión (encuadre — no hay tema del Syllabus)**
 1. Que el estudiante sepa **qué produce este curso**: una **Propuesta de Innovación** propia, no un ensayo.
 2. Que sepa **cómo se trabaja**: una hora sincrónica de aplicación + trabajo autónomo con el material leído antes.
-3. Que sepa **qué se evalúa y cómo se entrega**: las tres ACAs, el formato APA CUN y el espacio de CDigital.
+3. Que sepa **qué se evalúa y cómo se entrega**: los ítems reales del aula (quices y parciales por corte, **ACA Final**, auto y coevaluación), el formato APA CUN y el espacio de CDigital.
 4. Que conozca las reglas de **integridad académica** y de **uso declarado de IA generativa**.
 5. Que salga con **un solo encargo claro**: la lectura autónoma U1–U2 y un problema real escrito en tres líneas.
 
-> **Lo que hoy NO se hace:** no se define creatividad, no se explica inteligencia emocional, no se dictan tipos de innovación. Todo eso **empieza en la Sesión 02**. Si usted se mete en el tema hoy, llega tarde a las ACAs y el grupo se va sin saber cómo entrega.
+> **Lo que hoy NO se hace:** no se define creatividad, no se explica inteligencia emocional, no se dictan tipos de innovación. Todo eso **empieza en la Sesión 02**. Si usted se mete en el tema hoy, llega tarde al bloque de evaluación y el grupo se va sin saber que el **Quiz 1 cierra en la próxima sesión**.
 
 ---
 
@@ -302,7 +314,8 @@ def guion_01(meta):
 | :--- | :--- | :--- |
 | **Aula del curso en CDigital**, con el anuncio de bienvenida publicado y los espacios de entrega visibles | Campus institucional (login CUN) | Fases 5, 7 y 8 |
 | **Padlet oficial** del rompehielos, abierto en una pestaña y con la URL copiada al portapapeles | {PADLET_PRESENTACION_URL} | Fase 3 |
-| **Enunciados de las ACAs 1–3** | `Clases/Recursos/ACAs/` | Fase 5 |
+| **Libro de calificaciones** del aula, abierto en otra pestaña | Campus institucional (login CUN) | Fase 5 — de ahí salen los nombres, los tipos y los pesos que va a anunciar |
+| **Enunciado de la ACA Final** (única entrega documental) | `Clases/Recursos/ACAs/` | Fase 5 |
 | **Plantilla APA CUN**, ya abierta en **Google Docs** (no en Word de escritorio) | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Fase 5 |
 | **PPTX de esta sesión** (21 slides) | `Clases/{label}/Presentacion.pptx` | Toda la clase |
 | **Sala de Meet** abierta 5 minutos antes | {MEET} | Fase 1 |
@@ -328,7 +341,7 @@ def guion_01(meta):
 | Padlet leído completo, no tres notas | +8 | Leer en voz alta todas las notas y agrupar temas parecidos en pantalla |
 | Recorrido lento del **mapa del curso** (slide 7) | +10 | Preguntar sesión por sesión: “¿qué creen que sale de esta?” |
 | **Plantilla APA CUN** en vivo | +12 | Compartir pantalla, crear la copia en Google Docs y mostrar dónde escribe cada quien |
-| **Enunciado de la ACA 1** leído entero con el checklist | +10 | Abrirlo desde `Clases/Recursos/ACAs/` y marcar criterio por criterio |
+| **Enunciado de la ACA Final** leído entero con el checklist | +10 | Abrirlo desde `Clases/Recursos/ACAs/` y marcar criterio por criterio |
 | Mini-ejercicio “mi problema en tres líneas” escrito en clase | +15 | Cada quien escribe; dos voluntarios leen; el Docente solo pregunta “¿a quién le pasa?” |
 
 > Lo que no alcance a hacer **no se elimina: se convierte en trabajo autónomo** y se anuncia como tal en CDigital.
@@ -412,23 +425,27 @@ def guion_01(meta):
 
 ---
 
-#### 5️⃣ Las ACAs y cómo se entrega (~12 min) — Protagonista: Docente
+#### 5️⃣ Cómo se evalúa el curso (quices, parciales y ACA Final) y cómo se entrega (~12 min) — Protagonista: Docente
 **Slides:** 5 (LAS ACAs — QUÉ SE EVALÚA) → 9 (LAS TRES ACAs EN DETALLE) → 10 (FUERTE vs. FLOJO) → 11 (CÓMO SE ENTREGA)
 
 **GUION LITERAL:**
-> “**Slide 5.** Evaluación por cortes: **30, 30 y 40 por ciento**. Los pesos están ahí y también en la Presentación del Curso. Las **fechas exactas no las dicto de memoria**: están en el enunciado de cada ACA, en `Clases/Recursos/ACAs/`, y en el espacio de entrega de CDigital. Anótenlas hoy mismo en su calendario.”
+> “**Slide 5.** Evaluación por cortes: **30, 30 y 40 por ciento**. Pero escuchen los **nombres reales** de lo que van a ver en el aula, porque de ahí sale la nota: **{items_corte_txt('creatividad', 1)}** en el primer corte, **{items_corte_txt('creatividad', 2)}** en el segundo y **{items_corte_txt('creatividad', 3)}** en el tercero. Los quices y los parciales son **cuestionarios de CDigital**; la **ACA Final** es la única entrega con documento; y la **coevaluación es un foro**, o sea que hay que escribir en él.”
 
-> “**Slide 9 — Las tres ACAs en detalle.** ACA 1: la ficha del problema, el mapa de bloqueadores y la síntesis de ideación; se evalúa que el problema sea **real, observable y de alguien concreto**. ACA 2: la propuesta tipificada, con FODA, Canvas y MVP; se evalúa que esté **validada**, no solo descrita. ACA 3: la propuesta consolidada con vigilancia, entidades de apoyo y pitch; se evalúa que **cierre el hilo**, del problema al siguiente paso.”
+> “Ahora el dato que les va a cambiar la forma de organizarse: los **cuestionarios suman {peso_tipo('creatividad', KIND_CUESTIONARIO)} de la nota del curso**, y el **Parcial 1** solo vale {peso_item('creatividad', 'parcial1')}. Esto no es una materia que se salve con un buen documento al final: se salva viniendo a clase y respondiendo.”
+
+> “Y lo más importante de hoy, anótenlo: los quices y los parciales **caen en día de clase** y **cierran ese mismo día**. El primero es el **Quiz 1**, y cierra en la **próxima sesión**. El que falte ese día no lo recupera. Las **fechas exactas no las dicto de memoria**: están en cada ítem de CDigital y en la Presentación del Curso; ábranlas hoy y pónganse alarma.”
+
+> “**Slide 9 — qué se entrega en cada corte.** El hilo del curso no cambia: en el primer corte trabajan la **ficha del problema** —real, observable y de alguien concreto—; en el segundo, la **propuesta tipificada** con FODA, Canvas y MVP, **validada** y no solo descrita; y en el tercero la **propuesta consolidada** con vigilancia, entidades de apoyo y pitch. La diferencia es cómo se califica: ese avance se evalúa en los **cuestionarios** de cada corte y se recoge, completo, en la **ACA Final**. Nada de lo que escriben se pierde: se acumula en ese documento.”
 
 > “**Slide 10 — Qué separa un entregable fuerte de uno flojo.** Léanla completa esta semana. Resumo la columna izquierda: usuario genérico, problema deducido de la solución que ya eligieron, evidencia tipo ‘todo el mundo sabe que’, fuentes copiadas de un blog sin autor y un documento escrito la noche anterior. Yo no evalúo **cuánto** escribieron: evalúo si **se entiende, se sostiene y avanzó** desde el corte anterior.”
 
-> “**Slide 11 — Cómo se entrega.** Seis pasos y ninguno es opcional: escriben en la **plantilla APA CUN** abierta en **Google Docs** —no necesitan Office instalado—, revisan el checklist del enunciado, exportan a **PDF**, nombran el archivo **CRE_ACA1_Apellido**, lo suben al espacio del corte en **CDigital** y **verifican que abra** desde la plataforma. Un archivo corrupto cuenta como no entregado.”
+> “**Slide 11 — Cómo se entrega.** Seis pasos y ninguno es opcional: escriben en la **plantilla APA CUN** abierta en **Google Docs** —no necesitan Office instalado—, revisan el checklist del enunciado, exportan a **PDF**, nombran el archivo **CRE_ACAFinal_Apellido**, lo suben al espacio del corte en **CDigital** y **verifican que abra** desde la plataforma. Un archivo corrupto cuenta como no entregado.”
 
 > “Y la regla que más disgustos evita: **entrega oficial es CDigital**. No recibo trabajos por correo, ni por WhatsApp, ni por mensaje privado. Si se les complica una fecha, hablamos **antes** del cierre, no después.”
 
 **Qué hacer:**
-1. (3 min) Recorrer las tres ACAs sin leer el enunciado completo: el detalle vive en `Clases/Recursos/ACAs/`.
-2. (4 min) Abrir en pantalla el enunciado de la **ACA 1** y mostrar dónde está el checklist de criterios.
+1. (3 min) Recorrer los ítems **en el libro de calificaciones del aula**, en pantalla: nombre, tipo y peso. No de memoria.
+2. (4 min) Abrir el enunciado de la **ACA Final**, mostrar dónde está el checklist de criterios y abrir también el **Quiz 1** para que vean que ya existe y cuándo cierra.
 3. (5 min) Compartir pantalla con la **plantilla APA CUN en Google Docs** y mostrar el flujo real: copia propia → escribir → exportar PDF → subir a CDigital.
 {shot("Sesion 01/s01_google_docs_inicio.png", "Google Docs — plantilla APA CUN y flujo de entrega", "Abrir la plantilla en Google Docs, hacer una copia propia y mostrar el camino hasta CDigital.")}
 
@@ -458,7 +475,7 @@ def guion_01(meta):
 **GUION LITERAL:**
 > “**Slide 14 — Herramientas.** Todas gratis y todas desde el navegador: CDigital para material y entregas; Google Docs y Slides para escribir; Padlet para tableros; Excalidraw para bocetos; Canvanizer para el Canvas del corte 2; Scholar, SciELO y Redalyc para buscar; ZoteroBib para armar las referencias en APA 7 sin instalar nada. **Nada de pagar ni de instalar.** Si una herramienta les pide tarjeta, no es la que estamos pidiendo.”
 
-> “**Slide 15 — Cómo pedir ayuda.** Tres canales, en este orden. En el encuentro, los últimos minutos son para dudas y casi nadie los usa. En el **foro de CDigital**, las dudas que le sirven a todo el grupo: formato, entrega, alcance de un ACA; ahí respondo y la respuesta queda para los demás. Por **correo institucional**, lo personal. Asunto sugerido: **EI004, su nombre y el tema en cuatro palabras**. Respondo en días hábiles, normalmente entre 24 y 48 horas; no hay atención de madrugada ni domingo.”
+> “**Slide 15 — Cómo pedir ayuda.** Tres canales, en este orden. En el encuentro, los últimos minutos son para dudas y casi nadie los usa. En el **foro de CDigital**, las dudas que le sirven a todo el grupo: formato, entrega, alcance de la **ACA Final**; ahí respondo y la respuesta queda para los demás. Por **correo institucional**, lo personal. Asunto sugerido: **EI004, su nombre y el tema en cuatro palabras**. Respondo en días hábiles, normalmente entre 24 y 48 horas; no hay atención de madrugada ni domingo.”
 
 > “Y una petición concreta: pregunten **la duda puntual**. ‘No entendí nada’ no se puede responder. ‘No sé si mi usuario es el estudiante o el laboratorista’ sí se responde en dos líneas.”
 
@@ -479,11 +496,11 @@ def guion_01(meta):
 **GUION LITERAL:**
 > “**Slide 17 — Para la Sesión 02.** Cuatro cosas, y son cortas. Primera: la **lectura autónoma obligatoria**, unidades **U1 y U2** del Syllabus —Propuesta de Innovación, y creatividad e inteligencia emocional—; el material está en CDigital. Las retomamos en los primeros minutos de la próxima sesión: las repasamos, no las dictamos completas. Léanlas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**”
 
-> “Segunda: abran el **enunciado de la ACA 1** y léanlo entero, con checklist. Tercera: **traigan escrito**, con tres líneas basta, un problema real que les moleste, **a quién** le pasa y **dónde** lo vieron. No me traigan una solución; tráiganme un problema: la solución es el trabajo del resto del curso. Cuarta: creen su documento en Google Docs con la plantilla APA CUN y déjenlo listo.”
+> “Segunda: entren al aula y **abran el Quiz 1** —el primer cuestionario, que cierra en la próxima sesión— para ver cuántas preguntas tiene y cuánto tiempo da; y abran el **enunciado de la ACA Final** y léanlo entero, con checklist. Tercera: **traigan escrito**, con tres líneas basta, un problema real que les moleste, **a quién** le pasa y **dónde** lo vieron. No me traigan una solución; tráiganme un problema: la solución es el trabajo del resto del curso. Cuarta: creen su documento en Google Docs con la plantilla APA CUN y déjenlo listo.”
 
 > “**Slide 18 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
 
-> “**Slide 20 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, enunciado de la ACA 1 leído, y su problema escrito. Lo pego también en el chat y lo publico hoy mismo en CDigital.”
+> “**Slide 20 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, **Quiz 1** ubicado en el aula, enunciado de la **ACA Final** leído, y su problema escrito. Lo pego también en el chat y lo publico hoy mismo en CDigital.”
 
 > “**Slide 21 — Cierre.** Hoy no vimos tema y salimos sabiendo cómo se trabaja, qué se entrega y con quién cuentan. La **Sesión 02** arranca el contenido: *Creatividad e innovación en I+D, Design Thinking y técnicas*, y se trabaja sobre lo que ustedes traigan. Mismo enlace de siempre. Nos vemos.”
 
@@ -504,7 +521,8 @@ def guion_01(meta):
 | “¿La clase se graba?” | “Si se graba, lo aviso al inicio y la grabación queda en CDigital. No es reemplazo de la clase: el taller se hace en vivo.” |
 | “¿Puedo usar ChatGPT?” | “Sí, declarándolo al final del documento y verificando toda cita que le dé. Lo que la IA no puede hacer es observar a su usuario ni defender su criterio.” |
 | “¿Necesito saber programar o diseñar?” | “No. Aquí se evalúa criterio: problema real, propuesta clara y evidencia. La tecnología es un medio, no el requisito.” |
-| “¿Cuándo es la primera entrega?” | “La fecha exacta está en el enunciado de la ACA 1 y en el espacio de entrega de CDigital. Ábralo hoy y anótela en su calendario.” |
+| “¿Cuándo es la primera entrega?” | “Lo primero que se califica no es una entrega escrita: es el **Quiz 1**, un cuestionario que cierra en la próxima sesión. La fecha exacta está en el ítem de CDigital; ábralo hoy y anótela.” |
+| “¿Los quices y parciales son en clase?” | “Sí: son cuestionarios de CDigital que cierran el mismo día de la sesión y por eso les reservo tiempo en clase. Faltar ese día es perder el ítem.” |
 | “¿Y si no puedo conectarme a un encuentro?” | “Avise antes, revise el material en CDigital y llegue al siguiente con el avance. La ausencia no mueve la fecha de entrega.” |
 | “¿Qué tema escojo? No se me ocurre nada.” | “No busque un tema: busque algo que **funcione mal** donde usted está. Un trámite lento, un dato que se pierde, una fila. De ahí sale la propuesta.” |
 | “¿Se puede cambiar de problema después?” | “Sí, y es normal, sobre todo tras la Sesión 02. Lo que no se puede es llegar al Corte 2 sin haber elegido ninguno.” |
@@ -516,7 +534,7 @@ def guion_01(meta):
 **No hay entregable evaluado hoy** (el encuadre no se califica). Se lleva **tres cosas verificables**:
 
 1. Su **post-it publicado** en el Padlet del curso: {PADLET_PRESENTACION_URL}
-2. El **enunciado de la ACA 1** abierto y leído, con la fecha de entrega anotada en su calendario.
+2. El **Quiz 1** ubicado en el aula (cierra en la próxima sesión) y el enunciado de la **ACA Final** leído, con sus fechas anotadas en el calendario.
 3. El **encargo autónomo** para la Sesión 02: lectura U1–U2 en CDigital + un problema real escrito en tres líneas (a quién le pasa y dónde lo vio) + documento de trabajo creado en Google Docs con la plantilla APA CUN.
 
 **Criterio de éxito de la clase:** si al terminar un estudiante puede responder sin dudar *“¿qué produce este curso, cómo entrego y qué debo traer la próxima semana?”*, el encuadre funcionó.
@@ -528,13 +546,13 @@ def guion_01(meta):
 - [ ] Aula de **CDigital** abierta, con el anuncio de bienvenida publicado
 - [ ] Abrí `Clases/{label}/Presentacion.pptx` (21 slides)
 - [ ] **Padlet** abierto y URL copiada para pegar en el chat: {PADLET_PRESENTACION_URL}
-- [ ] Enunciados **ACA 1–3** abiertos desde `Clases/Recursos/ACAs/`
+- [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** desde `Clases/Recursos/ACAs/`
 - [ ] **Plantilla APA CUN** abierta en Google Docs, lista para compartir pantalla
 - [ ] Tengo decidida mi respuesta a: dúo, IA y entregas tarde
 - [ ] Meet listo: {MEET}
 
 📋 **Después de la clase (mismo día)**
-- [ ] Publiqué en **CDigital** el anuncio con: enlace del Padlet, encargo autónomo (lectura U1–U2) y recordatorio del enunciado de la ACA 1
+- [ ] Publiqué en **CDigital** el anuncio con: enlace del Padlet, encargo autónomo (lectura U1–U2) y recordatorio de que el **Quiz 1** ya está abierto en el aula
 - [ ] Revisé el Padlet y anoté 3 problemas del grupo para usarlos como ejemplo en la Sesión 02
 - [ ] Verifiqué que el espacio de entrega del Corte 1 esté visible para los estudiantes
 
@@ -1881,6 +1899,9 @@ def main(argv=None):
             # Mapa curado a mano: realinear contra el deck real («(cont.)» insertadas).
             text_md, _ = ajustar_mapa_manual(text_md, titulos_pptx(_deck))
         text_md = inject_shots(text_md, n)
+        # Evaluación REAL del aula (quices, parciales, ACA Final, auto y coevaluación):
+        # aviso, minutos reservados en el plan y checklist. Sale del modelo único.
+        text_md = inyectar_evaluacion(text_md, "creatividad", n)
         if n == 1 and "Rompehielos Padlet" not in text_md:
             text_md = text_md.replace(
                 "- **Meet (serie del curso):**",

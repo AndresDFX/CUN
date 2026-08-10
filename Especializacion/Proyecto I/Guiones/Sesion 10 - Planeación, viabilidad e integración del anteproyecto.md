@@ -7,11 +7,22 @@
 
 📌 **De esta sesión**
 - **Sesión:** **10** · **Tema:** Planeación, viabilidad e integración del anteproyecto
-- **Detalle:** ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de ACA3 (dom 08/11).
+- **Detalle:** ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de ACA FINAL.
 - **PPTX estudiante:** `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
+
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **ACA FINAL** | Tarea | 3 | 42% | Abierto: **cierra antes del próximo encuentro** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA FINAL** es la **tarea** del corte 3 y **cierra antes del próximo encuentro**: pesa **42%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
+
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
@@ -50,7 +61,7 @@
 La **planeación** es el cronograma realista de fases hasta Proyecto II (con recursos y, si el formato lo pide, presupuesto). La **viabilidad** es la pregunta honesta: ¿de verdad se puede? ¿Hay acceso a la población? ¿Hay permisos? ¿Alcanza el tiempo? Viabilidad no es optimismo: un cronograma que promete encuestar a 500 personas en una semana NO es viable, es un deseo.
 
 #### 2. Integración del anteproyecto
-ACA3 exige el documento **completo e integrado**, no un fragmento nuevo pegado al final. “Integrar” significa que la formulación corregida, el marco referencial, el método y la planeación se lean como UN solo texto coherente, con las correcciones de ACA1 y ACA2 ya incorporadas.
+La **ACA FINAL** exige el documento **completo e integrado**, no un fragmento nuevo pegado al final. “Integrar” significa que la formulación corregida, el marco referencial, el método y la planeación se lean como UN solo texto coherente, con las correcciones de la **ACA 1** ya incorporadas.
 
 #### 3. Checklist de coherencia final (previo a S11)
 El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ método ↔ instrumento propuesto ↔ cronograma. Cualquier eslabón que no conecte es un “gap” que hay que registrar y asignar a un responsable del equipo.
@@ -59,8 +70,8 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 | El estudiante… | Usted responde… |
 | :--- | :--- |
 | Cronograma irreal (todo en una semana) | “¿Eso se puede de verdad? Ajústelo a tiempos y accesos reales.” |
-| Pega ACA3 como fragmento nuevo | “ACA3 es el documento COMPLETO integrado, no un anexo suelto.” |
-| No incorporó las correcciones previas | “Las correcciones de ACA1 y ACA2 no son opcionales; el producto es acumulativo.” |
+| Pega la ACA FINAL como fragmento nuevo | “La ACA FINAL es el documento COMPLETO integrado, no un anexo suelto.” |
+| No incorporó las correcciones previas | “Las correcciones de la ACA 1 no son opcionales; el producto es acumulativo.” |
 | Objetivos que ya no coinciden con el método | “Revise el hilo: si el método cambió, ¿siguen alineados los objetivos?” |
 | Ignora la viabilidad de acceso | “¿Tiene permiso para llegar a esa población en Proyecto II? Declárelo.” |
 
@@ -86,7 +97,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 **Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 10**. Ya tienen todas las piezas sueltas; hoy las miramos como un SISTEMA. Trabajamos planeación, viabilidad e integración del anteproyecto de cara a ACA3, que es el producto de cierre.”
+> “Buenas tardes, **Sesión 10**. Ya tienen todas las piezas sueltas; hoy las miramos como un SISTEMA. Trabajamos planeación, viabilidad e integración del anteproyecto de cara a la **ACA FINAL**, que es el producto de cierre y la entrega que más pesa del curso.”
 > “Meta de hoy: construir un cronograma y una viabilidad realistas, integrar el documento completo y detectar los ‘gaps’ de coherencia antes del cierre.”
 
 #### 2️⃣ Cronograma y viabilidad (~14 min) — Protagonista: Docente
@@ -100,7 +111,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 **Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
-> “ACA3 NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de ACA1 y ACA2 ya metidas.”
+> “La **ACA FINAL** NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de la ACA 1 ya metidas.”
 > “Recuerden que el producto es acumulativo: si no incorporaron mis correcciones anteriores, el documento no está integrado, está remendado. Hoy detectamos esos remiendos.”
 
 #### 4️⃣ Taller: matriz de coherencia + gaps (~20 min) — Protagonista: Estudiantes
@@ -112,7 +123,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
 | Cronograma irreal | “Ajústelo a accesos y tiempos reales; menos es más.” |
-| Pega ACA3 como anexo | “Es el documento completo integrado, no un fragmento.” |
+| Pega la ACA FINAL como anexo | “Es el documento completo integrado, no un fragmento.” |
 | No metió correcciones | “El producto es acumulativo; incorpórelas ahora.” |
 | Método y objetivos no cuadran | “Revise el hilo: si el método cambió, realinee.” |
 
@@ -153,6 +164,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 2. **Éxito:** gaps priorizados con responsable.
 
 ✅ **Checklist antes de clase**
+- [ ] Anunciar en clase que **ACA FINAL** (Tarea · 42%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

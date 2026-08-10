@@ -11,6 +11,23 @@
 - **PPTX estudiante:** `Clases/Sesion 14 - Ajustes finales · seguimiento post-sustentación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Autoevaluación** | Cuestionario | 3 | 2% | **Abre hoy** — se diligencia en clase (~4 min reservados) |
+| **Coevaluación** | Foro | 3 | 2% | **Abre hoy** — se participa en el foro en clase (~4 min reservados) |
+| **ACA Final** | Tarea | 3 | 32% | Abierto: **cierra antes del próximo encuentro** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA Final** es la **tarea** del corte 3 y **cierra antes del próximo encuentro**: pesa **32%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
+
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**8 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> ⚠️ **Este curso tiene grupos con ventanas distintas.** La tabla de arriba es la del grupo de referencia (**54466**). En los demás cambia así:
+> - **Grupo 54450:** **Autoevaluación** cierra antes del próximo encuentro; **Coevaluación** cierra antes del próximo encuentro; **ACA Final** ya cerró.
+> Antes de anunciar una fecha, ábrala en el libro de calificaciones **del aula de ese grupo**: es la única fuente que no se equivoca de grupo.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -87,10 +104,11 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición / criterios | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición / criterios | 13 | min 06:00 – 19:00 |
+| 3️⃣ Modelación | 12 | min 19:00 – 31:00 |
+| 4️⃣ Taller | 13 | min 31:00 – 44:00 |
+| 5️⃣ Autoevaluación · Coevaluación en el aula | 8 | min 44:00 – 52:00 |
+| 6️⃣ Cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -104,7 +122,7 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 
 > “**OBJETIVOS.** Registrar las observaciones en una **matriz de ajustes**, priorizarlas —crítico, mayor, menor—, incorporarlas sin romper la coherencia y dejar una **versión corregida**. Tengan a la mano las notas de su sustentación.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición / criterios (~13 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -128,11 +146,11 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 
 > **En pantalla:** Columna: observación jurado | cambio | hecho/pendiente.
 
-#### 4️⃣ Taller (~20 min) — Taller
+#### 4️⃣ Taller (~13 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del artículo; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
+> “**TALLER.** ~13 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del artículo; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
 
 > “Criterio de éxito: la matriz muestra cada observación con su prioridad y estado, y los ajustes críticos ya están incorporados sin romper la coherencia del documento.”
 
@@ -149,7 +167,23 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 > **En pantalla:** Completar citas pedidas en ajustes.
 
 
-#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Autoevaluación · Coevaluación en el aula (~8 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **8 min** y por eso se recortan: Exposición / criterios 14→13 min, Taller 20→13 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte el aula en pantalla para que nadie diga después que no encontró la actividad.
+
+**GUION LITERAL:**
+> “Los últimos **ocho minutos** son de ustedes y de la plataforma: **Autoevaluación** y **Coevaluación** ya están en CDigital y entre las dos valen **4%** del curso. Se pierden por no entrar, que es la forma más tonta de perder nota.”
+> “La **autoevaluación** es un **cuestionario**: se diligencia una vez, con criterios. No es ponerse cinco: es sustentar con qué evidencia se pone la nota que se pone — cumplimiento, calidad del avance y participación.”
+> “La **coevaluación** es un **foro**: hay que **escribir** en él. No se «diligencia»: se participa. Un comentario por compañero o por equipo, con un criterio concreto y algo accionable. ‘Buen trabajo’ no es coevaluar y no cuenta como participación.”
+
+**Operativa del Docente en esta fase:** abrir el aula en pantalla, mostrar la ruta de cada actividad, pedir que la abran **ahora** desde el celular o el computador y confirmar en voz alta quién ya la ve. Es el momento con más deserción silenciosa del periodo: se resuelve haciéndolo en clase, no anunciándolo.
+
+**Qué NO se hace:** dejar la coevaluación como «tarea de la casa» sin haberla abierto en clase, ni pedir que se coevalúen por el chat del Meet — lo que no queda en el foro de CDigital no existe para el libro de calificaciones.
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -168,6 +202,9 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Autoevaluación** (Cuestionario · 2%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] **Coevaluación** (Foro · 2%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] Anunciar en clase que **ACA Final** (Tarea · 32%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 14 - Ajustes finales · seguimiento post-sustentación/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

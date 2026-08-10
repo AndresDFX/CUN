@@ -13,6 +13,17 @@
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz** | Cuestionario | 1 | 25% | Abierto: **cierra antes del próximo encuentro** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “Ojo con esto, que es plata: **Quiz** es un **cuestionario en CDigital** que **cierra antes del próximo encuentro** y pesa **25%** del curso — todo el corte 1 vale 25%. No cae en clase, así que nadie se lo va a recordar el día del cierre: agéndenlo ustedes hoy. Cuando lo resuelvan, verifiquen que la plataforma diga **enviado**.”
+
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -160,6 +171,7 @@ Antes de dar por buena una pregunta, respóndase mentalmente: ¿quién es el act
 2. **Éxito:** pregunta con actor + fenómeno + contexto.
 
 ✅ **Checklist antes de clase**
+- [ ] Anunciar en clase que **Quiz** (Cuestionario · 25%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 02 - Problema y pregunta de investigación/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

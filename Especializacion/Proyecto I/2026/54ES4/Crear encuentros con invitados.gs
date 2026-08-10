@@ -50,6 +50,7 @@ var GUESTS = [
   "fabian.rincong@cun.edu.co",
   "harold.villamilo@cun.edu.co",
   "hernan.gomezs@cun.edu.co",
+  "investigacion_especializaciones@cun.edu.co",
   "jaime.cortesg@cun.edu.co",
   "jair.vargasa@cun.edu.co",
   "jhon.guerrerom@cun.edu.co",
@@ -76,8 +77,7 @@ var GUESTS = [
   "over.cometa@cun.edu.co",
   "santiago.bahamon@cun.edu.co",
   "sebastian.castanos@cun.edu.co",
-  "william_marinch@cun.edu.co",
-  "investigacion_especializaciones@cun.edu.co"
+  "william_marinch@cun.edu.co"
 ];
 
 var SESSIONS = [

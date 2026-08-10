@@ -14,8 +14,8 @@
 ## Ciclo inicio → desarrollo → cierre (docente)
 - **Especialización / AFI:** `Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md` (+ instructivos en `01_`…`03_`)
 - **Pregrado:** `Pregrado/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`
-- **Checklists de cierre:** `Especializacion/Checklist…docx` · `Pregrado/Checklist…docx`
-- **CSV hitos:** en cada `2026/<grupo>/` y copia en raíz del curso → `Entregas y hitos docentes - Importar a Calendar.csv` (ACA + trámites; encuentros semanales van en CSV/ICS Encuentros…)
+- **Checklists de cierre:** `Especializacion/Checklist…md` (+ `.docx`) · `Pregrado/Checklist…md` (+ `.docx`) — la fuente editable es el `.md`; el `.docx` se rehace desde él.
+- **CSV hitos:** en cada `2026/<grupo>/` y copia en raíz del curso → `Entregas y hitos docentes - Importar a Calendar.csv` (todos los ítems del libro de calificaciones —quices, parciales, ACA Final, auto y coevaluación— + trámites; encuentros semanales van en CSV/ICS Encuentros…)
 
 ## Convención de carpetas (cada asignatura)
 
@@ -61,7 +61,8 @@
 ## Especialización — Proyecto I
 - Presentación: `Clases/Presentacion del Curso - Proyecto I.pptx`
 - Syllabus fuente: `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx`
-- **Las ACAs son TRES** (25% · 25% · 42%). La **autoevaluación (4%)** y la **coevaluación (4%)** **no son ACAs**: instrumentos individuales de cierre que el estudiante diligencia en CDigital (el Docente los habilita y registra). Solo en Proyecto I. Instructivos en `Clases/Recursos/ACAs/…instructivo.docx`; en `fechas_entrega_aca.py` van con `kind="ventana"`.
+- **Estructura del aula (CDigital, auditoría 2026-08-10):** corte 1 = **Quiz 25%** · corte 2 = **ACA 1 25%** · corte 3 = **ACA FINAL 42% + autoevaluación 4% (cuestionario) + coevaluación 4% (foro)**. Los enunciados del estudiante **ya se realinearon** (2026-08-10): `Clases/Recursos/ACAs/` tiene `Quiz (25%) - guía del cuestionario.docx`, `ACA 1 (25%) - Formulacion del problema y fundamentacion referencial.docx`, `ACA FINAL (42%) - Anteproyecto integrado.docx` y los dos instructivos. Catálogo en `build_acas_estudiantes.py`.
+- La **autoevaluación** y la **coevaluación** **no son ACAs** (instrumentos individuales de cierre que el estudiante diligencia/participa en CDigital) y **no son exclusivas de Proyecto I**: existen en los 5 cursos, con otro peso. Instructivos en `Clases/Recursos/ACAs/…instructivo.docx`; en `fechas_entrega_aca.py` son los ids `auto` y `coev`.
 - 11 sesiones en `Clases/Sesion NN - …/` + guiones homónimos `.md`
 - Contenido ~60 min + tutoría ~60 min · Tutorías: `links_afi` en `cun.json`
 - Grupo: `2026/54ES4/` (Calendar + Apps Script invitados)
@@ -81,6 +82,8 @@
 
 ## Regenerar
 ```text
+python config/cursos/sync_manuales_fechas.py          # Manuales pregrado: sección 3 (Evaluación) + tabla de fechas
+python config/slides/build_pregrado_cursos.py --calendar-only   # Calendarios + «Evaluación en el aula»
 python config/slides/build_cun_proyecto1.py
 python config/slides/build_pregrado_cursos.py
 python config/slides/build_all_course_presentations.py
@@ -108,33 +111,53 @@ Cada asignatura puede tener `<Asignatura>/_Archivo obsoleto 2026-08-09/` (espejo
 ### Meet de Proyecto I: existe pero no está propagado
 La URL real `https://meet.google.com/omk-woqk-vsj` está **hardcodeada** en `config/slides/build_calendar_proyecto1_54es4.py:48` y solo llega al CSV/ICS/Apps Script de `2026/54ES4/`. **No** llega a: la Presentación del Curso (slide 18), `2026/54ES4/Informacion.txt`, el CSV de hitos ni los guiones — todos siguen con el placeholder. Falta subirla a `config/universidades/cun.json` / `sesiones_cun.py` y regenerar.
 
-### Fechas de ACA — resueltas 2026-08-10 (decisión del docente)
+### Modelo de evaluación y fechas — rehecho 2026-08-10 contra el aula (CDigital)
 
-Creatividad e Investigación no tenían desglose EV oficial (la tabla SIAC llega truncada a `EV 01`). **Decisión: cada ACA evalúa el 100% de su corte** — ACA 1 = Corte 1 (30%) · ACA 2 = Corte 2 (30%) · ACA 3 = Corte 3 (40%), sin subdividir en varios EV.
+**Fuente única:** el libro de calificaciones de cada aula (auditoría `AUDITORIA CDigital 2026-08-10.md` §2), cargado en `config/cursos/fechas_entrega_aca.py` → `ACA_COMPONENTES` (ítem, tipo, peso, corte) + `VENTANAS` / `VENTANAS_POR_GRUPO` (apertura, cierre, límite de nota). **Nada se recalcula por pesos**; los pesos suman 100 por curso y el módulo lo verifica al importarse.
 
-Y como la Sesión 01 pasó a ser de encuadre (no dicta tema), el reparto automático dejaba la ACA 1 cerrando el mismo día de la Sesión 02, o sea **sin ninguna clase de contenido cursada**. Se corrieron las ventanas; ahora viven en `VENTANAS_DOCENTE` de `config/cursos/fechas_entrega_aca.py` (tabla explícita, ya no cálculo):
+Queda **anulada** la regla anterior «cada ACA evalúa el 100% de su corte»: hay quices y parciales (Parcial 1 = 24% por sí solo), en pregrado existe **una sola «ACA Final»** (Tarea) y auto/coevaluación existen en los 5 cursos (la coevaluación es un **foro**).
 
-| Curso | ACA 1 | ACA 2 | ACA 3 | Recepción (techo) |
-|---|---|---|---|---|
-| Creatividad 54408 | 12/08 → **26/08** | 27/08 → **09/09** | 10/09 → **16/09** | 19/09 |
-| Investigación 53339 | 13/08 → **27/08** | 28/08 → **03/09** | 04/09 → **10/09** | 12/09 |
+Pregrado = **30 / 30 / 40** (Art. 52). **Proyecto I = 25 / 25 / 50** (estructura propia; nota única Art. 41 operada en tres cortes).
 
-Clases de contenido que respaldan cada entrega: Creatividad ACA1←S02,S03 · ACA2←S04,S05 · ACA3←S06 · Investigación ACA1←S02,S03 · ACA2←S04 · ACA3←S05.
+| Curso | Corte 1 | Corte 2 | Corte 3 |
+|---|---|---|---|
+| Investigación 53339 | Quiz 1 6% → 20/08 · Parcial 1 24% → 27/08 | Quiz 2 9% → 03/09 · Parcial 2 21% → 10/09 | ACA Final 32,8% → **12/09** (recepción) · Quiz 3 4% → 17/09 · Auto 1,6% y Coev 1,6% → 20/09 |
+| Creatividad 54408 | Quiz 1 6% → 19/08 · Parcial 1 24% → 26/08 | Quiz 2 9% → 02/09 · Parcial 2 21% → 09/09 | Quiz 3 4% → 16/09 · ACA Final 32,8% → **19/09** (recepción) · Auto 1,6% y Coev 1,6% → 27/09 |
+| TG2 54448 | Quiz 1 6% → 31/08 · Parcial 1 24% → 14/09 | Quiz 2 9% → 28/09 · Parcial 2 21% → 05/10 | Quiz 3 4% → 26/10 · ACA Final 32,8% → **14/11** (recepción) · Auto 1,6% y Coev 1,6% → 22/11 |
+| TG3 54450 / 54466 / 54467 | Quiz 1 6% → 25/08 · Parcial 1 24% → 15/09 | Quiz 2 9% → 29/09 · Parcial 2 21% → 13/10 | Quiz 3 4% → 27/10 · ACA Final 32% → **07/11** (54450) / **14/11** (54466-67) · Auto 2% y Coev 2% → 15/11 / 22/11 |
+| Proyecto I 54ES4 *(25/25/50)* | Quiz 25% → 30/08 | ACA 1 25% → 04/10 | ACA FINAL 42% → 08/11 · Coev 4% (foro) → 15/11 · Auto 4% → 22/11 |
 
-> **Límite estructural, no corregible moviendo fechas:** en ambos cursos la **recepción institucional es anterior a la última clase** (Creatividad 19/09 < S07 23/09; Investigación 12/09 < S06 17/09). La última sesión queda necesariamente después del entregable final: úsala como socialización/cierre, no para contenido evaluable.
+Criterio de las ventanas (decisión del docente, no recalcular): la recepción de **trabajos** limita solo la ACA Final (documento); los quices y parciales son cuestionarios y cierran **en día de clase** con la ventana abierta desde la sesión anterior; la Sesión 01 es de encuadre y no evalúa; auto/coevaluación van de la última semana al cierre de notas; **Proyecto I** conserva las fechas OFICIALES de Coordinación.
 
-- **TG2 54448** — sin Syllabus SIAC: ACA 1 07/09 · ACA 2 05/10 · ACA 3 09/11 y los pesos 30/30/40 son orientativos (Art. 52). Coherentes entre Manual, enunciados, LEEME del estudiante y CSV de hitos, pero **no confirmados**.
+**Dónde se lee cada cosa (todo generado desde el módulo, nada escrito a mano):**
+
+| Pregunta | Archivo | Regenerar |
+|---|---|---|
+| ¿Qué ítems tiene el aula y cuánto pesan? | `<Curso>/Manual del Docente…` → «3. Evaluación — estructura REAL del aula» | `python config/cursos/sync_manuales_fechas.py` |
+| ¿Cuándo abre / cierra cada ítem y hasta cuándo hay para la nota? | mismo Manual → «Fechas de entrega ACA / cortes» | ídem |
+| **¿En qué sesión cae cada quiz y cada parcial?** | `<Curso>/Calendario de clases (oficial).md` → columna «Evaluación (aula CDigital)» + bloque «Evaluación en el aula» | `python config/slides/build_pregrado_cursos.py --calendar-only` |
+| ¿Qué ve el estudiante? | `Clases/Recursos/ACAs/*.docx` (ventana + tipo + peso del ítem real) | `python config/slides/build_acas_estudiantes.py` |
+| ¿Qué va a mi Calendar? | `Entregas y hitos docentes - Importar a Calendar.csv` | `python config/slides/build_hitos_docentes_calendar.py` |
+
+En Proyecto I el Manual y el `Calendario de clases (oficial).md` son **curados a mano** (llevan el cronograma oficial de Coordinación) y traen la columna «Ítem en el aula» con el puente ACA 1→Quiz · ACA 2→ACA 1 · ACA 3→ACA FINAL. Ningún ítem de Proyecto I cierra en día de clase (Coordinación cierra en domingo; la clase es lunes), así que su calendario marca la **última sesión sincrónica antes de cada cierre** en vez de «la sesión en que cae».
+
+> **Límite estructural, no corregible moviendo fechas:** en Creatividad e Investigación la **recepción institucional es anterior a la última clase** (19/09 < S07 23/09; 12/09 < S06 17/09). La última sesión queda después del entregable final: úsala como socialización/cierre, no para contenido evaluable.
+
+- **TG2 54448** — sigue sin Syllabus SIAC, pero los pesos **ya no son orientativos**: salen del libro de calificaciones del aula (30/30/40 con el mismo desglose de los otros cursos de pregrado).
+- **Pendiente de material (auditoría §5.1):** los **decks y guiones** siguen escritos como ACA 1/2/3 (y EV05/EXAM en TG3). Los **enunciados sí quedaron realineados** el 2026-08-10 (un `.docx` por ítem del aula en los 5 cursos), pero los quices y parciales **no existen todavía como actividad en el aula** — solo como ítem del libro de calificaciones.
 
 ### Otros pendientes vigentes
 - **Syllabus SIAC de TG2 ausente** — el material lo declara abiertamente (Manual, slide 7 de la Sesión 01, enunciados de ACA).
 - **Roster (listado de estudiantes y correos):** solo existe para Proyecto I `2026/54ES4/` (40 estudiantes + coanfitrión). Faltan los 6 grupos restantes (Investigación 53339 · Creatividad 54408 · TG2 54448 · TG3 54450/54466/54467) — sin ellos no se pueden generar invitaciones de Calendar con invitados para esos cursos.
 - **Correo de bienvenida = plantilla mínima** en los 7 grupos: solo curso, grupo, horario y contacto. No trae fecha de la primera clase, Meet, CDigital, qué traer ni lectura autónoma, y firma «el Docente» en vez del nombre.
 - **URL de la herramienta institucional antiplagio** en CDigital (TG2/TG3) — no inventar URL de terceros. TG3 tiene una sesión entera de verificación antiplagio (Sesión 11, 20/10).
-- **Manuales del Docente de pregrado son stubs** (2,6–3,4 KB) frente al de Proyecto I (22,8 KB): no traen guía sesión a sesión ni procedimiento de cierre.
+- **Manuales del Docente de pregrado siguen siendo cortos** (6,3–7,8 KB tras la sección de evaluación generada el 2026-08-10) frente al de Proyecto I (27 KB): ya traen estructura de evaluación, ítems del aula y fechas, pero **no** guía sesión a sesión ni procedimiento de cierre.
+- **Los quices y parciales no existen como actividad en el aula** — solo como ítem del libro de calificaciones. Hay que crearlos (cuestionario + banco de preguntas) y escribir las preguntas antes de su ventana; el primero cierra el **19/08** (Creatividad). El material del estudiante (guía por quiz y por parcial) ya está publicado.
+- ~~Auto/coevaluación de pregrado sin instructivo~~ → **resuelto 2026-08-10**: los 4 cursos ya tienen `Autoevaluacion individual (…) - instructivo.docx` y `Coevaluacion individual (…) - instructivo.docx`.
 - **`Fechas.txt` e `Informacion.txt` de Proyecto I** (`2026/54ES4/`) siguen diciendo «Fecha de inicio: 03/08/2026», contra el `2026-08-10` de `carga_academica_2026.json` que el propio `Informacion.txt` declara como fuente. Los `Fechas.txt` equivalentes de TG2/TG3 sí se archivaron; el de Proyecto I no. Además `Informacion.txt` de Proyecto I **no lo regenera ningún build** (`build_pregrado_cursos.py:704` solo cubre pregrado).
 - **Nota stale en el calendario de Investigación:** dice «Periodo corto 26P03 = 7 jueves (03/08–20/09)»; con el inicio real (13/08) son **6 jueves**, que es lo que lista la tabla.
 - **Los calendarios de Creatividad y TG3 no documentan la unidad diferida** de la Sesión 01 (sí está en `sesiones_cun.py` y sí se documenta en Proyecto I e Investigación): Creatividad salta a U3 y TG3 a U3 sin explicar dónde quedaron U1–U2.
-- **`fechas_entrega_aca.py` sigue sin poder reproducir el Cronograma OFICIAL de Proyecto I** (ver nota al pie del calendario de Proyecto I). Las fechas oficiales viven hoy fuera de esa API.
+- ~~`fechas_entrega_aca.py` no reproduce el Cronograma OFICIAL de Proyecto I~~ → **resuelto 2026-08-10:** ese cronograma ES la tabla `VENTANAS["proyecto1"]` del módulo (ya no hay cálculo del que desviarse), mapeado a los ítems reales del aula (Quiz · ACA 1 · ACA FINAL · coev · auto).
 
 ### Resuelto — verificado en disco el 2026-08-10, no volver a levantarlo
 - ~~URL pública plantilla APA~~ → no se usa URL. El material referencia la ruta relativa `Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`; **el archivo está presente en los 5 cursos**.

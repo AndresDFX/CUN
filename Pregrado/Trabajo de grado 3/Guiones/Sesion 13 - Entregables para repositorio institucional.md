@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 13 - Entregables para repositorio institucional/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+**Hoy no cierra ni abre ningún ítem del libro de calificaciones.** La sesión es de contenido y avance; lo único que sigue corriendo es lo que está abajo.
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> ⚠️ **Este curso tiene grupos con ventanas distintas.** La tabla de arriba es la del grupo de referencia (**54466**). En los demás cambia así:
+> - **Grupo 54450:** **Autoevaluación** abre hoy; **Coevaluación** abre hoy; **ACA Final** cierra antes del próximo encuentro.
+> Antes de anunciar una fecha, ábrala en el libro de calificaciones **del aula de ese grupo**: es la única fuente que no se equivoca de grupo.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |

@@ -7,11 +7,22 @@
 
 📌 **De esta sesión**
 - **Sesión:** **07** · **Tema:** Marco legal · citación APA 7
-- **Detalle:** ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de ACA2 (dom 04/10).
+- **Detalle:** ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de ACA 1.
 - **PPTX estudiante:** `Clases/Sesion 07 - Marco legal · citación APA 7/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
+
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **ACA 1** | Tarea | 2 | 25% | Abierto: **cierra antes del próximo encuentro** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA 1** es la **tarea** del corte 2 y **cierra antes del próximo encuentro**: pesa **25%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
+
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
@@ -60,7 +71,7 @@ Son las normas, políticas o marcos que **condicionan** el estudio: protección 
 ZoteroBib (zbib.org), las citas integradas de Google Docs, y la plantilla APA CUN en Google Docs o Word en línea. No se exige ningún plugin de escritorio.
 
 #### 4. Cierre del marco referencial
-Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. La meta mínima: cero citas huérfanas en el avance.
+Esta sesión cierra el marco referencial completo —antecedentes, teórico, conceptual, contextual y legal, con referencias limpias— que junto con la formulación corregida compone la **ACA 1**, la entrega del segundo corte. La meta mínima: cero citas huérfanas en el avance.
 
 #### 5. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -93,7 +104,7 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 **Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 07**. Hoy cerramos el marco referencial completo, que es el corazón de ACA2. Dos frentes: el **marco legal** —si su proyecto lo necesita— y una **clínica de APA 7** para dejar las citas impecables.”
+> “Buenas tardes, **Sesión 07**. Hoy cerramos el marco referencial completo, que es el corazón de la **ACA 1** —la entrega del segundo corte, y cierra pronto—. Dos frentes: el **marco legal** —si su proyecto lo necesita— y una **clínica de APA 7** para dejar las citas impecables.”
 > “Meta de hoy: decidir si aplica marco legal y redactarlo con pertinencia, y normalizar todas sus citas y referencias sin citas huérfanas.”
 
 #### 2️⃣ Marco legal pertinente (~12 min) — Protagonista: Docente
@@ -127,8 +138,8 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “Con esto queda listo el marco referencial completo para ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones y dejen cero citas huérfanas.”
-> “La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos de ACA3. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
+> “Con esto queda listo el marco referencial completo de la **ACA 1**: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones, dejen cero citas huérfanas y **suban el documento a la tarea de la ACA 1 en CDigital**: cierra antes de nuestro próximo encuentro, así que no lo dejen para el último día.”
+> “La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos del tramo final, que es cuando se arma la **ACA FINAL**. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
 
 
 
@@ -160,6 +171,7 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 2. **Éxito:** 0 citas huérfanas evidentes en el avance.
 
 ✅ **Checklist antes de clase**
+- [ ] Anunciar en clase que **ACA 1** (Tarea · 25%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 07 - Marco legal · citación APA 7/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

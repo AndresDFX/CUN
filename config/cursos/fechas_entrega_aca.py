@@ -1,40 +1,38 @@
 # -*- coding: utf-8 -*-
-"""Fechas de entrega ACA — cálculo regenerable (los 5 cursos CUN).
+"""Modelo de evaluación y ventanas de los 5 cursos CUN — **tablas explícitas**.
 
-IMPORTANTE — solo **TG2 y TG3** se calculan con la regla de pesos de abajo.
-Los otros tres cursos usan tablas explícitas y NO se recalculan:
-  · Proyecto I              → CRONOGRAMA_OFICIAL_P1 (Coordinación / cronograma AFI).
-  · Creatividad e Investig. → VENTANAS_DOCENTE (fijadas por el Docente 2026-08-10).
-Cada entrega lleva su origen en ``EntregaAca.regla``; los textos al estudiante y a los
-manuales deben citar ESE campo, no la regla de pesos por defecto.
+FUENTE DE VERDAD: el **libro de calificaciones de cada aula en CDigital**, auditado el
+2026-08-10 (ver «AUDITORIA CDigital 2026-08-10.md» §2). Cada ítem de ``ACA_COMPONENTES``
+existe en el gradebook del aula con ESE nombre (``code``), ESE tipo de actividad
+(``kind``: cuestionario / tarea / foro) y ESE peso (``weight``) dentro de su corte.
 
-Regla de cálculo (aplica a TG2/TG3 · usada por build_acas / hitos / Presentaciones):
+Aquí **NO se recalcula nada**: no hay reparto por pesos, ni «snap» al día de clase, ni
+derivación desde recepción/cierre. Las ventanas viven en tablas escritas a mano
+(``VENTANAS`` y ``VENTANAS_POR_GRUPO``) y solo se cambian editando esas tablas.
 
-1. Periodo de entregas documentales = ``[inicio, recepción]`` de
-   ``carga_academica_2026.json`` (la recepción es la fecha máx. de trabajos;
-   el cierre de notas puede ser posterior).
-2. Se reparte ese tramo según los **pesos** del componente (p. ej. 30/30/40,
-   25/25/42, EV05/EXAM 50/50). El ítem final cae en el día de clase en o
-   antes de la recepción.
-3. Fecha de entrega = fin del tramo *n*, ajustada al **día de clase semanal**
-   del curso (`horario.weekday` confirmado). Si el target no cae ese día,
-   se usa el día de clase **anterior** (o el viernes académico si no hubiera
-   weekday — no aplica a estos 5 cursos).
-4. Las fechas quedan estrictamente crecientes (mín. +1 semana de clase si
-   colisionan).
-5. Proyecto I — autoevaluación / coevaluación: ventanas **después** de ACA 3
-   y hasta el cierre de notas (coev primero, autoev al final), alineado a
-   ESP329 / Manual (8% de cierre).
-6. TG3: EV05 y EXAM se calculan **por grupo** cuando recepción/cierre difieren
-   (54450 vs 54466/54467).
-7. Límite de nota docente (hitos) = día de clase ~+7 días tras la entrega.
+Lo que esto corrige del modelo anterior (que sí calculaba):
+  · Existen **quices y parciales** y pesan mucho (Parcial 1 = 24%): antes no existían.
+  · En pregrado hay **una sola «ACA Final»** (Tarea) en el tercer corte. No hay
+    ACA 1 / ACA 2 / ACA 3 como tres entregables.
+  · **Autoevaluación y coevaluación existen en los 5 cursos**, no solo en Proyecto I;
+    la **coevaluación es un FORO** (se participa), no un cuestionario.
+  · TG3 **no** es «corte único 100% (EV05/EXAM)»: son tres cortes 30/30/40.
+  · Queda anulada la regla «cada ACA toma el 100% de su corte».
+  · En Proyecto I el primer corte es un **Quiz** (25%), no la ACA de formulación.
 
-Inicio operativo del semestre 2026 (pedido docente): **2026-08-10**.
-No hardcodear fechas sueltas en enunciados: leer esta API.
+Criterio con que el Docente fijó las ventanas (2026-08-10, no recalcular):
+  1. La **fecha máxima de recepción de TRABAJOS** limita la **ACA Final** (documento),
+     porque es un entregable documental.
+  2. Los **quices y parciales** son cuestionarios: pueden correr hasta el cierre de
+     notas y se ubican **en día de clase** (la ventana abre en la sesión anterior).
+  3. La **Sesión 01 es de encuadre** y no evalúa: ningún ítem cierra ahí.
+  4. **Auto y coevaluación** van entre la última semana y el **cierre de notas**.
+  5. **Proyecto I** usa las fechas OFICIALES de Coordinación (cronograma AFI): no se tocan.
+  6. **TG3 varía por grupo**: 54450 recibe/cierra una semana antes que 54466 y 54467.
 
 Uso:
   from fechas_entrega_aca import entregas_curso, fmt_entrega, blocks_para_slide
-  python config/cursos/fechas_entrega_aca.py   # imprime tabla
+  python config/cursos/fechas_entrega_aca.py   # imprime la tabla de los 5 cursos
 """
 from __future__ import annotations
 
@@ -43,356 +41,393 @@ from dataclasses import dataclass, replace
 from datetime import date, timedelta
 from typing import Any
 
-from carga_academica import curso, fmt_dmy, fmt_dmy_largo, load_carga, _parse_date
+from carga_academica import curso, fmt_dmy, fmt_dmy_largo, load_carga
 
 DIAS = ("lun", "mar", "mié", "jue", "vie", "sáb", "dom")
 
-# Catálogo de componentes evaluados (pesos oficiales / orientativos).
-# id estable → usado en builds, LEEME, hitos.
+# Tipos de actividad tal como están creados (o deben crearse) en Moodle/CDigital.
+KIND_CUESTIONARIO = "cuestionario"
+KIND_TAREA = "tarea"
+KIND_FORO = "foro"
+KIND_LABEL = {
+    KIND_CUESTIONARIO: "Cuestionario",
+    KIND_TAREA: "Tarea",
+    KIND_FORO: "Foro",
+}
+
+# Instrumentos individuales de cierre: se *diligencian* / se *participa*, no se
+# entrega documento. Existen en los CINCO cursos (auditoría 2026-08-10).
+IDS_INSTRUMENTO_CIERRE = ("auto", "coev")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CATÁLOGO DE ÍTEMS — copia fiel del libro de calificaciones de cada aula.
+#   id      → identificador estable que usan builds / hitos / enunciados
+#   code    → nombre EXACTO del ítem en Moodle
+#   label   → etiqueta corta para slides y tablas
+#   weight  → peso real sobre 100 (suma 100 por curso; verificado al final)
+#   kind    → cuestionario | tarea | foro (tipo de actividad en el aula)
+#   corte   → 1 | 2 | 3
 ACA_COMPONENTES: dict[str, list[dict[str, Any]]] = {
+    # PROYECTO I 54ES4 (ESP329) — estructura propia 25 / 25 / 50.
     "proyecto1": [
-        {"id": "aca1", "code": "ACA 1", "label": "ACA 1", "weight": 25, "kind": "aca"},
-        {"id": "aca2", "code": "ACA 2", "label": "ACA 2", "weight": 25, "kind": "aca"},
-        {"id": "aca3", "code": "ACA 3", "label": "ACA 3", "weight": 42, "kind": "aca"},
-        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación", "weight": 4, "kind": "ventana"},
-        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación", "weight": 4, "kind": "ventana"},
+        {"id": "quiz", "code": "Quiz", "label": "Quiz",
+         "weight": 25, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "aca1", "code": "ACA 1", "label": "ACA 1",
+         "weight": 25, "kind": KIND_TAREA, "corte": 2},
+        {"id": "aca_final", "code": "ACA FINAL", "label": "ACA FINAL",
+         "weight": 42, "kind": KIND_TAREA, "corte": 3},
+        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación",
+         "weight": 4, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación",
+         "weight": 4, "kind": KIND_FORO, "corte": 3},
     ],
+    # INVESTIGACIÓN 53339 — pregrado 30 / 30 / 40.
     "investigacion": [
-        {"id": "aca1", "code": "ACA 1", "label": "Corte 1", "weight": 30, "kind": "aca"},
-        {"id": "aca2", "code": "ACA 2", "label": "Corte 2", "weight": 30, "kind": "aca"},
-        {"id": "aca3", "code": "ACA 3", "label": "Corte 3", "weight": 40, "kind": "aca"},
+        {"id": "quiz1", "code": "Quiz 1", "label": "Quiz 1",
+         "weight": 6, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "parcial1", "code": "Parcial 1", "label": "Parcial 1",
+         "weight": 24, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "quiz2", "code": "Quiz 2", "label": "Quiz 2",
+         "weight": 9, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "parcial2", "code": "Parcial 2", "label": "Parcial 2",
+         "weight": 21, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "aca_final", "code": "ACA Final", "label": "ACA Final",
+         "weight": 32.8, "kind": KIND_TAREA, "corte": 3},
+        {"id": "quiz3", "code": "Quiz 3", "label": "Quiz 3",
+         "weight": 4, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación",
+         "weight": 1.6, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación",
+         "weight": 1.6, "kind": KIND_FORO, "corte": 3},
     ],
+    # CREATIVIDAD 54408 — pregrado 30 / 30 / 40 (mismos pesos que Investigación).
     "creatividad": [
-        {"id": "aca1", "code": "ACA 1", "label": "Corte 1", "weight": 30, "kind": "aca"},
-        {"id": "aca2", "code": "ACA 2", "label": "Corte 2", "weight": 30, "kind": "aca"},
-        {"id": "aca3", "code": "ACA 3", "label": "Corte 3", "weight": 40, "kind": "aca"},
+        {"id": "quiz1", "code": "Quiz 1", "label": "Quiz 1",
+         "weight": 6, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "parcial1", "code": "Parcial 1", "label": "Parcial 1",
+         "weight": 24, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "quiz2", "code": "Quiz 2", "label": "Quiz 2",
+         "weight": 9, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "parcial2", "code": "Parcial 2", "label": "Parcial 2",
+         "weight": 21, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "aca_final", "code": "ACA Final", "label": "ACA Final",
+         "weight": 32.8, "kind": KIND_TAREA, "corte": 3},
+        {"id": "quiz3", "code": "Quiz 3", "label": "Quiz 3",
+         "weight": 4, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación",
+         "weight": 1.6, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación",
+         "weight": 1.6, "kind": KIND_FORO, "corte": 3},
     ],
+    # TG2 54448 — pregrado 30 / 30 / 40 (confirmado en el aula, ya no «orientativo»).
     "tg2": [
-        {"id": "aca1", "code": "ACA 1", "label": "Corte 1", "weight": 30, "kind": "aca"},
-        {"id": "aca2", "code": "ACA 2", "label": "Corte 2", "weight": 30, "kind": "aca"},
-        {"id": "aca3", "code": "ACA 3", "label": "Corte 3", "weight": 40, "kind": "aca"},
+        {"id": "quiz1", "code": "Quiz 1", "label": "Quiz 1",
+         "weight": 6, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "parcial1", "code": "Parcial 1", "label": "Parcial 1",
+         "weight": 24, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "quiz2", "code": "Quiz 2", "label": "Quiz 2",
+         "weight": 9, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "parcial2", "code": "Parcial 2", "label": "Parcial 2",
+         "weight": 21, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "aca_final", "code": "ACA Final", "label": "ACA Final",
+         "weight": 32.8, "kind": KIND_TAREA, "corte": 3},
+        {"id": "quiz3", "code": "Quiz 3", "label": "Quiz 3",
+         "weight": 4, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación",
+         "weight": 1.6, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación",
+         "weight": 1.6, "kind": KIND_FORO, "corte": 3},
     ],
+    # TG3 54450 / 54466 / 54467 — igual estructura, pero ACA Final 32% y
+    # auto/coevaluación 2% cada una (así está en las tres aulas).
     "tg3": [
-        {"id": "ev05", "code": "ACA 1 (EV05)", "label": "EV05", "weight": 50, "kind": "aca"},
-        {"id": "exam", "code": "ACA 2 (EXAM)", "label": "EXAM", "weight": 50, "kind": "aca"},
+        {"id": "quiz1", "code": "Quiz 1", "label": "Quiz 1",
+         "weight": 6, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "parcial1", "code": "Parcial 1", "label": "Parcial 1",
+         "weight": 24, "kind": KIND_CUESTIONARIO, "corte": 1},
+        {"id": "quiz2", "code": "Quiz 2", "label": "Quiz 2",
+         "weight": 9, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "parcial2", "code": "Parcial 2", "label": "Parcial 2",
+         "weight": 21, "kind": KIND_CUESTIONARIO, "corte": 2},
+        {"id": "aca_final", "code": "ACA Final", "label": "ACA Final",
+         "weight": 32, "kind": KIND_TAREA, "corte": 3},
+        {"id": "quiz3", "code": "Quiz 3", "label": "Quiz 3",
+         "weight": 4, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "auto", "code": "Autoevaluación", "label": "Autoevaluación",
+         "weight": 2, "kind": KIND_CUESTIONARIO, "corte": 3},
+        {"id": "coev", "code": "Coevaluación", "label": "Coevaluación",
+         "weight": 2, "kind": KIND_FORO, "corte": 3},
     ],
+}
+
+# Peso declarado de cada corte en el aula (se verifica contra la suma de sus ítems).
+PESOS_CORTE: dict[str, dict[int, float]] = {
+    "proyecto1": {1: 25, 2: 25, 3: 50},
+    "investigacion": {1: 30, 2: 30, 3: 40},
+    "creatividad": {1: 30, 2: 30, 3: 40},
+    "tg2": {1: 30, 2: 30, 3: 40},
+    "tg3": {1: 30, 2: 30, 3: 40},
 }
 
 REGLA_RESUMEN = (
-    "Periodo [inicio–recepción] repartido por pesos del componente; "
-    "entrega = día de clase semanal en o antes del fin de tramo "
-    "(ultimo item <= recepcion). P1: coev/autoev tras ACA 3 hasta cierre. "
-    "Fuente: config/cursos/fechas_entrega_aca.py + carga_academica_2026.json."
+    "Estructura, tipo de actividad y pesos = libro de calificaciones del aula en CDigital "
+    "(auditoría 2026-08-10). Las ventanas son tablas explícitas de "
+    "config/cursos/fechas_entrega_aca.py: no se recalculan por pesos."
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PROYECTO I — fechas OFICIALES, no calculadas.
+# PROYECTO I — fechas OFICIALES de Coordinación (cronograma AFI). NO se tocan.
 #
-# Para Proyecto I (AFI/ESP329) las ventanas NO se derivan del reparto por pesos:
-# las fija la Coordinación de Gestión del Conocimiento en el
-# `Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf`, y esa es la fuente que
-# el docente adoptó (2026-08-09) para el Manual, el Calendario oficial y el CSV
-# de hitos. El cálculo por pesos se desviaba (daba 31/08 · 28/09 · 09/11 frente a
-# los 30/08 · 04/10 · 08/11 reales), lo que ponía fechas equivocadas en los
-# enunciados de ACA que reciben los estudiantes. Si cambia el periodo, se
-# actualiza ESTA tabla — no se vuelve al cálculo.
-#
-# (apertura, entrega/cierre, fecha límite de nota docente)
-CRONOGRAMA_OFICIAL_P1: dict[str, tuple[date, date, date]] = {
-    "aca1": (date(2026, 8, 3), date(2026, 8, 30), date(2026, 9, 7)),
-    "aca2": (date(2026, 9, 7), date(2026, 10, 4), date(2026, 10, 12)),
-    "aca3": (date(2026, 10, 12), date(2026, 11, 8), date(2026, 11, 16)),
-    "coev": (date(2026, 11, 9), date(2026, 11, 15), date(2026, 11, 22)),
-    "auto": (date(2026, 11, 16), date(2026, 11, 22), date(2026, 11, 22)),
-}
+# Las fija la Coordinación de Gestión del Conocimiento en
+# `Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf`. El mapeo contra el aula
+# (auditoría 2026-08-10) es: 1.ª ventana → **Quiz** (25%, corte 1), 2.ª → **ACA 1**
+# (25%, corte 2), 3.ª → **ACA FINAL** (42%, corte 3).
 REGLA_OFICIAL_P1 = (
-    "Fechas OFICIALES de Coordinación (Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf); "
-    "no se calculan por pesos. Cierre y registro de todas las notas: 22/11/2026."
+    "Fechas OFICIALES de Coordinación (Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf) "
+    "sobre la estructura real del aula en CDigital: Quiz 25% (corte 1) · ACA 1 25% (corte 2) · "
+    "ACA FINAL 42% + autoevaluación 4% + coevaluación 4% (corte 3). "
+    "Cierre y registro de todas las notas: 22/11/2026."
 )
 
+REGLA_VENTANAS_DOCENTE = (
+    "Ventanas fijadas por el Docente (2026-08-10) sobre la estructura real del aula en "
+    "CDigital: los quices y parciales son cuestionarios y cierran en día de clase (la "
+    "Sesión 01 es de encuadre y no evalúa); la ACA Final es una tarea y cierra en la fecha "
+    "máxima de recepción de trabajos; auto y coevaluación van de la última semana al cierre "
+    "de notas."
+)
 
-def _entregas_oficiales_p1() -> list[EntregaAca]:
-    """Proyecto I: ventanas tomadas del cronograma institucional (ver arriba)."""
-    return _desde_tabla("proyecto1", CRONOGRAMA_OFICIAL_P1, REGLA_OFICIAL_P1)
+# ─────────────────────────────────────────────────────────────────────────────
+# VENTANAS — tabla explícita por curso: id → (apertura, cierre, límite de nota docente)
+# El comentario de cada línea dice en qué sesión cae el cierre.
+VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
+    # PROYECTO I 54ES4 · recepción 14/11 · cierre de notas 22/11 (fechas de Coordinación)
+    "proyecto1": {
+        "quiz":      (date(2026, 8, 3), date(2026, 8, 30), date(2026, 9, 7)),
+        "aca1":      (date(2026, 9, 7), date(2026, 10, 4), date(2026, 10, 12)),
+        "aca_final": (date(2026, 10, 12), date(2026, 11, 8), date(2026, 11, 16)),
+        "coev":      (date(2026, 11, 9), date(2026, 11, 15), date(2026, 11, 22)),
+        "auto":      (date(2026, 11, 16), date(2026, 11, 22), date(2026, 11, 22)),
+    },
+    # CREATIVIDAD 54408 · mié · recepción 19/09 · cierre de notas 27/09
+    "creatividad": {
+        "quiz1":     (date(2026, 8, 12), date(2026, 8, 19), date(2026, 8, 26)),   # cierra S02
+        "parcial1":  (date(2026, 8, 20), date(2026, 8, 26), date(2026, 9, 2)),    # cierra S03
+        "quiz2":     (date(2026, 8, 27), date(2026, 9, 2), date(2026, 9, 9)),     # cierra S04
+        "parcial2":  (date(2026, 9, 3), date(2026, 9, 9), date(2026, 9, 16)),     # cierra S05
+        "quiz3":     (date(2026, 9, 10), date(2026, 9, 16), date(2026, 9, 23)),   # cierra S06
+        "aca_final": (date(2026, 8, 12), date(2026, 9, 19), date(2026, 9, 27)),   # recepción
+        "auto":      (date(2026, 9, 23), date(2026, 9, 27), date(2026, 9, 27)),
+        "coev":      (date(2026, 9, 23), date(2026, 9, 27), date(2026, 9, 27)),
+    },
+    # INVESTIGACIÓN 53339 · jue · recepción 12/09 · cierre de notas 20/09
+    "investigacion": {
+        "quiz1":     (date(2026, 8, 13), date(2026, 8, 20), date(2026, 8, 27)),   # cierra S02
+        "parcial1":  (date(2026, 8, 21), date(2026, 8, 27), date(2026, 9, 3)),    # cierra S03
+        "quiz2":     (date(2026, 8, 28), date(2026, 9, 3), date(2026, 9, 10)),    # cierra S04
+        "parcial2":  (date(2026, 9, 4), date(2026, 9, 10), date(2026, 9, 17)),    # cierra S05
+        "aca_final": (date(2026, 8, 13), date(2026, 9, 12), date(2026, 9, 20)),   # recepción
+        "quiz3":     (date(2026, 9, 11), date(2026, 9, 17), date(2026, 9, 20)),   # cierra S06
+        "auto":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
+        "coev":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
+    },
+    # TG2 54448 · lun · recepción 14/11 · cierre de notas 22/11
+    "tg2": {
+        "quiz1":     (date(2026, 8, 24), date(2026, 8, 31), date(2026, 9, 7)),    # cierra S03
+        "parcial1":  (date(2026, 9, 7), date(2026, 9, 14), date(2026, 9, 21)),    # cierra S05
+        "quiz2":     (date(2026, 9, 21), date(2026, 9, 28), date(2026, 10, 5)),   # cierra S07
+        "parcial2":  (date(2026, 9, 29), date(2026, 10, 5), date(2026, 10, 19)),  # cierra S08
+        "quiz3":     (date(2026, 10, 19), date(2026, 10, 26), date(2026, 11, 9)),  # cierra S10
+        "aca_final": (date(2026, 8, 10), date(2026, 11, 14), date(2026, 11, 22)),  # recepción
+        "auto":      (date(2026, 11, 9), date(2026, 11, 22), date(2026, 11, 22)),
+        "coev":      (date(2026, 11, 9), date(2026, 11, 22), date(2026, 11, 22)),
+    },
+    # TG3 · mar · quices y parciales IGUALES en los tres grupos.
+    # ACA Final / auto / coevaluación varían por grupo → VENTANAS_POR_GRUPO.
+    "tg3": {
+        "quiz1":    (date(2026, 8, 18), date(2026, 8, 25), date(2026, 9, 1)),     # cierra S03
+        "parcial1": (date(2026, 9, 8), date(2026, 9, 15), date(2026, 9, 22)),     # cierra S06
+        "quiz2":    (date(2026, 9, 22), date(2026, 9, 29), date(2026, 10, 6)),    # cierra S08
+        "parcial2": (date(2026, 10, 6), date(2026, 10, 13), date(2026, 10, 20)),  # cierra S10
+        "quiz3":    (date(2026, 10, 20), date(2026, 10, 27), date(2026, 11, 3)),  # cierra S12
+    },
+}
+
+# Overrides por grupo (mismo formato). TG3: 54450 recibe el 07/11 y cierra notas el
+# 15/11; 54466 y 54467 reciben el 14/11 y cierran el 22/11.
+VENTANAS_POR_GRUPO: dict[str, dict[str, dict[str, tuple[date, date, date]]]] = {
+    "tg3": {
+        "54450": {
+            "aca_final": (date(2026, 8, 11), date(2026, 11, 7), date(2026, 11, 15)),
+            "auto":      (date(2026, 11, 3), date(2026, 11, 15), date(2026, 11, 15)),
+            "coev":      (date(2026, 11, 3), date(2026, 11, 15), date(2026, 11, 15)),
+        },
+        "54466": {
+            "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+            "coev":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+        },
+        "54467": {
+            "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+            "coev":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+        },
+    },
+}
+
+# Grupo cuyas fechas se usan cuando no se pide uno explícito (el mayoritario).
+GRUPO_REFERENCIA = {"tg3": "54466"}
+
+# De qué tabla salió cada curso (para la columna «Regla» y los textos al estudiante).
+REGLA_POR_CURSO = {
+    "proyecto1": REGLA_OFICIAL_P1,
+    "creatividad": REGLA_VENTANAS_DOCENTE,
+    "investigacion": REGLA_VENTANAS_DOCENTE,
+    "tg2": REGLA_VENTANAS_DOCENTE,
+    "tg3": REGLA_VENTANAS_DOCENTE,
+}
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# CREATIVIDAD e INVESTIGACIÓN — ventanas FIJADAS POR EL DOCENTE (2026-08-10).
-#
-# Por qué no se calculan: al pasar la Sesión 01 a encuadre (no dicta tema), el
-# reparto automático dejaba la ACA 1 cerrando el mismo día de la Sesión 02, es
-# decir con CERO clases de contenido cursadas. El docente decidió correr la
-# ACA 1 una semana; ACA 2 se corre en consecuencia y ACA 3 se mantiene dentro
-# de la fecha de recepción institucional, que es el techo duro:
-#   Creatividad  → recepción 19/09/2026 · cierre 27/09/2026
-#   Investigación→ recepción 12/09/2026 · cierre 20/09/2026
-#
-# Clases de contenido que respalda cada entrega (S01 es encuadre en ambos):
-#   Creatividad   ACA1 ← S02,S03 · ACA2 ← S04,S05 · ACA3 ← S06
-#   Investigación ACA1 ← S02,S03 · ACA2 ← S04     · ACA3 ← S05
-#
-# (apertura, entrega/cierre, fecha límite de nota docente)
-VENTANAS_DOCENTE: dict[str, dict[str, tuple[date, date, date]]] = {
-    "creatividad": {
-        "aca1": (date(2026, 8, 12), date(2026, 8, 26), date(2026, 9, 2)),
-        "aca2": (date(2026, 8, 27), date(2026, 9, 9), date(2026, 9, 16)),
-        "aca3": (date(2026, 9, 10), date(2026, 9, 16), date(2026, 9, 23)),
-    },
-    "investigacion": {
-        "aca1": (date(2026, 8, 13), date(2026, 8, 27), date(2026, 9, 3)),
-        "aca2": (date(2026, 8, 28), date(2026, 9, 3), date(2026, 9, 10)),
-        "aca3": (date(2026, 9, 4), date(2026, 9, 10), date(2026, 9, 17)),
-    },
-}
-REGLA_VENTANAS_DOCENTE = (
-    "Ventanas fijadas por el Docente (2026-08-10) para que cada ACA tenga clases de "
-    "contenido cursadas antes de su cierre — la Sesión 01 es de encuadre y no dicta tema. "
-    "Respetan la fecha de recepción institucional del curso."
-)
-
-
-def _desde_tabla(key: str, tabla: dict, regla: str) -> list[EntregaAca]:
-    """Construye las entregas de un curso a partir de una tabla explícita de fechas."""
-    out: list[EntregaAca] = []
-    for comp in ACA_COMPONENTES[key]:
-        if comp["id"] not in tabla:
-            continue
-        ap, ent, nota = tabla[comp["id"]]
-        out.append(
-            EntregaAca(
-                id=comp["id"],
-                code=comp["code"],
-                label=comp["label"],
-                weight=comp["weight"],
-                kind=comp["kind"],
-                apertura=ap,
-                entrega=ent,
-                nota_docente=nota,
-                regla=regla,
-            )
-        )
-    return out
+# Modelo
+# ─────────────────────────────────────────────────────────────────────────────
+def fmt_peso(weight: float) -> str:
+    """`32.8 → '32,8%'` · `6 → '6%'` (coma decimal, como el material en español)."""
+    s = f"{float(weight):.2f}".rstrip("0").rstrip(".")
+    return s.replace(".", ",") + "%"
 
 
 @dataclass(frozen=True)
 class EntregaAca:
+    """Un ítem del libro de calificaciones + su ventana."""
+
     id: str
     code: str
     label: str
-    weight: int
-    kind: str
+    weight: float
+    kind: str            # cuestionario | tarea | foro
+    corte: int           # 1 | 2 | 3
     apertura: date
-    entrega: date
+    entrega: date        # cierre del ítem en CDigital
     nota_docente: date | None
     grupo: str | None = None
     regla: str = REGLA_RESUMEN
 
     @property
     def weight_pct(self) -> str:
-        return f"{self.weight}%"
+        return fmt_peso(self.weight)
+
+    @property
+    def tipo_label(self) -> str:
+        return KIND_LABEL[self.kind]
+
+    @property
+    def es_instrumento_cierre(self) -> bool:
+        """Autoevaluación / coevaluación: se diligencian o se participa, no se entregan."""
+        return self.id in IDS_INSTRUMENTO_CIERRE
+
+    @property
+    def es_documento(self) -> bool:
+        """Tarea = entregable documental (la ACA Final y las ACAs de Proyecto I)."""
+        return self.kind == KIND_TAREA
 
 
-def snap_dia_clase(target: date, weekday: int) -> date:
-    """Día de clase semanal en o antes de ``target`` (0=lun … 6=dom)."""
-    return target - timedelta(days=(target.weekday() - weekday) % 7)
+def componentes_curso(key: str) -> list[dict[str, Any]]:
+    """Catálogo de ítems del curso (orden del libro de calificaciones)."""
+    return ACA_COMPONENTES[key]
 
 
-def snap_viernes(target: date) -> date:
-    """Viernes académico en o antes de ``target`` (fallback)."""
-    return snap_dia_clase(target, 4)
+def componente(key: str, item_id: str) -> dict[str, Any]:
+    for c in ACA_COMPONENTES[key]:
+        if c["id"] == item_id:
+            return c
+    raise KeyError(f"{key}/{item_id}")
 
 
-def _next_class_after(prev: date, weekday: int) -> date:
-    d = prev + timedelta(days=1)
-    delta = (weekday - d.weekday()) % 7
-    return d + timedelta(days=delta)
+def cortes_curso(key: str) -> list[int]:
+    return sorted({int(c["corte"]) for c in ACA_COMPONENTES[key]})
 
 
-def _nota_docente(entrega: date, weekday: int) -> date:
-    target = entrega + timedelta(days=7)
-    d = snap_dia_clase(target, weekday)
-    if d <= entrega:
-        d = _next_class_after(entrega, weekday)
-    return d
+def peso_corte(key: str, corte: int) -> float:
+    return round(sum(float(c["weight"]) for c in ACA_COMPONENTES[key]
+                     if int(c["corte"]) == corte), 6)
 
 
-def _repartir_acas(
-    inicio: date,
-    recepcion: date,
-    weekday: int,
-    comps: list[dict[str, Any]],
-    grupo: str | None = None,
-) -> list[EntregaAca]:
-    """Reparte componentes kind=aca en [inicio, recepción]."""
-    acas = [c for c in comps if c["kind"] == "aca"]
-    if not acas:
-        return []
-    span = max(1, (recepcion - inicio).days)
-    total_w = sum(int(c["weight"]) for c in acas)
-    cum = 0
-    prev = inicio - timedelta(days=1)
+def desglose_corte_texto(key: str) -> str:
+    """«Corte 1 30% = Quiz 1 6% + Parcial 1 24% · …» — para notas de slides y CSV."""
+    partes = []
+    for corte in cortes_curso(key):
+        items = [c for c in ACA_COMPONENTES[key] if int(c["corte"]) == corte]
+        detalle = " + ".join(f"{c['code']} {fmt_peso(c['weight'])}" for c in items)
+        partes.append(f"Corte {corte} {fmt_peso(peso_corte(key, corte))} = {detalle}")
+    return " · ".join(partes)
+
+
+def _grupo_referencia(key: str) -> str | None:
+    porg = VENTANAS_POR_GRUPO.get(key) or {}
+    if not porg:
+        return None
+    return GRUPO_REFERENCIA.get(key) or sorted(porg)[0]
+
+
+def _ventanas(key: str, grupo: str | None = None) -> dict[str, tuple[date, date, date]]:
+    """Ventanas del curso, con el override del grupo aplicado si existe."""
+    tabla = dict(VENTANAS[key])
+    porg = VENTANAS_POR_GRUPO.get(key) or {}
+    if porg:
+        g = grupo if grupo in porg else _grupo_referencia(key)
+        tabla.update(porg[g])
+    return tabla
+
+
+def entregas_para_grupo(key: str, grupo: str | None = None) -> list[EntregaAca]:
+    """Ítems del curso (y grupo, si sus ventanas varían — TG3), en orden de gradebook."""
+    tabla = _ventanas(key, grupo)
+    regla = REGLA_POR_CURSO.get(key, REGLA_RESUMEN)
+    porg = VENTANAS_POR_GRUPO.get(key) or {}
+    etiqueta_grupo = grupo if (grupo and grupo in porg) else None
     out: list[EntregaAca] = []
-    apertura = inicio
-
-    for i, c in enumerate(acas):
-        w = int(c["weight"])
-        cum += w
-        if i == len(acas) - 1:
-            target = recepcion
-        else:
-            target = inicio + timedelta(days=round(span * cum / total_w))
-        entrega = snap_dia_clase(target, weekday)
-        if entrega < inicio:
-            entrega = _next_class_after(inicio - timedelta(days=1), weekday)
-        if entrega <= prev:
-            entrega = _next_class_after(prev, weekday)
-        if entrega > recepcion:
-            entrega = snap_dia_clase(recepcion, weekday)
-            if entrega <= prev:
-                entrega = recepcion  # último recurso (puede no ser día de clase)
-        nota = _nota_docente(entrega, weekday)
-        # Garantizar apertura < entrega (periodos cortos: Inv/Creatividad).
-        if apertura >= entrega:
-            apertura = inicio if i == 0 else (prev + timedelta(days=1))
-            if apertura >= entrega:
-                apertura = entrega  # mismo día: ventana de un día
+    for c in ACA_COMPONENTES[key]:
+        ap, cierre, nota = tabla[c["id"]]
         out.append(
             EntregaAca(
                 id=c["id"],
                 code=c["code"],
                 label=c["label"],
-                weight=w,
-                kind="aca",
-                apertura=apertura,
-                entrega=entrega,
+                weight=float(c["weight"]),
+                kind=c["kind"],
+                corte=int(c["corte"]),
+                apertura=ap,
+                entrega=cierre,
                 nota_docente=nota,
-                grupo=grupo,
+                grupo=etiqueta_grupo,
+                regla=regla,
             )
         )
-        prev = entrega
-        # Siguiente apertura: día de nota docente si aún queda margen; si no, día +1.
-        nxt_ap = nota if nota > entrega else entrega + timedelta(days=1)
-        apertura = nxt_ap
     return out
 
 
-def _ventanas_p1(
-    acas: list[EntregaAca],
-    cierre: date,
-    weekday: int,
-) -> list[EntregaAca]:
-    """Coevaluación y autoevaluación tras ACA 3 hasta cierre."""
-    if not acas:
-        return []
-    aca3 = acas[-1]
-    coev_ini = aca3.entrega + timedelta(days=1)
-    # ~1 semana de coev, cerrando en día de clase
-    coev_fin = snap_dia_clase(min(cierre - timedelta(days=6), aca3.entrega + timedelta(days=7)), weekday)
-    if coev_fin < coev_ini:
-        coev_fin = min(cierre, coev_ini + timedelta(days=6))
-    auto_ini = coev_fin + timedelta(days=1)
-    if auto_ini > cierre:
-        auto_ini = cierre
-    auto_fin = cierre
-    return [
-        EntregaAca(
-            id="coev",
-            code="Coevaluación",
-            label="Coevaluación",
-            weight=4,
-            kind="ventana",
-            apertura=coev_ini,
-            entrega=coev_fin,
-            nota_docente=cierre,
-            regla=REGLA_RESUMEN + " Coev. justo después de ACA 3.",
-        ),
-        EntregaAca(
-            id="auto",
-            code="Autoevaluación",
-            label="Autoevaluación",
-            weight=4,
-            kind="ventana",
-            apertura=auto_ini,
-            entrega=auto_fin,
-            nota_docente=cierre,
-            regla=REGLA_RESUMEN + " Autoev. en la última semana hasta cierre.",
-        ),
-    ]
-
-
-def entregas_para_grupo(key: str, grupo: str | None = None) -> list[EntregaAca]:
-    """Lista de entregas para un curso (y grupo, si aplica — TG3)."""
-    c = curso(key)
-    comps = ACA_COMPONENTES[key]
-    if grupo and grupo in c["grupos"]:
-        g = c["grupos"][grupo]
-        inicio = _parse_date(g["inicio"])
-        recepcion = _parse_date(g["recepcion"])
-        cierre = _parse_date(g["cierre"])
-    else:
-        inicio = _parse_date(c["inicio"])
-        recepcion = _parse_date(c["recepcion"])
-        cierre = _parse_date(c["cierre"])
-        grupo = None
-    if key == "proyecto1":
-        # Fechas institucionales, no calculadas (ver CRONOGRAMA_OFICIAL_P1).
-        return _entregas_oficiales_p1()
-    if key in VENTANAS_DOCENTE:
-        # Ventanas fijadas por el docente (ver VENTANAS_DOCENTE).
-        return _desde_tabla(key, VENTANAS_DOCENTE[key], REGLA_VENTANAS_DOCENTE)
-    weekday = int(c["horario"]["weekday"])
-    return _repartir_acas(inicio, recepcion, weekday, comps, grupo=grupo)
-
-
 def entregas_curso(key: str) -> list[EntregaAca] | dict[str, list[EntregaAca]]:
-    """Para TG3 (varios cierres) → dict por grupo; resto → lista."""
+    """Cursos con ventanas por grupo (TG3) → dict por grupo; el resto → lista."""
     c = curso(key)
     groups = list(c.get("groups") or [])
-    if key == "tg3" and len(groups) > 1:
-        # Compactar grupos con mismo (inicio, recepción, cierre)
-        by_sig: dict[tuple, list[str]] = {}
-        for g in groups:
-            m = c["grupos"][g]
-            sig = (m["inicio"], m["recepcion"], m["cierre"])
-            by_sig.setdefault(sig, []).append(g)
-        out: dict[str, list[EntregaAca]] = {}
-        for gs in by_sig.values():
-            # calcular una vez; etiquetar con el primer grupo representativo
-            # y clonar por cada código
-            base = entregas_para_grupo(key, gs[0])
-            for g in gs:
-                out[g] = [
-                    EntregaAca(
-                        id=e.id,
-                        code=e.code,
-                        label=e.label,
-                        weight=e.weight,
-                        kind=e.kind,
-                        apertura=e.apertura,
-                        entrega=e.entrega,
-                        nota_docente=e.nota_docente,
-                        grupo=g,
-                        regla=e.regla + f" Grupo {g}.",
-                    )
-                    for e in base
-                ]
-        return out
+    if (VENTANAS_POR_GRUPO.get(key) or {}) and len(groups) > 1:
+        return {g: entregas_para_grupo(key, g) for g in groups}
     return entregas_para_grupo(key)
 
 
-def entrega_por_id(key: str, aca_id: str, grupo: str | None = None) -> EntregaAca:
+def entrega_por_id(key: str, item_id: str, grupo: str | None = None) -> EntregaAca:
+    """Un ítem por id. Sin ``grupo`` en cursos multi-ventana → grupo de referencia."""
     data = entregas_curso(key)
     if isinstance(data, dict):
-        if grupo is None:
-            # fecha “canónica” = la más temprana entre grupos (avisar divergencia)
-            grupo = sorted(data.keys())[0]
-        items = data[grupo]
+        g = grupo or _grupo_referencia(key) or sorted(data)[0]
+        items = data[g]
     else:
         items = data
     for e in items:
-        if e.id == aca_id:
+        if e.id == item_id:
             return e
-    raise KeyError(f"{key}/{aca_id}")
+    raise KeyError(f"{key}/{item_id}")
 
 
 def fmt_entrega(d: date, *, largo: bool = True) -> str:
@@ -413,21 +448,16 @@ def _sufijo_grupo(grupo: str | None) -> str:
 
 
 def texto_fecha_enunciado(e: EntregaAca, weekday: int) -> str:
-    """Bloque markdown para el enunciado ACA.
+    """Bloque markdown de fecha para el enunciado / instructivo del estudiante.
 
-    El paréntesis del día NO puede afirmar «día de clase» a ciegas: las tres ACAs de
-    Proyecto I cierran en DOMINGO (fechas institucionales de Coordinación), y el día
-    de clase del curso es lunes. Se compara el weekday real contra el del curso.
+    El texto depende del **tipo real de actividad** en CDigital: una tarea se
+    *entrega*, un cuestionario se *cierra*, un foro se *participa*. El paréntesis del
+    día no afirma «día de clase» a ciegas: las ventanas de Proyecto I cierran en
+    domingo (fechas de Coordinación) y su día de clase es lunes.
     """
     dia = DIAS[weekday]
-    if e.kind == "ventana":
-        return (
-            f"**Ventana de diligenciamiento:** {fmt_dmy(e.apertura)} – {fmt_dmy(e.entrega)} "
-            f"(cierra **{fmt_dmy_largo(e.entrega)}**).\n\n"
-            f"**Día de referencia del curso:** {dia}. Entrega / cierre solo por **CDigital**."
-        )
-    g = _sufijo_grupo(e.grupo)
     dia_real = DIAS[e.entrega.weekday()]
+    g = _sufijo_grupo(e.grupo)
     if e.entrega.weekday() == weekday:
         parentesis = f"{dia_real} · día de clase"
     else:
@@ -435,31 +465,48 @@ def texto_fecha_enunciado(e: EntregaAca, weekday: int) -> str:
             f"{dia_real} · fecha de cierre institucional; "
             f"el día de clase del curso es {dia}"
         )
+    if e.es_instrumento_cierre:
+        verbo = "participar en el foro" if e.kind == KIND_FORO else "diligenciarla"
+        return (
+            f"**Ventana para {verbo} (CDigital){g}:** {fmt_dmy(e.apertura)} – "
+            f"{fmt_dmy(e.entrega)} (cierra **{fmt_dmy_largo(e.entrega)}**).\n\n"
+            f"**Tipo en el aula:** {e.tipo_label} · **{e.weight_pct}** de la nota "
+            f"(corte {e.corte}).\n\n"
+            f"> {e.regla}"
+        )
+    if e.kind == KIND_CUESTIONARIO:
+        return (
+            f"**Cierre del cuestionario (CDigital){g}:** **{fmt_dmy_largo(e.entrega)}** "
+            f"({parentesis}).\n\n"
+            f"**Ventana:** apertura {fmt_dmy(e.apertura)} – cierre {fmt_dmy(e.entrega)} · "
+            f"**{e.weight_pct}** de la nota (corte {e.corte}).\n\n"
+            f"> {e.regla}"
+        )
     return (
         f"**Fecha de entrega (CDigital){g}:** **{fmt_dmy_largo(e.entrega)}** "
         f"({parentesis}).\n\n"
-        f"**Ventana:** apertura {fmt_dmy(e.apertura)} – cierre {fmt_dmy(e.entrega)}.\n\n"
+        f"**Ventana:** apertura {fmt_dmy(e.apertura)} – cierre {fmt_dmy(e.entrega)} · "
+        f"**{e.weight_pct}** de la nota (corte {e.corte}).\n\n"
         f"> {e.regla}"
     )
 
 
-def texto_fecha_curso(key: str, aca_id: str) -> str:
-    """Texto de fecha para enunciado (TG3: lista por grupo si divergen)."""
+def texto_fecha_curso(key: str, item_id: str) -> str:
+    """Texto de fecha para enunciado (TG3: lista por grupo si las ventanas divergen)."""
     c = curso(key)
     weekday = int(c["horario"]["weekday"])
     data = entregas_curso(key)
     if isinstance(data, dict):
-        # Compactar por fecha de entrega
         by_date: dict[date, list[str]] = {}
         sample: dict[date, EntregaAca] = {}
         for g, items in data.items():
             for e in items:
-                if e.id != aca_id:
+                if e.id != item_id:
                     continue
                 by_date.setdefault(e.entrega, []).append(g)
                 sample[e.entrega] = e
         if not by_date:
-            raise KeyError(f"{key}/{aca_id}")
+            raise KeyError(f"{key}/{item_id}")
         if len(by_date) == 1:
             # Misma fecha para todos los grupos: NO nominar a uno solo (un estudiante
             # de otro grupo concluiría que no le aplica).
@@ -468,7 +515,13 @@ def texto_fecha_curso(key: str, aca_id: str) -> str:
             if len(data) > 1:
                 e = replace(e, grupo=todos, regla=_regla_sin_grupo(e.regla))
             return texto_fecha_enunciado(e, weekday)
-        lines = ["**Fechas de entrega (CDigital) según grupo:**", ""]
+        _e0 = sample[sorted(by_date)[0]]
+        titulo = (
+            "**Ventanas (CDigital) según grupo:**"
+            if _e0.es_instrumento_cierre
+            else "**Fechas de cierre (CDigital) según grupo:**"
+        )
+        lines = [titulo, ""]
         for d in sorted(by_date):
             gs = " / ".join(sorted(by_date[d]))
             e = sample[d]
@@ -477,98 +530,118 @@ def texto_fecha_curso(key: str, aca_id: str) -> str:
                 f"(ventana {fmt_dmy(e.apertura)} – {fmt_dmy(e.entrega)})"
             )
         lines.append("")
-        _e0 = sample[sorted(by_date)[0]]
-        lines.append(f"**Día de clase:** {DIAS[weekday]}.")
+        lines.append(
+            f"**Tipo en el aula:** {_e0.tipo_label} · **{_e0.weight_pct}** de la nota "
+            f"(corte {_e0.corte}) · **Día de clase:** {DIAS[weekday]}."
+        )
         lines.append("")
         lines.append(f"> {_regla_sin_grupo(_e0.regla)}")
         return "\n".join(lines)
-    e = entrega_por_id(key, aca_id)
+    e = entrega_por_id(key, item_id)
     return texto_fecha_enunciado(e, weekday)
 
 
-def blocks_para_slide(key: str, grupo: str | None = None) -> list[dict]:
-    """Bloques ``{label, start, end, pct}`` para ``fechas_inicio_fin_slide``."""
+def blocks_para_slide(
+    key: str,
+    grupo: str | None = None,
+    *,
+    por_corte: bool = True,
+) -> list[dict]:
+    """Bloques ``{label, start, end, pct}`` para ``fechas_inicio_fin_slide``.
+
+    Por defecto **una tarjeta por corte** (3 tarjetas): con 8 ítems por curso la
+    slide de cronograma queda ilegible. ``por_corte=False`` devuelve ítem por ítem.
+    """
     items = entregas_para_grupo(key, grupo)
-    # P1: fusionar coev+auto en una tarjeta 8%
-    if key == "proyecto1":
-        acas = [e for e in items if e.kind == "aca"]
-        vents = [e for e in items if e.kind == "ventana"]
-        blocks = [
-            {
-                "label": e.label,
-                "start": e.apertura,
-                "end": e.entrega,
-                "pct": e.weight_pct,
-            }
-            for e in acas
+    if not por_corte:
+        return [
+            {"label": e.label, "start": e.apertura, "end": e.entrega, "pct": e.weight_pct}
+            for e in items
         ]
-        if vents:
-            blocks.append(
-                {
-                    "label": "Coev. + Autoev.",
-                    "start": vents[0].apertura,
-                    "end": vents[-1].entrega,
-                    "pct": "8%",
-                }
-            )
-        return blocks
-    return [
-        {
-            "label": e.label,
-            "start": e.apertura,
-            "end": e.entrega,
-            "pct": e.weight_pct + ("*" if key == "tg2" else ""),
-        }
-        for e in items
-    ]
+    blocks: list[dict] = []
+    prev_fin: date | None = None
+    for corte in cortes_curso(key):
+        del_corte = [e for e in items if e.corte == corte]
+        ini = min(e.apertura for e in del_corte)
+        fin = max(e.entrega for e in del_corte)
+        # La ACA Final abre el primer día del curso (es el producto acumulativo del
+        # periodo), así que su apertura NO sirve como inicio del tercer corte: haría
+        # que las tarjetas se solaparan. El inicio de la tarjeta se recorta al día
+        # siguiente del cierre del corte anterior; la ventana completa del ítem sigue
+        # publicada en su enunciado y en `resumen_tabla_markdown`.
+        if prev_fin is not None and ini <= prev_fin:
+            ini = prev_fin + timedelta(days=1)
+        blocks.append(
+            {
+                "label": f"Corte {corte}",
+                "start": ini,
+                "end": fin,
+                "pct": fmt_peso(peso_corte(key, corte)),
+            }
+        )
+        prev_fin = fin
+    return blocks
 
 
 def blocks_tg3_slide() -> list[dict]:
-    """TG3 en Presentación del Curso: usa el cierre mayoritario (22/11) + nota."""
-    # Representativo 54466 (mismo que 54467)
-    return blocks_para_slide("tg3", "54466")
+    """TG3 en Presentación del Curso: grupo de referencia (54466 = mismo que 54467)."""
+    return blocks_para_slide("tg3", _grupo_referencia("tg3"))
 
 
 def regla_corta(e: EntregaAca) -> str:
-    """Etiqueta breve del ORIGEN de la fecha (para la columna «Regla» de las tablas)."""
+    """Etiqueta breve del ORIGEN de la fecha (columna «Regla» de las tablas)."""
     r = e.regla or ""
     if r.startswith("Fechas OFICIALES de Coordinación"):
         return "oficial Coordinación (cronograma AFI)"
     if r.startswith("Ventanas fijadas por el Docente"):
         return "ventana docente (2026-08-10)"
-    return "pesos + día de clase"
+    return "libro de calificaciones CDigital"
 
 
 def resumen_tabla_markdown(key: str, *, con_nota: bool = True) -> str:
-    """Tabla markdown de entregas del curso (Manual del Docente / LEEME).
+    """Tabla markdown del modelo de evaluación del curso (Manual del Docente / LEEME).
 
-    La columna «Regla» sale de ``e.regla`` — no se asume el reparto por pesos:
-    Proyecto I usa el cronograma de Coordinación y Creatividad/Investigación las
-    ventanas fijadas por el Docente.
+    Una fila por ítem del libro de calificaciones. En cursos con ventanas por grupo
+    (TG3) las filas se compactan: solo se desglosa el ítem cuyas fechas divergen.
     """
     data = entregas_curso(key)
     lines = [
-        "| Componente | Entrega | Apertura | Nota docente | Regla |",
-        "| :--- | :--- | :--- | :--- | :--- |",
+        "| Ítem | Tipo | Corte | Peso | Apertura | Cierre | Nota docente |",
+        "| :--- | :--- | :---: | ---: | :--- | :--- | :--- |",
     ]
     reglas: list[str] = []
+
+    def _fila(e: EntregaAca, etiqueta: str) -> str:
+        return (
+            f"| **{e.code}**{etiqueta} | {e.tipo_label} | {e.corte} | {e.weight_pct} | "
+            f"{fmt_dmy(e.apertura)} | {fmt_dmy(e.entrega)} | "
+            f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} |"
+        )
+
     if isinstance(data, dict):
-        for g, items in data.items():
-            for e in items:
-                lines.append(
-                    f"| **{e.code}** ({g}) | {fmt_dmy(e.entrega)} | {fmt_dmy(e.apertura)} | "
-                    f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | {regla_corta(e)} |"
-                )
+        grupos = sorted(data)
+        for comp in ACA_COMPONENTES[key]:
+            por_firma: dict[tuple, list[str]] = {}
+            muestra: dict[tuple, EntregaAca] = {}
+            for g in grupos:
+                e = next(x for x in data[g] if x.id == comp["id"])
+                firma = (e.apertura, e.entrega, e.nota_docente)
+                por_firma.setdefault(firma, []).append(g)
+                muestra[firma] = e
+            unico = len(por_firma) == 1
+            for firma, gs in por_firma.items():
+                e = muestra[firma]
+                lines.append(_fila(e, "" if unico else f" ({' / '.join(gs)})"))
                 if e.regla not in reglas:
                     reglas.append(e.regla)
     else:
         for e in data:
-            lines.append(
-                f"| **{e.code}** | {fmt_dmy(e.entrega)} | {fmt_dmy(e.apertura)} | "
-                f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | {regla_corta(e)} |"
-            )
+            lines.append(_fila(e, ""))
             if e.regla not in reglas:
                 reglas.append(e.regla)
+
+    lines.append("")
+    lines.append(f"**Cortes:** {desglose_corte_texto(key)}.")
     if con_nota and reglas:
         lines.append("")
         for r in reglas:
@@ -582,101 +655,141 @@ def hitos_aca_rows(
     *,
     esencial: bool = True,
 ) -> list[tuple[str, date, str]]:
-    """Filas (label, date, note) para Calendar de hitos docentes.
+    """Filas (label, date, note) para el CSV de hitos docentes.
 
-    Con ``esencial=True`` (default): solo deadlines — cierre entrega / límite nota
-    docente; en ventanas (coeval/autoeval) habilitar + cierre. Sin aperturas ACA.
+    Con ``esencial=True`` (default): solo deadlines — cierre del ítem y límite de
+    nota; en auto/coevaluación, habilitar + cierre. Sin aperturas de tareas/quices.
+    Las filas salen ordenadas por fecha.
     """
     items = entregas_para_grupo(key, grupo)
     rows: list[tuple[str, date, str]] = []
     for e in items:
-        if e.kind == "ventana":
+        etiqueta = f"{e.tipo_label} · {e.weight_pct} · corte {e.corte}"
+        if e.es_instrumento_cierre:
+            verbo = "Habilitar el foro" if e.kind == KIND_FORO else "Habilitar la actividad"
             rows.append(
                 (
                     f"{e.code} — ventana",
                     e.apertura,
-                    f"{e.code} {e.weight}% · ventana {fmt_dmy(e.apertura)}–{fmt_dmy(e.entrega)}. Habilitar en CDigital.",
+                    f"{e.code} ({etiqueta}) · ventana {fmt_dmy(e.apertura)}–"
+                    f"{fmt_dmy(e.entrega)}. {verbo} en CDigital.",
                 )
             )
-            rows.append(
-                (
-                    f"{e.code} — cierre",
-                    e.entrega,
-                    f"Cierre {e.code}.",
-                )
-            )
+            rows.append((f"{e.code} — cierre", e.entrega, f"Cierre {e.code} ({etiqueta})."))
         else:
             if not esencial:
                 rows.append(
                     (
                         f"{e.code} — apertura",
                         e.apertura,
-                        f"Apertura {e.code} ({e.weight}%). Configurar en CDigital con rúbrica.",
+                        f"Apertura {e.code} ({etiqueta}). Configurar en CDigital "
+                        f"({e.tipo_label.lower()} + rúbrica o banco de preguntas).",
                     )
                 )
-            rows.append(
-                (
-                    f"{e.code} — cierre entrega",
-                    e.entrega,
-                    f"Cierre entrega {e.code} (estudiantes).",
+            cierre_nota = (
+                f"Cierre {e.code} ({etiqueta})."
+                if e.es_documento
+                else (
+                    f"Cierre {e.code} ({etiqueta}). El ítem ya está en el libro de "
+                    "calificaciones; verificar que la actividad exista en el aula."
                 )
             )
-            if e.nota_docente:
-                rows.append(
-                    (
-                        f"{e.code} — límite nota docente",
-                        e.nota_docente,
-                        f"Fecha límite ingreso de nota {e.code}.",
-                    )
+            rows.append((f"{e.code} — cierre", e.entrega, cierre_nota))
+        if e.nota_docente:
+            rows.append(
+                (
+                    f"{e.code} — límite nota docente",
+                    e.nota_docente,
+                    f"Fecha límite de ingreso de la nota de {e.code} ({etiqueta}).",
                 )
+            )
+    rows.sort(key=lambda r: r[1])
     return rows
 
 
 def as_json_dict() -> dict:
-    """Snapshot serializable de todas las fechas (para docs / depuración)."""
+    """Snapshot serializable de todo el modelo (docs / depuración)."""
     load_carga()
-    out: dict[str, Any] = {"regla": REGLA_RESUMEN, "cursos": {}}
+    out: dict[str, Any] = {"regla": REGLA_RESUMEN, "fuente": "CDigital · auditoría 2026-08-10",
+                           "cursos": {}}
+
+    def _item(e: EntregaAca) -> dict:
+        return {
+            "id": e.id,
+            "code": e.code,
+            "tipo": e.kind,
+            "corte": e.corte,
+            "weight": e.weight,
+            "apertura": e.apertura.isoformat(),
+            "entrega": e.entrega.isoformat(),
+            "nota_docente": e.nota_docente.isoformat() if e.nota_docente else None,
+        }
+
     for key in ACA_COMPONENTES:
         data = entregas_curso(key)
         if isinstance(data, dict):
-            out["cursos"][key] = {
-                g: [
-                    {
-                        "id": e.id,
-                        "code": e.code,
-                        "weight": e.weight,
-                        "apertura": e.apertura.isoformat(),
-                        "entrega": e.entrega.isoformat(),
-                        "nota_docente": e.nota_docente.isoformat() if e.nota_docente else None,
-                    }
-                    for e in items
-                ]
-                for g, items in data.items()
-            }
+            out["cursos"][key] = {g: [_item(e) for e in items] for g, items in data.items()}
         else:
-            out["cursos"][key] = [
-                {
-                    "id": e.id,
-                    "code": e.code,
-                    "weight": e.weight,
-                    "apertura": e.apertura.isoformat(),
-                    "entrega": e.entrega.isoformat(),
-                    "nota_docente": e.nota_docente.isoformat() if e.nota_docente else None,
-                }
-                for e in data
-            ]
+            out["cursos"][key] = [_item(e) for e in data]
     return out
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Verificación del catálogo (corre al importar: los pesos deben sumar 100)
+# ─────────────────────────────────────────────────────────────────────────────
+def verificar_catalogo() -> None:
+    """Falla ruidosamente si el modelo deja de ser coherente con el aula."""
+    for key, comps in ACA_COMPONENTES.items():
+        ids = [c["id"] for c in comps]
+        if len(set(ids)) != len(ids):
+            raise ValueError(f"{key}: ids repetidos en ACA_COMPONENTES → {ids}")
+        total = round(sum(float(c["weight"]) for c in comps), 6)
+        if total != 100.0:
+            raise ValueError(
+                f"{key}: los pesos suman {total} y deben sumar 100 "
+                "(libro de calificaciones CDigital)"
+            )
+        for c in comps:
+            if c["kind"] not in KIND_LABEL:
+                raise ValueError(f"{key}/{c['id']}: kind desconocido {c['kind']!r}")
+            if int(c["corte"]) not in (1, 2, 3):
+                raise ValueError(f"{key}/{c['id']}: corte inválido {c['corte']!r}")
+        for corte, peso in PESOS_CORTE[key].items():
+            real = peso_corte(key, corte)
+            if round(real, 6) != round(float(peso), 6):
+                raise ValueError(
+                    f"{key}: corte {corte} suma {real} pero el aula declara {peso}"
+                )
+        grupos: list[str | None] = list(VENTANAS_POR_GRUPO.get(key) or {}) or [None]
+        for g in grupos:
+            tabla = _ventanas(key, g)
+            faltan = [i for i in ids if i not in tabla]
+            if faltan:
+                raise ValueError(f"{key} (grupo {g}): sin ventana para {faltan}")
+            for i in ids:
+                ap, cierre, nota = tabla[i]
+                if not (ap <= cierre <= nota):
+                    raise ValueError(
+                        f"{key}/{i} (grupo {g}): ventana incoherente "
+                        f"{ap} → {cierre} → nota {nota}"
+                    )
+
+
+verificar_catalogo()
 
 
 def main() -> None:
     import json
+
     print(REGLA_RESUMEN)
     print()
     for key in ACA_COMPONENTES:
         c = curso(key)
         print(f"=== {key} · {c['titulo_corto']} ===")
-        print(f"inicio={c['inicio']} recepcion={c['recepcion']} cierre={c['cierre']} "
-              f"weekday={DIAS[c['horario']['weekday']]}")
+        print(
+            f"inicio={c['inicio']} recepcion={c['recepcion']} cierre={c['cierre']} "
+            f"weekday={DIAS[c['horario']['weekday']]}"
+        )
         print(resumen_tabla_markdown(key))
         print()
     print(json.dumps(as_json_dict(), ensure_ascii=False, indent=2))

@@ -14,6 +14,20 @@
 
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 1** | Cuestionario | 1 | 6% | **Abre hoy** la ventana en CDigital |
+| **ACA Final** | Tarea | 3 | 32,8% | **Abre hoy** la ventana en CDigital |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “Aviso de plataforma: **Quiz 1** ya está **abierto** en CDigital, en la sección del corte 1. Es un **cuestionario** y vale **6%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
+> “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32,8%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
+
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck de **encuadre**, 21 slides — no es el mapa del curso)
 
 | Slide | Título en el PPTX | Fase |
@@ -50,7 +64,7 @@
 
 🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*
 
-> Esta sesión se cae si el Padlet no abre, si el espacio de entrega no existe o si usted no sabe dónde está el enunciado de la ACA 1. Todo lo de abajo se deja listo **antes** de entrar al Meet.
+> Esta sesión se cae si el Padlet no abre, si el espacio de entrega no existe o si usted no puede mostrar en pantalla los **ítems reales del libro de calificaciones** (Quiz 1 6% + Parcial 1 24% en el primer corte). Todo lo de abajo se deja listo **antes** de entrar al Meet.
 
 #### 1. Qué debe tener abierto y probado
 | Qué | Para qué lo necesita hoy |
@@ -59,7 +73,8 @@
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y logística de periodo (grupo, fechas, evaluación) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 21 slides, en orden |
 | **Padlet oficial** abierto y probado en una pestaña | Rompehielos; el link se pega en el chat apenas empiece |
-| Enunciados de las **ACAs** (`Clases/Recursos/ACAs/`) | Ábralos en pantalla: las **fechas exactas viven ahí**, no en la deck |
+| **Libro de calificaciones** del aula, abierto en otra pestaña | Es la fuente de los nombres, tipos y pesos que va a anunciar hoy: los ítems se muestran, no se describen de memoria |
+| Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Es la única entrega documental del curso; la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs, sin instalar Office |
 | **Meet** de la serie, 10 minutos antes | Recibir a quien llega temprano y probar audio |
 | Lista del grupo | Saludar por nombre y registrar asistencia |
@@ -76,16 +91,17 @@
 Es la única clase donde usted “vende” el curso. Hable despacio, use el nombre de quien participa y explique cada acuerdo **con la razón detrás**, no como lista de prohibiciones. Un encuadre bien hecho ahorra medio periodo de preguntas repetidas.
 
 #### Qué proyectar en pantalla (y en qué orden)
-Deje **cuatro pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** `Clases/Recursos/ACAs/` con el enunciado de la ACA 1 abierto → **4.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
-Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.
+Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer en pantalla los ítems con su nombre y su peso → **4.** `Clases/Recursos/ACAs/` con el enunciado de la **ACA Final** → **5.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
+Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.
 
 #### Si un estudiante pregunta… (dudas reales del primer día)
 | Si un estudiante pregunta… | Usted responde… |
 | :--- | :--- |
 | “¿Hoy no vamos a ver tema?” | “Hoy es el encuadre: cómo trabajamos, cómo se evalúa y quiénes somos. El tema arranca la próxima sesión, y la lectura de esta semana es la base.” |
 | “¿Esta materia se pierde fácil?” | “Se pierde por no entregar, casi nunca por escribir mal. Quien entrega los tres cortes, pasa; el riesgo es dejar todo para la última semana.” |
-| “¿Puedo trabajar solo o toca en grupo?” | “El artículo de este curso es individual, salvo que el enunciado de la ACA diga otra cosa. Está en `Clases/Recursos/ACAs/`.” |
+| “¿Puedo trabajar solo o toca en grupo?” | “El artículo de este curso es individual, salvo que el enunciado de la **ACA Final** diga otra cosa. Y los cuestionarios —quices y parciales— son **siempre individuales**.” |
+| “¿Los quices y los parciales son en clase?” | “Sí: son cuestionarios de CDigital que cierran el mismo día de la sesión, y por eso les reservo tiempo en clase. El que falte ese día pierde el ítem, así que la asistencia aquí sí pesa en la nota.” |
 | “¿Me sirve un trabajo de otro semestre?” | “Puede partir de un tema suyo, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica.” |
 | “¿La clase se graba?” | Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre publicados en CDigital”. |
 | “¿Puedo usar ChatGPT para escribir?” | “Como apoyo sí, y se declara en una línea al final del documento. Pero verifique las fuentes: inventa citas. Lo que usted no pueda explicar en voz alta, no le sirve.” |
@@ -101,7 +117,7 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
 | 1️⃣ Apertura, agenda y presentación del Docente | 10 | min 00:00 – 10:00 |
 | 2️⃣ Preséntate: rompehielos en Padlet | 10 | min 10:00 – 20:00 |
 | 3️⃣ Recorrido del curso: cómo trabajamos y qué se llevan | 14 | min 20:00 – 34:00 |
-| 4️⃣ Las ACAs, cómo se entrega e integridad académica | 18 | min 34:00 – 52:00 |
+| 4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad | 18 | min 34:00 – 52:00 |
 | 5️⃣ Acuerdos, encargo autónomo y cierre | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
@@ -158,13 +174,17 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
 
 **Pregunte a dos estudiantes:** “¿en qué semana creen que se empieza a escribir el artículo?”. Conviene que la respuesta —**esta semana**— la digan ellos.
 
-#### 4️⃣ Las ACAs, cómo se entrega e integridad académica (~18 min) — Slides 5 y 10–15 (ACAs · entrega · integridad · IA · herramientas · ayuda)
-**Protagonista:** Docente, compartiendo pantalla (CDigital + enunciados + plantilla APA).
+#### 4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad (~18 min) — Slides 5 y 10–15 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)
+**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
-> “**Slide 5 — LAS ACAs.** Volvamos un momento a esta tabla: son tres entregas, una por corte, y ahí ven cuánto pesa cada una. Los porcentajes son del reglamento. Las **fechas exactas no están en esta presentación a propósito**, porque se desactualizan: viven en el enunciado, en `Clases/Recursos/ACAs/`, y en CDigital.”
+> “**Slide 5 — Cómo se evalúa este curso.** Miren la tabla, pero escuchen esto porque es lo que decide la nota: en el aula **no hay tres trabajos escritos**. hay **Quiz 1 6% + Parcial 1 24%** en el primer corte, **Quiz 2 9% + Parcial 2 21%** en el segundo y **ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%** en el tercero. Los quices y los parciales son **cuestionarios de CDigital**; la ACA Final es la **única tarea con documento**; y la **coevaluación es un foro**, o sea que hay que escribir en él.”
 
-> “**Slide 10 — Las ACAs una por una.** Lo importante es qué se mira en cada una; lean la última columna, la de *flojo contra bueno*. La ACA 1 no pide páginas, pide que el problema se entienda sin conocerlos. La ACA 2 se juega en la pregunta: si se responde con sí o no, está mal formulada. La ACA 3 pide que las fuentes trabajen, no que decoren.”
+> “Lo voy a decir de la forma que a ustedes les importa: los **cuestionarios suman 65,6% del curso**, más que el documento. El **Parcial 1**, solo él, vale 24%. Quien viene a clase y responde, pasa; quien se guarda todo para el documento del final, no alcanza.”
+
+> “**Slide 10 — ítem por ítem.** Los quices y los parciales caen **en día de clase**: se abren aquí, tienen tiempo y cierran el mismo día, así que faltar a esa sesión es perder ese ítem. La **ACA Final** es distinta: es el documento acumulativo, se sube en PDF y cierra en la fecha de recepción del periodo. La **autoevaluación** se diligencia y la **coevaluación** se participa; las dos abren al final y son individuales.”
+
+> “Las **fechas exactas no están en esta presentación a propósito**, porque se desactualizan: viven en el ítem de CDigital y en el enunciado. Ábranlas hoy mismo y pásenlas a su calendario con alarma.”
 
 > “**Slide 11 — Cómo se entrega.** Esto es puro procedimiento y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre de archivo `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Apellido en el nombre del archivo, PDF, CDigital. Y verifiquen el estado: **subido no es entregado**.”
 
@@ -202,12 +222,15 @@ Modelar el paso 4 en vivo, treinta segundos, evita la mitad de las preguntas de 
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 1** (Cuestionario · 6% · corte 1) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
+- [ ] **ACA Final** (Tarea · 32,8% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
 - [ ] **Lectura autónoma U1–U2 publicada en CDigital** (sin eso el encargo de hoy no se puede cumplir)
 - [ ] **Padlet** oficial probado y el link listo para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 - [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)
 - [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 21 slides)
-- [ ] Enunciado de la **ACA 1** abierto (`Clases/Recursos/ACAs/`) y **plantilla APA CUN** lista para mostrar en Google Docs
+- [ ] **Libro de calificaciones** del aula abierto (nombres, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar
+- [ ] **Plantilla APA CUN** lista para mostrar en Google Docs
 - [ ] Lista del grupo para saludar por nombre y registrar asistencia
 - [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)
 

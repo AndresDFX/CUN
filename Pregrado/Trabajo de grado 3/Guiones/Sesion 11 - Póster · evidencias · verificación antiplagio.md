@@ -11,6 +11,18 @@
 - **PPTX estudiante:** `Clases/Sesion 11 - Póster · evidencias · verificación antiplagio/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 3** | Cuestionario | 3 | 4% | **Abre hoy** la ventana en CDigital |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “Aviso de plataforma: **Quiz 3** ya está **abierto** en CDigital, en la sección del corte 3. Es un **cuestionario** y vale **4%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **25 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -173,6 +185,7 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 3** (Cuestionario · 4% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 11 - Póster · evidencias · verificación antiplagio/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

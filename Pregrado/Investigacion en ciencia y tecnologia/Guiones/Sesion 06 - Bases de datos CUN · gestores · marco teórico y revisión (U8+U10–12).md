@@ -11,6 +11,23 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 3** | Cuestionario | 3 | 4% | **Cierra hoy** — se aplica en clase (~10 min reservados en el plan) |
+| **Autoevaluación** | Cuestionario | 3 | 1,6% | **Abre hoy** — se diligencia en clase (~4 min reservados) |
+| **Coevaluación** | Foro | 3 | 1,6% | **Abre hoy** — se participa en el foro en clase (~4 min reservados) |
+| **ACA Final** | Tarea | 3 | 32,8% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA Final** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**18 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **25 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -96,10 +113,11 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Bases y gestores | 14 | min 06:00 – 20:00 |
-| 3️⃣ Criterios de selección de fuentes | 10 | min 20:00 – 30:00 |
-| 4️⃣ Taller de búsqueda + fichas | 22 | min 30:00 – 52:00 |
-| 5️⃣ Cierre del ciclo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Bases y gestores | 9 | min 06:00 – 15:00 |
+| 3️⃣ Criterios de selección de fuentes | 9 | min 15:00 – 24:00 |
+| 4️⃣ Taller de búsqueda + fichas | 10 | min 24:00 – 34:00 |
+| 5️⃣ Quiz 3 · Autoevaluación · Coevaluación en CDigital (se aplica en clase) | 18 | min 34:00 – 52:00 |
+| 6️⃣ Cierre del ciclo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -113,7 +131,7 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 
 > “**OBJETIVOS.** Vamos a buscar bien, a citar en APA 7 con ZoteroBib y a avanzar una página de marco que responda a su pregunta. Tengan abierto su planteamiento de la Sesión 05: el marco es su continuación, no un tema nuevo.”
 
-#### 2️⃣ Bases y gestores (~14 min) — Exposición del concepto
+#### 2️⃣ Bases y gestores (~9 min) — Exposición del concepto
 **Protagonista:** Docente (demo en pantalla).
 
 **En pantalla:** Google Académico, SciELO, Redalyc, biblioteca CUN (login) y ZoteroBib.
@@ -125,7 +143,7 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 
 > “**ENFOQUE DE HOY.** Para citar no instalamos nada: **ZoteroBib**, en zbib.org. Pego un DOI o un título, me arma el APA 7 y lo copio a Google Docs. Cero Mendeley de escritorio, cero plugins.”
 
-#### 3️⃣ Criterios de selección de fuentes (~10 min) — Modelación en pantalla
+#### 3️⃣ Criterios de selección de fuentes (~9 min) — Modelación en pantalla
 **Protagonista:** Docente (modela una ficha de lectura).
 
 **En pantalla (Google Docs):** plantilla de ficha de lectura.
@@ -147,11 +165,11 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 
 > **En pantalla:** Búsqueda en español/portugués; abrir 1 artículo de acceso abierto.
 
-#### 4️⃣ Taller de búsqueda + fichas (~22 min) — Taller
+#### 4️⃣ Taller de búsqueda + fichas (~10 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~22 minutos. En `S06_MarcoRevision_Apellido`: (1) busquen en Scholar y en SciELO o Redalyc y elijan **5 fuentes** pertinentes; (2) hagan una **ficha de lectura** por fuente; (3) generen las 5 citas en APA 7 con ZoteroBib; (4) escriban una página de marco organizada por sus **constructos**, citando esas fuentes.”
+> “**TALLER.** ~10 minutos. En `S06_MarcoRevision_Apellido`: (1) busquen en Scholar y en SciELO o Redalyc y elijan **5 fuentes** pertinentes; (2) hagan una **ficha de lectura** por fuente; (3) generen las 5 citas en APA 7 con ZoteroBib; (4) escriban una página de marco organizada por sus **constructos**, citando esas fuentes.”
 
 > “Criterio de éxito: cada fuente responde a un constructo de su pregunta, las citas están en APA 7 y el marco no es un collage: se lee como argumento.”
 
@@ -172,7 +190,45 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 > **En pantalla:** Pegar 5 referencias APA 7 y redactar la página de marco agrupada por constructos.
 
 
-#### 5️⃣ Cierre del ciclo (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Quiz 3 · Autoevaluación · Coevaluación en CDigital (se aplica en clase) (~18 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **18 min** y por eso se recortan: Bases y gestores 14→9 min, Criterios de selección de fuentes 10→9 min, Taller de búsqueda + fichas 22→10 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 3** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **diez minutos** son para **Quiz 3**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **4%** del curso dentro del **corte 3**, que vale **40%**. El resto del corte 3 lo aportan **ACA Final** (32,8%), **Autoevaluación** (1,6%), **Coevaluación** (1,6%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 3** del aula, y abren el ítem **Quiz 3**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~7 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **Contexto del corte 3:** ya cerró **ACA Final**; si la nota todavía no está publicada, quedó pendiente de registro en el libro de calificaciones.
+
+**Y en el mismo bloque, los instrumentos individuales de cierre:**
+**Sin slides nuevas.** Se comparte el aula en pantalla para que nadie diga después que no encontró la actividad.
+
+**GUION LITERAL:**
+> “Los últimos **ocho minutos** son de ustedes y de la plataforma: **Autoevaluación** y **Coevaluación** ya están en CDigital y entre las dos valen **3,2%** del curso. Se pierden por no entrar, que es la forma más tonta de perder nota.”
+> “La **autoevaluación** es un **cuestionario**: se diligencia una vez, con criterios. No es ponerse cinco: es sustentar con qué evidencia se pone la nota que se pone — cumplimiento, calidad del avance y participación.”
+> “La **coevaluación** es un **foro**: hay que **escribir** en él. No se «diligencia»: se participa. Un comentario por compañero o por equipo, con un criterio concreto y algo accionable. ‘Buen trabajo’ no es coevaluar y no cuenta como participación.”
+
+**Operativa del Docente en esta fase:** abrir el aula en pantalla, mostrar la ruta de cada actividad, pedir que la abran **ahora** desde el celular o el computador y confirmar en voz alta quién ya la ve. Es el momento con más deserción silenciosa del periodo: se resuelve haciéndolo en clase, no anunciándolo.
+
+**Qué NO se hace:** dejar la coevaluación como «tarea de la casa» sin haberla abierto en clase, ni pedir que se coevalúen por el chat del Meet — lo que no queda en el foro de CDigital no existe para el libro de calificaciones.
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre del ciclo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -191,6 +247,10 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 3** (Cuestionario · 4% · corte 3) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
+- [ ] **Autoevaluación** (Cuestionario · 1,6%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] **Coevaluación** (Foro · 1,6%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
+- [ ] Nota de **ACA Final** (32,8%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 06 - Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12)/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

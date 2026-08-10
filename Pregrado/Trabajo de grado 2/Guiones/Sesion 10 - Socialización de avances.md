@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 10 - Socialización de avances/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 3** | Cuestionario | 3 | 4% | **Cierra hoy** — se aplica en clase (~10 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**10 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -84,10 +94,11 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre | 6 | min 00:00 – 06:00 |
-| 2️⃣ Exposición del concepto | 14 | min 06:00 – 20:00 |
-| 3️⃣ Modelación en vivo | 12 | min 20:00 – 32:00 |
-| 4️⃣ Taller aplicado al proyecto | 20 | min 32:00 – 52:00 |
-| 5️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
+| 2️⃣ Exposición del concepto | 12 | min 06:00 – 18:00 |
+| 3️⃣ Modelación en vivo | 12 | min 18:00 – 30:00 |
+| 4️⃣ Taller aplicado al proyecto | 12 | min 30:00 – 42:00 |
+| 5️⃣ Quiz 3 en CDigital (se aplica en clase) | 10 | min 42:00 – 52:00 |
+| 6️⃣ Cierre + autónomo | 8 | min 52:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -101,7 +112,7 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 
 > “**OBJETIVOS.** Salir con un guion de pitch de 3 minutos y con notas de feedback de sus compañeros. Tengan a la mano su documento para no inventar en vivo.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
+#### 2️⃣ Exposición del concepto (~12 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
@@ -125,11 +136,11 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 
 > **En pantalla:** Plantilla 3 min: problema → pregunta → avance → pedido de feedback; cronómetro en pantalla.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
+#### 4️⃣ Taller aplicado al proyecto (~12 min) — Taller
 **Protagonista:** Estudiantes (pitch + feedback) · Docente modera.
 
 **GUION LITERAL (consigna):**
-> “**TALLER.** ~20 minutos, en ronda. Cada quien: (1) da su **pitch de 3 minutos** con la estructura vista, cronómetro en pantalla; (2) al terminar, dos compañeros dan feedback con **fortaleza + pregunta + sugerencia**; (3) quien presentó **anota todo sin discutir**. Guarden las notas en `S10_Socializacion_Apellido`.”
+> “**TALLER.** ~12 minutos, en ronda. Cada quien: (1) da su **pitch de 3 minutos** con la estructura vista, cronómetro en pantalla; (2) al terminar, dos compañeros dan feedback con **fortaleza + pregunta + sugerencia**; (3) quien presentó **anota todo sin discutir**. Guarden las notas en `S10_Socializacion_Apellido`.”
 
 > “Criterio de éxito: el pitch cabe en 3 minutos y las notas de feedback son accionables, no aplausos.”
 
@@ -146,7 +157,31 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 > **En pantalla:** Si citan un referente en el pitch, tener el APA a la mano.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
+#### 5️⃣ Quiz 3 en CDigital (se aplica en clase) (~10 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **10 min** y por eso se recortan: Exposición del concepto 14→12 min, Taller aplicado al proyecto 20→12 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 3** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **diez minutos** son para **Quiz 3**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **4%** del curso dentro del **corte 3**, que vale **40%**. El resto del corte 3 lo aportan **ACA Final** (32,8%), **Autoevaluación** (1,6%), **Coevaluación** (1,6%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 3** del aula, y abren el ítem **Quiz 3**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~7 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -165,6 +200,7 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 3** (Cuestionario · 4% · corte 3) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 10 - Socialización de avances/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

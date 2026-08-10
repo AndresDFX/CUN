@@ -11,6 +11,16 @@
 - **PPTX estudiante:** `Clases/Sesion 02 - Creatividadinnovación en I+D · Design Thinking y técnicas/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz 1** | Cuestionario | 1 | 6% | **Cierra hoy** — se aplica en clase (~12 min reservados en el plan) |
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32,8% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**12 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -111,10 +121,11 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
 | 1️⃣ Encuadre + puente desde la sesión anterior | 6 | min 00:00 – 06:00 |
-| 2️⃣ Design Thinking + divergente/convergente | 13 | min 06:00 – 19:00 |
-| 3️⃣ Modelación de ideación (HMW + SCAMPER) | 12 | min 19:00 – 31:00 |
-| 4️⃣ Taller: ideación sobre su problema | 22 | min 31:00 – 53:00 |
-| 5️⃣ Cierre + trabajo autónomo | 7 | min 53:00 – 60:00 |
+| 2️⃣ Design Thinking + divergente/convergente | 11 | min 06:00 – 17:00 |
+| 3️⃣ Modelación de ideación (HMW + SCAMPER) | 12 | min 17:00 – 29:00 |
+| 4️⃣ Taller: ideación sobre su problema | 12 | min 29:00 – 41:00 |
+| 5️⃣ Quiz 1 en CDigital (se aplica en clase) | 12 | min 41:00 – 53:00 |
+| 6️⃣ Cierre + trabajo autónomo | 7 | min 53:00 – 60:00 |
 
 > **Suma:** **60 minutos** exactos.
 
@@ -137,7 +148,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 ---
 
-#### 2️⃣ Design Thinking + divergente/convergente (~13 min) — Protagonista: Docente
+#### 2️⃣ Design Thinking + divergente/convergente (~11 min) — Protagonista: Docente
 **Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que entiendan el ciclo DT y, sobre todo, que **divergir y converger son dos momentos distintos** que no se mezclan.
@@ -188,11 +199,11 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 > **En pantalla:** Solo si carga bien; si no, continuar en Excalidraw/Miro free.
 
-#### 4️⃣ Taller: ideación sobre su problema (~22 min) — Protagonista: Estudiantes
+#### 4️⃣ Taller: ideación sobre su problema (~12 min) — Protagonista: Estudiantes
 **Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos** y trabajan sobre SU problema. Cuatro pasos: (1) redacten **su HMW** con la fórmula de la pizarra; (2) generen **mínimo 8 ideas** —solos o en dúo— sin juzgar ninguna; (3) **elijan 1 o 2** y justifíquenlas con los tres criterios; (4) hagan un **boceto de 1 minuto** en Excalidraw —cajitas y flechas, feo está bien—. Al final le pido a **tres personas** que lean **solo su HMW** en 20 segundos. Criterio de éxito: si su HMW menciona al usuario y el dolor —y no la tecnología— vamos bien.”
+> “Pasamos a la **slide 5 — TALLER**. Tienen **12 minutos** y trabajan sobre SU problema. Cuatro pasos: (1) redacten **su HMW** con la fórmula de la pizarra; (2) generen **mínimo 8 ideas** —solos o en dúo— sin juzgar ninguna; (3) **elijan 1 o 2** y justifíquenlas con los tres criterios; (4) hagan un **boceto de 1 minuto** en Excalidraw —cajitas y flechas, feo está bien—. Al final le pido a **tres personas** que lean **solo su HMW** en 20 segundos. Criterio de éxito: si su HMW menciona al usuario y el dolor —y no la tecnología— vamos bien.”
 
 **Tabla de acompañamiento:**
 
@@ -206,7 +217,31 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 ---
 
-#### 5️⃣ Cierre + trabajo autónomo (~7 min) — Protagonista: Docente
+#### 5️⃣ Quiz 1 en CDigital (se aplica en clase) (~12 min) — Protagonistas: Estudiantes + Docente
+> **Replaneación de hoy (la hora no crece):** la fase de evaluación toma **12 min** y por eso se recortan: Design Thinking + divergente/convergente 13→11 min, Taller: ideación sobre su problema 22→12 min. Donde la consigna del taller diga otra cantidad de minutos, manda el plan de clase.
+
+**Sin slides nuevas.** Se comparte la pantalla del aula solo para mostrar dónde está el cuestionario; el resto de la fase el Docente no proyecta nada.
+
+**Antes de abrirlo (1 min, con el aula ya en pantalla):**
+- Verificar que **Quiz 1** esté **visible** para el grupo y con la configuración prevista: número de intentos, tiempo límite, orden aleatorio de preguntas y retroalimentación **diferida** (que no muestre respuestas antes del cierre).
+- Decir en voz alta la regla de conexión: si se cae el internet, **no se cierra la pestaña** y se avisa al Docente por el canal del curso **mientras la ventana sigue abierta**; después del cierre ya no hay nada que hacer desde el aula.
+- Recordar que es **individual**: el Docente responde fallas técnicas, no contenido.
+
+**GUION LITERAL:**
+> “Guarden lo que estén escribiendo. Los próximos **doce minutos** son para **Quiz 1**, que es un **cuestionario en CDigital** y **cierra hoy**: no queda abierto para la noche ni para mañana.”
+> “Pesa **6%** del curso dentro del **corte 1**, que vale **30%**. El resto del corte 1 lo aportan **Parcial 1** (24%). Con esto ya saben por qué no es un trámite.”
+> “Ruta exacta: entran al aula del curso en CDigital, la sección del **corte 1** del aula, y abren el ítem **Quiz 1**. Cuando terminen, la plataforma tiene que decirles **enviado**: un intento empezado y no enviado cuenta como no presentado.”
+> “Yo me quedo en el Meet con el micrófono abierto **solo** para fallas técnicas. Preguntas de contenido no las respondo mientras el cuestionario corre; las dejamos para el cierre.”
+
+**Qué hace el Docente mientras corre (~9 min):** mirar el chat del Meet, anotar quién reporta falla técnica (nombre y hora: es la evidencia para cualquier reclamación posterior) y **no** empezar a calificar todavía. Si el grupo termina antes, se adelanta el cierre de la sesión: no se rellena con contenido nuevo.
+
+**Si alguien no lo presenta:** el estudiante avisa **antes** del cierre por el canal del curso; el Docente verifica en el aula si el intento quedó abierto y resuelve con el reglamento en la mano. Nada se arregla “después” por WhatsApp ni por correo personal.
+
+**Cierre de la fase (1 min):** “¿Todos vieron el mensaje de **enviado**? Quien NO lo haya visto, escríbalo en el chat ahora, no cuando ya se haya cerrado.”
+
+> **El orden lo decide el Docente:** si el grupo llega disperso, esta fase se puede aplicar justo después del encuadre y dejar el taller al final; lo que no se puede es dejarla sin tiempo propio.
+
+#### 6️⃣ Cierre + trabajo autónomo (~7 min) — Protagonista: Docente
 **Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
@@ -237,6 +272,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 ---
 
 ✅ **Checklist del docente antes de clase**
+- [ ] **Quiz 1** (Cuestionario · 6% · corte 1) publicado en CDigital con intentos, tiempo límite y retroalimentación diferida ya configurados
 - [ ] Pantallazos en `Guiones/Capturas/` abiertos
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/Sesion 02 - Creatividadinnovación en I+D · Design Thinking y técnicas/Presentacion.pptx`

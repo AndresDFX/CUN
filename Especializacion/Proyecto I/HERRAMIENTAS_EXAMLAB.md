@@ -11,8 +11,15 @@
 | Plataforma oficial CUN | **CDigital (Moodle)** — no negociable |
 | Herramienta evaluada | **ExamLab** (`examlab.lovable.app`) |
 | Eje de este documento | **HERRAMIENTAS** (con qué se dicta y se acompaña) |
-| Fecha | 2026-08-08 |
+| Evaluación (aula CDigital) | Nota única Art. 41, operada en **3 cortes 25 / 25 / 50**: **Quiz** 25% (cuestionario) · **ACA 1** 25% (tarea) · **ACA FINAL** 42% (tarea) + **Autoevaluación** 4% (cuestionario) + **Coevaluación** 4% (**foro**) |
+| Fecha | 2026-08-08 · **revisado 2026-08-10** contra el aula |
 | Estado | **Borrador para aprobación docente** |
+
+> ### ⚠️ Nota del 2026-08-10 — cómo se llaman las cosas en el aula
+>
+> La auditoría del libro de calificaciones (`AUDITORIA CDigital 2026-08-10.md` §2) mostró que **el aula nombra los ítems distinto** de este documento y del material: lo que aquí es **ACA 1** es el ítem **«Quiz»** (cuestionario, 25%), **ACA 2** es la **«ACA 1»** del aula (tarea) y **ACA 3** es la **«ACA FINAL»** (tarea). La **coevaluación es un FORO** (se participa) y la **autoevaluación un cuestionario**. **Los pesos y las fechas no cambiaron** (siguen las de Coordinación); lo que cambia es a qué ítem se le entra la nota. Cuando este documento diga «registrar ACA1/2/3 como actividad externa», mapear con esa equivalencia.
+>
+> Segunda corrección: auto y coevaluación **no son exclusivas de Proyecto I** — existen también en los 4 cursos de pregrado, con peso menor. Y las ventanas oficiales son **coevaluación 09–15/11** y **autoevaluación 16–22/11** (este documento traía 10–16/11 y 17–22/11).
 
 > **Este documento COMPLEMENTA, no reemplaza, a [`./PLAN_VIABILIDAD_EXAMLAB.md`](./PLAN_VIABILIDAD_EXAMLAB.md).**
 > Ese plan analizó el curso por el eje de las **ENTREGAS** y concluyó *"viable condicionado — ExamLab como complemento de CDigital, nunca como reemplazo"*. Esa conclusión se mantiene íntegra y **no se re-discute acá**: la entrega oficial de ACA1/2/3, la coevaluación y la autoevaluación siguen en CDigital.
@@ -273,7 +280,7 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 **Tema.** Lectura de cierre (*"¿el documento cuenta una sola historia?"*); checklist de integración; coevaluación **formativa** entre pares con rúbrica breve de 4 criterios; puente a Proyecto II. **Es la última sesión sincrónica** — después no hay más encuentros hasta el 22/11.
 
-**Actividad.** Taller de 20 min: **intercambian 1 sección con otro equipo** → **3 comentarios accionables** → ajustes. Entregable: *"lista de verificación firmada por el equipo + ajustes"*. Fuera de sesión: coevaluación (10–16/11) y autoevaluación (17–22/11), **individuales, en CDigital**.
+**Actividad.** Taller de 20 min: **intercambian 1 sección con otro equipo** → **3 comentarios accionables** → ajustes. Entregable: *"lista de verificación firmada por el equipo + ajustes"*. Fuera de sesión: **coevaluación (09–15/11, foro)** y **autoevaluación (16–22/11, cuestionario)**, individuales, en CDigital — fechas oficiales de Coordinación.
 
 **Herramienta.**
 
@@ -351,7 +358,7 @@ Dos límites a conocer: es **autodeclarado** (un click marca presente sin abrir 
 
 ### 5.4 Alerta temprana → encender el semáforo con los ACA como items externos
 
-**Cómo.** Crear ACA1/2/3 (+ coevaluación y autoevaluación) como actividades externas con su `due_date`.
+**Cómo.** Crear los **5 ítems del aula** como actividades externas con su `due_date`: **Quiz** (= ACA 1 del material) · **ACA 1** (= ACA 2) · **ACA FINAL** (= ACA 3) · **Coevaluación** (foro) · **Autoevaluación**.
 **Qué se gana.** Tres cosas de golpe: el semáforo deja de estar ciego y lista a quién buscar esta semana con el motivo escrito; los recordatorios automáticos de ventana se activan; y las ventanas aparecen en el `.ics` del estudiante.
 **Qué se paga y hay que hacerlo bien.** El semáforo deriva las actividades **de las entregas existentes**: sin items, solo puede encenderse la inasistencia y —como hace falta cruzar **dos** motivos para el rojo— **nunca pasa de ámbar**. Y el motor es **por estudiante, no por equipo**: con un solo envío grupal, los otros 2 integrantes figuran como "no entregó". ⚠️ **Crear esos items con peso 0** si solo se usan para seguimiento: un item con peso y sin nota **cuenta como 0 con su peso completo** y hunde el consolidado.
 

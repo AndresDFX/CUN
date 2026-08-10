@@ -7,11 +7,24 @@
 
 📌 **De esta sesión**
 - **Sesión:** **08** · **Tema:** Diseño metodológico: paradigma, enfoque y alcance
-- **Detalle:** ESP329 U5 · Adelantar metodología antes de festivos de ACA3.
+- **Detalle:** ESP329 U5 · Adelantar metodología antes de festivos de ACA FINAL.
 - **PPTX estudiante:** `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
+
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **ACA 1** | Tarea | 2 | 25% | **Ya cerró** — hoy toca devolución y registro de la nota |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “**ACA 1** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
+
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
@@ -57,7 +70,7 @@
 El error más caro es el desajuste pregunta–método. Una pregunta que busca comprender significados (“¿cómo VIVEN los docentes…?”) con una encuesta de escalas cerradas está rota; y una pregunta que busca magnitudes (“¿en qué MEDIDA…?”) con tres entrevistas también. El enfoque no se elige por gusto: se deriva de la pregunta.
 
 #### 3. Por qué se adelanta aquí (sesión puente)
-Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3, que por los festivos tienen solo dos lunes sincrónicos. Adelantar hoy da colchón para las tutorías extra de esas semanas.
+Esta sesión anticipa la metodología antes de las semanas más cargadas del tramo de la **ACA FINAL**, que por los festivos tienen solo dos lunes sincrónicos. Adelantar hoy da colchón para las tutorías extra de esas semanas.
 
 #### 4. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
@@ -90,7 +103,7 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 **Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 08**. Cerramos el marco referencial y hoy damos el salto al **diseño metodológico**. Adelantamos a propósito, porque las semanas de ACA3 tienen menos lunes por los festivos.”
+> “Buenas tardes, **Sesión 08**. Cerramos el marco referencial —que ya quedó entregado en la **ACA 1**— y hoy damos el salto al **diseño metodológico**. Adelantamos a propósito, porque las semanas de la **ACA FINAL** tienen menos lunes por los festivos.”
 > “Hoy eligen el ‘cómo’ tentativo de su investigación: paradigma, enfoque y alcance. Insisto en ‘tentativo’ y en ‘propuesto’: hoy no aplicamos absolutamente nada.”
 
 #### 2️⃣ Enfoque y alcance (~14 min) — Protagonista: Docente
@@ -157,6 +170,7 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 2. **Éxito:** justificación explícita de coherencia con la pregunta.
 
 ✅ **Checklist antes de clase**
+- [ ] Nota de **ACA 1** (25%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs

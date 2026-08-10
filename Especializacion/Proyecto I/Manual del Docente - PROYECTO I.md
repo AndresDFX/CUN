@@ -65,11 +65,11 @@ Aula invertida · Aprendizaje Basado en Problemas · microaprendizaje · trabajo
 ### 1.4 Guion de las sesiones (ESP329 × calendario AFI)
 Ver fechas en `Calendario de clases (oficial).md`. El AFI exige **frecuencia semanal** (salvo festivo); el **contenido curricular** son las 7 unidades del ESP329.
 Cada guion en `Guiones/Sesion NN - ….md` (**solo Markdown**; sin `.docx`) cierra con un **checklist post-clase / seguimiento AFI**: (1) **tú** diligencias el registro de sesión/tutoría **dentro de 24h** con link de grabación — clave `links_afi.formulario_registro_sesiones_docente` en `config/universidades/cun.json` (solo docente); (2) en tutoría recuerdas el formulario de asistencia del **estudiante** — `links_afi.formulario_asistencia_tutorias_estudiante`. **Si Coordinación cambia los URLs el próximo semestre, actualiza solo `cun.json` y regenera.** Solo guiones `.md`: `python "Especializacion/Proyecto I/Guiones/_regen_guiones_proyecto1.py"` o `python config/slides/build_sesion_material.py proyecto1 all --guion-only`.
-- **ACA1 (25%) — U2–U3**: problema/pregunta (S02) → objetivos/justificación/alcances (tutoría de esa semana; S03 los amplía tras el cierre). **U1 no se dicta**: va como lectura autónoma de la S01.
-- **ACA2 (25%) — U4**: antecedentes → marco teórico → conceptual/contextual → legal/APA.
+- **ACA1 (25%) — U2–U3** *(aula: ítem «Quiz», cuestionario)*: problema/pregunta (S02) → objetivos/justificación/alcances (tutoría de esa semana; S03 los amplía tras el cierre). **U1 no se dicta**: va como lectura autónoma de la S01.
+- **ACA2 (25%) — U4** *(aula: ítem «ACA 1», tarea)*: antecedentes → marco teórico → conceptual/contextual → legal/APA.
 - **Puente (05/10) — U5**: adelantar diseño metodológico antes de festivos de ACA3.
-- **ACA3 (42%) — U5–U7** (solo 2 lunes sincrónicos): metodología completa + planeación/viabilidad + integración del anteproyecto.
-- **Cierre — U7**: coevaluación (4%) y autoevaluación (4%) según ESP329 / cronograma AFI. **No son ACAs**: son instrumentos individuales que cada estudiante diligencia en CDigital (tú los habilitas y registras la nota).
+- **ACA3 (42%) — U5–U7** *(aula: ítem «ACA FINAL», tarea)* (solo 2 lunes sincrónicos): metodología completa + planeación/viabilidad + integración del anteproyecto.
+- **Cierre — U7**: coevaluación (4%, **foro**) y autoevaluación (4%, **cuestionario**) según ESP329 / cronograma AFI. **No son ACAs**: son instrumentos individuales que cada estudiante participa/diligencia en CDigital (tú los habilitas y registras la nota).
 
 ### 1.5 Equipos de trabajo (regla que debes verificar tú)
 - **Máximo 3 estudiantes** por equipo (el instructivo de rúbricas dice máx. 3; el instructivo de configuración de Moodle dice mín. 1 – máx. 3 "sin excepción" — usa siempre el máximo de 3).
@@ -99,7 +99,7 @@ Sugerencias de la plantilla institucional: máx. 21 palabras, tono afirmativo, c
 | Calificación + retroalimentación cualitativa **y** cuantitativa de cada ACA | Antes de la "fecha límite para ingreso de nota" de cada una (07/09/2026, 12/10/2026, 16/11/2026) | Moodle (gradebook del curso) |
 | Registro de cada sesión sincrónica y cada tutoría, **dentro de 24h**, con el enlace directo de grabación (sin texto adicional en ese campo) | Continuo, todo el periodo | Formulario: https://forms.gle/6t6BXqQ2Kwmivpct8 (uso exclusivo docente, NO compartir con estudiantes) |
 | Actualización semanal de invitados al evento de Meet (primeras 3 semanas) | Semanas 1-3 | Google Calendar |
-| Habilitar Autoevaluación y Coevaluación individuales (**no son ACAs**: instrumentos que diligencia cada estudiante) | Ventanas oficiales (09-15/11 coevaluación; 16-22/11 autoevaluación) | Moodle |
+| Habilitar Autoevaluación (**cuestionario**) y Coevaluación (**foro**) individuales (**no son ACAs**: instrumentos que cada estudiante diligencia o en los que participa) | Ventanas oficiales (09-15/11 coevaluación; 16-22/11 autoevaluación) | Moodle |
 
 ### Al cierre del periodo (22/11/2026)
 | Qué | Plazo | Nota |
@@ -120,33 +120,37 @@ Sugerencias de la plantilla institucional: máx. 21 palabras, tono afirmativo, c
 
 Fuente: `Calendario de clases (oficial).md` (raíz de Proyecto I) → tabla "📅 Cronograma OFICIAL", tomada del `Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf` de Coordinación. **No recalcular con otro script** — la tabla que antes vivía aquí (calculada desde inicio 10/08) se retiró el 2026-08-09 por desviarse de estas fechas oficiales.
 
-| Componente | Apertura | Cierre | Fecha límite nota | % | Corte |
-| :--- | :--- | :--- | :--- | :---: | :---: |
-| **ACA 1** | 03/08/2026 | 30/08/2026 | 07/09/2026 | 25% | I |
-| **ACA 2** | 07/09/2026 | 04/10/2026 | 12/10/2026 | 25% | II |
-| **ACA 3** | 12/10/2026 | 08/11/2026 | 16/11/2026 | 42% | III |
-| **Coevaluación** (no es ACA) | 09/11/2026 | 15/11/2026 | 22/11/2026 | 4% | III |
-| **Autoevaluación** (no es ACA) | 16/11/2026 | 22/11/2026 | 22/11/2026 | 4% | III |
+| Componente (material) | Ítem en el aula (CDigital) | Tipo en el aula | Apertura | Cierre | Fecha límite nota | % | Corte |
+| :--- | :--- | :--- | :--- | :--- | :--- | :---: | :---: |
+| **ACA 1** | **Quiz** | Cuestionario | 03/08/2026 | 30/08/2026 | 07/09/2026 | 25% | I |
+| **ACA 2** | **ACA 1** | Tarea | 07/09/2026 | 04/10/2026 | 12/10/2026 | 25% | II |
+| **ACA 3** | **ACA FINAL** | Tarea | 12/10/2026 | 08/11/2026 | 16/11/2026 | 42% | III |
+| **Coevaluación** (no es ACA) | **Coevaluación** | **Foro** | 09/11/2026 | 15/11/2026 | 22/11/2026 | 4% | III |
+| **Autoevaluación** (no es ACA) | **Autoevaluación** | Cuestionario | 16/11/2026 | 22/11/2026 | 22/11/2026 | 4% | III |
 
-> **Las ACAs son tres** (ACA 1, ACA 2 y ACA 3). Coevaluación y autoevaluación son **instrumentos individuales de cierre** que cada estudiante diligencia en CDigital dentro de su ventana; no son entregables con rúbrica y no llevan el prefijo «ACA». En `config/cursos/fechas_entrega_aca.py` están marcados `kind="ventana"` (las ACAs, `kind="aca"`).
+> **Ojo con los nombres:** la auditoría del libro de calificaciones (2026-08-10) mostró que el aula nombra los ítems distinto — el corte I es un **Quiz** (25%), lo que el material llama ACA 2 es la **ACA 1** del aula y el anteproyecto final es la **ACA FINAL**. Las fechas no cambian (son las de Coordinación); lo pendiente es renombrar los enunciados. El puente documento ↔ ítem vive en `build_acas_estudiantes.ACA_ID_BY_CODE`.
+>
+> **Las ACAs son tres.** Coevaluación y autoevaluación son **instrumentos individuales de cierre** dentro de su ventana en CDigital (la coevaluación es un **foro**: se participa; la autoevaluación, un **cuestionario**); no son entregables con rúbrica y no llevan el prefijo «ACA». En `config/cursos/fechas_entrega_aca.py` son los ids `coev` y `auto` (`kind="foro"` / `kind="cuestionario"`), y su ventana sale de la tabla `VENTANAS["proyecto1"]`.
 
 ## PARTE 3 · QUÉ TE ENTREGAN LOS ESTUDIANTES (por equipo, máx. 3)
 
-### ACA 1 — Formulación del problema (25%, cierra 30/08/2026, nota máx. 07/09/2026)
+> **Nombres en el aula:** ACA 1 → ítem **«Quiz»** (cuestionario) · ACA 2 → ítem **«ACA 1»** (tarea) · ACA 3 → ítem **«ACA FINAL»** (tarea). Ver la tabla de la Parte 5. Los **enunciados del estudiante ya usan los nombres del aula** (realineados el 2026-08-10): `Quiz (25%) - guia del cuestionario.docx` · `ACA 1 (25%) - Formulacion del problema y fundamentacion referencial.docx` · `ACA FINAL (42%) - Anteproyecto integrado.docx`. Los encabezados que siguen abajo conservan la numeración del ESP329 para no romper la trazabilidad curricular.
+
+### ACA 1 — Formulación del problema (25%, cierra 30/08/2026, nota máx. 07/09/2026) · aula: **«Quiz»** (cuestionario)
 Planteamiento del problema · Pregunta de investigación · Objetivo general · Objetivos específicos · Justificación · Alcances y limitaciones · Referencias APA 7.
-**Enunciado estudiante:** `Clases/Recursos/ACAs/ACA 1 - Formulacion del problema.docx`
+**Enunciado estudiante:** `Clases/Recursos/ACAs/Quiz (25%) - guia del cuestionario.docx`
 
-### ACA 2 — Fundamentación referencial (25%, cierra 04/10/2026, nota máx. 12/10/2026)
+### ACA 2 — Fundamentación referencial (25%, cierra 04/10/2026, nota máx. 12/10/2026) · aula: **«ACA 1»** (tarea)
 Correcciones de ACA1 · Marco referencial (antecedentes —mínimo 6, nacionales e internacionales—, teórico, conceptual, contextual, legal si aplica) · Referencias APA 7.
-**Enunciado estudiante:** `Clases/Recursos/ACAs/ACA 2 - Fundamentacion referencial.docx`
+**Enunciado estudiante:** `Clases/Recursos/ACAs/ACA 1 (25%) - Formulacion del problema y fundamentacion referencial.docx`
 
-### ACA 3 — Diseño metodológico y anteproyecto FINAL (42%, cierra 08/11/2026, nota máx. 16/11/2026)
+### ACA 3 — Diseño metodológico y anteproyecto FINAL (42%, cierra 08/11/2026, nota máx. 16/11/2026) · aula: **«ACA FINAL»** (tarea)
 Correcciones de ACA1+ACA2 · Metodología completa (enfoque, tipo/alcance, diseño, población/muestra, plan de análisis, técnicas e instrumentos **propuestos, no aplicados**) · Cronograma · Presupuesto · Referencias APA 7.
 **Este es el producto de cierre**: debe ser el anteproyecto COMPLETO e integrado, no un fragmento nuevo.
-**Enunciado estudiante:** `Clases/Recursos/ACAs/ACA 3 - Diseno metodologico y anteproyecto final.docx`
+**Enunciado estudiante:** `Clases/Recursos/ACAs/ACA FINAL (42%) - Anteproyecto integrado.docx`
 
-### Coevaluación (4%, ventana 09-15/11) y Autoevaluación (4%, ventana 16-22/11) — **no son ACAs**
-Son **instrumentos individuales de cierre**, no entregables: **cada estudiante los diligencia** (tipo formulario) en Moodle/CDigital dentro de su ventana. No se sube documento, no usan plantilla APA, no son grupales y **no sustituyen la ACA 3**. Tú los habilitas, verificas cumplimiento y registras el 4% de cada uno antes del cierre de notas. (No aplican en Proyecto II ni en pregrado Art. 52.)
+### Coevaluación (4%, **foro**, ventana 09-15/11) y Autoevaluación (4%, **cuestionario**, ventana 16-22/11) — **no son ACAs**
+Son **instrumentos individuales de cierre**, no entregables: la coevaluación se **participa en un foro** y la autoevaluación se **diligencia como cuestionario** en Moodle/CDigital dentro de su ventana. No se sube documento, no usan plantilla APA, no son grupales y **no sustituyen la ACA 3**. Tú los habilitas, verificas cumplimiento y registras el 4% de cada uno antes del cierre de notas. (No aplican en Proyecto II. **Sí existen en los 4 cursos de pregrado**, con peso menor — la afirmación previa de que eran exclusivas de Proyecto I quedó desmentida por la auditoría del 2026-08-10.)
 **Instructivos para el estudiante:** `Clases/Recursos/ACAs/Autoevaluacion individual (4%) - instructivo.docx` · `Clases/Recursos/ACAs/Coevaluacion individual (4%) - instructivo.docx` (regen: `python config/slides/build_acas_estudiantes.py proyecto1`).
 
 ### Además, en cada tutoría: registro de asistencia del estudiante
@@ -167,7 +171,7 @@ El estudiante debe diligenciar **su propio** formulario de asistencia (distinto 
 1. Configuración del curso → Grupos → **Modo de grupo: Grupos visibles** · **Forzar modo de grupo: Sí**.
 2. Participantes → Grupos → Crear grupos automáticamente: esquema `Equipo@`, 3 miembros por grupo, rol Estudiante, **Asignar miembros: No asignación** (quedan vacíos).
 3. Crear actividad "Elección de grupo": máx. 3 integrantes, cierre "idealmente semana 2, máximo semana 3".
-4. ACA 1/2/3 → Entrega por grupos: **Sí**; Requerir pertenecer a grupo: **Sí**; Requerir que todos entreguen: **No**.
+4. Ítems del aula que reciben entrega grupal — **«ACA 1»** y **«ACA FINAL»** (nuestras ACA 2 y ACA 3) → Entrega por grupos: **Sí**; Requerir pertenecer a grupo: **Sí**; Requerir que todos entreguen: **No**. El ítem **«Quiz»** (nuestra ACA 1) está creado como **cuestionario**: resuelve primero cómo lo vas a operar (ver Parte 5) antes de configurar grupos ahí.
 5. Verificar: ningún equipo con más de 3, ningún estudiante sin grupo al terminar semana 3.
 ⚠️ **No cambies esta configuración después de recibir entregas** — puede desincronizar calificaciones.
 
@@ -189,10 +193,24 @@ El estudiante debe diligenciar **su propio** formulario de asistencia (distinto 
 
 ## PARTE 5 · EVALUACIÓN Y RÚBRICAS
 
-### Pesos (ESP329 — nota única Art. 41)
-ACA 1 **25%** · ACA 2 **25%** · ACA 3 / anteproyecto consolidado **42%** · Autoevaluación **4%** · Coevaluación **4%**.
+### Pesos (ESP329 — nota única Art. 41) y su ítem en el aula (CDigital)
 
-**Entregas ACA: tres** (ACA 1, ACA 2, ACA 3) — la DNI establece al menos tres entregas parciales y esa es la configuración operativa de Proyecto I. La autoevaluación y la coevaluación **no son ACAs**: son instrumentos individuales de cierre que diligencia el estudiante (ver Parte 3). Las tres ACAs son seguimiento formativo de un producto único y acumulativo: si ACA 3 evidencia que el estudiante incorporó correcciones y alcanzó resultados, el docente **puede ajustar favorablemente** ACA 1 y ACA 2 con trazabilidad en CDigital (criterio ESP329).
+| Componente (material / ESP329) | Ítem en el aula | Tipo de actividad | Peso | Corte del aula |
+|---|---|---|---:|:---:|
+| **ACA 1** — formulación del problema | **Quiz** | Cuestionario | **25%** | 1 (25%) |
+| **ACA 2** — fundamentación referencial | **ACA 1** | Tarea | **25%** | 2 (25%) |
+| **ACA 3** — anteproyecto consolidado | **ACA FINAL** | Tarea | **42%** | 3 (50%) |
+| **Autoevaluación** (no es ACA) | **Autoevaluación** | Cuestionario | **4%** | 3 (50%) |
+| **Coevaluación** (no es ACA) | **Coevaluación** | **Foro** | **4%** | 3 (50%) |
+
+Fuente de la columna del aula: auditoría del libro de calificaciones del **2026-08-10** (`AUDITORIA CDigital 2026-08-10.md` §2), cargada en `config/cursos/fechas_entrega_aca.py` → `ACA_COMPONENTES["proyecto1"]`. **Los pesos y las fechas no cambiaron**; lo que cambió es que ahora sabemos **cómo se llama cada cosa en el aula**, y ahí es donde entras la nota.
+
+Tres consecuencias operativas de esa auditoría:
+- **El primer corte del aula es un cuestionario («Quiz»), no una tarea.** Si lo configuras como entrega de documento, el ítem del libro de calificaciones queda sin actividad asociada. Decide cómo lo resuelves (crear la actividad como cuestionario y calificar el documento aparte, o pedirle a Coordinación el cambio de tipo) **antes del 30/08**.
+- **La coevaluación es un FORO:** el estudiante *participa*, no sube archivo. Habilítalo como foro con su ventana.
+- **A diferencia de pregrado, Proyecto I no tiene quices ni parciales adicionales:** los 5 ítems de la tabla son todo el libro de calificaciones. No busques un «Parcial 1» acá.
+
+**Entregas ACA: tres** (ACA 1, ACA 2, ACA 3) — la DNI establece al menos tres entregas parciales y esa es la configuración operativa de Proyecto I. La autoevaluación y la coevaluación **no son ACAs**: son instrumentos individuales de cierre que diligencia el estudiante (ver Parte 3); **sí existen también en los 4 cursos de pregrado**, con otro peso (allá 1,6% o 2% cada una), así que no las presentes como algo exclusivo de la especialización. Las tres ACAs son seguimiento formativo de un producto único y acumulativo: si ACA 3 evidencia que el estudiante incorporó correcciones y alcanzó resultados, el docente **puede ajustar favorablemente** ACA 1 y ACA 2 con trazabilidad en CDigital (criterio ESP329).
 
 ### Escala (AFI / rúbricas)
 | Rango | Nivel |
@@ -215,7 +233,9 @@ Cada una de las **tres ACAs** tiene su propia rúbrica de 5-6 criterios ponderad
 ## Checklist rápido para ti (marca antes de cada hito)
 - [x] Horario de la sesión sincrónica confirmado (lunes 8:00-10:00 pm).
 - [ ] Aula alistada completamente en la semana 1.
-- [ ] Grupos + "Elección de grupo" + ACA1/2/3 configuradas para entrega grupal — ANTES de habilitar entregas.
+- [ ] Grupos + "Elección de grupo" + los ítems **«ACA 1»** y **«ACA FINAL»** del aula configurados para entrega grupal — ANTES de habilitar entregas.
+- [ ] Decidido cómo se opera el ítem **«Quiz»** del primer corte (25%), que en el aula es un **cuestionario** y en el material es la ACA 1 (documento) — antes del 30/08.
+- [ ] Coevaluación creada como **foro** (no como cuestionario) con su ventana 09–15/11.
 - [ ] Evento de Meet creado (o .ics importado), coanfitrión Coordinación asignado, grabación habilitada, enlace publicado en CDigital.
 - [ ] Acuerdo Pedagógico diligenciado/socializado: https://forms.gle/EPHb7tbrEJTC6ey77
 - [ ] Clase del **10/08/2026** realizada y grabada.

@@ -90,8 +90,9 @@ QUE TRAER A LA SESION 02
      del texto y cuantas le faltan.
    - TRES COMPROMISOS concretos suyos para las proximas dos semanas.
 2. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
-3. Los ENUNCIADOS DE LAS ACAs abiertos, con las fechas de su grupo:
-   estan en Clases/Recursos/ACAs/.
+3. Las GUIAS DEL PRIMER CORTE leidas: 'Quiz 1 (6%) - guia del cuestionario' y
+   'Parcial 1 (24%) - guia del cuestionario', en Clases/Recursos/ACAs/, con las
+   fechas de su grupo. Son cuestionarios en el aula: no se sube archivo.
 4. Su ARTICULO abierto en la version vigente (una sola, no cinco copias) y su
    LISTA DE REFERENCIAS tal como va hoy.
 

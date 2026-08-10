@@ -11,6 +11,13 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Fase I de referentes de investigación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+**Hoy no cierra ni abre ningún ítem del libro de calificaciones.** La sesión es de contenido y avance; lo único que sigue corriendo es lo que está abajo.
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA Final** (Tarea · 32% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **20 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |

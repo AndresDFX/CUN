@@ -13,6 +13,18 @@
 
 > ⚠️ **ESP329 U1 (Fundamentos y enfoque de investigación) pasa a LECTURA AUTÓNOMA.** Hoy no se dicta: se encarga como trabajo de la semana y se retoma al abrir la Sesión 02. Si un estudiante reclama "no vimos nada", muéstrele el encargo de la slide **Antes de la Sesión 02**.
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+| Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
+| :--- | :--- | :---: | ---: | :--- |
+| **Quiz** | Cuestionario | 1 | 25% | Abierto: **cierra antes de la Sesión 03** |
+
+**Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
+> “Ojo con esto, que es plata: **Quiz** es un **cuestionario en CDigital** que **cierra antes de la Sesión 03** y pesa **25%** del curso — todo el corte 1 vale 25%. No cae en clase, así que nadie se lo va a recordar el día del cierre: agéndenlo ustedes hoy. Cuando lo resuelvan, verifiquen que la plataforma diga **enviado**.”
+
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (25%): **Quiz** (cuestionario, 25%); **corte 2** (25%): **ACA 1** (tarea, 25%); **corte 3** (50%): **ACA FINAL** (tarea, 42%), **Autoevaluación** (cuestionario, 4%), **Coevaluación** (foro, 4%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck de encuadre — 21 slides)
 
 | Slide | Título en el PPTX | Cuándo usarla |
@@ -41,7 +53,7 @@
 🎯 **Objetivos de la sesión**
 1. **Dejar claro** cómo funciona el curso: dos mitades del encuentro, avance escrito semanal y equipos de máximo 3.
 2. **Mostrar** el mapa de los 11 encuentros y el producto final: un único anteproyecto que crece entrega tras entrega.
-3. **Explicar** las tres ACAs, el procedimiento de entrega en CDigital y las reglas de integridad académica y uso de IA.
+3. **Explicar** cómo se califica el curso en CDigital —**Quiz** (primer corte), **ACA 1** (segundo) y **ACA FINAL** con auto y coevaluación (tercero)—, el procedimiento de entrega y las reglas de integridad académica y uso de IA.
 4. **Cerrar** con equipos tentativos conformados, canal de ayuda claro y el encargo de lectura autónoma para la Sesión 02.
 
 ---
@@ -52,14 +64,15 @@
 | :--- | :--- | :--- |
 | **Aula en CDigital** | Abierta, con el material de la sesión publicado y los tres espacios de entrega de ACA visibles | Los estudiantes van a preguntar dónde se sube; se muestra en pantalla, no se describe |
 | **Padlet del rompehielos** | Abierto en una pestaña y con el enlace copiado para pegar en el chat | El QR falla en celulares viejos; el enlace debe estar listo en 3 segundos |
-| **Enunciados de las ACAs** | Los tres abiertos desde `Clases/Recursos/ACAs/` | Se proyecta el enunciado real de la ACA 1, no un resumen |
+| **Libro de calificaciones del aula** | Abierto en otra pestaña | De ahí salen los nombres, tipos y pesos que se anuncian hoy. **El primer corte es un Quiz (cuestionario), no una entrega escrita**: hay que mostrarlo en pantalla |
+| **Enunciados de las ACAs** | `Clases/Recursos/ACAs/` (ACA 1 y ACA FINAL) | Se proyecta el enunciado real, no un resumen |
 | **Plantilla APA CUN** | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` abierta en Google Docs | Se modela en vivo cómo se trabaja el documento del equipo |
 | **Meet** | Iniciado 5 minutos antes, **grabación activada** y coanfitrión asignado | Se anuncia la grabación al abrir; sin grabación no hay evidencia de la sesión |
 | **Deck de Sesión 01** | `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` en modo presentador | 21 slides: el guion las referencia por número |
 | **Formulario de asistencia** | https://forms.gle/oZ8xCYiUo3KEWr1d9 copiado para el chat | Se pega apenas empieza la segunda hora |
 
 **Decisiones que el Docente debe traer tomadas (no se improvisan en el aula):**
-- Cómo nombrar los archivos de entrega (este guion usa `ACA1_Apellido1-Apellido2-Apellido3`).
+- Cómo nombrar los archivos de entrega (este guion usa `ACA1_Apellido1-Apellido2-Apellido3` para la ACA 1 y `ACAFinal_Apellido1-Apellido2-Apellido3` para la ACA FINAL).
 - Franja tentativa para las tutorías por equipo de la semana, para poder proponerla al cierre.
 - Qué hacer con quien llegue sin equipo: se anota su nombre y el Docente arma pareja/trío en la segunda hora.
 
@@ -93,7 +106,7 @@
 
 > "**Slide 1.** Esta primera sesión es distinta a todas las demás: **hoy no vemos tema**. Hoy usamos la hora en dejar clarísimo cómo funciona el curso, quién los acompaña, quiénes son ustedes y qué se les va a evaluar. El contenido del programa arranca la próxima sesión, y arranca en firme."
 
-> "**Slide 2 — AGENDA.** Cinco cosas: el curso, el Docente, ustedes, las ACAs y los acuerdos. La primera hora es esto. La segunda hora es tutoría: conformamos equipos y resolvemos dudas uno a uno."
+> "**Slide 2 — AGENDA.** Cinco cosas: el curso, el Docente, ustedes, **cómo se califica** y los acuerdos. La primera hora es esto. La segunda hora es tutoría: conformamos equipos y resolvemos dudas uno a uno."
 
 **Qué hacer:** verificar audio y pantalla compartida (1 min) · confirmar grabación en voz alta (30 s) · recorrer la agenda señalando cada punto (3 min).
 
@@ -144,11 +157,13 @@
 
 > "Los equipos son de **máximo tres personas** y se mantienen todo el curso. Sube un solo integrante, pero la nota es del equipo. ¿Se puede trabajar solo? Sí, y la carga es exactamente la misma. Decídanlo esta semana."
 
-> "**Slides 7 y 8 — el mapa completo.** Son once encuentros. Hoy, encuadre. De la 02 a la 03, problema, pregunta y objetivos: eso es la ACA 1. De la 04 a la 07, todo el marco referencial: antecedentes, teórico, conceptual, contextual y citación: eso es la ACA 2. De la 08 a la 10, la metodología y la integración: eso es la ACA 3. La 11 cierra con coevaluación y autoevaluación."
+> "**Slides 7 y 8 — el mapa completo.** Son once encuentros. Hoy, encuadre. De la 02 a la 03, problema, pregunta y objetivos. De la 04 a la 07, todo el marco referencial: antecedentes, teórico, conceptual, contextual y citación; **todo eso junto es lo que se entrega en la ACA 1**, la del segundo corte. De la 08 a la 10, la metodología y la integración: eso es la **ACA FINAL**. La 11 cierra con coevaluación y autoevaluación."
+
+> "Y falta la pieza que casi nadie ve venir: el **primer corte no es un documento, es un Quiz** —un cuestionario en CDigital que vale el **25% del curso** y que **cierra antes de la Sesión 03**—. Ya está abierto. Lo repito porque es el error más caro de este curso: la primera nota no se gana entregando un archivo, se gana entrando al aula y respondiendo ese cuestionario."
 
 > "Fíjense en algo: **cada sesión alimenta una entrega**. No hay clases decorativas. Si falta a una sesión, no perdió una charla: perdió un pedazo de su propio documento."
 
-> "**Slide 9 — qué se llevan al final.** Un solo archivo: **el anteproyecto**. No son tres trabajos distintos, es el mismo documento que crece. La ACA 3 es ese documento completo, no algo nuevo escrito la última semana. Va en la **plantilla APA CUN**, desde hoy, y les sirve después como punto de partida de **Proyecto II** y como base de lo que sustentarán al cerrar el programa."
+> "**Slide 9 — qué se llevan al final.** Un solo archivo: **el anteproyecto**. No son trabajos distintos, es el mismo documento que crece: lo que entregan en la **ACA 1** es su primera mitad, y la **ACA FINAL** es ese documento completo, no algo nuevo escrito la última semana. Va en la **plantilla APA CUN**, desde hoy, y les sirve después como punto de partida de **Proyecto II** y como base de lo que sustentarán al cerrar el programa."
 
 > "Y la frontera del curso, que repito ahora y voy a repetir todo el semestre: en **Proyecto I los instrumentos se proponen, nunca se aplican**. Aquí se diseña la encuesta; aplicarla es Proyecto II."
 
@@ -160,17 +175,21 @@
 **Slides:** 5 (LAS ACAs — QUÉ SE EVALÚA) → 10 (Las tres ACAs en detalle) → 11 (Cómo se entrega)
 
 **GUION LITERAL:**
-> "**Slide 5.** Estos son los pesos. No los memoricen: lo que importa es que **la última entrega es, por lejos, la que más pesa de las tres**, y que no es un trabajo nuevo: es todo lo anterior corregido e integrado. Quien haga bien las dos primeras ya tiene medio camino de la tercera."
+> "**Slide 5.** Estos son los pesos, y los nombres que van a ver en el aula son estos: **Quiz 25%** en el primer corte, **ACA 1 25%** en el segundo y **ACA FINAL 42% + Autoevaluación 4% + Coevaluación 4%** en el tercero. Retengan dos cosas: la **ACA FINAL es, por lejos, la que más pesa**, y no es un trabajo nuevo —es todo lo anterior corregido e integrado—; y el **primer corte se juega en un cuestionario**, no en un documento."
 
-> "**Slide 10 — qué se entrega en cada una y qué separa un buen trabajo de uno flojo.** ACA 1: problema, pregunta, objetivos, justificación, alcances y limitaciones. Un buen entregable permite señalar **a quién le duele algo y dónde**; uno flojo describe una tecnología de moda y nunca dice a quién le sirve. ACA 2: antecedentes —mínimo seis, nacionales e internacionales— y todo el marco. Un buen entregable **usa** cada fuente para responder a su pregunta; uno flojo pega resúmenes que no se hablan entre sí. ACA 3: el anteproyecto integrado. Un buen entregable se lee de portada a referencias sin contradecirse; uno flojo son tres capítulos escritos por tres personas con tres preguntas distintas."
+> "Esa es la sorpresa que quiero quitarles hoy: el **Quiz** ya está **abierto** en CDigital y **cierra antes de la Sesión 03**. Vale 25%, o sea el primer corte completo. Entren esta semana, mírenlo y resuélvanlo con tiempo: no hay reapertura por olvido."
 
-> "Las **fechas exactas y los criterios completos** no los voy a dictar: están en el enunciado de cada ACA, en `Clases/Recursos/ACAs/` y en CDigital. Ábranlos hoy mismo. — [proyectar el enunciado de la ACA 1 en pantalla]"
+> "**Slide 10 — qué se entrega y qué separa un buen trabajo de uno flojo.** La **ACA 1** recoge dos bloques: la formulación —problema, pregunta, objetivos, justificación, alcances y limitaciones— y el marco referencial con sus antecedentes, mínimo seis, nacionales e internacionales. Un buen entregable permite señalar **a quién le duele algo y dónde** y **usa** cada fuente para responder a su pregunta; uno flojo describe una tecnología de moda, nunca dice a quién le sirve y pega resúmenes que no se hablan entre sí. La **ACA FINAL** es el anteproyecto integrado: un buen entregable se lee de portada a referencias sin contradecirse; uno flojo son tres capítulos escritos por tres personas con tres preguntas distintas."
+
+> "Y el **Quiz** del primer corte no es un documento: es un cuestionario individual, con tiempo, sobre lo que trabajemos en las primeras sesiones. Se responde en la plataforma, y cuando terminen deben ver el mensaje de **enviado**: un intento abierto y sin enviar cuenta como no presentado."
+
+> "Las **fechas exactas y los criterios completos** no los voy a dictar: están en cada ítem de CDigital y en el enunciado, en `Clases/Recursos/ACAs/`. Ábranlos hoy mismo. — [proyectar en pantalla el **Quiz** dentro del aula y el enunciado de la **ACA 1**]"
 
 > "**Slide 11 — cómo se entrega, paso a paso.** Uno: trabajan la plantilla APA en **Google Docs**, un documento por equipo, con permiso de edición para todos. Dos: antes de entregar, **descargan en PDF**. Tres: nombran el archivo `ACA1_Apellido1-Apellido2-Apellido3`. Cuatro: **un solo integrante** lo sube en CDigital y los demás verifican que quedó cargado. Cinco: la portada lleva los **nombres completos de todos**; si falta uno, esa persona no tiene nota."
 
 > "Y la regla que evita el 90% de los problemas: **lo que no está en CDigital, no está entregado.** No recibo entregas por correo ni por WhatsApp. Si algo pasa, se avisa **antes** del cierre, no al día siguiente."
 
-**Qué hacer:** mostrar en vivo el espacio de entrega de la ACA 1 en CDigital · preguntar en voz alta "¿alguien no ve el espacio de entrega?" y esperar respuesta.
+**Qué hacer:** mostrar en vivo, en CDigital, **el Quiz del primer corte** y el espacio de entrega de la **ACA 1** · preguntar en voz alta "¿alguien no ve el Quiz en su aula?" y esperar respuesta: si alguien no lo ve, es un problema de matrícula o de grupo que hay que resolver esta misma semana.
 
 ---
 
@@ -216,7 +235,7 @@
 
 > "**Uno: lectura autónoma.** ESP329 U1 (Fundamentos y enfoque de investigación). Está publicada en CDigital. Hoy no la dictamos, la leen ustedes y **la retomamos al abrir la Sesión 02**. Mientras leen, anoten **tres términos** que no les queden claros: con esos tres arrancamos la próxima clase, así que tráiganlos escritos."
 
-> "**Dos:** confirmen su equipo, máximo tres personas. **Tres:** abran y lean completo el enunciado de la ACA 1. **Cuatro:** creen el documento del equipo en Google Docs con la plantilla APA y compártanlo con todos. **Cinco:** traigan una idea de tema **en una frase** y el contexto donde ocurre: una empresa, un aula, un proceso concreto."
+> "**Dos:** confirmen su equipo, máximo tres personas. **Tres:** entren al aula, **abran el Quiz del primer corte** para ver cuántas preguntas tiene y cuánto tiempo da, y lean completo el enunciado de la **ACA 1**. **Cuatro:** creen el documento del equipo en Google Docs con la plantilla APA y compártanlo con todos. **Cinco:** traigan una idea de tema **en una frase** y el contexto donde ocurre: una empresa, un aula, un proceso concreto."
 
 > "**Slide 18.** Y estas son las preguntas que siempre salen el primer día; las respondo ahora para que nadie se quede con la duda… [recorrer las tres cajas]. ¿Alguna otra antes de pasar a tutoría?"
 
@@ -229,7 +248,8 @@
 | Si un estudiante pregunta… | Usted responde… |
 | :--- | :--- |
 | "¿Esta materia se pierde fácil?" | "No se pierde por difícil: se pierde por entregar tarde o por subir un documento que nadie leyó antes. Quien trae avance cada semana llega al cierre del curso con el anteproyecto prácticamente listo." |
-| "¿Puedo trabajar solo?" | "Sí, pero la carga es la misma para uno que para tres y el equipo es de máximo tres. Decídalo esta semana: después de la ACA 1 no conviene cambiar de equipo ni de tema." |
+| "¿Puedo trabajar solo?" | "Sí, pero la carga es la misma para uno que para tres y el equipo es de máximo tres. Decídalo esta semana: una vez avanzada la ACA 1 no conviene cambiar de equipo ni de tema." |
+| "¿El Quiz también es en equipo?" | "No. El **Quiz es individual**, igual que la autoevaluación y la coevaluación. En equipo se entregan la **ACA 1** y la **ACA FINAL**." |
 | "¿Sirve un trabajo de otro semestre?" | "Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso." |
 | "¿La clase se graba?" | "Sí, el encuentro completo, y la grabación queda en CDigital. Si falta a una sesión puede verla, pero la tutoría de su equipo no se recupera con un video." |
 | "¿Ya puedo aplicar mi encuesta?" | "En Proyecto I no. Aquí se **propone** el instrumento; aplicarlo es Proyecto II, con aval previo. Si aplica algo ahora, no cuenta y le desordena el anteproyecto." |
@@ -249,7 +269,7 @@
 
 **Rutina de esta primera tutoría:**
 1. **Equipos (≈20 min).** Quien ya tenga equipo lo escribe en el chat: nombres completos, máximo tres. A quien esté solo, el Docente lo empareja según el tema tentativo que dejó en el Padlet.
-2. **Plataforma (≈15 min).** Con pantalla compartida: dónde está el material, dónde el espacio de entrega de la ACA 1, dónde la plantilla APA y cómo se comparte el documento del equipo en Google Docs.
+2. **Plataforma (≈15 min).** Con pantalla compartida: dónde está el material, **dónde está el Quiz del primer corte** —que ya corre—, dónde el espacio de entrega de la ACA 1, dónde la plantilla APA y cómo se comparte el documento del equipo en Google Docs.
 3. **Temas tentativos (≈15 min).** Dos o tres equipos leen su idea en una frase. El Docente devuelve **una sola** pregunta a cada uno: ¿quién tiene ese problema y dónde ocurre? No se corrige la idea todavía: eso es Sesión 02.
 4. **Agenda (≈10 min).** Se propone la franja de tutorías de la semana y cada equipo indica su disponibilidad. Se cierra con un acuerdo observable por equipo: llegar a la Sesión 02 con la frase de tema y el contexto escritos.
 
@@ -267,7 +287,7 @@
 ✅ **Checklist antes de clase**
 - [ ] Aula de CDigital abierta, con material publicado y espacios de entrega de ACA visibles
 - [ ] Padlet abierto y enlace copiado para el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-- [ ] Los tres enunciados de ACA abiertos desde `Clases/Recursos/ACAs/`
+- [ ] **Libro de calificaciones** del aula abierto (Quiz · ACA 1 · ACA FINAL · auto · coevaluación) y los enunciados de ACA en `Clases/Recursos/ACAs/`
 - [ ] Plantilla APA CUN abierta en Google Docs para mostrarla en vivo
 - [ ] PPTX `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` en modo presentador (21 slides)
 - [ ] Link del formulario de asistencia listo para el chat: https://forms.gle/oZ8xCYiUo3KEWr1d9

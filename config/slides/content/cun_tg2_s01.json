@@ -24,11 +24,11 @@
       ],
       [
         "aclaracion",
-        "Por lo mismo, los porcentajes de los tres cortes (**30 / 30 / 40**) están marcados con asterisco: son la regla general del reglamento, y se **confirman en CDigital**, que es la fuente oficial de este grupo."
+        "Lo que **sí está confirmado** es la evaluación: los tres cortes, sus quices, sus parciales, la ACA Final y la auto/coevaluación salen del **libro de calificaciones del aula**, no de una suposición. Los verá con su peso en la slide «CÓMO SE EVALÚA»."
       ],
       [
         "info",
-        "Qué significa esto en la práctica: **el orden de los temas puede ajustarse**, pero el producto final y los tres momentos de entrega no cambian. Si algo se mueve, el Docente lo avisa en CDigital, no de palabra."
+        "Qué significa esto en la práctica: **el orden de los temas puede ajustarse**, pero la estructura de evaluación y el producto final no cambian. Si algo se mueve, el Docente lo avisa en CDigital, no de palabra."
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "rows": [
       [
         "**01**",
-        "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)",
+        "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (**hoy**)",
         "Encuadre, acuerdo pedagógico y encargo autónomo"
       ],
       [
@@ -152,39 +152,39 @@
   },
   {
     "type": "table",
-    "title": "Las ACAs, una por una: qué se entrega y qué se mira",
+    "title": "Corte por corte: qué hay en el aula y qué se prepara",
     "headers": [
-      "ACA",
-      "Qué entrega",
-      "Qué mira el Docente",
+      "Corte",
+      "Qué hay en el aula (CDigital)",
+      "Qué se prepara para eso",
       "Flojo vs. bueno"
     ],
     "rows": [
       [
-        "**ACA 1**",
-        "Delimitación y formulación: tema delimitado, problema, pregunta, objetivos y título provisional",
-        "Que el tema tenga foco y que objetivos y pregunta hablen de lo mismo",
-        "Flojo: “IA en las empresas” · Bueno: actor, fenómeno y contexto en una sola frase, con objetivos que responden a la pregunta"
+        "**Corte 1**",
+        "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.",
+        "Delimitación y formulación: tema delimitado, problema, pregunta, objetivos y título provisional. Guías escritas: `Quiz 1 (6%)` y `Parcial 1 (24%)`.",
+        "Flojo: “IA en las empresas” · Bueno: actor, fenómeno y contexto en una frase, con objetivos que responden a la pregunta"
       ],
       [
-        "**ACA 2**",
-        "Marco referencial: antecedentes, marco teórico, conceptual y contextual con citas en APA 7",
-        "Que las fuentes se usen como argumento y no como adorno; que estén citadas en el cuerpo",
-        "Flojo: definiciones copiadas una tras otra · Bueno: tres o cuatro conceptos hilados, cada uno sosteniendo una parte de la pregunta"
+        "**Corte 2**",
+        "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.",
+        "Marco referencial: antecedentes, marco teórico, conceptual y contextual, citados en APA 7. Guías: `Quiz 2 (9%)` y `Parcial 2 (21%)`.",
+        "Flojo: definiciones copiadas una tras otra · Bueno: tres o cuatro conceptos hilados, cada uno sosteniendo parte de la pregunta"
       ],
       [
-        "**ACA 3**",
-        "Metodología propuesta e integración del avance en una versión limpia",
-        "Coherencia objetivo → método → instrumento, y que el documento se lea como un todo",
-        "Flojo: método “porque sí” y secciones pegadas · Bueno: matriz donde cada objetivo tiene su método, y un documento sin costuras"
+        "**Corte 3**",
+        "**ACA Final** (tarea: el único documento que se sube) + **Quiz 3** + **autoevaluación** (cuestionario) y **coevaluación** (foro).",
+        "Metodología propuesta e integración del avance en una versión limpia, lista para TG3. Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`.",
+        "Flojo: método “porque sí” y secciones pegadas · Bueno: cada objetivo con su método, y un documento sin costuras"
       ]
     ],
-    "note": "Enunciado completo, criterios y **fechas exactas** de cada corte: `Clases/Recursos/ACAs/` y CDigital.",
+    "note": "El peso de cada ítem está en la slide «CÓMO SE EVALÚA» de esta sesión, con su tipo de actividad. Enunciados y criterios: `Clases/Recursos/ACAs/`; **fechas exactas**, en la Presentación del Curso y en CDigital.",
     "col_w": [
-      1.0,
-      3.2,
-      3.2,
-      4.5
+      0.9,
+      3.4,
+      3.6,
+      4.0
     ]
   },
   {
@@ -198,6 +198,7 @@
       "**5.** Suba a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]",
       "**6.** Verifique el estado: **subido no es entregado**. Guarde la captura del envío si el campus la permite.",
       "**Si entrega tarde:** avise **antes** del cierre. Se recibe, pero se califica lo que exista dentro del plazo.",
+      "**Los quices y parciales no se suben:** son cuestionarios que se resuelven en el aula dentro de su ventana; si se cierra, no hay archivo que lo reemplace.",
       "**Lo que no está en CDigital, no está entregado.** No hay entregas por WhatsApp ni por correo personal."
     ]
   },
@@ -324,7 +325,7 @@
     "boxes": [
       [
         "info",
-        "**“¿Esto se pierde fácil?”** Se pierde por no entregar, casi nunca por escribir mal. El documento se corrige; la entrega que no llegó, no. **“¿Puedo trabajar solo?”** Según lo que autorice el programa: consúltelo hoy, no a mitad de periodo."
+        "**“¿Esto se pierde fácil?”** Se pierde por dejar pasar la ventana de un quiz o un parcial y por no entregar la ACA Final; casi nunca por escribir mal. El documento se corrige; la ventana cerrada, no. **“¿Puedo trabajar solo?”** Según lo que autorice el programa: consúltelo hoy, no a mitad de periodo."
       ],
       [
         "advertencia",
@@ -347,7 +348,7 @@
       "  Una **matriz de estado**: para cada sección (tema, problema, objetivos, marco, metodología) marque **lista / a medias / inexistente** y pegue la **evidencia** (el párrafo o el enlace).",
       "  Su **tema delimitado** en una sola frase: actor + fenómeno + contexto.",
       "  **Tres compromisos** concretos suyos para las próximas dos semanas.",
-      "**Súbalo a CDigital antes de la Sesión 02** y **abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/`."
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra las dos guías del primer corte** en `Clases/Recursos/ACAs/`: `Quiz 1 (6%)` y `Parcial 1 (24%)`, que es lo que se pregunta."
     ],
     "note": "“A medias” e “inexistente” son respuestas honestas y válidas. Lo que no sirve es el “más o menos” sin nada escrito debajo."
   }

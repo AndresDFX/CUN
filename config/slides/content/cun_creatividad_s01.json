@@ -19,7 +19,7 @@
     "title": "Mapa del curso: las 7 sesiones de un vistazo",
     "headers": ["Sesión", "Tema del encuentro", "Qué sale de esa sesión"],
     "rows": [
-      ["**01** (hoy)", "Encuadre: el curso, el Docente, ustedes y las ACAs", "Reglas claras + encargo de lectura autónoma"],
+      ["**01** (hoy)", "Encuadre: el curso, el Docente, ustedes y cómo se evalúa", "Reglas claras + encargo de lectura autónoma"],
       ["**02**", "Creatividad e innovación en I+D · **Design Thinking** y técnicas", "Su reto bien planteado y un banco de ideas"],
       ["**03**", "Gestión de la innovación (**Manual de Oslo** / OCDE)", "Su propuesta clasificada y justificada"],
       ["**04**", "Tipos de innovación", "Cuadro comparativo aplicado a su caso"],
@@ -47,15 +47,15 @@
   },
   {
     "type": "table",
-    "title": "Las tres ACAs: qué se entrega en cada corte",
-    "headers": ["ACA", "Qué entrega exactamente", "Qué se evalúa ahí"],
+    "title": "Qué evalúa cada corte: lo que está en el libro de calificaciones",
+    "headers": ["Corte", "Qué hay en el aula (CDigital)", "Qué se prepara para eso"],
     "rows": [
-      ["**ACA 1** · Corte 1", "Ficha problema–oportunidad + mapa de bloqueadores y ensanchadores + síntesis de ideación (3–6 págs.).", "Que el problema sea **real, observable y de alguien concreto**."],
-      ["**ACA 2** · Corte 2", "Propuesta tipificada + cuadro comparativo + **FODA**, **Canvas** y **MVP** + sustentación breve (6–10 págs.).", "Que la propuesta esté **clasificada y validada**, no solo descrita."],
-      ["**ACA 3** · Corte 3", "Propuesta consolidada + vigilancia tecnológica + entidades de apoyo + **pitch de 1 página** (8–12 págs.).", "Que el hilo **cierre**: del problema al siguiente paso, sin saltos."]
+      ["**Corte 1**", "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.", "Lo trabajado hasta ahí: problema–oportunidad real y observable, bloqueadores y ensanchadores, técnicas de ideación. Guías escritas: `Quiz 1 (6%)` y `Parcial 1 (24%)` en `Recursos/ACAs/`."],
+      ["**Corte 2**", "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.", "Tipificar la propuesta (**Manual de Oslo**) y validarla: cuadro comparativo, **FODA**, **Canvas** y **MVP** aplicados a su propia propuesta. Guías: `Quiz 2 (9%)` y `Parcial 2 (21%)`."],
+      ["**Corte 3**", "**Quiz 3** (cuestionario) + **ACA Final** (tarea: el único documento que se sube) + **autoevaluación** (cuestionario) y **coevaluación** (foro).", "La **Propuesta de Innovación** consolidada: problema → propuesta → validación → vigilancia → entidades de apoyo + **pitch de 1 página** (8–12 págs.). Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`."]
     ],
-    "note": "Enunciado completo, rúbrica y fechas de cada ACA: `Clases/Recursos/ACAs/` y el espacio de entrega en CDigital.",
-    "col_w": [1.5, 6.0, 4.4]
+    "note": "El peso de cada ítem está en la slide «CÓMO SE EVALÚA» de esta misma sesión, con el tipo de actividad. Enunciados y checklists: `Clases/Recursos/ACAs/`; fechas exactas, en la Presentación del Curso.",
+    "col_w": [1.1, 4.9, 5.9]
   },
   {
     "type": "table",
@@ -77,11 +77,12 @@
     "title": "Cómo se entrega: paso a paso en CDigital",
     "bullets": [
       "**1.** Escriba en la **plantilla APA CUN** (`Clases/Recursos/`): ábrala en **Google Docs** y trabaje ahí. No necesita Office instalado.",
-      "**2.** Abra el enunciado del ACA en `Clases/Recursos/ACAs/` y marque su **checklist de criterios** antes de dar por cerrado el texto.",
+      "**2.** Abra el enunciado del corte en `Clases/Recursos/ACAs/` y marque su **checklist de criterios** antes de dar por cerrado el texto.",
       "**3.** Exporte a **PDF**, salvo que el enunciado pida otro formato.",
-      "**4.** Nombre el archivo así: **CRE_ACA1_Apellido** (cambie el número del ACA y su apellido).",
-      "**5.** Suba el archivo al **espacio de entrega del corte en CDigital**, no al foro y no al chat del encuentro.",
+      "**4.** Nombre el archivo así: **CRE_ACAFinal_Apellido** (con su apellido).",
+      "**5.** Suba el archivo al espacio de la **ACA Final en CDigital**, no al foro y no al chat del encuentro.",
       "**6.** Verifique que quedó cargado y **ábralo desde la plataforma**: un archivo vacío o corrupto cuenta como no entregado.",
+      "**Los quices y parciales no se suben:** son cuestionarios que se resuelven en el aula dentro de su ventana. Si la ventana se cierra, no hay archivo que lo reemplace.",
       "**Entrega oficial = CDigital.** No se reciben trabajos por correo, por WhatsApp ni por mensaje privado.",
       "  ¿Se le complicó la fecha? Se habla con el Docente **antes** del cierre del espacio, nunca después. Cerrado el espacio, la nota es la que hay."
     ],
@@ -116,7 +117,7 @@
     "title": "Herramientas del curso: gratis y desde el navegador",
     "headers": ["Herramienta", "Para qué la usamos", "Cuenta / acceso"],
     "rows": [
-      ["**CDigital**", "Material, anuncios, foro y **entrega oficial** de las ACAs", "Login institucional CUN"],
+      ["**CDigital**", "Material, anuncios, foro, **quices y parciales** y entrega de la **ACA Final**", "Login institucional CUN"],
       ["**Google Docs / Slides**", "Escribir la propuesta y armar el pitch (plantilla APA CUN)", "Cuenta CUN o Gmail"],
       ["**Excalidraw** (excalidraw.com)", "Bocetos, mapas y diagramas: feos pero claros", "Sin cuenta"],
       ["**Canvanizer**", "Business Model Canvas de su propuesta (Corte 2)", "Gratis en el navegador"],
@@ -132,7 +133,7 @@
     "title": "Cómo pedir ayuda (y recibir respuesta pronto)",
     "bullets": [
       "**En el encuentro:** los últimos minutos son para dudas. Es el canal más rápido y el que menos se usa.",
-      "**Foro del curso en CDigital:** para dudas que le sirven a todo el grupo (formato, entrega, alcance de un ACA).",
+      "**Foro del curso en CDigital:** para dudas que le sirven a todo el grupo (formato, entrega, alcance de un corte, temario de un quiz).",
       "  Lo que se pregunta en el foro queda respondido para los demás; por eso se responde primero ahí.",
       "**Correo institucional del Docente:** para lo personal (una situación particular, una nota, una dificultad).",
       "  Asunto sugerido: **EI004 – su nombre – el tema en cuatro palabras**. Sin asunto claro, la respuesta tarda más.",
@@ -164,11 +165,11 @@
       "  Las retomamos en los primeros minutos de la Sesión 02: se repasan, no se dictan completas.",
       "  **Dónde está:** ya viene en tu carpeta del curso, en `Sesion 01 - …/` (el PDF `Lectura autonoma - Design Thinking en la universidad (REDIE 2020).pdf` y el archivo `Lectura autonoma - Sesion 01.txt` con la cita, el enlace y qué traer). También queda publicada en CDigital.",
       "  Léalas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**",
-      "**Abra el enunciado de la ACA 1** en `Clases/Recursos/ACAs/` y léalo entero, checklist incluido.",
+      "**Abra las dos guías del primer corte** en `Clases/Recursos/ACAs/` — `Quiz 1 (6%)` y `Parcial 1 (24%)` — y léalas enteras, checklist incluido: eso es exactamente lo que se pregunta.",
       "**Traiga escrito** (con tres líneas basta): un problema real que le moleste, **a quién** le pasa y **dónde** lo vio.",
       "  No traiga una solución: traiga un problema. La solución es el trabajo del resto del curso.",
       "**Cree su documento de trabajo** en Google Docs con la plantilla APA CUN y déjelo listo para escribir encima.",
-      "**Use la ficha del curso:** en `Sesion 01 - …/` están `Ficha_problema_oportunidad.docx` (la plantilla que se llena) y `Ejemplo_ficha_modelo.html` (un ejemplo ya diligenciado, ábralo en el navegador). Esa ficha se reutiliza como insumo de la ACA 1.",
+      "**Use la ficha del curso:** en `Sesion 01 - …/` están `Ficha_problema_oportunidad.docx` (la plantilla que se llena) y `Ejemplo_ficha_modelo.html` (un ejemplo ya diligenciado, ábralo en el navegador). Esa ficha es el insumo del primer corte y el primer pedazo de su **ACA Final**.",
       "**Sesión 02:** *Creatividad e innovación en I+D · Design Thinking y técnicas* — se trabaja sobre lo que usted traiga."
     ],
     "note": "Sin un problema propio, la Sesión 02 se le vuelve teoría. Con un problema propio, sale de ella con su reto ya planteado."
@@ -177,7 +178,7 @@
     "type": "boxes",
     "title": "Preguntas del primer día",
     "boxes": [
-      ["info", "**¿Esta materia se pierde fácil?** No, si entrega. Se pierde por no entregar y por dejarlo todo para el Corte 3, que pesa el 40%."],
+      ["info", "**¿Esta materia se pierde fácil?** No, si trabaja al día. Se pierde por dejar pasar la ventana de un quiz o de un parcial y por armar la ACA Final la última noche: el corte 3 es el que más pesa (vea «CÓMO SE EVALÚA»)."],
       ["aclaracion", "**¿Puedo trabajar solo o en grupo?** Puede trabajar en dúo si comparten el mismo problema, pero **cada uno entrega** su documento en CDigital."],
       ["advertencia", "**¿Sirve un trabajo de otro semestre?** Puede partir de un proyecto suyo si lo declara y lo lleva más lejos. Volver a entregar lo mismo es autoplagio."],
       ["info", "**¿Necesito saber programar o diseñar?** No. Aquí se evalúa criterio, no herramientas."]

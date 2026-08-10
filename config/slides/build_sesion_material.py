@@ -19,8 +19,8 @@ Contenido RICO por sesión (opcional, recomendado):
         python cun_contenido_sesion.py <curso> <NN>
   - Si el JSON existe: la deck = portada + bloques del JSON + cierre.
   - Si NO existe: deck genérica de 7 slides de siempre (fallback intacto).
-  - Sesión 01 (encuadre): el contenido rico se intercala DESPUÉS de la slide de ACAs
-    y ANTES de «PARA LA PRÓXIMA SESIÓN» (ver `S01_CONTENIDO_TRAS`).
+  - Sesión 01 (encuadre): el contenido rico se intercala DESPUÉS de la slide
+    «CÓMO SE EVALÚA» y ANTES de «PARA LA PRÓXIMA SESIÓN» (ver `S01_CONTENIDO_TRAS`).
 
 Estándar PPTX de sesión:
   - Número de sesión discreto (p. ej. «Sesión 01») + tema puntual.
@@ -49,6 +49,13 @@ Uso:
 """
 from __future__ import annotations
 import os, sys, re, textwrap, shutil
+
+# Consola de Windows en cp1252: sin esto, imprimir la ayuda (que trae «←») aborta.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
 from cun_slides_engine import *
@@ -64,6 +71,11 @@ from sesiones_cun import (
     meet_url,
 )
 from guion_slides import deck_path, tabla_slides_md, titulos_pptx  # noqa: E402
+from fechas_entrega_aca import (  # noqa: E402
+    entregas_para_grupo,
+    fmt_peso,
+    peso_corte,
+)
 
 SLIDES_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -73,9 +85,9 @@ RICH_GUION_COURSES = {"creatividad", "proyecto1", "investigacion", "tg2", "tg3"}
 # Contenido RICO por sesión: config/slides/content/cun_<curso>_s<NN>.json
 # (esquema y render → cun_contenido_sesion.py). Si el JSON no existe, la deck
 # se genera exactamente igual que antes (fallback genérico intacto).
-# En la Sesión 01 (encuadre) el contenido rico se inserta DESPUÉS de la slide de
-# ACAs y ANTES de «PARA LA PRÓXIMA SESIÓN»; este flag elige el punto exacto:
-#   "acas"     → justo después de la tabla de ACAs (por defecto)
+# En la Sesión 01 (encuadre) el contenido rico se inserta DESPUÉS de la slide
+# «CÓMO SE EVALÚA» y ANTES de «PARA LA PRÓXIMA SESIÓN»; este flag elige el punto exacto:
+#   "acas"     → justo después de la tabla de evaluación (por defecto; valor histórico)
 #   "acuerdos" → después de ACUERDOS DE TRABAJO (cierra el encuadre y luego el tema)
 S01_CONTENIDO_TRAS = "acas"
 
@@ -219,32 +231,68 @@ PADLET_PROMPTS = {
 }
 
 
-def _acas_rows(course_key):
-    """Filas de la slide «LAS ACAs» de la Sesión 01 → ``(rows, instrumentos)``.
+# Qué hace el estudiante con cada ítem, según su TIPO real de actividad en el aula.
+# (auditoría CDigital 2026-08-10: quices y parciales son cuestionarios, la ACA Final
+# es una tarea y la coevaluación es un FORO — no se sube archivo).
+_QUE_HACES = {
+    "auto": "La diligencias tú mismo en el aula (cuestionario individual).",
+    "coev": "Participas en el foro valorando el trabajo de tus pares.",
+    "cuestionario": "Lo resuelves en CDigital dentro de su ventana. No se sube archivo.",
+    "tarea": "Subes el documento (plantilla APA CUN) al espacio de la tarea.",
+}
 
-    ``rows`` = solo las **ACAs** (entregables evaluados con rúbrica).
-    ``instrumentos`` = ítems que NO son ACAs y que por eso no pueden ir en esa
-    tabla: en Proyecto I, la autoevaluación (4%) y la coevaluación (4%), que
-    cada estudiante *diligencia* en CDigital al cierre. Van rotulados aparte,
-    en la nota al pie, para que nadie los lea como una cuarta y quinta entrega.
 
-    Sin fechas: la fecha vive en el enunciado (`Clases/Recursos/ACAs/`) y en la
+def _evaluacion_rows(course_key):
+    """Filas de la slide «CÓMO SE EVALÚA» de la Sesión 01 → ``(rows, note)``.
+
+    Una fila por ítem del **libro de calificaciones del aula**: quices, parciales,
+    ACA Final, autoevaluación y coevaluación, con el tipo de actividad y el peso
+    REALES. Todo se lee de `config/cursos/fechas_entrega_aca.py` (auditoría CDigital
+    2026-08-10): aquí no se escribe ningún peso a mano.
+
+    Reemplaza a la vieja tabla «LAS ACAs», que mostraba tres entregables inexistentes
+    (en pregrado el aula tiene una sola ACA Final) y dejaba fuera los quices y
+    parciales, que son la mayor parte de la nota (Parcial 1 = 24%).
+
+    Sin fechas: la ventana vive en el enunciado (`Clases/Recursos/ACAs/`) y en la
     Presentación del Curso, para no arrastrar aquí una fecha que quede vieja.
     """
     try:
-        from build_acas_estudiantes import acas_for
-        items = acas_for(course_key)
+        items = entregas_para_grupo(course_key)
     except Exception:
-        return [], []
-    rows = [[a["code"], a["title"], a["weight"] or "—"]
-            for a in items if a["kind"] == "aca"]
-    instrumentos = [a for a in items if a["kind"] != "aca"]
-    return rows, instrumentos
+        return [], None, None
+    rows = []
+    for e in items:
+        rows.append([
+            f"**{e.code}**",
+            e.tipo_label,
+            f"{e.corte} ({fmt_peso(peso_corte(course_key, e.corte))})",
+            f"**{e.weight_pct}**",
+            _QUE_HACES.get(e.id) or _QUE_HACES[e.kind],
+        ])
+    total = fmt_peso(sum(e.weight for e in items))
+    docs = [e.code for e in items if e.es_documento]
+    docs_txt = " y ".join(", ".join(docs).rsplit(", ", 1)) if docs else "—"
+    # `sub` (bajo el título) en vez de nota al pie: con 8 ítems la tabla baja hasta 6,9"
+    # y el pie de `table_content` (fijo en 6,65") le quedaría encima.
+    sub = (
+        f"Evaluación y notas: solo en **CDigital** · los pesos suman **{total}** · "
+        "fechas: enunciados y Presentación del Curso"
+    )
+    note = None
+    if len(rows) <= 6:
+        note = (
+            f"Se **sube** documento únicamente en **{docs_txt}**; los cuestionarios se "
+            "**resuelven** en el aula y la **coevaluación es un foro**. Enunciados y "
+            "ventanas: `Clases/Recursos/ACAs/`."
+        )
+    return rows, sub, note
 
 
 def build_pptx_presentacion(course, ses, pptx):
     """Sesión 01 = ENCUADRE. Presentación del curso, del Docente, de los estudiantes
-    (Padlet) y de las ACAs. **No se dicta tema** — el tema empieza en la Sesión 02.
+    (Padlet) y de **cómo se evalúa** (ítems reales del aula). **No se dicta tema** —
+    el tema empieza en la Sesión 02.
     """
     n = ses["n"]
     label = f"Sesión {n:02d}"
@@ -257,7 +305,7 @@ def build_pptx_presentacion(course, ses, pptx):
         course["titulo_largo"],
         [
             f"**{label}** · Sesión de encuadre",
-            "**Hoy:** el curso · el Docente · ustedes · las ACAs",
+            "**Hoy:** el curso · el Docente · ustedes · cómo se evalúa",
             f"**Asignatura:** {course['titulo']}",
         ],
     )
@@ -269,7 +317,7 @@ def build_pptx_presentacion(course, ses, pptx):
         "**El curso:** de qué se trata, cómo trabajamos y qué se llevan al final.",
         "**El Docente:** quién los acompaña y cómo contactarlo.",
         "**Ustedes:** nos presentamos en el tablero colaborativo.",
-        "**Las ACAs:** qué se entrega, cuánto pesa y dónde se sube.",
+        "**Cómo se evalúa:** qué ítems tiene el aula, cuánto pesa cada uno y qué se hace con él.",
         "**Acuerdos** de trabajo y el primer encargo autónomo.",
     ], sub="Sesión de encuadre — hoy no vemos tema; el contenido arranca en la Sesión 02.", idx=idx)
     idx += 1
@@ -277,30 +325,23 @@ def build_pptx_presentacion(course, ses, pptx):
     idx += 1
     icebreaker_qr_slide(prs, idx=idx, sub="Preséntate: quién eres y qué esperas del curso")
     idx += 1
-    rows, instrumentos = _acas_rows(key)
+    # CÓMO SE EVALÚA: los ítems REALES del libro de calificaciones del aula (quices,
+    # parciales, ACA Final, auto y coevaluación) con su tipo y su peso, leídos del
+    # modelo. Antes esta slide se llamaba «LAS ACAs» y listaba tres entregables que el
+    # aula no tiene (auditoría CDigital 2026-08-10).
+    rows, sub, note = _evaluacion_rows(key)
     if rows:
-        note = "Enunciado completo y **fechas exactas**: `Clases/Recursos/ACAs/` y la Presentación del Curso."
-        if instrumentos:
-            # P1: auto/coevaluación NO son ACAs → nota al pie, nunca fila de la tabla.
-            nombres = " y la ".join(
-                f"**{a['code'].lower()} ({a['weight']})**" for a in instrumentos
-            )
-            note = (
-                f"Las ACAs son **{len(rows)}**. La {nombres} **no son ACAs**: son instrumentos "
-                "individuales que cada quien diligencia en CDigital al cierre. "
-                "Enunciados e instructivos: `Clases/Recursos/ACAs/`."
-            )
         table_content(
-            prs, "LAS ACAs — QUÉ SE EVALÚA",
-            ["ACA", "Qué entregas", "Peso"], rows,
-            sub="Entrega oficial: **CDigital**",
+            prs, "CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA",
+            ["Ítem en CDigital", "Tipo", "Corte (peso)", "Peso", "Qué haces con él"], rows,
+            sub=sub,
             note=note,
-            col_w=[1.9, 7.4, 1.1], idx=idx,
+            col_w=[2.0, 1.3, 1.3, 0.9, 6.4], idx=idx, fs_body=11,
         )
     else:
-        content_slide(prs, "LAS ACAs — QUÉ SE EVALÚA", [
-            "Enunciado completo y fechas: `Clases/Recursos/ACAs/`.",
-            "Entrega oficial: **CDigital**.",
+        content_slide(prs, "CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA", [
+            "Estructura, tipo de actividad y pesos: **libro de calificaciones del aula**.",
+            "Enunciados y fechas: `Clases/Recursos/ACAs/` y la Presentación del Curso.",
         ], idx=idx)
     idx += 1
     if bloques and S01_CONTENIDO_TRAS == "acas":
@@ -319,7 +360,7 @@ def build_pptx_presentacion(course, ses, pptx):
     diferida = ses.get("unidad_diferida")
     proximos = [
         "Revisar la **Presentación del Curso** completa (fechas, evaluación, contenido de todas las sesiones).",
-        "Abrir el enunciado de la **ACA 1** en `Clases/Recursos/ACAs/` y leerlo entero.",
+        "Abrir los enunciados de `Clases/Recursos/ACAs/`: son la guía escrita de lo que evalúa cada corte.",
     ]
     if diferida:
         proximos.insert(0, f"**Lectura autónoma:** {diferida.split('→')[0].strip()} — la retomamos al abrir la Sesión 02.")

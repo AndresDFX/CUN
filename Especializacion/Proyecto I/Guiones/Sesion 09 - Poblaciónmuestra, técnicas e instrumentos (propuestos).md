@@ -13,6 +13,13 @@
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
+⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
+
+**Hoy no cierra ni abre ningún ítem del libro de calificaciones.** La sesión es de contenido y avance; lo único que sigue corriendo es lo que está abajo.
+
+> **Abierto todo el periodo (hoy no cierra):** **ACA FINAL** (Tarea · 42% · corte 3). Es el producto acumulativo: cada sesión le agrega una sección, así que el avance de hoy es parte de esa entrega.
+> **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
+
 🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
@@ -126,7 +133,7 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 
 **GUION LITERAL:**
 > “En autónomo, completen el instrumento y dejen explícito, por escrito, que es una PROPUESTA para Proyecto II. Suban `S09_InstrumentosPropuestos_Apellidos`.”
-> “La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para ACA3. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
+> “La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para la **ACA FINAL**. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
 
 
 

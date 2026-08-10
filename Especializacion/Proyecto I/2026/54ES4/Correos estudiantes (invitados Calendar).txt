@@ -27,6 +27,7 @@ elva.tenganan@cun.edu.co
 fabian.rincong@cun.edu.co
 harold.villamilo@cun.edu.co
 hernan.gomezs@cun.edu.co
+investigacion_especializaciones@cun.edu.co
 jaime.cortesg@cun.edu.co
 jair.vargasa@cun.edu.co
 jhon.guerrerom@cun.edu.co

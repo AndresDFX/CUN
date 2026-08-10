@@ -39,7 +39,7 @@
     "rows": [
       [
         "**01**",
-        "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)",
+        "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (**hoy**)",
         "Encuadre, acuerdo pedagógico y encargo autónomo"
       ],
       [
@@ -78,7 +78,7 @@
         "Marco cerrado, sin huecos pendientes"
       ]
     ],
-    "note": "Tres tramos: **escribir** el artículo (02–10), **alistar** póster y antiplagio (11) y **defender y cerrar** (12–15).",
+    "sub": "Tres tramos: **escribir** el artículo (02–10), **alistar** póster y antiplagio (11) y **defender y cerrar** (12–15).",
     "col_w": [
       1.1,
       5.4,
@@ -153,33 +153,39 @@
   },
   {
     "type": "table",
-    "title": "Las dos ACAs: qué se entrega y qué se mira",
+    "title": "Corte por corte: qué hay en el aula y qué se prepara",
     "headers": [
-      "ACA",
-      "Qué entrega",
-      "Qué mira el Docente / el jurado",
+      "Corte",
+      "Qué hay en el aula (CDigital)",
+      "Qué se prepara para eso",
       "Flojo vs. bueno"
     ],
     "rows": [
       [
-        "**ACA 1 · EV05** (proceso académico)",
-        "El artículo y sus avances por sesión: introducción, marco, método, resultados, discusión y referencias",
-        "Coherencia de cabo a rabo (problema → pregunta → objetivos → método → resultados → discusión) y referencias realmente citadas en el cuerpo",
-        "Flojo: 50 referencias listadas y ninguna citada; resultados que no responden la pregunta · Bueno: cada sección se apoya en la anterior y la discusión dialoga con autores"
+        "**Corte 1**",
+        "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.",
+        "Retoma del proyecto: pregunta, objetivos y título definitivos + estructura del artículo e introducción en plantilla APA CUN.",
+        "Flojo: repetir el TG2 sin revisarlo · Bueno: pregunta afinada, con lo reutilizado y lo reescrito ya decidido"
       ],
       [
-        "**ACA 2 · EXAM** (sustentación)",
-        "Defensa oral ante jurados, con el apoyo visual y las evidencias que pida el programa",
-        "Dominio del propio trabajo: que explique decisiones, límites y hallazgos sin leer",
+        "**Corte 2**",
+        "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.",
+        "Referentes, método e instrumento; marco cerrado y primeros hallazgos escritos.",
+        "Flojo: 50 referencias listadas y ninguna citada · Bueno: cada sección se apoya en la anterior y las fuentes se usan como argumento"
+      ],
+      [
+        "**Corte 3**",
+        "**ACA Final** (tarea: el artículo, único documento que se sube) + **Quiz 3** + **autoevaluación** (cuestionario) y **coevaluación** (foro).",
+        "Artículo completo (resultados, discusión, conclusiones y referencias), póster, antiplagio y **sustentación ante jurados**.",
         "Flojo: leer diapositivas y no saber por qué eligió ese método · Bueno: contar el trabajo en 10 minutos y responder preguntas difíciles con calma"
       ]
     ],
-    "note": "Enunciados completos, criterios y **fechas exactas** por grupo: `Clases/Recursos/ACAs/` y CDigital. La defensa pesa tanto como todo el trabajo escrito: no se improvisa.",
+    "note": "La **sustentación** no tiene ítem propio en el libro de calificaciones: es requisito del programa y se prepara con el mismo artículo que califica la **ACA Final**. Pesos: slide «CÓMO SE EVALÚA». **La ACA Final, la autoevaluación y la coevaluación cierran en fechas distintas según su grupo**: revíselas en la Presentación del Curso.",
     "col_w": [
-      2.2,
-      3.2,
-      3.2,
-      3.3
+      0.9,
+      3.6,
+      3.5,
+      3.9
     ]
   },
   {
@@ -193,7 +199,8 @@
       "**5.** Suba a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]",
       "**6.** Verifique el estado: **subido no es entregado**. Guarde la captura del envío si el campus lo permite.",
       "**Si entrega tarde:** avise **antes** del cierre. Se recibe, pero se califica lo que exista dentro del plazo.",
-      "**Recepción y cierre varían por grupo.** Revise el suyo en la Presentación del Curso y anótelo hoy en su calendario."
+      "**Los quices y parciales no se suben:** son cuestionarios que se resuelven en el aula dentro de su ventana, iguales para los tres grupos.",
+      "**La ACA Final y la auto/coevaluación cierran por grupo.** Revise el suyo en la Presentación del Curso y anótelo hoy en su calendario."
     ]
   },
   {
@@ -343,7 +350,7 @@
       "  **Reutilizo tal cual · Reescribo · Creo de cero**, sección por sección de lo que trae de TG2.",
       "  **Cuente sus referencias reales**: cuántas están citadas hoy en el cuerpo y cuántas le faltan.",
       "  **Tres compromisos** concretos suyos para las próximas dos semanas.",
-      "**Súbalo a CDigital antes de la Sesión 02** y **abra los enunciados de las ACAs** en `Clases/Recursos/ACAs/`, con las fechas de su grupo."
+      "**Súbalo a CDigital antes de la Sesión 02** y **abra los enunciados** de `Clases/Recursos/ACAs/` (artículo y sustentación): traen la ventana de la **ACA Final** de su grupo."
     ],
     "note": "Cuente las referencias **citadas en el cuerpo**, no las de la lista final: esa diferencia es el trabajo real que queda por delante."
   }
