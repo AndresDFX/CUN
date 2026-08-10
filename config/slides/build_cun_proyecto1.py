@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from cun_slides_engine import *
 from sesiones_cun import COURSES, DOCENTE_CORREO, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO
 from carga_academica import bold_var, cover_meta_lines, curso as carga_curso, footer_inicio_efectivo
-from fechas_entrega_aca import blocks_para_slide
+from fechas_entrega_aca import blocks_para_slide, entrega_por_id, fmt_entrega
 
 OUT_DIR = os.path.join(COURSES["proyecto1"]["folder"], "Clases")
 OUT = os.path.join(OUT_DIR, "Presentacion del Curso - Proyecto I.pptx")
@@ -197,8 +197,13 @@ content_slide(
         "**Aplican solo en Proyecto I** (ESP329 · Art. 41 · cronograma AFI). **No** en Proyecto II ni en pregrado Art. 52.",
         "**Autoevaluación (4%):** tú valoras tu proceso, aportes al equipo y logro del anteproyecto. Individual y honesta.",
         "**Coevaluación (4%):** valoras el trabajo colaborativo / aportes de pares de tu equipo (respeto + criterio académico).",
-        "**Dónde:** actividad individual en **CDigital** (Moodle). Enunciados: `Clases/Recursos/ACAs/`.",
-        f"**Cuándo (26ES4):** coevaluación {bold_var('10–16/11/2026')} · autoevaluación {bold_var('17–22/11/2026')} "
+        "**Dónde:** actividad individual en **CDigital**. Instructivos en tu carpeta: `Recursos/ACAs/`.",
+        # Ventanas leídas del CRONOGRAMA OFICIAL (fechas_entrega_aca.CRONOGRAMA_OFICIAL_P1);
+        # antes estaban escritas a mano y se habían desfasado un día (10–16/11 · 17–22/11).
+        f"**Cuándo (26ES4):** coevaluación "
+        f"{bold_var(fmt_entrega(entrega_por_id('proyecto1', 'coev').apertura, largo=False) + '–' + fmt_entrega(entrega_por_id('proyecto1', 'coev').entrega, largo=False))} · "
+        f"autoevaluación "
+        f"{bold_var(fmt_entrega(entrega_por_id('proyecto1', 'auto').apertura, largo=False) + '–' + fmt_entrega(entrega_por_id('proyecto1', 'auto').entrega, largo=False))} "
         f"(cierre notas {bold_var('22/11/2026')}).",
         "**Quién califica:** el estudiante diligencia el instrumento; el Docente habilita la ventana, verifica y registra la nota en el gradebook.",
         "**Evidencia:** completar la actividad en la ventana. No sustituye ACA 3 (anteproyecto).",

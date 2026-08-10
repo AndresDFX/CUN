@@ -17,17 +17,49 @@
   {
     "type": "table",
     "title": "Mapa del curso: las 6 sesiones de un vistazo",
-    "headers": ["Sesión", "De qué se ocupa", "Con qué sale usted de ahí"],
+    "headers": [
+      "Sesión",
+      "De qué se ocupa",
+      "Con qué sale usted de ahí"
+    ],
     "rows": [
-      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)", "El encuadre completo y su encargo autónomo"],
-      ["**02**", "MinCiencias y las 6 líneas de Ingeniería del programa", "Su línea elegida y justificada por escrito"],
-      ["**03**", "Prueba parcial y 1.er avance del artículo", "El borrador mínimo viable del artículo"],
-      ["**04**", "Identificación de problemas y pregunta de investigación", "Su pregunta redactada y su diagrama del problema"],
-      ["**05**", "Formulación del planteamiento del problema", "El planteamiento escrito y sostenido con evidencia"],
-      ["**06**", "Bases de datos, gestores de citas y marco teórico (sesión combinada)", "Fichas de lectura y una página de marco citada"]
+      [
+        "**01**",
+        "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)",
+        "El encuadre completo y su encargo autónomo"
+      ],
+      [
+        "**02**",
+        "MinCiencias y las 6 líneas de Ingeniería del programa",
+        "Su línea elegida y justificada por escrito"
+      ],
+      [
+        "**03**",
+        "Prueba parcial y 1.er avance del artículo",
+        "El borrador mínimo viable del artículo"
+      ],
+      [
+        "**04**",
+        "Identificación de problemas y pregunta de investigación",
+        "Su pregunta redactada y su diagrama del problema"
+      ],
+      [
+        "**05**",
+        "Formulación del planteamiento del problema",
+        "El planteamiento escrito y sostenido con evidencia"
+      ],
+      [
+        "**06**",
+        "Bases de datos, gestores de citas y marco teórico (sesión combinada)",
+        "Fichas de lectura y una página de marco citada"
+      ]
     ],
     "note": "Las unidades **U1 y U2** del Syllabus no desaparecen: pasan a **lectura autónoma** y se retoman al abrir la Sesión 02.",
-    "col_w": [1.2, 5.6, 5.1]
+    "col_w": [
+      1.2,
+      5.6,
+      5.1
+    ]
   },
   {
     "type": "bullets",
@@ -48,22 +80,56 @@
     "type": "boxes",
     "title": "Este es un periodo corto: qué implica para usted",
     "boxes": [
-      ["info", "**Son seis encuentros.** Faltar a uno es perder cerca de la sexta parte del curso. Si falta, revise CDigital ese mismo día: la consigna queda publicada."],
-      ["aclaracion", "**Una sesión combina varias unidades** del Syllabus (bases de datos + gestores + marco teórico). Es la más densa del periodo: a esa se llega con las lecturas hechas."],
-      ["advertencia", "**Los avances se acumulan.** Si no entrega el de una sesión, el de la siguiente sale mal, porque se construye encima. Aquí no hay “me pongo al día la última semana”."]
+      [
+        "info",
+        "**Son seis encuentros.** Faltar a uno es perder cerca de la sexta parte del curso. Si falta, revise CDigital ese mismo día: la consigna queda publicada."
+      ],
+      [
+        "aclaracion",
+        "**Una sesión combina varias unidades** del Syllabus (bases de datos + gestores + marco teórico). Es la más densa del periodo: a esa se llega con las lecturas hechas."
+      ],
+      [
+        "advertencia",
+        "**Los avances se acumulan.** Si no entrega el de una sesión, el de la siguiente sale mal, porque se construye encima. Aquí no hay “me pongo al día la última semana”."
+      ]
     ]
   },
   {
     "type": "table",
     "title": "Las ACAs, una por una: qué se entrega y qué se mira",
-    "headers": ["ACA", "Qué entrega", "Qué mira el Docente", "Flojo vs. bueno"],
+    "headers": [
+      "ACA",
+      "Qué entrega",
+      "Qué mira el Docente",
+      "Flojo vs. bueno"
+    ],
     "rows": [
-      ["**ACA 1**", "Primer avance del artículo: título, introducción breve, problema y primeras referencias", "Que el problema se entienda sin conocerlo a usted y que las fuentes existan de verdad", "Flojo: párrafos largos sin problema visible · Bueno: media página donde se ve contexto, vacío y propósito"],
-      ["**ACA 2**", "Planteamiento del problema y pregunta de investigación", "Coherencia entre problema, pregunta y evidencia; que la pregunta sea investigable", "Flojo: pregunta que se responde sí/no · Bueno: pregunta con “cómo”, “qué” o “en qué medida”, anclada a un contexto"],
-      ["**ACA 3**", "Avance consolidado: marco / revisión con fuentes y referencias en APA 7", "Que cada fuente ayude a responder la pregunta y que el documento se lea como un todo", "Flojo: collage de definiciones copiadas · Bueno: fuentes agrupadas por concepto y usadas como argumento"]
+      [
+        "**ACA 1**",
+        "Primer avance del artículo: título, introducción breve, problema y primeras referencias",
+        "Que el problema se entienda sin conocerlo a usted y que las fuentes existan de verdad",
+        "Flojo: párrafos largos sin problema visible · Bueno: media página donde se ve contexto, vacío y propósito"
+      ],
+      [
+        "**ACA 2**",
+        "Planteamiento del problema y pregunta de investigación",
+        "Coherencia entre problema, pregunta y evidencia; que la pregunta sea investigable",
+        "Flojo: pregunta que se responde sí/no · Bueno: pregunta con “cómo”, “qué” o “en qué medida”, anclada a un contexto"
+      ],
+      [
+        "**ACA 3**",
+        "Avance consolidado: marco / revisión con fuentes y referencias en APA 7",
+        "Que cada fuente ayude a responder la pregunta y que el documento se lea como un todo",
+        "Flojo: collage de definiciones copiadas · Bueno: fuentes agrupadas por concepto y usadas como argumento"
+      ]
     ],
     "note": "Enunciado completo, criterios y **fechas exactas**: `Clases/Recursos/ACAs/`. No se copian aquí para que nunca queden desactualizadas.",
-    "col_w": [1.0, 3.0, 3.4, 4.5]
+    "col_w": [
+      1.0,
+      3.0,
+      3.4,
+      4.5
+    ]
   },
   {
     "type": "bullets",
@@ -98,26 +164,71 @@
     "type": "boxes",
     "title": "Inteligencia artificial generativa: reglas de la casa",
     "boxes": [
-      ["info", "**Sí se puede usar** para entender un concepto, ordenar ideas o mejorar la redacción de un párrafo que ya escribió usted."],
-      ["aclaracion", "**Se declara.** Al final del documento, una línea: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."],
-      ["advertencia", "**Verifique cada fuente: estos modelos inventan citas, autores y DOIs.** Si no abrió el artículo, no lo cite. Y si el Docente pregunta “¿por qué escribió esto?” y usted no puede explicarlo en voz alta, ese párrafo no le sirve."]
+      [
+        "info",
+        "**Sí se puede usar** para entender un concepto, ordenar ideas o mejorar la redacción de un párrafo que ya escribió usted."
+      ],
+      [
+        "aclaracion",
+        "**Se declara.** Al final del documento, una línea: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."
+      ],
+      [
+        "advertencia",
+        "**Verifique cada fuente: estos modelos inventan citas, autores y DOIs.** Si no abrió el artículo, no lo cite. Y si el Docente pregunta “¿por qué escribió esto?” y usted no puede explicarlo en voz alta, ese párrafo no le sirve."
+      ]
     ]
   },
   {
     "type": "table",
     "title": "Herramientas del curso: todas gratis, todas en el navegador",
-    "headers": ["Herramienta", "Para qué la usamos", "Cuándo aparece"],
+    "headers": [
+      "Herramienta",
+      "Para qué la usamos",
+      "Cuándo aparece"
+    ],
     "rows": [
-      ["**CDigital**", "Entrega oficial, materiales, avisos y notas", "Siempre"],
-      ["**Google Docs**", "Escribir el artículo sobre la plantilla APA CUN", "Todas las sesiones"],
-      ["**Google Académico**", "Buscar literatura y ver quién cita a quién", "Desde la Sesión 02"],
-      ["**SciELO y Redalyc**", "Fuentes abiertas en español y portugués de Iberoamérica", "Sesión de búsqueda y marco"],
-      ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es de acceso abierto"],
-      ["**ZoteroBib (zbib.org)**", "Generar referencias en APA 7 sin instalar ni registrarse", "Cada vez que cite"],
-      ["**Excalidraw**", "Diagramar el problema (espina de pescado, árbol de problemas)", "Sesión de problema y pregunta"]
+      [
+        "**CDigital**",
+        "Entrega oficial, materiales, avisos y notas",
+        "Siempre"
+      ],
+      [
+        "**Google Docs**",
+        "Escribir el artículo sobre la plantilla APA CUN",
+        "Todas las sesiones"
+      ],
+      [
+        "**Google Académico**",
+        "Buscar literatura y ver quién cita a quién",
+        "Desde la Sesión 02"
+      ],
+      [
+        "**SciELO y Redalyc**",
+        "Fuentes abiertas en español y portugués de Iberoamérica",
+        "Sesión de búsqueda y marco"
+      ],
+      [
+        "**Biblioteca CUN (web)**",
+        "Texto completo de bases suscritas, con login institucional",
+        "Cuando el PDF no es de acceso abierto"
+      ],
+      [
+        "**ZoteroBib (zbib.org)**",
+        "Generar referencias en APA 7 sin instalar ni registrarse",
+        "Cada vez que cite"
+      ],
+      [
+        "**Excalidraw**",
+        "Diagramar el problema (espina de pescado, árbol de problemas)",
+        "Sesión de problema y pregunta"
+      ]
     ],
     "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Con un navegador basta.",
-    "col_w": [2.6, 5.9, 3.4]
+    "col_w": [
+      2.6,
+      5.9,
+      3.4
+    ]
   },
   {
     "type": "bullets",
@@ -137,18 +248,36 @@
     "type": "boxes",
     "title": "Acuerdos de convivencia del encuentro virtual",
     "boxes": [
-      ["info", "**Puntualidad.** Se empieza a la hora que indica el pie de estas diapositivas: los primeros minutos son el encuadre de la sesión, y quien llega tarde llega sin consigna."],
-      ["aclaracion", "**Cámara** encendida al saludar y durante el taller si su conexión lo permite; no es obligatoria. **Micrófono** apagado mientras alguien expone. Si no quiere hablar, escriba en el chat: se lee todo."],
-      ["advertencia", "**Respeto en el foro y en el tablero.** Se comenta el texto, nunca a la persona. Un comentario útil dice qué mejorar y cómo, no solo qué está mal."]
+      [
+        "info",
+        "**Puntualidad.** Se empieza a la hora que indica el pie de estas diapositivas: los primeros minutos son el encuadre de la sesión, y quien llega tarde llega sin consigna."
+      ],
+      [
+        "aclaracion",
+        "**Cámara** encendida al saludar y durante el taller si su conexión lo permite; no es obligatoria. **Micrófono** apagado mientras alguien expone. Si no quiere hablar, escriba en el chat: se lee todo."
+      ],
+      [
+        "advertencia",
+        "**Respeto en el foro y en el tablero.** Se comenta el texto, nunca a la persona. Un comentario útil dice qué mejorar y cómo, no solo qué está mal."
+      ]
     ]
   },
   {
     "type": "boxes",
     "title": "Preguntas frecuentes del primer día",
     "boxes": [
-      ["info", "**“¿Esta materia se pierde fácil?”** No, si entrega. Se evalúa por avances acumulados: quien entrega cada corte, pasa. El riesgo no es la dificultad, es dejar todo para la última semana."],
-      ["aclaracion", "**“¿Puedo trabajar solo o tiene que ser en grupo?”** El artículo de este curso es **individual**, salvo que el enunciado de la ACA diga otra cosa. **“¿Y si aún no tengo tema?”** Hoy sale con uno tentativo; en la Sesión 02 se afina."],
-      ["advertencia", "**“¿Me sirve un trabajo de otro semestre?”** Puede **partir** de un tema suyo anterior, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica."]
+      [
+        "info",
+        "**“¿Esta materia se pierde fácil?”** No, si entrega. Se evalúa por avances acumulados: quien entrega cada corte, pasa. El riesgo no es la dificultad, es dejar todo para la última semana."
+      ],
+      [
+        "aclaracion",
+        "**“¿Puedo trabajar solo o tiene que ser en grupo?”** El artículo de este curso es **individual**, salvo que el enunciado de la ACA diga otra cosa. **“¿Y si aún no tengo tema?”** Hoy sale con uno tentativo; en la Sesión 02 se afina."
+      ],
+      [
+        "advertencia",
+        "**“¿Me sirve un trabajo de otro semestre?”** Puede **partir** de un tema suyo anterior, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica."
+      ]
     ]
   },
   {
@@ -157,7 +286,7 @@
     "bullets": [
       "**Lectura autónoma (obligatoria):** unidades **U1 y U2** del Syllabus — presentación del Syllabus y producto final (el artículo) y **fundamentos del método científico**.",
       "  Hoy no se dictaron: se leen en casa y se **retoman al abrir la Sesión 02** con sus dudas en la mano.",
-      "  Dónde: material de la Sesión 01 en CDigital — [URL CDigital — campus del curso pendiente]",
+      "  **Dónde está:** ya viene en tu carpeta del curso, en `Sesion 01 - …/` (el PDF y el archivo `Lectura autonoma - Sesion 01.txt` con la cita y el enlace). También queda publicada en CDigital.",
       "  Cuánto: 30–40 minutos. Anote **dos dudas** para plantearlas al inicio de la próxima clase.",
       "**Escriba su tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una sola frase con **actor + fenómeno + contexto**.",
       "  Agregue 2–3 líneas de **por qué le importa** ese problema.",

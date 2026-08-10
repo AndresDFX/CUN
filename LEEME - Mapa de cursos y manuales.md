@@ -77,7 +77,7 @@
 ## Guiones docentes (estándar de calidad)
 - Cubren **todo el tiempo de clase** (Creatividad/Inv/TG = 60 min; Proyecto I ≈ 60 + tutoría 60).
 - Minuto a minuto, texto casi literal, teórico-práctico.
-- **Modelo de calidad:** `Pregrado/Creatividad y pensamiento innovador/Guiones/Sesion 01 - Introducción · Propuesta de Innovación · creatividad e inteligencia em.md`
+- **Modelo de calidad:** `Pregrado/Creatividad y pensamiento innovador/Guiones/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs.md` *(la ruta anterior, `Sesion 01 - Introducción · Propuesta de Innovación · creatividad e inteligencia em.md`, dejó de existir con el renombrado del 2026-08-09; está en `_Archivo obsoleto 2026-08-09/`)*
 
 ## Regenerar
 ```text
@@ -97,15 +97,42 @@ python config/slides/build_sesion_material.py all all
 Cada asignatura puede tener `<Asignatura>/_Archivo obsoleto 2026-08-09/` (espejo de `Guiones/`, `Clases/`, `2026/<grupo>/`) con generaciones viejas de sesiones renumeradas, calendarios con fecha de inicio incorrecta y PPTX/carpetas `Temas/` redundantes. No es material vigente — no reutilizar sin verificar contra el `Calendario de clases (oficial).md` de la raíz de cada asignatura, que es el árbitro de qué tema va en cada número de sesión.
 
 ## Pendientes conocidos (no inventar)
-- URLs Meet reales por curso (hoy solo placeholders)
-- URL CDigital (campus) por curso
-- ~~URL pública plantilla APA~~ → **RESUELTO 2026-08-10**: no se usa URL. El material referencia la ruta relativa `Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`, y el archivo viaja en la carpeta de cada curso.
-- Syllabus SIAC de TG2 ausente
-- Desglose EV exacto Corte 1–3 en tablas SIAC de Creatividad/Investigación (confirmar en CDigital)
-- **Fechas.txt de TG2/TG3** (por grupo, en `2026/<grupo>/`): tenían fecha de inicio 03-04/08 contradicha por el Manual/Calendario (10-11/08) — ya archivados como obsoletos
-- **Roster (listado de estudiantes y correos):** solo existe para Proyecto I `2026/54ES4/`. Faltan los 6 grupos restantes (Investigación 53339 · Creatividad 54408 · TG2 54448 · TG3 54450/54466/54467) — sin ellos no se pueden generar invitaciones de Calendar con invitados para esos cursos
-- ~~**Enlace/documento de la lectura autónoma** de la Sesión 01~~ → **RESUELTO 2026-08-10** en los **5 cursos**. El marcador `Lectura autonoma - PENDIENTE enlace.txt` ya no existe: fue reemplazado por `Lectura autonoma - Sesion 01.txt` (archivo escrito a mano; **ningún build lo sobrescribe**), que trae cita completa, enlace oficial verificado y el «qué traer a la Sesión 02». Los PDF de acceso abierto quedaron descargados en la misma carpeta del estudiante — ver detalle abajo, «Lectura autónoma S01».
-- URL de la herramienta institucional **antiplagio** en CDigital (TG2/TG3) — no inventar URL de terceros
+
+> **Auditado en disco el 2026-08-10** (arranque real: TG2 hoy 5pm · Proyecto I hoy 8pm · TG3 mar · Creatividad mié · Investigación jue).
+> **Nada bloquea dictar hoy:** TG2 y Proyecto I tienen deck de Sesión 01, guion completo, lectura autónoma con PDF, ACAs, plantilla APA y calendario correctos (verificado archivo por archivo).
+
+### Bloquea la próxima clase de ese curso
+- **Enlace de Meet de TG2 / TG3 / Creatividad / Investigación: no existe.** Solo Proyecto I tiene uno real (ver abajo). Sin él, el material sigue mostrando `[URL Meet — mismo enlace toda la serie · <Curso>]`. → **Docente** (crear la sala y pasar la URL).
+- **URL CDigital (campus) por curso: no existe.** El placeholder `[URL CDigital — campus del curso pendiente]` es **visible para el estudiante** en las slides (p. ej. TG2 Sesión 01, slides 13 y 20; Proyecto I «RECURSOS…» slide 18). → **Docente** (URL) + regenerar.
+
+### Meet de Proyecto I: existe pero no está propagado
+La URL real `https://meet.google.com/omk-woqk-vsj` está **hardcodeada** en `config/slides/build_calendar_proyecto1_54es4.py:48` y solo llega al CSV/ICS/Apps Script de `2026/54ES4/`. **No** llega a: la Presentación del Curso (slide 18), `2026/54ES4/Informacion.txt`, el CSV de hitos ni los guiones — todos siguen con el placeholder. Falta subirla a `config/universidades/cun.json` / `sesiones_cun.py` y regenerar.
+
+### Fechas de ACA calculadas que chocan con el temario (confirmar EV en CDigital antes de anunciarlas)
+Creatividad e Investigación **no tienen desglose EV oficial**: sus ventanas salen de repartir `[inicio, recepción]` por 30/30/40 en `config/cursos/fechas_entrega_aca.py`. El resultado no cuadra con el plan de clases:
+- **Investigación 53339** — ACA 1 «Fundamentos y **primer avance**» cierra el **20/08**, pero la sesión dedicada al 1.er avance es la del **27/08**. ACA 3 (marco teórico) cierra el **10/09** y la sesión que enseña marco teórico es la del **17/09**. Además la **recepción oficial es 12/09**, anterior a la última clase (17/09).
+- **Creatividad 54408** — ACA 3 (Propuesta de Innovación final, 40%) cierra el **16/09**, una semana **antes** de la última clase (23/09); recepción 19/09 < última clase 23/09.
+- **TG2 54448** — sin Syllabus SIAC: ACA 1 07/09 · ACA 2 05/10 · ACA 3 09/11 y los pesos 30/30/40 son orientativos (Art. 52). Coherentes entre Manual, enunciados, LEEME del estudiante y CSV de hitos, pero **no confirmados**.
+
+### Otros pendientes vigentes
+- **Syllabus SIAC de TG2 ausente** — el material lo declara abiertamente (Manual, slide 7 de la Sesión 01, enunciados de ACA).
+- **Roster (listado de estudiantes y correos):** solo existe para Proyecto I `2026/54ES4/` (40 estudiantes + coanfitrión). Faltan los 6 grupos restantes (Investigación 53339 · Creatividad 54408 · TG2 54448 · TG3 54450/54466/54467) — sin ellos no se pueden generar invitaciones de Calendar con invitados para esos cursos.
+- **Correo de bienvenida = plantilla mínima** en los 7 grupos: solo curso, grupo, horario y contacto. No trae fecha de la primera clase, Meet, CDigital, qué traer ni lectura autónoma, y firma «el Docente» en vez del nombre.
+- **URL de la herramienta institucional antiplagio** en CDigital (TG2/TG3) — no inventar URL de terceros. TG3 tiene una sesión entera de verificación antiplagio (Sesión 11, 20/10).
+- **Manuales del Docente de pregrado son stubs** (2,6–3,4 KB) frente al de Proyecto I (22,8 KB): no traen guía sesión a sesión ni procedimiento de cierre.
+- **`Fechas.txt` e `Informacion.txt` de Proyecto I** (`2026/54ES4/`) siguen diciendo «Fecha de inicio: 03/08/2026», contra el `2026-08-10` de `carga_academica_2026.json` que el propio `Informacion.txt` declara como fuente. Los `Fechas.txt` equivalentes de TG2/TG3 sí se archivaron; el de Proyecto I no. Además `Informacion.txt` de Proyecto I **no lo regenera ningún build** (`build_pregrado_cursos.py:704` solo cubre pregrado).
+- **Nota stale en el calendario de Investigación:** dice «Periodo corto 26P03 = 7 jueves (03/08–20/09)»; con el inicio real (13/08) son **6 jueves**, que es lo que lista la tabla.
+- **Los calendarios de Creatividad y TG3 no documentan la unidad diferida** de la Sesión 01 (sí está en `sesiones_cun.py` y sí se documenta en Proyecto I e Investigación): Creatividad salta a U3 y TG3 a U3 sin explicar dónde quedaron U1–U2.
+- **`fechas_entrega_aca.py` sigue sin poder reproducir el Cronograma OFICIAL de Proyecto I** (ver nota al pie del calendario de Proyecto I). Las fechas oficiales viven hoy fuera de esa API.
+
+### Resuelto — verificado en disco el 2026-08-10, no volver a levantarlo
+- ~~URL pública plantilla APA~~ → no se usa URL. El material referencia la ruta relativa `Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`; **el archivo está presente en los 5 cursos**.
+- ~~**Enlace/documento de la lectura autónoma** de la Sesión 01~~ → resuelto en los **5 cursos**: `Lectura autonoma - Sesion 01.txt` (escrito a mano; **ningún build lo sobrescribe**) + PDF de acceso abierto en la misma carpeta. Ver «Lectura autónoma S01» abajo.
+- ~~**Los enunciados ACA de Proyecto I siguen con las fechas viejas (28/09 para ACA2)**~~ → **FALSO desde la regeneración del 2026-08-10.** Verificado extrayendo los `.docx`: ACA 1 = 03/08→30/08 · ACA 2 = 07/09→04/10 · ACA 3 = 12/10→08/11, y los tres traen la línea «Fechas OFICIALES de Coordinación (Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf)». El `LEEME - Material para estudiantes.docx` coincide. **No hay que avisarles nada a los estudiantes por este motivo.**
+- ~~**Fechas.txt de TG2/TG3**~~ → archivados como obsoletos (el de Proyecto I no; ver arriba).
+- **El «03/08/2026» de la slide 15 de la Presentación del Curso de Proyecto I NO es un error**: es la apertura oficial de ACA 1 según el cronograma de Coordinación.
+- **Las referencias de imagen de los guiones no están rotas**: 84 referencias en los 5 cursos, 0 rotas; `Guiones/Capturas/` poblada en los 5.
+- **`.cursor/agents/` y `.claude/agents/` están sincronizados**: la única diferencia es el frontmatter por plataforma, que es lo que `sync_agents_cursor_claude.py` hace a propósito.
 
 ## Sesión 01 = encuadre (cambio 2026-08-09)
 
@@ -149,7 +176,7 @@ Las 45 sesiones de los 5 cursos (menos la Sesión 01 de cada uno, que ya era el 
 - **Auto/coevaluación de Proyecto I ya no se llaman ACA.** Eran tres ACAs desde el Syllabus ESP329, pero el material las presentaba como una cuarta y quinta ACA. Ahora: `Clases/Recursos/ACAs/Autoevaluacion individual (4%) - instructivo.docx` y `…/Coevaluacion individual (4%) - instructivo.docx` (se borraron `ACA Autoevaluacion.docx` y `ACA Coevaluacion.docx`), redactados como instructivos de un instrumento que **se diligencia** en CDigital. La tabla «LAS ACAs» de la Sesión 01 lista solo las 3 ACAs y las nombra aparte al pie. Código: `build_acas_estudiantes.py` (nuevo campo `kind` + `acas_for()`; `catalog_for_leeme()` devuelve dicts), `build_sesion_material._acas_rows()` (devuelve `(rows, instrumentos)`), `sync_clases_estudiantes.py`. Sin cambios de % ni de fechas.
 
 ## Resuelto 2026-08-09
-- **Fechas ACA Proyecto I:** el Manual y el Calendario oficial se corrigieron para usar la Cronograma OFICIAL de Coordinación (fuente única): ACA1 cierre **30/08** · ACA2 cierre **04/10**/nota **12/10** · ACA3 cierre **08/11**. Se retiró la tabla duplicada calculada por `fechas_entrega_aca.py` que se había desviado. También se corrigió el CSV de hitos (`Entregas y hitos docentes - Importar a Calendar.csv`, raíz y `2026/54ES4/`) — **si ya se importó una versión vieja a Google Calendar, hay que reimportarlo o corregir esos eventos a mano.** ⚠️ Los enunciados ACA (`Clases/Recursos/ACAs/*.docx`, ya entregados a los 40 estudiantes) siguen con las fechas viejas (28/09 para ACA2, etc.) — si se quiere alinear, hay que comunicárselo a los estudiantes explícitamente; no se tocó ese documento en esta limpieza.
+- **Fechas ACA Proyecto I:** el Manual y el Calendario oficial se corrigieron para usar la Cronograma OFICIAL de Coordinación (fuente única): ACA1 cierre **30/08** · ACA2 cierre **04/10**/nota **12/10** · ACA3 cierre **08/11**. Se retiró la tabla duplicada calculada por `fechas_entrega_aca.py` que se había desviado. También se corrigió el CSV de hitos (`Entregas y hitos docentes - Importar a Calendar.csv`, raíz y `2026/54ES4/`) — **si ya se importó una versión vieja a Google Calendar, hay que reimportarlo o corregir esos eventos a mano.** ✅ *Actualización 2026-08-10:* los enunciados ACA (`Clases/Recursos/ACAs/*.docx`) **también quedaron con las fechas oficiales** en la regeneración del 10/08 (verificado en disco). Ya no hay desalineación que comunicar a los estudiantes.
 - **Modalidad Investigación (EI005, 53339):** confirmado **virtual** (el `.docx` "_PRES" es la plantilla genérica del programa, no refleja la oferta real de este grupo).
 
 ---

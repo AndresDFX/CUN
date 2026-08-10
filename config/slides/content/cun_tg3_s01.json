@@ -31,35 +31,111 @@
   {
     "type": "table",
     "title": "Mapa del curso (1/2): escribir el artículo",
-    "headers": ["Sesión", "De qué se ocupa", "Qué queda listo"],
+    "headers": [
+      "Sesión",
+      "De qué se ocupa",
+      "Qué queda listo"
+    ],
     "rows": [
-      ["**01**", "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)", "Encuadre, acuerdo pedagógico y encargo autónomo"],
-      ["**02**", "Formulación de pregunta, objetivos y título", "Pregunta y objetivos definitivos, con variables visibles"],
-      ["**03**", "Estructura del artículo · taller de introducción", "Introducción de 3–4 párrafos en plantilla APA CUN"],
-      ["**04**", "Fase I de referentes de investigación", "Primeras fichas y mapa de literatura"],
-      ["**05**", "Diseño de instrumento · desarrollo metodológico", "Método e instrumento coherentes con los objetivos"],
-      ["**06**", "Comunidades de práctica y co-creación", "Bitácora de retroalimentación de pares"],
-      ["**07**", "Experiencia creativa · análisis de datos", "Tabla de hallazgos con lectura escrita"],
-      ["**08**", "Fase III de referentes · cierre del marco teórico", "Marco cerrado, sin huecos pendientes"]
+      [
+        "**01**",
+        "Presentación del curso, del Docente, de ustedes y de las ACAs (**hoy**)",
+        "Encuadre, acuerdo pedagógico y encargo autónomo"
+      ],
+      [
+        "**02**",
+        "Formulación de pregunta, objetivos y título",
+        "Pregunta y objetivos definitivos, con variables visibles"
+      ],
+      [
+        "**03**",
+        "Estructura del artículo · taller de introducción",
+        "Introducción de 3–4 párrafos en plantilla APA CUN"
+      ],
+      [
+        "**04**",
+        "Fase I de referentes de investigación",
+        "Primeras fichas y mapa de literatura"
+      ],
+      [
+        "**05**",
+        "Diseño de instrumento · desarrollo metodológico",
+        "Método e instrumento coherentes con los objetivos"
+      ],
+      [
+        "**06**",
+        "Comunidades de práctica y co-creación",
+        "Bitácora de retroalimentación de pares"
+      ],
+      [
+        "**07**",
+        "Experiencia creativa · análisis de datos",
+        "Tabla de hallazgos con lectura escrita"
+      ],
+      [
+        "**08**",
+        "Fase III de referentes · cierre del marco teórico",
+        "Marco cerrado, sin huecos pendientes"
+      ]
     ],
     "note": "Tres tramos: **escribir** el artículo (02–10), **alistar** póster y antiplagio (11) y **defender y cerrar** (12–15).",
-    "col_w": [1.1, 5.4, 5.4]
+    "col_w": [
+      1.1,
+      5.4,
+      5.4
+    ]
   },
   {
     "type": "table",
     "title": "Mapa del curso (2/2): cerrar, defender y entregar",
-    "headers": ["Sesión", "De qué se ocupa", "Qué queda listo"],
+    "headers": [
+      "Sesión",
+      "De qué se ocupa",
+      "Qué queda listo"
+    ],
     "rows": [
-      ["**09**", "Resultados, discusión y relación con referentes", "Borrador de resultados y discusión"],
-      ["**10**", "Resumen, palabras clave UNESCO, conclusiones y referencias", "Artículo completo de punta a punta"],
-      ["**11**", "Póster · evidencias · verificación antiplagio", "Póster de una página y revisión de similitud"],
-      ["**12**", "Sustentación ante jurados", "Defensa presentada"],
-      ["**13**", "Entregables para repositorio institucional", "Paquete final verificado"],
-      ["**14**", "Ajustes finales · seguimiento post-sustentación", "Correcciones del jurado incorporadas"],
-      ["**15**", "Cierre administrativo · recepción", "Todo cargado y confirmado como recibido"]
+      [
+        "**09**",
+        "Resultados, discusión y relación con referentes",
+        "Borrador de resultados y discusión"
+      ],
+      [
+        "**10**",
+        "Resumen, palabras clave UNESCO, conclusiones y referencias",
+        "Artículo completo de punta a punta"
+      ],
+      [
+        "**11**",
+        "Póster · evidencias · verificación antiplagio",
+        "Póster de una página y revisión de similitud"
+      ],
+      [
+        "**12**",
+        "Sustentación ante jurados",
+        "Defensa presentada"
+      ],
+      [
+        "**13**",
+        "Entregables para repositorio institucional",
+        "Paquete final verificado"
+      ],
+      [
+        "**14**",
+        "Ajustes finales · seguimiento post-sustentación",
+        "Correcciones del jurado incorporadas"
+      ],
+      [
+        "**15**",
+        "Cierre administrativo · recepción",
+        "Todo cargado y confirmado como recibido"
+      ]
     ],
     "note": "El plazo de **recepción y cierre varía según su grupo**: consúltelo en la Presentación del Curso y anótelo hoy en su calendario.",
-    "col_w": [1.1, 5.4, 5.4]
+    "col_w": [
+      1.1,
+      5.4,
+      5.4
+    ]
   },
   {
     "type": "bullets",
@@ -78,13 +154,33 @@
   {
     "type": "table",
     "title": "Las dos ACAs: qué se entrega y qué se mira",
-    "headers": ["ACA", "Qué entrega", "Qué mira el Docente / el jurado", "Flojo vs. bueno"],
+    "headers": [
+      "ACA",
+      "Qué entrega",
+      "Qué mira el Docente / el jurado",
+      "Flojo vs. bueno"
+    ],
     "rows": [
-      ["**ACA 1 · EV05** (proceso académico)", "El artículo y sus avances por sesión: introducción, marco, método, resultados, discusión y referencias", "Coherencia de cabo a rabo (problema → pregunta → objetivos → método → resultados → discusión) y referencias realmente citadas en el cuerpo", "Flojo: 50 referencias listadas y ninguna citada; resultados que no responden la pregunta · Bueno: cada sección se apoya en la anterior y la discusión dialoga con autores"],
-      ["**ACA 2 · EXAM** (sustentación)", "Defensa oral ante jurados, con el apoyo visual y las evidencias que pida el programa", "Dominio del propio trabajo: que explique decisiones, límites y hallazgos sin leer", "Flojo: leer diapositivas y no saber por qué eligió ese método · Bueno: contar el trabajo en 10 minutos y responder preguntas difíciles con calma"]
+      [
+        "**ACA 1 · EV05** (proceso académico)",
+        "El artículo y sus avances por sesión: introducción, marco, método, resultados, discusión y referencias",
+        "Coherencia de cabo a rabo (problema → pregunta → objetivos → método → resultados → discusión) y referencias realmente citadas en el cuerpo",
+        "Flojo: 50 referencias listadas y ninguna citada; resultados que no responden la pregunta · Bueno: cada sección se apoya en la anterior y la discusión dialoga con autores"
+      ],
+      [
+        "**ACA 2 · EXAM** (sustentación)",
+        "Defensa oral ante jurados, con el apoyo visual y las evidencias que pida el programa",
+        "Dominio del propio trabajo: que explique decisiones, límites y hallazgos sin leer",
+        "Flojo: leer diapositivas y no saber por qué eligió ese método · Bueno: contar el trabajo en 10 minutos y responder preguntas difíciles con calma"
+      ]
     ],
     "note": "Enunciados completos, criterios y **fechas exactas** por grupo: `Clases/Recursos/ACAs/` y CDigital. La defensa pesa tanto como todo el trabajo escrito: no se improvisa.",
-    "col_w": [2.2, 3.2, 3.2, 3.3]
+    "col_w": [
+      2.2,
+      3.2,
+      3.2,
+      3.3
+    ]
   },
   {
     "type": "bullets",
@@ -120,26 +216,71 @@
     "type": "boxes",
     "title": "Inteligencia artificial generativa: reglas de la casa",
     "boxes": [
-      ["info", "**Sí se puede usar** para entender un concepto, ordenar la estructura de una sección o pulir la redacción de un párrafo que usted ya escribió."],
-      ["aclaracion", "**Se declara.** Una línea al final del documento: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."],
-      ["advertencia", "**Verifique cada referencia: estos modelos inventan autores, títulos y DOIs**, y esa bibliografía va al repositorio institucional. Además, frente a jurados usted defiende cada párrafo: lo que no pueda explicar en voz alta se nota en un minuto."]
+      [
+        "info",
+        "**Sí se puede usar** para entender un concepto, ordenar la estructura de una sección o pulir la redacción de un párrafo que usted ya escribió."
+      ],
+      [
+        "aclaracion",
+        "**Se declara.** Una línea al final del documento: qué herramienta usó y para qué. Usarla no es falta; ocultarlo sí."
+      ],
+      [
+        "advertencia",
+        "**Verifique cada referencia: estos modelos inventan autores, títulos y DOIs**, y esa bibliografía va al repositorio institucional. Además, frente a jurados usted defiende cada párrafo: lo que no pueda explicar en voz alta se nota en un minuto."
+      ]
     ]
   },
   {
     "type": "table",
     "title": "Herramientas del curso: todas gratis, todas en el navegador",
-    "headers": ["Herramienta", "Para qué la usamos", "Cuándo aparece"],
+    "headers": [
+      "Herramienta",
+      "Para qué la usamos",
+      "Cuándo aparece"
+    ],
     "rows": [
-      ["**CDigital**", "Entrega oficial, materiales, antiplagio institucional y notas", "Siempre"],
-      ["**Google Docs**", "Escribir el artículo sobre la plantilla APA CUN, con historial de versiones", "Todas las sesiones"],
-      ["**Google Académico**", "Buscar referentes, ver “citado por” y cerrar huecos del marco", "Fases de referentes y discusión"],
-      ["**SciELO y Redalyc**", "Fuentes abiertas iberoamericanas para el contexto local", "Marco teórico y discusión"],
-      ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es abierto"],
-      ["**ZoteroBib (zbib.org)**", "Generar y ordenar las referencias en APA 7 sin instalar nada", "Cada vez que cite"],
-      ["**Google Slides / Canva free**", "Póster de divulgación y apoyo visual de la sustentación", "Alistamiento y defensa"]
+      [
+        "**CDigital**",
+        "Entrega oficial, materiales, antiplagio institucional y notas",
+        "Siempre"
+      ],
+      [
+        "**Google Docs**",
+        "Escribir el artículo sobre la plantilla APA CUN, con historial de versiones",
+        "Todas las sesiones"
+      ],
+      [
+        "**Google Académico**",
+        "Buscar referentes, ver “citado por” y cerrar huecos del marco",
+        "Fases de referentes y discusión"
+      ],
+      [
+        "**SciELO y Redalyc**",
+        "Fuentes abiertas iberoamericanas para el contexto local",
+        "Marco teórico y discusión"
+      ],
+      [
+        "**Biblioteca CUN (web)**",
+        "Texto completo de bases suscritas, con login institucional",
+        "Cuando el PDF no es abierto"
+      ],
+      [
+        "**ZoteroBib (zbib.org)**",
+        "Generar y ordenar las referencias en APA 7 sin instalar nada",
+        "Cada vez que cite"
+      ],
+      [
+        "**Google Slides / Canva free**",
+        "Póster de divulgación y apoyo visual de la sustentación",
+        "Alistamiento y defensa"
+      ]
     ],
     "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Un navegador y su cuenta institucional bastan.",
-    "col_w": [2.8, 5.7, 3.4]
+    "col_w": [
+      2.8,
+      5.7,
+      3.4
+    ]
   },
   {
     "type": "bullets",
@@ -159,18 +300,36 @@
     "type": "boxes",
     "title": "Acuerdos de convivencia del encuentro virtual",
     "boxes": [
-      ["info", "**Puntualidad.** Se empieza a la hora del pie de estas diapositivas: en una hora semanal, diez minutos tarde son la sexta parte de la clase. **Micrófono** apagado mientras alguien expone."],
-      ["aclaracion", "**Compartir pantalla es parte del curso.** Se proyectan borradores reales, propios y ajenos; la **cámara** se agradece si su conexión lo permite. Nadie se burla de un texto a medio hacer: para eso venimos."],
-      ["advertencia", "**Retroalimentación exigente y respetuosa.** Se comenta el trabajo, nunca a la persona, y siempre con una propuesta concreta. Así es exactamente como pregunta un jurado."]
+      [
+        "info",
+        "**Puntualidad.** Se empieza a la hora del pie de estas diapositivas: en una hora semanal, diez minutos tarde son la sexta parte de la clase. **Micrófono** apagado mientras alguien expone."
+      ],
+      [
+        "aclaracion",
+        "**Compartir pantalla es parte del curso.** Se proyectan borradores reales, propios y ajenos; la **cámara** se agradece si su conexión lo permite. Nadie se burla de un texto a medio hacer: para eso venimos."
+      ],
+      [
+        "advertencia",
+        "**Retroalimentación exigente y respetuosa.** Se comenta el trabajo, nunca a la persona, y siempre con una propuesta concreta. Así es exactamente como pregunta un jurado."
+      ]
     ]
   },
   {
     "type": "boxes",
     "title": "Preguntas frecuentes del primer día",
     "boxes": [
-      ["advertencia", "**“¿Puedo cambiar de tema?”** No a estas alturas, salvo fuerza mayor hablada con el Docente. TG3 **culmina** un proyecto: cambiarlo aquí es no llegar a sustentar."],
-      ["info", "**“¿50 referencias no es imposible?”** No: se arrastran las de TG2 y se suman las nuevas cada semana. Lo imposible es reunirlas la última semana. **“¿Me sirve lo de TG2?”** Sí: se reutiliza lo bueno y se reescribe lo débil."],
-      ["aclaracion", "**“¿La sustentación es en vivo y ante quién?”** Ante jurados, en la fecha que fije su grupo. Se prepara desde ahora: cada sesión escrita es material de esa defensa."]
+      [
+        "advertencia",
+        "**“¿Puedo cambiar de tema?”** No a estas alturas, salvo fuerza mayor hablada con el Docente. TG3 **culmina** un proyecto: cambiarlo aquí es no llegar a sustentar."
+      ],
+      [
+        "info",
+        "**“¿50 referencias no es imposible?”** No: se arrastran las de TG2 y se suman las nuevas cada semana. Lo imposible es reunirlas la última semana. **“¿Me sirve lo de TG2?”** Sí: se reutiliza lo bueno y se reescribe lo débil."
+      ],
+      [
+        "aclaracion",
+        "**“¿La sustentación es en vivo y ante quién?”** Ante jurados, en la fecha que fije su grupo. Se prepara desde ahora: cada sesión escrita es material de esa defensa."
+      ]
     ]
   },
   {
@@ -179,7 +338,7 @@
     "bullets": [
       "**Lectura autónoma (obligatoria):** unidades **U1 y U2** del Syllabus — **casos de éxito** y **retomar el proyecto** (contexto y planteamiento).",
       "  Hoy no se dictaron: se leen en casa y se **retoman al abrir la Sesión 02**.",
-      "  Dónde: material de la Sesión 01 en CDigital — [URL CDigital — campus del curso pendiente]",
+      "  **Dónde está:** ya viene en tu carpeta del curso, en `Sesion 01 - …/` (el PDF y el archivo `Lectura autonoma - Sesion 01.txt` con la cita y el enlace). También queda publicada en CDigital.",
       "**Arme su matriz de herencia** en un Google Doc llamado `S01_AcuerdoRetoma_Apellido`, con tres columnas:",
       "  **Reutilizo tal cual · Reescribo · Creo de cero**, sección por sección de lo que trae de TG2.",
       "  **Cuente sus referencias reales**: cuántas están citadas hoy en el cuerpo y cuántas le faltan.",

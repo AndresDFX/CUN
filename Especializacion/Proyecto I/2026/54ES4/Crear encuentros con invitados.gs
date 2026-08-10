@@ -10,13 +10,20 @@
  * 3. Revisa SEND_INVITES (false = crea sin notificar; true = envía correo).
  * 4. Ejecuta createEncuentrosP1() → autoriza Calendar cuando lo pida.
  * 5. En Calendar: abre un evento → debe verse Invitados (roster + coanfitrión).
- * 6. Añade Meet a mano (mismo enlace en toda la serie) y coanfitrión Meet.
+ * 6. Asigna el coanfitrión de Meet a mano (eso NO lo puede hacer la API).
+ *
+ * SOBRE EL ENLACE DE MEET
+ * CalendarApp NO adjunta videoconferencia: si se añade Meet evento por evento desde la
+ * interfaz, Google crea un enlace DISTINTO en cada uno. Por eso este script escribe el
+ * MISMO enlace de la serie en Location y en la descripción de los 11 encuentros.
+ * Para además tener el chip nativo «Unirse con Google Meet», ejecuta después
+ * `Actualizar Meet en encuentros (mismo enlace).gs` (usa el servicio avanzado de Calendar).
  *
  * Regenerar este .gs: python config/slides/build_calendar_proyecto1_54es4.py
  */
 var SEND_INVITES = false; // true solo cuando quieras notificar a todos
 var TIMEZONE = 'America/Bogota';
-var LOCATION = ""; // vacío hasta tener Meet real
+var LOCATION = "https://meet.google.com/omk-woqk-vsj"; // enlace único de Meet para toda la serie
 
 var GUESTS = [
   "aide.moreno@cun.edu.co",
