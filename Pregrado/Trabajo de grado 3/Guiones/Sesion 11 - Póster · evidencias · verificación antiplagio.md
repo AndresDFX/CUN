@@ -117,7 +117,7 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Anoten la **ruta institucional de verificación** que use el curso en CDigital.”
+> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
 
 > “Criterio de éxito: el póster se entiende a un metro, los anexos están referenciados, y el párrafo reescrito conserva la idea con voz propia y su cita.”
 

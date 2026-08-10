@@ -927,7 +927,7 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 
 > “**Slide 13 — Cómo se entrega.** Puro procedimiento, y les ahorra sustos.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla de TG2: **trabajen siempre sobre el mismo documento**. Aquí se evalúa un texto que crece, no una carpeta de archivos sueltos.”
 
-> “**Slide 14 — Integridad académica.** En trabajo de grado esto se revisa de verdad. Todo lo que no es suyo se cita en APA 7, incluidos los fragmentos de su propio trabajo anterior: reutilizarlos sin declararlo es **autoplagio**. En TG3 el documento pasa por la herramienta antiplagio institucional del campus, así que el hábito lo corregimos aquí. Y el consejo práctico: anoten la fuente en el instante en que pegan algo; en un documento que crece seis meses, reconstruirla después es imposible.”
+> “**Slide 14 — Integridad académica.** En trabajo de grado esto se revisa de verdad. Todo lo que no es suyo se cita en APA 7, incluidos los fragmentos de su propio trabajo anterior: reutilizarlos sin declararlo es **autoplagio**. En TG3 la entrega pasa por la revisión de similitud institucional del aula, y allá el Docente confirma cómo opera; así que el hábito lo corregimos aquí. Y el consejo práctico: anoten la fuente en el instante en que pegan algo; en un documento que crece seis meses, reconstruirla después es imposible.”
 
 > “**Slide 15 — Inteligencia artificial.** Hablemos claro. Sí se puede usar para entender un concepto, ordenar una sección o pulir un párrafo que ustedes ya escribieron. Se declara en una línea al final. Y verifiquen cada referencia, porque estas herramientas inventan autores y DOIs. Piensen en el semestre que viene: en TG3 hay sustentación ante jurados, y un párrafo que usted no pueda explicar en voz alta le va a costar caro.”
 
@@ -1291,7 +1291,7 @@ Un **constructo** es un concepto clave de su pregunta. En "clasificación de tic
 En un avance de TG2, tres constructos bien desarrollados valen más que ocho superficiales. Más de tres suele significar que el estudiante no delimitó la pregunta. Menos de dos, que se quedó corto.
 
 #### 4. Parafraseo con cita, no copia
-Cada idea de otro autor se parafrasea y se cita en APA 7; la cita textual es la excepción (para definiciones clave), siempre con página. Copiar sin citar es plagio y en TG3 se verifica con la herramienta antiplagio institucional; se corrige el hábito ahora.""",
+Cada idea de otro autor se parafrasea y se cita en APA 7; la cita textual es la excepción (para definiciones clave), siempre con página. Copiar sin citar es plagio, y en TG3 la entrega pasa por la revisión de similitud institucional del aula; se corrige el hábito ahora.""",
     errores=[
         ("“El marco es pegar todas las definiciones que encuentre.”",
          "No: cada cita debe ayudar a responder la pregunta; si no, sobra."),
@@ -1879,7 +1879,7 @@ Cerrar TG2 no es "terminar el trabajo de grado": es dejar un **avance limpio y c
 Lo que quedó en propuesto o a medias no se esconde: se escribe una **lista de pendientes para TG3** —aplicar instrumentos, recoger y analizar datos, escribir resultados y discusión, preparar sustentación y repositorio—. Esa lista es el mejor regalo que el estudiante se hace a sí mismo para el próximo semestre.
 
 #### 4. Antiplagio: hábito, no susto
-Recuerde que en TG3 el documento pasa por la **herramienta antiplagio institucional del campus (CDigital)** —sin inventar servicios externos—. Cerrar TG2 con parafraseo y citas correctas evita sorpresas. No es una amenaza; es higiene académica.""",
+Recuerde que en TG3 la entrega pasa por la **revisión de similitud institucional del aula (CDigital)** —el Docente de TG3 indica cómo opera; sin inventar servicios externos—. Cerrar TG2 con parafraseo y citas correctas evita sorpresas. No es una amenaza; es higiene académica.""",
     errores=[
         ("“Cerrar TG2 es terminar el trabajo de grado.”",
          "No: es dejar un avance limpio para ejecutar y sustentar en TG3."),
@@ -3068,7 +3068,7 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Anoten la **ruta institucional de verificación** que use el curso en CDigital.”
+> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
 
 > “Criterio de éxito: el póster se entiende a un metro, los anexos están referenciados, y el párrafo reescrito conserva la idea con voz propia y su cita.”
 
@@ -3216,13 +3216,13 @@ Antes de subir, revisión de forma: portada correcta, numeración, tablas rotula
 **GUION LITERAL:**
 > “Sesión 13. Ya defendieron (o están por hacerlo). Hoy preparamos el **paquete para el repositorio institucional**. Ojo con esto: subir el artículo al repositorio es **publicarlo**: queda público y permanente. Por eso hoy trabajamos con lupa.”
 
-> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan su artículo final, sus anexos y la constancia de antiplagio a la mano.”""",
+> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su artículo final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
 > “**Slide 3 — CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
 
-> “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y la **constancia de antiplagio**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
+> “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y, **si el curso lo exige**, el **informe de similitud**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
 
 > “**Slide 4 — ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el artículo— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”""",
     fase3_texto="""**Protagonista:** Docente (modela el checklist + metadatos).
@@ -3230,7 +3230,7 @@ Antes de subir, revisión de forma: portada correcta, numeración, tablas rotula
 **En pantalla (Google Docs / ruta CDigital del semestre):** un checklist de repositorio y un formulario de metadatos de ejemplo.
 
 **GUION LITERAL:**
-> “Modelo el checklist. Voy marcando: artículo final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; constancia de antiplagio —según la ruta del curso—. En dos minutos sé exactamente qué me falta para poder cargar.”
+> “Modelo el checklist. Voy marcando: artículo final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. En dos minutos sé exactamente qué me falta para poder cargar.”
 
 > “Ahora los metadatos. Pongo el título tal cual, el resumen que ya escribimos y las palabras clave UNESCO. Les muestro por qué importa: si el resumen y las keywords están bien, el artículo aparece en las búsquedas; si están vacíos o mal, el trabajo queda enterrado aunque sea excelente.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
@@ -3386,7 +3386,7 @@ El objetivo de hoy es que nadie pierda la nota por un tema logístico: recorrer 
 **En pantalla (CDigital + Google Docs):** el espacio de entregas y un checklist de recepción.
 
 **GUION LITERAL:**
-> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: artículo final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; constancia de antiplagio —según la ruta del curso—. Voy marcando en el checklist: cargado y recibido.”
+> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: artículo final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. Voy marcando en el checklist: cargado y recibido.”
 
 > “Y donde el campus lo permite, capturo el estado 'entregado': esa captura es su respaldo si más adelante hay cualquier duda sobre si entregaron o no. Cerrar bien y con evidencia es parte de ser profesional.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.

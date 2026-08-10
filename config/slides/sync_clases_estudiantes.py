@@ -105,9 +105,32 @@ def leeme_md(key: str) -> str:
     meet = meet_placeholder(c["titulo"])
     aca_rows = catalog_for_leeme(key)
     aca_table = "\n".join(
-        f"| **{code}** — {title} | **{fecha}** | `{rel}` |"
-        for code, title, rel, fecha in aca_rows
+        f"| **{r['code']}** — {r['title']} | **{r['fecha']}** | `{r['rel']}` |"
+        for r in aca_rows
+        if r["kind"] == "aca"
     )
+    # Auto/coevaluación (solo Proyecto I): NO son ACAs — van aparte y rotuladas
+    # como instrumentos individuales de cierre, cada uno con su instructivo.
+    instrumentos = [r for r in aca_rows if r["kind"] == "instrumento"]
+    instrumentos_bloque = ""
+    arbol_instrumentos = ""
+    if instrumentos:
+        arbol_instrumentos = (
+            "\n      Autoevaluacion / Coevaluacion individual (4%) - instructivo.docx"
+            "   ← no son ACAs"
+        )
+        lineas = "\n".join(
+            f"- **{r['code']}** ({r['weight']}) — se diligencia hasta el **{r['fecha']}** · "
+            f"instructivo: `{r['rel']}`"
+            for r in instrumentos
+        )
+        instrumentos_bloque = (
+            "\n### Autoevaluación y coevaluación — **no son ACAs**\n\n"
+            "Al cierre del curso hay además dos **instrumentos individuales**: no se entrega documento "
+            "ni se usa la plantilla APA. **Cada estudiante los diligencia** (tipo formulario) en **CDigital**, "
+            "dentro de su ventana. **No sustituyen la ACA 3**; si no los diligencias, ese porcentaje queda en cero.\n\n"
+            f"{lineas}\n"
+        )
     tutorias_bloque = ""
     # Solo Proyecto I (AFI). No inventar esta sección en TG2/TG3.
     if key in CURSOS_CON_TUTORIAS_POR_GRUPO:
@@ -157,7 +180,7 @@ Los enunciados completos viven en **`Recursos/ACAs/`** (archivos `.docx` con ide
 | ACA | Fecha de entrega | Archivo |
 | :--- | :--- | :--- |
 {aca_table}
-
+{instrumentos_bloque}
 ---
 
 ## Cómo está organizada esta carpeta
@@ -169,7 +192,7 @@ Clases/
   Recursos/
     {APA_NAME}
     ACAs/
-      ACA N - ….docx
+      ACA N - ….docx{arbol_instrumentos}
   Sesion 01 - …/
     Presentacion.pptx
     (fichas / capturas de apoyo si aplica)

@@ -1,0 +1,126 @@
+LECTURA AUTONOMA DE LA SESION 01 -> SESION 02
+Proyecto I (ESP329) - Especializacion en Inteligencia Artificial
+================================================================
+
+QUE HAY QUE LEER
+----------------
+La unidad de FUNDAMENTOS Y ENFOQUE DE INVESTIGACION (U1 del programa).
+
+Es la unidad que hoy, en la Sesion 01, quedo diferida: la Sesion 01 es de
+encuadre (presentacion del curso, del Docente, de ustedes y de las ACAs) y no
+dicta tema. Por eso esta unidad se lee de forma autonoma y la retomamos al
+abrir la Sesion 02.
+
+Tal como quedo dicho en la deck de la Sesion 01:
+
+  "Lectura autonoma de esta semana: la unidad de fundamentos y enfoque de
+   investigacion (U1 del programa). Hoy no la dictamos: la leen ustedes y la
+   retomamos al abrir la Sesion 02. Mientras leen, anoten TRES TERMINOS que no
+   les queden claros. Con esos tres arrancamos la proxima clase."
+
+
+PARA CUANDO
+-----------
+Antes de la Sesion 02. La proxima clase arranca sobre esta lectura y sobre lo
+que ustedes traigan escrito.
+
+
+DONDE ESTA EL MATERIAL
+----------------------
+Los tres documentos estan en ESTA MISMA CARPETA, en PDF, y ademas se dejan los
+enlaces oficiales por si prefieren leerlos en linea. Los tres son de ACCESO
+ABIERTO con licencia Creative Commons: se pueden leer, descargar y compartir
+citando la fuente. No hay que pagar ni registrarse en ningun sitio.
+
+Carga real de lectura obligatoria: unas 27 paginas (Lectura 1 completa +
+la primera parte de la Lectura 2).
+
+
+--- LECTURA 1 - OBLIGATORIA, COMPLETA (15 paginas) ------------------------
+Cubre: enfoques cuantitativo, cualitativo y mixto; por que la oposicion entre
+ellos es una falsa disputa; como se elige el enfoque segun el objeto de estudio.
+Es el nucleo de la unidad.
+
+  Cadena-Iniguez, P., Rendon-Medel, R., Aguilar-Avila, J., Salinas-Cruz, E.,
+  de la Cruz-Morales, F. del R., y Sangerman-Jarquin, D. M. (2017). Metodos
+  cuantitativos, metodos cualitativos o su combinacion en la investigacion:
+  un acercamiento en las ciencias sociales. Revista Mexicana de Ciencias
+  Agricolas, 8(7), 1603-1617.
+
+  Enlace:  https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-09342017000701603
+  PDF:     https://www.scielo.org.mx/pdf/remexca/v8n7/2007-0934-remexca-8-07-1603.pdf
+  En esta carpeta:
+    "Lectura 1 (obligatoria) - Metodos cuantitativos, cualitativos o mixtos - Cadena-Iniguez 2017.pdf"
+  Fuente: SciELO Mexico. Licencia Creative Commons BY-NC 4.0.
+
+
+--- LECTURA 2 - OBLIGATORIA SOLO LAS SECCIONES 1 y 2 (pp. 91-102) ---------
+Cubre: que es y como se arma un anteproyecto, apartado por apartado
+(identificacion, delimitacion del tema, planteamiento del problema, preguntas,
+justificacion, relevancia, vacios de conocimiento).
+
+Lean AHORA solo las secciones 1 y 2 (pp. 91-102, unas 12 paginas: hasta donde
+empieza la seccion "3. Revision bibliografica", en la p. 103). El resto
+del documento (revision bibliografica, marco teorico, metodologia, cronograma,
+presupuesto) lo iremos usando sesion por sesion durante todo el curso: guarden
+este PDF, es la guia de trabajo del semestre.
+
+  Montes del Castillo, A., y Montes Martinez, A. (2014). Guia para proyectos
+  de investigacion. Universitas. Revista de Ciencias Sociales y Humanas, (20),
+  91-126. https://doi.org/10.17163/uni.n20.2014.04
+
+  Enlace:  https://universitas.ups.edu.ec/index.php/universitas/article/view/20.2014.04
+  PDF:     https://universitas.ups.edu.ec/universitas/article/download/20.2014.04/100
+  En esta carpeta:
+    "Lectura 2 (guia) - Guia para proyectos de investigacion - Montes del Castillo 2014.pdf"
+  Fuente: Universidad Politecnica Salesiana (Ecuador). Licencia Creative
+  Commons BY-NC-SA 4.0.
+
+
+--- LECTURA 3 - RECOMENDADA (9 paginas) -----------------------------------
+Cubre: etica de la investigacion (consentimiento informado, comites de etica,
+validez cientifica, integridad y presion por publicar). Corta y muy pertinente
+para proyectos que trabajen con datos de personas, que es el caso de casi
+todos los anteproyectos de esta especializacion.
+
+  Cruz-Ortiz, M., Perez-Rodriguez, M. del C., Jenaro-Rio, C., Flores-Robaina,
+  N., y Torres-Apolo, V. A. (2020). Implicaciones eticas para la investigacion:
+  el interminable reto en un mundo que se transforma. Horizonte Sanitario,
+  19(1), 9-17. https://doi.org/10.19136/hs.a19n1.3277
+
+  Enlace:  https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-74592020000100009
+  PDF:     https://www.scielo.org.mx/pdf/hs/v19n1/2007-7459-hs-19-01-9.pdf
+  En esta carpeta:
+    "Lectura 3 (recomendada) - Etica de la investigacion - Cruz-Ortiz 2020.pdf"
+  Fuente: SciELO Mexico. Licencia Creative Commons BY-NC 4.0.
+---------------------------------------------------------------------------
+
+Revisen tambien el espacio de la Sesion 01 en CDigital: alli se publica el
+material oficial del curso.
+
+Nota sobre la bibliografia del Syllabus: los libros del Syllabus (Hernandez
+Sampieri, Creswell, Maxwell, el manual APA 7) son material comercial y no se
+distribuyen por esta via. Se consultan en la Biblioteca CUN o en las bases de
+datos institucionales. Las tres lecturas de arriba son de acceso abierto y
+cubren la unidad sin necesidad de comprar nada.
+
+
+QUE TRAER A LA SESION 02
+------------------------
+1. Los TRES TERMINOS de la lectura que no les quedaron claros, anotados.
+   Aclaracion: los tres terminos salen de la LECTURA 1 o de la LECTURA 2.
+2. Su EQUIPO confirmado (maximo 3 personas) y avisado al Docente. Si aun no
+   tienen con quien, diganlo esta semana y el Docente ayuda a armarlo.
+3. El ENUNCIADO DE LA ACA 1 leido completo, incluida la lista de criterios:
+   esta en Clases/Recursos/ACAs/.
+4. El DOCUMENTO DEL EQUIPO ya creado en Google Docs, con la plantilla APA CUN
+   de proyecto de grado, compartido con todos los integrantes.
+5. Una IDEA DE TEMA escrita EN UNA FRASE y el contexto donde ocurre (empresa,
+   aula, proceso).
+6. Escrito en una linea: si su idea de tema pide un enfoque CUANTITATIVO,
+   CUALITATIVO o MIXTO, y por que. No importa si se equivocan; importa que
+   hayan tomado posicion despues de leer.
+
+Nada de esto se califica hoy, pero todo se nota en la Sesion 02: la clase
+avanza sobre lo que ustedes traigan escrito. Quien llegue sin la frase se
+pasara la sesion viendo trabajar a los demas.

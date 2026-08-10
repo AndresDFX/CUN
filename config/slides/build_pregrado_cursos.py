@@ -49,7 +49,10 @@ ROOT = Path(__file__).resolve().parents[2] / "Pregrado"
 D = date
 DOCENTE, DOCENTE_CORREO = _docente_pair()
 from sesiones_cun import DOCENTE_CREDS  # noqa: E402  (fuente única del perfil proyectado)
-URL_PLANTILLA_APA = "[URL Drive/Moodle de la Plantilla APA CUN — pendiente]"
+# La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
+# estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
+# build_acas_estudiantes.py). Decisión del docente 2026-08-10.
+RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 DIAS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
 
@@ -96,9 +99,9 @@ def recursos_items(titulo_corto: str, *extra: str) -> list[str]:
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
         f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet_ph(titulo_corto))}",
-        "**Plantilla APA CUN – Proyecto de Grado** (archivo local): "
-        "`Cursos/Plantilla_APA_CUN_Proyecto de grado.docx`.",
-        f"**URL pública Plantilla APA:** {URL_PLANTILLA_APA}",
+        f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
+        f"`{RUTA_PLANTILLA_APA}`.",
+        f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
         "**Enunciados ACA / cortes (estudiantes):** `Clases/Recursos/ACAs/`.",
     ]
     items.extend(extra)
@@ -169,7 +172,7 @@ def ensure_dirs(course_dir: Path):
 # Presentaciones
 # ---------------------------------------------------------------------------
 def build_investigacion(out: Path):
-    set_footer(footer_inicio_efectivo("investigacion"))
+    set_footer("")
     prs = new_prs()
     course_cover(
         prs, "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA",
@@ -236,7 +239,7 @@ def build_investigacion(out: Path):
 
 
 def build_creatividad(out: Path):
-    set_footer(footer_inicio_efectivo("creatividad"))
+    set_footer("")
     prs = new_prs()
     course_cover(
         prs, "CREATIVIDAD Y PENSAMIENTO INNOVADOR",
@@ -300,7 +303,7 @@ def build_creatividad(out: Path):
 
 
 def build_tg2(out: Path):
-    set_footer(footer_inicio_efectivo("tg2"))
+    set_footer("")
     prs = new_prs()
     course_cover(
         prs, "TRABAJO DE GRADO 2",
@@ -375,7 +378,7 @@ def build_tg2(out: Path):
 
 
 def build_tg3(out: Path):
-    set_footer(footer_inicio_efectivo("tg3"))
+    set_footer("")
     prs = new_prs()
     course_cover(
         prs, "TRABAJO DE GRADO 3",

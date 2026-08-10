@@ -16,14 +16,17 @@ from sesiones_cun import (
 from carga_academica import bold_var, cover_meta_lines, curso as carga_curso, footer_inicio_efectivo
 
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
-URL_PLANTILLA_APA = "[URL Drive/Moodle de la Plantilla APA CUN — pendiente]"
+# La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
+# estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
+# build_acas_estudiantes.py). Decisión del docente 2026-08-10.
+RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 
 
 def build_proyecto1(course):
     """Deck compacto de respaldo. El deck rico canónico es build_cun_proyecto1.py."""
     out = os.path.join(course["folder"], "Clases", "Presentacion del Curso - Proyecto I.pptx")
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    set_footer(footer_inicio_efectivo("proyecto1"))
+    set_footer("")
     prs = new_prs()
     meta = cover_meta_lines(
         "proyecto1",
@@ -68,8 +71,8 @@ def build_proyecto1(course):
         f"**Tutorías:** @@{LINK_TUTORIAS}@@",
         MSG_TUTORIAS_POR_GRUPO,
         f"**Meet (mismo enlace toda la serie):** {bold_var(meet_placeholder('Proyecto I'))}",
-        "**Plantilla APA CUN:** `Cursos/Plantilla_APA_CUN_Proyecto de grado.docx`",
-        f"**URL pública Plantilla APA:** {URL_PLANTILLA_APA}",
+        f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
+        f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
         "**Enunciados ACA:** `Clases/Recursos/ACAs/`",
     ], idx=_i)
     _p1_h = carga_curso("proyecto1")["horario"]
@@ -90,7 +93,7 @@ def build_pregrado(course, filename):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     key = course.get("key")
     if key in ("investigacion", "creatividad", "tg2", "tg3"):
-        set_footer(footer_inicio_efectivo(key))
+        set_footer("")
     prs = new_prs()
     if key in ("investigacion", "creatividad", "tg2", "tg3"):
         meta = cover_meta_lines(key, extra=[f"**Fuente de temas:** {course['fuente']}"])
@@ -117,8 +120,8 @@ def build_pregrado(course, filename):
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
         f"**Meet (mismo enlace toda la serie):** {bold_var(meet_placeholder(course['titulo']))}",
-        "**Plantilla APA CUN:** `Cursos/Plantilla_APA_CUN_Proyecto de grado.docx`",
-        f"**URL pública Plantilla APA:** {URL_PLANTILLA_APA}",
+        f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
+        f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
     ], idx=_i)
     closing_slide(prs, "¡Empezamos!", [
         "Nos vemos en el primer encuentro sincrónico.",

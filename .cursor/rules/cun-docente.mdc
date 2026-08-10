@@ -28,7 +28,7 @@ Tras el cambio: regenerar/actualizar las **5 Presentaciones del Curso** (y el mo
 
 ### Estándar vigente de slides (los 5)
 
-1. **Pie de página = hora de inicio efectivo** (horario oficial de clase **+ 10 min**), en **todas** las slides (Presentación del Curso + Presentaciones de Sesión), p. ej. `Inicio 8:10 pm` / `Inicio 5:10 pm`. Helper: `footer_inicio_efectivo(key)` en `carga_academica.py` → `set_footer(...)` en el build. **Sin** nombre del curso ni “Curso · Escuela…” en el pie. El nº de slide (idx) puede quedarse a la derecha. Logo CUN sí puede usarse (p. ej. en `tutor_slide`).
+1. **Pie de página = VACÍO** en los 5 cursos (cambio 2026-08-10). La hora de **inicio efectivo** (horario oficial **+ 10 min**) **ya no se repite** en cada slide: aparece **una sola vez**, en la **portada de la Presentación del Curso**, dentro de la línea «Horario confirmado: … · inicio efectivo **h:mm**» que arma `cover_meta_lines()` en `carga_academica.py`. Los builds llaman `set_footer("")`; **no** usar `footer_inicio_efectivo()` en `set_footer`. En el pie solo queda el **nº de slide** a la derecha. **Sin** nombre del curso ni «Curso · Escuela…». Logo CUN sí puede usarse (p. ej. en `tutor_slide`).
 2. **`tutor_slide`:** título genérico **«Docente»** + bullets de perfil + correo. **Sin** nombre propio grande. **Sin** subtítulo «Docente · &lt;curso&gt;».
 3. Plataforma = **CDigital** (nunca la palabra “LMS” como nombre). Placeholder: `[URL CDigital — campus del curso pendiente]`.
 4. Presentación del curso: **grupo(s) solo en la portada** (primera slide), slide docente genérico, **slide rompehielos “Preséntate” con QR** (`config/slides/assets/qr_presentacion_estudiantes.png` · helper `icebreaker_qr_slide`), **slide CONTENIDO** con listado `**Sesión N** — tema` en **UNA sola slide** (helper `contenido_sesiones_slide`; tipografía compacta o 2 columnas en la misma slide si hace falta; sin fechas ni tablas de cronograma), recursos con links/placeholders (sin grupo ni nombre propio), cierre **sin fechas de calendario** (sí día/hora semanal) y sin grupo.
@@ -66,12 +66,12 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - **Inicio operativo 2026:** `2026-08-10`. **Fechas de entrega ACA:** `config/cursos/fechas_entrega_aca.py` (pesos + día de clase sobre [inicio–recepción]; no hardcodear en enunciados).
 - Incluye bloque, periodo, grupos, fechas de inicio/recepción/cierre.
 - En Presentación del Curso, esos datos de oferta (y horario/placeholders Meet·CDigital) van en **negrita** para señalar qué actualizar el próximo periodo.
-- **Horarios confirmados por el docente** (tienen prioridad sobre el Excel vacío). Pie de slides = horario + 10 min (`footer_inicio_efectivo`):
-  - **Proyecto I:** lun 8:00–10:00 pm → pie `Inicio 8:10 pm`
-  - **TG2:** lun 5:00–6:00 pm → pie `Inicio 5:10 pm`
-  - **TG3:** mar 5:00–6:00 pm → pie `Inicio 5:10 pm`
-  - **Creatividad:** mié 5:00–6:00 pm → pie `Inicio 5:10 pm`
-  - **Investigación:** jue 5:00–6:00 pm → pie `Inicio 5:10 pm`
+- **Horarios confirmados por el docente** (tienen prioridad sobre el Excel vacío). El **inicio efectivo** = horario + 10 min (`hora_inicio_efectiva`) y se muestra **solo en la portada de la Presentación del Curso** (no en el pie — ver estándar de slides, punto 1):
+  - **Proyecto I:** lun 8:00–10:00 pm → inicio efectivo 8:10 pm
+  - **TG2:** lun 5:00–6:00 pm → inicio efectivo 5:10 pm
+  - **TG3:** mar 5:00–6:00 pm → inicio efectivo 5:10 pm
+  - **Creatividad:** mié 5:00–6:00 pm → inicio efectivo 5:10 pm
+  - **Investigación:** jue 5:00–6:00 pm → inicio efectivo 5:10 pm
 
 # Estructura de carpetas (NO usar `Temas/`)
 
@@ -101,6 +101,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - **Carpeta compartida con estudiantes = solo `Clases/`.** Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
 - **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`.
 - **ACAs (estudiantes):** convención única los 5 cursos → `Clases/Recursos/ACAs/ACA N - <título corto>.docx`. Build: `python config/slides/build_acas_estudiantes.py`. Guiones docentes pueden remitir a esa ruta **sin** duplicar el enunciado largo.
+- **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%)** y la **coevaluación (4%)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; `kind="ventana"` en `config/cursos/fechas_entrega_aca.py`). Solo existen en Proyecto I.
 - **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
 - **NO meter en `Clases/`:** Guiones docentes, Manual del Docente, CSV/ICS Calendar con roster, formularios solo-docente AFI, `Informacion.txt` de grupo, **`Correo de bienvenida.docx`**, builds/`config/`, ni archivos `.md`.
 - **Raíz** = material genérico/reutilizable (sin código de grupo en títulos ni nombres de archivo de sesión).

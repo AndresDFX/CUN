@@ -25,9 +25,10 @@ USO:
     closing_slide(prs, "Mensaje", ["línea"], "Acento")
     prs.save("salida.pptx")
 
-Pie de página (todas las slides): hora de **inicio efectivo** = horario oficial + 10 min
-(ej. `Inicio 8:10 pm`). Sin nombre del curso. El nº de slide (idx) va a la derecha.
-Los builds llaman `set_footer(footer_inicio_efectivo(key))` desde `carga_academica`.
+Pie de página: **vacío** en los cursos CUN (los builds llaman `set_footer("")`). Solo se
+imprime el nº de slide a la derecha. La hora de **inicio efectivo** (horario oficial + 10 min)
+aparece **una sola vez**, en la portada de la Presentación del Curso, vía `cover_meta_lines`
+de `carga_academica` — decisión del docente del 2026-08-10 (antes se repetía en cada slide).
 
 Requiere: pip install python-pptx pillow
 """
@@ -74,9 +75,12 @@ LINK_TEAL = RGBColor(0x00, 0x74, 0x33)  # enlaces en verde de marca CUN
 _FOOTER = ""
 
 def set_footer(text=None):
-    """Define el pie de todas las slides siguientes (p. ej. `Inicio 8:10 pm`).
+    """Define el pie de texto de las slides siguientes.
 
-    Usar `footer_inicio_efectivo(key)` de `carga_academica`. No poner nombre del curso.
+    **Decisión 2026-08-10 (docente):** en los cursos CUN el pie va **vacío**. La hora de
+    inicio efectivo ya NO se repite en todas las slides: aparece una sola vez, en la
+    **portada de la Presentación del Curso** (vía `cover_meta_lines`). Los builds CUN
+    llaman `set_footer("")`; el número de slide sigue saliendo a la derecha.
     """
     global _FOOTER
     _FOOTER = (text or "").strip()

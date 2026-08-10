@@ -1,0 +1,108 @@
+LECTURA AUTONOMA DE LA SESION 01 -> SESION 02
+Investigacion en ciencia y tecnologia
+================================================================
+
+QUE HAY QUE LEER
+----------------
+Las unidades U1 y U2 del Syllabus:
+  U1 - Presentacion del Syllabus y producto final (el articulo)
+  U2 - Fundamentos del metodo cientifico
+
+Son las unidades que hoy, en la Sesion 01, quedaron diferidas: la Sesion 01 es
+de encuadre (presentacion del curso, del Docente, de ustedes y de las ACAs) y
+no dicta tema. Por eso U1-U2 se leen de forma autonoma y se retoman al abrir la
+Sesion 02.
+
+Tal como quedo dicho en la deck de la Sesion 01:
+
+  "Lectura autonoma (obligatoria): unidades U1 y U2 del Syllabus - presentacion
+   del Syllabus y producto final (el articulo) y fundamentos del metodo
+   cientifico. Hoy no se dictaron: se leen en casa y se retoman al abrir la
+   Sesion 02 con sus dudas en la mano. Cuanto: 30-40 minutos. Anote DOS DUDAS
+   para plantearlas al inicio de la proxima clase."
+
+
+PARA CUANDO
+-----------
+Antes de la Sesion 02 (MinCiencias y las 6 lineas de Ingenieria del programa).
+Este es un periodo corto, de seis encuentros: no hay semana de recuperacion.
+
+
+DONDE ESTA EL MATERIAL
+----------------------
+
+>>> LECTURA OBLIGATORIA (15 paginas, 30-40 minutos)
+
+    Casares-Salazar, R., Gonzalez-Herrera, R. A. y Quintal-Franco, C. A. (2019).
+    Como organizar eficientemente un documento cientifico.
+    Ingenieria - Revista Academica de la Facultad de Ingenieria,
+    Universidad Autonoma de Yucatan, 23(1), 21-35. ISSN 2448-8364.
+
+    Enlace (acceso abierto, Redalyc):
+      https://www.redalyc.org/journal/467/46760427008/
+
+    PDF directo:
+      https://www.redalyc.org/journal/467/46760427008/46760427008.pdf
+
+    PDF ya descargado en esta misma carpeta:
+      "Lectura autonoma - Organizar un documento cientifico (Casares 2019).pdf"
+
+    Por que esta lectura: esta escrita por y para ingenieros, y recorre
+    exactamente el producto final del curso -el articulo-, seccion por seccion
+    (titulo, resumen, palabras clave, introduccion, metodologia, resultados,
+    discusion, conclusiones, referencias) en el formato IMRyD. Ese esqueleto es
+    el metodo cientifico puesto por escrito: la introduccion plantea la pregunta
+    y la hipotesis, la metodologia es el diseno, los resultados son la
+    evidencia, y la discusion y las conclusiones cierran el razonamiento.
+    Licencia Creative Commons Atribucion-NoComercial 4.0 Internacional
+    (CC BY-NC 4.0): se puede leer, descargar y compartir citando la fuente.
+
+
+>>> LECTURA COMPLEMENTARIA (opcional, para profundizar en U2)
+
+    Cienfuegos Velasco, M. de los A. (2019). Reflexiones en torno al metodo
+    cientifico y sus etapas. RICSH - Revista Iberoamericana de las Ciencias
+    Sociales y Humanisticas, 8(15), 60-77. DOI: 10.23913/ricsh.v8i15.161
+
+    PDF directo (acceso abierto, comprobado):
+      https://www.ricsh.org.mx/index.php/RICSH/article/download/161/806/
+
+    Indice del numero completo (por si el enlace de arriba cambia):
+      https://www.ricsh.org.mx/index.php/RICSH/issue/view/16
+
+    PDF ya descargado en esta misma carpeta:
+      "Lectura complementaria - Metodo cientifico y sus etapas
+       (Cienfuegos 2019).pdf"
+
+    Recorre las etapas del metodo -poblacion de estudio, ejecucion de la
+    investigacion (observacional o experimental), resultados y conclusiones- y
+    explica por que los disenos observacionales y experimentales se
+    complementan. Licencia CC BY-NC 4.0.
+
+    Nota: la ficha individual del articulo en el sitio de la revista esta
+    caida en este momento (error 500 del servidor). Use el PDF de la carpeta
+    o cualquiera de los dos enlaces de arriba, que si funcionan.
+
+
+Ambos textos son de acceso abierto y legal: no hace falta ninguna clave ni pago.
+Revise ademas el material de la Sesion 01 en CDigital: alli se publica el
+material oficial del curso.
+
+
+QUE TRAER A LA SESION 02
+------------------------
+1. Las DOS DUDAS de la lectura, escritas, para plantearlas al inicio de la clase.
+2. Su TEMA TENTATIVO en un Google Doc llamado S01_TemaTentativo_Apellido:
+   - Una sola frase con ACTOR + FENOMENO + CONTEXTO.
+   - 2-3 lineas de POR QUE LE IMPORTA ese problema.
+   - UNA FUENTE EXPLORATORIA de Google Academico: autor, ano y titulo.
+3. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
+4. El ENUNCIADO DE LA ACA 1 abierto y leido, con sus fechas:
+   esta en Clases/Recursos/ACAs/.
+
+La Sesion 02 arranca con los temas de ustedes en pantalla: quien llegue sin tema
+escrito trabaja esa hora en blanco.
+
+
+--------------------------------------------------------------------------
+Material verificado y publicado por el Docente. Enlaces comprobados: agosto de 2026.

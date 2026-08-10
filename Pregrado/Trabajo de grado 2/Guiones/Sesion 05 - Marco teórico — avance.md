@@ -50,7 +50,7 @@ Un **constructo** es un concepto clave de su pregunta. En "clasificación de tic
 En un avance de TG2, tres constructos bien desarrollados valen más que ocho superficiales. Más de tres suele significar que el estudiante no delimitó la pregunta. Menos de dos, que se quedó corto.
 
 #### 4. Parafraseo con cita, no copia
-Cada idea de otro autor se parafrasea y se cita en APA 7; la cita textual es la excepción (para definiciones clave), siempre con página. Copiar sin citar es plagio y en TG3 se verifica con la herramienta antiplagio institucional; se corrige el hábito ahora.
+Cada idea de otro autor se parafrasea y se cita en APA 7; la cita textual es la excepción (para definiciones clave), siempre con página. Copiar sin citar es plagio, y en TG3 la entrega pasa por la revisión de similitud institucional del aula; se corrige el hábito ahora.
 
 #### Ejemplo modelo para clase
 Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo de atención’, cada párrafo con cita y cierre que conecta con la pregunta.

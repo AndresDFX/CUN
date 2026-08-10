@@ -1,0 +1,111 @@
+LECTURA AUTONOMA DE LA SESION 01 -> SESION 02
+Trabajo de Grado 2 (TG2)
+================================================================
+
+QUE HAY QUE LEER
+----------------
+DELIMITACION Y REFORMULACION DEL TEMA: como se pasa de un tema amplio a uno
+investigable.
+
+Es la unidad que hoy, en la Sesion 01, quedo diferida: la Sesion 01 es de
+encuadre (presentacion del curso, del Docente, de ustedes y de las ACAs, mas la
+firma del acuerdo pedagogico) y no dicta tema. Por eso esta unidad se lee de
+forma autonoma y se retoma al abrir la Sesion 02.
+
+Nota del curso: TG2 no tiene Syllabus SIAC cargado en la carpeta del programa;
+el temario es orientativo y se confirma en CDigital, que es la fuente oficial
+de este grupo.
+
+Tal como quedo dicho en la deck de la Sesion 01:
+
+  "Lectura autonoma (obligatoria): delimitacion y reformulacion del tema - como
+   se pasa de un tema amplio a uno investigable. Hoy no se dicto: se lee en casa
+   y se retoma al abrir la Sesion 02."
+
+
+PARA CUANDO
+-----------
+Antes de la Sesion 02 (Pregunta, objetivos y titulo provisional).
+
+
+DONDE ESTA EL MATERIAL
+----------------------
+LECTURA OBLIGATORIA (13 paginas, en espanol, acceso abierto):
+
+  Arias Castrillon, J. C. (2020). Plantear y formular un problema de
+  investigacion: un ejercicio de razonamiento. Revista Lasallista de
+  Investigacion, 17(1), 301-313. Corporacion Universitaria Lasallista
+  (Caldas, Antioquia, Colombia). ISSN 1794-4449.
+  DOI: 10.22507/rli.v17n1a4
+
+  Enlace (ficha del articulo, acceso abierto, sin login):
+  https://repository.unilasallista.edu.co/items/d81e2a17-9044-4249-a3a1-c2f5f64defb0
+
+  Enlace directo al PDF:
+  https://repository.unilasallista.edu.co/server/api/core/bitstreams/39eb933d-699a-413b-94af-1ae3f7f588bf/content
+
+  Licencia: Creative Commons Atribucion-NoComercial-SinDerivadas 2.5 Colombia
+  (CC BY-NC-ND 2.5 CO). Por eso el PDF se puede dejar aqui mismo, sin modificar
+  y con su autoria completa.
+
+  EL PDF YA ESTA EN ESTA MISMA CARPETA, con el nombre:
+  "Lectura autonoma - Arias Castrillon (2020) Plantear y formular un problema
+   de investigacion.pdf"
+  (no hace falta que lo descargue; el enlace queda por si quiere la fuente
+   oficial o si el archivo no le abre).
+
+POR QUE ESTA LECTURA Y EN QUE FIJARSE
+  El articulo distingue cuatro cosas que los estudiantes suelen confundir:
+  problema real, problematica, problematizacion y problema de investigacion.
+  Y, sobre todo, propone CUATRO CRITERIOS para construir un problema
+  investigable:
+     1. Descripcion del FENOMENO
+     2. Descripcion del DESEQUILIBRIO (que es lo que no cuadra)
+     3. Descripcion ESPACIO-TEMPORAL (donde y cuando)
+     4. Descripcion de los SUJETOS de investigacion (con quien / sobre quien)
+  Esos cuatro criterios son exactamente la materia prima de la frase
+  "actor + fenomeno + contexto" que usted tiene que entregar (ver mas abajo).
+  Lea con especial cuidado esas cuatro descripciones y el apartado final sobre
+  paradigmas; la parte sobre razonamiento deductivo / inductivo / abductivo
+  leala como contexto, sin atascarse.
+
+LECTURA COMPLEMENTARIA (opcional, no obligatoria):
+
+  Elizondo Cortes, M., y Gonzalez Videgaray, M. C. (2021). Delimitacion del
+  problema y la pregunta de investigacion. Coleccion Vientos de Cambio.
+  Universidad Nacional Autonoma de Mexico, Facultad de Estudios Superiores
+  Acatlan. ISBN 978-607-30-4965-8.
+  Libro de acceso abierto en el repositorio Libros OA de la UNAM:
+  https://librosoa.unam.mx/handle/123456789/3295
+
+  Si lo consulta, le sirve el bloque "Etapa del planteamiento del problema y la
+  pregunta de investigacion" (aprox. pp. 13-46): va del area de conocimiento al
+  tema, del tema al problema, del problema a la pregunta y de ahi al objetivo, y
+  trae ejemplos resueltos. NOTA: este libro es de lectura y descarga libres en
+  el sitio de la UNAM, pero su pagina legal prohibe la reproduccion; por eso
+  aqui va solo el enlace y no una copia.
+
+Revise tambien el material de la Sesion 01 en CDigital: alli se publica el
+material oficial del curso.
+
+
+QUE TRAER A LA SESION 02
+------------------------
+1. La lectura hecha y su INVENTARIO DEL PROYECTO en un Google Doc llamado
+   S01_EstadoProyecto_Apellido, que contenga:
+   - Una MATRIZ DE ESTADO: para cada seccion (tema, problema, objetivos, marco,
+     metodologia) marque LISTA / A MEDIAS / INEXISTENTE y pegue la EVIDENCIA
+     (el parrafo o el enlace).
+   - Su TEMA DELIMITADO en una sola frase: actor + fenomeno + contexto.
+   - TRES COMPROMISOS concretos suyos para las proximas dos semanas.
+2. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
+3. El ENUNCIADO DE LA ACA 1 abierto y leido: esta en Clases/Recursos/ACAs/.
+4. Su DOCUMENTO DE TRABAJO DE GRADO abierto, en la version mas reciente.
+
+"A medias" e "inexistente" son respuestas honestas y validas. Lo que no sirve es
+el "mas o menos" sin nada escrito debajo.
+
+
+--------------------------------------------------------------------------
+Material verificado y publicado por el Docente. Ambas fuentes son de acceso
+abierto y estan enlazadas a su repositorio oficial.

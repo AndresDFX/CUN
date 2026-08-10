@@ -30,7 +30,7 @@
       ["**08**", "Diseño metodológico: paradigma, enfoque y alcance", "Puente"],
       ["**09**", "Población y muestra, técnicas e instrumentos **propuestos**", "ACA 3"],
       ["**10**", "Planeación, viabilidad e integración del anteproyecto", "ACA 3"],
-      ["**11**", "Integración y evaluación · coevaluación y autoevaluación", "Cierre"]
+      ["**11**", "Integración y evaluación · coevaluación y autoevaluación (instrumentos individuales, no son ACAs)", "Cierre"]
     ],
     "col_w": [1.1, 7.3, 2.6],
     "note": "La unidad de **fundamentos y enfoque de investigación (U1 del programa)** pasa a **lectura autónoma**: hoy hacemos encuadre y la retomamos al abrir la Sesión 02. Fechas exactas de cada encuentro: calendario del curso en CDigital."
@@ -60,7 +60,7 @@
       ["**ACA 3** — Anteproyecto final", "Documento completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad.", "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos escritos por personas distintas, con tres preguntas de investigación diferentes."]
     ],
     "col_w": [1.9, 4.3, 5.2],
-    "note": "Los pesos están en la slide anterior. **Enunciado completo, criterios y fechas exactas: `Clases/Recursos/ACAs/` y CDigital.** Al cierre se suman coevaluación y autoevaluación, cada una con su propio enunciado en esa misma carpeta."
+    "note": "Los pesos están en la slide anterior. **Enunciado completo, criterios y fechas exactas: `Clases/Recursos/ACAs/` y CDigital.** Las ACAs son estas **tres**: la coevaluación (4%) y la autoevaluación (4%) del cierre **no son ACAs**, son instrumentos individuales que cada quien diligencia en CDigital (instructivo en esa misma carpeta)."
   },
   {
     "type": "bullets",
@@ -112,7 +112,6 @@
       ["**SciELO y Redalyc**", "Repositorios abiertos en español: producción latinoamericana, clave para los antecedentes nacionales y regionales."],
       ["**ZoteroBib (zbib.org)**", "Genera la referencia en APA 7 pegando un enlace o un DOI. Sin instalar nada y sin crear cuenta."],
       ["**Excalidraw**", "Pizarra para dibujar el proceso, el contexto o la idea cuando el texto solo no alcanza para explicarla."],
-      ["**Padlet**", "El tablero colaborativo donde nos presentamos hoy y donde el Docente deja consignas breves."],
       ["**Google Meet**", "El encuentro sincrónico semanal: mismo enlace toda la serie. La sesión se graba."]
     ],
     "col_w": [3.0, 8.0],

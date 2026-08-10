@@ -51,7 +51,7 @@ Cerrar TG2 no es "terminar el trabajo de grado": es dejar un **avance limpio y c
 Lo que quedó en propuesto o a medias no se esconde: se escribe una **lista de pendientes para TG3** —aplicar instrumentos, recoger y analizar datos, escribir resultados y discusión, preparar sustentación y repositorio—. Esa lista es el mejor regalo que el estudiante se hace a sí mismo para el próximo semestre.
 
 #### 4. Antiplagio: hábito, no susto
-Recuerde que en TG3 el documento pasa por la **herramienta antiplagio institucional del campus (CDigital)** —sin inventar servicios externos—. Cerrar TG2 con parafraseo y citas correctas evita sorpresas. No es una amenaza; es higiene académica.
+Recuerde que en TG3 la entrega pasa por la **revisión de similitud institucional del aula (CDigital)** —el Docente de TG3 indica cómo opera; sin inventar servicios externos—. Cerrar TG2 con parafraseo y citas correctas evita sorpresas. No es una amenaza; es higiene académica.
 
 #### Ejemplo modelo para clase
 Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: aplicar encuesta, analizar tiempos, redactar resultados, sustentar, verificar antiplagio.

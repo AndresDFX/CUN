@@ -39,10 +39,10 @@
       ["**Metadatos**", "Título, autoría, resumen y palabras clave UNESCO", "Sesión 10"],
       ["**Autorización de publicación**", "Formato institucional, diligenciado y firmado", "Instructivo del semestre"],
       ["**Anexos / evidencias**", "Rotulados (A, B, C…) y referenciados desde el cuerpo", "Sesión 11"],
-      ["**Constancia antiplagio**", "Generada por la ruta institucional en CDigital", "Sesión 11"],
+      ["**Informe de similitud (si aplica)**", "Solo si el curso lo exige; el Docente indica cómo obtenerlo", "Sesión 11"],
       ["**Póster (si aplica)**", "PDF de una página, legible a un metro", "Sesión 11"]
     ],
-    "note": "Falta **una sola pieza** y el paquete no se puede radicar. La que más se atrasa siempre es la **autorización firmada**: tramítela primero, no de último.",
+    "note": "Falta **una sola de las piezas exigidas** y el paquete no se puede radicar. La que más se atrasa siempre es la **autorización firmada**: tramítela primero, no de último.",
     "col_w": [2.4, 4.5, 2.6]
   },
   {
@@ -144,7 +144,7 @@
     "title": "Paso a paso para armar el paquete hoy",
     "bullets": [
       "**1.** Cree una carpeta en su Drive llamada **Paquete_Repositorio_Apellido**.",
-      "**2.** Meta ahí, y solo ahí, las piezas definitivas: artículo PDF, anexos, póster, autorización y constancia de antiplagio.",
+      "**2.** Meta ahí, y solo ahí, las piezas definitivas: artículo PDF, anexos, póster, autorización y, si el curso lo exige, el informe de similitud.",
       "**3.** Abra el **instructivo institucional del semestre** en CDigital y compare pieza por pieza con lo que tiene.",
       "**4.** Arme el **checklist de entregables** en Google Docs, con una columna de **estado**: listo / falta / en trámite.",
       "**5.** Redacte la **ficha de metadatos** copiando del artículo: título, autoría, resumen y palabras clave.",
@@ -185,7 +185,7 @@
       ["Anexos rotulados y referenciados", "\"ver Anexo\" aparece para cada uno", "☐"],
       ["Metadatos completos y copiados", "Título, autoría, resumen y keywords idénticos", "☐"],
       ["Autorización firmada por todos", "Incluye a los coautores si los hay", "☐"],
-      ["Constancia de antiplagio adjunta", "Generada por la ruta institucional", "☐"],
+      ["Resolví si el curso exige informe de similitud", "Lo confirmé con el Docente; si aplica, está adjunto", "☐"],
       ["Nombre de archivo según la norma", "Sin tildes ni \"v3_final_final\"", "☐"]
     ],
     "col_w": [3.6, 4.4, 1.0]

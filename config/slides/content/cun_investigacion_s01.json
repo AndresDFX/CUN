@@ -114,8 +114,7 @@
       ["**SciELO y Redalyc**", "Fuentes abiertas en español y portugués de Iberoamérica", "Sesión de búsqueda y marco"],
       ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es de acceso abierto"],
       ["**ZoteroBib (zbib.org)**", "Generar referencias en APA 7 sin instalar ni registrarse", "Cada vez que cite"],
-      ["**Excalidraw**", "Diagramar el problema (espina de pescado, árbol de problemas)", "Sesión de problema y pregunta"],
-      ["**Padlet**", "Tablero donde nos presentamos como grupo", "Hoy"]
+      ["**Excalidraw**", "Diagramar el problema (espina de pescado, árbol de problemas)", "Sesión de problema y pregunta"]
     ],
     "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Con un navegador basta.",
     "col_w": [2.6, 5.9, 3.4]

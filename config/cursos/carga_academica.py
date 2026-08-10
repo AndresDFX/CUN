@@ -216,10 +216,14 @@ def cover_meta_lines(
         if c.get("nivel") == "especializacion"
         else "**Modalidad:** Virtual — encuentro sincrónico por Google Meet"
     )
+    # La hora de inicio efectivo (horario + 10 min) vive SOLO aquí, en la portada de la
+    # Presentación del Curso. Antes se repetía en el pie de todas las slides; se retiró
+    # el 2026-08-10 por decisión del docente.
     lines = [
         periodo_ln,
         modalidad,
-        f"**Horario confirmado:** {bold_var(h_txt)}",
+        f"**Horario confirmado:** {bold_var(h_txt)} · "
+        f"inicio efectivo {bold_var(hora_inicio_efectiva(key))}",
     ]
     g_ln = groups_label(c.get("groups"))
     if g_ln:

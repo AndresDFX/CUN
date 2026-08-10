@@ -110,7 +110,7 @@
       ["Etiquetar la muestra de tickets por categoría", "Requiere apoyo de agentes con experiencia", "Acuerdo de dos agentes y criterios de etiquetado"],
       ["Analizar tiempos con el plan de análisis del S08", "No hay datos todavía", "Hoja de cálculo en Google Sheets con los datos recogidos"],
       ["Redactar resultados, discusión y conclusiones", "Dependen del análisis", "Resultados del punto anterior"],
-      ["Preparar sustentación y verificar antiplagio", "Corresponde al cierre de TG3", "Documento final y herramienta institucional del campus"]
+      ["Preparar sustentación y alistar el documento para la revisión de similitud", "Corresponde al cierre de TG3", "Documento final e indicaciones del Docente de TG3"]
     ],
     "note": "Fíjese que las dos primeras acciones son de gestión, no de escritura: son las que más demoran y las que casi nadie prevé."
   },
@@ -124,7 +124,7 @@
       "  Aquí es donde el marco teórico se cobra: si está flojo, la discusión no tiene con qué dialogar.",
       "**Conclusiones y recomendaciones**: responden la pregunta de forma explícita, sin inventar lo que los datos no dicen.",
       "**Producto o prototipo**, cuando el proyecto lo contempla, con su documentación técnica.",
-      "**Verificación antiplagio** con la herramienta institucional del campus (**CDigital**) y entrega al repositorio.",
+      "**Revisión de similitud institucional** en el aula de **CDigital** —el Docente de TG3 indica cómo opera— y entrega al repositorio.",
       "**Sustentación ante jurados**: el pitch de la sesión anterior es la semilla directa de esa defensa."
     ]
   },
@@ -142,7 +142,7 @@
     "type": "bullets",
     "title": "Antiplagio: higiene académica, no amenaza",
     "bullets": [
-      "En TG3 el documento pasa por la **herramienta antiplagio institucional del campus (CDigital)**. No hay que buscar servicios externos.",
+      "En TG3 la entrega pasa por la **revisión de similitud institucional del aula (CDigital)**; el Docente de TG3 confirma cómo opera. No hay que buscar servicios externos.",
       "Lo que se reporta como coincidencia casi nunca es copia deliberada: son **citas mal hechas** y **parafraseo perezoso**.",
       "**Parafrasear no es cambiar sinónimos**: es entender la idea, cerrar la fuente y escribirla con su propia estructura.",
       "  Si al terminar el párrafo la sintaxis del original sigue intacta, usted copió con otras palabras.",
@@ -160,7 +160,7 @@
       ["'La clasificación manual de solicitudes incrementa el tiempo de respuesta en las mesas de servicio.'", "'La clasificación manual de peticiones aumenta el tiempo de respuesta en las mesas de servicio.'", "'Cuando las solicitudes se categorizan a mano, la mesa de servicio tarda más en responder (Pérez, 2022).'"],
       ["'Los modelos supervisados requieren conjuntos etiquetados de calidad.'", "'Los modelos supervisados necesitan conjuntos etiquetados de calidad.'", "'Sin un conjunto de datos bien etiquetado, un modelo supervisado no alcanza un desempeño confiable (Gómez, 2021).'"]
     ],
-    "note": "El parafraseo perezoso cambia palabras y conserva la estructura: es lo que la herramienta detecta y lo que un lector experto reconoce de inmediato."
+    "note": "El parafraseo perezoso cambia palabras y conserva la estructura: es lo que la revisión de similitud marca y lo que un lector experto reconoce de inmediato."
   },
   {
     "type": "bullets",

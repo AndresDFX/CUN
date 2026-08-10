@@ -25,13 +25,16 @@ DOCENTE_CREDENCIALES = [
     "Speaker Tecnológico",
 ]
 LINK_TUTORIAS_ESTUDIANTE = LINK_TUTORIAS
-URL_PLANTILLA_APA = "[URL Drive/Moodle de la Plantilla APA CUN — pendiente]"
+# La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
+# estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
+# build_acas_estudiantes.py). Decisión del docente 2026-08-10.
+RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 URL_PLANTILLA_ACA = "Clases/Recursos/ACAs/ (enunciados ACA 1–3 · autoevaluación · coevaluación)"
 URL_MEET = "[URL Meet — mismo enlace toda la serie · Proyecto I]"
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 FUENTE_ESP329 = "Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx"
 
-set_footer(footer_inicio_efectivo("proyecto1"))
+set_footer("")
 prs = new_prs()
 
 # ---------- 1. PORTADA (único slide con grupo) ----------
@@ -285,9 +288,9 @@ content_slide(
         f"**Registro de tutorías (obligatorio):** @@{LINK_TUTORIAS_ESTUDIANTE}@@",
         MSG_TUTORIAS_POR_GRUPO,
         f"**Google Meet (mismo enlace toda la serie):** {bold_var(URL_MEET)}",
-        "**Plantilla APA CUN – Proyecto de Grado** (archivo local): "
-        "`Cursos/Plantilla_APA_CUN_Proyecto de grado.docx`.",
-        f"**URL pública Plantilla APA:** {URL_PLANTILLA_APA}",
+        f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
+        f"`{RUTA_PLANTILLA_APA}`.",
+        f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
         f"**Enunciados ACA (estudiantes):** `{URL_PLANTILLA_ACA}`",
         "**Biblioteca Virtual CUN + bases:** Google Scholar, Redalyc, SciELO, Dialnet · citas: ZoteroBib / Google Docs.",
         f"**Syllabus fuente:** `{FUENTE_ESP329}` · Entregas oficiales solo por CDigital.",

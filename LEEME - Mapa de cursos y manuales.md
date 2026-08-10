@@ -2,10 +2,10 @@
 
 **Docente (interno):** Julian Andres Castaño · `julian_castanoe@cun.edu.co` · Regla: `.cursor/rules/cun-docente.mdc` · Perfil: `config/universidades/cun.json`
 
-**Ajustes generales → las 5 asignaturas** (Proyecto I + Creatividad + Investigación + TG2 + TG3): se aplican y regeneran en **todas**. Slides: pie = hora de inicio efectivo · `tutor_slide` genérico «Docente» · plataforma = **CDigital** (placeholder `[URL CDigital — campus del curso pendiente]`).
+**Ajustes generales → las 5 asignaturas** (Proyecto I + Creatividad + Investigación + TG2 + TG3): se aplican y regeneran en **todas**. Slides: **pie vacío** (solo nº de slide); la hora de inicio efectivo va **una sola vez**, en la portada de la Presentación del Curso · `tutor_slide` genérico «Docente» · plataforma = **CDigital** (placeholder `[URL CDigital — campus del curso pendiente]`).
 
 ## Compartido
-- `Plantilla_APA_CUN_Proyecto de grado.docx` (local; URL pública aún pendiente)
+- `Plantilla_APA_CUN_Proyecto de grado.docx` — se distribuye **dentro de la carpeta del estudiante**: `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` (ruta relativa; **no** se usa URL pública). La copia a cada curso la hace `sync_clases_estudiantes.py`.
 - **Carga académica 2026:** `config/cursos/carga_academica_2026.json` · loader: `config/cursos/carga_academica.py` · Excel: `Carga academica 2026.xlsx`
 - Builds: `config/slides/build_all_course_presentations.py`, `build_sesion_material.py`, `build_pregrado_cursos.py`, `build_cun_proyecto1.py`, `build_calendar_proyecto1_54es4.py`, `build_hitos_docentes_calendar.py`, `build_acas_estudiantes.py`, `build_correo_bienvenida.py`, `sync_clases_estudiantes.py`
 - Motor PPTX: `config/slides/cun_slides_engine.py` · Sesiones: `config/cursos/sesiones_cun.py`
@@ -61,6 +61,7 @@
 ## Especialización — Proyecto I
 - Presentación: `Clases/Presentacion del Curso - Proyecto I.pptx`
 - Syllabus fuente: `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx`
+- **Las ACAs son TRES** (25% · 25% · 42%). La **autoevaluación (4%)** y la **coevaluación (4%)** **no son ACAs**: instrumentos individuales de cierre que el estudiante diligencia en CDigital (el Docente los habilita y registra). Solo en Proyecto I. Instructivos en `Clases/Recursos/ACAs/…instructivo.docx`; en `fechas_entrega_aca.py` van con `kind="ventana"`.
 - 11 sesiones en `Clases/Sesion NN - …/` + guiones homónimos `.md`
 - Contenido ~60 min + tutoría ~60 min · Tutorías: `links_afi` en `cun.json`
 - Grupo: `2026/54ES4/` (Calendar + Apps Script invitados)
@@ -98,11 +99,13 @@ Cada asignatura puede tener `<Asignatura>/_Archivo obsoleto 2026-08-09/` (espejo
 ## Pendientes conocidos (no inventar)
 - URLs Meet reales por curso (hoy solo placeholders)
 - URL CDigital (campus) por curso
-- URL pública plantilla APA
+- ~~URL pública plantilla APA~~ → **RESUELTO 2026-08-10**: no se usa URL. El material referencia la ruta relativa `Recursos/Plantilla_APA_CUN_Proyecto de grado.docx`, y el archivo viaja en la carpeta de cada curso.
 - Syllabus SIAC de TG2 ausente
 - Desglose EV exacto Corte 1–3 en tablas SIAC de Creatividad/Investigación (confirmar en CDigital)
 - **Fechas.txt de TG2/TG3** (por grupo, en `2026/<grupo>/`): tenían fecha de inicio 03-04/08 contradicha por el Manual/Calendario (10-11/08) — ya archivados como obsoletos
-- **PLAN_VIABILIDAD_EXAMLAB.md (Proyecto I) §8/§9:** sus fechas de ACA1-3 (31/08·28/09·09/11) quedaron desalineadas tras la corrección 2026-08-09 de fechas (ver abajo) — pendiente de actualizar si se retoma el plan ExamLab
+- **Roster (listado de estudiantes y correos):** solo existe para Proyecto I `2026/54ES4/`. Faltan los 6 grupos restantes (Investigación 53339 · Creatividad 54408 · TG2 54448 · TG3 54450/54466/54467) — sin ellos no se pueden generar invitaciones de Calendar con invitados para esos cursos
+- ~~**Enlace/documento de la lectura autónoma** de la Sesión 01~~ → **RESUELTO 2026-08-10** en los **5 cursos**. El marcador `Lectura autonoma - PENDIENTE enlace.txt` ya no existe: fue reemplazado por `Lectura autonoma - Sesion 01.txt` (archivo escrito a mano; **ningún build lo sobrescribe**), que trae cita completa, enlace oficial verificado y el «qué traer a la Sesión 02». Los PDF de acceso abierto quedaron descargados en la misma carpeta del estudiante — ver detalle abajo, «Lectura autónoma S01».
+- URL de la herramienta institucional **antiplagio** en CDigital (TG2/TG3) — no inventar URL de terceros
 
 ## Sesión 01 = encuadre (cambio 2026-08-09)
 
@@ -111,6 +114,24 @@ En **los 5 cursos** la primera sesión **no dicta tema**: presenta el curso, al 
 - Fuente: `config/cursos/sesiones_cun.py` → la sesión 1 lleva `presentacion: True`, `bloque: "Encuadre"` y `unidad_diferida` (la unidad del Syllabus que pasa a **lectura autónoma** y se retoma al abrir la S02 — no se elimina del Syllabus).
 - Deck: `build_pptx_presentacion()` en `build_sesion_material.py`. El builder rico de tema de Creatividad S01 quedó obsoleto (archivado en `config/_Archivo obsoleto 2026-08-09/slides/`).
 - Los artefactos de S01 con el título viejo están en `<Curso>/_Archivo obsoleto 2026-08-09/`.
+
+### Lectura autónoma S01 (resuelta 2026-08-10 · auditada)
+
+Cada `Clases/Sesion 01 - …/` tiene un `Lectura autonoma - Sesion 01.txt` (legible por el estudiante: qué leer, para cuándo, dónde está y **qué traer a la Sesión 02**) más el PDF de acceso abierto descargado. **Regla legal aplicada:** solo acceso abierto real con licencia que permita redistribuir; la bibliografía comercial del Syllabus (Hernández-Sampieri, Creswell, Maxwell, manual APA 7) **no se distribuye** — se enlaza o se remite a Biblioteca CUN. Ningún libro comercial quedó descargado.
+
+| Curso | Lectura obligatoria | Fuente / licencia | PDF en carpeta |
+|---|---|---|---|
+| Proyecto I | Cadena-Iñiguez et al. (2017), *Métodos cuantitativos, cualitativos o su combinación*, RMCA 8(7) 1603-1617 · + Montes del Castillo (2014) secs. 1-2, pp. 91-102 · + Cruz-Ortiz et al. (2020) ética (recomendada) | SciELO MX (CC BY-NC 4.0) · Universitas UPS (CC BY-NC-SA 4.0) · SciELO MX (CC BY-NC 4.0) | 3 PDF |
+| Creatividad | Latorre-Cosculluela et al. (2020), *Design Thinking: creatividad y pensamiento crítico en la universidad*, REDIE 22 e28 | SciELO MX / REDIE UABC (CC BY-NC 4.0) | 1 PDF |
+| Investigación C&T | Casares-Salazar et al. (2019), *Cómo organizar eficientemente un documento científico*, Ingeniería UADY 23(1) 21-35 · + Cienfuegos (2019) método científico (complementaria) | Redalyc (CC BY-NC 4.0) · RICSH (CC BY-NC 4.0) | 2 PDF |
+| TG2 | Arias Castrillón (2020), *Plantear y formular un problema de investigación*, Rev. Lasallista 17(1) 301-313 | Repositorio Unilasallista (CC BY-NC-ND 2.5 CO) | 1 PDF |
+| TG3 | Itriago y Zerpa (2011), *El planteamiento del problema en el proyecto de investigación en ingeniería*, Rev. Fac. Ing. UCV 26(3) 39-54 | SciELO VE / SABER-UCV (CC BY-NC-ND 4.0) | 1 PDF |
+
+Complementarias **solo enlazadas** (licencia no permite redistribuir o no hace falta copiar): Elizondo y González Videgaray (2021) en Libros OA UNAM (TG2) · Pereira coord. (2024) en Dialnet (TG3) · Aperribai et al. (2024) en Educación XX1 / UNED (Creatividad).
+
+**Sigue pendiente aquí:** la ficha individual del artículo de Cienfuegos en `ricsh.org.mx` devuelve **error 500** del servidor de la revista (falla también vía DOI `10.23913/ricsh.v8i15.161`); el `.txt` enlaza el PDF directo y el índice del número, que sí responden. El DOI `10.22507/rli.v17n1a4` (Arias, TG2) apunta a un host dado de baja — el `.txt` usa el enlace del repositorio, que sí funciona. Revisar ambos más adelante; no afectan al estudiante porque el PDF está en la carpeta.
+
+> Nombres de archivo: mantenerlos **cortos**. Con la ruta de Google Drive estos `Clases/Sesion 01 - …/` ya gastan ~160 caracteres, y tres PDF superaron el límite de 260 de Windows (se acortaron el 2026-08-10). Antes de dejar un archivo aquí, verificar que la ruta completa quede por debajo de ~245.
 
 ## Decks de sesión: contenido rico por sesión
 
@@ -123,6 +144,9 @@ Las 45 sesiones de los 5 cursos (menos la Sesión 01 de cada uno, que ya era el 
 - Creatividad: `Pregrado/Creatividad y pensamiento innovador/Guiones/_regen_guiones_creatividad.py` (función `guion_NN` por sesión).
 - Investigación + TG2 + TG3: `config/slides/_regen_guiones_pregrado.py` (compartido). Cada sesión es un `_spec(curso, n, ...)` con kwargs nuevos `fase1_texto`…`fase5_texto` y `errores` (si no se dan, cae a un texto genérico — por eso hay que darlos siempre al añadir/editar una sesión).
 - Regenerar: `python <script> [curso] [N]` (ver docstring de cada script para la sintaxis exacta; `_regen_guiones_pregrado.py all` regenera los 3 cursos de pregrado a la vez).
+
+## Resuelto 2026-08-10
+- **Auto/coevaluación de Proyecto I ya no se llaman ACA.** Eran tres ACAs desde el Syllabus ESP329, pero el material las presentaba como una cuarta y quinta ACA. Ahora: `Clases/Recursos/ACAs/Autoevaluacion individual (4%) - instructivo.docx` y `…/Coevaluacion individual (4%) - instructivo.docx` (se borraron `ACA Autoevaluacion.docx` y `ACA Coevaluacion.docx`), redactados como instructivos de un instrumento que **se diligencia** en CDigital. La tabla «LAS ACAs» de la Sesión 01 lista solo las 3 ACAs y las nombra aparte al pie. Código: `build_acas_estudiantes.py` (nuevo campo `kind` + `acas_for()`; `catalog_for_leeme()` devuelve dicts), `build_sesion_material._acas_rows()` (devuelve `(rows, instrumentos)`), `sync_clases_estudiantes.py`. Sin cambios de % ni de fechas.
 
 ## Resuelto 2026-08-09
 - **Fechas ACA Proyecto I:** el Manual y el Calendario oficial se corrigieron para usar la Cronograma OFICIAL de Coordinación (fuente única): ACA1 cierre **30/08** · ACA2 cierre **04/10**/nota **12/10** · ACA3 cierre **08/11**. Se retiró la tabla duplicada calculada por `fechas_entrega_aca.py` que se había desviado. También se corrigió el CSV de hitos (`Entregas y hitos docentes - Importar a Calendar.csv`, raíz y `2026/54ES4/`) — **si ya se importó una versión vieja a Google Calendar, hay que reimportarlo o corregir esos eventos a mano.** ⚠️ Los enunciados ACA (`Clases/Recursos/ACAs/*.docx`, ya entregados a los 40 estudiantes) siguen con las fechas viejas (28/09 para ACA2, etc.) — si se quiere alinear, hay que comunicárselo a los estudiantes explícitamente; no se tocó ese documento en esta limpieza.

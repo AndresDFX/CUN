@@ -103,7 +103,7 @@ En pantalla, recorrer el checklist de recepción confirmando cada entregable en 
 **En pantalla (CDigital + Google Docs):** el espacio de entregas y un checklist de recepción.
 
 **GUION LITERAL:**
-> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: artículo final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; constancia de antiplagio —según la ruta del curso—. Voy marcando en el checklist: cargado y recibido.”
+> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: artículo final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. Voy marcando en el checklist: cargado y recibido.”
 
 > “Y donde el campus lo permite, capturo el estado 'entregado': esa captura es su respaldo si más adelante hay cualquier duda sobre si entregaron o no. Cerrar bien y con evidencia es parte de ser profesional.”
 

@@ -87,7 +87,7 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 **GUION LITERAL:**
 > “Sesión 13. Ya defendieron (o están por hacerlo). Hoy preparamos el **paquete para el repositorio institucional**. Ojo con esto: subir el artículo al repositorio es **publicarlo**: queda público y permanente. Por eso hoy trabajamos con lupa.”
 
-> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan su artículo final, sus anexos y la constancia de antiplagio a la mano.”
+> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su artículo final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”
 
 #### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
 **Protagonista:** Docente (exposición).
@@ -95,7 +95,7 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 **GUION LITERAL:**
 > “**Slide 3 — CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
 
-> “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y la **constancia de antiplagio**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
+> “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y, **si el curso lo exige**, el **informe de similitud**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
 
 > “**Slide 4 — ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el artículo— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”
 
@@ -105,7 +105,7 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 **En pantalla (Google Docs / ruta CDigital del semestre):** un checklist de repositorio y un formulario de metadatos de ejemplo.
 
 **GUION LITERAL:**
-> “Modelo el checklist. Voy marcando: artículo final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; constancia de antiplagio —según la ruta del curso—. En dos minutos sé exactamente qué me falta para poder cargar.”
+> “Modelo el checklist. Voy marcando: artículo final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. En dos minutos sé exactamente qué me falta para poder cargar.”
 
 > “Ahora los metadatos. Pongo el título tal cual, el resumen que ya escribimos y las palabras clave UNESCO. Les muestro por qué importa: si el resumen y las keywords están bien, el artículo aparece en las búsquedas; si están vacíos o mal, el trabajo queda enterrado aunque sea excelente.”
 

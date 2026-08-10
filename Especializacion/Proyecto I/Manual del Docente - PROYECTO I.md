@@ -65,7 +65,7 @@ Cada guion en `Guiones/Sesion NN - ….md` (**solo Markdown**; sin `.docx`) cier
 - **ACA2 (25%) — U4**: antecedentes → marco teórico → conceptual/contextual → legal/APA.
 - **Puente (05/10) — U5**: adelantar diseño metodológico antes de festivos de ACA3.
 - **ACA3 (42%) — U5–U7** (solo 2 lunes sincrónicos): metodología completa + planeación/viabilidad + integración del anteproyecto.
-- **Cierre — U7**: coevaluación (4%) y autoevaluación (4%) según ESP329 / cronograma AFI.
+- **Cierre — U7**: coevaluación (4%) y autoevaluación (4%) según ESP329 / cronograma AFI. **No son ACAs**: son instrumentos individuales que cada estudiante diligencia en CDigital (tú los habilitas y registras la nota).
 
 ### 1.5 Equipos de trabajo (regla que debes verificar tú)
 - **Máximo 3 estudiantes** por equipo (el instructivo de rúbricas dice máx. 3; el instructivo de configuración de Moodle dice mín. 1 – máx. 3 "sin excepción" — usa siempre el máximo de 3).
@@ -95,7 +95,7 @@ Sugerencias de la plantilla institucional: máx. 21 palabras, tono afirmativo, c
 | Calificación + retroalimentación cualitativa **y** cuantitativa de cada ACA | Antes de la "fecha límite para ingreso de nota" de cada una (07/09/2026, 12/10/2026, 16/11/2026) | Moodle (gradebook del curso) |
 | Registro de cada sesión sincrónica y cada tutoría, **dentro de 24h**, con el enlace directo de grabación (sin texto adicional en ese campo) | Continuo, todo el periodo | Formulario: https://forms.gle/6t6BXqQ2Kwmivpct8 (uso exclusivo docente, NO compartir con estudiantes) |
 | Actualización semanal de invitados al evento de Meet (primeras 3 semanas) | Semanas 1-3 | Google Calendar |
-| Habilitar Autoevaluación y Coevaluación individuales | Ventanas oficiales (09-15/11 coevaluación; 16-22/11 autoevaluación) | Moodle |
+| Habilitar Autoevaluación y Coevaluación individuales (**no son ACAs**: instrumentos que diligencia cada estudiante) | Ventanas oficiales (09-15/11 coevaluación; 16-22/11 autoevaluación) | Moodle |
 
 ### Al cierre del periodo (22/11/2026)
 | Qué | Plazo | Nota |
@@ -121,8 +121,10 @@ Fuente: `Calendario de clases (oficial).md` (raíz de Proyecto I) → tabla "�
 | **ACA 1** | 03/08/2026 | 30/08/2026 | 07/09/2026 | 25% | I |
 | **ACA 2** | 07/09/2026 | 04/10/2026 | 12/10/2026 | 25% | II |
 | **ACA 3** | 12/10/2026 | 08/11/2026 | 16/11/2026 | 42% | III |
-| **Coevaluación** | 09/11/2026 | 15/11/2026 | 22/11/2026 | 4% | III |
-| **Autoevaluación** | 16/11/2026 | 22/11/2026 | 22/11/2026 | 4% | III |
+| **Coevaluación** (no es ACA) | 09/11/2026 | 15/11/2026 | 22/11/2026 | 4% | III |
+| **Autoevaluación** (no es ACA) | 16/11/2026 | 22/11/2026 | 22/11/2026 | 4% | III |
+
+> **Las ACAs son tres** (ACA 1, ACA 2 y ACA 3). Coevaluación y autoevaluación son **instrumentos individuales de cierre** que cada estudiante diligencia en CDigital dentro de su ventana; no son entregables con rúbrica y no llevan el prefijo «ACA». En `config/cursos/fechas_entrega_aca.py` están marcados `kind="ventana"` (las ACAs, `kind="aca"`).
 
 ## PARTE 3 · QUÉ TE ENTREGAN LOS ESTUDIANTES (por equipo, máx. 3)
 
@@ -139,8 +141,9 @@ Correcciones de ACA1+ACA2 · Metodología completa (enfoque, tipo/alcance, dise�
 **Este es el producto de cierre**: debe ser el anteproyecto COMPLETO e integrado, no un fragmento nuevo.
 **Enunciado estudiante:** `Clases/Recursos/ACAs/ACA 3 - Diseno metodologico y anteproyecto final.docx`
 
-### Coevaluación (4%, ventana 09-15/11) y Autoevaluación (4%, ventana 16-22/11)
-Individuales, diligenciadas por cada estudiante en Moodle al cierre de Proyecto I. (No aplican en Proyecto II.)
+### Coevaluación (4%, ventana 09-15/11) y Autoevaluación (4%, ventana 16-22/11) — **no son ACAs**
+Son **instrumentos individuales de cierre**, no entregables: **cada estudiante los diligencia** (tipo formulario) en Moodle/CDigital dentro de su ventana. No se sube documento, no usan plantilla APA, no son grupales y **no sustituyen la ACA 3**. Tú los habilitas, verificas cumplimiento y registras el 4% de cada uno antes del cierre de notas. (No aplican en Proyecto II ni en pregrado Art. 52.)
+**Instructivos para el estudiante:** `Clases/Recursos/ACAs/Autoevaluacion individual (4%) - instructivo.docx` · `Clases/Recursos/ACAs/Coevaluacion individual (4%) - instructivo.docx` (regen: `python config/slides/build_acas_estudiantes.py proyecto1`).
 
 ### Además, en cada tutoría: registro de asistencia del estudiante
 El estudiante debe diligenciar **su propio** formulario de asistencia (distinto del tuyo): https://forms.gle/oZ8xCYiUo3KEWr1d9 — recuérdalo en cada encuentro; es su evidencia oficial de participación.
@@ -183,7 +186,9 @@ El estudiante debe diligenciar **su propio** formulario de asistencia (distinto 
 ## PARTE 5 · EVALUACIÓN Y RÚBRICAS
 
 ### Pesos (ESP329 — nota única Art. 41)
-ACA 1 **25%** · ACA 2 **25%** · ACA 3 / anteproyecto consolidado **42%** · Autoevaluación **4%** · Coevaluación **4%**. Son seguimiento formativo de un producto único y acumulativo. Si ACA 3 evidencia que el estudiante incorporó correcciones y alcanzó resultados, el docente **puede ajustar favorablemente** ACA 1 y ACA 2 con trazabilidad en CDigital (criterio ESP329).
+ACA 1 **25%** · ACA 2 **25%** · ACA 3 / anteproyecto consolidado **42%** · Autoevaluación **4%** · Coevaluación **4%**.
+
+**Entregas ACA: tres** (ACA 1, ACA 2, ACA 3) — la DNI establece al menos tres entregas parciales y esa es la configuración operativa de Proyecto I. La autoevaluación y la coevaluación **no son ACAs**: son instrumentos individuales de cierre que diligencia el estudiante (ver Parte 3). Las tres ACAs son seguimiento formativo de un producto único y acumulativo: si ACA 3 evidencia que el estudiante incorporó correcciones y alcanzó resultados, el docente **puede ajustar favorablemente** ACA 1 y ACA 2 con trazabilidad en CDigital (criterio ESP329).
 
 ### Escala (AFI / rúbricas)
 | Rango | Nivel |
@@ -193,7 +198,7 @@ ACA 1 **25%** · ACA 2 **25%** · ACA 3 / anteproyecto consolidado **42%** · Au
 | 3,6–4,5 | Buen desempeño |
 | 4,6–5,0 | Excelente |
 
-Cada ACA tiene su propia rúbrica de 5-6 criterios ponderados (PDF `Instructivo_Docentes_Proyecto_I_II_Especializaciones_Rubricas_Unificado.pdf`, Anexo 2, o el resumen). Criterios ESP329 a mirar en conjunto: coherencia, pertinencia, rigor metodológico, calidad de fuentes, escritura académica, integridad y viabilidad.
+Cada una de las **tres ACAs** tiene su propia rúbrica de 5-6 criterios ponderados (PDF `Instructivo_Docentes_Proyecto_I_II_Especializaciones_Rubricas_Unificado.pdf`, Anexo 2, o el resumen). Criterios ESP329 a mirar en conjunto: coherencia, pertinencia, rigor metodológico, calidad de fuentes, escritura académica, integridad y viabilidad.
 
 ---
 
@@ -213,7 +218,7 @@ Cada ACA tiene su propia rúbrica de 5-6 criterios ponderados (PDF `Instructivo_
 - [ ] Ningún estudiante sin equipo al cierre de la semana 3.
 - [ ] Cada sesión/tutoría registrada por TI en <24h con enlace de grabación — y recuérdales a los estudiantes registrar la suya.
 - [ ] ACA1 calificada con retro antes del 07/09/2026; ACA2 antes del 12/10/2026; ACA3 antes del 16/11/2026.
-- [ ] Coevaluación y Autoevaluación habilitadas en sus ventanas.
+- [ ] Coevaluación y Autoevaluación (instrumentos individuales, **no** ACAs) habilitadas en sus ventanas y diligenciadas por cada estudiante.
 - [ ] **Todas las notas en Moodle antes del 22/11/2026.**
 - [ ] Informe Final de Curso enviado dentro de 3 días hábiles tras el cierre.
 - [ ] Evidencias descargadas ANTES de que se cierre el acceso al aula.

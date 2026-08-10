@@ -7,6 +7,8 @@
 **Fuentes:** ESP329 · Instructivos AFI · Cronograma Proyecto I/II · Reglamento Estudiantil (Art. 41 nota única) · `config/universidades/cun.json` (links AFI)
 
 > Ítems **verificables**. Marca cada casilla cuando haya evidencia en CDigital, formularios institucionales o actas. Distingue lo que aplica a **Proyecto I** (auto/coevaluación) de lo que aplica a **Proyecto II** (sin auto/coeval).
+>
+> **Terminología:** las **ACAs son tres** (ACA 1, ACA 2, ACA 3). La **autoevaluación (4%)** y la **coevaluación (4%)** de Proyecto I **no son ACAs**: son instrumentos individuales de cierre que el estudiante diligencia en CDigital.
 
 ---
 
@@ -23,14 +25,18 @@
 - [ ] **ACA 1, ACA 2 y ACA 3** entregadas por equipos (máx. 3) en CDigital, con plantilla APA CUN.
 - [ ] Cada ACA tiene calificación y retroalimentación cualitativa/cuantitativa registrada **antes** del límite de nota docente.
 - [ ] ACA 3 = anteproyecto consolidado (metodología **propuesta**, sin trabajo de campo aplicado).
-- [ ] Enunciados disponibles en `Clases/Recursos/ACAs/` (incluida autoevaluación y coevaluación).
+- [ ] Enunciados de las **tres** ACAs disponibles en `Clases/Recursos/ACAs/`.
+- [ ] Queda claro que **las ACAs son tres**: autoevaluación y coevaluación no son ACAs (ver siguiente bloque).
 
-### Autoevaluación y coevaluación (solo Proyecto I)
+### Autoevaluación y coevaluación — **no son ACAs** (solo Proyecto I)
 
-- [ ] **Coevaluación (4%)** habilitada y diligenciada en su ventana (periodo 26ES4 calculado: **10–16/11/2026**).
-- [ ] **Autoevaluación (4%)** habilitada y diligenciada en su ventana (**17–22/11/2026**).
+Son **instrumentos individuales de cierre**: cada estudiante los **diligencia** (tipo formulario) en CDigital dentro de su ventana. No hay documento que subir, no llevan rúbrica de entregable ni prefijo «ACA»; el Docente los habilita, verifica y registra.
+
+- [ ] **Coevaluación (4%)** habilitada y diligenciada en su ventana (Cronograma OFICIAL 26ES4: **09–15/11/2026**).
+- [ ] **Autoevaluación (4%)** habilitada y diligenciada en su ventana (Cronograma OFICIAL 26ES4: **16–22/11/2026**).
+- [ ] Instructivos disponibles para el estudiante en `Clases/Recursos/ACAs/`: `Autoevaluacion individual (4%) - instructivo.docx` y `Coevaluacion individual (4%) - instructivo.docx`.
 - [ ] Notas de auto/coevaluación registradas en el gradebook de CDigital.
-- [ ] Estudiantes informados de que auto/coeval **no sustituyen** ACA 3 y **no aplican en Proyecto II**.
+- [ ] Estudiantes informados de que auto/coeval **no son una cuarta y quinta ACA**, **no sustituyen** ACA 3 y **no aplican en Proyecto II**.
 
 > Proyecto II: verificar régimen **75% metodólogo + 25% jurados** (desde 26ES4) y ausencia de auto/coevaluación.
 
@@ -68,8 +74,8 @@
 
 | Verificable | Evidencia esperada |
 |---|---|
-| Nota única desglosada (P1) | Gradebook: ACA1 25% · ACA2 25% · ACA3 42% · coev. 4% · autoev. 4% |
-| Ventanas auto/coeval | Actividades individuales en CDigital con fechas de apertura/cierre |
+| Nota única desglosada (P1) | Gradebook: 3 ACAs (ACA1 25% · ACA2 25% · ACA3 42%) + 2 instrumentos individuales (coev. 4% · autoev. 4%) |
+| Ventanas auto/coeval | Actividades individuales en CDigital con fechas de apertura/cierre (no son entregas ACA) |
 | Tutorías AFI | Forms estudiante + docente + grabaciones Meet |
 | Cierre formal | Notas al cierre + informe de cierre AFI |
 | Sin auto/coeval en P-II | Syllabus/instructivo vigente del periodo |

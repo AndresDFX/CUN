@@ -4,7 +4,18 @@
 Convención (única, los 5):
   <Asignatura>/Clases/Recursos/ACAs/ACA N - <título corto>.docx
 
+Excepción — Proyecto I: además de las **tres** ACAs, la carpeta lleva dos
+documentos que **no son ACAs**: los instructivos de la **autoevaluación (4%)**
+y la **coevaluación (4%)**, instrumentos individuales que cada estudiante
+*diligencia* en CDigital al cierre (no llevan prefijo «ACA» ni son entregables
+con rúbrica). Se distinguen por ``kind``:
+
+  kind="aca"          → enunciado de entregable evaluado (ACA 1/2/3, EV05/EXAM)
+  kind="instrumento"  → instructivo de instrumento individual de cierre
+
 Fuente de pesos/estructura: syllabus / Manual (no inventar % que contradigan).
+ESP329: ACA 1 25% · ACA 2 25% · ACA 3 42% · autoevaluación 4% · coevaluación 4%
+(las ACAs son tres; auto/coev son instrumentos, no una cuarta y quinta ACA).
 Lenguaje al estudiante: «el Docente» (sin nombre propio).
 Sin .md en Clases/ — se genera .docx vía guion_md_a_docx.
 
@@ -24,14 +35,16 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 
 from sesiones_cun import COURSES, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO  # noqa: E402
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
-from fechas_entrega_aca import REGLA_RESUMEN, texto_fecha_curso  # noqa: E402
+from fechas_entrega_aca import REGLA_OFICIAL_P1, REGLA_RESUMEN, texto_fecha_curso  # noqa: E402
 from carga_academica import curso as carga_curso  # noqa: E402
 
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 APA_REL = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 ACAS_REL = "Recursos/ACAs"
 
-# id de fechas_entrega_aca.py → cada enunciado
+# id de fechas_entrega_aca.py → cada documento del catálogo.
+# Los `code` coinciden con `ACA_COMPONENTES` de config/cursos/fechas_entrega_aca.py
+# (allí auto/coev ya están marcados kind="ventana", no kind="aca").
 ACA_ID_BY_CODE = {
     "proyecto1": {
         "ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3",
@@ -41,6 +54,15 @@ ACA_ID_BY_CODE = {
     "creatividad": {"ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3"},
     "tg2": {"ACA 1": "aca1", "ACA 2": "aca2", "ACA 3": "aca3"},
     "tg3": {"ACA 1 (EV05)": "ev05", "ACA 2 (EXAM)": "exam"},
+}
+
+# Nombres anteriores que ya no deben existir en Clases/Recursos/ACAs/
+# (se borran al regenerar para no dejar duplicados en manos de estudiantes).
+LEGACY_FILENAMES = {
+    "proyecto1": [
+        "ACA Autoevaluacion.docx",   # ahora: Autoevaluacion individual (4%) - instructivo.docx
+        "ACA Coevaluacion.docx",     # ahora: Coevaluacion individual (4%) - instructivo.docx
+    ],
 }
 
 
@@ -75,8 +97,25 @@ def _header(curso: str, codigo: str, fuente: str) -> str:
 """
 
 
-def _fecha_block(course_key: str, aca_id: str) -> str:
-    return f"""## Fecha de entrega
+def _header_instrumento(curso: str, codigo: str, fuente: str, nombre: str) -> str:
+    """Encabezado de los instrumentos individuales de cierre (NO son ACAs)."""
+    return f"""# Instructivo para estudiantes — instrumento individual de cierre
+
+**Curso:** {curso}
+**Código:** {codigo}
+**Qué es:** un **formulario individual** que **tú diligencias** en **CDigital** ({URL_CDIGITAL})
+**No es una ACA:** no se sube documento, no usa la plantilla APA y no es entrega de equipo
+**Fuente curricular:** {fuente}
+
+> Las ACAs de este curso son **tres** (ACA 1, ACA 2 y ACA 3). La {nombre} es un **instrumento individual de cierre**: se diligencia dentro de su ventana en CDigital. Si tienes dudas, confirma con **el Docente** y con lo publicado en el aula.
+
+---
+"""
+
+
+def _fecha_block(course_key: str, aca_id: str, *, kind: str = "aca") -> str:
+    titulo = "Ventana para diligenciarla" if kind == "instrumento" else "Fecha de entrega"
+    return f"""## {titulo}
 
 {texto_fecha_curso(course_key, aca_id)}
 
@@ -100,12 +139,33 @@ def _tools_block(*extra: str) -> str:
 """
 
 
-def _footer_sesiones(relacion: str) -> str:
+def _footer_sesiones(relacion: str, *, oficial: bool = False) -> str:
+    """Cierre del enunciado.
+
+    `oficial=True` para las ACAs de **Proyecto I**: sus ventanas NO se calculan,
+    las fija Coordinación en el cronograma AFI (ver CRONOGRAMA_OFICIAL_P1). Decir
+    ahí "cálculo regenerable" sería falso para el estudiante.
+    """
+    nota = (
+        f"> Fechas de este enunciado: {REGLA_OFICIAL_P1}"
+        if oficial
+        else f"> Fechas de este enunciado: cálculo regenerable (`config/cursos/fechas_entrega_aca.py`) · {REGLA_RESUMEN}"
+    )
     return f"""## 7. Relación con sesiones
 
 {relacion}
 
-> Fechas de este enunciado: cálculo regenerable (`config/cursos/fechas_entrega_aca.py`) · {REGLA_RESUMEN}
+{nota}
+"""
+
+
+def _footer_instrumento(relacion: str) -> str:
+    """Cierre de los instructivos de Proyecto I: sus ventanas son OFICIALES."""
+    return f"""## 7. Relación con sesiones
+
+{relacion}
+
+> Ventanas de este instructivo: {REGLA_OFICIAL_P1}
 """
 
 
@@ -166,7 +226,7 @@ Trabajo **por equipo** (máx. 3 integrantes, según AFI). Un solo integrante sub
     f"Formulario de asistencia a tutorías (estudiante): {LINK_TUTORIAS}",
     MSG_TUTORIAS_POR_GRUPO,
 )}
-{_footer_sesiones("Se construye tras **Sesiones 01–03** (fundamentos → problema/pregunta → objetivos/justificación/alcances). Cierre de avance ACA 1 según ventana en CDigital.")}
+{_footer_sesiones("Se construye tras **Sesiones 01–03** (fundamentos → problema/pregunta → objetivos/justificación/alcances). Cierre de avance ACA 1 según ventana en CDigital.", oficial=True)}
 """
 
     a2 = h + f"""## 1. Título / código
@@ -203,7 +263,7 @@ Construir el **marco referencial** del anteproyecto (ESP329 U4): antecedentes, m
 - [ ] Coherencia con pregunta y objetivos  
 
 {_tools_block("ZoteroBib / Google Docs para citas", "Biblioteca virtual CUN + Scholar / SciELO / Redalyc")}
-{_footer_sesiones("Se desarrolla en **Sesiones 04–07** (retro ACA1 · antecedentes · teórico · conceptual/contextual · legal/APA).")}
+{_footer_sesiones("Se desarrolla en **Sesiones 04–07** (retro ACA1 · antecedentes · teórico · conceptual/contextual · legal/APA).", oficial=True)}
 """
 
     a3 = h + f"""## 1. Título / código
@@ -245,98 +305,142 @@ Integrar el **anteproyecto completo** (ESP329 U5–U7): metodología **diseñada
 {_footer_sesiones(
     "Puente metodológico en **Sesión 08**; desarrollo ACA 3 en **Sesiones 09–10**; "
     "integración/cierre en **Sesión 11**. Usa tutorías acordadas en la semana con el Docente: "
-    "hay pocas sesiones sincrónicas en esta fase."
+    "hay pocas sesiones sincrónicas en esta fase.",
+    oficial=True,
 )}
 """
 
-    auto = h + f"""## 1. Título / código
+    h_auto = _header_instrumento(curso, codigo, fuente, "autoevaluación")
+    h_coev = _header_instrumento(curso, codigo, fuente, "coevaluación")
 
-**Autoevaluación** · **4%** de la nota única del curso (individual · cierre)
+    auto = h_auto + f"""## 1. Qué es este documento (y qué NO es)
 
-## 2. Propósito / qué evalúa
+**Autoevaluación individual** · **4%** de la nota única del curso · instrumento de cierre.
 
-Reflexionar con honestidad sobre tu trayectoria en el periodo, aportes al equipo y logro del anteproyecto (producto único acumulativo).
+Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para valorar tu propia trayectoria en el periodo: compromiso, aportes al equipo y avance del anteproyecto.
+
+**No es una ACA.** Las ACAs de Proyecto I son **tres** — ACA 1 (25%), ACA 2 (25%) y ACA 3 / anteproyecto consolidado (42%) —, y son entregas documentales por equipo con rúbrica. La autoevaluación (4%) y la coevaluación (4%) completan el 100% de la nota única (Art. 41), pero **no** son una cuarta ni una quinta ACA:
+
+- **No** subes documento ni usas la plantilla APA: no hay archivo que entregar.
+- **No** es grupal: no la diligencia un vocero por el equipo.
+- **No sustituye la ACA 3** ni compensa una ACA no entregada o con baja calificación.
+- **No es** la autoevaluación institucional SIAC (acreditacion.cun.edu.co): esa no suma nota en este curso.
+- **Solo existe en Proyecto I.** No aplica en Proyecto II ni en los cursos de pregrado (Art. 52).
 
 **Fuente:** ESP329 («MECANISMOS Y ESTRATEGIAS DE EVALUACIÓN») · Art. 41 Reglamento Estudiantil (nota única) · cronograma AFI / Instructivo Proyecto I.
 
-- **Solo aplica en Proyecto I.** No aplica en Proyecto II ni en pregrado Art. 52.
-- **No es** la autoevaluación institucional SIAC (acreditacion.cun.edu.co): esa no suma nota aquí.
-- **No sustituye** ACA 3.
+## 2. Quién la diligencia, dónde y cuándo
 
-{_fecha_block("proyecto1", "auto")}
+| Pregunta | Respuesta |
+| :--- | :--- |
+| **¿Quién?** | **Cada estudiante, de forma individual.** Si el equipo tiene 3 integrantes, se diligencian 3 autoevaluaciones. |
+| **¿Dónde?** | En el aula del curso en **CDigital** ({URL_CDIGITAL}), actividad «Autoevaluación». Ningún otro canal cuenta. |
+| **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba. El Docente la habilita al abrir y la cierra al terminar. |
+| **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
 
-## 3. Consigna (paso a paso)
+## 3. Paso a paso
 
-1. Espera la **ventana de habilitación** en **CDigital** (la publica el Docente).
-2. Entra a la actividad de **Autoevaluación** del aula (formulario / tarea individual Moodle).
-3. Diligénciala **individual y honesta**, según tu participación real.
-4. Envía dentro de la ventana; conserva acuse/captura si el aula lo permite.
-5. Dudas de rúbrica o ítems: pregunta al Docente **antes** del cierre.
+1. Revisa en CDigital el **aviso de apertura** de la ventana (la publica el Docente).
+2. Entra a la actividad **Autoevaluación** del aula (formulario / tarea individual en Moodle).
+3. Diligénciala **con honestidad**, según tu participación real en el periodo (no según lo que quisieras haber hecho).
+4. **Envía** dentro de la ventana; conserva acuse o captura si el aula lo permite.
+5. Dudas sobre los ítems o la escala: pregunta al Docente **antes** del cierre, no después.
 
-## 4. Producto entregable / evidencia
+## 4. Qué pasa si no la diligencias
 
-- Actividad individual completada en **CDigital** (evidencia oficial).
-- El Docente habilita, verifica y registra la nota (**4%**) en el gradebook antes del cierre de notas.
+- Ese **4% queda en cero**: no hay entregable alternativo ni trabajo extra que lo reemplace.
+- La ventana cierra en la fecha indicada y **no se reabre**: la nota debe quedar registrada antes del cierre de notas del periodo.
+- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre de la ventana.
 
-## 5. Criterios / checklist
+## 5. Evidencia y registro de la nota
 
-- [ ] Completaste la autoevaluación en la ventana indicada  
-- [ ] Respuestas coherentes con tu participación real  
-- [ ] No intentaste reemplazar ni “compensar” ACA 3 con este instrumento  
+- La **evidencia oficial** es la actividad completada en CDigital (queda con fecha y hora).
+- El Docente habilita la ventana, verifica el cumplimiento y registra el **4%** en el gradebook antes del cierre de notas.
+- Checklist rápido:
+  - [ ] Diligenciaste **tú** la autoevaluación dentro de la ventana
+  - [ ] Respuestas coherentes con tu participación real
+  - [ ] Tienes claro que **no** reemplaza ni compensa la ACA 3
 
-{_tools_block("CDigital — actividad Autoevaluación (ventana de cierre)")}
-{_footer_sesiones("Relacionada con **Sesión 11** (integración y evaluación). Ventana tras ACA 3 / fase final del periodo.")}
+## 6. Canal y requisitos
+
+- **CDigital (Moodle)** — actividad «Autoevaluación» del aula. Único canal válido.
+- Navegador actualizado y sesión iniciada con tu **cuenta institucional CUN**.
+- No requiere instalar nada, ni pagar, ni usar la plantilla APA (no hay documento que subir).
+
+{_footer_instrumento("Se comenta en la **Sesión 11** (integración y evaluación). La ventana abre después de la ACA 3, en la fase final del periodo.")}
 """
 
-    coev = h + f"""## 1. Título / código
+    coev = h_coev + f"""## 1. Qué es este documento (y qué NO es)
 
-**Coevaluación** · **4%** de la nota única del curso (individual · cierre)
+**Coevaluación individual** · **4%** de la nota única del curso · instrumento de cierre.
 
-## 2. Propósito / qué evalúa
+Es un **instrumento que tú diligencias** (tipo formulario) en CDigital para valorar el trabajo colaborativo y los aportes de **tus compañeros de equipo** (máx. 3), con criterio académico y respeto.
 
-Valorar el trabajo colaborativo y los aportes de **pares de tu equipo** (máx. 3), con criterio académico y respeto.
+**No es una ACA.** Las ACAs de Proyecto I son **tres** — ACA 1 (25%), ACA 2 (25%) y ACA 3 / anteproyecto consolidado (42%) —, y son entregas documentales por equipo con rúbrica. La coevaluación (4%) y la autoevaluación (4%) completan el 100% de la nota única (Art. 41), pero **no** son una cuarta ni una quinta ACA:
 
-**Fuente:** ESP329 · Art. 41 · cronograma AFI / Instructivo Proyecto I (obligatoria al cierre de Proyecto I; **no** en Proyecto II).
+- **No** subes documento ni usas la plantilla APA: no hay archivo que entregar.
+- **No** la diligencia el equipo en bloque: cada integrante diligencia la suya.
+- **No sustituye la ACA 3** ni cambia la calificación docente de las entregas grupales.
+- **Solo existe en Proyecto I.** No aplica en Proyecto II ni en los cursos de pregrado (Art. 52).
 
-- **Solo aplica en Proyecto I.** No hay coevaluación con % propio en pregrado Art. 52 según syllabus.
-- **No sustituye** ACA 3 ni la calificación docente de las entregas grupales.
+**Fuente:** ESP329 · Art. 41 Reglamento Estudiantil (nota única) · cronograma AFI / Instructivo Proyecto I (obligatoria al cierre de Proyecto I; **no** en Proyecto II).
 
-{_fecha_block("proyecto1", "coev")}
+## 2. Quién la diligencia, dónde y cuándo
 
-## 3. Consigna (paso a paso)
+| Pregunta | Respuesta |
+| :--- | :--- |
+| **¿Quién?** | **Cada estudiante, de forma individual**, sobre sus compañeros de equipo. Nadie la diligencia por otro. |
+| **¿Dónde?** | En el aula del curso en **CDigital** ({URL_CDIGITAL}), actividad «Coevaluación». Ningún otro canal cuenta. |
+| **¿Cuándo?** | Solo dentro de la **ventana** indicada arriba (abre justo después de la ACA 3). |
+| **¿Qué se entrega?** | Nada por archivo: el registro queda en CDigital al enviar el formulario. |
 
-1. Espera la **ventana de habilitación** en **CDigital** (suele abrirse justo después de ACA 3).
-2. Entra a la actividad de **Coevaluación** del aula.
-3. Diligénciala **individualmente** según instrucciones/rúbrica publicadas.
-4. Sé objetivo: hechos del trabajo conjunto (entregas, división de tareas, calidad de aportes), no ataques personales.
-5. Envía dentro de la ventana; conserva evidencia si el aula lo permite.
+## 3. Paso a paso
 
-## 4. Producto entregable / evidencia
+1. Revisa en CDigital el **aviso de apertura** de la ventana (la publica el Docente).
+2. Entra a la actividad **Coevaluación** del aula.
+3. Diligénciala **individualmente**, siguiendo las instrucciones y la escala publicadas.
+4. Sé objetivo: valora **hechos** del trabajo conjunto (entregas cumplidas, reparto de tareas, calidad de los aportes), nunca la persona.
+5. **Envía** dentro de la ventana; conserva evidencia si el aula lo permite.
 
-- Actividad individual completada en **CDigital**.
-- El Docente habilita la ventana, verifica cumplimiento y registra la nota (**4%**) antes del cierre de notas.
+## 4. Qué pasa si no la diligencias
 
-## 5. Criterios / checklist
+- Ese **4% queda en cero**: no hay entregable alternativo ni trabajo extra que lo reemplace.
+- La ventana cierra en la fecha indicada y **no se reabre**: la nota debe quedar registrada antes del cierre de notas del periodo.
+- Si tienes una situación de fuerza mayor, escríbele al Docente **antes** del cierre de la ventana.
 
-- [ ] Completaste la coevaluación en la ventana indicada  
-- [ ] Evaluación respetuosa y fundamentada en el trabajo del equipo  
-- [ ] Cada integrante diligenció la suya (es individual)  
+## 5. Evidencia y registro de la nota
 
-{_tools_block("CDigital — actividad Coevaluación (ventana de cierre)")}
-{_footer_sesiones("Relacionada con **Sesión 11**. Ventana de cierre **antes** de la autoevaluación (según fechas calculadas del periodo).")}
+- La **evidencia oficial** es la actividad completada en CDigital (queda con fecha y hora).
+- El Docente habilita la ventana, verifica el cumplimiento y registra el **4%** en el gradebook antes del cierre de notas.
+- Checklist rápido:
+  - [ ] Diligenciaste **tú** la coevaluación dentro de la ventana
+  - [ ] Valoración respetuosa y fundamentada en el trabajo del equipo
+  - [ ] Cada integrante diligenció la suya (es individual)
+
+## 6. Canal y requisitos
+
+- **CDigital (Moodle)** — actividad «Coevaluación» del aula. Único canal válido.
+- Navegador actualizado y sesión iniciada con tu **cuenta institucional CUN**.
+- No requiere instalar nada, ni pagar, ni usar la plantilla APA (no hay documento que subir).
+
+{_footer_instrumento("Se comenta en la **Sesión 11**. La ventana cierra **antes** de la de autoevaluación (ver fechas oficiales del periodo).")}
 """
 
     return [
         {"code": "ACA 1", "title": "Formulación del problema", "filename": "ACA 1 - Formulacion del problema.docx",
-         "weight": "25%", "source": fuente, "md": a1},
+         "weight": "25%", "source": fuente, "kind": "aca", "md": a1},
         {"code": "ACA 2", "title": "Fundamentación referencial", "filename": "ACA 2 - Fundamentacion referencial.docx",
-         "weight": "25%", "source": fuente, "md": a2},
+         "weight": "25%", "source": fuente, "kind": "aca", "md": a2},
         {"code": "ACA 3", "title": "Anteproyecto final", "filename": "ACA 3 - Diseno metodologico y anteproyecto final.docx",
-         "weight": "42%", "source": fuente, "md": a3},
-        {"code": "Autoevaluación", "title": "Autoevaluación", "filename": "ACA Autoevaluacion.docx",
-         "weight": "4%", "source": fuente, "md": auto},
-        {"code": "Coevaluación", "title": "Coevaluación", "filename": "ACA Coevaluacion.docx",
-         "weight": "4%", "source": fuente, "md": coev},
+         "weight": "42%", "source": fuente, "kind": "aca", "md": a3},
+        # NO son ACAs: instrumentos individuales de cierre (se diligencian en
+        # CDigital). Orden cronológico de sus ventanas: coevaluación → autoevaluación.
+        {"code": "Coevaluación", "title": "Coevaluación individual (instructivo)",
+         "filename": "Coevaluacion individual (4%) - instructivo.docx",
+         "weight": "4%", "source": fuente, "kind": "instrumento", "md": coev},
+        {"code": "Autoevaluación", "title": "Autoevaluación individual (instructivo)",
+         "filename": "Autoevaluacion individual (4%) - instructivo.docx",
+         "weight": "4%", "source": fuente, "kind": "instrumento", "md": auto},
     ]
 
 
@@ -828,11 +932,29 @@ ACAS_BY_COURSE = {
 }
 
 
-def catalog_for_leeme(key: str) -> list[tuple[str, str, str, str]]:
-    """Lista (código, título, ruta relativa, fecha entrega) para LEEME."""
+def acas_for(key: str) -> list[dict]:
+    """Catálogo del curso con ``kind`` normalizado.
+
+    ``kind="aca"`` → enunciado de entregable evaluado (por defecto).
+    ``kind="instrumento"`` → instructivo de instrumento individual de cierre
+    (autoevaluación / coevaluación de Proyecto I): NO son ACAs.
+    """
+    items = ACAS_BY_COURSE[key]()
+    for a in items:
+        a.setdefault("kind", "aca")
+    return items
+
+
+def catalog_for_leeme(key: str) -> list[dict]:
+    """Filas para el LEEME de estudiantes.
+
+    Cada ítem: ``{code, title, rel, fecha, weight, kind}``. ``kind`` permite al
+    consumidor separar las ACAs de los instrumentos individuales de cierre
+    (auto/coevaluación de Proyecto I), que **no** deben listarse como una ACA más.
+    """
     from fechas_entrega_aca import entrega_por_id, entregas_curso, fmt_dmy
 
-    items = ACAS_BY_COURSE[key]()
+    items = acas_for(key)
     out = []
     for a in items:
         aca_id = ACA_ID_BY_CODE[key][a["code"]]
@@ -844,13 +966,20 @@ def catalog_for_leeme(key: str) -> list[tuple[str, str, str, str]]:
             fecha_txt = " / ".join(fmt_dmy(d) for d in dates)
         else:
             fecha_txt = fmt_dmy(entrega_por_id(key, aca_id).entrega)
-        out.append((a["code"], a["title"], f"{ACAS_REL}/{a['filename']}", fecha_txt))
+        out.append({
+            "code": a["code"],
+            "title": a["title"],
+            "rel": f"{ACAS_REL}/{a['filename']}",
+            "fecha": fecha_txt,
+            "weight": a.get("weight") or "—",
+            "kind": a["kind"],
+        })
     return out
 
 
-def _inject_fecha(md: str, course_key: str, code: str) -> str:
+def _inject_fecha(md: str, course_key: str, code: str, kind: str = "aca") -> str:
     aca_id = ACA_ID_BY_CODE[course_key][code]
-    bloque = _fecha_block(course_key, aca_id)
+    bloque = _fecha_block(course_key, aca_id, kind=kind)
     if "\n---\n" in md:
         pre, post = md.split("\n---\n", 1)
         return pre + "\n---\n\n" + bloque + post.lstrip("\n")
@@ -864,18 +993,32 @@ def build_course(key: str) -> list[str]:
     cc = carga_curso(key)
     out_dir = Path(c["folder"]) / "Clases" / "Recursos" / "ACAs"
     out_dir.mkdir(parents=True, exist_ok=True)
-    subtitle = f"Enunciado ACA · {cc['titulo_corto']}"
-    footer = f"CUN · {cc['titulo_corto']} · Enunciado ACA · Vigilada Mineducación"
     written = []
-    for a in ACAS_BY_COURSE[key]():
+    for a in acas_for(key):
         path = out_dir / a["filename"]
-        md = _inject_fecha(a["md"], key, a["code"])
+        if a["kind"] == "instrumento":
+            subtitle = f"Instrumento individual de cierre · {cc['titulo_corto']}"
+            footer = (
+                f"CUN · {cc['titulo_corto']} · Instrumento individual de cierre "
+                "(no es una ACA) · Vigilada Mineducación"
+            )
+        else:
+            subtitle = f"Enunciado ACA · {cc['titulo_corto']}"
+            footer = f"CUN · {cc['titulo_corto']} · Enunciado ACA · Vigilada Mineducación"
+        md = _inject_fecha(a["md"], key, a["code"], a["kind"])
         write_md_as_docx(md, str(path), subtitle=subtitle, footer=footer)
         written.append(str(path))
-        print("OK ACA", key, a["filename"])
+        print("OK", "INSTRUMENTO" if a["kind"] == "instrumento" else "ACA", key, a["filename"])
     for p in out_dir.glob("*.md"):
         p.unlink()
         print("RM", p)
+    # Nombres viejos (p. ej. "ACA Autoevaluacion.docx"): se borran para no dejar
+    # duplicados que sigan llamando ACA a lo que no lo es.
+    for name in LEGACY_FILENAMES.get(key, ()):
+        old = out_dir / name
+        if old.is_file():
+            old.unlink()
+            print("RM obsoleto", old)
     return written
 
 
@@ -884,7 +1027,11 @@ def main(argv: list[str] | None = None) -> None:
     keys = argv if argv else list(ACAS_BY_COURSE.keys())
     for key in keys:
         build_course(key)
-    print("Listo: enunciados ACA en Clases/Recursos/ACAs/ (los cursos solicitados).")
+    print(
+        "Listo: enunciados ACA en Clases/Recursos/ACAs/ (los cursos solicitados). "
+        "Proyecto I incluye además los instructivos de autoevaluación y coevaluación "
+        "(instrumentos individuales de cierre, NO son ACAs)."
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,99 @@
+LECTURA AUTONOMA DE LA SESION 01 -> SESION 02
+Trabajo de Grado 3 (TG3)
+================================================================
+
+QUE HAY QUE LEER
+----------------
+Las unidades U1 y U2 del Syllabus (94532):
+  U1 - Casos de exito
+  U2 - Retomar el proyecto: contexto y planteamiento
+
+Son las unidades que hoy, en la Sesion 01, quedaron diferidas: la Sesion 01 es
+de encuadre (presentacion del curso, del Docente, de ustedes y de las ACAs, mas
+la firma del acuerdo pedagogico) y no dicta tema. Por eso U1-U2 se leen de forma
+autonoma y se retoman al abrir la Sesion 02.
+
+Tal como quedo dicho en la deck de la Sesion 01:
+
+  "Lectura autonoma (obligatoria): unidades U1 y U2 del Syllabus - casos de
+   exito y retomar el proyecto (contexto y planteamiento). Hoy no se dictaron:
+   se leen en casa y se retoman al abrir la Sesion 02."
+
+
+PARA CUANDO
+-----------
+Antes de la Sesion 02 (Formulacion de pregunta, objetivos y titulo).
+
+
+DONDE ESTA EL MATERIAL
+----------------------
+LECTURA OBLIGATORIA (16 paginas, en espanol, acceso abierto):
+
+  Itriago C., M. y Zerpa, C. E. (2011). El planteamiento del problema en el
+  proyecto de investigacion en ingenieria. Revista de la Facultad de Ingenieria
+  Universidad Central de Venezuela, 26(3), 39-54.
+
+  Enlace verificado (SciELO Venezuela, texto completo libre):
+  http://ve.scielo.org/scielo.php?pid=S0798-40652011000300005&script=sci_arttext
+
+  Enlace verificado (repositorio SABER-UCV, PDF de descarga libre):
+  https://saber.ucv.ve/ojs/index.php/rev_fiucv/article/view/4972
+
+  El PDF ya quedo descargado en esta misma carpeta, para que no dependan de la
+  conexion:
+      Lectura autonoma - Planteamiento del problema en ingenieria (Itriago y Zerpa, 2011).pdf
+
+  Licencia: Creative Commons Atribucion-NoComercial-SinDerivadas 4.0
+  (CC BY-NC-ND 4.0). Se puede leer, guardar y compartir citando la fuente.
+
+  POR QUE ESTA LECTURA: es un articulo escrito para investigacion EN INGENIERIA,
+  no para ciencias sociales. Recorre exactamente lo de U2 (contexto,
+  antecedentes, delimitacion, formulacion del problema, objetivos) y trae
+  ejemplos de redaccion buenos y malos, que es justo lo que hay que comparar
+  contra el planteamiento que cada uno trae de TG2.
+
+  Mientras lee, subraye: (a) que hace que un problema este BIEN DELIMITADO,
+  (b) como se encadena contexto -> problema -> pregunta -> objetivos, y
+  (c) los errores tipicos de redaccion. Eso es lo que se usa en la Sesion 02.
+
+
+LECTURA COMPLEMENTARIA (opcional, no se descarga: solo enlace)
+--------------------------------------------------------------
+Para U1 (casos de exito) y para la culminacion del trabajo de grado
+(articulo + sustentacion):
+
+  Pereira, M. (Coord.). (2024). Trabajo de grado: elaborar y publicar sus
+  resultados. Una guia para lograrlo. High Rate Consulting.
+  ISBN 979-8-9875607-8-5. 135 paginas.
+
+  Enlace verificado (Dialnet, descarga libre sin registro):
+  https://dialnet.unirioja.es/servlet/libro?codigo=979361
+
+  No hay que leerlo entero. Vayan a la Parte A (estructura del trabajo de grado)
+  y a los capitulos sobre pasar del trabajo de grado al articulo publicable.
+
+Revise tambien el material de la Sesion 01 en CDigital: alli se publica el
+material oficial del curso.
+
+NOTA: la bibliografia comercial del Syllabus (Hernandez-Sampieri, Creswell,
+Maxwell, manual APA 7) NO se distribuye por esta carpeta. Se consulta en la
+biblioteca o en las bases de datos institucionales de la CUN.
+
+
+QUE TRAER A LA SESION 02
+------------------------
+1. La lectura hecha y su MATRIZ DE HERENCIA en un Google Doc llamado
+   S01_AcuerdoRetoma_Apellido, con tres columnas:
+   - REUTILIZO TAL CUAL / REESCRIBO / CREO DE CERO, seccion por seccion de lo
+     que trae de TG2.
+   - El CONTEO DE SUS REFERENCIAS REALES: cuantas estan citadas hoy en el cuerpo
+     del texto y cuantas le faltan.
+   - TRES COMPROMISOS concretos suyos para las proximas dos semanas.
+2. Ese documento SUBIDO A CDIGITAL antes de la Sesion 02.
+3. Los ENUNCIADOS DE LAS ACAs abiertos, con las fechas de su grupo:
+   estan en Clases/Recursos/ACAs/.
+4. Su ARTICULO abierto en la version vigente (una sola, no cinco copias) y su
+   LISTA DE REFERENCIAS tal como va hoy.
+
+Cuente las referencias CITADAS EN EL CUERPO, no las de la lista final: esa
+diferencia es el trabajo real que queda por delante.

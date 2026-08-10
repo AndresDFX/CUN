@@ -117,7 +117,7 @@
       "  Copiar y pegar sin comillas ni referencia.",
       "  Traducir un texto ajeno y firmarlo como propio.",
       "  Reutilizar un trabajo de otro semestre sin declararlo (**autoplagio**).",
-      "En TG3 el documento pasa por la **herramienta antiplagio institucional del campus**: el hábito se corrige aquí, no allá.",
+      "En TG3 la entrega pasa por la **revisión de similitud institucional del aula (CDigital)**, y allá el Docente confirma cómo opera: el hábito se corrige aquí, no allá.",
       "Si se detecta plagio se activa el **debido proceso institucional**, con consecuencias sobre la opción de grado."
     ],
     "note": "Regla práctica: **anote la fuente en el instante** en que pega algo. En un documento que crece seis meses, reconstruirla es imposible."
@@ -142,8 +142,7 @@
       ["**SciELO y Redalyc**", "Fuentes abiertas iberoamericanas, útiles para el contexto local", "Marco referencial"],
       ["**Biblioteca CUN (web)**", "Texto completo de bases suscritas, con login institucional", "Cuando el PDF no es abierto"],
       ["**ZoteroBib (zbib.org)**", "Generar referencias en APA 7 sin instalar ni registrarse", "Cada vez que cite"],
-      ["**Excalidraw**", "Diagramar el problema o el diseño metodológico", "Sesiones de problema y método"],
-      ["**Padlet**", "Tablero donde nos presentamos como grupo", "Hoy"]
+      ["**Excalidraw**", "Diagramar el problema o el diseño metodológico", "Sesiones de problema y método"]
     ],
     "note": "No se exige instalar nada: ni Office de escritorio, ni Mendeley, ni Zotero de escritorio. Un navegador y su cuenta institucional bastan.",
     "col_w": [2.6, 5.9, 3.4]

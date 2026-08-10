@@ -220,17 +220,26 @@ PADLET_PROMPTS = {
 
 
 def _acas_rows(course_key):
-    """Filas (ACA, qué entrega, peso) para la slide de ACAs de la Sesión 01.
+    """Filas de la slide «LAS ACAs» de la Sesión 01 → ``(rows, instrumentos)``.
+
+    ``rows`` = solo las **ACAs** (entregables evaluados con rúbrica).
+    ``instrumentos`` = ítems que NO son ACAs y que por eso no pueden ir en esa
+    tabla: en Proyecto I, la autoevaluación (4%) y la coevaluación (4%), que
+    cada estudiante *diligencia* en CDigital al cierre. Van rotulados aparte,
+    en la nota al pie, para que nadie los lea como una cuarta y quinta entrega.
 
     Sin fechas: la fecha vive en el enunciado (`Clases/Recursos/ACAs/`) y en la
     Presentación del Curso, para no arrastrar aquí una fecha que quede vieja.
     """
     try:
-        from build_acas_estudiantes import ACAS_BY_COURSE
-        return [[a["code"], a["title"], a["weight"] or "—"]
-                for a in ACAS_BY_COURSE[course_key]()]
+        from build_acas_estudiantes import acas_for
+        items = acas_for(course_key)
     except Exception:
-        return []
+        return [], []
+    rows = [[a["code"], a["title"], a["weight"] or "—"]
+            for a in items if a["kind"] == "aca"]
+    instrumentos = [a for a in items if a["kind"] != "aca"]
+    return rows, instrumentos
 
 
 def build_pptx_presentacion(course, ses, pptx):
@@ -240,7 +249,7 @@ def build_pptx_presentacion(course, ses, pptx):
     n = ses["n"]
     label = f"Sesión {n:02d}"
     key = course["key"]
-    set_footer(footer_inicio_efectivo(key))
+    set_footer("")
     prs = new_prs()
     course_cover(
         prs,
@@ -268,13 +277,24 @@ def build_pptx_presentacion(course, ses, pptx):
     idx += 1
     icebreaker_qr_slide(prs, idx=idx, sub="Preséntate: quién eres y qué esperas del curso")
     idx += 1
-    rows = _acas_rows(key)
+    rows, instrumentos = _acas_rows(key)
     if rows:
+        note = "Enunciado completo y **fechas exactas**: `Clases/Recursos/ACAs/` y la Presentación del Curso."
+        if instrumentos:
+            # P1: auto/coevaluación NO son ACAs → nota al pie, nunca fila de la tabla.
+            nombres = " y la ".join(
+                f"**{a['code'].lower()} ({a['weight']})**" for a in instrumentos
+            )
+            note = (
+                f"Las ACAs son **{len(rows)}**. La {nombres} **no son ACAs**: son instrumentos "
+                "individuales que cada quien diligencia en CDigital al cierre. "
+                "Enunciados e instructivos: `Clases/Recursos/ACAs/`."
+            )
         table_content(
             prs, "LAS ACAs — QUÉ SE EVALÚA",
             ["ACA", "Qué entregas", "Peso"], rows,
             sub="Entrega oficial: **CDigital**",
-            note="Enunciado completo y **fechas exactas**: `Clases/Recursos/ACAs/` y la Presentación del Curso.",
+            note=note,
             col_w=[1.9, 7.4, 1.1], idx=idx,
         )
     else:
@@ -340,7 +360,7 @@ def build_pptx(course, ses, pptx):
     n = ses["n"]
     titulo = ses["titulo"]
     label = f"Sesión {n:02d}"
-    set_footer(footer_inicio_efectivo(course["key"]))
+    set_footer("")
 
     bloques = contenido.load(course["key"], n)
     if bloques:
