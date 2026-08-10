@@ -209,7 +209,7 @@ def build_investigacion(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Enunciados: Clases/Recursos/ACAs/. Fechas = día de clase (jue). Confirma desglose EV en CDigital.",
+        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Recursos/ACAs/.",
         sub=f"Periodo {bold_var('26P03')} · inicio {bold_var('10/08/2026')} · cierre {bold_var('20/09/2026')}",
         idx=_i,
     )
@@ -217,7 +217,7 @@ def build_investigacion(out: Path):
     _i = add_eval_scope_pregrado(
         prs, _i,
         "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** "
-        "(desglose EV: confirmar en CDigital / syllabus SIAC EI005).",
+        "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_inv_h)} por Google Meet. El enlace se publica en el aula virtual."),
@@ -281,7 +281,7 @@ def build_creatividad(out: Path):
     _i = add_eval_scope_pregrado(
         prs, _i,
         "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** "
-        "(desglose EV: confirmar en CDigital / syllabus SIAC EI004).",
+        "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_cre_h)} por Google Meet."),

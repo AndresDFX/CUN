@@ -105,9 +105,51 @@ REGLA_OFICIAL_P1 = (
 
 def _entregas_oficiales_p1() -> list[EntregaAca]:
     """Proyecto I: ventanas tomadas del cronograma institucional (ver arriba)."""
+    return _desde_tabla("proyecto1", CRONOGRAMA_OFICIAL_P1, REGLA_OFICIAL_P1)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CREATIVIDAD e INVESTIGACIÓN — ventanas FIJADAS POR EL DOCENTE (2026-08-10).
+#
+# Por qué no se calculan: al pasar la Sesión 01 a encuadre (no dicta tema), el
+# reparto automático dejaba la ACA 1 cerrando el mismo día de la Sesión 02, es
+# decir con CERO clases de contenido cursadas. El docente decidió correr la
+# ACA 1 una semana; ACA 2 se corre en consecuencia y ACA 3 se mantiene dentro
+# de la fecha de recepción institucional, que es el techo duro:
+#   Creatividad  → recepción 19/09/2026 · cierre 27/09/2026
+#   Investigación→ recepción 12/09/2026 · cierre 20/09/2026
+#
+# Clases de contenido que respalda cada entrega (S01 es encuadre en ambos):
+#   Creatividad   ACA1 ← S02,S03 · ACA2 ← S04,S05 · ACA3 ← S06
+#   Investigación ACA1 ← S02,S03 · ACA2 ← S04     · ACA3 ← S05
+#
+# (apertura, entrega/cierre, fecha límite de nota docente)
+VENTANAS_DOCENTE: dict[str, dict[str, tuple[date, date, date]]] = {
+    "creatividad": {
+        "aca1": (date(2026, 8, 12), date(2026, 8, 26), date(2026, 9, 2)),
+        "aca2": (date(2026, 8, 27), date(2026, 9, 9), date(2026, 9, 16)),
+        "aca3": (date(2026, 9, 10), date(2026, 9, 16), date(2026, 9, 23)),
+    },
+    "investigacion": {
+        "aca1": (date(2026, 8, 13), date(2026, 8, 27), date(2026, 9, 3)),
+        "aca2": (date(2026, 8, 28), date(2026, 9, 3), date(2026, 9, 10)),
+        "aca3": (date(2026, 9, 4), date(2026, 9, 10), date(2026, 9, 17)),
+    },
+}
+REGLA_VENTANAS_DOCENTE = (
+    "Ventanas fijadas por el Docente (2026-08-10) para que cada ACA tenga clases de "
+    "contenido cursadas antes de su cierre — la Sesión 01 es de encuadre y no dicta tema. "
+    "Respetan la fecha de recepción institucional del curso."
+)
+
+
+def _desde_tabla(key: str, tabla: dict, regla: str) -> list[EntregaAca]:
+    """Construye las entregas de un curso a partir de una tabla explícita de fechas."""
     out: list[EntregaAca] = []
-    for comp in ACA_COMPONENTES["proyecto1"]:
-        ap, ent, nota = CRONOGRAMA_OFICIAL_P1[comp["id"]]
+    for comp in ACA_COMPONENTES[key]:
+        if comp["id"] not in tabla:
+            continue
+        ap, ent, nota = tabla[comp["id"]]
         out.append(
             EntregaAca(
                 id=comp["id"],
@@ -118,7 +160,7 @@ def _entregas_oficiales_p1() -> list[EntregaAca]:
                 apertura=ap,
                 entrega=ent,
                 nota_docente=nota,
-                regla=REGLA_OFICIAL_P1,
+                regla=regla,
             )
         )
     return out
@@ -287,6 +329,9 @@ def entregas_para_grupo(key: str, grupo: str | None = None) -> list[EntregaAca]:
     if key == "proyecto1":
         # Fechas institucionales, no calculadas (ver CRONOGRAMA_OFICIAL_P1).
         return _entregas_oficiales_p1()
+    if key in VENTANAS_DOCENTE:
+        # Ventanas fijadas por el docente (ver VENTANAS_DOCENTE).
+        return _desde_tabla(key, VENTANAS_DOCENTE[key], REGLA_VENTANAS_DOCENTE)
     weekday = int(c["horario"]["weekday"])
     return _repartir_acas(inicio, recepcion, weekday, comps, grupo=grupo)
 

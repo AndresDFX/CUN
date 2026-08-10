@@ -449,7 +449,7 @@ def acas_investigacion() -> list[dict]:
         "Syllabus SIAC EI005_PRES · Art. 52: Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. "
         "Mecanismos: problema, protocolo, seguimiento y presentación oral/escrita. "
         "Producto: avance de artículo de nuevo conocimiento. "
-        "Desglose EV exacto: confirmar en CDigital (tabla SIAC incompleta/EV genérico)."
+        "Esta ACA evalúa el **100% de su corte**: no se subdivide en varios EV."
     )
     curso = "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA — Escuela de Ingenierías"
     codigo = "EI005"
@@ -575,7 +575,7 @@ def acas_creatividad() -> list[dict]:
         "Syllabus SIAC EI004_VIR · Art. 52: Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. "
         "Producto conductor: Propuesta de Innovación (desde semana 1). "
         "Mecanismos: talleres, parciales, simulaciones, etc. con rúbrica. "
-        "Desglose EV exacto: confirmar en CDigital."
+        "Esta ACA evalúa el **100% de su corte**: no se subdivide en varios EV."
     )
     curso = "CREATIVIDAD Y PENSAMIENTO INNOVADOR — Escuela de Ingenierías"
     codigo = "EI004"

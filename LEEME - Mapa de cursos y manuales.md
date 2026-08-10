@@ -108,10 +108,21 @@ Cada asignatura puede tener `<Asignatura>/_Archivo obsoleto 2026-08-09/` (espejo
 ### Meet de Proyecto I: existe pero no está propagado
 La URL real `https://meet.google.com/omk-woqk-vsj` está **hardcodeada** en `config/slides/build_calendar_proyecto1_54es4.py:48` y solo llega al CSV/ICS/Apps Script de `2026/54ES4/`. **No** llega a: la Presentación del Curso (slide 18), `2026/54ES4/Informacion.txt`, el CSV de hitos ni los guiones — todos siguen con el placeholder. Falta subirla a `config/universidades/cun.json` / `sesiones_cun.py` y regenerar.
 
-### Fechas de ACA calculadas que chocan con el temario (confirmar EV en CDigital antes de anunciarlas)
-Creatividad e Investigación **no tienen desglose EV oficial**: sus ventanas salen de repartir `[inicio, recepción]` por 30/30/40 en `config/cursos/fechas_entrega_aca.py`. El resultado no cuadra con el plan de clases:
-- **Investigación 53339** — ACA 1 «Fundamentos y **primer avance**» cierra el **20/08**, pero la sesión dedicada al 1.er avance es la del **27/08**. ACA 3 (marco teórico) cierra el **10/09** y la sesión que enseña marco teórico es la del **17/09**. Además la **recepción oficial es 12/09**, anterior a la última clase (17/09).
-- **Creatividad 54408** — ACA 3 (Propuesta de Innovación final, 40%) cierra el **16/09**, una semana **antes** de la última clase (23/09); recepción 19/09 < última clase 23/09.
+### Fechas de ACA — resueltas 2026-08-10 (decisión del docente)
+
+Creatividad e Investigación no tenían desglose EV oficial (la tabla SIAC llega truncada a `EV 01`). **Decisión: cada ACA evalúa el 100% de su corte** — ACA 1 = Corte 1 (30%) · ACA 2 = Corte 2 (30%) · ACA 3 = Corte 3 (40%), sin subdividir en varios EV.
+
+Y como la Sesión 01 pasó a ser de encuadre (no dicta tema), el reparto automático dejaba la ACA 1 cerrando el mismo día de la Sesión 02, o sea **sin ninguna clase de contenido cursada**. Se corrieron las ventanas; ahora viven en `VENTANAS_DOCENTE` de `config/cursos/fechas_entrega_aca.py` (tabla explícita, ya no cálculo):
+
+| Curso | ACA 1 | ACA 2 | ACA 3 | Recepción (techo) |
+|---|---|---|---|---|
+| Creatividad 54408 | 12/08 → **26/08** | 27/08 → **09/09** | 10/09 → **16/09** | 19/09 |
+| Investigación 53339 | 13/08 → **27/08** | 28/08 → **03/09** | 04/09 → **10/09** | 12/09 |
+
+Clases de contenido que respaldan cada entrega: Creatividad ACA1←S02,S03 · ACA2←S04,S05 · ACA3←S06 · Investigación ACA1←S02,S03 · ACA2←S04 · ACA3←S05.
+
+> **Límite estructural, no corregible moviendo fechas:** en ambos cursos la **recepción institucional es anterior a la última clase** (Creatividad 19/09 < S07 23/09; Investigación 12/09 < S06 17/09). La última sesión queda necesariamente después del entregable final: úsala como socialización/cierre, no para contenido evaluable.
+
 - **TG2 54448** — sin Syllabus SIAC: ACA 1 07/09 · ACA 2 05/10 · ACA 3 09/11 y los pesos 30/30/40 son orientativos (Art. 52). Coherentes entre Manual, enunciados, LEEME del estudiante y CSV de hitos, pero **no confirmados**.
 
 ### Otros pendientes vigentes

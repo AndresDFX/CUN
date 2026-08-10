@@ -93,7 +93,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | Cargar el cronograma de 7 encuentros | **Generador de sesiones** o **importación CSV de 8 columnas** | El CSV lleva `session_date, title, start_time, end_time, meeting_url, cut_name, recording_url, session_type`. El generador conoce los festivos de Colombia (Ley Emiliani + Pascua calculada) y ofrece política `incluir / saltar / mover` |
 | Regla "festivo → clase autónoma, no cancelación" | **`session_type = autonoma`** | Se marca **en la misma columna del CSV**. Un proceso automático detecta la hora de inicio de la sesión autónoma y **notifica + envía correo** a los matriculados; el estudiante "asiste" marcando el material como revisado. **[INFERIDO]** — no verifiqué si algún miércoles del 12/08 al 23/09 cae festivo; el Manual declara la regla, así que dejo la pieza lista |
 | Subir el material | **Contenidos** | Se puede seleccionar **la carpeta `Clases/` completa**. Tope 25 MB por archivo, 100 MB por lote |
-| Configurar 30/30/40 | **Cortes del curso** | Tres cortes con sus fechas y pesos; dentro de cada uno, cuánto pesan talleres, exámenes, proyectos y asistencia. **Advertencia:** el desglose EV del syllabus está truncado en la fuente (`CORTE 1 = 30% / EV 01 / 9,0%` y se corta). Hay que decidirlo **antes** de configurar, o queda mal desde el día 1 |
+| Configurar 30/30/40 | **Cortes del curso** | Tres cortes con sus fechas y pesos; dentro de cada uno, cuánto pesan talleres, exámenes, proyectos y asistencia. La tabla del Syllabus venía truncada (`CORTE 1 = 30% / EV 01 / 9,0%`). **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV. |
 | Escala 0,1–5,0 y nota de aprobación | **Configuración de la institución** | La escala y la nota mínima se configuran a nivel institución. **La nota de aprobación no está en el material del curso** — confirmar con CDigital |
 | Sincronizar el calendario | **Google / Microsoft 365** | El docente conecta su cuenta una vez; el sistema crea los eventos **con los 50 como invitados** y genera el enlace de Meet. Esto cierra el defecto textual del material (*"los CSV/ICS de Pregrado no incluyen invitados/estudiantes"*): hoy el estudiante nunca recibe la invitación |
 | Sembrar el Tutor IA | **Prompts de IA → override del curso** | Pegar en el prompt del curso las 4 respuestas típicas de la tabla de acompañamiento del guion S01 y el criterio *"si alguien externo entiende el dolor sin pedir aclaración, sirve"* |
@@ -447,7 +447,7 @@ Este curso no es un posgrado. 50 estudiantes de nivel tecnológico, virtual, con
 | **Las tres URL bloqueantes del curso siguen pendientes** (CDigital, Meet, plantilla APA) | **Medio** | No es un riesgo de ExamLab, pero lo hereda: sin la URL de CDigital, las actividades externas no tienen adónde apuntar |
 | **Contenido generado con IA con errores conceptuales** | **Medio** | Revisar los 6 paquetes antes de publicarlos. El curso enseña a distinguir innovación de tecnología: un material generado que confunda eso es peor que un PPTX genérico |
 | **Cuota de IA agotada** | **Medio** | El Tutor IA consume por mensaje y 50 estudiantes en semana de ACA generan picos. Hay lista de claves de respaldo con rotación automática — verificar que esté configurada |
-| **El desglose EV del syllabus está truncado en la fuente** | **Medio** | Decidir la distribución **antes** de configurar los cortes. Cambiarla a mitad de bloque recalcula todas las notas |
+| ~~El desglose EV del syllabus está truncado~~ — **resuelto 2026-08-10** | — | **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV. Cambiarlo a mitad de bloque recalcularía todas las notas: no tocar |
 | **Ausencia justificada sin dónde registrarse** | **Bajo-medio** | Con 7 encuentros, un ausente justificado se va al rojo. Marcar presente y dejar constancia por otra vía (§4.7) |
 | **Sobrecarga: 13 herramientas para 7 sesiones** | **Alto, y es el riesgo real** | Ver §7. La recomendación es empezar con **cinco**, no con trece |
 
@@ -480,7 +480,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 - [ ] Conseguir el listado de los 50 estudiantes (no está en el material del curso) y armar el CSV de importación.
 - [ ] Confirmar las tres URL pendientes: **CDigital**, **Google Meet** y plantilla APA pública.
 - [ ] Verificar que el **modo de procesamiento de IA** esté en inmediato (si está en diferido, la generación de contenidos se encola).
-- [ ] Decidir el desglose EV de los tres cortes (la fuente está truncada) y configurarlo.
+- [ ] Configurar los cortes con **una ACA por corte** (30/30/40), sin subdividir en EV — decidido 2026-08-10.
 - [ ] Confirmar la **nota de aprobación** y la escala institucional.
 - [ ] Importar el cronograma de 7 encuentros con la columna de modalidad de sesión.
 - [ ] Probar la autorización del calendario institucional. Si falla, plan B con `.ics` + mensajes programados.

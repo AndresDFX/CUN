@@ -201,4 +201,4 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - URL CDigital (campus) por curso — placeholder: `[URL CDigital — campus del curso pendiente]`
 - URL pública plantilla APA
 - Syllabus SIAC de TG2 ausente (ACAs TG2 = orientativas 30/30/40 hasta cargar SIAC)
-- Desglose EV exacto Corte 1–3 en tablas SIAC de Creatividad/Investigación (confirmar en CDigital)
+- **Desglose EV (resuelto 2026-08-10):** las tablas SIAC de Creatividad e Investigación venían truncadas (solo `EV 01` con un % parcial). Decisión del docente: **cada ACA evalúa el 100% de su corte** — ACA 1 = Corte 1 (30%), ACA 2 = Corte 2 (30%), ACA 3 = Corte 3 (40%). No se subdivide en varios EV. No volver a pedir «confirmar desglose EV».

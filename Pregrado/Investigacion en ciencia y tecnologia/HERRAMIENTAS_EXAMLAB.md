@@ -329,7 +329,7 @@ En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la c
 
 **Costo:** transcribir 20 notas tres veces = ~15 min por corte. **Lo que se gana:** los tres ACAs alimentan Alerta temprana, el gradebook y los informes, y sobre el ítem externo se puede colgar el **hilo de retroalimentación** que el ACA 2 exige.
 
-⚠️ **Antes de configurar los cortes hay que decidir el desglose EV**, que en el syllabus está truncado en el origen (llega hasta `CORTE 1 / EV 01 / 9.0%`). Los propios ACAs lo admiten: *"Desglose EV exacto: confirmar en CDigital"*.
+La tabla del Syllabus venía truncada en el origen (llega hasta `CORTE 1 / EV 01 / 9.0%`). **Decidido 2026-08-10:** cada ACA evalúa el **100% de su corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%); no se subdivide en varios EV.
 
 ---
 
@@ -428,7 +428,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 
 - [ ] **Override del prompt del Tutor IA** para este curso: pegar el criterio de calidad de los guiones (qué hace viable una pregunta de investigación, qué separa problema de solución).
 - [ ] Crear **un foro por sesión**, con ventana de la semana, hilo fijado con la consigna y el criterio como respuesta oficial.
-- [ ] Configurar los **cortes 30 / 30 / 40** — ⚠️ antes hay que decidir el desglose EV, truncado en el syllabus.
+- [ ] Configurar los **cortes 30 / 30 / 40** con **una ACA por corte**, sin subdividir en EV (decidido 2026-08-10).
 - [ ] Registrar **ACA 1, 2 y 3** como actividades **externas** con enlace a CDigital.
 - [ ] Sincronizar el **calendario** con los 20 como invitados; si el OAuth no conecta, publicar la URL `.ics`.
 - [ ] Subir las consignas `.md` de las sesiones 02 a 06.

@@ -23,7 +23,7 @@
 ### Creatividad (EI004) e Investigación (EI005)
 
 - [ ] Actividades de **Corte 1 (30%)**, **Corte 2 (30%)** y **Corte 3 (40%)** publicadas, entregadas y calificadas en CDigital.
-- [ ] Desglose EV del syllabus confirmado en el aula (si la tabla SIAC está incompleta, quedó aviso en CDigital).
+- [ ] Cortes configurados en el aula con **una ACA por corte** (ACA 1 = Corte 1 30% · ACA 2 = Corte 2 30% · ACA 3 = Corte 3 40%), sin subdividir en varios EV.
 - [ ] Enunciados en `Clases/Recursos/ACAs/` alineados a los cortes.
 
 ### Trabajo de Grado 2 (94453)
