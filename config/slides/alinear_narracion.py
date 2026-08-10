@@ -7,7 +7,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 SLIDES = os.path.dirname(os.path.abspath(__file__))
 CONTENT = os.path.join(SLIDES, "content")
-CURSOS = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos"
+CURSOS = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos"
 
 GUIONES = {
  "cableado": (os.path.join(CURSOS, "Cableado Estructurado", "Guiones"), {

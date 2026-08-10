@@ -21,16 +21,46 @@ from carga_academica import load_carga  # type: ignore
 from fechas_entrega_aca import hitos_aca_rows  # type: ignore
 from sesiones_cun import (  # type: ignore
     COANFITRION_MEET_AFI,
+    COURSES,
     LINK_ACUERDO_PEDAGOGICO,
     LINK_INFORME_CIERRE,
     LINK_REGISTRO_DOCENTE_AFI,
     LINK_TUTORIAS,
+    meet_url,
 )
+from fechas_entrega_aca import ACA_COMPONENTES  # type: ignore  # noqa: E402
 
 OUT_NAME = "Entregas y hitos docentes - Importar a Calendar.csv"
 
-MEET_PH = "[URL Meet — mismo enlace toda la serie · {curso}]"
+# El enlace de Meet NO se hardcodea aquí: sale de carga_academica_2026.json vía meet_url().
 CDIGITAL_PH = "[URL CDigital — campus del curso pendiente]"
+
+
+def fecha_encuadre(course_key: str, fallback: date) -> date:
+    """Fecha de la Sesión 01 (encuadre) del catálogo; `fallback` si el curso no está."""
+    try:
+        f = COURSES[course_key]["sesiones"][0]["fecha"]
+        d, m, y = (int(x) for x in f.split("/"))
+        return date(y, m, d)
+    except Exception:
+        return fallback
+
+
+def texto_evaluacion(course_key: str) -> str:
+    """Esquema de evaluación real del curso (no asumir 30/30/40 en todos)."""
+    comps = ACA_COMPONENTES.get(course_key) or []
+    if course_key == "tg3":
+        return (
+            "Evaluación: corte único 100% · EV05 50% (proceso) + EXAM 50% (sustentación) "
+            "— Syllabus 94532. "
+        )
+    if not comps:
+        return ""
+    detalle = " · ".join(f"{c['label']} {c['weight']}%" for c in comps if c["kind"] == "aca")
+    return (
+        f"Evaluación Art. 52: {detalle}; cada ACA evalúa el 100% de su corte "
+        "(sin subdividir en varios EV) — decidido 2026-08-10, configurar así en CDigital. "
+    )
 
 HEADERS = [
     "Subject",
@@ -77,7 +107,7 @@ def build_esp_rows(curso_titulo: str, grupo: str, g: dict) -> list[dict]:
     inicio = date.fromisoformat(g["inicio"])
     recepcion = date.fromisoformat(g["recepcion"])
     cierre = date.fromisoformat(g["cierre"])
-    meet = MEET_PH.format(curso=curso_titulo)
+    meet = meet_url(g.get("_course_key") or "", curso_titulo)
     tag = f"{curso_titulo} · {grupo}"
     rows: list[dict] = []
 
@@ -163,25 +193,30 @@ def build_pregrado_rows(curso_titulo: str, grupo: str, g: dict) -> list[dict]:
     inicio = date.fromisoformat(g["inicio"])
     recepcion = date.fromisoformat(g["recepcion"])
     cierre = date.fromisoformat(g["cierre"])
-    meet = MEET_PH.format(curso=curso_titulo)
+    course_key = g.get("_course_key")
+    meet = meet_url(course_key or "", curso_titulo)
     tag = f"{curso_titulo} · {grupo}"
     rows: list[dict] = []
 
+    # El encuadre no cae siempre el 10/08 (inicio del periodo): TG3 abre el 11/08,
+    # Creatividad el 12/08 e Investigación el 13/08. Se usa la Sesión 01 del catálogo.
+    encuadre = fecha_encuadre(course_key or "", inicio)
     rows.append(
         row(
-            f"[HITOS] {tag} — Inicio / Syllabus (acuerdo: confirmar)",
-            inicio,
-            "Inicio del periodo pregrado. Socializar Syllabus y reglas del curso. "
+            f"[HITOS] {tag} — Sesión 01 · Encuadre / Syllabus (acuerdo: confirmar)",
+            encuadre,
+            "Sesión 01 = encuadre: se presenta el curso, el Docente, los estudiantes y las ACAs; "
+            "no se dicta tema (el contenido arranca en la Sesión 02). "
+            "Socializar Syllabus y reglas del curso. "
             "Acuerdo pedagógico: PENDIENTE CONFIRMAR canal/formulario con Coordinación "
             "(NO asumir el form AFI de Proyecto I/II). "
             f"Meet: {meet} · CDigital: {CDIGITAL_PH} · "
-            "Eval. orientativa Art. 52: Corte1 30% · Corte2 30% · Corte3 40% (confirmar EV en CDigital). "
+            f"{texto_evaluacion(course_key or '')}"
             "Encuentros semanales: importar CSV/ICS Encuentros… (no este archivo).",
             meet,
         )
     )
 
-    course_key = g.get("_course_key")
     if course_key:
         for label, d, note in hitos_aca_rows(course_key, grupo, esencial=True):
             rows.append(
@@ -266,6 +301,8 @@ def main() -> None:
                 dest_raiz_g = folder / f"Entregas y hitos docentes - Grupo {grupo} - Importar a Calendar.csv"
                 write_csv(dest_raiz_g, deduped)
                 written.append(str(dest_raiz_g.relative_to(ROOT)))
+        # Ojo: en cursos multi-grupo (TG3) este combinado y los archivos por grupo
+        # contienen los MISMOS eventos. Importar los dos duplica cada hito en Calendar.
         write_csv(folder / OUT_NAME, dedupe(combined))
         written.append(str((folder / OUT_NAME).relative_to(ROOT)))
     print(f"\nTotal archivos: {len(written)}")

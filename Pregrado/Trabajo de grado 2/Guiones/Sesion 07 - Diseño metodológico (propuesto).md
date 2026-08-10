@@ -11,17 +11,30 @@
 - **PPTX estudiante:** `Clases/Sesion 07 - Diseño metodológico (propuesto)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 07 — DISEÑO METODOLÓGICO (PROPUESTO) |
+| **2** | Del 'qué' al 'cómo': hoy se decide la ruta |
+| **3** | Qué es y qué NO es el diseño metodológico |
+| **4** | Las cinco decisiones encadenadas de la metodología |
+| **5** | Cuantitativo, cualitativo o mixto: cómo elegir sin adivinar |
+| **6** | El alcance: hasta dónde llega lo que usted promete |
+| **7** | Diseño, población y unidad de análisis |
+| **8** | La matriz pregunta–método: la herramienta del día |
+| **9** | Ejemplo modelado: matriz del caso 'mesa de ayuda' |
+| **10** | Cómo se escribe en 'propuesto': antes y después |
+| **11** | Errores frecuentes al proponer la metodología |
+| **12** | Errores frecuentes al proponer la metodología (cont.) |
+| **13** | Paso a paso: armar su ficha metodológica en Google Docs |
+| **14** | Paso a paso: buscar un referente metodológico y citarlo |
+| **15** | TALLER — Ficha metodológica y matriz de coherencia |
+| **16** | Checklist de autoevaluación antes de entregar |
+| **17** | Para continuar (trabajo autónomo) |
+| **18** | Cierre — Sesión 07 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Proponer diseño metodológico coherente.
@@ -79,23 +92,23 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 07. Ya tienen el ‘qué’: problema, pregunta, marco. Hoy viene el ‘cómo’: el **diseño metodológico**. Es decir, con qué plan van a responder esa pregunta. Y una advertencia desde ya: en TG2 todo es **propuesto**, no ejecutado.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con una ficha metodológica coherente: enfoque, alcance, diseño y una matriz que conecte cada objetivo con su método. Tengan abiertos sus objetivos del `S02`.”
+> “**OBJETIVOS.** Salir con una ficha metodológica coherente: enfoque, alcance, diseño y una matriz que conecte cada objetivo con su método. Tengan abiertos sus objetivos del `S02`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** La metodología responde una sola cosa: **cómo voy a responder mi pregunta**. Tiene piezas encadenadas: enfoque, alcance, diseño, población o datos, y técnicas. Cada pieza se justifica por la anterior; nada se elige ‘porque sí’.”
+> “**CONTENIDO CLAVE.** La metodología responde una sola cosa: **cómo voy a responder mi pregunta**. Tiene piezas encadenadas: enfoque, alcance, diseño, población o datos, y técnicas. Cada pieza se justifica por la anterior; nada se elige ‘porque sí’.”
 
 > “Vocabulario mínimo: el **enfoque** puede ser cuantitativo, cualitativo o mixto, y se elige por la naturaleza de la pregunta. El **alcance** —exploratorio, descriptivo, correlacional, explicativo— depende de cuánto se sabe ya. El **diseño** dice si hay experimento o no. Si la pregunta es ‘¿en qué medida el modelo reduce el tiempo?’, eso es cuantitativo, con medición antes y después.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y la regla que no se les puede olvidar: escriban todo en **propuesto**. ‘Se aplicará’, ‘se propone’, ‘se seleccionará’. En TG2 no hay campo; prometer resultados aquí es un error que se arrastra hasta la sustentación.”
+> “**ENFOQUE DE HOY.** Y la regla que no se les puede olvidar: escriban todo en **propuesto**. ‘Se aplicará’, ‘se propone’, ‘se seleccionará’. En TG2 no hay campo; prometer resultados aquí es un error que se arrastra hasta la sustentación.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -111,11 +124,11 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 
 > **En pantalla:** Buscar 1 artículo con un método similar; copiar la lógica, no el texto.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S07_Metodologia_Apellido`: (1) definan **enfoque, alcance y diseño** con una línea de justificación cada uno; (2) armen la **matriz pregunta–método**: una fila por objetivo específico con dato / técnica / análisis; (3) redacten todo en **propuesto**.”
+> “**TALLER.** ~20 minutos. En `S07_Metodologia_Apellido`: (1) definan **enfoque, alcance y diseño** con una línea de justificación cada uno; (2) armen la **matriz pregunta–método**: una fila por objetivo específico con dato / técnica / análisis; (3) redacten todo en **propuesto**.”
 
 > “Criterio de éxito: cada objetivo tiene su método en la matriz, no sobra ni falta ninguno, y no hay un solo verbo en pasado.”
 
@@ -132,15 +145,15 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 > **En pantalla:** Citar el referente metodológico en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la metodología dice **cómo** responder la pregunta, con piezas encadenadas; (2) la matriz pregunta–método muestra la coherencia; (3) en TG2 todo va en **propuesto**.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S07_Metodologia_Apellido` con la ficha y la matriz. La próxima sesión bajamos la metodología a lo concreto: **instrumentos y plan de análisis propuestos** —cómo se verá la encuesta, la guía o el experimento—.”
+> “**PARA CONTINUAR.** Suban `S07_Metodologia_Apellido` con la ficha y la matriz. La próxima sesión bajamos la metodología a lo concreto: **instrumentos y plan de análisis propuestos** —cómo se verá la encuesta, la guía o el experimento—.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

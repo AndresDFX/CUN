@@ -9,21 +9,33 @@
 - **Sesión:** **10** · **Tema:** Planeación, viabilidad e integración del anteproyecto
 - **Detalle:** ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de ACA3 (dom 08/11).
 - **PPTX estudiante:** `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 10 — Planeación, viabilidad e integración del anteproyecto |
+| **2** | El cronograma que promete 500 encuestas en una semana |
+| **3** | Qué es la planeación y qué debe contener |
+| **4** | Ejemplo modelado de cronograma por fases hacia Proyecto II |
+| **5** | Recursos y presupuesto: los rubros que sí se piden |
+| **6** | Viabilidad: cuatro frentes y una pregunta incómoda en cada uno |
+| **7** | Viable o deseo: enunciados reales y cómo se arreglan |
+| **8** | Integrar no es pegar: cómo se ve un documento remendado |
+| **9** | El hilo completo: sección por sección, con su pregunta de control |
+| **10** | Ejemplo modelado: matriz de coherencia con gaps y responsables |
+| **11** | Errores frecuentes en la integración final |
+| **12** | Errores frecuentes en la integración final (cont.) |
+| **13** | Paso a paso: una sesión de integración de dos horas |
+| **14** | TALLER · Matriz de coherencia y lista de gaps (20 minutos) |
+| **15** | Checklist de autoevaluación antes de entregar |
+| **16** | Trabajo autónomo y qué viene después |
+| **17** | Cierre — Sesión 10 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Construir** cronograma/viabilidad realistas.
@@ -71,31 +83,31 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 ---
 
 #### 1️⃣ Encuadre (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 10**. Ya tienen todas las piezas sueltas; hoy las miramos como un SISTEMA. Trabajamos planeación, viabilidad e integración del anteproyecto de cara a ACA3, que es el producto de cierre.”
-> “**Slide 2.** Meta de hoy: construir un cronograma y una viabilidad realistas, integrar el documento completo y detectar los ‘gaps’ de coherencia antes del cierre.”
+> “Meta de hoy: construir un cronograma y una viabilidad realistas, integrar el documento completo y detectar los ‘gaps’ de coherencia antes del cierre.”
 
 #### 2️⃣ Cronograma y viabilidad (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** La planeación es el cronograma realista de las fases hasta Proyecto II. La viabilidad es la pregunta honesta: ¿de verdad se puede? Si su cronograma promete encuestar a quinientas personas en una semana, eso no es un plan, es un deseo.”
+> “La planeación es el cronograma realista de las fases hasta Proyecto II. La viabilidad es la pregunta honesta: ¿de verdad se puede? Si su cronograma promete encuestar a quinientas personas en una semana, eso no es un plan, es un deseo.”
 > “Piensen en tres frentes de viabilidad: acceso —¿los dejarán entrar a esa población?—, permisos —¿hay avales pendientes?— y tiempo. Un anteproyecto viable es más valioso que uno ambicioso e imposible.”
 
 #### 3️⃣ Integración del documento (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
-> “**Slide 4.** ACA3 NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de ACA1 y ACA2 ya metidas.”
+> “ACA3 NO es un fragmento nuevo que se pega al final: es el documento COMPLETO e integrado. Integrar significa que la formulación corregida, el marco, el método y la planeación se lean como un solo texto, con las correcciones de ACA1 y ACA2 ya metidas.”
 > “Recuerden que el producto es acumulativo: si no incorporaron mis correcciones anteriores, el documento no está integrado, está remendado. Hoy detectamos esos remiendos.”
 
 #### 4️⃣ Taller: matriz de coherencia + gaps (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Armen una matriz de coherencia en Google Docs: filas = las secciones del anteproyecto; columnas = ¿existe?, ¿está alineada con la pregunta?, ¿qué falta? Marquen cada casilla y hagan una lista de ‘gaps’ con un responsable por cada uno. Yo circulo. Suban como `S10_IntegracionViabilidad_Apellidos`.”
+> “Veinte minutos. Armen una matriz de coherencia en Google Docs: filas = las secciones del anteproyecto; columnas = ¿existe?, ¿está alineada con la pregunta?, ¿qué falta? Marquen cada casilla y hagan una lista de ‘gaps’ con un responsable por cada uno. Yo circulo. Suban como `S10_IntegracionViabilidad_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -105,11 +117,11 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 | Método y objetivos no cuadran | “Revise el hilo: si el método cambió, realinee.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, cierren los gaps priorizados por impacto y avancen el cronograma y —si el formato lo pide— el presupuesto. Suban `S10_IntegracionViabilidad_Apellidos`.”
-> “**Slide 7.** La próxima es la última sesión sincrónica: coevaluación, autoevaluación e integración final. Pasamos a tutoría; priorizamos las correcciones de alto impacto equipo por equipo.”
+> “En autónomo, cierren los gaps priorizados por impacto y avancen el cronograma y —si el formato lo pide— el presupuesto. Suban `S10_IntegracionViabilidad_Apellidos`.”
+> “La próxima es la última sesión sincrónica: coevaluación, autoevaluación e integración final. Pasamos a tutoría; priorizamos las correcciones de alto impacto equipo por equipo.”
 
 
 
@@ -145,7 +157,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 - [ ] PPTX `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

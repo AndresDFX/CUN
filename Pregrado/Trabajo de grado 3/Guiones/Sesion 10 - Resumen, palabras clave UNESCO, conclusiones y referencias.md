@@ -11,17 +11,36 @@
 - **PPTX estudiante:** `Clases/Sesion 10 - Resumen, palabras clave UNESCO, conclusiones y referencias/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 10 — Resumen, palabras clave UNESCO, conclusiones y referencias |
+| **2** | La cabeza y la cola: lo que se escribe de último y se lee de primero |
+| **3** | El resumen (abstract): qué es y por qué va de último |
+| **4** | El resumen (abstract): qué es y por qué va de último (cont.) |
+| **5** | Las cinco piezas del resumen y cuánto ocupa cada una |
+| **6** | Ejemplo modelado: un resumen armado pieza por pieza |
+| **7** | Tres resúmenes que se rechazan (y cómo se arreglan) |
+| **8** | Tres resúmenes que se rechazan (y cómo se arreglan) (cont.) |
+| **9** | Palabras clave: por qué NO se inventan |
+| **10** | Paso a paso para elegir palabras clave que sí funcionen |
+| **11** | Del término inventado al término que sí se busca |
+| **12** | Conclusiones: responden la pregunta, no repiten los resultados |
+| **13** | Conclusiones: responden la pregunta, no repiten los resultados (cont.) |
+| **14** | Las cuatro secciones de cierre: qué debe tener cada una |
+| **15** | Referencias sin huérfanas: el flujo con ZoteroBib (gratis, sin instalar) |
+| **16** | Referencias sin huérfanas: el flujo con ZoteroBib (gratis, sin instalar) (cont.) |
+| **17** | Errores frecuentes de la sesión de cierre |
+| **18** | Errores frecuentes de la sesión de cierre (cont.) |
+| **19** | TALLER — Cierre del artículo (20 minutos) |
+| **20** | TALLER — Cierre del artículo (20 minutos) (cont.) |
+| **21** | Checklist de autoevaluación antes de entregar |
+| **22** | Checklist de autoevaluación antes de entregar (cont.) |
+| **23** | Trabajo autónomo y qué viene después |
+| **24** | Cierre — Sesión 10 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Resumen, palabras clave UNESCO, conclusiones y referencias.
@@ -80,23 +99,23 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 10. El cuerpo del artículo ya está; hoy le ponemos la **cabeza y la cola**: el resumen, las palabras clave, las conclusiones y las referencias. Todo esto se escribe **al final**, y hay una razón para cada cosa.”
 
-> “**Slide 2 — OBJETIVOS.** Redactar un resumen que sea espejo del artículo, elegir palabras clave del **tesauro UNESCO**, escribir conclusiones que respondan la pregunta y cuadrar las referencias en APA 7 sin huérfanas. Tengan el artículo completo a la vista.”
+> “**OBJETIVOS.** Redactar un resumen que sea espejo del artículo, elegir palabras clave del **tesauro UNESCO**, escribir conclusiones que respondan la pregunta y cuadrar las referencias en APA 7 sin huérfanas. Tengan el artículo completo a la vista.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El **resumen** se escribe de último porque solo ahora saben qué resultado resumir. Son ~200–250 palabras con cinco piezas: contexto, objetivo, método, resultado principal y conclusión. Sin citas, sin abreviaturas raras, sin 'en este artículo se hablará de…'. Es un espejo del trabajo.”
+> “**CONTENIDO CLAVE.** El **resumen** se escribe de último porque solo ahora saben qué resultado resumir. Son ~200–250 palabras con cinco piezas: contexto, objetivo, método, resultado principal y conclusión. Sin citas, sin abreviaturas raras, sin 'en este artículo se hablará de…'. Es un espejo del trabajo.”
 
 > “Las **palabras clave** no se inventan: se sacan del **tesauro UNESCO**, un vocabulario controlado. ¿Por qué? Para que el artículo sea **encontrable**. Elijan 3–5 términos que otro investigador usaría para dar con su trabajo.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Las **conclusiones** responden la pregunta —no repiten resultados— e incluyen límites y trabajo futuro. Y las **referencias**: mínimo 50, APA 7, orden alfabético y **sin huérfanas**: toda cita del cuerpo está en la lista, y toda entrada de la lista se cita. ZoteroBib les cuadra eso sin instalar nada.”
+> “**ENFOQUE DE HOY.** Las **conclusiones** responden la pregunta —no repiten resultados— e incluyen límites y trabajo futuro. Y las **referencias**: mínimo 50, APA 7, orden alfabético y **sin huérfanas**: toda cita del cuerpo está en la lista, y toda entrada de la lista se cita. ZoteroBib les cuadra eso sin instalar nada.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela resumen + keywords).
@@ -112,11 +131,11 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 
 > **En pantalla:** Pegar bibliografía completa; revisar duplicados.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S10_CierreArticulo_Apellido`: (1) escriban el **resumen** (~200–250 palabras, cinco piezas); (2) elijan **4–5 palabras clave** del tesauro UNESCO; (3) redacten las **conclusiones** respondiendo la pregunta, con límites y trabajo futuro; (4) revisen las **referencias** en ZoteroBib: conteo hacia 50, APA 7 y sin huérfanas.”
+> “**TALLER.** ~20 minutos. En `S10_CierreArticulo_Apellido`: (1) escriban el **resumen** (~200–250 palabras, cinco piezas); (2) elijan **4–5 palabras clave** del tesauro UNESCO; (3) redacten las **conclusiones** respondiendo la pregunta, con límites y trabajo futuro; (4) revisen las **referencias** en ZoteroBib: conteo hacia 50, APA 7 y sin huérfanas.”
 
 > “Criterio de éxito: el resumen se entiende solo, las keywords son términos reales, las conclusiones responden la pregunta y la lista de referencias no tiene huérfanas.”
 
@@ -133,15 +152,15 @@ En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→o
 > **En pantalla:** Contrastar términos con uso en Scholar; 3–5 keywords.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el resumen es un espejo del artículo y se escribe al final; (2) las palabras clave vienen del tesauro UNESCO; (3) las conclusiones responden la pregunta y las referencias van sin huérfanas, camino a las 50.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S10_CierreArticulo_Apellido` a CDigital. El artículo debería estar completo. La próxima sesión preparamos la divulgación: **póster, evidencias y verificación antiplagio**.”
+> “**PARA CONTINUAR.** Suban `S10_CierreArticulo_Apellido` a CDigital. El artículo debería estar completo. La próxima sesión preparamos la divulgación: **póster, evidencias y verificación antiplagio**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

@@ -74,7 +74,7 @@ def img_for(title):
             return p if os.path.exists(p) else None
     return None
 
-BASE = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Moviles 1\Clases\_OBSOLETO-no-usar"
+BASE = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Moviles 1\Clases\_OBSOLETO-no-usar"
 CURSO = "Desarrollo de Aplicaciones Móviles 1"
 CURSO_CORTO = "Desarrollo de Aplicaciones Móviles 1"
 PROGRAMA = "Ingeniería de Sistemas"

@@ -9,21 +9,34 @@
 - **Sesión:** **04** · **Tema:** Retroalimentación ACA1 · Antecedentes de investigación
 - **Detalle:** ESP329 U4 · Retro ACA1 · antecedentes (mín. 6 nacionales/internacionales).
 - **PPTX estudiante:** `Clases/Sesion 04 - Retroalimentación ACA1 · Antecedentes de investigación/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 04 — Retroalimentación ACA1 · Antecedentes de investigación |
+| **2** | Por qué nadie investiga desde cero |
+| **3** | Con qué criterios se leyó su primer avance |
+| **4** | Cómo se traduce cada comentario de la retroalimentación |
+| **5** | Qué es un antecedente de investigación |
+| **6** | ¿Es antecedente o no lo es? |
+| **7** | Antecedente vs. marco teórico (la confusión número uno) |
+| **8** | Dónde buscar: bases abiertas, gratis y desde el navegador |
+| **9** | Cómo buscar de verdad: la receta de términos |
+| **10** | La ficha de antecedente: cinco casillas, ni una más |
+| **11** | Ejemplo modelado — una ficha llena (demostración de aula) |
+| **12** | Errores frecuentes con los antecedentes |
+| **13** | Errores frecuentes con los antecedentes (cont.) |
+| **14** | Paso a paso: de la búsqueda a la cita APA 7 |
+| **15** | TALLER (20 minutos) — búsqueda y fichaje |
+| **16** | Checklist de autoevaluación antes de subir el avance |
+| **17** | Trabajo autónomo y qué traer a la próxima sesión |
+| **18** | Cierre — Sesión 04 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Aplicar** criterios de retroalimentación al bloque de formulación.
@@ -74,31 +87,31 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 ---
 
 #### 1️⃣ Encuadre + criterios de retro ACA1 (~10 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 04**. Ya cerró ACA1. Hoy hago dos cosas: primero les explico con qué criterios la leí, y segundo abrimos el marco referencial empezando por los **antecedentes**.”
-> “**Slide 2.** Los criterios de mi retro son tres: coherencia (que pregunta, objetivos y justificación digan lo mismo), delimitación (actor, fenómeno, contexto) y APA básica. Cuando lean mis comentarios, léanlos como un mapa de correcciones, no como un regaño: cada observación es una instrucción concreta para mejorar el documento acumulativo.”
+> “Los criterios de mi retro son tres: coherencia (que pregunta, objetivos y justificación digan lo mismo), delimitación (actor, fenómeno, contexto) y APA básica. Cuando lean mis comentarios, léanlos como un mapa de correcciones, no como un regaño: cada observación es una instrucción concreta para mejorar el documento acumulativo.”
 
 #### 2️⃣ Qué es un antecedente (y qué no) (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** Un antecedente es una investigación PREVIA comparable a la suya: tiene autor, año, objetivo, método y hallazgos. Una noticia no es antecedente; un blog no es antecedente; una definición de Wikipedia no es antecedente.”
+> “Un antecedente es una investigación PREVIA comparable a la suya: tiene autor, año, objetivo, método y hallazgos. Una noticia no es antecedente; un blog no es antecedente; una definición de Wikipedia no es antecedente.”
 > “Necesitan mínimo seis, mezclando estudios nacionales e internacionales. Y ojo con esto, que es lo que más se olvida: cada antecedente TIENE que cerrar diciendo ‘esto le aporta a mi pregunta porque…’. Si no puedo conectar el estudio con mi problema, no lo pongo. Y no confundan esto con el marco teórico: hoy son estudios; los lentes conceptuales llegan la próxima sesión.”
 
 #### 3️⃣ Modelación de ficha de antecedente (~10 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
 > “Miren cómo lleno una ficha en pantalla, en Google Docs. Tomo un estudio real de Scholar y completo: autor y año, objetivo del estudio, método que usaron, hallazgo principal, y el vínculo con nuestra pregunta de ejemplo. Cinco casillas, ni una más.”
-> “**Slide 4, recuerda:** la cita la genero en ZoteroBib pegando el DOI o el enlace, y la pego en APA 7. No necesitan instalar nada; todo desde el navegador.”
+> “**recuerda:** la cita la genero en ZoteroBib pegando el DOI o el enlace, y la pego en APA 7. No necesitan instalar nada; todo desde el navegador.”
 
 #### 4️⃣ Taller de búsqueda y fichas (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Busquen en Google Scholar o SciELO y consigan hoy al menos DOS antecedentes —van rumbo a los seis—. Llenen la ficha de cada uno en su documento, peguen el DOI o la URL, y generen la cita APA con ZoteroBib. Yo paso resolviendo dudas de búsqueda y de vínculo con la pregunta.”
+> “Veinte minutos. Busquen en Google Scholar o SciELO y consigan hoy al menos DOS antecedentes —van rumbo a los seis—. Llenen la ficha de cada uno en su documento, peguen el DOI o la URL, y generen la cita APA con ZoteroBib. Yo paso resolviendo dudas de búsqueda y de vínculo con la pregunta.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -108,11 +121,11 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 | Copia el abstract literal | “Resúmalo con sus palabras; el copiar-pegar dispara la similitud.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, completen las seis fichas mínimas y, en paralelo, vayan aplicando las correcciones de mi retro de ACA1 sobre el documento. Suban el avance como `S04_Antecedentes_Apellidos`.”
-> “**Slide 7.** Recuerden: ACA2 acumula sobre ACA1, así que las correcciones no son opcionales. Pasamos a tutoría para revisar una o dos fichas por equipo.”
+> “En autónomo, completen las seis fichas mínimas y, en paralelo, vayan aplicando las correcciones de mi retro de ACA1 sobre el documento. Suban el avance como `S04_Antecedentes_Apellidos`.”
+> “Recuerden: ACA2 acumula sobre ACA1, así que las correcciones no son opcionales. Pasamos a tutoría para revisar una o dos fichas por equipo.”
 
 
 
@@ -148,7 +161,7 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 - [ ] PPTX `Clases/Sesion 04 - Retroalimentación ACA1 · Antecedentes de investigación/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

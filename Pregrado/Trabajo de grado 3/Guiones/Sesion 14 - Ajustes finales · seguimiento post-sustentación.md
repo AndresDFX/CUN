@@ -11,17 +11,34 @@
 - **PPTX estudiante:** `Clases/Sesion 14 - Ajustes finales · seguimiento post-sustentación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 14 — Ajustes finales · seguimiento post-sustentación |
+| **2** | El jurado habló: hay que convertir eso en tareas, no en pánico |
+| **3** | La matriz de ajustes: cuatro columnas que ordenan todo |
+| **4** | La matriz de ajustes: cuatro columnas que ordenan todo (cont.) |
+| **5** | Ejemplo modelado: una matriz de ajustes real |
+| **6** | Priorizar: crítico, mayor, menor |
+| **7** | Priorizar: crítico, mayor, menor (cont.) |
+| **8** | Cómo clasificar una observación en 10 segundos |
+| **9** | El efecto dominó: un cambio nunca viaja solo |
+| **10** | Mapa de dependencias: si cambia esto, revise aquello |
+| **11** | Trabajar con red: historial de versiones de Google Docs |
+| **12** | Trabajar con red: historial de versiones de Google Docs (cont.) |
+| **13** | Cómo se responde formalmente al jurado |
+| **14** | Errores frecuentes en la etapa de ajustes |
+| **15** | Errores frecuentes en la etapa de ajustes (cont.) |
+| **16** | Errores frecuentes en la etapa de ajustes (cont.) |
+| **17** | TALLER — Matriz de ajustes y versión corregida (20 minutos) |
+| **18** | TALLER — Matriz de ajustes y versión corregida (20 minutos) (cont.) |
+| **19** | Checklist de autoevaluación antes de entregar |
+| **20** | Checklist de autoevaluación antes de entregar (cont.) |
+| **21** | Trabajo autónomo y qué viene después |
+| **22** | Cierre — Sesión 14 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Ajustes finales · seguimiento post-sustentación.
@@ -79,23 +96,23 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 14. Ya pasó la sustentación y casi siempre el jurado deja **observaciones**. Hoy las convertimos en tareas ordenadas, no en pánico. Atender esos ajustes es parte de cerrar el trabajo de grado.”
 
-> “**Slide 2 — OBJETIVOS.** Registrar las observaciones en una **matriz de ajustes**, priorizarlas —crítico, mayor, menor—, incorporarlas sin romper la coherencia y dejar una **versión corregida**. Tengan a la mano las notas de su sustentación.”
+> “**OBJETIVOS.** Registrar las observaciones en una **matriz de ajustes**, priorizarlas —crítico, mayor, menor—, incorporarlas sin romper la coherencia y dejar una **versión corregida**. Tengan a la mano las notas de su sustentación.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Toda observación del jurado va a una **matriz de ajustes**: qué dijo, qué cambio implica, qué prioridad tiene y en qué estado está. Así no se pierde ninguna y ustedes ven de un vistazo cuánto les falta.”
+> “**CONTENIDO CLAVE.** Toda observación del jurado va a una **matriz de ajustes**: qué dijo, qué cambio implica, qué prioridad tiene y en qué estado está. Así no se pierde ninguna y ustedes ven de un vistazo cuánto les falta.”
 
 > “Prioricen. **Crítico**: afecta la validez o una conclusión —va primero y es obligatorio antes del repositorio—. **Mayor**: afecta una sección. **Menor**: es forma. En ese orden.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Cuidado con el **efecto dominó**: si tocan un resultado, revisen si la discusión y las conclusiones siguen cuadrando. Y trabajen con red: el **historial de versiones de Google Docs** les deja volver atrás si un cambio empeora las cosas. Gratis, en la nube, sin instalar nada.”
+> “**ENFOQUE DE HOY.** Cuidado con el **efecto dominó**: si tocan un resultado, revisen si la discusión y las conclusiones siguen cuadrando. Y trabajen con red: el **historial de versiones de Google Docs** les deja volver atrás si un cambio empeora las cosas. Gratis, en la nube, sin instalar nada.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela la matriz + historial de versiones).
@@ -111,11 +128,11 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 
 > **En pantalla:** Columna: observación jurado | cambio | hecho/pendiente.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del artículo; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
+> “**TALLER.** ~20 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del artículo; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
 
 > “Criterio de éxito: la matriz muestra cada observación con su prioridad y estado, y los ajustes críticos ya están incorporados sin romper la coherencia del documento.”
 
@@ -132,15 +149,15 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 > **En pantalla:** Completar citas pedidas en ajustes.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) los ajustes del jurado se registran en una matriz con estado; (2) se priorizan —crítico, mayor, menor—; (3) se incorporan cuidando el efecto dominó y con el historial de versiones como red.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S14_AjustesPost_Apellido` a CDigital con la matriz y la versión corregida. Terminen los ajustes pendientes en autónomo para dejar el artículo listo. La próxima sesión hacemos el **cierre administrativo y la verificación de recepción**.”
+> “**PARA CONTINUAR.** Suban `S14_AjustesPost_Apellido` a CDigital con la matriz y la versión corregida. Terminen los ajustes pendientes en autónomo para dejar el artículo listo. La próxima sesión hacemos el **cierre administrativo y la verificación de recepción**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

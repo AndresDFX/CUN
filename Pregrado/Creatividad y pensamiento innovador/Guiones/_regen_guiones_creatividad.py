@@ -24,10 +24,18 @@ CURSOS = os.path.abspath(os.path.join(ROOT, "..", "..", "..", "config", "cursos"
 sys.path.insert(0, SLIDES)
 sys.path.insert(0, CURSOS)
 
-from sesiones_cun import COURSES, meet_placeholder  # noqa: E402
+from sesiones_cun import COURSES, meet_url  # noqa: E402
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_slides import (  # noqa: E402
+    NOTA_MOMENTOS,
+    ajustar_mapa_manual,
+    deck_path,
+    limpiar_referencias,
+    tabla_slides_md,
+    titulos_pptx,
+)
 
-MEET = meet_placeholder(COURSES["creatividad"]["titulo"])
+MEET = meet_url("creatividad", COURSES["creatividad"]["titulo"])
 
 
 def topic_filename(titulo: str, max_len: int = 70) -> str:
@@ -220,6 +228,17 @@ def mapa_slides(n=None):
 | **21** | Cierre — Sesión 01 | Despedida |
 
 """
+    # S02+: tabla del deck REAL en disco (16–26 slides), no la plantilla fija de 7.
+    if n:
+        label = None
+        for m in sesiones_meta():
+            if m[0] == n:
+                label = m[1]
+                break
+        if label:
+            tabla = tabla_slides_md(titulos_pptx(deck_path(COURSES["creatividad"]["folder"], label)))
+            if tabla:
+                return f"{tabla}\n{NOTA_MOMENTOS}\n\n"
     return """🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
 
 | Slide | Título en el PPTX | Cuándo usarla |
@@ -1810,6 +1829,11 @@ def _fix_session_numbers(md: str, n: int) -> str:
     md = re.sub(r"Sesión \d{2}\b", f"Sesión {n:02d}", md)
     md = re.sub(r"Fin del Guión — Sesión \d{2}", f"Fin del Guión — Sesión {n:02d}", md)
     md = re.sub(r"ciclo de 8 encuentros", "ciclo de encuentros del Syllabus EI004", md)
+    # El nombre del entregable lleva el numero de sesion (`S03_Ideacion_Apellido`). Al heredar
+    # un guion de otra sesion tambien hay que renumerarlo: si no, el docente le pide al
+    # estudiante un archivo con el numero de la sesion vieja (y llegaba a pedir una `S08`
+    # que ya no existe). Cada guion legacy nombra unicamente SU propio entregable.
+    md = re.sub(r"\bS\d{2}_", f"S{n:02d}_", md)
     return md
 
 
@@ -1849,6 +1873,13 @@ def main(argv=None):
         if legacy_n != n:
             # Solo los guiones heredados de otra sesión necesitan renumerarse (ver docstring).
             text_md = _fix_session_numbers(text_md, n)
+        _deck = deck_path(COURSES["creatividad"]["folder"], label)
+        if n != 1:
+            # Narración heredada de la plantilla de 7 slides: se retiran los números.
+            text_md, _ = limpiar_referencias(text_md)
+        else:
+            # Mapa curado a mano: realinear contra el deck real («(cont.)» insertadas).
+            text_md, _ = ajustar_mapa_manual(text_md, titulos_pptx(_deck))
         text_md = inject_shots(text_md, n)
         if n == 1 and "Rompehielos Padlet" not in text_md:
             text_md = text_md.replace(

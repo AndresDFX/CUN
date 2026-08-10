@@ -9,21 +9,35 @@
 - **Sesión:** **11** · **Tema:** Integración y evaluación · coevaluación y autoevaluación
 - **Detalle:** ESP329 U7 · Coherencia final · coevaluación/autoevaluación · última sesión sincrónica.
 - **PPTX estudiante:** `Clases/Sesion 11 - Integración y evaluación · coevaluación y autoevaluación/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 11 — Integración y evaluación · coevaluación y autoevaluación |
+| **2** | Su anteproyecto se va a leer de corrido: ¿historia o collage? |
+| **3** | Las tres preguntas de oro de la integración final |
+| **4** | Checklist de secciones: verificación en 30 segundos cada una |
+| **5** | La prueba del hilo: léala en voz alta, en seis frases |
+| **6** | Coevaluación y autoevaluación: qué son y qué NO son |
+| **7** | Rúbrica de coevaluación: cuatro criterios, tres niveles |
+| **8** | Cómo se da un comentario que sí sirve: la fórmula en tres partes |
+| **9** | Feedback vago vs. feedback accionable |
+| **10** | Lo que hacemos hoy y lo que se diligencia en la plataforma |
+| **11** | Ejemplo modelado: un párrafo real y tres comentarios |
+| **12** | Autoevaluarse con criterios (sin inflarse ni castigarse) |
+| **13** | Errores frecuentes en el cierre |
+| **14** | Errores frecuentes en el cierre (cont.) |
+| **15** | TALLER · Coevaluación entre pares y ajustes (20 minutos) |
+| **16** | Puente a Proyecto II: lo que queda listo y lo que NO se hizo |
+| **17** | Checklist final antes de subir el anteproyecto |
+| **18** | Trabajo autónomo y cierre del ciclo sincrónico |
+| **19** | Cierre — Sesión 11 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Verificar** integración final del anteproyecto.
@@ -71,31 +85,31 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 ---
 
 #### 1️⃣ Encuadre de cierre (~8 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes. **Sesión 11**, la última sesión sincrónica de contenido del curso. Hoy cerramos el ciclo: verificamos la integración final del anteproyecto y practicamos la coevaluación con criterios claros.”
-> “**Slide 2.** Meta de hoy: dejar el documento como UNA sola historia coherente, entrenar el ojo crítico con una rúbrica entre pares, y tener claras las ventanas de coevaluación y autoevaluación en CDigital.”
+> “Meta de hoy: dejar el documento como UNA sola historia coherente, entrenar el ojo crítico con una rúbrica entre pares, y tener claras las ventanas de coevaluación y autoevaluación en CDigital.”
 
 #### 2️⃣ Checklist de integración final (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** Vamos a pasar el checklist en voz alta, y cada equipo va marcando en su documento: ¿está el problema?, ¿la pregunta?, ¿los objetivos?, ¿el marco referencial completo?, ¿el método?, ¿los instrumentos propuestos?, ¿el cronograma?, ¿las referencias en APA?”
+> “Vamos a pasar el checklist en voz alta, y cada equipo va marcando en su documento: ¿está el problema?, ¿la pregunta?, ¿los objetivos?, ¿el marco referencial completo?, ¿el método?, ¿los instrumentos propuestos?, ¿el cronograma?, ¿las referencias en APA?”
 > “Tres preguntas de oro para la integración: ¿el documento cuenta una sola historia?, ¿el APA está estable sin citas huérfanas?, ¿queda clarísimo que los instrumentos son PROPUESTOS? Si las tres dan sí, están listos para ACA3.”
 
 #### 3️⃣ Coevaluación formativa (modelo) (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
-> “**Slide 4.** Vamos a practicar feedback con una rúbrica de cuatro criterios: coherencia, delimitación, método propuesto y APA. Les modelo cómo se da un comentario ACCIONABLE: no ‘está bien’, sino ‘la pregunta no nombra el contexto; agregue dónde ocurre’.”
+> “Vamos a practicar feedback con una rúbrica de cuatro criterios: coherencia, delimitación, método propuesto y APA. Les modelo cómo se da un comentario ACCIONABLE: no ‘está bien’, sino ‘la pregunta no nombra el contexto; agregue dónde ocurre’.”
 > “Aclaro algo importante: esta práctica de hoy NO reemplaza la coevaluación oficial que cada uno diligencia en Moodle en su ventana. Lo de hoy entrena el ojo; lo oficial va en CDigital, y vale su porcentaje.”
 
 #### 4️⃣ Taller: rúbrica entre pares + ajustes (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Intercambien una sección de su anteproyecto con otro equipo —o hagan lecturas cruzadas— y devuelvan tres comentarios accionables usando la rúbrica de cuatro criterios. Después, apliquen los ajustes que valgan la pena en su propio documento. Yo circulo. Suban como `S11_CierreIntegracion_Apellidos`.”
+> “Veinte minutos. Intercambien una sección de su anteproyecto con otro equipo —o hagan lecturas cruzadas— y devuelvan tres comentarios accionables usando la rúbrica de cuatro criterios. Después, apliquen los ajustes que valgan la pena en su propio documento. Yo circulo. Suban como `S11_CierreIntegracion_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -105,11 +119,11 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 | El texto suena a piezas pegadas | “Léalo de corrido y una las costuras.” |
 
 #### 5️⃣ Cierre del encuentro sincrónico (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** No olviden las ventanas de coevaluación y autoevaluación en CDigital —el detalle logístico está en la Presentación del Curso—; cada una es individual y vale su porcentaje. En autónomo, pulido final del anteproyecto para ACA3.”
-> “**Slide 7.** La tutoría de hoy es de pulido final. Gracias por el trabajo de todo el periodo: salen con un anteproyecto completo, viable y listo para ejecutar en Proyecto II tras el aval. Nos vemos en las tutorías de cierre.”
+> “No olviden las ventanas de coevaluación y autoevaluación en CDigital —el detalle logístico está en la Presentación del Curso—; cada una es individual y vale su porcentaje. En autónomo, pulido final del anteproyecto para ACA3.”
+> “La tutoría de hoy es de pulido final. Gracias por el trabajo de todo el periodo: salen con un anteproyecto completo, viable y listo para ejecutar en Proyecto II tras el aval. Nos vemos en las tutorías de cierre.”
 
 
 
@@ -145,7 +159,7 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 - [ ] PPTX `Clases/Sesion 11 - Integración y evaluación · coevaluación y autoevaluación/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

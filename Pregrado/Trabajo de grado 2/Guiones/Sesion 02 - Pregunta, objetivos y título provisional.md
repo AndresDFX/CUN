@@ -11,17 +11,29 @@
 - **PPTX estudiante:** `Clases/Sesion 02 - Pregunta, objetivos y título provisional/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 02 — PREGUNTA, OBJETIVOS Y TÍTULO PROVISIONAL |
+| **2** | Sin pregunta no hay proyecto: solo hay un tema |
+| **3** | Qué es —y qué no es— una pregunta de investigación |
+| **4** | Preguntas que no sirven y su versión investigable |
+| **5** | Anatomía de la pregunta: cuatro piezas que deben verse |
+| **6** | Verbos: los que no se pueden evaluar y sus reemplazos |
+| **7** | El objetivo general: la pregunta convertida en propósito |
+| **8** | Los específicos: tres pasos, tres secciones, una coherencia |
+| **9** | Ejemplo modelado: el caso de los tickets, escrito completo |
+| **10** | El título provisional: eslogan frente a título académico |
+| **11** | Lo que más se corrige en esta sesión |
+| **12** | Lo que más se corrige en esta sesión (cont.) |
+| **13** | Paso a paso: de la pregunta al título, todo en el navegador |
+| **14** | Taller — 20 minutos sobre su propio proyecto |
+| **15** | Autoevaluación antes de subir el archivo |
+| **16** | Trabajo autónomo y qué viene la próxima sesión |
+| **17** | Cierre — Sesión 02 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Redactar pregunta, objetivos y título provisional.
@@ -80,23 +92,23 @@ Pregunta ‘¿en qué medida un clasificador supervisado reduce el tiempo de ate
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Buenas tardes. Sesión 02. La semana pasada dejamos el proyecto diagnosticado y el tema delimitado; y el lunes pasado, al ser festivo, tuvieron clase autónoma, así que espero que hayan avanzado su matriz. Hoy le ponemos el esqueleto al avance: **pregunta, objetivos y título**.”
 
-> “**Slide 2 — OBJETIVOS.** Salimos con tres cosas escritas: una pregunta investigable, un objetivo general con tres específicos, y un título provisional. Tengan abierto su `S01` con el tema delimitado, porque de ahí sale todo.”
+> “**OBJETIVOS.** Salimos con tres cosas escritas: una pregunta investigable, un objetivo general con tres específicos, y un título provisional. Tengan abierto su `S01` con el tema delimitado, porque de ahí sale todo.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** La pregunta de investigación es la **brújula** del documento. Todo lo que escriban después —marco, método, resultados— existe para responderla. Una buena pregunta es clara, delimitada, viable y no se contesta con sí o no. Nada de ‘¿sirve la IA?’; sí a ‘¿en qué medida un clasificador supervisado reduce el tiempo de atención de tickets en la mesa de ayuda de la empresa X?’.”
+> “**CONTENIDO CLAVE.** La pregunta de investigación es la **brújula** del documento. Todo lo que escriban después —marco, método, resultados— existe para responderla. Una buena pregunta es clara, delimitada, viable y no se contesta con sí o no. Nada de ‘¿sirve la IA?’; sí a ‘¿en qué medida un clasificador supervisado reduce el tiempo de atención de tickets en la mesa de ayuda de la empresa X?’.”
 
 > “Ahora los objetivos. El **general** es la pregunta hecha propósito; los **específicos** son los pasos. Y aquí la regla dura del día: **verbos medibles**. Borren ‘conocer’, ‘entender’, ‘aprender’: no se pueden evaluar. Usen identificar, caracterizar, analizar, diseñar, evaluar. Un general y tres específicos; cada específico será después una sección del documento.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y el título provisional: máximo 21 palabras, sin eslóganes. Debe verse el actor, el fenómeno y el contexto. Es provisional; lo afinamos al cierre.”
+> “**ENFOQUE DE HOY.** Y el título provisional: máximo 21 palabras, sin eslóganes. Debe verse el actor, el fenómeno y el contexto. Es provisional; lo afinamos al cierre.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -112,11 +124,11 @@ Pregunta ‘¿en qué medida un clasificador supervisado reduce el tiempo de ate
 
 > **En pantalla:** Extraer 3 términos del fenómeno para nombrar bien la pregunta y el título.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S02_PreguntaObjetivos_Apellido`: (1) escriban la **pregunta** en una sola frase investigable; (2) un **objetivo general** que la refleje; (3) **tres específicos** con verbos medibles; (4) un **título provisional** ≤ 21 palabras. Revisen la coherencia vertical: ¿los específicos suman al general? ¿el general responde la pregunta?”
+> “**TALLER.** ~20 minutos. En `S02_PreguntaObjetivos_Apellido`: (1) escriban la **pregunta** en una sola frase investigable; (2) un **objetivo general** que la refleje; (3) **tres específicos** con verbos medibles; (4) un **título provisional** ≤ 21 palabras. Revisen la coherencia vertical: ¿los específicos suman al general? ¿el general responde la pregunta?”
 
 > “Criterio de éxito: si tapo la pregunta y leo solo los objetivos, puedo reconstruir qué se va a investigar.”
 
@@ -133,15 +145,15 @@ Pregunta ‘¿en qué medida un clasificador supervisado reduce el tiempo de ate
 > **En pantalla:** 1 referencia que sostenga la pertinencia del problema.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la pregunta es la brújula y no se responde con sí/no; (2) los objetivos llevan **verbos medibles** y guardan coherencia vertical; (3) el título muestra actor, fenómeno y contexto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos este esqueleto y vemos **la estructura completa del documento de avance** con la Plantilla APA CUN: qué sección va dónde.”
+> “**PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos este esqueleto y vemos **la estructura completa del documento de avance** con la Plantilla APA CUN: qué sección va dónde.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet el próximo lunes.”
+> “**Cierre.** Gracias; mismo Meet el próximo lunes.”
 
 ---
 

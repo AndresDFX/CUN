@@ -7,13 +7,13 @@ Preferido si ya tienes OAuth local. Si no: usa el Apps Script
 Setup (una vez):
 1. Google Cloud Console → proyecto → habilitar «Google Calendar API».
 2. Credenciales → OAuth client ID (Desktop) → descarga JSON.
-3. Guarda como: config/slides/secrets/credentials.json
+3. Guarda como: config/slides/_secrets/credentials.json
    (carpeta secrets/ no versionar; crea si no existe).
 4. pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
 5. python config/slides/create_encuentros_p1_calendar_api.py
 
 Primera ejecución abre el navegador; guarda token en
-config/slides/secrets/token_calendar_p1.json.
+config/slides/_secrets/token_calendar_p1.json.
 
 Datos: se construyen en memoria desde el roster ODS + sesiones_cun
 (mismo origen que build_calendar_proyecto1_54es4.py; sin JSON intermedio).

@@ -9,21 +9,34 @@
 - **Sesión:** **05** · **Tema:** Marco teórico
 - **Detalle:** ESP329 U4 · Bases teóricas alineadas a pregunta y variables/categorías.
 - **PPTX estudiante:** `Clases/Sesion 05 - Marco teórico/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 05 — MARCO TEÓRICO |
+| **2** | El marco teórico es su par de lentes, no su relleno |
+| **3** | Qué es y qué no es un marco teórico |
+| **4** | Cuatro textos que se confunden con el marco teórico |
+| **5** | Teoría, modelo y constructo: el vocabulario de hoy |
+| **6** | El hilo de coherencia: cómo se decide qué entra y qué no |
+| **7** | Criterios de admisión de un constructo |
+| **8** | Dónde se consiguen fuentes teóricas (no es lo mismo que buscar antecedentes) |
+| **9** | Ejemplo modelado — el mapa de constructos, paso a paso |
+| **10** | El mismo mapa, ya con función y con uso posterior |
+| **11** | Cómo se escribe un párrafo del apartado teórico |
+| **12** | Errores frecuentes del marco teórico |
+| **13** | Errores frecuentes del marco teórico (cont.) |
+| **14** | Paso a paso: el mapa de constructos en Excalidraw |
+| **15** | TALLER (20 minutos) — mapa de constructos y primer apartado |
+| **16** | Checklist de autoevaluación antes de subir el avance |
+| **17** | Trabajo autónomo y qué traer a la próxima sesión |
+| **18** | Cierre — Sesión 05 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Diferenciar** antecedentes y marco teórico.
@@ -74,31 +87,31 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 ---
 
 #### 1️⃣ Encuadre (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 05**. La semana pasada trabajamos antecedentes: qué se ha INVESTIGADO. Hoy subimos un piso: el **marco teórico**, es decir, con qué LENTES conceptuales vamos a explicar el fenómeno.”
-> “**Slide 2.** Meta de hoy: diferenciar antecedentes de teoría, mapear los constructos que su pregunta obliga a definir, y dejar escrito un primer apartado teórico usable.”
+> “Meta de hoy: diferenciar antecedentes de teoría, mapear los constructos que su pregunta obliga a definir, y dejar escrito un primer apartado teórico usable.”
 
 #### 2️⃣ Qué es marco teórico (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** El marco teórico NO es un resumen de libros ni una fila de definiciones de Google. Es elegir las teorías y constructos que sostienen su pregunta y decir por qué esos. El orden es siempre el mismo: parto de la pregunta, veo qué conceptos me obliga a definir, busco los autores que los definen bien, y los conecto con mi contexto de IA.”
+> “El marco teórico NO es un resumen de libros ni una fila de definiciones de Google. Es elegir las teorías y constructos que sostienen su pregunta y decir por qué esos. El orden es siempre el mismo: parto de la pregunta, veo qué conceptos me obliga a definir, busco los autores que los definen bien, y los conecto con mi contexto de IA.”
 > “Hagan este ejercicio mental ahora: escriban los tres conceptos que su pregunta les obliga a definir sí o sí. Esos tres son la semilla de su marco teórico. Si un concepto no cuelga de la pregunta, sobra.”
 
 #### 3️⃣ Modelación: mapa de constructos (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
 > “Vamos a dibujarlo. Abro Excalidraw —es gratis y en el navegador— y pongo la pregunta en el centro. De ahí salen flechas a los constructos; de cada constructo, una flecha al autor que lo define. Miren cómo el mapa me obliga a botar lo que no conecta.”
-> “**Slide 4, recuerda:** cada definición que ponga en el texto va citada en APA 7, y cada constructo del mapa debe reaparecer después en la metodología. La teoría que no se usa, se cae.”
+> “**recuerda:** cada definición que ponga en el texto va citada en APA 7, y cada constructo del mapa debe reaparecer después en la metodología. La teoría que no se usa, se cae.”
 
 #### 4️⃣ Taller: mapa + primer apartado (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Produzcan dos entregables: primero, el mapa de constructos en Excalidraw (pregunta al centro, constructos, autores); segundo, una a dos páginas del primer apartado teórico en su documento de Google Docs. Yo circulo. Criterio de éxito: cada párrafo del apartado afirma algo que el método podrá ‘tocar’ más adelante.”
+> “Veinte minutos. Produzcan dos entregables: primero, el mapa de constructos en Excalidraw (pregunta al centro, constructos, autores); segundo, una a dos páginas del primer apartado teórico en su documento de Google Docs. Yo circulo. Criterio de éxito: cada párrafo del apartado afirma algo que el método podrá ‘tocar’ más adelante.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -108,11 +121,11 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 | No cita a los autores | “Cada definición operativa lleva su cita APA 7.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, completen el apartado teórico a partir del mapa y traigan a la Sesión 06 definiciones operativas tentativas de sus términos. Suban el avance como `S05_MarcoTeorico_Apellidos`.”
-> “**Slide 7.** Recuerden que todo esto acumula hacia ACA2. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
+> “En autónomo, completen el apartado teórico a partir del mapa y traigan a la Sesión 06 definiciones operativas tentativas de sus términos. Suban el avance como `S05_MarcoTeorico_Apellidos`.”
+> “Recuerden que todo esto acumula hacia ACA2. Pasamos a tutoría: revisamos el mapa de cada equipo y cortamos la teoría ornamental.”
 
 
 
@@ -148,7 +161,7 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 - [ ] PPTX `Clases/Sesion 05 - Marco teórico/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

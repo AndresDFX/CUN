@@ -11,17 +11,35 @@
 - **PPTX estudiante:** `Clases/Sesion 07 - Innovación local–internacional · entidades de apoyo/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **23 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 07 — Innovación local–internacional · entidades de apoyo |
+| **2** | Una semilla buena no basta |
+| **3** | Qué le puede dar el ecosistema (y qué no) |
+| **4** | El mapa de entidades: cuatro cuadrantes |
+| **5** | Aprender a preguntar el encaje |
+| **6** | "Pedir apoyo" no es un pedido |
+| **7** | Ejemplo modelado: mapa de entidades del caso del laboratorio |
+| **8** | El pitch de 60 segundos: qué logra y qué no |
+| **9** | El pitch de 60 segundos: qué logra y qué no (cont.) |
+| **10** | Los cinco tramos del pitch de 60 segundos |
+| **11** | Ejemplo modelado: el pitch completo, tramo por tramo |
+| **12** | Ejemplo modelado: el pitch completo, tramo por tramo (cont.) |
+| **13** | Errores frecuentes y respuestas |
+| **14** | Errores frecuentes y respuestas (cont.) |
+| **15** | Paso a paso: escribir y ensayar su pitch |
+| **16** | Paso a paso: escribir y ensayar su pitch (cont.) |
+| **17** | TALLER — Mapa de entidades + pitch de 60 s (23 minutos) |
+| **18** | Antes de entregar: revise usted mismo |
+| **19** | Antes de entregar: revise usted mismo (cont.) |
+| **20** | El hilo completo de su Propuesta de Innovación |
+| **21** | Para continuar — cierre y paquete consolidado |
+| **22** | Para continuar — cierre y paquete consolidado (cont.) |
+| **23** | Cierre — Sesión 07 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Ubicar** la propuesta en un ecosistema de apoyo (local e internacional).
@@ -92,7 +110,7 @@ El error número uno es **empezar por la tecnología** (“hicimos una app con I
 ---
 
 #### 1️⃣ Encuadre de cierre (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** enmarcar la sesión como cierre del hilo y anunciar el doble entregable de hoy (mapa de entidades + pitch).
 
@@ -109,14 +127,14 @@ El error número uno es **empezar por la tecnología** (“hicimos una app con I
 ---
 
 #### 2️⃣ Ecosistema local–internacional (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que entiendan qué es el ecosistema y aprendan a preguntar el encaje sin esperar promesas.
 
 **GUION LITERAL:**
-> “**Slide 3.** Innovar en Ingeniería no termina cuando suben el archivo a CDigital. Termina cuando alguien —un usuario, un aliado, una institución— **le abre la puerta** a su propuesta. Ese entorno de actores y reglas es el **ecosistema**. Piénsenlo como el clima de una semilla: no basta la semilla buena, necesita tierra, agua y luz.”
+> “Innovar en Ingeniería no termina cuando suben el archivo a CDigital. Termina cuando alguien —un usuario, un aliado, una institución— **le abre la puerta** a su propuesta. Ese entorno de actores y reglas es el **ecosistema**. Piénsenlo como el clima de una semilla: no basta la semilla buena, necesita tierra, agua y luz.”
 
-> “**Slide 4.** El mapa tiene cuatro cuadrantes: **universitario** —la unidad de emprendimiento de la CUN, semilleros—; **público** —Cámaras de Comercio, alcaldías, iNNpulsa, Minciencias—; **privado y redes** —hubs, aceleradoras, empresas—; e **internacional** —cooperación, retos abiertos—. Aviso importante: yo **no** les puedo prometer cupos ni plata; eso no lo manejo. Lo que sí les enseño es a **preguntar el encaje**: ¿esta entidad me da mentoría, un piloto, capital o contactos? Si no saben qué pedir, la entidad todavía no les sirve.”
+> “El mapa tiene cuatro cuadrantes: **universitario** —la unidad de emprendimiento de la CUN, semilleros—; **público** —Cámaras de Comercio, alcaldías, iNNpulsa, Minciencias—; **privado y redes** —hubs, aceleradoras, empresas—; e **internacional** —cooperación, retos abiertos—. Aviso importante: yo **no** les puedo prometer cupos ni plata; eso no lo manejo. Lo que sí les enseño es a **preguntar el encaje**: ¿esta entidad me da mentoría, un piloto, capital o contactos? Si no saben qué pedir, la entidad todavía no les sirve.”
 
 **Qué hacer:**
 1. (5 min) Explicar qué es el ecosistema con la metáfora de la semilla y el clima.
@@ -131,7 +149,7 @@ El error número uno es **empezar por la tecnología** (“hicimos una app con I
 > **En pantalla:** Mínimo 3 entidades reales (nombre correcto) + pedido concreto.
 
 #### 3️⃣ Modelación: mapa de entidades + pitch 60 s (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** modelar cómo se llena el mapa de entidades y cómo suena un pitch de 60 segundos.
 
@@ -158,7 +176,7 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 > **En pantalla:** Ensayar con cronómetro; 4 voluntarios. Canva free opcional para 1 slide.
 
 #### 4️⃣ Taller: pitch + plan de siguiente paso (~23 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **23 minutos**. Cuatro pasos: (1) completen su **Mapa de entidades** en Google Docs con **mínimo 3 entidades reales** —nombre correcto— y un pedido concreto a cada una; (2) escriban el **guion del pitch de 60 s** siguiendo los cinco tramos (pueden bocetarlo en Excalidraw); (3) **ensayen en parejas** con cronómetro; (4) al final, **4 voluntarios** pichan en vivo y les tomo el tiempo. Si necesitan una diapositiva de apoyo, Canva free —opcional—. Criterio de éxito: si en 60 segundos entendemos **dolor + valor + pedido**, sirve.”
@@ -176,14 +194,14 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 ---
 
 #### 5️⃣ Cierre del curso (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Cierre del hilo. Partimos de un **problema real**, pasamos por creatividad e inteligencia emocional, Design Thinking, el Manual de Oslo, los tipos de innovación, la validación con Canvas y MVP, la vigilancia tecnológica y hoy el ecosistema. Su Propuesta de Innovación ya no es una ocurrencia: es un **argumento con evidencia**.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo de cierre: suban a CDigital el **paquete consolidado** que pida el corte —ficha del problema, ficha Oslo, matriz de tipos, Canvas/MVP, tablero de vigilancia, mapa de entidades y guion del pitch— como `S08_EcosistemaPitch_Apellido`. Revisen las **rúbricas y los espacios de entrega (EV) del corte final** en CDigital.”
+> “**PARA CONTINUAR.** Autónomo de cierre: suban a CDigital el **paquete consolidado** que pida el corte —ficha del problema, ficha Oslo, matriz de tipos, Canvas/MVP, tablero de vigilancia, mapa de entidades y guion del pitch— como `S07_EcosistemaPitch_Apellido`. Revisen las **rúbricas y los espacios de entrega (EV) del corte final** en CDigital.”
 
-> “**Slide 7 — Cierre.** Gracias por el trabajo de todo el ciclo. Cualquier duda administrativa, por el canal del curso. Fue un gusto acompañarlos.”
+> “**Cierre.** Gracias por el trabajo de todo el ciclo. Cualquier duda administrativa, por el canal del curso. Fue un gusto acompañarlos.”
 
 **Qué hacer:**
 1. (3 min) Cerrar los pitches en vivo (si quedaron voluntarios) y dar 1 elogio + 1 mejora a cada uno.
@@ -200,7 +218,7 @@ Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso
 2. Guion del pitch de 60 s en 5 tramos (boceto en Excalidraw; Canva free opcional para 1 slide).
 3. Ensayo en parejas + pitch en vivo cronometrado.
 4. **Criterio de éxito:** 3 entidades con pedido concreto + pitch que en 60 s comunica dolor, valor y pedido.
-5. **Entregable:** `S08_EcosistemaPitch_Apellido` en CDigital + paquete consolidado del corte final.
+5. **Entregable:** `S07_EcosistemaPitch_Apellido` en CDigital + paquete consolidado del corte final.
 
 ---
 

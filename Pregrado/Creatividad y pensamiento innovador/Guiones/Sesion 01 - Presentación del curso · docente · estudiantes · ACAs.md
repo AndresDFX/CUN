@@ -33,10 +33,11 @@
 | **15** | Cómo pedir ayuda (y recibir respuesta pronto) | Canales y tiempos |
 | **16** | Acuerdos de convivencia del encuentro | Cámara, micrófono, foro |
 | **17** | Para la Sesión 02: lectura autónoma y qué traer | Encargo autónomo |
-| **18** | Preguntas del primer día | Dudas típicas |
-| **19** | ACUERDOS DE TRABAJO | Cierre de reglas |
-| **20** | PARA LA PRÓXIMA SESIÓN | Tarea concreta |
-| **21** | Cierre — Sesión 01 | Despedida |
+| **18** | Para la Sesión 02: lectura autónoma y qué traer (cont.) | |
+| **19** | Preguntas del primer día | Dudas típicas |
+| **20** | ACUERDOS DE TRABAJO | Cierre de reglas |
+| **21** | PARA LA PRÓXIMA SESIÓN | Tarea concreta |
+| **22** | Cierre — Sesión 01 | Despedida |
 
 🎯 **Objetivos de la sesión (encuadre — no hay tema del Syllabus)**
 1. Que el estudiante sepa **qué produce este curso**: una **Propuesta de Innovación** propia, no un ensayo.
@@ -237,7 +238,7 @@
 
 > “**Slide 16 — Convivencia.** Empezamos a la hora en punto. Nombre real en la sala. Micrófono cerrado por defecto y abierto para participar; **cámara bienvenida pero no obligatoria** —si no pueden, participen por el chat—. Lo que no funciona es estar conectado y ausente. Aquí se piensa en voz alta y se muestran borradores a medio hacer: **ninguna idea se ridiculiza**; las ideas se critican con criterio, a las personas no. Y si el encuentro se graba, lo aviso al inicio y la grabación queda en CDigital.”
 
-> “**Slide 19 — Acuerdos de trabajo.** Son los tres que ya dijimos, juntos: la entrega es en CDigital, se trae el avance escrito a cada encuentro, y se cita siempre en APA 7.”
+> “**Slide 20 — Acuerdos de trabajo.** Son los tres que ya dijimos, juntos: la entrega es en CDigital, se trae el avance escrito a cada encuentro, y se cita siempre en APA 7.”
 
 **Qué hacer:**
 1. (3 min) Recorrer herramientas y pedirles que abran CDigital **ahora**, en otra pestaña, para confirmar que entran.
@@ -254,11 +255,11 @@
 
 > “Segunda: abran el **enunciado de la ACA 1** y léanlo entero, con checklist. Tercera: **traigan escrito**, con tres líneas basta, un problema real que les moleste, **a quién** le pasa y **dónde** lo vieron. No me traigan una solución; tráiganme un problema: la solución es el trabajo del resto del curso. Cuarta: creen su documento en Google Docs con la plantilla APA CUN y déjenlo listo.”
 
-> “**Slide 18 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
+> “**Slide 19 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
 
-> “**Slide 20 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, enunciado de la ACA 1 leído, y su problema escrito. Lo pego también en el chat y lo publico hoy mismo en CDigital.”
+> “**Slide 21 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, enunciado de la ACA 1 leído, y su problema escrito. Lo pego también en el chat y lo publico hoy mismo en CDigital.”
 
-> “**Slide 21 — Cierre.** Hoy no vimos tema y salimos sabiendo cómo se trabaja, qué se entrega y con quién cuentan. La **Sesión 02** arranca el contenido: *Creatividad e innovación en I+D, Design Thinking y técnicas*, y se trabaja sobre lo que ustedes traigan. Mismo enlace de siempre. Nos vemos.”
+> “**Slide 22 — Cierre.** Hoy no vimos tema y salimos sabiendo cómo se trabaja, qué se entrega y con quién cuentan. La **Sesión 02** arranca el contenido: *Creatividad e innovación en I+D, Design Thinking y técnicas*, y se trabaja sobre lo que ustedes traigan. Mismo enlace de siempre. Nos vemos.”
 
 **Qué hacer:**
 1. (2 min) Dictar el encargo autónomo y **escribirlo también en el chat** (lo que solo se dice, se pierde).

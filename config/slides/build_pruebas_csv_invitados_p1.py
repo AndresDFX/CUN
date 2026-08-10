@@ -19,9 +19,10 @@ Genera en `2026/54ES4/pruebas_csv/`:
 También genera `Crear encuentros desde CSV en Sheets.gs`: flujo que SÍ mete
 invitados usando el CSV B como fuente (CSV → Google Sheets → Apps Script).
 
-Requiere haber corrido antes:
-    python config/slides/build_calendar_proyecto1_54es4.py
-(que produce `encuentros_p1_calendar_data.json` con roster y sesiones).
+Los datos (roster + sesiones + Meet) se leen EN MEMORIA de
+`build_calendar_proyecto1_54es4.build_calendar_payload()`, que es la misma fuente viva
+que alimenta el CSV/ICS/.gs. Antes se leían de un `encuentros_p1_calendar_data.json`
+que nadie regeneraba y que quedó con el título retirado de la Sesión 01.
 
 Uso:
     python config/slides/build_pruebas_csv_invitados_p1.py
@@ -29,9 +30,13 @@ Uso:
 from __future__ import annotations
 
 import csv
-import json
+import os
+import sys
 from datetime import datetime
 from pathlib import Path
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_calendar_proyecto1_54es4 import build_calendar_payload  # noqa: E402
 
 # Raíz del workspace derivada del propio archivo. Antes estaba hardcodeada como
 # «G:\\Mi unidad\\...» y rompía cuando Google Drive monta la unidad en inglés
@@ -42,7 +47,6 @@ _WS = Path(__file__).resolve().parents[2]
 GRUPO = Path(
     _WS / "Especializacion" / "Proyecto I" / "2026" / "54ES4"
 )
-DATA = GRUPO / "encuentros_p1_calendar_data.json"
 OUT = GRUPO / "pruebas_csv"
 
 # Google documenta la hora como «10:00 AM»; Outlook exporta «10:00:00 AM».
@@ -66,13 +70,7 @@ HEADERS_OUTLOOK = [
     "Show time as",
 ]
 
-if not DATA.is_file():
-    raise FileNotFoundError(
-        f"Falta {DATA.name}. Corre primero: "
-        "python config/slides/build_calendar_proyecto1_54es4.py"
-    )
-
-data = json.loads(DATA.read_text(encoding="utf-8"))
+data = build_calendar_payload(GRUPO)
 guests: list[str] = data["guests"]
 guests_csv = ", ".join(guests)
 eventos = data["events"]

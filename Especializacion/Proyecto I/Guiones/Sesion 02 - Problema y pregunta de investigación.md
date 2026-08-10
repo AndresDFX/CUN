@@ -9,21 +9,34 @@
 - **Sesión:** **02** · **Tema:** Problema y pregunta de investigación
 - **Detalle:** ESP329 U2 · Delimitación del problema · pregunta viable · líneas IA del programa.
 - **PPTX estudiante:** `Clases/Sesion 02 - Problema y pregunta de investigación/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 02 — PROBLEMA Y PREGUNTA DE INVESTIGACIÓN |
+| **2** | Todo el anteproyecto cuelga de una sola frase |
+| **3** | Tema, problema y pregunta: tres palabras que no son sinónimas |
+| **4** | Cuatro niveles que se confunden todo el tiempo |
+| **5** | Anatomía del planteamiento: las cuatro piezas |
+| **6** | Pregunta débil vs. pregunta fuerte |
+| **7** | El filtro de las cinco preguntas (antes de enamorarse de la suya) |
+| **8** | Cómo se abre una pregunta: arranques que sirven y arranques que la matan |
+| **9** | Las dos líneas oficiales de IA del programa |
+| **10** | Ejemplo modelado 1 — línea educación, paso a paso |
+| **11** | Ejemplo modelado 2 — línea entornos productivos |
+| **12** | Errores frecuentes que hoy vamos a cortar de raíz |
+| **13** | Errores frecuentes que hoy vamos a cortar de raíz (cont.) |
+| **14** | Paso a paso: cómo lo escriben hoy en Google Docs |
+| **15** | TALLER (18 minutos) — borrador de problema y pregunta |
+| **16** | Checklist de autoevaluación antes de subir el avance |
+| **17** | Trabajo autónomo y qué traer a la próxima sesión |
+| **18** | Cierre — Sesión 02 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Distinguir** tema, problema y pregunta.
@@ -76,31 +89,31 @@ Antes de dar por buena una pregunta, respóndase mentalmente: ¿quién es el act
 ---
 
 #### 1️⃣ Encuadre + puente desde S01 (~8 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes. **Sesión 02**. La semana pasada dejaron su ficha de encuadre con un tema tentativo y su línea de IA. Hoy damos el paso más importante del anteproyecto: convertir ese tema en un **problema** y en una **pregunta de investigación** defendibles. Al terminar la primera hora deben salir con un borrador escrito de ambos.”
-> “**Slide 2 — objetivos de hoy:** primero, distinguir tema, problema y pregunta; segundo, redactar el borrador de planteamiento y la pregunta; y tercero, aprender a detectar preguntas inviables antes de enamorarse de ellas. Levanten la mano quienes ya cambiaron de tema desde la semana pasada… perfecto, es normal, para eso es esta fase.”
+> “**objetivos de hoy:** primero, distinguir tema, problema y pregunta; segundo, redactar el borrador de planteamiento y la pregunta; y tercero, aprender a detectar preguntas inviables antes de enamorarse de ellas. Levanten la mano quienes ya cambiaron de tema desde la semana pasada… perfecto, es normal, para eso es esta fase.”
 
 #### 2️⃣ Tema ≠ problema ≠ pregunta (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** Tres palabras que la gente usa como sinónimos y NO lo son. **Tema** es el territorio: ‘IA en educación’. **Problema** es la tensión concreta dentro de ese territorio: ‘los docentes de tal programa tardan días en retroalimentar y los estudiantes pierden el hilo’. **Pregunta** es la forma interrogativa que va a guiar todo el método: ‘cómo…’, ‘qué factores…’, ‘en qué medida…’.”
+> “Tres palabras que la gente usa como sinónimos y NO lo son. **Tema** es el territorio: ‘IA en educación’. **Problema** es la tensión concreta dentro de ese territorio: ‘los docentes de tal programa tardan días en retroalimentar y los estudiantes pierden el hilo’. **Pregunta** es la forma interrogativa que va a guiar todo el método: ‘cómo…’, ‘qué factores…’, ‘en qué medida…’.”
 > “Fíjense en el orden: primero identifico a quién le duele algo, después lo formulo como pregunta. Si empiezo por la pregunta sin tener el dolor claro, me sale una pregunta bonita pero hueca. Y apliquen el filtro de las cinco preguntas: quién, dónde, qué fenómeno, en qué lapso y con qué acceso a la información —sin recolectar todavía, porque estamos en Proyecto I—.”
 
 #### 3️⃣ Modelación en vivo (ejemplo IA) (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (RECUERDA)
+**Momento del deck:** CONTENIDO CLAVE → RECUERDA
 
 **GUION LITERAL:**
 > “Vamos a modelarlo juntos en pantalla, en Google Docs. Tomo un ejemplo de la línea de educación: los estudiantes entregan sus laboratorios tarde porque no reciben retroalimentación oportuna. Miren cómo lo desarmo: **(a) síntoma** —entregas tardías y errores que se repiten—; **(b) contexto** —un curso concreto de un programa concreto—; **(c) actor** —estudiantes y docente de ese curso—; **(d) pregunta delimitada** —‘¿qué prácticas de retroalimentación mediadas por un asistente de IA podrían proponerse para el curso X?’—.”
-> “Y ahora lo importante: les muestro qué **NO** es la pregunta. No es ‘¿la IA es buena para educar?’ —demasiado amplia—; no es ‘¿hago un bot?’ —eso es una solución, no una pregunta—. **Slide 4, RECUERDA:** en Proyecto I la pregunta debe poder responderse MÁS ADELANTE con un diseño que ustedes proponen; hoy no salimos a encuestar a nadie.”
+> “Y ahora lo importante: les muestro qué **NO** es la pregunta. No es ‘¿la IA es buena para educar?’ —demasiado amplia—; no es ‘¿hago un bot?’ —eso es una solución, no una pregunta—. **RECUERDA:** en Proyecto I la pregunta debe poder responderse MÁS ADELANTE con un diseño que ustedes proponen; hoy no salimos a encuestar a nadie.”
 
 #### 4️⃣ Taller: borrador de problema + pregunta (~18 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Dieciocho minutos, manos a la obra en su documento de Google Docs con la plantilla APA CUN. Escriban tres cosas: **(1)** ocho a doce líneas de planteamiento del problema —síntoma, contexto y consecuencia—; **(2)** su pregunta de investigación en UNA sola frase; **(3)** la línea oficial de IA en la que encaja. Yo voy pasando por los equipos. En los últimos tres minutos, tres equipos leen en voz alta SOLO su pregunta, en veinte segundos.”
+> “Dieciocho minutos, manos a la obra en su documento de Google Docs con la plantilla APA CUN. Escriban tres cosas: **(1)** ocho a doce líneas de planteamiento del problema —síntoma, contexto y consecuencia—; **(2)** su pregunta de investigación en UNA sola frase; **(3)** la línea oficial de IA en la que encaja. Yo voy pasando por los equipos. En los últimos tres minutos, tres equipos leen en voz alta SOLO su pregunta, en veinte segundos.”
 > “El criterio de éxito es sencillo: si al leer su pregunta yo identifico **actor + fenómeno + contexto**, la pregunta avanza. Si me falta alguno de los tres, seguimos puliendo.”
 
 | Si el estudiante… | Usted responde… |
@@ -111,11 +124,11 @@ Antes de dar por buena una pregunta, respóndase mentalmente: ¿quién es el act
 | Quiere aplicar la encuesta ya | “Hoy diseñamos; el campo es Proyecto II, con aval previo.” |
 
 #### 5️⃣ Cierre contenido (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “Tres ideas para llevarse: **problema ≠ tema**; la **pregunta se delimita** con actor, fenómeno y contexto; y **Proyecto I no es campo**. **Slide 6, para continuar:** en trabajo autónomo pulan el planteamiento y traigan tres referencias exploratorias buscadas en Google Scholar o SciELO, con su cita generada en ZoteroBib o en las citas de Google Docs. Suban el avance a CDigital con el nombre `S02_ProblemaPregunta_Apellidos`.”
-> “**Slide 7.** Guardamos el documento y pasamos a la segunda hora, la tutoría por equipos, donde revisamos pregunta por pregunta.”
+> “Tres ideas para llevarse: **problema ≠ tema**; la **pregunta se delimita** con actor, fenómeno y contexto; y **Proyecto I no es campo**. **para continuar:** en trabajo autónomo pulan el planteamiento y traigan tres referencias exploratorias buscadas en Google Scholar o SciELO, con su cita generada en ZoteroBib o en las citas de Google Docs. Suban el avance a CDigital con el nombre `S02_ProblemaPregunta_Apellidos`.”
+> “Guardamos el documento y pasamos a la segunda hora, la tutoría por equipos, donde revisamos pregunta por pregunta.”
 
 
 
@@ -151,7 +164,7 @@ Antes de dar por buena una pregunta, respóndase mentalmente: ¿quién es el act
 - [ ] PPTX `Clases/Sesion 02 - Problema y pregunta de investigación/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

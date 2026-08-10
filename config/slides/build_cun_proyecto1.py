@@ -9,8 +9,8 @@ import os, sys, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
 from cun_slides_engine import *
-from sesiones_cun import COURSES, DOCENTE_CORREO, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO
-from carga_academica import bold_var, cover_meta_lines, curso as carga_curso, footer_inicio_efectivo
+from sesiones_cun import COURSES, DOCENTE_CORREO, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO, meet_url
+from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
 from fechas_entrega_aca import blocks_para_slide, entrega_por_id, fmt_entrega
 
 OUT_DIR = os.path.join(COURSES["proyecto1"]["folder"], "Clases")
@@ -30,7 +30,8 @@ LINK_TUTORIAS_ESTUDIANTE = LINK_TUTORIAS
 # build_acas_estudiantes.py). Decisión del docente 2026-08-10.
 RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 URL_PLANTILLA_ACA = "Clases/Recursos/ACAs/ (enunciados ACA 1–3 · autoevaluación · coevaluación)"
-URL_MEET = "[URL Meet — mismo enlace toda la serie · Proyecto I]"
+# Enlace real si existe en carga_academica_2026.json → cursos.proyecto1.meet; si no, placeholder.
+URL_MEET = meet_url("proyecto1", "Proyecto I")
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 FUENTE_ESP329 = "Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx"
 

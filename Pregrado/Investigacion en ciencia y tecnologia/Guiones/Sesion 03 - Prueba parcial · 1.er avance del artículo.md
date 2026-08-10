@@ -11,17 +11,33 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Prueba parcial · 1.er avance del artículo/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 03 — PRUEBA PARCIAL · 1.ER AVANCE DEL ARTÍCULO |
+| **2** | Bajemos la ansiedad: el avance no es media tesis |
+| **3** | Qué es y qué NO es el primer avance |
+| **4** | Las cuatro piezas del avance (y su error típico) |
+| **5** | El título: fórmula y ejemplos |
+| **6** | La introducción en tres párrafos: contexto → vacío → propósito |
+| **7** | La introducción en tres párrafos: contexto → vacío → propósito (cont.) |
+| **8** | Ejemplo modelado: introducción escrita completa |
+| **9** | Tipos de conocimiento (esto suele caer en el parcial) |
+| **10** | Tipos de fuente: primaria, secundaria y terciaria |
+| **11** | Wikipedia, blogs e IA generativa: qué se puede y qué no |
+| **12** | Wikipedia, blogs e IA generativa: qué se puede y qué no (cont.) |
+| **13** | Qué evalúa la prueba parcial |
+| **14** | Qué evalúa la prueba parcial (cont.) |
+| **15** | Paso a paso: sus referencias en APA 7 con ZoteroBib |
+| **16** | Paso a paso: sus referencias en APA 7 con ZoteroBib (cont.) |
+| **17** | TALLER · Escribir el 1.er avance (~22 min) |
+| **18** | Checklist antes de subir su entrega |
+| **19** | Checklist antes de subir su entrega (cont.) |
+| **20** | Trabajo autónomo · para la próxima sesión |
+| **21** | Cierre — Sesión 03 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Aclarar** qué evalúa la prueba escrita parcial y qué debe contener el **1.er avance** del artículo.
@@ -82,23 +98,23 @@ Introducción de 3 párrafos: contexto de las prácticas de laboratorio → vac�
 
 ---
 
-#### 1️⃣ Encuadre criterios del avance (~8 min) — Slides 1–2
+#### 1️⃣ Encuadre criterios del avance (~8 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 03, y es una sesión bisagra: hoy trabajamos la **prueba parcial** y el **primer avance** del artículo. Quiero bajarles la ansiedad de una vez: el avance no es media tesis, es un **borrador mínimo viable** bien planteado.”
 
-> “**Slide 2 — OBJETIVOS.** Vamos a: aclarar qué evalúa el parcial, repasar tipos de conocimiento y de fuentes —porque suelen caer— y salir con el borrador del avance empezado. Tengan abierto su Doc con el tema y la línea de las sesiones anteriores.”
+> “**OBJETIVOS.** Vamos a: aclarar qué evalúa el parcial, repasar tipos de conocimiento y de fuentes —porque suelen caer— y salir con el borrador del avance empezado. Tengan abierto su Doc con el tema y la línea de las sesiones anteriores.”
 
-#### 2️⃣ Estructura mínima del artículo (~12 min) — Slides 3–4
+#### 2️⃣ Estructura mínima del artículo (~12 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El avance tiene cuatro piezas: título, introducción breve, problema/pregunta y primeras referencias. Solo cuatro. Y una regla que voy a repetir todo el semestre: **calidad sobre extensión**.”
+> “**CONTENIDO CLAVE.** El avance tiene cuatro piezas: título, introducción breve, problema/pregunta y primeras referencias. Solo cuatro. Y una regla que voy a repetir todo el semestre: **calidad sobre extensión**.”
 
 > “Ahora la parte conceptual que suele caer en el parcial. Tipos de conocimiento: el **cotidiano** —me mojé, luego llueve—, el **empírico** —lo he visto muchas veces— y el **científico** —lo mido, lo verifico, uso método—. Su artículo se sostiene en el tercero.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y los tipos de fuente: **primaria** es el estudio original; **secundaria** lo interpreta; **terciaria** es un índice o enciclopedia. Wikipedia orienta, pero no se cita como autoridad. Todo esto no es para memorizar: es para que su avance tenga fuentes que aguanten una revisión.”
+> “**ENFOQUE DE HOY.** Y los tipos de fuente: **primaria** es el estudio original; **secundaria** lo interpreta; **terciaria** es un índice o enciclopedia. Wikipedia orienta, pero no se cita como autoridad. Todo esto no es para memorizar: es para que su avance tenga fuentes que aguanten una revisión.”
 
 #### 3️⃣ Modelación de introducción (~10 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -114,11 +130,11 @@ Introducción de 3 párrafos: contexto de las prácticas de laboratorio → vac�
 
 > **En pantalla:** Escribir en vivo 3 párrafos: contexto / vacío / propósito. Señalar qué NO hacer (arranque histórico).
 
-#### 4️⃣ Taller de escritura (~22 min) — Slide 5
+#### 4️⃣ Taller de escritura (~22 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~22 minutos. En `S03_Avance1_Apellido` escriban las cuatro piezas: (1) título tentativo con actor+fenómeno+contexto; (2) introducción de 3 párrafos contexto→vacío→propósito; (3) el problema convertido en una pregunta; (4) dos referencias en APA 7 usando ZoteroBib. Prefiero media página impecable a tres de relleno.”
+> “**TALLER.** ~22 minutos. En `S03_Avance1_Apellido` escriban las cuatro piezas: (1) título tentativo con actor+fenómeno+contexto; (2) introducción de 3 párrafos contexto→vacío→propósito; (3) el problema convertido en una pregunta; (4) dos referencias en APA 7 usando ZoteroBib. Prefiero media página impecable a tres de relleno.”
 
 > “Criterio de éxito: si leo su introducción sin conocer su tema, entiendo el contexto, el vacío y qué se proponen.”
 
@@ -135,15 +151,15 @@ Introducción de 3 párrafos: contexto de las prácticas de laboratorio → vac�
 > **En pantalla:** Pegar 1 DOI/URL → generar APA 7 → copiar a Google Docs. Sin instalar Zotero de escritorio.
 
 
-#### 5️⃣ Cierre / entrega (~8 min) — Slides 6–7
+#### 5️⃣ Cierre / entrega (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cerramos. Tres ideas: (1) el avance son cuatro piezas bien hechas, no muchas páginas; (2) el conocimiento que sostiene el artículo es el **científico**; (3) mandan las fuentes primarias y secundarias, no los blogs.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S03_Avance1_Apellido` a CDigital. Y revisen en CDigital el **detalle de la evaluación de este corte** —el desglose oficial vive allí—. La próxima sesión afinamos el corazón del artículo: **identificar el problema y formular la pregunta**.”
+> “**PARA CONTINUAR.** Suban `S03_Avance1_Apellido` a CDigital. Y revisen en CDigital el **detalle de la evaluación de este corte** —el desglose oficial vive allí—. La próxima sesión afinamos el corazón del artículo: **identificar el problema y formular la pregunta**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

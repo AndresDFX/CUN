@@ -11,17 +11,34 @@
 - **PPTX estudiante:** `Clases/Sesion 02 - Creatividadinnovación en I+D · Design Thinking y técnicas/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 02 — Creatividad/innovación en I+D · Design Thinking y técnicas |
+| **2** | El problema que resolvimos... y que nadie tenía |
+| **3** | Qué es Design Thinking (y qué NO es) |
+| **4** | Las cinco etapas del Design Thinking |
+| **5** | El doble diamante: abrir y cerrar, dos veces |
+| **6** | Divergir y converger son dos oficios distintos |
+| **7** | How Might We: la bisagra entre problema y solución |
+| **8** | How Might We: la bisagra entre problema y solución (cont.) |
+| **9** | HMW mal escrito vs. HMW bien escrito |
+| **10** | Ejemplo modelado (1/2): un HMW y diez ideas sin filtrar |
+| **11** | Ejemplo modelado (1/2): un HMW y diez ideas sin filtrar (cont.) |
+| **12** | Ejemplo modelado (2/2): convergemos con tres criterios |
+| **13** | SCAMPER: siete preguntas para no quedarse en blanco |
+| **14** | Dos técnicas más para que hable todo el grupo |
+| **15** | Errores frecuentes y mitos que hay que desarmar |
+| **16** | Errores frecuentes y mitos que hay que desarmar (cont.) |
+| **17** | Paso a paso: su boceto en Excalidraw en 5 minutos |
+| **18** | TALLER — Ideación sobre su propio problema (22 minutos) |
+| **19** | Antes de entregar: revise usted mismo |
+| **20** | Para continuar — trabajo autónomo |
+| **21** | Para continuar — trabajo autónomo (cont.) |
+| **22** | Cierre — Sesión 02 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Describir** las cinco etapas del Design Thinking (DT) en una versión operable, no decorativa.
@@ -104,7 +121,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 ---
 
 #### 1️⃣ Encuadre + puente desde la sesión anterior (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** conectar la observación/empatía que traen con el reto de hoy (definir un HMW e idear) y dejar claro el entregable de la hora.
 
@@ -121,12 +138,12 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 ---
 
 #### 2️⃣ Design Thinking + divergente/convergente (~13 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que entiendan el ciclo DT y, sobre todo, que **divergir y converger son dos momentos distintos** que no se mezclan.
 
 **GUION LITERAL:**
-> “**Slide 3.** Design Thinking no es un póster bonito: es un ciclo para **no enamorarnos de la primera solución**. Empatizar → Definir → Idear → Prototipar → Evaluar. Y ojo: no es una escalera, es un ciclo. Uno prueba, descubre que el problema estaba mal y vuelve atrás. Eso no es perder tiempo, es el método haciendo su trabajo.”
+> “Design Thinking no es un póster bonito: es un ciclo para **no enamorarnos de la primera solución**. Empatizar → Definir → Idear → Prototipar → Evaluar. Y ojo: no es una escalera, es un ciclo. Uno prueba, descubre que el problema estaba mal y vuelve atrás. Eso no es perder tiempo, es el método haciendo su trabajo.”
 
 > “La regla de oro de hoy está en la **slide 4**: primero **divergimos** —muchas ideas, cero juicios— y **después** convergemos —elegimos con criterios—. Si juzgan mientras idean, es como manejar con el freno de mano puesto. Imagínense una lluvia de ideas donde cada propuesta recibe un ‘eso no sirve’: a los dos minutos nadie habla. Por eso separamos los momentos: ahora abrimos, luego cerramos.”
 
@@ -149,7 +166,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 > **En pantalla:** Escribir 1 How Might We y 10 ideas en voz alta.
 
 #### 3️⃣ Modelación de ideación — HMW + SCAMPER (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** mostrar en vivo cómo se generan muchas ideas sin juzgar y cómo se filtran después con criterios.
 
@@ -172,7 +189,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 > **En pantalla:** Solo si carga bien; si no, continuar en Excalidraw/Miro free.
 
 #### 4️⃣ Taller: ideación sobre su problema (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos** y trabajan sobre SU problema. Cuatro pasos: (1) redacten **su HMW** con la fórmula de la pizarra; (2) generen **mínimo 8 ideas** —solos o en dúo— sin juzgar ninguna; (3) **elijan 1 o 2** y justifíquenlas con los tres criterios; (4) hagan un **boceto de 1 minuto** en Excalidraw —cajitas y flechas, feo está bien—. Al final le pido a **tres personas** que lean **solo su HMW** en 20 segundos. Criterio de éxito: si su HMW menciona al usuario y el dolor —y no la tecnología— vamos bien.”
@@ -190,14 +207,14 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 ---
 
 #### 5️⃣ Cierre + trabajo autónomo (~7 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) **primero entiendo, después resuelvo**; (2) **divergir y converger son momentos distintos**, no los mezclo; (3) un buen **HMW** mira al usuario, no a la tecnología.”
 
-> “**Slide 6 — PARA CONTINUAR.** Trabajo autónomo: (a) suban a CDigital su HMW + banco de ideas + boceto como `S03_Ideacion_Apellido`; (b) mejoren el boceto con una segunda mirada; (c) traigan a la próxima sesión una **clasificación tentativa** de su idea en un tipo de innovación —producto, proceso, organización, marketing o social—, que es justo lo que veremos con el Manual de Oslo.”
+> “**PARA CONTINUAR.** Trabajo autónomo: (a) suban a CDigital su HMW + banco de ideas + boceto como `S02_Ideacion_Apellido`; (b) mejoren el boceto con una segunda mirada; (c) traigan a la próxima sesión una **clasificación tentativa** de su idea en un tipo de innovación —producto, proceso, organización, marketing o social—, que es justo lo que veremos con el Manual de Oslo.”
 
-> “**Slide 7 — Cierre.** La próxima clase es **Gestión de la innovación con el Manual de Oslo**. Mismo Meet. Buen trabajo.”
+> “**Cierre.** La próxima clase es **Gestión de la innovación con el Manual de Oslo**. Mismo Meet. Buen trabajo.”
 
 **Qué hacer:**
 1. (3 min) Recoger 3 HMW en voz alta y corregir amablemente si empiezan por la tecnología.
@@ -214,7 +231,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 2. Generar mínimo 8 ideas (divergencia) y elegir 1–2 con tres criterios (convergencia).
 3. Boceto de 1 minuto en Excalidraw (o plantilla free de Miro).
 4. **Criterio de éxito:** el HMW se centra en usuario y dolor (no en “hacer una app”).
-5. **Entregable:** `S03_Ideacion_Apellido` en CDigital (HMW + ideas + captura del boceto).
+5. **Entregable:** `S02_Ideacion_Apellido` en CDigital (HMW + ideas + captura del boceto).
 6. **Trabajo autónomo:** clasificación tentativa del tipo de innovación para la próxima sesión.
 
 ---
@@ -225,7 +242,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 - [ ] Abrí `Clases/Sesion 02 - Creatividadinnovación en I+D · Design Thinking y técnicas/Presentacion.pptx`
 - [ ] Tengo Excalidraw abierto (y una plantilla free de Miro como opción)
 - [ ] Tengo listo mi HMW y mis 10 ideas modelo para la demostración
-- [ ] Publiqué en CDigital el espacio de entrega `S03_Ideacion`
+- [ ] Publiqué en CDigital el espacio de entrega `S02_Ideacion`
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 ---

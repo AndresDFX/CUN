@@ -77,7 +77,7 @@ def load_content(n):
                 out.append(("bullets", sl["title"], items))
     return out or None
 
-BASE = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos\Administración de Sistemas Operativos de Servidor\Clases"
+BASE = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos\Administración de Sistemas Operativos de Servidor\Clases"
 CURSO = "Administración de Sistemas Operativos de Servidor"
 CURSO_CORTO = "Administración de SO de Servidor"
 PROGRAMA = "Ingeniería de Sistemas"

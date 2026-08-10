@@ -11,17 +11,29 @@
 - **PPTX estudiante:** `Clases/Sesion 05 - Marco teórico — avance/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 05 — MARCO TEÓRICO — AVANCE |
+| **2** | La sección donde más se rellena por miedo |
+| **3** | Qué es —y qué no es— el marco teórico |
+| **4** | Cita que trabaja frente a cita que adorna |
+| **5** | El constructo: la unidad con la que se arma el marco |
+| **6** | Mapa de constructos del caso de los tickets |
+| **7** | La regla de los tres constructos |
+| **8** | Ejemplo modelado: un párrafo de marco, escrito completo |
+| **9** | Parafrasear, citar textual y copiar: no son lo mismo |
+| **10** | Citar en el texto en APA 7: los cuatro casos que va a usar |
+| **11** | Lo que más se corrige en esta sesión |
+| **12** | Lo que más se corrige en esta sesión (cont.) |
+| **13** | Paso a paso: del mapa al párrafo, en el navegador |
+| **14** | Taller — 20 minutos para dejar el marco arrancado |
+| **15** | Autoevaluación antes de subir el archivo |
+| **16** | Trabajo autónomo y qué viene la próxima sesión |
+| **17** | Cierre — Sesión 05 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Avanzar marco teórico usable.
@@ -79,23 +91,23 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 05. La semana pasada vimos quién ya trabajó algo parecido —los antecedentes—. Hoy vamos a la **teoría de fondo**: el marco teórico. Es la sección que más miedo da y donde más se rellena; vamos a evitar eso.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con un mapa de constructos y una a dos páginas de marco donde **cada cita trabaje**. Tengan abierta su pregunta del `S02` y sus fichas del `S04`.”
+> “**OBJETIVOS.** Salir con un mapa de constructos y una a dos páginas de marco donde **cada cita trabaje**. Tengan abierta su pregunta del `S02` y sus fichas del `S04`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** La primera regla del marco: **no es un collage de definiciones**. Es la teoría que ustedes necesitan para responder su pregunta. Si una cita no ayuda a responderla, sobra, aunque sea de un autor famoso.”
+> “**CONTENIDO CLAVE.** La primera regla del marco: **no es un collage de definiciones**. Es la teoría que ustedes necesitan para responder su pregunta. Si una cita no ayuda a responderla, sobra, aunque sea de un autor famoso.”
 
 > “¿Cómo se ordena? Por **constructos**. Un constructo es un concepto clave de su pregunta. En el caso de los tickets, los constructos son ‘clasificación supervisada’, ‘gestión de mesa de ayuda’ y ‘tiempo de atención’. El marco se arma constructo por constructo, no autor por autor.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y una regla práctica: **tres constructos**. Tres bien hilados valen más que ocho superficiales. Si les salen ocho, no delimitaron la pregunta. Además: todo se parafrasea y se cita en APA 7; copiar sin citar es plagio, y en TG3 hay antiplagio institucional. El hábito se corrige ahora.”
+> “**ENFOQUE DE HOY.** Y una regla práctica: **tres constructos**. Tres bien hilados valen más que ocho superficiales. Si les salen ocho, no delimitaron la pregunta. Además: todo se parafrasea y se cita en APA 7; copiar sin citar es plagio, y en TG3 hay antiplagio institucional. El hábito se corrige ahora.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -111,11 +123,11 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 
 > **En pantalla:** Buscar por cada constructo por separado, no por ‘todo el tema’.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S05_MarcoTeorico_Apellido`: (1) definan sus **3 constructos** a partir de la pregunta; (2) hagan el **mapa** constructo → fuentes → para qué lo necesito; (3) redacten **1 a 2 páginas** de marco parafraseando y citando en APA 7, cerrando cada constructo con su conexión a la pregunta.”
+> “**TALLER.** ~20 minutos. En `S05_MarcoTeorico_Apellido`: (1) definan sus **3 constructos** a partir de la pregunta; (2) hagan el **mapa** constructo → fuentes → para qué lo necesito; (3) redacten **1 a 2 páginas** de marco parafraseando y citando en APA 7, cerrando cada constructo con su conexión a la pregunta.”
 
 > “Criterio de éxito: leo su marco y cada párrafo tiene cita y termina conectando con su pregunta; no hay definición suelta que no sirva.”
 
@@ -132,15 +144,15 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 > **En pantalla:** Citas de los 3 constructos en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el marco responde a la pregunta, no decora; (2) se organiza por **constructos**, tres bien hilados; (3) todo se parafrasea y se cita en APA 7.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S05_MarcoTeorico_Apellido` con el mapa y el avance de marco. La próxima sesión completamos el marco referencial con lo **conceptual y lo contextual**: las definiciones operativas y el contexto real de su proyecto.”
+> “**PARA CONTINUAR.** Suban `S05_MarcoTeorico_Apellido` con el mapa y el avance de marco. La próxima sesión completamos el marco referencial con lo **conceptual y lo contextual**: las definiciones operativas y el contexto real de su proyecto.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

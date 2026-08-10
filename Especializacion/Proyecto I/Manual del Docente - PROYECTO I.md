@@ -16,7 +16,7 @@ Especialización en Inteligencia Artificial · Código ESP329
 ## 📁 Estructura de carpetas (`Clases/` = estudiante, `Guiones/` = docente)
 - **`Clases/`** — **`Presentacion del Curso - Proyecto I.pptx`** (alineada al ESP329: propósito, 7 unidades, evaluación; contacto `julian_castanoe@cun.edu.co`; slide rompehielos con QR; horario lun 8–10 pm; tutorías remarcadas) + **`Sesion NN - <tema>/Presentacion.pptx`** (contenido de la sesión; sin bio docente).
 - **`Calendario de clases (oficial).md`** — fechas ACA + festivos + encuentros (raíz).
-- **`Guiones/`** — `Sesion NN - <tema>.md` + `.docx` + `Capturas/`. Regenerar: `python config/slides/build_sesion_material.py proyecto1 all`.
+- **`Guiones/`** — `Sesion NN - <tema>.md` (**solo Markdown**; no hay `.docx`) + `Capturas/`. Regenerar: `python config/slides/build_sesion_material.py proyecto1 all`.
 - **`2026/<TU GRUPO>/`** — SOLO lo de esa oferta: `Informacion.txt`, roster, CSV/ICS de Calendar (54ES4 puede incluir invitados). Ver `LEEME - Importar encuentros a Calendar.md`.
 - Para generar/regenerar material, usa el agente `disenador-curricular-cun` (temario del **ESP329** + este Manual + AFI sin contradicción; nunca inventar).
 
@@ -44,6 +44,10 @@ Según el **ESP329**: inicia la ruta de trabajo de grado; el estudiante delimita
 
 Las sesiones semanales del calendario AFI **desarrollan** estas unidades (ver `config/cursos/sesiones_cun.py` · campo `unidad_esp329`).
 
+> **La Sesión 01 (10/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes (Padlet) y las ACAs. ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02. El contenido curricular arranca en la **Sesión 02**.
+>
+> Consecuencia operativa para la **ACA 1** (cierra dom 30/08, fecha institucional): la única sesión sincrónica de contenido antes del cierre es la **Sesión 02** (24/08). Objetivos, justificación y alcances se acompañan en **tutoría acordada de esa semana**; la Sesión 03 (31/08) los amplía ya después del cierre. Anúncialo en la Sesión 01.
+
 ### 1.2 Estructura del encuentro de 2h (8:00-10:00 pm) + tutorías aparte
 | Momento | Duración | Qué haces |
 |---|---|---|
@@ -61,7 +65,7 @@ Aula invertida · Aprendizaje Basado en Problemas · microaprendizaje · trabajo
 ### 1.4 Guion de las sesiones (ESP329 × calendario AFI)
 Ver fechas en `Calendario de clases (oficial).md`. El AFI exige **frecuencia semanal** (salvo festivo); el **contenido curricular** son las 7 unidades del ESP329.
 Cada guion en `Guiones/Sesion NN - ….md` (**solo Markdown**; sin `.docx`) cierra con un **checklist post-clase / seguimiento AFI**: (1) **tú** diligencias el registro de sesión/tutoría **dentro de 24h** con link de grabación — clave `links_afi.formulario_registro_sesiones_docente` en `config/universidades/cun.json` (solo docente); (2) en tutoría recuerdas el formulario de asistencia del **estudiante** — `links_afi.formulario_asistencia_tutorias_estudiante`. **Si Coordinación cambia los URLs el próximo semestre, actualiza solo `cun.json` y regenera.** Solo guiones `.md`: `python "Especializacion/Proyecto I/Guiones/_regen_guiones_proyecto1.py"` o `python config/slides/build_sesion_material.py proyecto1 all --guion-only`.
-- **ACA1 (25%) — U1–U3**: fundamentos → problema/pregunta → objetivos/justificación/alcances → cierre ACA1.
+- **ACA1 (25%) — U2–U3**: problema/pregunta (S02) → objetivos/justificación/alcances (tutoría de esa semana; S03 los amplía tras el cierre). **U1 no se dicta**: va como lectura autónoma de la S01.
 - **ACA2 (25%) — U4**: antecedentes → marco teórico → conceptual/contextual → legal/APA.
 - **Puente (05/10) — U5**: adelantar diseño metodológico antes de festivos de ACA3.
 - **ACA3 (42%) — U5–U7** (solo 2 lunes sincrónicos): metodología completa + planeación/viabilidad + integración del anteproyecto.

@@ -11,17 +11,29 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Estructura del documento artículo de avance/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 03 — Estructura del documento / artículo de avance |
+| **2** | Hoy no se escribe contenido nuevo: se ordena el envase |
+| **3** | Qué es la Plantilla APA CUN y qué le resuelve |
+| **4** | Sección por sección: qué va y qué no va |
+| **5** | La introducción es un embudo, no una enciclopedia |
+| **6** | El error rey del avance: mezclar método con resultados |
+| **7** | Tiempo verbal: cómo se escribe cada cosa en el avance |
+| **8** | Outline antes que prosa: la técnica que quita el bloqueo |
+| **9** | Ejemplo modelado: outline del caso de los tickets |
+| **10** | Lo que más se corrige en esta sesión |
+| **11** | Lo que más se corrige en esta sesión (cont.) |
+| **12** | Paso a paso: montar la plantilla en Google Docs |
+| **13** | Formato APA 7 que la plantilla ya trae (no lo cambie) |
+| **14** | Taller — 20 minutos para dejar el documento armado |
+| **15** | Autoevaluación antes de subir el archivo |
+| **16** | Trabajo autónomo y qué viene la próxima sesión |
+| **17** | Cierre — Sesión 03 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Dominar la estructura del artículo / documento de avance (plantilla APA CUN).
@@ -80,23 +92,23 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 03. Ya tienen tema, pregunta y objetivos. Hoy **no** escribimos contenido nuevo: ordenamos el envase. Al terminar deben saber qué va en cada sección del documento y, sobre todo, qué **no** va.”
 
-> “**Slide 2 — OBJETIVOS.** Dominar la estructura de la Plantilla APA CUN y salir con un **outline** de todo el documento: cada sección con viñetas de lo que irá. Tengan abierto su `S02`.”
+> “**OBJETIVOS.** Dominar la estructura de la Plantilla APA CUN y salir con un **outline** de todo el documento: cada sección con viñetas de lo que irá. Tengan abierto su `S02`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Buena noticia: ustedes **no** inventan la estructura. La **Plantilla APA CUN** ya trae el orden y el formato; se abre en Google Docs, no necesitan Word de escritorio. Su trabajo es **llenarla**, no diseñarla.”
+> “**CONTENIDO CLAVE.** Buena noticia: ustedes **no** inventan la estructura. La **Plantilla APA CUN** ya trae el orden y el formato; se abre en Google Docs, no necesitan Word de escritorio. Su trabajo es **llenarla**, no diseñarla.”
 
 > “Recorramos qué va en cada sección: la introducción es contexto → problema → propósito; el planteamiento argumenta el problema y aterriza en la pregunta; los objetivos ya los tienen; el marco referencial junta antecedentes, teoría y conceptos; el diseño metodológico dice enfoque, tipo y alcance; y las referencias van en APA 7.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y ahora el **error rey** de TG2: mezclar método y resultados. En este curso casi nunca hay resultados —el campo es de TG3—. Por eso la metodología se escribe en **propuesto**: ‘se aplicará’, ‘se propone’. Si aparece un hallazgo en la sección de método, algo está fuera de lugar.”
+> “**ENFOQUE DE HOY.** Y ahora el **error rey** de TG2: mezclar método y resultados. En este curso casi nunca hay resultados —el campo es de TG3—. Por eso la metodología se escribe en **propuesto**: ‘se aplicará’, ‘se propone’. Si aparece un hallazgo en la sección de método, algo está fuera de lugar.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en pantalla).
@@ -112,11 +124,11 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 
 > **En pantalla:** Abrir la Plantilla_APA_CUN_Proyecto de grado en Google Docs (nube); recorrer el orden de secciones.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. Abran una copia de la **Plantilla APA CUN** en Google Docs y, en `S03_EstructuraAvance_Apellido`, hagan el **outline** completo: cada sección del documento con 3–5 viñetas de lo que irá. En metodología, escriban en ‘propuesto/se aplicará’. Marquen con color las secciones que hoy están vacías.”
+> “**TALLER.** ~20 minutos. Abran una copia de la **Plantilla APA CUN** en Google Docs y, en `S03_EstructuraAvance_Apellido`, hagan el **outline** completo: cada sección del documento con 3–5 viñetas de lo que irá. En metodología, escriban en ‘propuesto/se aplicará’. Marquen con color las secciones que hoy están vacías.”
 
 > “Criterio de éxito: leo su outline y entiendo el documento entero de un vistazo, sin que haya un solo resultado colado en la metodología.”
 
@@ -133,15 +145,15 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 > **En pantalla:** Dejar la sección de referencias lista en APA para ir llenándola.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la estructura ya existe en la Plantilla APA CUN, ustedes la llenan; (2) el error rey es mezclar método y resultados —en TG2 el método va en ‘propuesto’—; (3) el outline evita la hoja en blanco.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S03_EstructuraAvance_Apellido` con el outline y la plantilla copiada. La próxima sesión empezamos a llenar de verdad: **antecedentes y referentes (Fase I)**, buscando en bases CUN y Scholar.”
+> “**PARA CONTINUAR.** Suban `S03_EstructuraAvance_Apellido` con el outline y la plantilla copiada. La próxima sesión empezamos a llenar de verdad: **antecedentes y referentes (Fase I)**, buscando en bases CUN y Scholar.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

@@ -9,21 +9,34 @@
 - **Sesión:** **06** · **Tema:** Marco conceptual y marco contextual
 - **Detalle:** ESP329 U4 · Definiciones operativas y contexto de aplicación.
 - **PPTX estudiante:** `Clases/Sesion 06 - Marco conceptual y marco contextual/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 06 — MARCO CONCEPTUAL Y MARCO CONTEXTUAL |
+| **2** | Una palabra, cinco lectores, cinco significados distintos |
+| **3** | Marco conceptual: el diccionario operativo de su estudio |
+| **4** | Definición teórica vs. definición operativa |
+| **5** | Cómo se redacta una definición operativa |
+| **6** | Así queda la tabla de definiciones en el documento |
+| **7** | Ejemplo modelado — cómo se llenó la fila de “retroalimentación oportuna” |
+| **8** | Marco contextual: el “dónde” que el método va a necesitar |
+| **9** | Contexto útil vs. contexto de relleno |
+| **10** | Qué se describe del contexto: lista de chequeo del escenario |
+| **11** | Ejemplo modelado — un párrafo de contexto que sí sirve |
+| **12** | Errores frecuentes en conceptual y contextual |
+| **13** | Errores frecuentes en conceptual y contextual (cont.) |
+| **14** | Paso a paso: cómo se arma esto hoy en Google Docs |
+| **15** | TALLER (22 minutos) — definiciones operativas y contexto |
+| **16** | Checklist de autoevaluación antes de subir el avance |
+| **17** | Trabajo autónomo y qué traer a la próxima sesión |
+| **18** | Cierre — Sesión 06 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Redactar** definiciones operativas.
@@ -71,31 +84,31 @@ El marco conceptual **baja a tierra** el marco teórico (traduce constructos abs
 ---
 
 #### 1️⃣ Encuadre (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 06**. Ya tienen antecedentes y el arranque del marco teórico. Hoy cerramos casi todo el marco referencial con dos piezas: el **marco conceptual** y el **marco contextual**.”
-> “**Slide 2.** Al final de la hora deben tener una tabla de definiciones operativas y una descripción precisa del contexto donde vive su problema.”
+> “Al final de la hora deben tener una tabla de definiciones operativas y una descripción precisa del contexto donde vive su problema.”
 
 #### 2️⃣ Conceptual vs. contextual (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** El marco conceptual es el diccionario de SU estudio: no la definición general de ‘retroalimentación’, sino cómo VAN A ENTENDER ‘retroalimentación’ ustedes, en este trabajo, para poder medirla después. Si dejan un término ambiguo, dos lectores entenderán cosas distintas y el método se les cae.”
+> “El marco conceptual es el diccionario de SU estudio: no la definición general de ‘retroalimentación’, sino cómo VAN A ENTENDER ‘retroalimentación’ ustedes, en este trabajo, para poder medirla después. Si dejan un término ambiguo, dos lectores entenderán cosas distintas y el método se les cae.”
 > “El marco contextual es el ‘dónde’ real: qué organización, qué aula, qué proceso, qué restricciones. Ojo: ‘en Colombia la IA crece’ NO es contexto, es titular de periódico. El contexto que sirve es el que el método va a necesitar.”
 
 #### 3️⃣ Modelación (~10 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
 > “Miren la tabla que armo en pantalla, en Google Docs. Cuatro columnas: Término | Definición teórica breve | Definición operativa (cómo la uso yo) | Por qué le importa a la pregunta. Lleno una fila de ejemplo con ‘retroalimentación’.”
-> “**Slide 4, recuerda:** el conceptual baja a tierra el teórico de la semana pasada, y el contextual fija el escenario —que en Proyecto I describimos, no intervenimos—.”
+> “**recuerda:** el conceptual baja a tierra el teórico de la semana pasada, y el contextual fija el escenario —que en Proyecto I describimos, no intervenimos—.”
 
 #### 4️⃣ Taller de definiciones y contexto (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veintidós minutos. Completen la tabla con cuatro a seis términos operativos y redacten una página de contexto: la organización, el aula o el proceso donde ocurre su fenómeno, con sus restricciones reales. Yo circulo. Criterio de éxito: los términos no deben admitir dos interpretaciones, y el contexto debe ser algo que el método pueda usar. Suban como `S06_ConceptualContextual_Apellidos`.”
+> “Veintidós minutos. Completen la tabla con cuatro a seis términos operativos y redacten una página de contexto: la organización, el aula o el proceso donde ocurre su fenómeno, con sus restricciones reales. Yo circulo. Criterio de éxito: los términos no deben admitir dos interpretaciones, y el contexto debe ser algo que el método pueda usar. Suban como `S06_ConceptualContextual_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -105,11 +118,11 @@ El marco conceptual **baja a tierra** el marco teórico (traduce constructos abs
 | Da contexto que no usará | “Si el método no lo necesita, recórtelo.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, terminen la tabla conceptual y el texto contextual, y guarden todo en el documento acumulativo. Suban el avance como `S06_ConceptualContextual_Apellidos`.”
-> “**Slide 7.** La próxima sesión cerramos el marco referencial con el marco legal —si aplica— y una clínica de citación APA 7. Pasamos a tutoría para afinar definiciones.”
+> “En autónomo, terminen la tabla conceptual y el texto contextual, y guarden todo en el documento acumulativo. Suban el avance como `S06_ConceptualContextual_Apellidos`.”
+> “La próxima sesión cerramos el marco referencial con el marco legal —si aplica— y una clínica de citación APA 7. Pasamos a tutoría para afinar definiciones.”
 
 
 
@@ -145,7 +158,7 @@ El marco conceptual **baja a tierra** el marco teórico (traduce constructos abs
 - [ ] PPTX `Clases/Sesion 06 - Marco conceptual y marco contextual/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

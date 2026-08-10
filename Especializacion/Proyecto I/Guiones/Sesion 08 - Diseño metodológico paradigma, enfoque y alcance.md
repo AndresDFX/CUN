@@ -9,21 +9,34 @@
 - **Sesión:** **08** · **Tema:** Diseño metodológico: paradigma, enfoque y alcance
 - **Detalle:** ESP329 U5 · Adelantar metodología antes de festivos de ACA3.
 - **PPTX estudiante:** `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 08 — Diseño metodológico: paradigma, enfoque y alcance |
+| **2** | Dos preguntas de IA que NO se pueden investigar igual |
+| **3** | Cuatro decisiones distintas que la gente confunde en una sola |
+| **4** | Los paradigmas, en el idioma del aula |
+| **5** | El enfoque se DERIVA de la pregunta: los verbos la delatan |
+| **6** | Cuantitativo · Cualitativo · Mixto, frente a frente |
+| **7** | El alcance: hasta dónde llega su estudio (Hernández-Sampieri) |
+| **8** | Enfoque y alcance no son lo mismo: la confusión que más se repite |
+| **9** | Diseños que se proponen con más frecuencia en proyectos de IA |
+| **10** | Ejemplo modelado: la misma idea, dos rutas distintas |
+| **11** | La matriz de coherencia: su herramienta de control |
+| **12** | Errores frecuentes en el capítulo metodológico |
+| **13** | Errores frecuentes en el capítulo metodológico (cont.) |
+| **14** | Paso a paso para redactar el capítulo metodológico |
+| **15** | TALLER · Su ficha metodológica (20 minutos) |
+| **16** | Checklist de autoevaluación antes de entregar |
+| **17** | Trabajo autónomo y qué viene después |
+| **18** | Cierre — Sesión 08 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Seleccionar** enfoque y alcance coherentes con la pregunta.
@@ -74,31 +87,31 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 ---
 
 #### 1️⃣ Encuadre (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 08**. Cerramos el marco referencial y hoy damos el salto al **diseño metodológico**. Adelantamos a propósito, porque las semanas de ACA3 tienen menos lunes por los festivos.”
-> “**Slide 2.** Hoy eligen el ‘cómo’ tentativo de su investigación: paradigma, enfoque y alcance. Insisto en ‘tentativo’ y en ‘propuesto’: hoy no aplicamos absolutamente nada.”
+> “Hoy eligen el ‘cómo’ tentativo de su investigación: paradigma, enfoque y alcance. Insisto en ‘tentativo’ y en ‘propuesto’: hoy no aplicamos absolutamente nada.”
 
 #### 2️⃣ Enfoque y alcance (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** El **enfoque** es cuantitativo, cualitativo o mixto, y NO se elige por gusto: se deriva de la pregunta. Si su pregunta busca magnitudes —‘en qué medida’, ‘cuánto’—, es cuantitativo. Si busca significados y experiencias —‘cómo viven’, ‘qué sentido le dan’—, es cualitativo. Si necesita ambas, mixto, pero justificado.”
+> “El **enfoque** es cuantitativo, cualitativo o mixto, y NO se elige por gusto: se deriva de la pregunta. Si su pregunta busca magnitudes —‘en qué medida’, ‘cuánto’—, es cuantitativo. Si busca significados y experiencias —‘cómo viven’, ‘qué sentido le dan’—, es cualitativo. Si necesita ambas, mixto, pero justificado.”
 > “El **alcance** es otro eje: exploratorio, descriptivo, correlacional o explicativo, siguiendo a Hernández-Sampieri, que es el texto guía. No confundan enfoque con alcance: son dos preguntas distintas sobre su método.”
 
 #### 3️⃣ Modelación de coherencia pregunta–método (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
 > “Armo en pantalla una matriz de coherencia, en Google Docs: Pregunta | Enfoque | Alcance | Técnica tentativa | Por qué es coherente. La lleno con una pregunta de ejemplo y les muestro cómo, si cambio la pregunta, cambia toda la fila.”
-> “**Slide 4, recuerda:** el diseño en Proyecto I se PROPONE; el instrumento no se aplica ni ‘para probar’. Esa frontera es lo que evalúo con más rigor.”
+> “**recuerda:** el diseño en Proyecto I se PROPONE; el instrumento no se aplica ni ‘para probar’. Esa frontera es lo que evalúo con más rigor.”
 
 #### 4️⃣ Taller: ficha metodológica (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Completen la matriz para SU proyecto: su pregunta, el enfoque que se deriva de ella, el alcance, la técnica tentativa y —la casilla más importante— por qué es coherente. Yo circulo por los equipos. Suban como `S08_DisenoMetodologico_Apellidos`.”
+> “Veinte minutos. Completen la matriz para SU proyecto: su pregunta, el enfoque que se deriva de ella, el alcance, la técnica tentativa y —la casilla más importante— por qué es coherente. Yo circulo por los equipos. Suban como `S08_DisenoMetodologico_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -108,11 +121,11 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 | Dice ‘mixto’ sin razón | “Justifique por qué necesita las dos rutas.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, dejen la ficha metodológica con la justificación de coherencia bien redactada. Suban `S08_DisenoMetodologico_Apellidos`.”
-> “**Slide 7.** La próxima sesión concretamos población, muestra y los instrumentos —siempre PROPUESTOS—. Pasamos a tutoría para validar la coherencia pregunta–enfoque de cada equipo.”
+> “En autónomo, dejen la ficha metodológica con la justificación de coherencia bien redactada. Suban `S08_DisenoMetodologico_Apellidos`.”
+> “La próxima sesión concretamos población, muestra y los instrumentos —siempre PROPUESTOS—. Pasamos a tutoría para validar la coherencia pregunta–enfoque de cada equipo.”
 
 
 
@@ -148,7 +161,7 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas de ACA3
 - [ ] PPTX `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

@@ -8,6 +8,7 @@
     "recepcion no viene en el Excel: se conserva la fecha operativa ya usada en el proyecto (típicamente ~8 días antes del cierre).",
     "Inicio operativo del semestre 2026 (pedido docente / clase AFI 10/08): 2026-08-10 en todos los cursos.",
     "Fechas de entrega ACA: cálculo regenerable en config/cursos/fechas_entrega_aca.py (no hardcodear en enunciados).",
+    "meet: enlace ÚNICO de Google Meet por curso para toda la serie. Fuente única — no hardcodear en builds; cadena vacía ⇒ el material muestra el placeholder [URL Meet …]. Resolutor: config/cursos/sesiones_cun.py → meet_url(course_key).",
     "Edita este archivo si cambia bloque/horario/grupo y regenera: python config/slides/build_all_course_presentations.py",
     "Carpetas de asignatura en Formato Oración (p. ej. Especializacion/Proyecto I, Pregrado/Creatividad y pensamiento innovador).",
     "Correo de bienvenida (interno · 2026/<grupo>/; nunca en Clases/): python config/slides/build_correo_bienvenida.py (también vía sync_clases_estudiantes.py)."
@@ -83,6 +84,7 @@
       "sede_portal": null,
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
+      "meet": "https://meet.google.com/omk-woqk-vsj",
       "periodos_nota": "26ES4",
       "bloque_portada": null,
       "horario": {
@@ -144,6 +146,7 @@
       "regional": "Regional Bogotá",
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
+      "meet": "",
       "periodos_nota": "26V04",
       "bloque_portada": "PRIMER BLOQUE",
       "horario": {
@@ -205,6 +208,7 @@
       "regional": "Regional Bogotá",
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
+      "meet": "",
       "periodos_nota": "26P03",
       "bloque_portada": "SEGUNDO BLOQUE",
       "horario": {
@@ -267,6 +271,7 @@
       "regional": "Regional Bogotá",
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
+      "meet": "",
       "periodos_nota": "26V04",
       "bloque_portada": "BLOQUE UNICO",
       "sin_syllabus": true,
@@ -329,6 +334,7 @@
       "regional": "Regional Bogotá",
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
+      "meet": "",
       "periodos_nota": "26P04 / 26V04",
       "bloque_portada": "BLOQUE UNICO",
       "horario": {

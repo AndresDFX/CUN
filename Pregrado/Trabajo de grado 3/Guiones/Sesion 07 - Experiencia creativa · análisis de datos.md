@@ -11,17 +11,34 @@
 - **PPTX estudiante:** `Clases/Sesion 07 - Experiencia creativa · análisis de datos/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 07 — EXPERIENCIA CREATIVA · ANÁLISIS DE DATOS |
+| **2** | El dato en bruto no dice nada; el hallazgo sí |
+| **3** | Dato, hallazgo y resultado no son lo mismo |
+| **4** | Cómo se convierte un dato en hallazgo: cuatro comparaciones |
+| **5** | Cómo se analiza según su enfoque |
+| **6** | Análisis cuantitativo: lo mínimo que necesita y sabe hacer |
+| **7** | Análisis cuantitativo: lo mínimo que necesita y sabe hacer (cont.) |
+| **8** | Análisis cualitativo: de las respuestas a las categorías |
+| **9** | Ejemplo modelado — el mismo número, de mudo a hablante |
+| **10** | Tabla de hallazgos — la herramienta del día |
+| **11** | La advertencia del día: el "data dump" |
+| **12** | La advertencia del día: el "data dump" (cont.) |
+| **13** | Errores frecuentes de esta sesión |
+| **14** | Errores frecuentes de esta sesión (cont.) |
+| **15** | Paso a paso — de los registros a la tabla de hallazgos |
+| **16** | Paso a paso — de los registros a la tabla de hallazgos (cont.) |
+| **17** | TALLER — Tabla de hallazgos y página de lectura |
+| **18** | TALLER — Tabla de hallazgos y página de lectura (cont.) |
+| **19** | Checklist de autoevaluación antes de subir a CDigital |
+| **20** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **21** | Para continuar — trabajo autónomo |
+| **22** | Cierre — Sesión 07 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Experiencia creativa · análisis de datos.
@@ -84,21 +101,21 @@ En pantalla, tomar un dato crudo ('42 minutos') y llevarlo por las tres etapas d
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 07. Ya tienen datos —o los están recogiendo—. Hoy aprendemos lo que separa un buen artículo de uno mediocre: convertir **datos en hallazgos**. Porque el dato en bruto no dice nada; el hallazgo sí.”
 
-> “**Slide 2 — OBJETIVOS.** Distinguir dato, hallazgo y resultado; analizar según el enfoque; y armar una **tabla de hallazgos** que conecte cada dato con un objetivo. Tengan a la mano lo que hayan recogido con su instrumento.”
+> “**OBJETIVOS.** Distinguir dato, hallazgo y resultado; analizar según el enfoque; y armar una **tabla de hallazgos** que conecte cada dato con un objetivo. Tengan a la mano lo que hayan recogido con su instrumento.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Tres palabras que muchos confunden. **Dato**: 'el despliegue tardó 42 minutos'. **Hallazgo**: 'eso casi duplica el estándar del equipo' —ahí ya interpreté—. **Resultado**: el hallazgo que **responde a un objetivo**. Si entregan datos y creen que entregaron resultados, les falta el paso del medio: interpretar.”
+> “**CONTENIDO CLAVE.** Tres palabras que muchos confunden. **Dato**: 'el despliegue tardó 42 minutos'. **Hallazgo**: 'eso casi duplica el estándar del equipo' —ahí ya interpreté—. **Resultado**: el hallazgo que **responde a un objetivo**. Si entregan datos y creen que entregaron resultados, les falta el paso del medio: interpretar.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** ¿Cómo se analiza? Si es cuantitativo: promedios, frecuencias, porcentajes, tablas —pero cada tabla con su **lectura en prosa**—. Si es cualitativo: codifican, agrupan en categorías y buscan patrones. Y si es obra-creación: describen las decisiones de diseño y qué aprendieron en cada iteración del prototipo.”
+> “**ENFOQUE DE HOY.** ¿Cómo se analiza? Si es cuantitativo: promedios, frecuencias, porcentajes, tablas —pero cada tabla con su **lectura en prosa**—. Si es cualitativo: codifican, agrupan en categorías y buscan patrones. Y si es obra-creación: describen las decisiones de diseño y qué aprendieron en cada iteración del prototipo.”
 
 > “La advertencia del día: el **'data dump'**. Pegar diez tablas sin leerlas no es análisis, es un volcado. Si una tabla no tiene una frase que la explique, sobra.”
 
@@ -116,11 +133,11 @@ En pantalla, tomar un dato crudo ('42 minutos') y llevarlo por las tres etapas d
 
 > **En pantalla:** Columnas: dato | hallazgo | vínculo a objetivo.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S07_AnalisisHallazgos_Apellido`: (1) armen una **tabla de hallazgos** con columnas *dato · hallazgo · objetivo que responde*, mínimo 3 filas; (2) escriban **una página de lectura** en prosa que interprete esos hallazgos —qué se ve y qué significa—. Nada de tablas mudas.”
+> “**TALLER.** ~20 minutos. En `S07_AnalisisHallazgos_Apellido`: (1) armen una **tabla de hallazgos** con columnas *dato · hallazgo · objetivo que responde*, mínimo 3 filas; (2) escriban **una página de lectura** en prosa que interprete esos hallazgos —qué se ve y qué significa—. Nada de tablas mudas.”
 
 > “Criterio de éxito: cada dato tiene su interpretación y se amarra a un objetivo; si leo su página, entiendo qué encontró sin ver las tablas.”
 
@@ -137,15 +154,15 @@ En pantalla, tomar un dato crudo ('42 minutos') y llevarlo por las tres etapas d
 > **En pantalla:** Preparar citas para la discusión (próximas sesiones).
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) dato, hallazgo y resultado no son lo mismo —la clave es interpretar—; (2) cada tabla lleva su lectura; (3) todo hallazgo se amarra a un objetivo.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S07_AnalisisHallazgos_Apellido` a CDigital. Estos hallazgos son la materia prima de la discusión. La próxima sesión cerramos la **Fase III de referentes y el marco teórico** para poder discutir con autores.”
+> “**PARA CONTINUAR.** Suban `S07_AnalisisHallazgos_Apellido` a CDigital. Estos hallazgos son la materia prima de la discusión. La próxima sesión cerramos la **Fase III de referentes y el marco teórico** para poder discutir con autores.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

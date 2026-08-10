@@ -30,6 +30,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from cun_slides_engine import *  # noqa: F401,F403
 from sesiones_cun import (  # noqa: E402
     COURSES as SESIONES_COURSES,
+    meet_url as _meet_url,
     subject_encuentro,
     tema_por_fecha as _tema_por_fecha_catalogo,
 )
@@ -37,10 +38,11 @@ from carga_academica import (  # noqa: E402
     bold_var,
     cover_meta_lines,
     docente as _docente_pair,
-    footer_inicio_efectivo,
     pregrado_build_dict,
 )
-from fechas_entrega_aca import blocks_para_slide, blocks_tg3_slide  # noqa: E402
+from fechas_entrega_aca import (  # noqa: E402
+    blocks_para_slide, blocks_tg3_slide, entrega_por_id, fmt_entrega,
+)
 
 # Ruta derivada del propio archivo (config/slides/ → ../../Pregrado). Antes estaba
 # hardcodeada como «G:\Mi unidad\…», que rompe cuando Google Drive monta la unidad
@@ -57,13 +59,30 @@ URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 DIAS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
 
 
+# Colombia no tiene horario de verano: un solo componente STANDARD en UTC-5.
+# RFC 5545 exige VTIMEZONE cuando los eventos usan `TZID=`; sin él, algunos clientes
+# (no Google) desplazan la hora del encuentro.
+VTIMEZONE_BOGOTA = [
+    "BEGIN:VTIMEZONE",
+    "TZID:America/Bogota",
+    "BEGIN:STANDARD",
+    "DTSTART:19930404T000000",
+    "TZOFFSETFROM:-0500",
+    "TZOFFSETTO:-0500",
+    "TZNAME:-05",
+    "END:STANDARD",
+    "END:VTIMEZONE",
+]
+
+
 def tema_por_fecha(course_key: str) -> dict[str, dict]:
     """Mapa dd/mm/YYYY → sesión de sesiones_cun (si existe)."""
     return _tema_por_fecha_catalogo(course_key)
 
 
-def _meet_ph(titulo_corto: str) -> str:
-    return f"[URL Meet — mismo enlace toda la serie · {titulo_corto}]"
+def _meet(course_key: str, titulo_corto: str) -> str:
+    """Enlace real del Meet (carga_academica_2026.json → cursos.<key>.meet) o placeholder."""
+    return _meet_url(course_key, titulo_corto)
 
 
 def add_eval_scope_pregrado(prs, idx: int, regimen: str) -> int:
@@ -90,7 +109,7 @@ def add_eval_scope_pregrado(prs, idx: int, regimen: str) -> int:
     return idx + 1
 
 
-def recursos_items(titulo_corto: str, *extra: str) -> list[str]:
+def recursos_items(course_key: str, titulo_corto: str, *extra: str) -> list[str]:
     """Bullets de la slide RECURSOS (links concretos + placeholders claros).
 
     Placeholders de oferta (CDigital / Meet) en negrita. Sin nombre propio del docente.
@@ -98,7 +117,7 @@ def recursos_items(titulo_corto: str, *extra: str) -> list[str]:
     items = [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
-        f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet_ph(titulo_corto))}",
+        f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet(course_key, titulo_corto))}",
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
@@ -209,14 +228,14 @@ def build_investigacion(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Recursos/ACAs/.",
+        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Clases/Recursos/ACAs/. Fechas fijadas por el Docente, siempre en el día de clase (jue).",
         sub=f"Periodo {bold_var('26P03')} · inicio {bold_var('10/08/2026')} · cierre {bold_var('20/09/2026')}",
         idx=_i,
     )
     _i += 1
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** "
+        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** · "
         "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
@@ -226,6 +245,7 @@ def build_investigacion(out: Path):
     ], idx=_i)
     _i += 1
     content_slide(prs, "RECURSOS", recursos_items(
+        "investigacion",
         "Investigación C&T",
         "**Bases de datos:** biblioteca CUN (EBSCO, SciELO, Redalyc, Latindex) + citas en la nube (ZoteroBib / Google Docs).",
         "**Entregas y notas oficiales:** solo por CDigital del curso.",
@@ -273,14 +293,14 @@ def build_creatividad(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTES (ART. 52)",
         blocks,
-        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Enunciados: Clases/Recursos/ACAs/. Fechas = día de clase (mié).",
+        note="Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%. Cada ACA evalúa el corte completo (no hay subdivisión en varios EV). Enunciados: Clases/Recursos/ACAs/. Fechas fijadas por el Docente, siempre en el día de clase (mié).",
         sub=f"Periodo {bold_var('26V04')} · inicio {bold_var('10/08/2026')} · cierre {bold_var('27/09/2026')}",
         idx=_i,
     )
     _i += 1
     _i = add_eval_scope_pregrado(
         prs, _i,
-        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** "
+        "**Régimen:** Art. 52 del Reglamento Estudiantil · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%** · "
         "Cada ACA evalúa el **100% de su corte**: ACA 1 = Corte 1, ACA 2 = Corte 2, ACA 3 = Corte 3.",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
@@ -290,6 +310,7 @@ def build_creatividad(out: Path):
     ], idx=_i)
     _i += 1
     content_slide(prs, "RECURSOS", recursos_items(
+        "creatividad",
         "Creatividad",
         "**Herramientas típicas:** Design Thinking, Canvas, Journey Map, MVP, vigilancia tecnológica.",
         "**Entregas y notas oficiales:** solo por CDigital del curso.",
@@ -365,6 +386,7 @@ def build_tg2(out: Path):
     ], idx=_i)
     _i += 1
     content_slide(prs, "RECURSOS", recursos_items(
+        "tg2",
         "Trabajo de Grado 2",
         "**Siguiente eslabón:** Trabajo de Grado 3 (sustentación ante jurados + repositorio).",
         "**Entregas y notas oficiales:** solo por CDigital del curso.",
@@ -410,10 +432,17 @@ def build_tg3(out: Path):
     fechas_inicio_fin_slide(
         prs, "EVALUACIÓN — CORTE ÚNICO 100%",
         blocks,
+        # OJO: `blocks_tg3_slide()` trae las fechas de UN solo grupo (54466). El EXAM
+        # difiere por grupo, así que la nota lo desglosa explícitamente. Antes decía
+        # "grupo 54450: 15/11 (EXAM anticipado)", pero 15/11 y 22/11 son los cierres de
+        # NOTAS del curso, no entregas: un estudiante de 54450 podía creer que su EXAM
+        # era el 15/11 cuando vence el 03/11. Corregido 2026-08-10.
         note=(
-            "EV05 50% + EXAM 50%. Enunciados: Clases/Recursos/ACAs/. "
-            f"Cierre grupos 54466/54467: {bold_var('22/11/2026')}; "
-            f"grupo 54450: {bold_var('15/11/2026')} (EXAM anticipado)."
+            "EV05 50% + EXAM 50%. Enunciados: Recursos/ACAs/. "
+            f"**EXAM por grupo** — 54450: {bold_var(fmt_entrega(entrega_por_id('tg3', 'exam', '54450').entrega, largo=False))} · "
+            f"54466 y 54467: {bold_var(fmt_entrega(entrega_por_id('tg3', 'exam', '54466').entrega, largo=False))}. "
+            f"(El cierre de notas del curso es posterior: 54450 {bold_var('15/11/2026')}, "
+            f"54466/54467 {bold_var('22/11/2026')}.)"
         ),
         sub=f"Art. 52 · inicio {bold_var('10/08/2026')} · día de clase mar",
         idx=_i,
@@ -434,6 +463,7 @@ def build_tg3(out: Path):
     ], idx=_i)
     _i += 1
     content_slide(prs, "RECURSOS", recursos_items(
+        "tg3",
         "Trabajo de Grado 3",
         "**Repositorio:** carga institucional del trabajo de grado al finalizar la sustentación.",
         "**Entregas y notas oficiales:** solo por CDigital del curso.",
@@ -463,7 +493,7 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
     temas = tema_por_fecha(course_key)
     g_lbl = groups_label(groups_for_event)
     g_file = groups_label(groups_for_event, for_filename=True)
-    meet = _meet_ph(course["titulo_corto"])
+    meet = _meet(course_key, course["titulo_corto"])
 
     rows = []
     ics_events = []
@@ -552,6 +582,9 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
 
     stem = f"Encuentros {course['titulo_corto']} - {g_file}"
     csv_path = out_dir / f"{stem} - Importar a Calendar.csv"
+    # Drive puede dejar la carpeta del grupo sin crear (ya pasó 2 veces): sin este mkdir el
+    # build revienta a mitad, después de haber escrito los PPTX.
+    out_dir.mkdir(parents=True, exist_ok=True)
     with csv_path.open("w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else [
             "Subject", "Start Date", "Start Time", "End Date", "End Time",
@@ -566,6 +599,9 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
             "BEGIN:VCALENDAR", "VERSION:2.0",
             "PRODID:-//CUN//Pregrado Encuentros//ES",
             "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+            f"X-WR-CALNAME:{course['titulo_corto']} {g_lbl} Encuentros",
+            "X-WR-TIMEZONE:America/Bogota",
+            *VTIMEZONE_BOGOTA,
             *ics_events, "END:VCALENDAR",
         ]) + "\r\n",
         encoding="utf-8",
@@ -666,12 +702,17 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
         f"**Eventos en plantilla (hasta {end.strftime('%d/%m/%Y')}):** {len(sessions)} · "
         f"**Entradas en catálogo de temas:** {n_temas}",
         "",
-        "| # | Fecha | Tipo | Tema (Syllabus / plan) |",
-        "|---|---|---|---|",
+        "> **Evento** = fila del CSV/ICS (incluye las clases autónomas por festivo). "
+        "**Sesión** = numeración del catálogo, la que usan el guion, el `.pptx` y el Subject "
+        "de Calendar. En cursos con festivos los dos números NO coinciden.",
+        "",
+        "| Evento | Sesión | Fecha | Tipo | Tema (Syllabus / plan) |",
+        "|---|---|---|---|---|",
     ]
     for i, d in enumerate(sessions, 1):
         fecha_txt = d.strftime("%d/%m/%Y")
         ses = temas.get(fecha_txt)
+        n_ses = f"**{ses['n']:02d}**" if ses and ses.get("n") else "—"
         if is_festivo(d):
             tipo = f"Autónoma ({FESTIVOS_2026[d]})"
             tema_txt = (
@@ -684,7 +725,15 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
                 f"{ses.get('bloque', '')}: {ses['titulo']}".strip(": ")
                 if ses else "Encuentro sincrónico (ver Manual / Syllabus)"
             )
-        lines.append(f"| {i} | {fecha_txt} ({DIAS[d.weekday()]}) | {tipo} | {tema_txt} |")
+        lines.append(
+            f"| {i} | {n_ses} | {fecha_txt} ({DIAS[d.weekday()]}) | {tipo} | {tema_txt} |"
+        )
+        # La unidad que pasó a lectura autónoma vive en el catálogo y solo la documentaba
+        # Proyecto I; sin esta fila el calendario deja «desaparecidas» U1–U2.
+        if ses and ses.get("unidad_diferida"):
+            lines.append(
+                f"| — | — | (misma semana) | ⚠️ Lectura autónoma | {ses['unidad_diferida']} |"
+            )
 
     if syllabus.get("unidades_syllabus"):
         lines += ["", "## Unidades del Syllabus (completas — no se eliminan)", ""]

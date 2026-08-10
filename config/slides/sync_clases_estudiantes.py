@@ -25,7 +25,7 @@ from sesiones_cun import (
     DOCENTE_CORREO,
     LINK_TUTORIAS,
     MSG_TUTORIAS_POR_GRUPO,
-    meet_placeholder,
+    meet_url,
 )
 from cun_slides_engine import PADLET_PRESENTACION_URL
 from guion_md_a_docx import convert as md_to_docx
@@ -102,7 +102,7 @@ def remove_if_exists(path: str) -> None:
 def leeme_md(key: str) -> str:
     c = COURSES[key]
     pptx_curso = PRESENTACION_CURSO[key]
-    meet = meet_placeholder(c["titulo"])
+    meet = meet_url(key, c["titulo"])
     aca_rows = catalog_for_leeme(key)
     aca_table = "\n".join(
         f"| **{r['code']}** — {r['title']} | **{r['fecha']}** | `{r['rel']}` |"
@@ -155,7 +155,8 @@ Guiones, manuales y calendarios con datos internos **no** van aquí.
 
 1. Este **LEEME** — mapa de la carpeta y listado de ACAs.
 2. **Presentación del Curso** — encuadre, el Docente, rompehielos Padlet y acuerdos.
-3. **`Recursos/ACAs/`** — enunciados de las entregas evaluadas.
+3. **`Sesion 01 - …/`** — además del deck, trae la **lectura autónoma** de la semana en PDF y el archivo `Lectura autonoma - Sesion 01.txt` con la cita, el enlace y **qué traer a la Sesión 02**. La Sesión 01 es de **encuadre**: no se dicta tema, el contenido arranca en la Sesión 02.
+4. **`Recursos/ACAs/`** — enunciados de las entregas evaluadas.
 
 La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo electrónico** del Docente; no forma parte de esta carpeta compartida.
 
@@ -195,13 +196,15 @@ Clases/
       ACA N - ….docx{arbol_instrumentos}
   Sesion 01 - …/
     Presentacion.pptx
+    Lectura autonoma - Sesion 01.txt       ← qué leer, para cuándo y dónde está
+    Lectura … .pdf                          ← la(s) lectura(s), en acceso abierto
     (fichas / capturas de apoyo si aplica)
   Sesion 02 - …/
   …
 ```
 
 1. **Presentación del Curso** — bienvenida, el Docente, rompehielos Padlet (slide Preséntate), contenido, recursos y acuerdos. La **Sesión 01** de encuadre usa este deck para el Preséntate.
-2. **`Sesion NN - <tema>/`** — diapositivas de esa clase (`Presentacion.pptx`) y, si hay, plantillas o capturas de apoyo para el taller.
+2. **`Sesion NN - <tema>/`** — diapositivas de esa clase (`Presentacion.pptx`) y, si hay, plantillas o capturas de apoyo para el taller. En **`Sesion 01 - …/`** están además la **lectura autónoma** (PDF de acceso abierto) y el `.txt` que dice qué leer, cuánto tarda y qué traer a la Sesión 02: **no hay que buscarla en ningún otro lado**.
 3. **`Recursos/`** — plantilla APA + carpeta **`ACAs/`** con los enunciados. No busques estos archivos fuera de `Clases/`.
 
 ---

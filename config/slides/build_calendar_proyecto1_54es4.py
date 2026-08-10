@@ -3,7 +3,8 @@
 
 Subject corto: «54ES4 - Proyecto I - Sesion NN» (helper subject_encuentro).
 Description: 2–4 líneas (sin políticas ni placeholders largos).
-Location: vacío mientras no haya Meet real.
+Location: enlace único de Meet de la serie, leído de
+`carga_academica_2026.json → cursos.proyecto1.meet` (vacío ⇒ sin sala todavía).
 
 Invitados en Google Calendar: la importación .ics/.csv **no** mete Guests
 (limitación de Google). Flujo que sí funciona → Apps Script generado aquí
@@ -36,16 +37,38 @@ from sesiones_cun import (  # noqa: E402
     LINK_TUTORIAS,
     subject_encuentro,
 )
+from carga_academica import (  # noqa: E402
+    _parse_date as _pdate,
+    curso as _carga_curso,
+    fmt_dmy as _fmt_dmy,
+)
 
 GRUPO = Path(
     _WS / "Especializacion" / "Proyecto I" / "2026" / "54ES4"
 )
 GROUPS = ["54ES4"]
 COURSE_KEY = "proyecto1"
-# Enlace ÚNICO de Meet para toda la serie del periodo (lo confirmó el docente 2026-08-10).
-# Va en Location de los eventos y en el .gs; si algún periodo aún no tiene sala, se deja "" y
-# el material vuelve a mostrar placeholder (no inventar una URL).
-LOCATION = "https://meet.google.com/omk-woqk-vsj"
+# Enlace ÚNICO de Meet para toda la serie del periodo. FUENTE ÚNICA:
+# carga_academica_2026.json → cursos.proyecto1.meet (así el mismo enlace llega también a la
+# Presentación del Curso, al LEEME, a los guiones y al CSV de hitos). Si el periodo aún no
+# tiene sala, el campo queda "" y el material vuelve a mostrar placeholder (no inventar URL).
+LOCATION = (_carga_curso(COURSE_KEY).get("meet") or "").strip()
+
+
+# Colombia no tiene horario de verano: un solo componente STANDARD en UTC-5.
+# RFC 5545 exige VTIMEZONE cuando los eventos usan `TZID=`; sin él, algunos clientes
+# (no Google) desplazan la hora del encuentro.
+VTIMEZONE_BOGOTA = [
+    "BEGIN:VTIMEZONE",
+    "TZID:America/Bogota",
+    "BEGIN:STANDARD",
+    "DTSTART:19930404T000000",
+    "TZOFFSETFROM:-0500",
+    "TZOFFSETTO:-0500",
+    "TZNAME:-05",
+    "END:STANDARD",
+    "END:VTIMEZONE",
+]
 
 
 def _cn_from_email(em: str) -> str:
@@ -125,6 +148,46 @@ def build_calendar_payload(grupo: Path | None = None) -> dict:
         "send_updates": "none",
         "events": events,
     }
+
+
+def _sync_txt_grupo() -> None:
+    """Refresca los datos volátiles de `Fechas.txt` e `Informacion.txt` desde config.
+
+    Estos dos archivos no tenían generador: quedaron con «Fecha de inicio: 03/08/2026» y
+    con el Meet en placeholder mucho después de que la config dijera otra cosa. Aquí solo
+    se reescriben las líneas de dato (no el texto explicativo), así que es idempotente.
+    """
+    c = _carga_curso(COURSE_KEY)
+    campos = {
+        "Fecha de inicio:": _fmt_dmy(_pdate(c["inicio"])),
+        "Fecha máxima para recepción de trabajos:": _fmt_dmy(_pdate(c["recepcion"])),
+        "Recepción de trabajos:": _fmt_dmy(_pdate(c["recepcion"])),
+        "Fecha de cierre:": _fmt_dmy(_pdate(c["cierre"])),
+    }
+    for nombre in ("Fechas.txt", "Informacion.txt"):
+        path = GRUPO / nombre
+        if not path.is_file():
+            continue
+        out = []
+        for linea in path.read_text(encoding="utf-8").split("\n"):
+            limpio = linea.strip()
+            for clave, valor in campos.items():
+                if limpio.startswith(clave):
+                    resto = limpio[len(clave):].strip()
+                    cola = ""
+                    if "(" in resto:
+                        cola = " " + resto[resto.index("("):]
+                    linea = f"{clave} {valor}{cola}"
+                    break
+            else:
+                if limpio.startswith("- Un solo enlace para toda la serie:"):
+                    linea = (
+                        "  - Un solo enlace para toda la serie: "
+                        + (LOCATION or "[URL Meet — pendiente]")
+                    )
+            out.append(linea)
+        path.write_text("\n".join(out), encoding="utf-8")
+        print("OK sync", path.name)
 
 
 def _write_apps_script(gs_path: Path, guests: list[str], events: list[dict]) -> None:
@@ -338,11 +401,14 @@ def main() -> None:
             "METHOD:PUBLISH",
             "X-WR-CALNAME:Proyecto I 54ES4 Encuentros",
             "X-WR-TIMEZONE:America/Bogota",
+            *VTIMEZONE_BOGOTA,
             *ics_events,
             "END:VCALENDAR",
         ]) + "\r\n",
         encoding="utf-8",
     )
+
+    _sync_txt_grupo()
 
     gs_path = grupo / "Crear encuentros con invitados.gs"
     _write_apps_script(gs_path, guests, events)

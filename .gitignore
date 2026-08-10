@@ -2,9 +2,11 @@
 __pycache__/
 *.py[cod]
 
-# Secretos OAuth de Calendar API (ver config/slides/secrets/README.md)
-config/slides/secrets/credentials.json
-config/slides/secrets/token*.json
+# Secretos OAuth de Calendar API (ver config/slides/_secrets/README.md)
+# Carpeta con guion bajo a propósito: `secrets` es un módulo de la stdlib y
+# config/slides/ va en sys.path[0] de todos los builds.
+config/slides/_secrets/credentials.json
+config/slides/_secrets/token*.json
 
 # Temporales de sistema / Google Drive
 .DS_Store

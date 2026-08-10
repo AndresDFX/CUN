@@ -1,8 +1,12 @@
 Asignatura: PROYECTO I
 Programa: ESPECIALIZACIÓN EN INTELIGENCIA ARTIFICIAL
 Grupo: 54ES4   |   Periodo: 26ES4   |   Código: ESP329
-Horario: Lunes, elegir entre 19:00-21:00 h o 20:00-22:00 h (se sugiere 20:00-22:00 h)
+Horario: Lunes, 8:00 pm – 10:00 pm (2 horas) — confirmado (franja AFI 19:00-22:00 h)
 
-Fecha de inicio: 03/08/2026
+Fecha de inicio: 10/08/2026 (inicio operativo del semestre 2026, pedido docente / clase AFI)
 Fecha máxima para recepción de trabajos: 14/11/2026
 Fecha de cierre: 22/11/2026
+
+Fuente de estos datos: config/cursos/carga_academica_2026.json (cursos.proyecto1).
+Si cambian ahí, se actualizan aquí al correr:
+  python config/slides/build_calendar_proyecto1_54es4.py

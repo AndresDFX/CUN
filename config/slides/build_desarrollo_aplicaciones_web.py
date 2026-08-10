@@ -28,7 +28,7 @@ def diag(diag_id):
     p = os.path.join(DIAG_DIR, diag_id + ".png")
     return p if os.path.exists(p) else None
 
-BASE = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Web\Clases\Version vigente (nuevo dictado 2026)"
+BASE = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Web\Clases\Version vigente (nuevo dictado 2026)"
 CURSO = "Desarrollo de Aplicaciones Web"
 PROGRAMA = "Ingeniería de Sistemas"
 EXAMLAB = "https://examlab.lovable.app/app"

@@ -35,7 +35,12 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 
 from sesiones_cun import COURSES, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO  # noqa: E402
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
-from fechas_entrega_aca import REGLA_OFICIAL_P1, REGLA_RESUMEN, texto_fecha_curso  # noqa: E402
+from fechas_entrega_aca import (  # noqa: E402
+    REGLA_OFICIAL_P1,
+    REGLA_RESUMEN,
+    REGLA_VENTANAS_DOCENTE,
+    texto_fecha_curso,
+)
 from carga_academica import curso as carga_curso  # noqa: E402
 
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
@@ -139,16 +144,19 @@ def _tools_block(*extra: str) -> str:
 """
 
 
-def _footer_sesiones(relacion: str, *, oficial: bool = False) -> str:
+def _footer_sesiones(relacion: str, *, regla: str | None = None) -> str:
     """Cierre del enunciado.
 
-    `oficial=True` para las ACAs de **Proyecto I**: sus ventanas NO se calculan,
-    las fija Coordinación en el cronograma AFI (ver CRONOGRAMA_OFICIAL_P1). Decir
-    ahí "cálculo regenerable" sería falso para el estudiante.
+    `regla` = de dónde salen REALMENTE las fechas de este curso, para no decirle
+    al estudiante que se «calculan» cuando no es así:
+      · Proyecto I            → REGLA_OFICIAL_P1 (cronograma de Coordinación).
+      · Creatividad / Invest. → REGLA_VENTANAS_DOCENTE (tabla fijada por el Docente).
+      · TG2 / TG3             → None ⇒ cálculo regenerable por pesos (único caso en
+                                que la frase «cálculo regenerable» es cierta).
     """
     nota = (
-        f"> Fechas de este enunciado: {REGLA_OFICIAL_P1}"
-        if oficial
+        f"> Fechas de este enunciado: {regla}"
+        if regla
         else f"> Fechas de este enunciado: cálculo regenerable (`config/cursos/fechas_entrega_aca.py`) · {REGLA_RESUMEN}"
     )
     return f"""## 7. Relación con sesiones
@@ -226,7 +234,7 @@ Trabajo **por equipo** (máx. 3 integrantes, según AFI). Un solo integrante sub
     f"Formulario de asistencia a tutorías (estudiante): {LINK_TUTORIAS}",
     MSG_TUTORIAS_POR_GRUPO,
 )}
-{_footer_sesiones("Se construye tras **Sesiones 01–03** (fundamentos → problema/pregunta → objetivos/justificación/alcances). Cierre de avance ACA 1 según ventana en CDigital.", oficial=True)}
+{_footer_sesiones("Se construye tras la **Sesión 02** (problema y pregunta de investigación): es la última sesión sincrónica antes del cierre. La **Sesión 01** es de encuadre y la unidad de fundamentos va como lectura autónoma. Objetivos, justificación y alcances se trabajan en la **tutoría acordada de esa semana**; la **Sesión 03** (31/08) los amplía ya después del cierre del 30/08. Cierre de avance ACA 1 según ventana en CDigital.", regla=REGLA_OFICIAL_P1)}
 """
 
     a2 = h + f"""## 1. Título / código
@@ -263,7 +271,7 @@ Construir el **marco referencial** del anteproyecto (ESP329 U4): antecedentes, m
 - [ ] Coherencia con pregunta y objetivos  
 
 {_tools_block("ZoteroBib / Google Docs para citas", "Biblioteca virtual CUN + Scholar / SciELO / Redalyc")}
-{_footer_sesiones("Se desarrolla en **Sesiones 04–07** (retro ACA1 · antecedentes · teórico · conceptual/contextual · legal/APA).", oficial=True)}
+{_footer_sesiones("Se desarrolla en **Sesiones 04–07** (retro ACA1 · antecedentes · teórico · conceptual/contextual · legal/APA).", regla=REGLA_OFICIAL_P1)}
 """
 
     a3 = h + f"""## 1. Título / código
@@ -306,7 +314,7 @@ Integrar el **anteproyecto completo** (ESP329 U5–U7): metodología **diseñada
     "Puente metodológico en **Sesión 08**; desarrollo ACA 3 en **Sesiones 09–10**; "
     "integración/cierre en **Sesión 11**. Usa tutorías acordadas en la semana con el Docente: "
     "hay pocas sesiones sincrónicas en esta fase.",
-    oficial=True,
+    regla=REGLA_OFICIAL_P1,
 )}
 """
 
@@ -485,7 +493,7 @@ Aplicar fundamentos del método científico, ubicar el tema en una de las **6 l�
 - [ ] Cumplimiento de talleres/quices del corte en CDigital  
 
 {_tools_block("Padlet solo para rompehielos de presentación — no sustituye esta entrega")}
-{_footer_sesiones("Tras **Sesiones 01–04** (syllabus · método científico · MinCiencias/líneas · prueba parcial / 1.er avance).")}
+{_footer_sesiones("Tras **Sesiones 02–03** (MinCiencias y las 6 líneas de Ingeniería · prueba parcial y 1.er avance del artículo). La **Sesión 01** es de encuadre: las unidades U1–U2 (Syllabus y producto final · fundamentos del método científico) van como lectura autónoma.", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     c2 = h + f"""## 1. Título / código
@@ -519,7 +527,7 @@ Identificar el problema, formular la pregunta y redactar el **planteamiento del 
 - [ ] Citas APA / integridad  
 
 {_tools_block()}
-{_footer_sesiones("Tras **Sesiones 05–06** (identificación de problemas/pregunta · formulación del planteamiento).")}
+{_footer_sesiones("Tras la **Sesión 04** (identificación de problemas y pregunta de investigación), última sesión antes del cierre de este corte.", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     c3 = h + f"""## 1. Título / código
@@ -554,7 +562,7 @@ Usar bases de datos / gestores de citas y avanzar el **marco teórico / revisió
 - [ ] Entrega completa en CDigital  
 
 {_tools_block("ZoteroBib (zbib.org)", "Biblioteca virtual CUN (login institucional)")}
-{_footer_sesiones("Tras **Sesión 07** (bases CUN · gestores · marco/revisión; en periodo corto concentra U8+U10–12).")}
+{_footer_sesiones("Tras la **Sesión 05** (formulación del planteamiento del problema). La **Sesión 06** (bases de datos CUN · gestores de citas · marco teórico y revisión, que concentra U8+U10–12 por periodo corto) es **posterior** al cierre de este corte: sirve de refuerzo, no es requisito de la entrega.", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     return [
@@ -612,7 +620,7 @@ Identificar habilidades de creatividad/inteligencia emocional y formular el **pu
 - [ ] Claridad y entrega a tiempo en CDigital  
 
 {_tools_block("Excalidraw / tldraw / Miro free", "Google Docs")}
-{_footer_sesiones("Tras **Sesiones 01–03** (intro/propuesta · IE/creatividad · Design Thinking y técnicas).")}
+{_footer_sesiones("Tras **Sesiones 02–03** (Design Thinking y técnicas de ideación · gestión de la innovación / Manual de Oslo). La **Sesión 01** es de encuadre: las unidades U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) van como lectura autónoma.", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     c2 = h + f"""## 1. Título / código
@@ -646,7 +654,7 @@ Clasificar y gestionar la innovación (Manual de Oslo/OCDE), tipificar la propue
 - [ ] Mejora respecto al Corte 1  
 
 {_tools_block("Canvanizer (BMC)", "Excalidraw", "Google Docs / Slides")}
-{_footer_sesiones("Tras **Sesiones 04–06** (Oslo · tipos · análisis de negocios / validación).")}
+{_footer_sesiones("Tras **Sesiones 04–05** (tipos de innovación · análisis de negocios y validación de la propuesta).", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     c3 = h + f"""## 1. Título / código
@@ -680,7 +688,7 @@ Consolidar la **Propuesta de Innovación** con vigilancia tecnológica y articul
 - [ ] Integridad y calidad de presentación  
 
 {_tools_block("Google Scholar / Patents (web)", "Canva free (opcional)", "Google Docs / Slides")}
-{_footer_sesiones("Tras **Sesiones 07–08** (vigilancia tecnológica · innovación local–internacional / entidades de apoyo).")}
+{_footer_sesiones("Tras la **Sesión 06** (vigilancia tecnológica), última sesión antes del cierre. La **Sesión 07** (innovación local–internacional · entidades de apoyo) es el cierre del curso y va **después** de la recepción.", regla=REGLA_VENTANAS_DOCENTE)}
 """
 
     return [
@@ -740,7 +748,7 @@ Retomar el proyecto de semestres anteriores, delimitar/reformular tema y problem
 - [ ] Integridad académica  
 
 {_tools_block()}
-{_footer_sesiones("Tras **Sesiones 01–04** (acuerdo · delimitación · pregunta/objetivos · estructura del documento).")}
+{_footer_sesiones("Tras **Sesiones 02–04** (pregunta, objetivos y título provisional · estructura del documento / artículo de avance · antecedentes y referentes). La **Sesión 01** es de encuadre — allí se firma el acuerdo pedagógico — y la delimitación/reformulación del tema va como lectura autónoma.")}
 """
 
     c2 = h + f"""## 1. Título / código
@@ -774,7 +782,7 @@ Consolidar antecedentes y marcos (teórico, conceptual, contextual) del avance d
 - [ ] Coherencia global  
 
 {_tools_block("ZoteroBib", "Biblioteca CUN / Scholar")}
-{_footer_sesiones("Tras **Sesiones 05–07** (antecedentes · marco teórico · conceptual/contextual).")}
+{_footer_sesiones("Tras **Sesiones 05–08** (marco teórico · marco conceptual y contextual · diseño metodológico propuesto · instrumentos y plan de análisis).")}
 """
 
     c3 = h + f"""## 1. Título / código
@@ -808,7 +816,7 @@ Avanzar el diseño metodológico (propuesto), instrumentos/plan de análisis e i
 - [ ] Integridad académica  
 
 {_tools_block()}
-{_footer_sesiones("Tras **Sesiones 08–12** (metodología · instrumentos · integración · socialización · cierre hacia TG3).")}
+{_footer_sesiones("Tras **Sesiones 09–11** (integración del avance y correcciones · socialización de avances · cierre del avance y preparación para TG3).")}
 """
 
     return [
@@ -873,7 +881,7 @@ Desarrollar y consolidar el **artículo resultado de investigación** (o investi
     "Google Docs",
     "Herramienta antiplagio institucional (ruta oficial del semestre en CDigital — no inventar URL)",
 )}
-{_footer_sesiones("Proceso a lo largo de **Sesiones 01–12** (hasta póster/antiplagio). Los hitos parciales los define el Docente dentro de EV05.")}
+{_footer_sesiones("Proceso a lo largo de **Sesiones 02–11** (del artículo hasta el póster y la verificación de similitud; la **Sesión 01** es de encuadre y U1–U2 van como lectura autónoma). Los hitos parciales los define el Docente dentro de EV05.")}
 """
 
     exam = h + f"""## 1. Título / código
@@ -910,7 +918,7 @@ Sustentar oralmente el trabajo de grado ante pares/jurados asignados por la Dire
     "Google Slides / Canva free (póster)",
     "CDigital / repositorio institucional",
 )}
-{_footer_sesiones("**Sesión 13** = sustentación · **Sesión 14** = repositorio · buffers posteriores solo si el calendario del grupo lo contempla.")}
+{_footer_sesiones("**Sesión 12** = sustentación ante jurados · **Sesión 13** = entregables para repositorio institucional · **Sesiones 14–15** son buffer de calendario, solo si el calendario del grupo las contempla (el grupo 54450 no tiene la Sesión 15).")}
 """
 
     return [

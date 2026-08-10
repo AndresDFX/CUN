@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
 """Fechas de entrega ACA — cálculo regenerable (los 5 cursos CUN).
 
-Regla (documentada · usada por build_acas / hitos / Presentaciones / Manuales):
+IMPORTANTE — solo **TG2 y TG3** se calculan con la regla de pesos de abajo.
+Los otros tres cursos usan tablas explícitas y NO se recalculan:
+  · Proyecto I              → CRONOGRAMA_OFICIAL_P1 (Coordinación / cronograma AFI).
+  · Creatividad e Investig. → VENTANAS_DOCENTE (fijadas por el Docente 2026-08-10).
+Cada entrega lleva su origen en ``EntregaAca.regla``; los textos al estudiante y a los
+manuales deben citar ESE campo, no la regla de pesos por defecto.
+
+Regla de cálculo (aplica a TG2/TG3 · usada por build_acas / hitos / Presentaciones):
 
 1. Periodo de entregas documentales = ``[inicio, recepción]`` de
    ``carga_academica_2026.json`` (la recepción es la fecha máx. de trabajos;
@@ -31,7 +38,8 @@ Uso:
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+import re
+from dataclasses import dataclass, replace
 from datetime import date, timedelta
 from typing import Any
 
@@ -391,8 +399,26 @@ def fmt_entrega(d: date, *, largo: bool = True) -> str:
     return fmt_dmy_largo(d) if largo else fmt_dmy(d)
 
 
+def _regla_sin_grupo(regla: str) -> str:
+    """Quita el sufijo « Grupo NNNNN.» cuando el texto ya nombra varios grupos."""
+    return re.sub(r"\s*Grupo\s+\S+\.\s*$", "", regla or "").strip()
+
+
+def _sufijo_grupo(grupo: str | None) -> str:
+    """« · Grupo 54450» / « · Grupos 54450 / 54466 / 54467» / «» (todos por igual)."""
+    if not grupo:
+        return ""
+    etiqueta = "Grupos" if "/" in grupo else "Grupo"
+    return f" · {etiqueta} {grupo}"
+
+
 def texto_fecha_enunciado(e: EntregaAca, weekday: int) -> str:
-    """Bloque markdown para el enunciado ACA."""
+    """Bloque markdown para el enunciado ACA.
+
+    El paréntesis del día NO puede afirmar «día de clase» a ciegas: las tres ACAs de
+    Proyecto I cierran en DOMINGO (fechas institucionales de Coordinación), y el día
+    de clase del curso es lunes. Se compara el weekday real contra el del curso.
+    """
     dia = DIAS[weekday]
     if e.kind == "ventana":
         return (
@@ -400,13 +426,20 @@ def texto_fecha_enunciado(e: EntregaAca, weekday: int) -> str:
             f"(cierra **{fmt_dmy_largo(e.entrega)}**).\n\n"
             f"**Día de referencia del curso:** {dia}. Entrega / cierre solo por **CDigital**."
         )
-    g = f" · Grupo {e.grupo}" if e.grupo else ""
+    g = _sufijo_grupo(e.grupo)
+    dia_real = DIAS[e.entrega.weekday()]
+    if e.entrega.weekday() == weekday:
+        parentesis = f"{dia_real} · día de clase"
+    else:
+        parentesis = (
+            f"{dia_real} · fecha de cierre institucional; "
+            f"el día de clase del curso es {dia}"
+        )
     return (
         f"**Fecha de entrega (CDigital){g}:** **{fmt_dmy_largo(e.entrega)}** "
-        f"({dia} · día de clase).\n\n"
+        f"({parentesis}).\n\n"
         f"**Ventana:** apertura {fmt_dmy(e.apertura)} – cierre {fmt_dmy(e.entrega)}.\n\n"
-        f"> Fecha calculada con la regla del periodo "
-        f"(pesos + día de clase; ver Presentación del Curso / Manual)."
+        f"> {e.regla}"
     )
 
 
@@ -428,7 +461,12 @@ def texto_fecha_curso(key: str, aca_id: str) -> str:
         if not by_date:
             raise KeyError(f"{key}/{aca_id}")
         if len(by_date) == 1:
+            # Misma fecha para todos los grupos: NO nominar a uno solo (un estudiante
+            # de otro grupo concluiría que no le aplica).
             e = next(iter(sample.values()))
+            todos = " / ".join(sorted(data.keys()))
+            if len(data) > 1:
+                e = replace(e, grupo=todos, regla=_regla_sin_grupo(e.regla))
             return texto_fecha_enunciado(e, weekday)
         lines = ["**Fechas de entrega (CDigital) según grupo:**", ""]
         for d in sorted(by_date):
@@ -439,10 +477,10 @@ def texto_fecha_curso(key: str, aca_id: str) -> str:
                 f"(ventana {fmt_dmy(e.apertura)} – {fmt_dmy(e.entrega)})"
             )
         lines.append("")
-        lines.append(
-            f"**Día de clase:** {DIAS[weekday]}. "
-            "> Regla: pesos + día de clase sobre [inicio–recepción] por oferta."
-        )
+        _e0 = sample[sorted(by_date)[0]]
+        lines.append(f"**Día de clase:** {DIAS[weekday]}.")
+        lines.append("")
+        lines.append(f"> {_regla_sin_grupo(_e0.regla)}")
         return "\n".join(lines)
     e = entrega_por_id(key, aca_id)
     return texto_fecha_enunciado(e, weekday)
@@ -491,25 +529,50 @@ def blocks_tg3_slide() -> list[dict]:
     return blocks_para_slide("tg3", "54466")
 
 
-def resumen_tabla_markdown(key: str) -> str:
+def regla_corta(e: EntregaAca) -> str:
+    """Etiqueta breve del ORIGEN de la fecha (para la columna «Regla» de las tablas)."""
+    r = e.regla or ""
+    if r.startswith("Fechas OFICIALES de Coordinación"):
+        return "oficial Coordinación (cronograma AFI)"
+    if r.startswith("Ventanas fijadas por el Docente"):
+        return "ventana docente (2026-08-10)"
+    return "pesos + día de clase"
+
+
+def resumen_tabla_markdown(key: str, *, con_nota: bool = True) -> str:
+    """Tabla markdown de entregas del curso (Manual del Docente / LEEME).
+
+    La columna «Regla» sale de ``e.regla`` — no se asume el reparto por pesos:
+    Proyecto I usa el cronograma de Coordinación y Creatividad/Investigación las
+    ventanas fijadas por el Docente.
+    """
     data = entregas_curso(key)
     lines = [
-        f"| Componente | Entrega | Apertura | Nota docente | Regla |",
-        f"| :--- | :--- | :--- | :--- | :--- |",
+        "| Componente | Entrega | Apertura | Nota docente | Regla |",
+        "| :--- | :--- | :--- | :--- | :--- |",
     ]
+    reglas: list[str] = []
     if isinstance(data, dict):
         for g, items in data.items():
             for e in items:
                 lines.append(
                     f"| **{e.code}** ({g}) | {fmt_dmy(e.entrega)} | {fmt_dmy(e.apertura)} | "
-                    f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | pesos+día clase |"
+                    f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | {regla_corta(e)} |"
                 )
+                if e.regla not in reglas:
+                    reglas.append(e.regla)
     else:
         for e in data:
             lines.append(
                 f"| **{e.code}** | {fmt_dmy(e.entrega)} | {fmt_dmy(e.apertura)} | "
-                f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | pesos+día clase |"
+                f"{fmt_dmy(e.nota_docente) if e.nota_docente else '—'} | {regla_corta(e)} |"
             )
+            if e.regla not in reglas:
+                reglas.append(e.regla)
+    if con_nota and reglas:
+        lines.append("")
+        for r in reglas:
+            lines.append(f"> {r}")
     return "\n".join(lines)
 
 

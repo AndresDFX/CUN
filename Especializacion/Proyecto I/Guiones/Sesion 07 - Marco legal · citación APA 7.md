@@ -9,21 +9,34 @@
 - **Sesión:** **07** · **Tema:** Marco legal · citación APA 7
 - **Detalle:** ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de ACA2 (dom 04/10).
 - **PPTX estudiante:** `Clases/Sesion 07 - Marco legal · citación APA 7/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 07 — MARCO LEGAL · CITACIÓN APA 7 |
+| **2** | Dos cosas pueden hundir un anteproyecto de IA en la última revisión |
+| **3** | Qué es el marco legal (y qué NO es) |
+| **4** | ¿A usted le aplica marco legal? Semáforo de decisión |
+| **5** | Normas colombianas que más aparecen en proyectos de IA |
+| **6** | Cómo se redacta un párrafo de marco legal (fórmula de tres tiempos) |
+| **7** | Si a usted no le aplica: cómo declararlo sin quedar mal parado |
+| **8** | El error #1 de APA: confundir la cita con la referencia |
+| **9** | Cita narrativa vs. cita parentética |
+| **10** | Plantillas de referencia APA 7 por tipo de fuente |
+| **11** | Ejemplo modelado: un párrafo real y su referencia |
+| **12** | Errores frecuentes que voy a buscar en su avance |
+| **13** | Errores frecuentes que voy a buscar en su avance (cont.) |
+| **14** | Paso a paso: dejar las referencias limpias con ZoteroBib (zbib.org) |
+| **15** | TALLER · Limpieza legal y bibliográfica (20 minutos) |
+| **16** | Checklist de autoevaluación antes de entregar |
+| **17** | Trabajo autónomo y qué viene después |
+| **18** | Cierre — Sesión 07 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Valorar** si aplica marco legal y redactarlo con pertinencia.
@@ -77,31 +90,31 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 ---
 
 #### 1️⃣ Encuadre (~6 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 07**. Hoy cerramos el marco referencial completo, que es el corazón de ACA2. Dos frentes: el **marco legal** —si su proyecto lo necesita— y una **clínica de APA 7** para dejar las citas impecables.”
-> “**Slide 2.** Meta de hoy: decidir si aplica marco legal y redactarlo con pertinencia, y normalizar todas sus citas y referencias sin citas huérfanas.”
+> “Meta de hoy: decidir si aplica marco legal y redactarlo con pertinencia, y normalizar todas sus citas y referencias sin citas huérfanas.”
 
 #### 2️⃣ Marco legal pertinente (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** Pregunta clave: ¿su estudio toca datos personales, menores de edad o información propiedad de una empresa? Si la respuesta es sí, el marco legal es obligatorio —en Colombia, la protección de datos de la Ley 1581 de 2012, propiedad intelectual y políticas de uso de IA—.”
+> “Pregunta clave: ¿su estudio toca datos personales, menores de edad o información propiedad de una empresa? Si la respuesta es sí, el marco legal es obligatorio —en Colombia, la protección de datos de la Ley 1581 de 2012, propiedad intelectual y políticas de uso de IA—.”
 > “Si su estudio es solo un diseño metodológico sin datos sensibles, no pasa nada: lo DECLARAN honestamente, ‘no aplica marco legal porque…’. Lo que NO se hace es inventar leyes para rellenar; eso lo detecto de inmediato.”
 
 #### 3️⃣ Clínica APA 7 (~14 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
-> “**Slide 4.** Vamos a corregir en vivo tres errores típicos que pego en el chat. Primero, una cita narrativa —el autor va dentro de la frase: ‘Pérez (2021) afirma que…’—. Segundo, una parentética —el autor va al final entre paréntesis—. Tercero, una referencia completa con su DOI.”
+> “Vamos a corregir en vivo tres errores típicos que pego en el chat. Primero, una cita narrativa —el autor va dentro de la frase: ‘Pérez (2021) afirma que…’—. Segundo, una parentética —el autor va al final entre paréntesis—. Tercero, una referencia completa con su DOI.”
 > “Y la regla de oro de APA que más se rompe: toda cita del cuerpo tiene que estar en la lista de referencias, y toda referencia tiene que estar citada al menos una vez. Si sobra una referencia sin cita, es bibliografía huérfana y hay que quitarla.”
 
 #### 4️⃣ Taller de limpieza bibliográfica (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Limpien las referencias de su documento con ZoteroBib o con las citas de Google Docs. Hagan la verificación cruzada: cada cita del cuerpo debe estar en la lista, y cada referencia debe estar citada. Y redacten el marco legal —o su declaración de no aplicabilidad—. Yo circulo. Suban como `S07_LegalAPA_Apellidos`.”
+> “Veinte minutos. Limpien las referencias de su documento con ZoteroBib o con las citas de Google Docs. Hagan la verificación cruzada: cada cita del cuerpo debe estar en la lista, y cada referencia debe estar citada. Y redacten el marco legal —o su declaración de no aplicabilidad—. Yo circulo. Suban como `S07_LegalAPA_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -111,11 +124,11 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 | Mezcla estilos de cita | “Decida: ¿autor dentro de la frase o al final? Uniforme.” |
 
 #### 5️⃣ Cierre bloque referencial (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** Con esto queda listo el marco referencial completo para ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones y dejen cero citas huérfanas.”
-> “**Slide 7.** La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos de ACA3. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
+> “Con esto queda listo el marco referencial completo para ACA2: antecedentes, teórico, conceptual, contextual y legal, con referencias limpias. En autónomo, integren las correcciones y dejen cero citas huérfanas.”
+> “La próxima sesión damos un salto: empezamos el **diseño metodológico** —paradigma, enfoque y alcance— para adelantar antes de los festivos de ACA3. Pasamos a tutoría para revisar APA y pertinencia legal equipo por equipo.”
 
 
 
@@ -151,7 +164,7 @@ Esta sesión cierra el bloque que compone ACA2: antecedentes, teórico, conceptu
 - [ ] PPTX `Clases/Sesion 07 - Marco legal · citación APA 7/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

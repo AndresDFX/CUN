@@ -11,17 +11,30 @@
 - **PPTX estudiante:** `Clases/Sesion 02 - Formulación de pregunta, objetivos y título/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **18 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 02 — FORMULACIÓN DE PREGUNTA, OBJETIVOS Y TÍTULO |
+| **2** | Sin una buena pregunta, todo el artículo cojea |
+| **3** | Qué es (y qué NO es) una pregunta de investigación |
+| **4** | Pregunta floja vs. pregunta con variables visibles |
+| **5** | Las cuatro piezas que debe tener su pregunta |
+| **6** | Del objetivo general a los específicos |
+| **7** | Verbos: los que hunden el proyecto y los que lo sostienen |
+| **8** | El título es la puerta de entrada del jurado |
+| **9** | Ejemplo modelado — de una idea floja a un proyecto coherente |
+| **10** | Errores frecuentes que hoy quedan desterrados |
+| **11** | Errores frecuentes que hoy quedan desterrados (cont.) |
+| **12** | Paso a paso — cómo armar el documento en Google Docs |
+| **13** | TALLER — Pregunta, objetivos y título en una página |
+| **14** | TALLER — Pregunta, objetivos y título en una página (cont.) |
+| **15** | Checklist de autoevaluación antes de subir a CDigital |
+| **16** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **17** | Para continuar — trabajo autónomo |
+| **18** | Cierre — Sesión 02 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Formulación de pregunta, objetivos y título (variables visibles).
@@ -80,21 +93,21 @@ En pantalla, tomar una pregunta débil ('¿es buena la automatización?') y rees
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Buenas tardes. Sesión 02. La semana pasada cada uno dejó su tema y su matriz de herencia. Hoy le damos el corazón al proyecto: la **pregunta**, los **objetivos** y el **título**. Si esto queda bien, el resto del artículo casi se ordena solo.”
 
-> “**Slide 2 — OBJETIVOS.** Vamos a formular una pregunta con variables visibles, derivar de ella un objetivo general y sus específicos con verbos que sí se pueden medir, y cerrar con un título que un jurado entienda de una sola leída. Tengan abierta su matriz de la Sesión 01.”
+> “**OBJETIVOS.** Vamos a formular una pregunta con variables visibles, derivar de ella un objetivo general y sus específicos con verbos que sí se pueden medir, y cerrar con un título que un jurado entienda de una sola leída. Tengan abierta su matriz de la Sesión 01.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** La pregunta manda. Y una buena pregunta **deja ver sus variables**: qué se relaciona con qué, en quién y dónde. '¿Sirve la automatización?' no muestra nada. '¿En qué medida automatizar las pruebas reduce el tiempo de despliegue en el equipo X?' muestra dos variables y un contexto. De esa pregunta salen los objetivos.”
+> “**CONTENIDO CLAVE.** La pregunta manda. Y una buena pregunta **deja ver sus variables**: qué se relaciona con qué, en quién y dónde. '¿Sirve la automatización?' no muestra nada. '¿En qué medida automatizar las pruebas reduce el tiempo de despliegue en el equipo X?' muestra dos variables y un contexto. De esa pregunta salen los objetivos.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Los objetivos: uno **general** —la pregunta hecha propósito— y tres o cuatro **específicos**. Regla de oro: **cada objetivo específico será una sección del artículo**. Por eso destierro tres verbos: 'conocer', 'entender', 'saber'. No se miden ni se vuelven sección. En su lugar: identificar, caracterizar, comparar, diseñar, evaluar.”
+> “**ENFOQUE DE HOY.** Los objetivos: uno **general** —la pregunta hecha propósito— y tres o cuatro **específicos**. Regla de oro: **cada objetivo específico será una sección del artículo**. Por eso destierro tres verbos: 'conocer', 'entender', 'saber'. No se miden ni se vuelven sección. En su lugar: identificar, caracterizar, comparar, diseñar, evaluar.”
 
 > “Y el título. El jurado lo lee primero. Actor + fenómeno + contexto, sin eslóganes. 'Innovando el futuro' no es un título; 'Detección de phishing con aprendizaje automático en los correos de la CUN' sí lo es.”
 
@@ -114,11 +127,11 @@ En pantalla, tomar una pregunta débil ('¿es buena la automatización?') y rees
 
 > **En pantalla:** Identificar cómo nombran las variables autores cercanos.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S02_PreguntaObjetivos_Apellido` escriban, en una sola página: (1) la **pregunta** con sus variables visibles; (2) **un objetivo general + 3 específicos** con verbos operables; (3) el **título** en ≤ 15–20 palabras. Al final, hagan la prueba de coherencia: léanlos seguidos.”
+> “**TALLER.** ~20 minutos. En `S02_PreguntaObjetivos_Apellido` escriban, en una sola página: (1) la **pregunta** con sus variables visibles; (2) **un objetivo general + 3 específicos** con verbos operables; (3) el **título** en ≤ 15–20 palabras. Al final, hagan la prueba de coherencia: léanlos seguidos.”
 
 > “Criterio de éxito: cada objetivo específico deja ver qué sección producirá, y el título, la pregunta y los objetivos suenan a un solo proyecto.”
 
@@ -135,15 +148,15 @@ En pantalla, tomar una pregunta débil ('¿es buena la automatización?') y rees
 > **En pantalla:** 2 APA que sostienen la pregunta.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la pregunta manda y debe dejar ver sus variables; (2) cada objetivo específico será una sección, así que use verbos que se midan; (3) el título es la puerta del jurado: actor + fenómeno + contexto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos esta pregunta y estos objetivos y montamos la **estructura del artículo**, con un taller de **introducción** sobre la plantilla APA CUN.”
+> “**PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos esta pregunta y estos objetivos y montamos la **estructura del artículo**, con un taller de **introducción** sobre la plantilla APA CUN.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet el próximo martes.”
+> “**Cierre.** Gracias; mismo Meet el próximo martes.”
 
 ---
 

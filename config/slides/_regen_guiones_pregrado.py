@@ -20,8 +20,16 @@ CURSOS = os.path.join(SLIDES, "..", "cursos")
 sys.path.insert(0, SLIDES)
 sys.path.insert(0, CURSOS)
 
-from sesiones_cun import COURSES, meet_placeholder  # noqa: E402
+from sesiones_cun import COURSES, meet_url  # noqa: E402
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_slides import (  # noqa: E402
+    NOTA_MOMENTOS,
+    ajustar_mapa_manual,
+    deck_path,
+    limpiar_referencias,
+    tabla_slides_md,
+    titulos_pptx,
+)
 
 KEYS = ("investigacion", "tg2", "tg3")
 
@@ -2039,7 +2047,7 @@ TG3 = [
        "Contrastar términos con uso en Scholar; 3–5 keywords.")]),
     (11, "Póster · evidencias · verificación antiplagio.",
      "Checklist de integridad académica + pieza de divulgación (Canva free / Docs).",
-     "Póster 1 página + constancia de revisión de similitud (ruta institucional CDigital).",
+     "Póster 1 página + anexos rotulados. (Informe de similitud **solo si el curso lo exige**, por la ruta institucional que confirme el Docente.)",
      "`S11_PosterEvidencias_Apellido`.",
      [("Herramientas/tg_scholar.png", "Estructura del póster en Docs/Canva free",
        "Bloques: problema, método, hallazgo, conclusión. Canva free opcional.")],
@@ -3084,7 +3092,7 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el póster es divulgación visual, no el artículo pegado; (2) los anexos se seleccionan, rotulan y referencian; (3) el antiplagio mide coincidencia —se resuelve parafraseando bien y citando, por la ruta institucional—.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S11_PosterEvidencias_Apellido` a CDigital y corran la verificación de similitud por la ruta oficial del curso. La próxima sesión es grande: **ensayo de la sustentación ante jurados**.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S11_PosterEvidencias_Apellido` a CDigital. **Si el curso exige verificación de similitud, yo les indico la ruta institucional**; no busquen servicios externos. La próxima sesión es grande: **ensayo de la sustentación ante jurados**.”
 
 > “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
 )
@@ -3470,7 +3478,7 @@ def build_guion(course_key: str, ses: dict) -> str:
     titulo = ses["titulo"]
     detalle = ses.get("detalle", "")
     label = label_for(n, titulo)
-    meet = meet_placeholder(course["titulo"])
+    meet = meet_url(course["key"], course["titulo"])
     spec = SPEC.get((course_key, n))
     if not spec:
         spec = {
@@ -3513,7 +3521,17 @@ def build_guion(course_key: str, ses: dict) -> str:
         "> **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.\n"
         "> Estudie primero el Fundamento Teórico. **Duración: 60 minutos**."
     )
-    slides_map = spec.get("slides_map") or slides_std()
+    # Tabla de slides: la del spec (S01, escrita contra el deck real) o, si no hay,
+    # la del deck REAL en disco. `slides_std()` queda solo como último recurso.
+    slides_map = spec.get("slides_map")
+    desde_plantilla = not slides_map
+    if desde_plantilla:
+        _label = label_for(n, titulo)
+        slides_map = (
+            tabla_slides_md(titulos_pptx(deck_path(COURSES[course_key]["folder"], _label)))
+            or slides_std()
+        )
+        slides_map = f"{slides_map}\n{NOTA_MOMENTOS}\n"
     fundamento_titulo = spec.get("fundamento_titulo") or (
         "📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*"
     )
@@ -3521,7 +3539,8 @@ def build_guion(course_key: str, ses: dict) -> str:
     errores_titulo = spec.get("errores_titulo") or "#### Errores frecuentes"
     entregable_titulo = spec.get("entregable_titulo") or "🧩 **Entregable de hoy**"
     fase_slides = spec.get("fase_slides") or [
-        "Slides 1–2", "Slides 3–4", "Modelación en pantalla", "Slide 5", "Slides 6–7",
+        "Portada y objetivos", "Exposición del concepto", "Modelación en pantalla",
+        "Taller", "Cierre y trabajo autónomo",
     ]
 
     # --- Errores frecuentes: tabla si el spec trae `errores`; si no, fallback genérico ---
@@ -3620,7 +3639,7 @@ def build_guion(course_key: str, ses: dict) -> str:
 {f5}
 {cierre_tutoria}"""
 
-    return f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
+    md = f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
 
 {uso_texto}
 > Logística de semestre → Presentación del Curso / Manual. **Sin fechas de periodo.**
@@ -3671,6 +3690,17 @@ def build_guion(course_key: str, ses: dict) -> str:
 ---
 *Fin del Guión — Sesión {n:02d}. Autocontenido para dictar 60 minutos.*
 """
+    if desde_plantilla:
+        # La narración venía de la plantilla de 7 slides: sus números no corresponden al
+        # deck real. Se retiran (queda el nombre del momento); nunca se inventa un número.
+        md, _ = limpiar_referencias(md)
+    else:
+        # Mapa curado a mano (S01): se realinea contra el deck real por si el motor
+        # partió algún bloque en «(cont.)» y corrió la numeración.
+        md, _ = ajustar_mapa_manual(
+            md, titulos_pptx(deck_path(COURSES[course_key]["folder"], label_for(n, titulo)))
+        )
+    return md
 
 
 def main(argv=None):

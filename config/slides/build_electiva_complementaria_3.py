@@ -2,10 +2,10 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 import sys
-sys.path.insert(0, r"g:/Mi unidad/Trabajos/Empleo/FESNA/config/slides")
+sys.path.insert(0, r"g:/My Drive/Trabajos/Empleo/FESNA/config/slides")
 from fesna_slides_engine import *
 set_footer("Electiva Complementaria III · Política Económica en Colombia")
-BASE = r"g:/Mi unidad/Trabajos/Empleo/FESNA/Cursos/Electiva Complementaria 3/Clases"
+BASE = r"g:/My Drive/Trabajos/Empleo/FESNA/Cursos/Electiva Complementaria 3/Clases"
 from pptx.enum.text import PP_ALIGN
 
 # =================================================================

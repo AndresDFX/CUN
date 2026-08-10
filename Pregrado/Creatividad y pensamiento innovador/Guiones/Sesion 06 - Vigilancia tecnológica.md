@@ -11,17 +11,35 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Vigilancia tecnológica/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **23 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 06 — VIGILANCIA TECNOLÓGICA |
+| **2** | Su MVP no vive en una burbuja |
+| **3** | Qué es la vigilancia tecnológica (y qué NO es) |
+| **4** | El ciclo mínimo: Observar → Analizar → Comunicar → Usar |
+| **5** | Informarse vs. vigilar |
+| **6** | Cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador) |
+| **7** | Google Scholar: cómo buscar sin ahogarse |
+| **8** | Google Scholar: cómo buscar sin ahogarse (cont.) |
+| **9** | Google Patents: encontrar algo parecido es una buena noticia |
+| **10** | Google Patents: encontrar algo parecido es una buena noticia (cont.) |
+| **11** | La ficha de señal: cinco campos, ni uno más |
+| **12** | La ficha de señal: cinco campos, ni uno más (cont.) |
+| **13** | Ejemplo modelado: dos fichas del caso del laboratorio |
+| **14** | Errores frecuentes y respuestas |
+| **15** | Errores frecuentes y respuestas (cont.) |
+| **16** | Paso a paso: arme su tablero de vigilancia en Google Docs |
+| **17** | Paso a paso: arme su tablero de vigilancia en Google Docs (cont.) |
+| **18** | TALLER — Tablero de vigilancia de su tema (22 minutos) |
+| **19** | Antes de entregar: revise usted mismo |
+| **20** | Antes de entregar: revise usted mismo (cont.) |
+| **21** | Para continuar — trabajo autónomo |
+| **22** | Para continuar — trabajo autónomo (cont.) |
+| **23** | Cierre — Sesión 06 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Definir** vigilancia tecnológica y diferenciarla de “buscar en Google un rato”.
@@ -92,7 +110,7 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 ---
 
 #### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** conectar los resultados de validación con la mirada al entorno.
 
@@ -109,14 +127,14 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 ---
 
 #### 2️⃣ Qué es vigilancia tecnológica + fuentes (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** separar “informarse” de “vigilar” y presentar las fuentes.
 
 **GUION LITERAL:**
-> “**Slide 3.** Vigilancia tecnológica no es ‘me informé’. Es un **sistema**: observar, analizar, comunicar y usar. La prueba de fuego es simple: si después de mirar el entorno **no cambia ninguna decisión** de su propuesta, no vigilaron, solo leyeron.”
+> “Vigilancia tecnológica no es ‘me informé’. Es un **sistema**: observar, analizar, comunicar y usar. La prueba de fuego es simple: si después de mirar el entorno **no cambia ninguna decisión** de su propuesta, no vigilaron, solo leyeron.”
 
-> “**Slide 4.** ¿Dónde miro? Cuatro frentes. Tecnología: **Google Scholar** y **Google Patents**. Ojo con Patents: si encuentran algo parecido, la idea no muere; ahora saben contra qué compiten y tienen que decir en qué se diferencian. Mercado: reportes y datos abiertos. Normativa: leyes y políticas de entidades. Y lo social: qué cambió en el usuario. Todo gratis, todo en el navegador.”
+> “¿Dónde miro? Cuatro frentes. Tecnología: **Google Scholar** y **Google Patents**. Ojo con Patents: si encuentran algo parecido, la idea no muere; ahora saben contra qué compiten y tienen que decir en qué se diferencian. Mercado: reportes y datos abiertos. Normativa: leyes y políticas de entidades. Y lo social: qué cambió en el usuario. Todo gratis, todo en el navegador.”
 
 **Qué hacer:**
 1. (5 min) Explicar el ciclo Observar → Analizar → Comunicar → Usar y la prueba “¿cambió una decisión?”.
@@ -130,7 +148,7 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 > **En pantalla:** Columnas: señal / fuente / implicación para mi propuesta.
 
 #### 3️⃣ Modelación: buscar y fichar una señal en vivo (~13 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** demostrar la búsqueda y el llenado de una ficha de señal.
 
@@ -151,7 +169,7 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 > **En pantalla:** Abrir https://scholar.google.com/; anotar 3 señales tecnológicas.
 
 #### 4️⃣ Taller: tablero de vigilancia de su tema (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Abran Google Scholar y Google Patents en otra pestaña y armen su **Tablero de vigilancia** en Google Docs con **mínimo 3 fichas de señal**: título, fuente con fecha y enlace, hallazgo en 2 líneas, implicación y nivel de confianza. **Al menos una** señal debe obligarlos a **ajustar algo**: alcance, usuario, tecnología o riesgo. Al final, dos personas comparten solo la **implicación** de una señal. Éxito: 3 señales con fuente y fecha + 1 decisión explícita.”
@@ -169,14 +187,14 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 ---
 
 #### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) vigilar es un **sistema**, no una lectura suelta; (2) una fuente **sin fecha ni autor** no es evidencia; (3) si la señal **no cambia una decisión**, no sirvió.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) pulan su tablero y súbanlo como `S07_Vigilancia_Apellido`; (b) preparen para la próxima sesión un listado de **mínimo 3 entidades de apoyo** —nombre correcto— a las que podrían acercarse. Eso es justo lo que trabajaremos en el cierre del curso.”
+> “**PARA CONTINUAR.** Autónomo: (a) pulan su tablero y súbanlo como `S06_Vigilancia_Apellido`; (b) preparen para la próxima sesión un listado de **mínimo 3 entidades de apoyo** —nombre correcto— a las que podrían acercarse. Eso es justo lo que trabajaremos en el cierre del curso.”
 
-> “**Slide 7 — Cierre.** La próxima es la **última sesión**: innovación local–internacional, entidades de apoyo y pitch. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima es la **última sesión**: innovación local–internacional, entidades de apoyo y pitch. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (4 min) Escuchar 2 implicaciones y verificar que cambien una decisión.
@@ -192,7 +210,7 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 1. Buscar en Google Scholar y Google Patents (gratis, en el navegador).
 2. Registrar mínimo 3 fichas de señal (título, fuente+fecha, hallazgo, implicación, confianza).
 3. **Criterio de éxito:** 3 señales con fuente y fecha + al menos 1 decisión explícita (ajuste o confirmación).
-4. **Entregable:** `S07_Vigilancia_Apellido` en CDigital.
+4. **Entregable:** `S06_Vigilancia_Apellido` en CDigital.
 5. **Trabajo autónomo:** listado de mínimo 3 entidades de apoyo para la próxima sesión.
 
 ---
@@ -203,7 +221,7 @@ En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o 
 - [ ] Abrí `Clases/Sesion 06 - Vigilancia tecnológica/Presentacion.pptx`
 - [ ] Abrí Google Scholar y Google Patents en el navegador del docente
 - [ ] Tengo una búsqueda de ejemplo probada (para no improvisar en vivo)
-- [ ] Publiqué en CDigital el espacio de entrega `S07_Vigilancia`
+- [ ] Publiqué en CDigital el espacio de entrega `S06_Vigilancia`
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 ---

@@ -11,17 +11,37 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **25 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 06 — Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12) |
+| **2** | La sesión más de laboratorio del curso |
+| **3** | Buscador ≠ base de datos: cuándo usar cada uno |
+| **4** | La estrategia en tres movimientos |
+| **5** | La estrategia en tres movimientos (cont.) |
+| **6** | Operadores de búsqueda que ahorran horas |
+| **7** | Ejemplo modelado: una búsqueda real, paso a paso |
+| **8** | Ejemplo modelado: una búsqueda real, paso a paso (cont.) |
+| **9** | El filtro de 60 segundos: ¿me quedo con esta fuente? |
+| **10** | Paso a paso: citar en APA 7 con ZoteroBib |
+| **11** | Paso a paso: citar en APA 7 con ZoteroBib (cont.) |
+| **12** | Cuatro advertencias sobre fuentes y citación |
+| **13** | Cuatro advertencias sobre fuentes y citación (cont.) |
+| **14** | El marco teórico responde a la pregunta, no decora |
+| **15** | Constructos: cómo salen de su propia pregunta |
+| **16** | Constructos: cómo salen de su propia pregunta (cont.) |
+| **17** | La ficha de lectura: campos y qué escribir |
+| **18** | Cómo se redacta un párrafo de marco (con su plantilla) |
+| **19** | Cómo se redacta un párrafo de marco (con su plantilla) (cont.) |
+| **20** | TALLER · Búsqueda, fichas y página de marco (~22 min) |
+| **21** | Checklist antes de subir su entrega |
+| **22** | Checklist antes de subir su entrega (cont.) |
+| **23** | Cierre del ciclo · trabajo autónomo |
+| **24** | Cierre del ciclo · trabajo autónomo (cont.) |
+| **25** | Cierre — Sesión 06 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Buscar** en bases y buscadores académicos (Google Académico, SciELO, Redalyc, biblioteca CUN) con operadores.
@@ -85,25 +105,25 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 06, y es la más 'de laboratorio' del curso. Como estamos en periodo corto, combinamos tres unidades del Syllabus: bases de datos, gestores de citas y marco teórico. Todo con herramientas **gratis y en la nube** —nada de instalar programas—.”
 
-> “**Slide 2 — OBJETIVOS.** Vamos a buscar bien, a citar en APA 7 con ZoteroBib y a avanzar una página de marco que responda a su pregunta. Tengan abierto su planteamiento de la Sesión 05: el marco es su continuación, no un tema nuevo.”
+> “**OBJETIVOS.** Vamos a buscar bien, a citar en APA 7 con ZoteroBib y a avanzar una página de marco que responda a su pregunta. Tengan abierto su planteamiento de la Sesión 05: el marco es su continuación, no un tema nuevo.”
 
-#### 2️⃣ Bases y gestores (~14 min) — Slides 3–4
+#### 2️⃣ Bases y gestores (~14 min) — Exposición del concepto
 **Protagonista:** Docente (demo en pantalla).
 
 **En pantalla:** Google Académico, SciELO, Redalyc, biblioteca CUN (login) y ZoteroBib.
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primero: no todo es Google normal. **Scholar** es un buscador amplio, ideal para arrancar y para el enlace 'citado por'. **SciELO** y **Redalyc** son bases de acceso abierto fuertes en español y en Latinoamérica. Y la **biblioteca CUN**, con su login institucional, les da el texto completo de bases suscritas.”
+> “**CONTENIDO CLAVE.** Primero: no todo es Google normal. **Scholar** es un buscador amplio, ideal para arrancar y para el enlace 'citado por'. **SciELO** y **Redalyc** son bases de acceso abierto fuertes en español y en Latinoamérica. Y la **biblioteca CUN**, con su login institucional, les da el texto completo de bases suscritas.”
 
 > “Operadores que ahorran horas: comillas para la frase exacta, AND/OR para combinar, filtro por año —en tecnología, últimos cinco—. Miren: busco 'pérdida de paquetes' AND laboratorio, filtro 2020 en adelante, y ya tengo resultados usables.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Para citar no instalamos nada: **ZoteroBib**, en zbib.org. Pego un DOI o un título, me arma el APA 7 y lo copio a Google Docs. Cero Mendeley de escritorio, cero plugins.”
+> “**ENFOQUE DE HOY.** Para citar no instalamos nada: **ZoteroBib**, en zbib.org. Pego un DOI o un título, me arma el APA 7 y lo copio a Google Docs. Cero Mendeley de escritorio, cero plugins.”
 
 #### 3️⃣ Criterios de selección de fuentes (~10 min) — Modelación en pantalla
 **Protagonista:** Docente (modela una ficha de lectura).
@@ -127,11 +147,11 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 
 > **En pantalla:** Búsqueda en español/portugués; abrir 1 artículo de acceso abierto.
 
-#### 4️⃣ Taller de búsqueda + fichas (~22 min) — Slide 5
+#### 4️⃣ Taller de búsqueda + fichas (~22 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~22 minutos. En `S06_MarcoRevision_Apellido`: (1) busquen en Scholar y en SciELO o Redalyc y elijan **5 fuentes** pertinentes; (2) hagan una **ficha de lectura** por fuente; (3) generen las 5 citas en APA 7 con ZoteroBib; (4) escriban una página de marco organizada por sus **constructos**, citando esas fuentes.”
+> “**TALLER.** ~22 minutos. En `S06_MarcoRevision_Apellido`: (1) busquen en Scholar y en SciELO o Redalyc y elijan **5 fuentes** pertinentes; (2) hagan una **ficha de lectura** por fuente; (3) generen las 5 citas en APA 7 con ZoteroBib; (4) escriban una página de marco organizada por sus **constructos**, citando esas fuentes.”
 
 > “Criterio de éxito: cada fuente responde a un constructo de su pregunta, las citas están en APA 7 y el marco no es un collage: se lee como argumento.”
 
@@ -152,15 +172,15 @@ Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google
 > **En pantalla:** Pegar 5 referencias APA 7 y redactar la página de marco agrupada por constructos.
 
 
-#### 5️⃣ Cierre del ciclo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre del ciclo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre del ciclo. Tres ideas: (1) busquen amplio en Scholar y afinen en SciELO, Redalyc y biblioteca CUN; (2) citen en APA 7 con ZoteroBib, sin instalar nada; (3) el marco responde a la pregunta, organizado por constructos.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S06_MarcoRevision_Apellido` a CDigital con sus 5 fichas y la página de marco. Con esto tienen el esqueleto del artículo: tema, línea, problema, pregunta, planteamiento y marco. Revisen en CDigital el detalle de la evaluación del corte final.”
+> “**PARA CONTINUAR.** Suban `S06_MarcoRevision_Apellido` a CDigital con sus 5 fichas y la página de marco. Con esto tienen el esqueleto del artículo: tema, línea, problema, pregunta, planteamiento y marco. Revisen en CDigital el detalle de la evaluación del corte final.”
 
-> “**Slide 7 — Cierre.** Gracias por el trabajo de este periodo; mismo Meet si queda encuentro de cierre.”
+> “**Cierre.** Gracias por el trabajo de este periodo; mismo Meet si queda encuentro de cierre.”
 
 ---
 

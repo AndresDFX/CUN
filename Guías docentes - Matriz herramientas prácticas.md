@@ -3,7 +3,7 @@
 **Docente:** Julian Andres Castaño · `julian_castanoe@cun.edu.co`  
 **Plataforma de entrega:** **CDigital** (placeholder: `[URL CDigital — campus del curso pendiente]`)  
 **Script de capturas:** `config/slides/capture_herramientas_practicas.py`  
-**Actualizado:** 2026-08-07
+**Actualizado:** 2026-08-10 (renumerado tras pasar la Sesión 01 a encuadre: Creatividad tiene **7** sesiones e Investigación **6**; los prefijos `SNN_` coinciden con la sesión real)
 
 > **REGLA DE PRÁCTICA:** toda actividad práctica de clase usa **solo componentes gratis + en la nube** (browser / SaaS free tier). Sin software de escritorio de pago, sin instalaciones obligatorias en el PC del estudiante (ni Packet Tracer, Visual Studio desktop, Office desktop obligatorio, Adobe de pago, Mendeley Desktop / Cite en Word, etc.).
 
@@ -15,14 +15,14 @@
 
 | Sesión | Tema | Herramienta práctica (gratis / online) | Entregable | Capturas / estado |
 | :---: | :--- | :--- | :--- | :--- |
-| **01** | Intro · Propuesta · ficha problema | **Padlet** (tablero expectativas) · **Excalidraw** · tldraw · **Google Docs** · ficha HTML modelo · Miro DT (free, opcional) | `S01_FichaProblema_Apellido` | ✅ `Sesion 01/` + tablero |
-| **02** | IE · bloqueadores · mapa utilidad | Excalidraw · Miro Empathy Map (free) · mapa HTML modelo | `S02_MapaUtilidad_Apellido` | ✅ `Sesion 02/` |
-| **03** | Design Thinking | Miro DT templates (free) · Excalidraw journey · IDEO Design Kit (si carga) | Prototipo conceptual / mapa empatía | ⏳ capturas plantilla Miro en S01; Design Kit débil en headless |
-| **04** | Manual de Oslo | Tabla Oslo en Google Docs / Excalidraw | Clasificación tentativa | ⏳ pendiente guía en pantalla |
-| **05** | Tipos de innovación | Misma pizarra + ejemplos | Matriz tipo↔propuesta | ⏳ |
-| **06** | FODA · Canvas · MVP | **Canvanizer** BMC · Excalidraw · Strategyzer solo como referencia visual | `S06_CanvasMVP_Apellido` | ✅ capturas en `Capturas/Herramientas/` |
-| **07** | Vigilancia tecnológica | Google Scholar · Patents · docs oficiales (web) | Matriz vigilancia | ⏳ reutilizar flujo Inv S07 |
-| **08** | Ecosistema / pitch | **Canva free** (opcional) · Google Docs / Slides pitch 1 pág. | Paquete corte 3 | ⏳ Canva no capturó en headless |
+| **01** | **Encuadre** (no se dicta tema) · ficha problema–oportunidad | **Padlet** (tablero expectativas) · **Excalidraw** · tldraw · **Google Docs** · ficha HTML modelo | `Ficha_problema_oportunidad.docx` + post en Padlet | ✅ `Sesion 01/` |
+| — | *Lectura autónoma U1–U2* (Propuesta de Innovación · creatividad e IE) | PDF de acceso abierto en `Clases/Sesion 01 - …/` | — | ✅ PDF + `.txt` en la carpeta |
+| **02** | Design Thinking y técnicas de ideación | Miro DT templates (free) · Excalidraw journey · IDEO Design Kit (si carga) | `S02_Ideacion_Apellido` | ⏳ capturas plantilla Miro |
+| **03** | Gestión de la innovación (Manual de Oslo) | Tabla Oslo en Google Docs / Excalidraw | `S03_FichaOslo_Apellido` | ⏳ pendiente guía en pantalla |
+| **04** | Tipos de innovación | Misma pizarra + ejemplos | `S04_MatrizTipos_Apellido` | ⏳ |
+| **05** | Análisis de negocios · validación (FODA · Canvas · MVP) | **Canvanizer** BMC · Excalidraw · Strategyzer solo como referencia visual | `S05_CanvasMVP_Apellido` | ✅ capturas en `Capturas/Herramientas/` |
+| **06** | Vigilancia tecnológica | Google Scholar · Patents · docs oficiales (web) | `S06_Vigilancia_Apellido` | ⏳ reutilizar flujo Investigación S06 |
+| **07** | Innovación local–internacional · entidades de apoyo (cierre) | **Canva free** (opcional) · Google Docs / Slides pitch 1 pág. | `S07_EcosistemaPitch_Apellido` | ⏳ Canva no capturó en headless |
 
 **Prioridad aula S01–S02:** Padlet (tablero 5–10 min) → Excalidraw (sin cuenta) → export PNG → CDigital.
 
@@ -40,9 +40,10 @@
 
 | Sesión | Tema | Herramienta práctica | Entregable | Estado |
 | :---: | :--- | :--- | :--- | :--- |
-| **01** | Syllabus · producto final (artículo) | **Padlet** (expectativa / tema de interés) · **Google Docs** | Avance + post en tablero | ✅ tablero S01 |
-| 02–06 | Problema → planteamiento | **Google Docs** / plantilla artículo (abrir en Docs) | Avances por unidad | ⏳ guías genéricas |
-| **07** ★ | Bases CUN · gestores · marco/revisión | **Scholar** · SciELO · Redalyc · **ZoteroBib** · citas en **Google Docs** · biblioteca CUN (login) | `S07_MatrizFuentes_Apellido` | ✅ sesión emblemática + capturas |
+| **01** | **Encuadre** (no se dicta tema) · producto final = artículo | **Padlet** (expectativa / tema de interés) · **Google Docs** | `S01_TemaTentativo_Apellido` + post en tablero | ✅ tablero S01 |
+| — | *Lectura autónoma U1–U2* (Syllabus y producto · método científico) | PDF de acceso abierto en `Clases/Sesion 01 - …/` | — | ✅ PDF + `.txt` en la carpeta |
+| 02–05 | MinCiencias/líneas → planteamiento del problema | **Google Docs** / plantilla artículo (abrir en Docs) | Avances por unidad | ⏳ guías genéricas |
+| **06** ★ | Bases CUN · gestores · marco/revisión (U8+U10–12) | **Scholar** · SciELO · Redalyc · **ZoteroBib** · citas en **Google Docs** · biblioteca CUN (login) | `S06_MarcoRevision_Apellido` | ✅ sesión emblemática |
 
 ★ = emblemática práctica de esta pasada.
 

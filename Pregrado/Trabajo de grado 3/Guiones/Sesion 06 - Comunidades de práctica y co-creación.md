@@ -11,17 +11,32 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Comunidades de práctica y co-creación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **20 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 06 — COMUNIDADES DE PRÁCTICA Y CO-CREACIÓN |
+| **2** | El aislamiento es el peor enemigo del trabajo de grado |
+| **3** | Qué es una comunidad de práctica |
+| **4** | Co-creación vs. copia: la línea que no se cruza |
+| **5** | El feedback vago no sirve — hay que pedirlo bien |
+| **6** | El feedback vago no sirve — hay que pedirlo bien (cont.) |
+| **7** | El pitch de 3 minutos, bloque por bloque |
+| **8** | Ejemplo modelado — pitch con cronómetro corriendo |
+| **9** | Feedback vago vs. feedback accionable |
+| **10** | La bitácora de co-creación: su evidencia y su blindaje |
+| **11** | La bitácora de co-creación: su evidencia y su blindaje (cont.) |
+| **12** | Bitácora de co-creación — ejemplo con tres filas |
+| **13** | Errores frecuentes de esta sesión |
+| **14** | Errores frecuentes de esta sesión (cont.) |
+| **15** | Paso a paso — cómo se organiza la socialización |
+| **16** | TALLER — Pitch de 3 minutos y bitácora de co-creación |
+| **17** | Checklist de autoevaluación antes de subir a CDigital |
+| **18** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **19** | Para continuar — trabajo autónomo |
+| **20** | Cierre — Sesión 06 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Comunidades de práctica y co-creación.
@@ -80,23 +95,23 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 06. Cambiamos de ritmo: hoy el proyecto sale de su burbuja y se expone a otros ojos. El grupo entero es hoy una **comunidad de práctica**, y el reto es nutrirse sin perder autoría.”
 
-> “**Slide 2 — OBJETIVOS.** Entender qué es una comunidad de práctica y la co-creación, aprender a **pedir feedback accionable** con un pitch de 3 minutos, y salir con una **bitácora de co-creación** con aprendizajes concretos. Tengan su avance a la mano; hoy se muestra.”
+> “**OBJETIVOS.** Entender qué es una comunidad de práctica y la co-creación, aprender a **pedir feedback accionable** con un pitch de 3 minutos, y salir con una **bitácora de co-creación** con aprendizajes concretos. Tengan su avance a la mano; hoy se muestra.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Una comunidad de práctica es un grupo que aprende junto haciendo. El peor enemigo del trabajo de grado es encerrarse; el mejor acelerador es mostrarlo. Hoy cada proyecto mejora porque otro lo mira con ojos frescos.”
+> “**CONTENIDO CLAVE.** Una comunidad de práctica es un grupo que aprende junto haciendo. El peor enemigo del trabajo de grado es encerrarse; el mejor acelerador es mostrarlo. Hoy cada proyecto mejora porque otro lo mira con ojos frescos.”
 
 > “Ahora, la línea que **no** se cruza: co-crear no es copiar. Co-crear es tomar un aporte de otro, adaptarlo y —si viene de una fuente— **citarlo**; y si viene de un compañero, registrarlo como su aporte. Copiar es apropiarse. Esto conecta directo con el antiplagio que veremos en la Sesión 11.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y para que el feedback sirva, hay que pedirlo bien: un **pitch de 3 minutos** —problema, pregunta, avance, y un **pedido concreto** al final—. Nada de 'opinen'; sí de 'necesito feedback sobre mi instrumento'.”
+> “**ENFOQUE DE HOY.** Y para que el feedback sirva, hay que pedirlo bien: un **pitch de 3 minutos** —problema, pregunta, avance, y un **pedido concreto** al final—. Nada de 'opinen'; sí de 'necesito feedback sobre mi instrumento'.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela el pitch + bitácora).
@@ -112,11 +127,11 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 
 > **En pantalla:** Publicar problema+propuesta en 5 líneas; pedir 1 comentario de par.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller de socialización) · Docente modera.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos, en parejas o tríos. Turnos: uno da su **pitch de 3 minutos** con pedido concreto; los demás dan feedback sobre lo que pidió, no sobre gustos. Cada quien llena su `S06_CoCreacion_Apellido` con: (1) el pedido que hizo; (2) **3 aprendizajes accionables** recibidos; (3) qué decide hacer con cada uno (adoptar/adaptar/descartar) y por qué.”
+> “**TALLER.** ~20 minutos, en parejas o tríos. Turnos: uno da su **pitch de 3 minutos** con pedido concreto; los demás dan feedback sobre lo que pidió, no sobre gustos. Cada quien llena su `S06_CoCreacion_Apellido` con: (1) el pedido que hizo; (2) **3 aprendizajes accionables** recibidos; (3) qué decide hacer con cada uno (adoptar/adaptar/descartar) y por qué.”
 
 > “Criterio de éxito: la bitácora deja claro qué es aporte externo y qué es decisión propia, con una razón en cada caso.”
 
@@ -133,15 +148,15 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 > **En pantalla:** 1 referente sobre comunidades de práctica si aplica al marco.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el grupo es una comunidad de práctica y socializar acelera; (2) co-crear no es copiar: se registra y se cita; (3) el feedback útil se pide con un pedido concreto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S06_CoCreacion_Apellido` con su bitácora. En autónomo, apliquen los aprendizajes al proyecto. La próxima sesión pasamos a la **experiencia creativa y el análisis de datos**: convertir datos en hallazgos.”
+> “**PARA CONTINUAR.** Suban `S06_CoCreacion_Apellido` con su bitácora. En autónomo, apliquen los aprendizajes al proyecto. La próxima sesión pasamos a la **experiencia creativa y el análisis de datos**: convertir datos en hallazgos.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

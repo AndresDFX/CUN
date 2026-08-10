@@ -8,7 +8,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from terminal_shot import render_many
 
-DEST = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Web\Clases\Version vigente (nuevo dictado 2026)\Guiones\Capturas"
+DEST = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos\Desarrollo de Aplicaciones Web\Clases\Version vigente (nuevo dictado 2026)\Guiones\Capturas"
 ENV = "Consola JavaScript · examlab"
 PROMPT = "›"
 

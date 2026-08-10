@@ -11,17 +11,34 @@
 - **PPTX estudiante:** `Clases/Sesion 09 - Resultados, discusión y relación con referentes/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 09 — Resultados, discusión y relación con referentes |
+| **2** | El corazón del artículo: aquí se demuestra que hay conocimiento nuevo |
+| **3** | Resultados: qué es y qué NO es |
+| **4** | Discusión: qué es y qué NO es |
+| **5** | Resultados vs. Discusión: dos secciones, dos tareas distintas |
+| **6** | El latido: los cuatro movimientos de un párrafo de discusión |
+| **7** | El latido: los cuatro movimientos de un párrafo de discusión (cont.) |
+| **8** | Tabla puente: de sus hallazgos a sus párrafos de discusión |
+| **9** | Los tres verbos del diálogo: confirma, contradice, extiende |
+| **10** | Ejemplo modelado: el mismo dato, dos párrafos muy distintos |
+| **11** | Ningún objetivo huérfano: la discusión cierra uno por uno |
+| **12** | Mitos y errores frecuentes de esta sección |
+| **13** | Mitos y errores frecuentes de esta sección (cont.) |
+| **14** | Cómo se escriben las limitaciones sin hundir el trabajo |
+| **15** | Cómo se escriben las limitaciones sin hundir el trabajo (cont.) |
+| **16** | Paso a paso para escribir la sección hoy (herramientas gratis y en la nube) |
+| **17** | Paso a paso para escribir la sección hoy (herramientas gratis y en la nube) (cont.) |
+| **18** | TALLER — Resultados y discusión de su artículo (20 minutos) |
+| **19** | TALLER — Resultados y discusión de su artículo (20 minutos) (cont.) |
+| **20** | Checklist de autoevaluación antes de entregar |
+| **21** | Trabajo autónomo y qué viene después |
+| **22** | Cierre — Sesión 09 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Resultados, discusión y relación con referentes.
@@ -85,21 +102,21 @@ En pantalla, escribir un párrafo de discusión con el latido completo: retomar 
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 09. Llegamos al corazón del artículo: **resultados y discusión**. Aquí es donde se demuestra que su trabajo produjo algo nuevo. Y aquí también está el error de forma que más se penaliza: mezclar las dos cosas.”
 
-> “**Slide 2 — OBJETIVOS.** Separar resultados de discusión, escribir una discusión que **dialogue con los referentes**, responder cada objetivo y hacerlo con honestidad científica. Tengan abierta su tabla de hallazgos de la Sesión 07 y su marco de la Sesión 08.”
+> “**OBJETIVOS.** Separar resultados de discusión, escribir una discusión que **dialogue con los referentes**, responder cada objetivo y hacerlo con honestidad científica. Tengan abierta su tabla de hallazgos de la Sesión 07 y su marco de la Sesión 08.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Dos secciones, dos tareas distintas. **Resultados**: qué encontré, neutral, sin interpretar —'el tiempo bajó de 42 a 18 minutos'—. **Discusión**: qué significa, dialogando con los autores —'esto confirma lo que reporta X en 2022'—. Interpretar en resultados o repetir resultados en discusión es el error más castigado.”
+> “**CONTENIDO CLAVE.** Dos secciones, dos tareas distintas. **Resultados**: qué encontré, neutral, sin interpretar —'el tiempo bajó de 42 a 18 minutos'—. **Discusión**: qué significa, dialogando con los autores —'esto confirma lo que reporta X en 2022'—. Interpretar en resultados o repetir resultados en discusión es el error más castigado.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Cada párrafo de discusión tiene el mismo latido: retomo un hallazgo, lo confronto con un autor —¿lo confirma, lo contradice, lo extiende?—, digo la implicación y reconozco un límite. Y algo serio: reporten también **lo que no salió**. Ocultar un dato que contradice su hipótesis debilita el artículo; discutir sus limitaciones, al contrario, les da credibilidad.”
+> “**ENFOQUE DE HOY.** Cada párrafo de discusión tiene el mismo latido: retomo un hallazgo, lo confronto con un autor —¿lo confirma, lo contradice, lo extiende?—, digo la implicación y reconozco un límite. Y algo serio: reporten también **lo que no salió**. Ocultar un dato que contradice su hipótesis debilita el artículo; discutir sus limitaciones, al contrario, les da credibilidad.”
 
 > “Y no olviden: la discusión debe **responder cada objetivo específico**. Si uno queda huérfano, el jurado lo va a ver.”
 
@@ -117,11 +134,11 @@ En pantalla, escribir un párrafo de discusión con el latido completo: retomar 
 
 > **En pantalla:** Tabla: hallazgo | autor que confirma/contradicce | implicación.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S09_ResultadosDiscusion_Apellido`: (1) redacten sus **resultados** en tono neutral (apoyados en la tabla de hallazgos); (2) escriban al menos **dos párrafos de discusión** con el latido completo —hallazgo → autor que confirma/contradice → implicación → límite—; (3) verifiquen que cada **objetivo específico** queda respondido.”
+> “**TALLER.** ~20 minutos. En `S09_ResultadosDiscusion_Apellido`: (1) redacten sus **resultados** en tono neutral (apoyados en la tabla de hallazgos); (2) escriban al menos **dos párrafos de discusión** con el latido completo —hallazgo → autor que confirma/contradice → implicación → límite—; (3) verifiquen que cada **objetivo específico** queda respondido.”
 
 > “Criterio de éxito: resultados sin interpretación, discusión con al menos dos autores citados, y ningún objetivo huérfano.”
 
@@ -138,15 +155,15 @@ En pantalla, escribir un párrafo de discusión con el latido completo: retomar 
 > **En pantalla:** Citas de la discusión.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) resultados neutral, discusión interpreta; (2) la discusión dialoga con autores, no repite; (3) se responde cada objetivo y se es honesto con lo que no salió.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S09_ResultadosDiscusion_Apellido` a CDigital. Con esto el cuerpo del artículo está casi completo. La próxima sesión le ponemos la cabeza y la cola: **resumen, palabras clave UNESCO, conclusiones y referencias**.”
+> “**PARA CONTINUAR.** Suban `S09_ResultadosDiscusion_Apellido` a CDigital. Con esto el cuerpo del artículo está casi completo. La próxima sesión le ponemos la cabeza y la cola: **resumen, palabras clave UNESCO, conclusiones y referencias**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

@@ -11,17 +11,33 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Gestión de la innovación (Manual de Oslo OCDE)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 03 — Gestión de la innovación (Manual de Oslo / OCDE) |
+| **2** | Tener ideas es barato; convertirlas en valor, no |
+| **3** | Qué significa "gestionar" la innovación |
+| **4** | Las cuatro preguntas que se hace un gestor de innovación |
+| **5** | El Manual de Oslo: el idioma común de la innovación |
+| **6** | Los cinco tipos de innovación (taxonomía del curso) |
+| **7** | El caso difícil: ¿producto o proceso? |
+| **8** | Las dos condiciones que casi todos olvidan |
+| **9** | Ejemplo modelado: clasificamos tres casos en vivo |
+| **10** | Ejemplo modelado: clasificamos tres casos en vivo (cont.) |
+| **11** | Dominante y secundario: sí hay capas, pero hay que decidir |
+| **12** | Dominante y secundario: sí hay capas, pero hay que decidir (cont.) |
+| **13** | Errores frecuentes y respuestas |
+| **14** | Errores frecuentes y respuestas (cont.) |
+| **15** | Paso a paso: cómo llenar su Ficha Oslo |
+| **16** | Ficha Oslo modelo — caso del laboratorio |
+| **17** | TALLER — Ficha Oslo de su propuesta (20 minutos) |
+| **18** | Antes de entregar: revise usted mismo |
+| **19** | Para continuar — trabajo autónomo |
+| **20** | Para continuar — trabajo autónomo (cont.) |
+| **21** | Cierre — Sesión 03 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Explicar** qué significa *gestionar* la innovación (no solo “tener ideas”).
@@ -91,7 +107,7 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 ---
 
 #### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** enlazar la idea elegida en la sesión de Design Thinking con la clasificación de hoy.
 
@@ -108,16 +124,16 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 ---
 
 #### 2️⃣ Gestionar la innovación + Manual de Oslo (~15 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que entiendan qué es gestionar y que dominen la taxonomía de cinco tipos.
 
 **GUION LITERAL:**
-> “**Slide 3.** Empecemos por gestionar. Gestionar la innovación es ponerle **ritmo y criterio** a la creatividad. La creatividad da chispas; la gestión decide cuáles se vuelven fuego y cuáles se apagan a tiempo. No es hacer más reuniones: es priorizar, prototipar, medir y decidir cuándo parar.”
+> “Empecemos por gestionar. Gestionar la innovación es ponerle **ritmo y criterio** a la creatividad. La creatividad da chispas; la gestión decide cuáles se vuelven fuego y cuáles se apagan a tiempo. No es hacer más reuniones: es priorizar, prototipar, medir y decidir cuándo parar.”
 
 > “Ahora el idioma común. El **Manual de Oslo**, de la OCDE, nos da nombres para no pelear en abstracto sobre si algo ‘es innovador’. Son cinco tipos: **producto** —una función nueva que el usuario percibe—; **proceso** —hago o entrego con menos tiempo, error o costo—; **organización** —me coordino distinto, como pasar de sprints caóticos a Kanban—; **marketing** —cambio cómo llego o me posiciono—; y **social** —genero un valor público medible—.”
 
-> “**Slide 4.** Y dos condiciones que casi todos olvidan: **novedad** e **implementación**. Una idea en PowerPoint no es innovación, es una intención. Para que cuente, tiene que salir del papel: aunque sea un prototipo pequeñito, algo que se pueda mostrar y usar.”
+> “Y dos condiciones que casi todos olvidan: **novedad** e **implementación**. Una idea en PowerPoint no es innovación, es una intención. Para que cuente, tiene que salir del papel: aunque sea un prototipo pequeñito, algo que se pueda mostrar y usar.”
 
 **Qué hacer:**
 1. (6 min) Explicar qué es gestionar con las 4 preguntas de gestor.
@@ -132,7 +148,7 @@ Oslo insiste en dos cosas que el estudiante suele olvidar: **novedad** (algo nue
 > **En pantalla:** Clasificar 3 casos en producto/proceso/organización/marketing/social.
 
 #### 3️⃣ Modelación: clasificar 3 casos en vivo (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** que vean cómo se clasifica y por qué a veces hay tipo dominante + secundario.
 
@@ -159,7 +175,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 > **En pantalla:** Tipo dominante + secundario + 1 justificación.
 
 #### 4️⃣ Taller: ficha Oslo de su propuesta (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **20 minutos**. Completen la **Ficha Oslo** de su propuesta en Google Docs o Excalidraw con seis campos: (1) **tipo dominante**; (2) tipo **secundario** opcional; (3) **novedad** —¿nueva para quién: para usted, para el campus, para el mercado?—; (4) **valor esperado** en una frase; (5) **dos actividades de gestión** con responsable y fecha; (6) **riesgo #1**. Al final leo tres fichas en voz alta. Criterio de éxito: el tipo dominante está **justificado** y las dos actividades tienen **fecha real**.”
@@ -177,14 +193,14 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 ---
 
 #### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) gestionar innovación es imponer **ritmo y criterio**, no hacer más reuniones; (2) el Manual de Oslo nos da **cinco tipos** para hablar el mismo idioma; (3) sin **novedad e implementación**, sigue siendo una idea, no una innovación.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su ficha como `S04_FichaOslo_Apellido` a CDigital; (b) traigan a la próxima sesión un **cuadro comparativo** de su tipo elegido contra un tipo alternativo que descartaron, explicando **por qué no**.”
+> “**PARA CONTINUAR.** Autónomo: (a) suban su ficha como `S03_FichaOslo_Apellido` a CDigital; (b) traigan a la próxima sesión un **cuadro comparativo** de su tipo elegido contra un tipo alternativo que descartaron, explicando **por qué no**.”
 
-> “**Slide 7 — Cierre.** La próxima clase profundizamos en los **tipos de innovación** y en incremental vs. radical. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima clase profundizamos en los **tipos de innovación** y en incremental vs. radical. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (4 min) Leer 3 fichas Oslo y corregir clasificaciones dudosas con amabilidad.
@@ -200,7 +216,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 1. Clasificar la propuesta en un tipo dominante (+ secundario opcional).
 2. Definir novedad, valor y dos actividades de gestión con responsable y fecha.
 3. **Criterio de éxito:** tipo dominante justificado + 2 actividades **fechadas**.
-4. **Entregable:** `S04_FichaOslo_Apellido` en CDigital.
+4. **Entregable:** `S03_FichaOslo_Apellido` en CDigital.
 5. **Trabajo autónomo:** cuadro comparativo de tipo elegido vs. tipo descartado.
 
 ---
@@ -211,7 +227,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 - [ ] Abrí `Clases/Sesion 03 - Gestión de la innovación (Manual de Oslo OCDE)/Presentacion.pptx`
 - [ ] Preparé 1 ejemplo de Ingeniería por cada tipo Oslo
 - [ ] Tengo la tabla de Google Docs (o Excalidraw) lista para clasificar en vivo
-- [ ] Publiqué en CDigital el espacio de entrega `S04_FichaOslo`
+- [ ] Publiqué en CDigital el espacio de entrega `S03_FichaOslo`
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 ---

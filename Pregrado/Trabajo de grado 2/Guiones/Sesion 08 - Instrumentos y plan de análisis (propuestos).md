@@ -11,17 +11,31 @@
 - **PPTX estudiante:** `Clases/Sesion 08 - Instrumentos y plan de análisis (propuestos)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 08 — INSTRUMENTOS Y PLAN DE ANÁLISIS (PROPUESTOS) |
+| **2** | De la matriz a las preguntas concretas |
+| **3** | Qué es un instrumento y qué NO es |
+| **4** | Tipos de instrumento: cuál le sirve a su proyecto |
+| **5** | La regla de trazabilidad: cada ítem apunta a un objetivo |
+| **6** | Operacionalización: el puente entre la idea y la pregunta |
+| **7** | Ejemplo modelado: operacionalización del caso 'mesa de ayuda' |
+| **8** | Siete reglas para redactar ítems que sí funcionan |
+| **9** | Ítem mal redactado vs. ítem corregido |
+| **10** | Escalas y tipos de respuesta: cuál usar en cada caso |
+| **11** | El plan de análisis se decide ANTES de tener un solo dato |
+| **12** | Ejemplo modelado: plan de análisis del caso |
+| **13** | Errores frecuentes con instrumentos y análisis |
+| **14** | Errores frecuentes con instrumentos y análisis (cont.) |
+| **15** | Paso a paso: dejar el instrumento listo (sin aplicarlo) |
+| **16** | TALLER — Operacionalización, instrumento y plan de análisis |
+| **17** | Checklist de autoevaluación antes de entregar |
+| **18** | Para continuar (trabajo autónomo) |
+| **19** | Cierre — Sesión 08 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Diseñar instrumentos y plan de análisis (propuestos).
@@ -79,23 +93,23 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 08. La clase pasada definimos el ‘cómo’ a grandes rasgos; hoy lo bajamos a herramientas concretas: **el instrumento y el plan de análisis**. Aviso de calendario: el próximo lunes es festivo, así que será clase autónoma; aprovechen hoy para dejar el instrumento bien armado.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con un bosquejo de instrumento alineado a los objetivos y un plan de análisis escrito. Todo **propuesto**. Tengan abierta su matriz del `S07`.”
+> “**OBJETIVOS.** Salir con un bosquejo de instrumento alineado a los objetivos y un plan de análisis escrito. Todo **propuesto**. Tengan abierta su matriz del `S07`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El instrumento —encuesta, entrevista, ficha de observación, protocolo de prueba— es con lo que van a recoger datos. Regla de oro: **cada ítem se rastrea hasta un objetivo**. Si una pregunta no sirve a ningún objetivo, por interesante que sea, sobra.”
+> “**CONTENIDO CLAVE.** El instrumento —encuesta, entrevista, ficha de observación, protocolo de prueba— es con lo que van a recoger datos. Regla de oro: **cada ítem se rastrea hasta un objetivo**. Si una pregunta no sirve a ningún objetivo, por interesante que sea, sobra.”
 
 > “Para no inventar preguntas al azar usamos una **tabla de operacionalización**: variable → indicador → ítem. Así cada pregunta tiene un porqué trazable. ‘Tiempo de atención’ → indicador ‘minutos por ticket’ → ítem ‘registre hora de apertura y cierre’. Directo.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y algo que casi nadie hace y cuesta caro: **el plan de análisis se decide antes de tener datos**. No recojan primero y después piensen qué hacer. Decidan ya: descriptiva para esto, comparación de medias para aquello, análisis temático para las respuestas abiertas. Y todo en ‘propuesto’: en TG2 se diseña, no se aplica.”
+> “**ENFOQUE DE HOY.** Y algo que casi nadie hace y cuesta caro: **el plan de análisis se decide antes de tener datos**. No recojan primero y después piensen qué hacer. Decidan ya: descriptiva para esto, comparación de medias para aquello, análisis temático para las respuestas abiertas. Y todo en ‘propuesto’: en TG2 se diseña, no se aplica.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -111,11 +125,11 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 
 > **En pantalla:** Revisar cómo otros midieron variables similares; copiar la lógica, no el texto.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S08_Instrumentos_Apellido`: (1) hagan la **tabla de operacionalización** (variable → indicador → ítem); (2) redacten el **instrumento**: ~10 ítems de encuesta o una guía de ~8 preguntas; (3) escriban el **plan de análisis**: qué harán con cada tipo de dato. Todo en propuesto.”
+> “**TALLER.** ~20 minutos. En `S08_Instrumentos_Apellido`: (1) hagan la **tabla de operacionalización** (variable → indicador → ítem); (2) redacten el **instrumento**: ~10 ítems de encuesta o una guía de ~8 preguntas; (3) escriban el **plan de análisis**: qué harán con cada tipo de dato. Todo en propuesto.”
 
 > “Criterio de éxito: cada ítem se rastrea a un objetivo por la tabla, y el plan de análisis ya dice qué se hará con cada dato.”
 
@@ -132,15 +146,15 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 > **En pantalla:** Citar las bases del instrumento en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) cada ítem del instrumento **se rastrea a un objetivo**; (2) el plan de análisis se decide **antes** de tener datos; (3) todo en propuesto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; usen esa semana para pulir el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
+> “**PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; usen esa semana para pulir el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
 
-> “**Slide 7 — Cierre.** Gracias; nos leemos en la autónoma y nos vemos en el Meet la siguiente.”
+> “**Cierre.** Gracias; nos leemos en la autónoma y nos vemos en el Meet la siguiente.”
 
 ---
 

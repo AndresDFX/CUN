@@ -9,7 +9,7 @@
 - **Sesión:** **01** · **Tema:** Presentación del curso · docente · estudiantes · ACAs
 - **Detalle:** Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA). No se dicta tema.
 - **PPTX estudiante:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ **ESP329 U1 (Fundamentos y enfoque de investigación) pasa a LECTURA AUTÓNOMA.** Hoy no se dicta: se encarga como trabajo de la semana y se retoma al abrir la Sesión 02. Si un estudiante reclama "no vimos nada", muéstrele el encargo de la slide **Antes de la Sesión 02**.
 
@@ -271,7 +271,7 @@
 - [ ] Plantilla APA CUN abierta en Google Docs para mostrarla en vivo
 - [ ] PPTX `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` en modo presentador (21 slides)
 - [ ] Link del formulario de asistencia listo para el chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet iniciado con **grabación activada**: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet iniciado con **grabación activada**: https://meet.google.com/omk-woqk-vsj
 
 ---
 

@@ -61,9 +61,9 @@ from sesiones_cun import (
     LINK_TUTORIAS,
     MSG_TUTORIAS_POR_GRUPO,
     LINK_REGISTRO_DOCENTE_AFI,
-    meet_placeholder,
+    meet_url,
 )
-from carga_academica import footer_inicio_efectivo
+from guion_slides import deck_path, tabla_slides_md, titulos_pptx  # noqa: E402
 
 SLIDES_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -429,7 +429,7 @@ def build_guion_md(course, ses, label: str) -> str:
     n = ses["n"]
     dur = course["contenido_min"]
     titulo = ses["titulo"]
-    meet = meet_placeholder(course["titulo"])
+    meet = meet_url(course["key"], course["titulo"])
     fund = FUNDAMENTOS_S1.get(course["key"], "") if n == 1 else textwrap.dedent(f"""\
         ### Concepto central
         Desarrolla con profundidad el tema **{titulo}**, tal como aparece en la fuente
@@ -477,7 +477,11 @@ def build_guion_md(course, ses, label: str) -> str:
     warn = f"\n> ⚠️ {course['nota_syllabus']}\n" if course.get("nota_syllabus") else ""
     rel_pptx = f"Clases/{label}/Presentacion.pptx"
 
-    slides_table = f"""| Slide | Título | Cuándo |
+    # Tabla del deck REAL si ya existe en disco; si no, la plantilla como último recurso.
+    _tabla_real = tabla_slides_md(
+        titulos_pptx(deck_path(course["folder"], label)), encabezado=""
+    )
+    slides_table = (_tabla_real or "").strip() or f"""| Slide | Título | Cuándo |
 | :---: | :--- | :--- |
 | **1** | Portada — {n:02d} | Apertura |
 | **2** | OBJETIVOS | Encuadre |

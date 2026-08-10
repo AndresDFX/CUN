@@ -11,17 +11,38 @@
 - **PPTX estudiante:** `Clases/Sesion 05 - Análisis de negocios · validación de la propuesta/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **26 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 05 — Análisis de negocios · validación de la propuesta |
+| **2** | Hoy la propuesta deja de ser un ensayo |
+| **3** | FODA: la radiografía rápida (y su única regla) |
+| **4** | FODA: la radiografía rápida (y su única regla) (cont.) |
+| **5** | FODA: la versión que no sirve y la que sí |
+| **6** | Business Model Canvas: cómo se sostiene su propuesta |
+| **7** | Los nueve bloques del Canvas y su pregunta clave |
+| **8** | Los nueve bloques del Canvas y su pregunta clave (cont.) |
+| **9** | Cómo se llenan bien los cuatro bloques de hoy |
+| **10** | MVP: la maqueta, no el edificio |
+| **11** | MVP: la maqueta, no el edificio (cont.) |
+| **12** | Cuatro MVP baratos que sí caben en un semestre |
+| **13** | La cadena de validación: cinco eslabones |
+| **14** | La cadena de validación: cinco eslabones (cont.) |
+| **15** | Ejemplo modelado: la cadena completa del caso del laboratorio |
+| **16** | Ejemplo modelado: la cadena completa del caso del laboratorio (cont.) |
+| **17** | Criterios de éxito: el que no sirve y el que sí |
+| **18** | Errores frecuentes y respuestas |
+| **19** | Errores frecuentes y respuestas (cont.) |
+| **20** | Paso a paso: su mini-Canvas en Canvanizer |
+| **21** | Paso a paso: su mini-Canvas en Canvanizer (cont.) |
+| **22** | TALLER — Mini-Canvas + plan de MVP (22 minutos) |
+| **23** | Antes de entregar: revise usted mismo |
+| **24** | Para continuar — trabajo autónomo |
+| **25** | Para continuar — trabajo autónomo (cont.) |
+| **26** | Cierre — Sesión 05 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Usar** el FODA como radiografía rápida y verificable (sin prosa vacía).
@@ -104,7 +125,7 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 ---
 
 #### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** anunciar que hoy la propuesta pasa de idea argumentada a idea **sostenible y validada**.
 
@@ -121,16 +142,16 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 ---
 
 #### 2️⃣ FODA + Business Model Canvas + MVP (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** que sepan qué es cada herramienta y para qué sirve, sin convertirlo en teoría de administración.
 
 **GUION LITERAL:**
-> “**Slide 3.** Tres herramientas, una detrás de otra. Primero el **FODA**: cuatro cajas —fortalezas y debilidades internas, oportunidades y amenazas externas—. Regla única: cada frase debe poderse verificar. ‘Somos creativos’ no vale; ‘tengo 30 usuarios a la mano esta semana’ sí.”
+> “Tres herramientas, una detrás de otra. Primero el **FODA**: cuatro cajas —fortalezas y debilidades internas, oportunidades y amenazas externas—. Regla única: cada frase debe poderse verificar. ‘Somos creativos’ no vale; ‘tengo 30 usuarios a la mano esta semana’ sí.”
 
 > “Segundo, el **Business Model Canvas**: nueve bloques que cuentan cómo su propuesta crea y entrega valor. Hoy no lleno los nueve; me concentro en cuatro que aclaran todo: **propuesta de valor, segmento, canales y actividades clave**. Lo trabajamos en Canvanizer, gratis y en el navegador.”
 
-> “**Slide 4.** Y el **MVP**. Aquí está la analogía que quiero que recuerden: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara**. El MVP no es la app terminada; es lo más pequeño que me enseña si a alguien le importa: una landing con lista de espera, un prototipo clicable, un piloto hecho a mano.”
+> “Y el **MVP**. Aquí está la analogía que quiero que recuerden: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara**. El MVP no es la app terminada; es lo más pequeño que me enseña si a alguien le importa: una landing con lista de espera, un prototipo clicable, un piloto hecho a mano.”
 
 **Qué hacer:**
 1. (5 min) Explicar FODA con la regla “específico y verificable”.
@@ -149,7 +170,7 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 > **En pantalla:** Solo referencia; el trabajo se hace en Canvanizer/Excalidraw/Docs.
 
 #### 3️⃣ Modelación de validación: supuesto → prueba (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** mostrar la cadena completa de validación con un ejemplo cronometrable.
 
@@ -180,7 +201,7 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 > **En pantalla:** Pegar captura o texto del Canvas y subir a CDigital.
 
 #### 4️⃣ Taller: mini-Canvas + plan MVP (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Cuatro entregas: (1) un **FODA** de máximo 6 bullets en total, todos verificables; (2) un **Canvas mínimo** en Canvanizer con al menos propuesta de valor, segmento, canales y actividades clave; (3) su **MVP descrito en 5 líneas** —qué es lo mínimo que van a mostrar—; (4) **una prueba de validación** de su supuesto más riesgoso, con criterio numérico u observable. Al final dos personas comparten solo su prueba y su criterio. Éxito: la prueba tiene un criterio que se pueda medir.”
@@ -198,14 +219,14 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 ---
 
 #### 5️⃣ Cierre + pista de sustentación (~7 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) el **FODA** solo sirve si es verificable; (2) el **MVP** es la maqueta que responde la duda más cara, no el edificio; (3) validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado antes.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su Canvas + MVP + prueba como `S06_CanvasMVP_Apellido`; (b) **ejecuten la prueba** aunque sea con 3 usuarios y traigan los resultados a la próxima sesión. Eso alimenta directamente su sustentación.”
+> “**PARA CONTINUAR.** Autónomo: (a) suban su Canvas + MVP + prueba como `S05_CanvasMVP_Apellido`; (b) **ejecuten la prueba** aunque sea con 3 usuarios y traigan los resultados a la próxima sesión. Eso alimenta directamente su sustentación.”
 
-> “**Slide 7 — Cierre.** La próxima clase es **Vigilancia tecnológica**, para que su MVP no viva en una burbuja. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima clase es **Vigilancia tecnológica**, para que su MVP no viva en una burbuja. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (3 min) Escuchar 2 pruebas y verificar que tengan criterio medible.
@@ -222,7 +243,7 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 2. Canvas mínimo en Canvanizer (valor, segmento, canales, actividades).
 3. MVP descrito en 5 líneas + 1 prueba del supuesto más riesgoso con criterio medible.
 4. **Criterio de éxito:** supuesto riesgoso + prueba concreta + criterio de éxito definido de antemano.
-5. **Entregable:** `S06_CanvasMVP_Apellido` en CDigital.
+5. **Entregable:** `S05_CanvasMVP_Apellido` en CDigital.
 6. **Trabajo autónomo:** ejecutar la prueba con al menos 3 usuarios y traer resultados.
 
 ---
@@ -233,7 +254,7 @@ Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalid
 - [ ] Abrí `Clases/Sesion 05 - Análisis de negocios · validación de la propuesta/Presentacion.pptx`
 - [ ] Abrí Canvanizer (https://canvanizer.com/new/business-model-canvas) para modelar en vivo
 - [ ] Tengo la cadena de validación del caso laboratorio lista para escribir
-- [ ] Publiqué en CDigital el espacio de entrega `S06_CanvasMVP`
+- [ ] Publiqué en CDigital el espacio de entrega `S05_CanvasMVP`
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 ---

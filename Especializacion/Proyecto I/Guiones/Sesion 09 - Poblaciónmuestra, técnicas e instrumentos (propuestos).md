@@ -9,21 +9,35 @@
 - **Sesión:** **09** · **Tema:** Población/muestra, técnicas e instrumentos (propuestos)
 - **Detalle:** ESP329 U5 · Instrumentos PROPUESTOS (no aplicados en Proyecto I).
 - **PPTX estudiante:** `Clases/Sesion 09 - Poblaciónmuestra, técnicas e instrumentos (propuestos)/Presentacion.pptx`
-- **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | RECUERDA | Tutorías / instrumentos propuestos |
-| **5** | ACTIVIDAD / TALLER | Consigna práctica |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 09 — Población/muestra, técnicas e instrumentos (propuestos) |
+| **2** | La regla de oro de hoy: nadie manda todavía ese formulario |
+| **3** | Antes de la muestra: ¿cuál es su unidad de análisis? |
+| **4** | Población, muestra y muestreo: tres cosas distintas |
+| **5** | Criterios de inclusión y exclusión: sin ellos, la muestra es un deseo |
+| **6** | Tipos de muestreo: probabilístico y no probabilístico |
+| **7** | ¿De qué tamaño debe ser la muestra? |
+| **8** | Técnica e instrumento no son sinónimos |
+| **9** | De la técnica al instrumento: qué produce cada ruta |
+| **10** | Las cuatro declaraciones obligatorias de todo instrumento propuesto |
+| **11** | Matriz de alineación: cada ítem cuelga de un objetivo |
+| **12** | Ejemplo modelado: ítems reales de los dos tipos de instrumento |
+| **13** | Ética y datos: lo que su instrumento debe prever desde ya |
+| **14** | Ética y datos: lo que su instrumento debe prever desde ya (cont.) |
+| **15** | Paso a paso para bosquejar su instrumento en Google Docs |
+| **16** | TALLER · Bosquejo de instrumento (20 minutos) |
+| **17** | Checklist de autoevaluación antes de entregar |
+| **18** | Trabajo autónomo y qué viene después |
+| **19** | Cierre — Sesión 09 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Definir** población/muestra propuestas.
@@ -74,31 +88,31 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 ---
 
 #### 1️⃣ Encuadre + regla de oro P-I (~8 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **GUION LITERAL:**
 > “Buenas tardes, **Sesión 09**. Empiezo con la regla de oro de hoy, porque es la que más se rompe: si alguien ya mandó un Google Form ‘de prueba’ a cuarenta personas, eso NO es avance de Proyecto I, es un riesgo —recolectó sin aval—. Hoy PROPONEMOS instrumentos; no aplicamos.”
-> “**Slide 2.** Meta de hoy: definir población y muestra propuestas, y bosquejar el instrumento alineado a sus objetivos. Todo en condicional.”
+> “Meta de hoy: definir población y muestra propuestas, y bosquejar el instrumento alineado a sus objetivos. Todo en condicional.”
 
 #### 2️⃣ Población / muestra (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **GUION LITERAL:**
-> “**Slide 3.** Población no es lo mismo que muestra. La **población** es el total de unidades que me interesan; la **muestra** es a quiénes efectivamente estudiaría. Y la muestra necesita criterios: quién SÍ entra —inclusión— y quién NO —exclusión—, y cómo los seleccionaría.”
+> “Población no es lo mismo que muestra. La **población** es el total de unidades que me interesan; la **muestra** es a quiénes efectivamente estudiaría. Y la muestra necesita criterios: quién SÍ entra —inclusión— y quién NO —exclusión—, y cómo los seleccionaría.”
 > “Recuerden: en Proyecto I definimos quiénes serían y cómo se elegirían, pero no contactamos a nadie para recolectar. Eso es Proyecto II, con aval.”
 
 #### 3️⃣ Técnicas e instrumentos propuestos (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+**Momento del deck:** RECUERDA
 
 **GUION LITERAL:**
-> “**Slide 4.** La técnica es el procedimiento —encuesta, entrevista, observación, análisis de documentos—; el instrumento es la herramienta concreta —el cuestionario, la guía, la rúbrica—. Cada instrumento propuesto declara cuatro cosas: propósito, estructura por bloques, cómo se validaría, y el plan de análisis.”
+> “La técnica es el procedimiento —encuesta, entrevista, observación, análisis de documentos—; el instrumento es la herramienta concreta —el cuestionario, la guía, la rúbrica—. Cada instrumento propuesto declara cuatro cosas: propósito, estructura por bloques, cómo se validaría, y el plan de análisis.”
 > “Y la alineación de oro: cada bloque del instrumento cuelga de un objetivo específico. Si un ítem no responde a ningún objetivo, sobra. Recuerden diligenciar su formulario de asistencia cuando estén en tutoría.”
 
 #### 4️⃣ Taller: bosquejo de instrumento (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Bosquejen su instrumento: si es encuesta, diez a quince ítems; si es entrevista, una guía de ocho preguntas. Añadan un párrafo de plan de análisis. Y al lado de cada bloque, escriban a qué objetivo responde. Redacten todo en condicional. Yo circulo. Suban como `S09_InstrumentosPropuestos_Apellidos`.”
+> “Veinte minutos. Bosquejen su instrumento: si es encuesta, diez a quince ítems; si es entrevista, una guía de ocho preguntas. Añadan un párrafo de plan de análisis. Y al lado de cada bloque, escriban a qué objetivo responde. Redacten todo en condicional. Yo circulo. Suban como `S09_InstrumentosPropuestos_Apellidos`.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -108,11 +122,11 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 | No define inclusión/exclusión | “¿Quién entra y quién no? Escriba los criterios.” |
 
 #### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, completen el instrumento y dejen explícito, por escrito, que es una PROPUESTA para Proyecto II. Suban `S09_InstrumentosPropuestos_Apellidos`.”
-> “**Slide 7.** La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para ACA3. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
+> “En autónomo, completen el instrumento y dejen explícito, por escrito, que es una PROPUESTA para Proyecto II. Suban `S09_InstrumentosPropuestos_Apellidos`.”
+> “La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para ACA3. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
 
 
 
@@ -148,7 +162,7 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 - [ ] PPTX `Clases/Sesion 09 - Poblaciónmuestra, técnicas e instrumentos (propuestos)/Presentacion.pptx`
 - [ ] Material / plantilla APA en CDigital o Google Docs
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
-- [ ] Meet: [URL Meet — mismo enlace toda la serie · PROYECTO I]
+- [ ] Meet: https://meet.google.com/omk-woqk-vsj
 
 ---
 

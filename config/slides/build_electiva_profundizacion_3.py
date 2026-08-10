@@ -21,7 +21,7 @@ from pptx.enum.text import PP_ALIGN
 set_footer("Electiva de Profundización 3 · Redes de nueva generación")
 
 DIAG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "diagramas")
-BASE = r"g:\Mi unidad\Trabajos\Empleo\FESNA\Cursos\Electiva de Profundizacion 3 - Redes de nueva generacion\Clases"
+BASE = r"g:\My Drive\Trabajos\Empleo\FESNA\Cursos\Electiva de Profundizacion 3 - Redes de nueva generacion\Clases"
 
 def P(did):
     """Ruta del diagrama <did>.png si existe (si no, None -> la slide degrada a solo texto)."""

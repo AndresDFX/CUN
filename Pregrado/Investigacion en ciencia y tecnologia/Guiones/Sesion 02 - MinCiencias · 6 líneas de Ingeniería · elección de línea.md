@@ -11,17 +11,31 @@
 - **PPTX estudiante:** `Clases/Sesion 02 - MinCiencias · 6 líneas de Ingeniería · elección de línea/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 02 — MinCiencias · 6 líneas de Ingeniería · elección de línea |
+| **2** | Su tema todavía no tiene apellido |
+| **3** | MinCiencias: qué es y por qué le importa a su artículo |
+| **4** | Las 6 líneas de Ingeniería del programa |
+| **5** | La misma palabra, cuatro artículos distintos |
+| **6** | La misma palabra, cuatro artículos distintos (cont.) |
+| **7** | Los tres criterios para elegir su línea |
+| **8** | Ejemplo modelado (1/2): del tema al dilema |
+| **9** | Ejemplo modelado (2/2): la tabla de decisión resuelta |
+| **10** | Cuatro mitos que hay que desactivar hoy |
+| **11** | Cuatro mitos que hay que desactivar hoy (cont.) |
+| **12** | Paso a paso: elegir su línea con herramientas gratis |
+| **13** | Paso a paso: elegir su línea con herramientas gratis (cont.) |
+| **14** | Cómo se escribe el párrafo de justificación |
+| **15** | Ejemplo modelado (3/3): el párrafo terminado |
+| **16** | TALLER · Línea elegida + justificación (~20 min) |
+| **17** | Checklist antes de subir su entrega |
+| **18** | Trabajo autónomo · para la próxima sesión |
+| **19** | Cierre — Sesión 02 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Explicar** qué es MinCiencias y cómo el Sistema Nacional de CTeI organiza la investigación en líneas.
@@ -82,21 +96,21 @@ Tema 'phishing en correos de estudiantes' → línea **Inteligencia Artificial**
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Buenas tardes. Sesión 02. La semana pasada cada uno dejó un **tema tentativo**. Hoy le ponemos apellido a ese tema: lo ubicamos en una **línea de investigación** para saber dónde buscar y con quién dialogar.”
 
-> “**Slide 2 — OBJETIVOS:** entender qué es MinCiencias, conocer las 6 líneas del programa y elegir la suya con una justificación escrita. Tengan a la mano su ficha de la Sesión 01, porque de ahí partimos.”
+> “**OBJETIVOS:** entender qué es MinCiencias, conocer las 6 líneas del programa y elegir la suya con una justificación escrita. Tengan a la mano su ficha de la Sesión 01, porque de ahí partimos.”
 
-#### 2️⃣ MinCiencias y líneas (~16 min) — Slides 3–4
+#### 2️⃣ MinCiencias y líneas (~16 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Empecemos por MinCiencias. Es el Ministerio de Ciencia, Tecnología e Innovación; coordina el sistema nacional que organiza la investigación del país en áreas y líneas. Para ustedes lo importante es esto: la investigación no flota, se agrupa en líneas, y **cada línea tiene su propio lenguaje y sus propias fuentes**.”
+> “**CONTENIDO CLAVE.** Empecemos por MinCiencias. Es el Ministerio de Ciencia, Tecnología e Innovación; coordina el sistema nacional que organiza la investigación del país en áreas y líneas. Para ustedes lo importante es esto: la investigación no flota, se agrupa en líneas, y **cada línea tiene su propio lenguaje y sus propias fuentes**.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Nuestro programa trabaja seis líneas: IoT, Big Data, Inteligencia Artificial, servicios cloud/FinTech, aplicaciones y telemática. Voy a describir cada una con una pregunta de ejemplo para que se ubiquen.” (Recorra la tabla del Fundamento línea por línea.)
+> “**ENFOQUE DE HOY.** Nuestro programa trabaja seis líneas: IoT, Big Data, Inteligencia Artificial, servicios cloud/FinTech, aplicaciones y telemática. Voy a describir cada una con una pregunta de ejemplo para que se ubiquen.” (Recorra la tabla del Fundamento línea por línea.)
 
 > “Fíjense en algo: la misma idea de 'seguridad' se ve distinta según la línea. En IA es detección de fraude con modelos; en telemática es seguridad de la red; en cloud es proteger datos en la nube. **La línea decide el ángulo.**”
 
@@ -114,11 +128,11 @@ Tema 'phishing en correos de estudiantes' → línea **Inteligencia Artificial**
 
 > **En pantalla:** Columnas: Línea | Afinidad | ¿Hay fuentes? | Pertinencia local. Llenar 2 filas en vivo y elegir.
 
-#### 4️⃣ Taller: línea + justificación (~20 min) — Slide 5
+#### 4️⃣ Taller: línea + justificación (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En su Doc `S02_LineaInvestigacion_Apellido` escriban: (1) la **línea elegida**; (2) un **párrafo de justificación** que responda a los tres criterios —afinidad, fuentes disponibles y pertinencia local—; (3) **dos referentes exploratorios** que encuentren en Google Académico, en APA tentativa.”
+> “**TALLER.** ~20 minutos. En su Doc `S02_LineaInvestigacion_Apellido` escriban: (1) la **línea elegida**; (2) un **párrafo de justificación** que responda a los tres criterios —afinidad, fuentes disponibles y pertinencia local—; (3) **dos referentes exploratorios** que encuentren en Google Académico, en APA tentativa.”
 
 > “Criterio de éxito: al leer su párrafo entiendo por qué esa línea y no otra, y veo que ya existe literatura para trabajarla.”
 
@@ -135,15 +149,15 @@ Tema 'phishing en correos de estudiantes' → línea **Inteligencia Artificial**
 > **En pantalla:** Con la línea elegida, localizar 2 títulos y anotar APA tentativa. Si aparece 'tráfico inusual', usar el navegador del docente.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) MinCiencias organiza la investigación en líneas; (2) el programa tiene 6 líneas de ingeniería; (3) la línea define su vocabulario y sus fuentes, así que se elige **una** principal y se justifica.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S02_LineaInvestigacion_Apellido` a CDigital y afinen los 2 referentes. La próxima sesión es clave: **prueba parcial + primer avance del artículo**; traigan su tema y su línea ya definidos, porque son la materia prima del avance.”
+> “**PARA CONTINUAR.** Suban `S02_LineaInvestigacion_Apellido` a CDigital y afinen los 2 referentes. La próxima sesión es clave: **prueba parcial + primer avance del artículo**; traigan su tema y su línea ya definidos, porque son la materia prima del avance.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet la próxima.”
+> “**Cierre.** Gracias; mismo Meet la próxima.”
 
 ---
 

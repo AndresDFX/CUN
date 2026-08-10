@@ -27,11 +27,19 @@ from sesiones_cun import (  # noqa: E402
     LINK_REGISTRO_DOCENTE_AFI,
     LINK_TUTORIAS,
     MSG_TUTORIAS_POR_GRUPO,
-    meet_placeholder,
+    meet_url,
 )
 from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from guion_slides import (  # noqa: E402
+    NOTA_MOMENTOS,
+    ajustar_mapa_manual,
+    deck_path,
+    limpiar_referencias,
+    tabla_slides_md,
+    titulos_pptx,
+)
 
-MEET = meet_placeholder("PROYECTO I")
+MEET = meet_url("proyecto1", "PROYECTO I")
 COURSE = COURSES["proyecto1"]
 
 
@@ -135,7 +143,7 @@ def guion_01(ses):
         ("7️⃣ Herramientas, cómo pedir ayuda y acuerdos", 7),
         ("8️⃣ Encargo autónomo y cierre del bloque", 5),
     ]
-    return f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
+    md = f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
 
 > **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
 > **Esta sesión es de ENCUADRE: no se dicta tema.** El contenido curricular arranca en la Sesión 02.
@@ -401,10 +409,24 @@ def guion_01(ses):
 ---
 *Fin del Guión — Sesión 01 (encuadre). No se dicta tema: el contenido arranca en la Sesión 02.*
 """
+    # Mapa de slides curado a mano: se realinea contra el deck real por si el motor
+    # partió algún bloque en «(cont.)» y corrió la numeración de la narración.
+    md, _ = ajustar_mapa_manual(
+        md, titulos_pptx(deck_path(COURSES["proyecto1"]["folder"], label))
+    )
+    return md
+
+
+def _slides_map(label: str) -> str:
+    """Tabla de slides del deck REAL (no la plantilla fija de 7)."""
+    tabla = tabla_slides_md(titulos_pptx(deck_path(COURSES["proyecto1"]["folder"], label)))
+    if not tabla:
+        return slides_table_std()
+    return f"{tabla}\n{NOTA_MOMENTOS}\n"
 
 
 def _body(n, titulo, detalle, label, objetivos, fundamento, fases_plan, fases_texto, taller_foco, entregable, tutoria_foco):
-    return f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
+    md = f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
 
 > **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
 > Estudie primero el Fundamento Teórico. **Duración: ≈60 min contenido + 60 min tutoría**.
@@ -419,7 +441,7 @@ def _body(n, titulo, detalle, label, objetivos, fundamento, fases_plan, fases_te
 
 > ⚠️ Temario curricular = 7 unidades ESP329 · 11 sesiones AFI las desarrollan.
 
-{slides_table_std()}
+{_slides_map(label)}
 🎯 **Objetivos de la sesión**
 {objetivos}
 
@@ -456,6 +478,10 @@ def _body(n, titulo, detalle, label, objetivos, fundamento, fases_plan, fases_te
 ---
 *Fin del Guión — Sesión {n:02d}. Autocontenido para dictar 60+60.*
 """
+    # La narración de estas sesiones venía de la plantilla de 7 slides: sus números no
+    # corresponden al deck real (17–19 slides). Se retiran; queda el nombre del momento.
+    md, _ = limpiar_referencias(md)
+    return md
 
 
 def guion_02(ses):

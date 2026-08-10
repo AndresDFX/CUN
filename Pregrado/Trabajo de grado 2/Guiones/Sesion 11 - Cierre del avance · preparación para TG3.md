@@ -11,17 +11,31 @@
 - **PPTX estudiante:** `Clases/Sesion 11 - Cierre del avance · preparación para TG3/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 11 — CIERRE DEL AVANCE · PREPARACIÓN PARA TG3 |
+| **2** | Cerrar TG2 no es terminar el trabajo de grado |
+| **3** | Qué significa exactamente 'versión limpia' |
+| **4** | Checklist de cierre: ítem, verificación y evidencia |
+| **5** | Aplicar la Plantilla APA CUN sin sufrir |
+| **6** | Errores de APA 7 que más se repiten en los avances |
+| **7** | La revisión final de coherencia: diez minutos bien invertidos |
+| **8** | La lista de pendientes para TG3: su mejor regalo del semestre |
+| **9** | Ejemplo modelado: pendientes para TG3 del caso 'mesa de ayuda' |
+| **10** | Qué le espera en TG3 (para que no lo tome por sorpresa) |
+| **11** | Errores frecuentes en el cierre |
+| **12** | Errores frecuentes en el cierre (cont.) |
+| **13** | Antiplagio: higiene académica, no amenaza |
+| **14** | Parafraseo mal hecho vs. parafraseo correcto |
+| **15** | Paso a paso: dejar la versión limpia y entregarla |
+| **16** | TALLER — Versión limpia, checklist y pendientes para TG3 |
+| **17** | Checklist de autoevaluación antes de entregar |
+| **18** | Cierre del curso y puente a TG3 |
+| **19** | Cierre — Sesión 11 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Cerrar avance TG2 y preparar puente a TG3.
@@ -80,23 +94,23 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 11, la última sincrónica del curso. Ojo con el calendario: en este tramo final hay dos lunes festivos, que son clases autónomas, así que hoy es nuestro cierre en vivo. El objetivo es claro: dejar el avance **limpio** y construir el puente a Trabajo de Grado 3.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con una versión limpia del avance, un checklist de cierre y una lista explícita de pendientes para TG3. Tengan el documento consolidado abierto.”
+> “**OBJETIVOS.** Salir con una versión limpia del avance, un checklist de cierre y una lista explícita de pendientes para TG3. Tengan el documento consolidado abierto.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Aclaremos qué es cerrar TG2: **no** es terminar el trabajo de grado. Es dejar un avance limpio y coherente —planteamiento, pregunta, objetivos, marco y metodología propuesta— para que en TG3 solo quede ejecutar y sustentar. ‘Limpio’ tiene nombre: formato APA CUN aplicado, citas y referencias completas, y ninguna sección a medias sin marcar.”
+> “**CONTENIDO CLAVE.** Aclaremos qué es cerrar TG2: **no** es terminar el trabajo de grado. Es dejar un avance limpio y coherente —planteamiento, pregunta, objetivos, marco y metodología propuesta— para que en TG3 solo quede ejecutar y sustentar. ‘Limpio’ tiene nombre: formato APA CUN aplicado, citas y referencias completas, y ninguna sección a medias sin marcar.”
 
 > “Para eso usamos un **checklist de cierre**: título coherente, objetivos alineados, marco completo, metodología con matriz e instrumento, referencias en APA 7, plantilla aplicada. Lo que no esté, se marca.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y lo más importante para el próximo semestre: la **lista de pendientes para TG3**. Lo que quedó en propuesto —aplicar instrumentos, recoger datos, escribir resultados, sustentar— no se esconde, se escribe. Recuerden que en TG3 el documento pasa por el **antiplagio institucional del campus**; cerrar hoy con citas y parafraseo correctos les evita sustos. Es higiene, no amenaza.”
+> “**ENFOQUE DE HOY.** Y lo más importante para el próximo semestre: la **lista de pendientes para TG3**. Lo que quedó en propuesto —aplicar instrumentos, recoger datos, escribir resultados, sustentar— no se esconde, se escribe. Recuerden que en TG3 el documento pasa por el **antiplagio institucional del campus**; cerrar hoy con citas y parafraseo correctos les evita sustos. Es higiene, no amenaza.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en Google Docs).
@@ -112,11 +126,11 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 
 > **En pantalla:** Lista de secciones listas / pendientes con acción concreta.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S11_CierreTG2_Apellido`: (1) recorran el **checklist de cierre** y marquen lo que está y lo que falta; (2) dejen una **versión limpia** del avance con formato APA CUN y referencias completas; (3) escriban la **lista de pendientes para TG3** en imperativo.”
+> “**TALLER.** ~20 minutos. En `S11_CierreTG2_Apellido`: (1) recorran el **checklist de cierre** y marquen lo que está y lo que falta; (2) dejen una **versión limpia** del avance con formato APA CUN y referencias completas; (3) escriban la **lista de pendientes para TG3** en imperativo.”
 
 > “Criterio de éxito: su documento se lee coherente de punta a punta, y cualquiera que abra su lista de pendientes sabe qué falta para TG3.”
 
@@ -133,15 +147,15 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 > **En pantalla:** Exportar/pegar la lista APA final del avance y revisar duplicados.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cerramos el curso. Tres ideas: (1) cerrar TG2 es dejar un avance **limpio**, no terminar el grado; (2) el checklist verifica que nada quede a medias sin marcar; (3) la lista de pendientes es el puente a TG3.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban a CDigital `S11_CierreTG2_Apellido` con la versión limpia, el checklist y la lista de pendientes. Revisen en CDigital el detalle de la evaluación del corte final y la fecha de recepción. En TG3 retoman justo desde esta lista.”
+> “**PARA CONTINUAR.** Suban a CDigital `S11_CierreTG2_Apellido` con la versión limpia, el checklist y la lista de pendientes. Revisen en CDigital el detalle de la evaluación del corte final y la fecha de recepción. En TG3 retoman justo desde esta lista.”
 
-> “**Slide 7 — Cierre.** Gracias por el trabajo de todo el periodo. Llegaron con un proyecto disperso y se van con un avance ordenado; eso es exactamente lo que TG2 debía lograr. Nos vemos en TG3.”
+> “**Cierre.** Gracias por el trabajo de todo el periodo. Llegaron con un proyecto disperso y se van con un avance ordenado; eso es exactamente lo que TG2 debía lograr. Nos vemos en TG3.”
 
 ---
 

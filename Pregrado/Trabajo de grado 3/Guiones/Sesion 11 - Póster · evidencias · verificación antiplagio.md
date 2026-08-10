@@ -11,17 +11,37 @@
 - **PPTX estudiante:** `Clases/Sesion 11 - Póster · evidencias · verificación antiplagio/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **25 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 11 — Póster · evidencias · verificación antiplagio |
+| **2** | Un metro y un minuto: la regla que define el póster |
+| **3** | El póster: qué es y qué NO es |
+| **4** | Anatomía del póster: bloque por bloque |
+| **5** | Jerarquía visual: cómo se guía el ojo del que pasa |
+| **6** | Jerarquía visual: cómo se guía el ojo del que pasa (cont.) |
+| **7** | Paso a paso: montar el póster en Canva free o Google Slides |
+| **8** | Paso a paso: montar el póster en Canva free o Google Slides (cont.) |
+| **9** | Ejemplo modelado: el mismo proyecto, en versión póster |
+| **10** | Evidencias y anexos: qué se anexa y qué no |
+| **11** | Evidencias y anexos: qué se anexa y qué no (cont.) |
+| **12** | Cómo se arma la lista de anexos |
+| **13** | Antiplagio: qué mide de verdad y qué NO mide |
+| **14** | Antiplagio: qué mide de verdad y qué NO mide (cont.) |
+| **15** | Diagnóstico honesto de un porcentaje alto |
+| **16** | Ejemplo modelado: cómo baja la similitud de forma legítima |
+| **17** | Mitos que hay que enterrar hoy |
+| **18** | Mitos que hay que enterrar hoy (cont.) |
+| **19** | Mitos que hay que enterrar hoy (cont.) |
+| **20** | TALLER — Póster, anexos y revisión de similitud (20 minutos) |
+| **21** | TALLER — Póster, anexos y revisión de similitud (20 minutos) (cont.) |
+| **22** | Checklist de autoevaluación antes de entregar |
+| **23** | Checklist de autoevaluación antes de entregar (cont.) |
+| **24** | Trabajo autónomo y qué viene después |
+| **25** | Cierre — Sesión 11 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Póster · evidencias · verificación antiplagio.
@@ -83,21 +103,21 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 11. Entramos en la recta de la sustentación. Hoy preparamos tres cosas: el **póster**, las **evidencias** para anexos y la **verificación antiplagio**. Y quiero desmontar de una el pánico: el antiplagio no muerde si citan bien.”
 
-> “**Slide 2 — OBJETIVOS.** Diseñar un póster que sea divulgación visual —no el artículo pegado—, organizar los anexos de la obra-creación, y entender qué mide de verdad el software de similitud. Tengan su artículo y sus evidencias del prototipo a la mano.”
+> “**OBJETIVOS.** Diseñar un póster que sea divulgación visual —no el artículo pegado—, organizar los anexos de la obra-creación, y entender qué mide de verdad el software de similitud. Tengan su artículo y sus evidencias del prototipo a la mano.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El póster **no** es el artículo en miniatura. Es una pieza que se lee de lejos, en un minuto: título, problema, método, hallazgo principal, conclusión y una imagen. El error clásico es pegar el artículo con letra 8. Regla: si no se lee a un metro, sobra texto. Se hace en **Canva free** o en Google Slides, gratis y en la nube.”
+> “**CONTENIDO CLAVE.** El póster **no** es el artículo en miniatura. Es una pieza que se lee de lejos, en un minuto: título, problema, método, hallazgo principal, conclusión y una imagen. El error clásico es pegar el artículo con letra 8. Regla: si no se lee a un metro, sobra texto. Se hace en **Canva free** o en Google Slides, gratis y en la nube.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Ahora el antiplagio, sin mitos. El software mide **coincidencia textual**, no plagio por sí mismo: una cita bien hecha también coincide. Un porcentaje alto casi siempre viene de **parafraseo malo** o de no citar. ¿La forma de bajarlo? No trucos: **reescribir con sus palabras y citar bien**. La verificación se hace por la **ruta institucional en CDigital**; no busquen páginas de terceros. Y esto cierra lo que dijimos en co-creación: todo lo prestado se cita.”
+> “**ENFOQUE DE HOY.** Ahora el antiplagio, sin mitos. El software mide **coincidencia textual**, no plagio por sí mismo: una cita bien hecha también coincide. Un porcentaje alto casi siempre viene de **parafraseo malo** o de no citar. ¿La forma de bajarlo? No trucos: **reescribir con sus palabras y citar bien**. La verificación se hace por la **ruta institucional en CDigital**; no busquen páginas de terceros. Y esto cierra lo que dijimos en co-creación: todo lo prestado se cita.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela póster + parafraseo).
@@ -113,11 +133,11 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 
 > **En pantalla:** Bloques: problema, método, hallazgo, conclusión. Canva free opcional.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
+> “**TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
 
 > “Criterio de éxito: el póster se entiende a un metro, los anexos están referenciados, y el párrafo reescrito conserva la idea con voz propia y su cita.”
 
@@ -134,20 +154,20 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 > **En pantalla:** Solo las citas que caben en el póster.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el póster es divulgación visual, no el artículo pegado; (2) los anexos se seleccionan, rotulan y referencian; (3) el antiplagio mide coincidencia —se resuelve parafraseando bien y citando, por la ruta institucional—.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S11_PosterEvidencias_Apellido` a CDigital y corran la verificación de similitud por la ruta oficial del curso. La próxima sesión es grande: **ensayo de la sustentación ante jurados**.”
+> “**PARA CONTINUAR.** Suban `S11_PosterEvidencias_Apellido` a CDigital. **Si el curso exige verificación de similitud, yo les indico la ruta institucional**; no busquen servicios externos. La próxima sesión es grande: **ensayo de la sustentación ante jurados**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 
 🧩 **Entregable de hoy**
-1. Póster 1 página + constancia de revisión de similitud (ruta institucional CDigital).
+1. Póster 1 página + anexos rotulados. (Informe de similitud **solo si el curso lo exige**, por la ruta institucional que confirme el Docente.)
 2. Archivo en CDigital: `S11_PosterEvidencias_Apellido`.
 3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).

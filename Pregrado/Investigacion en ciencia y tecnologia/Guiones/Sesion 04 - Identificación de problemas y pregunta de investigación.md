@@ -11,17 +11,32 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Identificación de problemas y pregunta de investigación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **20 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 04 — Identificación de problemas y pregunta de investigación |
+| **2** | El corazón del artículo: si esto queda bien, el resto casi se escribe solo |
+| **3** | Qué es (y qué no es) un problema de investigación |
+| **4** | Deseo de producto vs. problema de investigación |
+| **5** | Tres herramientas para ordenar el problema |
+| **6** | Espina de pescado: abrir familias de causas |
+| **7** | Árbol de problemas y método 3D |
+| **8** | Árbol de problemas y método 3D (cont.) |
+| **9** | Ejemplo modelado (1/2): la espina llena, en vivo |
+| **10** | Ejemplo modelado (2/2): de la espina sale la pregunta |
+| **11** | Anatomía de una pregunta investigable |
+| **12** | Preguntas mal formuladas y su reformulación |
+| **13** | Errores frecuentes al formular el problema |
+| **14** | Errores frecuentes al formular el problema (cont.) |
+| **15** | Paso a paso: el diagrama en Excalidraw y la prueba de viabilidad |
+| **16** | TALLER · Problema y pregunta (~20 min) |
+| **17** | Checklist antes de subir su entrega |
+| **18** | Checklist antes de subir su entrega (cont.) |
+| **19** | Trabajo autónomo · para la próxima sesión |
+| **20** | Cierre — Sesión 04 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Diferenciar** un problema de investigación de "la falta de mi solución".
@@ -76,21 +91,21 @@ De 'haré un chatbot' a '¿en qué medida el tiempo de respuesta del feedback in
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 04. Llegamos al **corazón** de toda investigación: el problema y la pregunta. Si esto queda bien, el resto del artículo casi se escribe solo. Si queda mal, todo lo demás cojea.”
 
-> “**Slide 2 — OBJETIVOS.** Hoy: separar el problema de 'la falta de mi solución', usar una herramienta para ordenar causas y efectos, y salir con una **pregunta investigable escrita**.”
+> “**OBJETIVOS.** Hoy: separar el problema de 'la falta de mi solución', usar una herramienta para ordenar causas y efectos, y salir con una **pregunta investigable escrita**.”
 
-#### 2️⃣ Problema y pregunta (~14 min) — Slides 3–4
+#### 2️⃣ Problema y pregunta (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primero, la trampa número uno: muchos escriben 'el problema es que no existe una app que…'. Eso no es un problema, es que **quieren hacer una app**. El problema es un hecho que genera consecuencias: 'los tutores dan feedback tarde, y por eso los estudiantes repiten el mismo error'. Uno se puede investigar; el otro es un antojo.”
+> “**CONTENIDO CLAVE.** Primero, la trampa número uno: muchos escriben 'el problema es que no existe una app que…'. Eso no es un problema, es que **quieren hacer una app**. El problema es un hecho que genera consecuencias: 'los tutores dan feedback tarde, y por eso los estudiantes repiten el mismo error'. Uno se puede investigar; el otro es un antojo.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Para ordenar el problema tenemos tres herramientas: la **espina de pescado** abre familias de causas; el **árbol de problemas** separa causas, problema y efectos; y el **método 3D** —describir, dimensionar, decidir— sirve para acotar temas gigantes.”
+> “**ENFOQUE DE HOY.** Para ordenar el problema tenemos tres herramientas: la **espina de pescado** abre familias de causas; el **árbol de problemas** separa causas, problema y efectos; y el **método 3D** —describir, dimensionar, decidir— sirve para acotar temas gigantes.”
 
 > “Y de ahí sale la **pregunta**. Una buena pregunta es clara, delimitada, viable y no se responde con sí o no. Nada de '¿sirve la IA?'; sí a '¿en qué medida un clasificador reduce el phishing en los correos de la sede X?'.”
 
@@ -108,11 +123,11 @@ De 'haré un chatbot' a '¿en qué medida el tiempo de respuesta del feedback in
 
 > **En pantalla:** Modelar síntoma → consecuencias → pregunta en una frase; abrir https://excalidraw.com/ (sin cuenta) para el diagrama.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S04_ProblemaPregunta_Apellido`: (1) describan el problema en 8–12 líneas, como hecho con consecuencias, no como falta de su solución; (2) hagan un diagrama —espina de pescado o árbol— en Excalidraw y peguen la captura; (3) escriban la pregunta en **una sola frase** investigable.”
+> “**TALLER.** ~20 minutos. En `S04_ProblemaPregunta_Apellido`: (1) describan el problema en 8–12 líneas, como hecho con consecuencias, no como falta de su solución; (2) hagan un diagrama —espina de pescado o árbol— en Excalidraw y peguen la captura; (3) escriban la pregunta en **una sola frase** investigable.”
 
 > “Criterio de éxito: su pregunta tiene actor y contexto, no se responde con sí/no, y el diagrama muestra al menos tres causas.”
 
@@ -129,15 +144,15 @@ De 'haré un chatbot' a '¿en qué medida el tiempo de respuesta del feedback in
 > **En pantalla:** Buscar 2 términos de la pregunta; si aparece literatura, la pregunta es viable.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el problema es un hecho con consecuencias, no la falta de su app; (2) espina, árbol y método 3D ordenan causas y efectos; (3) la pregunta se escribe en una frase investigable.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S04_ProblemaPregunta_Apellido` con el diagrama. La próxima sesión tomamos esta pregunta y la desarrollamos en el **planteamiento del problema** completo.”
+> “**PARA CONTINUAR.** Suban `S04_ProblemaPregunta_Apellido` con el diagrama. La próxima sesión tomamos esta pregunta y la desarrollamos en el **planteamiento del problema** completo.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

@@ -11,17 +11,28 @@
 - **PPTX estudiante:** `Clases/Sesion 06 - Marco conceptual y contextual/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **16 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 06 — MARCO CONCEPTUAL Y CONTEXTUAL |
+| **2** | "Tiempo de atención" no significa lo mismo para dos personas |
+| **3** | Marco conceptual = definiciones operativas, no de diccionario |
+| **4** | Del diccionario a lo operativo: cuatro términos del caso |
+| **5** | Anatomía de una definición operativa: cuatro piezas |
+| **6** | Marco contextual: dónde ocurre, con lupa y no con mapa |
+| **7** | Contexto mal acotado frente a contexto bien acotado |
+| **8** | Ejemplo modelado: párrafo de contexto, escrito completo |
+| **9** | Por qué esto sostiene el próximo semestre |
+| **10** | Lo que más se corrige en esta sesión |
+| **11** | Lo que más se corrige en esta sesión (cont.) |
+| **12** | Paso a paso: construir las dos secciones en el navegador |
+| **13** | Taller — 20 minutos para cerrar el marco referencial |
+| **14** | Autoevaluación antes de subir el archivo |
+| **15** | Trabajo autónomo y qué viene la próxima sesión |
+| **16** | Cierre — Sesión 06 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Redactar marco conceptual y contextual.
@@ -76,21 +87,21 @@ Estas definiciones operativas son las que en TG3 se convierten en **variables me
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 06. Cerramos el marco referencial con dos piezas cortas pero decisivas: el **marco conceptual** —definir los términos como los usa SU proyecto— y el **marco contextual** —dónde ocurre exactamente el problema—.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con una tabla de términos con definiciones operativas y una página de contexto acotada. Tengan a la mano su pregunta y sus constructos del `S05`.”
+> “**OBJETIVOS.** Salir con una tabla de términos con definiciones operativas y una página de contexto acotada. Tengan a la mano su pregunta y sus constructos del `S05`.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El marco conceptual define sus términos, pero **no** como el diccionario. Necesitan **definiciones operativas**: acotadas y medibles. ‘Tiempo de atención’ no es ‘lo que se demora’; es ‘los minutos entre que se abre y se cierra un ticket en el sistema X’. ¿Ven la diferencia? La segunda se puede medir; la primera no.”
+> “**CONTENIDO CLAVE.** El marco conceptual define sus términos, pero **no** como el diccionario. Necesitan **definiciones operativas**: acotadas y medibles. ‘Tiempo de atención’ no es ‘lo que se demora’; es ‘los minutos entre que se abre y se cierra un ticket en el sistema X’. ¿Ven la diferencia? La segunda se puede medir; la primera no.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** El marco contextual dice **dónde** ocurre. Y aquí el error clásico: describir ‘Colombia’ o ‘el sector TI del país’ cuando su proyecto pasa en un área de una sola empresa. Contexto es la **organización y el proceso concretos**, no el país entero.”
+> “**ENFOQUE DE HOY.** El marco contextual dice **dónde** ocurre. Y aquí el error clásico: describir ‘Colombia’ o ‘el sector TI del país’ cuando su proyecto pasa en un área de una sola empresa. Contexto es la **organización y el proceso concretos**, no el país entero.”
 
 > “Y les adelanto por qué esto importa: estas definiciones operativas son las que en TG3 se vuelven **variables e instrumentos**. Un término mal definido hoy es un instrumento imposible el próximo semestre.”
 
@@ -108,11 +119,11 @@ Estas definiciones operativas son las que en TG3 se convierten en **variables me
 
 > **En pantalla:** Contrastar 2 definiciones del mismo término; elegir la operacionalizable.
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S06_ConceptualContextual_Apellido`: (1) una **tabla de términos** (≥ 4) con la definición operativa de cada uno; (2) **una página de contexto** que describa organización, área y proceso concretos, con las citas que hagan falta en APA 7.”
+> “**TALLER.** ~20 minutos. En `S06_ConceptualContextual_Apellido`: (1) una **tabla de términos** (≥ 4) con la definición operativa de cada uno; (2) **una página de contexto** que describa organización, área y proceso concretos, con las citas que hagan falta en APA 7.”
 
 > “Criterio de éxito: cada término se puede medir con su definición, y el contexto describe un lugar concreto, no un país.”
 
@@ -129,15 +140,15 @@ Estas definiciones operativas son las que en TG3 se convierten en **variables me
 > **En pantalla:** Citar las definiciones elegidas en APA 7.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el marco conceptual son **definiciones operativas**, medibles; (2) el contextual es la organización y el proceso concretos, no el país; (3) estas definiciones sostienen la metodología de TG3.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S06_ConceptualContextual_Apellido`. Con esto el marco referencial queda armado. La próxima sesión damos el salto al **diseño metodológico propuesto**: cómo van a responder la pregunta.”
+> “**PARA CONTINUAR.** Suban `S06_ConceptualContextual_Apellido`. Con esto el marco referencial queda armado. La próxima sesión damos el salto al **diseño metodológico propuesto**: cómo van a responder la pregunta.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

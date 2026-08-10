@@ -11,17 +11,36 @@
 - **PPTX estudiante:** `Clases/Sesion 12 - Sustentación ante jurados/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 12 — SUSTENTACIÓN ANTE JURADOS |
+| **2** | Doce minutos que valen un semestre |
+| **3** | Qué evalúa realmente el jurado (y qué no) |
+| **4** | Qué evalúa realmente el jurado (y qué no) (cont.) |
+| **5** | Reparto del guion oral: 10–12 minutos, bloque por bloque |
+| **6** | Cómo se escribe un guion oral (no es leer el artículo) |
+| **7** | Cómo se escribe un guion oral (no es leer el artículo) (cont.) |
+| **8** | Ejemplo modelado: los primeros dos minutos, palabra por palabra |
+| **9** | Ejemplo modelado: los primeros dos minutos, palabra por palabra (cont.) |
+| **10** | Las preguntas que el jurado hace casi siempre |
+| **11** | El "no sé": la respuesta que salva o hunde |
+| **12** | El "no sé": la respuesta que salva o hunde (cont.) |
+| **13** | Las diapositivas de apoyo: reglas que sí se cumplen |
+| **14** | Errores frecuentes en la sustentación |
+| **15** | Errores frecuentes en la sustentación (cont.) |
+| **16** | Errores frecuentes en la sustentación (cont.) |
+| **17** | Paso a paso del ensayo (lo que haremos ahora mismo) |
+| **18** | TALLER — Guion oral y preguntas anticipadas (20 minutos, en parejas) |
+| **19** | TALLER — Guion oral y preguntas anticipadas (20 minutos, en parejas) (cont.) |
+| **20** | Rúbrica de autoobservación: cómo se ve un ensayo bien hecho |
+| **21** | Checklist de autoevaluación antes de sustentar |
+| **22** | Checklist de autoevaluación antes de sustentar (cont.) |
+| **23** | Trabajo autónomo y qué viene después |
+| **24** | Cierre — Sesión 12 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Sustentación ante jurados (ensayo de defensa).
@@ -89,23 +108,23 @@ Modelar 2 minutos de sustentación con cronómetro visible (problema→pregunta�
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 12. Hoy ensayamos la **sustentación ante jurados**, y necesito que entiendan el peso: la sustentación **es el EXAM, el 50% de la nota final**. La otra mitad, el EV05, es el proceso que venimos construyendo. O sea: defender bien vale tanto como todo el trabajo del semestre.”
 
-> “**Slide 2 — OBJETIVOS.** Armar un guion oral de 10–12 minutos, **anticipar las preguntas** del jurado y ensayar con cronómetro. Esto es un simulacro: la defensa real es ante los jurados que asigna la Dirección del Programa. Tengan su artículo y su póster listos.”
+> “**OBJETIVOS.** Armar un guion oral de 10–12 minutos, **anticipar las preguntas** del jurado y ensayar con cronómetro. Esto es un simulacro: la defensa real es ante los jurados que asigna la Dirección del Programa. Tengan su artículo y su póster listos.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El jurado evalúa cuatro cosas: **dominio del tema, claridad, coherencia del artículo y capacidad de defensa**. No evalúa lo bonitas que sean las diapositivas. Así que las diapositivas se **apoyan**, no se leen. Si leen, pierden dominio ante los ojos del jurado.”
+> “**CONTENIDO CLAVE.** El jurado evalúa cuatro cosas: **dominio del tema, claridad, coherencia del artículo y capacidad de defensa**. No evalúa lo bonitas que sean las diapositivas. Así que las diapositivas se **apoyan**, no se leen. Si leen, pierden dominio ante los ojos del jurado.”
 
 > “El guion dura 10–12 minutos y el tiempo es nota. Reparto: dos minutos de problema y pregunta, uno de objetivos, dos o tres de método, tres de resultados, dos o tres de discusión y conclusión, y uno de aporte. Ensáyenlo con cronómetro: pasarse resta, quedarse corto también.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y la mejor vacuna contra el miedo: **anticipar las preguntas**. El jurado pregunta casi siempre lo mismo —por qué ese método, cuáles son las limitaciones, qué aporta, cómo garantiza la validez—. Si traen esas respuestas preparadas, se les va el 80% del nervio. Y si preguntan algo que no saben: honestidad breve y reconducen; nunca inventen.”
+> “**ENFOQUE DE HOY.** Y la mejor vacuna contra el miedo: **anticipar las preguntas**. El jurado pregunta casi siempre lo mismo —por qué ese método, cuáles son las limitaciones, qué aporta, cómo garantiza la validez—. Si traen esas respuestas preparadas, se les va el 80% del nervio. Y si preguntan algo que no saben: honestidad breve y reconducen; nunca inventen.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela sustentación + pregunta difícil).
@@ -121,11 +140,11 @@ Modelar 2 minutos de sustentación con cronómetro visible (problema→pregunta�
 
 > **En pantalla:** Ensayar con timer; 1 colega toma notas de claridad.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (ensayo por parejas) · Docente cronometra y observa.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos, en parejas. Uno sustenta con **cronómetro** mientras el otro toma notas de claridad y tiempo; luego cambian. Cada quien entrega `S12_GuionSustentacion_Apellido` con: (1) el **guion oral** por bloques con sus minutos; (2) **5 preguntas difíciles** que anticipa del jurado, cada una con una **respuesta corta**.”
+> “**TALLER.** ~20 minutos, en parejas. Uno sustenta con **cronómetro** mientras el otro toma notas de claridad y tiempo; luego cambian. Cada quien entrega `S12_GuionSustentacion_Apellido` con: (1) el **guion oral** por bloques con sus minutos; (2) **5 preguntas difíciles** que anticipa del jurado, cada una con una **respuesta corta**.”
 
 > “Criterio de éxito: el guion cabe en 10–12 minutos, no se lee de las diapositivas, y las 5 respuestas son concretas y honestas.”
 
@@ -142,15 +161,15 @@ Modelar 2 minutos de sustentación con cronómetro visible (problema→pregunta�
 > **En pantalla:** Tener 3 citas clave memorizables.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la sustentación es el EXAM, la mitad de la nota; (2) el jurado evalúa dominio, no diapositivas —no se lee—; (3) anticipar las preguntas y ensayar con cronómetro quita el miedo.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S12_GuionSustentacion_Apellido` a CDigital y sigan ensayando en voz alta, con reloj. La próxima sesión preparamos los **entregables para el repositorio institucional**.”
+> “**PARA CONTINUAR.** Suban `S12_GuionSustentacion_Apellido` a CDigital y sigan ensayando en voz alta, con reloj. La próxima sesión preparamos los **entregables para el repositorio institucional**.”
 
-> “**Slide 7 — Cierre.** Gracias, y a practicar; mismo Meet.”
+> “**Cierre.** Gracias, y a practicar; mismo Meet.”
 
 ---
 

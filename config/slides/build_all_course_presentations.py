@@ -11,9 +11,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from cun_slides_engine import *
 from sesiones_cun import (
     COURSES, DOCENTE_CORREO, DOCENTE_CREDS, LINK_TUTORIAS,
-    MSG_TUTORIAS_POR_GRUPO, meet_placeholder,
+    MSG_TUTORIAS_POR_GRUPO, meet_url,
 )
-from carga_academica import bold_var, cover_meta_lines, curso as carga_curso, footer_inicio_efectivo
+from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
 
 URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 # La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
@@ -70,7 +70,7 @@ def build_proyecto1(course):
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
         f"**Tutorías:** @@{LINK_TUTORIAS}@@",
         MSG_TUTORIAS_POR_GRUPO,
-        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_placeholder('Proyecto I'))}",
+        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url('proyecto1', 'Proyecto I'))}",
         f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
         "**Enunciados ACA:** `Clases/Recursos/ACAs/`",
@@ -119,7 +119,7 @@ def build_pregrado(course, filename):
     content_slide(prs, "RECURSOS", [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
-        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_placeholder(course['titulo']))}",
+        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url(course['key'], course['titulo']))}",
         f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
     ], idx=_i)

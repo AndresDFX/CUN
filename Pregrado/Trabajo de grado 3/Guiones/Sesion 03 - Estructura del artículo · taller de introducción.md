@@ -11,17 +11,31 @@
 - **PPTX estudiante:** `Clases/Sesion 03 - Estructura del artículo · taller de introducción/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 03 — Estructura del artículo · taller de introducción |
+| **2** | Hoy deja de tener ideas sueltas y pasa a tener un documento |
+| **3** | Anatomía del artículo: qué va y qué NO va en cada sección |
+| **4** | La regla mental que evita el 90% de las mezclas |
+| **5** | La introducción es un embudo: de lo ancho a lo estrecho |
+| **6** | Los tres o cuatro párrafos, uno por uno |
+| **7** | Ejemplo modelado — introducción real, párrafo a párrafo |
+| **8** | El mal arranque y el buen arranque |
+| **9** | El mal arranque y el buen arranque (cont.) |
+| **10** | Paso a paso — trabajar sobre la plantilla APA CUN en Google Docs |
+| **11** | Paso a paso — trabajar sobre la plantilla APA CUN en Google Docs (cont.) |
+| **12** | Formato APA 7: lo mínimo que el jurado revisa |
+| **13** | Errores frecuentes de esta sesión |
+| **14** | Errores frecuentes de esta sesión (cont.) |
+| **15** | TALLER — Escriba su introducción en la plantilla APA CUN |
+| **16** | Checklist de autoevaluación antes de subir a CDigital |
+| **17** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **18** | Para continuar — trabajo autónomo |
+| **19** | Cierre — Sesión 03 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Estructura del artículo + taller de introducción.
@@ -84,21 +98,21 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 03. Ya tienen pregunta, objetivos y título. Hoy dejan de tener ideas sueltas y pasan a tener un **documento con secciones**. Vamos a montar el esqueleto del artículo y a escribir, en vivo, la **introducción**.”
 
-> “**Slide 2 — OBJETIVOS.** Conocer la anatomía del artículo en la plantilla APA CUN, entender qué va en cada sección para no mezclarlas, y salir con la introducción empezada. Abran ya la **plantilla APA CUN en Google Docs**; hoy trabajamos sobre ella.”
+> “**OBJETIVOS.** Conocer la anatomía del artículo en la plantilla APA CUN, entender qué va en cada sección para no mezclarlas, y salir con la introducción empezada. Abran ya la **plantilla APA CUN en Google Docs**; hoy trabajamos sobre ella.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El artículo tiene secciones fijas, no es un ensayo libre. Resumen, introducción, marco, metodología, resultados, discusión, conclusiones y referencias. Y una regla mental que les va a salvar la vida: **introducción = por qué; método = cómo; resultados = qué encontré; discusión = qué significa**. Si respetan eso, no mezclan.”
+> “**CONTENIDO CLAVE.** El artículo tiene secciones fijas, no es un ensayo libre. Resumen, introducción, marco, metodología, resultados, discusión, conclusiones y referencias. Y una regla mental que les va a salvar la vida: **introducción = por qué; método = cómo; resultados = qué encontré; discusión = qué significa**. Si respetan eso, no mezclan.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Hoy nos concentramos en la **introducción**, que funciona como un **embudo**: arranca ancho —contexto— y se va cerrando por el problema, el vacío, la pregunta y los objetivos, hasta el propósito del artículo. Tres o cuatro párrafos. Lo que **no** se hace: empezar con 'desde la antigüedad el ser humano se comunica'. Se arranca en el problema real.”
+> “**ENFOQUE DE HOY.** Hoy nos concentramos en la **introducción**, que funciona como un **embudo**: arranca ancho —contexto— y se va cerrando por el problema, el vacío, la pregunta y los objetivos, hasta el propósito del artículo. Tres o cuatro párrafos. Lo que **no** se hace: empezar con 'desde la antigüedad el ser humano se comunica'. Se arranca en el problema real.”
 
 > “Y una nota de forma: trabajamos sobre la **plantilla APA CUN en Google Docs**. Nada de dar formato a mano ni de depender de Word instalado; el formato ya viene resuelto.”
 
@@ -116,11 +130,11 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 
 > **En pantalla:** Abrir plantilla APA CUN en Google Docs; modelar gancho → vacío → propósito.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En la plantilla APA CUN (Google Docs), archivo `S03_Introduccion_Apellido`: escriban una **introducción de 3–4 párrafos** con el embudo contexto → problema → vacío → pregunta → objetivos → propósito. Debe cerrar exactamente en la pregunta y los objetivos de la Sesión 02.”
+> “**TALLER.** ~20 minutos. En la plantilla APA CUN (Google Docs), archivo `S03_Introduccion_Apellido`: escriban una **introducción de 3–4 párrafos** con el embudo contexto → problema → vacío → pregunta → objetivos → propósito. Debe cerrar exactamente en la pregunta y los objetivos de la Sesión 02.”
 
 > “Criterio de éxito: si leo su introducción sin conocer su tema, entiendo el contexto, el vacío y qué se proponen; y termina en su pregunta, no en el aire.”
 
@@ -137,15 +151,15 @@ En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducci
 > **En pantalla:** Citas de la introducción.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el artículo tiene secciones fijas y no se mezclan —por qué, cómo, qué encontré, qué significa—; (2) la introducción es un embudo que termina en la pregunta; (3) se escribe sobre la plantilla APA CUN en Docs.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S03_Introduccion_Apellido` a CDigital. La próxima sesión abrimos la **Fase I de referentes**: búsqueda sistemática y fichas de lectura para empezar a sumar hacia las 50 referencias.”
+> “**PARA CONTINUAR.** Suban `S03_Introduccion_Apellido` a CDigital. La próxima sesión abrimos la **Fase I de referentes**: búsqueda sistemática y fichas de lectura para empezar a sumar hacia las 50 referencias.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

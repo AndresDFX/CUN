@@ -11,17 +11,36 @@
 - **PPTX estudiante:** `Clases/Sesion 05 - Formulación del planteamiento del problema/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 05 — FORMULACIÓN DEL PLANTEAMIENTO DEL PROBLEMA |
+| **2** | Hoy vestimos la pregunta |
+| **3** | Qué es y qué NO es el planteamiento |
+| **4** | La estructura de embudo |
+| **5** | La estructura de embudo (cont.) |
+| **6** | Los seis componentes del planteamiento |
+| **7** | La regla dura de hoy: evidencia, no opinión |
+| **8** | ¿De dónde saco evidencia si todavía no recojo datos? |
+| **9** | ¿De dónde saco evidencia si todavía no recojo datos? (cont.) |
+| **10** | El truco antibloqueo: primero la tabla, después la prosa |
+| **11** | El truco antibloqueo: primero la tabla, después la prosa (cont.) |
+| **12** | Ejemplo modelado (1/2): la tabla llena |
+| **13** | Ejemplo modelado (2/2): del renglón al párrafo |
+| **14** | Ejemplo modelado (2/2): del renglón al párrafo (cont.) |
+| **15** | Jerarquizar causas y cerrar en la pregunta |
+| **16** | Jerarquizar causas y cerrar en la pregunta (cont.) |
+| **17** | Errores frecuentes al redactar el planteamiento |
+| **18** | Errores frecuentes al redactar el planteamiento (cont.) |
+| **19** | Paso a paso: escribirlo en 22 minutos |
+| **20** | TALLER · Redactar el planteamiento (~22 min) |
+| **21** | Checklist antes de subir su entrega |
+| **22** | Checklist antes de subir su entrega (cont.) |
+| **23** | Trabajo autónomo · para la próxima sesión |
+| **24** | Cierre — Sesión 05 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Redactar** el planteamiento del problema completo (estado actual, evidencias, causas, consecuencias, vacío y pregunta).
@@ -77,21 +96,21 @@ Tabla síntoma/evidencia/consecuencia convertida en el primer párrafo del plant
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 05. Ya tienen la pregunta; hoy la **vestimos**: escribimos el planteamiento del problema. Es la sección donde ustedes convencen al lector de que su problema es real y vale la pena estudiarlo.”
 
-> “**Slide 2 — OBJETIVOS.** Redactar el planteamiento con sus seis componentes, respaldarlo con evidencia y que termine, natural, en la pregunta de la clase pasada. Tengan abierto su `S04`.”
+> “**OBJETIVOS.** Redactar el planteamiento con sus seis componentes, respaldarlo con evidencia y que termine, natural, en la pregunta de la clase pasada. Tengan abierto su `S04`.”
 
-#### 2️⃣ Estructura del planteamiento (~14 min) — Slides 3–4
+#### 2️⃣ Estructura del planteamiento (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Piensen el planteamiento como un **embudo**: arriba, ancho, el estado actual del tema; y va cerrándose por evidencias, causas, consecuencias y vacío, hasta caer en un solo punto: su pregunta. Seis componentes, un embudo.”
+> “**CONTENIDO CLAVE.** Piensen el planteamiento como un **embudo**: arriba, ancho, el estado actual del tema; y va cerrándose por evidencias, causas, consecuencias y vacío, hasta caer en un solo punto: su pregunta. Seis componentes, un embudo.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** La regla dura de hoy: **evidencia, no opinión**. 'Creo que muchos reprueban' no sirve; 'el 34 % reprobó según el reporte X de 2024' sí. Cada afirmación fuerte lleva una cifra o un estudio detrás. Aquí Google Académico deja de ser opcional.”
+> “**ENFOQUE DE HOY.** La regla dura de hoy: **evidencia, no opinión**. 'Creo que muchos reprueban' no sirve; 'el 34 % reprobó según el reporte X de 2024' sí. Cada afirmación fuerte lleva una cifra o un estudio detrás. Aquí Google Académico deja de ser opcional.”
 
 > “Y un truco para no bloquearse frente a la hoja en blanco: primero llenamos una **tabla síntoma / evidencia / consecuencia** y después la volvemos párrafos. La tabla piensa por ustedes.”
 
@@ -109,11 +128,11 @@ Tabla síntoma/evidencia/consecuencia convertida en el primer párrafo del plant
 
 > **En pantalla:** Llenar 3 filas en vivo; luego convertir la primera en prosa del planteamiento.
 
-#### 4️⃣ Taller de redacción (~22 min) — Slide 5
+#### 4️⃣ Taller de redacción (~22 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~22 minutos. En `S05_Planteamiento_Apellido`: (1) llenen la tabla síntoma/evidencia/consecuencia con al menos tres filas; (2) conviértanla en un planteamiento de 1 a 1.5 páginas con los seis componentes; (3) al menos una afirmación debe apoyarse en un dato o estudio hallado en Google Académico. Que el texto termine en su pregunta.”
+> “**TALLER.** ~22 minutos. En `S05_Planteamiento_Apellido`: (1) llenen la tabla síntoma/evidencia/consecuencia con al menos tres filas; (2) conviértanla en un planteamiento de 1 a 1.5 páginas con los seis componentes; (3) al menos una afirmación debe apoyarse en un dato o estudio hallado en Google Académico. Que el texto termine en su pregunta.”
 
 > “Criterio de éxito: leo su planteamiento y, sin conocer su tema, entiendo qué pasa, cómo lo sabe y por qué importa; y al final aparece la pregunta.”
 
@@ -130,15 +149,15 @@ Tabla síntoma/evidencia/consecuencia convertida en el primer párrafo del plant
 > **En pantalla:** Buscar 1 dato/estudio que sostenga el 'estado actual' (no la solución). Anotar en APA tentativa.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el planteamiento es un embudo de seis componentes; (2) evidencia, no opinión; (3) todo termina en la pregunta.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S05_Planteamiento_Apellido` a CDigital y revisen allí la **fecha límite de recepción** de trabajos de este corte. La próxima sesión es la más práctica del curso: **bases de datos, gestores de citas y marco teórico** —traigan su planteamiento, porque el marco responde a esta misma pregunta.”
+> “**PARA CONTINUAR.** Suban `S05_Planteamiento_Apellido` a CDigital y revisen allí la **fecha límite de recepción** de trabajos de este corte. La próxima sesión es la más práctica del curso: **bases de datos, gestores de citas y marco teórico** —traigan su planteamiento, porque el marco responde a esta misma pregunta.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

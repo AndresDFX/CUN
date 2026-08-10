@@ -11,17 +11,29 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Antecedentes y referentes (Fase I)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **17 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 04 — ANTECEDENTES Y REFERENTES (FASE I) |
+| **2** | Antes de escribir su solución: ¿alguien ya la intentó? |
+| **3** | Las tres piezas del marco referencial no son lo mismo |
+| **4** | Qué cuenta como antecedente y qué no |
+| **5** | La ficha de antecedente: cinco campos, ninguno opcional |
+| **6** | Nacional e internacional: por qué la mezcla es obligatoria |
+| **7** | Cómo se busca de verdad: consultas que sí traen resultados |
+| **8** | Lectura estratégica: no se lee el artículo completo |
+| **9** | Ejemplo modelado: una ficha completa, escrita |
+| **10** | El párrafo puente: lo que convierte la lista en argumento |
+| **11** | Lo que más se corrige en esta sesión |
+| **12** | Lo que más se corrige en esta sesión (cont.) |
+| **13** | Paso a paso: de Google Académico a su documento, en APA 7 |
+| **14** | Taller — 20 minutos de búsqueda y fichaje |
+| **15** | Autoevaluación antes de subir el archivo |
+| **16** | Trabajo autónomo y qué viene la próxima sesión |
+| **17** | Cierre — Sesión 04 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Lograr:** Construir antecedentes y referentes (Fase I).
@@ -81,23 +93,23 @@ Ficha con la línea ‘qué me aporta’ + párrafo puente: ‘coinciden en X, d
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 04. Ya tenemos el envase; hoy empezamos a llenarlo con lo primero del marco: los **antecedentes**. Es decir, quién ya trabajó algo parecido a lo suyo y qué encontró.”
 
-> “**Slide 2 — OBJETIVOS.** Salir con al menos cuatro fichas de antecedentes bien hechas y un párrafo que las hile. Para el flujo de búsqueda y citación nos apoyamos en la **guía práctica de herramientas** que está en la carpeta Guiones; no repito todo el paso a paso de ZoteroBib, lo tienen ahí.”
+> “**OBJETIVOS.** Salir con al menos cuatro fichas de antecedentes bien hechas y un párrafo que las hile. Para el flujo de búsqueda y citación nos apoyamos en la **guía práctica de herramientas** que está en la carpeta Guiones; no repito todo el paso a paso de ZoteroBib, lo tienen ahí.”
 
-#### 2️⃣ Exposición del concepto (~14 min) — Slides 3–4
+#### 2️⃣ Exposición del concepto (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Cuidado con una confusión clásica: **antecedentes no es marco teórico**. Los antecedentes son **estudios previos** parecidos al suyo —qué hicieron, cómo y qué hallaron—. La teoría de fondo y las definiciones vienen después. Sirven para dos cosas: mostrar que su problema es real y no reinventar lo ya hecho.”
+> “**CONTENIDO CLAVE.** Cuidado con una confusión clásica: **antecedentes no es marco teórico**. Los antecedentes son **estudios previos** parecidos al suyo —qué hicieron, cómo y qué hallaron—. La teoría de fondo y las definiciones vienen después. Sirven para dos cosas: mostrar que su problema es real y no reinventar lo ya hecho.”
 
 > “Cada antecedente se guarda en una **ficha**: referencia APA, objetivo, método, hallazgo y —la línea que nunca puede faltar— **qué aporta a mi proyecto**. Si esa línea no está, la ficha es adorno.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y busquen mezclando: algo **nacional o local**, que muestre pertinencia en Colombia, y algo **internacional**, que traiga el estado del arte. Usen Google Académico y las bases de la biblioteca CUN con su login. El flujo de citas en APA 7 lo tienen en la guía de herramientas.”
+> “**ENFOQUE DE HOY.** Y busquen mezclando: algo **nacional o local**, que muestre pertinencia en Colombia, y algo **internacional**, que traiga el estado del arte. Usen Google Académico y las bases de la biblioteca CUN con su login. El flujo de citas en APA 7 lo tienen en la guía de herramientas.”
 
 #### 3️⃣ Modelación en vivo (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela en pantalla).
@@ -113,11 +125,11 @@ Ficha con la línea ‘qué me aporta’ + párrafo puente: ‘coinciden en X, d
 
 > **En pantalla:** Búsqueda con 3–5 palabras de la pregunta; comillas para la frase exacta; guardar 4 títulos (≥1 nacional, ≥1 internacional).
 
-#### 4️⃣ Taller aplicado al proyecto (~20 min) — Slide 5
+#### 4️⃣ Taller aplicado al proyecto (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S04_Antecedentes_Apellido`: (1) busquen y elijan **4 antecedentes** —al menos uno nacional y uno internacional—; (2) hagan una **ficha** por cada uno con los cinco campos, sin copiar el resumen; (3) generen las referencias en APA 7 con ZoteroBib (guía de herramientas); (4) escriban un **párrafo puente** que las hile y muestre el vacío.”
+> “**TALLER.** ~20 minutos. En `S04_Antecedentes_Apellido`: (1) busquen y elijan **4 antecedentes** —al menos uno nacional y uno internacional—; (2) hagan una **ficha** por cada uno con los cinco campos, sin copiar el resumen; (3) generen las referencias en APA 7 con ZoteroBib (guía de herramientas); (4) escriban un **párrafo puente** que las hile y muestre el vacío.”
 
 > “Criterio de éxito: cada ficha tiene su línea de ‘qué me aporta’, y el párrafo puente convierte la lista en argumento.”
 
@@ -134,15 +146,15 @@ Ficha con la línea ‘qué me aporta’ + párrafo puente: ‘coinciden en X, d
 > **En pantalla:** Convertir a APA 7 y pegar en Docs. Paso a paso: guía transversal de herramientas.
 
 
-#### 5️⃣ Cierre + autónomo (~8 min) — Slides 6–7
+#### 5️⃣ Cierre + autónomo (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) antecedentes son estudios previos, no teoría de fondo; (2) cada ficha lleva ‘qué me aporta’; (3) el párrafo puente hila las fichas y muestra el vacío que su proyecto llena.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S04_Antecedentes_Apellido` con las 4 fichas y el párrafo puente. La próxima sesión pasamos de los estudios previos a la **teoría de fondo**: el marco teórico organizado por constructos.”
+> “**PARA CONTINUAR.** Suban `S04_Antecedentes_Apellido` con las 4 fichas y el párrafo puente. La próxima sesión pasamos de los estudios previos a la **teoría de fondo**: el marco teórico organizado por constructos.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

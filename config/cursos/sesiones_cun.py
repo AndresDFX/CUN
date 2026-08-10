@@ -102,9 +102,29 @@ def _horario_carga(key: str, default: str) -> str:
     except Exception:
         return default
 
-# Un solo Meet por curso (serie completa). Sustituir el placeholder cuando exista el enlace real.
+# Un solo Meet por curso (serie completa).
+# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.meet
+# (cadena vacía = el docente aún no creó la sala ⇒ se muestra el placeholder).
+# NO hardcodear la URL en los builds: usar `meet_url(course_key, titulo)`.
 def meet_placeholder(curso_corto: str) -> str:
     return f"[URL Meet — mismo enlace toda la serie · {curso_corto}]"
+
+
+def meet_url(course_key: str, curso_corto: str | None = None) -> str:
+    """Enlace de Meet de la serie: el real si está en config, si no el placeholder.
+
+    `curso_corto` solo se usa para redactar el placeholder (nombre visible del curso).
+    """
+    url = ""
+    if _carga_curso is not None:
+        try:
+            url = (_carga_curso(course_key).get("meet") or "").strip()
+        except Exception:
+            url = ""
+    if url:
+        return url
+    corto = curso_corto or (COURSES.get(course_key, {}).get("titulo") or course_key)
+    return meet_placeholder(corto)
 
 
 # Convención carpetas (raíz de asignatura, GENÉRICO — sin código de grupo):
@@ -192,8 +212,10 @@ COURSES = {
         "contenido_min": 60,
         "fuente": "Syllabus SIAC EI005_PRES",
         "nota_syllabus": (
-            "Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03 = 7 jueves (03/08–20/09): "
-            "las unidades U8 + U10–U12 se combinan en la fecha del 17/09 (no se eliminan del Syllabus)."
+            "Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03: el rango institucional "
+            "tiene 7 jueves calendario (06/08–17/09), pero el inicio operativo del semestre es el "
+            "10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. Las unidades "
+            "U8 + U10–U12 se combinan en la fecha del 17/09 (no se eliminan del Syllabus)."
         ),
         "unidades_syllabus": [
             "U1 Presentación del Syllabus y producto final (artículo)",
@@ -395,7 +417,9 @@ def subject_encuentro(
         core = f"{g_lbl} - {curso} - Clase autonoma{fest}"
     else:
         core = f"{g_lbl} - {curso} - Encuentro"
-    if autonoma and not core.rstrip().endswith("(autónoma)"):
+    # Solo la rama `Sesion NN` necesita el sufijo: la rama `Clase autonoma (Festivo)` ya
+    # dice que es autónoma, y añadirlo otra vez daba «Clase autonoma (Asunción…) (autónoma)».
+    if autonoma and n is not None and not core.rstrip().endswith("(autónoma)"):
         core = f"{core} (autónoma)"
     return core
 

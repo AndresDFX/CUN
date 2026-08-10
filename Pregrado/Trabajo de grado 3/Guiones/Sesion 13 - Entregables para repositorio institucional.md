@@ -11,17 +11,33 @@
 - **PPTX estudiante:** `Clases/Sesion 13 - Entregables para repositorio institucional/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 13 — ENTREGABLES PARA REPOSITORIO INSTITUCIONAL |
+| **2** | Subir al repositorio no es entregar una tarea: es publicar |
+| **3** | Qué es un repositorio institucional y qué le da a usted |
+| **4** | El paquete de entregables: piezas fijas |
+| **5** | Metadatos: los datos que hacen visible (o invisible) su trabajo |
+| **6** | Metadatos: los datos que hacen visible (o invisible) su trabajo (cont.) |
+| **7** | Ejemplo modelado: una ficha de metadatos bien diligenciada |
+| **8** | El mismo trabajo, con metadatos malos y con metadatos buenos |
+| **9** | Autorización y licencia: qué está firmando |
+| **10** | Revisión de forma: la última pasada antes de cargar |
+| **11** | Revisión de forma: la última pasada antes de cargar (cont.) |
+| **12** | Errores frecuentes al armar el paquete |
+| **13** | Errores frecuentes al armar el paquete (cont.) |
+| **14** | Errores frecuentes al armar el paquete (cont.) |
+| **15** | Paso a paso para armar el paquete hoy |
+| **16** | TALLER — Paquete para el repositorio (20 minutos) |
+| **17** | TALLER — Paquete para el repositorio (20 minutos) (cont.) |
+| **18** | Checklist de autoevaluación antes de cargar |
+| **19** | Checklist de autoevaluación antes de cargar (cont.) |
+| **20** | Trabajo autónomo y qué viene después |
+| **21** | Cierre — Sesión 13 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Entregables para repositorio institucional.
@@ -81,23 +97,23 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 13. Ya defendieron (o están por hacerlo). Hoy preparamos el **paquete para el repositorio institucional**. Ojo con esto: subir el artículo al repositorio es **publicarlo**: queda público y permanente. Por eso hoy trabajamos con lupa.”
 
-> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su artículo final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”
+> “**OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su artículo final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
+> “**CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
 
 > “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y, **si el curso lo exige**, el **informe de similitud**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el artículo— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”
+> “**ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el artículo— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela el checklist + metadatos).
@@ -113,11 +129,11 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 
 > **En pantalla:** Verificar APA completa antes del paquete.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S13_PaqueteRepositorio_Apellido`: (1) armen el **checklist de entregables** del repositorio marcando listo/falta; (2) redacten los **metadatos** (título, resumen, keywords UNESCO); (3) hagan la **revisión de forma** de la versión final —portada, numeración, tablas rotuladas, referencias sin huérfanas, nombre de archivo—. Anoten la **ruta institucional** de carga del semestre.”
+> “**TALLER.** ~20 minutos. En `S13_PaqueteRepositorio_Apellido`: (1) armen el **checklist de entregables** del repositorio marcando listo/falta; (2) redacten los **metadatos** (título, resumen, keywords UNESCO); (3) hagan la **revisión de forma** de la versión final —portada, numeración, tablas rotuladas, referencias sin huérfanas, nombre de archivo—. Anoten la **ruta institucional** de carga del semestre.”
 
 > “Criterio de éxito: el checklist muestra sin ambigüedad qué falta, los metadatos están completos, y la versión es la final, no un borrador.”
 
@@ -134,15 +150,15 @@ En pantalla, recorrer un checklist de entregables del repositorio marcando qué 
 > **En pantalla:** Lista de archivos requeridos según instructivo del semestre (CDigital).
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) el repositorio publica su trabajo —permanente y público—; (2) el paquete tiene piezas fijas: artículo, metadatos, autorización, anexos, antiplagio; (3) se carga la versión final, revisada en forma, por la ruta institucional.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S13_PaqueteRepositorio_Apellido` a CDigital y completen lo que quedó en 'falta'. La próxima sesión hacemos los **ajustes finales y el seguimiento post-sustentación** con las observaciones del jurado.”
+> “**PARA CONTINUAR.** Suban `S13_PaqueteRepositorio_Apellido` a CDigital y completen lo que quedó en 'falta'. La próxima sesión hacemos los **ajustes finales y el seguimiento post-sustentación** con las observaciones del jurado.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

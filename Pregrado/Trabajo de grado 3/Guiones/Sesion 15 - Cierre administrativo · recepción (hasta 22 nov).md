@@ -11,17 +11,36 @@
 - **PPTX estudiante:** `Clases/Sesion 15 - Cierre administrativo · recepción (hasta 22 nov)/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 15 — Cierre administrativo · recepción (hasta 22 nov) |
+| **2** | Un trabajo excelente que no se cargó, no cuenta |
+| **3** | Cierre administrativo ≠ cierre académico |
+| **4** | Subir ≠ recibido: los cuatro puntos donde falla una entrega |
+| **5** | Subir ≠ recibido: los cuatro puntos donde falla una entrega (cont.) |
+| **6** | Checklist de recepción: entregable por entregable |
+| **7** | Recepción y cierre: dos palabras que se confunden |
+| **8** | Paso a paso de la verificación en CDigital |
+| **9** | Paso a paso de la verificación en CDigital (cont.) |
+| **10** | Ejemplo modelado: un recorrido de verificación real |
+| **11** | Ejemplo modelado: un recorrido de verificación real (cont.) |
+| **12** | La evidencia de envío: su respaldo cuando algo se discute |
+| **13** | La evidencia de envío: su respaldo cuando algo se discute (cont.) |
+| **14** | Errores frecuentes del cierre administrativo |
+| **15** | Errores frecuentes del cierre administrativo (cont.) |
+| **16** | Errores frecuentes del cierre administrativo (cont.) |
+| **17** | TALLER — Verificación de recepción (20 minutos) |
+| **18** | TALLER — Verificación de recepción (20 minutos) (cont.) |
+| **19** | Checklist final de autoevaluación |
+| **20** | Checklist final de autoevaluación (cont.) |
+| **21** | Lo que queda cuando esto cierra |
+| **22** | Lo que queda cuando esto cierra (cont.) |
+| **23** | Cierre del curso |
+| **24** | Cierre — Sesión 15 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Cierre administrativo · recepción.
@@ -81,21 +100,21 @@ En pantalla, recorrer el checklist de recepción confirmando cada entregable en 
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 15, la última. El trabajo académico ya está hecho: artículo, sustentación, ajustes. Hoy hacemos el **cierre administrativo**, que suena aburrido pero es la red de seguridad: verificar que **todo** quedó cargado y recibido en CDigital.”
 
-> “**Slide 2 — OBJETIVOS.** Recorrer el checklist de recepción, confirmar cada carga y guardar evidencia de envío. Recuerden: un trabajo excelente que no se cargó, o que se cargó mal, no cuenta. Tengan CDigital abierto.”
+> “**OBJETIVOS.** Recorrer el checklist de recepción, confirmar cada carga y guardar evidencia de envío. Recuerden: un trabajo excelente que no se cargó, o que se cargó mal, no cuenta. Tengan CDigital abierto.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Cierre administrativo no es lo mismo que cierre académico. Lo académico terminó; lo de hoy es asegurar que todo quedó **entregado y recibido**. Y ojo con el error silencioso: **subir no es igual a recibido**. Hay que verificar que el archivo esté en el espacio correcto, con el nombre correcto, y —si el campus lo permite— guardar la captura del estado 'entregado'.”
+> “**CONTENIDO CLAVE.** Cierre administrativo no es lo mismo que cierre académico. Lo académico terminó; lo de hoy es asegurar que todo quedó **entregado y recibido**. Y ojo con el error silencioso: **subir no es igual a recibido**. Hay que verificar que el archivo esté en el espacio correcto, con el nombre correcto, y —si el campus lo permite— guardar la captura del estado 'entregado'.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Dos palabras que se confunden: **recepción** —la última fecha para recibir trabajos— y **cierre** —el fin del periodo—. No son lo mismo y **cambian según el grupo**. Por eso no doy fechas aquí: cada quien consulta la Presentación del Curso, el Manual y el calendario de su grupo. Hoy nos concentramos en que nadie pierda la nota por un tema logístico.”
+> “**ENFOQUE DE HOY.** Dos palabras que se confunden: **recepción** —la última fecha para recibir trabajos— y **cierre** —el fin del periodo—. No son lo mismo y **cambian según el grupo**. Por eso no doy fechas aquí: cada quien consulta la Presentación del Curso, el Manual y el calendario de su grupo. Hoy nos concentramos en que nadie pierda la nota por un tema logístico.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela la verificación en CDigital).
@@ -111,11 +130,11 @@ En pantalla, recorrer el checklist de recepción confirmando cada entregable en 
 
 > **En pantalla:** Recorrer entregables cargados; capturar evidencia de envío si el campus lo permite.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S15_CierreAdmin_Apellido`: (1) recorran el **checklist de recepción** —artículo, póster, anexos, autorización, antiplagio— marcando cargado y recibido; (2) capturen la **evidencia de envío** de cada entregable si el campus lo permite; (3) anoten cualquier **pendiente administrativo** que deban resolver antes de la recepción de su grupo.”
+> “**TALLER.** ~20 minutos. En `S15_CierreAdmin_Apellido`: (1) recorran el **checklist de recepción** —artículo, póster, anexos, autorización, antiplagio— marcando cargado y recibido; (2) capturen la **evidencia de envío** de cada entregable si el campus lo permite; (3) anoten cualquier **pendiente administrativo** que deban resolver antes de la recepción de su grupo.”
 
 > “Criterio de éxito: cada entregable está confirmado como recibido (no solo subido) y con su evidencia; y no queda ningún pendiente sin anotar.”
 
@@ -132,15 +151,15 @@ En pantalla, recorrer el checklist de recepción confirmando cada entregable en 
 > **En pantalla:** 1 post de cierre/aprendizaje si el grupo aún usa el tablero; no obligatorio.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre del curso. Tres ideas: (1) el cierre administrativo asegura que todo quedó **recibido**, no solo subido; (2) recepción y cierre no son lo mismo y varían por grupo —consulten su calendario—; (3) guarden evidencia de cada envío.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S15_CierreAdmin_Apellido` a CDigital con su checklist y sus evidencias, y resuelvan los pendientes antes de la recepción de su grupo. Con esto culmina su trabajo de grado.”
+> “**PARA CONTINUAR.** Suban `S15_CierreAdmin_Apellido` a CDigital con su checklist y sus evidencias, y resuelvan los pendientes antes de la recepción de su grupo. Con esto culmina su trabajo de grado.”
 
-> “**Slide 7 — Cierre.** Felicitaciones: cierran un proceso largo con un artículo publicado y una defensa hecha. Gracias por el trabajo de este periodo.”
+> “**Cierre.** Felicitaciones: cierran un proceso largo con un artículo publicado y una defensa hecha. Gracias por el trabajo de este periodo.”
 
 ---
 

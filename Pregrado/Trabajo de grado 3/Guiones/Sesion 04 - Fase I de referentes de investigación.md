@@ -11,17 +11,32 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Fase I de referentes de investigación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **20 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 04 — FASE I DE REFERENTES DE INVESTIGACIÓN |
+| **2** | Empieza la batalla de las 50 referencias — pero con método |
+| **3** | Tres palabras que todo el mundo confunde |
+| **4** | Qué hace que una fuente sea un buen referente |
+| **5** | La ficha de lectura: el ladrillo de todo lo que viene |
+| **6** | Buscar con método: los operadores que cambian todo |
+| **7** | Dónde buscar: cada fuente sirve para algo distinto |
+| **8** | El truco del "citado por": buscar en bola de nieve |
+| **9** | Ejemplo modelado — una búsqueda real y una ficha completa |
+| **10** | El mapa de diálogo: los autores no se apilan, se ponen a conversar |
+| **11** | Mapa de diálogo — ejemplo con cuatro autores |
+| **12** | Errores frecuentes de esta sesión |
+| **13** | Errores frecuentes de esta sesión (cont.) |
+| **14** | Paso a paso — del hallazgo en Scholar a la referencia en su documento |
+| **15** | TALLER — Fichas de lectura y primer mapa de diálogo |
+| **16** | TALLER — Fichas de lectura y primer mapa de diálogo (cont.) |
+| **17** | Checklist de autoevaluación antes de subir a CDigital |
+| **18** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **19** | Para continuar — trabajo autónomo |
+| **20** | Cierre — Sesión 04 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Fase I de referentes de investigación.
@@ -86,23 +101,23 @@ En pantalla, hacer una búsqueda en Google Académico con comillas + AND + filtr
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 04. Hoy empieza la batalla de las **50 referencias**, pero con método, no a lo loco. Trabajamos la **Fase I de referentes**: quién más ha estudiado su problema y qué encontró.”
 
-> “**Slide 2 — OBJETIVOS.** Distinguir antecedentes de marco teórico, dominar la **ficha de lectura**, buscar de forma sistemática y armar un primer **mapa de diálogo** entre autores. Tengan a la mano su pregunta de la Sesión 02: es la brújula de toda búsqueda de hoy.”
+> “**OBJETIVOS.** Distinguir antecedentes de marco teórico, dominar la **ficha de lectura**, buscar de forma sistemática y armar un primer **mapa de diálogo** entre autores. Tengan a la mano su pregunta de la Sesión 02: es la brújula de toda búsqueda de hoy.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Ojo con tres palabras que se confunden. **Antecedentes** —lo de hoy— son estudios previos: quién ya abordó esto. **Marco teórico** son los conceptos que sostienen la pregunta; ese lo cerramos más adelante. **Estado del arte** es lo más reciente. Hoy: referentes, Fase I.”
+> “**CONTENIDO CLAVE.** Ojo con tres palabras que se confunden. **Antecedentes** —lo de hoy— son estudios previos: quién ya abordó esto. **Marco teórico** son los conceptos que sostienen la pregunta; ese lo cerramos más adelante. **Estado del arte** es lo más reciente. Hoy: referentes, Fase I.”
 
 > “Segundo, el ladrillo de todo: la **ficha de lectura**. Nadie cita bien lo que no leyó. Cada fuente se resume en cuatro campos: dato bibliográfico en APA, idea principal en una frase, una cita textual con página, y —lo más importante— **cómo se relaciona con mi pregunta**. Si no la puedo relacionar, la fuente no entra.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Y se busca con método: amplio en Scholar —comillas, AND/OR, filtro por año—, afino en SciELO y Redalyc, y bajo el texto completo desde la biblioteca CUN. Truco: el enlace 'citado por' de Scholar los lleva de un buen paper a otros mejores.”
+> “**ENFOQUE DE HOY.** Y se busca con método: amplio en Scholar —comillas, AND/OR, filtro por año—, afino en SciELO y Redalyc, y bajo el texto completo desde la biblioteca CUN. Truco: el enlace 'citado por' de Scholar los lleva de un buen paper a otros mejores.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela búsqueda + ficha).
@@ -118,11 +133,11 @@ En pantalla, hacer una búsqueda en Google Académico con comillas + AND + filtr
 
 > **En pantalla:** Búsqueda sistemática; anotar criterio de inclusión.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S04_ReferentesFaseI_Apellido`: (1) definan su **criterio de inclusión** (años, idioma, pertinencia) en una línea; (2) busquen en Scholar y en SciELO o Redalyc y elijan **4–6 fuentes**; (3) hagan **una ficha de lectura** por fuente; (4) esbocen un **mapa de diálogo**: agrupen quién confirma, quién contradice, quién extiende.”
+> “**TALLER.** ~20 minutos. En `S04_ReferentesFaseI_Apellido`: (1) definan su **criterio de inclusión** (años, idioma, pertinencia) en una línea; (2) busquen en Scholar y en SciELO o Redalyc y elijan **4–6 fuentes**; (3) hagan **una ficha de lectura** por fuente; (4) esbocen un **mapa de diálogo**: agrupen quién confirma, quién contradice, quién extiende.”
 
 > “Criterio de éxito: cada ficha tiene su línea de 'relación con mi pregunta', y el mapa muestra a los autores conversando, no una lista apilada.”
 
@@ -139,15 +154,15 @@ En pantalla, hacer una búsqueda en Google Académico con comillas + AND + filtr
 > **En pantalla:** Generar APA de todas las fichas del día.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) hoy son **antecedentes** (Fase I), no el marco completo; (2) nada se cita sin ficha de lectura; (3) los referentes se ponen a **dialogar**, no se apilan.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S04_ReferentesFaseI_Apellido` a CDigital con sus fichas y el mapa. Sigan sumando fichas en autónomo: cada semana deben acercarse a las 50. La próxima sesión diseñamos el **instrumento y el desarrollo metodológico**.”
+> “**PARA CONTINUAR.** Suban `S04_ReferentesFaseI_Apellido` a CDigital con sus fichas y el mapa. Sigan sumando fichas en autónomo: cada semana deben acercarse a las 50. La próxima sesión diseñamos el **instrumento y el desarrollo metodológico**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

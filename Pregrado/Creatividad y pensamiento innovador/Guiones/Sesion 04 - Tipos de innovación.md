@@ -11,17 +11,31 @@
 - **PPTX estudiante:** `Clases/Sesion 04 - Tipos de innovación/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **19 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada (SESIÓN NN — tema) | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición y modelación |
-| **4** | ENFOQUE DE HOY | Anclaje del tema |
-| **5** | ACTIVIDAD / TALLER | Consigna del taller |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 04 — TIPOS DE INNOVACIÓN |
+| **2** | Una etiqueta no defiende nada |
+| **3** | De clasificar a argumentar: dos matices que hay que tener claros |
+| **4** | Todas son "una app" — y ninguna es del mismo tipo |
+| **5** | La segunda dimensión: el grado de la innovación |
+| **6** | Incremental vs. radical, criterio por criterio |
+| **7** | Por qué no idolatrar lo radical |
+| **8** | La prueba de realidad: contexto socio-económico |
+| **9** | Comparar con criterios, no con gusto |
+| **10** | Ejemplo modelado: matriz del caso del laboratorio |
+| **11** | Cómo se escribe la conclusión (texto modelo, 4 líneas) |
+| **12** | Errores frecuentes y respuestas |
+| **13** | Errores frecuentes y respuestas (cont.) |
+| **14** | Paso a paso: arme su matriz en Google Docs |
+| **15** | TALLER — Matriz comparativa de su propuesta (21 minutos) |
+| **16** | Antes de entregar: revise usted mismo |
+| **17** | Para continuar — trabajo autónomo |
+| **18** | Para continuar — trabajo autónomo (cont.) |
+| **19** | Cierre — Sesión 04 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Comparar** los tipos de innovación usando criterios comunes (no gusto personal).
@@ -93,7 +107,7 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 ---
 
 #### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+**Momento del deck:** Portada → OBJETIVOS
 
 **Objetivo de la fase:** subir la exigencia de clasificar a argumentar.
 
@@ -110,16 +124,16 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 ---
 
 #### 2️⃣ Profundizar tipos + incremental/radical (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+**Momento del deck:** CONTENIDO CLAVE → ENFOQUE DE HOY
 
 **Objetivo de la fase:** distinguir tipo (qué cambia) de grado (cuánto rompe) y anclar el contexto socio-económico.
 
 **GUION LITERAL:**
-> “**Slide 3.** Repasemos, pero activos. Los tipos —producto, proceso, organización, marketing, social— dicen **qué cambia**. Cuidado con la trampa: ‘lo hago digital’ no define nada. Digital es el envase. Díganme si cambia el servicio, el método o la coordinación.”
+> “Repasemos, pero activos. Los tipos —producto, proceso, organización, marketing, social— dicen **qué cambia**. Cuidado con la trampa: ‘lo hago digital’ no define nada. Digital es el envase. Díganme si cambia el servicio, el método o la coordinación.”
 
 > “Ahora una segunda dimensión que va aparte: el **grado**. **Incremental** es mejorar paso a paso; **radical** es romper las reglas del juego. En un semestre, una mejora incremental bien medida —‘bajé el tiempo de reserva un 30%’— es mucho más defendible que un ‘esto es revolucionario’ sin un solo dato. No idolatren lo radical.”
 
-> “**Slide 4.** Y la prueba de realidad: ¿quién paga?, ¿quién usa?, ¿qué restricción hay —tiempo, dinero, norma, conectividad—? Una innovación que ignora sus restricciones es ficción, por más elegante que sea la ingeniería.”
+> “Y la prueba de realidad: ¿quién paga?, ¿quién usa?, ¿qué restricción hay —tiempo, dinero, norma, conectividad—? Una innovación que ignora sus restricciones es ficción, por más elegante que sea la ingeniería.”
 
 **Qué hacer:**
 1. (6 min) Repasar los 5 tipos insistiendo en “qué cambia, no el envase digital”.
@@ -134,7 +148,7 @@ Comparar “bien” significa poner los **mismos criterios** a las dos opciones.
 > **En pantalla:** Filas = tipos Oslo; columnas = ejemplo / su propuesta.
 
 #### 3️⃣ Modelación con matriz comparativa (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+**Momento del deck:** CONTENIDO CLAVE
 
 **Objetivo de la fase:** mostrar cómo se llena y cómo se lee una matriz de comparación.
 
@@ -163,7 +177,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 > **En pantalla:** Mejora socio-económica vs. tipo elegido.
 
 #### 4️⃣ Taller: matriz de su propuesta (~21 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Momento del deck:** ACTIVIDAD / TALLER
 
 **GUION LITERAL (consigna):**
 > “Pasamos a la **slide 5 — TALLER**. Tienen **21 minutos**. Armen su **Matriz comparativa**: su **tipo elegido** contra un **tipo alternativo** que descartaron. Mínimo **5 criterios**. Terminen con una **conclusión de 4 líneas** que explique, con base en los criterios, por qué se quedan con el tipo A. Al final, dos personas leen solo su conclusión. Criterio de éxito: la conclusión se apoya en los criterios, no en ‘me gusta más’.”
@@ -181,14 +195,14 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 ---
 
 #### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+**Momento del deck:** PARA CONTINUAR → Cierre
 
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) el **tipo** dice qué cambia, el **grado** dice cuánto rompe; (2) **incremental bien medido** vence a radical sin evidencia; (3) se compara con **criterios**, no con gusto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S05_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—. Eso lo vamos a validar la próxima sesión.”
+> “**PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S04_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—. Eso lo vamos a validar la próxima sesión.”
 
-> “**Slide 7 — Cierre.** La próxima clase es **Análisis de negocios: FODA, Canvas, MVP y validación**. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima clase es **Análisis de negocios: FODA, Canvas, MVP y validación**. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (4 min) Leer 2 conclusiones y verificar que se apoyan en criterios.
@@ -204,7 +218,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 1. Comparar tipo elegido vs. tipo alternativo con mínimo 5 criterios.
 2. Escribir una conclusión de 4 líneas basada en la comparación.
 3. **Criterio de éxito:** criterios explícitos + conclusión argumentada (no gusto personal).
-4. **Entregable:** `S05_MatrizTipos_Apellido` en CDigital.
+4. **Entregable:** `S04_MatrizTipos_Apellido` en CDigital.
 5. **Trabajo autónomo:** listado de mínimo 5 supuestos para la validación de la próxima sesión.
 
 ---
@@ -215,7 +229,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 - [ ] Abrí `Clases/Sesion 04 - Tipos de innovación/Presentacion.pptx`
 - [ ] Preparé 2 ejemplos locales de incremental vs. radical
 - [ ] Tengo la matriz del caso laboratorio lista para llenar en vivo (Excalidraw/Docs)
-- [ ] Publiqué en CDigital el espacio de entrega `S05_MatrizTipos`
+- [ ] Publiqué en CDigital el espacio de entrega `S04_MatrizTipos`
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 ---

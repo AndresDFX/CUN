@@ -11,17 +11,36 @@
 - **PPTX estudiante:** `Clases/Sesion 08 - Fase III de referentes · cierre del marco teórico/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 3]
 
-🗺️ **Slides de esta presentación** (tema de hoy — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **24 slides** — no es el mapa del curso)
 
-| Slide | Título en el PPTX | Cuándo usarla |
-| :---: | :--- | :--- |
-| **1** | Portada — Sesión NN | Apertura |
-| **2** | OBJETIVOS | Encuadre |
-| **3** | CONTENIDO CLAVE | Exposición |
-| **4** | ENFOQUE DE HOY | Anclaje |
-| **5** | ACTIVIDAD / TALLER | Consigna |
-| **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| Slide | Título en el PPTX |
+| :---: | :--- |
+| **1** | SESIÓN 08 — Fase III de referentes · cierre del marco teórico |
+| **2** | Hoy se CIERRA el marco — no se abren temas nuevos |
+| **3** | Saturación teórica: cómo saber cuándo parar de buscar |
+| **4** | Saturación teórica: cómo saber cuándo parar de buscar (cont.) |
+| **5** | Marco por autores vs. marco por constructos |
+| **6** | Cómo identificar sus constructos (salen de su pregunta) |
+| **7** | Cómo identificar sus constructos (salen de su pregunta) (cont.) |
+| **8** | Tabla de constructos — el mapa de su marco |
+| **9** | Ejemplo modelado — reorganizar un marco en vivo |
+| **10** | Auditoría de referencias: listadas no es lo mismo que citadas |
+| **11** | Auditoría de referencias: listadas no es lo mismo que citadas (cont.) |
+| **12** | Paso a paso — auditar el conteo en Google Docs |
+| **13** | Paso a paso — auditar el conteo en Google Docs (cont.) |
+| **14** | Ejemplo modelado — la auditoría con números reales |
+| **15** | El puente marco → discusión: para qué sirve todo esto |
+| **16** | De cada constructo a un movimiento de la discusión |
+| **17** | Errores frecuentes de esta sesión |
+| **18** | Errores frecuentes de esta sesión (cont.) |
+| **19** | TALLER — Cierre del marco y auditoría de referencias |
+| **20** | TALLER — Cierre del marco y auditoría de referencias (cont.) |
+| **21** | Checklist de autoevaluación antes de subir a CDigital |
+| **22** | Checklist de autoevaluación antes de subir a CDigital (cont.) |
+| **23** | Para continuar — trabajo autónomo |
+| **24** | Cierre — Sesión 08 |
+
+> Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 
 🎯 **Objetivos de la sesión**
 1. **Desarrollar:** Fase III de referentes · cierre del marco teórico.
@@ -79,23 +98,23 @@ Mostrar un marco 'de autores' (Autor 1 dice…, Autor 2 dice…) y reorganizarlo
 
 ---
 
-#### 1️⃣ Encuadre (~6 min) — Slides 1–2
+#### 1️⃣ Encuadre (~6 min) — Portada y objetivos
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Sesión 08. Hoy **cerramos** el marco teórico. Y la palabra clave es 'cerrar': no vamos a abrir temas nuevos, vamos a rematar lo que falta. La meta es teoría **suficiente y usable**, no una enciclopedia.”
 
-> “**Slide 2 — OBJETIVOS.** Aplicar el criterio de saturación para saber cuándo parar, organizar el marco por **constructos**, auditar el conteo hacia las 50 referencias y dejar claro qué autores citaremos en la discusión. Tengan abierto su marco y sus fichas.”
+> “**OBJETIVOS.** Aplicar el criterio de saturación para saber cuándo parar, organizar el marco por **constructos**, auditar el conteo hacia las 50 referencias y dejar claro qué autores citaremos en la discusión. Tengan abierto su marco y sus fichas.”
 
-#### 2️⃣ Exposición / criterios (~14 min) — Slides 3–4
+#### 2️⃣ Exposición / criterios (~14 min) — Exposición del concepto
 **Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El marco tiene una trampa: se puede agrandar hasta el infinito. Por eso existe la **saturación teórica**: paran cuando las fuentes nuevas ya no aportan conceptos, solo repiten. Un marco cerrado es el que tiene lo necesario para **sostener la discusión**, ni más ni menos.”
+> “**CONTENIDO CLAVE.** El marco tiene una trampa: se puede agrandar hasta el infinito. Por eso existe la **saturación teórica**: paran cuando las fuentes nuevas ya no aportan conceptos, solo repiten. Un marco cerrado es el que tiene lo necesario para **sostener la discusión**, ni más ni menos.”
 
 > “Y se organiza por **constructos**, no autor por autor. Si su pregunta habla de 'automatización de pruebas' y 'tiempo de despliegue', esos son sus constructos; debajo de cada uno entran los autores. Así el marco es un argumento, no una lista de resúmenes.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Momento de auditar: ¿cuántas referencias tienen **citadas en el cuerpo**, no solo en la lista? El Syllabus pide 50. Una referencia listada y no citada no cuenta, y para el jurado es una alarma. Cada autor que cierran hoy es alguien con quien van a dialogar en la discusión de la próxima sesión.”
+> “**ENFOQUE DE HOY.** Momento de auditar: ¿cuántas referencias tienen **citadas en el cuerpo**, no solo en la lista? El Syllabus pide 50. Una referencia listada y no citada no cuenta, y para el jurado es una alarma. Cada autor que cierran hoy es alguien con quien van a dialogar en la discusión de la próxima sesión.”
 
 #### 3️⃣ Modelación (~12 min) — Modelación en pantalla
 **Protagonista:** Docente (modela reorganización + auditoría).
@@ -111,11 +130,11 @@ Mostrar un marco 'de autores' (Autor 1 dice…, Autor 2 dice…) y reorganizarlo
 
 > **En pantalla:** Buscar solo lo que falta para cerrar constructos.
 
-#### 4️⃣ Taller (~20 min) — Slide 5
+#### 4️⃣ Taller (~20 min) — Taller
 **Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S08_MarcoCierre_Apellido`: (1) reorganicen su marco **por constructos** (mínimo 2–3) y verifiquen que cada uno queda cerrado; (2) auditen el conteo: cuántas referencias citadas en el cuerpo tienen y cuántas faltan para 50; (3) hagan una **lista de huecos resueltos** y de los que quedan pendientes para autónomo.”
+> “**TALLER.** ~20 minutos. En `S08_MarcoCierre_Apellido`: (1) reorganicen su marco **por constructos** (mínimo 2–3) y verifiquen que cada uno queda cerrado; (2) auditen el conteo: cuántas referencias citadas en el cuerpo tienen y cuántas faltan para 50; (3) hagan una **lista de huecos resueltos** y de los que quedan pendientes para autónomo.”
 
 > “Criterio de éxito: el marco se lee como argumento por constructos y el conteo de referencias citadas es real, no inflado.”
 
@@ -132,15 +151,15 @@ Mostrar un marco 'de autores' (Autor 1 dice…, Autor 2 dice…) y reorganizarlo
 > **En pantalla:** Lista APA limpia de la sección teórica.
 
 
-#### 5️⃣ Cierre (~8 min) — Slides 6–7
+#### 5️⃣ Cierre (~8 min) — Cierre y trabajo autónomo
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) marco 'suficiente y usable' —saturación, no infinito—; (2) se organiza por constructos; (3) cuentan las referencias **citadas en el cuerpo**, camino a las 50.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S08_MarcoCierre_Apellido` a CDigital y, en autónomo, cierren los huecos de referencias pendientes. La próxima sesión es el corazón del nuevo conocimiento: **resultados, discusión y relación con referentes**.”
+> “**PARA CONTINUAR.** Suban `S08_MarcoCierre_Apellido` a CDigital y, en autónomo, cierren los huecos de referencias pendientes. La próxima sesión es el corazón del nuevo conocimiento: **resultados, discusión y relación con referentes**.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”
+> “**Cierre.** Gracias; mismo Meet.”
 
 ---
 

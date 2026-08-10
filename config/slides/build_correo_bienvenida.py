@@ -29,9 +29,14 @@ from carga_academica import (  # noqa: E402
     course_dir,
     curso as carga_curso,
     docente as _docente_pair,
+    fmt_dmy,
+    hora_inicio_efectiva,
     load_carga,
+    _parse_date,
 )
-from sesiones_cun import COURSES  # noqa: E402
+from sesiones_cun import COURSES, meet_url  # noqa: E402
+
+URL_CDIGITAL = "[URL CDigital — campus del curso pendiente]"
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
 
 CORREO_NAME = "Correo de bienvenida.docx"
@@ -49,16 +54,62 @@ def _titulo_display(key: str, c: dict) -> str:
     return c.get("titulo_largo") or COURSES.get(key, {}).get("titulo_largo") or c.get("titulo_corto") or key
 
 
-def correo_md(key: str) -> str:
+def _primera_sesion(key: str) -> dict:
+    ses = (COURSES.get(key) or {}).get("sesiones") or [{}]
+    return ses[0]
+
+
+def correo_md(key: str, grupo: str | None = None) -> str:
+    """Correo de bienvenida. `grupo` = código del grupo destinatario (no la lista entera).
+
+    Todos los datos salen de fuentes que ya existen: `sesiones_cun` (fecha y carácter de
+    la Sesión 01, unidad diferida), `carga_academica_2026.json` (horario, Meet, cierre
+    del grupo) y la carpeta del estudiante (lectura autónoma de la S01).
+    """
     c = carga_curso(key)
     _, correo = _docente_pair()
     titulo = _titulo_display(key, c)
-    grupos = _grupos_txt(c)
+    grupos = grupo or _grupos_txt(c)
+    etiqueta_grupo = "Grupo" if grupo or len(list(c.get("groups") or [])) == 1 else "Grupo(s)"
     horario = (c.get("horario") or {}).get("texto_corto") or (c.get("horario") or {}).get("texto") or "—"
+    s1 = _primera_sesion(key)
+    primera = s1.get("fecha", "—")
+    diferida = (s1.get("unidad_diferida") or "").strip()
+    es_pregrado = c.get("nivel") != "especializacion"
+
+    filas = [
+        f"| **Curso** | {bold_var(titulo)} |",
+        f"| **{etiqueta_grupo}** | {bold_var(grupos)} |",
+        f"| **Horario** | {bold_var(horario)} · empezamos puntuales a las "
+        f"{bold_var(hora_inicio_efectiva(key))} |",
+        f"| **Primera clase** | {bold_var(primera)} — sesión de **encuadre**: presento el curso, "
+        "las ACAs y nos conocemos. **No se dicta tema**; el contenido arranca en la Sesión 02. |",
+        f"| **Google Meet** (mismo enlace toda la serie) | {meet_url(key, c['titulo_corto'])} |",
+        f"| **Aula CDigital** (entregas y notas) | {URL_CDIGITAL} |",
+    ]
+    if grupo:
+        meta = (c.get("grupos") or {}).get(grupo) or {}
+        cierre = _parse_date(meta.get("cierre"))
+        if cierre:
+            filas.append(f"| **Cierre de tu grupo** | {bold_var(fmt_dmy(cierre))} |")
+    filas.append(
+        "| **Antes de la Sesión 02** | la **lectura autónoma** de la semana viene en la carpeta "
+        "del curso, en `Clases/Sesion 01 - …/`: el PDF y el archivo "
+        "`Lectura autonoma - Sesion 01.txt`, que dice qué leer, cuánto tarda y qué traer. |"
+    )
+    if es_pregrado:
+        filas.append(
+            "| **Si el día de clase es festivo** | la clase **no se cancela**: queda como "
+            "**clase autónoma**, con la actividad publicada en CDigital. |"
+        )
+    filas.append(f"| **Docente (contacto)** | el Docente · {correo} |")
+    tabla = "\n".join(filas)
+
+    nota_diferida = f"\n\n> {diferida}" if diferida else ""
 
     return f"""# Correo de bienvenida — {titulo}
 
-**Asunto sugerido:** Bienvenida · {titulo}
+**Asunto sugerido:** Bienvenida · {titulo} — primera clase {primera}
 
 ---
 
@@ -68,16 +119,17 @@ Te doy la bienvenida al curso **{titulo}**. Soy el Docente de la asignatura.
 
 | Dato | Valor |
 | :--- | :--- |
-| **Curso** | {bold_var(titulo)} |
-| **Grupo(s)** | {bold_var(grupos)} |
-| **Horario** | {bold_var(horario)} |
-| **Docente (contacto)** | el Docente · {correo} |
+{tabla}
+
+**Lo mínimo para el primer día:** conéctate por el Meet a la hora indicada y ten a mano la
+carpeta del curso. En esa primera sesión revisamos juntos las ACAs (qué se entrega, cuándo
+y con qué formato) y dejamos acordadas las reglas de trabajo.{nota_diferida}
 
 Cualquier duda, escríbeme al correo de contacto.
 
-Cordialmente,  
-**El Docente**  
-{correo}  
+Cordialmente,
+**El Docente**
+{correo}
 Corporación Unificada Nacional de Educación Superior — CUN
 """
 
@@ -118,13 +170,12 @@ def build_course(key: str, *, copy_to_grupos: bool = True) -> list[Path]:
     groups = [str(g) for g in (c.get("groups") or [])]
     sub = f"Correo de bienvenida · {c['titulo_corto']}"
     foot = f"CUN · {c['titulo_corto']} · uso docente · Vigilada Mineducación"
-    md = correo_md(key)
     written: list[Path] = []
 
     if not groups:
         # Sin grupo en carga: copia en raíz del curso (interno).
         out = root / CORREO_NAME
-        write_md_as_docx(md, out, subtitle=sub, footer=foot)
+        write_md_as_docx(correo_md(key), out, subtitle=sub, footer=foot)
         print("OK", out)
         written.append(out)
         return written
@@ -134,17 +185,16 @@ def build_course(key: str, *, copy_to_grupos: bool = True) -> list[Path]:
             gdir = root / "2026" / g
             gdir.mkdir(parents=True, exist_ok=True)
             dst = gdir / CORREO_NAME
-            write_md_as_docx(md, dst, subtitle=sub, footer=foot)
+            # Un correo POR GRUPO: el estudiante de 54450 no debe recibir un correo que
+            # nombra los otros dos grupos ni el cierre que no es el suyo.
+            write_md_as_docx(correo_md(key, g), dst, subtitle=sub, footer=foot)
             print("OK", dst)
             written.append(dst)
 
     if len(groups) > 1:
-        # Multi-grupo: también en raíz del curso (referencia única para pegar/enviar).
+        # Multi-grupo: copia de referencia en la raíz del curso, esta sí con los 3 códigos.
         root_copy = root / CORREO_NAME
-        if written:
-            shutil.copy2(written[0], root_copy)
-        else:
-            write_md_as_docx(md, root_copy, subtitle=sub, footer=foot)
+        write_md_as_docx(correo_md(key), root_copy, subtitle=sub, footer=foot)
         print("OK multi-grupo (raíz)", root_copy)
         written.append(root_copy)
 
