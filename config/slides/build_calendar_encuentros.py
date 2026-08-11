@@ -73,8 +73,13 @@ from sesiones_cun import (  # noqa: E402
 from carga_academica import curso as carga_curso  # noqa: E402
 
 EMAIL_RX = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
-# Proyecto I tiene su propio builder (incluye coanfitrión AFI y su propio flujo).
-CURSOS = ("creatividad", "investigacion", "tg2", "tg3")
+# LOS CINCO cursos, Proyecto I incluido (2026-08-11). Antes quedaba fuera «porque tenía su
+# propio builder», y el resultado fue que el único curso que ya empezó era el único sin el
+# rótulo PRINCIPAL/RESPALDO, sin Meet autogestionado y con un runbook de 114 palabras frente
+# a las ~1.400 de los otros cuatro. `build_calendar_proyecto1_54es4.py` sigue existiendo para
+# lo que sí es suyo (CSV/ICS de respaldo, coanfitrión AFI, tutorías); el `.gs` y el runbook
+# salen de aquí, para los cinco por igual.
+CURSOS = ("proyecto1", "creatividad", "investigacion", "tg2", "tg3")
 TG3_GRUPOS = ("54450", "54466", "54467")
 TG3_CIERRE_CORTO = "54450"  # cierra 15/11; no asiste a la última sesión de la serie
 

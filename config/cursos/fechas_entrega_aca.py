@@ -473,8 +473,12 @@ def texto_fecha_enunciado(e: EntregaAca, weekday: int) -> str:
     if e.entrega.weekday() == weekday:
         parentesis = f"{dia_real} · día de clase"
     else:
+        # Antes decía «fecha de cierre institucional», y no lo es: la recepción es una fecha
+        # OPERATIVA nuestra (carga_academica_2026.json declara que «recepcion no viene en el
+        # Excel» y se derivó a ~8 días del cierre de notas). Lo único institucional es el
+        # inicio del periodo y el cierre/registro de notas. Corregido 2026-08-11.
         parentesis = (
-            f"{dia_real} · fecha de cierre institucional; "
+            f"{dia_real} · fecha de recepción de trabajos; "
             f"el día de clase del curso es {dia}"
         )
     if e.es_instrumento_cierre:

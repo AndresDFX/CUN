@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Genera CSV + ICS + Apps Script de encuentros Proyecto I (grupo 54ES4).
+"""Genera el CSV y el ICS de respaldo de los encuentros de Proyecto I (grupo 54ES4).
 
 Subject corto: «54ES4 - Proyecto I - Sesion NN» (helper subject_encuentro).
 Description: 2–4 líneas (sin políticas ni placeholders largos).
 Location: enlace único de Meet de la serie, leído de
 `carga_academica_2026.json → cursos.proyecto1.meet` (vacío ⇒ sin sala todavía).
 
-Invitados en Google Calendar: la importación .ics/.csv **no** mete Guests
-(limitación de Google). Flujo que sí funciona → Apps Script generado aquí
-(`Crear encuentros con invitados.gs`) o Calendar API
-(`create_encuentros_p1_calendar_api.py`).
+Invitados en Google Calendar: la importación .ics/.csv **no** mete Guests (limitación de
+Google). Por eso lo que sale de aquí es SOLO respaldo de fechas, y va rotulado
+`RESPALDO sin invitados - …`.
+
+El flujo que sí funciona —el `.gs` con invitados y Meet, y su runbook— lo genera
+`build_calendar_encuentros.py`, que desde el 2026-08-11 cubre los CINCO cursos. Antes
+Proyecto I se generaba aquí y era el único sin rótulo PRINCIPAL/RESPALDO, sin Meet
+autogestionado y con un runbook de 114 palabras.
 """
 from __future__ import annotations
 
@@ -220,138 +224,10 @@ def _sync_txt_grupo() -> None:
         print("OK sync", path.name)
 
 
-def _write_apps_script(gs_path: Path, guests: list[str], events: list[dict]) -> None:
-    guests_js = ",\n  ".join(_js_str(e) for e in guests)
-    sessions_js_parts = []
-    for ev in events:
-        sessions_js_parts.append(
-            "  {\n"
-            f"    subject: {_js_str(ev['subject'])},\n"
-            f"    description: {_js_str(ev['description'])},\n"
-            f"    start: {_js_str(ev['start'])},\n"
-            f"    end: {_js_str(ev['end'])}\n"
-            "  }"
-        )
-    sessions_js = ",\n".join(sessions_js_parts)
-    gs_path.write_text(
-        f"""/**
- * Proyecto I · 54ES4 — Crear encuentros CON invitados en Google Calendar.
- *
- * Google Calendar al IMPORTAR .ics/.csv DESCARTA los invitados (ATTENDEE/Guests).
- * Este script usa CalendarApp y SÍ añade la sección Invitados.
- *
- * Pasos:
- * 1. Abre https://script.google.com con tu cuenta CUN ({DOCENTE_CORREO}).
- * 2. Nuevo proyecto → pega TODO este archivo → guarda.
- * 3. Revisa SEND_INVITES (false = crea sin notificar; true = envía correo).
- * 4. Ejecuta createEncuentrosP1() → autoriza Calendar cuando lo pida.
- * 5. En Calendar: abre un evento → debe verse Invitados (roster + coanfitrión).
- * 6. Asigna el coanfitrión de Meet a mano (eso NO lo puede hacer la API).
- *
- * SOBRE EL ENLACE DE MEET
- * CalendarApp NO adjunta videoconferencia: si se añade Meet evento por evento desde la
- * interfaz, Google crea un enlace DISTINTO en cada uno. Por eso este script escribe el
- * MISMO enlace de la serie en Location y en la descripción de los 11 encuentros.
- * Para además tener el chip nativo «Unirse con Google Meet», ejecuta después
- * `Actualizar Meet en encuentros (mismo enlace).gs` (usa el servicio avanzado de Calendar).
- *
- * Regenerar este .gs: python config/slides/build_calendar_proyecto1_54es4.py
- */
-var SEND_INVITES = false; // true solo cuando quieras notificar a todos
-var TIMEZONE = 'America/Bogota';
-var LOCATION = {_js_str(LOCATION)}; // enlace único de Meet para toda la serie
-
-var GUESTS = [
-  {guests_js}
-];
-
-var SESSIONS = [
-{sessions_js}
-];
-
-function createEncuentrosP1() {{
-  var cal = CalendarApp.getDefaultCalendar();
-  var guestsCsv = GUESTS.join(',');
-  var created = 0;
-  var skipped = 0;
-
-  SESSIONS.forEach(function (s) {{
-    var start = _parseLocal(s.start);
-    var end = _parseLocal(s.end);
-    var existing = cal.getEvents(start, end, {{ search: s.subject }});
-    var already = existing.some(function (ev) {{
-      return ev.getTitle() === s.subject;
-    }});
-    if (already) {{
-      skipped++;
-      return;
-    }}
-    var options = {{
-      description: s.description,
-      location: LOCATION,
-      guests: guestsCsv,
-      sendInvites: SEND_INVITES
-    }};
-    cal.createEvent(s.subject, start, end, options);
-    created++;
-  }});
-
-  Logger.log(
-    'Listo. Creados=' + created + ' omitidos(ya existían)=' + skipped +
-    ' invitados/evento=' + GUESTS.length + ' sendInvites=' + SEND_INVITES
-  );
-}}
-
-/** Borra solo eventos cuyo título empieza por «54ES4 - Proyecto I - Sesion». */
-function deleteEncuentrosP1Generados() {{
-  var cal = CalendarApp.getDefaultCalendar();
-  var from = _parseLocal(SESSIONS[0].start);
-  var to = _parseLocal(SESSIONS[SESSIONS.length - 1].end);
-  to = new Date(to.getTime() + 60 * 60 * 1000);
-  var events = cal.getEvents(from, to);
-  var n = 0;
-  events.forEach(function (ev) {{
-    var t = ev.getTitle() || '';
-    if (t.indexOf('54ES4 - Proyecto I - Sesion') === 0) {{
-      ev.deleteEvent();
-      n++;
-    }}
-  }});
-  Logger.log('Eliminados=' + n);
-}}
-
-function _parseLocal(isoLocal) {{
-  // isoLocal: YYYY-MM-DDTHH:MM:SS → America/Bogota
-  return Utilities.parseDate(
-    isoLocal.replace('T', ' '),
-    TIMEZONE,
-    'yyyy-MM-dd HH:mm:ss'
-  );
-}}
-""",
-        encoding="utf-8",
-    )
-
-
-def _write_leeme(path: Path) -> None:
-    path.write_text(
-        """# Proyecto I · 54ES4 · Calendar (mínimo)
-
-## Qué hay aquí
-- `Listado estudiantes.ods` — roster (fuente)
-- `Correos estudiantes (invitados Calendar).txt` — lista plana
-- `Crear encuentros con invitados.gs` — **flujo principal** (sí mete invitados)
-- `Encuentros Proyecto I - Importar a Calendar.csv` / `.ics` — fechas/respaldo (Google **no** importa invitados)
-- `Entregas y hitos docentes - Importar a Calendar.csv` — deadlines ACA / hitos AFI
-- `Correo de bienvenida.docx` · `Informacion.txt` — oferta del grupo
-
-## Qué hacer
-1. **Encuentros con invitados:** script.google.com → pegar `Crear encuentros con invitados.gs` → `createEncuentrosP1` (`SEND_INVITES=false` al inicio).
-2. **Hitos docentes:** Calendar → Importar el CSV de entregas (sin invitados).
-3. Regenerar CSV/ICS/.gs/correos: `python config/slides/build_calendar_proyecto1_54es4.py`
-""",
-        encoding="utf-8",
-    )
+# _write_apps_script() y _write_leeme() vivían aquí. Retirados el 2026-08-11: el `.gs` y
+# el runbook de Proyecto I los emite ahora `build_calendar_encuentros.py`, el mismo que los
+# de los otros cuatro cursos. Dejarlos habría significado dos generadores compitiendo por
+# el mismo archivo, que es justo como Proyecto I se quedó atrás.
 
 
 def main() -> None:
@@ -405,7 +281,7 @@ def main() -> None:
             )
         ics_events.append("END:VEVENT")
 
-    csv_path = grupo / "Encuentros Proyecto I - Importar a Calendar.csv"
+    csv_path = grupo / "RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.csv"
     with csv_path.open("w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(rows_out[0].keys()))
         w.writeheader()
@@ -415,13 +291,13 @@ def main() -> None:
     mails_path.write_text(
         "Correos invitados (estudiantes 54ES4). El coanfitrión se añade aparte en el script.\n"
         "NO uses import CSV/ICS para invitados: Google Calendar descarta Guests/ATTENDEE.\n"
-        "Flujo correcto: ejecutar Crear encuentros con invitados.gs (Apps Script).\n"
+        "Flujo correcto: ejecutar «PRINCIPAL - Crear encuentros con invitados.gs» (Apps Script).\n"
         f"Coanfitrión: {coord}\n\n"
         + "\n".join(emails) + "\n",
         encoding="utf-8",
     )
 
-    ics_path = grupo / "Encuentros Proyecto I - Importar a Calendar.ics"
+    ics_path = grupo / "RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.ics"
     ics_path.write_text(
         "\r\n".join([
             "BEGIN:VCALENDAR",
@@ -440,15 +316,19 @@ def main() -> None:
 
     _sync_txt_grupo()
 
-    gs_path = grupo / "Crear encuentros con invitados.gs"
-    _write_apps_script(gs_path, guests, events)
+    # El `.gs` y el runbook de Proyecto I salen de `build_calendar_encuentros.py`, igual que
+    # los de los otros cuatro cursos (2026-08-11). Antes se emitían aquí, y por eso Proyecto I
+    # —el único curso que ya empezó— era el único sin rótulo PRINCIPAL/RESPALDO, sin Meet
+    # autogestionado y con un runbook de 114 palabras. Se borran los que dejó este build.
+    for viejo in ("Crear encuentros con invitados.gs",
+                  "LEEME - Importar encuentros a Calendar.md"):
+        p = grupo / viejo
+        if p.is_file():
+            p.unlink()
+            print(f"RM {viejo}  (ahora lo genera build_calendar_encuentros.py)")
 
-    leeme_path = grupo / "LEEME - Importar encuentros a Calendar.md"
-    _write_leeme(leeme_path)
-
-    # No generar JSON auxiliar ni pruebas_csv/ (ruido; el .gs ya es self-contained).
     print(
-        f"OK CSV={csv_path.name} ICS={ics_path.name} GS={gs_path.name} "
+        f"OK CSV={csv_path.name} ICS={ics_path.name} "
         f"estudiantes={len(emails)} invitados/evento={len(guests)} "
         f"sesiones={len(events)} subject0={rows_out[0]['Subject']!r}"
     )

@@ -1,6 +1,6 @@
 Correos invitados (estudiantes 54ES4). El coanfitrión se añade aparte en el script.
 NO uses import CSV/ICS para invitados: Google Calendar descarta Guests/ATTENDEE.
-Flujo correcto: ejecutar Crear encuentros con invitados.gs (Apps Script).
+Flujo correcto: ejecutar «PRINCIPAL - Crear encuentros con invitados.gs» (Apps Script).
 Coanfitrión: investigacion_especializaciones@cun.edu.co
 
 aide.moreno@cun.edu.co
