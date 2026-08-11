@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parents[2]
@@ -151,6 +152,16 @@ def cdigital_url(course_key: str) -> str:
 #   Guiones/Sesion 01 - <Nombre del tema>.md                ← numerado + tema (solo .md)
 #   Guiones/Capturas/
 # PPTX de sesión: SIN bio/correo del docente (eso solo en Presentación del Curso).
+#
+# REGLA · TÍTULOS DE SESIÓN SIN FECHAS (obligatoria, verificada al importar):
+#   El `titulo` nombra el TEMA, nunca una fecha ni una ventana («… (hasta 22 nov)»).
+#   La fecha sale siempre del modelo: `fecha` de esta misma sesión para el día del
+#   encuentro y `config/cursos/fechas_entrega_aca.py` para aperturas, cierres y
+#   límites de nota. Un título con fecha se congela en el nombre de la carpeta
+#   `Clases/Sesion NN - <tema>/` y del guion `.md`, y sigue mintiendo aunque el
+#   modelo cambie (fue el caso de TG3 S15: anunciaba el 22/11 y la ACA Final cerraba
+#   el 14/11 en 54466/54467 y el 07/11 en 54450). Si necesita matizar, use `detalle`.
+#   La verifica `_verificar_titulos_sin_fecha()` al final de este módulo.
 
 COURSES = {
     "proyecto1": {
@@ -170,6 +181,12 @@ COURSES = {
             "Temario curricular = 7 unidades didácticas del ESP329. "
             "Las 11 sesiones semanales del calendario AFI desarrollan esas unidades."
         ),
+        # `bloque` = el ítem del aula al que apunta el tramo de sesiones, con el NOMBRE
+        # EXACTO del libro de calificaciones de CDigital (ver `fechas_entrega_aca.py` →
+        # ACA_COMPONENTES["proyecto1"]): Quiz (25%, corte 1) · ACA 1 (25%, corte 2) ·
+        # ACA FINAL (42%, corte 3). El esquema viejo «ACA 1 / ACA 2 / ACA 3 / Puente»
+        # del ESP329 se retiró el 2026-08-11: colisionaba con los nombres del aula y
+        # hacía creer al estudiante que había perdido un ítem que apenas se le abría.
         "sesiones": [
             {"n": 1, "fecha": "10/08/2026",
              "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
@@ -178,41 +195,42 @@ COURSES = {
              "unidad_diferida": "ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02.",
              "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA). No se dicta tema."},
             {"n": 2, "fecha": "24/08/2026",
-             "titulo": "Problema y pregunta de investigación", "bloque": "ACA 1",
+             "titulo": "Problema y pregunta de investigación", "bloque": "Quiz",
              "unidad_esp329": "U2",
              "detalle": "ESP329 U2 · Delimitación del problema · pregunta viable · líneas IA del programa."},
             {"n": 3, "fecha": "31/08/2026",
-             "titulo": "Objetivos, justificación, alcances y limitaciones", "bloque": "ACA 1",
+             "titulo": "Objetivos, justificación, alcances y limitaciones", "bloque": "Quiz",
              "unidad_esp329": "U3",
-             "detalle": "ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · ACA1 ya cerró (dom 30/08); la última sincrónica antes del cierre es la Sesión 02."},
+             "detalle": "ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · el Quiz (cuestionario, corte 1) cerró el domingo anterior: la última sincrónica antes de su cierre fue la Sesión 02."},
             {"n": 4, "fecha": "07/09/2026",
-             "titulo": "Retroalimentación ACA1 · Antecedentes de investigación", "bloque": "ACA 2",
+             "titulo": "Retroalimentación del Quiz · Antecedentes de investigación", "bloque": "ACA 1",
              "unidad_esp329": "U4",
-             "detalle": "ESP329 U4 · Retro ACA1 · antecedentes (mín. 6 nacionales/internacionales)."},
+             "detalle": "ESP329 U4 · Retro del Quiz (cuestionario del corte 1) · hoy ABRE la ACA 1 (tarea, corte 2) · antecedentes (mín. 6 nacionales/internacionales)."},
             {"n": 5, "fecha": "14/09/2026",
-             "titulo": "Marco teórico", "bloque": "ACA 2",
+             "titulo": "Marco teórico", "bloque": "ACA 1",
              "unidad_esp329": "U4",
              "detalle": "ESP329 U4 · Bases teóricas alineadas a pregunta y variables/categorías."},
             {"n": 6, "fecha": "21/09/2026",
-             "titulo": "Marco conceptual y marco contextual", "bloque": "ACA 2",
+             "titulo": "Marco conceptual y marco contextual", "bloque": "ACA 1",
              "unidad_esp329": "U4",
              "detalle": "ESP329 U4 · Definiciones operativas y contexto de aplicación."},
             {"n": 7, "fecha": "28/09/2026",
-             "titulo": "Marco legal · citación APA 7", "bloque": "ACA 2",
+             "titulo": "Marco legal · citación APA 7", "bloque": "ACA 1",
              "unidad_esp329": "U4",
-             "detalle": "ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de ACA2 (dom 04/10)."},
+             "detalle": "ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de la ACA 1."},
             {"n": 8, "fecha": "05/10/2026",
-             "titulo": "Diseño metodológico: paradigma, enfoque y alcance", "bloque": "Puente",
+             "titulo": "Diseño metodológico: paradigma, enfoque y alcance", "bloque": "ACA FINAL",
              "unidad_esp329": "U5",
-             "detalle": "ESP329 U5 · Adelantar metodología antes de festivos de ACA3."},
+             "detalle": "ESP329 U5 · Adelantar metodología antes de los festivos del tramo de la ACA FINAL."},
             {"n": 9, "fecha": "19/10/2026",
-             "titulo": "Población/muestra, técnicas e instrumentos (propuestos)", "bloque": "ACA 3",
+             "titulo": "Devolución de la ACA 1 · población, muestra e instrumentos propuestos",
+             "bloque": "ACA FINAL",
              "unidad_esp329": "U5",
-             "detalle": "ESP329 U5 · Instrumentos PROPUESTOS (no aplicados en Proyecto I)."},
+             "detalle": "ESP329 U5 · Primeros 20 min: devolución de la ACA 1 con la rúbrica en pantalla (qué se corrige antes de la ACA FINAL, que exige trazabilidad de esas correcciones) · luego población/muestra e instrumentos PROPUESTOS (no aplicados en Proyecto I)."},
             {"n": 10, "fecha": "26/10/2026",
-             "titulo": "Planeación, viabilidad e integración del anteproyecto", "bloque": "ACA 3",
+             "titulo": "Planeación, viabilidad e integración del anteproyecto", "bloque": "ACA FINAL",
              "unidad_esp329": "U6–U7",
-             "detalle": "ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de ACA3 (dom 08/11)."},
+             "detalle": "ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de la ACA FINAL."},
             {"n": 11, "fecha": "09/11/2026",
              "titulo": "Integración y evaluación · coevaluación y autoevaluación", "bloque": "Cierre",
              "unidad_esp329": "U7",
@@ -232,8 +250,12 @@ COURSES = {
         "nota_syllabus": (
             "Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03: el rango institucional "
             "tiene 7 jueves calendario (06/08–17/09), pero el inicio operativo del semestre es el "
-            "10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. Las unidades "
-            "U8 + U10–U12 se combinan en la fecha del 17/09 (no se eliminan del Syllabus)."
+            "10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. "
+            "TEMARIO ADELANTADO (2026-08-11): la ACA Final (el artículo) califica marco teórico y "
+            "revisión de literatura y cierra el 12/09, así que **U8** (bases de datos CUN y gestores "
+            "de citas) pasa a la **Sesión 04** y **U10–U12** (posturas teóricas · marco teórico y "
+            "revisión) a la **Sesión 05**. Ninguna unidad se elimina: es un reorden, no un recorte. "
+            "La Sesión 06 (17/09) queda como socialización del artículo y cierre, sin evaluación."
         ),
         "unidades_syllabus": [
             "U1 Presentación del Syllabus y producto final (artículo)",
@@ -254,12 +276,12 @@ COURSES = {
              "detalle": "IoT, Big Data, IA, cloud/FinTech, aplicaciones, telemática."},
             {"n": 3, "fecha": "27/08/2026", "titulo": "Prueba parcial · 1.er avance del artículo", "bloque": "U5",
              "detalle": "Talleres/sustentaciones · tipos de conocimiento y fuentes."},
-            {"n": 4, "fecha": "03/09/2026", "titulo": "Identificación de problemas y pregunta de investigación", "bloque": "U6",
-             "detalle": "Espina de pescado, árbol de problemas, método 3D."},
-            {"n": 5, "fecha": "10/09/2026", "titulo": "Formulación del planteamiento del problema", "bloque": "U7",
-             "detalle": "Estado actual, evidencias, causas, posibles soluciones. Recepción máx. trabajos: 12/09."},
-            {"n": 6, "fecha": "17/09/2026", "titulo": "Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12)", "bloque": "U8+U10–12",
-             "detalle": "COMBINACIÓN por periodo corto: U8 + U10–U12 en un solo encuentro. Scholar + biblioteca CUN + ZoteroBib (web) + avance de revisión en Google Docs."}
+            {"n": 4, "fecha": "03/09/2026", "titulo": "Problema y pregunta · bases de datos y gestores de citas", "bloque": "U6+U8",
+             "detalle": "U6+U8 en un solo encuentro: espina de pescado, árbol de problemas y método 3D hasta la pregunta · Scholar, SciELO, Redalyc y biblioteca CUN · operadores de búsqueda y citación APA 7 con ZoteroBib. U8 se adelanta porque la ACA Final la califica y cierra antes de la Sesión 06."},
+            {"n": 5, "fecha": "10/09/2026", "titulo": "Planteamiento del problema · marco teórico y revisión de literatura", "bloque": "U7+U10–12",
+             "detalle": "U7+U10–U12 en un solo encuentro: estado actual, evidencias, causas y vacío hasta cerrar en la pregunta · constructos, posturas teóricas, fichas de lectura y primera página de marco. Última sincrónica antes del cierre de la ACA Final y del Quiz 3."},
+            {"n": 6, "fecha": "17/09/2026", "titulo": "Socialización del artículo y cierre del curso", "bloque": "Cierre",
+             "detalle": "Cierre sin evaluación nueva: la ACA Final y el Quiz 3 ya cerraron. Ronda de socialización del artículo, retroalimentación entre pares, ruta hacia semillero y trabajo de grado, y diligenciamiento de autoevaluación y coevaluación, que abren este día en CDigital."}
         ],
     },
     "creatividad": {
@@ -272,7 +294,14 @@ COURSES = {
         "duracion_min": 60,
         "contenido_min": 60,
         "fuente": "Syllabus SIAC EI004_VIR",
-        "nota_syllabus": None,
+        "nota_syllabus": (
+            "TEMARIO ADELANTADO (2026-08-11): la ACA Final califica «Ecosistema: entidades de apoyo» "
+            "(**U8**) y cierra el 19/09, cuatro días antes de la Sesión 07, donde U8 se dictaba. "
+            "**U7** (vigilancia tecnológica) pasa a la **Sesión 05** —junto con U6, que ya vivía ahí— "
+            "y **U8** a la **Sesión 06**; la Sesión 07 queda como taller de consolidación y "
+            "sustentación. Ninguna unidad se elimina: es un reorden, no un recorte. U1–U2 siguen en "
+            "lectura autónoma desde la Sesión 01."
+        ),
         "sesiones": [
             {"n": 1, "fecha": "12/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
@@ -284,12 +313,12 @@ COURSES = {
              "detalle": "Métodos en producto, proceso, organización, marketing, social."},
             {"n": 4, "fecha": "02/09/2026", "titulo": "Tipos de innovación", "bloque": "U5",
              "detalle": "Cuadro comparativo · mejoras en contextos socio-económicos."},
-            {"n": 5, "fecha": "09/09/2026", "titulo": "Análisis de negocios · validación de la propuesta", "bloque": "U6",
-             "detalle": "FODA, Canvas, MVP · sustentación de propuesta."},
-            {"n": 6, "fecha": "16/09/2026", "titulo": "Vigilancia tecnológica", "bloque": "U7",
-             "detalle": "Datos estratégicos sobre tecnologías y tendencias."},
-            {"n": 7, "fecha": "23/09/2026", "titulo": "Innovación local–internacional · entidades de apoyo", "bloque": "U8",
-             "detalle": "Cierre del curso · impactos y programas de apoyo."}
+            {"n": 5, "fecha": "09/09/2026", "titulo": "Validación de la propuesta · vigilancia tecnológica", "bloque": "U6–U7",
+             "detalle": "U6+U7 en un solo encuentro: FODA, Canvas y MVP · prueba del supuesto más riesgoso con criterio fijado antes · tablero de vigilancia (Scholar/Patents) que termina en una decisión. U7 se adelanta porque la ACA Final la califica."},
+            {"n": 6, "fecha": "16/09/2026", "titulo": "Innovación local–internacional · entidades de apoyo", "bloque": "U8",
+             "detalle": "U8 adelantada una sesión: escalas local–regional–nacional–internacional, tipos de impacto, mapa de entidades reales con un pedido concreto y guion del pitch de 60 s. Última sincrónica antes del cierre de la ACA Final, que califica ecosistema y pitch."},
+            {"n": 7, "fecha": "23/09/2026", "titulo": "Taller de consolidación y sustentación de la propuesta", "bloque": "Cierre",
+             "detalle": "Cierre sin evaluación nueva: la ACA Final y el Quiz 3 ya cerraron. Sustentación cruzada con el pitch de 60 s, revisión de coherencia del paquete consolidado y diligenciamiento de autoevaluación y coevaluación, que abren este día en CDigital."}
         ],
     },
     "tg2": {
@@ -372,11 +401,54 @@ COURSES = {
              "detalle": "Cierre formal del trabajo de grado (Syllabus U1–U14 completo)."},
             {"n": 14, "fecha": "10/11/2026", "titulo": "Ajustes finales · seguimiento post-sustentación", "bloque": "Buffer",
              "detalle": "Fecha calendario extra tras U14. Grupo 54450: última martes antes del cierre 15/11 (recepción 07/11)."},
-            {"n": 15, "fecha": "17/11/2026", "titulo": "Cierre administrativo · recepción (hasta 22 nov)", "bloque": "Buffer",
-             "detalle": "Solo grupos 54466/54467 (26V04, cierre 22/11). El 54450 NO tiene esta fecha."}
+            {"n": 15, "fecha": "17/11/2026", "titulo": "Cierre administrativo · recepción de entregables", "bloque": "Buffer",
+             "detalle": "Solo grupos 54466/54467 (26V04): cae después de la recepción de su ACA Final y antes del cierre de notas. El 54450 NO tiene esta fecha: su periodo ya cerró. Las fechas exactas se leen en CDigital."}
         ],
     },
 }
+
+
+# ---------------------------------------------------------------------------
+# Regla «títulos de sesión sin fechas» — se verifica al importar el módulo
+# ---------------------------------------------------------------------------
+# El título viaja al nombre de la carpeta `Clases/Sesion NN - <tema>/` y del guion
+# `.md`: una fecha escrita ahí sobrevive a cualquier cambio del calendario y le
+# queda mintiendo al estudiante. Las fechas se leen del modelo (`fecha` de la
+# sesión · `config/cursos/fechas_entrega_aca.py`), nunca del título.
+_MES_ABREV = r"ene|feb|mar|abr|may|jun|jul|ago|sep|sept|oct|nov|dic"
+_MES_LARGO = (
+    r"enero|febrero|marzo|abril|mayo|junio|julio|agosto|"
+    r"septiembre|setiembre|octubre|noviembre|diciembre"
+)
+_RE_FECHA_EN_TITULO = re.compile(
+    r"\d{1,2}\s*/\s*\d{1,2}"                                  # 22/11 · 22/11/2026
+    rf"|\b\d{{1,2}}\s*(?:de\s+)?(?:{_MES_ABREV}|{_MES_LARGO})\b"  # 22 nov · 22 de noviembre
+    rf"|\b(?:{_MES_ABREV}|{_MES_LARGO})\.?\s+\d{{1,2}}\b",        # nov 22 · noviembre 22
+    re.IGNORECASE,
+)
+
+
+def titulos_con_fecha() -> list[str]:
+    """Sesiones cuyo `titulo` trae una fecha. Debe devolver SIEMPRE lista vacía."""
+    malos: list[str] = []
+    for key, c in COURSES.items():
+        for s in c.get("sesiones") or []:
+            titulo = s.get("titulo") or ""
+            if _RE_FECHA_EN_TITULO.search(titulo):
+                malos.append(f"{key} S{int(s.get('n', 0)):02d}: «{titulo}»")
+    return malos
+
+
+def _verificar_titulos_sin_fecha() -> None:
+    malos = titulos_con_fecha()
+    if malos:
+        raise ValueError(
+            "Título de sesión con fecha (la fecha sale del modelo, no del título; "
+            "si hay que matizar, va en `detalle`): " + " · ".join(malos)
+        )
+
+
+_verificar_titulos_sin_fecha()
 
 
 # ---------------------------------------------------------------------------

@@ -52,4 +52,8 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 
 > Los **quices y parciales** son cuestionarios: caen en día de clase y su ventana abre en la sesión anterior. La **ACA Final** es una tarea (documento) y cierra en la fecha máxima de recepción de trabajos. **Autoevaluación** (cuestionario) y **coevaluación** (foro) van de la última semana al cierre de notas. La **Sesión 01 es de encuadre y no evalúa.**
 
-Los CSV/ICS con el/los códigos de grupo en el título del evento viven en `2026/<grupo>/` (y, si varios grupos comparten horario y cierre, también puede generarse un archivo combinado).
+## Cómo llegan estos encuentros a Calendar
+
+Con `PRINCIPAL - Crear encuentros con invitados.gs`, en `2026/54448/`. Es un Apps Script y es lo único que añade a los estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. Paso a paso: `LEEME - Crear los eventos de Calendar.md`, en esa misma carpeta.
+
+⚠️ Los `.ics`/`.csv` que hay junto al script llevan el prefijo `RESPALDO sin invitados` porque **Google Calendar descarta los invitados** al importarlos: sirven como respaldo de fechas, no para crear la serie del curso.

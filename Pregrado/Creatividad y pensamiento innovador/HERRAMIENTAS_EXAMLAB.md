@@ -123,19 +123,22 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 ---
 
-### Sesión 01 — 12/08 · Introducción · Propuesta de Innovación · creatividad e inteligencia emocional
+### Sesión 01 — 12/08 · Presentación del curso · docente · estudiantes · ACAs
 
-**Lo que pide el guion:** post-it en Padlet con expectativa + tema (~7 min); **18 min** llenando la ficha problema–oportunidad de 6 campos; 3 estudiantes leen usuario+problema en 30 s. Entregable `S01_FichaProblema_Apellido`.
+> **Sesión de encuadre: no dicta tema.** Se presenta el curso, el Docente, los estudiantes (Padlet) y las ACAs — peso, fechas y formato —, más los acuerdos de trabajo. La **U1–U2** (Propuesta de Innovación · creatividad e inteligencia emocional) pasa a **lectura autónoma** y se retoma al abrir la Sesión 02. El contenido curricular arranca en la S02.
+
+**Lo que pide el guion:** rompehielos en Padlet (~9 min) donde cada estudiante se presenta por escrito; mapa de las 7 sesiones; tabla de las ACAs y de los ítems del aula; herramientas del curso; acuerdos; encargo autónomo (lectura U1–U2) y aviso de que el **Quiz 1** ya está abierto y cierra el **19/08**.
 
 | Momento | Herramienta | Cómo |
 |---|---|---|
-| Rompehielos (7 min) | **Encuesta mixta** | 2 campos: "tu expectativa del curso" y "el tema o problema que te interesa". El nombre ya lo trae el sistema. Reemplaza el Padlet — que hoy es **el mismo enlace compartido entre los 5 cursos del docente**, así que las respuestas se mezclan |
-| Ficha de 6 campos (18 min) | **Encuesta mixta**, 6 campos `obligatorios` con tope de caracteres | Título · usuario concreto · problema (3–5 líneas) · evidencia observable · tipo Oslo tentativo · valor esperado. El docente después la lee **campo por campo con el nombre del autor**: las 50 respuestas a "usuario concreto" juntas, que es exactamente lo que hoy no puede hacer |
-| Las 3 lecturas en voz alta | **Se mantienen** | La encuesta no las reemplaza; las hace innecesarias como muestreo, no como momento de clase |
-| Cierre | **Tablero del curso** | El estudiante ve el material de la sesión; el guion docente queda cargado pero **destildado del allowlist** de esa sesión, así que no lo ve |
+| Rompehielos (~9 min) | **Encuesta mixta** | 2 campos: "tu expectativa del curso" y "el tema o problema que te interesa". El nombre ya lo trae el sistema. Reemplaza el Padlet — que hoy es **el mismo enlace compartido entre los 5 cursos del docente**, así que las respuestas se mezclan |
+| Que el docente lea las 50 respuestas sin ahogarse | **Resultados agrupados por campo, con autor** | Las 50 respuestas a "el tema que te interesa" juntas y con nombre, que es exactamente lo que hoy no puede hacer. De ahí salen los 3 problemas del grupo que el guion pide anotar para usar de ejemplo en la S02 |
+| Material del curso y lectura autónoma | **Contenidos** asignados a la sesión | La lectura U1–U2 y su PDF quedan visibles el día 1; el guion docente queda cargado pero **destildado del allowlist** de esa sesión, así que el estudiante no lo ve |
+| Mapa de las 7 sesiones y calendario | **Generador de sesiones** + suscripción al **`.ics`** | Hace visible el día 1 que la **ACA Final** cierra el 19/09, antes de la última clase |
 | Anuncio | **Tutor IA + Foro de la sesión 01** | Se anuncian los dos el día 1. El foro con ventana 12/08 → 18/08 |
+| **Quiz 1** abierto (6%, cierra 19/08) | **Actividad externa** | Se anuncia hoy aunque la sesión no evalúe: la ventana ya está abierta en CDigital |
 
-**Lo que no cubre:** la inteligencia emocional, los bloqueadores/ensanchadores y el mapa de utilidad son la Unidad 2 del syllabus, el ACA 1 los exige, y **ninguna de las 5 fases del guion S01 les asigna tiempo**. Ver sesión 02 para dónde meterlos.
+**Lo que no cubre:** la inteligencia emocional, los bloqueadores/ensanchadores y el mapa de utilidad son la **U2** del Syllabus, la **ACA Final** los exige y hoy van como lectura autónoma. Ver sesión 02 para dónde se retoman.
 
 **Advertencia de arranque:** esta es la sesión donde 50 personas entran por primera vez, cambian la clave temporal y descubren la plataforma. Si además se estrena el Reto en vivo, no queda taller. **Recomiendo cero Reto en la sesión 01.**
 
@@ -149,7 +152,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 |---|---|---|
 | Las 8 ideas | **Taller con pregunta tipo `diagrama`** → mermaid `mindmap` | **Este es el hallazgo más útil del análisis para esta sesión.** El tipo `diagrama` se renderiza dentro de la pantalla del estudiante: cada uno tiene **su propio lienzo**, la respuesta se guarda, y lleva rúbrica y puntaje como cualquier otra pregunta. Un mapa mental con 8 ramas es exactamente el instrumento. En modo grupo, un lienzo por grupo |
 | El *How Might We* + los 3 criterios | Misma pregunta o pregunta `abierta` aparte | Con la rúbrica escrita como **tabla markdown en el enunciado** — el enunciado se renderiza formateado mientras el estudiante responde, así que la tabla de criterios se ve como tabla |
-| El mapa de utilidad (U2, huérfano) | **`diagrama`** → mermaid `quadrantChart` | Matriz 2×2 nativa. Cierra el instrumento de la Unidad 2 que el material tiene como archivo suelto (`s02_mapa_utilidad_modelo.html`) sin sesión que lo acoja. El ACA 1 lo exige |
+| El mapa de utilidad (U2, huérfano) | **`diagrama`** → mermaid `quadrantChart` | Matriz 2×2 nativa. Cierra el instrumento de la Unidad 2 que el material tiene como archivo suelto (`s02_mapa_utilidad_modelo.html`) sin sesión que lo acoja. La **ACA Final** lo exige |
 | El boceto de 1 min | **Mensajería 1-a-1 o el hilo del foro** | **Brecha:** no se puede subir una imagen como respuesta de taller. Los compañeros del mismo curso **sí** pueden mensajearse entre ellos con adjuntos, y el docente también. Es un rodeo |
 | SCAMPER | **Sin plantilla** | El catálogo de 44 figuras de la pizarra no la tiene. Se dicta como lista de verbos y el estudiante la aplica en el mapa mental. Ver §6 |
 | **Quiz 1** cierra hoy (cuestionario, 6%) | **Actividad externa** | Registrar en ExamLab un ítem `externo` con el enlace a CDigital, para que la nota entre al corte y al semáforo. El quiz se aplica en **CDigital**; ExamLab sirve para el ensayo previo desde el Banco de preguntas |
@@ -165,7 +168,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | Los 3 mini-casos | **Encuesta `single`** ×3, resultado visible al instante | Reemplaza el "pidan en el chat" de manera exacta: con 50 personas el chat de Meet no da lectura agregada; la encuesta muestra la distribución en 20 segundos y el docente enseña sobre el error mayoritario, no sobre el que alcanzó a leer |
 | Ficha Oslo (20 min) | **Encuesta mixta** de 7 campos | Los dos campos de "actividad de gestión con responsable y fecha" son campos obligatorios, así que el sistema no deja cerrar sin ellos — hoy es lo primero que la gente deja en blanco |
 | Cierre + repaso | **Reto en vivo**, 6 preguntas de 20 s | Sobre los errores del banco: *"innovación = tecnología nueva"*, *"es de todos los tipos"*. Si el tiempo no da, va como taller autocorregible para la semana |
-| Retroalimentación del ACA 1 | **Hilo de retroalimentación** sobre la actividad externa | Anclado a la actividad, no en un correo suelto |
+| Retroalimentación del **Quiz 1** (6%) | **Hilo de retroalimentación** sobre la actividad externa | Anclado a la actividad, no en un correo suelto |
 
 ---
 
@@ -182,9 +185,11 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 
 ---
 
-### Sesión 05 — 09/09 · Análisis de negocios · validación de la propuesta
+### Sesión 05 — 09/09 · Validación de la propuesta · vigilancia tecnológica · *(cierra **Parcial 2**, 21%)*
 
-**Lo que pide el guion:** **22 min** — FODA en 6 bullets; Canvas mínimo (propuesta de valor, segmento, canales, actividades); MVP en 5 líneas; **1 prueba de validación con criterio numérico u observable**.
+> **Sesión de dos mitades (temario adelantado 2026-08-11).** U7 (vigilancia tecnológica) bajó a esta sesión para juntarse con U6, que ya vivía acá. Por dentro: FODA, Canvas y MVP. Por fuera: el tablero de vigilancia. El taller es **uno solo, de 25 min**, y produce **un documento con las dos mitades**.
+
+**Lo que pide el guion — primera mitad (validar por dentro):** FODA en 6 bullets; Canvas mínimo (propuesta de valor, segmento, canales, actividades); MVP en 5 líneas; **1 prueba de validación con criterio numérico u observable**.
 
 | Momento | Herramienta | Cómo |
 |---|---|---|
@@ -193,14 +198,9 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | MVP en 5 líneas | Campo `abierto` con tope de caracteres | El tope obliga a las 5 líneas |
 | La prueba de validación | Campo obligatorio, con la rúbrica del criterio numérico en el enunciado | Es el campo que hoy más se llena con generalidades |
 | Repaso | **Reto en vivo** | *"MVP = fase 2 del software grande"*, Canvas con frases genéricas |
+| **Parcial 2** cierra hoy (cuestionario · 21% · corte 2) | **Actividad externa** | Es el ítem más pesado del segundo corte. Llega hasta la **Sesión 04** (tipos de innovación): lo de hoy **no** entra. Recordar la ventana en clase |
 
-**Trabajo autónomo S05→S06:** el guion pide **ejecutar la prueba de validación con usuarios reales**. Ahí el **Foro** de la semana y el **Tutor IA** son las dos piezas que sostienen a un estudiante de pregrado que nunca entrevistó a nadie.
-
----
-
-### Sesión 06 — 16/09 · Vigilancia tecnológica · *(cierra **Quiz 3**, 4%; la **ACA Final** —32,8%— cierra el 19/09)*
-
-**Lo que pide el guion:** **22 min** — tablero de vigilancia con **mínimo 3 fichas de señal** (título, fuente + fecha + enlace, hallazgo en 2 líneas, implicación, nivel de confianza); ≥1 señal debe forzar un ajuste. 2 comparten la implicación.
+**Lo que pide el guion — segunda mitad (validar por fuera):** tablero de vigilancia con **mínimo 3 fichas de señal** (título, fuente + fecha + enlace, hallazgo en 2 líneas, implicación, nivel de confianza); ≥1 señal debe forzar un ajuste a la propuesta. 2 estudiantes comparten la implicación.
 
 | Momento | Herramienta | Cómo |
 |---|---|---|
@@ -208,23 +208,44 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | El ajuste forzado por una señal | Cuarta pregunta `abierta` | Es el criterio de aprobación del taller |
 | Las fuentes con fecha y enlace | — | **Brecha real, ver §6.** No hay gestor de referencias ni ayuda de citación. El estudiante pega la URL a mano y nadie valida el formato |
 | El ciclo observar→analizar→comunicar→usar | **`diagrama`** → flowchart | Modelado en vivo por el docente en la pizarra de sesión |
-| **Quiz 3** cierra hoy (4%) y la **ACA Final** (tarea, 32,8%) cierra el **19/09** | **Actividad externa** | El tercer corte es el 40% del curso y la ACA Final es el 32,8%: si no queda registrada acá, el semáforo queda ciego justo en el corte más pesado. Recordar en clase la ventana de **autoevaluación y coevaluación** (23–27/09) |
+| Scholar y Patents sin ahogarse | **Contenido `.md`** con los operadores de búsqueda | Queda consultable mientras el estudiante busca, no solo proyectado en la sesión |
+
+**Trabajo autónomo S05→S06:** el guion pide **ejecutar la prueba de validación con usuarios reales**. Ahí el **Foro** de la semana y el **Tutor IA** son las dos piezas que sostienen a un estudiante de pregrado que nunca entrevistó a nadie.
 
 ---
 
-### Sesión 07 — 23/09 · Innovación local–internacional · entidades de apoyo · cierre
+### Sesión 06 — 16/09 · Innovación local–internacional · entidades de apoyo · *(cierra **Quiz 3**, 4%; la **ACA Final** —32,8%— cierra el 19/09)*
 
-**Lo que pide el guion:** **23 min** — mapa de **mínimo 3 entidades reales** con el pedido concreto; escribir guion de pitch de 60 s; **ensayo en parejas**; **4 voluntarios pitchean cronometrados**.
+> **Última sesión antes del cierre de la ACA Final.** Con el temario adelantado, U8 (ecosistema y entidades de apoyo) se dicta acá y no en la S07: la ACA Final califica esta unidad y cierra el **19/09**, cuatro días antes de la última clase.
+
+**Lo que pide el guion:** **23 min** — mapa de **mínimo 3 entidades reales** con el pedido concreto; escribir el guion del **pitch de 60 s**; **ensayo en parejas**; **4 voluntarios pitchean cronometrados**.
 
 | Momento | Herramienta | Cómo |
 |---|---|---|
 | Mapa de 3 entidades | **`diagrama`** → mermaid `mindmap` o flowchart | Universidad / sector productivo / Estado / redes como ramas, con el pedido concreto en cada hoja |
+| «Pedir apoyo» no es un pedido | Campo `abierto` obligatorio, con la rúbrica del pedido concreto en el enunciado | Es el campo que hoy más se llena con generalidades |
+| Los cinco tramos del pitch | **Taller con 5 preguntas `abierta`** (una por tramo), o una sola con la plantilla en tabla markdown | La IA califica tramo por tramo contra la misma rúbrica |
 | Ensayo en parejas | **Mensajería 1-a-1 entre compañeros** | Dos matriculados del mismo curso pueden escribirse, **con adjuntos**. Sirve para intercambiar el guion antes de ensayarlo |
-| Los 4 voluntarios | **Se mantienen en vivo** | |
-| **Los otros 46 pitches** | **Proyecto con video de sustentación** | Este es el cierre honesto del curso: el estudiante graba su pitch de 60 s, pega el enlace (o sube el archivo), y el docente registra el **factor de sustentación** y las notas cuando puede. La nota final del proyecto es `nota de entrega × factor`. Con importación masiva de sustentaciones por CSV, para no abrir 50 diálogos |
-| Coevaluación entre pares | **Foro, un hilo por estudiante** | **Brecha, ver §6.** Funciona como conversación; no hay pauta, ni asignación de quién revisa a quién, ni nota |
-| Cierre y consolidado | **Informes** | Plantilla con las notas por corte, exportable a `.docx` e imprimible a PDF |
+| Los 4 voluntarios cronometrados | **Se mantienen en vivo** | **Brecha:** no hay cronómetro proyectable con la consigna visible |
 | Restricción del guion | *"no prometa cupos ni financiaciones"* | Se mantiene tal cual; ninguna herramienta la toca |
+| **Quiz 3** cierra hoy (4%) y la **ACA Final** (tarea, 32,8%) cierra el **19/09** | **Actividad externa** | El tercer corte es el 40% del curso y la ACA Final es el 32,8%: si no queda registrada acá, el semáforo queda ciego justo en el corte más pesado. Ojo: el Quiz 3 **sí** incluye la vigilancia tecnológica de la S05. Recordar también la ventana de **autoevaluación y coevaluación** (23–27/09) |
+
+---
+
+### Sesión 07 — 23/09 · Taller de consolidación y sustentación de la propuesta · cierre
+
+> **Sesión sin evaluación nueva: es socialización y cierre.** La ACA Final ya cerró el **19/09**, cuatro días antes. Hoy no se entrega nada nuevo: se sostiene lo ya escrito, se revisan costuras y se abren los dos instrumentos individuales (**autoevaluación** y **coevaluación**, 1,6% cada uno, ventana **23–27/09**).
+
+**Lo que pide el guion:** **25 min** — **sustentación cruzada** de 3 minutos por estudiante contra las cinco preguntas previsibles; retroalimentar al compañero con la **fórmula de las tres frases**; consolidar el documento revisando trazabilidad sesión → sección.
+
+| Momento | Herramienta | Cómo |
+|---|---|---|
+| Trazabilidad sesión → sección del documento | **Taller checklist** o **Proyecto con N slots** (un slot por sección esperada) | Cada sección es un ítem verificable con su estado. Es el uso más natural del módulo: hace visible qué falta sin escribir más texto |
+| Las 5 preguntas previsibles | **Reto en vivo** + **Banco de preguntas** | Las preguntas de sustentación se guardan y sirven a los semestres siguientes |
+| Sustentación de 3 min por estudiante | **Se mantiene en vivo**; para los que no alcanzan, **Proyecto con video de sustentación** | El estudiante graba su sustentación, pega el enlace (o sube el archivo) y el docente registra el **factor de sustentación** y la nota cuando puede: la nota final del proyecto es `nota de entrega × factor`. Con importación masiva por CSV, para no abrir 50 diálogos. **Brecha:** no hay cronómetro proyectable con la consigna visible |
+| Retro con la fórmula de las tres frases | **Foro, un hilo por estudiante**, con la fórmula fijada como respuesta oficial | **Brecha, ver §6.** Funciona como conversación; no hay pauta calificable, ni asignación de quién revisa a quién, ni registro de que la revisión ocurrió |
+| **Autoevaluación** (1,6%) y **Coevaluación** (1,6%, **foro**) | **Actividad externa** ×2 | Se diligencian **en CDigital**, no acá; su ventana abre hoy y cierra el **27/09**, el mismo día del cierre de notas. Registrar las dos notas antes de esa fecha |
+| Cierre y consolidado | **Informes** | Plantilla con las notas por corte, exportable a `.docx` e imprimible a PDF |
 
 ---
 
@@ -238,7 +259,7 @@ Nada de esto es sincrónico, pero condiciona las 7 sesiones.
 | **Recordatorio de ACA** | **Mensaje programado** con difusión al curso | Escrito una vez en la semana 0, programado para el domingo anterior a 19/08, 02/09 y 16/09 |
 | **Acompañamiento entre clases** | **Tutor IA** | Permanente |
 
-**Ninguna sesión queda sin herramienta.** Las tres que quedan a medias — la matriz de 5 criterios de la S04, el Canvas de la S05 y las fuentes citadas de la S06 — están señaladas arriba y desarrolladas en §5 y §6.
+**Ninguna sesión queda sin herramienta.** Las tres que quedan a medias — la matriz de 5 criterios de la S04, el Canvas de la S05 y las fuentes citadas del tablero de vigilancia (también S05) — están señaladas arriba y desarrolladas en §5 y §6.
 
 ---
 
@@ -316,7 +337,7 @@ Y las tablas markdown escritas por un estudiante **sí se renderizan como tabla*
 
 **Diagnóstico del curso:** matriz estudiante × actividad con cinco estados de celda (sin entregar · entregado sin calificar · calificado · error de IA · sin sustentación).
 
-**Aplicación:** la necesidad #4 y la #12. Entre el 12/08 y el 19/08 hay una sola clase; la primera señal real de abandono hoy es el ACA 1, y con 50 inscritos de pregrado eso llega tarde.
+**Aplicación:** la necesidad #4 y la #12. Entre el 12/08 y el 19/08 hay una sola clase; la primera señal real de abandono hoy es el **Quiz 1** (19/08), y con 50 inscritos de pregrado eso llega tarde.
 
 **Dos límites que cambian el hábito:**
 1. **No avisa solo.** El docente tiene que **abrir Estadísticas**. No hay notificación automática ni historial del nivel. Es un hábito semanal, no una alerta que llega.
@@ -348,7 +369,7 @@ Matriz sesiones × estudiantes. Cada sesión lleva fecha, título, hora, duraci�
 
 **Proyectos:** N "archivos esperados", cada uno con su tipo y rúbrica. **Sustentación como factor multiplicativo**: `nota final = nota de entrega × factor (0 a 1)`. Video de sustentación (enlace o archivo subido) e importación masiva de sustentaciones por CSV. Grupos con arrastrar y soltar; la entrega es compartida y al calificar se notifica a cada integrante.
 
-**Aplicación:** los talleres como práctica formativa autocorregible y como ensayo con rúbrica antes de la entrega oficial; el proyecto como el **contenedor del artefacto acumulativo** y como el **pitch grabado asíncrono** de la S07.
+**Aplicación:** los talleres como práctica formativa autocorregible y como ensayo con rúbrica antes de la entrega oficial; el proyecto como el **contenedor del artefacto acumulativo** y como el **pitch grabado asíncrono** de la S06 y la **sustentación grabada** de la S07.
 
 ### 3.10 Notas externas y consolidado
 
@@ -397,7 +418,7 @@ Matriz sesiones × estudiantes. Cada sesión lleva fecha, título, hora, duraci�
 **Problema:** no existe evaluación entre pares. Un estudiante no puede ver la entrega de otro.
 
 **Workaround en dos piezas:**
-- **Ensayo en parejas (S07):** dos matriculados del mismo curso **sí pueden mensajearse entre ellos, con adjuntos**. Se intercambian el guion del pitch por mensajería.
+- **Ensayo en parejas (S06):** dos matriculados del mismo curso **sí pueden mensajearse entre ellos, con adjuntos**. Se intercambian el guion del pitch por mensajería.
 - **Comentarios de pares:** un hilo de foro por estudiante donde los compañeros comentan.
 
 **Costo:** sin pauta, sin asignación automática de quién revisa a quién, sin registro de que la revisión ocurrió, sin nota. Y el foro no admite adjuntos, así que el trabajo hay que pegarlo como texto. **Ojo (corregido 2026-08-10):** este curso **sí tiene coevaluación con peso propio (1,6%)**, y en el aula es un **FORO de CDigital**. Es decir: la nota se cumple allá, y lo que falta en ExamLab es solo la capa formativa (pauta, asignación de revisores, registro). No presentarla como «no aplica».
@@ -433,12 +454,12 @@ Sin maquillar. Estas cinco no se tapan con otra pieza.
 
 | # | Brecha | Impacto en este curso | Qué se pierde exactamente |
 |---:|---|---|---|
-| 1 | **No hay tipo de pregunta tabular (grilla filas × columnas)** | **Alto** | La matriz comparativa de ≥5 criterios (S04) y el tablero de vigilancia con 3 fichas × 5 campos (S06) son el instrumento central de dos sesiones. Se pueden pedir como formulario de campos o como texto con plantilla en el enunciado, pero el estudiante nunca ve su matriz como matriz, y no hay validación de "esta celda quedó vacía" |
+| 1 | **No hay tipo de pregunta tabular (grilla filas × columnas)** | **Alto** | La matriz comparativa de ≥5 criterios (S04) y el tablero de vigilancia con 3 fichas × 5 campos (S05) son el instrumento central de dos sesiones. Se pueden pedir como formulario de campos o como texto con plantilla en el enunciado, pero el estudiante nunca ve su matriz como matriz, y no hay validación de "esta celda quedó vacía" |
 | 2 | **La rúbrica no es dato** | **Alto** | El syllabus la exige por actividad. Se escribe como tabla markdown en dos lugares (§4.5) y funciona visualmente, pero no hay criterios, ni niveles, ni puntaje por celda, ni suma, ni reutilización, ni consulta agregada |
 | 3 | **No hay plantillas de ideación de este dominio** | **Medio-alto** | El material pide SCAMPER, Business Model Canvas, FODA y mapa de utilidad **por nombre**. El motor de diagramas cubre mapa mental y matriz 2×2 (que resuelve mapa de utilidad y FODA); Canvas y SCAMPER quedan sin plantilla visual. Y **el estudiante no puede crear pizarras propias** — es limitación de pantalla, no de base |
 | 4 | **No hay versiones de un trabajo largo** | **Medio-alto** | La Propuesta de Innovación es un documento que crece 7 semanas y es *"el hilo conductor único"* del curso. La plataforma guarda su última versión. El ciclo del guion (*"mejorar el problema con una observación real"*) no se puede verificar |
-| 5 | **No hay gestor de referencias ni ayuda de citación** | **Medio** | La ficha de señal de la S06 pide **fuente + fecha + enlace** y el ACA 3 pide fuentes trazables. El estudiante pega URLs a mano; nadie valida formato, nadie detecta duplicados, no hay biblioteca personal. Y el syllabus exige plantilla APA CUN |
-| 6 | **No hay coevaluación / revisión por pares** | **Medio** | S07 pide ensayo en parejas y el pitch es criterio del ACA 3. Sucedáneo: mensajería entre compañeros + hilo de foro, sin pauta ni nota (§4.4) |
+| 5 | **No hay gestor de referencias ni ayuda de citación** | **Medio** | La ficha de señal de la S05 pide **fuente + fecha + enlace** y la **ACA Final** pide fuentes trazables. El estudiante pega URLs a mano; nadie valida formato, nadie detecta duplicados, no hay biblioteca personal. Y el syllabus exige plantilla APA CUN |
+| 6 | **No hay coevaluación / revisión por pares** | **Medio** | La S06 pide ensayo en parejas y la S07, sustentación cruzada con retro entre pares; el pitch es criterio de la **ACA Final**. Sucedáneo: mensajería entre compañeros + hilo de foro, sin pauta ni nota (§4.4) |
 | 7 | **No hay cronómetro de actividad proyectable** | **Bajo-medio** | Cada guion es un reloj (18/22/21/22/22/23 min) y cada taller tiene un criterio explícito que hoy solo se dice en voz alta. Se resuelve con cualquier temporizador compartido en pantalla |
 | 8 | **No hay canal de clase donde los 50 se vean entre sí** | **Bajo-medio** | La difusión llega a 50 conversaciones privadas. La discusión colectiva vive en el Foro, que sí funciona para eso |
 | 9 | **Sin adjuntos en el foro; sin subir imagen como respuesta de taller** | **Bajo-medio** | El "boceto de 1 minuto" de la S02 no tiene dónde ir dentro del taller. Rodeo: mensajería (sí admite adjuntos) |
@@ -487,7 +508,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 4. **Tutor IA** — el acompañamiento de las 64 horas autónomas.
 5. **Actividades externas + Alerta temprana** — los ítems del aula registrados (empezando por Quiz 1 y **Parcial 1**, que se juegan el 30% en las tres primeras semanas), para que el semáforo vea algo.
 
-**Segundo anillo, si el primero funciona** (a partir de la S03): Reto en vivo, pregunta tipo `diagrama` para la ideación, y el proyecto con video de sustentación para el pitch de la S07.
+**Segundo anillo, si el primero funciona** (a partir de la S03): Reto en vivo, pregunta tipo `diagrama` para la ideación, y el proyecto con video de sustentación para el pitch de la S06 y la sustentación de la S07.
 
 **No adoptar en este bloque:** certificados (los emite la institución), exámenes con supervisión remota (fricción sin retorno formativo en un virtual de pregrado por celular), pizarras standalone (el estudiante no las puede crear) y todo el módulo de código.
 
@@ -522,7 +543,7 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 - [ ] Preparar los 5 fragmentos de código base de diagrama (mapa mental, matriz 2×2, flujo del ciclo de vigilancia, mapa de entidades).
 - [ ] Armar el Reto en vivo de la S03 con 6 preguntas.
 - [ ] Escribir las rúbricas como tabla markdown para los instrumentos que alimentan la **ACA Final**, y las preguntas de **Quiz 1–3 y Parcial 1–2** en el Banco.
-- [ ] Crear el proyecto de pitch de la S07 con video de sustentación.
+- [ ] Crear el proyecto de pitch de la S06 (y el de sustentación de la S07) con video de sustentación.
 
 **Hábito semanal — todo el bloque**
 
@@ -569,7 +590,7 @@ Inventario de módulos verificado contra el repositorio de ExamLab (catálogo de
 | La pregunta tipo `diagrama` da **un lienzo por estudiante**, persistido y calificable | §4.2 — la brecha de "50 ideando en paralelo" no es tal |
 | El motor de diagramas incluye mapa mental, matriz 2×2 y mapa de experiencia | §4.2 — mapa de utilidad y FODA tienen soporte nativo. **Sin verificación visual** |
 | La **encuesta mixta** es un constructor de formularios y el docente lee por campo con autor | §3.3 — resuelve la necesidad #3, que el inventario daba por inexistente |
-| Compañeros del mismo curso pueden mensajearse **con adjuntos** | §4.4 — el ensayo en parejas de la S07 tiene camino |
+| Compañeros del mismo curso pueden mensajearse **con adjuntos** | §4.4 — el ensayo en parejas de la S06 tiene camino |
 | La rúbrica escrita como tabla markdown **sí** se renderiza formateada al estudiante | §4.5 — el rodeo pasa de imposible a viable |
 | El estudiante **podría** crear pizarras propias (la base lo permite; falta la pantalla) | §5 brecha 3 — es limitación de interfaz, no de arquitectura |
 

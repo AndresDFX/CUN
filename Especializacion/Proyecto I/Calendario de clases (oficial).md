@@ -1,84 +1,108 @@
-﻿# Calendario de clases — PROYECTO I · Periodo 26ES4
-Especialización en Inteligencia Artificial
+# Calendario de clases (oficial) — Proyecto I — Especialización en Inteligencia Artificial
+Plantilla del curso · Horario: **Lunes, 8:00 pm – 10:00 pm (2 horas)** · franja AFI oficial **19:00–22:00 h** (duración exigida 1 h 30 min – 2 h)
+Grupos de este periodo: **54ES4** · Periodo **26ES4** · Código **ESP329**
+Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
-> ⚠️ **Este archivo se corrigió** con el **cronograma oficial** (`Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf`, Coordinación de Gestión del Conocimiento) recibido después de la primera versión. Los pesos reales por ítem son **25% + 25% + 42% + 4% coevaluación + 4% autoevaluación**; sumados dan los tres cortes que el aula declara (**25 / 25 / 50**).
->
-> 🔁 **Actualizado el 2026-08-10 con la auditoría del aula (CDigital).** El libro de calificaciones nombra los ítems **distinto** de nuestro material: el corte 1 es un **Quiz** (cuestionario, 25%), lo que el material llama ACA 2 es la **ACA 1** del aula y el anteproyecto final es la **ACA FINAL**. La **coevaluación es un foro** (se participa) y la **autoevaluación un cuestionario**. **Las fechas no cambiaron** — siguen siendo las de Coordinación. Fuente cargada en `config/cursos/fechas_entrega_aca.py` → `VENTANAS["proyecto1"]`.
+> **Archivo generado — no editar a mano.** Regenerar: `python config/slides/build_pregrado_cursos.py --calendar-only` (o `--proyecto1-only`). Fuentes: oferta y horario en `config/cursos/carga_academica_2026.json`; sesiones y temas en `config/cursos/sesiones_cun.py`; ítems, tipos, pesos y ventanas en `config/cursos/fechas_entrega_aca.py`.
+> **Horario ✓ instructivo AFI:** el encuentro (20:00–22:00 h) cae dentro de la franja oficial **19:00–22:00 h** y cumple la duración exigida (1 h 30 min – 2 h); coincide además con la sugerencia del propio portal (20:00–22:00 h).
+> **Regla de festivo (AFI — distinta de pregrado):** En lunes festivo **no se hace encuentro sincrónico** (Instructivo de encuentros sincrónicos de Especializaciones, §3). Opción principal: **clase pregrabada** disponible en CDigital; opción excepcional: **reprogramar**, solo por coincidencia con festivo y avisando con anticipación. Por eso el catálogo **no numera** los días de clase festivos: aparecen en la tabla de sesiones sin número, y **no** generan evento en el CSV/ICS.
+> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: `sesiones_cun.py`). El CSV/ICS del grupo —con invitados, coanfitrión y el enlace único de Meet de la serie— lo genera `python config/slides/build_calendar_proyecto1_54es4.py`, **no** este build.
+> **CDigital (aula del curso):** https://cdigital.cun.edu.co/course/view.php?id=130378 · **Google Meet (mismo enlace toda la serie):** https://meet.google.com/omk-woqk-vsj
+> **Nota Syllabus:** Temario curricular = 7 unidades didácticas del ESP329. Las 11 sesiones semanales del calendario AFI desarrollan esas unidades.
 
-## ✅ Horario CONFIRMADO: lunes, 8:00–10:00 pm (2 horas)
-Cumple el `Instructivo_encuentros_sincronicos_Especializaciones_AFI.pdf`: franja 19:00-22:00h ✓, duración 1h30-2h ✓, coincide además con la "sugerencia" del propio portal (20:00-22:00h). *(Se descarta la alerta anterior de horario 5-6pm — quedó resuelta.)*
+## El encuentro de 2 horas: ~60 min de contenido + 60 min de tutoría
 
-> 📌 **El CONTENIDO NUEVO de cada sesión se prepara para ~1 hora** (el bloque de enseñanza: teoría + modelación). La **2ª hora del encuentro de 2h se reserva para tutoría/taller en vivo** con los equipos (revisión de avances, dudas puntuales) — así que el guion docente de cada sesión trae solo ~60 min de contenido estructurado; el resto del tiempo es acompañamiento flexible, no material nuevo que preparar.
+- **Contenido nuevo por sesión: ~60 min.** El guion docente de cada sesión trae solo ese bloque (teoría + modelación); no hay que preparar 120 min de material.
+- **Los otros 60 min son tutoría/taller en vivo** con los equipos: revisión de avances y dudas puntuales. Es acompañamiento flexible, no material nuevo.
+- Las tutorías por grupo se acuerdan en la semana con el Docente (no hay atención espontánea sin cita).
+- **Asistencia a tutorías (formulario del estudiante):** https://forms.gle/oZ8xCYiUo3KEWr1d9
 
-## 🔴 ALERTA PENDIENTE: ACA 3 (42%, el entregable más grande) solo tiene 2 lunes de clase disponibles
-Cruzando el cronograma oficial con los festivos colombianos de 2026, la ventana de ACA 3 (12/10–08/11) pierde **2 de sus 4 lunes** por festivo (12/10 Día de la Raza, 02/11 Todos los Santos trasladado). Quedan únicamente **19/10 y 26/10** como sesiones sincrónicas para todo el diseño metodológico + integración del anteproyecto final. **Recomendación:** adelanta contenido de metodología en las sesiones "puente" de ACA2 (05/10) y refuerza con tutorías adicionales durante esas semanas — no dependas solo de las 2 sesiones sincrónicas para ese tramo.
+## Evaluación — ventanas OFICIALES de Coordinación
 
----
+**Régimen:** **Nota única 100%** (ESP329 · Art. 41 §3 del Reglamento Estudiantil), registrada en el aula en **tres cortes 25% / 25% / 50%**. Fuente de las ventanas: `config/cursos/fechas_entrega_aca.py` → `VENTANAS["proyecto1"]`; fuente de los nombres, tipos y pesos: libro de calificaciones del aula en CDigital (auditoría 2026-08-10).
 
-## 📅 Cronograma OFICIAL (fuente: Coordinación de Gestión del Conocimiento)
+| Ítem en el aula (CDigital) | Tipo | Corte (peso) | Peso del ítem | Apertura | Cierre | Límite de nota | Última sincrónica antes del cierre |
+| :--- | :--- | :---: | ---: | :--- | :--- | :--- | :--- |
+| **Quiz** | Cuestionario | 1 (25%) | **25%** | lun 03/08/2026 | dom 30/08/2026 | 07/09/2026 | **S02** (24/08) — Problema y pregunta de investigación |
+| **ACA 1** | Tarea | 2 (25%) | **25%** | lun 07/09/2026 | dom 04/10/2026 | 12/10/2026 | **S07** (28/09) — Marco legal · citación APA 7 |
+| **ACA FINAL** | Tarea | 3 (50%) | **42%** | lun 12/10/2026 | dom 08/11/2026 | 16/11/2026 | **S10** (26/10) — Planeación, viabilidad e integración del anteproyecto |
+| **Autoevaluación** | Cuestionario | 3 (50%) | **4%** | lun 16/11/2026 | dom 22/11/2026 | 22/11/2026 | **S11** (09/11) — Integración y evaluación · coevaluación y autoevaluación |
+| **Coevaluación** | Foro | 3 (50%) | **4%** | lun 09/11/2026 | dom 15/11/2026 | 22/11/2026 | **S11** (09/11) — Integración y evaluación · coevaluación y autoevaluación |
 
-| Actividad (material) | Ítem en el aula (CDigital) | Tipo en el aula | Apertura | Cierre | Fecha límite nota | % | Corte | Última sincrónica antes del cierre |
-|---|---|---|---|---|---|---|---|---|
-| **ACA 1** — Primer avance del anteproyecto | **Quiz** | Cuestionario | lun 03/08/2026 | dom 30/08/2026 | lun 07/09/2026 | **25%** | I | **S02** (24/08) |
-| **ACA 2** — Segundo avance del anteproyecto | **ACA 1** | Tarea | lun 07/09/2026 | dom 04/10/2026 | lun 12/10/2026 | **25%** | II | **S07** (28/09) |
-| **ACA 3** — Anteproyecto (final) | **ACA FINAL** | Tarea | lun 12/10/2026 | dom 08/11/2026 | lun 16/11/2026 | **42%** | III | **S10** (26/10) |
-| **Coevaluación** (no es ACA) | **Coevaluación** | **Foro** | lun 09/11/2026 | dom 15/11/2026 | dom 22/11/2026 | **4%** | III | **S11** (09/11) |
-| **Autoevaluación** (no es ACA) | **Autoevaluación** | Cuestionario | lun 16/11/2026 | dom 22/11/2026 | dom 22/11/2026 | **4%** | III | **S11** (09/11) · 16/11 es festivo |
+**Cortes:** Corte 1 25% = Quiz 25% · Corte 2 25% = ACA 1 25% · Corte 3 50% = ACA FINAL 42% + Autoevaluación 4% + Coevaluación 4%.
 
-> **Ningún ítem cierra en día de clase**: las ventanas de Coordinación cierran en **domingo** y el día de clase es **lunes**. Por eso la última columna marca la última sesión sincrónica útil antes de cada cierre, en vez de «la sesión en que cae».
-> Los **tres cortes del aula** (I=25%, II=25%, III=50% = ACA FINAL 42% + coev. 4% + autoev. 4%) están confirmados en el libro de calificaciones (auditoría 2026-08-10) y no dejan de ser **nota única** para efectos del Reglamento Estudiantil (Art. 41).
-> A diferencia de pregrado, Proyecto I **no tiene quices ni parciales adicionales**: su único cuestionario evaluativo del primer corte es el **Quiz** (25%) que en el material se enuncia como ACA 1.
-> **Fecha oficial de cierre y registro de TODAS las calificaciones: domingo 22 de noviembre de 2026.** No te guíes por recordatorios de Moodle — pueden estar desactualizados; esa es la única fecha válida (comunicada directamente por la Coordinación).
+> **Ningún ítem cierra en día de clase:** las ventanas de Coordinación cierran en **domingo** y el día de clase es **lunes**. Por eso la última columna marca la última sesión sincrónica útil antes de cada cierre, en vez de «la sesión en que cae».
+> A diferencia de pregrado, Proyecto I **no tiene quices ni parciales adicionales**: en todo el periodo hay **1 cuestionario evaluativo** (Quiz) y **2 tareas** (ACA 1, ACA FINAL); el resto del corte 3 son los instrumentos individuales de cierre (**autoevaluación** cuestionario, **coevaluación** foro).
+> **Ventanas que abren antes del inicio del periodo:** **Quiz** (03/08/2026), contra un inicio de clases el 10/08/2026. Son las fechas de Coordinación; en la práctica el ítem se presenta y se trabaja desde la primera clase.
+> Fechas OFICIALES de Coordinación (Cronograma_Proyecto_I_II_Especializaciones_26ES4.pdf) sobre la estructura real del aula en CDigital: Quiz 25% (corte 1) · ACA 1 25% (corte 2) · ACA FINAL 42% + autoevaluación 4% + coevaluación 4% (corte 3). Cierre y registro de todas las notas: 22/11/2026.
+> **No te guíes por los recordatorios de Moodle** para el cierre: pueden estar desactualizados. La fecha válida es la de Coordinación (columna «Límite de nota» y cierre del periodo en «Fechas institucionales»).
 
-## 🚫 Lunes SIN clase (festivos colombianos 2026 en el periodo)
-| Fecha | Festivo | Cae en ventana de |
-|---|---|---|
-| 17/08/2026 | Asunción de la Virgen (trasladado del sáb. 15/08) | ACA 1 |
-| 12/10/2026 | Día de la Raza y la Diversidad Étnica | ACA 3 |
-| 02/11/2026 | Todos los Santos (trasladado del dom. 01/11) | ACA 3 |
-| 16/11/2026 | Independencia de Cartagena (trasladado del mié. 11/11) | Autoevaluación (fecha límite de nota ACA3, no día de clase) |
+## Cuántas clases caben dentro de cada ventana
 
-> Instructivo de encuentros sincrónicos, sección 3: en lunes festivo, **NO se hace sincrónico**. Opción principal = clase pregrabada disponible en Moodle; opción excepcional = reprogramar (solo por coincidencia con festivo, avisando con anticipación).
+Cruce de las ventanas de Coordinación con los festivos colombianos y con el catálogo de sesiones. **Día de clase: lunes.** La **sesión de encuadre no dicta tema**, así que no cuenta como clase de contenido para el ítem cuya ventana la incluye.
 
-## 📚 Las sesiones de clase reales (lunes) — alineadas a ESP329
+| Ítem | Ventana | Días de clase en la ventana (dentro del periodo) | Perdidos por festivo | Sesiones sincrónicas | Cuáles |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| **Quiz** ⚠️ | 03/08 – 30/08 | 3 | 17/08 (Asunción de la Virgen) | **2** | S01 (10/08, encuadre — no dicta tema) · S02 (24/08) |
+| **ACA 1** | 07/09 – 04/10 | 4 | — | **4** | S04 (07/09) · S05 (14/09) · S06 (21/09) · S07 (28/09) |
+| **ACA FINAL** ⚠️ | 12/10 – 08/11 | 4 | 12/10 (Día de la Raza) · 02/11 (Todos los Santos) | **2** | S09 (19/10) · S10 (26/10) |
+| **Autoevaluación** | 16/11 – 22/11 | 1 | 16/11 (Independencia de Cartagena) | **0** | — |
+| **Coevaluación** | 09/11 – 15/11 | 1 | — | **1** | S11 (09/11) |
 
-Fuente de las **fechas de sesión**: `config/cursos/sesiones_cun.py` → `COURSES["proyecto1"]["sesiones"]` (la misma que alimenta el CSV/ICS de encuentros que se importa a Calendar). Fuente **curricular**: `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx` (7 unidades).
+> ⚠️ **Quiz** (25% · corte 1) se juega en solo **1 sesión de contenido** (la sesión de encuadre que cae en su ventana no dicta tema): de los 3 días de clase de su ventana, 1 cae en festivo — 17/08 (Asunción de la Virgen). Refuerza con **tutorías por grupo** en esas semanas. No dejes ese tramo dependiendo solo de las sesiones sincrónicas.
+> ⚠️ **ACA FINAL** (42% · corte 3) se juega en solo **2 sesiones de contenido**: de los 4 días de clase de su ventana, 2 caen en festivo — 12/10 (Día de la Raza) · 02/11 (Todos los Santos). Adelanta contenido en la sesión anterior a la ventana (**S08**, 05/10). Refuerza con **tutorías por grupo** en esas semanas. No dejes ese tramo dependiendo solo de las sesiones sincrónicas.
 
-> ✅ **Corregido el 2026-08-09:** esta tabla estaba **desfasada una sesión** (arrancaba el 03/08, lunes anterior al inicio del periodo, lo que contradecía el «Inicio del periodo: 10/08/2026» de este mismo archivo). Ya está alineada con la fuente. Las fechas de ACA y la tabla «Cronograma OFICIAL» **no se tocaron**.
+## Días de clase SIN encuentro (festivos colombianos 2026)
 
-| # | Fecha | Bloque | Unidad ESP329 | Contenido |
-|---|---|---|---|---|
-| 1 | **10/08/2026** | Encuadre | — (U1 → lectura autónoma) | **Presentación del curso · docente · estudiantes · ACAs.** No se dicta tema: se presentan el curso, el Docente, los estudiantes (rompehielos en Padlet) y las ACAs (qué se entrega, peso, cómo se entrega). ⚠️ **La U1 (Fundamentos y enfoque de investigación) pasa a LECTURA AUTÓNOMA** y se retoma al abrir la Sesión 02. |
-| — | *17/08: festivo (Asunción). Sin sincrónico — trabajo autónomo en CDigital.* | | | |
-| 2 | **24/08/2026** | ACA 1 | U2 | Problema y pregunta de investigación · líneas IA del programa. **Última sincrónica antes del cierre de ACA 1 (dom 30/08 · en el aula es el ítem «Quiz», cuestionario 25%)** — equipos conformados en CDigital a más tardar esta semana. |
-| 3 | **31/08/2026** | ACA 1 | U3 | Objetivos, justificación, alcances y limitaciones. ⚠️ Cae **después** del cierre de ACA 1 (30/08) y **antes** de la fecha límite de nota (07/09): úsela para cerrar coherencia problema ↔ objetivos y preparar la retroalimentación. |
-| 4 | **07/09/2026** | ACA 2 (abre) | U4 | Retroalimentación ACA 1 · antecedentes (mín. 6 nacionales/internacionales). |
-| 5 | **14/09/2026** | ACA 2 | U4 | Marco teórico. |
-| 6 | **21/09/2026** | ACA 2 | U4 | Marco conceptual y marco contextual. |
-| 7 | **28/09/2026** | ACA 2 | U4 | Marco legal (si aplica) · citación APA 7. **Última sincrónica antes del cierre de ACA 2 (dom 04/10 · en el aula es el ítem «ACA 1», tarea 25%).** |
-| 8 | **05/10/2026** | Puente ACA2→ACA3 | U5 | Diseño metodológico: paradigma, enfoque y alcance — última sesión antes de los festivos de ACA 3. |
-| — | *12/10: festivo (Día de la Raza). Sin sincrónico.* | | | |
-| 9 | **19/10/2026** | ACA 3 (#1 de 2) | U5 | Población/muestra, técnicas e instrumentos (**propuestos, NO aplicados**). Tutoría extra recomendada. |
-| 10 | **26/10/2026** | ACA 3 (#2 de 2) | U6–U7 | Planeación, viabilidad e integración del anteproyecto. **Última sincrónica antes del cierre de ACA 3 (dom 08/11 · en el aula es el ítem «ACA FINAL», tarea 42%).** |
-| — | *02/11: festivo (Todos los Santos). Sin sincrónico.* | | | |
-| 11 | **09/11/2026** | Cierre | U7 | Integración y evaluación · **coevaluación** (foro, 09–15/11) y **autoevaluación** (cuestionario, 16–22/11). Es la **única** sesión para explicar ambas ventanas: **última sesión sincrónica** (16/11 es festivo). |
-| — | *16/11 y 22/11: sin sincrónico (16/11 festivo); trabajo autónomo en CDigital hasta el cierre del 22/11.* | | | |
+| Fecha | Festivo | Qué toca de la evaluación |
+| :--- | :--- | :--- |
+| 17/08/2026 (lun) | Asunción de la Virgen (trasladado del sáb. 15/08) | ventana de **Quiz** |
+| 12/10/2026 (lun) | Día de la Raza | **abre ACA FINAL** · límite de nota de **ACA 1** |
+| 02/11/2026 (lun) | Todos los Santos (trasladado del dom. 01/11) | ventana de **ACA FINAL** |
+| 16/11/2026 (lun) | Independencia de Cartagena (trasladado del mié. 11/11) | **abre Autoevaluación** · límite de nota de **ACA FINAL** |
 
-**Total: 11 sesiones sincrónicas = los 11 lunes no festivos del periodo (10/08 → 09/11).** Cuadra exacto: entre el 10/08 y el 22/11 hay **15 lunes**; menos los **4 festivos** (17/08, 12/10, 02/11, 16/11) quedan **11**. No sobra ni falta ningún lunes.
+> En lunes festivo **no se hace encuentro sincrónico** (Instructivo de encuentros sincrónicos de Especializaciones, §3). Opción principal: **clase pregrabada** disponible en CDigital; opción excepcional: **reprogramar**, solo por coincidencia con festivo y avisando con anticipación.
 
-## 🎯 Fechas institucionales resumen
+## Las sesiones de clase (lunes) — alineadas a ESP329
+
+**Fuente:** Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx (fuente primaria) · Instructivo/Cronograma AFI 26ES4 (operativa) · Manual del Docente
+
+**Sesión** = numeración del catálogo, la que usan el guion, el `.pptx` y el Subject de Calendar. Las filas sin número son días de clase festivos: **no hay encuentro y no hay evento en Calendar**. La columna **Evaluación** dice qué ventana abre ese lunes, cuál cierra durante esa semana (en domingo) y si esa es la última clase antes de un cierre.
+
+| Sesión | Fecha | Tipo | Bloque | Unidad ESP329 | Contenido | Evaluación (aula CDigital) |
+|---|---|---|---|---|---|---|
+| **01** | 10/08/2026 (lun) | Sincrónica | Encuadre | — | Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA). No se dicta tema. | — |
+| — | (misma semana) | ⚠️ Lectura autónoma | Encuadre | — | ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02. | — |
+| — | 17/08/2026 (lun) | Sin sincrónico (Asunción de la Virgen) | — | — | **No hay encuentro** (festivo). Clase **pregrabada** en CDigital / trabajo autónomo; el avance del anteproyecto no se detiene. | — |
+| **02** | 24/08/2026 (lun) | Sincrónica | Quiz | U2 | ESP329 U2 · Delimitación del problema · pregunta viable · líneas IA del programa. | **Cierra Quiz** dom 30/08 (cuestionario · 25%) — esta es la última clase antes del cierre |
+| **03** | 31/08/2026 (lun) | Sincrónica | Quiz | U3 | ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · el Quiz (cuestionario, corte 1) cerró el domingo anterior: la última sincrónica antes de su cierre fue la Sesión 02. | **Calificando Quiz** (límite de nota 07/09): sesión de retroalimentación |
+| **04** | 07/09/2026 (lun) | Sincrónica | ACA 1 | U4 | ESP329 U4 · Retro del Quiz (cuestionario del corte 1) · hoy ABRE la ACA 1 (tarea, corte 2) · antecedentes (mín. 6 nacionales/internacionales). | **Abre ACA 1** (tarea · 25% · corte 2) · **Hoy vence el límite de nota de Quiz** |
+| **05** | 14/09/2026 (lun) | Sincrónica | ACA 1 | U4 | ESP329 U4 · Bases teóricas alineadas a pregunta y variables/categorías. | — |
+| **06** | 21/09/2026 (lun) | Sincrónica | ACA 1 | U4 | ESP329 U4 · Definiciones operativas y contexto de aplicación. | — |
+| **07** | 28/09/2026 (lun) | Sincrónica | ACA 1 | U4 | ESP329 U4 · Marco legal si aplica · citación/referencias · última sincrónica antes del cierre de la ACA 1. | **Cierra ACA 1** dom 04/10 (tarea · 25%) — esta es la última clase antes del cierre |
+| **08** | 05/10/2026 (lun) | Sincrónica | ACA FINAL | U5 | ESP329 U5 · Adelantar metodología antes de los festivos del tramo de la ACA FINAL. | **Calificando ACA 1** (límite de nota 12/10): sesión de retroalimentación |
+| — | 12/10/2026 (lun) | Sin sincrónico (Día de la Raza) | — | — | **No hay encuentro** (festivo). Clase **pregrabada** en CDigital / trabajo autónomo; el avance del anteproyecto no se detiene. | **Abre ACA FINAL** (tarea · 42% · corte 3) · **Hoy vence el límite de nota de ACA 1** |
+| **09** | 19/10/2026 (lun) | Sincrónica | ACA FINAL | U5 | ESP329 U5 · Primeros 20 min: devolución de la ACA 1 con la rúbrica en pantalla (qué se corrige antes de la ACA FINAL, que exige trazabilidad de esas correcciones) · luego población/muestra e instrumentos PROPUESTOS (no aplicados en Proyecto I). | — |
+| **10** | 26/10/2026 (lun) | Sincrónica | ACA FINAL | U6–U7 | ESP329 U6–U7 · Cronograma, presupuesto e integración · última sincrónica antes del cierre de la ACA FINAL. | **Última sincrónica antes del cierre de ACA FINAL** (dom 08/11) |
+| — | 02/11/2026 (lun) | Sin sincrónico (Todos los Santos) | — | — | **No hay encuentro** (festivo). Clase **pregrabada** en CDigital / trabajo autónomo; el avance del anteproyecto no se detiene. | **Cierra ACA FINAL** dom 08/11 (tarea · 42%) |
+| **11** | 09/11/2026 (lun) | Sincrónica | Cierre | U7 | ESP329 U7 · Coherencia final · coevaluación/autoevaluación · última sesión sincrónica. | **Abre Coevaluación** (foro · 4% · corte 3) · **Cierra Coevaluación** dom 15/11 (foro · 4%) — esta es la última clase antes del cierre · **Última sincrónica antes del cierre de Autoevaluación** (dom 22/11) · **Calificando ACA FINAL** (límite de nota 16/11): sesión de retroalimentación |
+| — | 16/11/2026 (lun) | Sin sincrónico (Independencia de Cartagena) | — | — | **No hay encuentro** (festivo). Clase **pregrabada** en CDigital / trabajo autónomo; el avance del anteproyecto no se detiene. | **Abre Autoevaluación** (cuestionario · 4% · corte 3) · **Cierra Autoevaluación** dom 22/11 (cuestionario · 4%) · **Hoy vence el límite de nota de ACA FINAL** |
+
+> La actividad **«Conformación de equipos»** tiene que quedar habilitada en CDigital desde el encuadre: sin ella **no hay entrega grupal** (Instructivo AFI). Los equipos se arman en la hora de tutoría de la Sesión 01.
+
+**Total: 11 sesiones sincrónicas** = los 11 días de clase no festivos del periodo (10/08 → 09/11). Entre 10/08/2026 y 22/11/2026 hay **15** días de clase; menos los **4** festivos (17/08, 12/10, 02/11, 16/11) quedan **11**. No sobra ni falta ninguno.
+
+## Fechas institucionales
 - Inicio del periodo: **10/08/2026**
 - Fecha máxima de recepción de trabajos (informativa, portal): **14/11/2026**
-- **Cierre oficial y registro de notas: 22/11/2026** (única fecha válida)
-- Créditos/horas: 2
+- **Cierre oficial y registro de notas: 22/11/2026** (domingo) — única fecha válida
+- Última sesión sincrónica del periodo: **09/11/2026** (S11)
 - Informe Final de Curso: dentro de los **3 días hábiles siguientes** al cierre.
 
-## Registro obligatorio de cada sesión/tutoría (dentro de 24h)
-Formulario exclusivo del docente titular (NO compartir con estudiantes):
-**Registro de Sesiones Sincrónicas y Tutorías Especialización:** https://forms.gle/6t6BXqQ2Kwmivpct8
+## Registro obligatorio de cada sesión y tutoría (dentro de 24 h)
+Formulario exclusivo del Docente titular (**NO compartir con estudiantes**): **Registro de Sesiones Sincrónicas y Tutorías Especialización:** https://forms.gle/6t6BXqQ2Kwmivpct8
 
-Ver el **Manual del Docente** en la raíz de PROYECTO I para la guía completa (cómo preparar la sesión, qué le entregas a la universidad, qué te entregan los estudiantes).
-
-## ⚠️ Tabla retirada (contradecía la Cronograma OFICIAL de arriba)
-
-Este archivo tuvo aquí una segunda tabla "Fechas de entrega ACA (regenerables)" calculada por `config/cursos/fechas_entrega_aca.py` asumiendo inicio 10/08/2026, que se desvió de la **Cronograma OFICIAL** (Coordinación, §arriba) en ACA2 (nota 05/10 vs. **12/10** real) y en los cierres de ACA1/ACA3 (31/08/09/11 calculados vs. **30/08/08/11** reales). Se retiró el 2026-08-09 para no tener dos fuentes de fecha en el mismo archivo — **la única tabla de fechas válida es la "📅 Cronograma OFICIAL" de arriba.** **Corregido el 2026-08-09** y **rehecho el 2026-08-10:** esta tabla ES ahora la tabla explícita `VENTANAS["proyecto1"]` de `config/cursos/fechas_entrega_aca.py` (30/08 · 04/10 · 08/11 · coev 15/11 · autoev 22/11), mapeada a los ítems reales del aula en CDigital (Quiz 25% · ACA 1 25% · ACA FINAL 42% · coevaluación 4% en foro · autoevaluación 4%). Ya no existe cálculo por pesos del que desviarse; los builds leen esa tabla.
+## Ver también
+- `Manual del Docente - PROYECTO I.md` (raíz del curso): guía completa — cómo preparar la sesión, qué le entregas a la universidad, qué te entregan los estudiantes.
+- `2026/54ES4/`: roster, CSV/ICS de encuentros con invitados, Apps Script, hitos docentes y correo de bienvenida.
+- Enunciados e instructivos para el estudiante: `Clases/Recursos/ACAs/` (`python config/slides/build_acas_estudiantes.py proyecto1`).

@@ -35,8 +35,8 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 | 11 | **11** | 20/10/2026 (mar) | Sincrónica | U12: Póster · evidencias · verificación antiplagio | — |
 | 12 | **12** | 27/10/2026 (mar) | Sincrónica | U13: Sustentación ante jurados | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
 | 13 | **13** | 03/11/2026 (mar) | Sincrónica | U14: Entregables para repositorio institucional | — |
-| 14 | **14** | 10/11/2026 (mar) | Sincrónica | Buffer: Ajustes finales · seguimiento post-sustentación | — |
-| 15 | **15** | 17/11/2026 (mar) | Sincrónica | Buffer: Cierre administrativo · recepción (hasta 22 nov) | — |
+| 14 | **14** | 10/11/2026 (mar) | Sincrónica | Buffer: Ajustes finales · seguimiento post-sustentación | **Cierra la ventana de Autoevaluación** (cuestionario · 2% · corte 3) · grupos 54450 · **Cierra la ventana de Coevaluación** (foro · 2% · corte 3) · grupos 54450 |
+| 15 | **15** | 17/11/2026 (mar) | Sincrónica | Buffer: Cierre administrativo · recepción de entregables | **Cierra la ventana de Autoevaluación** (cuestionario · 2% · corte 3) · grupos 54466 / 54467 · **Cierra la ventana de Coevaluación** (foro · 2% · corte 3) · grupos 54466 / 54467 |
 
 ## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem
 
@@ -51,13 +51,17 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 | **ACA Final** (54450) | Tarea | 3 | 32% | 07/11/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
 | **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 14/11/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
 | **Quiz 3** | Cuestionario | 3 | 4% | 27/10/2026 | **S12** — Sustentación ante jurados |
-| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 15/11/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
-| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 22/11/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
-| **Coevaluación** (54450) | Foro | 3 | 2% | 15/11/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
-| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 22/11/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
+| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
+| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 17/11/2026 | **S15** — Cierre administrativo · recepción de entregables |
+| **Coevaluación** (54450) | Foro | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
+| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 17/11/2026 | **S15** — Cierre administrativo · recepción de entregables |
 
 **Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32% + Quiz 3 4% + Autoevaluación 2% + Coevaluación 2%.
 
 > Los **quices y parciales** son cuestionarios: caen en día de clase y su ventana abre en la sesión anterior. La **ACA Final** es una tarea (documento) y cierra en la fecha máxima de recepción de trabajos. **Autoevaluación** (cuestionario) y **coevaluación** (foro) van de la última semana al cierre de notas. La **Sesión 01 es de encuadre y no evalúa.**
 
-Los CSV/ICS con el/los códigos de grupo en el título del evento viven en `2026/<grupo>/` (y, si varios grupos comparten horario y cierre, también puede generarse un archivo combinado).
+## Cómo llegan estos encuentros a Calendar
+
+Con `PRINCIPAL - Crear encuentros con invitados (3 grupos).gs`, en `2026/_combinado_todos/` — los tres grupos son **una sola serie** (mismo horario y misma sala de Meet), así que hay un único script y un único juego de eventos para 54450, 54466 y 54467. Es un Apps Script y es lo único que añade a los estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. Paso a paso: `LEEME - Crear los eventos de Calendar.md`, en esa misma carpeta.
+
+⚠️ Los `.ics`/`.csv` que hay junto al script llevan el prefijo `RESPALDO sin invitados` porque **Google Calendar descarta los invitados** al importarlos: sirven como respaldo de fechas, no para crear la serie del curso.

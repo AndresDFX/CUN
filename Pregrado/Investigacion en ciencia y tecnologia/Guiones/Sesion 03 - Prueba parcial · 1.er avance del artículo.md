@@ -21,7 +21,7 @@
 > **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**22 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
-🗺️ **Slides de esta presentación** (deck real: **21 slides** — no es el mapa del curso)
+🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
 
 | Slide | Título en el PPTX |
 | :---: | :--- |
@@ -45,7 +45,8 @@
 | **18** | Checklist antes de subir su entrega |
 | **19** | Checklist antes de subir su entrega (cont.) |
 | **20** | Trabajo autónomo · para la próxima sesión |
-| **21** | Cierre — Sesión 03 |
+| **21** | Trabajo autónomo · para la próxima sesión (cont.) |
+| **22** | Cierre — Sesión 03 |
 
 > Los **momentos** del plan de clase (Portada, OBJETIVOS, CONTENIDO CLAVE, TALLER, PARA CONTINUAR, Cierre) son los del guion, no números de slide: el deck real tiene más slides y su orden está en la tabla de arriba.
 

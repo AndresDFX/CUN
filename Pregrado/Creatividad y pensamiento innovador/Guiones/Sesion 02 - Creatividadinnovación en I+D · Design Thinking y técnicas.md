@@ -76,7 +76,9 @@ No es una receta lineal: es **iterativo**. Se avanza, se prueba con un usuario, 
 | **Prototipar** | ¿Cómo se ve/toca la idea? | Boceto, storyboard, mock feo |
 | **Evaluar / testear** | ¿Qué aprendimos al mostrarlo? | 3 aprendizajes del usuario |
 
-Hoy el foco fuerte es **Definir + Idear**. La empatía ya la traen de la sesión anterior (evidencia de observación) y el prototipo de hoy puede ser solo conceptual (un boceto feo en Excalidraw).
+Hoy el foco fuerte es **Definir + Idear**. La **empatía** no se dictó en clase: la S01 fue de encuadre y lo que el estudiante trae es su **problema escrito en tres líneas** (a quién le pasa y dónde lo vio) más la **lectura autónoma de U1–U2**. Cuente con eso y no con más: si alguien llega sin observación de usuario, sirve igual para arrancar. El prototipo de hoy puede ser solo conceptual (un boceto feo en Excalidraw).
+
+> **U1–U2 (lectura autónoma) se retoma aquí, en dos minutos y de viva voz** — es lo que promete el encuadre. No hay slides de esa unidad en el deck y **no se dicta**: se pregunta qué se llevaron y se conecta con el HMW de hoy. Los dos ganchos que sí sirven: *creatividad se entrena, no se tiene* (por eso hoy se practica divergir y converger) y *el bloqueador más común es juzgar la idea antes de escribirla* (la regla sagrada de la fase de ideación).
 
 #### 2. Divergencia y convergencia — el “doble diamante”
 La imagen que mejor funciona en clase es el **doble diamante**: se **abre** (divergencia) y se **cierra** (convergencia) **dos veces** — una para entender el problema y otra para construir la solución.
@@ -120,7 +122,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 | Fase | Minutos | Reloj sugerido (desde el inicio) |
 | :--- | :---: | :--- |
-| 1️⃣ Encuadre + puente desde la sesión anterior | 6 | min 00:00 – 06:00 |
+| 1️⃣ Encuadre + retomada de U1–U2 y puente desde el encuadre | 6 | min 00:00 – 06:00 |
 | 2️⃣ Design Thinking + divergente/convergente | 11 | min 06:00 – 17:00 |
 | 3️⃣ Modelación de ideación (HMW + SCAMPER) | 12 | min 17:00 – 29:00 |
 | 4️⃣ Taller: ideación sobre su problema | 12 | min 29:00 – 41:00 |
@@ -131,20 +133,22 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 ---
 
-#### 1️⃣ Encuadre + puente desde la sesión anterior (~6 min) — Protagonista: Docente
+#### 1️⃣ Encuadre + retomada de U1–U2 y puente desde el encuadre (~6 min) — Protagonista: Docente
 **Momento del deck:** Portada → OBJETIVOS
 
-**Objetivo de la fase:** conectar la observación/empatía que traen con el reto de hoy (definir un HMW e idear) y dejar claro el entregable de la hora.
+**Objetivo de la fase:** cerrar la lectura autónoma de U1–U2 con dos ganchos y conectar el problema que traen escrito con el reto de hoy (definir un HMW e idear).
 
 **GUION LITERAL:**
-> “Buenas tardes. Hoy es la **Sesión 02** y el tema es **Design Thinking y técnicas de creatividad**. La sesión pasada salieron con evidencia de empatía —una observación real o unas notas de su usuario— y con sus bloqueadores. Hoy convertimos eso en dos cosas concretas: un **How Might We** bien redactado y un **banco de al menos 8 ideas** con 1 o 2 elegidas.”
+> “Buenas tardes. Hoy es la **Sesión 02** y el tema es **Design Thinking y técnicas de creatividad**. Empiezo cumpliendo lo que prometí el primer día: la lectura autónoma de las unidades **1 y 2** —Propuesta de Innovación, y creatividad e inteligencia emocional— la **retomamos aquí**, no la dictamos. Y me la llevo en dos frases: la creatividad **se entrena**, no se tiene; y el bloqueador que más ideas mata es **juzgarlas antes de escribirlas**. Guárdense la segunda, porque en veinte minutos la van a necesitar.”
+
+> “Lo otro que traían era su **problema en tres líneas**: a quién le pasa y dónde lo vieron. Hoy lo convertimos en dos cosas concretas: un **How Might We** bien redactado y un **banco de al menos 8 ideas** con 1 o 2 elegidas.”
 
 > “Miren la **slide 2 — OBJETIVOS**. No venimos a llenar post-its bonitos: venimos a practicar un músculo —abrir muchas ideas y luego cerrar con criterio— que van a usar toda su vida profesional. Al final de la hora, su Propuesta de Innovación tendrá un reto claro y un primer boceto.”
 
 **Qué hacer:**
 1. (2 min) Portada + control de audio/nombres en Meet.
-2. (2 min) Leer objetivos (slide 2) y recordar en una línea qué trajeron de la sesión anterior.
-3. (2 min) Pedir en el chat de Meet que 2 personas peguen su observación de usuario en una frase.
+2. (2 min) Retomar U1–U2 con los dos ganchos y leer objetivos (slide 2). No dictar la unidad: no hay slides de U1–U2 en este deck y el tiempo es del taller.
+3. (2 min) Pedir en el chat de Meet que 2 personas peguen su problema en una frase (a quién le pasa y dónde lo vieron).
 
 ---
 

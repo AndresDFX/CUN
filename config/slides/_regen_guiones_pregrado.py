@@ -504,304 +504,593 @@ Regla: Wikipedia y blogs **orientan**, pero **no** son fuente para el artículo.
 
 _spec(
     "investigacion", 4,
-    objetivos="""1. **Diferenciar** un problema de investigación de "la falta de mi solución".
-2. **Aplicar** una herramienta de identificación —espina de pescado, árbol de problemas o método 3D— para ordenar causas y efectos.
-3. **Formular** una pregunta investigable (clara, delimitada, viable) alineada al tema y a la línea.""",
-    fundamento="""#### 1. Problema ≠ ausencia de mi solución
-El error más común: "el problema es que no existe mi app". Eso no es un problema de investigación, es un **deseo de producto**. El problema es un **hecho observable que genera consecuencias**: "los tutores dan feedback tarde y los estudiantes repiten errores". La app es una posible respuesta, no el problema.
+    uso_texto="""> **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
+> Estudie primero el Fundamento Teórico. **Duración del encuentro: 60 minutos.**
+> **Es sesión doble (U6 + U8)** y además hoy se aplica el **Quiz 2**: la deck da para dos horas y la hora no crece. El plan de abajo prioriza lo que sí cabe; las slides que no se proyectan **se anuncian por su nombre** y quedan como recorrido guiado de trabajo autónomo de esta semana.""",
+    objetivos="""1. **Diferenciar** un problema de investigación de «la falta de mi solución», y ordenarlo con **espina de pescado**, **árbol de problemas** o **método 3D**.
+2. **Formular** una pregunta investigable —clara, delimitada, viable, relevante y abierta— alineada al tema y a la línea ya elegidos.
+3. **Distinguir** buscador académico, base de datos y gestor de citas, y **buscar con operadores** en Google Académico, SciELO, Redalyc y la biblioteca CUN.
+4. **Citar tres fuentes reales en APA 7** con ZoteroBib, revisadas a mano, y dejarlas pegadas en el documento del artículo.""",
+    fundamento="""> **Sesión doble: U6 (problema y pregunta) + U8 (bases de datos y gestores de citas).** U8 **se adelantó a hoy** por una razón de calificación, no de gusto: la **ACA Final** es el artículo y se evalúa **con sus fuentes citadas**, y cierra **antes** de la Sesión 06. Enseñar a buscar al final del periodo es enseñar tarde. Consecuencia práctica para usted: hoy hay que ir rápido, decir en voz alta qué se deja para autónomo y **no improvisar búsquedas en vivo**.
 
-#### 2. Tres herramientas para ordenar el problema
-- **Espina de pescado (Ishikawa):** la "cabeza" es el efecto/problema; las "espinas" son familias de causas (personas, proceso, tecnología, entorno). Evita quedarse con una sola causa.
-- **Árbol de problemas:** raíces = causas, tronco = problema central, ramas = efectos. Luego se "voltea" en árbol de objetivos.
-- **Método 3D (según el material del curso):** acota el hecho en tres momentos — **Describir** qué pasa, **Dimensionar** cuánto y a quiénes afecta, **Decidir** la pregunta. Útil cuando el tema es muy amplio.
+#### 1. Problema ≠ ausencia de mi solución
+El error número uno en Ingeniería: *«el problema es que no existe una app que…»*. Eso no es un problema de investigación, es un **deseo de producto**. Un problema es un **hecho observable** —se puede describir o medir— **con afectados y con consecuencias**: «la retroalimentación llega días después y los estudiantes repiten el mismo error». La app es una posible respuesta; el problema es lo que dolería aunque la app nunca existiera. Prueba de control, una sola pregunta: **«¿qué duele hoy, si mi solución nunca existiera?»**.
 
+#### 2. Tres herramientas para ordenar el problema (se elige UNA)
 | Herramienta | Qué produce | Cuándo usarla |
 | :--- | :--- | :--- |
-| Espina de pescado | Familias de causas de un efecto | Hay muchas causas dispersas |
-| Árbol de problemas | Causas → problema → efectos | Necesita separar causa de consecuencia |
-| Método 3D | Descripción acotada + pregunta | El tema está demasiado amplio |
+| **Espina de pescado** (Ishikawa) | Familias de causas de un mismo efecto | Hay muchas causas dispersas y no sabe cuál pesa |
+| **Árbol de problemas** | Causas (raíces) → problema central (tronco) → efectos (ramas) | Confunde lo que causa con lo que resulta |
+| **Método 3D** | **D**escribir · **D**imensionar · **D**ecidir → descripción acotada + pregunta | El tema está demasiado amplio |
 
-#### 3. De problema a pregunta investigable
-Una buena pregunta es **clara** (se entiende sola), **delimitada** (actor + contexto + tiempo), **viable** (hay datos/fuentes) y **relevante**. Evite las preguntas de sí/no y las preguntas planetarias.""",
+Las tres terminan en el mismo punto: **la pregunta**. En la espina, las cuatro familias que funcionan en Ingeniería son **personas, proceso, tecnología y entorno**; en cada una se cuelgan causas concretas, no adjetivos («un tutor por cada 45 estudiantes», no «faltan tutores»). Mínimo tres familias con contenido: si todo cabe en una sola, el estudiante no abrió el problema, repitió su hipótesis.
+
+#### 3. Los cinco atributos de una pregunta investigable
+**Clara** (se entiende sin que usted la explique) · **delimitada** (actor, contexto y alcance) · **viable** (hay fuentes y datos a su alcance) · **relevante** (alguien usaría la respuesta) · **abierta** (empieza por *cómo, qué, cuál, en qué medida*, y no se contesta con sí o no). Se cumplen **a la vez**. El de viabilidad no se discute: **se comprueba buscando**, y por eso la segunda mitad de la clase es la que cierra la primera.
+
+#### 4. Buscador ≠ base de datos ≠ gestor de citas
+Son tres cosas distintas y el estudiante las confunde todas:
+- **Buscador académico** — **Google Académico**: cobertura enorme y el enlace **«citado por»**, pero mezcla calidades y muchos resultados no traen texto completo.
+- **Base de datos** — **SciELO**, **Redalyc** y las bases **suscritas por la CUN**: colecciones curadas, texto completo, fuertes en español y en contexto latinoamericano.
+- **Gestor de citas** — **ZoteroBib** (zbib.org): no busca nada; **arma la referencia** en el formato correcto.
+
+Regla del curso: Google normal sirve para orientarse, **no sostiene un artículo**. Y nunca se paga un artículo antes de verificar si la biblioteca CUN ya lo tiene.
+
+#### 5. Operadores y el filtro de 60 segundos
+Comillas para **frase exacta**; **AND** para exigir dos términos; **OR** para sinónimos; **signo menos** para excluir; **filtro por año** (en tecnología, últimos cinco); **«citado por»** para seguir el hilo hacia adelante. Se **empieza amplio y se va cerrando**: quien arranca con cinco filtros concluye que su tema no existe.
+Antes de descargar, cinco chequeos en un minuto: **autoría** identificable · **año** · **dónde se publicó** · **¿tiene método?** · **pertinencia con mi pregunta**. Orden de lectura rápida: **título → resumen → conclusiones → método**. Y la regla de honestidad: **si solo leyó el resumen, no cite el interior del artículo**.
+
+#### 6. ZoteroBib y APA 7 — y por qué aquí no se instala nada
+`zbib.org` → estilo **American Psychological Association 7th edition** → pegar **DOI** (o título exacto, o URL) → *Cite* → **revisar a mano** (autores completos, título en minúscula salvo la inicial, revista, volumen, DOI) → *Copy to clipboard* → pegar bajo **Referencias**, en orden alfabético. En el cuerpo, **(Apellido, año)**; en cita textual, **(Apellido, año, p. 12)**.
+**Decisión del curso, dígala en voz alta:** el Syllabus nombra **Mendeley** y **RefWorks**, pero aquí se trabaja con **ZoteroBib**, que es web, gratuito y no pide cuenta. **No se instala Mendeley ni Zotero de escritorio**: en muchos equipos institucionales ni siquiera se puede, y para lo único que se necesita hoy —armar la referencia— sobra con el navegador.
+
+#### 7. Qué se prioriza si el tiempo aprieta (y hoy aprieta)
+Con el **Quiz 2** dentro de la hora, la clase real de contenido es corta. Orden de sacrificio, de lo último que se suelta a lo primero:
+| Prioridad | Bloque | Si no alcanza |
+| :--- | :--- | :--- |
+| **1 (no se suelta)** | Deseo de producto vs. problema · la pregunta y sus cinco atributos | — |
+| **2 (no se suelta)** | Buscador ≠ base de datos · ZoteroBib en APA 7 | — |
+| **3** | Espina de pescado, con una familia modelada | Se anuncia y queda en la deck |
+| **4** | Operadores y filtro de 60 segundos | Se nombra en 30 segundos y queda en la deck |
+| **5** | Árbol de problemas y método 3D · ejemplo de las cuatro búsquedas | Lectura autónoma de esta semana |""",
     errores=[
         ("“El problema es que no existe mi aplicación.”",
-         "Eso es un deseo de producto. El problema es el hecho que duele; la app es una posible respuesta."),
+         "Eso es un deseo de producto. Pregunte: si su app nunca existiera, ¿qué seguiría doliendo? Esa respuesta es el problema."),
         ("“¿Es útil la inteligencia artificial? — como pregunta.”",
-         "Es de sí/no y planetaria. Reformule con actor, contexto y 'en qué medida'."),
+         "Es de sí/no y planetaria. Reformule con actor, lugar y «en qué medida»."),
         ("“Confundo causas con efectos en el árbol.”",
-         "Pregunte 'por qué ocurre' (causa) vs '¿qué provoca?' (efecto) para ubicarlos."),
-        ("“Una sola causa lo explica todo.”",
-         "Casi nunca; use la espina para abrir 3–4 familias de causas."),
+         "Dos preguntas los separan: «¿por qué ocurre?» señala causa; «¿qué provoca esto?» señala efecto. Causas abajo, efectos arriba."),
+        ("“Busqué y no hay nada sobre mi tema.”",
+         "Casi nunca es que el tema no exista: buscó con lenguaje cotidiano. Tome los términos técnicos de un artículo que sí sirvió y vuelva a buscar, también en inglés."),
+        ("“Este artículo lo tengo que pagar.”",
+         "Primero la **biblioteca CUN** con el login institucional: buena parte del texto completo ya está suscrito."),
+        ("“¿Instalo Mendeley o Zotero de escritorio?”",
+         "No. **ZoteroBib** en el navegador genera el APA 7 gratis y sin cuenta; el escritorio no aporta nada para lo de hoy."),
+        ("“La IA me dio tres referencias perfectas.”",
+         "La IA fabrica autor, año, revista y DOI de artículos que no existen. **Si no abrió el documento, no lo cita.**"),
     ],
     fases=[
-        ("1️⃣ Encuadre", 6),
-        ("2️⃣ Problema y pregunta", 14),
-        ("3️⃣ Modelación (espina / árbol)", 12),
-        ("4️⃣ Taller", 20),
-        ("5️⃣ Cierre", 8),
+        ("1️⃣ Encuadre: hoy son dos cosas", 6),
+        ("2️⃣ Problema, herramientas y pregunta", 14),
+        ("3️⃣ Dónde se busca de verdad y cómo se cita", 14),
+        ("4️⃣ Taller: pregunta + tres fuentes citadas", 18),
+        ("5️⃣ Cierre y trabajo autónomo", 8),
+    ],
+    fase_slides=[
+        "Portada · «Hoy son dos cosas: la pregunta y las fuentes que la sostienen»",
+        "De «Qué es (y qué no es) un problema» a «Preguntas mal formuladas y su reformulación»",
+        "De «la otra mitad: dónde se busca de verdad» a «Errores frecuentes: del problema a la fuente»",
+        "«Paso a paso: el diagrama en Excalidraw» → «TALLER · Pregunta + tres fuentes citadas»",
+        "«Checklist antes de subir» → «Trabajo autónomo» → Cierre",
     ],
     fase1_texto="""**Protagonista:** Docente.
 
-**GUION LITERAL:**
-> “Sesión 04. Llegamos al **corazón** de toda investigación: el problema y la pregunta. Si esto queda bien, el resto del artículo casi se escribe solo. Si queda mal, todo lo demás cojea.”
-
-> “**Slide 2 — OBJETIVOS.** Hoy: separar el problema de 'la falta de mi solución', usar una herramienta para ordenar causas y efectos, y salir con una **pregunta investigable escrita**.”""",
-    fase2_texto="""**Protagonista:** Docente (exposición).
+**Momento del deck:** Portada → «Hoy son dos cosas: la pregunta y las fuentes que la sostienen»
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primero, la trampa número uno: muchos escriben 'el problema es que no existe una app que…'. Eso no es un problema, es que **quieren hacer una app**. El problema es un hecho que genera consecuencias: 'los tutores dan feedback tarde, y por eso los estudiantes repiten el mismo error'. Uno se puede investigar; el otro es un antojo.”
+> “Sesión 04, y les anuncio el trato de una vez porque hoy vamos apretados. Esta clase hace **dos cosas**: en la primera mitad convertimos su tema en un **problema** y de ahí sacamos **la pregunta**; en la segunda vemos **dónde se busca de verdad** y **cómo se cita** en APA 7.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Para ordenar el problema tenemos tres herramientas: la **espina de pescado** abre familias de causas; el **árbol de problemas** separa causas, problema y efectos; y el **método 3D** —describir, dimensionar, decidir— sirve para acotar temas gigantes.”
+> “¿Por qué juntas? Porque el artículo que ustedes entregan —la **ACA Final**— se califica **con las fuentes citadas**, y esa entrega cierra antes de nuestra última sesión. Si les enseño a buscar al final del periodo, les enseño tarde. Prefiero apretar hoy.”
 
-> “Y de ahí sale la **pregunta**. Una buena pregunta es clara, delimitada, viable y no se responde con sí o no. Nada de '¿sirve la IA?'; sí a '¿en qué medida un clasificador reduce el phishing en los correos de la sede X?'.”""",
-    fase3_texto="""**Protagonista:** Docente (modela en pantalla).
+> “**OBJETIVOS.** Salen de esta hora con una **pregunta investigable en una sola frase**, respaldada por un diagrama de causas y por **tres fuentes reales ya citadas en APA 7**. Y sí: hoy también se aplica el **Quiz 2**, que tiene su tiempo reservado en el plan, así que nada de estirar los bloques.”
 
-**En pantalla (Excalidraw o Google Docs):** dibuje una espina de pescado o un árbol de problemas.
+**Cómo se maneja este arranque:** no prometa recorrer la deck completa. Diga en voz alta que el material **da para dos horas**, que hoy se proyecta lo esencial y que **el resto queda publicado y se estudia esta semana**. Un grupo que sabe qué se le va a quedar por fuera trabaja tranquilo; uno al que se le acelera en el minuto 50, no.""",
+    fase2_texto="""**Protagonista:** Docente (exposición, ritmo alto).
+
+**Momento del deck:** «Qué es (y qué no es) un problema de investigación» → «Deseo de producto vs. problema» → «Tres herramientas para ordenar el problema» → «Espina de pescado» → «Árbol de problemas y método 3D» → «Ejemplo modelado (1/2) y (2/2)» → «Anatomía de una pregunta investigable» → «Preguntas mal formuladas y su reformulación»
 
 **GUION LITERAL:**
-> “Modelo en vivo. Abro **Excalidraw** —sin cuenta, gratis— y dibujo la cabeza del pescado con el efecto: 'los estudiantes repiten errores en el laboratorio'. Ahora las espinas: personas (tutores saturados), proceso (feedback sin fecha límite), tecnología (no hay registro de entregas), entorno (grupos grandes).”
+> “**Qué es y qué no es un problema de investigación.** Un problema es un **hecho que se puede observar, describir o medir**, en un lugar y un tiempo concretos, con **afectados** —alguien pierde tiempo, dinero o calidad— y con **causas** que se pueden nombrar. No es un tema: «la inteligencia artificial» es un tema. No es una molestia personal. Y sobre todo, **no es la ausencia de su solución favorita**.”
 
-> “Con eso convierto el problema en pregunta: '¿en qué medida el tiempo de respuesta del feedback influye en la repetición de errores de los estudiantes del laboratorio X?'. Fíjense cómo la pregunta salió directa de **una** de las espinas.”""",
+> “**Deseo de producto contra problema.** Miren el patrón de la tabla: la columna de la izquierda siempre empieza con *falta*, *no existe*, *hay que*; la de la derecha empieza con **un hecho y su consecuencia**. La prueba de control es una sola pregunta: *si mi solución nunca existiera, ¿qué seguiría doliendo?* Esa respuesta es su problema.”
+
+> “**Tres herramientas, y se elige una.** Espina de pescado cuando hay causas dispersas; árbol de problemas cuando se le mezclan causas con efectos; método 3D —describir, dimensionar, decidir— cuando el tema está gigante. No se usan las tres. Las tres terminan en el mismo punto: la pregunta.”
+
+> “**La espina, que es la que más les va a servir.** La cabeza es el **efecto**, escrito en una frase. Las espinas son familias de causas: **personas, proceso, tecnología, entorno**. Y en cada familia se cuelgan **hechos, no adjetivos**: «faltan tutores» no dice nada; «un tutor por cada 45 estudiantes» sí. Mínimo tres familias con contenido real; si todo le cabe en una sola, usted no abrió el problema, repitió su hipótesis.”
+
+> “**Ejemplo modelado.** Punto de partida malo: *«quiero hacer un chatbot que responda las dudas del laboratorio»*. Cabeza del pescado: *«los estudiantes repiten los mismos errores en las prácticas del laboratorio X»*. Personas: un solo tutor para tres grupos. Proceso: la retroalimentación no tiene fecha límite. Tecnología: no hay registro de lo entregado. Entorno: grupos de más de cuarenta. **¿Dónde quedó el chatbot? En ninguna parte, porque era una respuesta, no una causa.**”
+
+> “Y de la espina de **proceso** sale la pregunta: *«¿en qué medida el tiempo de respuesta de la retroalimentación influye en la repetición de errores de los estudiantes del laboratorio X?»*. Ahí están el actor, la variable que se observa, el fenómeno y una apertura —‘en qué medida’— que obliga a describir, no a contestar sí o no. Lo importante: **la pregunta salió del análisis, no del antojo inicial**.”
+
+> “**Anatomía y reformulación.** Cinco atributos, y se cumplen todos a la vez: clara, delimitada, viable, relevante y abierta. Miren la tabla de preguntas mal formuladas: el patrón de la corrección siempre es el mismo, **agregar actor y lugar** y cambiar el verbo de apertura por *qué*, *cómo* o *en qué medida*.”
+
+**Si el reloj va justo:** proyecte «Árbol de problemas y método 3D» sin desarrollarla —*«esta la leen esta semana, ahí está el paso a paso»*— y no suelte por nada la tabla de reformulación: es la que corrige el 80 % de las preguntas del grupo.""",
+    fase3_texto="""**Protagonista:** Docente (demo en pantalla).
+
+**Momento del deck:** «Con la pregunta lista, la otra mitad: dónde se busca de verdad» → «Buscador ≠ base de datos» → «Operadores de búsqueda que ahorran horas» → «Ejemplo modelado (3/3): la misma pregunta, cuatro búsquedas» → «El filtro de 60 segundos» → «Paso a paso: citar en APA 7 con ZoteroBib» → «Errores frecuentes: del problema a la fuente»
+
+**En pantalla:** cuatro pestañas **ya abiertas y probadas antes de la clase** — Google Académico · SciELO (o Redalyc) · biblioteca CUN **con la sesión iniciada** · `zbib.org` con un **DOI de prueba** copiado. Aquí no se busca nada por primera vez en vivo: un buscador que se demora en cargar se come la mitad de la fase.
+
+**GUION LITERAL:**
+> “Ya tienen la pregunta. Ahora, ¿con quién va a conversar? Porque nadie investiga solo: todo artículo dialoga con lo que ya se escribió. Y aquí hay tres palabras que ustedes usan como sinónimos y **no lo son**.”
+
+> “**Buscador ≠ base de datos ≠ gestor de citas.** **Google Académico** es un **buscador**: cobertura enorme, arranque rápido y el enlace ‘citado por’, pero mezcla calidades. **SciELO** y **Redalyc** son **bases de datos**: colecciones curadas, texto completo, fuertes en español y en América Latina. La **biblioteca CUN**, con su login institucional, les abre lo que está detrás de muro de pago. Y **ZoteroBib** no busca nada: **arma la referencia**. Tres herramientas, tres oficios distintos.”
+
+> “Una regla que les ahorra plata: **nunca paguen un artículo** sin verificar antes si la institución ya lo tiene suscrito.”
+
+> “**Operadores.** Comillas para la frase exacta; **AND** para exigir dos términos; **OR** para sinónimos; el **signo menos** para excluir lo que le ensucia los resultados; y el **filtro por año** —en tecnología, últimos cinco—. Y una regla práctica: **empiecen amplio y vayan cerrando**. El que arranca con cinco filtros no encuentra nada y concluye que su tema no existe.”
+
+> “**Las cuatro búsquedas del ejemplo.** Miren la progresión: `problemas de internet en la universidad` no sirve, porque está en lenguaje cotidiano. `"pérdida de paquetes" AND laboratorio` mejora. `"packet loss" AND "network laboratory"` en Scholar, desde 2021, ya trae artículos con método y datos. Y el mismo tema en SciELO o Redalyc les da la **fuente regional**, que es la que le pone pertinencia local a su artículo. Lección: **si no encuentra nada, casi nunca es que el tema no exista; es que buscó con las palabras equivocadas**.”
+
+> “**El filtro de 60 segundos**, antes de descargar: autoría identificable, año, dónde se publicó, si el texto explica **cómo** llegó a sus resultados, y si responde a algo de **su** pregunta. Lean en este orden: título, resumen, conclusiones, método. Y algo de honestidad profesional: **si solo leyó el resumen, no cite el interior del artículo**.”
+
+> “**Citar en APA 7, en vivo.** Entro a `zbib.org`, elijo *American Psychological Association 7th edition*, pego este DOI, pulso *Cite*… y aquí está la referencia. Ahora la parte que nadie hace: **revisarla a mano**. Miren —el título en mayúsculas sostenidas, que en APA 7 va en minúscula; el autor incompleto—. Corrijo, *Copy to clipboard*, y la pego en el documento bajo **Referencias**, en orden alfabético. En el cuerpo del texto va **(Apellido, año)**; si es cita textual, con página.”
+
+> “Y aclaro algo porque está en el Syllabus: ahí aparecen **Mendeley** y **RefWorks**. En este curso trabajamos con **ZoteroBib** y **no instalen Mendeley ni Zotero de escritorio**: en los equipos institucionales muchas veces ni se puede, y para lo que necesitamos sobra el navegador.”
+
+> “**Errores frecuentes.** Dos que cuestan caro: **citar sin haber leído** —si toma la idea de un artículo que cita a otro, cite el que **usted** leyó— y confiar en la **IA generativa**, que fabrica autor, año, revista y DOI de artículos que no existen. Regla innegociable del curso: **si no abrió el documento, no lo cita**.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
-**GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S04_ProblemaPregunta_Apellido`: (1) describan el problema en 8–12 líneas, como hecho con consecuencias, no como falta de su solución; (2) hagan un diagrama —espina de pescado o árbol— en Excalidraw y peguen la captura; (3) escriban la pregunta en **una sola frase** investigable.”
+**Momento del deck:** «Paso a paso: el diagrama en Excalidraw y la prueba de viabilidad» → «TALLER · Pregunta + tres fuentes citadas»
 
-> “Criterio de éxito: su pregunta tiene actor y contexto, no se responde con sí/no, y el diagrama muestra al menos tres causas.”
+**GUION LITERAL (consigna):**
+> “**TALLER.** Tienen **18 minutos** y todo es en el navegador. En un documento llamado `S04_ProblemaPreguntaFuentes_Apellido`: **(1)** el problema en **8 a 12 líneas**, como hecho con consecuencias, sin que aparezca su solución; **(2)** el diagrama en **excalidraw.com** —espina, árbol o 3D—, exportado como imagen y pegado en el documento; **(3)** la pregunta en **una sola frase**; **(4)** **tres fuentes** que pasen el filtro de 60 segundos, al menos una de SciELO o Redalyc; **(5)** las **tres referencias en APA 7** con ZoteroBib, revisadas a mano.”
+
+> “**Empiecen por el diagrama:** pensar dibujando desatasca más rápido que pensar escribiendo. Y hagan de una vez la **prueba de viabilidad**: tomen los dos términos principales de su pregunta, búsquenlos entre comillas en Google Académico, y de esa misma búsqueda salen las tres fuentes. No es un trabajo aparte.”
+
+> “Y les digo el orden honesto, porque hoy no van a alcanzar a todo en clase: **(1), (2) y (3) se hacen aquí**; **(4) y (5) se rematan hoy mismo**, con la deck abierta, que ahí está el paso a paso. Lo que no puede pasar es que salgan sin pregunta escrita.”
+
+> “**Criterio de éxito, y es verificable:** su pregunta tiene **actor y contexto**, no se responde con sí o no, el diagrama muestra **al menos tres causas en familias distintas**, y las referencias están completas —autor, año, título, fuente— y usted **abrió** los tres documentos. Prueba final: léale su pregunta a un compañero por el chat; si tiene que explicársela, todavía no es clara.”
+
+> “La slide del taller dice ~24 minutos porque la deck está dimensionada para dos horas. Hoy manda el plan de clase.”
 
 **Acompañamiento:**
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
-| Escribe "no existe una app que…" | “Eso es su solución. ¿Qué hecho duele hoy, sin la app?” |
-| Pregunta gigante ("¿sirve la IA?") | “Bájela a un actor y un lugar concretos.” |
+| Escribe “no existe una app que…” | “Eso es su solución. ¿Qué hecho duele hoy, sin la app?” |
+| Pregunta gigante (“¿sirve la IA?”) | “Bájela a un actor y un lugar concretos.” |
 | Mezcla causas y efectos | “En el árbol: causas abajo, efectos arriba. Reubique.” |
-| Solo ve una causa | “Abra la espina: personas, proceso, tecnología, entorno.” |""",
+| Solo ve una causa | “Abra la espina: personas, proceso, tecnología, entorno.” |
+| “No aparece nada en Scholar” | “Cambie el vocabulario antes de cambiar la pregunta: términos técnicos, y pruebe en inglés.” |
+| Llega con tres blogs | “Ninguno pasa el filtro. Vaya a SciELO o Redalyc; al menos una fuente suya debe ser regional.” |
+| Quiere instalar Mendeley | “No hace falta: `zbib.org`, pegar el DOI y revisar a mano.” |""",
     fase5_texto="""**Protagonista:** Docente.
 
+**Momento del deck:** «Checklist antes de subir su entrega» → «Trabajo autónomo · para la próxima sesión» → Cierre
+
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el problema es un hecho con consecuencias, no la falta de su app; (2) espina, árbol y método 3D ordenan causas y efectos; (3) la pregunta se escribe en una frase investigable.”
+> “Cerramos con cuatro ideas: **(1)** el problema es un hecho con consecuencias, no la falta de su app; **(2)** la pregunta sale de **una causa del diagrama**, no de la ocurrencia inicial; **(3)** buscador, base de datos y gestor de citas son tres cosas distintas; **(4)** si no abrió el documento, no lo cita.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S04_ProblemaPregunta_Apellido` con el diagrama. La próxima sesión tomamos esta pregunta y la desarrollamos en el **planteamiento del problema** completo.”
+> “**Checklist antes de subir.** Está en la deck y les pido que lo usen de verdad: nombre del archivo, diagrama pegado, problema sin solución adentro, pregunta con actor y contexto, tres fuentes abiertas, una regional, y las referencias revisadas a mano.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
-    taller="En Google Docs + Excalidraw (`S04_ProblemaPregunta_Apellido`): problema en 8–12 líneas + diagrama (espina o árbol) + pregunta investigable en una frase.",
-    entregable="`S04_ProblemaPregunta_Apellido` en CDigital (Doc + captura del diagrama).",
-    ejemplo="De 'haré un chatbot' a '¿en qué medida el tiempo de respuesta del feedback influye en la repetición de errores en el laboratorio X?'.",
+> “**PARA CONTINUAR.** Suban `S04_ProblemaPreguntaFuentes_Apellido` a CDigital. En autónomo: dejen reposar la pregunta un día y vuelvan a leerla —casi siempre sobra una palabra vaga—; marquen las dos o tres causas más fuertes del diagrama, que son las que van a defender con evidencia; suban de tres a cinco fuentes con el mismo método, ya citadas; y subrayen en su pregunta los **dos o tres conceptos clave**, porque esos son los que vamos a rastrear en la literatura.”
+
+> “**La próxima sesión también es doble:** el **planteamiento del problema** completo y la primera página de **marco teórico y revisión**. Traigan pregunta, diagrama y fuentes: sin eso no hay con qué trabajar. Y es la **última sesión antes del cierre de la ACA Final**, así que abran hoy mismo CDigital y confirmen la fecha.”
+
+> “**Cierre.** Gracias; mismo Meet el próximo jueves.”""",
+    taller="En el navegador (`S04_ProblemaPreguntaFuentes_Apellido`): problema en 8–12 líneas + diagrama en Excalidraw (espina, árbol o 3D) pegado como imagen + pregunta investigable en una frase + **3 fuentes** de Scholar/SciELO/Redalyc que pasen el filtro de 60 segundos, citadas en **APA 7** con ZoteroBib y revisadas a mano.",
+    entregable="`S04_ProblemaPreguntaFuentes_Apellido` en CDigital (documento con la captura del diagrama y las 3 referencias en APA 7).",
+    ejemplo="""**Un solo caso, las dos mitades.** Punto de partida malo: *«quiero hacer un chatbot que responda las dudas del laboratorio»*. Cabeza del pescado: *«los estudiantes repiten los mismos errores en las prácticas del laboratorio X»*; espinas: un tutor para tres grupos (personas), retroalimentación sin fecha límite (proceso), sin registro de entregas (tecnología), grupos de más de 40 (entorno). De la espina de proceso sale la pregunta: *«¿en qué medida el tiempo de respuesta de la retroalimentación influye en la repetición de errores de los estudiantes del laboratorio X?»*.
+Y con esa pregunta se busca: `problemas de internet en la universidad` no sirve; `"packet loss" AND "network laboratory"` en Scholar, desde 2021, sí; el mismo tema en SciELO o Redalyc da la fuente regional; ZoteroBib arma las tres referencias en APA 7 y usted las corrige a mano. **El chatbot no aparece por ningún lado: era una respuesta, no una causa.**""",
+    checklist=[
+        "- [ ] Fundamento teórico leído y **una** herramienta elegida para modelar (espina, árbol o 3D)",
+        "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 04) y **decidido qué slides no se proyectan** (la deck da para dos horas)",
+        "- [ ] Cuatro pestañas abiertas y probadas: **Google Académico**, **SciELO** (o Redalyc), **biblioteca CUN con sesión iniciada** y **zbib.org**",
+        "- [ ] Un **DOI de prueba** copiado al portapapeles (no se busca en vivo) y **excalidraw.com** abierto en otra pestaña",
+        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
+        "- [ ] Espacio de entrega de la Sesión 04 creado en CDigital, con el nombre de archivo `S04_ProblemaPreguntaFuentes_Apellido` en la consigna",
+        "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
+    ],
     shots_demo=[
-        ("inv_google_docs.png", "Google Docs / Excalidraw — problema → pregunta",
-         "Modelar síntoma → consecuencias → pregunta en una frase; abrir https://excalidraw.com/ (sin cuenta) para el diagrama."),
+        ("inv_google_scholar.png", "Google Académico — el buscador amplio",
+         "Explicar comillas, AND/OR, filtro por año y el enlace «citado por». Arrancar amplio y cerrar después."),
+        ("inv_scielo.png", "SciELO — base regional de acceso abierto",
+         "Buscar el mismo tema en español y abrir un artículo con texto completo. Mencionar Redalyc como la segunda base y la biblioteca CUN para lo suscrito."),
+        ("inv_zoterobib.png", "ZoteroBib (zbib.org) — APA 7 sin instalar nada",
+         "Pegar el DOI de prueba → *Cite* → **corregir a mano** (mayúsculas, autores, DOI) → *Copy to clipboard* → pegar en el documento."),
     ],
     shots_taller=[
-        ("inv_google_scholar.png", "Google Académico — validar que la pregunta es investigable",
-         "Buscar 2 términos de la pregunta; si aparece literatura, la pregunta es viable."),
+        ("inv_scholar_busqueda.png", "Google Académico — prueba de viabilidad de la pregunta",
+         "Dos términos de la pregunta entre comillas: si aparece literatura, la pregunta es investigable. De esa misma búsqueda salen las 3 fuentes del taller."),
+        ("inv_google_docs.png", "Google Docs — el documento del taller",
+         "Diagrama pegado como imagen, pregunta en una frase y las 3 referencias bajo *Referencias*, en orden alfabético."),
     ],
 )
 
 _spec(
     "investigacion", 5,
-    objetivos="""1. **Redactar** el planteamiento del problema completo (estado actual, evidencias, causas, consecuencias, vacío y pregunta).
-2. **Respaldar** las afirmaciones con evidencia (datos o estudios), no con opinión.
-3. **Alinear** el planteamiento con la pregunta formulada en la sesión anterior.""",
-    fundamento="""#### 1. Qué es el planteamiento (y su estructura de embudo)
-El planteamiento es la sección donde **argumenta que su problema existe y merece estudiarse**. Va de lo general a lo específico (un embudo): estado actual → evidencias → causas → consecuencias → vacío → pregunta. Al final del embudo debe caer, natural, la **misma pregunta** de la Sesión 04.
+    uso_texto="""> **Uso:** guion de locución de **esta** clase. Léalo en voz alta casi literal.
+> Estudie primero el Fundamento Teórico. **Duración del encuentro: 60 minutos.**
+> **Es sesión doble (U7 + U10–U12)**, hoy se aplica el **Parcial 2** y es la **última sincrónica antes del cierre de la ACA Final y del Quiz 3**. La deck da para dos horas y quedan unos 38 minutos de clase: el plan prioriza, la deck es el material de estudio y eso **se dice en voz alta al empezar**.""",
+    objetivos="""1. **Redactar** el planteamiento del problema con sus **seis componentes** en orden —estado actual, evidencias, causas, consecuencias, vacío y pregunta— en prosa y en 1 a 1.5 páginas.
+2. **Respaldar** cada afirmación fuerte con **evidencia citada** (cifra, registro o estudio), no con opinión.
+3. **Organizar** la primera página de **marco teórico** por **constructos**, y **tomar postura** cuando dos autores no coinciden.
+4. **Fichar** cada fuente con la **ficha de lectura** (un RAE breve de cinco campos) y dejar el documento listo para consolidar la **ACA Final**, que cierra antes del próximo encuentro.""",
+    fundamento="""> **Sesión doble: U7 (planteamiento del problema) + U10–U12 (posturas teóricas, marco teórico y revisión de literatura).** Se adelantaron a hoy porque **la ACA Final se califica con estas dos secciones** y cierra antes de la Sesión 06. Sume el **Parcial 2** dentro de la hora y la cuenta queda clara: **~38 minutos de clase para dos unidades**. No se dictan enteras y no hay que fingir que sí: se entregan los **criterios** y el estudiante escribe con la deck al lado. Dígalo en el primer minuto.
 
-#### 2. Evidencia, no opinión
-"Creo que muchos estudiantes reprueban" es opinión. "El 34 % reprobó según el reporte X (2024)" es evidencia. El planteamiento fuerte se apoya en datos, informes o estudios; la opinión sin respaldo debilita el artículo.
+#### 1. Qué es el planteamiento (y qué no es)
+Es la sección donde el estudiante **argumenta que su problema existe y merece estudiarse**. Se escribe en **prosa continua**, no en viñetas. **No es la introducción** (esa presenta y ubica; esta **demuestra**), **no es el marco** (aquí no se definen conceptos), **no es la solución** y no es un desahogo. Función real: cuando el lector termina, debe pensar **«tiene razón, esto hay que estudiarlo»**. Extensión de trabajo: **1 a 1.5 páginas**.
 
-| Componente | Pregunta que responde | Ejemplo |
+#### 2. El embudo y los seis componentes
+Va de lo ancho a lo estrecho: estado actual → evidencias → causas → consecuencias → vacío → **pregunta**. El lector necesita ubicarse antes de que le importe; las causas solo tienen sentido después de saber qué pasa; y el vacío solo se nota después de ver lo que sí se sabe. Error de orden más común: **empezar por el vacío o por la pregunta**.
+
+| Componente | Pregunta que responde | Extensión |
 | :--- | :--- | :--- |
-| Estado actual | ¿Qué ocurre hoy? | "Las prácticas dependen de una red inestable." |
-| Evidencias | ¿Cómo lo sé? | "La bitácora del laboratorio: 12 caídas en un mes." |
-| Causas | ¿Por qué ocurre? | "Cableado antiguo, saturación en horas pico." |
-| Consecuencias | ¿A quién/qué afecta? | "Prácticas incompletas, repetición de sesiones." |
-| Vacío | ¿Qué falta saber? | "No hay medición de la pérdida de paquetes." |
-| Pregunta | ¿Qué me propongo responder? | La pregunta de la Sesión 04. |
+| **Estado actual** | ¿Qué ocurre hoy? | 1 párrafo |
+| **Evidencias** | ¿Cómo lo sé? | dentro de los párrafos |
+| **Causas** | ¿Por qué ocurre? | 1 párrafo (2–3 causas jerarquizadas) |
+| **Consecuencias** | ¿A quién o a qué afecta? | 1 párrafo |
+| **Vacío** | ¿Qué falta saber? | 2–3 frases |
+| **Pregunta** | ¿Qué me propongo responder? | 1 frase final, **literal la de la Sesión 04** |
 
-#### 3. Del dato a la prosa
-Truco de escritura: primero llene una **tabla síntoma / evidencia / consecuencia** y luego conviértala en párrafos. Escribir la tabla evita la página en blanco y garantiza que **cada afirmación tenga respaldo**.""",
+**Regla de oro:** el último párrafo contiene la pregunta, sin sorpresas.
+
+#### 3. Evidencia, no opinión (y de dónde sale sin trabajo de campo)
+«Creo que muchos reprueban» es opinión; «el 34 % del grupo reprobó, según el reporte académico (2024)» es evidencia. Lo que la vuelve fuerte: **cifra + fuente + año**, o **conteo + registro verificable**. No hace falta salir a recoger datos: sirven los **registros institucionales** (bitácoras, tickets, actas, reportes), la **estadística oficial** (DANE, MinTIC, SNIES, MinCiencias), los **informes de gremios**, los **artículos** que ya buscó en la Sesión 04 y la **documentación técnica**. Dos condiciones: se **cita siempre** el origen, y si el dato es de otro contexto **se dice** —sirve para mostrar que el fenómeno existe, no para afirmar que ocurre igual en su sede—.
+**Truco antibloqueo que hay que enseñar sí o sí:** primero una tabla de tres columnas —**síntoma · evidencia · consecuencia**, mínimo tres filas— y después la prosa. Cada fila se convierte en un párrafo que **nace respaldado**; y si una casilla de evidencia queda vacía, ese síntoma todavía no se puede afirmar.
+
+#### 4. Del planteamiento al marco: el mismo argumento, otro interlocutor
+El planteamiento demuestra que **su caso** existe; el marco demuestra que sabe **qué se ha pensado ya** sobre eso. No son dos trabajos: el planteamiento **termina** en la pregunta y el marco **empieza** por esa misma pregunta. Si en una sección dice «caídas» y en la otra «interrupciones», el lector cree que son dos artículos pegados: **una palabra por concepto, en todo el documento**.
+
+#### 5. Constructos, posturas teóricas y ficha de lectura
+Un **constructo** es un concepto clave que el artículo necesita definir y sostener con literatura, y **se extrae subrayando la propia pregunta**. Con **dos o tres basta**; cada uno se vuelve un **subtítulo** del marco, y se busca literatura **por constructo**, no «sobre el tema en general».
+Tarde o temprano aparecen dos fuentes que se contradicen. El estudiante inseguro **borra una**; el que entendió **las pone a conversar**, con tres movimientos: **acumular** («ambos coinciden en que…»), **contrastar** («mientras Apellido (2021) sostiene X, Apellido (2023) encuentra Y») y **tomar postura** —decir **cuál le sirve a su caso y por qué**, que es donde está su aporte—. No se dice «el autor está equivocado»: se dice **para qué contexto sirve cada uno**. Con **una** postura bien justificada basta para este curso.
+La **ficha de lectura** —un RAE breve— tiene cinco campos: **referencia APA 7 · constructo al que responde · idea principal con sus propias palabras · cita textual con página (máx. 2 líneas) · relación con mi pregunta**. El último decide: **si no puede llenarlo, la fuente no entra en el marco**.
+
+#### 6. El párrafo de marco, en cuatro movimientos
+**1)** Enuncie el concepto con su fuente. **2)** Amplíe o matice con otra. **3)** Contraste o acumule. **4)** **Amarre a su caso.** El movimiento 4 es el que separa un marco de un resumen de lecturas. Señales de que está mal: un párrafo por autor en fila india; definiciones que después nunca se usan; citas textuales largas y poco texto propio.
+
+#### 7. Qué se prioriza hoy (con el Parcial 2 adentro)
+| Prioridad | Bloque | Si no alcanza |
+| :--- | :--- | :--- |
+| **1 (no se suelta)** | La tabla síntoma·evidencia·consecuencia y la conversión de una fila en párrafo | — |
+| **2 (no se suelta)** | Constructos y la ficha de lectura (los cinco campos) | — |
+| **3** | Los seis componentes, leídos de corrido sobre la tabla de la deck | Se anuncia y queda en la deck |
+| **4** | Posturas teóricas y el párrafo de marco en cuatro movimientos | Se nombra en un minuto; el paso a paso queda en la deck |
+| **5** | De dónde sale la evidencia · jerarquizar causas | Lectura autónoma de esta semana |""",
     errores=[
         ("“Escribo lo que creo, sin datos.”",
-         "Cada afirmación fuerte necesita una cifra o un estudio; sin evidencia es opinión."),
+         "Cada afirmación fuerte necesita cifra, registro o estudio con año. Sin evidencia, el planteamiento es una opinión larga."),
+        ("“Todavía no tengo datos propios, entonces no puedo escribir.”",
+         "No hace falta trabajo de campo: bitácoras, DANE, MinTIC, SNIES, informes de gremios y los artículos de la sesión pasada ya son evidencia."),
         ("“Empiezo por la solución que quiero proponer.”",
-         "El planteamiento argumenta el problema; la solución va mucho después."),
+         "Hoy se argumenta el problema. Si el texto ya dice «por eso se desarrollará una aplicación…», esa frase pertenece a otra sección."),
         ("“El planteamiento no termina en la pregunta.”",
-         "Debe caer exactamente en la pregunta de la sesión anterior; si no, algo está desalineado."),
+         "Debe caer exactamente en la pregunta de la Sesión 04. Si termina en otra, hay una desalineación que se corrige antes de seguir."),
         ("“Pongo 10 causas sin jerarquía.”",
-         "Priorice 2–3 causas con evidencia; el resto dispersa."),
+         "Priorice 2 o 3 con evidencia. Una causa bien sustentada pesa más que ocho enunciadas al paso."),
+        ("“El marco es copiar y pegar definiciones.”",
+         "Se organiza por constructos y cada fuente entra porque ayuda a responder la pregunta. Si un párrafo no vuelve a su caso, sobra."),
+        ("“Encontré dos autores que se contradicen: borro uno.”",
+         "Al contrario: contrástelos y **tome postura** diciendo cuál le sirve a su contexto y por qué. Ahí está su aporte."),
+        ("“En el planteamiento digo ‘caídas’ y en el marco ‘interrupciones’.”",
+         "Elija una palabra por concepto y úsela en todo el documento; el cambio de vocabulario se lee como costura."),
     ],
     fases=[
-        ("1️⃣ Encuadre", 6),
-        ("2️⃣ Estructura del planteamiento", 14),
-        ("3️⃣ Modelación", 10),
-        ("4️⃣ Taller de redacción", 22),
-        ("5️⃣ Cierre", 8),
+        ("1️⃣ Encuadre y puente desde la pregunta", 6),
+        ("2️⃣ Planteamiento: embudo, evidencia y el truco de la tabla", 15),
+        ("3️⃣ Marco: constructos, posturas y ficha de lectura", 15),
+        ("4️⃣ Taller: planteamiento + primera página de marco", 16),
+        ("5️⃣ Cierre: recta final hacia la ACA Final", 8),
+    ],
+    fase_slides=[
+        "Portada · «Hoy vestimos la pregunta y la ponemos a conversar»",
+        "De «Qué es y qué NO es el planteamiento» a «Jerarquizar causas y cerrar en la pregunta»",
+        "De «Del planteamiento al marco» a «Errores frecuentes: planteamiento y marco»",
+        "«Paso a paso: las dos secciones, sin bloquearse» → «TALLER · Planteamiento + primera página de marco»",
+        "«Checklist antes de subir» → «Trabajo autónomo · recta final» → Cierre",
     ],
     fase1_texto="""**Protagonista:** Docente.
 
-**GUION LITERAL:**
-> “Sesión 05. Ya tienen la pregunta; hoy la **vestimos**: escribimos el planteamiento del problema. Es la sección donde ustedes convencen al lector de que su problema es real y vale la pena estudiarlo.”
-
-> “**Slide 2 — OBJETIVOS.** Redactar el planteamiento con sus seis componentes, respaldarlo con evidencia y que termine, natural, en la pregunta de la clase pasada. Tengan abierto su `S04`.”""",
-    fase2_texto="""**Protagonista:** Docente (exposición).
+**Momento del deck:** Portada → «Hoy vestimos la pregunta y la ponemos a conversar»
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Piensen el planteamiento como un **embudo**: arriba, ancho, el estado actual del tema; y va cerrándose por evidencias, causas, consecuencias y vacío, hasta caer en un solo punto: su pregunta. Seis componentes, un embudo.”
+> “Sesión 05. Ya tienen una pregunta y tres fuentes. Sola, la pregunta no convence a nadie: hay que **demostrar que el problema existe**. Eso es el **planteamiento**. Y hay una segunda mitad: el **marco teórico**, donde su problema deja de estar solo y **conversa con lo que otros ya estudiaron**. Las dos secciones responden a la **misma pregunta**.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** La regla dura de hoy: **evidencia, no opinión**. 'Creo que muchos reprueban' no sirve; 'el 34 % reprobó según el reporte X de 2024' sí. Cada afirmación fuerte lleva una cifra o un estudio detrás. Aquí Google Académico deja de ser opcional.”
+> “Piénsenlo como un juicio: usted acusa y el lector es el jurado. Si dice ‘creo que la red del laboratorio falla mucho’, el jurado se encoge de hombros. Si dice ‘la bitácora institucional registró doce interrupciones en un mes’, el jurado se sienta a escuchar.”
 
-> “Y un truco para no bloquearse frente a la hoja en blanco: primero llenamos una **tabla síntoma / evidencia / consecuencia** y después la volvemos párrafos. La tabla piensa por ustedes.”""",
-    fase3_texto="""**Protagonista:** Docente (modela en Google Docs).
+> “Y les hablo claro del reloj, que es parte del encuadre: hoy se aplica el **Parcial 2** y esta es la **última sesión antes de que cierren la ACA Final y el Quiz 3**. Nos quedan menos de cuarenta minutos de clase para dos unidades. Entonces yo les doy **los criterios** y ustedes escriben con la deck al lado: ahí está el paso a paso completo, slide por slide.”
 
-**En pantalla (Google Docs):** tabla síntoma / evidencia / consecuencia con 3 filas.
+> “**OBJETIVOS.** Salir con **1 a 1.5 páginas de planteamiento** que terminan en su pregunta, y con la **primera página de marco** organizada por constructos.”
+
+**Antes de seguir:** pida que abran el documento de la Sesión 04 —el diagrama de causas y las fuentes ya citadas—. Es la materia prima de hoy; quien no lo traiga va a escribir en el aire.""",
+    fase2_texto="""**Protagonista:** Docente (exposición + modelación en el mismo bloque).
+
+**Momento del deck:** «Qué es y qué NO es el planteamiento» → «La estructura de embudo» → «Los seis componentes» → «La regla dura de hoy: evidencia, no opinión» → «¿De dónde saco evidencia…?» → «El truco antibloqueo» → «Ejemplo modelado (1/2) y (2/2)» → «Jerarquizar causas y cerrar en la pregunta»
+
+**En pantalla (Google Docs):** la tabla de tres columnas ya rotulada —**síntoma · evidencia · consecuencia**— para llenarla en vivo.
 
 **GUION LITERAL:**
-> “Modelo la tabla. Fila 1 — síntoma: 'la red del laboratorio se cae'; evidencia: 'la bitácora registra 12 caídas en un mes'; consecuencia: 'prácticas incompletas'. Lleno la fila 2 y la 3 igual.”
+> “**Qué es y qué no es.** El planteamiento es una **argumentación**: hechos, evidencia y consecuencias que llevan a una pregunta. En **prosa**, no en viñetas. **No es la introducción**, que presenta y ubica; aquí se **demuestra**. **No es el marco**: aquí no se definen conceptos. Y **no es la solución**: si su texto ya dice qué van a hacer, se saltaron una sección.”
 
-> “Ahora convierto la primera fila en prosa: 'Durante el último mes, la red del laboratorio X presentó doce interrupciones registradas en la bitácora institucional, lo que impidió completar prácticas programadas…'. ¿Ven? Del renglón salió el párrafo, y **cada dato tiene respaldo**.”""",
+> “**El embudo.** Arriba ancho: qué pasa hoy. Se cierra por evidencias, causas y consecuencias. Se estrecha en el **vacío** —lo que todavía no se sabe— y cae en un solo punto: **su pregunta**, literal, la misma de la clase pasada. Miren la tabla de los **seis componentes**: si les falta uno, el lector siente el hueco aunque no sepa nombrarlo.”
+
+> “**La regla dura de hoy: evidencia, no opinión.** ‘Creo que muchos reprueban’ no sirve. ‘El 34 % del grupo reprobó, según el reporte académico de 2024’ sí. ¿Qué la volvió fuerte? Cifra, fuente y año. Prueba de control para su propio texto: subrayen cada afirmación fuerte; **si no tiene cifra ni cita al lado, es opinión**.”
+
+> “Y antes de que me lo pregunten: **no hace falta trabajo de campo**. Sirven las bitácoras y los tickets de soporte de su institución o su empresa, el DANE, MinTIC, el SNIES, los informes de gremios, y los artículos que ya buscaron la semana pasada. Dos condiciones: **citen de dónde salió el dato**, y si el dato es de otro país, **díganlo**.”
+
+> “**El truco antibloqueo, y aquí lo hago con ustedes.** La página en blanco no se vence escribiendo mejor: se vence **no empezando por la prosa**. Tabla de tres columnas. Fila uno —síntoma: ‘la red del laboratorio X se interrumpe durante las prácticas’; evidencia: ‘la bitácora registra **doce interrupciones en un mes**’; consecuencia: ‘prácticas incompletas y repetición de sesiones’. Fila dos, fila tres. Y fíjense en la tercera del ejemplo: ‘**no existe** ningún registro de pérdida de paquetes’. **La ausencia de datos también es evidencia**, y es justo la que anuncia el vacío.”
+
+> “Ahora convierto la fila uno en párrafo, en vivo: *‘Durante el último mes, la red del laboratorio X presentó doce interrupciones registradas en la bitácora institucional. Cada una obligó a suspender la práctica en curso, de modo que varios grupos no completaron las actividades programadas y debieron repetir la sesión en otra franja.’* Desármenlo: **tiempo** delimitado, **cifra** exacta, **fuente** dentro de la misma frase, **consecuencia** con verbos de efecto. Del renglón salió el párrafo, y **cada dato tiene respaldo**.”
+
+> “**Para cerrar la sección:** jerarquicen. Diez causas sueltas dispersan; elijan **dos o tres** con evidencia. Y el cierre son dos movimientos: penúltima frase, el **vacío** —‘no se dispone de mediciones que permitan establecer…’—; última frase, **la pregunta**.”
+
+**Si el reloj va justo:** llene **una sola fila** de la tabla y conviértala en párrafo. Ese minuto y medio vale más que leer los seis componentes de corrido.""",
+    fase3_texto="""**Protagonista:** Docente (exposición + una ficha modelada).
+
+**Momento del deck:** «Del planteamiento al marco: la misma pregunta, otro interlocutor» → «El marco teórico responde a la pregunta, no decora» → «Constructos» → «Posturas teóricas» → «La ficha de lectura» → «Cómo se redacta un párrafo de marco» → «Errores frecuentes: planteamiento y marco»
+
+**En pantalla (Google Docs):** la plantilla de **ficha de lectura** con sus cinco campos, en blanco, para llenar una en vivo.
+
+**GUION LITERAL:**
+> “Segunda mitad, y no es un tema nuevo: es **el mismo argumento con otro interlocutor**. En el planteamiento usted habla con su contexto; en el marco habla con la literatura. El planteamiento termina en la pregunta y el marco **empieza por esa misma pregunta**.”
+
+> “**El marco no decora.** No es un collage de definiciones, no es historia del tema y no es un desfile de autores famosos. Es lo que le permite **entender y responder su pregunta**. Y se organiza por **constructos**, no por autores ni por fechas.”
+
+> “**¿De dónde salen los constructos? De su propia pregunta.** Subrayen: *‘¿en qué medida la **pérdida de paquetes** afecta las **prácticas de laboratorio**…?’*. Ahí están los dos: pérdida de paquetes —qué es, cómo se mide, qué valores son críticos— y prácticas de laboratorio —qué son, qué condiciones requieren—. **Dos o tres bastan**; cinco es dispersión. Y cada constructo se vuelve un **subtítulo**: así el texto se ordena solo.”
+
+> “**Cuando dos autores no dicen lo mismo** —y les va a pasar—, eso no es un problema: es la parte interesante. El inseguro borra una fuente para que no se note; el que ya entendió **las pone a conversar**. Tres movimientos: **acumular**, ‘ambos coinciden en que…’; **contrastar**, ‘mientras Apellido 2021 sostiene X, Apellido 2023 encuentra Y’; y **tomar postura**, que es decir **cuál de las dos le sirve a su caso y por qué**. Ese ‘por qué’ es su aporte. No se dice ‘el autor está equivocado’: se dice **para qué contexto sirve cada uno**.”
+
+> “**La ficha de lectura**, que es el antídoto contra el collage. Cinco campos, y la lleno con una fuente en vivo: referencia en APA 7; **a cuál constructo responde**; idea principal en una frase, con sus palabras; una cita textual de máximo dos líneas **con página**; y el que decide todo: **relación con mi pregunta**. Si ese último campo no se puede llenar, **la fuente no entra**, por interesante que sea.”
+
+> “**Y así se redacta el párrafo**, en cuatro movimientos: enuncio el concepto con su fuente; lo amplío o matizo con otra; contrasto o acumulo; y **amarro a mi caso** —‘este umbral sirve como referencia para interpretar las interrupciones del laboratorio X’—. El cuarto movimiento es el que separa un marco de un resumen de lecturas: **siempre vuelvan a su pregunta**.”
+
+> “**Errores frecuentes**, y me detengo en uno: un marco que **nunca vuelve al caso**. Si ningún párrafo termina amarrando el concepto a su laboratorio, su sede o su empresa, lo que escribieron es un resumen de lecturas y así se va a calificar.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
-**GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~22 minutos. En `S05_Planteamiento_Apellido`: (1) llenen la tabla síntoma/evidencia/consecuencia con al menos tres filas; (2) conviértanla en un planteamiento de 1 a 1.5 páginas con los seis componentes; (3) al menos una afirmación debe apoyarse en un dato o estudio hallado en Google Académico. Que el texto termine en su pregunta.”
+**Momento del deck:** «Paso a paso: las dos secciones, sin bloquearse» → «TALLER · Planteamiento + primera página de marco»
 
-> “Criterio de éxito: leo su planteamiento y, sin conocer su tema, entiendo qué pasa, cómo lo sabe y por qué importa; y al final aparece la pregunta.”
+**GUION LITERAL (consigna):**
+> “**TALLER.** Tienen **16 minutos** y hoy no alcanzan a todo, así que les doy el orden. En el documento `S05_PlanteamientoMarco_Apellido`: **(1)** peguen arriba su **pregunta**, que es la brújula de las dos secciones; **(2)** llenen la tabla **síntoma · evidencia · consecuencia** con **tres filas**; **(3)** conviertan **cada fila en un párrafo**; **(4)** declaren sus **dos constructos** y pongan un **subtítulo** para cada uno; **(5)** llenen **una ficha de lectura** completa.”
+
+> “Lo que **no** se hace aquí y sí esta semana: completar el planteamiento a 1–1.5 páginas con los seis componentes, subir a cinco fuentes fichadas y redactar un párrafo de marco por constructo. El paso a paso de los diez movimientos está en la deck.”
+
+> “**Criterio de éxito, verificable:** al leer su planteamiento **sin conocer su tema** se entiende **qué pasa, cómo lo sabe y por qué importa**; y cada párrafo del marco **se puede etiquetar con un constructo**. Prueba rápida: cuenten cuántas veces aparece **un número o una cita** en su texto. Si la respuesta es cero, todavía es opinión.”
+
+> “**Y la prueba de alineación**, que toma quince segundos: tapen todo y lean solo la pregunta; después lean solo el primer párrafo. ¿Hablan del mismo actor y del mismo contexto? Si no, algo se desalineó.”
+
+> “La slide del taller dice ~24 minutos porque la deck está dimensionada para dos horas. Hoy manda el plan de clase, y con el Parcial 2 encima prefiero que salgan con **la tabla llena y una ficha bien hecha** que con dos páginas de relleno.”
 
 **Acompañamiento:**
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
-| Escribe solo opiniones | “¿Qué dato o estudio respalda eso? Vamos a Scholar.” |
-| Se va a la solución | “Todavía no: hoy argumentamos el problema.” |
-| No cierra en la pregunta | “Reescriba el último párrafo para que caiga en su pregunta.” |
-| Pone 10 causas sueltas | “Priorice 2–3 con evidencia; el resto quítelo.” |""",
+| Escribe solo opiniones | “¿Qué dato, registro o estudio respalda eso? Si no lo tiene, todavía no se puede afirmar.” |
+| “No tengo datos de mi caso” | “Bitácora, tickets, actas, DANE o SNIES. Y si el dato es de otro contexto, dígalo en el texto.” |
+| Se va a la solución | “Todavía no: hoy se argumenta el problema.” |
+| No cierra en la pregunta | “Reescriba el último párrafo: vacío y después la pregunta, literal.” |
+| Pone 10 causas sueltas | “Deje 2 o 3 con evidencia; las demás, en una frase.” |
+| Su marco es un collage | “¿A qué parte de su pregunta responde este párrafo? Si no puede contestarme, sobra.” |
+| Tiene cinco constructos | “Dos o tres. Subráyelos en su pregunta: los que no estén ahí, no son suyos.” |
+| Cambia de palabra entre secciones | “Elija una: o ‘caídas’ o ‘interrupciones’, en todo el documento.” |""",
     fase5_texto="""**Protagonista:** Docente.
 
+**Momento del deck:** «Checklist antes de subir su entrega» → «Trabajo autónomo · recta final hacia la ACA Final» → Cierre
+
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el planteamiento es un embudo de seis componentes; (2) evidencia, no opinión; (3) todo termina en la pregunta.”
+> “Cierre. Tres ideas: **(1)** el planteamiento es un embudo de seis componentes que cae en su pregunta; **(2)** evidencia, no opinión; **(3)** el marco se organiza por **constructos** y cada párrafo vuelve a su caso.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S05_Planteamiento_Apellido` a CDigital y revisen allí la **fecha límite de recepción** de trabajos de este corte. La próxima sesión es la más práctica del curso: **bases de datos, gestores de citas y marco teórico** —traigan su planteamiento, porque el marco responde a esta misma pregunta.”
+> “**Y ahora lo importante de hoy, que no es el contenido: es el calendario.** Esta semana cierran la **ACA Final** —el artículo consolidado— y el **Quiz 3**. Las fechas exactas están en CDigital y en el enunciado; ábranlas **hoy**, no mañana.”
 
-> “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
-    taller="En Google Docs (`S05_Planteamiento_Apellido`): tabla síntoma/evidencia/consecuencia (3+ filas) + planteamiento de 1–1.5 páginas con los 6 componentes + 1 afirmación respaldada con dato de Scholar.",
-    entregable="`S05_Planteamiento_Apellido` en CDigital.",
-    ejemplo="Tabla síntoma/evidencia/consecuencia convertida en el primer párrafo del planteamiento, con la cifra de la bitácora como evidencia.",
+> “**PARA CONTINUAR**, y háganlo en este orden: **uno**, peguen en un solo documento lo que ya existe —título e introducción, línea de Ingeniería, problema y pregunta, planteamiento, marco por constructos, referencias—. **Dos**, léanlo seguido **en voz alta**: donde se les trabe la lengua hay una frase mal armada, y donde cambie el vocabulario hay una costura. **Tres**, amplíen de cinco a **ocho fuentes** con ficha. **Cuatro**, búsquenle fuente a cada afirmación que quedó sin respaldo. **Cinco**, verifiquen que cada cita del texto esté en Referencias y al revés. **Seis**, incorporen la **retroalimentación** de los cortes anteriores: eso se evalúa.”
+
+> “No dejen la consolidación para la última noche. Cerrado el espacio en CDigital, no hay archivo que lo reemplace.”
+
+> “**La próxima sesión no tiene entrega nueva:** es la **socialización del artículo y el cierre del curso**. Vengan preparados para contar su trabajo en **cuatro minutos**.”
+
+> “**Cierre.** Gracias; mismo Meet el próximo jueves.”""",
+    taller="En Google Docs (`S05_PlanteamientoMarco_Apellido`): pregunta pegada arriba + tabla síntoma/evidencia/consecuencia con 3 filas + cada fila convertida en párrafo + 2 constructos con su subtítulo + 1 ficha de lectura completa (cinco campos). En autónomo esta semana: planteamiento a 1–1.5 páginas con los seis componentes, 5 fuentes fichadas y un párrafo de marco por constructo.",
+    entregable="`S05_PlanteamientoMarco_Apellido` en CDigital.",
+    ejemplo="""**Del renglón al párrafo, y del párrafo al marco.** Fila de la tabla — síntoma: «la red del laboratorio X se interrumpe durante las prácticas»; evidencia: «la bitácora institucional registra 12 interrupciones en un mes»; consecuencia: «prácticas incompletas y repetición de sesiones». Convertida: *«Durante el último mes, la red del laboratorio X presentó doce interrupciones registradas en la bitácora institucional. Cada una obligó a suspender la práctica en curso, de modo que varios grupos no completaron las actividades programadas y debieron repetir la sesión en otra franja.»* — tiempo, cifra, fuente y consecuencia en tres líneas.
+De la misma pregunta salen los constructos —**pérdida de paquetes** y **prácticas de laboratorio**— y el párrafo de marco en cuatro movimientos: definir con Apellido (2022), matizar con Apellido (2021), contrastar, y amarrar: *«este umbral sirve como referencia para interpretar las interrupciones del laboratorio X»*.""",
+    checklist=[
+        "- [ ] Fundamento teórico leído y **decidido qué se prioriza hoy** (con el Parcial 2 adentro quedan ~38 min de clase)",
+        "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 05) y marcadas las slides que **no** se proyectan",
+        "- [ ] **Google Docs** abierto con dos plantillas listas: la tabla *síntoma · evidencia · consecuencia* y la **ficha de lectura** de cinco campos",
+        "- [ ] Un **dato con fuente** a la mano para modelar la evidencia (bitácora, DANE, SNIES o un artículo de la Sesión 04)",
+        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
+        "- [ ] Espacio de entrega de la Sesión 05 creado en CDigital, con el nombre `S05_PlanteamientoMarco_Apellido` en la consigna",
+        "- [ ] Verificadas en CDigital las ventanas de **ACA Final** y **Quiz 3**, para anunciarlas sin equivocarse",
+        "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
+    ],
     shots_demo=[
-        ("inv_google_docs.png", "Google Docs — tabla síntoma / evidencia / consecuencia",
-         "Llenar 3 filas en vivo; luego convertir la primera en prosa del planteamiento."),
+        ("inv_google_docs.png", "Google Docs — tabla de trabajo y ficha de lectura",
+         "Arriba, la tabla *síntoma · evidencia · consecuencia* con una fila convertida en párrafo; abajo, la ficha de lectura con sus cinco campos y el último —relación con mi pregunta— lleno."),
     ],
     shots_taller=[
         ("inv_scholar_busqueda.png", "Google Académico — evidencia de respaldo",
-         "Buscar 1 dato/estudio que sostenga el 'estado actual' (no la solución). Anotar en APA tentativa."),
+         "Buscar 1 dato o estudio que sostenga el «estado actual» (no la solución) y anotarlo con su año."),
+        ("inv_zoterobib.png", "ZoteroBib — completar las referencias del marco",
+         "Cada cita nueva del marco se genera aquí en APA 7 y se revisa a mano antes de pegarla bajo *Referencias*."),
     ],
 )
 
 _spec(
     "investigacion", 6,
-    objetivos="""1. **Buscar** en bases y buscadores académicos (Google Académico, SciELO, Redalyc, biblioteca CUN) con operadores.
-2. **Generar** citas en **APA 7** con ZoteroBib (en la nube, sin instalar) y pegarlas en Google Docs.
-3. **Avanzar** el marco teórico / revisión: fichas de lectura y una página que responda a la pregunta.""",
-    fundamento="""> Sesión combinada por periodo corto: reúne U8 (bases + gestores) y U10–U12 (posturas teóricas · marco · revisión). Es la sesión más "de laboratorio" del curso.
+    uso_texto="""> **Uso:** guion de locución de la sesión de **cierre**. Hoy **no se dicta contenido nuevo**: se socializa el artículo, se retroalimenta entre pares y se diligencian **autoevaluación** y **coevaluación**, que abren hoy.
+> Léalo en voz alta casi literal. **Duración del encuentro: 60 minutos**.""",
+    objetivos="""1. **Sostener** el artículo en voz alta en **cuatro minutos**: contexto y problema, pregunta literal, hallazgos del marco, qué está listo y qué falta.
+2. **Retroalimentar** a un compañero con la **fórmula de las tres frases** y con los **cuatro criterios** de la rúbrica de la ronda.
+3. **Diligenciar** la **autoevaluación** (cuestionario) y participar en la **coevaluación** (foro), que **abren hoy** en CDigital.
+4. **Salir** con una **lista escrita de tres ajustes** y con la ruta del artículo hacia semillero, trabajo de grado o publicación.""",
+    fundamento="""> **Sesión de cierre.** La **ACA Final** y el **Quiz 3** **ya cerraron**: hoy no hay evaluación de contenido nueva. Y una nota para usted, porque el temario cambió: **bases de datos, gestores de citas y marco teórico ya no se ven aquí**. Se adelantaron a las Sesiones **04** y **05** para que la ACA Final los alcanzara. Si un estudiante llega esperando esa clase, la respuesta es que ya se dictó y que la deck de esas sesiones sigue publicada.
 
-#### 1. Buscador ≠ base de datos (y cuándo usar cada uno)
-- **Google Académico (Scholar):** buscador amplio; bueno para empezar y para el enlace "citado por".
-- **SciELO y Redalyc:** bases de acceso abierto, fuertes en español/portugués y en Latinoamérica.
-- **Biblioteca CUN (web, con login institucional):** acceso a bases suscritas; úsela para el texto completo.
+#### 1. Para qué sirve socializar después de entregar
+Lo que se diga hoy **no cambia la nota del artículo**, y precisamente por eso funciona: cambia **el documento con el que el estudiante va a seguir**. Descubrir hoy que no sabe explicar su propia pregunta en un minuto es infinitamente mejor que descubrirlo en una sustentación de grado. Es, además, la única vez en el periodo en que su trabajo **se escucha** y no solo se lee.
 
-Estrategia: empezar amplio en Scholar → afinar en SciELO/Redalyc → descargar el texto completo desde la biblioteca CUN.
-
-#### 2. Operadores de búsqueda que ahorran horas
-| Recurso | Para qué | Tip |
+#### 2. Los cuatro minutos, por tramos
+| Tramo | Qué va | Trampa que hay que cortar |
 | :--- | :--- | :--- |
-| Google Académico | Arranque amplio + "citado por" | Comillas "…" para la frase exacta |
-| SciELO | Fuentes en español/portugués | Filtre por área y país |
-| Redalyc | Revistas iberoamericanas abiertas | Contraste con lo hallado en Scholar |
-| Biblioteca CUN (web) | Texto completo de bases suscritas | Requiere login institucional |
-| ZoteroBib (zbib.org) | Generar APA 7 sin instalar | Pegue DOI → Copy → Docs |
+| **0:00–0:40** | Contexto y problema, con un dato | «Mi tema es la inteligencia artificial» |
+| **0:40–1:20** | **La pregunta, leída literal** | Parafrasearla y perder el actor |
+| **1:20–2:20** | Los dos constructos y **una** cosa que le sorprendió de lo leído | Recitar autores sin decir qué aportan |
+| **2:20–3:00** | Qué está listo y qué falta, una frase cada uno | Presentar el artículo como terminado |
+| **3:00–4:00** | Dos preguntas del grupo o del Docente | Responder con «eso lo voy a hacer después» |
 
-Además: **AND/OR** para combinar o ampliar, y filtro por **año** (últimos 5 cuando el tema es tecnológico).
+La regla que más cuesta y más sirve: **no empezar por la solución**. Quien arranca con «yo quiero hacer una app» pierde a media sala. Y decir «me faltó conseguir la bitácora» **no es una debilidad**: es saber dónde está el hueco.
 
-#### 3. Gestor de citas ligero: ZoteroBib (zbib.org)
-ZoteroBib genera **APA 7** desde un DOI, ISBN o URL, **sin instalar nada** ni crear cuenta. Es la opción gratis-nube del curso: nada de Mendeley de escritorio ni plugins de Word.
+#### 3. Las cinco preguntas que caen siempre
+¿A quién afecta y dónde ocurre? (actor y contexto) · ¿Qué evidencia tiene? (observado o supuesto) · ¿Se puede responder este periodo? (viabilidad y alcance) · ¿Qué dicen los autores que leyó? (marco: argumento o collage) · ¿Qué le falta? (honestidad). **Las cinco se responden con material que el estudiante ya escribió**; la que lo deje en blanco marca el hueco del documento.
 
-#### 4. El marco teórico responde a la pregunta (no decora)
-Un marco **no** es un collage de definiciones. Se organiza por **constructos** (los conceptos clave de su pregunta) y cada fuente entra porque **ayuda a responder**. Herramienta: la **ficha de lectura** = dato bibliográfico + idea principal + cita textual + cómo se relaciona con mi pregunta.""",
+#### 4. Retroalimentar bien, que es lo que se evalúa en la coevaluación
+Escuchar no es un descanso. La devolución va en **tres frases, en este orden**: **«me quedó claro que…»** (algo que entendió sin esfuerzo) · **«no me quedó claro…»** (**una** sola cosa, específica: «no entendí a quién afecta» sirve, «estuvo confuso» no) · **«le sugiero…»** (una acción ejecutable: una fuente, un recorte de alcance, una palabra que unificar). No cuentan: «muy bien, felicitaciones», «yo en tu lugar investigaría otra cosa», ni corregir la ortografía de la diapositiva mientras la pregunta sigue sin actor. Se critica **el trabajo**, nunca a la persona.
+
+| Criterio de la rúbrica | Está flojo si… | Está sólido si… |
+| :--- | :--- | :--- |
+| **Problema** | Empieza por la solución o por la tecnología | En 40 s ya sabemos a quién le pasa qué y dónde |
+| **Evidencia** | «Todo el mundo sabe que…» | Una cifra o un registro, con fuente y año |
+| **Pregunta** | Se responde con sí o no, o es planetaria | Actor, contexto y apertura por qué / cómo / en qué medida |
+| **Marco** | Definiciones sin relación con el caso | Constructos claros y al menos un contraste entre autores |
+
+#### 5. Autoevaluación y coevaluación: las notas más fáciles de perder
+Son **dos ítems del corte 3** con nota propia y **abren hoy**. La **autoevaluación** es un **cuestionario** y no se trata de ponerse 5,0 ni de castigarse: se trata de **argumentar con hechos del periodo** («entregué las cuatro entradas dentro de la ventana; la de la sesión 04 la subí el mismo día del cierre»). La **coevaluación** es un **foro**: se **participa**, no se sube archivo, y responder al comentario de otro cuenta. Se pierden **por no entrar**, casi nunca por hacerlo mal — dígalo con esas palabras.
+
+#### 6. La ruta después del periodo
+El Syllabus lo dice desde la primera sesión: el producto es un **artículo de nuevo conocimiento** y el **Docente actúa como coautor** en un eventual sometimiento a publicación. No es una promesa de publicación: es una **ruta que existe** y que casi nadie usa. Lo que separa el avance de un artículo sometible: ampliar de 5 a 10–12 fuentes fichadas; **cerrar la metodología** (en este curso se propone, no se aplica); recoger algo de evidencia propia, aunque sea pequeña; resumen y palabras clave —el resumen se escribe **al final**—; y revisión de forma con APA 7 completo. Los otros dos destinos naturales: **semillero** y **trabajo de grado**, donde el problema ya está delimitado y hay antecedentes.
+
+#### 7. Aritmética de la ronda (planéela antes de entrar)
+Haga la cuenta antes de entrar: la fase de socialización de este plan son 22 minutos, de los cuales 8 se van en la devolución, la lista de ajustes y la verificación en CDigital. Quedan **unos 14 minutos de ronda: tres turnos de cuatro minutos, cuatro si el grupo es puntual**. No más. Decida antes quién pasa —los que tienen el documento más avanzado no siempre: prefiera a quien más se beneficie de la devolución—, anúncielo al empezar y deje el resto para el **foro del curso**, con la misma estructura: pregunta, dos constructos y la frase de qué está listo y qué falta. Un grupo al que se le acaba el tiempo sin avisar se lleva la sensación de que su trabajo no importó.""",
     errores=[
-        ("“El marco es copiar y pegar definiciones.”",
-         "No: se organiza por constructos y cada cita debe ayudar a responder la pregunta."),
-        ("“Cito sin haber leído.”",
-         "Se nota y es riesgo de plagio. Haga la ficha de lectura de cada fuente antes de citar."),
-        ("“Uso Wikipedia y blogs como marco.”",
-         "Orientan; el marco se sostiene en fuentes académicas: Scholar, SciELO, Redalyc, biblioteca CUN."),
-        ("“Instalo Mendeley/Zotero de escritorio.”",
-         "No hace falta: ZoteroBib en el navegador genera el APA 7 gratis."),
+        ("“¿Hoy no vemos bases de datos ni marco teórico?”",
+         "Ya se vieron: se adelantaron a las Sesiones 04 y 05 para que la ACA Final los alcanzara. Las decks siguen publicadas en CDigital."),
+        ("“¿Todavía puedo mejorar mi nota?”",
+         "El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revisen sus ventanas hoy."),
+        ("El estudiante lee la diapositiva en voz alta.",
+         "Se corta con respeto: “cuéntemelo, no me lo lea; la única frase que sí se lee es la pregunta”."),
+        ("El estudiante arranca por la solución.",
+         "“Devuélvase: ¿a quién le pasa qué y dónde? La app va después, si es que va.”"),
+        ("“Muy bien, felicitaciones” como coevaluación.",
+         "Eso no es retroalimentar. Exija las tres frases: me quedó claro / no me quedó claro / le sugiero."),
+        ("“Mi pregunta cambió después de entregar.”",
+         "Es buena señal: la evidencia le enseñó algo. Se anota y se lleva a la siguiente versión del documento."),
+        ("“¿Puedo entregar el artículo por correo?”",
+         "No. La entrega oficial era CDigital y su espacio ya cerró; cualquier situación particular se habla por el canal del curso antes del cierre de notas."),
+        ("“¿Sirve este artículo para otra materia?”",
+         "Como base sí, y conviene declararlo. Volver a entregar el mismo texto como nuevo es autoplagio."),
     ],
     fases=[
-        ("1️⃣ Encuadre", 6),
-        ("2️⃣ Bases y gestores", 14),
-        ("3️⃣ Criterios de selección de fuentes", 10),
-        ("4️⃣ Taller de búsqueda + fichas", 22),
-        ("5️⃣ Cierre del ciclo", 8),
+        ("1️⃣ Encuadre: qué pasa hoy y de dónde vienen", 6),
+        ("2️⃣ Cómo se socializa en cuatro minutos y qué le van a preguntar", 8),
+        ("3️⃣ Modelación: las tres frases y la rúbrica de la ronda", 8),
+        ("4️⃣ TALLER: ronda de socialización", 30),
+        ("5️⃣ Cierre: ruta del artículo y despedida", 8),
+    ],
+    fase_slides=[
+        "Portada · «El artículo ya se entregó» · «Seis semanas en una línea» · «Trazabilidad»",
+        "«Cómo se socializa un artículo en cuatro minutos» → «Las cinco preguntas que le van a hacer»",
+        "«Retroalimentar bien: la fórmula de las tres frases» → «Rúbrica de la ronda»",
+        "«TALLER · Ronda de socialización»",
+        "«Qué le falta para ser publicable» → «Del artículo al semillero» → «Preguntas del último día» → Cierre",
     ],
     fase1_texto="""**Protagonista:** Docente.
 
-**GUION LITERAL:**
-> “Sesión 06, y es la más 'de laboratorio' del curso. Como estamos en periodo corto, combinamos tres unidades del Syllabus: bases de datos, gestores de citas y marco teórico. Todo con herramientas **gratis y en la nube** —nada de instalar programas—.”
-
-> “**Slide 2 — OBJETIVOS.** Vamos a buscar bien, a citar en APA 7 con ZoteroBib y a avanzar una página de marco que responda a su pregunta. Tengan abierto su planteamiento de la Sesión 05: el marco es su continuación, no un tema nuevo.”""",
-    fase2_texto="""**Protagonista:** Docente (demo en pantalla).
-
-**En pantalla:** Google Académico, SciELO, Redalyc, biblioteca CUN (login) y ZoteroBib.
+**Momento del deck:** Portada → «El artículo ya se entregó: hoy se sostiene en voz alta» → «De dónde vienen: seis semanas en una línea» → «Trazabilidad: qué sesión produjo qué sección»
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Primero: no todo es Google normal. **Scholar** es un buscador amplio, ideal para arrancar y para el enlace 'citado por'. **SciELO** y **Redalyc** son bases de acceso abierto fuertes en español y en Latinoamérica. Y la **biblioteca CUN**, con su login institucional, les da el texto completo de bases suscritas.”
+> “Última sesión. La **ACA Final** ya cerró y el **Quiz 3** también, así que hoy **no hay evaluación de contenido nueva**. Eso no la hace menos importante: es la única vez en el periodo en que su trabajo **se escucha** y no solo se lee.”
 
-> “Operadores que ahorran horas: comillas para la frase exacta, AND/OR para combinar, filtro por año —en tecnología, últimos cinco—. Miren: busco 'pérdida de paquetes' AND laboratorio, filtro 2020 en adelante, y ya tengo resultados usables.”
+> “El orden de hoy: **socialización** —cada quien cuenta su artículo en cuatro minutos y recibe dos preguntas—; **retroalimentación entre pares**, con una fórmula, no con ‘me gustó’; **autoevaluación y coevaluación**, que abren hoy en CDigital; y **la ruta** de este artículo después del periodo.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Para citar no instalamos nada: **ZoteroBib**, en zbib.org. Pego un DOI o un título, me arma el APA 7 y lo copio a Google Docs. Cero Mendeley de escritorio, cero plugins.”""",
-    fase3_texto="""**Protagonista:** Docente (modela una ficha de lectura).
+> “Y les respondo la pregunta que alguien está pensando: lo que digan hoy **no cambia la nota del artículo**. Cambia el **documento con el que ustedes van a seguir**. Descubrir hoy que no saben explicar su propia pregunta en un minuto es mucho mejor que descubrirlo en una sustentación de grado.”
 
-**En pantalla (Google Docs):** plantilla de ficha de lectura.
+> “**De dónde vienen.** En seis semanas hicieron el recorrido completo: eligieron una **línea**, escribieron un **primer avance**, convirtieron un fastidio en un **problema** y de ahí sacaron una **pregunta**, aprendieron **dónde se busca y cómo se cita**, argumentaron el **planteamiento** con evidencia y pusieron el problema a **conversar con la literatura**. Miren la tabla de **trazabilidad**: cada sesión produjo una sección del artículo. Si alguna fila no tiene documento en su carpeta, esa es la sección que hay que reconstruir.”
+
+**Antes de arrancar la ronda:** anuncie **quiénes pasan hoy** y cuántos alcanzan. Con el tiempo de esta sesión caben **tres o cuatro** intervenciones; el resto socializa por el **foro del curso**. Decirlo al minuto tres evita que alguien espere media hora un turno que no va a llegar.""",
+    fase2_texto="""**Protagonista:** Docente (exposición corta).
+
+**Momento del deck:** «Cómo se socializa un artículo en cuatro minutos» → «Las cinco preguntas que le van a hacer (y cómo se responden)»
 
 **GUION LITERAL:**
-> “El marco no es un collage de definiciones. Se organiza por **constructos**: los conceptos clave de su pregunta. Si mi pregunta habla de 'pérdida de paquetes' y 'prácticas de laboratorio', esos son mis dos constructos, y busco fuentes para cada uno.”
+> “Antes de la ronda, la estructura, porque **no es una exposición**: es contar de qué se trata y por qué importa, en un orden que el oyente pueda seguir. Cuatro minutos, por tramos.”
 
-> “Modelo una **ficha de lectura**: dato bibliográfico en APA, idea principal en una frase, una cita textual con página y —lo más importante— **cómo se relaciona con mi pregunta**. Una fuente que no ayuda a responder, no entra. Así el marco queda al servicio de la pregunta, no de relleno.”""",
-    fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
+> “**Primeros cuarenta segundos: contexto y problema**, con un dato. Nada de ‘mi tema es la inteligencia artificial’. **Hasta el minuto veinte: la pregunta**, y esta sí se **lee literal** — es la única frase que se lee. **Hasta los dos veinte: qué encontró en la literatura**, sus dos constructos y **una** cosa que le sorprendió de lo que leyó. **Hasta los tres: qué está listo y qué falta**, una frase cada uno, sin adornos. **El último minuto: dos preguntas** del grupo o mías.”
+
+> “La regla que más cuesta y más sirve: **no empiecen por la solución**. Si arrancan con ‘yo quiero hacer una app’, perdieron a la mitad de la sala antes del segundo treinta.”
+
+> “Y quiero que oigan esto bien: decir ‘me faltó conseguir la bitácora del laboratorio’ **no es una debilidad**, es saber dónde está el hueco. Lo que sí se nota mal es el artículo que se presenta como terminado y se cae en la primera pregunta.”
+
+> “**Las cinco preguntas que les van a hacer** están en la deck, y no son un examen sorpresa: ¿a quién afecta y dónde ocurre?; ¿qué evidencia tiene de que eso pasa?; ¿se puede responder este periodo?; ¿qué dicen los autores que leyó?; ¿qué le falta al artículo? **Las cinco se responden con lo que ustedes ya escribieron.** Si alguna los deja en blanco, ahí está el hueco del documento.”""",
+    fase3_texto="""**Protagonista:** Docente (modela una devolución).
+
+**Momento del deck:** «Retroalimentar bien: la fórmula de las tres frases» → «Rúbrica de la ronda: qué mirar cuando escucha a un compañero»
+
+**GUION LITERAL:**
+> “Ahora la otra mitad del ejercicio, que es la que más se descuida: **escuchar**. Escuchar a un compañero no es un descanso, y es lo que se evalúa en la **coevaluación**.”
+
+> “La devolución va en **tres frases**, en este orden. **‘Me quedó claro que…’**: nombre una cosa que entendió sin esfuerzo; eso le dice al otro qué sí está funcionando. **‘No me quedó claro…’**: **una** sola cosa, y específica — ‘no entendí a quién afecta’ sirve; ‘estuvo confuso’ no sirve. **‘Le sugiero…’**: una acción concreta y ejecutable — una fuente, un recorte de alcance, una palabra que unificar.”
+
+> “Lo modelo con el caso del laboratorio: *‘Me quedó claro que el problema es la interrupción de las prácticas y que hay una bitácora con doce registros. No me quedó claro a quiénes afecta: ¿a un grupo o a toda la franja? Le sugiero acotar la pregunta a la franja de la tarde, que es donde usted mismo mostró que se concentran las caídas.’* Tres frases, veinte segundos, y el otro se va con algo que puede hacer.”
+
+> “Lo que **no** cuenta: ‘muy bien, felicitaciones’ —amable e inútil—; ‘yo en tu lugar investigaría otra cosa’ —eso es cambiarle el tema, no evaluarlo—; y corregir la ortografía de la diapositiva mientras la pregunta sigue sin actor.”
+
+> “**Rúbrica de la ronda**, cuatro criterios, y son los mismos con los que van a escribir en el foro: **problema**, **evidencia**, **pregunta** y **marco**. Miren la tabla: a la izquierda la señal de que está flojo, a la derecha la de que está sólido. Tomen nota con esos cuatro, **una línea por criterio**, no más. Y algo que no se negocia: se critica **el trabajo**, nunca a la persona — con el mismo criterio que le van a aplicar a usted en cinco minutos.”""",
+    fase4_texto="""**Protagonista:** Estudiantes (ronda) · Docente cronometra y modera.
+
+**Momento del deck:** «TALLER · Ronda de socialización»
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~22 minutos. En `S06_MarcoRevision_Apellido`: (1) busquen en Scholar y en SciELO o Redalyc y elijan **5 fuentes** pertinentes; (2) hagan una **ficha de lectura** por fuente; (3) generen las 5 citas en APA 7 con ZoteroBib; (4) escriban una página de marco organizada por sus **constructos**, citando esas fuentes.”
+> “**Ronda de socialización: 30 minutos.** Cuatro pasos y yo llevo el reloj en voz alta.”
 
-> “Criterio de éxito: cada fuente responde a un constructo de su pregunta, las citas están en APA 7 y el marco no es un collage: se lee como argumento.”
+> “**Paso 1 — las rondas** (lo que queda de la fase, unos 14 minutos)**.** Turnos de **cuatro minutos**: tres de exposición con la estructura de hoy y uno de preguntas. Alcanzan **tres o cuatro turnos**; ya dije quiénes pasan. **Quien escucha toma nota con los cuatro criterios de la rúbrica: una línea por criterio.**”
 
-**Acompañamiento:**
-| Si el estudiante… | Usted responde… |
+> “**Paso 2 — devolución en pareja (4 min).** Cada quien le entrega a su compañero las **tres frases**: me quedó claro / no me quedó claro / le sugiero. Por el chat o por micrófono, pero **escritas**, porque el que la recibe se la lleva.”
+
+> “**Paso 3 — lista de ajustes (3 min).** Con la devolución en la mano, escriban los **tres arreglos** que le van a hacer al documento. **No los hagan ahora: anótenlos.** Escribir la lista es el producto de este taller.”
+
+> “**Paso 4 — CDigital (1 min).** Abran la plataforma y verifiquen que ven los espacios de **autoevaluación** y **coevaluación** y sus fechas. Si alguien no los ve, me lo dice **ahora**, no la semana entrante.”
+
+> “**Criterio de éxito, verificable:** salen con una **lista escrita de tres ajustes** y con la **devolución de un compañero anotada**, no recordada. Segunda verificación: su compañero puede repetir **su pregunta y a quién afecta** sin mirar el documento.”
+
+> “Quien no alcance a socializar en clase lo hace por el **foro del curso**, con la misma estructura: pregunta, dos constructos y la frase de qué está listo y qué falta. La slide dice ~25 minutos porque la deck está dimensionada para dos horas; hoy manda el plan de clase.”
+
+**Cómo modera el Docente:**
+| Situación | Qué hace |
 | :--- | :--- |
-| Solo usa Google normal | “Vaya a Scholar/SciELO/Redalyc; la biblioteca CUN da el texto completo.” |
-| Cita sin leer | “Haga la ficha: idea principal + cómo se relaciona con su pregunta.” |
-| Copia definiciones sueltas | “Agrúpelas por constructo: ¿esto responde a qué parte de su pregunta?” |
-| Quiere instalar Mendeley | “No hace falta: ZoteroBib en el navegador genera el APA 7.” |""",
+| Se pasa del tiempo | Avisa a los 3:00 en voz alta y corta a los 4:00, siempre igual para todos. |
+| Lee la diapositiva | “Cuéntemelo, no me lo lea. La única frase que se lee es la pregunta.” |
+| Nadie pregunta | El Docente hace una de las **cinco preguntas** de la deck y pide que la segunda la haga el grupo. |
+| Devolución vacía (“muy bien”) | Devuelve la fórmula: “deme la segunda frase: ¿qué **no** le quedó claro?”. |
+| Alguien no quiere pasar | No se fuerza en vivo: se le asigna el **foro** y se le anota, para que no quede sin coevaluación. |""",
     fase5_texto="""**Protagonista:** Docente.
 
+**Momento del deck:** «Qué le falta a su artículo para ser publicable» → «Del artículo al semillero y al trabajo de grado» → «Preguntas del último día» → «Cierre del curso · últimos pendientes»
+
 **GUION LITERAL:**
-> “Cierre del ciclo. Tres ideas: (1) busquen amplio en Scholar y afinen en SciELO, Redalyc y biblioteca CUN; (2) citen en APA 7 con ZoteroBib, sin instalar nada; (3) el marco responde a la pregunta, organizado por constructos.”
+> “Cerramos el curso. Y quiero que se lleven que **este artículo es la semilla, no el punto final**.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S06_MarcoRevision_Apellido` a CDigital con sus 5 fichas y la página de marco. Con esto tienen el esqueleto del artículo: tema, línea, problema, pregunta, planteamiento y marco. Revisen en CDigital el detalle de la evaluación del corte final.”
+> “**Qué le falta para ser publicable.** El Syllabus lo dice desde la primera sesión: el producto es un artículo de nuevo conocimiento y yo actúo como **coautor** si alguien decide someterlo. No les prometo publicación; les digo que **la ruta existe** y que casi nadie la usa. Lo que falta, en orden de esfuerzo: ampliar de cinco a diez o doce fuentes con ficha; **cerrar la metodología** —en este curso se propone, no se aplica—; recoger algo de evidencia propia, así sea pequeña; escribir resumen y palabras clave **al final**; y una revisión de forma con APA 7 completo. Si les interesa, escríbanme por el canal del curso **con el documento adjunto**: sin documento, la conversación no arranca.”
 
-> “**Slide 7 — Cierre.** Gracias por el trabajo de este periodo; mismo Meet si queda encuentro de cierre.”""",
-    taller="En Google Docs (`S06_MarcoRevision_Apellido`): 5 fuentes de Scholar/SciELO/Redalyc + 1 ficha de lectura por fuente + 5 citas APA 7 con ZoteroBib + 1 página de marco organizada por constructos.",
-    entregable="`S06_MarcoRevision_Apellido` en CDigital.",
-    ejemplo="Flujo en pantalla: Scholar → ZoteroBib → pegar la referencia APA 7 en Google Docs, ubicándola bajo su constructo.",
-    shots_demo=[
-        ("Sesion 06/inv_google_scholar.png", "Google Académico",
-         "Home de Scholar; explicar comillas, AND/OR y el enlace 'citado por'."),
-        ("Sesion 06/inv_zoterobib.png", "ZoteroBib (zbib.org)",
-         "Pegar DOI/título → APA 7 → Copy to clipboard → Google Docs. Sin instalar nada."),
-        ("Sesion 06/inv_scielo.png", "SciELO",
-         "Búsqueda en español/portugués; abrir 1 artículo de acceso abierto."),
-    ],
-    shots_taller=[
-        ("Sesion 06/inv_redalyc.png", "Redalyc — complemento iberoamericano",
-         "Segunda base abierta; contrastar con lo hallado en Scholar."),
-        ("Sesion 06/inv_google_docs.png", "Google Docs — marco por constructos",
-         "Pegar 5 referencias APA 7 y redactar la página de marco agrupada por constructos."),
+> “**Y los otros dos caminos**, que no exigen empezar de cero: el **semillero** —llegar con pregunta y marco escritos es más de lo que trae la mayoría el primer día— y el **trabajo de grado**, donde el problema ya está delimitado y hay antecedentes. Y si el problema salió de la empresa donde trabajan, allá tienen un diagnóstico argumentado que nadie había escrito.”
+
+> “**Esta semana**, mientras está fresco: guarden el documento **fuera del escritorio del computador**, guarden también las **fichas de lectura** —es lo que más cuesta reconstruir—, anoten en el mismo archivo la lista de tres ajustes con la fecha, y verifiquen que todas las fuentes tengan **enlace y DOI**.”
+
+> “**Pendientes, y son los últimos:** diligenciar la **autoevaluación** y participar en la **coevaluación** dentro de su ventana en CDigital; aplicar los tres ajustes; y revisar sus notas en el libro de calificaciones, escribiéndome **antes del cierre** si algo no cuadra. Después del cierre ya no hay margen.”
+
+> “Tres ideas para llevarse del curso: investigar **no es tener un tema**, es delimitar un problema real y sostener una pregunta con evidencia; una afirmación **sin cifra ni cita** es una opinión, por bien redactada que esté; y el marco **no decora** — si un párrafo no vuelve a su pregunta, sobra.”
+
+> “Una advertencia honesta para terminar: **nadie va a venir a preguntarles por su artículo. La puerta se toca desde adentro.** Gracias por el trabajo de estas seis semanas.”""",
+    entregable_titulo="🧩 **Qué se lleva hoy** *(no hay archivo nuevo que subir)*",
+    taller="Ronda de socialización: cada quien cuenta su artículo en cuatro minutos con la estructura de la deck y recibe dos preguntas; quien escucha toma nota con los cuatro criterios de la rúbrica y devuelve las **tres frases**. Producto del taller: una **lista escrita de tres ajustes** al documento.",
+    entregable="**no hay archivo nuevo.** Lo que sí queda registrado hoy en CDigital: la **autoevaluación** (cuestionario) diligenciada y la **coevaluación** (foro) con un comentario propio y una respuesta a otro. Quien no alcance a socializar en vivo lo hace por el **foro del curso**.",
+    ejemplo="""**Los cuatro minutos, modelados con el caso del laboratorio.** *«En el laboratorio X de la sede Y las prácticas se interrumpen: la bitácora institucional registró doce cortes en un mes, nueve de ellos entre las 2 y las 5 de la tarde. [40 s] Mi pregunta es: ¿en qué medida la pérdida de paquetes afecta las prácticas del laboratorio de redes? [1:20] Trabajé dos constructos —pérdida de paquetes y prácticas de laboratorio— y me sorprendió que el umbral del 2 % que todos citan se propuso para aplicaciones en tiempo real, que no es mi caso. [2:20] Listo: planteamiento y marco. Falta: no conseguí el registro de latencia. [3:00]»*
+Y la devolución, en tres frases: *«Me quedó claro el problema y la cifra. No me quedó claro a quiénes afecta: ¿un grupo o toda la franja? Le sugiero acotar a la franja de la tarde, que es donde usted mismo mostró que se concentran las caídas.»*""",
+    checklist=[
+        "- [ ] Decidido **quiénes socializan hoy** (la ronda da para 3 o 4 turnos de 4 minutos) y avisado el criterio al grupo",
+        "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 06) y cronómetro a la vista para los turnos de 4 minutos",
+        "- [ ] **Autoevaluación** (cuestionario) y **coevaluación** (foro) **visibles** en CDigital, con sus ventanas verificadas",
+        "- [ ] Libro de calificaciones revisado: notas de **ACA Final** y **Quiz 3** registradas, y los **dos errores más repetidos** del grupo anotados para la devolución",
+        "- [ ] Foro del curso abierto para quienes no alcancen a socializar en vivo, con la estructura pedida ya publicada",
+        "- [ ] Lista del grupo a la mano para registrar quién socializó y quién queda pendiente por foro",
+        "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
     ],
 )
 

@@ -1,9 +1,56 @@
 [
   {
     "type": "bullets",
+    "title": "Primeros 20 minutos: la devolución de la ACA 1",
+    "bullets": [
+      "La **ACA 1** (tarea grupal, corte 2) ya está calificada en CDigital: hoy, en los primeros **20 minutos**, se devuelve.",
+      "  Se devuelven tres cosas: la **nota en el libro de calificaciones**, los **comentarios por criterio de la rúbrica** y el **documento comentado**.",
+      "  Ábralos ahora, en pantalla. El equipo que no los abre hoy los abre en la semana de la ACA FINAL, cuando ya no hay tiempo de rehacer el marco.",
+      "Los comentarios **no son una nota disfrazada**: cada uno es una instrucción accionable —“delimite el actor”, “este objetivo no responde la pregunta”, “esta afirmación necesita fuente”.",
+      "Por qué la devolución va hoy y no más adelante:",
+      "  La **ACA FINAL** exige, como primer paso, incorporar **todas** las correcciones de la ACA 1, con **trazabilidad visible** en el documento.",
+      "  Y lo que usted bosqueje en la segunda parte de hoy —población, muestra, instrumento— cuelga de los objetivos: si un objetivo va a cambiar por una corrección, cámbielo **antes** de escribir ítems.",
+      "Si su equipo no alcanzó a entregar la ACA 1, la devolución igual le sirve: esas secciones son parte del anteproyecto y la ACA FINAL las vuelve a pedir, ya integradas."
+    ],
+    "note": "La ACA 1 es grupal: la devolución se hace por equipo y las correcciones se aplican sobre el mismo documento, no sobre copias sueltas."
+  },
+  {
+    "type": "table",
+    "title": "Cómo se lee la rúbrica de la ACA 1, criterio por criterio",
+    "headers": ["Criterio de la rúbrica", "Qué se miró", "Qué se corrige antes de la ACA FINAL"],
+    "rows": [
+      ["**Coherencia problema–pregunta–objetivos**", "Que los tres cuenten la misma historia", "Reescribir el objetivo específico que no responde la pregunta; uno a la vez, sin tocar todo"],
+      ["**Pertinencia al campo y a las líneas del programa**", "Que el problema sea de IA aplicada y no un tema suelto", "Reencuadrar el caso en la línea del programa y decirlo explícito en la justificación"],
+      ["**Justificación argumentada**", "Vacío, beneficiario y aporte; no opinión personal", "Cambiar la opinión por evidencia citada: qué vacío llena y a quién le sirve"],
+      ["**Alcances y limitaciones realistas**", "Que no prometan lo que es Proyecto II", "Bajar a diseño lo prometido y dejar la aplicación anunciada para Proyecto II"],
+      ["**Antecedentes ≥ 6, nacionales e internacionales**", "Número, mezcla y cierre de cada ficha", "Completar los que falten y añadir la frase “esto le aporta a mi pregunta porque…”"],
+      ["**Marco teórico, conceptual y contextual**", "Que respondan a la pregunta y no sean un listado", "Amarrar cada base teórica a una variable o categoría de la pregunta"],
+      ["**Escritura académica e integridad**", "Citas de lo prestado, redacción, similitud", "Citar o borrar la afirmación sin fuente; declarar el uso de IA si lo hubo"],
+      ["**Referencias APA 7**", "Que la cita en texto y la lista final se correspondan", "Cerrar el par cita–referencia en ambos sentidos, sobre la plantilla APA CUN"]
+    ],
+    "note": "La rúbrica de la ACA 1 no se archiva: sus criterios siguen vivos dentro de la coherencia global que evalúa la ACA FINAL.",
+    "col_w": [3.2, 4.0, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué hacer con las correcciones antes de la ACA FINAL",
+    "bullets": [
+      "**La ACA FINAL no es un documento nuevo:** es este mismo documento corregido, más metodología, cronograma y viabilidad.",
+      "Cómo se ve la **trazabilidad** que pide el enunciado (sin ella, el criterio se da por incumplido):",
+      "  Deje una **bitácora de correcciones** al final o como anexo: *comentario recibido · qué se cambió · en qué sección quedó*.",
+      "  Conserve el historial en Google Docs y marque un comentario como **resuelto** solo cuando el texto ya cambió.",
+      "  Si una corrección **no** se aplicó, dígalo y sustente por qué: eso también es trazabilidad, no un descuido.",
+      "Orden en que conviene corregir, porque cada nivel arrastra al siguiente:",
+      "  **(1)** coherencia pregunta–objetivos · **(2)** justificación, alcances y limitaciones · **(3)** antecedentes y marco · **(4)** forma y APA 7.",
+      "La duda sobre un comentario se resuelve **hoy** o en la **tutoría acordada de la semana**, nunca en la víspera de la entrega."
+    ],
+    "note": "Criterio literal de la ACA FINAL: “Correcciones de la ACA 1 incorporadas”. Lo que hoy quede sin corregir se vuelve a descontar allí."
+  },
+  {
+    "type": "bullets",
     "title": "La regla de oro de hoy: nadie manda todavía ese formulario",
     "bullets": [
-      "Empiezo por lo que más se rompe en este punto del curso, y no es un detalle menor.",
+      "Cerrada la devolución, sigo con lo que más se rompe en este punto del curso, y no es un detalle menor.",
       "  Un equipo entusiasta arma un Google Form y lo envía \"de prueba\" a cuarenta personas de una empresa.",
       "  Cree que adelantó trabajo. En realidad **recolectó datos personales sin aval institucional ni consentimiento informado**.",
       "  Eso no es avance de Proyecto I: es un riesgo ético y legal que puede invalidar todo el proyecto.",

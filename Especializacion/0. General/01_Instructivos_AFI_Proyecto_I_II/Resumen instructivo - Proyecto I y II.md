@@ -27,6 +27,16 @@ Título · Planteamiento del problema y pregunta de investigación · Objetivo g
 ## 2. Las 3 entregas (ACA) — nota única, pero con seguimiento formativo
 Proyecto I es de **nota única (100%)**, pero la DNI exige mínimo 3 entregas parciales de seguimiento. **No son trabajos independientes — son avances del MISMO producto.** En Moodle el libro de notas se configura operativamente en 3 cortes: **25% + 25% + 50%**.
 
+> ⚠️ **Puente con el aula real (auditoría CDigital 2026-08-10).** Este resumen conserva la numeración y las rúbricas del **instructivo AFI / Syllabus ESP329**, que es su fuente. El aula de 54ES4 **llama los ítems de otra manera**, y ese es el nombre que ven el estudiante y el libro de calificaciones:
+>
+> | Aquí (ESP329) | Ítem en el aula | Tipo | Peso real | Cierre |
+> |---|---|---|---:|:---|
+> | ACA 1 | **Quiz** | Cuestionario | 25% | **30/08/2026** |
+> | ACA 2 | **ACA 1** | Tarea | 25% | **04/10/2026** |
+> | ACA 3 | **ACA FINAL** | Tarea | **42%** (el corte 3 vale 50%: los otros 8 puntos son autoevaluación 4% + coevaluación 4%) | **08/11/2026** |
+>
+> Cuidado con la trampa: **lo que cierra el 30/08 es el Quiz**, no la «ACA 1» del aula, que cierra el **04/10**. Fechas y pesos vigentes: `config/cursos/fechas_entrega_aca.py` y `Especializacion/Proyecto I/Calendario de clases (oficial).md`.
+
 ### ACA 1 — Formulación del problema (peso operativo 25%)
 Planteamiento del problema · Pregunta de investigación · Objetivo general · Objetivos específicos · Justificación · Alcances y limitaciones · Referencias APA 7.
 **Rúbrica (5 criterios):** Planteamiento/delimitación del problema (25%) · Pregunta y objetivos (25%) · Justificación (15%) · Alcances y limitaciones (15%) · Calidad académica y APA 7 (20%).

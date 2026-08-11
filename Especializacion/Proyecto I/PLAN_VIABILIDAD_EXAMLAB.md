@@ -13,7 +13,9 @@
 | Fecha | 2026-08-08 (fechas ACA actualizadas 2026-08-09) |
 | Estado | **Borrador para aprobación docente** |
 
-> **Nota 2026-08-09:** las fechas de ACA1/ACA2/ACA3/coevaluación/autoevaluación de este plan se actualizaron para usar la **Cronograma OFICIAL de Coordinación** (`Calendario de clases (oficial).md`, raíz de Proyecto I), la misma fuente ya adoptada en el Manual del Docente. Esto **resuelve el §11(a)** de este documento, que quedaba abierto — ver el cierre de esa sección más abajo. Las fechas de sesión (10/08, 24/08, 31/08…) no cambiaron.
+> **Nota 2026-08-09:** las fechas de Quiz/ACA 1/ACA FINAL/coevaluación/autoevaluación de este plan se actualizaron para usar la **Cronograma OFICIAL de Coordinación** (`Calendario de clases (oficial).md`, raíz de Proyecto I), la misma fuente ya adoptada en el Manual del Docente. Esto **resuelve el §11(a)** de este documento, que quedaba abierto — ver el cierre de esa sección más abajo. Las fechas de sesión (10/08, 24/08, 31/08…) no cambiaron.
+
+> **Nota 2026-08-11 · nombres de los ítems.** Este plan se escribió con la numeración del Syllabus ESP329 (ACA 1 / ACA 2 / ACA 3). La auditoría del aula (2026-08-10) mostró que **CDigital los llama distinto**, y ese es el nombre que usan hoy el gradebook, el `Calendario de clases (oficial).md` y los enunciados del estudiante. Todo el documento quedó reescrito con los nombres del aula: **Quiz** (cuestionario, 25%, corte 1 — era «ACA 1») · **ACA 1** (tarea, 25%, corte 2 — era «ACA 2») · **ACA FINAL** (tarea, 42%, corte 3 — era «ACA 3»). Ojo con la trampa que dejaba la numeración vieja: **lo que cierra el 30/08 es el Quiz**, no la ACA 1, que cierra el **04/10**.
 
 ---
 
@@ -24,7 +26,7 @@
 Hay dos razones, y la primera es institucional, no técnica:
 
 1. **CUN exige la entrega en CDigital.** Los 5 enunciados de ACA lo dicen en la misma línea de cabecera: *"Entrega oficial: solo por CDigital"*. El Manual del Docente (L95, L151-156) pone ahí las entregas, el gradebook y el registro de notas, y fija el cierre único el **22/11/2026**. Ninguna decisión sobre ExamLab puede mover eso.
-2. **ExamLab no puede recibir el entregable de este curso.** Verificado en código, en tres capas: no existe un tipo de pregunta "subir documento" (los 12 tipos vigentes son texto, código, consola, GUI, SQL y diagrama); los únicos `<input type="file">` para el estudiante aceptan `.zip` o extensiones de código; y el calificador IA **rechaza activamente** archivos no-código dentro del ZIP (`ai-grade-submission/index.ts:1626-1639`). El ACA1/2/3 en **Plantilla APA CUN** — Times New Roman 12, márgenes 3 cm, espaciado 1,5, portada, paginación — no entra a ExamLab como entrega.
+2. **ExamLab no puede recibir el entregable de este curso.** Verificado en código, en tres capas: no existe un tipo de pregunta "subir documento" (los 12 tipos vigentes son texto, código, consola, GUI, SQL y diagrama); los únicos `<input type="file">` para el estudiante aceptan `.zip` o extensiones de código; y el calificador IA **rechaza activamente** archivos no-código dentro del ZIP (`ai-grade-submission/index.ts:1626-1639`). El entregable documental (**ACA 1** y **ACA FINAL**) en **Plantilla APA CUN** — Times New Roman 12, márgenes 3 cm, espaciado 1,5, portada, paginación — no entra a ExamLab como entrega.
 
 Sumado a eso: **la coevaluación (4%) y la autoevaluación (4%) no existen en ExamLab.** No es un tema de configuración; **no hay ninguna tabla en la que un `user_id` califique a otro**, y la RLS lo impide por diseño (un estudiante no puede leer la entrega de un compañero). Se registran como nota, no se diligencian.
 
@@ -138,8 +140,8 @@ Mismo resultado. El único hit de `autoevaluac` en todo el repositorio es una **
 
 | Pieza | Por qué ahí | Sesión |
 |---|---|---|
-| **Título del anteproyecto** (≤21 palabras, tono afirmativo, alineado al objetivo general) | Regla verificable y objetiva; error caro si llega mal a ACA3 | 02–03 |
-| **Pregunta de investigación** | Es el eje de coherencia de todo el ACA1 | 02 |
+| **Título del anteproyecto** (≤21 palabras, tono afirmativo, alineado al objetivo general) | Regla verificable y objetiva; error caro si llega mal a la ACA FINAL | 02–03 |
+| **Pregunta de investigación** | Es el eje de coherencia de todo el Quiz | 02 |
 | **Objetivo general** | Un párrafo; la IA detecta desalineación con la pregunta | 03 |
 
 Tres piezas cortas, calificación IA formativa (nota **no** ponderada), hilo de feedback, y — dato verificado — **el texto de una pregunta `abierta` NO se trunca** al calificar con IA (los límites de 200.000 / 50.000 caracteres están en la rama de ZIP de código, no en la de texto). Cabe además bajo el cap de similitud de 3.000 caracteres, así que la detección entre equipos **sí funciona** en estas piezas.
@@ -156,11 +158,11 @@ Mitigación real: el use case `workshop_question` de `ai_prompts` acepta un **ov
 
 **Detalle a no olvidar:** con `group_required`, un estudiante **sin grupo queda bloqueado** para entregar. Los 40 deben quedar en un grupo, incluidos los que trabajen solos — exactamente la misma regla que el Manual L74 fija para Moodle (*"Estudiante individual → igual necesita un grupo propio"*). Con 40 estudiantes: **13 equipos de 3 + 1 individual**, o 12 de 3 + 2 de 2. *(Reparto inferido; los equipos reales no están documentados en ningún archivo del curso.)*
 
-### 5.5 Trazabilidad de versiones ACA1 → ACA2 → ACA3
+### 5.5 Trazabilidad de versiones Quiz → ACA 1 → ACA FINAL
 
-Asimetría verificada: **los exámenes guardan historial** (cada intento es una fila nueva en `submissions`, con `retry_mode ∈ last|average|highest`); **talleres y proyectos NO** — es *una sola fila que se UPDATEa*, con un `attempt_count` explícito y **sin `retry_mode`**. Si un ACA se modelara como un taller reentregable, la reentrega **sobrescribiría** el texto anterior, su `ai_feedback` y el `teacher_feedback` — justo la trazabilidad que ACA2 y ACA3 exigen.
+Asimetría verificada: **los exámenes guardan historial** (cada intento es una fila nueva en `submissions`, con `retry_mode ∈ last|average|highest`); **talleres y proyectos NO** — es *una sola fila que se UPDATEa*, con un `attempt_count` explícito y **sin `retry_mode`**. Si un ACA se modelara como un taller reentregable, la reentrega **sobrescribiría** el texto anterior, su `ai_feedback` y el `teacher_feedback` — justo la trazabilidad que ACA 1 y ACA FINAL exigen.
 
-**Workaround:** **tres entidades separadas** (ACA1, ACA2, ACA3) en tres cortes distintos, que es lo que el Calendario oficial ya llama Corte I/II/III. Se pierde el diff automático entre versiones, pero se conservan las tres notas y las tres retros. El ajuste del Manual L189 (*"ACA 3 … puede ajustar favorablemente ACA 1 y ACA 2"*) se aplica editando la nota del ítem viejo — y el cambio queda con su observación.
+**Workaround:** **tres entidades separadas** (Quiz, ACA 1, ACA FINAL) en tres cortes distintos, que es lo que el Calendario oficial ya llama Corte I/II/III. Se pierde el diff automático entre versiones, pero se conservan las tres notas y las tres retros. El ajuste que autoriza el Manual (*"si la **ACA FINAL** evidencia que el estudiante incorporó correcciones…, el docente puede ajustar favorablemente el **Quiz** y la **ACA 1**"*) se aplica editando la nota del ítem viejo — y el cambio queda con su observación.
 
 ---
 
@@ -184,7 +186,7 @@ Se documenta para decidir en otro periodo, no para este.
 
 | Función | CDigital (oficial) | ExamLab (complemento) |
 |---|---|---|
-| Entrega de ACA1/2/3 (plantilla APA) | ✅ **Única** | ❌ Imposible |
+| Entrega de **ACA 1** / **ACA FINAL** (plantilla APA) | ✅ **Única** | ❌ Imposible |
 | Coevaluación y autoevaluación (diligenciar) | ✅ **Única** | ❌ No existe |
 | Registro oficial de notas (cierre 22/11) | ✅ **Fuente de verdad** | Espejo de seguimiento |
 | Retro cualitativa por ACA | ✅ Requerida por AFI | ✅ **Observación por estudiante** + hilo con adjuntos |
@@ -214,13 +216,13 @@ Se documenta para decidir en otro periodo, no para este.
 
 | Corte | `weight` | Rango de fechas | `workshop_weight` | `attendance_weight` | Ítems |
 |---|---:|---|---:|---:|---|
-| **Corte I** | 25 | 10/08 – 30/08 | 25 | **0** | ACA1 (25) |
-| **Corte II** | 25 | 31/08 – 04/10 | 25 | **0** | ACA2 (25) |
-| **Corte III** | 50 | 05/10 – 22/11 | 50 | **0** | ACA3 (42) · Coevaluación (4) · Autoevaluación (4) |
+| **Corte I** | 25 | 10/08 – 30/08 | 25 | **0** | Quiz (25) |
+| **Corte II** | 25 | 31/08 – 04/10 | 25 | **0** | ACA 1 (25) |
+| **Corte III** | 50 | 05/10 – 22/11 | 50 | **0** | ACA FINAL (42) · Coevaluación (4) · Autoevaluación (4) |
 
 > **`attendance_weight` = 0 en los tres cortes.** ESP329 no pondera asistencia. Si se pone >0, la suma de buckets deja de cuadrar con `cut.weight` y el consolidado se desvía.
 >
-> Rangos actualizados 2026-08-09 a la Cronograma OFICIAL (cierres 30/08 · 04/10 · 22/11). Los rangos reparten las 11 sesiones **2 / 5 / 4** (Corte I: 10/08, 24/08 · Corte II: 31/08, 07/09, 14/09, 21/09, 28/09 · Corte III: 05/10, 19/10, 26/10, 09/11) — cambió de 3/4/4 porque la sesión del 31/08 ahora cae **después** del nuevo cierre de ACA1 (30/08), no en el mismo día. La pertenencia de una sesión a un corte **se deriva por `session_date` entre `cut.start_date` y `cut.end_date`**, no por FK: un corte mal fechado desplaza sesiones de corte.
+> Rangos actualizados 2026-08-09 a la Cronograma OFICIAL (cierres 30/08 · 04/10 · 22/11). Los rangos reparten las 11 sesiones **2 / 5 / 4** (Corte I: 10/08, 24/08 · Corte II: 31/08, 07/09, 14/09, 21/09, 28/09 · Corte III: 05/10, 19/10, 26/10, 09/11) — cambió de 3/4/4 porque la sesión del 31/08 ahora cae **después** del nuevo cierre del Quiz (30/08), no en el mismo día. La pertenencia de una sesión a un corte **se deriva por `session_date` entre `cut.start_date` y `cut.end_date`**, no por FK: un corte mal fechado desplaza sesiones de corte.
 
 ### 8.3 Los 5 ítems
 
@@ -228,13 +230,13 @@ Los cinco como **talleres** (no proyectos): los talleres soportan `is_external`,
 
 | Ítem | Tipo | `is_external` | `group_mode` | Peso | Cierre |
 |---|---|---|---|---:|---|
-| ACA 1 — Formulación del problema | Taller | ✅ | `group_required` | 25 | 30/08/2026 |
-| ACA 2 — Fundamentación referencial | Taller | ✅ | `group_required` | 25 | 04/10/2026 |
-| ACA 3 — Anteproyecto final | Taller | ✅ | `group_required` | 42 | 08/11/2026 |
+| Quiz — Formulación del problema | Taller | ✅ | `group_required` | 25 | 30/08/2026 |
+| ACA 1 — Fundamentación referencial | Taller | ✅ | `group_required` | 25 | 04/10/2026 |
+| ACA FINAL — Anteproyecto integrado | Taller | ✅ | `group_required` | 42 | 08/11/2026 |
 | Coevaluación | Taller | ✅ | `individual` | 4 | 15/11/2026 |
 | Autoevaluación | Taller | ✅ | `individual` | 4 | 22/11/2026 |
 
-> Fechas de cierre = Cronograma OFICIAL (actualizado 2026-08-09). Fechas límite de nota docente: ACA1 07/09 · ACA2 12/10 · ACA3 16/11 · coev./autoev. 22/11 (ver §8.5 y §9).
+> Fechas de cierre = Cronograma OFICIAL (actualizado 2026-08-09). Fechas límite de nota docente: Quiz 07/09 · ACA 1 12/10 · ACA FINAL 16/11 · coev./autoev. 22/11 (ver §8.5 y §9).
 
 > Al ser `is_external`, se ocultan duración, navegación, proctoring y preguntas: el docente solo transcribe **Nota + Observación**.
 >
@@ -257,9 +259,9 @@ Requiere: override del prompt `workshop_question` con el criterio ESP329, y deci
 
 | Programar para | Mensaje |
 |---|---|
-| 24/08 | ACA1 cierra el **30/08** · plantilla APA · un solo integrante sube en CDigital |
-| 28/09 | ACA2 cierra el **04/10** · mínimo 6 antecedentes nacionales e internacionales · correcciones de ACA1 incorporadas |
-| 26/10 | ACA3 cierra el **08/11** · anteproyecto **completo e integrado**, no un fragmento |
+| 24/08 | El **Quiz** (cuestionario, 25%) cierra el **30/08** · se resuelve en CDigital dentro de la ventana, no se sube documento |
+| 28/09 | La **ACA 1** (tarea, 25%) cierra el **04/10** · plantilla APA · un solo integrante sube en CDigital · mínimo 6 antecedentes nacionales e internacionales |
+| 26/10 | La **ACA FINAL** (tarea, 42%) cierra el **08/11** · anteproyecto **completo e integrado**, no un fragmento |
 | 09/11 | **Coevaluación abierta** en CDigital (09/11–15/11) |
 | 16/11 | **Autoevaluación abierta** en CDigital (16/11–22/11) · cierre de notas 22/11 |
 
@@ -270,19 +272,19 @@ Requiere: override del prompt `workshop_question` con el criterio ESP329, y deci
 | # | Fecha | Tema | Uso de ExamLab |
 |---:|---|---|---|
 | 01 | 10/08 | Presentación y fundamentos | Alta de los 40 · subir contenidos · publicar Tutor IA · programar las 5 difusiones |
-| 02 | 24/08 | Problema y pregunta | Cerrar equipos · **taller formativo**: pregunta de investigación · última clase antes del cierre ACA1 (30/08) |
-| 03 | 31/08 | Objetivos, justificación, alcances | **Taller formativo**: objetivo general y título (≤21 palabras) · ACA1 **ya cerró ayer (30/08)** |
-| 04 | 07/09 | Retro ACA1 · Antecedentes | **Registrar ACA1** (nota + observación, límite hoy) · devolver el `.docx` anotado por el hilo de feedback |
+| 02 | 24/08 | Problema y pregunta | Cerrar equipos · **taller formativo**: pregunta de investigación · última clase antes del cierre del Quiz (30/08) |
+| 03 | 31/08 | Objetivos, justificación, alcances | **Taller formativo**: objetivo general y título (≤21 palabras) · el **Quiz** ya cerró ayer (30/08) |
+| 04 | 07/09 | Retroalimentación del **Quiz** · Antecedentes | **Registrar el Quiz** (nota + observación, límite hoy) · devolver el `.docx` anotado por el hilo de feedback |
 | 05 | 14/09 | Marco teórico | Foro U4 · tutor IA para citación |
 | 06 | 21/09 | Marco conceptual y contextual | Foro U4 |
-| 07 | 28/09 | Marco legal · APA 7 | Última clase antes del cierre ACA2 (04/10) · tutor IA sobre los 22 pares cita↔referencia legal de la plantilla |
-| 08 | 05/10 | Diseño metodológico (puente) | ACA2 **ya cerró ayer (04/10)** · adelantar metodología (solo 2 lunes sincrónicos quedan para ACA3) |
+| 07 | 28/09 | Marco legal · APA 7 | Última clase antes del cierre de la **ACA 1** (04/10) · tutor IA sobre los 22 pares cita↔referencia legal de la plantilla |
+| 08 | 05/10 | Diseño metodológico (puente) | la **ACA 1** ya cerró ayer (04/10) · adelantar metodología (solo 2 lunes sincrónicos quedan para la ACA FINAL) |
 | 09 | 19/10 | Población, técnicas e instrumentos | Encuesta `slot` para tutorías por equipo (ver nota abajo) |
-| 10 | 26/10 | Planeación, viabilidad, integración | Tutorías por equipo · última clase antes del cierre ACA3 (08/11) |
-| 11 | 09/11 | Integración · coev y autoev | ACA3 **ya cerró ayer (08/11)** · hoy abre la ventana de **Coevaluación** (09/11–15/11) · explicar las dos ventanas |
-| — | 12/10 | *(festivo — nota límite ACA2)* | **Registrar ACA2** (nota + observación, límite hoy) |
+| 10 | 26/10 | Planeación, viabilidad, integración | Tutorías por equipo · última clase antes del cierre de la ACA FINAL (08/11) |
+| 11 | 09/11 | Integración · coev y autoev | la **ACA FINAL** ya cerró ayer (08/11) · hoy abre la ventana de **Coevaluación** (09/11–15/11) · explicar las dos ventanas |
+| — | 12/10 | *(festivo — nota límite ACA 1)* | **Registrar ACA 1** (nota + observación, límite hoy) |
 | — | 15/11 | *(cierre ventana coevaluación)* | Cierra la ventana de diligenciamiento de Coevaluación |
-| — | 16/11 | *(festivo)* | **Registrar ACA3** (nota límite hoy) · hoy abre la ventana de **Autoevaluación** (16/11–22/11) |
+| — | 16/11 | *(festivo)* | **Registrar ACA FINAL** (nota límite hoy) · hoy abre la ventana de **Autoevaluación** (16/11–22/11) |
 | — | 22/11 | Cierre | Registrar coev + autoev (nota límite hoy) · **exportar XLSX** → digitar en CDigital · generar consolidado DOCX |
 | — | 25/11 | Post-cierre | Informe Final (Google Form) · ExamLab queda como archivo |
 
@@ -297,7 +299,7 @@ Requiere: override del prompt `workshop_question` con el criterio ESP329, y deci
 | # | Riesgo | Impacto | Mitigación |
 |---|---|---|---|
 | **R1** | **Doble fuente de verdad de notas** (ExamLab vs CDigital) | **Alto** | Declarar por escrito que **CDigital es la oficial**. Digitar en ExamLab primero y exportar XLSX → CDigital en un solo movimiento por corte. Nunca al revés |
-| **R2** | **Ítems sin nota cuentan como 0** con su peso original (no se reescalan) | **Alto** | Con ACA3 al 42% cerrando el 08/11, todo estudiante verá una nota reprobatoria hasta noviembre. Opciones: explicarlo en la sesión 01, o desactivar el módulo de notas para el rol Estudiante — **ojo: `module_visibility` es por institución y rol, no por curso**, así que afectaría a todos los cursos del tenant *(inferido)* |
+| **R2** | **Ítems sin nota cuentan como 0** con su peso original (no se reescalan) | **Alto** | Con la ACA FINAL al 42% cerrando el 08/11, todo estudiante verá una nota reprobatoria hasta noviembre. Opciones: explicarlo en la sesión 01, o desactivar el módulo de notas para el rol Estudiante — **ojo: `module_visibility` es por institución y rol, no por curso**, así que afectaría a todos los cursos del tenant *(inferido)* |
 | **R3** | ~~Los **tres juegos de fechas ACA** no concuerdan~~ — **resuelto 2026-08-09** (ver §11) | — | Se adoptó la Cronograma OFICIAL en el Manual, el Calendario y este plan. Si se retoma este plan más adelante, verificar que ningún documento quedó con las fechas viejas (31/08 · 28/09 · 09/11) |
 | **R4** | Estudiantes entienden que el ACA se entrega en ExamLab | **Alto** | Slide explícita en sesión 01: *"la entrega oficial es y sigue siendo CDigital"*. No crear en ExamLab ningún ítem que parezca recibir archivos |
 | **R5** | **Doble digitación** de 5 × 40 = 200 notas (más coev/autoev) | Medio | Aceptado por diseño. Usar el editor de notas externas (grilla de 40 filas, una pasada por ítem) |
@@ -319,13 +321,13 @@ Estos dos no los resuelve este plan: están sin documentar en el material del cu
 
 | Componente | Manual (antes, encabezados ACA) | Manual (antes, tabla calculada) | Calendario oficial AFI — **adoptado** |
 |---|---|---|---|
-| ACA1 cierre / nota | 31/08 · 07/09 | 31/08 · 07/09 | **30/08 · 07/09** |
-| ACA2 cierre / nota | 28/09 · 05/10 | 28/09 · 05/10 | **04/10 · 12/10** |
-| ACA3 cierre / nota | 09/11 · 16/11 | 09/11 · 16/11 | **08/11 · 16/11** |
+| Quiz cierre / nota | 31/08 · 07/09 | 31/08 · 07/09 | **30/08 · 07/09** |
+| ACA 1 cierre / nota | 28/09 · 05/10 | 28/09 · 05/10 | **04/10 · 12/10** |
+| ACA FINAL cierre / nota | 09/11 · 16/11 | 09/11 · 16/11 | **08/11 · 16/11** |
 | Coevaluación cierre / nota | — · 22/11 | 16/11 · 22/11 | **15/11 · 22/11** (ventana 09/11–15/11) |
 | Autoevaluación cierre / nota | — · 22/11 | 22/11 · 22/11 | **22/11 · 22/11** (ventana 16/11–22/11) |
 
-**Decisión (docente, 2026-08-09):** se adoptó el juego de la **Cronograma OFICIAL AFI** (Coordinación de Gestión del Conocimiento) — no el de los enunciados ACA que este plan recomendaba originalmente. El Manual del Docente y el Calendario oficial ya se corrigieron para usar estas fechas, y este documento (§8.2, §8.3, §8.5, §9) se actualizó para que coincida. **Pendiente real (no resuelto por esta actualización):** los 5 enunciados ACA en `Clases/Recursos/ACAs/*.docx`, ya entregados a los 40 estudiantes, siguen con las fechas viejas (ACA1 31/08, ACA2 28/09, ACA3 09/11) — si se quiere alinearlos con la fecha real de cierre, hay que comunicárselo explícitamente al curso; ese documento no se tocó. Lo único no ambiguo en todas las fuentes, antes y después: **cierre y registro de todas las notas = domingo 22/11/2026**.
+**Decisión (docente, 2026-08-09):** se adoptó el juego de la **Cronograma OFICIAL AFI** (Coordinación de Gestión del Conocimiento) — no el de los enunciados ACA que este plan recomendaba originalmente. El Manual del Docente y el Calendario oficial ya se corrigieron para usar estas fechas, y este documento (§8.2, §8.3, §8.5, §9) se actualizó para que coincida. ~~**Pendiente real:** los 5 enunciados en `Clases/Recursos/ACAs/*.docx` siguen con las fechas viejas (31/08, 28/09, 09/11).~~ → **Cerrado el 2026-08-10, reverificado extrayendo los `.docx` el 2026-08-11:** los cinco se regeneraron con los nombres del aula y las ventanas oficiales — `Quiz (25%) - guia del cuestionario.docx` 03/08→**30/08** · `ACA 1 (25%) - Formulacion del problema y fundamentacion referencial.docx` 07/09→**04/10** · `ACA FINAL (42%) - Anteproyecto integrado.docx` 12/10→**08/11** · coevaluación 09/11→**15/11** · autoevaluación 16/11→**22/11**. **No hay nada que comunicarle al curso por este motivo.** Lo único no ambiguo en todas las fuentes, antes y después: **cierre y registro de todas las notas = domingo 22/11/2026**.
 
 **(b) Por qué el inicio es 03/08 en `Informacion.txt` pero la Sesión 01 es el 10/08** en el CSV, el `.ics` y el Apps Script. El Manual además fija como hito de Coordinación: *"Lunes 10/08/2026: la clase de Proyecto I debe realizarse y grabarse"*. **Recomendación:** usar **10/08** como `start_date` del Corte I (es la primera sesión real y el hito verificable). *(Recomendación, no resolución.)*
 

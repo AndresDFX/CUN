@@ -1,19 +1,19 @@
 [
   {
     "type": "bullets",
-    "title": "El corazón del artículo: si esto queda bien, el resto casi se escribe solo",
+    "title": "Hoy son dos cosas: la pregunta y las fuentes que la sostienen",
     "bullets": [
       "Hoy se decide la suerte del artículo: el **problema** y la **pregunta**.",
       "  Si quedan bien, el planteamiento, el marco y la metodología salen casi en cadena.",
       "  Si quedan mal, todo lo demás cojea, por bien redactado que esté.",
       "La trampa número uno en ingeniería, y hay que nombrarla de una vez:",
-      "  *\"El problema es que no existe una app que...\"*",
-      "  Eso **no es un problema de investigación**: es que usted quiere hacer una app.",
+      "  *\"El problema es que no existe una app que...\"* — eso **no es un problema de investigación**: es que usted quiere hacer una app.",
       "Un problema de investigación es un **hecho observable que produce consecuencias**.",
       "  \"Los tutores dan retroalimentación tarde y los estudiantes repiten el mismo error\" → eso sí duele, y se puede medir.",
-      "La app, el modelo o el dispositivo son **posibles respuestas**; nunca el problema."
+      "**Segunda mitad de la sesión:** una pregunta sin fuentes se queda en opinión. Por eso hoy también vemos **dónde se busca de verdad** (bases de datos, biblioteca CUN) y **cómo se cita** en APA 7.",
+      "  Se adelanta a hoy porque el **artículo que se califica** exige fuentes citadas: no puede llegar al final del periodo sin saber buscar."
     ],
-    "note": "Meta de hoy: salir con **una pregunta investigable escrita en una sola frase**, respaldada por un diagrama de causas."
+    "note": "Meta de hoy: salir con **una pregunta investigable en una sola frase**, respaldada por un diagrama de causas y por **tres fuentes reales ya citadas en APA 7**."
   },
   {
     "type": "bullets",
@@ -127,7 +127,8 @@
       ["**Relevante**", "A alguien le importa la respuesta", "Puede nombrar quién usaría el resultado"],
       ["**Abierta**", "No se contesta con sí o no", "Empieza por **cómo / qué / cuál / en qué medida**"]
     ],
-    "note": "Los cinco atributos se cumplen a la vez. Si falla uno, la pregunta todavía no está lista para el planteamiento."
+    "note": "Los cinco atributos se cumplen a la vez. Si falla uno, la pregunta todavía no está lista para el planteamiento. El de **viabilidad** se comprueba en la segunda mitad de hoy.",
+    "col_w": [1.8, 3.6, 5.4]
   },
   {
     "type": "table",
@@ -143,13 +144,109 @@
     "col_w": [3.2, 2.4, 5.2]
   },
   {
+    "type": "bullets",
+    "title": "Con la pregunta lista, la otra mitad: dónde se busca de verdad",
+    "bullets": [
+      "Su pregunta ya existe. Ahora hay que averiguar **con quién va a conversar**: nadie investiga solo, y todo artículo dialoga con lo que ya se escribió.",
+      "El problema que resuelve esta mitad de la sesión es muy concreto:",
+      "  Un estudiante busca en Google normal, encuentra tres blogs y una nota de prensa, y su artículo no aguanta revisión.",
+      "  Otro busca en **Google Académico**, filtra por año, baja el texto completo desde la **biblioteca CUN** y en 40 minutos tiene cinco fuentes citables.",
+      "  Misma pregunta, mismo tiempo invertido: **la diferencia fue saber dónde y cómo buscar**.",
+      "Tres nombres que hay que separar desde ya:",
+      "  **Buscador académico** (Google Académico): rastrea muchísimo, pero mezcla calidades.",
+      "  **Base de datos** (SciELO, Redalyc, las suscritas por la CUN): colecciones curadas, con texto completo.",
+      "  **Gestor de citas** (ZoteroBib): no busca nada; **arma la referencia** en el formato correcto.",
+      "Todo lo de hoy es **gratis y en el navegador**: no se instala ningún programa."
+    ],
+    "note": "Regla del curso: Google normal sirve para orientarse. **No sostiene un artículo.**"
+  },
+  {
+    "type": "table",
+    "title": "Buscador ≠ base de datos: cuándo usar cada uno",
+    "headers": ["Recurso", "Qué es", "Fortaleza", "Límite"],
+    "rows": [
+      ["**Google Académico** (scholar.google.com)", "Buscador académico amplio", "Arranque rápido, cobertura enorme, enlace **\"citado por\"**", "Mezcla calidades; muchos resultados sin texto completo"],
+      ["**SciELO** (scielo.org)", "Base de acceso abierto regional", "Fuerte en español y portugués, texto completo gratis", "Menos cobertura en temas muy técnicos o recientes"],
+      ["**Redalyc** (redalyc.org)", "Red de revistas iberoamericanas abiertas", "Revistas de la región, descarga libre", "Cobertura desigual por área"],
+      ["**Biblioteca CUN** (web, login institucional)", "Acceso a bases **suscritas** por la institución (EBSCO y otras)", "**Texto completo** de artículos de pago", "Requiere iniciar sesión con la cuenta institucional"],
+      ["**ZoteroBib** (zbib.org)", "Generador de citas en línea", "APA 7 al instante, sin instalar ni registrarse", "No guarda su biblioteca: copie lo que genere"]
+    ],
+    "note": "Nunca pague por un artículo: primero verifique si la institución **ya lo tiene** en la biblioteca CUN.",
+    "col_w": [2.8, 2.4, 3.2, 2.6]
+  },
+  {
+    "type": "table",
+    "title": "Operadores de búsqueda que ahorran horas",
+    "headers": ["Operador / filtro", "Qué hace", "Cómo se escribe"],
+    "rows": [
+      ["**Comillas**", "Busca la **frase exacta**, en ese orden", "`\"pérdida de paquetes\"`"],
+      ["**AND**", "Exige que aparezcan **ambos** términos", "`\"pérdida de paquetes\" AND laboratorio`"],
+      ["**OR**", "Amplía: sirve cualquiera de los dos (útil para sinónimos)", "`phishing OR \"correo malicioso\"`"],
+      ["**Signo menos**", "**Excluye** un término que le ensucia los resultados", "`redes -sociales`"],
+      ["**Filtro por año**", "Limita a lo reciente: en tecnología, **últimos 5 años**", "Panel izquierdo de Scholar: *Desde 2021*"],
+      ["**\"Citado por\"**", "Muestra quién retomó ese artículo después", "Enlace bajo cada resultado en Scholar"]
+    ],
+    "note": "Regla práctica: **empiece amplio y vaya cerrando**. Si arranca con cinco filtros, no encontrará nada y creerá que su tema no existe.",
+    "col_w": [2.2, 5.0, 3.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado (3/3): la misma pregunta, cuatro búsquedas",
+    "bullets": [
+      "**Pregunta de partida:** *\"¿En qué medida la pérdida de paquetes afecta las prácticas del laboratorio de redes?\"*",
+      "**Intento 1 (mal):** `problemas de internet en la universidad` → miles de resultados irrelevantes, ninguno académico.",
+      "  Falla porque usa **lenguaje cotidiano**, no el vocabulario de la disciplina.",
+      "**Intento 2:** `\"pérdida de paquetes\" AND laboratorio` → mejor, pero pocos resultados en español.",
+      "**Intento 3 (bueno):** `\"packet loss\" AND \"network laboratory\"` en Scholar, filtro **desde 2021**.",
+      "  Aparecen artículos con método, medición y datos: eso sí es citable. Desde uno bueno, **\"citado por\"** lleva a los que lo continuaron.",
+      "**Intento 4 (contexto local):** el mismo tema en **SciELO** o **Redalyc**, en español, filtrando por Colombia o Latinoamérica.",
+      "  Un solo artículo regional le da **pertinencia local** a todo su artículo.",
+      "**Y si está detrás de un muro de pago:** entre a la **biblioteca CUN** con su login institucional y descárguelo desde las bases suscritas.",
+      "Lección para anotar: **si no encuentra nada, casi nunca es que el tema no exista: es que buscó con las palabras equivocadas**. Tome los términos técnicos de los artículos que sí sirvieron y vuelva a buscar con ellos."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El filtro de 60 segundos: ¿me quedo con esta fuente?",
+    "bullets": [
+      "Antes de descargar nada, revise cinco cosas. Si falla más de una, siga de largo.",
+      "  **Autoría:** ¿hay autores identificables y una institución detrás? Sin autor, no se cita.",
+      "  **Año:** en temas tecnológicos, prefiera los **últimos 5 años**; en teoría de base, la antigüedad no descalifica.",
+      "  **Dónde se publicó:** ¿revista, congreso, repositorio universitario? Un PDF suelto en un sitio desconocido no basta.",
+      "  **¿Tiene método?** Si el texto explica **cómo** llegó a sus resultados, es una fuente fuerte.",
+      "  **Pertinencia:** ¿responde a algo de **su pregunta**? Si no, es interesante pero no entra.",
+      "Truco de lectura rápida, en este orden: **título → resumen → conclusiones → método**.",
+      "  Con eso decide en un minuto si vale la pena leer el artículo completo.",
+      "Y una advertencia de honestidad: **si solo leyó el resumen, no cite el interior del artículo**."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Paso a paso: citar en APA 7 con ZoteroBib",
+    "bullets": [
+      "**1.** Abra **zbib.org**. No pide cuenta, no instala nada, es gratis.",
+      "**2.** Seleccione el estilo **American Psychological Association 7th edition**.",
+      "**3.** Pegue el **DOI** del artículo (el código que empieza por `10.`). Si no tiene DOI, pegue el **título exacto** o la URL.",
+      "**4.** Pulse *Cite*: ZoteroBib arma la referencia completa.",
+      "**5.** **Revísela a mano**, siempre. Los fallos típicos son:",
+      "  Nombres de autor incompletos o invertidos.",
+      "  Título en mayúsculas sostenidas (en APA 7 va en minúscula, salvo la inicial y nombres propios).",
+      "  Falta el nombre de la revista, el volumen o el DOI.",
+      "**6.** *Copy to clipboard* y pegue en su documento, bajo **Referencias**, en **orden alfabético**.",
+      "**7.** En el cuerpo del texto cite **(Apellido, año)**; para cita textual agregue la página: **(Apellido, año, p. 12)**.",
+      "**8.** Repita por cada fuente. Cinco fuentes toman menos de diez minutos."
+    ],
+    "note": "Cada referencia del listado debe estar citada en el texto, y cada cita del texto debe estar en el listado. **No instale Mendeley ni Zotero de escritorio:** no hace falta y en muchos equipos institucionales ni siquiera se puede."
+  },
+  {
     "type": "boxes",
-    "title": "Errores frecuentes al formular el problema",
+    "title": "Errores frecuentes: del problema a la fuente",
     "boxes": [
       ["advertencia", "**\"El problema es que no existe mi aplicación.\"** Eso es un deseo de producto. Pregúntese: si su app nunca existiera, ¿qué seguiría doliendo? Esa respuesta es el problema."],
-      ["advertencia", "**Confundir causas con efectos.** Ubíquelas con dos preguntas distintas: *¿por qué ocurre?* señala una **causa**; *¿qué provoca esto?* señala un **efecto**. En el árbol: causas abajo, efectos arriba."],
-      ["aclaracion", "**\"Una sola causa lo explica todo.\"** Casi nunca. Abra la espina en al menos tres familias: personas, proceso, tecnología, entorno. Si solo ve una, está defendiendo su hipótesis, no analizando."],
-      ["info", "**La pregunta puede cambiar, y está bien.** Es normal reformularla dos o tres veces. Lo que no puede pasar es que quede como estaba el primer día sin haber sido puesta a prueba."]
+      ["advertencia", "**Confundir causas con efectos.** Dos preguntas distintas las separan: *¿por qué ocurre?* señala una **causa**; *¿qué provoca esto?* señala un **efecto**. En el árbol: causas abajo, efectos arriba."],
+      ["advertencia", "**Citar sin haber leído.** Si toma una idea de un artículo que cita a otro, cite el que **usted** leyó. Es riesgo de plagio y se nota."],
+      ["aclaracion", "**Wikipedia y los blogs orientan, no sostienen.** Úselos para entender un concepto y luego vaya a las referencias que ellos citan. El artículo se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN."],
+      ["info", "**La IA generativa fabrica referencias creíbles y falsas.** Puede darle autor, año, revista y DOI de un artículo que no existe. Regla innegociable: **si no abrió el documento, no lo cita**."]
     ]
   },
   {
@@ -162,40 +259,43 @@
       "**4.** Cuelgue **una o dos causas concretas** en cada diagonal. Sin adjetivos: hechos.",
       "**5.** Marque con color **la causa que puede observar o medir** con las fuentes a su alcance.",
       "**6.** Exporte con *Export image* → PNG y pegue la imagen en su documento de Google Docs.",
-      "**7. Prueba de viabilidad:** tome los **dos términos principales** de su pregunta y búsquelos en **Google Académico**.",
+      "**7. Prueba de viabilidad:** tome los **dos términos principales** de su pregunta y búsquelos en **Google Académico**, entre comillas.",
       "  Si aparecen artículos que hablan de eso, su pregunta es **investigable**: hay con qué dialogar.",
-      "  Si no aparece nada, no abandone: **cambie el vocabulario** (busque en inglés, use términos técnicos) antes de cambiar la pregunta."
+      "  Si no aparece nada, no abandone: **cambie el vocabulario** (busque en inglés, use términos técnicos) antes de cambiar la pregunta.",
+      "**8.** De esa misma búsqueda salen las **tres fuentes** que va a citar hoy: no es un trabajo aparte."
     ],
-    "note": "Todo en el navegador: Excalidraw, Google Docs y Google Académico. Sin instalar programas."
+    "note": "Todo en el navegador: Excalidraw, Google Docs, Google Académico, SciELO/Redalyc y ZoteroBib. Sin instalar programas."
   },
   {
     "type": "bullets",
-    "title": "TALLER · Problema y pregunta (~20 min)",
+    "title": "TALLER · Pregunta + tres fuentes citadas (~24 min)",
     "bullets": [
-      "**Consigna literal.** En un documento llamado `S04_ProblemaPregunta_Apellido`:",
-      "  **(1)** Describa el problema en **8 a 12 líneas**, como un hecho con consecuencias, **no** como la falta de su solución.",
-      "  **(2)** Haga un diagrama en **Excalidraw** —espina de pescado o árbol de problemas— y pegue la captura en el documento.",
-      "  **(3)** Escriba la pregunta en **una sola frase** investigable.",
-      "  **(4)** Anote los **dos términos** con los que probó la viabilidad en Google Académico y qué encontró.",
-      "**Tiempo:** ~20 minutos. Empiece por el diagrama: pensar dibujando desatasca más rápido que pensar escribiendo.",
-      "**Criterio de éxito (verificable):** su pregunta **tiene actor y contexto**, **no** se responde con sí/no, y el diagrama muestra **al menos tres causas** en familias distintas.",
+      "**Consigna literal.** En un documento llamado `S04_ProblemaPreguntaFuentes_Apellido`:",
+      "  **(1)** Describa el problema en **8 a 12 líneas**, como un hecho con consecuencias, **no** como la falta de su solución. **(6 min)**",
+      "  **(2)** Haga un diagrama en **Excalidraw** —espina de pescado o árbol de problemas— y pegue la captura. **(5 min)**",
+      "  **(3)** Escriba la pregunta en **una sola frase** investigable. **(3 min)**",
+      "  **(4)** Busque en **Google Académico** y en **SciELO o Redalyc**, y quédese con **3 fuentes** que pasen el filtro de 60 segundos. **(6 min)**",
+      "  **(5)** Genere las **3 referencias en APA 7** con **ZoteroBib**, revíselas a mano y péguelas bajo *Referencias*. **(4 min)**",
+      "**Empiece por el diagrama:** pensar dibujando desatasca más rápido que pensar escribiendo.",
+      "**Criterio de éxito (verificable):** su pregunta **tiene actor y contexto**, **no** se responde con sí/no, el diagrama muestra **al menos tres causas** en familias distintas, y las **3 referencias** están completas —autor, año, título, fuente— y usted **abrió las tres**.",
       "Prueba final antes de entregar: lea su pregunta a un compañero. Si tiene que explicársela, todavía no es clara."
-    ]
+    ],
+    "note": "Al menos **una** de las tres fuentes debería ser regional (SciELO o Redalyc): es la que le da pertinencia local al artículo."
   },
   {
     "type": "bullets",
     "title": "Checklist antes de subir su entrega",
     "bullets": [
-      "[ ] El documento se llama `S04_ProblemaPregunta_Apellido` y trae la imagen del diagrama pegada.",
-      "[ ] Mi problema está escrito como **hecho + consecuencias**, no como \"falta un/una...\".",
-      "[ ] En ningún lado del problema aparece **mi solución** (app, modelo, sensor, plataforma).",
+      "[ ] El documento se llama `S04_ProblemaPreguntaFuentes_Apellido` y trae la imagen del diagrama pegada.",
+      "[ ] Mi problema está escrito como **hecho + consecuencias**, no como \"falta un/una...\", y no aparece **mi solución** por ningún lado.",
       "[ ] Nombro a los **afectados**: quién pierde qué.",
-      "[ ] Mi diagrama tiene **al menos tres familias de causas** con contenido real.",
-      "[ ] Distinguí causas de efectos (causas abajo o a la izquierda; efectos arriba o a la derecha).",
-      "[ ] Mi pregunta empieza por **cómo, qué, cuál o en qué medida**.",
-      "[ ] Mi pregunta tiene **actor** y **contexto** explícitos, y cabe en una sola frase.",
-      "[ ] Probé la viabilidad: busqué 2 términos en Google Académico y **sí apareció literatura**.",
+      "[ ] Mi diagrama tiene **al menos tres familias de causas** con contenido real, y distinguí causas de efectos.",
+      "[ ] Mi pregunta empieza por **cómo, qué, cuál o en qué medida**, tiene **actor** y **contexto**, y cabe en una sola frase.",
       "[ ] Mi pregunta es coherente con el **tema y la línea** que ya elegí.",
+      "[ ] Tengo **3 fuentes** y **abrí las tres**: ninguna salió solo del listado de resultados.",
+      "[ ] Ninguna de mis fuentes es un blog, un video o Wikipedia; **al menos una** es de SciELO o Redalyc.",
+      "[ ] Mis **3 referencias en APA 7** están revisadas a mano (autores, año, revista, mayúsculas, DOI).",
+      "[ ] Anoté, al lado de cada fuente, **una línea** que diga por qué se relaciona con mi pregunta.",
       "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
     ]
   },
@@ -205,11 +305,13 @@
     "bullets": [
       "**Deje reposar la pregunta un día y vuelva a leerla.** Casi siempre se le puede quitar una palabra vaga.",
       "**Guarde el diagrama:** las causas que dibujó hoy se convierten mañana en el cuerpo del planteamiento.",
-      "**Empiece a coleccionar evidencia:** cualquier cifra, bitácora, informe o queja documentada sobre su problema.",
-      "  Anote de dónde salió cada dato; sin la fuente, el dato no sirve.",
       "**Marque las 2 o 3 causas más fuertes** del diagrama: son las que va a defender con evidencia.",
-      "La próxima sesión tomamos esta pregunta y la desarrollamos en el **planteamiento del problema** completo.",
-      "  Traiga su pregunta y su diagrama: sin ellos no hay con qué trabajar.",
+      "**Empiece a coleccionar evidencia:** cualquier cifra, bitácora, informe o queja documentada sobre su problema. Anote de dónde salió cada dato; sin la fuente, el dato no sirve.",
+      "**Suba de 3 a 5 fuentes** con el mismo método y guárdelas ya citadas en APA 7. Le van a hacer falta la próxima semana.",
+      "**Subraye en su pregunta los 2 o 3 conceptos clave.** Esos conceptos son los que va a rastrear en la literatura.",
+      "**La próxima sesión son dos cosas otra vez:** el **planteamiento del problema** completo y la primera página de **marco teórico y revisión de literatura**.",
+      "  Traiga su pregunta, su diagrama y sus fuentes: sin ellos no hay con qué trabajar.",
+      "  Es además la **última sesión antes del cierre de la ACA Final**: verifique hoy mismo en CDigital la fecha de recepción de trabajos.",
       "Entrega y materiales en **CDigital**: [URL CDigital — campus del curso pendiente]"
     ]
   }

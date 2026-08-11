@@ -1,19 +1,19 @@
 [
   {
     "type": "bullets",
-    "title": "Hoy vestimos la pregunta",
+    "title": "Hoy vestimos la pregunta y la ponemos a conversar",
     "bullets": [
-      "Ya tiene una pregunta. Sola, no convence a nadie: **hay que demostrar que el problema existe**.",
+      "Ya tiene una pregunta y tres fuentes. Sola, la pregunta no convence a nadie: **hay que demostrar que el problema existe**.",
       "Eso es el **planteamiento del problema**: la sección donde usted argumenta que su tema merece estudiarse.",
-      "Piénselo como un juicio: usted es quien acusa, y el lector es el jurado.",
+      "  Piénselo como un juicio: usted acusa, y el lector es el jurado.",
       "  Si dice \"creo que la red del laboratorio falla mucho\", el jurado se encoge de hombros.",
       "  Si dice \"la bitácora institucional registró 12 interrupciones en un mes\", el jurado se sienta a escuchar.",
-      "Caso frecuente en ingeniería: dos estudiantes con el mismo problema real.",
-      "  Uno lo sustenta con **datos de un informe** y su artículo avanza.",
-      "  El otro lo sustenta con **su experiencia** y el evaluador le pide reescribir todo.",
-      "Meta de hoy: salir con **1 a 1.5 páginas escritas**, que terminen exactamente en su pregunta."
+      "**Y hay una segunda mitad:** el **marco teórico y la revisión de literatura**. Ahí su problema deja de estar solo y **conversa con lo que otros ya estudiaron**.",
+      "  Las dos secciones responden a la **misma pregunta**. No son temas distintos: son el mismo argumento, visto desde su caso y desde la literatura.",
+      "**Aviso de calendario, sin rodeos:** esta es la **última sesión antes del cierre de la ACA Final y del Quiz 3**. Lo que hoy no quede escrito, se escribe esta semana.",
+      "Meta de hoy: salir con **1 a 1.5 páginas de planteamiento** que terminan en su pregunta, y con **la primera página de marco** organizada por constructos."
     ],
-    "note": "Tenga abierto lo de la sesión anterior: el diagrama de causas es la materia prima de este texto."
+    "note": "Tenga abierto lo de la sesión anterior: el diagrama de causas y las fuentes ya citadas son la materia prima de este texto."
   },
   {
     "type": "bullets",
@@ -83,7 +83,7 @@
       "  **Registros institucionales:** bitácoras de laboratorio, tickets de soporte, actas, reportes académicos.",
       "  **Estadística oficial colombiana:** DANE, MinTIC, MinEducación (SNIES), MinCiencias.",
       "  **Informes de gremios y entidades:** cámaras de comercio, observatorios, agremiaciones del sector.",
-      "  **Artículos académicos:** Google Académico, SciELO, Redalyc — la evidencia de otros también cuenta.",
+      "  **Artículos académicos:** los que ya buscó la sesión pasada en Scholar, SciELO y Redalyc — la evidencia de otros también cuenta.",
       "  **Documentación técnica:** normas, estándares, manuales de fabricante, reportes de incidentes.",
       "Reglas de uso:",
       "  Cite **siempre** de dónde salió el dato: **(Fuente, año)**. Un número sin origen no vale nada.",
@@ -153,75 +153,176 @@
     ]
   },
   {
+    "type": "bullets",
+    "title": "Del planteamiento al marco: la misma pregunta, otro interlocutor",
+    "bullets": [
+      "El planteamiento demuestra que **su caso** existe. El **marco teórico** demuestra que usted sabe **qué se ha pensado ya** sobre eso.",
+      "  Es el mismo argumento con otro interlocutor: allá hablaba con su contexto; aquí habla con la literatura.",
+      "El error clásico es tratarlos como dos trabajos distintos. No lo son:",
+      "  El planteamiento termina en una pregunta; el marco **empieza por esa misma pregunta**.",
+      "  Si al pasar de una sección a la otra cambia el vocabulario, el lector cree que son dos artículos pegados.",
+      "  Si en el planteamiento dice \"caídas\" y en el marco \"interrupciones\", **elija una palabra** y úsela en todo el documento.",
+      "Lo que el marco aporta y el planteamiento no puede dar:",
+      "  **Definiciones sostenidas por autores**, no por su intuición.",
+      "  **Umbrales y referencias** para interpretar lo que usted observe.",
+      "  **Antecedentes**: qué encontraron otros que estudiaron algo parecido, y en qué se diferencian de su caso."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "El marco teórico responde a la pregunta, no decora",
+    "bullets": [
+      "**No es** un collage de definiciones copiadas una detrás de otra.",
+      "**No es** un capítulo de historia del tema.",
+      "**No es** un desfile de autores famosos que no tienen que ver con su caso.",
+      "**Es** el conjunto de conceptos y hallazgos previos que le permiten **entender y responder su pregunta**.",
+      "  Se organiza por **constructos** (los conceptos clave de la pregunta), no por autores ni por fechas.",
+      "  Cada fuente entra por una sola razón: **porque ayuda a responder algo de su pregunta**.",
+      "  Si una fuente no ayuda, **no entra**, por interesante que sea.",
+      "Prueba de control: al lado de cada párrafo del marco, escriba a qué parte de su pregunta responde.",
+      "  Si hay un párrafo al que no le puede escribir nada, ese párrafo sobra."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Constructos: cómo salen de su propia pregunta",
+    "bullets": [
+      "Un **constructo** es un concepto clave que su artículo necesita definir y sostener con literatura.",
+      "Se extraen subrayando la pregunta. Veámoslo con el caso modelado:",
+      "  Pregunta: *\"¿En qué medida la **pérdida de paquetes** afecta las **prácticas de laboratorio** en un laboratorio de redes universitario?\"*",
+      "  **Constructo 1:** pérdida de paquetes (qué es, cómo se mide, qué valores se consideran críticos).",
+      "  **Constructo 2:** prácticas de laboratorio (qué son, qué condiciones requieren, cómo se evalúan).",
+      "Segundo ejemplo, con otra línea: pregunta sobre phishing → **Constructo 1:** phishing y sus rasgos; **Constructo 2:** clasificación automática de correo.",
+      "Reglas prácticas:",
+      "  **Dos o tres constructos** bastan para un artículo de este curso. Cinco es dispersión.",
+      "  Busque literatura **por constructo**, no \"sobre el tema en general\".",
+      "  Cada constructo se vuelve un **subtítulo** del marco: así el texto se ordena solo."
+    ]
+  },
+  {
+    "type": "bullets",
+    "title": "Posturas teóricas: cuando dos autores no dicen lo mismo",
+    "bullets": [
+      "Tarde o temprano va a encontrar dos fuentes que **se contradicen**. Eso no es un problema: es la parte interesante.",
+      "  El estudiante inseguro **borra una de las dos** para que \"no se note\". El que ya entendió **las pone a conversar**.",
+      "Tres movimientos posibles cuando las fuentes no coinciden:",
+      "  **Acumular** — dicen lo mismo desde ángulos distintos: *\"ambos coinciden en que...\"*. Suma respaldo.",
+      "  **Contrastar** — dicen cosas distintas: *\"mientras Apellido (2021) sostiene X, Apellido (2023) encuentra Y\"*. Muestra que el tema está vivo.",
+      "  **Tomar postura** — usted dice **cuál de las dos le sirve a su caso y por qué**. Ese \"por qué\" es su aporte.",
+      "Cómo se toma postura sin arrogancia: no se dice \"el autor está equivocado\". Se dice **para qué contexto sirve cada uno**.",
+      "  Ejemplo: *\"El umbral del 2 % se propuso para aplicaciones en tiempo real; en un laboratorio con prácticas asincrónicas, ese criterio se adopta con reserva.\"*",
+      "Señal de que su marco tiene postura: **al terminar de leerlo se sabe desde dónde va a mirar usted su problema**, no solo qué han dicho otros."
+    ],
+    "note": "En un artículo de este curso basta con **una** postura tomada y bien justificada. No hace falta discutir con toda la disciplina."
+  },
+  {
+    "type": "table",
+    "title": "La ficha de lectura: campos y qué escribir",
+    "headers": ["Campo", "Qué se escribe", "Ejemplo (caso modelado)"],
+    "rows": [
+      ["**Referencia APA 7**", "La cita completa generada en ZoteroBib", "Apellido, A. (2022). Título del artículo. *Nombre de la Revista*, 14(2), 45–58."],
+      ["**Constructo al que responde**", "Cuál de sus 2–3 constructos aborda", "Constructo 1: pérdida de paquetes"],
+      ["**Idea principal**", "Una frase, con sus propias palabras", "Mide el efecto de la pérdida de paquetes sobre aplicaciones en tiempo real"],
+      ["**Cita textual + página**", "Máximo 2 líneas, entre comillas, con página", "\"Por encima del 2 % de pérdida, la sesión se degrada de forma perceptible\" (p. 51)"],
+      ["**Relación con mi pregunta**", "Por qué esta fuente entra en **mi** marco", "Aporta un umbral de referencia para juzgar las mediciones del laboratorio X"]
+    ],
+    "note": "El último campo es el que decide. **Si no puede llenarlo, la fuente no entra en su marco.**",
+    "col_w": [2.4, 3.0, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "Cómo se redacta un párrafo de marco (con su plantilla)",
+    "bullets": [
+      "Un párrafo de marco no es una definición suelta: es un **argumento con respaldo**.",
+      "Estructura en cuatro movimientos:",
+      "  **1. Enuncie el concepto:** *\"La pérdida de paquetes se entiende como la proporción de paquetes que no llegan a destino (Apellido, 2022).\"*",
+      "  **2. Amplíe o matice con otra fuente:** *\"Otros autores señalan que su efecto depende del tipo de aplicación (Apellido, 2021).\"*",
+      "  **3. Contraste o acumule:** *\"Ambos coinciden en que...\"* o *\"a diferencia del anterior, ...\"*",
+      "  **4. Amarre a su caso:** *\"Este umbral sirve como referencia para interpretar las interrupciones del laboratorio X.\"*",
+      "El movimiento 4 es el que separa un marco de un resumen: **siempre vuelva a su pregunta**.",
+      "Señales de que su marco está mal:",
+      "  Un párrafo = un autor, en fila india, sin conversación entre ellos.",
+      "  Aparecen definiciones que después **nunca se usan** en el artículo.",
+      "  Hay citas textuales largas y poco texto propio: el marco lo escribe usted, no los autores."
+    ]
+  },
+  {
     "type": "boxes",
-    "title": "Errores frecuentes al redactar el planteamiento",
+    "title": "Errores frecuentes: planteamiento y marco",
     "boxes": [
       ["advertencia", "**Escribir lo que uno cree, sin datos.** Cada afirmación fuerte necesita una cifra, un registro o un estudio. Sin evidencia, su planteamiento es una opinión larga."],
-      ["advertencia", "**Empezar por la solución que quiere proponer.** Hoy se argumenta el problema. Si su texto ya dice \"por eso se desarrollará una aplicación...\", bórrelo: esa frase pertenece a otra sección y le quita fuerza al problema."],
-      ["aclaracion", "**El planteamiento no termina en la pregunta.** Debe caer exactamente en la pregunta que ya formuló. Si termina en otra cosa —o en una pregunta distinta—, hay una desalineación que corregir antes de seguir."],
+      ["advertencia", "**Empezar por la solución que quiere proponer.** Hoy se argumenta el problema. Si su texto ya dice \"por eso se desarrollará una aplicación...\", bórrelo: esa frase pertenece a otra sección."],
+      ["advertencia", "**Un marco que no vuelve nunca a su caso.** Si ningún párrafo termina amarrando el concepto a su laboratorio, su sede o su empresa, lo que escribió es un resumen de lecturas."],
+      ["aclaracion", "**El planteamiento debe caer exactamente en la pregunta que ya formuló.** Si termina en otra cosa —o en una pregunta distinta—, hay una desalineación que corregir antes de seguir."],
       ["info", "**Diez causas sin jerarquía.** Priorice 2 o 3 con evidencia. Una causa bien sustentada pesa más que ocho enunciadas al paso."]
     ]
   },
   {
     "type": "bullets",
-    "title": "Paso a paso: escribirlo en 22 minutos",
+    "title": "Paso a paso: las dos secciones, sin bloquearse",
     "bullets": [
-      "**1.** Abra su documento `S05_Planteamiento_Apellido` en Google Docs y pegue arriba su **pregunta** (le sirve de brújula).",
-      "**2.** Inserte una tabla de **3 columnas** (síntoma · evidencia · consecuencia) y llene **3 filas**. ~6 minutos.",
-      "**3.** Busque en **Google Académico** un dato o estudio que respalde su **estado actual** —no su solución—. ~4 minutos.",
-      "  Consejo: busque el fenómeno + el contexto, entre comillas la frase exacta.",
-      "  Anote la referencia en APA tentativa; después la afinará con ZoteroBib.",
-      "**4.** Convierta **cada fila en un párrafo**, siguiendo el modelo: tiempo + cifra + fuente + consecuencia. ~8 minutos.",
-      "**5.** Agregue el párrafo de **causas** (2 o 3, jerarquizadas). ~2 minutos.",
-      "**6.** Escriba el **cierre**: una frase de vacío + su pregunta literal. ~2 minutos.",
-      "**7.** Al final, **borre la tabla o déjela como anexo**: en el artículo va la prosa, no la tabla de trabajo."
+      "**1.** Abra su documento y pegue arriba su **pregunta**: le sirve de brújula para las dos secciones.",
+      "**2.** Inserte la tabla de **3 columnas** (síntoma · evidencia · consecuencia) y llene **3 filas**. ~5 min.",
+      "**3.** Convierta **cada fila en un párrafo**: tiempo + cifra + fuente + consecuencia. ~7 min.",
+      "**4.** Agregue el párrafo de **causas** (2 o 3, jerarquizadas) y el **cierre**: una frase de vacío + su pregunta literal. ~3 min.",
+      "**5.** Al final, **borre la tabla o déjela como anexo**: en el artículo va la prosa, no la tabla de trabajo.",
+      "**6.** Baje dos renglones y escriba **un subtítulo por constructo**. Con dos basta.",
+      "**7.** Bajo cada subtítulo, pegue **las fuentes que ya tenía** de la sesión pasada y complete hasta **5** con Scholar, SciELO o Redalyc.",
+      "**8.** Llene la **ficha de lectura** de cada una —cinco campos— antes de redactar. La ficha es la que evita el collage.",
+      "**9.** Redacte cada párrafo con los **cuatro movimientos** y cierre siempre volviendo a su caso.",
+      "**10.** Verifique que **cada cita del texto** esté en Referencias y viceversa. Genere lo que falte en **zbib.org**."
     ],
-    "note": "Todo en el navegador: Google Docs y Google Académico. Escriba primero, corrija después."
+    "note": "Todo en el navegador: Google Docs, Google Académico, SciELO, Redalyc, biblioteca CUN y ZoteroBib. Escriba primero, corrija después."
   },
   {
     "type": "bullets",
-    "title": "TALLER · Redactar el planteamiento (~22 min)",
+    "title": "TALLER · Planteamiento + primera página de marco (~24 min)",
     "bullets": [
-      "**Consigna literal.** En el documento `S05_Planteamiento_Apellido`:",
-      "  **(1)** Llene la tabla **síntoma / evidencia / consecuencia** con **al menos tres filas**.",
-      "  **(2)** Conviértala en un planteamiento de **1 a 1.5 páginas** con los **seis componentes** en orden.",
-      "  **(3)** Al menos **una afirmación** debe apoyarse en un dato o estudio hallado en Google Académico, citado en el texto.",
-      "  **(4)** El texto debe **terminar en su pregunta**, la misma de la sesión anterior.",
-      "**Tiempo:** ~22 minutos. El Docente pasa acompañando y revisando alineación.",
-      "**Criterio de éxito (verificable):** al leer su planteamiento **sin conocer su tema**, se entiende **qué pasa**, **cómo lo sabe** y **por qué importa**; y al final aparece la pregunta.",
+      "**Consigna literal.** En el documento `S05_PlanteamientoMarco_Apellido`:",
+      "  **(1)** Llene la tabla **síntoma / evidencia / consecuencia** con **al menos tres filas**. **(5 min)**",
+      "  **(2)** Conviértala en un planteamiento de **1 a 1.5 páginas** con los **seis componentes** en orden, que **termine en su pregunta**. **(9 min)**",
+      "  **(3)** Declare sus **2 constructos** y ponga un **subtítulo** para cada uno. **(2 min)**",
+      "  **(4)** Complete **5 fuentes** con su **ficha de lectura** (los cinco campos), citadas en APA 7. **(4 min)**",
+      "  **(5)** Escriba **un párrafo de marco** por constructo con los **cuatro movimientos**, y cierre cada uno volviendo a su caso. **(4 min)**",
+      "**El Docente pasa acompañando y revisando alineación** entre pregunta, planteamiento y marco.",
+      "**Criterio de éxito (verificable):** al leer su planteamiento **sin conocer su tema** se entiende **qué pasa, cómo lo sabe y por qué importa**; y cada párrafo del marco **se puede etiquetar con un constructo**.",
       "Prueba de control rápida: cuente cuántas veces aparece un **número o una cita** en su texto. Si la respuesta es cero, todavía es opinión."
-    ]
+    ],
+    "note": "Si el tiempo aprieta, priorice el planteamiento completo y **un** párrafo de marco bien hecho. Media página con argumento vale más que dos páginas de definiciones."
   },
   {
     "type": "bullets",
     "title": "Checklist antes de subir su entrega",
     "bullets": [
-      "[ ] El documento se llama `S05_Planteamiento_Apellido`.",
-      "[ ] Están los **seis componentes**: estado actual, evidencias, causas, consecuencias, vacío y pregunta.",
-      "[ ] Van **en ese orden** (de lo ancho a lo estrecho, sin saltos).",
-      "[ ] Tiene **al menos un dato con fuente citada** en el cuerpo del texto.",
-      "[ ] Ninguna afirmación fuerte quedó sin respaldo: revisé una por una.",
-      "[ ] Prioricé **2 o 3 causas**, no diez enunciadas al paso.",
-      "[ ] **No** propongo ninguna solución en este texto.",
-      "[ ] Nombro a los **afectados** y digo en qué se traduce el problema para ellos.",
+      "[ ] El documento se llama `S05_PlanteamientoMarco_Apellido`.",
+      "[ ] Están los **seis componentes** del planteamiento, **en orden**, y está escrito en **prosa** (1 a 1.5 páginas).",
+      "[ ] Tiene **al menos un dato con fuente citada** en el cuerpo del texto, y ninguna afirmación fuerte quedó sin respaldo.",
+      "[ ] Prioricé **2 o 3 causas**, no diez enunciadas al paso, y **no** propongo ninguna solución en este texto.",
       "[ ] El **último párrafo cae en mi pregunta**, exactamente la misma de la sesión anterior.",
-      "[ ] Está escrito en **prosa**, no en viñetas, y ocupa entre 1 y 1.5 páginas.",
+      "[ ] Declaré **2 o 3 constructos** y el marco está organizado con **un subtítulo por constructo**, no por autores ni por fechas.",
+      "[ ] Tengo **5 fuentes** con **ficha de lectura** completa, y el campo **\"relación con mi pregunta\"** está lleno en todas.",
+      "[ ] **Al menos una** fuente es regional (SciELO o Redalyc) y ninguna es blog, video o Wikipedia.",
+      "[ ] Cada párrafo del marco **vuelve a mi caso** en su última frase.",
+      "[ ] Uso **el mismo vocabulario** en el planteamiento y en el marco (no \"caídas\" en uno e \"interrupciones\" en el otro).",
+      "[ ] Todo lo citado en el texto aparece en Referencias, y viceversa, en **APA 7** revisado a mano.",
       "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
     ]
   },
   {
     "type": "bullets",
-    "title": "Trabajo autónomo · para la próxima sesión",
+    "title": "Trabajo autónomo · recta final hacia la ACA Final",
     "bullets": [
-      "**Léalo en voz alta.** Donde se le trabe la lengua, hay una frase mal armada.",
-      "**Complete la evidencia que le faltó:** identifique las afirmaciones sin respaldo y búsqueles fuente.",
-      "**Extraiga sus constructos:** subraye en su pregunta los **2 o 3 conceptos clave**.",
-      "  Esos conceptos son los que va a rastrear en la literatura la próxima sesión.",
-      "**Verifique en CDigital** el espacio de entrega y la fecha límite de recepción de trabajos de este corte.",
-      "La próxima sesión es la más práctica del curso: **bases de datos, gestores de citas y marco teórico**.",
-      "  Traiga su planteamiento abierto: el marco **responde a esta misma pregunta**, no es un tema nuevo.",
-      "  Traiga también una lista de términos de búsqueda, en español y en inglés.",
-      "Materiales y entrega en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "**Esta semana se cierra la ACA Final** —el artículo consolidado— y también el **Quiz 3**. Verifique las fechas exactas y el espacio de entrega **en CDigital, hoy**.",
+      "**Qué hay que hacer, en este orden:**",
+      "  **1.** Pegue en un solo documento lo que ya existe: título e introducción · línea de Ingeniería · problema y pregunta · planteamiento · marco por constructos · referencias.",
+      "  **2.** **Léalo seguido, en voz alta.** Donde se le trabe la lengua, hay una frase mal armada; donde cambie de vocabulario, hay una costura.",
+      "  **3.** Amplíe de 5 a **8 fuentes** con su ficha: es la diferencia entre un marco justo y uno sólido.",
+      "  **4.** Complete la evidencia que le faltó: identifique las afirmaciones sin respaldo y búsqueles fuente.",
+      "  **5.** Revise que **cada cita del texto** tenga su referencia y que no sobre ninguna.",
+      "  **6.** Incorpore la **retroalimentación** de los cortes anteriores: eso se evalúa.",
+      "**No deje la consolidación para la última noche.** Cerrado el espacio, no hay archivo que lo reemplace.",
+      "**La próxima sesión no tiene entrega nueva:** es la **socialización del artículo y el cierre del curso**. Prepárese para contar su trabajo en cuatro minutos.",
+      "Entrega y materiales en **CDigital**: [URL CDigital — campus del curso pendiente]"
     ]
   }
 ]

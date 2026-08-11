@@ -106,10 +106,20 @@ Cada `.gs` trae `verificar()` (solo lectura, ejecútalo primero), `crearEncuentr
 
 ---
 
+## 4 bis. La fecha de «recepción» NO es institucional
+
+Conviene tenerlo claro antes de discutir cualquier fecha: en `config/cursos/carga_academica_2026.json` la nota de cabecera dice literalmente que **«recepcion no viene en el Excel»** y que se conservó «la fecha operativa ya usada en el proyecto (típicamente ~8 días antes del cierre)».
+
+Es decir: de cada curso solo son institucionales el **inicio del periodo** y el **cierre/registro de notas**. La recepción es una fecha **nuestra** y se puede mover sin pedirle permiso a nadie. Varias afirmaciones del material que decían «límite estructural, no corregible moviendo fechas» partían de creerla intocable.
+
+**Decisión del Docente (10/08/2026) — Investigación 53339:** el Quiz 3 pasa de cerrar el 17/09 (S06) a cerrar el **12/09**, junto con la ACA Final. Todo el corte 3 cierra el mismo día y la **S06 (17/09) queda como socialización y cierre, sin evaluación**. Es una excepción consciente a la regla de «los cuestionarios cierran en día de clase»: la última sesión cae después de la recepción, así que la regla no era satisfacible.
+
+---
+
 ## 5. Qué queda pendiente
 
 1. **Alinear el material a la estructura del campus** (§2). Es un cambio de fondo: hay que introducir quices y parciales, y renombrar/reagrupar las ACAs. Afecta enunciados, decks, guiones y manuales de los 5 cursos.
-2. **Crear en el aula los quices y parciales** (hoy solo existen como ítems del libro de calificaciones, sin la actividad).
+2. **Crear en el aula los quices y parciales** — hoy solo existen como ítems del libro de calificaciones, sin la actividad detrás. *Confirmado por el Docente el 10/08/2026: queda pendiente, lo hace él en la plataforma.* El material del estudiante ya está listo para cuando existan: cada cuestionario tiene su guía con el alcance exacto.
 3. **Salas de Meet** de TG2, TG3, Creatividad e Investigación (solo Proyecto I tiene). Van en `carga_academica_2026.json` → `cursos.<key>.meet`.
 4. **Subir el contenido a las aulas**: no tienen secciones creadas más allá de Avisos.
 5. **Syllabus SIAC de TG2**, aún ausente.

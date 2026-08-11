@@ -46,7 +46,7 @@ Los **cuatro** cursos tienen la misma estructura (los pesos del tercer corte cam
 
 ### Notas por curso
 
-- **Creatividad (EI004) e Investigación (EI005):** la última sesión cae **después** de la fecha de recepción (23/09 > 19/09 · 17/09 > 12/09): úsala como socialización/cierre, no para contenido evaluable nuevo.
+- **Creatividad (EI004) e Investigación (EI005):** la última sesión cae **después** de la fecha de recepción (23/09 > 19/09 · 17/09 > 12/09): úsala como socialización/cierre, no para contenido evaluable nuevo. La recepción **no es institucional** (se derivó como ~8 días antes del cierre de notas), así que es movible si algún periodo lo pide. En **Investigación** el Quiz 3 ya se adelantó al 12/09 para que el corte 3 cierre completo antes de esa última sesión.
 - **Trabajo de Grado 2 (94453):** sigue **sin Syllabus SIAC**, pero los pesos **ya no son orientativos** — salen del aula. Documento de avance listo para continuidad en TG3.
 - **Trabajo de Grado 3 (94532):** **no es corte único.** La **sustentación ante jurados** se califica **dentro de la ACA Final** (no existe un ítem «EXAM»). Cierre del grupo respetado: **54450** recibe el 07/11 y cierra el **15/11**; **54466/54467** reciben el 14/11 y cierran el **22/11**.
 

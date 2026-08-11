@@ -235,14 +235,14 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) el **tipo** dice qué cambia, el **grado** dice cuánto rompe; (2) **incremental bien medido** vence a radical sin evidencia; (3) se compara con **criterios**, no con gusto.”
 
-> “**PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S04_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—. Eso lo vamos a validar la próxima sesión.”
+> “**PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S04_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—; escríbanlos como **afirmaciones**, no como preguntas, para poderlos poner a prueba; (c) anoten **una pregunta sobre el entorno** de su propuesta: ¿ya existe algo parecido?, ¿hay una norma o un permiso de por medio? De ahí arranca la segunda mitad de la próxima sesión.”
 
-> “**Cierre.** La próxima clase es **Análisis de negocios: FODA, Canvas, MVP y validación**. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima clase es **doble**: en la primera mitad, **validación** —FODA, Business Model Canvas y MVP— para poner a prueba el supuesto más riesgoso; en la segunda, **vigilancia tecnológica**, para contrastar la propuesta con lo que ya existe ahí afuera. Va doble porque la **ACA Final califica las dos** y cierra antes de la última sesión del curso. Vengan con los supuestos escritos. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (4 min) Leer 2 conclusiones y verificar que se apoyan en criterios.
-2. (2 min) Enunciar el trabajo autónomo (los 5 supuestos) y el nombre del archivo.
-3. (2 min) Anunciar el tema de la próxima sesión.
+2. (2 min) Enunciar el trabajo autónomo (los 5 supuestos y la pregunta de entorno) y el nombre del archivo.
+3. (2 min) Anunciar la próxima sesión **como doble** y decir en voz alta por qué: la ACA Final califica validación y vigilancia, y cierra antes del último encuentro.
 
 ---
 
@@ -254,7 +254,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 2. Escribir una conclusión de 4 líneas basada en la comparación.
 3. **Criterio de éxito:** criterios explícitos + conclusión argumentada (no gusto personal).
 4. **Entregable:** `S04_MatrizTipos_Apellido` en CDigital.
-5. **Trabajo autónomo:** listado de mínimo 5 supuestos para la validación de la próxima sesión.
+5. **Trabajo autónomo:** listado de mínimo 5 supuestos (escritos como afirmaciones) **y** una pregunta sobre el entorno de la propuesta — insumos de las dos mitades de la próxima sesión.
 
 ---
 

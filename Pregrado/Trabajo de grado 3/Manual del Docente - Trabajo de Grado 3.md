@@ -8,7 +8,8 @@ Fuente: `TRABAJO DE GRADO 3-MDI_INGENIERIA DE SISTEMAS_94532_PRES_VIR.docx` (en 
 - **`Clases/`** — presentación del curso (15 sesiones = encuadre + U3–U14 + 2 buffers) + **`Sesion NN - <tema>/Presentacion.pptx`** · docente **Julian Andres Castaño** · `julian_castanoe@cun.edu.co`
 - **`Guiones/`** — `Sesion NN - <tema>.md` (solo Markdown; no hay `.docx`) + `Capturas/`
 - **`Calendario…`** · festivo = autónoma · 54450 cierra 15/11; 54466/54467 hasta 22/11
-- **`2026/<grupo>/`** + `_combinado_*` para Calendar multi-grupo (**sin invitados estudiantes**; Meet placeholder único)
+- **`2026/<grupo>/`** — roster, correo de bienvenida, hitos docentes y el calendario del grupo (cada grupo tiene su propio cierre)
+- **`2026/_combinado_todos/`** — los encuentros: los tres grupos son **una sola serie** (mismo horario, **una sola sala de Meet**). `PRINCIPAL - Crear encuentros con invitados (3 grupos).gs` los crea **con invitados y con Meet**; el `.gs` crea la sala solo. Paso a paso en `LEEME - Crear los eventos de Calendar.md`. Los `.ics`/`.csv` marcados `RESPALDO sin invitados` son respaldo de fechas: Google **descarta los invitados** al importarlos
 
 **Horario confirmado:** martes, **5:00–6:00 pm**.
 **Festivo en martes → clase autónoma.**
@@ -56,7 +57,7 @@ Régimen: **Art. 52 · tres cortes** — **Corte 1 = 30%** · **Corte 2 = 30%** 
 - **No hay tres ACAs.** El aula tiene **una sola «ACA Final»** (tarea) en el tercer corte. Los antiguos enunciados ACA 1 / ACA 2 / ACA 3 no correspondían a tres ítems del libro de calificaciones; ya se rehicieron como **un documento por ítem real** (2026-08-10).
 - **Queda anulada la regla «cada ACA evalúa el 100% de su corte»** (decisión del 2026-08-10, derogada el mismo día por la auditoría): el desglose real existe y está en la tabla de arriba.
 - **Autoevaluación y coevaluación SÍ hacen parte de la nota de este curso** — no son exclusivas de Proyecto I. La **coevaluación es un FORO** (se participa, no se entrega documento) y la **autoevaluación un cuestionario**.
-- **Los quices y parciales existen y pesan.** El **Parcial 1 vale 24%** por sí solo. Ya tienen guía para el estudiante en `Clases/Recursos/ACAs/` (`Quiz N (…) - guía del cuestionario.docx` · `Parcial N (…) - guía del cuestionario.docx`), pero en el aula **existen solo como ítem del libro de calificaciones**: falta **crear la actividad** (cuestionario + banco de preguntas) antes de su ventana.
+- **Los quices y parciales existen y pesan.** El **Parcial 1 vale 24%** por sí solo. Ya tienen guía para el estudiante en `Clases/Recursos/ACAs/` (`Quiz N (…) - guia del cuestionario.docx` · `Parcial N (…) - guia del cuestionario.docx`), pero en el aula **existen solo como ítem del libro de calificaciones**: falta **crear la actividad** (cuestionario + banco de preguntas) antes de su ventana.
 - **TG3 no es «corte único = 100%».** El Syllabus 94532 decía corte único con **EV05 50% + EXAM 50%**; el aula tiene **tres cortes 30/30/40** y ni EV05 ni EXAM existen como ítems. Manda el aula.
 
 ### Notas de este curso
@@ -80,10 +81,10 @@ Fuente en vivo: `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — 
 | **ACA Final** (54450) | Tarea | 3 | 32% | 11/08/2026 | 07/11/2026 | 15/11/2026 |
 | **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 11/08/2026 | 14/11/2026 | 22/11/2026 |
 | **Quiz 3** | Cuestionario | 3 | 4% | 20/10/2026 | 27/10/2026 | 03/11/2026 |
-| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 03/11/2026 | 15/11/2026 | 15/11/2026 |
-| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 10/11/2026 | 22/11/2026 | 22/11/2026 |
-| **Coevaluación** (54450) | Foro | 3 | 2% | 03/11/2026 | 15/11/2026 | 15/11/2026 |
-| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 10/11/2026 | 22/11/2026 | 22/11/2026 |
+| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 03/11/2026 | 10/11/2026 | 15/11/2026 |
+| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 10/11/2026 | 17/11/2026 | 22/11/2026 |
+| **Coevaluación** (54450) | Foro | 3 | 2% | 03/11/2026 | 10/11/2026 | 15/11/2026 |
+| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 10/11/2026 | 17/11/2026 | 22/11/2026 |
 
 **Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32% + Quiz 3 4% + Autoevaluación 2% + Coevaluación 2%.
 

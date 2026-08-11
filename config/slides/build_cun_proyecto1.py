@@ -19,6 +19,9 @@ from fechas_entrega_aca import (
     fmt_peso,
     peso_corte,
 )
+# Catálogo de los .docx que viven en `Clases/Recursos/ACAs/`: mismo módulo que los
+# escribe, así que los nombres que cita esta presentación son los del disco.
+from build_acas_estudiantes import documentos_for as acas_documentos_for
 
 OUT_DIR = os.path.join(COURSES["proyecto1"]["folder"], "Clases")
 from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
@@ -37,13 +40,38 @@ LINK_TUTORIAS_ESTUDIANTE = LINK_TUTORIAS
 # estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
 # build_acas_estudiantes.py). Decisión del docente 2026-08-10.
 RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
-URL_PLANTILLA_ACA = "Clases/Recursos/ACAs/ (enunciados ACA 1–3 · autoevaluación · coevaluación)"
+# Carpeta de enunciados que viaja con el estudiante. NO se enumeran aquí «ACA 1 – 3»:
+# esos documentos dejaron de existir cuando los enunciados se renombraron por ítem del
+# aula. Los nombres se citan con `doc_aca()`, que los lee del catálogo.
+RUTA_ACAS_ESTUDIANTE = "Clases/Recursos/ACAs/"
 # Enlace real si existe en carga_academica_2026.json → cursos.proyecto1.meet; si no, placeholder.
 URL_MEET = meet_url("proyecto1", "Proyecto I")
 # URL real del aula desde carga_academica_2026.json → cursos.<key>.cdigital
 # (auditada en CDigital el 2026-08-10). Si falta, `cdigital_url` da el placeholder.
 URL_CDIGITAL = cdigital_url("proyecto1")
 FUENTE_ESP329 = "Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx"
+
+# ---------- Documentos REALES de `Clases/Recursos/ACAs/` ----------
+# Cada enunciado se llama como su ítem del libro de calificaciones:
+# `<ítem> (<peso>) - <qué es>.docx`. Ni un nombre se escribe a mano aquí:
+# `build_acas_estudiantes` los deriva del MISMO catálogo (fechas_entrega_aca: código del
+# ítem + peso) con el que escribe los .docx, así que la slide y la carpeta del estudiante
+# no pueden volver a desincronizarse. Antes esta presentación mandaba a buscar «ACA 1 /
+# ACA 2 / ACA 3» —documentos que ya no existen— y, peor, anunciaba como guía del Quiz
+# (cierra 30/08) el documento del segundo corte.
+_P1_DOCS = {d["item"]: d for d in acas_documentos_for("proyecto1")}
+
+
+def doc_aca(item_id, corto=False):
+    """Nombre del documento de `Recursos/ACAs/` que prepara el ítem, tal cual en disco.
+
+    Sin la extensión. Con ``corto=True`` devuelve solo el prefijo por el que el
+    estudiante lo reconoce en la carpeta («Quiz (25%)», «ACA FINAL (42%)»): es el mismo
+    archivo, sin la cola descriptiva.
+    """
+    nombre = _P1_DOCS[item_id]["filename"].removesuffix(".docx")
+    return nombre.split(" - ")[0] if corto else nombre
+
 
 set_footer("")
 prs = new_prs()
@@ -195,18 +223,23 @@ _i = 11 + _n_cont  # siguiente idx libre
 # auditoría 2026-08-10): ni un peso escrito a mano. El aula NO nombra los componentes
 # «ACA 1 / 2 / 3»: el primer corte es un **Quiz** (cuestionario), el segundo la **ACA 1**
 # (tarea) y el tercero la **ACA FINAL** + autoevaluación (cuestionario) + coevaluación
-# (foro). El documento de `Recursos/ACAs/` que prepara cada ítem se declara en la fila,
-# para que el estudiante encuentre el ítem en el gradebook (renombrado de enunciados:
-# pendiente de material, auditoría §5.1).
+# (foro). El documento de `Recursos/ACAs/` que prepara cada ítem se declara en la fila
+# con su nombre REAL —vía `doc_aca()`, no escrito a mano—, porque el enunciado ya se
+# renombró por ítem del aula y los viejos «ACA 1 / 2 / 3» ya no están en la carpeta.
 QUE_VALORA_P1 = {
     "quiz": "Comprobación individual en CDigital de las sesiones 02–03: problema, "
-            "pregunta, objetivos y justificación (guía: documento «ACA 1»).",
+            "pregunta, objetivos y justificación. Guía escrita: "
+            f"`{doc_aca('quiz', corto=True)}`.",
     "aca1": "Documento del equipo: correcciones + marco referencial — antecedentes, "
-            "teórico, conceptual, contextual y legal (guía: documento «ACA 2»).",
+            "teórico, conceptual, contextual y legal. Enunciado: "
+            f"`{doc_aca('aca1', corto=True)}`.",
     "aca_final": "Anteproyecto completo e integrado: metodología, instrumentos "
-                 "propuestos, cronograma, presupuesto y viabilidad (guía: «ACA 3»).",
-    "auto": "Tu valoración de tu propio proceso y de tu aporte al equipo (individual).",
-    "coev": "Valoración de los aportes de tus pares del equipo: se participa en el foro.",
+                 "propuestos, cronograma, presupuesto y viabilidad. Enunciado: "
+                 f"`{doc_aca('aca_final', corto=True)}`.",
+    "auto": "Tu valoración de tu propio proceso y de tu aporte al equipo (individual). "
+            f"Instructivo: `{doc_aca('auto', corto=True)}`.",
+    "coev": "Valoración de los aportes de tus pares del equipo: se participa en el foro. "
+            f"Instructivo: `{doc_aca('coev', corto=True)}`.",
 }
 _p1_items = entregas_para_grupo("proyecto1")
 table_content(
@@ -325,9 +358,13 @@ box_note_slide(
 _i += 1
 
 # ---------- QUÉ SE PREPARA EN CADA CORTE (cruce ESP329 unidades + ítem del aula) ----------
-# Los documentos de `Recursos/ACAs/` siguen titulados ACA 1 / 2 / 3; el aula califica
-# Quiz · ACA 1 · ACA FINAL. La primera columna publica el puente para que nadie busque
-# en el gradebook un ítem que no existe (pesos y tipo, del modelo).
+# Conviven TRES nomenclaturas y el estudiante tropieza con las tres: el **Syllabus
+# ESP329** numera tres ACAs (1 / 2 / 3), el **aula** califica Quiz · ACA 1 · ACA FINAL,
+# y los **documentos** de `Recursos/ACAs/` se titulan como el ítem del aula. La tabla
+# publica el puente completo para que nadie busque en el gradebook un ítem que no existe
+# ni en su carpeta un archivo que ya no se llama así. Ojo: la «ACA 1» del Syllabus NO es
+# el archivo «ACA 1» de la carpeta —esa es la del segundo corte—; por eso la tercera
+# columna sale de `doc_aca()` (catálogo) y no de un nombre escrito a mano.
 _p1_puente = [
     ("quiz", "ACA 1", "U2–U3 (+alcances): problema, pregunta, objetivos, justificación, "
                       "alcances/limitaciones. Se comprueba en el **Quiz** del aula."),
@@ -337,20 +374,28 @@ _p1_puente = [
                            "anteproyecto FINAL integrado. Se **sube** como ACA FINAL."),
 ]
 table_content(
-    prs, "QUÉ SE PREPARA EN CADA CORTE (Y CÓMO SE LLAMA EN EL AULA)",
-    ["Documento en Recursos/ACAs", "Ítem del aula", "Contenido (unidades ESP329)"],
+    prs, "QUÉ SE PREPARA EN CADA CORTE (Y CÓMO SE LLAMA EN CADA SITIO)",
+    ["En el Syllabus ESP329", "Ítem del aula (CDigital)",
+     "Documento en Recursos/ACAs/", "Contenido (unidades ESP329)"],
     [
         [
             f"**{doc}**",
             f"**{entrega_por_id('proyecto1', item_id).code}** "
             f"({entrega_por_id('proyecto1', item_id).tipo_label.lower()} · "
             f"{entrega_por_id('proyecto1', item_id).weight_pct})",
+            f"`{doc_aca(item_id)}.docx`",
             texto,
         ]
         for item_id, doc, texto in _p1_puente
     ],
-    note="Equipos máx. 3 (AFI). Formato: Plantilla APA CUN – Proyecto de Grado (APA 7). Criterios: coherencia, pertinencia, rigor, fuentes, escritura, integridad y viabilidad (ESP329).",
-    idx=_i, fs_body=11, col_w=[2.6, 2.4, 6.9],
+    note=(
+        "Tres nombres para lo mismo: el Syllabus numera las ACAs, el aula califica "
+        "**Quiz · ACA 1 · ACA FINAL** y tu carpeta titula cada documento como su ítem. "
+        "Busca siempre por el nombre de la tercera columna. Equipos máx. 3 (AFI). "
+        "Formato: Plantilla APA CUN – Proyecto de Grado (APA 7). Criterios: coherencia, "
+        "pertinencia, rigor, fuentes, escritura, integridad y viabilidad (ESP329)."
+    ),
+    idx=_i, fs_body=11, col_w=[1.5, 1.9, 3.4, 5.1],
 )
 _i += 1
 
@@ -366,7 +411,8 @@ content_slide(
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
-        f"**Enunciados ACA (estudiantes):** `{URL_PLANTILLA_ACA}`",
+        f"**Enunciados y guías:** `{RUTA_ACAS_ESTUDIANTE}` — un documento por ítem del "
+        "aula, con su nombre y su peso.",
         "**Biblioteca Virtual CUN + bases:** Google Scholar, Redalyc, SciELO, Dialnet · citas: ZoteroBib / Google Docs.",
         f"**Syllabus fuente:** `{FUENTE_ESP329}` · Entregas oficiales solo por CDigital.",
     ],

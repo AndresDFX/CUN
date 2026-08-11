@@ -227,7 +227,12 @@ VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
         "quiz2":     (date(2026, 8, 28), date(2026, 9, 3), date(2026, 9, 10)),    # cierra S04
         "parcial2":  (date(2026, 9, 4), date(2026, 9, 10), date(2026, 9, 17)),    # cierra S05
         "aca_final": (date(2026, 8, 13), date(2026, 9, 12), date(2026, 9, 20)),   # recepción
-        "quiz3":     (date(2026, 9, 11), date(2026, 9, 17), date(2026, 9, 20)),   # cierra S06
+        # Excepción a REGLA_VENTANAS_DOCENTE: el Quiz 3 NO cierra en día de clase.
+        # La última sesión (S06, 17/09) cae DESPUÉS de la recepción del 12/09, así que
+        # dejarlo en la S06 lo ponía a cerrar después del entregable final del corte.
+        # Decisión del Docente (10/08/2026): todo el corte 3 cierra el 12/09 y la S06
+        # queda como socialización y cierre, sin evaluación.
+        "quiz3":     (date(2026, 9, 11), date(2026, 9, 12), date(2026, 9, 20)),   # con la ACA Final
         "auto":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
         "coev":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
     },
@@ -255,22 +260,29 @@ VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
 
 # Overrides por grupo (mismo formato). TG3: 54450 recibe el 07/11 y cierra notas el
 # 15/11; 54466 y 54467 reciben el 14/11 y cierran el 22/11.
+#
+# Auto y coevaluación cierran en la ÚLTIMA CLASE del grupo, no en el cierre de notas
+# (decisión del Docente, 10/08/2026). Antes cerraban el mismo día del cierre
+# institucional —y en domingo—, así que la coevaluación, que es un FORO y se valora a
+# mano, no tenía ni un día para calificarse y registrarse. Cerrar en día de clase deja
+# 5 días de margen y permite recordarlo en vivo. 54450 termina en la S14 (10/11) porque
+# su curso cierra el 15/11; 54466 y 54467 llegan a la S15 (17/11).
 VENTANAS_POR_GRUPO: dict[str, dict[str, dict[str, tuple[date, date, date]]]] = {
     "tg3": {
         "54450": {
             "aca_final": (date(2026, 8, 11), date(2026, 11, 7), date(2026, 11, 15)),
-            "auto":      (date(2026, 11, 3), date(2026, 11, 15), date(2026, 11, 15)),
-            "coev":      (date(2026, 11, 3), date(2026, 11, 15), date(2026, 11, 15)),
+            "auto":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 15)),   # S14
+            "coev":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 15)),   # S14
         },
         "54466": {
             "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
-            "auto":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
-            "coev":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
+            "coev":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
         },
         "54467": {
             "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
-            "auto":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
-            "coev":      (date(2026, 11, 10), date(2026, 11, 22), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
+            "coev":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
         },
     },
 }

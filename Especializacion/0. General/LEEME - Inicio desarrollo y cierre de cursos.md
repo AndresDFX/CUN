@@ -76,13 +76,13 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
 - [ ] Publicar Meet único en CDigital y en Calendar (sustituir placeholder) · coanfitrión + grabación.
 - [ ] Alistar aula en **CDigital**: bienvenida, syllabus, recursos, plantilla APA, formularios.
 - [ ] Configurar **grupos / elección de grupo** (PDF en `01_Instructivos_AFI_Proyecto_I_II/`) **antes** de habilitar ACA grupales.
-- [ ] Configurar **ACA 1/2/3** + rúbricas (apertura/cierre/peso según cronograma 26ES4).
+- [ ] Configurar los tres ítems calificables — **Quiz** (cuestionario), **ACA 1** y **ACA FINAL** (tareas) — + rúbricas (apertura/cierre/peso según cronograma 26ES4).
 - [ ] Diligenciar / socializar **Acuerdo Pedagógico**: https://forms.gle/EPHb7tbrEJTC6ey77
 - [ ] Rompehielos “Preséntate” (QR/Padlet oficial) + recordatorio formulario de tutorías estudiante.
 - [ ] Importar CSV/ICS de **encuentros** (clases semanales) y, aparte, CSV de **hitos docentes** (mínimo: ACA + AFI) a Calendar (`Proyecto I/2026/54ES4/`).
 - [ ] **10/08/2026:** clase P1 realizada y grabada (anotado en hito de inicio; encuentro en Calendar de Encuentros).
 
-**Fechas 54ES4 (confirmadas en carga académica):** inicio **03/08/2026** · recepción máx. trabajos (portal) **14/11/2026** · cierre notas **22/11/2026**.
+**Fechas 54ES4 (confirmadas en carga académica):** inicio **10/08/2026** · recepción máx. trabajos (portal) **14/11/2026** · cierre notas **22/11/2026**. *(El 03/08/2026 no es el inicio del periodo: es la **apertura del Quiz** en el cronograma de Coordinación, que abre una semana antes de la primera clase.)*
 
 ---
 
@@ -91,10 +91,10 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
 - [ ] Sesión semanal lun **8:00–10:00 pm** (≈60 min contenido + ≈60 min tutoría/taller).
 - [ ] Grabar cada encuentro · coanfitrión Coordinación presente en la serie.
 - [ ] Registrar **cada** sesión/tutoría en el form docente (24h) · pedir a estudiantes su form de asistencia.
-- [ ] Calificar + retroalimentar cada ACA **antes** de la fecha límite de nota:
-  - ACA1 cierra 30/08 · nota máx. **07/09**
-  - ACA2 cierra 04/10 · nota máx. **12/10**
-  - ACA3 cierra 08/11 · nota máx. **16/11**
+- [ ] Calificar + retroalimentar cada ítem **antes** de la fecha límite de nota (nombres del aula en CDigital; la numeración ACA1/ACA2/ACA3 del Syllabus ESP329 ya no se usa):
+  - **Quiz** (cuestionario, 25% · corte 1) cierra 30/08 · nota máx. **07/09**
+  - **ACA 1** (tarea, 25% · corte 2) cierra 04/10 · nota máx. **12/10**
+  - **ACA FINAL** (tarea, 42% · corte 3) cierra 08/11 · nota máx. **16/11**
 - [ ] Equipos ≤3 conformados a más tardar semana 3 (en CDigital).
 - [ ] Habilitar coevaluación (09–15/11) y autoevaluación (16–22/11).
 - [ ] Registro de sesiones AFI tras cada clase (checklist del guión; en hitos Calendar hay solo 1 recordatorio a mitad de periodo).
@@ -106,7 +106,7 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
 - [ ] Todas las calificaciones en CDigital a más tardar **22/11/2026** (fecha oficial Coordinación).
 - [ ] Descargar/conservar evidencias **antes** del cierre del aula (después puede no haber reingreso).
 - [ ] **Informe de cierre** Proyecto I/II: https://docs.google.com/forms/d/e/1FAIpQLSej5yUK3b0p617XhccE7GZrm2C4ra3lk-hzfPTx43uJM_xAmg/viewform · plazo orientativo institucional **3 días hábiles** tras el cierre (Manual P1).
-- [ ] Verificar que no queden entregas sin nota ni equipos sin aval metodológico documentado (vía ACA3).
+- [ ] Verificar que no queden entregas sin nota ni equipos sin aval metodológico documentado (vía **ACA FINAL**).
 
 ---
 

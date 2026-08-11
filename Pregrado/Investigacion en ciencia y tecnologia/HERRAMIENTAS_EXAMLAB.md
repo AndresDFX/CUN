@@ -28,7 +28,9 @@
 > | «La tabla EV del syllabus está truncada; hay que decidir el desglose» | El aula **ya trae el desglose completo**. No hay nada que decidir; la regla intermedia «cada ACA vale el 100% de su corte» **quedó anulada** |
 > | (no lo mencionaba) | **Autoevaluación (1,6%)** y **coevaluación (1,6%, FORO)** pesan en este curso. La coevaluación deja de ser una brecha «sin nota» de ExamLab: se cumple en el foro de CDigital |
 >
-> **Ventanas reales** (fuente: `config/cursos/fechas_entrega_aca.py`): Quiz 1 → **20/08** (S02) · Parcial 1 → **27/08** (S03) · Quiz 2 → **03/09** (S04) · Parcial 2 → **10/09** (S05) · **ACA Final → 12/09** (recepción) · Quiz 3 → **17/09** (S06) · Autoevaluación y Coevaluación 17/09 → **20/09**.
+> **Ventanas reales** (fuente: `config/cursos/fechas_entrega_aca.py`): Quiz 1 → **20/08** (S02) · Parcial 1 → **27/08** (S03) · Quiz 2 → **03/09** (S04) · Parcial 2 → **10/09** (S05) · **ACA Final → 12/09** (recepción) · **Quiz 3 → 12/09** · Autoevaluación y Coevaluación 17/09 → **20/09**.
+>
+> **Ojo con el Quiz 3:** se adelantó del 17/09 al **12/09** (decisión del Docente, 10/08/2026). **Todo el corte 3 cierra el mismo sábado 12/09** y la **S06 (17/09) queda sin evaluación**: es socialización y cierre. La última clase con contenido evaluable es la **S05 (10/09)**.
 >
 > **Qué cambia para el montaje:** el **Banco de preguntas** deja de ser «un extra formativo» y pasa a ser el insumo directo de los dos parciales y los tres quices del aula — la necesidad #3 de este documento es ahora la más urgente, y su primer vencimiento es el **20/08**. La nota oficial sigue siendo la del cuestionario de CDigital.
 
@@ -75,8 +77,8 @@ Las 11 necesidades del análisis del corpus, más tres que aparecieron al cruzar
 | 11 | Lienzo de diagramación: espina de pescado y árbol de problemas (S04) | Pizarra de sesión (docente) + pregunta `diagrama` (estudiante) | **Con workaround** — ver §5.1 |
 | 12 | Matriz estructurada (síntoma/evidencia/consecuencia; matriz de fuentes) | Encuesta `mixed` con un campo por columna, o tabla markdown en el foro | **Con workaround** — ver §5.2 |
 | 13 | Rúbrica visible por criterios y niveles | Tabla markdown en el enunciado (`MarkdownInline` la renderiza) | **Con workaround** — ver §5.3 |
-| 14 | Gestor de referencias / ayuda de citación APA (ACA 3: matriz de fuentes) | — | **No existe** — §6.1 |
-| 15 | Historial de versiones del documento acumulativo (ACA 1→2→3) | — | **No existe** — §6.2 |
+| 14 | Gestor de referencias / ayuda de citación APA (**ACA Final**: matriz de fuentes) | — | **No existe** — §6.1 |
+| 15 | Historial de versiones del artículo, que se construye acumulativamente S01→S05 | — | **No existe** — §6.2 |
 | 16 | Similitud entre entregas de prosa | Detector de plagio (cabe por escala, pero el prompt es de código) | **Con workaround caro** — §6.3 |
 
 **Recomendación:** montar el **núcleo de 4 piezas** antes del 13/08 (curso + 20 cuentas + material por sesión + check-in), encender **Tutor IA y foros** en la semana 1, y dejar el banco de preguntas para la S03 —que es justo donde el syllabus pide la prueba parcial que no existe—. Todo lo demás, fuera de este bloque.
@@ -110,13 +112,15 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 
 ---
 
-### Sesión 01 — 13/08 (jue) — U1–U2: Presentación del Syllabus · fundamentos del método científico
+### Sesión 01 — 13/08 (jue) — Encuadre: Presentación del curso · docente · estudiantes · ACAs
+
+> **Sesión de encuadre: no dicta tema.** Se presenta el curso, el Docente, los estudiantes y los ítems del aula. La **U1–U2** (Syllabus y producto final · fundamentos del método científico) pasa a **lectura autónoma** y se retoma al abrir la Sesión 02. El contenido curricular arranca en la S02.
 
 | Fase (min) | Actividad del guion | Herramienta | |
 |---|---|---|---|
 | Encuadre (12) | Rompehielos con post-its: nombre + expectativa + idea de tema | **Encuesta `mixed`** con 2 campos abiertos ("¿qué esperas del curso?", "¿sobre qué te gustaría investigar?"). El nombre lo pone el perfil. El docente ve las 20 respuestas **agrupadas por campo y con autor** | **[L]** |
-| Exposición (16) | Ciencia vs. tecnología vs. investigación; etapas del método | **Contenidos**: la PPTX de la sesión, subida al tablero y asignada a la S01 | **[L]** |
-| Modelación (12) | Modelar en pantalla las etapas del método | **Pizarra de sesión** (Excalidraw), proyectada por Meet. Queda guardada y el alumno la consulta después | **[L]** |
+| Exposición (16) | Mapa de las 6 sesiones · los 8 ítems del aula con peso y ventana · acuerdos de trabajo | **Contenidos**: la PPTX de la sesión, subida al tablero y asignada a la S01 | **[L]** |
+| Lectura autónoma U1–U2 | Ciencia vs. tecnología vs. investigación; etapas del método | **Contenidos**: `Lectura autonoma - Sesion 01.txt` + los PDF de acceso abierto, asignados a la S01. Se retoma al abrir la S02 | **[L]** |
 | Taller (16) | Ficha: tema tentativo + por qué importa + 1 fuente exploratoria → `S01_TemaTentativo_Apellido` | **Encuesta `mixed`** de 3 campos (uno por dato). Si se quiere que lleve nota, **Taller** con 3 preguntas `abierta` + rúbrica | **[L]** |
 | Cierre (8) | 2–3 estudiantes comparten 30 s | Sin herramienta — es conversación en Meet | — |
 | Asistencia | — | **Check-in** con código de 6 dígitos por el chat de Meet, o marcar a mano (son 20) | **[L]** |
@@ -157,7 +161,9 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 
 ---
 
-### Sesión 04 — 03/09 (jue) — U6: Identificación de problemas y pregunta de investigación
+### Sesión 04 — 03/09 (jue) — U6 + U8: Problema y pregunta · bases de datos y gestores de citas · *(cierra **Quiz 2**, 9%)*
+
+> **Sesión de dos mitades (temario adelantado 2026-08-11).** U8 (bases de datos CUN y gestores de citas) subió desde la vieja S06 para juntarse con U6: la pregunta y las fuentes que la sostienen se trabajan el mismo día, porque el corte 3 entero cierra el **12/09** y la S06 quedó como socialización. El taller es **uno solo, de ~24 min**: pregunta + tres fuentes citadas.
 
 **La sesión que más pide herramienta, y la que tiene la brecha más específica del curso.** El entregable pide literalmente *"diagrama (espina o árbol)"*, y el guion manda *"Abrir Excalidraw (sin cuenta) o dibujar la espina en Docs"*.
 
@@ -167,6 +173,9 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 | Exposición (14) | Espina de pescado, árbol de problemas, método de las 3D; preguntas cerradas/abiertas/compuestas; fuentes oficiales confiables | Contenidos | **[L]** |
 | **Modelación (12)** | El docente dibuja la espina en vivo | **Pizarra de sesión** (Excalidraw embebido, sin cuenta ni instalación → cumple la restricción "solo gratis + nube"). **El catálogo de 44 figuras no trae espina ni árbol**: el docente dibuja la plantilla **una vez** con rectángulo + línea + texto, y la **duplica** para cada uso | **[W]** — §5.1 |
 | **Taller (20)** | 8–12 líneas de problema + pregunta en una frase + **diagrama** → `S04_ProblemaPregunta_Apellido` | **Taller con pregunta tipo `diagrama`**: cada estudiante tiene su propio lienzo, persistido, con rúbrica y puntaje, calificable. Para el **árbol de problemas** el editor soporta jerarquías; la **espina de pescado** no tiene forma nativa | **[W]** — §5.1 |
+| **Segunda mitad — U8** | Buscador ≠ base de datos; operadores de búsqueda; el filtro de 60 segundos; citar en APA 7 con **ZoteroBib** | **Contenidos `.md`** con los operadores, consultable mientras se busca. **Alto valor si la modelación se graba una vez** (`Video`): el flujo bases CUN → ZoteroBib → Docs se repite en los 4 cursos del docente y come 12 min cada vez | **[L]** |
+| Las tres fuentes citadas del taller | Tres preguntas `abierta`, una por fuente, con la estructura pedida en el enunciado | **⚠️ Brecha §6.1:** ExamLab **no tiene gestor de referencias ni ayuda de citación APA**. Se recogen como texto; nada valida el formato, nada detecta duplicados, nada importa un DOI. ZoteroBib sigue siendo externo | — |
+| Hito | **Cierra Quiz 2** (cuestionario · 9% · corte 2) | Actividad `is_external` con enlace a CDigital. Llega hasta la **S03**: lo de hoy **no** entra | **[L]** |
 | Cierre (8) | 2–3 comparten | — | — |
 | Entre clases | — | Foro de la S04: los diagramas se comentan entre pares | **[L]** |
 
@@ -174,33 +183,37 @@ Convención: **[L]** lista sin trabajo previo · **[W]** con workaround (§5) ·
 
 ---
 
-### Sesión 05 — 10/09 (jue) — U7: Formulación del planteamiento del problema
+### Sesión 05 — 10/09 (jue) — U7 + U10–12: Planteamiento del problema · marco teórico y revisión de literatura · *(cierra **Parcial 2**, 21%)*
+
+> **La otra sesión de dos mitades.** U10–U12 (marco teórico, posturas y revisión de literatura) bajó desde la vieja S06: es la **última clase con contenido evaluable** del curso, porque la ACA Final y el Quiz 3 cierran el **12/09**. Taller único de ~24 min: planteamiento + primera página de marco.
 
 | Fase (min) | Actividad del guion | Herramienta | |
 |---|---|---|---|
 | Encuadre (10) | Recoger el diagrama de la S04 | Entregas del taller de la S04 (visibles con nota y feedback) | **[L]** |
 | Exposición (14) | ¿Estado actual? ¿evidencias visibles? ¿causas/implicaciones? ¿qué hacer? ¿posibles soluciones? | Contenidos | **[L]** |
 | **Modelación (12)** | **Tabla síntoma / evidencia / consecuencia** antes de pasar a prosa | Dos caminos: **(a)** encuesta `mixed` con 3 campos —el docente lee las 20 en columna—; **(b)** el estudiante pega la tabla en markdown en un **hilo del foro**, donde **sí se renderiza como tabla real** con bordes | **[W]** — §5.2 |
-| Taller (22) | Planteamiento de 1–1.5 páginas → `S05_Planteamiento_Apellido` | Google Docs (plantilla APA) + **Tutor IA** con el criterio del guion cargado + rúbrica visible | **[W]** |
-| Hito | **Cierra Quiz 3 (4%)**; la **ACA Final** (32,8%) cerró el **12/09** y las ventanas de **autoevaluación y coevaluación** corren 17→20/09 | Actividad `is_external` con enlace a CDigital. Recordar en clase que la coevaluación es un **foro** de CDigital | **[L]** |
+| **Segunda mitad — U10–U12** | Constructos que salen de la propia pregunta; posturas teóricas cuando dos autores no coinciden; la **ficha de lectura** (autor · año · aporte · relación con tu pregunta); cómo se redacta un párrafo de marco | **Taller con preguntas `abierta`**, una ficha por pregunta, cada una con su estructura y su rúbrica en el enunciado. La IA califica ficha por ficha contra el mismo criterio | **[L]** |
+| Taller (24) | Planteamiento de 1–1.5 páginas + primera página de marco → `S05_Planteamiento_Apellido` | Google Docs (plantilla APA) + **Tutor IA** con el criterio del guion cargado + rúbrica visible | **[W]** |
+| Hito | **Cierra Parcial 2** (cuestionario · 21% · corte 2) — el ítem más pesado del corte. Y es la **última clase antes de que cierre todo el corte 3 el 12/09**: **ACA Final** (32,8%) y **Quiz 3** (4%) el mismo sábado; las ventanas de **autoevaluación y coevaluación** corren 17→20/09 | Actividad `is_external` con enlace a CDigital. Avisar las tres fechas hoy, porque la S06 ya no evalúa. Recordar que la coevaluación es un **foro** de CDigital | **[L]** |
 
 > ⚠️ **Ojo con el camino (b):** una respuesta de taller se muestra en texto plano monoespaciado —los pipes de la tabla salen crudos—. En el **foro** sí renderiza como tabla. Si la tabla se quiere ver formateada, va al foro; si se quiere que lleve nota, va al taller y se lee cruda.
 
 ---
 
-### Sesión 06 — 17/09 (jue) — U8 + U10–12: Bases de datos CUN · gestores · marco teórico y revisión
+### Sesión 06 — 17/09 (jue) — Cierre: Socialización del artículo y cierre del curso
 
-Es la sesión más cargada (cuatro unidades comprimidas en una hora) y la única **sin nombre de archivo de entrega** en su guion.
+> **Sesión sin evaluación: es socialización y cierre.** Todo el corte 3 cerró el **12/09** (ACA Final 32,8% + Quiz 3 4%), cinco días antes. El Quiz 3 se adelantó del 17/09 al 12/09 por decisión del Docente (10/08/2026) justamente para dejar esta clase limpia. Hoy no se recibe nada nuevo: el artículo ya se entregó y se sostiene en voz alta.
 
 | Fase (min) | Actividad del guion | Herramienta | |
 |---|---|---|---|
-| Encuadre (10) | Estado del planteamiento | Alerta temprana | **[L]** |
-| Exposición (16) | EBSCO, SciELO, Redalyc, Latindex; gestores (Mendeley, RefWorks, ZoteroBib); posturas teóricas; 3D | Contenidos | **[L]** |
-| **Modelación (12)** | Buscar en las bases CUN → exportar a ZoteroBib → pegar en Docs | Compartir pantalla. **Alto valor si se graba una vez** y se sube a la biblioteca de videos: el flujo se repite en los 4 cursos del docente y come 12 min cada vez | **[L]** |
-| **Taller (22)** | **5 fichas de lectura** + 1 página de marco/revisión | **Taller con 5 preguntas `abierta`** (una ficha por pregunta), cada una con la estructura pedida en el enunciado (autor · año · aporte · relación con tu pregunta) y su rúbrica. La IA califica ficha por ficha. **Es el mejor encaje del módulo de talleres en todo el curso** | **[L]** |
-| Cierre (8) | — | Definir y comunicar el nombre del archivo que falta: `S06_FichasMarco_Apellido` (⚠️ inferido por analogía con S01–S05) | — |
+| Encuadre (10) | Trazabilidad: qué sesión produjo qué sección del artículo | **Taller checklist** — una fila por sección, con su estado. Hace visible lo que quedó flojo sin pedir texto nuevo | **[L]** |
+| Exposición (14) | Cómo se socializa un artículo en cuatro minutos; las cinco preguntas previsibles; la fórmula de las tres frases para retroalimentar | **Contenidos** + **Reto en vivo** con las cinco preguntas, que quedan en el **Banco de preguntas** y sirven a los semestres siguientes | **[L]** |
+| **Taller (25)** | **Ronda de socialización**: 4 min por estudiante + retro de los pares con la rúbrica de la ronda | Se mantiene **en vivo** (son 20). Para quien no alcance, **Proyecto con video de sustentación**: graba los 4 min, pega el enlace y el docente registra factor y nota. **⚠️ Brecha:** no hay cronómetro proyectable con la consigna visible | **[L]** |
+| Retro entre pares | La fórmula de las tres frases | **Foro, un hilo por estudiante**, con la fórmula fijada como respuesta oficial. **⚠️ Brecha §6:** no hay pauta calificable, ni asignación de quién revisa a quién, ni registro de que la revisión ocurrió | **[L]** |
+| Hito | **Autoevaluación** (1,6%) y **Coevaluación** (1,6%, **foro**): ventana **17→20/09**, hasta el cierre de notas | Actividad `is_external` ×2. Se diligencian en CDigital, no acá. Es lo único que queda por registrar del curso | **[L]** |
+| Cierre (8) | Del artículo al semillero y al trabajo de grado | **Informes** — consolidado del curso con las notas ya calculadas, exportable a `.docx` | — |
 
-> **Brecha específica de esta sesión:** ExamLab **no tiene gestor de referencias ni ayuda de citación APA**. Las 5 fichas se recogen como texto; nada valida el formato APA, nada detecta duplicados, nada importa un DOI. Es la brecha §6.1 y afecta también al ACA 3.
+> **Brecha que arrastra el curso:** ExamLab **no tiene gestor de referencias ni ayuda de citación APA**. Las fichas de lectura de la S05 y las tres fuentes citadas de la S04 se recogen como texto; nada valida el formato APA, nada detecta duplicados, nada importa un DOI. Es la brecha §6.1 y afecta directamente a la **ACA Final**.
 
 ---
 
@@ -264,7 +277,7 @@ En pregrado esto vale doble: el estudiante que no habla en Meet frente a 20 comp
 
 **Límites:** el foro **no se califica** (no hay rúbrica ni conteo de participación hacia el gradebook) y **no acepta adjuntos** — solo texto (que sí renderiza markdown con tablas).
 
-### 4.5 Alerta temprana + progreso de material — la señal antes del ACA 1
+### 4.5 Alerta temprana + progreso de material — la señal antes del primer cierre
 
 Cada estudiante acumula **motivos** discretos y verificables: inasistencia, actividades reprobadas, no entregadas, promedio bajo. 0 motivos = sin riesgo, 1 = en observación, **2 o más = en riesgo**. Que hagan falta dos señales independientes para el rojo es deliberado: evita que un instrumento duro pinte medio curso. Solo lista a quienes requieren atención.
 
@@ -272,7 +285,7 @@ Tres reglas de justicia en la asistencia que conviene conocer: **tarde cuenta co
 
 En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la card del curso muestra *"Seguías en: …"*.
 
-**Cómo se usa acá:** hay **6 hitos observables antes del primer 30%** (`S01_…` a `S06_…`), y un error listado en los 6 guiones: *"Avanzar contenido sin verificar el estado del avance previo"*. Revisar Alerta temprana **el miércoles antes de cada jueves** es la rutina que convierte esos hitos en acción. Con 6 semanas, detectar en el ACA 1 que alguien no arrancó ya es tarde.
+**Cómo se usa acá:** hay **6 hitos observables antes del primer 30%** (`S01_…` a `S06_…`), y un error listado en los 6 guiones: *"Avanzar contenido sin verificar el estado del avance previo"*. Revisar Alerta temprana **el miércoles antes de cada jueves** es la rutina que convierte esos hitos en acción. Con 6 semanas, detectar en la **ACA Final** que alguien no arrancó ya es tarde.
 
 **Límite importante:** **no llega sola.** No hay notificación automática ni persistencia del nivel de riesgo — el docente tiene que abrir el módulo de estadísticas. Es un hábito semanal, no una alerta.
 
@@ -307,7 +320,7 @@ En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la c
 
 **Recomendación para la S04:** camino A para la modelación (docente) + camino B **solo para el árbol de problemas** en el taller. Para la espina, dejar el camino C explícito en la consigna: *"dibújala en Excalidraw y sube la imagen"*.
 
-### 5.2 Matriz estructurada (S05 y ACA 3)
+### 5.2 Matriz estructurada (S05 y ACA Final)
 
 **Lo que falta:** no hay un tipo de pregunta tabular. El estudiante no puede llenar una grilla de N filas × M columnas.
 
@@ -316,7 +329,7 @@ En paralelo, el **progreso de material** dice *"abriste N de M archivos"* y la c
 | Necesidad | Workaround | Costo |
 |---|---|---|
 | **Tabla síntoma / evidencia / consecuencia** (S05, modelación) | **Encuesta `mixed`** con 3 preguntas abiertas, una por columna. El docente lee **todas las respuestas de una columna juntas, con autor**. Una ficha de 3 campos son 3 preguntas | Armar la encuesta: 10 min. **No lleva nota ni entra al gradebook** |
-| **Matriz de fuentes** del ACA 3 (autor, año, aporte, relación con tu pregunta) | **Taller con una pregunta `abierta` por fuente**, con la estructura pedida en el enunciado. 5 fuentes = 5 preguntas, cada una con rúbrica y calificable | Escribir el enunciado una vez. Sí lleva nota |
+| **Matriz de fuentes** de la **ACA Final** (autor, año, aporte, relación con tu pregunta) | **Taller con una pregunta `abierta` por fuente**, con la estructura pedida en el enunciado. 5 fuentes = 5 preguntas, cada una con rúbrica y calificable | Escribir el enunciado una vez. Sí lleva nota |
 | **Tabla que el estudiante quiere que se vea como tabla** | Pegarla en **markdown en un hilo del foro** → renderiza con bordes | Cero, pero fuera del gradebook |
 
 **Lo que NO funciona:** pedir la tabla markdown dentro de una respuesta de taller. Ahí se muestra en texto plano monoespaciado y salen los pipes crudos.
@@ -357,9 +370,9 @@ La tabla del Syllabus venía truncada en el origen (llega hasta `CORTE 1 / EV 01
 
 No hay nada: ni biblioteca de referencias por estudiante, ni importación de DOI/BibTeX/RIS, ni formateo de cita, ni detección de duplicados, ni validación de formato APA. Lo único parecido es un campo de texto libre "Bibliografía sugerida" en el panel del Admin, que es una sola cadena por asignatura del Syllabus institucional.
 
-**Impacto directo en este curso:** el ACA 3 (40%) pide una **matriz de fuentes** (autor, año, aporte, relación con tu pregunta); la S03 pide 3 referencias APA; la S06 pide 5 fichas de lectura y enseña gestores. **Ninguna de esas cosas tiene apoyo en la plataforma.** Se recogen como texto y se revisan a ojo.
+**Impacto directo en este curso:** la **ACA Final** (32,8%) pide una **matriz de fuentes** (autor, año, aporte, relación con tu pregunta); la S03 pide 3 referencias APA; la **S04** enseña los gestores y pide 3 fuentes citadas, y la **S05** pide las fichas de lectura. **Ninguna de esas cosas tiene apoyo en la plataforma.** Se recogen como texto y se revisan a ojo.
 
-**Qué se hace mientras tanto:** seguir con ZoteroBib (zbib.org), que ya está en la lista de herramientas permitidas del curso, y usar el taller de 5 preguntas `abierta` de la S06 como contenedor con rúbrica.
+**Qué se hace mientras tanto:** seguir con ZoteroBib (zbib.org), que ya está en la lista de herramientas permitidas del curso, y usar el taller de fichas con preguntas `abierta` de la S05 como contenedor con rúbrica.
 
 ### 6.2 Historial de versiones del documento acumulativo — **no existe**
 
@@ -409,7 +422,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 | **R7** | **La IA depende de configuración institucional**: una clave de proveedor activa y el modo de procesamiento. Si está en modo diferido, la generación con IA se encola en vez de responder en clase | **Medio** | Verificar **antes** del 13/08. El Tutor IA responde siempre en vivo; lo que se encola es la generación de contenido y preguntas — hacerla fuera de clase |
 | **R8** | **Un PDF escaneado es invisible al Tutor IA.** Si el material clave del curso llega como imagen, el tutor responde sin él | **Medio** | Revisar los PDFs del corpus: si al seleccionar texto no se selecciona nada, no tiene capa de texto. Subir en su lugar el `.docx`/`.pptx` original |
 | **R9** | **La espina de pescado no tiene camino limpio** por estudiante dentro de la plataforma (§5.1) | **Medio** | Probar el editor de diagramas con un árbol de ejemplo **antes del 03/09**. Si no convence, dejar la espina en Excalidraw suelto y decirlo en la consigna |
-| **R10** | **El ACA 3 pide matriz de fuentes y no hay gestor de referencias** (§6.1) | **Medio** | Seguir con ZoteroBib. Recoger la matriz como taller de 5 preguntas `abierta` con rúbrica |
+| **R10** | **La ACA Final pide matriz de fuentes y no hay gestor de referencias** (§6.1) | **Medio** | Seguir con ZoteroBib. Recoger la matriz como taller de 5 preguntas `abierta` con rúbrica |
 | **R11** | **Cuatro cuestionarios en cuatro semanas seguidas** (20/08 · 27/08 · 03/09 · 10/09) en un curso de 6 sesiones, con el 60% de la nota en juego | **Medio** | Calificar y devolver cada uno **antes** del siguiente; usar el Banco de preguntas para reutilizar y corregir rápido. Es decisión docente, no de herramienta |
 | **R12** | **Reto en vivo:** nadie entra después de que arranca, el correo debe ser el institucional exacto, y un dispositivo con la hora desfasada ve las preguntas ya vencidas | **Bajo** | Dar 2 min de lobby. Anunciar "usá tu correo `@cun.edu.co`". Si a alguien "no le cargan las preguntas", revisar la hora de su teléfono |
 | **R13** | **El OAuth de calendario puede estar bloqueado** por la política de la CUN para apps de terceros | **Bajo** | Probarlo primero. Si no conecta, el estudiante se suscribe a la URL `.ics` (no requiere permisos institucionales) |
@@ -461,8 +474,8 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 - [ ] **Taller sin proctoring** con varios intentos para la S03, como práctica de las 64 h.
 - [ ] **Probar el editor de diagramas** con un árbol de problemas antes del 03/09 (R9). Decidir camino B o C.
 - [ ] Preparar la **pizarra plantilla** de espina de pescado y duplicarla.
-- [ ] **Taller de 5 fichas** con rúbrica para la S06.
-- [ ] Definir y comunicar el nombre de archivo faltante de la S06 (⚠️ inferido: `S06_FichasMarco_Apellido`).
+- [ ] **Taller de fichas de lectura** con rúbrica para la **S05**.
+- [ ] Confirmar que la **S06** no pide entregable: es socialización y cierre, y todo el corte 3 cerró el 12/09.
 - [ ] Si se va a usar detección de similitud: **reescribir el prompt de plagio** con marcadores de prosa (§6.3) y verificar que el caso de uso esté disponible para el docente.
 
 **Cierre del bloque**
@@ -485,7 +498,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 | `Manual del Docente - Investigacion Ciencia y Tecnologia.md` | Fechas de cierre y de límite de nota por ACA |
 | `Guiones/Sesion 01–06 ….md` | Estructura de 60 min, actividades por fase, nombres de entregable, tabla de remediación |
 | `Clases/Sesion 01–06 …/Presentacion.pptx` (6) · `Presentacion del Curso….pptx` | Contenido visible al estudiante; evidencia de las slides idénticas |
-| `Clases/Recursos/ACAs/ACA 1, 2, 3 ….docx` | Consignas, checklists, restricción "solo gratis + nube", "entrega oficial: solo por CDigital" |
+| `Clases/Recursos/ACAs/*.docx` — un documento por ítem del aula (guía de cada quiz y parcial, `ACA Final (32,8%) - Articulo de nuevo conocimiento.docx`, instructivos de auto y coevaluación) | Consignas, checklists, restricción "solo gratis + nube", "entrega oficial: solo por CDigital" |
 | `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` | **Estructura real del aula**: ítems, tipos, pesos y ventanas (fuente de verdad de la evaluación) |
 | `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` | **Estructura real del aula**: ítems, tipos, pesos y ventanas (fuente de verdad de la evaluación) |
 | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Formato obligatorio (y su origen de posgrado) |
@@ -509,7 +522,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 ### Marcas de este documento
 
 - ⚠️ señala **inferencias** y **contradicciones del material de origen**, no hechos verificados.
-- Los tres puntos explícitamente inferidos son: el nombre de archivo faltante de la S06, el comportamiento del editor de diagramas con árboles y mapas (no probado con un render real), y la propuesta de 6 sesiones autónomas semanales como contenedor de las 26 h no asignadas.
+- Los tres puntos explícitamente inferidos son: el nombre de archivo del entregable de la S05, el comportamiento del editor de diagramas con árboles y mapas (no probado con un render real), y la propuesta de 6 sesiones autónomas semanales como contenedor de las 26 h no asignadas.
 
 ---
 

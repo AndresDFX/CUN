@@ -24,7 +24,7 @@
 
 > **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**8 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
 > ⚠️ **Este curso tiene grupos con ventanas distintas.** La tabla de arriba es la del grupo de referencia (**54466**). En los demás cambia así:
-> - **Grupo 54450:** **Autoevaluación** cierra antes del próximo encuentro; **Coevaluación** cierra antes del próximo encuentro; **ACA Final** ya cerró.
+> - **Grupo 54450:** **Autoevaluación** cierra hoy; **Coevaluación** cierra hoy; **ACA Final** ya cerró.
 > Antes de anunciar una fecha, ábrala en el libro de calificaciones **del aula de ese grupo**: es la única fuente que no se equivoca de grupo.
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 

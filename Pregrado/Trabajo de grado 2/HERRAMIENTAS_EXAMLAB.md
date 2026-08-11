@@ -99,7 +99,7 @@ Las 11 necesidades son las declaradas en el análisis del curso, más la de las 
 | — | Gestor de referencias y ayuda de citación APA | — | **No existe** |
 | — | Rúbrica como **dato** (criterios × niveles × puntaje) | — | **No existe** |
 | — | Revisión por pares con rúbrica y registro *(la **coevaluación con nota** del curso —1,6%— **sí existe**, pero es un **foro de CDigital**)* | — | **No existe en ExamLab** |
-| — | Historial de versiones del documento (ACA1→2→3) | — | **No existe** |
+| — | Historial de versiones del avance, que se construye acumulativamente S01→S11 | — | **No existe** |
 | — | Que el **estudiante** cree una encuesta (sesión 08) | — | **No existe (bloqueado en RLS)** |
 | — | Cronómetro proyectable con consigna y criterio a la vista | — | **No existe** |
 
@@ -304,8 +304,8 @@ Una entrega por actividad, **sobrescrita**. No hay tabla de versiones ni de hito
 como una sola actividad reentregable, la V2 pisaría la V1, su retro y su feedback.
 
 **Impacto:** la **ACA Final** integra todo el avance del periodo y exige incorporar la retroalimentación de los
-anteriores. **No hay forma de ver si se incorporó.** Workaround: tres entidades separadas (ACA1, ACA2,
-ACA3) en tres cortes — se conservan las tres notas y las tres retros, se pierde el diff.
+anteriores. **No hay forma de ver si se incorporó.** Workaround: una entidad por versión (una actividad
+por corte) en los tres cortes — se conservan las tres notas y las tres retros, se pierde el diff.
 
 ### 6.5 Que el estudiante cree una encuesta — **no existe, y está bloqueado en la base**
 

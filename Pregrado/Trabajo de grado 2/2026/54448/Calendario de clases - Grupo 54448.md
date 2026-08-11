@@ -1,9 +1,9 @@
 # Calendario — Trabajo de Grado 2 — Modelos de Innovación (Ing. Sistemas)
 **Grupo 54448** · Horario: **Lunes, 5:00 pm – 6:00 pm (1 hora sincrónica)**
 
+> **Este archivo es de consulta: no crea eventos.** Los encuentros se crean con `PRINCIPAL - Crear encuentros con invitados.gs` (Apps Script), que es lo único que añade a los estudiantes como invitados y pone el Meet. Paso a paso en `LEEME - Crear los eventos de Calendar.md`.
 > **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.
 > Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).
-> CSV/ICS **sin invitados** estudiantes. Description corta; Location vacío hasta Meet real.
 
 | # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |
 |---|---|---|---|---|
@@ -26,15 +26,12 @@
 ## Fechas institucionales
 - **54448** (26V04): inicio 10/08/2026 · recepción 14/11/2026 · cierre **22/11/2026**
 - Cierre considerado en este archivo Calendar: **22/11/2026**
-- Eventos generados: **15**
-- Archivos: `Encuentros TRABAJO DE GRADO 2 - Grupo 54448 - Importar a Calendar.csv` / `Encuentros TRABAJO DE GRADO 2 - Grupo 54448 - Importar a Calendar.ics`
+- Sesiones del periodo: **15**
 
-## Cómo importar (sin invitados · description corta)
-1. Google Calendar → Configuración → Importar → `.ics` o `.csv`.
-2. **No incluye estudiantes** (Pregrado no lleva Guests/ATTENDEE).
-3. Location vacío: tras importar, añade Meet (mismo enlace en toda la serie) y publícalo en CDigital.
-4. Subject corto: grupos - asignatura - Sesion NN. Description = una línea con el tema.
-5. Placeholder Meet de referencia (no va en el ICS): [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2].
+## Cómo se crean estos eventos
+1. **Flujo principal:** `PRINCIPAL - Crear encuentros con invitados.gs` en esta misma carpeta → Apps Script → `verificar()` y luego `crearEncuentros()`. Es lo único que añade a los estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. Instrucciones: `LEEME - Crear los eventos de Calendar.md`.
+2. **Respaldo (`RESPALDO sin invitados - Encuentros TRABAJO DE GRADO 2 - Grupo 54448.csv` / `RESPALDO sin invitados - Encuentros TRABAJO DE GRADO 2 - Grupo 54448.ics`):** ⚠️ Google Calendar **descarta los invitados** al importar `.ics`/`.csv`. Estos archivos solo llevan fechas y títulos; úsalos si necesitas el cronograma en un calendario que no sea Google, no para crear la serie del curso.
+3. Enlace de Meet: [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]. No va dentro del respaldo; lo pone el `.gs`.
 
 ## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem
 

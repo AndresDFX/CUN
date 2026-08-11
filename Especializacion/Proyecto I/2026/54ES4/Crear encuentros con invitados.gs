@@ -101,7 +101,7 @@ var SESSIONS = [
   },
   {
     subject: "54ES4 - Proyecto I - Sesion 04",
-    description: "Sesión 04 — Retroalimentación ACA1 · Antecedentes de investigación\nForm tutorías: https://forms.gle/oZ8xCYiUo3KEWr1d9\nCoanfitrión: investigacion_especializaciones@cun.edu.co",
+    description: "Sesión 04 — Retroalimentación del Quiz · Antecedentes de investigación\nForm tutorías: https://forms.gle/oZ8xCYiUo3KEWr1d9\nCoanfitrión: investigacion_especializaciones@cun.edu.co",
     start: "2026-09-07T20:00:00",
     end: "2026-09-07T22:00:00"
   },
@@ -131,7 +131,7 @@ var SESSIONS = [
   },
   {
     subject: "54ES4 - Proyecto I - Sesion 09",
-    description: "Sesión 09 — Población/muestra, técnicas e instrumentos (propuestos)\nForm tutorías: https://forms.gle/oZ8xCYiUo3KEWr1d9\nCoanfitrión: investigacion_especializaciones@cun.edu.co",
+    description: "Sesión 09 — Devolución de la ACA 1 · población, muestra e instrumentos propuestos\nForm tutorías: https://forms.gle/oZ8xCYiUo3KEWr1d9\nCoanfitrión: investigacion_especializaciones@cun.edu.co",
     start: "2026-10-19T20:00:00",
     end: "2026-10-19T22:00:00"
   },

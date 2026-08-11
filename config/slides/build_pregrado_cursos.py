@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Presentaciones + calendarios de las 4 asignaturas de Pregrado (CUN).
+"""Presentaciones + calendarios de las 4 asignaturas de Pregrado (CUN)
+   + «Calendario de clases (oficial)» de PROYECTO I (Especialización · AFI).
+
+Por qué Proyecto I vive aquí y no en su propio archivo: el motor del calendario
+oficial (catálogo de sesiones ↔ fechas, festivos, ventanas del libro de
+calificaciones, tabla de evaluación) está completo en este módulo y en ninguna otra
+parte. Duplicarlo para un quinto curso garantizaba que las dos copias se
+desincronizaran — que es exactamente lo que pasó mientras ese archivo se mantuvo a
+mano. Proyecto I **no** entra en `COURSES`: sus PPTX (`build_cun_proyecto1.py`), su
+CSV/ICS con invitados y su `Informacion.txt` (`build_calendar_proyecto1_54es4.py`) ya
+tienen dueño, y meterlo en `COURSES` los sobrescribiría. Entra por `COURSE_P1` y por
+`write_calendario_proyecto1()`, que aplican sus reglas propias (ver §PROYECTO I).
 
 Reglas:
 - Presentación del Curso en <Asignatura>/Clases/: grupo(s) solo en portada;
@@ -15,6 +26,17 @@ Reglas:
     TG3  → martes 5:00–6:00 pm
     Creatividad → miércoles 5:00–6:00 pm
     Investigación → jueves 5:00–6:00 pm
+    Proyecto I → lunes 8:00–10:00 pm (Especialización · franja AFI 19:00–22:00 h)
+
+§PROYECTO I — en qué se aparta de pregrado (por eso tiene su propio writer):
+- Festivo: el Instructivo AFI dice que en lunes festivo **NO hay sincrónico** (clase
+  pregrabada en CDigital), no «clase autónoma que sigue en el calendario». Su catálogo
+  de sesiones salta los lunes festivos y no los numera.
+- Evaluación 25 / 25 / 50 (no 30/30/40) y sobre nota única Art. 41 §3, no Art. 52.
+- Ningún ítem cierra en día de clase: las ventanas de Coordinación cierran en domingo y
+  la clase es lunes. La columna útil no es «en qué sesión cae» sino «última sincrónica
+  antes del cierre».
+- Encuentro de 2 h = ~1 h de contenido + 1 h de tutoría por grupo (AFI).
 """
 from __future__ import annotations
 
@@ -36,6 +58,7 @@ from sesiones_cun import (  # noqa: E402
 )
 from carga_academica import (  # noqa: E402
     bold_var,
+    course_dir as _course_dir,
     cover_meta_lines,
     docente as _docente_pair,
     pregrado_build_dict,
@@ -54,6 +77,12 @@ D = date
 DOCENTE, DOCENTE_CORREO = _docente_pair()
 from sesiones_cun import DOCENTE_CREDS  # noqa: E402  (fuente única del perfil proyectado)
 from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+from sesiones_cun import (  # noqa: E402  (AFI · solo los usa el calendario de Proyecto I)
+    CURSOS_CON_TUTORIAS_POR_GRUPO,
+    LINK_REGISTRO_DOCENTE_AFI,
+    LINK_TUTORIAS,
+    MSG_TUTORIAS_POR_GRUPO,
+)
 # La plantilla NO se enlaza por URL pública: viaja DENTRO de la carpeta que recibe el
 # estudiante. Ruta relativa a `Clases/` (misma convención que APA_REL en
 # build_acas_estudiantes.py). Decisión del docente 2026-08-10.
@@ -63,6 +92,79 @@ RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 # en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
 URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 DIAS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
+DIAS_LARGO = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+
+# Flujo principal vs. respaldo. Los nombres se importan de su dueño (el builder del .gs)
+# para que no haya dos verdades sobre cómo se llama el archivo que el docente debe abrir.
+from build_calendar_encuentros import (  # noqa: E402
+    GS_NAME as GS_PRINCIPAL,
+    GS_NAME_TG3 as GS_PRINCIPAL_TG3,
+    LEEME_NAME as LEEME_ENCUENTROS,
+)
+# Prefijo de los .ics/.csv de encuentros. Existen solo como respaldo de fechas: Google
+# Calendar DESCARTA los invitados al importarlos, así que un docente que importe el que
+# está al lado del .gs se queda con la serie vacía de estudiantes. El aviso va en el
+# nombre del archivo porque es lo primero (y a veces lo único) que se lee.
+RESPALDO_PREFIJO = "RESPALDO sin invitados - "
+
+
+def _borrar_legacy(out_dir: Path, nombres: list[str], conservar: set[str] | None = None) -> None:
+    """Retira archivos con nombres de versiones anteriores del build.
+
+    Un archivo generado que cambia de nombre no desaparece solo: se queda al lado del
+    nuevo, con contenido plausible y desactualizado. En esta carpeta eso significa que el
+    docente puede importar el que no es.
+    """
+    conservar = conservar or set()
+    for n in nombres:
+        if n in conservar:
+            continue
+        p = out_dir / n
+        if p.is_file():
+            try:
+                p.unlink()
+            except OSError:
+                pass
+
+
+# Carpetas de TG3 que este build emitía antes del 2026-08-11 y que ya no debe emitir:
+# eran juegos alternativos de los MISMOS encuentros (dos grupos, o los tres pero cortados
+# el 15/11), sobrantes de planes previos a la decisión del docente de «un solo enlace para
+# los tres grupos». Con cuatro juegos conviviendo, importar el que no es duplicaba eventos.
+COMBINADOS_OBSOLETOS_TG3 = ("_combinado_54466-54467", "_combinado_todos_hasta_15-11")
+
+
+def _retirar_combinados_obsoletos(base_2026: Path) -> None:
+    """Borra las carpetas `_combinado_*` obsoletas de TG3, si siguen ahí.
+
+    Solo retira archivos generados por este mismo build (md/csv/ics de encuentros). Si
+    queda algo que no reconoce, deja la carpeta y lo avisa en vez de borrar a ciegas.
+    """
+    for nombre in COMBINADOS_OBSOLETOS_TG3:
+        carpeta = base_2026 / nombre
+        if not carpeta.is_dir():
+            continue
+        for f in sorted(carpeta.iterdir()):
+            if f.is_file() and f.suffix.lower() in {".md", ".csv", ".ics"}:
+                try:
+                    f.unlink()
+                except OSError:
+                    pass
+        restos = list(carpeta.iterdir())
+        if restos:
+            print(f"AVISO: {carpeta} no se pudo retirar; quedan "
+                  f"{', '.join(r.name for r in restos)}")
+            continue
+        try:
+            carpeta.rmdir()
+            print(f"OK RETIRADA carpeta obsoleta -> {carpeta}")
+        except OSError as e:
+            print(f"AVISO: no se pudo borrar {carpeta}: {e}")
+
+
+def plural(n: int, singular: str, plural_: str) -> str:
+    """`1 sesión` / `2 sesiones` — sin «(s)» en el material del docente."""
+    return f"{n} {singular if n == 1 else plural_}"
 
 
 # Colombia no tiene horario de verano: un solo componente STANDARD en UTC-5.
@@ -368,6 +470,25 @@ FESTIVOS_2026 = {
 }
 
 
+# Festivos que caen en lunes por la Ley Emiliani: fecha real de la efeméride. Va aparte
+# de FESTIVOS_2026 para no alterar el texto ya publicado en los 4 calendarios de pregrado
+# (que solo nombran el festivo); lo usa la tabla de festivos de Proyecto I.
+FESTIVOS_TRASLADO_2026 = {
+    D(2026, 8, 17): D(2026, 8, 15),
+    D(2026, 11, 2): D(2026, 11, 1),
+    D(2026, 11, 16): D(2026, 11, 11),
+}
+
+
+def nombre_festivo(d: date, *, con_traslado: bool = False) -> str:
+    """«Todos los Santos» / «Todos los Santos (trasladado del dom. 01/11)»."""
+    nombre = FESTIVOS_2026[d]
+    orig = FESTIVOS_TRASLADO_2026.get(d) if con_traslado else None
+    if not orig:
+        return nombre
+    return f"{nombre} (trasladado del {DIAS[orig.weekday()]}. {orig.strftime('%d/%m')})"
+
+
 def weekday_dates(start: date, end: date, weekday: int) -> list[date]:
     """weekday: 0=lun … 6=dom. Incluye start/end si coinciden."""
     d = start
@@ -403,6 +524,51 @@ COURSES = {
     key: pregrado_build_dict(key)
     for key in ("investigacion", "creatividad", "tg2", "tg3")
 }
+
+# ---------------------------------------------------------------------------
+# PROYECTO I (Especialización · AFI) — solo «Calendario de clases (oficial).md».
+# Deliberadamente FUERA de COURSES: `write_all_calendars()` y `main()` iteran ese
+# dict para escribir CSV/ICS por grupo, PPTX e Informacion.txt, y los tres ya los
+# genera otro build para Proyecto I (ver docstring). Meterlo ahí borraría el CSV/ICS
+# con invitados + coanfitrión + Meet de la serie que produce
+# build_calendar_proyecto1_54es4.py.
+# ---------------------------------------------------------------------------
+P1_KEY = "proyecto1"
+COURSE_P1 = pregrado_build_dict(P1_KEY)
+
+# Franja horaria oficial de encuentros sincrónicos de Especializaciones
+# (Instructivo_encuentros_sincronicos_Especializaciones_AFI.pdf). El horario concreto
+# del curso sale de carga_academica_2026.json; esto es el marco que debe cumplir.
+FRANJA_AFI = "19:00–22:00 h"
+DURACION_AFI = "1 h 30 min – 2 h"
+# El propio portal sugiere 20:00–22:00 h para esta oferta; el horario confirmado coincide.
+SUGERENCIA_PORTAL_AFI = "20:00–22:00 h"
+
+# Instructivo AFI §3: el lunes festivo NO se convierte en «clase autónoma» como en
+# pregrado — no hay sincrónico y se deja clase pregrabada.
+REGLA_FESTIVO_AFI = (
+    "En lunes festivo **no se hace encuentro sincrónico** (Instructivo de encuentros "
+    "sincrónicos de Especializaciones, §3). Opción principal: **clase pregrabada** "
+    "disponible en CDigital; opción excepcional: **reprogramar**, solo por coincidencia "
+    "con festivo y avisando con anticipación."
+)
+
+# ESP329 cita el Art. 41 §3 (nota única); el aula la reparte en tres cortes.
+REGIMEN_P1 = (
+    "**Nota única 100%** (ESP329 · Art. 41 §3 del Reglamento Estudiantil), registrada en "
+    "el aula en **tres cortes 25% / 25% / 50%**"
+)
+
+# Manual del Docente P1 §Informe Final de Curso (mismo plazo en el Checklist de cierre).
+PLAZO_INFORME_FINAL = "3 días hábiles"
+
+# Requisito del Instructivo AFI (Especializacion/0. General/01_Instructivos_AFI_Proyecto_I_II/):
+# la entrega de las ACAs es grupal y Moodle no la habilita sin esta actividad.
+NOTA_EQUIPOS_AFI = (
+    "La actividad **«Conformación de equipos»** tiene que quedar habilitada en CDigital "
+    "desde el encuadre: sin ella **no hay entrega grupal** (Instructivo AFI). Los equipos "
+    "se arman en la hora de tutoría de la Sesión 01."
+)
 
 
 def ensure_dirs(course_dir: Path):
@@ -720,10 +886,26 @@ def ics_escape(s: str) -> str:
     return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 
-def write_calendar_files(course_key: str, course: dict, groups_for_event: list[str], out_dir: Path, end: date):
+def write_calendar_files(course_key: str, course: dict, groups_for_event: list[str],
+                         out_dir: Path, end: date, *, con_ics: bool = True,
+                         grupos_evento: list[str] | None = None):
     """Genera CSV + ICS + markdown para un conjunto de grupos que comparten horario.
     Pregrado: sin Guests/ATTENDEE. Festivo = clase autónoma (sigue en calendar).
     Subject: `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo).
+
+    `con_ics=False` escribe **solo** el markdown de referencia del grupo. Es lo que se hace
+    con los tres grupos de TG3: sus encuentros son UNA sola serie (`2026/_combinado_todos/`),
+    así que un `.ics` por grupo no es un respaldo — es un tercer juego de los mismos eventos
+    que, importado, los triplica.
+
+    En un archivo multi-grupo cada sesión invita solo a los grupos **cuyo cierre no ha
+    pasado** (54450 de TG3 cierra el 15/11 y los otros dos el 22/11). Así el Subject del
+    respaldo dice lo mismo que el `.gs` de la serie, evento por evento.
+
+    `grupos_evento` son los grupos que salen en el **Subject**, cuando no coinciden con los
+    del archivo: el calendario de 54450 lista los eventos de la serie de los tres, porque son
+    los que va a ver en Calendar. Si se pusiera solo «54450», la tabla anunciaría un título
+    de evento que no existe.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
     sessions = weekday_dates(course["inicio"], end, course["weekday"])
@@ -731,6 +913,15 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
     g_lbl = groups_label(groups_for_event)
     g_file = groups_label(groups_for_event, for_filename=True)
     meet = _meet(course_key, course["titulo_corto"])
+
+    en_subject = grupos_evento or groups_for_event
+
+    def grupos_de(d: date) -> list[str]:
+        """Grupos vivos en esa fecha (solo importa cuando la serie cubre varios)."""
+        if len(en_subject) == 1:
+            return en_subject
+        vivos = [g for g in en_subject if d <= course["group_meta"][g]["cierre"]]
+        return vivos or en_subject
 
     rows = []
     ics_events = []
@@ -743,6 +934,7 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
         fest_name = FESTIVOS_2026.get(d, "")
         fecha_txt = d.strftime("%d/%m/%Y")
         ses = temas.get(fecha_txt)
+        grupos_d = grupos_de(d)
 
         # n/tema = catálogo sesiones_cun (alineado a carpetas Sesion NN).
         # Festivo sin entrada en catálogo → Clase autónoma (…) (autónoma).
@@ -751,19 +943,19 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
             titulo_ses = ses["titulo"]
             tema_txt = f"Sesión {n_ses:02d} — {titulo_ses}"
             subject = subject_encuentro(
-                course_key, groups_for_event,
+                course_key, grupos_d,
                 n=n_ses, titulo_sesion=titulo_ses,
                 autonoma=auto, festivo_nombre=fest_name or None,
             )
         elif auto:
             tema_txt = f"Clase autónoma — continuar avance (festivo: {fest_name})"
             subject = subject_encuentro(
-                course_key, groups_for_event,
+                course_key, grupos_d,
                 autonoma=True, festivo_nombre=fest_name,
             )
         else:
             tema_txt = "Encuentro sincrónico (ver Manual / Syllabus)"
-            subject = subject_encuentro(course_key, groups_for_event)
+            subject = subject_encuentro(course_key, grupos_d)
 
         # Description corta (2–4 líneas). Location vacío sin Meet real.
         if auto:
@@ -817,42 +1009,59 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
             "END:VEVENT",
         ]
 
-    stem = f"Encuentros {course['titulo_corto']} - {g_file}"
-    csv_path = out_dir / f"{stem} - Importar a Calendar.csv"
+    # El nombre del archivo es lo primero que ve el docente: sin la marca «RESPALDO», el
+    # .ics que está al lado del .gs invita a importarlo — y Google descarta los invitados.
+    stem = f"{RESPALDO_PREFIJO}Encuentros {course['titulo_corto']} - {g_file}"
+    csv_path = out_dir / f"{stem}.csv"
+    ics_path = out_dir / f"{stem}.ics"
+
     # Drive puede dejar la carpeta del grupo sin crear (ya pasó 2 veces): sin este mkdir el
     # build revienta a mitad, después de haber escrito los PPTX.
     out_dir.mkdir(parents=True, exist_ok=True)
-    with csv_path.open("w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else [
-            "Subject", "Start Date", "Start Time", "End Date", "End Time",
-            "All Day Event", "Description", "Location", "Private",
-        ])
-        w.writeheader()
-        w.writerows(rows)
+    _borrar_legacy(out_dir, [
+        # Nombres anteriores (sin la marca RESPALDO). Se retiran siempre, también cuando
+        # `con_ics=False`: en TG3 son justo los que duplicaban la serie del .gs.
+        f"Encuentros {course['titulo_corto']} - {g_file} - Importar a Calendar.csv",
+        f"Encuentros {course['titulo_corto']} - {g_file} - Importar a Calendar.ics",
+    ])
+    if not con_ics:
+        _borrar_legacy(out_dir, [csv_path.name, ics_path.name])
 
-    ics_path = out_dir / f"{stem} - Importar a Calendar.ics"
-    ics_path.write_text(
-        "\r\n".join([
-            "BEGIN:VCALENDAR", "VERSION:2.0",
-            "PRODID:-//CUN//Pregrado Encuentros//ES",
-            "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-            f"X-WR-CALNAME:{course['titulo_corto']} {g_lbl} Encuentros",
-            "X-WR-TIMEZONE:America/Bogota",
-            *VTIMEZONE_BOGOTA,
-            *ics_events, "END:VCALENDAR",
-        ]) + "\r\n",
-        encoding="utf-8",
-    )
+    if con_ics:
+        with csv_path.open("w", newline="", encoding="utf-8-sig") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else [
+                "Subject", "Start Date", "Start Time", "End Date", "End Time",
+                "All Day Event", "Description", "Location", "Private",
+            ])
+            w.writeheader()
+            w.writerows(rows)
+
+        ics_path.write_text(
+            "\r\n".join([
+                "BEGIN:VCALENDAR", "VERSION:2.0",
+                "PRODID:-//CUN//Pregrado Encuentros//ES",
+                "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+                f"X-WR-CALNAME:{course['titulo_corto']} {g_lbl} Encuentros (respaldo)",
+                "X-WR-TIMEZONE:America/Bogota",
+                *VTIMEZONE_BOGOTA,
+                *ics_events, "END:VCALENDAR",
+            ]) + "\r\n",
+            encoding="utf-8",
+        )
 
     # Calendario markdown
+    gs_nombre = GS_PRINCIPAL_TG3 if course_key == "tg3" else GS_PRINCIPAL
     lines = [
         f"# Calendario — {course['titulo_largo']}",
         f"**{g_lbl}** · Horario: **{course['horario_txt']}**",
         "",
+        "> **Este archivo es de consulta: no crea eventos.** Los encuentros se crean con "
+        f"`{gs_nombre}` (Apps Script), que es lo único que añade a los estudiantes como "
+        "invitados y pone el Meet. Paso a paso en "
+        f"`{LEEME_ENCUENTROS}`.",
         "> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` "
         "(fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.",
         "> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).",
-        "> CSV/ICS **sin invitados** estudiantes. Description corta; Location vacío hasta Meet real.",
         "",
         "| # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |",
         "|---|---|---|---|---|",
@@ -878,29 +1087,49 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
         "## Fechas institucionales",
         *meta_bits,
         f"- Cierre considerado en este archivo Calendar: **{end.strftime('%d/%m/%Y')}**",
-        f"- Eventos generados: **{len(sessions)}**",
-        f"- Archivos: `{csv_path.name}` / `{ics_path.name}`",
+        f"- Sesiones del periodo: **{len(sessions)}**",
         "",
-        "## Cómo importar (sin invitados · description corta)",
-        "1. Google Calendar → Configuración → Importar → `.ics` o `.csv`.",
-        "2. **No incluye estudiantes** (Pregrado no lleva Guests/ATTENDEE).",
-        "3. Location vacío: tras importar, añade Meet (mismo enlace en toda la serie) y publícalo en CDigital.",
-        "4. Subject corto: grupos - asignatura - Sesion NN. Description = una línea con el tema.",
-        f"5. Placeholder Meet de referencia (no va en el ICS): {meet}.",
+        "## Cómo se crean estos eventos",
+    ]
+    if con_ics:
+        lines += [
+            f"1. **Flujo principal:** `{gs_nombre}` en esta misma carpeta → Apps Script → "
+            f"`verificar()` y luego `crearEncuentros()`. Es lo único que añade a los "
+            "estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. "
+            f"Instrucciones: `{LEEME_ENCUENTROS}`.",
+            f"2. **Respaldo (`{csv_path.name}` / `{ics_path.name}`):** ⚠️ Google Calendar "
+            "**descarta los invitados** al importar `.ics`/`.csv`. Estos archivos solo llevan "
+            "fechas y títulos; úsalos si necesitas el cronograma en un calendario que no sea "
+            "Google, no para crear la serie del curso.",
+            f"3. Enlace de Meet: {meet}. No va dentro del respaldo; lo pone el `.gs`.",
+        ]
+    else:
+        lines += [
+            f"Con `{gs_nombre}`, que está en `2026/_combinado_todos/`. Los tres grupos de TG3 "
+            "son **una sola serie** (mismo horario, misma sala de Meet), así que hay un único "
+            f"script y un único juego de eventos. Instrucciones: "
+            f"`2026/_combinado_todos/{LEEME_ENCUENTROS}`.",
+            "",
+            "⚠️ Este grupo **no tiene** `.ics`/`.csv` de encuentros propio, y es a propósito: "
+            "importar el de cada grupo crearía los mismos eventos tres veces. El respaldo de "
+            "fechas de la serie está también en `_combinado_todos/`.",
+            "",
+            "Lo que sí se importa desde esta carpeta es "
+            "`Entregas y hitos docentes - Importar a Calendar.csv`: son recordatorios tuyos, "
+            "sin invitados, y los cierres de ACA **no** coinciden entre los tres grupos.",
+        ]
+    lines += [
         "",
         *tabla_eval_calendario(course_key, groups_for_event),
         "",
-        f"Regenerar (sin PPTX): `python config/slides/build_pregrado_cursos.py --calendar-only`",
+        "Regenerar (sin PPTX): `python config/slides/build_pregrado_cursos.py --calendar-only`",
     ]
     (out_dir / f"Calendario de clases - {g_file}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     # Limpia duplicado antiguo con raya tipográfica
-    legacy = out_dir / f"Calendario de clases — {g_file}.md"
-    if legacy.exists() and legacy.resolve() != (out_dir / f"Calendario de clases - {g_file}.md").resolve():
-        try:
-            legacy.unlink()
-        except OSError:
-            pass
-    print(f"OK CAL {course_key} {g_lbl}: {len(sessions)} sesiones -> {out_dir}")
+    _borrar_legacy(out_dir, [f"Calendario de clases — {g_file}.md"],
+                   conservar={f"Calendario de clases - {g_file}.md"})
+    print(f"OK CAL {course_key} {g_lbl}: {len(sessions)} sesiones"
+          f"{'' if con_ics else ' (solo md: la serie es única)'} -> {out_dir}")
 
 
 def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
@@ -992,12 +1221,491 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
         for u in syllabus["unidades_syllabus"]:
             lines.append(f"- {u}")
 
+    if course_key == "tg3":
+        donde = ("`2026/_combinado_todos/` — los tres grupos son **una sola serie** (mismo "
+                 "horario y misma sala de Meet), así que hay un único script y un único juego "
+                 "de eventos para 54450, 54466 y 54467")
+    else:
+        donde = f"`2026/{course['groups'][0]}/`"
     lines += [
         "",
-        "Los CSV/ICS con el/los códigos de grupo en el título del evento viven en `2026/<grupo>/` "
-        "(y, si varios grupos comparten horario y cierre, también puede generarse un archivo combinado).",
+        "## Cómo llegan estos encuentros a Calendar",
+        "",
+        f"Con `{GS_PRINCIPAL_TG3 if course_key == 'tg3' else GS_PRINCIPAL}`, en {donde}. Es un "
+        "Apps Script y es lo único que añade a los estudiantes como **invitados** y deja el "
+        f"**mismo enlace de Meet** en toda la serie. Paso a paso: `{LEEME_ENCUENTROS}`, en esa "
+        "misma carpeta.",
+        "",
+        "⚠️ Los `.ics`/`.csv` que hay junto al script llevan el prefijo "
+        f"`{RESPALDO_PREFIJO.strip(' -')}` porque **Google Calendar descarta los invitados** al "
+        "importarlos: sirven como respaldo de fechas, no para crear la serie del curso.",
     ]
     (course_dir / "Calendario de clases (oficial).md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# PROYECTO I (Especialización · AFI) — calendario oficial
+# ---------------------------------------------------------------------------
+def sesiones_catalogo(course_key: str) -> list[tuple[date, dict]]:
+    """`(fecha, sesión)` del catálogo `sesiones_cun`, ordenadas por fecha."""
+    out = [
+        (_dt.datetime.strptime(s["fecha"], "%d/%m/%Y").date(), s)
+        for s in (SESIONES_COURSES[course_key].get("sesiones") or [])
+    ]
+    out.sort(key=lambda t: t[0])
+    return out
+
+
+def ultima_sincronica(sesiones: list[tuple[date, dict]], hasta: date):
+    """Última sesión sincrónica en o antes de `hasta` (None si no hay ninguna).
+
+    En Proyecto I ningún ítem cierra en día de clase —las ventanas de Coordinación
+    cierran en domingo y la clase es lunes—, así que la pregunta útil no es «en qué
+    sesión cae» sino «cuál fue la última clase para hablar de esto».
+    """
+    previas = [t for t in sesiones if t[0] <= hasta]
+    return previas[-1] if previas else None
+
+
+def sesion_ref(par: tuple[date, dict] | None) -> str:
+    if not par:
+        return "— (sin sesión previa: la ventana abre antes del inicio del curso)"
+    d, ses = par
+    return f"**S{int(ses['n']):02d}** ({d.strftime('%d/%m')}) — {ses['titulo']}"
+
+
+def lunes_del_periodo(course: dict) -> list[date]:
+    """Todos los días de clase del periodo, festivos incluidos (para la tabla)."""
+    fin = max(m["cierre"] for m in course["group_meta"].values())
+    return weekday_dates(course["inicio"], fin, course["weekday"])
+
+
+def cobertura_item(e, lunes: list[date], sesiones: list[tuple[date, dict]]) -> dict:
+    """Cuántos días de clase y cuántas sesiones sincrónicas caen dentro de una ventana."""
+    en_ventana = [d for d in lunes if e.apertura <= d <= e.entrega]
+    festivos = [d for d in en_ventana if is_festivo(d)]
+    ses = [t for t in sesiones if e.apertura <= t[0] <= e.entrega]
+    anteriores = [t for t in sesiones if t[0] < e.apertura]
+    return {
+        "lunes": en_ventana,
+        "festivos": festivos,
+        "sesiones": ses,
+        "previa": anteriores[-1] if anteriores else None,
+    }
+
+
+def marcas_eval_p1(items, sesiones: list[tuple[date, dict]], d: date,
+                   es_sesion: bool) -> list[str]:
+    """Qué pasa con la evaluación en la semana que arranca el lunes `d`.
+
+    La columna «Evaluación» de pregrado marca el ítem que cierra ESE día; en Proyecto I
+    eso dejaría la columna vacía en las 15 filas. Aquí se marca lo que sí ocurre: qué
+    ventana abre ese lunes, qué ventana cierra durante esa semana (en domingo) y si esa
+    es la última clase antes de un cierre.
+    """
+    fin_semana = d + timedelta(days=6)
+    marcas: list[str] = []
+    for e in items:
+        if e.apertura == d:
+            marcas.append(
+                f"**Abre {e.code}** ({e.tipo_label.lower()} · {e.weight_pct} · corte {e.corte})"
+            )
+    for e in items:
+        if not (d <= e.entrega <= fin_semana):
+            continue
+        u = ultima_sincronica(sesiones, e.entrega)
+        cola = " — esta es la última clase antes del cierre" if (es_sesion and u and u[0] == d) else ""
+        marcas.append(
+            f"**Cierra {e.code}** {DIAS[e.entrega.weekday()]} "
+            f"{e.entrega.strftime('%d/%m')} ({e.tipo_label.lower()} · {e.weight_pct}){cola}"
+        )
+    if es_sesion:
+        for e in items:
+            if d <= e.entrega <= fin_semana:
+                continue  # ya lo dice la marca «Cierra …»
+            u = ultima_sincronica(sesiones, e.entrega)
+            if u and u[0] == d:
+                marcas.append(
+                    f"**Última sincrónica antes del cierre de {e.code}** "
+                    f"({DIAS[e.entrega.weekday()]} {e.entrega.strftime('%d/%m')})"
+                )
+    # Entre el cierre del ítem y el límite de nota el Docente está calificando: la clase
+    # de esa franja es la de la retroalimentación (S03 y S04 con el Quiz, S11 con la
+    # ACA FINAL). Sin esta marca la fila quedaría en «—» y parecería una semana muerta.
+    for e in items:
+        if not e.nota_docente:
+            continue
+        if d == e.nota_docente:
+            marcas.append(f"**Hoy vence el límite de nota de {e.code}**")
+        elif es_sesion and e.entrega < d < e.nota_docente:
+            marcas.append(
+                f"**Calificando {e.code}** (límite de nota "
+                f"{e.nota_docente.strftime('%d/%m')}): sesión de retroalimentación"
+            )
+    return marcas
+
+
+def tabla_eval_p1(course_key: str, sesiones: list[tuple[date, dict]]) -> list[str]:
+    """Bloque «Evaluación» de Proyecto I: ventanas oficiales de Coordinación.
+
+    Todo sale de `fechas_entrega_aca.VENTANAS['proyecto1']` y de `ACA_COMPONENTES`
+    (nombre exacto del ítem en el aula, tipo de actividad, peso, corte). Aquí no se
+    escribe a mano ninguna fecha, ningún peso y ningún nombre de ítem.
+    """
+    items = entregas_para_grupo(course_key)
+    cuest = [e for e in items if e.kind == "cuestionario" and not e.es_instrumento_cierre]
+    tareas = [e for e in items if e.es_documento]
+    lines = [
+        "## Evaluación — ventanas OFICIALES de Coordinación",
+        "",
+        f"**Régimen:** {REGIMEN_P1}. Fuente de las ventanas: "
+        "`config/cursos/fechas_entrega_aca.py` → `VENTANAS[\"proyecto1\"]`; fuente de los "
+        "nombres, tipos y pesos: libro de calificaciones del aula en CDigital "
+        "(auditoría 2026-08-10).",
+        "",
+        "| Ítem en el aula (CDigital) | Tipo | Corte (peso) | Peso del ítem | Apertura | "
+        "Cierre | Límite de nota | Última sincrónica antes del cierre |",
+        "| :--- | :--- | :---: | ---: | :--- | :--- | :--- | :--- |",
+    ]
+    for e in items:
+        lines.append(
+            f"| **{e.code}** | {e.tipo_label} | {e.corte} "
+            f"({fmt_peso(peso_corte(course_key, e.corte))}) | **{e.weight_pct}** | "
+            f"{DIAS[e.apertura.weekday()]} {fmt_entrega(e.apertura, largo=False)} | "
+            f"{DIAS[e.entrega.weekday()]} {fmt_entrega(e.entrega, largo=False)} | "
+            f"{fmt_entrega(e.nota_docente, largo=False) if e.nota_docente else '—'} | "
+            f"{sesion_ref(ultima_sincronica(sesiones, e.entrega))} |"
+        )
+    en_dia_clase = [e for e in items if e.entrega.weekday() == COURSE_P1["weekday"]]
+    lines += [
+        "",
+        f"**Cortes:** {desglose_corte_texto(course_key)}.",
+        "",
+    ]
+    if not en_dia_clase:
+        dias_cierre = sorted({DIAS_LARGO[e.entrega.weekday()] for e in items})
+        lines.append(
+            "> **Ningún ítem cierra en día de clase:** las ventanas de Coordinación "
+            f"cierran en **{' / '.join(dias_cierre)}** y el día de clase es "
+            f"**{DIAS_LARGO[COURSE_P1['weekday']]}**. Por eso la última columna marca la "
+            "última sesión sincrónica útil antes de cada cierre, en vez de «la sesión en "
+            "que cae»."
+        )
+    lines.append(
+        "> A diferencia de pregrado, Proyecto I **no tiene quices ni parciales "
+        "adicionales**: en todo el periodo hay "
+        f"**{plural(len(cuest), 'cuestionario evaluativo', 'cuestionarios evaluativos')}** "
+        f"({', '.join(e.code for e in cuest) or '—'}) y "
+        f"**{plural(len(tareas), 'tarea', 'tareas')}** "
+        f"({', '.join(e.code for e in tareas) or '—'}); el resto del corte 3 son los "
+        "instrumentos individuales de cierre (**autoevaluación** cuestionario, "
+        "**coevaluación** foro)."
+    )
+    previas = [e for e in items if e.apertura < COURSE_P1["inicio"]]
+    if previas:
+        lines.append(
+            "> **Ventanas que abren antes del inicio del periodo:** "
+            + " · ".join(
+                f"**{e.code}** ({fmt_entrega(e.apertura, largo=False)})" for e in previas
+            )
+            + f", contra un inicio de clases el "
+            f"{COURSE_P1['inicio'].strftime('%d/%m/%Y')}. Son las fechas de Coordinación; "
+            "en la práctica el ítem se presenta y se trabaja desde la primera clase."
+        )
+    lines.append(f"> {items[0].regla}")
+    lines.append(
+        "> **No te guíes por los recordatorios de Moodle** para el cierre: pueden estar "
+        "desactualizados. La fecha válida es la de Coordinación (columna «Límite de nota» "
+        "y cierre del periodo en «Fechas institucionales»)."
+    )
+    return lines
+
+
+def tabla_cobertura_p1(course_key: str, lunes: list[date],
+                       sesiones: list[tuple[date, dict]]) -> list[str]:
+    """Cuántas clases quedan realmente dentro de la ventana de cada ítem.
+
+    Es la sección que en la versión a mano era la «🔴 ALERTA PENDIENTE: ACA 3 solo tiene
+    2 lunes». Ahora se calcula: si mañana cambia un festivo o una ventana, la alerta se
+    recalcula sola en vez de quedarse afirmando algo que ya no es cierto.
+    """
+    items = entregas_para_grupo(course_key)
+    lines = [
+        "## Cuántas clases caben dentro de cada ventana",
+        "",
+        "Cruce de las ventanas de Coordinación con los festivos colombianos y con el "
+        f"catálogo de sesiones. **Día de clase: {DIAS_LARGO[COURSE_P1['weekday']]}.** La "
+        "**sesión de encuadre no dicta tema**, así que no cuenta como clase de contenido "
+        "para el ítem cuya ventana la incluye.",
+        "",
+        "| Ítem | Ventana | Días de clase en la ventana (dentro del periodo) | "
+        "Perdidos por festivo | Sesiones sincrónicas | Cuáles |",
+        "| :--- | :--- | :---: | :--- | :---: | :--- |",
+    ]
+    alertas: list[str] = []
+    for e in items:
+        c = cobertura_item(e, lunes, sesiones)
+        fest = " · ".join(
+            f"{d.strftime('%d/%m')} ({FESTIVOS_2026[d]})" for d in c["festivos"]
+        ) or "—"
+        cuales = " · ".join(
+            f"S{int(s['n']):02d} ({d.strftime('%d/%m')}"
+            + (", encuadre — no dicta tema)" if s.get("presentacion") else ")")
+            for d, s in c["sesiones"]
+        ) or "—"
+        # La sesión de encuadre no dicta tema (regla de los 5 cursos), así que no cuenta
+        # como clase de contenido para el ítem cuya ventana la incluye.
+        contenido = [t for t in c["sesiones"] if not t[1].get("presentacion")]
+        marca = " ⚠️" if (c["festivos"] and len(contenido) <= 2
+                          and not e.es_instrumento_cierre) else ""
+        lines.append(
+            f"| **{e.code}**{marca} | {e.apertura.strftime('%d/%m')} – "
+            f"{e.entrega.strftime('%d/%m')} | {len(c['lunes'])} | {fest} | "
+            f"**{len(c['sesiones'])}** | {cuales} |"
+        )
+        if marca:
+            encuadre = (
+                " (la sesión de encuadre que cae en su ventana no dicta tema)"
+                if len(contenido) != len(c["sesiones"]) else ""
+            )
+            previa = (
+                " Adelanta contenido en la sesión anterior a la ventana "
+                f"(**S{int(c['previa'][1]['n']):02d}**, {c['previa'][0].strftime('%d/%m')})."
+                if c["previa"] else ""
+            )
+            refuerzo = (
+                " Refuerza con **tutorías por grupo** en esas semanas."
+                if course_key in CURSOS_CON_TUTORIAS_POR_GRUPO else ""
+            )
+            alertas.append(
+                f"> ⚠️ **{e.code}** ({e.weight_pct} · corte {e.corte}) se juega en solo "
+                f"**{plural(len(contenido), 'sesión de contenido', 'sesiones de contenido')}"
+                f"**{encuadre}: de los "
+                f"{plural(len(c['lunes']), 'día de clase', 'días de clase')} de su ventana, "
+                f"{plural(len(c['festivos']), 'cae', 'caen')} en festivo — {fest}."
+                f"{previa}{refuerzo} No dejes ese tramo dependiendo solo de las sesiones "
+                "sincrónicas."
+            )
+    if alertas:
+        lines += ["", *alertas]
+    return lines
+
+
+def tabla_festivos_p1(course_key: str, lunes: list[date]) -> list[str]:
+    """Los días de clase que caen en festivo y qué ventana tocan."""
+    items = entregas_para_grupo(course_key)
+    lines = [
+        f"## Días de clase SIN encuentro (festivos colombianos {COURSE_P1['inicio'].year})",
+        "",
+        "| Fecha | Festivo | Qué toca de la evaluación |",
+        "| :--- | :--- | :--- |",
+    ]
+    for d in lunes:
+        if not is_festivo(d):
+            continue
+        partes = []
+        for e in items:
+            if e.apertura == d:
+                partes.append(f"**abre {e.code}**")
+            elif e.apertura < d <= e.entrega:
+                partes.append(f"ventana de **{e.code}**")
+        for e in items:
+            if e.nota_docente == d:
+                partes.append(f"límite de nota de **{e.code}**")
+        lines.append(
+            f"| {d.strftime('%d/%m/%Y')} ({DIAS[d.weekday()]}) | "
+            f"{nombre_festivo(d, con_traslado=True)} | {' · '.join(partes) or '—'} |"
+        )
+    lines += ["", f"> {REGLA_FESTIVO_AFI}"]
+    return lines
+
+
+def write_calendario_proyecto1(course: dict, course_dir: Path) -> None:
+    """«Calendario de clases (oficial).md» de Proyecto I — 100% generado.
+
+    Hasta 2026-08-11 este archivo era el único de los cinco cursos que se mantenía a
+    mano, y por eso conservaba títulos de sesión viejos y la nomenclatura muerta
+    ACA 1 / ACA 2 / ACA 3 (que hacía leer «la ACA 1 cerró el 30/08» cuando lo que cierra
+    el 30/08 es el **Quiz**). Todo lo que aquí se escribe sale del modelo:
+      · oferta, horario y fechas institucionales → carga_academica_2026.json
+      · sesiones, temas y unidades ESP329        → sesiones_cun.py
+      · ítems, tipos, pesos y ventanas           → fechas_entrega_aca.py
+    """
+    key = course["key"]
+    sesiones = sesiones_catalogo(key)
+    lunes = lunes_del_periodo(course)
+    items = entregas_para_grupo(key)
+    syllabus = SESIONES_COURSES.get(key, {})
+    meta = course["group_meta"][course["groups"][0]]
+    fin = max(m["cierre"] for m in course["group_meta"].values())
+    festivos = [d for d in lunes if is_festivo(d)]
+    dia_clase = DIAS_LARGO[course["weekday"]]
+    # `hora_ics` es HHMMSS 24 h (misma fuente que el ICS): así la comprobación contra la
+    # franja AFI usa el mismo dato que se importa a Calendar, no un texto paralelo.
+    hhmm_ini, hhmm_fin = (f"{h[:2]}:{h[2:4]}" for h in course["hora_ics"])
+
+    lines = [
+        f"# Calendario de clases (oficial) — {course['titulo_largo']}",
+        f"Plantilla del curso · Horario: **{course['horario_txt']}** · "
+        f"franja AFI oficial **{FRANJA_AFI}** (duración exigida {DURACION_AFI})",
+        f"Grupos de este periodo: **{', '.join(course['groups'])}** · "
+        f"Periodo **{meta['periodo']}** · Código **{course['codigo']}**",
+        f"Docente: **{DOCENTE}** · {DOCENTE_CORREO}",
+        "",
+        "> **Archivo generado — no editar a mano.** Regenerar: "
+        "`python config/slides/build_pregrado_cursos.py --calendar-only` "
+        "(o `--proyecto1-only`). "
+        "Fuentes: oferta y horario en `config/cursos/carga_academica_2026.json`; "
+        "sesiones y temas en `config/cursos/sesiones_cun.py`; ítems, tipos, pesos y "
+        "ventanas en `config/cursos/fechas_entrega_aca.py`.",
+        f"> **Horario ✓ instructivo AFI:** el encuentro ({hhmm_ini}–{hhmm_fin} h) cae "
+        f"dentro de la franja oficial **{FRANJA_AFI}** y cumple la duración exigida "
+        f"({DURACION_AFI}); coincide además con la sugerencia del propio portal "
+        f"({SUGERENCIA_PORTAL_AFI}).",
+        f"> **Regla de festivo (AFI — distinta de pregrado):** {REGLA_FESTIVO_AFI} "
+        "Por eso el catálogo **no numera** los días de clase festivos: aparecen en la "
+        "tabla de sesiones sin número, y **no** generan evento en el CSV/ICS.",
+        "> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: "
+        "`sesiones_cun.py`). El CSV/ICS del grupo —con invitados, coanfitrión y el enlace "
+        "único de Meet de la serie— lo genera "
+        "`python config/slides/build_calendar_proyecto1_54es4.py`, **no** este build.",
+        f"> **CDigital (aula del curso):** {cdigital_url(key)} · "
+        f"**Google Meet (mismo enlace toda la serie):** {_meet(key, course['titulo_corto'])}",
+    ]
+    if syllabus.get("nota_syllabus"):
+        lines.append(f"> **Nota Syllabus:** {syllabus['nota_syllabus']}")
+    lines.append("")
+
+    # ── El encuentro de 2 h: contenido + tutoría ────────────────────────────
+    dur = syllabus.get("duracion_min")
+    cont = syllabus.get("contenido_min")
+    if dur and cont and dur > cont:
+        lines += [
+            f"## El encuentro de {dur // 60} horas: ~{cont} min de contenido + "
+            f"{dur - cont} min de tutoría",
+            "",
+            f"- **Contenido nuevo por sesión: ~{cont} min.** El guion docente de cada "
+            "sesión trae solo ese bloque (teoría + modelación); no hay que preparar "
+            f"{dur} min de material.",
+            f"- **Los otros {dur - cont} min son tutoría/taller en vivo** con los equipos: "
+            "revisión de avances y dudas puntuales. Es acompañamiento flexible, no "
+            "material nuevo.",
+        ]
+        if key in CURSOS_CON_TUTORIAS_POR_GRUPO:
+            lines.append(f"- {MSG_TUTORIAS_POR_GRUPO}")
+            lines.append(
+                f"- **Asistencia a tutorías (formulario del estudiante):** {LINK_TUTORIAS}"
+            )
+        lines.append("")
+
+    # ── Evaluación (ventanas oficiales) ─────────────────────────────────────
+    lines += tabla_eval_p1(key, sesiones)
+    lines.append("")
+
+    # ── Cobertura de cada ventana + alertas calculadas ──────────────────────
+    lines += tabla_cobertura_p1(key, lunes, sesiones)
+    lines.append("")
+
+    # ── Festivos ────────────────────────────────────────────────────────────
+    lines += tabla_festivos_p1(key, lunes)
+    lines.append("")
+
+    # ── Sesiones ────────────────────────────────────────────────────────────
+    temas = {d: s for d, s in sesiones}
+    lines += [
+        f"## Las sesiones de clase ({dia_clase}) — alineadas a {course['codigo']}",
+        "",
+        f"**Fuente:** {syllabus.get('fuente', '—')}",
+        "",
+        f"**Sesión** = numeración del catálogo, la que usan el guion, el `.pptx` y el "
+        f"Subject de Calendar. Las filas sin número son días de clase festivos: **no hay "
+        f"encuentro y no hay evento en Calendar**. La columna **Evaluación** dice qué "
+        f"ventana abre ese {dia_clase}, cuál cierra durante esa semana (en domingo) y si "
+        f"esa es la última clase antes de un cierre.",
+        "",
+        "| Sesión | Fecha | Tipo | Bloque | Unidad "
+        f"{course['codigo']} | Contenido | Evaluación (aula CDigital) |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    for d in lunes:
+        ses = temas.get(d)
+        fecha_txt = f"{d.strftime('%d/%m/%Y')} ({DIAS[d.weekday()]})"
+        if ses:
+            n_ses = f"**{int(ses['n']):02d}**"
+            tipo = "Sincrónica"
+            bloque = ses.get("bloque") or "—"
+            unidad = ses.get("unidad_esp329") or "—"
+            contenido = ses.get("detalle") or ses["titulo"]
+        elif is_festivo(d):
+            n_ses = "—"
+            tipo = f"Sin sincrónico ({FESTIVOS_2026[d]})"
+            bloque = unidad = "—"
+            contenido = (
+                "**No hay encuentro** (festivo). Clase **pregrabada** en CDigital / "
+                "trabajo autónomo; el avance del anteproyecto no se detiene."
+            )
+        else:
+            n_ses = "—"
+            tipo = "Sin sesión en el catálogo"
+            bloque = unidad = "—"
+            contenido = "Revisar `sesiones_cun.py`: este día de clase no tiene sesión."
+        ev = " · ".join(marcas_eval_p1(items, sesiones, d, bool(ses))) or "—"
+        lines.append(
+            f"| {n_ses} | {fecha_txt} | {tipo} | {bloque} | {unidad} | {contenido} | {ev} |"
+        )
+        if ses and ses.get("unidad_diferida"):
+            lines.append(
+                f"| — | (misma semana) | ⚠️ Lectura autónoma | {ses.get('bloque') or '—'} "
+                f"| — | {ses['unidad_diferida']} | — |"
+            )
+
+    lines += [
+        "",
+        f"> {NOTA_EQUIPOS_AFI}",
+        "",
+        f"**Total: {len(sesiones)} sesiones sincrónicas** = los {len(sesiones)} días de "
+        f"clase no festivos del periodo ({sesiones[0][0].strftime('%d/%m')} → "
+        f"{sesiones[-1][0].strftime('%d/%m')}). Entre "
+        f"{course['inicio'].strftime('%d/%m/%Y')} y {fin.strftime('%d/%m/%Y')} hay "
+        f"**{len(lunes)}** días de clase; menos los **{len(festivos)}** festivos "
+        f"({', '.join(d.strftime('%d/%m') for d in festivos)}) quedan "
+        f"**{len(lunes) - len(festivos)}**. No sobra ni falta ninguno.",
+        "",
+        "## Fechas institucionales",
+        f"- Inicio del periodo: **{meta['inicio'].strftime('%d/%m/%Y')}**",
+        f"- Fecha máxima de recepción de trabajos (informativa, portal): "
+        f"**{meta['recepcion'].strftime('%d/%m/%Y')}**",
+        f"- **Cierre oficial y registro de notas: {meta['cierre'].strftime('%d/%m/%Y')}** "
+        f"({DIAS_LARGO[meta['cierre'].weekday()]}) — única fecha válida",
+        f"- Última sesión sincrónica del periodo: "
+        f"**{sesiones[-1][0].strftime('%d/%m/%Y')}** (S{int(sesiones[-1][1]['n']):02d})",
+    ]
+    if course.get("creditos"):
+        lines.append(f"- Créditos / horas: {course['creditos']}")
+    lines += [
+        f"- Informe Final de Curso: dentro de los **{PLAZO_INFORME_FINAL} siguientes** "
+        "al cierre.",
+        "",
+        "## Registro obligatorio de cada sesión y tutoría (dentro de 24 h)",
+        "Formulario exclusivo del Docente titular (**NO compartir con estudiantes**): "
+        f"**Registro de Sesiones Sincrónicas y Tutorías Especialización:** "
+        f"{LINK_REGISTRO_DOCENTE_AFI}",
+        "",
+        "## Ver también",
+        "- `Manual del Docente - PROYECTO I.md` (raíz del curso): guía completa — cómo "
+        "preparar la sesión, qué le entregas a la universidad, qué te entregan los "
+        "estudiantes.",
+        f"- `2026/{course['groups'][0]}/`: roster, CSV/ICS de encuentros con invitados, "
+        "Apps Script, hitos docentes y correo de bienvenida.",
+        "- Enunciados e instructivos para el estudiante: `Clases/Recursos/ACAs/` "
+        "(`python config/slides/build_acas_estudiantes.py proyecto1`).",
+    ]
+    (course_dir / "Calendario de clases (oficial).md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8")
+    print(
+        f"OK CAL {key} {course['groups'][0]}: {len(sesiones)} sesiones / "
+        f"{len(lunes)} días de clase -> {course_dir}"
+    )
 
 
 def update_informacion(course: dict):
@@ -1049,44 +1757,77 @@ def update_informacion(course: dict):
 
 
 def write_all_calendars():
-    """CSV/ICS de encuentros + calendarios oficiales md (sin PPTX)."""
+    """CSV/ICS de encuentros + calendarios oficiales md (sin PPTX).
+
+    Incluye el «Calendario de clases (oficial)» de Proyecto I. De ese curso se genera
+    **solo** ese archivo: su CSV/ICS con invitados es de `build_calendar_proyecto1_54es4.py`.
+    """
+    p1_dir = _course_dir(P1_KEY)
+    ensure_dirs(p1_dir)
+    write_calendario_proyecto1(COURSE_P1, p1_dir)
+
     for key, course in COURSES.items():
         course_dir = ROOT / course["folder"]
         ensure_dirs(course_dir)
         write_calendario_curso(key, course, course_dir)
 
+        # TG3: los tres grupos son UNA sola serie (mismo horario, misma sala de Meet), así
+        # que sus encuentros viven en `_combinado_todos/` y punto. Por grupo se escribe solo
+        # el markdown de referencia —cada uno tiene su propio cierre y su propio libro de
+        # calificaciones—, nunca un .ics: importar los tres crearía los eventos por
+        # triplicado. Hasta el 2026-08-11 este build emitía además `_combinado_54466-54467/`
+        # y `_combinado_todos_hasta_15-11/`, restos de planes anteriores a la decisión del
+        # docente; eran dos juegos más de los mismos encuentros y se retiraron.
         for g, meta in course["group_meta"].items():
-            write_calendar_files(key, course, [g], course_dir / "2026" / g, meta["cierre"])
+            write_calendar_files(
+                key, course, [g], course_dir / "2026" / g, meta["cierre"],
+                con_ics=(key != "tg3"),
+                # En TG3 el evento real lleva los tres códigos: es una sola serie.
+                grupos_evento=(list(course["group_meta"].keys()) if key == "tg3" else None),
+            )
 
         if key == "tg3":
             write_calendar_files(
-                key, course, ["54466", "54467"],
-                course_dir / "2026" / "_combinado_54466-54467",
-                D(2026, 11, 22),
+                key, course, list(course["group_meta"].keys()),
+                course_dir / "2026" / "_combinado_todos",
+                max(m["cierre"] for m in course["group_meta"].values()),
             )
-            write_calendar_files(
-                key, course, ["54450", "54466", "54467"],
-                course_dir / "2026" / "_combinado_todos_hasta_15-11",
-                D(2026, 11, 15),
-            )
+            _retirar_combinados_obsoletos(course_dir / "2026")
 
 
 def main(argv: list[str] | None = None):
     import argparse
 
-    parser = argparse.ArgumentParser(description="Presentaciones + calendarios Pregrado CUN")
+    parser = argparse.ArgumentParser(
+        description="Presentaciones + calendarios Pregrado CUN "
+                    "(+ calendario oficial de Proyecto I)"
+    )
     parser.add_argument(
         "--calendar-only",
         action="store_true",
         help="Solo regenera CSV/ICS de encuentros y calendarios md (no PPTX ni Informacion.txt)",
     )
+    parser.add_argument(
+        "--proyecto1-only",
+        action="store_true",
+        help="Solo regenera «Calendario de clases (oficial).md» de Proyecto I",
+    )
     args = parser.parse_args(argv)
+
+    if args.proyecto1_only:
+        p1_dir = _course_dir(P1_KEY)
+        ensure_dirs(p1_dir)
+        write_calendario_proyecto1(COURSE_P1, p1_dir)
+        print("DONE (proyecto1-only)")
+        return
 
     if args.calendar_only:
         write_all_calendars()
         print("DONE (calendar-only)")
         return
 
+    # Los PPTX y el Informacion.txt de Proyecto I NO se generan aquí:
+    # build_cun_proyecto1.py y build_calendar_proyecto1_54es4.py son sus dueños.
     builders = {
         "investigacion": build_investigacion,
         "creatividad": build_creatividad,

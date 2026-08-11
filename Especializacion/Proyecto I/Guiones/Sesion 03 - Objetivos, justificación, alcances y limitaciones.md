@@ -7,7 +7,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **03** · **Tema:** Objetivos, justificación, alcances y limitaciones
-- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · Quiz ya cerró; la última sincrónica antes del cierre es la Sesión 02.
+- **Detalle:** ESP329 U3 · Objetivo general/específicos · justificación · alcances/limitaciones · el Quiz (cuestionario, corte 1) cerró el domingo anterior: la última sincrónica antes de su cierre fue la Sesión 02.
 - **PPTX estudiante:** `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 

@@ -7,7 +7,7 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 > Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.
 > **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
 
-> **Nota Syllabus:** Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03: el rango institucional tiene 7 jueves calendario (06/08–17/09), pero el inicio operativo del semestre es el 10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. Las unidades U8 + U10–U12 se combinan en la fecha del 17/09 (no se eliminan del Syllabus).
+> **Nota Syllabus:** Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03: el rango institucional tiene 7 jueves calendario (06/08–17/09), pero el inicio operativo del semestre es el 10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. TEMARIO ADELANTADO (2026-08-11): la ACA Final (el artículo) califica marco teórico y revisión de literatura y cierra el 12/09, así que **U8** (bases de datos CUN y gestores de citas) pasa a la **Sesión 04** y **U10–U12** (posturas teóricas · marco teórico y revisión) a la **Sesión 05**. Ninguna unidad se elimina: es un reorden, no un recorte. La Sesión 06 (17/09) queda como socialización del artículo y cierre, sin evaluación.
 
 **Eventos en plantilla (hasta 20/09/2026):** 6 · **Entradas en catálogo de temas:** 6
 
@@ -20,9 +20,9 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 | — | — | (misma semana) | ⚠️ Lectura autónoma | U1–U2 (Syllabus y producto final · fundamentos del método científico) → lectura autónoma; se retoma al abrir la Sesión 02. | — |
 | 2 | **02** | 20/08/2026 (jue) | Sincrónica | U4: MinCiencias · 6 líneas de Ingeniería · elección de línea | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
 | 3 | **03** | 27/08/2026 (jue) | Sincrónica | U5: Prueba parcial · 1.er avance del artículo | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
-| 4 | **04** | 03/09/2026 (jue) | Sincrónica | U6: Identificación de problemas y pregunta de investigación | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
-| 5 | **05** | 10/09/2026 (jue) | Sincrónica | U7: Formulación del planteamiento del problema | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
-| 6 | **06** | 17/09/2026 (jue) | Sincrónica | U8+U10–12: Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12) | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
+| 4 | **04** | 03/09/2026 (jue) | Sincrónica | U6+U8: Problema y pregunta · bases de datos y gestores de citas | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
+| 5 | **05** | 10/09/2026 (jue) | Sincrónica | U7+U10–12: Planteamiento del problema · marco teórico y revisión de literatura | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
+| 6 | **06** | 17/09/2026 (jue) | Sincrónica | Cierre: Socialización del artículo y cierre del curso | — |
 
 ## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem
 
@@ -32,10 +32,10 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 | :--- | :--- | :---: | ---: | :--- | :--- |
 | **Quiz 1** | Cuestionario | 1 | 6% | 20/08/2026 | **S02** — MinCiencias · 6 líneas de Ingeniería · elección de línea |
 | **Parcial 1** | Cuestionario | 1 | 24% | 27/08/2026 | **S03** — Prueba parcial · 1.er avance del artículo |
-| **Quiz 2** | Cuestionario | 2 | 9% | 03/09/2026 | **S04** — Identificación de problemas y pregunta de investigación |
-| **Parcial 2** | Cuestionario | 2 | 21% | 10/09/2026 | **S05** — Formulación del planteamiento del problema |
+| **Quiz 2** | Cuestionario | 2 | 9% | 03/09/2026 | **S04** — Problema y pregunta · bases de datos y gestores de citas |
+| **Parcial 2** | Cuestionario | 2 | 21% | 10/09/2026 | **S05** — Planteamiento del problema · marco teórico y revisión de literatura |
 | **ACA Final** | Tarea | 3 | 32,8% | 12/09/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
-| **Quiz 3** | Cuestionario | 3 | 4% | 17/09/2026 | **S06** — Bases de datos CUN · gestores · marco teórico y revisión (U8+U10–12) |
+| **Quiz 3** | Cuestionario | 3 | 4% | 12/09/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
 | **Autoevaluación** | Cuestionario | 3 | 1,6% | 20/09/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
 | **Coevaluación** | Foro | 3 | 1,6% | 20/09/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
 
@@ -54,4 +54,8 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 - U8 Bases de datos CUN + gestores de citas
 - U10–12 Posturas teóricas · marco teórico y revisión de literatura
 
-Los CSV/ICS con el/los códigos de grupo en el título del evento viven en `2026/<grupo>/` (y, si varios grupos comparten horario y cierre, también puede generarse un archivo combinado).
+## Cómo llegan estos encuentros a Calendar
+
+Con `PRINCIPAL - Crear encuentros con invitados.gs`, en `2026/53339/`. Es un Apps Script y es lo único que añade a los estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. Paso a paso: `LEEME - Crear los eventos de Calendar.md`, en esa misma carpeta.
+
+⚠️ Los `.ics`/`.csv` que hay junto al script llevan el prefijo `RESPALDO sin invitados` porque **Google Calendar descarta los invitados** al importarlos: sirven como respaldo de fechas, no para crear la serie del curso.

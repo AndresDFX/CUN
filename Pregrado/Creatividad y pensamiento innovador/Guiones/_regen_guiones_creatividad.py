@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """Regenera guiones docentes de Creatividad (EI004) — solo .md, 60 min, con pantallazos.
 
-Alineado a config/cursos/sesiones_cun.py (7 sesiones del periodo).
+Alineado a config/cursos/sesiones_cun.py (7 sesiones del periodo). **Un builder por sesión
+canónica**: `GUIONES[n]` se escribió para la sesión `n` y para ninguna otra (ver la nota
+«CORRIMIENTO RETIRADO» al final del archivo).
 
 Sesión 01 = **ENCUADRE** (decisión del docente, 2026-08-09): no dicta tema. Presenta el
 curso, al Docente, a los estudiantes (rompehielos Padlet) y las ACAs; el contenido
@@ -11,17 +13,26 @@ Por eso la S01 **ya no se protege**: se regenera como cualquier otra sesión en 
 (el modelo de calidad del curso es hoy la Sesión 02). El flag ``--force-s01`` se sigue
 aceptando por compatibilidad con pipelines antiguos, pero **no cambia nada**.
 
+Temario adelantado (2026-08-11, ver `nota_syllabus` en `sesiones_cun.py`): la **S05** es
+doble (**U6+U7**: validación *y* vigilancia tecnológica), la **S06** es **U8** (ecosistema,
+entidades de apoyo y pitch) y la **S07** es el **taller de consolidación y sustentación**,
+sin evaluación de contenido nueva. El reorden existe porque la **ACA Final califica U7 y U8**
+y cierra antes de la última sesión: lo calificable tenía que llegar antes del cierre.
+
 Evaluación: `guion_evaluacion.py` inyecta el aviso del ítem real del aula (Quiz 1, Parcial 1,
 …, ACA Final, auto y coevaluación) y, cuando ese ítem cierra en día de clase, una fase con
 minutos reservados dentro de los 60. Los datos salen del libro de calificaciones
 (`config/cursos/fechas_entrega_aca.py`): aquí no se escribe ningún peso ni fecha a mano.
+Ese inyector **recorta las fases más largas** para hacerle sitio a la evaluación, así que los
+minutos que escribe cada builder son los de una hora **sin** evaluación; el .md en disco
+muestra ya el reparto real y una nota de replaneación.
 
 Uso:
     python _regen_guiones_creatividad.py            # todas las sesiones (incluida S01)
     python _regen_guiones_creatividad.py 1          # solo la Sesión 01
 """
 from __future__ import annotations
-import os, sys, re
+import os, re, sys, unicodedata
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SLIDES = os.path.abspath(os.path.join(ROOT, "..", "..", "..", "config", "slides"))
@@ -70,6 +81,56 @@ def sesiones_meta():
 SESIONES = sesiones_meta()
 
 
+# ---------------------------------------------------------------------------
+# SLIDES REALES DEL DECK  (para que cada fase diga qué se proyecta y en qué orden)
+# ---------------------------------------------------------------------------
+# El guion no puede citar números de slide a mano: el motor parte los bloques largos en
+# «(cont.)», así que un deck de 19 bloques JSON sale con 27 slides y cualquier número
+# escrito a mano queda corrido. Aquí el número se **calcula** desde el .pptx en disco a
+# partir del título del bloque; si el deck no está, la fase igual nombra los títulos.
+_DECK_CACHE: dict[str, list[str] | None] = {}
+
+
+def _norm_titulo(s: str) -> str:
+    s = unicodedata.normalize("NFKD", str(s or "")).replace("(cont.)", " ")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return " ".join(re.findall(r"[a-z0-9]+", s.lower()))
+
+
+def _deck_titulos(label: str) -> list[str] | None:
+    if label not in _DECK_CACHE:
+        _DECK_CACHE[label] = titulos_pptx(deck_path(COURSES["creatividad"]["folder"], label))
+    return _DECK_CACHE[label]
+
+
+def slides_fase(label: str, *titulos: str) -> str:
+    """Línea «Slides del deck» de una fase: rango real + los títulos, en orden de proyección.
+
+    No usa el prefijo `**Slides:**` a propósito: `limpiar_referencias()` lo reescribiría a
+    «Momento del deck» y borraría justo los números que aquí sí son correctos.
+    """
+    reales = _deck_titulos(label) or []
+    idx = [
+        i + 1
+        for i, real in enumerate(reales)
+        if any(_norm_titulo(real) == _norm_titulo(t) for t in titulos)
+    ]
+    rango = ""
+    if idx:
+        a, b = min(idx), max(idx)
+        rango = f"**{a}**" if a == b else f"**{a}–{b}**"
+    cuerpo = " → ".join(f"«{t}»" for t in titulos)
+    return f"**Slides del deck:** {rango + ' · ' if rango else ''}{cuerpo}"
+
+
+def portada_deck(n: int, titulo: str) -> str:
+    return f"SESIÓN {n:02d} — {titulo}"
+
+
+def cierre_deck(n: int) -> str:
+    return f"Cierre — Sesión {n:02d}"
+
+
 def shot(rel_path: str, caption: str, tip: str) -> str:
     return (
         f"\n![{caption}](Capturas/{rel_path})\n\n"
@@ -77,97 +138,96 @@ def shot(rel_path: str, caption: str, tip: str) -> str:
     )
 
 
-# Pantallazos por sesión canónica (n)
+# Pantallazos por sesión canónica (n) → {fase antes de la cual se insertan: [pantallazos]}.
+# La clave es el keycap de la fase del builder (numeración **antes** de que el inyector de
+# evaluación meta su propia fase), porque `inject_shots()` corre antes que él.
 SHOTS = {
-    # S01 = encuadre: solo el pantallazo del rompehielos (se inyecta antes de la fase 3️⃣).
-    # El de Google Docs / plantilla APA va incrustado dentro de la fase 5️⃣ del guion_01.
+    # S01 = encuadre: solo el pantallazo del rompehielos. El de Google Docs / plantilla APA
+    # va incrustado dentro de la fase 5️⃣ del guion de encuadre.
     1: {
-        "demo": [
+        "3️⃣": [
             ("Sesion 01/s01_padlet.png", "Padlet — Preséntate",
              f"Tablero oficial del rompehielos. URL: {PADLET_PRESENTACION_URL}. ~5 min de escritura."),
         ],
     },
     2: {
-        "demo": [
+        "3️⃣": [
             ("Sesion 01/s01_miro_design_thinking.png", "Miro — Design Thinking (plantilla free)",
              "Mostrar etapas DT; plan B: Excalidraw si Miro pide login."),
             ("s01_excalidraw_pizarra.png", "Excalidraw — HMW + banco de ideas",
              "Escribir 1 How Might We y 10 ideas en voz alta."),
         ],
-        "taller": [
+        "4️⃣": [
             ("Herramientas/dt_ideo_designkit.png", "IDEO Design Kit (referencia)",
              "Solo si carga bien; si no, continuar en Excalidraw/Miro free."),
         ],
     },
     3: {
-        "demo": [
+        "3️⃣": [
             ("s01_google_docs_inicio.png", "Docs — tabla Oslo",
              "Clasificar 3 casos en producto/proceso/organización/marketing/social."),
         ],
-        "taller": [
+        "4️⃣": [
             ("s01_excalidraw_pizarra.png", "Excalidraw — ficha Oslo de su propuesta",
              "Tipo dominante + secundario + 1 justificación."),
         ],
     },
     4: {
-        "demo": [
+        "3️⃣": [
             ("s01_google_docs_inicio.png", "Docs — matriz tipos de innovación",
              "Filas = tipos Oslo; columnas = ejemplo / su propuesta."),
         ],
-        "taller": [
+        "4️⃣": [
             ("s01_excalidraw_pizarra.png", "Excalidraw — cuadro comparativo",
              "Mejora socio-económica vs. tipo elegido."),
         ],
     },
+    # S05 = sesión doble (U6+U7). La fase 2️⃣ lleva el Canvanizer incrustado en su propio
+    # texto; aquí van la segunda mitad (vigilancia) y el taller.
     5: {
-        "demo": [
-            ("Herramientas/bmc_canvanizer.png", "Canvanizer — Business Model Canvas",
-             "Abrir https://canvanizer.com/new/business-model-canvas; llenar 3 bloques clave en vivo."),
-            ("Herramientas/strategyzer_bmc.png", "Strategyzer BMC (referencia visual)",
-             "Solo referencia; el trabajo se hace en Canvanizer/Excalidraw/Docs."),
+        "3️⃣": [
+            ("s01_google_docs_inicio.png", "Docs — tablero de vigilancia (5 columnas)",
+             "Señal · fuente y fecha · hallazgo · implicación · confianza. Scholar y Patents "
+             "abiertos en pestañas aparte."),
         ],
-        "taller": [
-            ("s01_excalidraw_pizarra.png", "Excalidraw — FODA + MVP",
-             "FODA 4 cuadrantes + hipótesis de MVP en 5 líneas."),
-            ("s01_google_docs_inicio.png", "Docs — consolidar Canvas/MVP",
-             "Pegar captura o texto del Canvas y subir a CDigital."),
+        "4️⃣": [
+            ("s01_excalidraw_pizarra.png", "Excalidraw — FODA + MVP en 5 líneas",
+             "FODA de 6 bullets con interna/externa separadas y el MVP escrito al lado."),
+            ("s01_google_docs_inicio.png", "Docs — un solo documento con las dos mitades",
+             "Títulos «A. Validación» y «B. Vigilancia»; se exporta a PDF y se sube a CDigital."),
         ],
     },
     6: {
-        "demo": [
-            ("s01_google_docs_inicio.png", "Docs — matriz de vigilancia",
-             "Columnas: señal / fuente / implicación para mi propuesta."),
+        "3️⃣": [
+            ("s01_google_docs_inicio.png", "Docs — mapa de entidades de apoyo",
+             "Tres columnas: entidad (nombre verificado) · tipo de encaje · pedido concreto y acotado."),
         ],
-        "taller": [
-            ("s01_google_docs_inicio.png", "Scholar en otra pestaña + matriz",
-             "Abrir https://scholar.google.com/; anotar 3 señales tecnológicas."),
+        "5️⃣": [
+            ("s01_excalidraw_pizarra.png", "Excalidraw — los cinco tramos del pitch",
+             "Un recuadro por tramo, una frase en cada uno. Cronómetro a la vista al ensayar."),
         ],
     },
     7: {
-        "demo": [
-            ("s01_google_docs_inicio.png", "Docs — mapa de entidades de apoyo",
-             "Mínimo 3 entidades reales (nombre correcto) + pedido concreto."),
+        "3️⃣": [
+            ("s01_google_docs_inicio.png", "Docs — la propuesta consolidada, sección por sección",
+             "Recorrer el documento del caso del laboratorio y mostrar dónde se rompen las costuras."),
         ],
-        "taller": [
-            ("s01_excalidraw_pizarra.png", "Pitch 60 s — guion",
-             "Ensayar con cronómetro; 4 voluntarios. Canva free opcional para 1 slide."),
+        "5️⃣": [
+            ("s01_excalidraw_pizarra.png", "Excalidraw — rúbrica de la ronda a la vista",
+             "Los cuatro criterios escritos en pantalla mientras un compañero sustenta."),
         ],
     },
 }
 
 
 def inject_shots(md: str, n: int) -> str:
-    cfg = SHOTS.get(n) or {}
-    demo = "".join(shot(*t) for t in cfg.get("demo", []))
-    taller = "".join(shot(*t) for t in cfg.get("taller", []))
-    if demo and "#### 3️⃣" in md:
-        md = md.replace("#### 3️⃣", demo + "\n#### 3️⃣", 1)
-    elif demo:
-        md = md + "\n\n### Pantallazos (demo)\n" + demo
-    if taller and "#### 4️⃣" in md:
-        md = md.replace("#### 4️⃣", taller + "\n#### 4️⃣", 1)
-    elif taller:
-        md = md + "\n\n### Pantallazos (taller)\n" + taller
+    for keycap, tiros in (SHOTS.get(n) or {}).items():
+        bloque = "".join(shot(*t) for t in tiros)
+        ancla = f"#### {keycap}"
+        if bloque and ancla in md:
+            md = md.replace(ancla, bloque + "\n" + ancla, 1)
+        elif bloque:
+            md = md + f"\n\n### Pantallazos (fase {keycap})\n" + bloque
     if "Pantallazos de esta sesión" not in md and "Pantallazos en `Guiones/Capturas/`" not in md:
         md = md.replace(
             "✅ **Checklist del docente antes de clase**",
@@ -189,6 +249,18 @@ USO_SESION_ENCUADRE = (
     "> El contenido curricular arranca en la **Sesión 02**; la unidad U1–U2 queda como **lectura autónoma**.\n"
     "> **Duración del encuentro: 60 minutos.** El material da para dos horas: lo que no alcance se"
     " convierte en extensión y trabajo autónomo (ver tabla de ampliación).\n"
+    "> Logística de semestre (fechas, grupos, cortes) → Presentación del Curso / Manual."
+)
+
+# Sesión 07 = cierre: no dicta contenido nuevo ni evalúa contenido (la ACA Final y el Quiz 3
+# ya cerraron). Sí abren la autoevaluación y la coevaluación, que el inyector agenda solo.
+USO_SESION_CIERRE = (
+    "> **Uso:** guion de **cierre**. Esta sesión **no dicta contenido nuevo y no evalúa contenido**:"
+    " la ACA Final y el Quiz 3 ya cerraron.\n"
+    "> Lo que pasa hoy es sustentación con el pitch, retroalimentación entre pares, revisión de"
+    " coherencia del documento y apertura de auto y coevaluación.\n"
+    "> Léalo en voz alta casi literal. Estudie primero el Fundamento Teórico. **Duración: 60"
+    " minutos**.\n"
     "> Logística de semestre (fechas, grupos, cortes) → Presentación del Curso / Manual."
 )
 
@@ -561,7 +633,21 @@ def guion_01(meta):
 """
 
 
-def guion_02(meta):
+def guion_u2_inteligencia_emocional(meta):
+    """**NO PROGRAMADA.** Guion de la U2 del Syllabus (IE · bloqueadores y ensanchadores ·
+    mapa de utilidad). No está en `GUIONES` y por tanto no se escribe ningún .md con él.
+
+    Existe porque el Syllabus EI004 tiene **8 unidades** y el periodo solo **7 encuentros**:
+    U1–U2 quedaron como **lectura autónoma** desde la decisión docente del 2026-08-09
+    (`unidad_diferida` en `sesiones_cun.py`). Ninguna sesión dicta U2 y **ningún deck de
+    `config/slides/content/` tiene slides de U2**, así que enchufarlo hoy produciría un guion
+    que habla de lo que la pantalla no muestra — el defecto que este archivo acaba de corregir.
+
+    Se conserva, y no se borra, porque es el único material escrito de esa unidad: si algún
+    día el periodo gana un octavo encuentro (o la U2 entra al deck de la S02), esto ya está
+    redactado. Para activarlo hacen falta **las dos cosas**: una sesión en `sesiones_cun.py`
+    y su JSON de contenido en `config/slides/content/`.
+    """
     n, label, titulo, detalle = meta
     fases = [
         ("1️⃣ Encuadre + puente desde S01", 5, 5),
@@ -685,10 +771,10 @@ Modele en pantalla una tabla con SU ejemplo (o el del laboratorio de la S01):
 """
 
 
-def guion_03(meta):
+def guion_02(meta):
     n, label, titulo, detalle = meta
     fases = [
-        ("1️⃣ Encuadre + puente desde la sesión anterior", 6, 6),
+        ("1️⃣ Encuadre + retomada de U1–U2 y puente desde el encuadre", 6, 6),
         ("2️⃣ Design Thinking + divergente/convergente", 13, 19),
         ("3️⃣ Modelación de ideación (HMW + SCAMPER)", 12, 31),
         ("4️⃣ Taller: ideación sobre su problema", 22, 53),
@@ -720,7 +806,9 @@ No es una receta lineal: es **iterativo**. Se avanza, se prueba con un usuario, 
 | **Prototipar** | ¿Cómo se ve/toca la idea? | Boceto, storyboard, mock feo |
 | **Evaluar / testear** | ¿Qué aprendimos al mostrarlo? | 3 aprendizajes del usuario |
 
-Hoy el foco fuerte es **Definir + Idear**. La empatía ya la traen de la sesión anterior (evidencia de observación) y el prototipo de hoy puede ser solo conceptual (un boceto feo en Excalidraw).
+Hoy el foco fuerte es **Definir + Idear**. La **empatía** no se dictó en clase: la S01 fue de encuadre y lo que el estudiante trae es su **problema escrito en tres líneas** (a quién le pasa y dónde lo vio) más la **lectura autónoma de U1–U2**. Cuente con eso y no con más: si alguien llega sin observación de usuario, sirve igual para arrancar. El prototipo de hoy puede ser solo conceptual (un boceto feo en Excalidraw).
+
+> **U1–U2 (lectura autónoma) se retoma aquí, en dos minutos y de viva voz** — es lo que promete el encuadre. No hay slides de esa unidad en el deck y **no se dicta**: se pregunta qué se llevaron y se conecta con el HMW de hoy. Los dos ganchos que sí sirven: *creatividad se entrena, no se tiene* (por eso hoy se practica divergir y converger) y *el bloqueador más común es juzgar la idea antes de escribirla* (la regla sagrada de la fase de ideación).
 
 #### 2. Divergencia y convergencia — el “doble diamante”
 La imagen que mejor funciona en clase es el **doble diamante**: se **abre** (divergencia) y se **cierra** (convergencia) **dos veces** — una para entender el problema y otra para construir la solución.
@@ -766,20 +854,22 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 
 ---
 
-#### 1️⃣ Encuadre + puente desde la sesión anterior (~6 min) — Protagonista: Docente
+#### 1️⃣ Encuadre + retomada de U1–U2 y puente desde el encuadre (~6 min) — Protagonista: Docente
 **Slides:** 1 (Portada) → 2 (OBJETIVOS)
 
-**Objetivo de la fase:** conectar la observación/empatía que traen con el reto de hoy (definir un HMW e idear) y dejar claro el entregable de la hora.
+**Objetivo de la fase:** cerrar la lectura autónoma de U1–U2 con dos ganchos y conectar el problema que traen escrito con el reto de hoy (definir un HMW e idear).
 
 **GUION LITERAL:**
-> “Buenas tardes. Hoy es la **Sesión {n:02d}** y el tema es **Design Thinking y técnicas de creatividad**. La sesión pasada salieron con evidencia de empatía —una observación real o unas notas de su usuario— y con sus bloqueadores. Hoy convertimos eso en dos cosas concretas: un **How Might We** bien redactado y un **banco de al menos 8 ideas** con 1 o 2 elegidas.”
+> “Buenas tardes. Hoy es la **Sesión {n:02d}** y el tema es **Design Thinking y técnicas de creatividad**. Empiezo cumpliendo lo que prometí el primer día: la lectura autónoma de las unidades **1 y 2** —Propuesta de Innovación, y creatividad e inteligencia emocional— la **retomamos aquí**, no la dictamos. Y me la llevo en dos frases: la creatividad **se entrena**, no se tiene; y el bloqueador que más ideas mata es **juzgarlas antes de escribirlas**. Guárdense la segunda, porque en veinte minutos la van a necesitar.”
+
+> “Lo otro que traían era su **problema en tres líneas**: a quién le pasa y dónde lo vieron. Hoy lo convertimos en dos cosas concretas: un **How Might We** bien redactado y un **banco de al menos 8 ideas** con 1 o 2 elegidas.”
 
 > “Miren la **slide 2 — OBJETIVOS**. No venimos a llenar post-its bonitos: venimos a practicar un músculo —abrir muchas ideas y luego cerrar con criterio— que van a usar toda su vida profesional. Al final de la hora, su Propuesta de Innovación tendrá un reto claro y un primer boceto.”
 
 **Qué hacer:**
 1. (2 min) Portada + control de audio/nombres en Meet.
-2. (2 min) Leer objetivos (slide 2) y recordar en una línea qué trajeron de la sesión anterior.
-3. (2 min) Pedir en el chat de Meet que 2 personas peguen su observación de usuario en una frase.
+2. (2 min) Retomar U1–U2 con los dos ganchos y leer objetivos (slide 2). No dictar la unidad: no hay slides de U1–U2 en este deck y el tiempo es del taller.
+3. (2 min) Pedir en el chat de Meet que 2 personas peguen su problema en una frase (a quién le pasa y dónde lo vieron).
 
 ---
 
@@ -844,7 +934,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) **primero entiendo, después resuelvo**; (2) **divergir y converger son momentos distintos**, no los mezclo; (3) un buen **HMW** mira al usuario, no a la tecnología.”
 
-> “**Slide 6 — PARA CONTINUAR.** Trabajo autónomo: (a) suban a CDigital su HMW + banco de ideas + boceto como `S03_Ideacion_Apellido`; (b) mejoren el boceto con una segunda mirada; (c) traigan a la próxima sesión una **clasificación tentativa** de su idea en un tipo de innovación —producto, proceso, organización, marketing o social—, que es justo lo que veremos con el Manual de Oslo.”
+> “**Slide 6 — PARA CONTINUAR.** Trabajo autónomo: (a) suban a CDigital su HMW + banco de ideas + boceto como `S02_Ideacion_Apellido`; (b) mejoren el boceto con una segunda mirada; (c) traigan a la próxima sesión una **clasificación tentativa** de su idea en un tipo de innovación —producto, proceso, organización, marketing o social—, que es justo lo que veremos con el Manual de Oslo.”
 
 > “**Slide 7 — Cierre.** La próxima clase es **Gestión de la innovación con el Manual de Oslo**. Mismo Meet. Buen trabajo.”
 
@@ -863,7 +953,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 2. Generar mínimo 8 ideas (divergencia) y elegir 1–2 con tres criterios (convergencia).
 3. Boceto de 1 minuto en Excalidraw (o plantilla free de Miro).
 4. **Criterio de éxito:** el HMW se centra en usuario y dolor (no en “hacer una app”).
-5. **Entregable:** `S03_Ideacion_Apellido` en CDigital (HMW + ideas + captura del boceto).
+5. **Entregable:** `S02_Ideacion_Apellido` en CDigital (HMW + ideas + captura del boceto).
 6. **Trabajo autónomo:** clasificación tentativa del tipo de innovación para la próxima sesión.
 
 ---
@@ -873,7 +963,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 - [ ] Abrí `Clases/{label}/Presentacion.pptx`
 - [ ] Tengo Excalidraw abierto (y una plantilla free de Miro como opción)
 - [ ] Tengo listo mi HMW y mis 10 ideas modelo para la demostración
-- [ ] Publiqué en CDigital el espacio de entrega `S03_Ideacion`
+- [ ] Publiqué en CDigital el espacio de entrega `S02_Ideacion`
 - [ ] Meet listo: {MEET}
 
 ---
@@ -881,7 +971,7 @@ Un prototipo no es la app terminada: es **lo mínimo para que otro entienda y op
 """
 
 
-def guion_04(meta):
+def guion_03(meta):
     n, label, titulo, detalle = meta
     fases = [
         ("1️⃣ Encuadre + puente desde la sesión anterior", 5, 5),
@@ -1031,7 +1121,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) gestionar innovación es imponer **ritmo y criterio**, no hacer más reuniones; (2) el Manual de Oslo nos da **cinco tipos** para hablar el mismo idioma; (3) sin **novedad e implementación**, sigue siendo una idea, no una innovación.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su ficha como `S04_FichaOslo_Apellido` a CDigital; (b) traigan a la próxima sesión un **cuadro comparativo** de su tipo elegido contra un tipo alternativo que descartaron, explicando **por qué no**.”
+> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su ficha como `S03_FichaOslo_Apellido` a CDigital; (b) traigan a la próxima sesión un **cuadro comparativo** de su tipo elegido contra un tipo alternativo que descartaron, explicando **por qué no**.”
 
 > “**Slide 7 — Cierre.** La próxima clase profundizamos en los **tipos de innovación** y en incremental vs. radical. Mismo Meet. Gracias.”
 
@@ -1049,7 +1139,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 1. Clasificar la propuesta en un tipo dominante (+ secundario opcional).
 2. Definir novedad, valor y dos actividades de gestión con responsable y fecha.
 3. **Criterio de éxito:** tipo dominante justificado + 2 actividades **fechadas**.
-4. **Entregable:** `S04_FichaOslo_Apellido` en CDigital.
+4. **Entregable:** `S03_FichaOslo_Apellido` en CDigital.
 5. **Trabajo autónomo:** cuadro comparativo de tipo elegido vs. tipo descartado.
 
 ---
@@ -1059,7 +1149,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 - [ ] Abrí `Clases/{label}/Presentacion.pptx`
 - [ ] Preparé 1 ejemplo de Ingeniería por cada tipo Oslo
 - [ ] Tengo la tabla de Google Docs (o Excalidraw) lista para clasificar en vivo
-- [ ] Publiqué en CDigital el espacio de entrega `S04_FichaOslo`
+- [ ] Publiqué en CDigital el espacio de entrega `S03_FichaOslo`
 - [ ] Meet listo: {MEET}
 
 ---
@@ -1067,7 +1157,7 @@ Abra una **tabla en Google Docs** compartiendo pantalla (o Excalidraw). Presente
 """
 
 
-def guion_05(meta):
+def guion_04(meta):
     n, label, titulo, detalle = meta
     fases = [
         ("1️⃣ Encuadre + puente desde la sesión anterior", 5, 5),
@@ -1221,14 +1311,14 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 **GUION LITERAL:**
 > “Tres ideas de hoy: (1) el **tipo** dice qué cambia, el **grado** dice cuánto rompe; (2) **incremental bien medido** vence a radical sin evidencia; (3) se compara con **criterios**, no con gusto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S05_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—. Eso lo vamos a validar la próxima sesión.”
+> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su matriz como `S04_MatrizTipos_Apellido`; (b) preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos —cosas que, si fueran falsas, tumbarían el proyecto—; escríbanlos como **afirmaciones**, no como preguntas, para poderlos poner a prueba; (c) anoten **una pregunta sobre el entorno** de su propuesta: ¿ya existe algo parecido?, ¿hay una norma o un permiso de por medio? De ahí arranca la segunda mitad de la próxima sesión.”
 
-> “**Slide 7 — Cierre.** La próxima clase es **Análisis de negocios: FODA, Canvas, MVP y validación**. Mismo Meet. Gracias.”
+> “**Slide 7 — Cierre.** La próxima clase es **doble**: en la primera mitad, **validación** —FODA, Business Model Canvas y MVP— para poner a prueba el supuesto más riesgoso; en la segunda, **vigilancia tecnológica**, para contrastar la propuesta con lo que ya existe ahí afuera. Va doble porque la **ACA Final califica las dos** y cierra antes de la última sesión del curso. Vengan con los supuestos escritos. Mismo Meet. Gracias.”
 
 **Qué hacer:**
 1. (4 min) Leer 2 conclusiones y verificar que se apoyan en criterios.
-2. (2 min) Enunciar el trabajo autónomo (los 5 supuestos) y el nombre del archivo.
-3. (2 min) Anunciar el tema de la próxima sesión.
+2. (2 min) Enunciar el trabajo autónomo (los 5 supuestos y la pregunta de entorno) y el nombre del archivo.
+3. (2 min) Anunciar la próxima sesión **como doble** y decir en voz alta por qué: la ACA Final califica validación y vigilancia, y cierra antes del último encuentro.
 
 ---
 
@@ -1239,8 +1329,8 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 1. Comparar tipo elegido vs. tipo alternativo con mínimo 5 criterios.
 2. Escribir una conclusión de 4 líneas basada en la comparación.
 3. **Criterio de éxito:** criterios explícitos + conclusión argumentada (no gusto personal).
-4. **Entregable:** `S05_MatrizTipos_Apellido` en CDigital.
-5. **Trabajo autónomo:** listado de mínimo 5 supuestos para la validación de la próxima sesión.
+4. **Entregable:** `S04_MatrizTipos_Apellido` en CDigital.
+5. **Trabajo autónomo:** listado de mínimo 5 supuestos (escritos como afirmaciones) **y** una pregunta sobre el entorno de la propuesta — insumos de las dos mitades de la próxima sesión.
 
 ---
 
@@ -1249,7 +1339,7 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 - [ ] Abrí `Clases/{label}/Presentacion.pptx`
 - [ ] Preparé 2 ejemplos locales de incremental vs. radical
 - [ ] Tengo la matriz del caso laboratorio lista para llenar en vivo (Excalidraw/Docs)
-- [ ] Publiqué en CDigital el espacio de entrega `S05_MatrizTipos`
+- [ ] Publiqué en CDigital el espacio de entrega `S04_MatrizTipos`
 - [ ] Meet listo: {MEET}
 
 ---
@@ -1257,78 +1347,184 @@ Llene en pantalla (Excalidraw o Google Docs) una **matriz de criterios × 2 opci
 """
 
 
-def guion_06(meta):
+def guion_05(meta):
+    """S05 = sesión **doble** (U6 + U7): validación por dentro, vigilancia por fuera.
+
+    U7 se adelantó una sesión porque la **ACA Final la califica** y cierra el 19/09, antes de
+    la última clase. El deck (`config/slides/content/cun_creatividad_s05.json`) trae las dos
+    mitades como un solo hilo y pide **un solo entregable**: `S05_ValidacionVigilancia_Apellido`.
+    Este guion sigue ese deck slide por slide; si el JSON cambia, este guion cambia con él.
+    """
     n, label, titulo, detalle = meta
     fases = [
-        ("1️⃣ Encuadre + puente desde la sesión anterior", 5, 5),
-        ("2️⃣ FODA + Business Model Canvas + MVP", 14, 19),
-        ("3️⃣ Modelación de validación (supuesto → prueba)", 12, 31),
-        ("4️⃣ Taller: mini-Canvas + plan MVP", 22, 53),
-        ("5️⃣ Cierre + pista de sustentación", 7, 60),
+        ("1️⃣ Encuadre + por qué hoy la sesión es doble", 5, 5),
+        ("2️⃣ Por dentro: FODA, Canvas, MVP y la cadena de validación", 12, 17),
+        ("3️⃣ Por fuera: vigilancia, fuentes y ficha de señal", 12, 29),
+        ("4️⃣ Taller: validar por dentro y por fuera", 25, 54),
+        ("5️⃣ Cierre + trabajo autónomo", 6, 60),
     ]
-    return header(*meta) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión**
-1. **Usar** el FODA como radiografía rápida y verificable (sin prosa vacía).
-2. **Completar** un Business Model Canvas **mínimo** centrado en la propuesta de valor.
-3. **Definir** un MVP (producto mínimo viable) de **aprendizaje**, no una “app completa”.
-4. **Diseñar** una prueba de validación para el supuesto más riesgoso, con criterio de éxito medible.
+    return header(*meta) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión** *(sesión doble: **U6 + U7** del Syllabus)*
+1. **Escribir** un FODA de máximo 6 bullets **verificables**, con lo interno y lo externo bien separados.
+2. **Llenar** los cuatro bloques del Business Model Canvas que aclaran la propuesta: propuesta de valor, segmento, canales y actividades clave.
+3. **Definir** un **MVP de aprendizaje** —lo más barato que responde la duda más cara—, no una “app completa”.
+4. **Diseñar** la cadena de validación del supuesto **más riesgoso**, con un criterio de éxito numérico u observable fijado **antes** de probar.
+5. **Distinguir** “informarse” de **vigilar**, y ejecutar el ciclo de cuatro pasos: observar → analizar → comunicar → **usar**.
+6. **Levantar** mínimo **2 fichas de señal** de **frentes distintos** (Scholar y Google Patents), con fuente y fecha, que terminen en **una decisión escrita**.
+
+> **Por qué las dos mitades hoy y no en dos semanas.** La **ACA Final** califica **validación y vigilancia**, y cierra **antes** de la última sesión del curso. Si la vigilancia se dictara después de ese cierre, el estudiante entregaría calificada una sección que nunca vio. Es un **reorden, no un recorte**: no se elimina ninguna unidad, U7 solo se adelanta a hoy y U8 a la próxima. Dígalo en voz alta en el minuto uno: el grupo tiene que entender por qué hoy corre más rápido de lo normal.
 
 ---
 
 📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
 
-> Este apartado asume que usted **no** viene de negocios. Léalo completo: FODA, Canvas, MVP y la cadena de validación son las herramientas con las que la propuesta deja de ser un ensayo y empieza a sostenerse.
+> Este apartado asume que usted **no** viene de negocios **ni** ha hecho vigilancia tecnológica formal. Léalo completo: hoy dicta dos unidades y no hay margen para improvisar ninguna de las dos.
 
-#### 1. FODA (DAFO) — la radiografía rápida
-**FODA** = **F**ortalezas, **O**portunidades, **D**ebilidades, **A**menazas. Fortalezas y Debilidades son **internas** (dependen de usted/su equipo); Oportunidades y Amenazas son **externas** (del entorno). Regla de oro: cada ítem debe ser **específico y verificable**, no un adjetivo bonito.
+#### 1. Cómo se sostiene una sesión doble sin atropellar al grupo
+La hora tiene **una sola idea** y dos maneras de aplicarla: *poner la propuesta a prueba*. **Por dentro** —¿qué de lo que creo no he comprobado?— y **por fuera** —¿qué hay allá afuera que yo no he mirado?—. Si usted presenta las dos mitades como dos temas sueltos, el grupo se pierde; si las presenta como **dos caras de la misma pregunta**, la hora se sostiene sola.
 
-- Mal: “Fortaleza: somos creativos.” (no se puede verificar).
-- Bien: “Fortaleza: tenemos acceso a 30 usuarios del laboratorio esta semana.” (concreto y comprobable).
+Las dos mitades terminan igual: en **una decisión escrita**. La primera produce una frase de tipo *“si 3 de 5 no pasan, pivoto el flujo”*; la segunda, una frase de tipo *“ajusto mi diferencia hacia la asignación automática”*. **Ese es el criterio de éxito de la hora**: no el número de páginas, sino que haya dos frases de decisión.
 
-Un FODA de 6 bullets bien escritos vale más que uno de 20 frases genéricas. Su función no es decorar: es **decidir dónde apoyarse y qué vigilar**.
+**Regla de tiempo:** nada se explica dos veces y nada se lee de la pantalla. Cada slide tiene un mensaje; dígalo, ponga el ejemplo del caso del laboratorio y siga. Lo que no alcance es **trabajo autónomo de esta misma semana** —no de la próxima—, porque la ACA Final no espera.
 
-#### 2. Business Model Canvas (Osterwalder) — foco de aula
-El **Business Model Canvas (BMC)** de Alexander Osterwalder es un lienzo de **9 bloques** que describe cómo una propuesta **crea, entrega y captura valor**. No exija una obra maestra; en una hora priorice los bloques que más aclaran la propuesta:
+#### 2. FODA (DAFO) — la radiografía rápida y su única regla
+**FODA** = **F**ortalezas, **O**portunidades, **D**ebilidades, **A**menazas (también **DAFO**). La división que casi todos confunden: **Fortalezas y Debilidades son INTERNAS** —dependen de usted y su equipo, y las puede cambiar—; **Oportunidades y Amenazas son EXTERNAS** —están en el entorno, y solo puede aprovecharlas o cubrirse—. El error típico de aula: poner *“falta de presupuesto de la universidad”* como debilidad. No es interna: es **amenaza**.
 
-| # | Bloque | Pregunta clave |
+Regla de oro, única e innegociable: **cada ítem debe ser específico y verificable**.
+
+| Cuadrante | Versión vacía (no sirve) | Versión verificable (sí sirve) |
 | :--- | :--- | :--- |
-| 1 | **Segmento de clientes** | ¿Para quién es (quién usa)? |
-| 2 | **Propuesta de valor** | ¿Qué dolor alivia o qué gana el usuario? |
-| 3 | **Canales** | ¿Cómo llega la propuesta al usuario? |
-| 4 | **Relación con el cliente** | ¿Cómo se capta y se retiene? |
-| 5 | **Actividades clave** | ¿Qué hay que hacer sí o sí? |
-| 6 | **Recursos clave** | ¿Qué se necesita (datos, gente, infra)? |
-| 7 | **Socios clave** | ¿Quién ayuda desde afuera? |
-| 8 | **Estructura de costos** | ¿Qué cuesta (aunque sea cualitativo)? |
-| 9 | **Fuentes de ingreso** | ¿Quién paga o cómo se sostiene (si es social)? |
+| **Fortaleza** (interna) | “Somos creativos y comprometidos” | “Tengo acceso a **30 usuarios del laboratorio** esta semana” |
+| **Debilidad** (interna) | “Nos falta experiencia” | “**Nadie del equipo** ha hecho una entrevista de usuario antes” |
+| **Oportunidad** (externa) | “Hay mucha tecnología disponible” | “El campus **ya publica el horario** de laboratorios en un archivo abierto” |
+| **Amenaza** (externa) | “Puede haber competencia” | “El laboratorio **exige autorización escrita** para cualquier piloto” |
 
-En clase se trabaja en **Canvanizer** (https://canvanizer.com/new/business-model-canvas, gratis, en la nube). **Strategyzer** solo se muestra como referencia visual; el trabajo real se hace en Canvanizer, Excalidraw o Google Docs. Prioridad mínima de hoy: **propuesta de valor, segmento, canales y actividades clave**.
+Prueba rápida que puede aplicar en voz alta: **si un compañero no puede comprobar esa frase esta semana, todavía es un adjetivo, no un dato**. Y fíjese en las dos filas externas: **ya son señales de vigilancia**. Ese es el puente natural hacia la segunda mitad, úselo.
 
-#### 3. MVP — Producto Mínimo Viable (de aprendizaje)
-El **MVP** es la versión **más pequeña** que permite **aprender** de un usuario real. **No** es “la app fea pero completa” ni “la fase 1 del software grande”. Ejemplos válidos y baratos:
+#### 3. Business Model Canvas (Osterwalder) — cuatro bloques, no nueve
+El **Business Model Canvas (BMC)**, de **Alexander Osterwalder**, es un lienzo de **9 bloques** que describe en una página cómo una propuesta **crea, entrega y captura valor**. Hoy **no** se llenan los nueve, y no hace falta: un Canvas a medias pero **concreto** decide más que uno completo lleno de frases generales.
 
-- Una **landing page** con un botón y una lista de espera (¿cuánta gente se anota?).
-- Un **prototipo clicable** (pantallas enlazadas, sin backend).
-- Un **piloto manual tipo “concierge”**: usted hace a mano lo que después haría el sistema, para ver si el usuario lo valora.
-- Un **storyboard** probado con 5 usuarios.
+| # | Bloque | Pregunta clave que responde | Hoy |
+| :---: | :--- | :--- | :--- |
+| 1 | **Segmento de clientes** | ¿Para quién es? ¿Quién **usa**? | **Obligatorio** |
+| 2 | **Propuesta de valor** | ¿Qué dolor alivia o qué gana el usuario? | **Obligatorio** |
+| 3 | **Canales** | ¿Cómo **llega** la propuesta al usuario? | **Obligatorio** |
+| 4 | Relación con el cliente | ¿Cómo se capta y se retiene? | Autónomo |
+| 5 | **Actividades clave** | ¿Qué hay que hacer **sí o sí**? | **Obligatorio** |
+| 6 | Recursos clave | ¿Qué se necesita: datos, gente, infraestructura? | Autónomo |
+| 7 | Socios clave | ¿Quién ayuda desde afuera? | Autónomo |
+| 8 | Estructura de costos | ¿Qué cuesta, aunque sea cualitativo? | Autónomo |
+| 9 | Fuentes de ingreso | ¿Quién paga o cómo se sostiene si es social? | Autónomo |
 
-La pregunta que responde un MVP no es “¿funciona el código?”, sino “¿esto le importa a alguien?”.
+Cómo se llena **bien** cada obligatorio, con el contraste que hay que decir en voz alta:
+- **Segmento** — una persona concreta, no una categoría. Vago: “estudiantes”. Concreto: “**estudiantes de Ingeniería de 4º semestre que cursan laboratorio los martes**”.
+- **Propuesta de valor** — lo que **gana el usuario**, no lo que hace su sistema. Vago: “una plataforma de gestión de turnos”. Concreto: “**llegas y ya tienes equipo asignado; dejas de perder tu hora**”.
+- **Canales** — el camino real hasta esa persona. Vago: “redes sociales”. Concreto: “**el docente lo anuncia al inicio del laboratorio; el aviso llega por CDigital**”.
+- **Actividades clave** — lo que hay que hacer sí o sí. Vago: “desarrollar el sistema”. Concreto: “**conseguir el horario real de ocupación**” y “**obtener el permiso del laboratorio**”.
 
-#### 4. La cadena de validación
-Validar es una cadena corta y disciplinada:
+Regla de escritura para los cuatro: **si la frase le sirve igual a otro proyecto del salón, todavía no es su Canvas.** Herramienta de clase: **Canvanizer** (https://canvanizer.com/new/business-model-canvas, gratis y en el navegador); **Excalidraw** o una tabla en Google Docs también valen. **Strategyzer** se muestra solo como referencia visual. El bloque **7, socios clave**, es el puente con la próxima sesión: anúncielo.
+
+#### 4. MVP — Producto Mínimo Viable, de aprendizaje
+El **MVP** es la versión **más pequeña** que permite **aprender de un usuario real**. La analogía que hay que dejar grabada: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara.**
+
+Lo que el MVP **NO** es: no es “la app fea pero completa”, no es “la fase 1 del software grande”, y no es una versión con menos funciones pero igual de cara en tiempo. La pregunta que responde **no** es “¿funciona el código?”, sino **“¿esto le importa a alguien?”**. Consecuencia práctica que sorprende al grupo: **un MVP puede no tener nada de software** y seguir siendo válido. Definición operativa para hoy: **lo más barato que responde su duda más cara**.
+
+| Tipo de MVP | En qué consiste | Qué pregunta responde | Costo |
+| :--- | :--- | :--- | :--- |
+| **Landing page** | Una página con la promesa y un botón de lista de espera | ¿Cuánta gente se anota? ¿A alguien le interesa? | 1 tarde |
+| **Prototipo clicable** | Pantallas enlazadas entre sí, sin backend ni datos reales | ¿La persona entiende el flujo sin que yo se lo explique? | 2–3 horas |
+| **Piloto “concierge”** | Usted hace **a mano** lo que después haría el sistema | ¿El usuario valora el resultado, aunque sea manual? | 1 semana |
+| **Storyboard** | 4 viñetas del antes/durante/después, mostradas a 5 usuarios | ¿Reconocen el dolor? ¿La solución les hace sentido? | 1 hora |
+
+El **concierge** es el más subestimado y el que más conviene empujar: prueba el **valor** antes de escribir una sola línea de código.
+
+#### 5. La cadena de validación y el criterio que decide
+Validar **no** es “mostrarle la idea a alguien”. Es una cadena corta y disciplinada:
 
 **Supuesto → Riesgo si es falso → Prueba → Criterio de éxito → Decisión (seguir / pivotar / parar)**
 
-Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el proyecto. No se valida con opiniones de amigos; se valida con el **segmento real** y un **criterio medible u observable** definido de antemano (para no “ver lo que quiero ver”).
+Con el caso del laboratorio, resuelto entero (téngalo escrito, no lo improvise):
+1. **Supuesto** — se escribe como **afirmación**: *“Los estudiantes registrarían la reserva si el flujo toma menos de 1 minuto.”*
+2. **Riesgo si es falso** — *“Nadie usa el sistema y el problema del laboratorio sigue igual.”* Por eso este supuesto va **primero**: si falla, todo lo demás sobra.
+3. **Prueba** — acción concreta, con **cuántas personas**, **qué hacen** y **cuánto dura**: *“5 estudiantes cronometran el registro en un prototipo en papel, sin ayuda mía.”*
+4. **Criterio de éxito** — el número que decide, **fijado ANTES de probar**: *“≥ 4 de 5 terminan en menos de 60 s **y** dicen que lo usarían cada semana.”*
+5. **Decisión** — *“Si 3 de 5 → no pasa: pivoto el flujo.”* Seguir, pivotar y parar son **las tres resultados válidos** del método.
 
-#### 5. Errores frecuentes / preguntas trampa
+Por qué el criterio va antes: si se fija después, el estudiante **ve lo que quiere ver**. Ese sesgo no se vence con buena voluntad, se vence con anticipación. Y una advertencia que hay que decir: **no se valida con opiniones de amigos**; sus amigos no son el segmento y no le van a decir que no.
+
+| Criterio que NO sirve | Por qué falla | Criterio reescrito |
+| :--- | :--- | :--- |
+| “Que a la gente le guste” | “Gustar” no se observa ni se cuenta | “**4 de 5** dicen que lo usarían **la próxima semana**” |
+| “Que sea fácil de usar” | Sin umbral, cualquier resultado “pasa” | “**4 de 5** terminan el flujo **en menos de 60 s** sin ayuda” |
+| “Que muchos se interesen” | “Muchos” no es un número | “**Al menos 15** de 40 dejan su correo en la lista de espera” |
+| “Que funcione bien” | Mide el sistema, no al usuario | “**Ningún** usuario pregunta ‘¿y ahora qué hago?’ durante la prueba” |
+
+Fórmula de bolsillo para corregir en el taller: **[cuántos] de [cuántos]** hacen **[qué acción observable]** en **[qué condición]**. Si el criterio no cabe ahí, todavía es un deseo.
+
+#### 6. Vigilancia tecnológica: informarse no es vigilar
+La **vigilancia tecnológica** es un proceso **sistemático** de **capturar, filtrar, analizar y usar** información sobre tecnologías, competidores, normas y tendencias, con un fin concreto: **decidir mejor**. La palabra que carga todo el peso es **sistemático**: no es leer el artículo que apareció en el celular, es un **método repetible** con fuentes definidas y registro.
+
+Lo que **no** es: no es “me informé”, no es acumular enlaces en un documento, y no es leer solo lo que confirma lo que ya se pensaba. **La prueba de fuego cabe en una pregunta: ¿cambió alguna decisión de su propuesta?** Si no ajustó ni confirmó nada, no vigiló: leyó.
+
+| | Informarse | **Vigilar** |
+| :--- | :--- | :--- |
+| **1. Observar** | Cuando algo aparece por casualidad | En un momento **planeado**, con fuentes definidas de antemano |
+| **2. Analizar** | Se lee y se sigue de largo | Se separa el **hallazgo** (lo que dice la fuente) de la **implicación** (lo que significa para usted) |
+| **3. Comunicar** | Un enlace guardado, o nada | Una **ficha** que otro entiende sin explicación: fuente, fecha, implicación |
+| **4. Usar** | Ningún efecto visible | Un **ajuste concreto**: de alcance, usuario, tecnología o riesgo |
+| Frecuencia | Aleatoria | Repetible: se puede volver a hacer igual |
+| Cómo se sabe que sirvió | Uno “se enteró” | **Cambió o confirmó una decisión** |
+
+El paso **4** es el que casi siempre falta, y es el único que justifica los tres anteriores. Para un ingeniero esto vale oro: evita reinventar lo que ya existe gratis y documentado, detecta que una tecnología **acaba de volverse viable o barata**, y anticipa la norma o la política institucional que aparece al final, cuando ya no hay tiempo de ajustar nada.
+
+#### 7. Los cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador)
+
+| Tipo de señal | Fuentes gratis / web | Pregunta que responde |
+| :--- | :--- | :--- |
+| **Tecnología** | **Google Scholar** (scholar.google.com) · **Google Patents** (patents.google.com) · repositorios de GitHub · documentación oficial de estándares (IEEE) | ¿Qué se volvió **posible** o **barato**? |
+| **Mercado** | Reportes públicos · listas de precios · notas de adopción · portales de **datos abiertos** | ¿Quién **ya paga** por esto y cuánto? |
+| **Normativa** | Leyes y resoluciones · políticas institucionales · sitios de entidades públicas | ¿Qué me **limita** o me **habilita**? |
+| **Social** | Hábitos y demografía · quejas públicas en redes y prensa · foros de usuarios | ¿Qué **cambió en el usuario**? |
+
+El error más común es mirar **solo** el frente tecnológico. Dígalo tal cual: **las propuestas de estudiantes suelen morir por el frente normativo, que nadie revisó.** Por eso el taller exige señales de **frentes distintos**, no dos tecnológicas.
+
+#### 8. Scholar y Google Patents sin ahogarse
+**Google Scholar** da el **estado del arte académico**: qué se ha estudiado y qué se encontró.
+- **Busque el PROBLEMA, no su solución.** Mal: “app de reservas CUN”. Bien: “gestión de turnos laboratorio universitario”.
+- **Pruebe en inglés** (“laboratory scheduling system”), **use comillas** para frases exactas y **filtre por año** (“Desde 2020”) en el panel izquierdo.
+- Mire **“Citado por”**: muchas citas señalan una referencia central, y desde ahí se salta a lo más reciente.
+
+**Google Patents** muestra soluciones **ya documentadas o protegidas**, muchísimas más de las que uno imagina. La reacción típica del estudiante al encontrar algo parecido es **“mi idea murió”**; es exactamente al revés: **ahora sabe contra qué compite**. Busque con las palabras del problema, filtre por fecha, lea **solo el resumen y las figuras**, y revise **“Similar documents”** al final de la ficha. Lo que se escribe no es “existe algo parecido”, sino: **“existe X; mi diferencia está en Y”**.
+
+En los dos: **título + autor o número + año**, siempre. Sin esos tres datos, lo que encontró **no es evidencia**. Si alguna búsqueda muestra un aviso de “tráfico inusual”, se continúa en el navegador normal — **no se instala nada**.
+
+#### 9. La ficha de señal: cinco campos, con el ejemplo resuelto
+
+| Campo | Señal 1 (académica) | Señal 2 (patente) |
+| :--- | :--- | :--- |
+| **1. Título** (frase suya, no la del documento) | Los sistemas de turnos reducen el tiempo muerto de laboratorio | Ya existe reserva de espacios por código QR |
+| **2. Fuente + fecha + enlace** (los tres) | Artículo sobre gestión de turnos en laboratorios universitarios, Google Scholar, 2021 | Patente de sistema de reserva por QR, Google Patents, 2019 |
+| **3. Hallazgo en 2 líneas** (con sus palabras) | La mayor pérdida no está en reservar, sino en los **choques de horario entre cursos** | El registro por QR ya está documentado como solución de reserva de espacios |
+| **4. Implicación** (confirma · obliga a pivotar · es un riesgo) | **Confirma** el problema, pero **desplaza el foco**: atacar los choques, no el trámite | **Obliga a pivotar**: mi diferencia debe estar en la **asignación automática**, no en el registro |
+| **5. Confianza** (alta · media · baja) | **Alta** — publicación académica con revisión | **Alta** — documento oficial de patente |
+
+Lo que hay que hacer notar del ejemplo es **la fila 4**: las dos señales **cambiaron algo**. Una movió el foco del problema; la otra movió la diferencia de la solución. **Eso es vigilar.** Confianza baja no invalida una señal: solo indica que todavía no puede decidir sola.
+
+#### 10. Errores frecuentes / preguntas trampa
 
 | Error o pregunta trampa del estudiante | Respuesta sugerida del docente |
 | :--- | :--- |
 | “Mi FODA: fortaleza, somos creativos.” | “Eso no se verifica. Cámbialo por un hecho: ‘acceso a 30 usuarios esta semana’.” |
-| “El MVP es la app terminada pero sin diseño.” | “No. El MVP es lo más barato que responde tu duda más cara. Una landing o un prototipo en papel sirve.” |
+| “El MVP es la app terminada pero sin diseño.” | “No. El MVP es lo más barato que responde tu duda más cara: una landing o un prototipo en papel sirve.” |
 | “Ya validé: a mis amigos les gustó.” | “Tus amigos no son el segmento y no te dirán que no. Prueba con usuarios reales y un criterio medible.” |
-| “Lleno el Canvas con frases generales.” | “Un Canvas genérico no decide nada. Sé concreto en propuesta de valor y segmento.” |
+| “Lleno el Canvas con frases generales.” | “Si esa frase le sirve a otro proyecto del salón, todavía no es tu Canvas. Sé concreto en valor y segmento.” |
 | “¿Para qué elegir un solo supuesto?” | “Porque el tiempo es finito. Valida primero el que, si es falso, tumba todo el proyecto.” |
+| “Ya vigilé: leí un artículo.” | “¿Cambió alguna decisión de tu propuesta? Si no, te informaste, no vigilaste.” |
+| “Encontré una patente igual, mi idea murió.” | “Al contrario: ahora sabes contra qué compites. ¿En qué se diferencia la tuya?” |
+| Pega un enlace sin fecha ni autor | “Una fuente sin fecha ni autor no es evidencia. Busca quién lo dice y cuándo.” |
+| “No encuentro nada.” | “Cambia las palabras: busca el problema, no tu solución. Y prueba en inglés.” |
+| “¿Por qué hoy vemos dos temas?” | “Porque la ACA Final califica los dos y cierra antes de la última sesión. No se quitó nada: se adelantó.” |
+
+> **Que la prueba falle es un buen resultado.** Descubrir en la semana 3 que el supuesto era falso vale mucho más que descubrirlo el día de la sustentación. Dígalo antes del taller: baja el miedo y sube la honestidad de los criterios.
 
 ---
 
@@ -1336,187 +1532,595 @@ Se empieza por el supuesto **más riesgoso**: aquel que, si es falso, tumba el p
 
 {plan_tabla(fases)}
 
+> **Los minutos de arriba son los de una hora sin evaluación.** Esta sesión cierra el **Parcial 2**, así que el plan real —el que verá unas líneas más abajo con la fase de evaluación incluida— **recorta las fases más largas**. Cuando los números no coincidan, manda el plan de clase, no la consigna de la slide.
+
+**Triage si el reloj aprieta** (y hoy va a apretar): lo que **no** se sacrifica es la **cadena de validación con criterio** y la **ficha de señal**; son lo que la ACA Final califica. Lo primero que se recorta son los ejemplos de MVP y el recorrido de los nueve bloques del Canvas: están en el deck y el estudiante los lee solo.
+
 ---
 
-#### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+#### 1️⃣ Encuadre + por qué hoy la sesión es doble (~5 min) — Protagonista: Docente
+{slides_fase(label, portada_deck(n, titulo), "Hoy la propuesta se pone a prueba: por dentro y por fuera")}
 
-**Objetivo de la fase:** anunciar que hoy la propuesta pasa de idea argumentada a idea **sostenible y validada**.
+**Objetivo de la fase:** que entiendan en tres minutos que hoy la propuesta **deja de estar bien argumentada y pasa a estar puesta a prueba**, y que eso tiene dos caras.
 
 **GUION LITERAL:**
-> “Buenas tardes. **Sesión {n:02d}**: **Análisis de negocios y validación**. Aquí la propuesta deja de ser un ensayo y empieza a **sostenerse**: con un FODA honesto, un Canvas mínimo y —lo más importante— una **prueba** al supuesto más peligroso. La sesión pasada les pedí una lista de supuestos; hoy elegimos el más riesgoso y lo ponemos a prueba.”
+> “Buenas tardes. Hoy la propuesta se pone a prueba, **por dentro y por fuera**. Hasta ahora la suya está **bien argumentada**: tiene usuario, tiene tipo, tiene grado y tiene criterios. Pero sigue apoyada en **cosas que ustedes creen** y que nadie ha comprobado, y en un entorno que nadie ha mirado.”
 
-> “Miren la **slide 2 — OBJETIVOS**. Salen de la hora con un mini-Canvas, un MVP descrito en 5 líneas y una prueba de validación con criterio de éxito medible.”
+> “Con el caso del laboratorio se ve rapidísimo: todo el proyecto se sostiene sobre una creencia —**‘el estudiante sí registraría su turno’**— y sobre un silencio: nadie averiguó si **eso ya existe** ni si el laboratorio **permite** un piloto. La creencia se ataca por dentro, con FODA, Canvas, MVP y una prueba. El silencio se ataca por fuera, con vigilancia tecnológica.”
+
+> “Y les digo de una vez por qué las dos hoy y no en dos semanas: la **ACA Final califica validación y vigilancia**, y **cierra antes de la última sesión** del curso. No se quitó nada del programa; se **adelantó**. Eso significa que hoy vamos rápido y que lo que no alcancemos en clase queda como trabajo autónomo **de esta misma semana**, no de la próxima.”
+
+> “Salen de la hora con cuatro cosas: un **mini-Canvas**, un **MVP en 5 líneas**, **una prueba con criterio medible** y un **tablero con mínimo 2 señales**, cada una con su implicación.”
 
 **Qué hacer:**
-1. (2 min) Portada + control de audio/nombres en Meet.
-2. (2 min) Leer objetivos (slide 2).
-3. (1 min) Pedir a 1–2 estudiantes que lean uno de sus supuestos.
+1. (2 min) Portada, control de audio y de nombres en Meet.
+2. (2 min) Nombrar la creencia y el silencio del caso del laboratorio; anunciar las dos mitades y el entregable único.
+3. (1 min) Decir por qué la sesión es doble y que hoy el ritmo es más alto de lo normal.
 
 ---
 
-#### 2️⃣ FODA + Business Model Canvas + MVP (~14 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+#### 2️⃣ Por dentro: FODA, Canvas, MVP y la cadena de validación (~12 min) — Protagonista: Docente
+{slides_fase(label, "FODA: la radiografía rápida (y su única regla)", "FODA: la versión que no sirve y la que sí", "Business Model Canvas: cuatro bloques, no nueve", "Los nueve bloques del Canvas y su pregunta clave", "MVP: la maqueta, no el edificio", "Cuatro MVP baratos que sí caben en un semestre", "La cadena de validación, con el caso resuelto", "Criterios de éxito: el que no sirve y el que sí")}
 
-**Objetivo de la fase:** que sepan qué es cada herramienta y para qué sirve, sin convertirlo en teoría de administración.
+**Objetivo de la fase:** dejar las cuatro herramientas operables —FODA, Canvas, MVP y cadena— sin convertir la clase en teoría de administración.
 
 **GUION LITERAL:**
-> “**Slide 3.** Tres herramientas, una detrás de otra. Primero el **FODA**: cuatro cajas —fortalezas y debilidades internas, oportunidades y amenazas externas—. Regla única: cada frase debe poderse verificar. ‘Somos creativos’ no vale; ‘tengo 30 usuarios a la mano esta semana’ sí.”
+> “Primero el **FODA**. Cuatro cajas: fortalezas y debilidades son **internas** —dependen de ustedes—; oportunidades y amenazas son **externas** —están en el entorno—. El error clásico: poner ‘falta de presupuesto de la universidad’ como debilidad. No es interna: es una **amenaza**. Y regla única, innegociable: **cada frase se tiene que poder comprobar esta semana**. ‘Somos creativos’ no vale. ‘Tengo acceso a 30 usuarios del laboratorio esta semana’ sí. Seis bullets buenos valen más que veinte frases bonitas.”
 
-> “Segundo, el **Business Model Canvas**: nueve bloques que cuentan cómo su propuesta crea y entrega valor. Hoy no lleno los nueve; me concentro en cuatro que aclaran todo: **propuesta de valor, segmento, canales y actividades clave**. Lo trabajamos en Canvanizer, gratis y en el navegador.”
+> “Fíjense en las dos filas externas del cuadro: **ya son señales de vigilancia**. Guárdenlas, porque en diez minutos las vamos a necesitar.”
 
-> “**Slide 4.** Y el **MVP**. Aquí está la analogía que quiero que recuerden: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara**. El MVP no es la app terminada; es lo más pequeño que me enseña si a alguien le importa: una landing con lista de espera, un prototipo clicable, un piloto hecho a mano.”
+> “Segundo, el **Business Model Canvas**, de Osterwalder: nueve bloques que cuentan en una página cómo su propuesta **crea, entrega y captura valor**. Hoy **no llenamos los nueve** y no hace falta: cuatro bien escritos deciden más que nueve genéricos. **Propuesta de valor** —lo que gana el usuario, no lo que hace su sistema—; **segmento** —una persona concreta, con rol y situación, no ‘estudiantes’—; **canales** —el camino real hasta esa persona—; y **actividades clave** —lo que hay que hacer sí o sí—. La prueba: **si la frase le sirve igual a otro proyecto del salón, todavía no es su Canvas**.”
+
+> “Tercero, el **MVP**, y aquí va la frase que quiero que se lleven: **no construyan el edificio entero para saber si alguien quiere vivir ahí; armen la maqueta que responde la duda más cara**. El MVP no es la app fea pero completa, ni la fase 1 del software grande. Es **lo más barato que responde su duda más cara**. Puede no tener **nada** de software y seguir siendo válido: una landing con lista de espera, un prototipo clicable, un storyboard, o el piloto ‘concierge’ —donde ustedes hacen a mano lo que después haría el sistema—. La pregunta no es ‘¿funciona el código?’; es **‘¿esto le importa a alguien?’**.”
+
+> “Y cuarto, lo que amarra todo: la **cadena de validación**. Cinco eslabones: **supuesto → riesgo si es falso → prueba → criterio de éxito → decisión**. Con el caso: supuesto, ‘los estudiantes registrarían la reserva si el flujo toma menos de un minuto’. Riesgo si es falso: nadie usa el sistema y el problema sigue igual. Prueba: cinco estudiantes cronometran un prototipo en papel, sin ayuda mía. Criterio: **cuatro de cinco en menos de sesenta segundos**, y que digan que lo usarían cada semana. Decisión: si pasan tres de cinco, **no pasa**: pivoto el flujo.”
+
+> “Lo importante del ejemplo no es el número: es **cuándo se escribió**. El criterio va **antes** de la prueba. Si lo fijan después, van a ver lo que quieren ver, y eso no se arregla con buena voluntad. Y no se valida con amigos: sus amigos no son el segmento y no les van a decir que no.”
 
 **Qué hacer:**
-1. (5 min) Explicar FODA con la regla “específico y verificable”.
-2. (6 min) Recorrer el Canvas priorizando 4 bloques; mencionar Canvanizer.
-3. (3 min) Definir MVP con la analogía del edificio/maqueta.
+1. (4 min) FODA con la regla “específico y verificable”; corregir en vivo un ejemplo vacío del grupo y señalar que las filas externas ya son señales.
+2. (4 min) Recorrer el Canvas priorizando los cuatro obligatorios, con el contraste vago/concreto de cada uno. Modelar dos bloques en Canvanizer.
+3. (2 min) MVP con la analogía del edificio y la maqueta; nombrar los cuatro tipos baratos y empujar el “concierge”.
+4. (2 min) Escribir la cadena de validación completa del caso e insistir en que el criterio se fija **antes**.
+{shot("Herramientas/bmc_canvanizer.png", "Canvanizer — Business Model Canvas en vivo", "Abrir https://canvanizer.com/new/business-model-canvas y llenar propuesta de valor y segmento del caso del laboratorio. Strategyzer solo como referencia visual.")}
+> **Si hay que recortar esta fase** (día de evaluación, y hoy lo es): se comprime el recorrido del Canvas y los tipos de MVP; **no** se recorta la cadena de validación ni el momento en que se fija el criterio.
 
 ---
 
-#### 3️⃣ Modelación de validación: supuesto → prueba (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+#### 3️⃣ Por fuera: vigilancia, fuentes y ficha de señal (~12 min) — Protagonista: Docente
+{slides_fase(label, "Segunda mitad: su MVP no vive en una burbuja", "Informarse vs. vigilar, y el ciclo de cuatro pasos", "Cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador)", "Scholar y Patents: cómo buscar sin ahogarse", "La ficha de señal: cinco campos, con el ejemplo resuelto")}
 
-**Objetivo de la fase:** mostrar la cadena completa de validación con un ejemplo cronometrable.
-
-Tome el caso del laboratorio de turnos y escriba en pantalla (Canvanizer/Excalidraw/Docs) la cadena:
-
-- **Supuesto riesgoso:** “Los estudiantes registrarían la reserva si el flujo toma menos de 1 minuto.”
-- **Riesgo si es falso:** nadie usa el sistema y el problema sigue igual.
-- **Prueba:** 5 estudiantes cronometran un prototipo en papel o clicable.
-- **Criterio de éxito:** ≥ 4 de 5 completan en menos de 60 s y dicen que lo usarían cada semana.
-- **Decisión:** si pasa, seguir; si no, pivotar el flujo o parar.
+**Objetivo de la fase:** separar “informarse” de “vigilar”, mostrar dónde se busca y dejar una ficha de señal llenada en vivo.
 
 **GUION LITERAL:**
-> “Miren la cadena completa. No digo ‘voy a validar mi idea’ en abstracto. Digo: este es el supuesto que si es falso me hunde; esta es la prueba concreta; y —clave— **defino el criterio de éxito ANTES de probar**, para no engañarme viendo lo que quiero ver. Cuatro de cinco en menos de un minuto: pasa. Tres de cinco: no pasa, y toca pivotar.”
+> “Segunda mitad. Ya saben probar su propuesta por dentro; ahora hay que **levantar la vista del prototipo** y mirar el entorno. Tres cosas pasan cuando nadie mira afuera: se **reinventa** algo que ya existe, gratis y documentado, y se pierden semanas; no se nota que una tecnología **acaba de volverse viable o barata**, y la propuesta nace desactualizada; y aparece **una norma o una política institucional** al final, cuando ya no hay tiempo de ajustar nada.”
+
+> “**Vigilancia tecnológica** es un proceso **sistemático** de capturar, filtrar, analizar y usar información sobre tecnologías, competidores, normas y tendencias, con un fin concreto: **decidir mejor**. La palabra que carga todo el peso es **sistemático**: no es leer el artículo que le apareció en el celular, es un método repetible, con fuentes definidas y con registro.”
+
+> “El ciclo tiene cuatro pasos —**observar, analizar, comunicar y usar**— y el que casi siempre falta es el cuarto, que es justamente el único que justifica los otros tres. Por eso la prueba de fuego cabe en una pregunta: **¿cambió alguna decisión de su propuesta?** Si no ajustaron ni confirmaron nada, no vigilaron: **leyeron**.”
+
+> “¿Dónde se mira? Cuatro frentes. **Tecnología**: Scholar, Google Patents, repositorios, estándares. **Mercado**: reportes públicos, precios, datos abiertos. **Normativa**: leyes, resoluciones, políticas de la institución. Y **social**: qué cambió en el usuario. Aviso importante: casi todos miran solo el frente tecnológico, y **las propuestas de estudiantes suelen morir por el normativo**, que nadie revisó. Por eso hoy les voy a pedir señales de **frentes distintos**.”
+
+> “Cómo buscar sin ahogarse. En **Scholar**, busquen **el problema, no su solución**: ‘gestión de turnos laboratorio universitario’, no ‘app de reservas CUN’. Prueben en inglés, usen comillas para frases exactas y filtren por año. En **Patents**, si encuentran algo parecido, la reacción típica es ‘mi idea murió’. Es al revés: **ahora saben contra qué compiten**. No escriban ‘existe algo parecido’; escriban **‘existe X; mi diferencia está en Y’**. Y en los dos, copien **título, autor o número, y año**: sin esos tres datos no es evidencia, es un recuerdo.”
+
+**Modelación en vivo (esto es lo que hace que la fase funcione):** con Scholar y Patents abiertos, busque el caso del laboratorio pensando en voz alta y llene **una ficha completa** en Google Docs delante de ellos. Cinco campos: **título** con sus propias palabras, **fuente + fecha + enlace**, **hallazgo en 2 líneas**, **implicación** —confirma, obliga a pivotar o es un riesgo— y **confianza**. Termine señalando la implicación: *“esta señal me obliga a pivotar: mi diferencia ya no es el registro, es la asignación automática”*. Eso, y no el enlace, es la vigilancia.
 
 **Qué hacer:**
-1. (7 min) Escribir la cadena supuesto → prueba → criterio → decisión en pantalla.
-2. (5 min) Insistir en fijar el criterio de éxito antes de la prueba; pedir un ejemplo oral a un estudiante.
+1. (3 min) Las tres cosas que pasan cuando nadie mira afuera + definición y ciclo de cuatro pasos, con la pregunta “¿cambió una decisión?”.
+2. (3 min) Los cuatro frentes con sus fuentes; insistir en el frente normativo.
+3. (3 min) Buscar en Scholar y en Patents en pantalla, pensando en voz alta.
+4. (3 min) Llenar la ficha de señal completa y leer la implicación en voz alta.
+
+> **Si hay que recortar esta fase:** se acorta la búsqueda en vivo (deje una pestaña ya buscada de antes), **no** el llenado de la ficha: es el modelo que los estudiantes van a copiar en el taller.
 
 ---
 
-#### 4️⃣ Taller: mini-Canvas + plan MVP (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+#### 4️⃣ Taller: validar por dentro y por fuera (~25 min) — Protagonista: Estudiantes
+{slides_fase(label, "Errores frecuentes y respuestas", "Paso a paso: un solo documento con las dos mitades", "TALLER — Validar por dentro y por fuera (25 minutos)")}
+
+**Antes de soltar el taller (30 segundos, con la slide del paso a paso en pantalla):** un solo documento en Google Docs, `Validación y vigilancia — [su propuesta]`, con dos títulos dentro: **A. Validación** y **B. Vigilancia**. Todo va ahí; no se abren dos archivos.
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Cuatro entregas: (1) un **FODA** de máximo 6 bullets en total, todos verificables; (2) un **Canvas mínimo** en Canvanizer con al menos propuesta de valor, segmento, canales y actividades clave; (3) su **MVP descrito en 5 líneas** —qué es lo mínimo que van a mostrar—; (4) **una prueba de validación** de su supuesto más riesgoso, con criterio numérico u observable. Al final dos personas comparten solo su prueba y su criterio. Éxito: la prueba tiene un criterio que se pueda medir.”
+> “Pasamos al **TALLER**. Tienen **25 minutos** y trabajan sobre SU propuesta, en un solo documento con dos títulos: A. Validación y B. Vigilancia.”
+
+> “**Bloque A, por dentro.** Uno: **FODA de máximo 6 bullets**, todos verificables, con interna y externa bien separadas. Dos: **Canvas mínimo** en Canvanizer —propuesta de valor, segmento, canales y actividades clave—; guarden el enlace de compartir o peguen una captura. Tres: **MVP en 5 líneas** y **una prueba** de su supuesto más riesgoso, con criterio **numérico u observable** escrito **antes**.”
+
+> “**Bloque B, por fuera.** Cuatro: escriban primero **la pregunta que quieren responder** con la vigilancia; sin pregunta, la búsqueda se dispersa. Cinco: **mínimo 2 fichas de señal**, de **frentes distintos** —no las dos tecnológicas—, con fuente, **fecha**, hallazgo, implicación y confianza; peguen los datos **en el momento**, porque después no encuentran de dónde salió. Seis: cierren con una frase que empiece por **‘Ajusto…’** o **‘Confirmo…’**.”
+
+> “Al final, **dos personas** comparten **solo la implicación** de una señal y **solo el criterio** de su prueba. No el documento completo. **Criterio de éxito:** una prueba con criterio que se pueda medir hoy mismo y **que podría fallar**, y 2 señales con fuente y fecha que produjeron **1 decisión escrita**.”
+
+| Paso del taller | Qué tiene que quedar escrito | Si hay que recortar |
+| :--- | :--- | :--- |
+| **1.** FODA | Máximo 6 bullets verificables, interna/externa separadas | Se reduce a 4 bullets: uno por cuadrante |
+| **2.** Canvas mínimo | Valor, segmento, canales y actividades clave | Se dejan **valor y segmento**; los otros dos, autónomo |
+| **3.** MVP + prueba | MVP en 5 líneas y la cadena completa con criterio | **No se recorta**: es lo que califica la ACA Final |
+| **4.** Pregunta de vigilancia | Una pregunta escrita antes de buscar | No se recorta: sin ella el paso 5 se dispersa |
+| **5.** Fichas de señal | Mínimo 2, de frentes distintos, con fuente y fecha | Se baja a **1 ficha en clase** y la segunda queda de autónomo |
+| **6.** Decisión | Una frase que empiece por “Ajusto…” o “Confirmo…” | **No se recorta**: es el producto de la hora |
+
+> **El número que trae el título de la slide es el del taller completo.** Si el plan de clase de arriba le asignó menos minutos —porque hoy corre el Parcial 2—, manda el plan: use la columna “Si hay que recortar” y anuncie en voz alta que el resto es trabajo autónomo **de esta semana**.
 
 **Tabla de acompañamiento:**
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
-| Escribe un FODA con adjetivos vagos | “‘Somos buenos’ no se mide. Dame un hecho verificable para cada casilla.” |
+| Escribe un FODA con adjetivos vagos | “‘Somos buenos’ no se mide. Dame un hecho que puedas comprobar esta semana.” |
+| Pone “falta de presupuesto de la universidad” como debilidad | “Eso no depende de ti: es una **amenaza**. Las debilidades son internas.” |
+| Se pierde llenando los nueve bloques del Canvas | “Hoy solo cuatro: valor, segmento, canales y actividades. El resto queda para esta semana.” |
 | Describe el MVP como la app completa | “Recórtalo: ¿cuál es la versión más pequeña que te dice si a alguien le importa?” |
-| Pone una prueba sin criterio de éxito | “¿Cómo sabrás si pasó? Fija el número o la observación ANTES de probar.” |
+| Pone una prueba sin criterio de éxito | “¿Cómo sabrás si pasó? Fija el número o la observación **antes** de probar.” |
 | Va a validar con amigos | “Tus amigos no son el segmento. ¿Quién es el usuario real que puedes tocar esta semana?” |
-| Se pierde llenando los 9 bloques | “Hoy solo 4: valor, segmento, canales y actividades. El resto queda para después.” |
+| Trae las dos señales del frente tecnológico | “Cambia una: mira normativa o mercado. Ahí es donde se caen estos proyectos.” |
+| Pega un enlace sin fecha ni autor | “Sin fecha y sin autor no es evidencia. ¿Quién lo dice y cuándo?” |
+| Llena fichas que no cambian nada | “Vigilancia decorativa. Si la ficha no ajusta ni confirma, bórrala: ocupa el lugar de una que sí decide.” |
+| Copia el abstract entero | “Resúmelo en dos líneas. Lo que importa es la implicación para TU propuesta.” |
 
 ---
 
-#### 5️⃣ Cierre + pista de sustentación (~7 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+#### 5️⃣ Cierre + trabajo autónomo (~6 min) — Protagonista: Docente
+{slides_fase(label, "Antes de entregar: revise usted mismo", "Para continuar — trabajo autónomo", cierre_deck(n))}
 
 **GUION LITERAL:**
-> “Tres ideas de hoy: (1) el **FODA** solo sirve si es verificable; (2) el **MVP** es la maqueta que responde la duda más cara, no el edificio; (3) validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado antes.”
+> “Tres ideas de hoy. Una: el **MVP** es la maqueta que responde la duda más cara, **no el edificio**. Dos: validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado **antes**. Tres: vigilar es un **sistema**; si la señal no cambia una decisión, no sirvió.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) suban su Canvas + MVP + prueba como `S06_CanvasMVP_Apellido`; (b) **ejecuten la prueba** aunque sea con 3 usuarios y traigan los resultados a la próxima sesión. Eso alimenta directamente su sustentación.”
+> “**PARA CONTINUAR.** (a) Suban el documento con las dos mitades como **`S05_ValidacionVigilancia_Apellido`** a CDigital, en PDF. (b) **Ejecuten la prueba**, aunque sea con **3 usuarios**, y anoten lo que pasó **tal cual**, incluso si el criterio no se cumplió: ese dato es el más valioso que van a tener, y que falle es un buen resultado. (c) Completen el tablero hasta **3 señales** y llenen los **cinco bloques restantes** del Canvas; empiecen por **socios clave**, que es el puente con la próxima sesión. (d) Preparen un listado de **mínimo 3 entidades de apoyo** —con el **nombre correcto**— de tipo universitario, público, privado o internacional, y anoten en una línea **qué le pedirían a cada una**. Si no saben qué pedir, esa entidad todavía no les sirve.”
 
-> “**Slide 7 — Cierre.** La próxima clase es **Vigilancia tecnológica**, para que su MVP no viva en una burbuja. Mismo Meet. Gracias.”
+> “**Cierre.** La próxima clase es **innovación local–internacional, entidades de apoyo y el pitch de 60 segundos**, y es la **última antes del cierre de la ACA Final**. Vengan con la propuesta lista para conectarla con el afuera. Mismo Meet. Gracias.”
 
 **Qué hacer:**
-1. (3 min) Escuchar 2 pruebas y verificar que tengan criterio medible.
-2. (2 min) Enunciar el trabajo autónomo (ejecutar la prueba) y el nombre del archivo.
-3. (2 min) Anunciar el tema de la próxima sesión.
+1. (2 min) Escuchar 2 implicaciones y 1 criterio, y verificar en voz alta que el criterio **podría fallar**.
+2. (2 min) Recorrer el checklist de la slide “Antes de entregar” y confirmar el nombre exacto del archivo.
+3. (2 min) Enunciar las cuatro tareas autónomas y anunciar la próxima sesión como la última antes del cierre de la ACA Final.
 
 ---
 
 🧩 **Actividad práctica / taller (resumen del entregable de hoy)**
 
-**Nombre:** Mini-Canvas + MVP + prueba de validación — insumo de la Propuesta de Innovación.
+**Nombre:** Validación y vigilancia — insumo doble (U6+U7) de la Propuesta de Innovación.
 
-1. FODA de máximo 6 bullets verificables.
-2. Canvas mínimo en Canvanizer (valor, segmento, canales, actividades).
-3. MVP descrito en 5 líneas + 1 prueba del supuesto más riesgoso con criterio medible.
-4. **Criterio de éxito:** supuesto riesgoso + prueba concreta + criterio de éxito definido de antemano.
-5. **Entregable:** `S06_CanvasMVP_Apellido` en CDigital.
-6. **Trabajo autónomo:** ejecutar la prueba con al menos 3 usuarios y traer resultados.
+1. FODA de máximo 6 bullets verificables, con interna y externa separadas.
+2. Canvas mínimo en Canvanizer: propuesta de valor, segmento, canales y actividades clave.
+3. MVP en 5 líneas + la cadena completa del supuesto más riesgoso, con criterio fijado antes de probar.
+4. Tablero con **mínimo 2 fichas de señal** de **frentes distintos** (título, fuente + fecha + enlace, hallazgo, implicación, confianza).
+5. **Criterio de éxito:** una prueba con criterio medible **que podría fallar** + 2 señales con fuente y fecha que produjeron **1 decisión escrita** (“Ajusto…” / “Confirmo…”).
+6. **Entregable:** `S05_ValidacionVigilancia_Apellido` en CDigital (PDF, un solo documento con las dos mitades).
+7. **Trabajo autónomo de esta misma semana:** ejecutar la prueba con al menos 3 usuarios, subir a 3 señales, completar los 5 bloques restantes del Canvas y listar 3 entidades de apoyo con su pedido.
+
+---
+
+✅ **Checklist del docente antes de clase**
+- [ ] Leí el Fundamento Teórico completo (son **dos** unidades: U6 y U7)
+- [ ] Abrí `Clases/{label}/Presentacion.pptx`
+- [ ] Abrí Canvanizer (https://canvanizer.com/new/business-model-canvas) para modelar en vivo
+- [ ] Tengo la cadena de validación del caso laboratorio ya escrita (no se improvisa)
+- [ ] Abrí Google Scholar y Google Patents, **con una búsqueda de ejemplo ya probada**
+- [ ] Tengo la ficha de señal modelo lista para llenar en pantalla
+- [ ] Publiqué en CDigital el espacio de entrega `S05_ValidacionVigilancia`
+- [ ] Meet listo: {MEET}
+
+---
+*Fin del Guión — Sesión {n:02d} (sesión doble U6+U7). Documento autocontenido: un docente sin trayectoria en innovación puede estudiarlo y dictar la hora completa.*
+"""
+
+
+def guion_06(meta):
+    """S06 = U8: ecosistema, entidades de apoyo y pitch de 60 s.
+
+    Adelantada una sesión: es la **última sincrónica antes del cierre de la ACA Final**, que
+    califica justamente ecosistema y pitch. Deck: `cun_creatividad_s06.json`; entregable
+    `S06_EcosistemaPitch_Apellido`.
+    """
+    n, label, titulo, detalle = meta
+    fases = [
+        ("1️⃣ Encuadre: la última antes del cierre de la ACA Final", 5, 5),
+        ("2️⃣ Qué da el ecosistema · escalas · tipos de impacto", 9, 14),
+        ("3️⃣ Mapa de entidades, encaje y pedido concreto", 9, 23),
+        ("4️⃣ El pitch de 60 segundos: cinco tramos y ejemplo", 9, 32),
+        ("5️⃣ Taller: mapa de entidades + guion del pitch", 22, 54),
+        ("6️⃣ Cierre: la semana en que se cierra la ACA Final", 6, 60),
+    ]
+    return header(*meta) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión** *(**U8** del Syllabus, adelantada una sesión)*
+1. **Explicar** qué le puede dar un ecosistema de innovación —y qué no— con los seis insumos que una propuesta necesita.
+2. **Ubicar** la propuesta en una **escala** (local, regional, nacional, internacional) y decir cuál sería el paso siguiente.
+3. **Declarar** el **tipo de impacto** con la fórmula *a quién + qué cambia + en cuánto*.
+4. **Armar** un mapa de **mínimo 3 entidades reales**, de cuadrantes distintos, con el **nombre verificado** y **un pedido concreto** a cada una.
+5. **Escribir y cronometrar** un **pitch de 60 segundos** en cinco tramos, que empiece por la persona y termine pidiendo algo.
+
+> **Esta es la última sesión sincrónica antes del cierre de la ACA Final**, y la ACA califica **dos cosas de hoy**: el **ecosistema** (entidades de apoyo) y el **pitch**. La próxima sesión ya no alcanza a alimentar la entrega: sirve para **sustentar y consolidar** lo que hoy quede escrito. Dígalo al abrir, no al cerrar.
+
+---
+
+📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
+
+> Su rol hoy es doble: enseñar a **conectar la propuesta con el mundo real** y enseñar a **contarla en 60 segundos**. Léalo completo; la parte de entidades exige nombres correctos y usted los va a decir en voz alta.
+
+#### 1. Por qué existe un “ecosistema” de innovación
+Una innovación **rara vez sobrevive sola**. Para pasar de prototipo a impacto necesita insumos que el estudiante no tiene: **capital, mentoría, redes de contactos, infraestructura, marco normativo y clientes**. El **ecosistema de innovación** es ese conjunto de **actores y reglas** que rodean a un equipo de I+D o a un emprendedor.
+
+La metáfora que funciona en clase: **una semilla buena no basta; necesita tierra, agua, luz y clima**. Por eso el trabajo del curso no termina cuando se sube el archivo a CDigital: termina —de verdad— cuando **alguien de afuera le abre una puerta** a la propuesta. Y para que alguien abra esa puerta hay que saber **a quién tocarla** y **qué pedir** cuando abra.
+
+Los seis insumos, con lo que hay que decir de cada uno:
+- **Capital** — dinero para materiales, licencias o dedicación. **Rara vez es lo primero que falta.**
+- **Mentoría** — alguien que ya se equivocó antes y le ahorra tres meses de camino.
+- **Redes de contactos** — acceso a las personas correctas; suele valer más que el dinero.
+- **Infraestructura** — laboratorios, equipos, espacios, datos.
+- **Marco normativo** — permisos, avales, respaldo institucional para poder probar.
+- **Clientes o usuarios reales** — el insumo más escaso y el que más rápido madura un proyecto.
+
+Lo que el ecosistema **no** hace: no valida por usted, no arregla una propuesta sin usuario y no reemplaza la evidencia. **Si llega a una entidad sin saber qué problema resuelve, la puerta se abre y no pasa nada.**
+
+#### 2. Escalas: la misma innovación cambia según dónde la ponga
+
+| Escala | Qué se innova ahí | Quién decide y financia | Qué le exigen a usted |
+| :--- | :--- | :--- | :--- |
+| **Local** (barrio, campus, empresa) | Mejora de un proceso concreto, con usuarios que usted puede ver | La institución o el jefe del área | Un piloto pequeño y un permiso |
+| **Regional** (ciudad, departamento) | Soluciones replicables en varios sitios parecidos | Alcaldías, gobernaciones, cámaras de comercio | Que sirva a más de un caso y se pueda medir |
+| **Nacional** | Propuestas alineadas con políticas y focos del país | **MinCiencias**, **iNNpulsa**, ministerios sectoriales | Formulación formal, indicadores y contrapartida |
+| **Internacional** | Retos abiertos, cooperación y escalamiento | Programas de cooperación, **OCDE**/**CEPAL** como referencia, corporativos | Inglés, estándares y evidencia comparable |
+
+El mensaje central: **no se sube de escala saltando pasos**. Un **piloto local bien medido es el pasaporte** para la escala siguiente; sin él, la postulación nacional se cae en la primera revisión. Casi todos los proyectos del curso están —y deben estar— en escala **local**: eso no es poca ambición, es orden.
+
+#### 3. Tipos de impacto: por qué le importa a un país
+Una entidad no financia “una buena idea”: financia **un impacto que puede mostrar**. Hay cuatro tipos y conviene que el estudiante sepa cuál es el suyo:
+- **Económico** — ahorro, productividad, empleo, ingresos. El más fácil de medir y el más pedido en convocatorias.
+- **Social** — calidad de vida, acceso, inclusión, tiempo devuelto a las personas.
+- **Ambiental** — consumo de energía, residuos, huella, uso de recursos.
+- **Institucional / de conocimiento** — capacidades nuevas, datos disponibles, procesos que antes no existían.
+
+El caso del laboratorio, tipificado: el impacto **no** es “una app”; es **tiempo de práctica recuperado** (social) y **uso más eficiente de equipos ya comprados** (económico). Regla para escribirlo: **impacto = a quién + qué cambia + en cuánto**. “Mejorar la experiencia” no es impacto; “**30 estudiantes recuperan una hora de práctica por semana**” sí. Entre dos propuestas iguales, gana la que **nombró su impacto y dijo cómo lo mediría**.
+
+#### 4. El mapa de entidades — un mapa, no un directorio
+No convierta la clase en un listado interminable. Presente **cuatro cuadrantes** con un ejemplo en cada uno y **verifique nombres y vigencia el día de clase**, porque los programas cambian.
+
+| Cuadrante | Ejemplos orientativos | Qué suelen ofrecer |
+| :--- | :--- | :--- |
+| **Universitario** | Unidad de emprendimiento de la CUN · semilleros de investigación · laboratorios y docentes del programa | Mentoría, espacio, validación, contactos |
+| **Público / mixto** | Cámaras de Comercio · programas de alcaldías y gobernaciones · **iNNpulsa** · **MinCiencias** | Convocatorias, capital semilla, formación |
+| **Privado / redes** | Hubs y aceleradoras · centros de desarrollo tecnológico (p. ej. **Cidei**) · comunidades tech · empresas ancla del sector | Piloto, inversión, red de clientes |
+| **Internacional** | Programas de cooperación · **open innovation** de multilatinas · plataformas de retos · marcos de referencia (**OCDE**, **CEPAL**) | Retos abiertos, financiación, escalamiento |
+
+**Regla docente ineludible: no prometa cupos ni financiaciones.** Usted no controla esas convocatorias. Y una advertencia de forma que sí cuesta nota: **un nombre mal escrito hunde la credibilidad del documento** —es “MinCiencias”, no “Min Ciencia”; es “iNNpulsa”, no “Impulsa”—.
+
+#### 5. Preguntar el encaje y escribir un pedido que se pueda responder
+Antes de acercarse a cualquier entidad hay **una sola pregunta**: **¿para qué me sirve ESTA entidad?** Cinco encajes posibles, y se elige **uno** por entidad, no los cinco: **mentoría**, **capital semilla**, **networking**, **infraestructura** o **validación**.
+
+**Si el estudiante no sabe qué pediría, la entidad todavía no le sirve.** No falla la entidad: falla que la propuesta aún no sabe qué le falta. Truco para descubrirlo: **vuelva al MVP y a la prueba de validación de la sesión pasada. ¿Qué le faltó para ejecutarla bien? Eso es lo que pide.**
+
+| Pedido vago | Por qué no funciona | Pedido concreto |
+| :--- | :--- | :--- |
+| “Necesito apoyo para mi proyecto” | El otro no sabe qué hacer con eso y archiva el correo | “Solicito **20 minutos** para que revisen mi Canvas y mi MVP” |
+| “Quisiera que me ayuden con usuarios” | No dice cuántos, ni cuándo, ni para qué | “Solicito acceso a **10 usuarios por 2 semanas** para probar el flujo” |
+| “Me interesa participar en convocatorias” | Pide información que ya es pública | “Solicito confirmar **fechas y requisitos** de la convocatoria vigente” |
+| “Busco financiación” | Sin monto ni destino, no es evaluable | “Solicito apoyo para **materiales de un piloto de 4 semanas**” |
+
+Criterio de calidad de un pedido: **cabe en un correo de 5 líneas** y le permite al otro decir **sí o no** sin tener que preguntar nada más.
+
+#### 6. El pitch de 60 segundos
+Un pitch **no es contar todo**: es lograr que el otro **quiera una segunda conversación**. Con eso claro, el resto es fácil: **todo lo que no ayude a conseguir esa segunda charla, sobra**.
+
+| Tramo | Contenido | Tiempo | Pregunta que responde |
+| :---: | :--- | :---: | :--- |
+| **1** | **Usuario + dolor** | ~10 s | ¿A quién y qué le duele? |
+| **2** | **Insight** | ~10 s | ¿Qué observación lo cambia todo? |
+| **3** | **Propuesta + tipo de innovación** | ~15 s | ¿Qué proponen y qué cambia? |
+| **4** | **Evidencia breve** | ~15 s | ¿Por qué debería creerles? |
+| **5** | **Pedido / siguiente paso** | ~10 s | ¿Qué necesitan de mí ahora? |
+
+El error número uno y el más caro: **empezar por la tecnología** (“hicimos una app con inteligencia artificial que…”). Nadie se conecta con eso, ni siquiera la gente técnica. La tecnología entra en el **tramo 3, como medio**, nunca como protagonista. El **tramo 4** es el que separa un proyecto de aula de una propuesta creíble: ahí entra la **validación** o la **vigilancia** de la sesión pasada.
+
+Tres reglas de forma: **una sola idea por tramo** (si mete dos, se pierden las dos); **números concretos** cuando los tenga (un número vale por tres adjetivos); y **termine pidiendo algo** (un pitch sin pedido deja al otro sin saber qué hacer).
+
+Y una regla de ensayo que hay que enseñar explícitamente: cuando el pitch se pasa de tiempo, **se corta, no se acelera**. Hablar más rápido no arregla un pitch largo: lo vuelve incomprensible. Se corta empezando por los adjetivos y las explicaciones técnicas del tramo 3. Se **memoriza la estructura, no el texto**: un pitch recitado suena a discurso; uno estructurado suena a convicción.
+
+#### 7. Errores frecuentes / preguntas trampa
+
+| Error o pregunta trampa del estudiante | Respuesta sugerida del docente |
+| :--- | :--- |
+| Lista entidades sin decir qué les pediría | “Una entidad sin pedido concreto no sirve. ¿Le pides mentoría, piloto, capital o contactos?” |
+| Pone entidades genéricas o inventadas | “Necesito el nombre real y bien escrito, verificado en su sitio. ¿Existe y hace lo que dices?” |
+| Empieza el pitch por la tecnología | “Empieza por la persona y su dolor. La app va en el tramo 3, como medio.” |
+| Pitch de 3 minutos “porque hay mucho que contar” | “En 60 s no cuentas todo: logras que quieran una segunda charla. Corta lo demás.” |
+| Se pasa de tiempo y habla más rápido | “No aceleres: **corta**. Empieza por los adjetivos del tramo 3.” |
+| Confunde el producto con el impacto | “‘Una app’ no es impacto. A quién + qué cambia + en cuánto, eso sí lo es.” |
+| “¿Me pueden dar el cupo o la beca?” | “No manejo esas convocatorias y no puedo prometer nada. Te enseño a identificarlas y a preguntar el encaje.” |
+| Dice que su propuesta es “nacional” sin piloto | “Sin un piloto local medido, la postulación nacional se cae en la primera revisión.” |
+
+---
+
+🧭 **Plan de Clase por Fases** — *Total: 60 min*
+
+{plan_tabla(fases)}
+
+> **Los minutos de arriba son los de una hora sin evaluación.** Esta sesión cierra el **Quiz 3**, así que el plan real —el de abajo, con la fase de evaluación— recorta la fase más larga. Cuando los números no coincidan, manda el plan de clase.
+
+**Triage si el reloj aprieta:** lo que **no** se sacrifica es el **pedido concreto** (fase 3) y los **cinco tramos del pitch** (fase 4): son exactamente lo que la ACA Final califica y cierra esta semana. Lo primero que se recorta es el recorrido de escalas e impacto, que el estudiante puede leer del deck.
+
+---
+
+#### 1️⃣ Encuadre: la última antes del cierre de la ACA Final (~5 min) — Protagonista: Docente
+{slides_fase(label, portada_deck(n, titulo), "Una semilla buena no basta")}
+
+**Objetivo de la fase:** que entiendan que hoy la propuesta se conecta con el afuera **y** que esta es la última clase que alimenta la ACA Final.
+
+**GUION LITERAL:**
+> “Buenas tardes. Una innovación **rara vez sobrevive sola**. Para pasar de prototipo a impacto necesita cosas que ustedes todavía no tienen: **capital, mentoría, contactos, infraestructura, permisos y usuarios reales**. La metáfora del día: **una semilla buena no basta; necesita tierra, agua, luz y clima**. Ese entorno de actores y reglas es el **ecosistema**.”
+
+> “Por eso su trabajo no termina cuando suben el archivo a CDigital. Termina de verdad cuando **alguien de afuera le abre una puerta** a la propuesta. Y para que alguien abra esa puerta hay que saber **a quién tocarla** y **qué pedir** cuando abra. Eso es lo de hoy.”
+
+> “Aviso de calendario, sin rodeos: esta es la **última sesión antes del cierre de la ACA Final**, y la ACA califica **dos cosas de hoy**: el **ecosistema** y el **pitch**. La próxima clase ya no alcanza a alimentar la entrega: sirve para **sustentar y consolidar** lo que hoy quede escrito. Las fechas exactas están en CDigital y en la Presentación del Curso: revísenlas hoy, no el fin de semana.”
+
+> “Salen de la hora con un **mapa de mínimo 3 entidades reales** con un pedido concreto a cada una, y el **guion del pitch de 60 segundos** cronometrado.”
+
+**Qué hacer:**
+1. (2 min) Portada, control de audio y de nombres en Meet.
+2. (2 min) Metáfora de la semilla y los seis insumos, en una pasada rápida.
+3. (1 min) Anunciar el cierre de la ACA Final y pedir que abran hoy mismo el ítem en CDigital para ver la fecha.
+
+---
+
+#### 2️⃣ Qué da el ecosistema · escalas · tipos de impacto (~9 min) — Protagonista: Docente
+{slides_fase(label, "Qué le puede dar el ecosistema (y qué no)", "La misma innovación cambia de escala: local → internacional", "Tipos de impacto: por qué le importa a un país")}
+
+**Objetivo de la fase:** que cada estudiante pueda decir **qué insumo le falta**, **en qué escala está** y **qué impacto declara**.
+
+**GUION LITERAL:**
+> “Seis insumos que una propuesta necesita y casi nunca consigue sola: **capital, mentoría, redes, infraestructura, marco normativo y usuarios reales**. Antes de salir a buscar plata, háganse una pregunta honesta: **¿cuál de los seis me falta de verdad hoy?** Casi nunca es el primero. Y lo que el ecosistema **no** hace: no valida por ustedes, no arregla una propuesta sin usuario y no reemplaza la evidencia.”
+
+> “Segundo, **la escala**. La misma innovación cambia según dónde la pongan. **Local**: un proceso concreto, usuarios que usted puede ver, y le piden un piloto pequeño y un permiso. **Regional**: que sirva en varios sitios parecidos y se pueda medir. **Nacional**: **MinCiencias**, **iNNpulsa**, ministerios; ahí le piden formulación formal, indicadores y contrapartida. **Internacional**: cooperación y retos abiertos, con inglés y estándares. Y la regla que evita el ridículo: **no se sube de escala saltando pasos**. Un **piloto local bien medido es el pasaporte** para la siguiente. Casi todos ustedes están en local, y está perfecto.”
+
+> “Tercero, **el impacto**. Una entidad no financia una buena idea: financia **un impacto que puede mostrar**. Cuatro tipos: económico, social, ambiental e institucional. Con el caso del laboratorio: el impacto **no es la app**; es **tiempo de práctica recuperado** —social— y **mejor uso de equipos ya comprados** —económico—. Y se escribe con una fórmula: **a quién + qué cambia + en cuánto**. ‘Mejorar la experiencia’ no es impacto. ‘Treinta estudiantes recuperan una hora de práctica por semana’ sí lo es. Entre dos propuestas iguales, **gana la que nombró su impacto y dijo cómo lo mediría**.”
+
+**Qué hacer:**
+1. (3 min) Los seis insumos y la pregunta “¿cuál me falta hoy?”; pedir dos respuestas por el chat.
+2. (3 min) Recorrer la tabla de escalas y ubicar el caso del laboratorio en **local**.
+3. (3 min) Los cuatro tipos de impacto y la fórmula; reescribir en vivo un “mejorar la experiencia” que alguien proponga.
+
+---
+
+#### 3️⃣ Mapa de entidades, encaje y pedido concreto (~9 min) — Protagonista: Docente
+{slides_fase(label, "El mapa de entidades: cuatro cuadrantes", "Aprender a preguntar el encaje", '"Pedir apoyo" no es un pedido', "Ejemplo modelado: mapa de entidades del caso del laboratorio")}
+
+**Objetivo de la fase:** que salgan sabiendo **a quién** acercarse y, sobre todo, **con qué frase**.
+
+**GUION LITERAL:**
+> “El mapa tiene **cuatro cuadrantes**. **Universitario**: la unidad de emprendimiento de la CUN, semilleros, laboratorios y docentes del programa. **Público y mixto**: Cámaras de Comercio, programas de alcaldías y gobernaciones, **iNNpulsa**, **MinCiencias**. **Privado y redes**: hubs, aceleradoras, centros de desarrollo tecnológico como **Cidei**, comunidades tech y empresas ancla de su sector. E **internacional**: cooperación, *open innovation* de multilatinas, plataformas de retos, y marcos de referencia como **OCDE** y **CEPAL**.”
+
+> “Dos advertencias. La primera: esto es un **mapa, no un directorio**; los programas cambian, así que **verifiquen el nombre y la vigencia** el día que vayan a escribirlo. Un nombre mal escrito hunde la credibilidad del documento entero. La segunda, y sean conscientes: yo **no** les puedo prometer cupos ni recursos, porque no manejo esas convocatorias. Lo que sí les enseño es a **preguntar el encaje**.”
+
+> “Preguntar el encaje es responderse una sola cosa: **¿para qué me sirve ESTA entidad?** Cinco opciones y se elige **una** por entidad: **mentoría, capital semilla, networking, infraestructura o validación**. Si no saben qué pedirían, la entidad todavía no les sirve —y no es culpa de la entidad: es que la propuesta aún no sabe qué le falta—. El truco para descubrirlo: **vuelvan a su MVP y a la prueba de la clase pasada. ¿Qué les faltó para ejecutarla bien? Eso es lo que piden.**”
+
+> “Y ahora lo que más cuesta: **‘pedir apoyo’ no es un pedido**. ‘Necesito apoyo para mi proyecto’ termina archivado. ‘**Solicito 20 minutos para que revisen mi Canvas y mi MVP**’ se puede responder con un sí o un no. ‘Quisiera ayuda con usuarios’ no dice nada; ‘**solicito acceso a 10 usuarios por 2 semanas para probar el flujo**’ sí. Un buen pedido **cabe en un correo de cinco líneas** y no obliga al otro a preguntar nada más.”
+
+**Modelación en vivo:** abra una tabla de tres columnas en Google Docs y llénela con el caso del laboratorio delante de ellos — Unidad de emprendimiento CUN / **mentoría** / *revisión del Canvas y del pitch, y 5 contactos de estudiantes usuarios*; área de TI o empresa del sector / **piloto** / *10 usuarios reales durante 2 semanas para cronometrar el flujo*; programa público o Cámara de Comercio / **convocatoria** / *confirmación de fechas y requisitos vigentes*. Subraye la tercera columna: **medible y acotada en el tiempo**, ninguna dice “pedir ayuda”.
+
+**Qué hacer:**
+1. (3 min) Recorrer los cuatro cuadrantes con un ejemplo por cada uno, pronunciando bien los nombres.
+2. (2 min) Los cinco encajes y la regla “si no sabe qué pedir, la entidad no le sirve todavía”.
+3. (4 min) Llenar el mapa del caso en pantalla y contrastar cada pedido vago con su versión concreta.
+
+---
+
+#### 4️⃣ El pitch de 60 segundos: cinco tramos y ejemplo (~9 min) — Protagonista: Docente
+{slides_fase(label, "El pitch de 60 segundos: qué logra y qué no", "Los cinco tramos del pitch de 60 segundos", "Ejemplo modelado: el pitch completo, tramo por tramo", "Paso a paso: escribir y ensayar su pitch")}
+
+**Objetivo de la fase:** que escuchen un pitch completo, cronometrado, y sepan exactamente cómo escribir el suyo.
+
+**GUION LITERAL:**
+> “Un pitch **no es contar todo**. Es lograr que el otro **quiera una segunda conversación**. Si eso les queda claro, el resto es fácil: **todo lo que no ayude a conseguir esa segunda charla, sobra**.”
+
+> “El error número uno, y el más caro, es **empezar por la tecnología**: ‘hicimos una app con inteligencia artificial que…’. Nadie se conecta con eso, ni siquiera los técnicos. Se empieza por **la persona y su dolor**, que es lo único que todo el mundo entiende sin contexto. La tecnología va en el tramo 3, **como medio**.”
+
+> “Cinco tramos. Diez segundos de **usuario y dolor**; diez de **insight**, la observación que lo cambia todo; quince de **propuesta y tipo de innovación**; quince de **evidencia**; y diez de **pedido**. Ojo con el tramo 4: **es el que separa un proyecto de aula de una propuesta creíble**, y ahí entra la validación o la vigilancia de la clase pasada.”
+
+> “Escúchenlo entero, con cronómetro: ‘*Los estudiantes de Ingeniería pierden **hasta una hora** buscando un laboratorio libre.* — usuario y dolor, y todavía no aparece ninguna tecnología. *Al observarlos notamos que el **70 % de los choques** se concentra en **dos franjas** del día.* — ese es el insight, la observación que uno no esperaba. *Proponemos una **asignación automática desde el horario del curso**, sin trámite de reserva; es una innovación **de proceso**.* — quince segundos, y nombra el tipo, que muestra que sabe lo que está haciendo. *En una prueba con 5 estudiantes, **4 de 5 completaron el flujo en menos de un minuto** y dijeron que lo usarían cada semana.* — un número real vence a cualquier adjetivo; aquí es donde su validación paga. *Buscamos un **piloto de dos semanas con un curso** para medirlo en condiciones reales.*’ **Sesenta segundos exactos, y empecé por la persona, no por la app.**”
+
+> “Tres reglas de forma: **una sola idea por tramo**; **números concretos** cuando los tengan; y **terminen pidiendo algo**. Y una regla de ensayo: casi todos pasan de noventa segundos en el primer intento, y es normal. Cuando eso pase, **corten, no aceleren**. Hablar rápido no arregla un pitch largo: lo vuelve incomprensible. Corten adjetivos y explicaciones técnicas del tramo 3. Y **memoricen la estructura, no el texto**: un pitch recitado suena a discurso; uno estructurado suena a convicción.”
+
+**Qué hacer:**
+1. (2 min) Qué logra un pitch y el error de empezar por la tecnología.
+2. (2 min) Recorrer los cinco tramos con sus tiempos, señalando el tramo 4.
+3. (3 min) Leer el pitch modelo completo **con cronómetro a la vista**, tramo por tramo.
+4. (2 min) Las tres reglas de forma y el “corte, no acelere” del ensayo.
+
+---
+
+#### 5️⃣ Taller: mapa de entidades + guion del pitch (~22 min) — Protagonista: Estudiantes
+{slides_fase(label, "Errores frecuentes y respuestas", "TALLER — Mapa de entidades + guion del pitch (23 minutos)")}
+
+**GUION LITERAL (consigna):**
+> “Pasamos al **TALLER**. Tienen **22 minutos** y cinco pasos.”
+
+> “**Uno:** completen su **mapa de entidades** en Google Docs con **mínimo 3 entidades reales**, de **cuadrantes distintos**, con el **nombre verificado en el sitio de la entidad** y **un pedido concreto** a cada una. Si no encuentran el nombre, esa entidad no entra. **Dos:** escriban su **frase de impacto** — a quién + qué cambia + en cuánto. Una sola frase. **Tres:** escriban el **guion del pitch** siguiendo los cinco tramos; pueden bocetarlo en Excalidraw. **Cuatro:** **ensayen en parejas** con cronómetro: el que escucha repite qué entendió, y el que habla ajusta. **Cinco:** **dos voluntarios** hacen su pitch en vivo y les tomo el tiempo; el resto sustenta la próxima sesión.”
+
+> “**Criterio de éxito:** 3 entidades con pedido concreto, y un guion en el que en **60 segundos** se entiendan **dolor, valor y pedido**. Verificación en pareja: si su compañero no puede repetir el pedido después de escucharlo, el tramo 5 está mal escrito. El cronómetro no es para presionarlos: es para que descubran cuánto sobra — y casi siempre sobra el tramo 3.”
+
+| Paso del taller | Qué tiene que quedar escrito | Si hay que recortar |
+| :--- | :--- | :--- |
+| **1.** Mapa de entidades | 3 entidades reales, cuadrantes distintos, nombre verificado, un pedido concreto | **No se recorta**: la ACA Final lo califica y cierra esta semana |
+| **2.** Frase de impacto | Una frase con a quién + qué cambia + en cuánto | No se recorta: es una sola frase |
+| **3.** Guion del pitch | Una frase por tramo, los cinco tramos | **No se recorta**: la ACA Final lo califica |
+| **4.** Ensayo en parejas | Tiempo real anotado y qué entendió el compañero | Se hace **en casa** y se reporta por el foro |
+| **5.** Pitch en vivo | Dos voluntarios cronometrados | Pasa completo a la próxima sesión, que es de sustentación |
+
+> **El número que trae el título de la slide es el del taller completo.** Si el plan de clase de arriba le asignó menos minutos —porque hoy cierra el Quiz 3—, manda el plan: recorte por los pasos 4 y 5, nunca por el 1 y el 3.
+
+**Tabla de acompañamiento:**
+
+| Si el estudiante… | Usted responde… |
+| :--- | :--- |
+| Escribe “pedir apoyo” sin concretar | “¿Apoyo de qué: mentoría, piloto, capital o contactos? Elige uno y pon cuánto y por cuánto tiempo.” |
+| Pone entidades genéricas o inventadas | “Necesito el nombre real y bien escrito. Ábrelo en su sitio antes de pegarlo.” |
+| Elige las tres entidades del mismo cuadrante | “Diversifica: universitario, público y privado piden cosas distintas y te enseñan cosas distintas.” |
+| No sabe qué pedirle a la entidad | “Vuelve a tu MVP: ¿qué te faltó para ejecutar la prueba? Eso es lo que pides.” |
+| Confunde producto con impacto | “‘Una app’ no es impacto. ¿A quién le cambia qué, y en cuánto?” |
+| Empieza el pitch por la tecnología | “Arranca por la persona y su dolor. La app va en el tramo 3.” |
+| Se pasa de 60 segundos | “**Corta, no aceleres.** Empieza por los adjetivos del tramo 3.” |
+| Termina el pitch sin pedir nada | “¿Qué quieres que haga el que te escuchó? Eso es el tramo 5.” |
+
+---
+
+#### 6️⃣ Cierre: la semana en que se cierra la ACA Final (~6 min) — Protagonista: Docente
+{slides_fase(label, "Antes de entregar: revise usted mismo", "Para continuar — la semana en que se cierra la ACA Final", cierre_deck(n))}
+
+**GUION LITERAL:**
+> “Tres ideas de hoy. Una: una innovación **no sobrevive sola**; necesita un ecosistema que le dé lo que le falta. Dos: una entidad **sin un pedido concreto** no le sirve todavía. Tres: un pitch se gana **empezando por la persona**, no por la tecnología.”
+
+> “**PARA CONTINUAR.** (a) Suban su mapa y su guion como **`S06_EcosistemaPitch_Apellido`** a CDigital. (b) **Esta es la semana de la ACA Final**: armen el **paquete consolidado** con lo que ya tienen —ficha del problema, ficha Oslo, matriz de tipos, Canvas, MVP y validación, tablero de vigilancia, mapa de entidades y guion del pitch—. **Nada de esto hay que inventarlo ahora**: son documentos que ya existen; lo que falta es **integrarlos en un solo texto** y que el usuario sea el mismo en todos. (c) **Revisen en CDigital la rúbrica y el espacio de entrega de la ACA Final** antes de subir, y verifiquen ahí la fecha exacta de cierre. Cerrado el espacio, la nota es la que hay.”
+
+> “**Cierre.** La próxima sesión es la **última**: taller de **consolidación y sustentación**. Ya no se entrega nada nuevo: cada quien **sustenta su propuesta con el pitch**, recibe retroalimentación y cerramos el curso. Vengan con el pitch ensayado y el documento abierto: se habla, no se lee. Mismo Meet. Gracias.”
+
+**Qué hacer:**
+1. (2 min) Recorrer el checklist de la slide “Antes de entregar”, deteniéndose en “nombre verificado” y “el tramo 5 pide algo”.
+2. (2 min) Enunciar el paquete consolidado y repetir que no se escribe nada nuevo: se integra.
+3. (2 min) Anunciar la última sesión y qué hay que traer a ella.
+
+---
+
+🧩 **Actividad práctica / taller (resumen del entregable de hoy)**
+
+**Nombre:** Mapa de entidades + frase de impacto + guion del pitch — última pieza de la Propuesta de Innovación.
+
+1. Mapa de **mínimo 3 entidades reales**, de cuadrantes distintos, con nombre verificado y **un pedido concreto y acotado** a cada una.
+2. **Frase de impacto**: a quién + qué cambia + en cuánto, con su tipo (económico, social, ambiental o institucional).
+3. **Guion del pitch de 60 s** en cinco tramos, con un número real en el tramo 4 y un pedido en el tramo 5.
+4. **Criterio de éxito:** 3 entidades con pedido concreto + un pitch que en 60 segundos comunica **dolor, valor y pedido**.
+5. **Entregable:** `S06_EcosistemaPitch_Apellido` en CDigital.
+6. **Trabajo autónomo de esta semana:** integrar el **paquete consolidado** de la ACA Final y revisar su rúbrica y su fecha de cierre en CDigital.
 
 ---
 
 ✅ **Checklist del docente antes de clase**
 - [ ] Leí el Fundamento Teórico completo
 - [ ] Abrí `Clases/{label}/Presentacion.pptx`
-- [ ] Abrí Canvanizer (https://canvanizer.com/new/business-model-canvas) para modelar en vivo
-- [ ] Tengo la cadena de validación del caso laboratorio lista para escribir
-- [ ] Publiqué en CDigital el espacio de entrega `S06_CanvasMVP`
+- [ ] **Verifiqué hoy** el nombre y la vigencia de las entidades que voy a nombrar (MinCiencias, iNNpulsa, Cidei, Cámara de Comercio, unidad de emprendimiento CUN)
+- [ ] Tengo el mapa de entidades del caso laboratorio listo para llenar en vivo
+- [ ] Tengo el pitch modelo ensayado y un cronómetro visible
+- [ ] Publiqué en CDigital el espacio de entrega `S06_EcosistemaPitch`
+- [ ] Tengo a la vista la fecha exacta de cierre de la ACA Final, leída desde CDigital
 - [ ] Meet listo: {MEET}
 
 ---
-*Fin del Guión — Sesión {n:02d}. Documento autocontenido: un docente sin trayectoria en innovación puede estudiarlo y dictar la hora completa.*
+*Fin del Guión — Sesión {n:02d}. Última sincrónica antes del cierre de la ACA Final. Documento autocontenido: un docente sin trayectoria en innovación puede estudiarlo y dictar la hora completa.*
 """
 
 
 def guion_07(meta):
+    """S07 = cierre: taller de consolidación y sustentación. No dicta contenido nuevo.
+
+    La ACA Final y el Quiz 3 **ya cerraron**; hoy solo abren autoevaluación y coevaluación,
+    que el inyector de `guion_evaluacion.py` agenda con sus propios minutos. Deck:
+    `cun_creatividad_s07.json`. **No pide ningún archivo nuevo en CDigital** — el producto de
+    la hora es una lista escrita de ajustes y la devolución de un compañero.
+    """
     n, label, titulo, detalle = meta
     fases = [
-        ("1️⃣ Encuadre + puente desde la sesión anterior", 5, 5),
-        ("2️⃣ Qué es vigilancia tecnológica + fuentes", 12, 17),
-        ("3️⃣ Modelación: buscar y fichar una señal en vivo", 13, 30),
-        ("4️⃣ Taller: tablero de vigilancia de su tema", 22, 52),
-        ("5️⃣ Cierre + trabajo autónomo", 8, 60),
+        ("1️⃣ Encuadre de cierre: hoy se sostiene lo que ya escribió", 5, 5),
+        ("2️⃣ El hilo completo y la trazabilidad del documento", 7, 12),
+        ("3️⃣ Cómo se sustenta en tres minutos · las cinco preguntas", 8, 20),
+        ("4️⃣ Retroalimentar con criterio y revisar costuras", 7, 27),
+        ("5️⃣ Taller: sustentación cruzada y consolidación", 25, 52),
+        ("6️⃣ Cierre del curso", 8, 60),
     ]
-    return header(*meta) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión**
-1. **Definir** vigilancia tecnológica y diferenciarla de “buscar en Google un rato”.
-2. **Identificar** fuentes confiables (académicas, patentes, mercado, normativa).
-3. **Registrar** al menos 3 señales o tendencias relevantes para su propuesta, con ficha.
-4. **Decidir** un ajuste (o una confirmación) de la propuesta a partir de la evidencia hallada.
+    return header(*meta, uso=USO_SESION_CIERRE) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión** *(cierre: no hay contenido nuevo del Syllabus)*
+1. **Sustentar** la propuesta en tres minutos: pitch de 60 s, dos preguntas y la frase de qué está listo y qué falta.
+2. **Responder** con material propio las cinco preguntas que se le hacen a cualquier propuesta.
+3. **Retroalimentar** a un compañero con la fórmula de las tres frases y los cuatro criterios de la rúbrica.
+4. **Revisar** las seis costuras del documento y salir con una **lista escrita de ajustes**, mínimo tres.
+5. **Diligenciar** en clase la **autoevaluación** (cuestionario) y participar en la **coevaluación** (foro), que abren hoy.
+
+> **Hoy no se entrega nada nuevo y no se evalúa contenido:** la ACA Final y el Quiz 3 ya cerraron. Eso no hace la sesión menos importante — lo que el estudiante responda hoy **no cambia la nota de la ACA**, pero sí cambia el documento con el que va a golpear puertas después. Y descubrir hoy que no sabe explicar su propia propuesta en un minuto es mucho mejor que descubrirlo en una entrevista.
 
 ---
 
 📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
 
-> Este apartado asume que usted **no** ha hecho vigilancia tecnológica formal. Léalo completo: la diferencia entre “informarse” y “vigilar” es el corazón de la clase.
+> Esta es la **última** sesión del curso y la única en la que usted habla poco. Su trabajo hoy es **conducir una ronda**: cronometrar, preguntar bien, cortar a tiempo y lograr que la retroalimentación entre pares sea útil y no cortés. Léalo completo: dirigir bien una ronda es más difícil que dictar.
 
-#### 1. Qué es (y qué no es) la vigilancia tecnológica
-La **vigilancia tecnológica** es un proceso **sistemático** de **capturar, filtrar, analizar y usar** información sobre tecnologías, competidores, normas y tendencias, con un fin concreto: **decidir mejor**. La palabra clave es *sistemático*: no es leer un artículo suelto que apareció en el celular, es un método repetible.
+#### 1. Qué hace útil una sustentación después de la entrega
+La objeción va a salir: *“ya entregué, ¿para qué sustento?”*. La respuesta honesta: porque **el documento no se acaba en la nota**. Es la base de una convocatoria, de una opción de grado o de una entrevista de trabajo. Y porque la sustentación es el único momento del semestre en que alguien le señala el hueco **mientras todavía hay alguien al lado para señalarlo**.
 
-La trampa más común es confundirla con “me informé”. Buscar en Google un rato **no** es vigilancia; es curiosidad. La vigilancia se distingue porque **cambia una decisión**: si después de mirar el entorno usted no ajusta ni confirma nada de su propuesta, no vigiló, solo leyó. El ciclo mínimo es:
+Hoy pasan cuatro cosas, en este orden: **sustentación** con el pitch, **retroalimentación entre pares** con una fórmula, **consolidación** —revisar que las piezas hablen del mismo proyecto— y **cierre**, con auto y coevaluación. Pida dos cosas al abrir: **documento abierto y pitch ensayado**. Hoy se habla, no se lee.
 
-**Observar → Analizar → Comunicar → Usar.**
+#### 2. El hilo completo: de dónde viene cada sección
+Vale la pena decirlo en voz alta, porque el grupo no ve el arco hasta que se lo nombran: **su propuesta ya no es una ocurrencia, es un argumento con evidencia**. Partieron de un problema real con un usuario que duele; lo convirtieron en un *How Might We* y un banco de ideas del que eligieron con criterios; le pusieron nombre con el Manual de Oslo; lo argumentaron contra una alternativa con una matriz; lo pusieron a prueba con Canvas, MVP y una validación con criterio fijado de antemano; lo contrastaron con el entorno en un tablero de vigilancia; y lo conectaron con el afuera con entidades reales, una frase de impacto y un pitch.
 
-Para un ingeniero esto es vital: evita reinventar lo que ya existe, detecta que una tecnología acaba de volverse viable (o barata), y anticipa una norma que puede habilitar o bloquear el proyecto.
+| Sesión | Lo que produjo | Dónde vive en la propuesta |
+| :---: | :--- | :--- |
+| **02** | Reto (HMW), banco de ideas y criterios de selección | Problema–oportunidad: usuario, dolor y evidencia |
+| **03** | **Ficha Oslo**: tipo dominante, novedad, valor | Propuesta de valor y tipo de innovación |
+| **04** | **Matriz comparativa** contra una alternativa + conclusión | Justificación del tipo y del grado |
+| **05** | FODA, **Canvas**, **MVP** y la prueba con criterio; **tablero de vigilancia** | Validación y vigilancia tecnológica |
+| **06** | **Mapa de entidades**, frase de impacto y **guion del pitch** | Ecosistema, siguiente paso y pitch anexo |
+| **07** (hoy) | Sustentación, ajustes de coherencia y cierre | El documento revisado que se lleva del curso |
 
-#### 2. Tipos de señales y dónde buscarlas (fuentes gratis + web)
-No todas las señales son técnicas. Conviene mirar cuatro frentes, todos con fuentes gratuitas y en el navegador:
+Úsela como diagnóstico: **si alguna fila no tiene documento en su carpeta, esa es la sección que hay que reconstruir** antes de usar la propuesta para cualquier otra cosa.
 
-| Tipo de señal | Fuentes gratis / web | Pregunta que responde |
+#### 3. La ronda: tres minutos por persona, con reloj
+- **0:00 – 1:00 · El pitch.** Los cinco tramos, tal como se ensayaron.
+- **1:00 – 2:30 · Dos preguntas.** Un compañero y el Docente. Se responde **corto y concreto**.
+- **2:30 – 3:00 · La frase honesta.** **Qué está listo** y **qué falta**, una frase cada cosa.
+
+Esa última frase es la que más pesa. Decir *“me falta probar con usuarios reales”* **no es una debilidad: es madurez de proyecto**. Lo que sí se nota mal es la propuesta que se declara terminada y se cae en la primera pregunta.
+
+Tres reglas de sala que conviene anunciar antes de empezar: **no se lee la pantalla** (si necesita apoyo, una sola diapositiva con el dolor y el número); **no se pide disculpas al empezar** (“es que no me quedó muy bien” le quita autoridad a todo lo que venga después); y **se responde lo que se preguntó** — si no sabe, se dice **“no lo verifiqué”** y se sigue: es una respuesta válida y profesional.
+
+#### 4. Las cinco preguntas que hay que hacer (y qué mide cada una)
+
+| Pregunta | Qué está midiendo | Respuesta que funciona |
 | :--- | :--- | :--- |
-| **Tecnología** | **Google Scholar** (scholar.google.com), **Google Patents** (patents.google.com), repos de GitHub, documentación oficial de IEEE/estándares | ¿Qué se volvió posible o barato? |
-| **Mercado** | Reportes públicos, precios, notas de adopción, portales de datos abiertos | ¿Quién ya paga por esto y cuánto? |
-| **Normativa** | Leyes, resoluciones, políticas institucionales, sitios de entidades públicas | ¿Qué me limita o me habilita? |
-| **Social** | Hábitos, demografía, quejas públicas en redes/prensa | ¿Qué cambió en el usuario? |
+| ¿Quién es exactamente su usuario? | Si el problema tiene una persona detrás | Rol + situación: “estudiantes de 4º que cursan laboratorio los martes” |
+| ¿Qué evidencia tiene de que eso pasa? | Si el problema es observado o supuesto | Un dato, una observación o una frase textual del usuario |
+| ¿En qué se diferencia de lo que ya existe? | Si hubo vigilancia real | “Existe X; mi diferencia está en Y”, con la fuente a la mano |
+| ¿Cómo sabría que su propuesta funcionó? | Si hay criterio, no deseo | El criterio de la prueba: [cuántos] de [cuántos] en [qué condición] |
+| ¿Qué necesita ahora que no tiene? | Si sabe pedir el encaje | Un pedido concreto a una entidad concreta, acotado en el tiempo |
 
-**Google Patents** merece un párrafo: muchas soluciones ya están patentadas o documentadas ahí. Ver una patente parecida **no** mata la idea del estudiante; le obliga a decir **en qué se diferencia** la suya. **Google Scholar** da el estado del arte académico. En clase se usan sin login para lo básico; si aparece “tráfico inusual” en una búsqueda profunda, se sigue con el navegador normal del docente.
+Las cinco se responden con material que el estudiante **ya escribió**. Si alguna lo deja en blanco, **ahí está el hueco de su documento** — y eso, no la nota, es lo que se lleva de hoy.
 
-#### 3. La ficha de señal (para que la vigilancia sea utilizable)
-Cada señal se registra en una ficha mínima —en Google Docs— para que sirva a la decisión:
+#### 5. Retroalimentar bien: la fórmula de las tres frases
+Escuchar una sustentación **no es un descanso**: es la mitad del ejercicio, y es exactamente lo que se evalúa en la **coevaluación**. La fórmula, en este orden y sin salirse de ahí:
+- **“Me quedó claro que…”** — una cosa que entendió sin esfuerzo. Le dice al otro qué sí funciona.
+- **“No me quedó claro…”** — **una** sola cosa, específica. “No entendí quién es el usuario” sirve; “estuvo confuso” no.
+- **“Le sugiero…”** — una acción concreta y ejecutable, no un juicio.
 
-- **Título de la señal.**
-- **Fuente + fecha + enlace** (sin fecha ni autor, no vale).
-- **Hallazgo en 2 líneas.**
-- **Implicación para MI propuesta:** ¿confirma, obliga a pivotar, o es un riesgo?
-- **Nivel de confianza:** alto / medio / bajo.
+Lo que **no** cuenta: “muy bien, felicitaciones” (amable e inútil); “a mí me parece que deberías hacer una app” (eso es imponer su idea, no evaluar la del otro); y corregir la ortografía de la diapositiva mientras el problema de fondo sigue sin usuario. **Se critica la propuesta, nunca a la persona** — con el mismo criterio que le van a aplicar a usted en cinco minutos.
 
-#### 4. Errores frecuentes / preguntas trampa
+| Criterio de la rúbrica | Señal de que está flojo | Señal de que está sólido |
+| :--- | :--- | :--- |
+| **Claridad del problema** | Empieza por la solución o por la tecnología | En 10 s ya sabemos a quién le duele qué |
+| **Solidez de la evidencia** | “Todo el mundo sabe que…” | Un número, una observación o una cita del usuario |
+| **Diferencia** | “No hay nada parecido” (sin haber buscado) | Nombra lo que existe y dice en qué se aparta |
+| **Claridad del pedido** | Termina sin pedir nada | Se puede responder con un sí o un no |
+
+Esos cuatro criterios son los que el estudiante debe usar también **en el foro de coevaluación**: escribir con ellos, no con adjetivos.
+
+#### 6. Consolidar es revisar costuras, no escribir más
+El error de la consolidación es creer que hay que **agregar páginas**. Casi siempre hay que **quitar contradicciones**. Las seis costuras que más se rompen:
+1. **El usuario es el mismo en todo el documento.** Si en la ficha del problema era el estudiante y en el Canvas es el laboratorista, uno de los dos sobra.
+2. **El tipo Oslo coincide con lo que el Canvas describe.** Si dijo “innovación de proceso” y su propuesta de valor habla de un producto nuevo, algo se movió.
+3. **El MVP prueba el supuesto que declaró más riesgoso.** Es el desajuste más común de todos.
+4. **Alguna señal de vigilancia cambió algo visible.** Si el tablero está y la propuesta quedó idéntica, la vigilancia fue decorativa.
+5. **Lo que le pide a la entidad es lo que al proyecto le falta.** Si pide capital pero lo que le falta son usuarios, el pedido está mal dirigido.
+6. **El pitch dice lo mismo que el documento.** Si el pitch promete algo que el texto no sostiene, gana el texto: se corrige el pitch.
+
+Prueba final del paquete: **un lector externo debería poder contar su propuesta después de leerla una vez.** Si no puede, sobra texto o falta hilo.
+
+#### 7. Auto y coevaluación: qué son y por qué se hacen en clase
+Son **dos ítems del corte 3 con nota propia** y **abren hoy** en CDigital. La **autoevaluación** es un **cuestionario**: no se trata de ponerse 5,0 ni de castigarse, sino de **argumentar con hechos del semestre** — ¿entregué a tiempo?, ¿trabajé por semanas o la última noche?, ¿incorporé la retroalimentación?, ¿qué haría distinto? La **coevaluación** es un **foro**: se **participa escribiendo**, no se sube archivo, y se escribe con los cuatro criterios de la rúbrica.
+
+Pesan poco por separado, pero **son las notas más fáciles de perder: se pierden por no entrar**. Por eso se abren en pantalla y se diligencian en clase. Los minutos y el guion exacto de esa fase los inserta el modelo de evaluación más abajo; no los improvise aquí.
+
+#### 8. Errores frecuentes / preguntas trampa
 
 | Error o pregunta trampa del estudiante | Respuesta sugerida del docente |
 | :--- | :--- |
-| “Ya vigilé: leí un artículo.” | “¿Cambió alguna decisión de tu propuesta? Si no, te informaste, no vigilaste.” |
-| “Encontré una patente igual, mi idea murió.” | “Al contrario: ahora sabes contra qué compites. ¿En qué se diferencia la tuya?” |
-| Pega un enlace sin fecha ni autor | “Una fuente sin fecha ni autor no es evidencia. Busca quién lo dice y cuándo.” |
-| “Hay muchas apps parecidas.” | “‘Parecidas’ no es análisis. ¿En qué se parecen y en qué te diferencias tú?” |
-| Vigilancia decorativa (no cambia nada) | “Si tu tablero no ajusta alcance, usuario, tecnología ni riesgo, todavía no sirve.” |
+| “Ya entregué, ¿para qué sustentar?” | “Porque el documento no se acaba en la nota: es la base de una convocatoria, de una opción de grado o de una entrevista.” |
+| Lee el documento en voz alta | “El pitch se cuenta, no se lee. Si necesitas apoyo, una sola diapositiva con el dolor y el número.” |
+| Empieza pidiendo disculpas | “‘No me quedó muy bien’ borra seis sesiones de trabajo antes de tu primera frase. Arranca por el usuario.” |
+| Inventa una respuesta que no verificó | “‘No lo verifiqué’ es una respuesta profesional. Inventar no lo es.” |
+| “Mi propuesta cambió después de entregar.” | “Perfecto, dilo. Que la propuesta evolucione con la evidencia es exactamente lo que este curso quería enseñar.” |
+| Retroalimenta con “muy bien, felicitaciones” | “Eso es amable e inútil. Usa las tres frases: me quedó claro / no me quedó claro / te sugiero.” |
+| Cree que consolidar es escribir más | “Consolidar es quitar contradicciones. Revisa las seis costuras antes de agregar una sola página.” |
+| Deja la coevaluación “para la casa” | “El foro tiene ventana. Lo que no queda escrito ahí no existe para el libro de calificaciones.” |
 
 ---
 
@@ -1524,335 +2128,211 @@ Cada señal se registra en una ficha mínima —en Google Docs— para que sirva
 
 {plan_tabla(fases)}
 
+> Hoy **no hay evaluación de contenido**, pero **sí abren la autoevaluación y la coevaluación**: el modelo de evaluación inserta esa fase con sus propios minutos justo antes del cierre, y recorta la fase más larga para hacerle sitio. Las slides «Autoevaluación y coevaluación: qué son y cómo se diligencian» pertenecen a **esa** fase — no las adelante.
+
+**Triage si el reloj aprieta:** lo que **no** se sacrifica es la **ronda de sustentación** (paso 1 del taller) ni los **minutos de auto y coevaluación**: son, respectivamente, el sentido de la sesión y una nota que se pierde por no entrar. Lo primero que se recorta es el recorrido del hilo y la trazabilidad, que está entero en el deck.
+
 ---
 
-#### 1️⃣ Encuadre + puente desde la sesión anterior (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+#### 1️⃣ Encuadre de cierre: hoy se sostiene lo que ya escribió (~5 min) — Protagonista: Docente
+{slides_fase(label, portada_deck(n, titulo), "Hoy no se entrega nada nuevo: hoy se sostiene lo que ya escribió")}
 
-**Objetivo de la fase:** conectar los resultados de validación con la mirada al entorno.
+**Objetivo de la fase:** dejar clarísimo que hoy no se entrega nada, que igual hay que trabajar, y anunciar el orden de la hora.
 
 **GUION LITERAL:**
-> “Buenas tardes. **Sesión {n:02d}**: **Vigilancia tecnológica**. La sesión pasada probaron su MVP con usuarios. Hoy levantamos la vista del prototipo y miramos el **entorno**: ¿qué tecnología, qué competidor, qué norma afecta su propuesta? La idea es que su MVP no viva en una burbuja.”
+> “Buenas tardes. Esta es la **última sesión** del curso. La **ACA Final ya cerró** y el **Quiz 3** también, así que hoy **no hay evaluación de contenido nueva** — y eso no hace la sesión menos importante, se los digo de una vez.”
 
-> “Miren la **slide 2 — OBJETIVOS**. Salen con un **tablero de al menos 3 señales** y, muy importante, con **una decisión** tomada a partir de ellas.”
+> “Hoy pasan cuatro cosas, en este orden. **Sustentación**: cada quien defiende su propuesta con el **pitch de 60 segundos** y responde dos preguntas. **Retroalimentación entre pares**, con una fórmula, no con ‘me gustó’. **Consolidación**: revisamos que las siete piezas de su documento hablen del mismo proyecto. Y **cierre**: la **autoevaluación** y la **coevaluación**, que se abren hoy en CDigital, más la ruta de lo que sigue.”
+
+> “¿Por qué sustentar después de entregar? Por dos razones honestas. La primera: lo que respondan hoy **no cambia la nota de la ACA**, pero sí cambia el documento con el que van a golpear puertas después. La segunda: descubrir hoy que no saben explicar su propia propuesta en un minuto es **muchísimo mejor** que descubrirlo en una entrevista de trabajo.”
+
+> “Dos cosas necesito de ustedes: **el documento abierto** y **el pitch ensayado**. Hoy se habla, no se lee.”
 
 **Qué hacer:**
-1. (2 min) Portada + control de audio/nombres en Meet.
-2. (2 min) Leer objetivos (slide 2).
-3. (1 min) Preguntar a 1–2 estudiantes cómo les fue con la prueba del MVP.
+1. (2 min) Portada, control de audio y de nombres; confirmar quién tiene el pitch listo.
+2. (2 min) Anunciar el orden de la hora y que hoy no se entrega archivo nuevo.
+3. (1 min) Anunciar que la ronda es cronometrada, para que se preparen desde ya.
 
 ---
 
-#### 2️⃣ Qué es vigilancia tecnológica + fuentes (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
+#### 2️⃣ El hilo completo y la trazabilidad del documento (~7 min) — Protagonista: Docente
+{slides_fase(label, "El hilo completo de su Propuesta de Innovación", "Trazabilidad: qué sesión produjo qué sección del documento")}
 
-**Objetivo de la fase:** separar “informarse” de “vigilar” y presentar las fuentes.
+**Objetivo de la fase:** que vean el arco completo y detecten, con la tabla en pantalla, qué sección les falta.
 
 **GUION LITERAL:**
-> “**Slide 3.** Vigilancia tecnológica no es ‘me informé’. Es un **sistema**: observar, analizar, comunicar y usar. La prueba de fuego es simple: si después de mirar el entorno **no cambia ninguna decisión** de su propuesta, no vigilaron, solo leyeron.”
+> “Miren de dónde vienen. Partieron de **un problema real**, con un usuario y un dolor concreto. Lo convirtieron en un **How Might We** y en un banco de ideas del que eligieron **con criterios**. Le pusieron **nombre** con el Manual de Oslo: un tipo dominante, justificado. Lo **argumentaron** contra una alternativa, con una matriz y una conclusión escrita. Lo pusieron a prueba con un **Canvas, un MVP y una validación** con criterio fijado de antemano. Lo **contrastaron con el entorno** en un tablero de vigilancia, y ajustaron. Y lo conectaron con el **afuera**: entidades reales, una frase de impacto y un pitch.”
 
-> “**Slide 4.** ¿Dónde miro? Cuatro frentes. Tecnología: **Google Scholar** y **Google Patents**. Ojo con Patents: si encuentran algo parecido, la idea no muere; ahora saben contra qué compiten y tienen que decir en qué se diferencian. Mercado: reportes y datos abiertos. Normativa: leyes y políticas de entidades. Y lo social: qué cambió en el usuario. Todo gratis, todo en el navegador.”
+> “Su propuesta ya no es una ocurrencia: es **un argumento con evidencia**. Y cada pieza de esa lista es un documento que **ya existe**. Hoy no se produce nada nuevo: se **verifica que todas hablen del mismo proyecto**.”
+
+> “Usen la tabla de trazabilidad como diagnóstico, ahora mismo, con su carpeta abierta: si alguna fila **no tiene documento**, esa es justamente la sección que van a tener que reconstruir antes de usar esta propuesta para cualquier otra cosa — una convocatoria, la opción de grado o una entrevista.”
 
 **Qué hacer:**
-1. (5 min) Explicar el ciclo Observar → Analizar → Comunicar → Usar y la prueba “¿cambió una decisión?”.
-2. (7 min) Recorrer los 4 tipos de señal con sus fuentes; abrir Scholar y Patents para mostrarlos.
+1. (3 min) Recorrer el arco completo en voz alta, sesión por sesión, sin detenerse en ninguna.
+2. (3 min) Proyectar la tabla de trazabilidad y pedir que cada quien marque en su carpeta las filas que tiene.
+3. (1 min) Preguntar por el chat cuántas filas le faltan a cada uno. Es el termómetro de la hora.
 
 ---
 
-#### 3️⃣ Modelación: buscar y fichar una señal en vivo (~13 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
+#### 3️⃣ Cómo se sustenta en tres minutos · las cinco preguntas (~8 min) — Protagonista: Docente
+{slides_fase(label, "Cómo se sustenta una propuesta en tres minutos", "Las cinco preguntas que le van a hacer (y cómo se responden)")}
 
-**Objetivo de la fase:** demostrar la búsqueda y el llenado de una ficha de señal.
-
-En vivo, con el caso del laboratorio: busque en **Google Scholar** un paper y/o en **Google Patents** un producto/solución relacionada con sistemas de reserva/turnos. Complete una **ficha de señal** en Google Docs compartiendo pantalla. Insista en **fuente + fecha + implicación**.
+**Objetivo de la fase:** dejar el formato de la ronda sin ambigüedad y anticipar las preguntas, para que nadie sustente a ciegas.
 
 **GUION LITERAL:**
-> “Busco ‘sistema de reserva de laboratorios’ en Scholar… miren, hay estudios sobre gestión de turnos. Copio el título, el autor y el año —sin eso no es evidencia—. Ahora paso a Patents… aquí hay una solución de reserva por QR. ¿Esto mata mi idea? No: me dice que mi diferencia debe estar en otro lado, por ejemplo en la asignación automática. Eso lo escribo en la implicación: ‘pivotar hacia asignación automática’. Fíjense: la señal **cambió** algo. Eso es vigilar.”
+> “La sustentación tiene **tres minutos y el reloj corre**. Del minuto cero al uno, **el pitch**: los cinco tramos tal como los ensayaron. Del uno al dos y medio, **dos preguntas**: una de un compañero y una mía; se responde **corto y concreto**. Y los últimos treinta segundos, **la frase honesta**: qué está listo y qué falta, una frase cada cosa.”
+
+> “Esa última frase es la que más pesa, y quiero que me crean: decir ‘me falta probar con usuarios reales’ **no es una debilidad, es madurez de proyecto**. Lo que sí se nota mal es la propuesta que dice estar terminada y se cae en la primera pregunta.”
+
+> “Tres reglas de la sala. **No se lee la pantalla**: si necesitan apoyo, una diapositiva con el dolor y el número de evidencia, una sola. **No se pide disculpas al empezar**: ‘es que no me quedó muy bien’ le quita autoridad a todo lo que venga después. Y **se responde lo que se preguntó**: si no saben, digan **‘no lo verifiqué’** y sigan. Es una respuesta válida y profesional; inventar no lo es.”
+
+> “Y para que nadie sustente a ciegas, aquí están **las cinco preguntas** que les voy a hacer, en pantalla: quién es exactamente su usuario; qué evidencia tienen de que eso pasa; en qué se diferencia de lo que ya existe; cómo sabrían que su propuesta funcionó; y qué necesitan ahora que no tienen. Las cinco se responden con material que **ustedes ya escribieron**. Si alguna los deja en blanco, ahí está el hueco de su documento — y eso es lo que se llevan de hoy.”
 
 **Qué hacer:**
-1. (7 min) Buscar en Scholar y/o Patents en pantalla, pensando en voz alta.
-2. (6 min) Llenar una ficha de señal completa, subrayando fuente, fecha e implicación.
+1. (3 min) Explicar los tres tiempos de la ronda con el reloj a la vista.
+2. (2 min) Las tres reglas de sala, en tono de acuerdo y no de reglamento.
+3. (3 min) Recorrer las cinco preguntas y su columna de “respuesta que funciona”; pedir que cada quien marque cuál lo deja en blanco.
 
 ---
 
-#### 4️⃣ Taller: tablero de vigilancia de su tema (~22 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+#### 4️⃣ Retroalimentar con criterio y revisar costuras (~7 min) — Protagonista: Docente
+{slides_fase(label, "Retroalimentar bien: la fórmula de las tres frases", "Rúbrica de la ronda: qué mirar cuando escucha a un compañero", "Consolidar es revisar costuras, no escribir más", "Errores frecuentes en la sustentación")}
+
+**Objetivo de la fase:** que el que escucha tenga trabajo —y que la consolidación se entienda como quitar contradicciones, no como escribir más.
+
+**GUION LITERAL:**
+> “Escuchar una sustentación **no es un descanso**: es la mitad del ejercicio, y es exactamente lo que se evalúa en la **coevaluación**. Van a usar **tres frases**, en este orden y sin salirse de ahí. **‘Me quedó claro que…’**: una cosa que entendieron sin esfuerzo, que es información útil para el otro. **‘No me quedó claro…’**: **una** sola cosa y específica —‘no entendí quién es el usuario’ sirve; ‘estuvo confuso’ no—. Y **‘le sugiero…’**: una acción concreta y ejecutable, no un juicio.”
+
+> “Lo que **no** cuenta como retroalimentación: ‘muy bien, felicitaciones’, que es amable e inútil; ‘a mí me parece que deberías hacer una app’, que es imponer su idea en vez de evaluar la del otro; y corregir la ortografía de la diapositiva mientras el problema de fondo sigue sin usuario. Se critica **la propuesta**, nunca a la persona. Y se critica con criterio: el mismo que les van a aplicar a ustedes en cinco minutos.”
+
+> “Mientras escuchan, miren **cuatro criterios**: claridad del problema —¿en diez segundos ya sabemos a quién le duele qué?—; solidez de la evidencia —¿hay un número o una cita, o es ‘todo el mundo sabe que’?—; diferencia —¿nombra lo que existe y dice en qué se aparta?—; y claridad del pedido —¿se puede responder con un sí o un no?—. Esos mismos cuatro son los que van a usar después en el foro.”
+
+> “Y lo último antes del taller: **consolidar no es escribir más**. El error clásico es creer que hay que agregar páginas; casi siempre hay que **quitar contradicciones**. Seis costuras: que el **usuario sea el mismo** en todo el documento; que el **tipo Oslo coincida** con lo que describe el Canvas; que el **MVP pruebe el supuesto** que ustedes declararon más riesgoso —este es el desajuste más común de todos—; que **alguna señal de vigilancia haya cambiado algo visible**; que lo que le piden a la entidad sea **lo que al proyecto le falta**; y que **el pitch diga lo mismo que el documento** —si el pitch promete lo que el texto no sostiene, gana el texto: corrijan el pitch—.”
+
+**Qué hacer:**
+1. (3 min) La fórmula de las tres frases y lo que no cuenta como retroalimentación.
+2. (2 min) Los cuatro criterios de la rúbrica, anunciando que se usan también en el foro.
+3. (2 min) Las seis costuras, rápido, y la prueba final: “¿un lector externo podría contar su propuesta después de leerla una vez?”.
+
+---
+
+#### 5️⃣ Taller: sustentación cruzada y consolidación (~25 min) — Protagonista: Estudiantes
+{slides_fase(label, "TALLER — Sustentación cruzada y consolidación (25 minutos)")}
 
 **GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **22 minutos**. Abran Google Scholar y Google Patents en otra pestaña y armen su **Tablero de vigilancia** en Google Docs con **mínimo 3 fichas de señal**: título, fuente con fecha y enlace, hallazgo en 2 líneas, implicación y nivel de confianza. **Al menos una** señal debe obligarlos a **ajustar algo**: alcance, usuario, tecnología o riesgo. Al final, dos personas comparten solo la **implicación** de una señal. Éxito: 3 señales con fuente y fecha + 1 decisión explícita.”
+> “Pasamos al **TALLER**. Tienen **25 minutos** y cuatro pasos.”
 
-**Tabla de acompañamiento:**
+> “**Paso 1 — Ronda de sustentación.** Turnos de tres minutos: pitch de 60 segundos, dos preguntas, y la frase de qué está listo y qué falta. El que escucha toma nota con los **cuatro criterios de la rúbrica**: **una línea por criterio**, no más. **Paso 2 — Devolución en pareja.** Cada quien le entrega a su compañero las **tres frases**: me quedó claro, no me quedó claro, le sugiero. **Paso 3 — Revisión de costuras.** Con la devolución en la mano, revisen las **seis costuras** de su documento y anoten los ajustes en una lista. **No los hagan ahora: anótenlos.** Escribir la lista **es** el producto del taller. **Paso 4 — Abran CDigital** y verifiquen que ven los espacios de **autoevaluación** y **coevaluación**, y sus fechas.”
 
-| Si el estudiante… | Usted responde… |
-| :--- | :--- |
-| Pega enlaces sin fecha ni autor | “Sin fecha y autor no es evidencia. ¿Quién lo dice y cuándo?” |
-| Dice “no encuentro nada” | “Cambia las palabras: busca el problema, no tu solución. Prueba en inglés en Scholar.” |
-| Encuentra algo igual y se bloquea | “Perfecto, ya sabes contra qué compites. Escribe en qué te diferencias.” |
-| Llena fichas que no cambian nada | “Vigilancia decorativa. Que al menos una señal te haga ajustar alcance o riesgo.” |
-| Copia el abstract entero | “Resúmelo en 2 líneas. Lo que importa es la implicación para TU propuesta.” |
+> “**Criterio de éxito:** salen de la sesión con **una lista escrita de ajustes** —mínimo tres— y con **la devolución de un compañero anotada, no recordada**. Segunda verificación: su compañero pudo repetir su **dolor, su valor y su pedido** sin mirar el documento. Y quien no alcance a sustentar hoy lo hace por el **foro del curso**: guion del pitch escrito más la frase de qué está listo y qué falta.”
+
+| Paso del taller | Qué tiene que quedar escrito | Si hay que recortar |
+| :--- | :--- | :--- |
+| **1.** Ronda de sustentación | Notas del oyente: una línea por criterio de la rúbrica | **No se recorta**: es el sentido de la sesión. Si no alcanza para todos, los demás sustentan por el foro |
+| **2.** Devolución en pareja | Las tres frases, escritas y entregadas al compañero | Se hace por escrito en el chat o en el foro |
+| **3.** Revisión de costuras | Lista de **mínimo 3 ajustes** — anotados, no ejecutados | Se dejan **las tres costuras** que el compañero señaló |
+| **4.** Abrir CDigital | Auto y coevaluación **vistas en pantalla**, con sus fechas | **No se recorta**: pasa a la fase de evaluación, que ya tiene minutos propios |
+
+> **El número que trae el título de la slide es el del taller completo.** Si el plan de clase de arriba le asignó menos minutos, manda el plan: acorte la ronda a los voluntarios y mande el resto al foro, pero **no elimine la devolución en pareja**: sin ella, el paso 3 se queda sin insumo.
+
+**Cómo conducir la ronda (esto es lo que hace que funcione):**
+1. **Cronómetro visible y turnos anunciados de a dos**: “sustenta Camila, pregunta Andrés; después sustenta Andrés”. Nadie se queda esperando sin saber cuándo le toca.
+2. **Corte a los 60 segundos, con amabilidad y sin excepción.** Si deja pasar el primer pitch de dos minutos, perdió la ronda entera.
+3. **Pregunte usted de segundo, no de primero.** Si el docente pregunta primero, los compañeros se callan.
+4. **Elija sus preguntas de la lista de cinco**, no improvise: así todos reciben el mismo trato y nadie se siente perseguido.
+5. **Cierre cada turno con una sola frase suya** —un acierto y un ajuste—. No convierta cada turno en una minitutoría: hay más gente esperando.
 
 ---
 
-#### 5️⃣ Cierre + trabajo autónomo (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+#### 6️⃣ Cierre del curso (~8 min) — Protagonista: Docente
+{slides_fase(label, "Qué hacer con esta propuesta después del curso", "Cierre del curso · últimos pendientes", cierre_deck(n))}
 
 **GUION LITERAL:**
-> “Tres ideas de hoy: (1) vigilar es un **sistema**, no una lectura suelta; (2) una fuente **sin fecha ni autor** no es evidencia; (3) si la señal **no cambia una decisión**, no sirvió.”
+> “Antes de despedirnos, lo más importante que les voy a decir hoy: **el semestre termina, la propuesta no tiene por qué terminar con él**. Cuatro caminos reales, en orden de esfuerzo. Uno: **escriban el correo de cinco líneas**; ya tienen la entidad, el pedido y el pitch — es media hora de trabajo y es lo único que separa un documento de una respuesta real. Dos: **llévenla a la unidad de emprendimiento de la CUN o a un semillero**; es el cuadrante universitario, el más cercano y el que menos se usa. Tres: **conviértanla en opción de grado**: el problema ya está delimitado, hay evidencia y hay antecedentes, que es más de lo que tiene la mayoría al empezar. Cuatro: **úsenla en una entrevista de trabajo**, no como ‘un trabajo de la universidad’, sino como el caso donde ustedes detectaron un problema, lo validaron y decidieron con criterio.”
 
-> “**Slide 6 — PARA CONTINUAR.** Autónomo: (a) pulan su tablero y súbanlo como `S07_Vigilancia_Apellido`; (b) preparen para la próxima sesión un listado de **mínimo 3 entidades de apoyo** —nombre correcto— a las que podrían acercarse. Eso es justo lo que trabajaremos en el cierre del curso.”
+> “Antes de mostrarla afuera, actualicen dos cosas: **verifiquen la vigencia** de las entidades y convocatorias que citaron, porque cambian de un semestre a otro; y **ejecuten la prueba** si no alcanzaron a hacerla — un criterio cumplido cambia por completo el tramo 4 del pitch. Y una advertencia honesta: **nadie va a venir a preguntarles por su propuesta. La puerta se toca desde adentro.**”
 
-> “**Slide 7 — Cierre.** La próxima es la **última sesión**: innovación local–internacional, entidades de apoyo y pitch. Mismo Meet. Gracias.”
+> “Tres ideas para llevarse **del curso completo**. Una: la innovación **no es tener ideas**; es elegir un problema real y **defender una decisión con evidencia**. Dos: todo lo que no se puede **verificar** —un FODA, un criterio, una entidad— todavía no sirve para decidir. Tres: una propuesta que **no se conecta con el afuera** se queda en el archivo, por buena que sea.”
+
+> “**Últimos pendientes de esta semana.** Diligenciar la **autoevaluación** y participar en la **coevaluación** dentro de su ventana en CDigital. Aplicar la **lista de ajustes** del taller a su documento y guardarlo en un sitio que no sea el escritorio del computador. Y revisar sus notas en el libro de calificaciones y **escribirme antes del cierre** si algo no cuadra: después del cierre ya no hay margen.”
+
+> “**Cierre.** Cualquier duda administrativa, por el canal del curso. Gracias por el trabajo de todo el ciclo; fue un gusto acompañarlos.”
 
 **Qué hacer:**
-1. (4 min) Escuchar 2 implicaciones y verificar que cambien una decisión.
-2. (2 min) Enunciar el trabajo autónomo (3 entidades) y el nombre del archivo.
-3. (2 min) Anunciar el tema de la última sesión.
+1. (3 min) Los cuatro caminos después del curso y las dos actualizaciones previas a mostrarla afuera.
+2. (2 min) Las tres ideas del curso completo.
+3. (3 min) Los tres pendientes de la semana y la despedida. **No** leer notas en voz alta ni comparar estudiantes.
 
 ---
 
-🧩 **Actividad práctica / taller (resumen del entregable de hoy)**
+🧩 **Actividad práctica / taller (resumen del producto de hoy)**
 
-**Nombre:** Tablero de vigilancia tecnológica — insumo de la Propuesta de Innovación.
+**Nombre:** Sustentación cruzada y consolidación — cierre de la Propuesta de Innovación.
 
-1. Buscar en Google Scholar y Google Patents (gratis, en el navegador).
-2. Registrar mínimo 3 fichas de señal (título, fuente+fecha, hallazgo, implicación, confianza).
-3. **Criterio de éxito:** 3 señales con fuente y fecha + al menos 1 decisión explícita (ajuste o confirmación).
-4. **Entregable:** `S07_Vigilancia_Apellido` en CDigital.
-5. **Trabajo autónomo:** listado de mínimo 3 entidades de apoyo para la próxima sesión.
+1. Sustentación de 3 minutos: pitch de 60 s + dos preguntas + la frase de qué está listo y qué falta.
+2. Devolución en pareja con las tres frases (me quedó claro / no me quedó claro / le sugiero).
+3. Revisión de las **seis costuras** del documento.
+4. **Criterio de éxito:** una **lista escrita de mínimo 3 ajustes** + la devolución de un compañero **anotada**, y que ese compañero pueda repetir su dolor, su valor y su pedido sin mirar el documento.
+5. **Entregable: hoy NO se pide ningún archivo nuevo en CDigital.** La ACA Final ya cerró. Lo que sí queda en la plataforma es la **autoevaluación** (cuestionario) y la **coevaluación** (foro), que abren hoy.
+6. **Trabajo autónomo de cierre:** aplicar la lista de ajustes al documento propio y guardarlo fuera del escritorio del computador.
 
 ---
 
 ✅ **Checklist del docente antes de clase**
-- [ ] Leí el Fundamento Teórico completo
+- [ ] Leí el Fundamento Teórico completo (hoy conduzco una ronda, no dicto)
 - [ ] Abrí `Clases/{label}/Presentacion.pptx`
-- [ ] Abrí Google Scholar y Google Patents en el navegador del docente
-- [ ] Tengo una búsqueda de ejemplo probada (para no improvisar en vivo)
-- [ ] Publiqué en CDigital el espacio de entrega `S07_Vigilancia`
+- [ ] Tengo **cronómetro visible** y la lista de turnos armada de a dos
+- [ ] Tengo a la mano **las cinco preguntas** para no improvisar y tratar a todos igual
+- [ ] Anoté **los dos errores más repetidos** del grupo en la ACA Final, con un ejemplo anónimo para la devolución
+- [ ] Verifiqué que el **foro del curso** esté abierto para quien no alcance a sustentar hoy
+- [ ] **No** publiqué espacio de entrega nuevo: hoy no se entrega archivo
 - [ ] Meet listo: {MEET}
 
 ---
-*Fin del Guión — Sesión {n:02d}. Documento autocontenido: un docente sin trayectoria en innovación puede estudiarlo y dictar la hora completa.*
+*Fin del Guión — Sesión {n:02d}. Cierra el ciclo de encuentros del Syllabus EI004: sin contenido nuevo, sin entrega nueva y con la propuesta sostenida en voz alta.*
 """
 
 
-def guion_08(meta):
-    n, label, titulo, detalle = meta
-    fases = [
-        ("1️⃣ Encuadre de cierre", 5, 5),
-        ("2️⃣ Ecosistema local–internacional", 12, 17),
-        ("3️⃣ Modelación: mapa de entidades + pitch 60 s", 12, 29),
-        ("4️⃣ Taller: pitch + plan de siguiente paso", 23, 52),
-        ("5️⃣ Cierre del curso", 8, 60),
-    ]
-    return header(*meta) + mapa_slides(n) + f"""🎯 **Objetivos de la sesión**
-1. **Ubicar** la propuesta en un ecosistema de apoyo (local e internacional).
-2. **Identificar** entidades concretas por su nombre real y por el tipo de apoyo que darían.
-3. **Comunicar** la propuesta en un pitch de 60 segundos, cronometrado.
-4. **Cerrar** el hilo del curso con un plan de continuidad y el paquete consolidado para el corte.
-
----
-
-📚 **Fundamento Teórico para el Docente** *(estudiar ANTES de la clase)*
-
-> Esta es la **última** sesión sincrónica. Su rol hoy es doble: enseñar a conectar la propuesta con el mundo real (entidades de apoyo) y ayudar a comunicarla en 60 segundos. Léalo completo.
-
-#### 1. Por qué existe un “ecosistema” de innovación
-Una innovación **rara vez sobrevive sola**. Para pasar de prototipo a impacto necesita insumos que el estudiante no tiene por sí mismo: **capital, mentoría, redes de contactos, infraestructura, marco normativo y clientes**. El **ecosistema de innovación** es precisamente ese conjunto de **actores y reglas** que rodean a un emprendedor o a un equipo de I+D.
-
-La metáfora útil en clase: una semilla buena no basta; necesita **tierra, agua, luz y clima**. El ecosistema es ese entorno. Por eso el trabajo del curso no termina cuando se sube el archivo a CDigital: termina —de verdad— cuando **alguien de afuera le abre una puerta** a la propuesta.
-
-#### 2. Entidades típicas (Colombia / región) — un mapa, no un directorio
-No convierta la clase en un listado interminable. Presente un mapa de **cuatro cuadrantes** y dé un ejemplo por cada uno (verifique vigencia y enlaces el día de clase, porque los programas cambian):
-
-| Cuadrante | Ejemplos orientativos | Qué suelen ofrecer |
-| :--- | :--- | :--- |
-| **Universitario** | Unidad de emprendimiento CUN, semilleros, laboratorios | Mentoría, espacio, validación, contactos |
-| **Público / mixto** | Cámaras de Comercio, programas de alcaldías/gobernaciones, iNNpulsa, Minciencias | Convocatorias, capital semilla, formación |
-| **Privado / redes** | Hubs, aceleradoras, comunidades tech, empresas ancla | Piloto, inversión, red de clientes |
-| **Internacional** | Programas de cooperación, open innovation de multilatinas, plataformas de retos | Retos abiertos, financiación, escalamiento |
-
-**Regla docente ineludible:** **no prometa cupos ni financiaciones**. Usted no controla esas convocatorias. Lo que sí enseña es a **preguntar el encaje**: ¿esta entidad me sirve para mentoría, capital semilla, networking, infraestructura o validación? Si el estudiante no sabe **qué pediría**, la entidad no le sirve todavía.
-
-#### 3. El pitch de 60 segundos (estructura probada)
-Un pitch no es contar todo; es lograr que el otro **quiera una segunda conversación**. Estructura de 60 segundos:
-
-| Tramo | Contenido | Tiempo |
-| :--- | :--- | :--- |
-| 1 | **Usuario + dolor** (a quién y qué le duele) | ~10 s |
-| 2 | **Insight** (la observación que lo cambia todo) | ~10 s |
-| 3 | **Propuesta + tipo de innovación** | ~15 s |
-| 4 | **Evidencia breve** (validación o vigilancia) | ~15 s |
-| 5 | **Pedido / siguiente paso** | ~10 s |
-
-El error número uno es **empezar por la tecnología** (“hicimos una app con IA…”). Nadie se conecta con eso. El pitch empieza por **la persona y su dolor**; la tecnología aparece como medio, no como protagonista.
-
-#### 4. Errores frecuentes / preguntas trampa
-
-| Error o pregunta trampa del estudiante | Respuesta sugerida del docente |
-| :--- | :--- |
-| Lista entidades sin decir qué les pediría | “Una entidad sin un pedido concreto no sirve. ¿Le pides mentoría, piloto o capital?” |
-| Empieza el pitch por la tecnología | “Empieza por la persona y el dolor. La tecnología va en el tramo 3, como medio.” |
-| Pitch de 3 minutos “porque hay mucho que contar” | “En 60 s no cuentas todo; logras que quieran una segunda charla. Corta lo demás.” |
-| “¿Me pueden dar el cupo/beca?” (al docente) | “No manejo esas convocatorias. Te enseño a identificarlas y a preguntar el encaje.” |
-| Cierra el curso sin saber qué falta | “Di explícitamente qué está listo y qué falta. Eso es madurez de proyecto.” |
-
----
-
-🧭 **Plan de Clase por Fases** — *Total: 60 min*
-
-{plan_tabla(fases)}
-
----
-
-#### 1️⃣ Encuadre de cierre (~5 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
-
-**Objetivo de la fase:** enmarcar la sesión como cierre del hilo y anunciar el doble entregable de hoy (mapa de entidades + pitch).
-
-**GUION LITERAL:**
-> “Buenas tardes. Esta es la **última sesión sincrónica** del curso — **Sesión {n:02d}**: **Innovación local–internacional y entidades de apoyo**. Hoy conectamos su propuesta con el **afuera**: quién podría ayudarles a que esto no se quede en un archivo, y cómo lo cuentan en 60 segundos.”
-
-> “Miren la **slide 2 — OBJETIVOS**. Salen con dos cosas: un **mapa de al menos 3 entidades reales** con un pedido concreto a cada una, y un **pitch de 60 segundos** ensayado.”
-
-**Qué hacer:**
-1. (2 min) Portada + control de audio/nombres en Meet.
-2. (2 min) Leer objetivos (slide 2) y recordar que traían un listado de entidades.
-3. (1 min) Anunciar que habrá pitch en vivo con cronómetro (para que se preparen).
-
----
-
-#### 2️⃣ Ecosistema local–internacional (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE) → 4 (ENFOQUE DE HOY)
-
-**Objetivo de la fase:** que entiendan qué es el ecosistema y aprendan a preguntar el encaje sin esperar promesas.
-
-**GUION LITERAL:**
-> “**Slide 3.** Innovar en Ingeniería no termina cuando suben el archivo a CDigital. Termina cuando alguien —un usuario, un aliado, una institución— **le abre la puerta** a su propuesta. Ese entorno de actores y reglas es el **ecosistema**. Piénsenlo como el clima de una semilla: no basta la semilla buena, necesita tierra, agua y luz.”
-
-> “**Slide 4.** El mapa tiene cuatro cuadrantes: **universitario** —la unidad de emprendimiento de la CUN, semilleros—; **público** —Cámaras de Comercio, alcaldías, iNNpulsa, Minciencias—; **privado y redes** —hubs, aceleradoras, empresas—; e **internacional** —cooperación, retos abiertos—. Aviso importante: yo **no** les puedo prometer cupos ni plata; eso no lo manejo. Lo que sí les enseño es a **preguntar el encaje**: ¿esta entidad me da mentoría, un piloto, capital o contactos? Si no saben qué pedir, la entidad todavía no les sirve.”
-
-**Qué hacer:**
-1. (5 min) Explicar qué es el ecosistema con la metáfora de la semilla y el clima.
-2. (5 min) Recorrer los 4 cuadrantes con 1 ejemplo por cada uno.
-3. (2 min) Insistir en “preguntar el encaje” y en no prometer cupos ni financiación.
-
----
-
-#### 3️⃣ Modelación: mapa de entidades + pitch 60 s (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
-
-**Objetivo de la fase:** modelar cómo se llena el mapa de entidades y cómo suena un pitch de 60 segundos.
-
-Abra una tabla en **Google Docs** (compartiendo pantalla) y llénela con el caso del laboratorio; luego modele el pitch **cronometrado** (use el reloj a la vista).
-
-| Entidad | Tipo de apoyo | Qué le pediría en un correo de 5 líneas |
-| :--- | :--- | :--- |
-| Unidad de emprendimiento CUN | Mentoría / pitch | Revisión de Canvas y contactos de usuarios |
-| Empresa o área de TI | Piloto | 10 usuarios reales por 2 semanas |
-| Programa público / cámara | Convocatoria | Info de fechas y requisitos de postulación |
-
-**GUION LITERAL:**
-> “Fíjense en la tercera columna: cada entidad tiene un **pedido concreto**. No escribo ‘pedir ayuda’; escribo ‘revisión de Canvas y 5 contactos de usuarios’. Ahora el pitch, con cronómetro… ‘Los estudiantes de Ingeniería pierden hasta una hora buscando laboratorio libre (usuario + dolor). Notamos que el 70% de los choques se dan en dos franjas (insight). Proponemos una reserva con asignación automática (propuesta, tipo proceso). En una prueba, 4 de 5 reservaron en menos de un minuto (evidencia). Buscamos un piloto de dos semanas con un curso (pedido).’ Sesenta segundos, y empecé por la persona, no por la app.”
-
-**Qué hacer:**
-1. (6 min) Llenar el mapa de entidades en Docs, subrayando el pedido concreto de cada una.
-2. (6 min) Modelar el pitch de 60 s cronometrado, siguiendo los 5 tramos.
-
----
-
-#### 4️⃣ Taller: pitch + plan de siguiente paso (~23 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
-
-**GUION LITERAL (consigna):**
-> “Pasamos a la **slide 5 — TALLER**. Tienen **23 minutos**. Cuatro pasos: (1) completen su **Mapa de entidades** en Google Docs con **mínimo 3 entidades reales** —nombre correcto— y un pedido concreto a cada una; (2) escriban el **guion del pitch de 60 s** siguiendo los cinco tramos (pueden bocetarlo en Excalidraw); (3) **ensayen en parejas** con cronómetro; (4) al final, **4 voluntarios** pichan en vivo y les tomo el tiempo. Si necesitan una diapositiva de apoyo, Canva free —opcional—. Criterio de éxito: si en 60 segundos entendemos **dolor + valor + pedido**, sirve.”
-
-**Tabla de acompañamiento:**
-
-| Si el estudiante… | Usted responde… |
-| :--- | :--- |
-| Escribe “pedir apoyo” sin concretar | “¿Apoyo de qué? Mentoría, piloto, capital, contactos. Elige uno y sé específico.” |
-| Empieza el pitch por la tecnología | “Arranca por la persona y su dolor. La app va en el tramo 3.” |
-| Se pasa de 60 segundos | “Corta la mitad. En un pitch no cuentas todo; buscas una segunda reunión.” |
-| Pone entidades genéricas o inventadas | “Necesito nombre real y correcto. ¿Existe esa entidad y hace lo que dices?” |
-| No sabe qué pedir a la entidad | “Vuelve a tu MVP: ¿qué te falta para probarlo? Eso es lo que pides.” |
-
----
-
-#### 5️⃣ Cierre del curso (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
-
-**GUION LITERAL:**
-> “Cierre del hilo. Partimos de un **problema real**, pasamos por creatividad e inteligencia emocional, Design Thinking, el Manual de Oslo, los tipos de innovación, la validación con Canvas y MVP, la vigilancia tecnológica y hoy el ecosistema. Su Propuesta de Innovación ya no es una ocurrencia: es un **argumento con evidencia**.”
-
-> “**Slide 6 — PARA CONTINUAR.** Autónomo de cierre: suban a CDigital el **paquete consolidado** que pida el corte —ficha del problema, ficha Oslo, matriz de tipos, Canvas/MVP, tablero de vigilancia, mapa de entidades y guion del pitch— como `S08_EcosistemaPitch_Apellido`. Revisen las **rúbricas y los espacios de entrega (EV) del corte final** en CDigital.”
-
-> “**Slide 7 — Cierre.** Gracias por el trabajo de todo el ciclo. Cualquier duda administrativa, por el canal del curso. Fue un gusto acompañarlos.”
-
-**Qué hacer:**
-1. (3 min) Cerrar los pitches en vivo (si quedaron voluntarios) y dar 1 elogio + 1 mejora a cada uno.
-2. (3 min) Recorrer el paquete consolidado que se sube al corte final.
-3. (2 min) Despedida y canal de dudas administrativas.
-
----
-
-🧩 **Actividad práctica / taller (resumen del entregable de hoy)**
-
-**Nombre:** Mapa de entidades + pitch de 60 s — cierre de la Propuesta de Innovación.
-
-1. Mapa de mínimo 3 entidades reales con un pedido concreto a cada una (Google Docs).
-2. Guion del pitch de 60 s en 5 tramos (boceto en Excalidraw; Canva free opcional para 1 slide).
-3. Ensayo en parejas + pitch en vivo cronometrado.
-4. **Criterio de éxito:** 3 entidades con pedido concreto + pitch que en 60 s comunica dolor, valor y pedido.
-5. **Entregable:** `S08_EcosistemaPitch_Apellido` en CDigital + paquete consolidado del corte final.
-
----
-
-✅ **Checklist del docente antes de clase**
-- [ ] Leí el Fundamento Teórico completo
-- [ ] Abrí `Clases/{label}/Presentacion.pptx`
-- [ ] Tengo el mapa de entidades y el pitch modelo del caso laboratorio listos
-- [ ] Tengo un cronómetro visible para los pitches en vivo
-- [ ] Revisé las rúbricas/EV del corte final en CDigital para orientar el paquete consolidado
-- [ ] Meet listo: {MEET}
-
----
-*Fin del Guión — Sesión {n:02d}. Cierra el ciclo de encuentros del Syllabus EI004.*
-"""
-
-
-
-# Builders originales (1..8). Mapa canónico 7 sesiones: 1→1, 2→3, 3→4, 4→5, 5→6, 6→7, 7→8
-BUILDERS_LEGACY = {
-    1: guion_01,
-    2: guion_02,
-    3: guion_03,
-    4: guion_04,
-    5: guion_05,
-    6: guion_06,
-    7: guion_07,
-    8: guion_08,
+# ---------------------------------------------------------------------------
+# REGISTRO DE GUIONES — una función por sesión canónica, sin corrimiento
+# ---------------------------------------------------------------------------
+GUIONES = {
+    1: guion_01,   # Encuadre
+    2: guion_02,   # U3 · Design Thinking y técnicas
+    3: guion_03,   # U4 · Gestión de la innovación (Manual de Oslo)
+    4: guion_04,   # U5 · Tipos de innovación
+    5: guion_05,   # U6+U7 · Validación y vigilancia tecnológica (sesión doble)
+    6: guion_06,   # U8 · Ecosistema, entidades de apoyo y pitch
+    7: guion_07,   # Cierre · consolidación y sustentación
 }
 
-CANON_TO_LEGACY = {1: 1, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8}
-
-
-def _fix_session_numbers(md: str, n: int) -> str:
-    """Renumera un guion escrito para otra sesión (builder legacy ≠ sesión canónica).
-
-    Solo se aplica cuando ``CANON_TO_LEGACY[n] != n``: reescribe **todas** las menciones
-    «Sesión NN», así que aplicarlo a un guion escrito para su propia sesión destruiría las
-    referencias legítimas a otras sesiones (p. ej. la S01 de encuadre, que remite a la S02).
-    """
-    md = re.sub(r"Sesión \*\*\d{2}\*\*", f"Sesión **{n:02d}**", md)
-    md = re.sub(r"Sesión \d{2}\b", f"Sesión {n:02d}", md)
-    md = re.sub(r"Fin del Guión — Sesión \d{2}", f"Fin del Guión — Sesión {n:02d}", md)
-    md = re.sub(r"ciclo de 8 encuentros", "ciclo de encuentros del Syllabus EI004", md)
-    # El nombre del entregable lleva el numero de sesion (`S03_Ideacion_Apellido`). Al heredar
-    # un guion de otra sesion tambien hay que renumerarlo: si no, el docente le pide al
-    # estudiante un archivo con el numero de la sesion vieja (y llegaba a pedir una `S08`
-    # que ya no existe). Cada guion legacy nombra unicamente SU propio entregable.
-    md = re.sub(r"\bS\d{2}_", f"S{n:02d}_", md)
-    return md
+# ── CORRIMIENTO RETIRADO (2026-08-11) ─────────────────────────────────────────
+# Aquí vivían `BUILDERS_LEGACY` (guiones 1..8) + `CANON_TO_LEGACY = {1:1, 2:3, 3:4,
+# 4:5, 5:6, 6:7, 7:8}` y un `_fix_session_numbers()` que renumeraba al vuelo las
+# menciones «Sesión NN» y los nombres de entregable `SNN_…`.
+#
+# Por qué existió: el Syllabus EI004 tiene **8 unidades** y el periodo solo **7
+# encuentros**. Cuando U1–U2 pasaron a lectura autónoma, en vez de reescribir los
+# guiones se dejó el corrimiento fijo «canónica n → builder n+1» y un renumerado
+# textual encima.
+#
+# Por qué se retira: tras el reorden del temario (U7 → S05, U8 → S06, S07 = cierre)
+# el corrimiento **ya no describe nada real**. El builder que caía en la S05 dictaba
+# solo validación (media sesión de las dos que hoy tiene), el de la S06 dictaba
+# vigilancia —que hoy se dicta el 09/09— y el de la S07 dictaba el ecosistema, que
+# hoy se dicta el 16/09. El renumerado disfrazaba el desajuste: cambiaba el número
+# del encabezado y del entregable, y dejaba intactos los objetivos, el fundamento
+# teórico y el plan minuto a minuto. Resultado: encabezado y tabla de slides nuevos
+# sobre un parlamento viejo.
+#
+# Hoy cada `GUIONES[n]` se escribió **para la sesión n**: nombra su propio entregable
+# (el mismo que muestra el deck), su propio tema y sus propias slides. No hay nada
+# que renumerar y no debe volver a haberlo: si una sesión cambia de contenido, se
+# reescribe su builder, no se le enchufa el de otra.
+#
+# El guion de la U2 (`guion_u2_inteligencia_emocional`) se conserva **fuera** del
+# registro: es la única unidad del Syllabus sin sesión, y sin slides en el deck.
+# Ver su docstring.
 
 
 def main(argv=None):
@@ -1885,15 +2365,18 @@ def main(argv=None):
         if only_n is not None and n != only_n:
             continue
         md_path = os.path.join(ROOT, f"{label}.md")
-        legacy_n = CANON_TO_LEGACY[n]
-        builder = BUILDERS_LEGACY[legacy_n]
+        builder = GUIONES.get(n)
+        if builder is None:
+            # `sesiones_cun.py` ganó una sesión y aquí no hay guion para ella: se avisa y no
+            # se escribe nada. Antes esto reventaba con KeyError sobre el mapa de corrimiento.
+            print(f"SIN GUION: sesión {n:02d} ({titulo}) — falta su builder en GUIONES")
+            continue
         text_md = builder((n, label, titulo, detalle))
-        if legacy_n != n:
-            # Solo los guiones heredados de otra sesión necesitan renumerarse (ver docstring).
-            text_md = _fix_session_numbers(text_md, n)
         _deck = deck_path(COURSES["creatividad"]["folder"], label)
         if n != 1:
             # Narración heredada de la plantilla de 7 slides: se retiran los números.
+            # Las líneas «**Slides del deck:**» que escribe `slides_fase()` no caen aquí:
+            # sus números salen del .pptx real y sí son correctos.
             text_md, _ = limpiar_referencias(text_md)
         else:
             # Mapa curado a mano: realinear contra el deck real («(cont.)» insertadas).

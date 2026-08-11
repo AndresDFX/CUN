@@ -1,231 +1,207 @@
 [
   {
     "type": "bullets",
-    "title": "La sesión más de laboratorio del curso",
+    "title": "El artículo ya se entregó: hoy se sostiene en voz alta",
     "bullets": [
-      "Hoy se combinan tres unidades del Syllabus en un solo encuentro: **bases de datos, gestores de citas y marco teórico**.",
-      "Es una sesión de manos en el teclado: se busca, se cita y se escribe en vivo.",
-      "Todo con herramientas **gratis y en el navegador**: nada de instalar programas ni comprar licencias.",
-      "El problema que resuelve esta sesión es muy concreto:",
-      "  Un estudiante busca en Google normal, encuentra tres blogs y una nota de prensa, y su marco no aguanta revisión.",
-      "  Otro busca en **Google Académico**, filtra por año, baja el texto completo desde la **biblioteca CUN** y en 40 minutos tiene cinco fuentes citables.",
-      "  Misma pregunta, mismo tiempo invertido: **la diferencia fue saber dónde y cómo buscar**.",
-      "Con lo de hoy queda cerrado el esqueleto del artículo: tema, línea, problema, pregunta, planteamiento y marco."
+      "La **ACA Final** —el artículo— ya cerró, y el **Quiz 3** también. Esta sesión **no tiene evaluación de contenido nueva**.",
+      "  Eso no la hace menos importante: es la única vez en el periodo en que su trabajo se **escucha** y no solo se lee.",
+      "Lo que sí pasa hoy, en este orden:",
+      "  **Socialización** — cada quien cuenta su artículo en cuatro minutos y responde preguntas.",
+      "  **Retroalimentación entre pares** — con una fórmula, no con \"me gustó\".",
+      "  **Cierre** — **autoevaluación** y **coevaluación**, que se abren hoy en CDigital.",
+      "  **Ruta** — qué hacer con este artículo después del periodo: semillero, trabajo de grado, publicación.",
+      "Por qué socializar después de entregar sirve, y mucho:",
+      "  Lo que usted diga hoy no cambia la nota del artículo, pero sí cambia **el documento con el que va a seguir**.",
+      "  Y descubrir hoy que no sabe explicar su propia pregunta en un minuto es mejor que descubrirlo en una sustentación de grado."
     ],
-    "note": "Tenga abierto su planteamiento: el marco **responde a la misma pregunta**, no es un tema nuevo."
-  },
-  {
-    "type": "table",
-    "title": "Buscador ≠ base de datos: cuándo usar cada uno",
-    "headers": ["Recurso", "Qué es", "Fortaleza", "Límite"],
-    "rows": [
-      ["**Google Académico** (scholar.google.com)", "Buscador académico amplio", "Arranque rápido, cobertura enorme, enlace **\"citado por\"**", "Mezcla calidades; muchos resultados sin texto completo"],
-      ["**SciELO** (scielo.org)", "Base de acceso abierto regional", "Fuerte en español y portugués, texto completo gratis", "Menos cobertura en temas muy técnicos o recientes"],
-      ["**Redalyc** (redalyc.org)", "Red de revistas iberoamericanas abiertas", "Revistas de la región, descarga libre", "Cobertura desigual por área"],
-      ["**Biblioteca CUN** (web, login institucional)", "Acceso a bases **suscritas** por la institución", "**Texto completo** de artículos de pago", "Requiere iniciar sesión con la cuenta institucional"],
-      ["**ZoteroBib** (zbib.org)", "Generador de citas en línea", "APA 7 al instante, sin instalar ni registrarse", "No guarda su biblioteca: copie lo que genere"]
-    ],
-    "note": "Google normal **no** está en esta lista. Sirve para orientarse, no para sostener un artículo.",
-    "col_w": [2.8, 2.4, 3.2, 2.6]
+    "note": "Traiga el artículo abierto. Hoy se cuenta, no se lee en voz alta."
   },
   {
     "type": "bullets",
-    "title": "La estrategia en tres movimientos",
+    "title": "De dónde vienen: seis semanas en una línea",
     "bullets": [
-      "**Movimiento 1 — Abrir en Google Académico.** Busque amplio, con sus constructos y sin filtros.",
-      "  Objetivo: descubrir **cómo llama la literatura a su fenómeno**. Anote los términos que se repiten.",
-      "  Use el enlace **\"citado por\"** para saltar de un artículo bueno a los que lo continuaron.",
-      "**Movimiento 2 — Afinar en SciELO o Redalyc.** Aquí busca lo regional y en español.",
-      "  Objetivo: encontrar estudios de **contexto latinoamericano o colombiano**, que le den pertinencia local.",
-      "  Filtre por área y país; contraste lo que encuentre con lo hallado en Scholar.",
-      "**Movimiento 3 — Cerrar en la biblioteca CUN.** Cuando un artículo esté detrás de un muro de pago.",
-      "  Entre con su **login institucional** y descargue el texto completo desde las bases suscritas.",
-      "  Nunca pague por un artículo: primero verifique si la institución ya lo tiene.",
-      "Ese orden ahorra horas: **descubrir → contextualizar → obtener el texto**."
+      "En un periodo corto hicieron el recorrido completo del método científico aplicado a **su** entorno:",
+      "  Eligieron una **línea de Ingeniería** del programa y le pusieron apellido a un tema suelto.",
+      "  Escribieron un **primer avance** con título e introducción, y aprendieron a distinguir tipos de conocimiento y de fuente.",
+      "  Convirtieron un fastidio en un **problema de investigación** y de ahí sacaron una **pregunta** que resiste lectura.",
+      "  Aprendieron **dónde se busca de verdad** —Scholar, SciELO, Redalyc, biblioteca CUN— y **cómo se cita** en APA 7.",
+      "  Argumentaron el **planteamiento** con evidencia, no con opinión, y lo cerraron en la misma pregunta.",
+      "  Pusieron su problema a **conversar con la literatura** en un marco organizado por constructos.",
+      "Cada pieza responde a la anterior: **si una se mueve, hay que revisar las demás**. Eso no es un defecto del método: es el método.",
+      "Lo que se llevan no es un archivo para la nota: es **la semilla de un trabajo de grado** y la prueba de que saben sostener una idea con evidencia."
     ]
   },
   {
     "type": "table",
-    "title": "Operadores de búsqueda que ahorran horas",
-    "headers": ["Operador / filtro", "Qué hace", "Cómo se escribe"],
+    "title": "Trazabilidad: qué sesión produjo qué sección del artículo",
+    "headers": ["Sesión", "Lo que produjo", "Dónde vive en el artículo"],
     "rows": [
-      ["**Comillas**", "Busca la **frase exacta**, en ese orden", "`\"pérdida de paquetes\"`"],
-      ["**AND**", "Exige que aparezcan **ambos** términos", "`\"pérdida de paquetes\" AND laboratorio`"],
-      ["**OR**", "Amplía: sirve cualquiera de los dos (útil para sinónimos)", "`phishing OR \"correo malicioso\"`"],
-      ["**Signo menos**", "**Excluye** un término que le ensucia los resultados", "`redes -sociales`"],
-      ["**Filtro por año**", "Limita a lo reciente: en tecnología, **últimos 5 años**", "Panel izquierdo de Scholar: *Desde 2021*"],
-      ["**\"Citado por\"**", "Muestra quién retomó ese artículo después", "Enlace bajo cada resultado en Scholar"]
+      ["**02**", "Línea de Ingeniería elegida y justificada", "Introducción: tema, línea y motivación"],
+      ["**03**", "Título, introducción en tres párrafos, primeras referencias", "Título e introducción"],
+      ["**04**", "Diagrama de causas, **pregunta** y **3 fuentes citadas**", "Problema y pregunta · primeras referencias APA 7"],
+      ["**05**", "**Planteamiento** con evidencia y **marco** por constructos", "Planteamiento del problema · marco teórico y revisión"],
+      ["**06** (hoy)", "Socialización, retroalimentación y cierre", "Los ajustes que se lleva para seguir con el documento"]
     ],
-    "note": "Regla práctica: **empiece amplio y vaya cerrando**. Si arranca con cinco filtros, no encontrará nada y creerá que su tema no existe."
+    "note": "Si alguna fila **no tiene documento** en su carpeta, esa es la sección que hay que reconstruir antes de usar el artículo para cualquier otra cosa.",
+    "col_w": [1.2, 5.0, 4.6]
   },
   {
     "type": "bullets",
-    "title": "Ejemplo modelado: una búsqueda real, paso a paso",
+    "title": "Cómo se socializa un artículo en cuatro minutos",
     "bullets": [
-      "**Pregunta de partida:** *\"¿En qué medida la pérdida de paquetes afecta las prácticas del laboratorio de redes?\"*",
-      "**Intento 1 (mal):** `problemas de internet en la universidad` → miles de resultados irrelevantes, ninguno académico.",
-      "  Falla porque usa **lenguaje cotidiano**, no el vocabulario de la disciplina.",
-      "**Intento 2:** `\"pérdida de paquetes\" AND laboratorio` → mejor, pero pocos resultados en español.",
-      "**Intento 3 (bueno):** `\"packet loss\" AND \"network laboratory\"`, filtro **desde 2021**.",
-      "  Aparecen artículos con método, medición y datos: eso sí es citable.",
-      "**Intento 4 (contexto local):** el mismo tema en **SciELO**, en español, filtrando por Colombia o Latinoamérica.",
-      "  Un solo artículo regional le da pertinencia local a todo su marco.",
-      "Lección para anotar: **si no encuentra nada, casi nunca es que el tema no exista: es que buscó con las palabras equivocadas**.",
-      "  Antídoto: tome los términos técnicos de los artículos que sí sirvieron y vuelva a buscar con ellos."
+      "No es una exposición: es contar **de qué se trata y por qué importa**, en un orden que el oyente pueda seguir.",
+      "  **0:00 – 0:40 · Contexto y problema.** Dónde ocurre y qué duele, con un dato. Nada de \"mi tema es la inteligencia artificial\".",
+      "  **0:40 – 1:20 · La pregunta.** Léala **literal**. Es la única frase que sí se lee.",
+      "  **1:20 – 2:20 · Qué encontró en la literatura.** Sus dos constructos y **una** cosa que le sorprendió de lo que leyó.",
+      "  **2:20 – 3:00 · Qué está listo y qué falta.** En una frase cada cosa. Sin adornos.",
+      "  **3:00 – 4:00 · Dos preguntas** del grupo o del Docente.",
+      "La regla que más cuesta y más sirve: **no empiece por la solución**. Si arranca con \"yo quiero hacer una app\", perdió a la mitad de la sala.",
+      "Decir \"me faltó conseguir la bitácora del laboratorio\" **no es una debilidad**: es saber dónde está el hueco.",
+      "  Lo que sí se nota mal es el artículo que se presenta como terminado y se cae en la primera pregunta."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Las cinco preguntas que le van a hacer (y cómo se responden)",
+    "headers": ["Pregunta", "Qué está midiendo", "Respuesta que funciona"],
+    "rows": [
+      ["¿A quién afecta y dónde ocurre?", "Si el problema tiene actor y contexto", "Rol + lugar: \"los estudiantes del laboratorio X de la sede Y\""],
+      ["¿Qué evidencia tiene de que eso pasa?", "Si el problema es observado o supuesto", "Un dato con fuente y año, o un registro institucional"],
+      ["¿Su pregunta se puede responder este periodo?", "Viabilidad y alcance", "Qué fuentes existen y qué parte del problema recortó"],
+      ["¿Qué dicen los autores que leyó?", "Si el marco es argumento o collage", "Dos constructos, un acuerdo y una diferencia entre autores"],
+      ["¿Qué le falta al artículo?", "Honestidad y madurez del trabajo", "Una frase concreta: qué sección, qué dato, qué fuente"]
+    ],
+    "note": "Las cinco se responden con material que **usted ya escribió**. Si alguna lo deja en blanco, ahí está el hueco del documento.",
+    "col_w": [3.2, 3.0, 4.6]
+  },
+  {
+    "type": "bullets",
+    "title": "Retroalimentar bien: la fórmula de las tres frases",
+    "bullets": [
+      "Escuchar a un compañero **no es un descanso**: es la mitad del ejercicio, y es lo que se evalúa en la **coevaluación**.",
+      "Use tres frases, en este orden, y no se salga de ahí:",
+      "  **\"Me quedó claro que...\"** — nombre una cosa que entendió sin esfuerzo. Le dice al otro qué sí está funcionando.",
+      "  **\"No me quedó claro...\"** — señale **una** sola cosa, y sea específico. \"No entendí a quién afecta\" sirve; \"estuvo confuso\" no.",
+      "  **\"Le sugiero...\"** — una acción concreta y ejecutable: una fuente, un recorte de alcance, una palabra que unificar.",
+      "Lo que **no** cuenta como retroalimentación:",
+      "  \"Muy bien, felicitaciones\" — amable e inútil.",
+      "  \"Yo en tu lugar investigaría otra cosa\" — eso es cambiarle el tema, no evaluarlo.",
+      "  Corregir la ortografía de la diapositiva mientras la pregunta sigue sin actor.",
+      "Se critica **el trabajo**, nunca a la persona. Y se critica con criterio: el mismo que le van a aplicar a usted en cinco minutos."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Rúbrica de la ronda: qué mirar cuando escucha a un compañero",
+    "headers": ["Criterio", "Señal de que está flojo", "Señal de que está sólido"],
+    "rows": [
+      ["**Problema**", "Empieza por la solución o por la tecnología", "En 40 s ya sabemos a quién le pasa qué y dónde"],
+      ["**Evidencia**", "\"Todo el mundo sabe que...\"", "Una cifra o un registro, con fuente y año"],
+      ["**Pregunta**", "Se responde con sí o no, o es planetaria", "Tiene actor, contexto y abre con qué / cómo / en qué medida"],
+      ["**Marco**", "Lista de definiciones sin relación con el caso", "Constructos claros y al menos un contraste entre autores"]
+    ],
+    "note": "Estos cuatro criterios son los que debe usar en el **foro de coevaluación**: escriba con ellos, no con adjetivos.",
+    "col_w": [1.8, 4.2, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "TALLER · Ronda de socialización (~25 min)",
+    "bullets": [
+      "**Paso 1 (16 min) · Rondas de 4 minutos.** Cada quien cuenta su artículo con la estructura de hoy y recibe dos preguntas.",
+      "  Quien escucha toma nota con los **cuatro criterios de la rúbrica**. Una línea por criterio, no más.",
+      "**Paso 2 (5 min) · Devolución en pareja.** Cada quien le entrega a su compañero las **tres frases**: me quedó claro / no me quedó claro / le sugiero.",
+      "**Paso 3 (3 min) · Lista de ajustes.** Con la devolución en la mano, escriba los **tres arreglos** que le va a hacer al documento.",
+      "  No los haga ahora: **anótelos**. Escribir la lista es el producto del taller.",
+      "**Paso 4 (1 min) · Abra CDigital** y verifique que ve los espacios de **autoevaluación** y **coevaluación**, y sus fechas.",
+      "**Criterio de éxito (verificable):** sale con **una lista escrita de tres ajustes** y con **la devolución de un compañero** anotada, no recordada.",
+      "  Segunda verificación: su compañero pudo repetir **su pregunta y a quién afecta** sin mirar el documento.",
+      "Quien no alcance a socializar en clase lo hace por el **foro del curso**: pregunta, dos constructos y la frase de qué está listo y qué falta."
+    ],
+    "note": "El objetivo no es lucirse: es descubrir el hueco mientras todavía hay alguien al lado para señalarlo."
+  },
+  {
+    "type": "bullets",
+    "title": "Autoevaluación y coevaluación: qué son y cómo se diligencian",
+    "bullets": [
+      "Son **dos ítems del corte 3** con nota propia, y se **abren hoy** en CDigital. No son un trámite ni un formalismo.",
+      "**Autoevaluación** — un **cuestionario** que usted responde sobre su propio proceso.",
+      "  No se trata de ponerse 5,0 ni de castigarse: se trata de **argumentar** con hechos del periodo.",
+      "**Coevaluación** — un **foro**: se **participa**, no se sube archivo.",
+      "  Escriba sobre el trabajo de sus compañeros con los **cuatro criterios de la rúbrica** de hoy. Un comentario útil menciona algo concreto que el otro dijo.",
+      "  \"Buen trabajo\" no es coevaluar. Y responder al comentario de otro cuenta: un foro es una conversación.",
+      "**Dos advertencias operativas:**",
+      "  El foro exige **participar dentro de la ventana**: si se cierra, no hay archivo que lo reemplace.",
+      "  **Las fechas exactas de apertura y cierre están en CDigital** y en la Presentación del Curso. Revíselas hoy, con la plataforma abierta.",
+      "Son las notas más fáciles de perder del periodo: se pierden por **no entrar**, no por hacerlo mal."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Autoevaluarse con criterio: cuatro preguntas honestas",
+    "headers": ["Pregunta", "Respuesta que no dice nada", "Respuesta que sí argumenta"],
+    "rows": [
+      ["¿Entregué a tiempo?", "\"Sí, casi siempre\"", "\"Entregué las cuatro entradas dentro de la ventana; la de la sesión 04 la subí el mismo día del cierre\""],
+      ["¿Trabajé por semanas o la última noche?", "\"Me organicé bien\"", "\"El planteamiento lo escribí en dos sesiones distintas; el marco sí lo armé en un solo día\""],
+      ["¿Incorporé la retroalimentación?", "\"Sí, tuve en cuenta todo\"", "\"Cambié la pregunta después del comentario sobre el actor y volví a alinear el planteamiento\""],
+      ["¿Qué haría distinto?", "\"Dedicarle más tiempo\"", "\"Buscar fuentes desde la sesión 02: llegué al marco con pocas y tuve que improvisar\""]
+    ],
+    "note": "Una autoevaluación creíble **nombra hechos concretos del periodo**. La que solo dice \"cumplí\" no le sirve a nadie, ni siquiera a usted.",
+    "col_w": [2.6, 3.4, 4.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Qué le falta a su artículo para ser publicable",
+    "bullets": [
+      "El Syllabus lo dice desde la primera sesión: el producto de este curso es un **artículo de nuevo conocimiento**, y el **Docente actúa como coautor** en un eventual proceso de sometimiento a publicación.",
+      "  Eso no es una promesa de publicación: es una **ruta que existe** y que casi nadie usa porque no sabe que está ahí.",
+      "Lo que separa su avance de un artículo sometible, en orden de esfuerzo:",
+      "  **Ampliar las fuentes** — de 5 a 10 o 12, con fichas, y al menos dos de contexto colombiano o latinoamericano.",
+      "  **Cerrar la metodología** — decir con qué datos y con qué técnica se respondería la pregunta. En este curso se propone; no se aplica.",
+      "  **Recoger algo de evidencia propia** — aunque sea pequeña: una medición, unas entrevistas, un registro.",
+      "  **Resumen y palabras clave** — el resumen se escribe **al final**, nunca al principio.",
+      "  **Revisión de forma** — APA 7 completo, verificación antiplagio y lectura de un tercero.",
+      "Si le interesa esa ruta, escríbale al Docente por el canal del curso **con el documento adjunto**. Sin documento, la conversación no arranca."
     ]
   },
   {
     "type": "bullets",
-    "title": "El filtro de 60 segundos: ¿me quedo con esta fuente?",
+    "title": "Del artículo al semillero y al trabajo de grado",
     "bullets": [
-      "Antes de descargar nada, revise cinco cosas. Si falla más de una, siga de largo.",
-      "  **Autoría:** ¿hay autores identificables y una institución detrás? Sin autor, no se cita.",
-      "  **Año:** en temas tecnológicos, prefiera los **últimos 5 años**; en teoría de base, la antigüedad no descalifica.",
-      "  **Dónde se publicó:** ¿revista, congreso, repositorio universitario? Un PDF suelto en un sitio desconocido no basta.",
-      "  **¿Tiene método?** Si el texto explica **cómo** llegó a sus resultados, es una fuente fuerte.",
-      "  **Pertinencia:** ¿responde a alguno de **sus constructos**? Si no, es interesante pero no entra.",
-      "Truco de lectura rápida, en este orden: **título → resumen → conclusiones → método**.",
-      "  Con eso decide en un minuto si vale la pena leer el artículo completo.",
-      "Y una advertencia de honestidad: **si solo leyó el resumen, no cite el interior del artículo**."
+      "Este artículo es la **semilla**, no el punto final. Tres caminos concretos, y ninguno exige empezar de cero:",
+      "  **Semillero de investigación.** Llegue con la pregunta y el marco escritos: es más de lo que trae la mayoría el primer día.",
+      "  **Trabajo de grado.** El problema ya está delimitado, hay antecedentes y hay evidencia. Lo que sigue es la metodología y el trabajo de campo.",
+      "  **Su entorno laboral.** Si el problema salió de la empresa donde trabaja, ya tiene un diagnóstico argumentado que allá nadie había escrito.",
+      "Lo que hay que hacer **esta semana**, mientras está fresco:",
+      "  Guarde el documento en un sitio que no sea el escritorio del computador, y guarde también las **fichas de lectura**: son lo que más cuesta reconstruir.",
+      "  Anote en el mismo archivo la **lista de ajustes** de hoy y la fecha. En seis meses no va a recordar por qué había que cambiar eso.",
+      "  Verifique que todas sus fuentes tengan **enlace y DOI**: los enlaces se rompen y las búsquedas se olvidan.",
+      "Y una advertencia honesta: nadie va a venir a preguntarle por su artículo. **La puerta se toca desde adentro.**"
     ]
-  },
-  {
-    "type": "bullets",
-    "title": "Paso a paso: citar en APA 7 con ZoteroBib",
-    "bullets": [
-      "**1.** Abra **zbib.org**. No pide cuenta, no instala nada, es gratis.",
-      "**2.** Seleccione el estilo **American Psychological Association 7th edition**.",
-      "**3.** Pegue el **DOI** del artículo (el código que empieza por `10.`). Si no tiene DOI, pegue el **título exacto** o la URL.",
-      "**4.** Pulse *Cite*: ZoteroBib arma la referencia completa.",
-      "**5.** **Revísela a mano**, siempre. Los fallos típicos son:",
-      "  Nombres de autor incompletos o invertidos.",
-      "  Título en mayúsculas sostenidas (en APA 7 va en minúscula, salvo la inicial y nombres propios).",
-      "  Falta el nombre de la revista, el volumen o el DOI.",
-      "**6.** *Copy to clipboard* y pegue en su documento, bajo **Referencias**, en **orden alfabético**.",
-      "**7.** En el cuerpo del texto cite **(Apellido, año)**; para cita textual agregue la página: **(Apellido, año, p. 12)**.",
-      "**8.** Repita por cada fuente. Cinco fuentes toman menos de diez minutos."
-    ],
-    "note": "Cada referencia del listado debe estar citada en el texto, y cada cita del texto debe estar en el listado."
   },
   {
     "type": "boxes",
-    "title": "Cuatro advertencias sobre fuentes y citación",
+    "title": "Preguntas del último día",
     "boxes": [
-      ["advertencia", "**No instale Mendeley ni Zotero de escritorio.** No hace falta para este curso, y en muchos equipos institucionales ni siquiera se puede. **ZoteroBib** en el navegador genera el mismo APA 7."],
-      ["advertencia", "**Citar sin haber leído se nota, y es riesgo de plagio.** Si toma una idea de un artículo que cita a otro, cite el que usted leyó. Haga la ficha de lectura antes de citar: sin ficha, no hay cita."],
-      ["aclaracion", "**Wikipedia y los blogs orientan, no sostienen.** Úselos para entender un concepto y luego vaya a las referencias que ellos citan. El marco se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN."],
-      ["info", "**La IA generativa fabrica referencias creíbles y falsas.** Puede darle autor, año, revista y DOI de un artículo que no existe. Regla innegociable: **si no abrió el documento, no lo cita**."]
+      ["info", "**\"¿Todavía puedo mejorar mi nota?\"** El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revise sus ventanas en CDigital y diligéncielas."],
+      ["aclaracion", "**\"Mi pregunta cambió después de entregar.\"** Es normal y es buena señal: significa que la evidencia le enseñó algo. Anótelo y llévelo a la siguiente versión del documento."],
+      ["advertencia", "**\"¿Puedo entregar el artículo por correo?\"** No. La entrega oficial es **CDigital** y su espacio ya cerró. Si hay una situación particular, se habla con el Docente por el canal del curso antes del cierre de notas."],
+      ["info", "**\"¿Sirve este artículo para otra materia?\"** Como base, sí, y conviene declararlo. Volver a entregar el mismo texto como nuevo es autoplagio."]
     ]
   },
   {
     "type": "bullets",
-    "title": "El marco teórico responde a la pregunta, no decora",
+    "title": "Cierre del curso · últimos pendientes",
     "bullets": [
-      "**No es** un collage de definiciones copiadas una detrás de otra.",
-      "**No es** un capítulo de historia del tema.",
-      "**No es** un desfile de autores famosos que no tienen que ver con su caso.",
-      "**Es** el conjunto de conceptos y hallazgos previos que le permiten **entender y responder su pregunta**.",
-      "  Se organiza por **constructos** (los conceptos clave de la pregunta), no por autores ni por fechas.",
-      "  Cada fuente entra por una sola razón: **porque ayuda a responder algo de su pregunta**.",
-      "  Si una fuente no ayuda, **no entra**, por interesante que sea.",
-      "Prueba de control: al lado de cada párrafo del marco, escriba a qué parte de su pregunta responde.",
-      "  Si hay un párrafo al que no le puede escribir nada, ese párrafo sobra."
-    ]
-  },
-  {
-    "type": "bullets",
-    "title": "Constructos: cómo salen de su propia pregunta",
-    "bullets": [
-      "Un **constructo** es un concepto clave que su artículo necesita definir y sostener con literatura.",
-      "Se extraen subrayando la pregunta. Veámoslo con el caso modelado:",
-      "  Pregunta: *\"¿En qué medida la **pérdida de paquetes** afecta las **prácticas de laboratorio** en un laboratorio de redes universitario?\"*",
-      "  **Constructo 1:** pérdida de paquetes (qué es, cómo se mide, qué valores se consideran críticos).",
-      "  **Constructo 2:** prácticas de laboratorio (qué son, qué condiciones requieren, cómo se evalúan).",
-      "Segundo ejemplo, con otra línea:",
-      "  Pregunta sobre phishing → **Constructo 1:** phishing y sus rasgos; **Constructo 2:** clasificación automática de correo.",
-      "Reglas prácticas:",
-      "  **Dos o tres constructos** bastan para un artículo de este curso. Cinco es dispersión.",
-      "  Busque literatura **por constructo**, no \"sobre el tema en general\".",
-      "  Cada constructo se vuelve un **subtítulo** del marco: así el texto se ordena solo."
-    ]
-  },
-  {
-    "type": "table",
-    "title": "La ficha de lectura: campos y qué escribir",
-    "headers": ["Campo", "Qué se escribe", "Ejemplo (caso modelado)"],
-    "rows": [
-      ["**Referencia APA 7**", "La cita completa generada en ZoteroBib", "Apellido, A. (2022). Título del artículo. *Nombre de la Revista*, 14(2), 45–58."],
-      ["**Constructo al que responde**", "Cuál de sus 2–3 constructos aborda", "Constructo 1: pérdida de paquetes"],
-      ["**Idea principal**", "Una frase, con sus propias palabras", "Mide el efecto de la pérdida de paquetes sobre aplicaciones en tiempo real"],
-      ["**Cita textual + página**", "Máximo 2 líneas, entre comillas, con página", "\"Por encima del 2 % de pérdida, la sesión se degrada de forma perceptible\" (p. 51)"],
-      ["**Relación con mi pregunta**", "Por qué esta fuente entra en **mi** marco", "Aporta un umbral de referencia para juzgar las mediciones del laboratorio X"]
-    ],
-    "note": "El último campo es el que decide. **Si no puede llenarlo, la fuente no entra en su marco.**",
-    "col_w": [2.4, 3.0, 5.4]
-  },
-  {
-    "type": "bullets",
-    "title": "Cómo se redacta un párrafo de marco (con su plantilla)",
-    "bullets": [
-      "Un párrafo de marco no es una definición suelta: es un **argumento con respaldo**.",
-      "Estructura en cuatro movimientos:",
-      "  **1. Enuncie el concepto:** *\"La pérdida de paquetes se entiende como la proporción de paquetes que no llegan a destino (Apellido, 2022).\"*",
-      "  **2. Amplíe o matice con otra fuente:** *\"Otros autores señalan que su efecto depende del tipo de aplicación (Apellido, 2021).\"*",
-      "  **3. Contraste o acumule:** *\"Ambos coinciden en que...\"* o *\"a diferencia del anterior, ...\"*",
-      "  **4. Amarre a su caso:** *\"Este umbral sirve como referencia para interpretar las interrupciones del laboratorio X.\"*",
-      "El movimiento 4 es el que separa un marco de un resumen: **siempre vuelva a su pregunta**.",
-      "Señales de que su marco está mal:",
-      "  Un párrafo = un autor, en fila india, sin conversación entre ellos.",
-      "  Aparecen definiciones que después **nunca se usan** en el artículo.",
-      "  Hay citas textuales largas y poco texto propio: el marco lo escribe usted, no los autores."
-    ]
-  },
-  {
-    "type": "bullets",
-    "title": "TALLER · Búsqueda, fichas y página de marco (~22 min)",
-    "bullets": [
-      "**Consigna literal.** En un documento llamado `S06_MarcoRevision_Apellido`:",
-      "  **(1)** Busque en **Google Académico** y en **SciELO o Redalyc**, y elija **5 fuentes** pertinentes.",
-      "  **(2)** Haga **una ficha de lectura por fuente**, con los cinco campos de la tabla.",
-      "  **(3)** Genere las **5 citas en APA 7** con **ZoteroBib** y revíselas a mano.",
-      "  **(4)** Escriba **una página de marco** organizada por sus **constructos** (un subtítulo por constructo), citando esas fuentes.",
-      "**Tiempo:** ~22 minutos. Reparta: 8 de búsqueda, 6 de fichas, 8 de redacción.",
-      "**Criterio de éxito (verificable):** cada fuente responde a **un constructo de su pregunta**, las 5 citas están en APA 7 y el marco **no es un collage: se lee como argumento**.",
-      "Prueba de control: al lado de cada párrafo, escriba a qué constructo pertenece. Si un párrafo no pertenece a ninguno, sobra."
-    ],
-    "note": "Herramientas: Google Académico, SciELO, Redalyc, biblioteca CUN, ZoteroBib y Google Docs. Todo en el navegador."
-  },
-  {
-    "type": "bullets",
-    "title": "Checklist antes de subir su entrega",
-    "bullets": [
-      "[ ] El documento se llama `S06_MarcoRevision_Apellido`.",
-      "[ ] Tengo **5 fuentes** y **abrí las cinco**: ninguna salió solo del listado de resultados.",
-      "[ ] Al menos **una fuente es de acceso abierto regional** (SciELO o Redalyc), para contexto latinoamericano.",
-      "[ ] Ninguna de mis fuentes es un blog, un video o Wikipedia.",
-      "[ ] Cada fuente tiene su **ficha de lectura** con los cinco campos llenos.",
-      "[ ] El campo **\"relación con mi pregunta\"** está lleno en las cinco fichas.",
-      "[ ] Mis **5 citas en APA 7** están revisadas a mano (autores, año, revista, mayúsculas).",
-      "[ ] Mi marco está organizado por **constructos**, con subtítulos, no por autores ni por fechas.",
-      "[ ] Cada párrafo del marco **vuelve a mi caso** en su última frase.",
-      "[ ] Todo lo citado en el texto aparece en Referencias, y viceversa.",
-      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
-    ]
-  },
-  {
-    "type": "bullets",
-    "title": "Cierre del ciclo · trabajo autónomo",
-    "bullets": [
-      "Con lo de hoy queda armado el **esqueleto completo del artículo**:",
-      "  Tema → línea → problema → pregunta → planteamiento → marco.",
-      "  Cada pieza responde a la anterior; si una se mueve, hay que revisar las demás.",
-      "**Trabajo autónomo:**",
-      "  Amplíe de 5 a **8 fuentes** y hágales su ficha: es la diferencia entre un marco justo y uno sólido.",
-      "  Relea su planteamiento y su marco **seguidos**: deben hablar de lo mismo y usar el mismo vocabulario.",
-      "  Unifique términos: si en el planteamiento dice \"caídas\" y en el marco \"interrupciones\", elija uno.",
-      "  Verifique que **cada cita del texto** tenga su referencia y que no sobre ninguna.",
-      "Consulte en **CDigital** el detalle de la evaluación del corte final y el espacio de entrega.",
-      "Plataforma del curso: [URL CDigital — campus del curso pendiente]"
+      "**Tres ideas para llevarse del curso completo:**",
+      "  1. Investigar **no es tener un tema**: es delimitar un problema real y sostener una pregunta con evidencia.",
+      "  2. Una afirmación **sin cifra ni cita** es una opinión, por bien redactada que esté.",
+      "  3. El marco **no decora**: si un párrafo no vuelve a su pregunta, sobra.",
+      "**Pendientes de esta semana, y son los últimos:**",
+      "  Diligenciar la **autoevaluación** (cuestionario) y participar en la **coevaluación** (foro) dentro de su ventana en CDigital.",
+      "  Aplicar la **lista de tres ajustes** del taller a su documento y guardarlo con sus fichas de lectura.",
+      "  Revisar sus notas en el libro de calificaciones y **escribir al Docente antes del cierre** si algo no cuadra. Después del cierre ya no hay margen.",
+      "Plataforma del curso: [URL CDigital — campus del curso pendiente]",
+      "Cualquier duda administrativa, por el canal del curso. **Gracias por el trabajo de estas seis semanas.**"
     ]
   }
 ]

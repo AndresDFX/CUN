@@ -1,17 +1,19 @@
 [
   {
     "type": "bullets",
-    "title": "Hoy la propuesta deja de ser un ensayo",
+    "title": "Hoy la propuesta se pone a prueba: por dentro y por fuera",
     "bullets": [
       "Hasta ahora su propuesta está **bien argumentada**: tiene usuario, tipo, grado y criterios.",
-      "  Pero sigue apoyada en **cosas que ustedes creen** y que nadie ha comprobado.",
+      "  Pero sigue apoyada en **cosas que ustedes creen** y que nadie ha comprobado, y en un entorno que nadie ha mirado.",
       "Ejemplo del caso del laboratorio: todo el proyecto se sostiene sobre una creencia —**\"el estudiante sí registraría su turno\"**—.",
-      "  Si esa creencia es falsa, no importa qué tan bien programado esté: nadie lo usa y el problema sigue igual.",
-      "Eso es un **supuesto**, y hoy aprendemos a ponerlos a prueba antes de invertir el semestre en construir.",
-      "Tres herramientas, una detrás de otra: **FODA** (radiografía), **Canvas** (cómo se sostiene), **MVP** (lo mínimo para aprender).",
-      "Y la cadena que las une: **supuesto → prueba → criterio → decisión**.",
-      "Salen de la hora con un **mini-Canvas**, un **MVP descrito en 5 líneas** y **una prueba de validación con criterio de éxito medible**."
-    ]
+      "  Y sobre un silencio: nadie averiguó si **eso ya existe** o si **el laboratorio permite** un piloto.",
+      "La sesión tiene dos mitades y las dos terminan en lo mismo: **una decisión escrita**.",
+      "  **Por dentro** — FODA, Canvas y MVP: poner a prueba el supuesto más riesgoso.",
+      "  **Por fuera** — vigilancia tecnológica: contrastar la propuesta con lo que ya existe, lo que la norma permite y lo que el usuario cambió.",
+      "**Por qué las dos hoy y no en dos semanas:** la **ACA Final** califica validación **y** vigilancia, y cierra antes de la última sesión del curso.",
+      "Salen de la hora con un **mini-Canvas**, un **MVP en 5 líneas**, **una prueba con criterio medible** y un **tablero de mínimo 2 señales** con su implicación."
+    ],
+    "note": "Es una sesión doble (U6 + U7 del Syllabus). Lo que no alcance en clase queda como trabajo autónomo de esta misma semana: la ACA Final no espera."
   },
   {
     "type": "bullets",
@@ -25,8 +27,7 @@
       "**Regla de oro, única e innegociable: cada ítem debe ser específico y verificable.**",
       "  Mal: \"Fortaleza: somos creativos.\" — no se puede comprobar, no decide nada.",
       "  Bien: \"Fortaleza: tenemos acceso a **30 usuarios del laboratorio esta semana**.\" — concreto y comprobable.",
-      "Un FODA de **6 bullets bien escritos** vale más que uno de 20 frases genéricas.",
-      "Su función no es decorar el documento: es **decidir dónde apoyarse y qué vigilar**."
+      "Un FODA de **6 bullets bien escritos** vale más que uno de 20 frases genéricas: su función es **decidir dónde apoyarse y qué vigilar**."
     ]
   },
   {
@@ -39,22 +40,22 @@
       ["**Oportunidad** (externa)", "\"Hay mucha tecnología disponible\"", "\"El campus **ya publica el horario** de laboratorios en un archivo abierto\""],
       ["**Amenaza** (externa)", "\"Puede haber competencia\"", "\"El laboratorio **exige autorización escrita** para cualquier piloto\""]
     ],
-    "note": "Prueba rápida: si un compañero **no puede comprobar su frase esta semana**, todavía es un adjetivo, no un dato.",
+    "note": "Prueba rápida: si un compañero **no puede comprobar su frase esta semana**, todavía es un adjetivo, no un dato. Fíjense en las dos filas externas: **ya son señales de vigilancia**.",
     "col_w": [2.4, 3.8, 4.6]
   },
   {
     "type": "bullets",
-    "title": "Business Model Canvas: cómo se sostiene su propuesta",
+    "title": "Business Model Canvas: cuatro bloques, no nueve",
     "bullets": [
-      "El **Business Model Canvas (BMC)**, de **Alexander Osterwalder**, es un lienzo de **9 bloques**.",
-      "  Describe, en una sola página, cómo una propuesta **crea, entrega y captura valor**.",
-      "Para qué sirve en este curso: obliga a responder preguntas que la ingeniería suele saltarse.",
-      "  ¿Para quién es exactamente? ¿Cómo llega a esa persona? ¿Quién lo sostiene si nadie paga?",
-      "**Aviso importante:** hoy **no** vamos a llenar los nueve bloques, ni falta que hace.",
-      "  Un Canvas a medias pero **concreto** decide más que uno completo lleno de frases generales.",
-      "**Prioridad mínima de hoy — cuatro bloques:** propuesta de valor · segmento de clientes · canales · actividades clave.",
-      "Herramienta: **Canvanizer** (canvanizer.com/new/business-model-canvas) — gratis y en el navegador.",
-      "  **Strategyzer** solo lo miramos como referencia visual; el trabajo real se hace en Canvanizer, Excalidraw o Google Docs."
+      "El **Business Model Canvas (BMC)**, de **Alexander Osterwalder**, es un lienzo de **9 bloques** que describe, en una página, cómo una propuesta **crea, entrega y captura valor**.",
+      "**Aviso importante:** hoy **no** vamos a llenar los nueve, ni falta que hace. Un Canvas a medias pero **concreto** decide más que uno completo lleno de frases generales.",
+      "**Los cuatro de hoy, y cómo se llenan bien:**",
+      "  **Segmento de clientes** — una persona concreta, no una categoría. Vago: \"estudiantes\". Concreto: \"**estudiantes de Ingeniería de 4º semestre que cursan laboratorio los martes**\".",
+      "  **Propuesta de valor** — lo que **gana el usuario**, no lo que hace su sistema. Vago: \"una plataforma de gestión de turnos\". Concreto: \"**llegas y ya tienes equipo asignado; dejas de perder tu hora**\".",
+      "  **Canales** — el camino real hasta esa persona. Vago: \"redes sociales\". Concreto: \"**el docente lo anuncia al inicio del laboratorio; el aviso llega por CDigital**\".",
+      "  **Actividades clave** — lo que hay que hacer **sí o sí**. Vago: \"desarrollar el sistema\". Concreto: \"**conseguir el horario real de ocupación**\" y \"**obtener el permiso del laboratorio**\".",
+      "Regla de escritura para los cuatro: si la frase le sirve igual a otro proyecto del salón, **todavía no es su Canvas**.",
+      "Herramienta: **Canvanizer** (canvanizer.com/new/business-model-canvas), gratis y en el navegador. **Excalidraw** o una tabla en Google Docs también valen."
     ]
   },
   {
@@ -65,30 +66,15 @@
       ["1", "**Segmento de clientes**", "¿Para quién es? ¿Quién **usa**?", "**Obligatorio**"],
       ["2", "**Propuesta de valor**", "¿Qué dolor alivia o qué gana el usuario?", "**Obligatorio**"],
       ["3", "**Canales**", "¿Cómo **llega** la propuesta al usuario?", "**Obligatorio**"],
-      ["4", "Relación con el cliente", "¿Cómo se capta y se retiene?", "Opcional"],
+      ["4", "Relación con el cliente", "¿Cómo se capta y se retiene?", "Autónomo"],
       ["5", "**Actividades clave**", "¿Qué hay que hacer **sí o sí**?", "**Obligatorio**"],
-      ["6", "Recursos clave", "¿Qué se necesita: datos, gente, infraestructura?", "Opcional"],
-      ["7", "Socios clave", "¿Quién ayuda desde afuera?", "Opcional"],
-      ["8", "Estructura de costos", "¿Qué cuesta? (aunque sea cualitativo)", "Opcional"],
-      ["9", "Fuentes de ingreso", "¿Quién paga o cómo se sostiene si es social?", "Opcional"]
+      ["6", "Recursos clave", "¿Qué se necesita: datos, gente, infraestructura?", "Autónomo"],
+      ["7", "Socios clave", "¿Quién ayuda desde afuera?", "Autónomo"],
+      ["8", "Estructura de costos", "¿Qué cuesta? (aunque sea cualitativo)", "Autónomo"],
+      ["9", "Fuentes de ingreso", "¿Quién paga o cómo se sostiene si es social?", "Autónomo"]
     ],
-    "note": "Los cuatro obligatorios son los que **aclaran la propuesta**. Los otros cinco se llenan después, cuando ya sepa a quién le sirve.",
+    "note": "Los cuatro obligatorios **aclaran la propuesta**. Los otros cinco se llenan esta semana, en casa: el bloque 7 (socios clave) es justo el puente con la próxima sesión.",
     "col_w": [0.6, 3.0, 5.2, 1.6]
-  },
-  {
-    "type": "bullets",
-    "title": "Cómo se llenan bien los cuatro bloques de hoy",
-    "bullets": [
-      "**Segmento de clientes** — una persona concreta, no una categoría.",
-      "  Vago: \"estudiantes\". Concreto: \"**estudiantes de Ingeniería de 4º semestre que cursan laboratorio los martes**\".",
-      "**Propuesta de valor** — lo que **gana el usuario**, no lo que hace su sistema.",
-      "  Vago: \"una plataforma de gestión de turnos\". Concreto: \"**llegas y ya tienes equipo asignado; dejas de perder tu hora**\".",
-      "**Canales** — el camino real por el que la propuesta llega a esa persona.",
-      "  Vago: \"redes sociales\". Concreto: \"**el docente lo anuncia al inicio del laboratorio; el aviso llega por CDigital**\".",
-      "**Actividades clave** — lo que hay que hacer **sí o sí** para que esto exista.",
-      "  Vago: \"desarrollar el sistema\". Concreto: \"**conseguir el horario real de ocupación**\" y \"**obtener el permiso del laboratorio**\".",
-      "Regla de escritura para los cuatro: si la frase le sirve igual a otro proyecto del salón, **todavía no es su Canvas**."
-    ]
   },
   {
     "type": "bullets",
@@ -100,8 +86,7 @@
       "  **No** es \"la app fea pero completa\".",
       "  **No** es \"la fase 1 del software grande\".",
       "  **No** es una versión reducida en funciones pero igual de costosa en tiempo.",
-      "La pregunta que responde un MVP **no** es \"¿funciona el código?\".",
-      "  Es: **\"¿esto le importa a alguien?\"**",
+      "La pregunta que responde un MVP **no** es \"¿funciona el código?\". Es: **\"¿esto le importa a alguien?\"**",
       "Consecuencia práctica: un MVP puede **no tener nada de software**. Y sigue siendo un MVP válido.",
       "Definición operativa que pueden usar hoy: **lo más barato que responde su duda más cara**."
     ]
@@ -121,33 +106,16 @@
   },
   {
     "type": "bullets",
-    "title": "La cadena de validación: cinco eslabones",
+    "title": "La cadena de validación, con el caso resuelto",
     "bullets": [
-      "Validar no es \"mostrarle la idea a alguien\". Es una cadena corta y disciplinada:",
-      "  **Supuesto → Riesgo si es falso → Prueba → Criterio de éxito → Decisión**",
-      "**1. Supuesto** — algo que usted cree y no ha comprobado. Se escribe como **afirmación**, no como pregunta.",
-      "**2. Riesgo si es falso** — qué se cae si resulta que no era cierto. Sirve para **ordenar** cuál validar primero.",
-      "  Empiece siempre por el supuesto **más riesgoso**: el que, si es falso, **tumba el proyecto entero**.",
-      "**3. Prueba** — la acción concreta, con **cuántas personas**, **qué hacen** y **cuánto dura**.",
-      "**4. Criterio de éxito** — el número o la observación que decide. **Se fija ANTES de probar.**",
-      "  Si lo fija después, va a \"ver lo que quiere ver\". Ese sesgo no se vence con buena voluntad, se vence con anticipación.",
-      "**5. Decisión** — **seguir**, **pivotar** o **parar**. Las tres son resultados válidos del método.",
-      "Y una advertencia: **no se valida con opiniones de amigos**. Sus amigos no son el segmento y no le van a decir que no."
-    ]
-  },
-  {
-    "type": "bullets",
-    "title": "Ejemplo modelado: la cadena completa del caso del laboratorio",
-    "bullets": [
-      "**Supuesto riesgoso:** \"Los estudiantes registrarían la reserva **si el flujo toma menos de 1 minuto**.\"",
-      "  Fíjense: está escrito como afirmación y trae una **condición medible** dentro.",
-      "**Riesgo si es falso:** nadie usa el sistema, y el problema del laboratorio **sigue exactamente igual**.",
-      "  Por eso es el primero de la lista: si esto falla, todo lo demás sobra.",
-      "**Prueba:** **5 estudiantes** cronometran el registro en un **prototipo en papel o clicable**, sin ayuda mía.",
-      "  Barata, rápida, y no requiere que exista el sistema.",
-      "**Criterio de éxito:** **≥ 4 de 5** completan en **menos de 60 segundos** **y** dicen que lo usarían **cada semana**.",
-      "  Dos condiciones: una de **tiempo** (observable con cronómetro) y una de **intención** (declarada por el usuario).",
-      "**Decisión:** si pasa → sigo y construyo. Si **3 de 5** → **no pasa**: pivoto el flujo o lo paro.",
+      "Validar no es \"mostrarle la idea a alguien\". Es una cadena corta: **Supuesto → Riesgo si es falso → Prueba → Criterio de éxito → Decisión**.",
+      "**1. Supuesto** — algo que cree y no ha comprobado. Se escribe como **afirmación**: *\"Los estudiantes registrarían la reserva si el flujo toma menos de 1 minuto.\"*",
+      "**2. Riesgo si es falso** — qué se cae. *\"Nadie usa el sistema y el problema del laboratorio sigue igual.\"* Por eso este supuesto va **primero**: si falla, todo lo demás sobra.",
+      "**3. Prueba** — acción concreta, con **cuántas personas**, **qué hacen** y **cuánto dura**. *\"5 estudiantes cronometran el registro en un prototipo en papel, sin ayuda mía.\"*",
+      "**4. Criterio de éxito** — el número que decide, y **se fija ANTES de probar**. *\"≥ 4 de 5 terminan en menos de 60 s **y** dicen que lo usarían cada semana.\"*",
+      "  Si lo fija después, va a \"ver lo que quiere ver\". Ese sesgo no se vence con buena voluntad: se vence con anticipación.",
+      "**5. Decisión** — **seguir**, **pivotar** o **parar**. *\"Si 3 de 5 → no pasa: pivoto el flujo.\"* Las tres son resultados válidos del método.",
+      "Y una advertencia: **no se valida con opiniones de amigos**. Sus amigos no son el segmento y no le van a decir que no.",
       "Lo importante del ejemplo: **el criterio se escribió antes de la prueba**. Por eso el resultado obliga, en vez de acomodarse."
     ],
     "note": "\"Voy a validar mi idea\" no es una prueba. Esta cadena, con números, sí lo es."
@@ -166,78 +134,154 @@
     "col_w": [3.0, 3.2, 4.8]
   },
   {
+    "type": "bullets",
+    "title": "Segunda mitad: su MVP no vive en una burbuja",
+    "bullets": [
+      "Ya sabe cómo probar su propuesta **por dentro**. Ahora hay que levantar la vista del prototipo y mirar **el entorno**.",
+      "Tres cosas que pasan cuando nadie mira afuera:",
+      "  Se **reinventa** algo que ya existe, gratis y documentado, y se pierden semanas del semestre.",
+      "  No se nota que una tecnología **acaba de volverse viable o barata** — y la propuesta nace desactualizada.",
+      "  Aparece **una norma o una política institucional** al final, cuando ya no hay tiempo de ajustar nada.",
+      "**Vigilancia tecnológica**: proceso **sistemático** de **capturar, filtrar, analizar y usar** información sobre tecnologías, competidores, normas y tendencias, con un fin concreto: **decidir mejor**.",
+      "  La palabra que carga todo el peso es **sistemático**. No es leer el artículo que apareció en el celular: es un **método repetible**, con fuentes definidas y registro.",
+      "Lo que **NO** es: no es \"me informé\"; no es acumular enlaces en un documento; no es leer solo lo que confirma lo que ya pensaba.",
+      "**La prueba de fuego, en una pregunta: ¿cambió alguna decisión de su propuesta?** Si no ajustó ni confirmó nada, no vigiló: leyó."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Informarse vs. vigilar, y el ciclo de cuatro pasos",
+    "headers": ["", "Informarse", "**Vigilar**"],
+    "rows": [
+      ["**1. Observar**", "Cuando algo aparece por casualidad", "En un momento **planeado**, con fuentes definidas de antemano"],
+      ["**2. Analizar**", "Se lee y se sigue de largo", "Se separa el **hallazgo** (lo que dice la fuente) de la **implicación** (lo que significa para usted)"],
+      ["**3. Comunicar**", "Un enlace guardado, o nada", "Una **ficha** que otro entiende sin explicación: fuente, fecha, implicación"],
+      ["**4. Usar**", "Ningún efecto visible", "Un **ajuste concreto**: de alcance, usuario, tecnología o riesgo"],
+      ["Frecuencia", "Aleatoria", "Repetible: se puede volver a hacer igual"],
+      ["Cómo se sabe que sirvió", "Uno \"se enteró\"", "**Cambió o confirmó una decisión**"]
+    ],
+    "note": "El paso 4 es el que casi siempre falta, y es el único que justifica los tres anteriores. La diferencia no está en cuánto se lee: está en si al final **hay una decisión escrita**.",
+    "col_w": [2.6, 3.8, 4.4]
+  },
+  {
+    "type": "table",
+    "title": "Cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador)",
+    "headers": ["Tipo de señal", "Fuentes gratis / web", "Pregunta que responde"],
+    "rows": [
+      ["**Tecnología**", "**Google Scholar** (scholar.google.com) · **Google Patents** (patents.google.com) · repositorios de GitHub · documentación oficial de estándares (IEEE)", "¿Qué se volvió **posible** o **barato**?"],
+      ["**Mercado**", "Reportes públicos · listas de precios · notas de adopción · portales de **datos abiertos**", "¿Quién **ya paga** por esto y cuánto?"],
+      ["**Normativa**", "Leyes y resoluciones · políticas institucionales · sitios de entidades públicas", "¿Qué me **limita** o me **habilita**?"],
+      ["**Social**", "Hábitos y demografía · quejas públicas en redes y prensa · foros de usuarios", "¿Qué **cambió en el usuario**?"]
+    ],
+    "note": "El error más común es mirar **solo** el frente tecnológico. Las propuestas de estudiantes suelen morir por el frente **normativo**, que nadie revisó.",
+    "col_w": [1.8, 5.4, 3.0]
+  },
+  {
+    "type": "bullets",
+    "title": "Scholar y Patents: cómo buscar sin ahogarse",
+    "bullets": [
+      "**Google Scholar** da el **estado del arte académico**: qué se ha estudiado y qué se encontró.",
+      "  **Busque el PROBLEMA, no su solución.** Mal: \"app de reservas CUN\". Bien: \"gestión de turnos laboratorio universitario\".",
+      "  **Pruebe en inglés** (\"laboratory scheduling system\"), **use comillas** para frases exactas y **filtre por año** (\"Desde 2020\") en el panel izquierdo.",
+      "  Mire **\"Citado por\"**: si un artículo tiene muchas citas es una referencia central, y desde ahí salta a lo más reciente.",
+      "**Google Patents** muestra soluciones **ya documentadas o protegidas** — muchísimas más de las que uno imagina.",
+      "  La reacción típica al encontrar algo parecido es **\"mi idea murió\"**. Es exactamente al revés: ahora **sabe contra qué compite**.",
+      "  Busque con las palabras del problema, filtre por fecha, lea **solo el resumen y las figuras**, y revise **\"Similar documents\"** al final de la ficha.",
+      "  Lo que escribe no es \"existe algo parecido\", sino: **\"existe X; mi diferencia está en Y\"**.",
+      "En los dos: copie siempre **título + autor/número + año**. Sin esos tres datos, lo que encontró **no es evidencia**."
+    ],
+    "note": "Si alguna búsqueda muestra un aviso de \"tráfico inusual\", se continúa en el navegador normal — no se instala nada."
+  },
+  {
+    "type": "table",
+    "title": "La ficha de señal: cinco campos, con el ejemplo resuelto",
+    "headers": ["Campo", "Señal 1 (académica)", "Señal 2 (patente)"],
+    "rows": [
+      ["**1. Título** (frase suya, no la del documento)", "Los sistemas de turnos reducen el tiempo muerto de laboratorio", "Ya existe reserva de espacios por código QR"],
+      ["**2. Fuente + fecha + enlace** (los tres; sin fecha ni autor, no vale)", "Artículo sobre gestión de turnos en laboratorios universitarios, Google Scholar, 2021", "Patente de sistema de reserva por QR, Google Patents, 2019"],
+      ["**3. Hallazgo en 2 líneas** (con sus palabras)", "La mayor pérdida no está en reservar, sino en los **choques de horario entre cursos**", "El registro por QR ya está documentado como solución de reserva de espacios"],
+      ["**4. Implicación** (confirma · obliga a pivotar · es un riesgo)", "**Confirma** el problema, pero **desplaza el foco**: atacar los choques, no el trámite", "**Obliga a pivotar**: mi diferencia debe estar en la **asignación automática**, no en el registro"],
+      ["**5. Confianza** (alta · media · baja)", "**Alta** — publicación académica con revisión", "**Alta** — documento oficial de patente"]
+    ],
+    "note": "Miren la fila 4: **las dos señales cambiaron algo**. Una movió el foco del problema; la otra movió la diferencia de la solución. **Eso es vigilar.** Confianza baja no invalida la señal: solo indica que todavía no puede decidir sola.",
+    "col_w": [2.6, 3.9, 3.9]
+  },
+  {
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
       ["advertencia", "**\"Mi FODA: fortaleza, somos creativos.\"** Eso no se verifica. Cámbielo por un hecho: \"acceso a 30 usuarios esta semana\"."],
-      ["advertencia", "**\"El MVP es la app terminada pero sin diseño.\"** No. El MVP es **lo más barato que responde su duda más cara**. Una landing o un prototipo en papel sirven."],
+      ["advertencia", "**\"El MVP es la app terminada pero sin diseño.\"** No. El MVP es **lo más barato que responde su duda más cara**: una landing o un prototipo en papel sirven."],
       ["advertencia", "**\"Ya validé: a mis amigos les gustó.\"** Sus amigos **no son el segmento** y no le van a decir que no. Pruebe con usuarios reales y un criterio medible."],
-      ["advertencia", "**\"Lleno el Canvas con frases generales.\"** Un Canvas genérico no decide nada. Sea concreto en **propuesta de valor** y **segmento**."],
-      ["advertencia", "**\"¿Para qué elegir un solo supuesto?\"** Porque el tiempo es finito. Valide primero el que, **si es falso, tumba todo el proyecto**."],
+      ["advertencia", "**\"Ya vigilé: leí un artículo.\"** ¿Cambió alguna decisión de su propuesta? Si no, se **informó**, no vigiló."],
+      ["advertencia", "**\"Encontré una patente igual, mi idea murió.\"** Al contrario: ahora sabe **contra qué compite**. ¿En qué se diferencia la suya?"],
       ["aclaracion", "**Que la prueba falle es un buen resultado.** Descubrir en la semana 3 que el supuesto era falso vale mucho más que descubrirlo el día de la sustentación."]
     ]
   },
   {
     "type": "bullets",
-    "title": "Paso a paso: su mini-Canvas en Canvanizer",
+    "title": "Paso a paso: un solo documento con las dos mitades",
     "bullets": [
-      "**1.** Abra **canvanizer.com/new/business-model-canvas** en el navegador. Es gratis y no exige instalar nada.",
-      "**2.** El lienzo aparece con los **nueve bloques** ya dibujados. No se asuste: hoy solo llena cuatro.",
-      "**3.** Empiece por **Value Proposition (propuesta de valor)** — no por el producto. Escriba lo que gana el usuario.",
-      "**4.** Siga con **Customer Segments (segmento)**. Nombre a la persona con al menos **dos rasgos** (rol + situación).",
-      "**5.** Luego **Channels (canales)**: por dónde se entera y por dónde lo usa.",
-      "**6.** Cierre con **Key Activities (actividades clave)**: máximo tres, las que sin ellas no hay proyecto.",
-      "**7.** Use **una nota por idea** (no párrafos). El Canvas se lee de un vistazo o no sirve.",
-      "**8.** Guarde el **enlace de compartir** que da Canvanizer, o tome una **captura de pantalla**.",
-      "**9.** Suba la captura o el enlace a **CDigital** junto con su MVP y su prueba.",
-      "Si Canvanizer no carga o pide cuenta: **Excalidraw** o una tabla en **Google Docs** son alternativas totalmente válidas."
+      "**1.** Documento nuevo en **Google Docs**: `Validación y vigilancia — [su propuesta]`. Dos títulos dentro: **A. Validación** y **B. Vigilancia**.",
+      "**2.** En **A**, escriba su FODA de máximo 6 bullets, con la división interna/externa correcta.",
+      "**3.** Abra **canvanizer.com/new/business-model-canvas**. El lienzo trae los nueve bloques: llene **propuesta de valor → segmento → canales → actividades clave**, en ese orden. Una nota por idea, no párrafos.",
+      "  Guarde el **enlace de compartir** o tome una **captura** y péguela en el documento.",
+      "**4.** Escriba su **MVP en 5 líneas**: qué es lo mínimo que va a mostrar, a quién y cuándo.",
+      "**5.** Escriba la **cadena de validación** completa: supuesto · riesgo · prueba · criterio · decisión. El criterio, **antes** de probar.",
+      "**6.** En **B**, escriba primero **la pregunta que quiere responder** con la vigilancia. Sin pregunta, la búsqueda se dispersa.",
+      "**7.** Inserte una tabla de **5 columnas** (señal · fuente y fecha · hallazgo · implicación · confianza) y ábrala junto a **scholar.google.com** y **patents.google.com** en pestañas aparte.",
+      "**8.** Pegue **título, autor, año y enlace en el momento** —después no encuentra de dónde salió— y llene la **implicación** con la fuente todavía abierta.",
+      "**9.** Cierre con una frase que empiece por **\"Ajusto...\"** o **\"Confirmo...\"**, descargue en PDF y súbalo a **CDigital**."
     ]
   },
   {
     "type": "bullets",
-    "title": "TALLER — Mini-Canvas + plan de MVP (22 minutos)",
+    "title": "TALLER — Validar por dentro y por fuera (25 minutos)",
     "bullets": [
-      "Cuatro entregas, en este orden:",
-      "**(1) FODA de máximo 6 bullets en total** — todos verificables, con la división interna/externa correcta. **(4 min)**",
-      "**(2) Canvas mínimo en Canvanizer** — al menos **propuesta de valor, segmento, canales y actividades clave**. **(7 min)**",
-      "**(3) MVP descrito en 5 líneas** — qué es **lo mínimo** que van a mostrar, y a quién. **(5 min)**",
-      "**(4) Una prueba de validación** de su **supuesto más riesgoso**, con criterio **numérico u observable**. **(6 min)**",
-      "  Usen la fórmula: [cuántos] de [cuántos] hacen [qué acción] en [qué condición].",
-      "Al final, **dos personas** comparten **solo su prueba y su criterio** — no el Canvas completo.",
-      "**Criterio de éxito verificable:** su prueba tiene un criterio que **se puede medir hoy mismo**, y está escrito **antes** de ejecutarla.",
-      "  Segunda verificación: ¿su prueba **podría fallar**? Si el criterio es tan blando que siempre pasa, no es una prueba."
+      "**Bloque A · Por dentro (13 min)**",
+      "  **(1)** FODA de **máximo 6 bullets**, todos verificables, con interna/externa bien separadas. **(3 min)**",
+      "  **(2)** Canvas mínimo en Canvanizer: **propuesta de valor, segmento, canales y actividades clave**. **(5 min)**",
+      "  **(3)** **MVP en 5 líneas** + **una prueba** de su supuesto más riesgoso con criterio **numérico u observable**. **(5 min)**",
+      "**Bloque B · Por fuera (12 min)**",
+      "  **(4)** Escriban la pregunta de vigilancia y busquen en Scholar y/o Patents. **(5 min)**",
+      "  **(5)** **Mínimo 2 fichas de señal** —de **frentes distintos**, no las dos tecnológicas— con fuente, **fecha**, hallazgo, implicación y confianza. **(5 min)**",
+      "  **(6)** Escriban abajo **su decisión** en una frase. **(2 min)**",
+      "Al final, **dos personas** comparten **solo la implicación** de una señal y **solo el criterio** de su prueba — no el documento completo.",
+      "**Criterio de éxito verificable:** una prueba con criterio que **se puede medir hoy mismo y podría fallar**, y **2 señales con fuente y fecha** que produjeron **1 decisión** escrita."
     ],
-    "note": "Si se pierde llenando los nueve bloques del Canvas, deténgase: hoy solo cuatro. El resto queda para después."
+    "note": "Si se pierde llenando los nueve bloques del Canvas, deténgase: hoy solo cuatro. Si una ficha no cambia ni confirma nada, bórrela: ocupa el lugar de una que sí decide."
   },
   {
     "type": "bullets",
     "title": "Antes de entregar: revise usted mismo",
     "bullets": [
-      "☐ Mi FODA tiene **máximo 6 bullets** y **cada uno se puede comprobar** esta semana.",
-      "☐ Puse Fortalezas/Debilidades en lo **interno** y Oportunidades/Amenazas en lo **externo** (revisé que no se me cruzaran).",
-      "☐ Mi **propuesta de valor** dice lo que **gana el usuario**, no lo que hace el sistema.",
-      "☐ Mi **segmento** nombra a la persona con **rol + situación**, no solo \"estudiantes\".",
+      "☐ Mi FODA tiene **máximo 6 bullets** y **cada uno se puede comprobar** esta semana, con lo interno y lo externo bien separados.",
+      "☐ Mi **propuesta de valor** dice lo que **gana el usuario** y mi **segmento** nombra a la persona con **rol + situación**.",
       "☐ Mi **MVP** se puede hacer **esta semana** y **no requiere programar** nada todavía.",
-      "☐ Elegí **un** supuesto y puedo explicar por qué es **el más riesgoso** de mi lista.",
-      "☐ Mi criterio de éxito tiene **un número** o una **observación** clara, y lo escribí **antes** de probar.",
+      "☐ Elegí **un** supuesto y puedo explicar por qué es **el más riesgoso**; mi criterio tiene **un número** y lo escribí **antes** de probar.",
       "☐ Mi prueba dice **con cuántas personas** y **cuánto dura**.",
-      "☐ El archivo se llama **`S05_CanvasMVP_Apellido`** y está en **CDigital**."
-    ]
+      "☐ Tengo **2 fichas de señal o más**, y **no todas** son del frente tecnológico.",
+      "☐ Cada ficha tiene **autor, fecha y enlace**. Ninguna dice solo \"lo vi en internet\", y ninguna pasa de 5 años sin que yo explique por qué sigue vigente.",
+      "☐ Cada ficha dice si **confirma**, **obliga a pivotar** o **es un riesgo**, y **al menos una** cambió algo real de mi propuesta.",
+      "☐ Si encontré algo parecido a mi idea, escribí **en qué me diferencio** — no lo escondí.",
+      "☐ El archivo se llama **`S05_ValidacionVigilancia_Apellido`** y está en **CDigital**."
+    ],
+    "note": "Prueba final: si le entrego este documento a un compañero, ¿sabría **qué decidí y por qué**? Si no, falta la implicación."
   },
   {
     "type": "bullets",
     "title": "Para continuar — trabajo autónomo",
     "bullets": [
       "**Tres ideas para llevarse de hoy:**",
-      "  1. El **FODA** solo sirve si es **verificable**.",
-      "  2. El **MVP** es la maqueta que responde la duda más cara, **no el edificio**.",
-      "  3. Validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado **antes**.",
-      "**(a)** Suban su Canvas + MVP + prueba como **`S05_CanvasMVP_Apellido`** a **CDigital**.",
-      "  Plataforma: [URL CDigital — campus del curso pendiente]",
-      "**(b)** **Ejecuten la prueba** — aunque sea con **3 usuarios** — y traigan los resultados a la próxima sesión.",
-      "  Anoten lo que pasó **tal cual**, incluso si el criterio no se cumplió. Ese dato es el más valioso que van a tener.",
-      "  Traigan también su **decisión**: sigo, pivoto o paro, y por qué.",
-      "**Próxima sesión:** **Vigilancia tecnológica** — para que su MVP no viva en una burbuja y sepa contra qué compite."
+      "  1. El **MVP** es la maqueta que responde la duda más cara, **no el edificio**.",
+      "  2. Validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado **antes**.",
+      "  3. Vigilar es un **sistema**: si la señal **no cambia una decisión**, no sirvió.",
+      "**(a)** Suban su documento como **`S05_ValidacionVigilancia_Apellido`** a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**(b)** **Ejecuten la prueba** —aunque sea con **3 usuarios**— y anoten lo que pasó **tal cual**, incluso si el criterio no se cumplió. Ese dato es el más valioso que van a tener.",
+      "**(c)** Completen el tablero hasta **3 señales** y llenen los **cinco bloques restantes** del Canvas. Empiecen por **socios clave**: es el puente con la próxima sesión.",
+      "**(d)** Preparen un listado de **mínimo 3 entidades de apoyo** —con el **nombre correcto**— a las que podrían acercarse: **universitarias**, **públicas**, **privadas/redes** e **internacionales**.",
+      "  Para cada una, anoten en una línea **qué creen que le pedirían**. Si no saben qué pedir, esa entidad todavía no les sirve.",
+      "**Próxima sesión:** **innovación local–internacional, entidades de apoyo y el pitch de 60 segundos**. Es la **última antes del cierre de la ACA Final**: vengan con la propuesta lista para conectarla con el afuera."
     ]
   }
 ]

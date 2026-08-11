@@ -853,36 +853,23 @@ def _nota_replan(viejos: list[int], nuevos: list[int], md: str, mins: int) -> st
     )
 
 
-# Puente de nombres viejos → ítem real del aula (auditoría 2026-08-10). Solo se aplica
-# a la línea «- **Detalle:**», que llega tal cual desde `sesiones_cun.py` y todavía habla
-# de ACA1/ACA2/ACA3. El mapeo de Proyecto I es el mismo que usan los enunciados:
-# la 1.ª ventana es el **Quiz**, la 2.ª la **ACA 1** y la 3.ª la **ACA FINAL**.
-PUENTE_LEGACY: dict[str, dict[str, str]] = {
-    "proyecto1": {"ACA1": "Quiz", "ACA2": "ACA 1", "ACA3": "ACA FINAL"},
-}
-PUENTE_PREGRADO = {"ACA1": "Parcial 1", "ACA2": "Parcial 2", "ACA3": "ACA Final"}
-_RE_DETALLE = re.compile(r"(?m)^- \*\*Detalle:\*\* .*$")
-_RE_LEGACY = re.compile(r"\bACA ?([123])\b")
-# «(dom 30/08)» / «(04/10)»: fecha de periodo pegada al nombre viejo del ítem.
-_RE_PAREN_FECHA = re.compile(
-    r"\s*\((?:(?:lun|mar|mié|mie|jue|vie|sáb|sab|dom)\s+)?\d{1,2}/\d{1,2}\)"
-)
-
-
-def sanear_detalle(md: str, key: str) -> str:
-    """Quita de la línea «Detalle» los nombres de ítems que ya no existen.
-
-    `sesiones_cun.py` sigue describiendo las sesiones con «ACA1 ya cerró (dom 30/08)».
-    Ese texto se imprime tal cual en el guion y hoy es falso —lo que cierra ahí es el
-    **Quiz**— además de meter una fecha de periodo, que en los guiones no van.
-    """
-    mapa = PUENTE_LEGACY.get(key) or PUENTE_PREGRADO
-
-    def _linea(m: re.Match) -> str:
-        txt = _RE_LEGACY.sub(lambda g: mapa.get("ACA" + g.group(1), g.group(0)), m.group(0))
-        return _RE_PAREN_FECHA.sub("", txt)
-
-    return _RE_DETALLE.sub(_linea, md, count=1)
+# ─────────────────────────────────────────────────────────────────────────────
+# RETIRADO (2026-08-11): `PUENTE_LEGACY` / `PUENTE_PREGRADO` / `sanear_detalle()`
+# ─────────────────────────────────────────────────────────────────────────────
+# Eran un puente temporal: reescribían al vuelo la línea «- **Detalle:**» del guion
+# porque `sesiones_cun.py` todavía describía Proyecto I con el esquema viejo del
+# ESP329 («ACA1 ya cerró (dom 30/08)») y había que traducirlo a los nombres reales
+# del aula (Quiz · ACA 1 · ACA FINAL) y borrarle la fecha de periodo.
+#
+# El origen ya está corregido: los `bloque`/`titulo`/`detalle` de `sesiones_cun.py`
+# usan los nombres EXACTOS del libro de calificaciones y no llevan fechas. Mantener
+# el puente sería dañino, no inocuo: volvería a mapear un texto YA correcto
+# («cierre de la ACA 1» → «cierre de la Quiz») y reintroduciría el error que
+# resolvía. Por eso se retira en vez de dejarse como no-op.
+#
+# Nadie más lo importaba (verificado con grep sobre el repo: solo se usaba dentro
+# de `inyectar_evaluacion`). Si algún día un `detalle` vuelve a traer un nombre que
+# no existe en el aula, se arregla en `sesiones_cun.py`, que es la fuente.
 
 
 def _insertar_aviso(md: str, aviso: str) -> str:
@@ -938,7 +925,8 @@ def _insertar_checklist(md: str, ag: AgendaEval, key: str) -> str:
 
 def inyectar_evaluacion(md: str, key: str, n: int) -> str:
     """Mete en el guion la evaluación real del aula (aviso + fase + plan + checklist)."""
-    md = sanear_detalle(md, key)
+    # La línea «- **Detalle:**» ya no se sanea: llega correcta desde `sesiones_cun.py`
+    # (nombres del aula, sin fechas de periodo). Ver la nota «RETIRADO» más arriba.
     ag = agenda_sesion(key, n)
     if ag.vacia:
         return md

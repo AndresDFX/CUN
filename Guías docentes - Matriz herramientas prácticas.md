@@ -18,11 +18,11 @@
 | **01** | **Encuadre** (no se dicta tema) · ficha problema–oportunidad | **Padlet** (tablero expectativas) · **Excalidraw** · tldraw · **Google Docs** · ficha HTML modelo | `Ficha_problema_oportunidad.docx` + post en Padlet | ✅ `Sesion 01/` |
 | — | *Lectura autónoma U1–U2* (Propuesta de Innovación · creatividad e IE) | PDF de acceso abierto en `Clases/Sesion 01 - …/` | — | ✅ PDF + `.txt` en la carpeta |
 | **02** | Design Thinking y técnicas de ideación | Miro DT templates (free) · Excalidraw journey · IDEO Design Kit (si carga) | `S02_Ideacion_Apellido` | ⏳ capturas plantilla Miro |
-| **03** | Gestión de la innovación (Manual de Oslo) | Tabla Oslo en Google Docs / Excalidraw | `S03_FichaOslo_Apellido` | ⏳ pendiente guía en pantalla |
+| **03** | Gestión de la innovación (Manual de Oslo / OCDE) | Tabla Oslo en Google Docs / Excalidraw | `S03_FichaOslo_Apellido` | ⏳ pendiente guía en pantalla |
 | **04** | Tipos de innovación | Misma pizarra + ejemplos | `S04_MatrizTipos_Apellido` | ⏳ |
-| **05** | Análisis de negocios · validación (FODA · Canvas · MVP) | **Canvanizer** BMC · Excalidraw · Strategyzer solo como referencia visual | `S05_CanvasMVP_Apellido` | ✅ capturas en `Capturas/Herramientas/` |
-| **06** | Vigilancia tecnológica | Google Scholar · Patents · docs oficiales (web) | `S06_Vigilancia_Apellido` | ⏳ reutilizar flujo Investigación S06 |
-| **07** | Innovación local–internacional · entidades de apoyo (cierre) | **Canva free** (opcional) · Google Docs / Slides pitch 1 pág. | `S07_EcosistemaPitch_Apellido` | ⏳ Canva no capturó en headless |
+| **05** | Validación de la propuesta · vigilancia tecnológica (FODA · Canvas · MVP + tablero de señales) | **Canvanizer** BMC · Excalidraw · Strategyzer solo como referencia visual · **Google Scholar** · Patents · docs oficiales (web) | `S05_ValidacionVigilancia_Apellido` | ✅ capturas Canvas en `Capturas/Herramientas/` · ⏳ flujo Scholar/Patents (reutilizar el de Investigación **S04**) |
+| **06** | Innovación local–internacional · entidades de apoyo | **Canva free** (opcional) · Google Docs / Slides pitch 1 pág. | `S06_EcosistemaPitch_Apellido` | ⏳ Canva no capturó en headless |
+| **07** | Taller de consolidación y sustentación de la propuesta (cierre) | **Google Docs** (documento consolidado) · Slides para la sustentación · CDigital (auto y coevaluación) | `S07_PropuestaConsolidada_Apellido` | ⏳ sin herramienta nueva: se sostiene lo ya escrito |
 
 **Prioridad aula S01–S02:** Padlet (tablero 5–10 min) → Excalidraw (sin cuenta) → export PNG → CDigital.
 
@@ -42,10 +42,14 @@
 | :---: | :--- | :--- | :--- | :--- |
 | **01** | **Encuadre** (no se dicta tema) · producto final = artículo | **Padlet** (expectativa / tema de interés) · **Google Docs** | `S01_TemaTentativo_Apellido` + post en tablero | ✅ tablero S01 |
 | — | *Lectura autónoma U1–U2* (Syllabus y producto · método científico) | PDF de acceso abierto en `Clases/Sesion 01 - …/` | — | ✅ PDF + `.txt` en la carpeta |
-| 02–05 | MinCiencias/líneas → planteamiento del problema | **Google Docs** / plantilla artículo (abrir en Docs) | Avances por unidad | ⏳ guías genéricas |
-| **06** ★ | Bases CUN · gestores · marco/revisión (U8+U10–12) | **Scholar** · SciELO · Redalyc · **ZoteroBib** · citas en **Google Docs** · biblioteca CUN (login) | `S06_MarcoRevision_Apellido` | ✅ sesión emblemática |
+| 02–03 | MinCiencias / 6 líneas de Ingeniería → prueba parcial y 1.er avance | **Google Docs** / plantilla artículo (abrir en Docs) | Avances por unidad | ⏳ guías genéricas |
+| **04** ★ | Problema y pregunta · **bases de datos CUN y gestores de citas** (U6+U8) | Excalidraw (espina / árbol) · **Scholar** · SciELO · Redalyc · **ZoteroBib** · biblioteca CUN (login) | `S04_ProblemaPregunta_Apellido` (pregunta + 3 fuentes citadas) | ✅ sesión emblemática (flujo Scholar → ZoteroBib → Docs) |
+| **05** | Planteamiento del problema · **marco teórico y revisión de literatura** (U7+U10–12) | **Google Docs** (plantilla APA) · **ZoteroBib** · citas nativas de Docs | `S05_Planteamiento_Apellido` (planteamiento + 1.ª página de marco) | ⏳ reutilizar capturas ZoteroBib de la S04 |
+| **06** | Socialización del artículo y cierre del curso | **Google Slides** (socialización) · CDigital (auto y coevaluación) | — *(sin entregable nuevo: el corte 3 cerró el 12/09)* | ⏳ sin herramienta nueva |
 
 ★ = emblemática práctica de esta pasada.
+
+> **Temario adelantado 2026-08-11:** U8 (bases + gestores) subió a la **S04** y U10–U12 (marco y revisión) a la **S05**, porque todo el corte 3 cierra el **12/09** y la S06 quedó como socialización y cierre. El flujo Scholar → ZoteroBib → Docs, que era la práctica emblemática de la vieja S06, ahora se dicta en la **S04**.
 
 ---
 
@@ -53,8 +57,9 @@
 
 | Sesión | Tema | Herramienta práctica | Entregable | Estado |
 | :---: | :--- | :--- | :--- | :--- |
-| **01** ★ | Presentación · proceso · tutorías | **Padlet** (expectativa / tema tentativo) · **Form tutorías** · **ZoteroBib** · APA Style (web) · plantilla APA en **Google Docs** · CDigital | Tema tentativo + registro tutoría | ✅ emblemática + capturas + tablero |
-| 02–06 | Problema → marcos | ZoteroBib + Google Docs + plantilla APA (nube) | Secciones anteproyecto | ⏳ |
+| **01** ★ | **Encuadre** (no se dicta tema) · presentación del curso, docente, estudiantes y ACAs · tutorías | **Padlet** (expectativa / tema tentativo) · **Form tutorías** · **ZoteroBib** · APA Style (web) · plantilla APA en **Google Docs** · CDigital | Tema tentativo + registro tutoría | ✅ emblemática + capturas + tablero |
+| — | *Lectura autónoma ESP329 U1* (Fundamentos y enfoque de investigación) | PDF de acceso abierto en `Clases/Sesion 01 - …/` | — | ✅ 3 PDF + `.txt` en la carpeta |
+| 02–06 | Problema → marcos *(S04 = retroalimentación del **Quiz** + antecedentes)* | ZoteroBib + Google Docs + plantilla APA (nube) | Secciones anteproyecto | ⏳ |
 | **07** | Marco legal · APA 7 | ZoteroBib · citas en Google Docs · APA Style web · plantilla CUN (Docs) | Citas corregidas | ⏳ (reutilizar capturas P1/ZoteroBib) |
 | 08–11 | Método → cierre | CDigital entregas · form tutorías cada encuentro | Anteproyecto / coeval | ⏳ |
 
@@ -72,7 +77,7 @@
 | TG2 / TG3 | Búsqueda y citas | Google Scholar · **ZoteroBib** (https://zbib.org/) | ✅ `Guiones/Capturas/Herramientas/tg_*.png` (ambos cursos) |
 | TG2 / TG3 | Formato artículo / APA | Plantilla APA CUN abierta en **Google Docs** · APA Style web | Reutilizar `p1_apa_style.png` |
 | TG2 / TG3 | Antiplagio | Herramienta institucional CUN si existe en CDigital; si no, **no inventar** URL — instruir ruta oficial del semestre | ⏳ pendiente URL real |
-| TG2 / TG3 | Estructura artículo | **Google Docs** + ZoteroBib | Guía breve (misma lógica Inv S07) |
+| TG2 / TG3 | Estructura artículo | **Google Docs** + ZoteroBib | Guía breve (misma lógica de Investigación **S04–S05**) |
 
 ---
 
@@ -93,7 +98,7 @@
 
 ## 6. Orden sugerido para siguientes pasadas
 
-1. Creatividad **S03** (Design Thinking en Miro free / Excalidraw) + **S06** (Canvanizer paso a paso del lienzo).  
+1. Creatividad **S02** (Design Thinking en Miro free / Excalidraw) + **S05** (Canvanizer paso a paso del lienzo, y Scholar/Patents para el tablero de vigilancia).  
 2. Proyecto I **S07** (APA + ZoteroBib + Google Docs) con pantallas de Docs en el navegador.  
 3. TG2/TG3: 1 guía corta “estructura artículo + antiplagio institucional”.  
 4. Cuando existan URLs reales Meet/CDigital: sustituir placeholders y re-capturar flujos de entrega.

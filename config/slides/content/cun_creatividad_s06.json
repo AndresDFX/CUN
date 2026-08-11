@@ -1,215 +1,237 @@
 [
   {
     "type": "bullets",
-    "title": "Su MVP no vive en una burbuja",
+    "title": "Una semilla buena no basta",
     "bullets": [
-      "La sesión pasada probaron su MVP con usuarios. Hoy **levantamos la vista del prototipo** y miramos el entorno.",
-      "Tres cosas que pasan cuando nadie mira afuera:",
-      "  Se **reinventa** algo que ya existe, gratis y documentado, y se pierden semanas del semestre.",
-      "  No se nota que una tecnología **acaba de volverse viable o barata** — y la propuesta nace desactualizada.",
-      "  Aparece **una norma o una política institucional** al final, cuando ya no hay tiempo de ajustar nada.",
-      "Caso concreto: un equipo diseña su sistema de turnos por completo y en la semana 12 descubre que **el laboratorio exige autorización escrita** para cualquier piloto.",
-      "  Esa información estaba publicada desde el principio. Nadie fue a buscarla.",
-      "Producto de la hora: un **tablero de mínimo 3 señales** y —lo más importante— **una decisión** tomada a partir de ellas."
-    ]
+      "Una innovación **rara vez sobrevive sola**. Para pasar de prototipo a impacto necesita cosas que ustedes no tienen todavía.",
+      "  **Capital · mentoría · redes de contactos · infraestructura · marco normativo · clientes.**",
+      "La metáfora del día: una semilla buena no basta. Necesita **tierra, agua, luz y clima**.",
+      "  El **ecosistema de innovación** es ese entorno: el conjunto de **actores y reglas** que rodean a un equipo de I+D o a un emprendedor.",
+      "Por eso su trabajo **no termina** cuando suben el archivo a CDigital. Termina —de verdad— cuando **alguien de afuera le abre una puerta** a la propuesta.",
+      "  Y para que alguien abra esa puerta, hay que saber **a quién tocarla** y **qué pedir** cuando abre.",
+      "**Aviso de calendario, sin rodeos:** esta es la **última sesión antes del cierre de la ACA Final**, y la ACA califica dos cosas de hoy: el **ecosistema** (entidades de apoyo) y el **pitch**.",
+      "  La próxima sesión ya no alcanza a alimentar la entrega: sirve para **sustentar y consolidar** lo que hoy quede escrito.",
+      "Salen de la hora con un **mapa de mínimo 3 entidades reales** con un pedido concreto a cada una, y el **guion del pitch de 60 segundos** cronometrado."
+    ],
+    "note": "Las fechas exactas de cierre están en CDigital y en la Presentación del Curso. Revíselas hoy mismo, no el fin de semana."
   },
   {
     "type": "bullets",
-    "title": "Qué es la vigilancia tecnológica (y qué NO es)",
+    "title": "Qué le puede dar el ecosistema (y qué no)",
     "bullets": [
-      "**Vigilancia tecnológica**: proceso **sistemático** de **capturar, filtrar, analizar y usar** información sobre tecnologías, competidores, normas y tendencias, con un fin concreto: **decidir mejor**.",
-      "La palabra que carga todo el peso es **sistemático**.",
-      "  No es leer el artículo que apareció en el celular. Es un **método repetible**, con fuentes definidas y registro.",
-      "Lo que **NO** es vigilancia:",
-      "  **No** es \"me informé\". Buscar en internet un rato es **curiosidad**, no vigilancia.",
-      "  **No** es acumular enlaces en un documento. Eso es un archivo, no un tablero.",
-      "  **No** es leer solo lo que confirma lo que ya pensaba.",
-      "**La prueba de fuego, en una sola pregunta: ¿cambió alguna decisión de su propuesta?**",
-      "  Si después de mirar el entorno usted **no ajustó ni confirmó nada**, no vigiló: leyó."
-    ]
+      "Seis insumos que una propuesta necesita y que casi nunca se consiguen solos:",
+      "  **Capital** — dinero para materiales, licencias o dedicación. Rara vez es lo primero que falta.",
+      "  **Mentoría** — alguien que ya se equivocó antes y le ahorra tres meses de camino.",
+      "  **Redes de contactos** — el acceso a las personas correctas, que suele valer más que el dinero.",
+      "  **Infraestructura** — laboratorios, equipos, espacios, datos.",
+      "  **Marco normativo** — permisos, avales, respaldo institucional para poder probar.",
+      "  **Clientes o usuarios reales** — el insumo más escaso de todos y el que más rápido madura un proyecto.",
+      "Lo que el ecosistema **no** hace: no valida por usted, no arregla una propuesta sin usuario, y no reemplaza la evidencia.",
+      "  Si llega a una entidad sin saber qué problema resuelve, la puerta se abre y no pasa nada."
+    ],
+    "note": "Antes de buscar plata, pregúntese cuál de los seis insumos es **el que hoy le falta de verdad**. Casi nunca es el primero."
+  },
+  {
+    "type": "table",
+    "title": "La misma innovación cambia de escala: local → internacional",
+    "headers": ["Escala", "Qué se innova ahí", "Quién decide y financia", "Qué le exigen a usted"],
+    "rows": [
+      ["**Local** (barrio, campus, empresa)", "Mejora de un proceso concreto, con usuarios que usted puede ver", "La institución o el jefe del área", "Un piloto pequeño y un permiso"],
+      ["**Regional** (ciudad, departamento)", "Soluciones replicables en varios sitios parecidos", "Alcaldías, gobernaciones, cámaras de comercio", "Que sirva a más de un caso y se pueda medir"],
+      ["**Nacional**", "Propuestas alineadas con políticas y focos del país", "**MinCiencias**, **iNNpulsa**, ministerios sectoriales", "Formulación formal, indicadores y contrapartida"],
+      ["**Internacional**", "Retos abiertos, cooperación y escalamiento", "Programas de cooperación, **OCDE**/**CEPAL** como referencia, corporativos", "Inglés, estándares y evidencia comparable"]
+    ],
+    "note": "No se sube de escala saltando pasos: **un piloto local bien medido es el pasaporte** para la escala siguiente. Sin él, la postulación nacional se cae en la primera revisión.",
+    "col_w": [2.4, 3.3, 3.0, 2.7]
   },
   {
     "type": "bullets",
-    "title": "El ciclo mínimo: Observar → Analizar → Comunicar → Usar",
+    "title": "Tipos de impacto: por qué le importa a un país",
     "bullets": [
-      "**1. Observar** — buscar en fuentes definidas de antemano, no en lo que aparezca.",
-      "  Decida **antes** dónde va a mirar: académico, patentes, mercado, normativa. Si no, terminará donde lo lleve el algoritmo.",
-      "**2. Analizar** — separar el **hallazgo** (lo que dice la fuente) de la **implicación** (lo que significa para usted).",
-      "  Casi todo el mundo se queda en el hallazgo. El valor está en la implicación.",
-      "**3. Comunicar** — dejarlo escrito de forma que **otro lo entienda sin explicación**.",
-      "  Si su tablero solo lo entiende usted, no comunicó: tomó apuntes.",
-      "**4. Usar** — convertirlo en un **ajuste concreto**: de alcance, de usuario, de tecnología o de riesgo.",
-      "  Este paso es el que casi siempre falta, y es el único que justifica los tres anteriores.",
-      "Los cuatro pasos caben en **una hora** por señal. La disciplina no es el tiempo: es **no saltarse el paso 4**."
+      "Una entidad no financia \"una buena idea\": financia **un impacto que puede mostrar**. Hay cuatro tipos, y conviene saber cuál es el suyo.",
+      "  **Económico** — ahorro, productividad, empleo, ingresos. El más fácil de medir y el más pedido en convocatorias.",
+      "  **Social** — calidad de vida, acceso, inclusión, tiempo devuelto a las personas.",
+      "  **Ambiental** — consumo de energía, residuos, huella, uso de recursos.",
+      "  **Institucional / de conocimiento** — capacidades nuevas, datos disponibles, procesos que antes no existían.",
+      "El caso del laboratorio, tipificado: el impacto **no** es \"una app\". Es **tiempo de práctica recuperado** (social) y **uso más eficiente de equipos ya comprados** (económico).",
+      "Regla para escribirlo: **impacto = a quién + qué cambia + en cuánto**. \"Mejorar la experiencia\" no es un impacto; \"30 estudiantes recuperan una hora de práctica por semana\" sí.",
+      "Por qué esto decide una postulación: dos propuestas iguales compiten, y gana la que **nombró su impacto y dijo cómo lo mediría**.",
+      "En su ACA Final, esa frase de impacto es lo que le da sentido al punto de **siguiente paso**."
     ]
   },
   {
     "type": "table",
-    "title": "Informarse vs. vigilar",
-    "headers": ["", "Informarse", "**Vigilar**"],
+    "title": "El mapa de entidades: cuatro cuadrantes",
+    "headers": ["Cuadrante", "Ejemplos orientativos", "Qué suelen ofrecer"],
     "rows": [
-      ["Cuándo ocurre", "Cuando algo aparece por casualidad", "En un momento **planeado**, con fuentes definidas"],
-      ["Qué se busca", "Lo que resulte interesante", "Respuesta a una **pregunta concreta** del proyecto"],
-      ["Qué queda", "Un enlace guardado o nada", "Una **ficha** con fuente, fecha e implicación"],
-      ["Cómo se sabe que sirvió", "Uno \"se enteró\"", "**Cambió o confirmó una decisión**"],
-      ["Frecuencia", "Aleatoria", "Repetible: se puede volver a hacer igual"],
-      ["Resultado en el proyecto", "Ninguno visible", "Ajuste de alcance, usuario, tecnología o riesgo"]
+      ["**Universitario**", "Unidad de emprendimiento de la CUN · semilleros de investigación · laboratorios y docentes del programa", "Mentoría, espacio, validación, contactos"],
+      ["**Público / mixto**", "Cámaras de Comercio · programas de alcaldías y gobernaciones · **iNNpulsa** · **MinCiencias**", "Convocatorias, capital semilla, formación"],
+      ["**Privado / redes**", "Hubs y aceleradoras · centros de desarrollo tecnológico (p. ej. **Cidei**) · comunidades tech · empresas ancla de su sector", "Piloto, inversión, red de clientes"],
+      ["**Internacional**", "Programas de cooperación · **open innovation** de multilatinas · plataformas de retos · marcos de referencia (**OCDE**, **CEPAL**)", "Retos abiertos, financiación, escalamiento"]
     ],
-    "note": "La diferencia no está en cuánto se lee. Está en si al final **hay una decisión escrita**.",
-    "col_w": [2.6, 3.8, 4.4]
-  },
-  {
-    "type": "table",
-    "title": "Cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador)",
-    "headers": ["Tipo de señal", "Fuentes gratis / web", "Pregunta que responde"],
-    "rows": [
-      ["**Tecnología**", "**Google Scholar** (scholar.google.com) · **Google Patents** (patents.google.com) · repositorios de GitHub · documentación oficial de estándares (IEEE)", "¿Qué se volvió **posible** o **barato**?"],
-      ["**Mercado**", "Reportes públicos · listas de precios · notas de adopción · portales de **datos abiertos**", "¿Quién **ya paga** por esto y cuánto?"],
-      ["**Normativa**", "Leyes y resoluciones · políticas institucionales · sitios de entidades públicas", "¿Qué me **limita** o me **habilita**?"],
-      ["**Social**", "Hábitos y demografía · quejas públicas en redes y prensa · foros de usuarios", "¿Qué **cambió en el usuario**?"]
-    ],
-    "note": "El error más común es mirar **solo** el frente tecnológico. Las propuestas de estudiantes suelen morir por el frente **normativo**, que nadie revisó.",
-    "col_w": [1.8, 5.4, 3.0]
+    "note": "Es un **mapa**, no un directorio. Los programas cambian: **verifiquen el nombre y la vigencia** el día que vayan a escribir. Un nombre mal escrito hunde la credibilidad del documento.",
+    "col_w": [2.0, 5.2, 3.0]
   },
   {
     "type": "bullets",
-    "title": "Google Scholar: cómo buscar sin ahogarse",
+    "title": "Aprender a preguntar el encaje",
     "bullets": [
-      "**Google Scholar** (scholar.google.com) da el **estado del arte académico**: qué se ha estudiado y qué se encontró.",
-      "**Regla 1 · Busque el PROBLEMA, no su solución.**",
-      "  Mal: \"app de reservas CUN\" — no existe literatura de su app.",
-      "  Bien: \"gestión de turnos laboratorio universitario\" — ahí sí hay estudios.",
-      "**Regla 2 · Pruebe en inglés.** El volumen de resultados se multiplica.",
-      "  \"laboratory scheduling system\", \"resource booking higher education\".",
-      "**Regla 3 · Use comillas** para frases exactas: `\"laboratory scheduling\"` evita resultados sueltos.",
-      "**Regla 4 · Filtre por año** en el panel izquierdo (\"Desde 2020\"). Una señal tecnológica de hace 15 años ya no es señal.",
-      "**Regla 5 · Mire \"Citado por\"**: si un artículo tiene muchas citas, es una referencia central del tema.",
-      "  Y desde ahí puede saltar a trabajos más recientes que lo citan.",
-      "Copie siempre **título + autor + año**. Sin esos tres datos, lo que encontró **no es evidencia**."
-    ]
-  },
-  {
-    "type": "bullets",
-    "title": "Google Patents: encontrar algo parecido es una buena noticia",
-    "bullets": [
-      "**Google Patents** (patents.google.com) muestra soluciones **ya documentadas o protegidas** — muchísimas más de las que uno imagina.",
-      "La reacción típica del estudiante al encontrar algo parecido: **\"mi idea murió\"**. Es exactamente al revés.",
-      "  Ahora usted **sabe contra qué compite** — y eso antes no lo sabía.",
-      "  Y queda obligado a responder la pregunta que sí importa: **¿en qué se diferencia la mía?**",
-      "Cómo se usa en 5 minutos:",
-      "  Busque **con las palabras del problema**, no con el nombre de su proyecto.",
-      "  Filtre por **fecha** para ver qué es reciente y qué es viejo.",
-      "  Lea **solo el resumen (abstract)** y las figuras. No hace falta leer las reivindicaciones completas.",
-      "  Revise **\"Similar documents\"** al final de la ficha: ahí aparece el vecindario completo de su idea.",
-      "Lo que escribe en su ficha no es \"existe algo parecido\", sino: **\"existe X; mi diferencia está en Y\"**."
-    ],
-    "note": "Si en clase alguna búsqueda profunda muestra un aviso de \"tráfico inusual\", se continúa en el navegador normal — no se instala nada."
-  },
-  {
-    "type": "bullets",
-    "title": "La ficha de señal: cinco campos, ni uno más",
-    "bullets": [
-      "Cada señal se registra en una ficha mínima —en **Google Docs**— para que sirva a la decisión y no al archivo.",
-      "**1. Título de la señal** — una frase suya que diga qué encontró, no el título del documento original.",
-      "**2. Fuente + fecha + enlace** — los tres. **Sin fecha ni autor, no vale.**",
-      "  Una fuente sin fecha puede estar describiendo un mundo que ya no existe.",
-      "**3. Hallazgo en 2 líneas** — resumen **con sus palabras**. Copiar el abstract entero no es resumir.",
-      "**4. Implicación para MI propuesta** — el campo que decide si la ficha sirve. Tres salidas posibles:",
-      "  **Confirma** — sigo igual, y ahora con respaldo para sustentarlo.",
-      "  **Obliga a pivotar** — cambio alcance, usuario o tecnología.",
-      "  **Es un riesgo** — no cambio hoy, pero lo anoto y lo vigilo.",
-      "**5. Nivel de confianza** — **alto** (fuente oficial o revisada por pares) · **medio** (reporte o nota técnica seria) · **bajo** (blog, foro, testimonio suelto).",
-      "  Confianza baja no invalida la señal: solo indica que **todavía no puede decidir sola**."
+      "Antes de acercarse a cualquier entidad, respóndase una sola pregunta: **¿para qué me sirve ESTA entidad?**",
+      "Cinco tipos de encaje posibles. Elija **uno** por entidad — no los cinco:",
+      "  **Mentoría** — que alguien revise lo que ya hice y me diga dónde está el hueco.",
+      "  **Capital semilla** — recursos para una etapa concreta y acotada.",
+      "  **Networking** — que me conecten con quien ya trabaja en esto.",
+      "  **Infraestructura** — acceso a un espacio, un equipo o unos datos.",
+      "  **Validación** — usuarios reales para probar mi MVP en condiciones reales.",
+      "**Si usted no sabe qué pediría, la entidad todavía no le sirve.** No es la entidad la que falla: es que su propuesta aún no sabe qué le falta.",
+      "Truco para descubrirlo: vuelva al **MVP y a la prueba de validación de la sesión pasada**. ¿Qué le faltó para ejecutarla bien? **Eso** es lo que pide."
     ]
   },
   {
     "type": "table",
-    "title": "Ejemplo modelado: dos fichas del caso del laboratorio",
-    "headers": ["Campo", "Señal 1 (académica)", "Señal 2 (patente)"],
+    "title": "\"Pedir apoyo\" no es un pedido",
+    "headers": ["Pedido vago", "Por qué no funciona", "Pedido concreto"],
     "rows": [
-      ["**Título**", "Los sistemas de turnos reducen el tiempo muerto de laboratorio", "Ya existe reserva de espacios por código QR"],
-      ["**Fuente + fecha**", "Artículo sobre gestión de turnos en laboratorios universitarios, Google Scholar, 2021 (autor y enlace copiados)", "Patente de sistema de reserva por QR, Google Patents, 2019 (número y enlace copiados)"],
-      ["**Hallazgo (2 líneas)**", "La mayor pérdida no está en reservar, sino en los **choques de horario entre cursos**", "El registro por QR ya está documentado como solución de reserva de espacios"],
-      ["**Implicación**", "**Confirma** el problema, pero **desplaza el foco**: atacar los choques, no el trámite", "**Obliga a pivotar**: mi diferencia debe estar en la **asignación automática**, no en el registro"],
-      ["**Confianza**", "**Alta** — publicación académica con revisión", "**Alta** — documento oficial de patente"]
+      ["\"Necesito apoyo para mi proyecto\"", "El otro no sabe qué hacer con eso y archiva el correo", "\"Solicito **20 minutos** para que revisen mi Canvas y mi MVP\""],
+      ["\"Quisiera que me ayuden con usuarios\"", "No dice cuántos, ni cuándo, ni para qué", "\"Solicito acceso a **10 usuarios por 2 semanas** para probar el flujo\""],
+      ["\"Me interesa participar en convocatorias\"", "Pide información que ya es pública", "\"Solicito confirmar **fechas y requisitos** de la convocatoria vigente\""],
+      ["\"Busco financiación\"", "Sin monto ni destino, no es evaluable", "\"Solicito apoyo para **materiales de un piloto de 4 semanas**\""]
     ],
-    "note": "Miren la fila de implicación: **las dos señales cambiaron algo**. Una movió el foco del problema; la otra movió la diferencia de la solución. **Eso es vigilar.**",
-    "col_w": [1.8, 4.2, 4.2]
+    "note": "Un buen pedido cabe en **un correo de 5 líneas** y le permite al otro decir **sí o no** sin tener que preguntar nada más.",
+    "col_w": [3.0, 3.4, 4.6]
+  },
+  {
+    "type": "table",
+    "title": "Ejemplo modelado: mapa de entidades del caso del laboratorio",
+    "headers": ["Entidad", "Tipo de apoyo", "Qué le pediría en un correo de 5 líneas"],
+    "rows": [
+      ["Unidad de emprendimiento de la CUN", "**Mentoría / pitch**", "Revisión del Canvas y del pitch, y **5 contactos** de estudiantes usuarios"],
+      ["Área de TI o empresa del sector", "**Piloto**", "**10 usuarios reales durante 2 semanas** para cronometrar el flujo"],
+      ["Programa público o Cámara de Comercio", "**Convocatoria**", "Confirmación de **fechas y requisitos** de postulación vigentes"]
+    ],
+    "note": "Fíjense en la tercera columna: cada fila tiene un **pedido concreto, medible y acotado en el tiempo**. Ninguna dice \"pedir ayuda\".",
+    "col_w": [3.0, 2.2, 5.4]
+  },
+  {
+    "type": "bullets",
+    "title": "El pitch de 60 segundos: qué logra y qué no",
+    "bullets": [
+      "Un pitch **no es contar todo**. Es lograr que el otro **quiera una segunda conversación**. Nada más.",
+      "  Si esto lo tienen claro, el resto es fácil: todo lo que no ayude a conseguir esa segunda charla, **sobra**.",
+      "El error número uno, y el más caro: **empezar por la tecnología**.",
+      "  \"Hicimos una app con inteligencia artificial que...\" — nadie se conecta con eso, ni siquiera la gente técnica.",
+      "  La tecnología entra en el tramo 3, **como medio**, nunca como protagonista.",
+      "El pitch empieza por **la persona y su dolor**. Es lo único que todo el mundo entiende sin contexto.",
+      "Tres reglas de forma:",
+      "  **Una sola idea por tramo.** Si mete dos, se pierden las dos.",
+      "  **Números concretos** cuando los tenga (4 de 5, 30 %, una hora perdida). Un número vale por tres adjetivos.",
+      "  **Termine pidiendo algo.** Un pitch sin pedido deja al otro sin saber qué hacer."
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Los cinco tramos del pitch de 60 segundos",
+    "headers": ["Tramo", "Contenido", "Tiempo", "Pregunta que responde"],
+    "rows": [
+      ["**1**", "**Usuario + dolor**", "~10 s", "¿A quién y qué le duele?"],
+      ["**2**", "**Insight**", "~10 s", "¿Qué observación lo cambia todo?"],
+      ["**3**", "**Propuesta + tipo de innovación**", "~15 s", "¿Qué proponen y qué cambia?"],
+      ["**4**", "**Evidencia breve**", "~15 s", "¿Por qué debería creerles?"],
+      ["**5**", "**Pedido / siguiente paso**", "~10 s", "¿Qué necesitan de mí ahora?"]
+    ],
+    "note": "El tramo 4 es el que separa un proyecto de aula de una propuesta creíble: ahí entra su **validación** o su **vigilancia** de la sesión pasada.",
+    "col_w": [1.0, 4.0, 1.4, 3.8]
+  },
+  {
+    "type": "bullets",
+    "title": "Ejemplo modelado: el pitch completo, tramo por tramo",
+    "bullets": [
+      "**Tramo 1 · Usuario + dolor:** \"Los estudiantes de Ingeniería pierden **hasta una hora** buscando un laboratorio libre.\"",
+      "  Empieza por la persona. Todavía no aparece ninguna tecnología.",
+      "**Tramo 2 · Insight:** \"Al observarlos notamos que el **70 % de los choques** se concentra en **dos franjas** del día.\"",
+      "  El insight es la observación que uno no esperaba. Es lo que hace que el otro levante la cabeza.",
+      "**Tramo 3 · Propuesta + tipo:** \"Proponemos una **asignación automática desde el horario del curso**, sin trámite de reserva. Es una innovación **de proceso**.\"",
+      "  Quince segundos, y nombra el tipo. Eso muestra que sabe qué está haciendo.",
+      "**Tramo 4 · Evidencia:** \"En una prueba con 5 estudiantes, **4 de 5 completaron el flujo en menos de un minuto** y dijeron que lo usarían cada semana.\"",
+      "  Un número real vence a cualquier adjetivo. Aquí es donde su validación paga.",
+      "**Tramo 5 · Pedido:** \"Buscamos un **piloto de dos semanas con un curso** para medirlo en condiciones reales.\"",
+      "**Sesenta segundos exactos — y empecé por la persona, no por la app.**"
+    ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
-      ["advertencia", "**\"Ya vigilé: leí un artículo.\"** ¿Cambió alguna decisión de su propuesta? Si no, se **informó**, no vigiló."],
-      ["advertencia", "**\"Encontré una patente igual, mi idea murió.\"** Al contrario: ahora sabe **contra qué compite**. ¿En qué se diferencia la suya?"],
-      ["advertencia", "**Pegar un enlace sin fecha ni autor.** Una fuente sin fecha ni autor **no es evidencia**. Busque quién lo dice y cuándo."],
-      ["advertencia", "**\"Hay muchas apps parecidas.\"** \"Parecidas\" no es análisis. ¿**En qué** se parecen y **en qué** se diferencia usted?"],
-      ["advertencia", "**Vigilancia decorativa.** Si su tablero no ajusta alcance, usuario, tecnología ni riesgo, todavía no sirve para nada."],
-      ["info", "**\"No encuentro nada.\"** Cambie las palabras: busque **el problema**, no su solución. Y pruebe **en inglés** en Scholar."]
+      ["advertencia", "**Listar entidades sin decir qué les pediría.** Una entidad sin un pedido concreto no sirve. ¿Le pide **mentoría, piloto, capital o contactos**?"],
+      ["advertencia", "**Entidades genéricas o inventadas.** Se necesita el **nombre real y correcto**, verificado en su sitio. ¿Existe esa entidad y hace lo que usted dice que hace?"],
+      ["advertencia", "**Empezar el pitch por la tecnología.** Empiece por **la persona y su dolor**. La tecnología va en el tramo 3, como medio."],
+      ["advertencia", "**Pitch de 3 minutos \"porque hay mucho que contar\".** En 60 s usted no cuenta todo: logra que quieran una **segunda charla**. Corte lo demás."],
+      ["advertencia", "**Confundir el producto con el impacto.** \"Una app\" no es impacto. **A quién + qué cambia + en cuánto**, eso sí lo es."],
+      ["aclaracion", "**Sobre cupos y financiaciones:** el Docente **no maneja** esas convocatorias y no puede prometer cupos ni recursos. Lo que sí se enseña aquí es a **identificarlas** y a **preguntar el encaje**."]
     ]
   },
   {
     "type": "bullets",
-    "title": "Paso a paso: arme su tablero de vigilancia en Google Docs",
+    "title": "Paso a paso: escribir y ensayar su pitch",
     "bullets": [
-      "**1.** Documento nuevo en **Google Docs**. Título: `Tablero de vigilancia — [su propuesta]`.",
-      "**2.** Escriba primero **la pregunta que quiere responder**. Sin pregunta, la búsqueda se dispersa.",
-      "  Ejemplo: \"¿Qué soluciones de asignación de recursos ya existen y qué las limita?\"",
-      "**3.** Inserte una tabla de **5 columnas × 4 filas**: señal · fuente y fecha · hallazgo · implicación · confianza.",
-      "**4.** Abra **scholar.google.com** y **patents.google.com** en **pestañas aparte** — no cierre el documento.",
-      "**5.** Por cada búsqueda útil, **pegue de una vez** título, autor, año y enlace **antes** de seguir leyendo.",
-      "  Si no lo hace en el momento, después no encuentra de dónde salió. Le pasa a todo el mundo.",
-      "**6.** Llene la columna **implicación** inmediatamente, con la fuente todavía abierta.",
-      "**7.** Al final, subraye **la señal que le obligó a ajustar algo** y escriba abajo la **decisión** en una frase.",
-      "**8.** Descargue en PDF o comparta el enlace, y súbalo a **CDigital**."
+      "**1.** Abra un documento y escriba los **cinco tramos como títulos**, uno debajo del otro.",
+      "**2.** Llene **una frase por tramo**. Una sola. Si le salen dos, elija la que más se entienda sin contexto.",
+      "**3.** Léalo en voz alta con **cronómetro** (el del celular sirve). Anote el tiempo real.",
+      "  Casi todos pasan de 90 segundos en el primer intento. Es normal.",
+      "**4.** **Corte, no acelere.** Hablar más rápido no arregla un pitch largo: lo vuelve incomprensible. Empiece cortando adjetivos y explicaciones técnicas del tramo 3.",
+      "**5.** Repita hasta quedar **entre 55 y 60 segundos** leyendo a ritmo normal.",
+      "**6.** Ensaye **en parejas**: el compañero cronometra y luego repite **qué entendió**.",
+      "  Si no puede repetir el **dolor, el valor y el pedido**, el problema es el pitch, no el oyente.",
+      "**7.** (Opcional) Si quiere una diapositiva de apoyo, **Canva free** en el navegador. **Una sola**, con el dolor y el número de evidencia.",
+      "Regla final: **memorice la estructura, no el texto**. Un pitch recitado suena a discurso; uno estructurado suena a convicción."
     ]
   },
   {
     "type": "bullets",
-    "title": "TALLER — Tablero de vigilancia de su tema (22 minutos)",
+    "title": "TALLER — Mapa de entidades + guion del pitch (23 minutos)",
     "bullets": [
-      "Abran **Google Scholar** y **Google Patents** en otra pestaña y armen su **Tablero de vigilancia** en Google Docs.",
-      "**Mínimo 3 fichas de señal**, cada una con: título · fuente con **fecha** y enlace · hallazgo en 2 líneas · **implicación** · nivel de confianza.",
-      "**Minutos 0–3** · Escriban la pregunta de búsqueda y armen la tabla vacía.",
-      "**Minutos 3–10** · Señal **tecnológica**: busquen en Scholar y/o Patents. Copien título, autor y año **en el momento**.",
-      "**Minutos 10–16** · Señales de **otro frente**: mercado, normativa o social. No las tres del mismo lado.",
-      "**Minutos 16–22** · Llenen las implicaciones y escriban abajo **su decisión**.",
-      "**Al menos una** señal debe obligarlos a **ajustar algo**: alcance, usuario, tecnología o riesgo.",
-      "Al final, **dos personas** comparten **solo la implicación** de una señal — no el hallazgo.",
-      "**Criterio de éxito verificable:** **3 señales con fuente y fecha** + **1 decisión explícita** escrita en una frase que empiece por \"Ajusto...\" o \"Confirmo...\"."
+      "**Paso 1 (8 min)** · Completen su **Mapa de entidades** en Google Docs: **mínimo 3 entidades reales**, de **cuadrantes distintos**, con **nombre correcto** y un **pedido concreto** a cada una.",
+      "  Verifiquen el nombre en el sitio de la entidad antes de escribirlo. Si no lo encuentran, esa entidad no entra.",
+      "**Paso 2 (3 min)** · Escriban su **frase de impacto**: a quién + qué cambia + en cuánto. Una sola frase.",
+      "**Paso 3 (6 min)** · Escriban el **guion del pitch de 60 s** siguiendo los **cinco tramos**. Pueden bocetarlo en Excalidraw.",
+      "**Paso 4 (4 min)** · **Ensayen en parejas** con cronómetro. El que escucha repite qué entendió; el que habla ajusta.",
+      "**Paso 5 (2 min)** · **Dos voluntarios** hacen su pitch en vivo y se les toma el tiempo. El resto se sustenta la próxima sesión.",
+      "Si quieren una diapositiva de apoyo: **Canva free**, opcional, una sola.",
+      "**Criterio de éxito verificable:** **3 entidades con pedido concreto** + un guion en el que, en **60 segundos**, se entienden **dolor, valor y pedido**.",
+      "  Verificación en pareja: si su compañero no puede repetir el pedido después de escucharlo, el tramo 5 está mal escrito."
     ],
-    "note": "Si una ficha no cambia ni confirma nada, bórrela y busque otra. Una ficha inútil ocupa el lugar de una que sí decide."
+    "note": "El cronómetro no es para presionar: es para que descubran cuánto sobra. Casi siempre sobra el tramo 3."
   },
   {
     "type": "bullets",
     "title": "Antes de entregar: revise usted mismo",
     "bullets": [
-      "☐ Tengo **3 fichas o más**, y **no todas** son del frente tecnológico.",
-      "☐ Cada ficha tiene **autor, fecha y enlace**. Ninguna dice solo \"lo vi en internet\".",
-      "☐ Ninguna de mis fuentes tiene **más de 5 años** sin que yo explique por qué sigue vigente.",
-      "☐ Mis hallazgos están **con mis palabras**, en 2 líneas. No pegué ningún abstract completo.",
-      "☐ Cada ficha dice si **confirma**, **obliga a pivotar** o **es un riesgo**.",
-      "☐ **Al menos una** señal cambió algo real de mi propuesta, y puedo señalar **qué** cambió.",
-      "☐ Escribí mi **decisión** en una frase, al final del tablero.",
-      "☐ Si encontré algo parecido a mi idea, escribí **en qué me diferencio** — no lo escondí.",
-      "☐ El archivo se llama **`S06_Vigilancia_Apellido`** y está en **CDigital**.",
-      "Prueba final: si le entrego mi tablero a un compañero, ¿sabría **qué decisión tomé y por qué**? Si no, falta la implicación."
+      "☐ Mis **3 entidades existen** y escribí su **nombre correcto** (lo verifiqué en su sitio), y no son las tres del mismo cuadrante.",
+      "☐ Cada entidad tiene **un solo tipo de encaje**: mentoría, capital, networking, infraestructura o validación.",
+      "☐ Cada pedido es **concreto y acotado**: dice **cuánto**, **de qué** y **por cuánto tiempo**.",
+      "☐ Escribí mi **frase de impacto** con **a quién + qué cambia + en cuánto**, y dije de qué tipo es (económico, social, ambiental o institucional).",
+      "☐ Sé decir en qué **escala** está hoy mi propuesta (local, regional, nacional) y cuál sería el paso siguiente.",
+      "☐ Mi pitch **empieza por la persona y su dolor** — no por la app, la plataforma ni la IA.",
+      "☐ Mi pitch tiene **los cinco tramos**, y en el tramo 4 hay **un número real** salido de mi validación o de mi vigilancia.",
+      "☐ El tramo 5 **pide algo** que el otro puede responder con un sí o un no.",
+      "☐ Lo cronometré y quedó **en 60 segundos o menos** leyendo a ritmo normal.",
+      "☐ El archivo se llama **`S06_EcosistemaPitch_Apellido`** y está en **CDigital**."
     ]
   },
   {
     "type": "bullets",
-    "title": "Para continuar — trabajo autónomo",
+    "title": "Para continuar — la semana en que se cierra la ACA Final",
     "bullets": [
       "**Tres ideas para llevarse de hoy:**",
-      "  1. Vigilar es un **sistema**, no una lectura suelta.",
-      "  2. Una fuente **sin fecha ni autor** no es evidencia.",
-      "  3. Si la señal **no cambia una decisión**, no sirvió.",
-      "**(a)** Pulan su tablero y súbanlo como **`S06_Vigilancia_Apellido`** a **CDigital**.",
-      "  Plataforma: [URL CDigital — campus del curso pendiente]",
-      "**(b)** Preparen un listado de **mínimo 3 entidades de apoyo** —con el **nombre correcto**— a las que podrían acercarse.",
-      "  Piensen en cuatro frentes: **universitario** (unidad de emprendimiento, semilleros), **público**, **privado / redes** e **internacional**.",
-      "  Para cada una, anoten en una línea **qué creen que le pedirían**. Si no saben qué pedir, esa entidad todavía no les sirve.",
-      "**Próxima sesión — la última:** innovación local–internacional, **entidades de apoyo** y el **pitch de 60 segundos** cronometrado. Vengan preparados para hablar."
+      "  1. Una innovación **no sobrevive sola**: necesita un ecosistema que le dé lo que le falta.",
+      "  2. Una entidad **sin un pedido concreto** no le sirve todavía.",
+      "  3. Un pitch se gana **empezando por la persona**, no por la tecnología.",
+      "**(a)** Suban su mapa y su guion como **`S06_EcosistemaPitch_Apellido`** a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**(b)** **Esta es la semana de la ACA Final.** Arme el **paquete consolidado** con lo que ya tiene: ficha del problema · ficha Oslo · matriz de tipos · Canvas, MVP y validación · tablero de vigilancia · mapa de entidades · guion del pitch.",
+      "  **Nada de esto hay que inventarlo ahora**: son documentos que ya existen. Lo que falta es **integrarlos en un solo texto** y que el usuario sea el mismo en todos.",
+      "**(c)** **Revisen en CDigital la rúbrica y el espacio de entrega (EV) de la ACA Final** antes de subir, y verifiquen ahí la fecha exacta de cierre. Cerrado el espacio, la nota es la que hay.",
+      "**Próxima sesión — la última:** **taller de consolidación y sustentación**. Ya no se entrega nada nuevo: cada quien **sustenta su propuesta con el pitch**, recibe retroalimentación y se cierra el curso.",
+      "  Vengan con el pitch ensayado y con el documento abierto. Se habla, no se lee."
     ]
   }
 ]

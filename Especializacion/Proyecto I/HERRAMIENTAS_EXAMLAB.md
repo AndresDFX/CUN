@@ -17,12 +17,14 @@
 
 > ### ⚠️ Nota del 2026-08-10 — cómo se llaman las cosas en el aula
 >
-> La auditoría del libro de calificaciones (`AUDITORIA CDigital 2026-08-10.md` §2) mostró que **el aula nombra los ítems distinto** de este documento y del material: lo que aquí es **ACA 1** es el ítem **«Quiz»** (cuestionario, 25%), **ACA 2** es la **«ACA 1»** del aula (tarea) y **ACA 3** es la **«ACA FINAL»** (tarea). La **coevaluación es un FORO** (se participa) y la **autoevaluación un cuestionario**. **Los pesos y las fechas no cambiaron** (siguen las de Coordinación); lo que cambia es a qué ítem se le entra la nota. Cuando este documento diga «registrar ACA1/2/3 como actividad externa», mapear con esa equivalencia.
+> La auditoría del libro de calificaciones (`AUDITORIA CDigital 2026-08-10.md` §2) mostró que **el aula nombra los ítems distinto** de como los numeraba el Syllabus ESP329: la ACA 1 del ESP329 es el ítem **«Quiz»** (cuestionario, 25%, corte 1), la ACA 2 es la **«ACA 1»** del aula (tarea, 25%, corte 2) y la ACA 3 es la **«ACA FINAL»** (tarea, 42%, corte 3). La **coevaluación es un FORO** (se participa) y la **autoevaluación un cuestionario**. **Los pesos y las fechas no cambiaron** (siguen las de Coordinación); lo que cambia es a qué ítem se le entra la nota.
+>
+> **Actualización 2026-08-11:** este documento ya está reescrito con los **nombres del aula** — igual que el `PLAN_VIABILIDAD_EXAMLAB.md`, el Manual, el `Calendario de clases (oficial).md` y los enunciados del estudiante. Cuidado con la trampa que dejaba la numeración vieja: **lo que cierra el 30/08 es el Quiz**; la **ACA 1** del aula cierra el **04/10**. Las referencias entre comillas invertidas del tipo `` `ACA 2:18` `` son **citas a los enunciados anteriores al 2026-08-10** (archivo y número de línea de entonces) y se conservan tal cual como rastro de dónde salió cada requisito.
 >
 > Segunda corrección: auto y coevaluación **no son exclusivas de Proyecto I** — existen también en los 4 cursos de pregrado, con peso menor. Y las ventanas oficiales son **coevaluación 09–15/11** y **autoevaluación 16–22/11** (este documento traía 10–16/11 y 17–22/11).
 
 > **Este documento COMPLEMENTA, no reemplaza, a [`./PLAN_VIABILIDAD_EXAMLAB.md`](./PLAN_VIABILIDAD_EXAMLAB.md).**
-> Ese plan analizó el curso por el eje de las **ENTREGAS** y concluyó *"viable condicionado — ExamLab como complemento de CDigital, nunca como reemplazo"*. Esa conclusión se mantiene íntegra y **no se re-discute acá**: la entrega oficial de ACA1/2/3, la coevaluación y la autoevaluación siguen en CDigital.
+> Ese plan analizó el curso por el eje de las **ENTREGAS** y concluyó *"viable condicionado — ExamLab como complemento de CDigital, nunca como reemplazo"*. Esa conclusión se mantiene íntegra y **no se re-discute acá**: la entrega oficial del **Quiz**, la **ACA 1** y la **ACA FINAL**, más la coevaluación y la autoevaluación, siguen en CDigital.
 > Lo que este documento responde es otra pregunta: **¿qué herramientas de ExamLab le sirven al docente para DICTAR y ACOMPAÑAR este curso, sesión por sesión?** Herramienta = algo con lo que el estudiante o el docente *trabaja* durante la sesión o entre sesiones (tutor de IA, pizarra, foro, encuesta en vivo, material por sesión, calendario, seguimiento). Dónde se sube el `.docx` final y cuánto pesa en la nota **queda fuera de alcance** — eso ya está resuelto en el documento hermano.
 
 ---
@@ -44,7 +46,7 @@ Tres precisiones que definen el alcance, y las tres son honestas:
 | # | Necesidad del curso | Herramienta ExamLab | Estado |
 |---|---|---|---|
 | 1 | Material de la semana publicado **antes** del encuentro (aula invertida, `Manual:50`) | Contenidos + asignación a sesión | ✅ **Lista** |
-| 2 | Sustituto asincrónico de las sesiones que no existen (4 lunes festivos + tramo ACA3) | **Sesión `autonoma`** (notifica por correo a la hora fijada + el alumno marca "material revisado" y queda asistencia) | ✅ **Lista** |
+| 2 | Sustituto asincrónico de las sesiones que no existen (4 lunes festivos + tramo de la ACA FINAL) | **Sesión `autonoma`** (notifica por correo a la hora fijada + el alumno marca "material revisado" y queda asistencia) | ✅ **Lista** |
 | 3 | Grabación de las 2 h ligada a su sesión (evidencia AFI <24 h, `Manual:96`) | `recording_url` + **sync automático desde Google Calendar cada 6 h** | ✅ **Lista** |
 | 4 | Calendario único con sesiones, festivos y ventanas | Generador de sesiones con **festivos de Colombia calculados** + suscripción `.ics` del estudiante | ✅ **Lista** |
 | 5 | Tutoría asincrónica 24/7 sobre el material real del curso | **Tutor IA** + override del prompt `tutor_chat` por curso | ✅ **Lista** |
@@ -83,9 +85,9 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 ## 3. Mapa sesión por sesión (01 → 11)
 
-### Sesión 01 · 10/08 — Presentación del curso y fundamentos de investigación
+### Sesión 01 · 10/08 — Presentación del curso · docente · estudiantes · ACAs
 
-**Tema.** Qué es y qué NO es un anteproyecto; frontera Proyecto I → Proyecto II; el docente como **garante metodológico**, no experto temático; las 2 líneas oficiales de IA del programa; ética mínima del día 1; estructura 60+60.
+**Tema.** **Sesión de encuadre: no dicta contenido curricular.** Se presenta el curso, el Docente, los estudiantes y los tres ítems calificables del aula (**Quiz · ACA 1 · ACA FINAL**), más acuerdos de trabajo: frontera Proyecto I → Proyecto II; el docente como **garante metodológico**, no experto temático; las 2 líneas oficiales de IA del programa; ética mínima del día 1; estructura 60+60. La ESP329 U1 (fundamentos y enfoque de investigación) va como **lectura autónoma** y se retoma al abrir la Sesión 02.
 
 **Actividad.** Rompehielos en muro con QR (~7 min): un aporte con expectativa + **tema tentativo en una frase**. Taller de 18 min: **ficha de encuadre** (integrantes ≤3, línea oficial, tema en una frase, contexto, una duda metodológica). Tutoría por equipos. Registrar asistencia como evidencia.
 
@@ -95,11 +97,11 @@ Tres convenciones, para que la sección 3 se lea rápido:
 |---|---|---|
 | Rompehielos con efecto espejo | **Padlet (fuera de ExamLab)** + en paralelo un **foro** "Preséntate y di tu tema", un hilo por persona | ⚠️ **No usar la pizarra compartida ese día.** No tiene QR, exige estar logueado y matriculado, y ese lunes los 40 recién reciben credenciales temporales con un diálogo de cambio de contraseña **bloqueante**. 40 primeros logins en 7 minutos por Meet no ocurre. El foro sí da el efecto espejo, pero asíncrono durante la semana |
 | Ficha de encuadre (5 campos) | **Encuesta `mixed`**: 1 `cerrada` (las 2 líneas oficiales de IA) + 4 `abierta` | ⚠️ Las respuestas abiertas **solo las ve el docente y el propio autor** — sirve como captura, no como muro |
-| Material del curso | **Contenidos**: presentación del curso, plantilla APA, los 5 enunciados ACA como *material general del curso* | Convertir a **PDF** lo que se quiera leer inline: `.docx` y `.pptx` subidos son **descarga pura** |
-| Calendario del semestre | **Generador de sesiones con festivos de Colombia** (ya corrido antes de la S01) + el alumno se suscribe al **`.ics`** | Hace visible el choque de ACA3 con 12/10 y 02/11 el día 1 |
+| Material del curso | **Contenidos**: presentación del curso, plantilla APA, los 5 enunciados del aula como *material general del curso* | Convertir a **PDF** lo que se quiera leer inline: `.docx` y `.pptx` subidos son **descarga pura** |
+| Calendario del semestre | **Generador de sesiones con festivos de Colombia** (ya corrido antes de la S01) + el alumno se suscribe al **`.ics`** | Hace visible el día 1 el choque de la **ACA FINAL** con 12/10 y 02/11 |
 | Orientación en la plataforma | **Tour guiado del rol Estudiante** (~15 pasos, ya construido) + **⌘K** | ⚠️ El tour **no se dispara en pantallas <768 px**: quien entre por celular no lo verá nunca |
 | Asistencia | **Check-in por QR**, variante **pública sin login** (el alumno pone correo + contraseña y queda registrado) | Exige estar **matriculado**: hacerlo después de la matrícula, no antes |
-| Equipos | Editor de grupos por **drag & drop** en el taller ACA1 | El auto-registro (`self_signup`) **no está expuesto**: los ~14 equipos los arma el docente a mano |
+| Equipos | Editor de grupos por **drag & drop** en el taller del primer corte | El auto-registro (`self_signup`) **no está expuesto**: los ~14 equipos los arma el docente a mano |
 
 ---
 
@@ -131,7 +133,7 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 | Pieza | Herramienta | Nota |
 |---|---|---|
-| Que los 6 criterios de ACA1 estén **donde se redacta** | **Taller formativo peso 0** con 3 preguntas `abierta` (pregunta de investigación · objetivo general · 3 específicos) y en cada `expected_rubric` los criterios reales + los verbos vetados → **la IA devuelve observaciones en ~10 s** | ⚠️ El alumno **pega el texto** (la IA no lee `.docx`). Acotarlo a ~15 líneas, no al ACA completo. **Requiere** que la IA esté en modo inmediato (§7, R5) |
+| Que los 6 criterios del **Quiz** estén **donde se redacta** | **Taller formativo peso 0** con 3 preguntas `abierta` (pregunta de investigación · objetivo general · 3 específicos) y en cada `expected_rubric` los criterios reales + los verbos vetados → **la IA devuelve observaciones en ~10 s** | ⚠️ El alumno **pega el texto** (la IA no lee `.docx`). Acotarlo a ~15 líneas, no al ACA completo. **Requiere** que la IA esté en modo inmediato (§7, R5) |
 | Iterar tras la observación | **`max_attempts` = 4** en ese taller | El default institucional es **1**: sin subirlo, el alumno entrega una vez y queda bloqueado, y el docente tendría que reabrir 40 entregas a mano |
 | Referencia de verbos aceptados/vetados | **Contenido `.md`** | Consultable en el momento de redactar |
 | Aviso de la ventana de entrega (no dicho al aire en el cierre de clase) | **Mensaje programado** en agosto para todo el semestre | El recordatorio automático de vencimiento existe, pero tiene **dedup permanente**: si se mueve la fecha, **no hay segundo aviso** |
@@ -140,17 +142,17 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 ---
 
-### Sesión 04 · 07/09 — Retroalimentación ACA1 · Antecedentes de investigación
+### Sesión 04 · 07/09 — Retroalimentación del Quiz · Antecedentes de investigación
 
-**Tema.** Criterios con los que el docente leyó ACA1, devolviendo **2–3 hallazgos accionables sin reescribir el texto**; qué es un antecedente y qué no (y **tampoco es marco teórico todavía**); meta de **mínimo 6, nacionales e internacionales**; estructura de la ficha (autor, año, propósito, método, hallazgo y **relación explícita con SU pregunta**); error frecuente: **"decoración bibliográfica"**.
+**Tema.** Criterios con los que el docente leyó el **Quiz**, devolviendo **2–3 hallazgos accionables sin reescribir el texto**; qué es un antecedente y qué no (y **tampoco es marco teórico todavía**); meta de **mínimo 6, nacionales e internacionales**; estructura de la ficha (autor, año, propósito, método, hallazgo y **relación explícita con SU pregunta**); error frecuente: **"decoración bibliográfica"**.
 
-**Actividad.** Recibir retro y trabajar correcciones en paralelo, con trazabilidad visible exigida en ACA2. Ver 1 ficha modelo llenada en pantalla. Taller de 20 min: buscar al menos 2 antecedentes hoy. Autónomo: completar 6.
+**Actividad.** Recibir retro y trabajar correcciones en paralelo, con trazabilidad visible exigida en la **ACA 1**. Ver 1 ficha modelo llenada en pantalla. Taller de 20 min: buscar al menos 2 antecedentes hoy. Autónomo: completar 6.
 
 **Herramienta.**
 
 | Pieza | Herramienta | Nota |
 |---|---|---|
-| Nota + retro cualitativa de ACA1 | **Notas de actividades externas** (grilla de los 40 con **Nota + Observación**) | Es literalmente lo que pide `Manual:95` (*retro cualitativa y cuantitativa*) |
+| Nota + retro cualitativa del **Quiz** | **Notas de actividades externas** (grilla de los 40 con **Nota + Observación**) | Es literalmente lo que pide `Manual:95` (*retro cualitativa y cuantitativa*) |
 | Devolver el **`.docx` anotado** al equipo | **Mensaje 1-a-1 con adjunto** (25 MB, hasta 8 archivos, **sin filtro de tipo**) | ⚠️ **No hay chat de equipo** (existe en la base, sin interfaz) ⇒ **3 mensajes por equipo, ~40 en total**. El mensaje queda **inmutable una vez leído**, lo que sí lo vuelve evidencia |
 | Ficha modelo llenada en vivo | **Pizarra de sesión** — la caja de 3 zonas de *UML·Clase* / *DB·Tabla* sirve como ficha (autor+año / método / hallazgo) | El catálogo de 44 figuras no fue diseñado para metodología: de 6 familias, solo *Diagrama de flujo* y *Entidad–Relación* se reutilizan |
 | Matriz de antecedentes del equipo | **Foro** — un hilo por equipo, **una respuesta por ficha**, con enlace/DOI | ⚠️ **No teclear la matriz como tabla markdown de 6×6**: un posgrado que redacta en Word no lo hace. La matriz vive en Drive; al foro va el **enlace + el hallazgo y su vínculo con la pregunta en prosa**. Solo el foro renderiza markdown; la vista de calificación de taller **no** |
@@ -230,7 +232,7 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 ---
 
-### Sesión 09 · 19/10 — Población/muestra, técnicas e instrumentos (propuestos)
+### Sesión 09 · 19/10 — Devolución de la ACA 1 · población, muestra e instrumentos propuestos
 
 > ### ⚠️ Esta es la sesión que se queda SIN herramienta para su actividad central.
 
@@ -260,7 +262,7 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 ### Sesión 10 · 26/10 — Planeación, viabilidad e integración del anteproyecto
 
-**Tema.** Cronograma realista con fases hasta Proyecto II; recursos; riesgos; **viabilidad ≠ optimismo**; ACA3 exige el documento **completo**, no un fragmento nuevo; cadena de coherencia final.
+**Tema.** Cronograma realista con fases hasta Proyecto II; recursos; riesgos; **viabilidad ≠ optimismo**; la **ACA FINAL** exige el documento **completo**, no un fragmento nuevo; cadena de coherencia final.
 
 **Actividad.** Taller de 20 min: **matriz de coherencia** — filas = secciones del anteproyecto; columnas = ¿existe? ¿alineado? ¿falta? — **+ lista de gaps con dueño**. Criterio: *"gaps priorizados con responsable"*.
 
@@ -297,7 +299,7 @@ Tres convenciones, para que la sección 3 se lea rápido:
 
 ### Las sesiones que NO existen: 4 lunes festivos
 
-`17/08` · `12/10` · `02/11` · `16/11`. El instructivo **exige** clase pregrabada en lunes festivo, y los dos festivos de octubre/noviembre caen dentro del tramo de ACA3, que vale 42%.
+`17/08` · `12/10` · `02/11` · `16/11`. El instructivo **exige** clase pregrabada en lunes festivo, y los dos festivos de octubre/noviembre caen dentro del tramo de la **ACA FINAL**, que vale 42%.
 
 **Herramienta: sesión `autonoma`.** Es el mecanismo más completo de todo el producto para este caso y no requiere nada especial:
 
@@ -314,8 +316,8 @@ Dos límites a conocer: es **autodeclarado** (un click marca presente sin abrir 
 | # | Herramienta | Cómo se usa en ESP329 |
 |---|---|---|
 | 1 | **Contenidos + asignación por sesión** | Un paquete por sesión (o uno del curso repartido con subconjuntos de archivos). Las 11 presentaciones + plantilla APA + los 5 enunciados. Convertir a **PDF** lo que se quiera leer inline. Un archivo cuyo nombre empiece por `GUIA_DOCENTE_` o `SOLUCION_` queda **invisible al estudiante** por dos capas — útil, y a la vez una trampa: *"Guía docente de citación"* desaparecería sin aviso |
-| 2 | **Sesión `autonoma`** | Los 4 festivos + las semanas de ACA3. Notificación automática por correo + registro de asistencia autodeclarado |
-| 3 | **Generador de sesiones con festivos de Colombia** | Las 11 sesiones en una pasada, con los 4 festivos marcados por nombre y política omitir / mover / dejar-como-autónoma. Hace visible el choque de ACA3 el día 1 |
+| 2 | **Sesión `autonoma`** | Los 4 festivos + las semanas de la **ACA FINAL**. Notificación automática por correo + registro de asistencia autodeclarado |
+| 3 | **Generador de sesiones con festivos de Colombia** | Las 11 sesiones en una pasada, con los 4 festivos marcados por nombre y política omitir / mover / dejar-como-autónoma. Hace visible el choque de la **ACA FINAL** el día 1 |
 | 4 | **`recording_url` + sync automático de Google Calendar** | Cada 6 h rellena el enlace de grabación de la sesión desde el evento de Google. El docente lo copia al formulario AFI de 24 h desde la fila; el alumno lo encuentra colgado de su sesión meses después. ⚠️ Solo Google trae grabación |
 | 5 | **Calendario `.ics` del estudiante** | Suscripción única: las 11 sesiones + las ventanas de los ACA aparecen en el calendario del teléfono. Es la mitigación práctica de la discrepancia de fechas |
 | 6 | **Tutor IA con override de prompt por curso** | Sube los guiones y los ACA; escribe en el override las fronteras del curso (verbos vetados, antecedente ≠ marco teórico, título ≤21 palabras, las 2 líneas oficiales, "los instrumentos se proponen"). El estudiante escribe `#` para referenciar un archivo concreto y garantizar que entra al contexto |
@@ -358,7 +360,7 @@ Dos límites a conocer: es **autodeclarado** (un click marca presente sin abrir 
 
 ### 5.4 Alerta temprana → encender el semáforo con los ACA como items externos
 
-**Cómo.** Crear los **5 ítems del aula** como actividades externas con su `due_date`: **Quiz** (= ACA 1 del material) · **ACA 1** (= ACA 2) · **ACA FINAL** (= ACA 3) · **Coevaluación** (foro) · **Autoevaluación**.
+**Cómo.** Crear los **5 ítems del aula** como actividades externas con su `due_date`: **Quiz** (ESP329: ACA 1) · **ACA 1** (ESP329: ACA 2) · **ACA FINAL** (ESP329: ACA 3) · **Coevaluación** (foro) · **Autoevaluación**.
 **Qué se gana.** Tres cosas de golpe: el semáforo deja de estar ciego y lista a quién buscar esta semana con el motivo escrito; los recordatorios automáticos de ventana se activan; y las ventanas aparecen en el `.ics` del estudiante.
 **Qué se paga y hay que hacerlo bien.** El semáforo deriva las actividades **de las entregas existentes**: sin items, solo puede encenderse la inasistencia y —como hace falta cruzar **dos** motivos para el rojo— **nunca pasa de ámbar**. Y el motor es **por estudiante, no por equipo**: con un solo envío grupal, los otros 2 integrantes figuran como "no entregó". ⚠️ **Crear esos items con peso 0** si solo se usan para seguimiento: un item con peso y sin nota **cuenta como 0 con su peso completo** y hunde el consolidado.
 
@@ -460,7 +462,7 @@ Incluye el perfil: **posgrado virtual, 40 adultos que trabajan, clase de lunes 8
 - [ ] S01: matricular → check-in QR → decir en una línea qué se guarda y quién lo ve (R10) → **Padlet** para el rompehielos.
 - [ ] S02: crear el foro "Nuestra pregunta" (un hilo por equipo) + la encuesta de 3 ítems.
 - [ ] S03: taller formativo peso 0 con los 6 criterios en la rúbrica y `max_attempts = 4`.
-- [ ] S04: registrar ACA1 (nota + observación) y mandar el `.docx` anotado por mensaje con adjunto.
+- [ ] S04: registrar el **Quiz** (nota + observación) y mandar el `.docx` anotado por mensaje con adjunto.
 - [ ] S05: activar **"Pizarra compartida"** en la sesión y asignar una zona del lienzo por equipo.
 - [ ] S07: armar el **banco de 8–10 ítems** de citación → servirlo como taller autocalificado.
 - [ ] S09–S10: publicar la encuesta `slot` de tutorías **con franjas nocturnas** y acompañarla de un mensaje de difusión *(la encuesta sola no manda correo, R8)*.

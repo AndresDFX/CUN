@@ -1,9 +1,9 @@
 # Calendario — Creatividad y Pensamiento Innovador — Escuela de Ingenierías
 **Grupo 54408** · Horario: **Miércoles, 5:00 pm – 6:00 pm (1 hora sincrónica)**
 
+> **Este archivo es de consulta: no crea eventos.** Los encuentros se crean con `PRINCIPAL - Crear encuentros con invitados.gs` (Apps Script), que es lo único que añade a los estudiantes como invitados y pone el Meet. Paso a paso en `LEEME - Crear los eventos de Calendar.md`.
 > **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.
 > Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).
-> CSV/ICS **sin invitados** estudiantes. Description corta; Location vacío hasta Meet real.
 
 | # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |
 |---|---|---|---|---|
@@ -18,15 +18,12 @@
 ## Fechas institucionales
 - **54408** (26V04): inicio 10/08/2026 · recepción 19/09/2026 · cierre **27/09/2026**
 - Cierre considerado en este archivo Calendar: **27/09/2026**
-- Eventos generados: **7**
-- Archivos: `Encuentros CREATIVIDAD Y PENSAMIENTO INNOVADOR - Grupo 54408 - Importar a Calendar.csv` / `Encuentros CREATIVIDAD Y PENSAMIENTO INNOVADOR - Grupo 54408 - Importar a Calendar.ics`
+- Sesiones del periodo: **7**
 
-## Cómo importar (sin invitados · description corta)
-1. Google Calendar → Configuración → Importar → `.ics` o `.csv`.
-2. **No incluye estudiantes** (Pregrado no lleva Guests/ATTENDEE).
-3. Location vacío: tras importar, añade Meet (mismo enlace en toda la serie) y publícalo en CDigital.
-4. Subject corto: grupos - asignatura - Sesion NN. Description = una línea con el tema.
-5. Placeholder Meet de referencia (no va en el ICS): [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR].
+## Cómo se crean estos eventos
+1. **Flujo principal:** `PRINCIPAL - Crear encuentros con invitados.gs` en esta misma carpeta → Apps Script → `verificar()` y luego `crearEncuentros()`. Es lo único que añade a los estudiantes como **invitados** y deja el **mismo enlace de Meet** en toda la serie. Instrucciones: `LEEME - Crear los eventos de Calendar.md`.
+2. **Respaldo (`RESPALDO sin invitados - Encuentros CREATIVIDAD Y PENSAMIENTO INNOVADOR - Grupo 54408.csv` / `RESPALDO sin invitados - Encuentros CREATIVIDAD Y PENSAMIENTO INNOVADOR - Grupo 54408.ics`):** ⚠️ Google Calendar **descarta los invitados** al importar `.ics`/`.csv`. Estos archivos solo llevan fechas y títulos; úsalos si necesitas el cronograma en un calendario que no sea Google, no para crear la serie del curso.
+3. Enlace de Meet: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]. No va dentro del respaldo; lo pone el `.gs`.
 
 ## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem
 
@@ -37,9 +34,9 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 | **Quiz 1** | Cuestionario | 1 | 6% | 19/08/2026 | **S02** — Creatividad/innovación en I+D · Design Thinking y técnicas |
 | **Parcial 1** | Cuestionario | 1 | 24% | 26/08/2026 | **S03** — Gestión de la innovación (Manual de Oslo / OCDE) |
 | **Quiz 2** | Cuestionario | 2 | 9% | 02/09/2026 | **S04** — Tipos de innovación |
-| **Parcial 2** | Cuestionario | 2 | 21% | 09/09/2026 | **S05** — Análisis de negocios · validación de la propuesta |
+| **Parcial 2** | Cuestionario | 2 | 21% | 09/09/2026 | **S05** — Validación de la propuesta · vigilancia tecnológica |
 | **ACA Final** | Tarea | 3 | 32,8% | 19/09/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
-| **Quiz 3** | Cuestionario | 3 | 4% | 16/09/2026 | **S06** — Vigilancia tecnológica |
+| **Quiz 3** | Cuestionario | 3 | 4% | 16/09/2026 | **S06** — Innovación local–internacional · entidades de apoyo |
 | **Autoevaluación** | Cuestionario | 3 | 1,6% | 27/09/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
 | **Coevaluación** | Foro | 3 | 1,6% | 27/09/2026 | — (no cae en día de clase: ventana hasta el cierre de notas) |
 

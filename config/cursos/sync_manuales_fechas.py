@@ -114,9 +114,12 @@ ANULADO_COMUN = [
     "**Autoevaluación y coevaluación SÍ hacen parte de la nota de este curso** — no son "
     "exclusivas de Proyecto I. La **coevaluación es un FORO** (se participa, no se entrega "
     "documento) y la **autoevaluación un cuestionario**.",
+    # OJO con el nombre del archivo: en disco es «guia», SIN tilde (así lo escribe
+    # build_acas_estudiantes.py). Escribirlo con tilde deja una ruta colgada en los
+    # cuatro manuales de pregrado a la vez.
     "**Los quices y parciales existen y pesan.** El **Parcial 1 vale 24%** por sí solo. Ya "
-    "tienen guía para el estudiante en `Clases/Recursos/ACAs/` (`Quiz N (…) - guía del "
-    "cuestionario.docx` · `Parcial N (…) - guía del cuestionario.docx`), pero en el aula "
+    "tienen guía para el estudiante en `Clases/Recursos/ACAs/` (`Quiz N (…) - guia del "
+    "cuestionario.docx` · `Parcial N (…) - guia del cuestionario.docx`), pero en el aula "
     "**existen solo como ítem del libro de calificaciones**: falta **crear la actividad** "
     "(cuestionario + banco de preguntas) antes de su ventana.",
 ]

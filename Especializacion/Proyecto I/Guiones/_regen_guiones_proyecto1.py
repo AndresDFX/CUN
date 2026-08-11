@@ -1110,60 +1110,90 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas del tra
 def guion_09(ses):
     n, titulo, detalle = ses["n"], ses["titulo"], ses["detalle"]
     label = label_for(n, titulo)
-    fundamento = f"""#### 1. Población y muestra (propuestas)
+    fundamento = f"""#### 1. La clase abre con la devolución de la ACA 1 (20 min, no 5)
+La **ACA 1** (tarea grupal del segundo corte) ya está calificada y esta es la primera sesión después de su cierre. Se devuelven **tres cosas, no una**: la nota en el libro de calificaciones, los **comentarios por criterio de la rúbrica** y el **documento comentado**. Que el equipo los abra HOY, en pantalla y con usted delante, es la única garantía de que los lea a tiempo: el que los deja para después los abre en la semana de la **ACA FINAL**, cuando ya no hay margen para rehacer el marco.
+
+Va primero por una razón operativa, no ceremonial: lo que se bosqueja en la segunda mitad de hoy —población, muestra, instrumento— **cuelga de los objetivos**. Si una corrección va a mover un objetivo, hay que moverlo ANTES de redactar ítems; si no, el equipo escribe un instrumento alineado a un objetivo que va a cambiar.
+
+#### 2. Cómo se devuelve una rúbrica (y qué es «trazabilidad»)
+Cada comentario es una **instrucción accionable** —“delimite el actor”, “este objetivo no responde la pregunta”, “esta afirmación necesita fuente”—, no una nota disfrazada. Recorra la rúbrica **en el orden en que lista sus criterios**, diga en cada uno qué se miró y qué se corrige, y hágalo **sin nombres y sin leer notas en voz alta**; el detalle por equipo va en la segunda hora.
+
+El criterio literal de la ACA FINAL es «**correcciones de la ACA 1 incorporadas**», y se demuestra con **trazabilidad visible**: bitácora al final del documento (comentario recibido · qué se cambió · en qué sección quedó), historial de Google Docs y comentarios marcados como resueltos solo cuando el texto ya cambió. Una corrección que se decide NO aplicar también se declara y se sustenta: eso también es trazabilidad, no un descuido.
+
+#### 3. Reparto de tiempos de hoy (léalo antes de entrar)
+La devolución se lleva los **primeros 20 minutos** y el taller, otros 20: quedan **16 minutos** para toda la exposición. El deck de hoy es **denso a propósito** —tipos de muestreo, tamaño de muestra, ítems modelados, ética y datos— y buena parte es **material de consulta** que el estudiante relee en autónomo y que usted retoma caso por caso en la tutoría. En vivo narre solo la espina: unidad de análisis → población y muestra delimitadas → criterios de inclusión/exclusión → técnica vs. instrumento → matriz de alineación. Lo demás se nombra y se deja señalado.
+
+#### 4. Población y muestra (propuestas)
 La **población** es el conjunto total de unidades de estudio (personas, procesos, documentos) que interesan; la **muestra** es el subconjunto que efectivamente se estudiaría, con sus **criterios de inclusión y exclusión** y su forma de selección (probabilística o no). En Proyecto I se DEFINE quiénes serían y cómo se elegirían —no se contacta a nadie para recolectar—.
 
-#### 2. Técnicas e instrumentos **propuestos**
+#### 5. Técnicas e instrumentos **propuestos**
 La **técnica** es el procedimiento (encuesta, entrevista, observación, análisis de logs/documentos); el **instrumento** es la herramienta concreta (el cuestionario, la guía de entrevista, la rúbrica). Cada instrumento propuesto debe declarar: propósito, estructura (bloques o ítems tipo), validez tentativa (cómo se validaría) y plan de análisis. Todo en condicional: se PROPONE, no se aplica.
 
-#### 3. Alineación con los objetivos
+#### 6. Alineación con los objetivos
 Cada bloque del instrumento debe colgar de un objetivo específico o de una categoría/variable. Si un ítem no responde a ningún objetivo, sobra; si un objetivo no tiene ítems que lo alimenten, falta instrumento.
 
-#### 4. Recordatorio institucional
+#### 7. Recordatorio institucional
 La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PROPUESTOS. En la tutoría, el estudiante diligencia su formulario de asistencia: {LINK_TUTORIAS}.
 
-#### 5. Errores frecuentes / preguntas trampa
+#### 8. Errores frecuentes / preguntas trampa
 | El estudiante… | Usted responde… |
 | :--- | :--- |
+| Pide que le “suban” la nota de la ACA 1 | “La nota se sustenta en la rúbrica. Lo que sí sube es la ACA FINAL, si las correcciones se ven.” |
+| Dice que no ha visto los comentarios | “Ábralos ahora, en pantalla. La ACA FINAL exige que estén incorporados y con trazabilidad.” |
+| Su equipo no entregó la ACA 1 | “La devolución igual le aplica: esas secciones vuelven a pedirse, integradas, en la ACA FINAL.” |
 | Ya envió un formulario ‘de prueba’ a gente | “Eso no es avance de Proyecto I, es riesgo. Retírelo: hoy PROPONEMOS.” |
 | Confunde población con muestra | “Población = el total; muestra = a quiénes estudiaría. ¿Cuál es cuál en su caso?” |
 | Ítems que no responden a ningún objetivo | “¿A qué objetivo alimenta este ítem? Si a ninguno, quítelo.” |
 | No define criterios de inclusión | “¿Quién SÍ entra y quién NO? Sin criterios, la muestra es un deseo.” |
 | Redacta el instrumento en pasado (‘apliqué’) | “En condicional: ‘se aplicaría’. En Proyecto I se propone.” |
 """
+    # Reparto: el deck abre con tres slides de devolución de la ACA 1 rotuladas «Primeros
+    # 20 minutos», y la slide de taller dice «(20 minutos)». Esos dos bloques son fijos y
+    # se llevan 40 de los 60 min de contenido: la exposición se recorta a 16 (8 + 8) y el
+    # cierre a 4. El §3 del fundamento le dice al Docente qué narra en vivo y qué queda
+    # como material de consulta.
     fases_plan = [
-        ("1️⃣ Encuadre + regla de oro P-I", 8),
-        ("2️⃣ Población / muestra", 12),
-        ("3️⃣ Técnicas e instrumentos propuestos", 12),
+        ("1️⃣ Encuadre + devolución de la ACA 1", 20),
+        ("2️⃣ Regla de oro P-I + población, muestra y muestreo", 8),
+        ("3️⃣ Técnica, instrumento y alineación a objetivos", 8),
         ("4️⃣ Taller: bosquejo de instrumento", 20),
-        ("5️⃣ Cierre", 8),
+        ("5️⃣ Cierre", 4),
     ]
-    fases_texto = f"""#### 1️⃣ Encuadre + regla de oro P-I (~8 min) — Protagonista: Docente
-**Slides:** 1 (Portada) → 2 (OBJETIVOS)
+    fases_texto = """#### 1️⃣ Encuadre + devolución de la ACA 1 (~20 min) — Protagonista: Docente
+**Slides:** 1 (Portada) → 2 (Primeros 20 minutos: la devolución de la ACA 1) → 3 (Cómo se lee la rúbrica, criterio por criterio) → 4 (Qué hacer con las correcciones antes de la ACA FINAL)
 
 **GUION LITERAL:**
-> “Buenas tardes, **Sesión 09**. Empiezo con la regla de oro de hoy, porque es la que más se rompe: si alguien ya mandó un Google Form ‘de prueba’ a cuarenta personas, eso NO es avance de Proyecto I, es un riesgo —recolectó sin aval—. Hoy PROPONEMOS instrumentos; no aplicamos.”
-> “**Slide 2.** Meta de hoy: definir población y muestra propuestas, y bosquejar el instrumento alineado a sus objetivos. Todo en condicional.”
+> “Buenas tardes, **Sesión 09**. Los primeros veinte minutos de hoy son para la **devolución de la ACA 1**: ya está calificada en CDigital. Y les devuelvo tres cosas, no una: la **nota** en el libro de calificaciones, los **comentarios por criterio de la rúbrica** y el **documento comentado**. Ábranlos ahora, en pantalla, mientras hablo. El equipo que no los abre hoy los abre en la semana de la ACA FINAL, cuando ya no hay tiempo de rehacer el marco.”
+> “Un aviso de lectura: mis comentarios **no son una nota disfrazada**. Cada uno es una instrucción concreta —‘delimite el actor’, ‘este objetivo no responde la pregunta’, ‘esta afirmación necesita fuente’—. Léanlos como mapa de trabajo, no como regaño.”
+> “Ahora la **rúbrica, criterio por criterio**, en el orden de la tabla. **Coherencia problema–pregunta–objetivos:** miré que los tres cuenten la misma historia; se corrige el objetivo específico que no responde la pregunta, uno a la vez. **Pertinencia:** que el problema sea de IA aplicada y no un tema suelto, y que la línea del programa quede dicha explícitamente. **Justificación:** vacío, beneficiario y aporte; no opinión personal. **Alcances y limitaciones:** que no prometan lo que es Proyecto II. **Antecedentes:** mínimo seis, nacionales e internacionales, cada ficha cerrando con ‘esto le aporta a mi pregunta porque…’. **Marco teórico, conceptual y contextual:** amarrado a las variables de la pregunta, no un listado. **Escritura e integridad:** citar o borrar la afirmación sin fuente. **APA 7:** que la cita en texto y la lista final se correspondan en los dos sentidos.”
+> “Voy criterio por criterio sin nombres y sin leer notas en voz alta. El detalle de su caso lo vemos en la segunda hora.”
+> “Y esto es lo que hacen con las correcciones: la **ACA FINAL no es un documento nuevo**, es este mismo documento corregido más metodología, cronograma y viabilidad. El criterio dice, literal, ‘correcciones de la ACA 1 incorporadas’, y eso se demuestra con **trazabilidad**: una bitácora al final —comentario recibido, qué se cambió, en qué sección quedó—, el historial de Google Docs, y comentarios marcados como resueltos solo cuando el texto ya cambió. Si deciden NO aplicar una corrección, díganlo y susténtenlo: eso también cuenta.”
+> “Corrijan en este orden, porque cada nivel arrastra al siguiente: primero coherencia pregunta–objetivos; después justificación, alcances y limitaciones; luego antecedentes y marco; al final, forma y APA 7. Y si su equipo no alcanzó a entregar la ACA 1, esto igual le aplica: esas secciones son parte del anteproyecto y la ACA FINAL las vuelve a pedir, ya integradas.”
+> “Por qué les devuelvo esto ANTES del tema de hoy y no al final: lo que van a bosquejar en la segunda parte —población, muestra, instrumento— cuelga de sus objetivos. Si una corrección les va a mover un objetivo, muévanlo **antes** de escribir ítems. Las dudas sobre un comentario se resuelven hoy o en la tutoría de la semana, nunca en la víspera de la entrega.”
 
-#### 2️⃣ Población / muestra (~12 min) — Protagonista: Docente
-**Slides:** 3 (CONTENIDO CLAVE)
-
-**GUION LITERAL:**
-> “**Slide 3.** Población no es lo mismo que muestra. La **población** es el total de unidades que me interesan; la **muestra** es a quiénes efectivamente estudiaría. Y la muestra necesita criterios: quién SÍ entra —inclusión— y quién NO —exclusión—, y cómo los seleccionaría.”
-> “Recuerden: en Proyecto I definimos quiénes serían y cómo se elegirían, pero no contactamos a nadie para recolectar. Eso es Proyecto II, con aval.”
-
-#### 3️⃣ Técnicas e instrumentos propuestos (~12 min) — Protagonista: Docente
-**Slides:** 4 (RECUERDA)
+#### 2️⃣ Regla de oro P-I + población, muestra y muestreo (~8 min) — Protagonista: Docente
+**Slides:** 5 (La regla de oro de hoy) → 6 (Unidad de análisis) → 7 (Población, muestra y muestreo) → 8 (Inclusión y exclusión) → 9 (Tipos de muestreo) → 10 (Tamaño de la muestra)
 
 **GUION LITERAL:**
-> “**Slide 4.** La técnica es el procedimiento —encuesta, entrevista, observación, análisis de documentos—; el instrumento es la herramienta concreta —el cuestionario, la guía, la rúbrica—. Cada instrumento propuesto declara cuatro cosas: propósito, estructura por bloques, cómo se validaría, y el plan de análisis.”
-> “Y la alineación de oro: cada bloque del instrumento cuelga de un objetivo específico. Si un ítem no responde a ningún objetivo, sobra. Recuerden diligenciar su formulario de asistencia cuando estén en tutoría.”
+> “Cerrada la devolución, sigo con la regla de oro de hoy, porque es la que más se rompe: si alguien ya mandó un Google Form ‘de prueba’ a cuarenta personas, eso NO es avance de Proyecto I, es un riesgo —recolectó datos personales sin aval ni consentimiento—. Hoy PROPONEMOS instrumentos; no aplicamos. Esa frontera no tiene excepciones.”
+> “Antes de la muestra, la pregunta que casi nadie se hace: **¿qué voy a estudiar, uno por uno?** Esa es la **unidad de análisis**, y en proyectos de IA no siempre es una persona: puede ser un registro, un documento o un evento del sistema. Definirla mal tuerce la muestra, el instrumento y el análisis.”
+> “Con eso claro: la **población** es el total de unidades que me interesan, **delimitada** por lugar y periodo; la **muestra** es el subconjunto que efectivamente estudiaría; y necesita criterios —quién SÍ entra, quién NO— verificables por un tercero. El **muestreo** es el procedimiento para elegirla: el no probabilístico no está prohibido, está permitido si se declara y se reconoce su límite. Lo que no se acepta es esconderlo.”
+> “El tamaño se justifica, no se inventa: fórmula con sus parámetros si es cuantitativa, saturación con un rango si es cualitativa, periodo y cobertura si son registros. Las tablas de tipos de muestreo y de tamaño quedan en el deck para que las relean en autónomo; en tutoría las miramos caso por caso.”
+
+#### 3️⃣ Técnica, instrumento y alineación a objetivos (~8 min) — Protagonista: Docente
+**Slides:** 11 (Técnica e instrumento no son sinónimos) → 12 (De la técnica al instrumento) → 13 (Las cuatro declaraciones) → 14 (Matriz de alineación) → 15 (Ejemplo modelado) → 16 (Ética y datos) → 18 (Paso a paso en Google Docs)
+
+**GUION LITERAL:**
+> “La **técnica** es el procedimiento —encuestar, entrevistar, observar, analizar documentos—; el **instrumento** es la herramienta concreta que ustedes construyen y adjuntan: el cuestionario, la guía, la matriz. La técnica es ‘tomar una fotografía’; el instrumento es la cámara con sus ajustes. Escribir ‘se aplicará una encuesta’ no es un instrumento propuesto: no hay nada que revisar ni que validar.”
+> “Todo instrumento propuesto declara **cuatro cosas**: propósito —a qué objetivo específico responde—, estructura —bloques, número de ítems, escala—, validación tentativa —juicio de expertos y prueba piloto, en condicional— y plan de análisis. Sin las cuatro está incompleto, aunque tenga cincuenta preguntas.”
+> “Y la alineación de oro, que es la **matriz**: cada bloque cuelga de un objetivo. La regla va en dos direcciones: **ítem sin objetivo, se elimina; objetivo sin ítems, falta instrumento**. En el deck les dejo ítems modelados de los dos tipos, el paso a paso en Google Docs y las cajas de **ética** —consentimiento, anonimización, menores, aval institucional—: se redactan ahora aunque se usen en Proyecto II. Y recuerden diligenciar su formulario de asistencia cuando estén en tutoría.”
 
 #### 4️⃣ Taller: bosquejo de instrumento (~20 min) — Protagonista: Estudiantes
-**Slides:** 5 (ACTIVIDAD / TALLER)
+**Slides:** 19 (TALLER · Bosquejo de instrumento)
 
 **GUION LITERAL:**
-> “**Slide 5.** Veinte minutos. Bosquejen su instrumento: si es encuesta, diez a quince ítems; si es entrevista, una guía de ocho preguntas. Añadan un párrafo de plan de análisis. Y al lado de cada bloque, escriban a qué objetivo responde. Redacten todo en condicional. Yo circulo. Suban como `S09_InstrumentosPropuestos_Apellidos`.”
+> “Veinte minutos. Primero, población y muestra delimitadas —quiénes, dónde, en qué periodo— con sus criterios de inclusión y exclusión, y el tipo de muestreo propuesto. Después bosquejen el instrumento: si es cuestionario, entre diez y quince ítems; si es guía de entrevista, ocho preguntas abiertas. Al lado de cada bloque, a qué objetivo responde. Cierren con un párrafo de plan de análisis. Todo en condicional. Yo circulo. Suban como `S09_InstrumentosPropuestos_Apellidos`.”
+> “Criterio de éxito, y lo reviso equipo por equipo: **ningún ítem sin objetivo y ningún objetivo sin ítems**.”
 
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
@@ -1171,23 +1201,26 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 | Confunde población y muestra | “Población = total; muestra = a quiénes estudia. Sepárelas.” |
 | Tiene ítems sueltos | “¿A qué objetivo responde este ítem? Si a ninguno, fuera.” |
 | No define inclusión/exclusión | “¿Quién entra y quién no? Escriba los criterios.” |
+| Aún no abrió la retro de la ACA 1 | “Ábrala ya: si una corrección mueve un objetivo, se mueve antes de los ítems.” |
 
-#### 5️⃣ Cierre (~8 min) — Protagonista: Docente
-**Slides:** 6 (PARA CONTINUAR) → 7 (Cierre)
+#### 5️⃣ Cierre (~4 min) — Protagonista: Docente
+**Slides:** 20 (Checklist de autoevaluación) → 21 (Trabajo autónomo y qué viene después) → 22 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 6.** En autónomo, completen el instrumento y dejen explícito, por escrito, que es una PROPUESTA para Proyecto II. Suban `S09_InstrumentosPropuestos_Apellidos`.”
-> “**Slide 7.** La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para la **ACA FINAL**. Pasamos a tutoría; reviso instrumentos y freno cualquier aplicación prematura.”
+> “En autónomo, dos frentes. Uno: terminen los ítems y redacten el consentimiento informado propuesto; dejen explícito, por escrito, que el instrumento es una PROPUESTA para Proyecto II. Dos: **abran hoy mismo la bitácora de correcciones de la ACA 1** —comentario, qué se cambió, en qué sección quedó—. Repasen el checklist antes de darlo por cerrado y suban `S09_InstrumentosPropuestos_Apellidos`.”
+> “La próxima sesión integramos todo: cronograma, viabilidad y el ensamble del anteproyecto para la **ACA FINAL**; traigan el documento completo en un solo archivo, no fragmentos. Pasamos a tutoría: resuelvo dudas de los comentarios de la ACA 1, reviso instrumentos y freno cualquier aplicación prematura.”
 """
     return _body(
         n, titulo, detalle, label,
-        """1. **Definir** población/muestra propuestas.
-2. **Bosquejar** instrumentos sin aplicarlos.
-3. **Alinear** ítems/preguntas a objetivos/categorías.""",
+        """1. **Interpretar** la devolución de la ACA 1 y planear sus correcciones con trazabilidad.
+2. **Definir** población/muestra propuestas.
+3. **Bosquejar** instrumentos sin aplicarlos.
+4. **Alinear** ítems/preguntas a objetivos/categorías.""",
         fundamento, fases_plan, fases_texto, "instrumentos",
         """1. Sección población/muestra + bosquejo de instrumento en CDigital.
-2. **Éxito:** queda explícito que es propuesta para P-II.""",
-        "revisar instrumentos; frenar cualquier aplicación prematura.",
+2. Bitácora de correcciones de la ACA 1 abierta (comentario · qué se cambió · dónde quedó).
+3. **Éxito:** queda explícito que es propuesta para P-II y ningún ítem queda sin objetivo.""",
+        "resolver dudas de los comentarios de la ACA 1; revisar instrumentos y frenar cualquier aplicación prematura.",
     )
 
 

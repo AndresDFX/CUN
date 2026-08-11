@@ -23,11 +23,11 @@
       ["**02**", "Creatividad e innovación en I+D · **Design Thinking** y técnicas", "Su reto bien planteado y un banco de ideas"],
       ["**03**", "Gestión de la innovación (**Manual de Oslo** / OCDE)", "Su propuesta clasificada y justificada"],
       ["**04**", "Tipos de innovación", "Cuadro comparativo aplicado a su caso"],
-      ["**05**", "Análisis de negocios · validación de la propuesta", "FODA, Canvas y MVP de su propuesta"],
-      ["**06**", "Vigilancia tecnológica", "Tablero de señales, fuentes e implicaciones"],
-      ["**07**", "Innovación local–internacional · entidades de apoyo", "Mapa de entidades + pitch de 60 segundos"]
+      ["**05**", "Validación de la propuesta · **vigilancia tecnológica** (sesión doble)", "FODA, Canvas, MVP + tablero de señales con una decisión"],
+      ["**06**", "Innovación local–internacional · entidades de apoyo", "Mapa de entidades + guion del pitch de 60 segundos"],
+      ["**07**", "Taller de consolidación y **sustentación** de la propuesta", "Su propuesta defendida, ajustada y cerrada"]
     ],
-    "note": "Ocho unidades del Syllabus en siete encuentros: **U1–U2 se leen de forma autónoma** y las retomamos al abrir la Sesión 02.",
+    "note": "Ocho unidades del Syllabus en siete encuentros: **U1–U2 se leen de forma autónoma** y las retomamos al abrir la Sesión 02. Todo lo que la **ACA Final** califica se dicta hasta la **Sesión 06**; la 07 es taller de cierre.",
     "col_w": [1.4, 5.6, 4.9]
   },
   {

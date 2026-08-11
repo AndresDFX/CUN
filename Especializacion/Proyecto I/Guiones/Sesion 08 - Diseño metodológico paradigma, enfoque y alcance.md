@@ -7,7 +7,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **08** · **Tema:** Diseño metodológico: paradigma, enfoque y alcance
-- **Detalle:** ESP329 U5 · Adelantar metodología antes de festivos de ACA FINAL.
+- **Detalle:** ESP329 U5 · Adelantar metodología antes de los festivos del tramo de la ACA FINAL.
 - **PPTX estudiante:** `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
 - **Meet (serie del curso):** https://meet.google.com/omk-woqk-vsj
 
