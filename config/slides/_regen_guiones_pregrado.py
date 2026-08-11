@@ -26,7 +26,11 @@ sys.path.insert(0, SLIDES)
 sys.path.insert(0, CURSOS)
 
 from sesiones_cun import COURSES, meet_url  # noqa: E402
-from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from cun_slides_engine import (  # noqa: E402
+    PADLET_PRESENTACION_URL,
+    formulario_presentacion_url,
+    usa_padlet,
+)
 from guion_evaluacion import (  # noqa: E402
     KIND_CUESTIONARIO,
     desglose,
@@ -46,6 +50,18 @@ from guion_slides import (  # noqa: E402
 )
 
 KEYS = ("investigacion", "tg2", "tg3")
+
+# --- Rompehielos de la Sesión 01 según el TAMAÑO del grupo --------------------------
+# La forma del rompehielos NO se elige aquí: la decide `cun_slides_engine` con la
+# matrícula real (roster de CDigital) — muro de Padlet hasta ICEBREAKER_MAX_MURO
+# estudiantes, formulario de Google + encuestas y Q&A de Meet por encima. Este módulo
+# solo consume `usa_padlet()` y `formulario_presentacion_url()`, de modo que el guion y
+# la slide nunca digan cosas distintas.
+# Hoy: Investigación 53339 = 20 → muro. TG2 54448 = 50 y TG3 (54450 + 54466 + 54467) =
+# 112 en una sola serie → formulario (con 50 o 112 el muro no se alcanza a leer, y los
+# planes gratis de Mentimeter (50) y Slido (100) se quedan por debajo de estos grupos).
+FORM_TG2 = formulario_presentacion_url("tg2")
+FORM_TG3 = formulario_presentacion_url("tg3")
 
 
 def topic_filename(titulo: str, max_len: int = 70) -> str:
@@ -183,7 +199,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
         ("“¿Me sirve un trabajo de otro semestre?”",
          "“Puede partir de un tema suyo, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica.”"),
         ("“¿La clase se graba?”",
-         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre publicados en CDigital”."),
+         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre en la carpeta de esa sesión, en el **Drive de clases**; CDigital es para entregar y para las notas”."),
         ("“¿Puedo usar ChatGPT para escribir?”",
          "“Como apoyo sí, y se declara en una línea al final del documento. Pero verifique las fuentes: inventa citas. Lo que usted no pueda explicar en voz alta, no le sirve.”"),
         ("“Todavía no tengo tema, ¿estoy mal?”",
@@ -205,7 +221,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
         "Slides 5 y 10–15 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 16–21 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
     ],
-    s01_padlet=True,
+    s01_rompehielos=True,
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -243,7 +259,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 
 > “**Slide 8 — Qué se llevan al final.** El producto es **un artículo**. No seis trabajos sueltos: uno solo, que crece. Al final debe tener título, introducción, problema, pregunta, marco con fuentes citadas y lista de referencias. ¿Para qué sirve de verdad? Es la semilla de su trabajo de grado y la prueba de que usted puede sostener una idea con evidencia y no con opinión.”
 
-> “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, revisen CDigital ese mismo día: la consigna queda publicada.”
+> “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, ese mismo día abran la carpeta de la sesión en el **Drive de clases**: ahí queda la consigna y el material.”
 
 **Pregunte a dos estudiantes:** “¿en qué semana creen que se empieza a escribir el artículo?”. Conviene que la respuesta —**esta semana**— la digan ellos.""",
     fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
@@ -271,17 +287,17 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 **GUION LITERAL:**
 > “**Slides 16 y 17 — Convivencia y dudas frecuentes.** Dos minutos de acuerdos: empezamos a la hora, micrófono apagado mientras alguien habla, cámara si su conexión da, y respeto en el foro —se comenta el texto, nunca a la persona—. En la siguiente slide dejé las dudas que siempre salen el primer día; léanlas con calma después.”
 
-> “**Slide 18 — Lo que debe tener listo para la Sesión 02.** Esta es la tarea, y es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 del Syllabus, publicadas en CDigital. Media hora de lectura y traen **dos dudas anotadas**. Segundo, escriban su **tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una frase con actor, fenómeno y contexto; dos o tres líneas de por qué les importa; y una fuente que encuentren en Google Académico. Súbanlo a CDigital antes de la próxima clase.”
+> “**Slide 18 — Lo que debe tener listo para la Sesión 02.** Esta es la tarea, y es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 del Syllabus, que están en la carpeta de esta sesión, en el **Drive de clases** —el enlace les llega en el correo de bienvenida—. Media hora de lectura y traen **dos dudas anotadas**. Segundo, escriban su **tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una frase con actor, fenómeno y contexto; dos o tres líneas de por qué les importa; y una fuente que encuentren en Google Académico. Súbanlo a CDigital antes de la próxima clase.”
 
 > “**Slides 19 y 20 — Acuerdos y para la próxima.** Resumo el trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7. Con esas tres, este curso funciona.”
 
 > “**Slide 21 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y quién es quién. La próxima sesión abre con los temas de ustedes en pantalla y con las dudas de la lectura. Gracias, y nos vemos el próximo jueves en el mismo Meet.”""",
     entregable_titulo="🧩 **Encargo autónomo (para la Sesión 02)**",
-    taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** publicadas en CDigital y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.",
+    taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2**, publicadas en la carpeta de la Sesión 01 del **Drive de clases**, y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.",
     entregable="`S01_TemaTentativo_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
         "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
-        "- [ ] **Lectura autónoma U1–U2 publicada en CDigital** (sin eso el encargo de hoy no se puede cumplir)",
+        "- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo de hoy no se puede cumplir)",
         "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 21 slides)",
@@ -961,7 +977,7 @@ El Syllabus lo dice desde la primera sesión: el producto es un **artículo de n
 Haga la cuenta antes de entrar: la fase de socialización de este plan son 22 minutos, de los cuales 8 se van en la devolución, la lista de ajustes y la verificación en CDigital. Quedan **unos 14 minutos de ronda: tres turnos de cuatro minutos, cuatro si el grupo es puntual**. No más. Decida antes quién pasa —los que tienen el documento más avanzado no siempre: prefiera a quien más se beneficie de la devolución—, anúncielo al empezar y deje el resto para el **foro del curso**, con la misma estructura: pregunta, dos constructos y la frase de qué está listo y qué falta. Un grupo al que se le acaba el tiempo sin avisar se lleva la sensación de que su trabajo no importó.""",
     errores=[
         ("“¿Hoy no vemos bases de datos ni marco teórico?”",
-         "Ya se vieron: se adelantaron a las Sesiones 04 y 05 para que la ACA Final los alcanzara. Las decks siguen publicadas en CDigital."),
+         "Ya se vieron: se adelantaron a las Sesiones 04 y 05 para que la ACA Final los alcanzara. Las decks siguen en la carpeta de esas sesiones, en el **Drive de clases**."),
         ("“¿Todavía puedo mejorar mi nota?”",
          "El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revisen sus ventanas hoy."),
         ("El estudiante lee la diapositiva en voz alta.",
@@ -1107,7 +1123,7 @@ _spec(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (formulario del curso) | 2 |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
 | **6** | Cómo trabajamos: TG2 es un taller de escritura | 3 |
 | **7** | Aviso honesto sobre este curso (sin Syllabus SIAC) | 3 |
@@ -1128,7 +1144,7 @@ _spec(
 | **23** | Cierre — Sesión 01 | 5 |
 """,
     objetivos="""1. **Encuadrar** TG2 como **continuación**: qué se hace en la hora sincrónica, qué en autónomo y cuál es el producto (**el avance escrito** que alimenta TG3).
-2. **Presentar** al Docente y conocer el estado real de cada proyecto a través del Padlet.
+2. **Presentar** al Docente y **diagnosticar por escrito** el estado real de los 50 proyectos con el **formulario del curso**, no con un muro que nadie alcanza a leer.
 3. **Explicar** las ACAs, la ruta de entrega en CDigital, la integridad académica y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura sobre delimitación + matriz de estado del proyecto.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
@@ -1138,9 +1154,10 @@ _spec(
 | Qué | Para qué lo necesita hoy |
 | :--- | :--- |
 | Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
-| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística del periodo |
+| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística del periodo |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
-| **Padlet oficial** abierto y probado | Rompehielos: aquí se diagnostica el estado del grupo |
+| **Formulario «Preséntate»** creado, probado desde otra cuenta y con el enlace copiado | Rompehielos y diagnóstico del grupo. **Son 50 estudiantes: no hay muro que se lea entero**, así que el diagnóstico se recoge por formulario |
+| **Encuesta de Meet** ya escrita (una pregunta cerrada) y **Q&A** activado en la sala | Es la interacción en vivo mientras responden y durante toda la hora; viene con la licencia CUN y aguanta el grupo completo |
 | **Libro de calificaciones** del aula, en otra pestaña | De ahí salen los nombres, los tipos y los pesos que va a anunciar: los ítems se muestran, no se citan de memoria |
 | Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental del curso: la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
@@ -1151,15 +1168,15 @@ _spec(
 **No se dicta tema.** Si alguien pide ayuda con su delimitación, respóndale: *“esa es exactamente la lectura de esta semana; la abrimos en la Sesión 02 con su matriz de estado en la mano”*. Tampoco se revisan proyectos uno por uno hoy: no alcanza la hora y el encuadre se pierde.
 
 #### 3. La honestidad que este curso exige
-TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Docente + ruta de TG3) y los pesos 30/30/40 llevan asterisco. Dígalo con todas sus letras en la Slide 7: reconocerlo genera más confianza que fingir un temario oficial, y deja claro cuál es la fuente que manda (**CDigital**). Añada la regla operativa del grupo: **lunes festivo = clase autónoma**, no clase cancelada.
+TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Docente + ruta de TG3) y los pesos 30/30/40 llevan asterisco. Dígalo con todas sus letras en la Slide 7: reconocerlo genera más confianza que fingir un temario oficial, y deja claro cuál es la fuente que manda para la nota (**CDigital**). Añada la regla operativa del grupo: **lunes festivo = clase autónoma**, no clase cancelada; la actividad de ese día queda en la carpeta de esa sesión del **Drive de clases** (`Clases/Sesion NN - …/`), que es la misma carpeta compartida donde ya están los decks y las lecturas.
 
 #### 4. Los tres mensajes que deben quedar grabados
 1. **TG2 continúa, no empieza de cero**: y en trabajo de grado **solo cuenta lo escrito**.
 2. **El producto es el avance consolidado** que en TG3 solo habrá que ejecutar y sustentar.
 3. **Se entrega en CDigital**, con plantilla APA CUN, y lo acordado hoy queda por escrito.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
-    ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+    ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** el **formulario «Preséntate»** (rompehielos) y, al lado, su **hoja de respuestas** → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -1177,27 +1194,27 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         ("“Casi no tengo nada escrito, ¿arranco mal?”",
          "“No. Marque ‘inexistente’ con honestidad en su matriz: ese es su punto de partida real y con eso se puede planear. Lo que no sirve es el ‘más o menos’.”"),
         ("“¿Y si el lunes es festivo?”",
-         "“La sesión no se cancela: es **clase autónoma**, con la actividad publicada en CDigital. Cuenta igual.”"),
+         "“La sesión no se cancela: es **clase autónoma**. Ese lunes yo les dejo la actividad en la carpeta de esa sesión, en el **Drive de clases** —la misma carpeta donde están los decks—, y ustedes la trabajan. Cuenta igual, y si hay algo que entregar, se entrega en CDigital como siempre.”"),
         ("“¿La clase se graba?”",
-         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre publicados en CDigital”."),
+         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre en la carpeta de esa sesión, en el **Drive de clases**; CDigital es para entregar y para las notas”."),
         ("“¿Puedo usar ChatGPT?”",
          "“Como apoyo sí, y se declara en una línea al final del documento. Verifique las referencias: inventa autores y DOIs. En TG3 usted defiende ese texto ante jurados.”"),
     ],
     fases=[
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
-        ("2️⃣ Preséntate: rompehielos y diagnóstico en Padlet", 10),
+        ("2️⃣ Preséntate: formulario del curso + encuesta en vivo", 10),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
         ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
         ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
-        "Slide 4 (PRESÉNTATE — Padlet)",
+        "Slide 4 (PRESÉNTATE — formulario del curso)",
         "Slides 6–11 (cómo trabajamos · aviso honesto · mapa · producto · acuerdo)",
         "Slides 5 y 12–17 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 18–23 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
     ],
-    s01_padlet=True,
+    s01_rompehielos=True,
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
@@ -1207,25 +1224,36 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 
 > “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia dirigiendo trabajos de grado.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro.”
 
-**Cómo se maneja este arranque:** salude por nombre a quien va entrando. Y no arranque preguntando “¿cómo van con el proyecto?” en abierto: casi nadie confiesa un atraso por micrófono el primer día. Ese diagnóstico se hace por escrito, en el Padlet, que resulta mucho más cómodo.""",
-    fase2_texto="""**Protagonista:** Estudiantes (Padlet) · Docente conduce.
+**Cómo se maneja este arranque:** salude por nombre a quien va entrando. Y no arranque preguntando “¿cómo van con el proyecto?” en abierto: casi nadie confiesa un atraso por micrófono el primer día, y con **50 conectados** menos todavía. Ese diagnóstico se hace por escrito, en el formulario, que resulta mucho más cómodo y además le queda guardado.""",
+    fase2_texto="""**Protagonista:** Estudiantes (formulario) · Docente conduce.
 
-**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, con el QR. URL: """ + PADLET_PRESENTACION_URL + """
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**. Enlace del formulario: """ + FORM_TG2 + """ — **péguelo en el chat del Meet**, no lo dicte.
+
+> **Por qué ya no hay muro:** este grupo tiene **50 estudiantes**. Cincuenta notas en un tablero no se leen en clase, y el que escribe y nunca es leído se desconecta. El formulario recoge lo mismo, ordenado y en una hoja que usted reutiliza todo el periodo; la parte viva —la que hace que se sientan grupo— la ponen la **encuesta** y el **Q&A** de Meet, que aguantan el curso completo y no piden registrarse en nada: entran con su cuenta @cun.edu.co.
 
 **GUION LITERAL:**
-> “**Slide 4 — PRESÉNTATE.** Quiero conocerlos y, sobre todo, saber en qué punto llega cada proyecto. En pantalla está el QR y el enlace; lo dejo también en el chat del Meet. Suban un post-it con (a) su nombre, (b) el tema de su proyecto en una frase y (c) el estado real en el que llega: ‘lo tengo casi listo’, ‘está congelado’, ‘quiero reformularlo’, ‘la verdad, no tengo casi nada’. Tienen unos siete minutos.”
+> “**Slide 4 — PRESÉNTATE.** Quiero conocerlos y, sobre todo, saber en qué punto llega cada proyecto. Acabo de pegar en el chat el **formulario del curso**: ábranlo ahí mismo, son tres preguntas y se responde en cuatro minutos. (a) su nombre; (b) el tema de su proyecto en una frase; (c) el estado real en el que llega: ‘lo tengo casi listo’, ‘está congelado’, ‘quiero reformularlo’, ‘la verdad, no tengo casi nada’.”
 
-> “Y les pido algo: **sean honestos**. Aquí nadie califica el post-it. Si usted dice que está en cero, yo sé por dónde empezar con usted; si dice que está listo y no lo está, perdemos las dos primeras semanas.”
+> “Y les pido algo: **sean honestos**. Esto no tiene nota. Si usted dice que está en cero, yo sé por dónde empezar con usted; si dice que está listo y no lo está, perdemos las dos primeras semanas.”
 
-> [Deje el tablero proyectado, ponga usted el primer post-it y lea tres o cuatro en voz alta, agradeciendo por nombre. Anote mentalmente el patrón del grupo: ¿mayoría congelados? ¿mayoría sin problema escrito? Eso le dice cómo dosificar las próximas sesiones.]
+> “Mientras responden, hagamos una cosa rápida entre todos.” [Lance la **encuesta de Meet**: *“¿Qué tiene escrito hoy? — (1) nada · (2) tema y poco más · (3) problema y objetivos · (4) marco avanzado”*.] “Ahí lo tienen en pantalla: así llega este curso. No es para señalar a nadie, es para que vean que no están solos en el punto donde están.”
 
-**Si nadie escribe** — pasa casi siempre el primer día virtual:
+**Cómo se conduce (con 50, esto es lo que cambia):**
+1. **Minuto 0–1:** pegue el enlace en el chat y dígalo en voz alta. Repítalo al minuto 3 — el chat se llena y el primer mensaje se pierde.
+2. **Minuto 1–5:** ellos responden. Usted **no llena el silencio**: lanza la encuesta de Meet y proyecta el resultado en vivo. Es la interacción del momento, y no cuesta un minuto más.
+3. **Minuto 5–8:** abra la pestaña **Respuestas → Resumen** del formulario y **proyéctela**. Ahí están los 50: el gráfico de estados y la lista de temas. Nadie queda invisible aunque nadie hable.
+4. **Minuto 8–10:** lea en voz alta **cinco o seis respuestas**, no más, y escogidas: **dos** del estado mayoritario, **una** de un proyecto congelado (sin dramatizar), **una** de un tema que se pueda conectar con otro del grupo y **una o dos** que sirvan de ejemplo el resto del periodo. Nombre a la persona y devuélvale una frase concreta.
+5. **Cierre de la fase:** deje el **Q&A de Meet** abierto y dígalo: “lo que les quede sonando, escríbanlo ahí; al final respondo las más votadas”. Con 50 personas, el Q&A ordena lo que el chat desordena.
+6. **Después de clase:** la hoja de respuestas **se guarda**. De ahí salen los ejemplos de las próximas sesiones, la lista de quién llegó en cero y el cruce con la lista de matriculados para ver quién no respondió.
+
+**Si el formulario no despega:**
 | Situación | Qué hace el Docente |
 | :--- | :--- |
-| Silencio total a los 2 minutos | Escribe un post-it de ejemplo con un caso típico (“tema amplio, sin pregunta escrita”) y lo narra en voz alta. |
-| “No me abre el link” | Pega el URL otra vez en el chat y ofrece que lo digan por micrófono; usted lo transcribe. |
-| Todos escriben “voy bien” | Repregunta en abierto: “¿quién tiene ya el planteamiento **escrito**, no pensado?”. El silencio es el diagnóstico. |
-| Alguien confiesa que abandonó el proyecto | Agradece la honestidad en público y ofrece revisar el caso al terminar la sesión. |""",
+| A los 2 minutos hay 3 respuestas | Proyecta el contador subiendo: “vamos en 3 de 50, esperamos un minuto más”. Verlo subir arrastra al resto. |
+| “No me abre el enlace” | Lo pega otra vez en el chat y confirma que el formulario acepta cualquier cuenta @cun.edu.co; nadie tiene que crear usuario. |
+| Muchos responden “voy bien” | Lo contrasta en voz alta con la encuesta de Meet: “tenemos 30 en ‘voy bien’ y 4 con el problema escrito. ¿Ven la diferencia entre pensado y escrito?”. |
+| Alguien escribe que abandonó el proyecto | **No lo lee en voz alta.** Le escribe por chat privado y lo cita al terminar la sesión. |
+| Faltan 15 por responder al terminar la hora | Deja el formulario abierto toda la semana y lo recuerda en el cierre: la hoja se revisa antes de la Sesión 02. |""",
     fase3_texto="""**Protagonista:** Docente (recorrido de la deck).
 
 **GUION LITERAL:**
@@ -1233,11 +1261,11 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 
 > “**Slide 7 — Aviso honesto.** Les debo una aclaración: esta asignatura **no tiene Syllabus SIAC cargado** en la carpeta del programa. El temario que van a ver es orientativo; lo construí con el Manual del Docente y con la ruta que sigue TG3. Los porcentajes 30, 30 y 40 son la regla general del reglamento y por eso llevan asterisco: la fuente que manda es **CDigital**. Si algo se ajusta, se los aviso ahí, no de palabra.”
 
-> “**Slides 8 y 9 — Mapa del curso.** Miren las once sesiones y fíjense en la última columna: ninguna termina en apuntes, todas terminan en algo escrito. Y ojo con la nota: cuando un lunes sea festivo, esa sesión es **clase autónoma**, no clase cancelada; la actividad queda publicada en CDigital.”
+> “**Slides 8 y 9 — Mapa del curso.** Miren las once sesiones y fíjense en la última columna: ninguna termina en apuntes, todas terminan en algo escrito. Y ojo con la nota: cuando un lunes sea festivo, esa sesión es **clase autónoma**, no clase cancelada. Ese día yo les dejo la actividad en la carpeta de esa sesión, dentro de la **carpeta de clases que tienen compartida en Drive** —la misma donde están los decks y las lecturas—; ustedes la trabajan por su cuenta y, si hay algo que entregar, se entrega en CDigital como cualquier otra semana.”
 
 > “**Slide 10 — Qué se llevan al final.** El producto de TG2 es **un solo documento**: planteamiento, pregunta, objetivos, marco referencial y metodología propuesta. Terminar TG2 no es terminar el trabajo de grado; es dejarlo listo para que en TG3 solo quede ejecutar y sustentar. Y sean claros con esto: aquí todavía **no hay resultados**; el trabajo de campo es de TG3.”
 
-> “**Slide 11 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: ritmo de una sección por sesión, formato con plantilla APA CUN en Google Docs, entrega por CDigital, festivo igual a clase autónoma, y retroalimentación sobre lo entregado. No es un trámite: es lo que invoco cuando alguien me diga ‘yo no sabía’. Léanlo antes de aceptarlo y pregunten ahora.”""",
+> “**Slide 11 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: ritmo de una sección por sesión, formato con plantilla APA CUN en Google Docs, entrega por CDigital, **festivo igual a clase autónoma —con la actividad en la carpeta de esa sesión, en el Drive de clases—**, y retroalimentación sobre lo entregado. No es un trámite: es lo que invoco cuando alguien me diga ‘yo no sabía’. Léanlo antes de aceptarlo y pregunten ahora.”""",
     fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
 
 **GUION LITERAL:**
@@ -1261,32 +1289,33 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 **GUION LITERAL:**
 > “**Slides 18 y 19 — Convivencia y dudas frecuentes.** Dos minutos: empezamos a la hora, micrófono apagado mientras alguien expone, y compartir pantalla es parte del curso —vamos a proyectar borradores reales, y aquí nadie se burla de un texto a medio hacer, porque todos estamos mostrando lo mismo—. En la siguiente slide están las dudas que siempre salen el primer día.”
 
-> “**Slide 20 — Lo que debe tener listo para la Sesión 02.** La tarea es doble. Primero, la **lectura autónoma** sobre delimitación y reformulación del tema, publicada en CDigital. Segundo, y esto es lo que quiero ver: hagan el inventario de su proyecto en un Doc llamado `S01_EstadoProyecto_Apellido`. Una **matriz de estado** donde cada sección —tema, problema, objetivos, marco, metodología— se marca como **lista, a medias o inexistente**, con la **evidencia** pegada: el párrafo o el enlace. Más su **tema delimitado en una sola frase** y **tres compromisos** suyos para las próximas dos semanas.”
+> “**Slide 20 — Lo que debe tener listo para la Sesión 02.** La tarea es doble. Primero, la **lectura autónoma** sobre delimitación y reformulación del tema: está en la carpeta de esta sesión, en el **Drive de clases** —el mismo enlace que reciben en el correo de bienvenida—. Segundo, y esto es lo que quiero ver: hagan el inventario de su proyecto en un Doc llamado `S01_EstadoProyecto_Apellido`. Una **matriz de estado** donde cada sección —tema, problema, objetivos, marco, metodología— se marca como **lista, a medias o inexistente**, con la **evidencia** pegada: el párrafo o el enlace. Más su **tema delimitado en una sola frase** y **tres compromisos** suyos para las próximas dos semanas.”
 
 > “Y les repito: ‘a medias’ e ‘inexistente’ son respuestas válidas y honestas. Lo único que no me sirve es ‘más o menos’ sin nada escrito debajo.”
 
 > “**Slides 21 y 22 — Acuerdos y para la próxima.** Resumo el trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7.”
 
-> “**Slide 23 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y qué pactamos. La próxima sesión abrimos con sus matrices en pantalla y convertimos ese tema en pregunta, objetivos y título. Recuerden: si un lunes cae festivo, esa sesión es autónoma; el resto nos vemos en el mismo Meet.”""",
+> “**Slide 23 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y qué pactamos. La próxima sesión abrimos con sus matrices en pantalla y convertimos ese tema en pregunta, objetivos y título. Recuerden: si un lunes cae festivo, esa sesión es autónoma y la actividad la buscan en la carpeta de esa sesión, en el Drive de clases; el resto nos vemos en el mismo Meet.”""",
     entregable_titulo="🧩 **Encargo autónomo (para la Sesión 02)**",
-    taller="**No se hace en clase, es trabajo autónomo:** leer el material sobre **delimitación / reformulación del tema** publicado en CDigital; y llenar en Google Docs la **matriz de estado** del proyecto (sección · lista/a medias/inexistente · evidencia), el **tema delimitado** en una frase (actor + fenómeno + contexto) y **3 compromisos** para las próximas dos semanas.",
+    taller="**No se hace en clase, es trabajo autónomo:** leer el material sobre **delimitación / reformulación del tema**, publicado en la carpeta de la Sesión 01 del **Drive de clases**; y llenar en Google Docs la **matriz de estado** del proyecto (sección · lista/a medias/inexistente · evidencia), el **tema delimitado** en una frase (actor + fenómeno + contexto) y **3 compromisos** para las próximas dos semanas.",
     entregable="`S01_EstadoProyecto_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
         "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
-        "- [ ] **Lectura autónoma sobre delimitación del tema publicada en CDigital** (sin eso el encargo no se puede cumplir)",
+        "- [ ] **Lectura autónoma sobre delimitación del tema** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
-        "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
-        "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
+        "- [ ] **Formulario «Preséntate»** creado y probado desde otra cuenta, con el enlace listo para pegar en el chat: " + FORM_TG2,
+        "- [ ] **Encuesta de Meet** redactada (una pregunta cerrada sobre el estado del proyecto) y **Q&A** activado en la sala",
+        "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 23 slides)",
         "- [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar",
         "- [ ] **Plantilla APA CUN** lista para mostrar en Google Docs",
-        "- [ ] Verificado qué lunes del periodo caen en festivo (esas sesiones son **clase autónoma**)",
+        "- [ ] Verificado qué lunes del periodo caen en festivo (esas sesiones son **clase autónoma**: la actividad va en la carpeta de esa sesión del **Drive de clases**)",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
-    shots_fase2=[
-        ("Sesion 01/tg_padlet.png", "Padlet — Preséntate / estado del proyecto",
-         "Tablero de la Presentación del Curso. Consigna: nombre + tema en una frase + estado real del proyecto (~7 min). Lea 3–4 en voz alta."),
-    ],
+    # Sin pantallazo: la captura que había es del Padlet, que este curso ya no usa. Cuando
+    # el formulario exista, se captura `Sesion 01/tg_formulario_resumen.png` (pestaña
+    # Respuestas → Resumen, que es lo que se proyecta) y se enchufa aquí.
+    shots_fase2=[],
     shots_taller=[
         ("Herramientas/tg_zoterobib.png", "ZoteroBib (zbib.org) — citar sin instalar nada",
          "Muestre 30 segundos: pegar un DOI o título → APA 7 → copiar al Doc. Es la respuesta a “¿con qué gestor de citas trabajamos?”."),
@@ -1338,7 +1367,7 @@ Título tentativo ≤ 21 palabras, sin eslóganes: debe dejar ver el actor, el f
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Buenas tardes. Sesión 02. La semana pasada dejamos el proyecto diagnosticado y el tema delimitado; y el lunes pasado, al ser festivo, tuvieron clase autónoma, así que espero que hayan avanzado su matriz. Hoy le ponemos el esqueleto al avance: **pregunta, objetivos y título**.”
+> “Buenas tardes. Sesión 02. La semana pasada dejamos el proyecto diagnosticado y el tema delimitado; y el lunes pasado, al ser festivo, tuvieron clase autónoma con la actividad que les dejé en la carpeta de esa sesión, en el Drive de clases, así que espero que hayan avanzado su matriz. Hoy le ponemos el esqueleto al avance: **pregunta, objetivos y título**.”
 
 > “**Slide 2 — OBJETIVOS.** Salimos con tres cosas escritas: una pregunta investigable, un objetivo general con tres específicos, y un título provisional. Tengan abierto su `S01` con el tema delimitado, porque de ahí sale todo.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -1926,7 +1955,7 @@ En un avance, una encuesta de ~10 ítems o una guía de ~8 preguntas es suficien
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 08. La clase pasada definimos el ‘cómo’ a grandes rasgos; hoy lo bajamos a herramientas concretas: **el instrumento y el plan de análisis**. Aviso de calendario: el próximo lunes es festivo, así que será clase autónoma; aprovechen hoy para dejar el instrumento bien armado.”
+> “Sesión 08. La clase pasada definimos el ‘cómo’ a grandes rasgos; hoy lo bajamos a herramientas concretas: **el instrumento y el plan de análisis**. Aviso de calendario: el próximo lunes es festivo, así que será **clase autónoma** —la actividad la dejo en la carpeta de esa sesión, en el Drive de clases—; aprovechen hoy para dejar el instrumento bien armado.”
 
 > “**Slide 2 — OBJETIVOS.** Salir con un bosquejo de instrumento alineado a los objetivos y un plan de análisis escrito. Todo **propuesto**. Tengan abierta su matriz del `S07`.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -1964,7 +1993,7 @@ En un avance, una encuesta de ~10 ítems o una guía de ~8 preguntas es suficien
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) cada ítem del instrumento **se rastrea a un objetivo**; (2) el plan de análisis se decide **antes** de tener datos; (3) todo en propuesto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; usen esa semana para pulir el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; la actividad de esa semana queda en la carpeta de esa sesión, en el **Drive de clases**, y con ella pulen el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
 
 > “**Slide 7 — Cierre.** Gracias; nos leemos en la autónoma y nos vemos en el Meet la siguiente.”""",
     taller="En Google Docs (`S08_Instrumentos_Apellido`): tabla de operacionalización (variable → indicador → ítem) + instrumento (~10 ítems o guía de ~8 preguntas) + plan de análisis, todo en ‘propuesto’.",
@@ -2223,7 +2252,7 @@ Recuerde que en TG3 la entrega pasa por la **revisión de similitud instituciona
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 11, la última sincrónica del curso. Ojo con el calendario: en este tramo final hay dos lunes festivos, que son clases autónomas, así que hoy es nuestro cierre en vivo. El objetivo es claro: dejar el avance **limpio** y construir el puente a Trabajo de Grado 3.”
+> “Sesión 11, la última sincrónica del curso. Ojo con el calendario: en este tramo final hay dos lunes festivos, que son **clases autónomas** —cada una con su actividad en la carpeta de esa sesión, en el Drive de clases—, así que hoy es nuestro cierre en vivo. El objetivo es claro: dejar el avance **limpio** y construir el puente a Trabajo de Grado 3.”
 
 > “**Slide 2 — OBJETIVOS.** Salir con una versión limpia del avance, un checklist de cierre y una lista explícita de pendientes para TG3. Tengan el documento consolidado abierto.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -2281,7 +2310,7 @@ Recuerde que en TG3 la entrega pasa por la **revisión de similitud instituciona
 TG3 = [
     # Sesión 01 = ENCUADRE (no se dicta tema). El detalle vive en TG3_RICH[1], que
     # sobreescribe objetivos, fases, textos de fase, checklist y capturas.
-    (1, "Encuadre: presentación del curso, del Docente, del grupo (Padlet) y de las ACAs, más el acuerdo pedagógico.",
+    (1, "Encuadre: presentación del curso, del Docente, del grupo (formulario «Preséntate») y de las ACAs, más el acuerdo pedagógico.",
      "Sesión de presentación: cómo se trabaja, qué se entrega y cómo se evalúa. El contenido arranca en la Sesión 02.",
      "Encargo autónomo: lectura U1–U2 + matriz de herencia.",
      "`S01_AcuerdoRetoma_Apellido`.",
@@ -2324,8 +2353,8 @@ TG3 = [
      "Nutrir el proyecto con pares/expertos sin perder autoría.",
      "Bitácora de co-creación + 3 aprendizajes accionables.",
      "`S06_CoCreacion_Apellido`.",
-     [("Sesion 01/tg_padlet.png", "Padlet / Docs — socialización breve",
-       "Publicar problema+propuesta en 5 líneas; pedir 1 comentario de par.")],
+     [("Sesion 01/tg_padlet.png", "Docs compartido — socialización breve",
+       "Con 112 no hay ronda: cada quien escribe problema+propuesta en 5 líneas en el Doc del curso y comenta el de un par. En vivo se leen 4 o 5.")],
      [("Herramientas/tg_scholar.png", "Scholar (opcional)",
        "1 referente sobre comunidades de práctica si aplica al marco.")]),
     (7, "Experiencia creativa · análisis de datos.",
@@ -2399,7 +2428,7 @@ TG3 = [
      [("Herramientas/tg_scholar.png", "Checklist CDigital",
        "Recorrer entregables cargados; capturar evidencia de envío si el campus lo permite.")],
      [("Sesion 01/tg_padlet.png", "Cierre humano (opcional)",
-       "1 post de cierre/aprendizaje si el grupo aún usa el tablero; no obligatorio.")]),
+       "Una pregunta de cierre por la **encuesta de Meet** («¿con qué se queda del proceso?») y el resultado en pantalla; no obligatorio.")]),
 ]
 # Contenido rico y ESPECÍFICO por sesión de TG3 (fundamento + fases con parlamento
 # literal propio + tabla de errores/preguntas trampa). Model de calidad:
@@ -2423,7 +2452,7 @@ _tg3(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (formulario del curso) | 2 |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
 | **6** | Cómo trabajamos: una hora semanal para cerrar el trabajo de grado | 3 |
 | **7** | Qué se llevan al final: artículo, sustentación y repositorio | 3 |
@@ -2443,7 +2472,7 @@ _tg3(
 | **22** | Cierre — Sesión 01 | 5 |
 """,
     objetivos="""1. **Encuadrar** TG3 como **culminación**: cómo se usa la hora sincrónica, qué se hace en autónomo y cuál es el producto (**artículo + sustentación + repositorio**).
-2. **Presentar** al Docente y conocer el estado real de cada proyecto a través del Padlet.
+2. **Presentar** al Docente y **diagnosticar por escrito** el estado de los 112 proyectos con el **formulario del curso** — en esta serie **no se presentan todos en voz alta**: no cabe en la hora.
 3. **Explicar** la evaluación real del aula (quices y parciales por corte + **ACA Final** + auto y coevaluación) y la sustentación ante jurados, la ruta de entrega en CDigital, la integridad académica con antiplagio institucional y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura U1–U2 + matriz de herencia de lo que traen de TG2.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
@@ -2453,9 +2482,10 @@ _tg3(
 | Qué | Para qué lo necesita hoy |
 | :--- | :--- |
 | Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
-| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y la logística por grupo (recepción y cierre) |
+| **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística por grupo (recepción y cierre) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 22 slides, en orden |
-| **Padlet oficial** abierto y probado | Rompehielos y diagnóstico del estado de cada proyecto |
+| **Formulario «Preséntate»** creado, probado desde otra cuenta y con **pregunta obligatoria de grupo** (54450 · 54466 · 54467) | Rompehielos y diagnóstico. Son **112 estudiantes en una sola serie**: ningún muro ni ninguna ronda de presentaciones cabe en la hora, y sin la pregunta de grupo la hoja de respuestas no sirve para nada |
+| **Encuesta de Meet** ya escrita (una pregunta cerrada) y **Q&A** activado | Es la interacción en vivo de un grupo de 112: viene con la licencia CUN, no pide registro y aguanta el curso entero |
 | **Libro de calificaciones** del aula **de cada grupo**, abierto en otra pestaña | TG3 **no** es corte único EV05/EXAM: son tres cortes con quices, parciales y **ACA Final**, y las ventanas cambian por grupo. Los ítems se muestran, no se citan de memoria |
 | Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental: la **fecha exacta por grupo vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
@@ -2472,10 +2502,13 @@ _tg3(
 3. **Se avanza una sección por semana.** Quien deje todo para el cierre no alcanza a defender con dominio.
 
 #### 4. Un cuidado propio de TG3
-Aquí hay **tres grupos con calendarios de recepción y cierre distintos**. Cuando alguien pregunte por fechas, remita a la Presentación del Curso y a CDigital, y pida que cada quien anote **la de su grupo**. Dar una sola fecha en voz alta es el error administrativo más caro de este curso.""",
+Aquí hay **tres grupos con calendarios de recepción y cierre distintos**. Cuando alguien pregunte por fechas, remita a la Presentación del Curso y a CDigital, y pida que cada quien anote **la de su grupo**. Dar una sola fecha en voz alta es el error administrativo más caro de este curso.
+
+#### 5. El tamaño manda: 112 estudiantes en una sola serie
+Los tres grupos entran al **mismo Meet**. Eso cambia el primer día entero: **nadie se presenta hablando**. Ciento doce presentaciones de treinta segundos son **cincuenta y seis minutos**, es decir, la clase completa sin encuadre. La regla operativa de hoy: **todo lo que dicen 112 personas se recoge por escrito** (formulario), **lo que se decide en vivo se decide por encuesta** (Meet), y **lo que se pregunta va al Q&A**, no al micrófono. Usted lee cinco o seis respuestas, no más, y proyecta el resumen para que el resto se vea representado.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
-    ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico**.
+    ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
+**1.** el **formulario «Preséntate»** y su **hoja de respuestas** (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -2495,20 +2528,22 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         ("“¿La sustentación es en vivo, ante quién?”",
          "“Ante jurados, y pesa tanto como todo el trabajo escrito. Se prepara desde ahora: cada sección que escriba es material de esa defensa.”"),
         ("“¿La clase se graba?”",
-         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre publicados en CDigital”."),
+         "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre en la carpeta de esa sesión, en el **Drive de clases**; CDigital es para entregar y para las notas”."),
+        ("“¿Por qué no nos presentamos todos?”",
+         "“Porque somos **112** en la misma sala: presentarnos de a treinta segundos se lleva la hora entera. Por eso el formulario, que los recoge a todos, y por eso leo unos pocos en voz alta; el resumen con todas las respuestas lo proyecto en pantalla.”"),
         ("“¿Puedo usar ChatGPT?”",
          "“Como apoyo sí, y se declara al final del documento. Verifique cada referencia: inventa autores y DOIs, y esa bibliografía va al repositorio institucional.”"),
     ],
     fases=[
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
-        ("2️⃣ Preséntate: rompehielos y diagnóstico en Padlet", 10),
+        ("2️⃣ Preséntate: formulario del curso + encuesta en vivo", 10),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
         ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
         ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
-        "Slide 4 (PRESÉNTATE — Padlet)",
+        "Slide 4 (PRESÉNTATE — formulario del curso)",
         "Slides 6–10 (cómo trabajamos · producto · mapa · acuerdo)",
         "Slides 5 y 11–16 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 17–22 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
@@ -2522,25 +2557,42 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 
 > “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia acompañando sustentaciones.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro.”
 
-**Cómo se maneja este arranque:** salude por nombre. Y no abra con la palabra “jurados” en tono de amenaza: el objetivo del primer día es que sepan que hay defensa oral y que **se prepara desde la primera semana**, no que se asusten.""",
-    fase2_texto="""**Protagonista:** Estudiantes (Padlet) · Docente conduce.
+**Cómo se maneja este arranque:** salude por nombre. Y no abra con la palabra “jurados” en tono de amenaza: el objetivo del primer día es que sepan que hay defensa oral y que **se prepara desde la primera semana**, no que se asusten. Anuncie de una vez la regla del tamaño: “somos 112 en esta sala, así que hoy nos presentamos **por escrito**”; dicho al principio, nadie lo siente como un recorte.""",
+    fase2_texto="""**Protagonista:** Estudiantes (formulario) · Docente conduce.
 
-**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, con el QR. URL: """ + PADLET_PRESENTACION_URL + """
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**. Enlace del formulario: """ + FORM_TG3 + """ — **péguelo en el chat del Meet**, no lo dicte.
+
+> **Aquí NO se presentan todos, y se dice en voz alta.** Son **112 estudiantes** (54450 + 54466 + 54467) en una sola serie: treinta segundos por persona son **casi una hora**. El formulario los recoge a todos y los ordena; en vivo se leen **cinco o seis** y el resto se ve en la **pantalla de resumen**. Lo que no se puede es dejar que la fase se convierta en una ronda: se corta sola porque nunca se abre.
 
 **GUION LITERAL:**
-> “**Slide 4 — PRESÉNTATE.** Quiero conocerlos y saber en qué estado llega cada proyecto. En pantalla está el QR y el enlace; lo dejo también en el chat del Meet. Suban un post-it con (a) su nombre, (b) el tema de su proyecto en una frase y (c) el estado real: ‘casi listo’, ‘a medias’, ‘congelado desde el semestre pasado’. Unos siete minutos.”
+> “**Slide 4 — PRESÉNTATE.** Quiero saber en qué estado llega cada proyecto, y somos ciento doce: si nos presentamos hablando, se nos va la clase entera y no alcanzamos a ver ni la evaluación. Así que nos presentamos **por escrito**, y es rápido. Acabo de pegar en el chat el **formulario del curso**: cuatro preguntas, cuatro minutos. (a) su nombre; (b) **su grupo** —54450, 54466 o 54467, y esta es obligatoria—; (c) el tema de su proyecto en una frase; (d) el estado real: ‘casi listo’, ‘a medias’, ‘congelado desde el semestre pasado’.”
 
-> “Y sean honestos, porque esto me sirve a mí para dosificar el curso: si la mayoría llega con el marco a medias, arrancamos distinto que si llegan con resultados. Aquí nadie califica el post-it.”
+> “Sean honestos, porque esto me sirve para dosificar el curso: si la mayoría llega con el marco a medias, arrancamos distinto que si llegan con resultados. Esto no tiene nota y no lo lee nadie más que yo.”
 
-> [Deje el tablero proyectado, ponga usted el primer post-it y lea tres o cuatro en voz alta agradeciendo por nombre. Pregunte a dos: *“¿su proyecto está más cerca de ‘producto sin documentar’ o de ‘documento sin producto’?”*. Es el diagnóstico del día.]
+> “Mientras responden, una pregunta rápida para todos.” [Lance la **encuesta de Meet**: *“¿Cuántas referencias tiene **citadas en el cuerpo** hoy? — (1) ninguna · (2) menos de 10 · (3) entre 10 y 30 · (4) más de 30”*.] “Miren la pantalla: esa es la foto real del curso. Nadie está señalado ahí, y por eso mismo nadie tiene que fingir.”
 
-**Si nadie escribe** — pasa casi siempre el primer día virtual:
+**Cómo se conduce con 112 (el minuto a minuto):**
+1. **Minuto 0–1:** enlace al chat + dicho en voz alta. Repítalo al minuto 3: en una sala de 112 el chat entierra el primer mensaje en segundos.
+2. **Minuto 1–5:** responden. Usted lanza la **encuesta de Meet** y proyecta el resultado. Cero silencio muerto y cero micrófonos abiertos.
+3. **Minuto 5–8:** proyecte **Respuestas → Resumen** del formulario. Los gráficos ya vienen hechos: estado del proyecto y reparto por grupo. Diga en voz alta lo que se ve —“así llegamos: la mitad con el marco a medias”—; ese es el momento en que 112 personas se sienten leídas sin haber hablado.
+4. **Minuto 8–10 — a quién se lee (esto no se improvisa):** **cinco o seis** respuestas, escogidas con este criterio y no por orden de llegada —
+   · **una de cada grupo** (54450, 54466, 54467), para que los tres se sientan nombrados el primer día;
+   · **dos** que representen el estado mayoritario, que es el que hay que atender;
+   · **una** que se pueda conectar con otra parecida (“estos dos temas se parecen; hablen entre ustedes”);
+   · y **ninguna** de las delicadas: el que escribe “mi proyecto se cayó” recibe un mensaje privado, no una lectura pública.
+   Nombre a la persona, agradezca y devuelva **una frase concreta**. Con eso basta: son diez segundos por respuesta.
+5. **Todo el encuentro:** **Q&A de Meet** abierto. Con 112 personas el chat es ilegible; el Q&A ordena por votos y usted responde las tres más votadas al cierre.
+6. **Después de clase:** la hoja de respuestas es la **base de datos del curso**. Se filtra por grupo, se cruza con la lista de matriculados para ver quién no respondió y de ahí salen los ejemplos del resto del periodo.
+
+**Si el formulario no despega:**
 | Situación | Qué hace el Docente |
 | :--- | :--- |
-| Silencio total a los 2 minutos | Escribe un post-it de ejemplo (“tema heredado de TG2, marco a medias”) y lo narra en voz alta. |
-| “No me abre el link” | Pega el URL otra vez en el chat y ofrece que lo digan por micrófono; usted lo transcribe. |
-| Todos escriben “voy bien” | Repregunta: “¿cuántas referencias tienen **citadas en el cuerpo** hoy?”. El silencio es el diagnóstico. |
-| Alguien dice que su proyecto se cayó | Agradece la honestidad, no lo resuelve en público y lo cita al terminar la sesión. |""",
+| A los 2 minutos hay 10 de 112 | Proyecta el contador subiendo: “vamos en 10, esperamos un minuto”. Ver el número crecer arrastra al resto. |
+| “No me abre el enlace” | Lo pega otra vez y aclara que se entra con la cuenta **@cun.edu.co**: no hay que crear usuario en ningún lado. |
+| Muchos dejan el grupo en blanco | Lo pide otra vez en voz alta: sin grupo, la respuesta no sirve para las fechas de recepción, que son distintas por grupo. |
+| Todos escriben “voy bien” | Lo contrasta con el resultado de la encuesta de Meet: “treinta dicen que van bien y cuatro tienen más de diez referencias citadas”. El contraste es el diagnóstico. |
+| Alguien escribe que su proyecto se cayó | **No se lee en público.** Mensaje privado en el chat y cita al terminar la sesión. |
+| Quedan 40 sin responder | Deja el formulario abierto toda la semana y lo recuerda en el cierre; antes de la Sesión 02 revisa quién falta. |""",
     fase3_texto="""**Protagonista:** Docente (recorrido de la deck).
 
 **GUION LITERAL:**
@@ -2574,30 +2626,32 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 **GUION LITERAL:**
 > “**Slides 17 y 18 — Convivencia y dudas frecuentes.** Dos minutos: empezamos a la hora, micrófono apagado mientras alguien expone, y compartir pantalla es parte del curso —vamos a proyectar borradores reales—. La retroalimentación aquí es exigente y respetuosa: se comenta el trabajo, nunca a la persona, y siempre con una propuesta concreta. Así es exactamente como pregunta un jurado. En la siguiente slide están las dudas que siempre salen el primer día.”
 
-> “**Slide 19 — Lo que debe tener listo para la Sesión 02.** La tarea es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 —casos de éxito y retomar el proyecto—, publicadas en CDigital. Segundo, y esto es lo que quiero ver: su **matriz de herencia** en un Doc llamado `S01_AcuerdoRetoma_Apellido`, con tres columnas —**reutilizo tal cual, reescribo, creo de cero**— aplicada sección por sección a lo que traen de TG2. Agreguen el conteo honesto de referencias: cuántas tienen **citadas en el cuerpo** hoy y cuántas les faltan. Y tres compromisos suyos para las próximas dos semanas.”
+> “**Slide 19 — Lo que debe tener listo para la Sesión 02.** La tarea es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 —casos de éxito y retomar el proyecto—, que están en la carpeta de esta sesión, en el **Drive de clases** —el enlace les llega en el correo de bienvenida—. Segundo, y esto es lo que quiero ver: su **matriz de herencia** en un Doc llamado `S01_AcuerdoRetoma_Apellido`, con tres columnas —**reutilizo tal cual, reescribo, creo de cero**— aplicada sección por sección a lo que traen de TG2. Agreguen el conteo honesto de referencias: cuántas tienen **citadas en el cuerpo** hoy y cuántas les faltan. Y tres compromisos suyos para las próximas dos semanas.”
 
 > “**Slides 20 y 21 — Acuerdos y para la próxima.** El trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7 desde el primer día.”
 
 > “**Slide 22 — Cierre.** Ya saben qué vamos a hacer, cómo se evalúa y qué pactamos. La próxima sesión abrimos con sus matrices en pantalla y formulamos la pregunta, los objetivos y el título definitivos. Gracias, buen arranque, y nos vemos el próximo martes en el mismo Meet.”""",
     entregable_titulo="🧩 **Encargo autónomo (para la Sesión 02)**",
-    taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** (casos de éxito · retomar el proyecto) publicadas en CDigital; y llenar en Google Docs la **matriz de herencia** (reutilizo tal cual · reescribo · creo de cero) sección por sección, el **conteo real de referencias citadas en el cuerpo** y **3 compromisos** para las próximas dos semanas.",
+    taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** (casos de éxito · retomar el proyecto), publicadas en la carpeta de la Sesión 01 del **Drive de clases**; y llenar en Google Docs la **matriz de herencia** (reutilizo tal cual · reescribo · creo de cero) sección por sección, el **conteo real de referencias citadas en el cuerpo** y **3 compromisos** para las próximas dos semanas.",
     entregable="`S01_AcuerdoRetoma_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
         "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
-        "- [ ] **Lectura autónoma U1–U2 publicada en CDigital** (sin eso el encargo no se puede cumplir)",
+        "- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
         "- [ ] **Fechas de recepción y cierre de cada grupo** a la vista (este curso tiene calendarios distintos)",
-        "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
-        "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
+        "- [ ] **Formulario «Preséntate»** creado y probado, **con la pregunta de grupo obligatoria** (54450 · 54466 · 54467), y el enlace listo para el chat: " + FORM_TG3,
+        "- [ ] **Encuesta de Meet** redactada (una pregunta cerrada) y **Q&A** activado: es la interacción de un grupo de 112",
+        "- [ ] Decidido de antemano **a quién se lee** en el rompehielos: 5 o 6 respuestas, una por grupo, ninguna delicada en público",
+        "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 22 slides)",
         "- [ ] **Libro de calificaciones** del aula de cada grupo abierto (tres cortes: quices, parciales, **ACA Final**, auto y coevaluación) y enunciado de la **ACA Final** listo para proyectar",
         "- [ ] **Plantilla APA CUN** lista en Google Docs",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
-    shots_fase2=[
-        ("Sesion 01/tg_padlet.png", "Padlet — Preséntate / estado del proyecto",
-         "Tablero de la Presentación del Curso. Consigna: nombre + tema en una frase + estado real del proyecto (~7 min). Lea 3–4 en voz alta."),
-    ],
+    # Sin pantallazo: la captura que había es del Padlet, que este curso ya no usa. Cuando
+    # el formulario exista, se captura `Sesion 01/tg_formulario_resumen.png` (pestaña
+    # Respuestas → Resumen con el reparto por grupo) y se enchufa aquí.
+    shots_fase2=[],
 )
 
 _tg3(
@@ -3767,7 +3821,7 @@ for n, fund, note, taller, ent, shots_d, shots_t in TG3:
         taller=rich.get("taller", taller),
         entregable=ent,
         ejemplo=rich.get("ejemplo", "Modelar en pantalla un fragmento bueno vs uno débil del entregable de hoy."),
-        s01_padlet=(n == 1),
+        s01_rompehielos=(n == 1),
         shots_demo=shots_d,
         shots_taller=shots_t,
         fase1_texto=rich.get("fase1_texto"),
@@ -3825,9 +3879,14 @@ def build_guion(course_key: str, ses: dict) -> str:
         }
 
     padlet = ""
-    if spec.get("s01_padlet"):
+    if spec.get("s01_rompehielos") and usa_padlet(course_key):
         padlet = f"""
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: {PADLET_PRESENTACION_URL}
+> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **formulario**.
+"""
+    elif spec.get("s01_rompehielos"):
+        padlet = f"""
+> **Rompehielos con grupo grande:** slide **PRESÉNTATE**, pero **sin muro**. Se responde un **formulario de Google** ({formulario_presentacion_url(course_key)}, enlace por el chat del Meet) y la interacción en vivo va por las **encuestas** y el **Q&A** que ya trae Meet. Es el **mismo momento** que el de la Presentación del Curso, no dos rompehielos distintos.
 """
 
     # Tutorías por grupo acordadas en la semana = solo Proyecto I (AFI). No inyectar en TG2/TG3.
@@ -3890,12 +3949,20 @@ def build_guion(course_key: str, ses: dict) -> str:
         f"> “Buenas tardes. Sesión **{n:02d}**: *{titulo}*. Al terminar esta hora deben salir "
         "con un **avance observable**. Slide 2: objetivos de hoy.”"
     )
-    if not spec.get("fase1_texto") and spec.get("s01_padlet"):
-        gen_f1 += (
-            "\n\n> “Abrimos primero la **Presentación del Curso** → **PRESÉNTATE**. "
-            f"QR o link: {PADLET_PRESENTACION_URL}. Post-it con expectativa + tema. ~7 min. "
-            "Luego volvemos a esta deck.”"
-        )
+    if not spec.get("fase1_texto") and spec.get("s01_rompehielos"):
+        if usa_padlet(course_key):
+            gen_f1 += (
+                "\n\n> “Abrimos primero la **Presentación del Curso** → **PRESÉNTATE**. "
+                f"QR o link: {PADLET_PRESENTACION_URL}. Post-it con expectativa + tema. ~7 min. "
+                "Luego volvemos a esta deck.”"
+            )
+        else:
+            gen_f1 += (
+                "\n\n> “Abrimos primero la **Presentación del Curso** → **PRESÉNTATE**. "
+                f"Les pego en el chat el formulario del curso: {formulario_presentacion_url(course_key)}. "
+                "Nombre, tema y expectativa; cuatro minutos. Mientras responden lanzo la **encuesta "
+                "de Meet**, leo cinco o seis respuestas y les muestro el resumen. Luego volvemos a esta deck.”"
+            )
     gen_f2 = (
         "**GUION LITERAL:**\n"
         "> “**Slide 3 — CONTENIDO CLAVE.** Vamos al concepto del día. **Slide 4 — ENFOQUE DE HOY:** "
@@ -3931,8 +3998,11 @@ def build_guion(course_key: str, ses: dict) -> str:
         "- [ ] Fundamento teórico leído",
         f"- [ ] PPTX `Clases/{label}/Presentacion.pptx`",
         "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
-        ("- [ ] Presentación del Curso (Preséntate / Padlet): " + PADLET_PRESENTACION_URL)
-        if spec.get("s01_padlet") else "- [ ] Ejemplo modelo listo para compartir pantalla",
+        (("- [ ] Presentación del Curso (Preséntate / Padlet): " + PADLET_PRESENTACION_URL)
+         if usa_padlet(course_key)
+         else ("- [ ] Presentación del Curso (Preséntate / formulario): "
+               + formulario_presentacion_url(course_key)))
+        if spec.get("s01_rompehielos") else "- [ ] Ejemplo modelo listo para compartir pantalla",
         "- [ ] Espacio de entrega en CDigital",
         f"- [ ] Meet: {meet}",
     ]
@@ -4004,7 +4074,7 @@ def build_guion(course_key: str, ses: dict) -> str:
 {entregable_titulo}
 1. {spec['taller']}
 2. Archivo en CDigital: {spec['entregable']}
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

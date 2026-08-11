@@ -202,7 +202,7 @@ Introducción de 3 párrafos: contexto de las prácticas de laboratorio → vac�
 🧩 **Entregable de hoy**
 1. En Google Docs (`S03_Avance1_Apellido`): título tentativo + introducción de 3 párrafos (contexto→vacío→propósito) + pregunta + 2 referencias en APA 7 con ZoteroBib.
 2. Archivo en CDigital: `S03_Avance1_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

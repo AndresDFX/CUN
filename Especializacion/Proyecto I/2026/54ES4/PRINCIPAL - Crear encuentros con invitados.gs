@@ -99,77 +99,77 @@ var INVITADOS = {
 
 var SESIONES = [
   {
-    subject: '54ES4 - Proyecto I - Sesion 01',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
     start: '2026-08-10T20:00:00',
     end: '2026-08-10T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 02',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 02',
     description: 'Sesión 02 — Problema y pregunta de investigación',
     start: '2026-08-24T20:00:00',
     end: '2026-08-24T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 03',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 03',
     description: 'Sesión 03 — Objetivos, justificación, alcances y limitaciones',
     start: '2026-08-31T20:00:00',
     end: '2026-08-31T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 04',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 04',
     description: 'Sesión 04 — Retroalimentación del Quiz · Antecedentes de investigación',
     start: '2026-09-07T20:00:00',
     end: '2026-09-07T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 05',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 05',
     description: 'Sesión 05 — Marco teórico',
     start: '2026-09-14T20:00:00',
     end: '2026-09-14T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 06',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 06',
     description: 'Sesión 06 — Marco conceptual y marco contextual',
     start: '2026-09-21T20:00:00',
     end: '2026-09-21T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 07',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 07',
     description: 'Sesión 07 — Marco legal · citación APA 7',
     start: '2026-09-28T20:00:00',
     end: '2026-09-28T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 08',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 08',
     description: 'Sesión 08 — Diseño metodológico: paradigma, enfoque y alcance',
     start: '2026-10-05T20:00:00',
     end: '2026-10-05T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 09',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 09',
     description: 'Sesión 09 — Devolución de la ACA 1 · población, muestra e instrumentos propuestos',
     start: '2026-10-19T20:00:00',
     end: '2026-10-19T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 10',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 10',
     description: 'Sesión 10 — Planeación, viabilidad e integración del anteproyecto',
     start: '2026-10-26T20:00:00',
     end: '2026-10-26T22:00:00',
     grupos: ['54ES4']
   },
   {
-    subject: '54ES4 - Proyecto I - Sesion 11',
+    subject: '26ES4 - 54ES4 - Proyecto I - Sesion 11',
     description: 'Sesión 11 — Integración y evaluación · coevaluación y autoevaluación',
     start: '2026-11-09T20:00:00',
     end: '2026-11-09T22:00:00',

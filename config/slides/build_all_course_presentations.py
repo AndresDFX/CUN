@@ -116,7 +116,11 @@ def build_pregrado(course, filename):
         f"Asignatura: **{course['titulo_largo']}**.",
         f"Temario tomado de: {course['fuente']}.",
         "Enfoque teórico-práctico con trabajo autónomo entre sesiones.",
-        "Si el día de clase es festivo colombiano → **clase autónoma** (actividad en el CDigital).",
+        # La actividad de la clase autónoma vive en el **Drive de clases** (la carpeta
+        # `Clases/` que comparte el Docente), en la carpeta de esa sesión. CDigital sigue
+        # siendo donde se ENTREGA y donde están las notas: no mezclar los dos roles.
+        "Si el día de clase es festivo colombiano → **clase autónoma** "
+        "(actividad en el **Drive de clases**, en la carpeta de esa sesión).",
     ], idx=3)
     _n_cont = contenido_sesiones_slide(prs, course["sesiones"], idx=4)
     _i = 4 + _n_cont

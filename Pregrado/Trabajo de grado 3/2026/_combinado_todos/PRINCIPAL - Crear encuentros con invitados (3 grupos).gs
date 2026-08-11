@@ -168,105 +168,105 @@ var INVITADOS = {
 
 var SESIONES = [
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 01',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
     start: '2026-08-11T17:00:00',
     end: '2026-08-11T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 02',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 02',
     description: 'Sesión 02 — Formulación de pregunta, objetivos y título',
     start: '2026-08-18T17:00:00',
     end: '2026-08-18T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 03',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 03',
     description: 'Sesión 03 — Estructura del artículo · taller de introducción',
     start: '2026-08-25T17:00:00',
     end: '2026-08-25T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 04',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 04',
     description: 'Sesión 04 — Fase I de referentes de investigación',
     start: '2026-09-01T17:00:00',
     end: '2026-09-01T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 05',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 05',
     description: 'Sesión 05 — Diseño de instrumento · desarrollo metodológico',
     start: '2026-09-08T17:00:00',
     end: '2026-09-08T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 06',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 06',
     description: 'Sesión 06 — Comunidades de práctica y co-creación',
     start: '2026-09-15T17:00:00',
     end: '2026-09-15T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 07',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 07',
     description: 'Sesión 07 — Experiencia creativa · análisis de datos',
     start: '2026-09-22T17:00:00',
     end: '2026-09-22T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 08',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 08',
     description: 'Sesión 08 — Fase III de referentes · cierre del marco teórico',
     start: '2026-09-29T17:00:00',
     end: '2026-09-29T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 09',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 09',
     description: 'Sesión 09 — Resultados, discusión y relación con referentes',
     start: '2026-10-06T17:00:00',
     end: '2026-10-06T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 10',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 10',
     description: 'Sesión 10 — Resumen, palabras clave UNESCO, conclusiones y referencias',
     start: '2026-10-13T17:00:00',
     end: '2026-10-13T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 11',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 11',
     description: 'Sesión 11 — Póster · evidencias · verificación antiplagio',
     start: '2026-10-20T17:00:00',
     end: '2026-10-20T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 12',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 12',
     description: 'Sesión 12 — Sustentación ante jurados',
     start: '2026-10-27T17:00:00',
     end: '2026-10-27T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 13',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 13',
     description: 'Sesión 13 — Entregables para repositorio institucional',
     start: '2026-11-03T17:00:00',
     end: '2026-11-03T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54450/54466/54467 - Trabajo de Grado 3 - Sesion 14',
+    subject: '26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 14',
     description: 'Sesión 14 — Ajustes finales · seguimiento post-sustentación',
     start: '2026-11-10T17:00:00',
     end: '2026-11-10T18:00:00',
     grupos: ['54450', '54466', '54467']
   },
   {
-    subject: '54466/54467 - Trabajo de Grado 3 - Sesion 15',
+    subject: '26V04 - 54466/54467 - Trabajo de Grado 3 - Sesion 15',
     description: 'Sesión 15 — Cierre administrativo · recepción de entregables',
     start: '2026-11-17T17:00:00',
     end: '2026-11-17T18:00:00',

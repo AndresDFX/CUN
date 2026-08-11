@@ -34,7 +34,7 @@ from sesiones_cun import (  # noqa: E402
     MSG_TUTORIAS_POR_GRUPO,
     meet_url,
 )
-from cun_slides_engine import PADLET_PRESENTACION_URL  # noqa: E402
+from cun_slides_engine import formulario_presentacion_url  # noqa: E402
 from guion_evaluacion import (  # noqa: E402
     inyectar_evaluacion,
     items_corte_txt,
@@ -51,6 +51,18 @@ from guion_slides import (  # noqa: E402
 
 MEET = meet_url("proyecto1", "PROYECTO I")
 COURSE = COURSES["proyecto1"]
+
+# --- Rompehielos de la Sesión 01: formulario, no muro -------------------------------
+# ESP329 54ES4 tiene **50 matriculados** (roster de CDigital). Un Padlet de 50 notas no
+# se lee entero en clase y el que escribe sin ser leído se desconecta; los planes gratis
+# de Mentimeter (50/mes) y Slido (100) tampoco dan para este grupo. Por eso el
+# rompehielos es un **formulario de Google** —gratis, sin tope, incluido en la licencia
+# CUN: se entra con la cuenta @cun.edu.co y no hay que registrarse— más las **encuestas**
+# y el **Q&A** nativos de Meet para la parte en vivo.
+# La decisión no se escribe aquí: la deriva `cun_slides_engine.modo_rompehielos()` de la
+# matrícula, y el enlace sale de la misma fuente que el del Meet (mientras el Docente no
+# cree el formulario, `formulario_presentacion_url` devuelve el marcador de posición).
+FORM_PRESENTATE = formulario_presentacion_url("proyecto1")
 
 
 def topic_filename(titulo: str, max_len: int = 70) -> str:
@@ -136,7 +148,7 @@ def tutoria_block(foco: str) -> str:
 def guion_01(ses):
     """Sesión 01 = ENCUADRE (no se dicta tema). Guion de presentación del curso.
 
-    Cubre: el curso · el Docente · los estudiantes (Padlet) · la evaluación real del
+    Cubre: el curso · el Docente · los estudiantes (formulario «Preséntate») · la evaluación real del
     aula (Quiz del primer corte, ACA 1, ACA FINAL, auto y coevaluación). La unidad
     del programa que antes ocupaba esta sesión pasa a LECTURA AUTÓNOMA y se retoma
     al abrir la Sesión 02 (campo `unidad_diferida` en sesiones_cun.py).
@@ -147,7 +159,7 @@ def guion_01(ses):
     fases = [
         ("1️⃣ Apertura y bienvenida", 5),
         ("2️⃣ Quién los acompaña: el Docente", 4),
-        ("3️⃣ Rompehielos en Padlet: preséntense", 9),
+        ("3️⃣ Rompehielos: formulario del curso + encuesta en vivo", 9),
         ("4️⃣ Recorrido del curso y su producto final", 10),
         ("5️⃣ Las ACAs y cómo se entrega", 12),
         ("6️⃣ Integridad académica y uso de IA", 8),
@@ -176,7 +188,7 @@ def guion_01(ses):
 | **1** | Portada — Sesión 01 | Apertura |
 | **2** | AGENDA DE HOY | Apertura |
 | **3** | Docente | Presentación del Docente |
-| **4** | PRESÉNTATE — ROMPEHIELOS | Padlet |
+| **4** | PRESÉNTATE — ROMPEHIELOS | Formulario del curso |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | Pesos de las entregas |
 | **6** | Cómo trabajamos: el encuentro tiene dos mitades | Método del curso |
 | **7–8** | Mapa del curso (11 encuentros) | Recorrido del curso |
@@ -196,7 +208,7 @@ def guion_01(ses):
 
 🎯 **Objetivos de la sesión**
 1. **Dejar claro** cómo funciona el curso: dos mitades del encuentro, avance escrito semanal y equipos de máximo 3.
-2. **Mostrar** el mapa de los 11 encuentros y el producto final: un único anteproyecto que crece entrega tras entrega.
+2. **Mostrar** el mapa de los 11 encuentros y el producto final: un único anteproyecto que crece entrega tras entrega, y **recoger por escrito** —formulario, no ronda hablada— quién es quién en un grupo de 50.
 3. **Explicar** cómo se califica el curso en CDigital —**Quiz** (primer corte), **ACA 1** (segundo) y **ACA FINAL** con auto y coevaluación (tercero)—, el procedimiento de entrega y las reglas de integridad académica y uso de IA.
 4. **Cerrar** con equipos tentativos conformados, canal de ayuda claro y el encargo de lectura autónoma para la Sesión 02.
 
@@ -206,8 +218,10 @@ def guion_01(ses):
 
 | Elemento | Estado en el que debe llegar | Por qué |
 | :--- | :--- | :--- |
-| **Aula en CDigital** | Abierta, con el material de la sesión publicado y los tres espacios de entrega de ACA visibles | Los estudiantes van a preguntar dónde se sube; se muestra en pantalla, no se describe |
-| **Padlet del rompehielos** | Abierto en una pestaña y con el enlace copiado para pegar en el chat | El QR falla en celulares viejos; el enlace debe estar listo en 3 segundos |
+| **Aula en CDigital** | Abierta, con los tres espacios de entrega de ACA visibles | Los estudiantes van a preguntar dónde se sube; se muestra en pantalla, no se describe |
+| **Carpeta `Clases/` en Drive** | Compartida con el grupo y con el material de esta sesión ya cargado | Es donde vive el material de clase (y la actividad, cuando una sesión sea autónoma). CDigital es para entregar y para las notas |
+| **Formulario «Preséntate»** | Creado, probado desde otra cuenta y con el enlace copiado para el chat; la hoja de respuestas abierta al lado | Son **50 estudiantes**: no hay muro que se lea entero ni ronda hablada que quepa en la hora. El enlace debe estar listo en 3 segundos |
+| **Encuesta de Meet y Q&A** | Encuesta redactada (una pregunta cerrada) y Q&A activado en la sala | Es la interacción en vivo del grupo grande: viene con la licencia CUN, no pide registro y aguanta los 50 |
 | **Libro de calificaciones del aula** | Abierto en otra pestaña | De ahí salen los nombres, tipos y pesos que se anuncian hoy. **El primer corte es un Quiz (cuestionario), no una entrega escrita**: hay que mostrarlo en pantalla |
 | **Enunciados de las ACAs** | `Clases/Recursos/ACAs/` (ACA 1 y ACA FINAL) | Se proyecta el enunciado real, no un resumen |
 | **Plantilla APA CUN** | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` abierta en Google Docs | Se modela en vivo cómo se trabaja el documento del equipo |
@@ -258,26 +272,35 @@ def guion_01(ses):
 
 ---
 
-#### 3️⃣ Rompehielos en Padlet: preséntense (~9 min) — Protagonistas: Estudiantes
+#### 3️⃣ Rompehielos: formulario del curso + encuesta en vivo (~9 min) — Protagonistas: Estudiantes
 **Slides:** 4 (PRESÉNTATE — ROMPEHIELOS)
 
+> **Por qué formulario y no muro:** el grupo tiene **50 matriculados**. Cincuenta notas en un tablero no se leen en clase y cincuenta presentaciones habladas se comen el encuadre entero. El formulario los recoge a todos, ordenados, en una hoja que usted usa el resto del periodo —sobre todo para **armar equipos por afinidad de tema**—; lo vivo lo ponen la **encuesta** y el **Q&A** de Meet, que aguantan el grupo completo y no piden crear cuenta: se entra con el correo @cun.edu.co.
+
 **GUION LITERAL:**
-> "**Slide 4.** Turno de ustedes. Escaneen el QR o abran el enlace que acabo de pegar en el chat: {PADLET_PRESENTACION_URL}"
+> "**Slide 4.** Turno de ustedes, pero por escrito: somos cincuenta y una ronda hablada se lleva la clase. Abran el **formulario «Preséntate»** del curso, que acabo de pegar en el chat: {FORM_PRESENTATE}"
 
-> "Un post-it por persona, tres líneas, no más: **(1)** su nombre y a qué se dedica hoy; **(2)** qué espera del curso; **(3)** un **tema tentativo** de investigación, aunque sea una idea cruda de una sola frase. No tiene que estar bien: hoy nadie tiene el tema definitivo. Tienen **6 minutos** y el Padlet queda abierto toda la semana."
+> *(Ojo, Docente: este formulario no es el de asistencia a tutorías. Son dos, y en el chat se pegan en momentos distintos: el «Preséntate» ahora, el de asistencia al abrir la segunda hora.)*
 
-**Cómo conducirlo (esto es lo que decide si el rompehielos funciona):**
-1. El Docente escribe **el primero**, con su propio post-it, mientras habla. Un tablero vacío no lo llena nadie.
-2. Pegar el enlace en el chat **antes** de mostrar el QR: siempre hay alguien conectado desde el computador.
-3. A los 2 minutos, leer en voz alta el primer post-it que aparezca y celebrarlo: "listo, ya tenemos el primero".
-4. A los 4 minutos, leer **tres o cuatro** notas en voz alta, nombrando a la persona y devolviéndole algo concreto.
+> "Son tres preguntas y se responde en **cuatro minutos**: **(1)** su nombre y a qué se dedica hoy; **(2)** qué espera del curso; **(3)** un **tema tentativo** de investigación, aunque sea una idea cruda de una sola frase. No tiene que estar bien: hoy nadie tiene el tema definitivo. El formulario queda abierto toda la semana, pero llénenlo ahora."
 
-> **Si a los 3 minutos nadie escribe** — no repetir la consigna, cambiar de estrategia:
-> "Veo el tablero quieto, así que vamos por otra vía: voy a nombrar a tres personas y me responden por micrófono, y yo les escribo el post-it desde acá. [Nombre], ¿a qué se dedica y qué le gustaría investigar? … Perfecto, lo dejo escrito."
-> Con dos o tres respuestas habladas el tablero se destraba solo. Si aun así no se mueve, se sigue adelante: **el rompehielos no puede consumir más de 9 minutos**; el enlace queda abierto y se retoma en la tutoría.
+> "Y mientras responden, una pregunta rápida para todos." [Lance la **encuesta de Meet**: *"¿Con qué llega hoy? — (1) ya tengo tema y equipo · (2) tengo tema, me falta equipo · (3) tengo equipo, nos falta tema · (4) llego en blanco"*.] "Ahí está el curso en una pantalla. El que votó ‘en blanco’ no está atrasado: está donde empieza la mayoría."
+
+**Cómo conducirlo (con 50, esto es lo que decide si funciona):**
+1. **Minuto 0–1:** pegue el enlace en el chat y dígalo en voz alta; repítalo al minuto 3, porque el chat del primer día lo entierra. Nada de depender del QR: la mitad está en computador.
+2. **Minuto 1–4:** ellos responden. Usted no llena el silencio: lanza la **encuesta de Meet** y proyecta el resultado en vivo.
+3. **Minuto 4–6:** abra **Respuestas → Resumen** del formulario y **proyéctelo**. Ahí están los cincuenta con sus temas; el grupo se ve a sí mismo sin que nadie hable. Diga en voz alta el patrón: "la mitad viene del mismo sector, y eso les va a servir para armar equipo".
+4. **Minuto 6–9 — a quién se lee:** **cinco o seis** respuestas, escogidas, no las primeras que llegaron. Dos del tema más repetido, dos que se parezcan entre sí —y dígalo: "estos dos temas son casi el mismo, hablen entre ustedes en la tutoría"— y una que sirva de ejemplo de tema bien acotado. Nombre a la persona y devuélvale una frase concreta. Diez segundos cada una.
+5. **Todo el encuentro:** deje el **Q&A de Meet** abierto y anúncielo. Con cincuenta personas, el chat se vuelve ilegible y el Q&A ordena por votos; al cierre se responden las más votadas.
+
+> **Si a los 3 minutos casi nadie ha respondido** — no repita la consigna, cambie de estrategia:
+> "Proyecto el contador: vamos en seis de cincuenta, esperamos un minuto." Ver el número subir arrastra más que insistir. Si alguien dice que no le abre, pegue el enlace otra vez y aclare que **se entra con la cuenta institucional, sin registrarse en nada**. Y nombre a dos o tres con amabilidad: "[Nombre], ¿a qué se dedica y qué le gustaría investigar? … Perfecto, lo escribo yo".
+> Pase lo que pase, **el rompehielos no puede consumir más de 9 minutos**: el formulario queda abierto y se retoma en la tutoría de la segunda hora.
 
 **Cierre de la fase:**
-> "Guarden ese tema tentativo: en la Sesión 02 lo convertimos en un problema y en una pregunta de investigación."
+> "Guarden ese tema tentativo: en la Sesión 02 lo convertimos en un problema y en una pregunta de investigación. Y el que todavía no tiene equipo, tranquilo: en la segunda hora los empato con esas respuestas en pantalla."
+
+**Después de clase:** la hoja de respuestas es la herramienta de la tutoría — se ordena por tema y de ahí salen los equipos de quien llegó solo.
 
 ---
 
@@ -345,7 +368,7 @@ def guion_01(ses):
 **Slides:** 14 (Herramientas) → 15 (Cómo pedir ayuda) → 16 (Acuerdos de convivencia) → 19 (ACUERDOS DE TRABAJO)
 
 **GUION LITERAL:**
-> "**Slide 14.** Todo lo que usamos es **gratis y desde el navegador**: CDigital para entregar, Google Docs para escribir, Scholar, SciELO y Redalyc para buscar, ZoteroBib para generar las referencias en APA sin instalar nada, Excalidraw para dibujar, Padlet y Meet. Súmenle la biblioteca virtual de la CUN con su usuario institucional. Si una herramienta les pide pagar para continuar, no es la que estamos usando: pregúntenme antes de sacar la tarjeta."
+> "**Slide 14.** Todo lo que usamos es **gratis y desde el navegador**: CDigital para entregar, Google Docs para escribir, Scholar, SciELO y Redalyc para buscar, ZoteroBib para generar las referencias en APA sin instalar nada, Excalidraw para dibujar, el **Drive de clases** donde les dejo el material de cada sesión, y Meet. Súmenle la biblioteca virtual de la CUN con su usuario institucional. Si una herramienta les pide pagar para continuar, no es la que estamos usando: pregúntenme antes de sacar la tarjeta."
 
 > "**Slide 15 — cómo pedir ayuda.** Tres canales. El primero y más rápido: la **segunda hora de cada encuentro**. El segundo: **tutorías por equipo**, que se piden y se agendan durante la semana; no hay atención espontánea sin cita, así que escríbanme diciendo qué necesitan y qué tienen escrito, y la acordamos. El tercero: el **foro de CDigital**, para lo que le sirve a todo el curso; respondo en días hábiles."
 
@@ -365,7 +388,7 @@ def guion_01(ses):
 **GUION LITERAL:**
 > "**Slide 17 — lo que hay que hacer antes de la próxima sesión.** Escuchen bien esta parte, porque es la única tarea de hoy y es la que define cómo arranca la Sesión 02."
 
-> "**Uno: lectura autónoma.** {diferida}. Está publicada en CDigital. Hoy no la dictamos, la leen ustedes y **la retomamos al abrir la Sesión 02**. Mientras leen, anoten **tres términos** que no les queden claros: con esos tres arrancamos la próxima clase, así que tráiganlos escritos."
+> "**Uno: lectura autónoma.** {diferida}. Está en la carpeta de esta sesión, en el **Drive de clases** —el enlace les llega en el correo de bienvenida—. Hoy no la dictamos, la leen ustedes y **la retomamos al abrir la Sesión 02**. Mientras leen, anoten **tres términos** que no les queden claros: con esos tres arrancamos la próxima clase, así que tráiganlos escritos."
 
 > "**Dos:** confirmen su equipo, máximo tres personas. **Tres:** entren al aula, **abran el Quiz del primer corte** para ver cuántas preguntas tiene y cuánto tiempo da, y lean completo el enunciado de la **ACA 1**. **Cuatro:** creen el documento del equipo en Google Docs con la plantilla APA y compártanlo con todos. **Cinco:** traigan una idea de tema **en una frase** y el contexto donde ocurre: una empresa, un aula, un proceso concreto."
 
@@ -400,7 +423,7 @@ def guion_01(ses):
 > "Segunda hora: **tutoría**. Hoy no hay avances que revisar, así que la usamos en tres cosas: cerrar equipos, resolver dudas de plataforma y dejar agendada la primera tutoría por equipo. Cada persona que se quede diligencia su asistencia aquí: {LINK_TUTORIAS} — lo dejo en el chat."
 
 **Rutina de esta primera tutoría:**
-1. **Equipos (≈20 min).** Quien ya tenga equipo lo escribe en el chat: nombres completos, máximo tres. A quien esté solo, el Docente lo empareja según el tema tentativo que dejó en el Padlet.
+1. **Equipos (≈20 min).** Quien ya tenga equipo lo escribe en el chat: nombres completos, máximo tres. A quien esté solo, el Docente lo empareja con la **hoja de respuestas del formulario** proyectada y ordenada por tema: con 50 personas, emparejar de memoria no funciona; emparejar leyendo los temas en pantalla, sí.
 2. **Plataforma (≈15 min).** Con pantalla compartida: dónde está el material, **dónde está el Quiz del primer corte** —que ya corre—, dónde el espacio de entrega de la ACA 1, dónde la plantilla APA y cómo se comparte el documento del equipo en Google Docs.
 3. **Temas tentativos (≈15 min).** Dos o tres equipos leen su idea en una frase. El Docente devuelve **una sola** pregunta a cada uno: ¿quién tiene ese problema y dónde ocurre? No se corrige la idea todavía: eso es Sesión 02.
 4. **Agenda (≈10 min).** Se propone la franja de tutorías de la semana y cada equipo indica su disponibilidad. Se cierra con un acuerdo observable por equipo: llegar a la Sesión 02 con la frase de tema y el contexto escritos.
@@ -414,11 +437,13 @@ def guion_01(ses):
 1. Equipos tentativos conformados (máximo 3) y registrados en el chat o en CDigital.
 2. Cada estudiante sabe dónde se entrega, con qué plantilla y con qué nombre de archivo.
 3. El encargo autónomo quedó claro: **{diferida}** leída para la Sesión 02, más la frase de tema y su contexto.
-4. Rompehielos del Padlet con post-its de la mayoría del grupo (queda abierto toda la semana).
+4. Formulario «Preséntate» respondido por la mayoría del grupo (queda abierto toda la semana) y su hoja de respuestas revisada el mismo día.
 
 ✅ **Checklist antes de clase**
-- [ ] Aula de CDigital abierta, con material publicado y espacios de entrega de ACA visibles
-- [ ] Padlet abierto y enlace copiado para el chat: {PADLET_PRESENTACION_URL}
+- [ ] Aula de CDigital abierta, con los espacios de entrega de ACA visibles
+- [ ] Material de esta sesión cargado en `Clases/{label}/` del **Drive de clases**, y la carpeta compartida con el grupo
+- [ ] **Formulario «Preséntate»** creado y probado, con el enlace copiado para el chat: {FORM_PRESENTATE}
+- [ ] **Encuesta de Meet** redactada (una pregunta cerrada) y **Q&A** activado en la sala
 - [ ] **Libro de calificaciones** del aula abierto (Quiz · ACA 1 · ACA FINAL · auto · coevaluación) y los enunciados de ACA en `Clases/Recursos/ACAs/`
 - [ ] Plantilla APA CUN abierta en Google Docs para mostrarla en vivo
 - [ ] PPTX `Clases/{label}/Presentacion.pptx` en modo presentador (21 slides)
@@ -493,7 +518,7 @@ def _body(n, titulo, detalle, label, objetivos, fundamento, fases_plan, fases_te
 ✅ **Checklist antes de clase**
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/{label}/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/{label}/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: {LINK_TUTORIAS}
 - [ ] Meet: {MEET}
 {post_clase()}

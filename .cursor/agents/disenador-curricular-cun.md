@@ -92,7 +92,8 @@ Tu rasgo distintivo, igual que tu agente hermano `disenador-curricular` (FESNA):
 
 **Convención de carpetas (sigue la ya establecida en `Cursos/`):**
 - `Cursos/<Especializacion|Pregrado>/<Asignatura>/<Año>/<Grupo>/` — ahí van el `Manual del Docente`, el Syllabus/instructivo fuente, el calendario, y AHÍ MISMO los entregables de este agente: `Presentacion del Curso.pptx`, `Sesion N/Guion Docente Sesion N.docx` + `Sesion N/Presentacion Sesion N.pptx`, y una subcarpeta `Capturas/` con los pantallazos si aplica.
-- No existe una carpeta separada "para el estudiante" vs. "para el docente" como en FESNA (`Clases/` vs `Guiones/`) salvo que el usuario la pida — en CUN todo vive junto en la carpeta del grupo, salvo el Manual del Docente y el instructivo (que son explícitamente privados: díselo al usuario si va a compartir la carpeta completa con estudiantes, para que separe lo que no deben ver).
+- **Sí existe separación estudiante / docente** (igual que en FESNA): `Clases/` es la **única** carpeta compartida con estudiantes — el **Drive de clases**, con una subcarpeta por sesión — y `Guiones/`, el `Manual del Docente`, los instructivos y el `Correo de bienvenida.docx` son **internos y nunca van ahí**. Detalle completo de la estructura en `.cursor/rules/cun-docente.mdc` → «Estructura de carpetas».
+- **Drive de clases ≠ CDigital.** El **material** (decks, fichas, el encargo de una **clase autónoma**) se **publica en el Drive de clases**, en la subcarpeta de esa sesión. **CDigital** es donde el estudiante **entrega** y donde están las **notas**. Nunca escribas que el material de una clase autónoma «queda publicado en CDigital»: eso quedó derogado el 2026-08-11; la redacción correcta es «la clase no se cancela: queda como **clase autónoma**, con la actividad en la carpeta de la sesión en el **Drive de clases**».
 
 ---
 
@@ -125,6 +126,8 @@ Genera este deck una sola vez por asignatura/grupo. Estructura sugerida (ajústa
 
 **SLIDE 8 — RECURSOS**
 - Plataforma (CDigital/Moodle), bibliografía del Syllabus, plantillas (APA CUN si aplica), gestor de citas (Mendeley si el Syllabus lo menciona).
+- **Drive de clases** = carpeta `Clases/` del curso (de ahí se baja el material, incluido el de las clases autónomas). Mientras no exista la URL: marcador de posición `[URL Drive — carpeta Clases/ del curso · <Curso>]`, igual que el de Meet — nunca inventes un enlace de Drive.
+- **Grabaciones de los encuentros:** carpeta única para todos los cursos y periodos — https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing — y se buscan por el **nombre del evento**: «periodo - grupo - asignatura - sesión».
 
 **SLIDE 9 — IMPORTANTE**
 - Fechas críticas (apertura/cierre de cada corte o ACA), fecha oficial de cierre del periodo, canales de atención institucionales si el instructivo los trae.
@@ -142,15 +145,15 @@ En **todos** los cursos CUN de este workspace, la **primera sesión NO desarroll
 
 1. **El curso** — de qué se trata, cómo se trabaja, qué se llevan al final, acuerdos de trabajo.
 2. **El Docente** — quién acompaña el curso y cómo se le contacta (slide genérico «Docente», sin nombre propio en pantalla).
-3. **Los estudiantes** — rompehielos «Preséntate» en el Padlet oficial (QR + URL).
+3. **Los estudiantes** — rompehielos «Preséntate» (QR + URL). **La herramienta depende del tamaño del grupo, no es Padlet siempre:** hasta 20 estudiantes (solo Investigación 53339) el Padlet oficial; por encima de 20 (Proyecto I, Creatividad, TG2, TG3) un **formulario de Google** + las **encuestas y el Q&A nativos de Meet** para lo que pase en vivo. Con 100+ (TG3, 112 en una sola serie) **no se presentan todos**: se leen en voz alta 5 o 6 respuestas y el resto se ve en la pantalla de resumen del formulario. Fundamento y tabla completa en `.cursor/rules/cun-docente.mdc` → «Rompehielos según el tamaño del grupo».
 4. **Las ACAs** — qué se entrega en cada una, cuánto pesa y dónde se sube (**CDigital**). El enunciado completo y las fechas viven en `Clases/Recursos/ACAs/` y en la Presentación del Curso: **no** los dupliques en la deck.
 
 Consecuencias operativas (no negociables):
 
 - El título de la Sesión 01 es siempre **«Presentación del curso · docente · estudiantes · ACAs»** — no lleva el nombre de una unidad temática.
 - En `config/cursos/sesiones_cun.py` la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y un campo `"unidad_diferida"` que registra qué unidad del Syllabus se corre a **lectura autónoma** para retomarse al abrir la Sesión 02. **La unidad no se elimina del Syllabus**: se difiere y se deja escrita ahí para trazabilidad.
-- La deck la genera `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → Preséntate/Padlet → ACAs → acuerdos → autónomo → cierre). **No** escribas una deck de tema para la Sesión 01.
-- El guion docente de la Sesión 01 se redacta como **guion de encuadre**: cómo abrir el curso, cómo presentarse, cómo conducir el Padlet, cómo explicar las ACAs y los acuerdos. Sin fundamento teórico de una unidad temática.
+- La deck la genera `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → **Preséntate** → ACAs → acuerdos → autónomo → cierre). **No** escribas una deck de tema para la Sesión 01.
+- El guion docente de la Sesión 01 se redacta como **guion de encuadre**: cómo abrir el curso, cómo presentarse, **cómo conducir el rompehielos que le toca a ese curso** (Padlet si es de ≤ 20; formulario de Google + encuestas/Q&A de Meet si es más grande), cómo explicar las ACAs y los acuerdos. Sin fundamento teórico de una unidad temática.
 - El contenido curricular arranca en la **Sesión 02**, que abre retomando brevemente la lectura autónoma dejada en la Sesión 01.
 
 > ⭐ **REGLA DE ORO — escribe para un docente que NO SABE NADA del tema**, igual que en FESNA: antes del plan de clase, un "Fundamento Teórico para el Docente" completo (varios conceptos, cada uno con varios párrafos, al menos una tabla, analogías, errores frecuentes).
@@ -232,6 +235,9 @@ Una deck de sesión debe **bastarse a sí misma para exponer**: el docente proye
 7. **Sin relleno:** nada de introducciones o conclusiones no solicitadas.
 8. **Gobernanza distinta según asignatura:** antes de escribir cualquier cosa sobre "qué debe entregar el estudiante" o "qué corte es", confirma si la asignatura es de régimen AFI (Proyecto I/II) o de cortes Art. 52 (pregrado regular / Trabajo de Grado) — las reglas de equipos, plazos y formularios de registro son distintas entre ambas (ver los respectivos Manual del Docente).
 9. **Tutorías por grupo acordadas en la semana** («no hay atención espontánea sin cita» / `MSG_TUTORIAS_POR_GRUPO`): **solo Proyecto I (AFI)**. No inventar esa viñeta en TG2/TG3 ni en Creatividad/Investigación salvo que el syllabus lo diga.
+10. **Material → Drive de clases · entrega y nota → CDigital.** El encargo de una **clase autónoma** (festivo) se publica en la subcarpeta de esa sesión dentro del **Drive de clases** (`Clases/Sesion NN - <Tema>/`), **no** en CDigital. «Queda como clase autónoma con la actividad publicada en CDigital» está **derogado** (2026-08-11): si lo ves escrito en material existente, corrígelo en su sitio en vez de dejar las dos versiones.
+11. **Rompehielos según el tamaño del grupo, nunca «Padlet por defecto».** Hasta 20 (Investigación 53339) → Padlet oficial. Más de 20 (Proyecto I 50 · Creatividad 50 · TG2 50 · TG3 112) → **formulario de Google** + **encuestas y Q&A nativos de Meet**; con 100+ no se presentan todos (5 o 6 respuestas leídas en voz alta + pantalla de resumen). **No propongas Mentimeter ni Slido:** sus planes gratis cortan en 50 participantes/mes y en 100 con 3 encuestas — por debajo de estos cursos; el formulario de Google no tiene tope y ya viene con la licencia CUN.
+12. **Subject de los eventos de clase = `{periodo} - {grupos} - {Asignatura corta} - Sesion NN`** (el periodo va **primero**; sale por grupo de `config/cursos/carga_academica_2026.json`; TG3 lleva sus dos periodos unidos con `/`, igual que los códigos de grupo). Ese nombre es la clave con la que el estudiante encuentra la **grabación** en la carpeta común, así que **no cambies el patrón** sin cambiar también la consigna de búsqueda del material.
 
 ---
 

@@ -32,7 +32,7 @@ de `carga_academica` — decisión del docente del 2026-08-10 (antes se repetía
 
 Requiere: pip install python-pptx pillow
 """
-import os, re, datetime
+import csv, os, re, sys, datetime
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
@@ -67,7 +67,8 @@ LOGO = os.path.join(_ASSETS, "logo_cun_solo.png")   # wordmark limpio (sin sello
 LOGO_ANIV = os.path.join(_ASSETS, "logo_cun.png")   # versión con sello de aniversario, si se necesita
 GMAIL = os.path.join(_ASSETS, "gmail_icon.png")
 QR_PRESENTACION_ESTUDIANTES = os.path.join(_ASSETS, "qr_presentacion_estudiantes.png")
-# Tablero oficial rompehielos / Preséntate (los 5 cursos · Presentación del Curso = Sesión 01)
+# Tablero rompehielos / Preséntate. YA NO es «el mismo en los 5 cursos»: desde el
+# 2026-08-11 solo lo usan los grupos pequeños (ver `modo_rompehielos`).
 PADLET_PRESENTACION_URL = "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7"
 LINK_TEAL = RGBColor(0x00, 0x74, 0x33)  # enlaces en verde de marca CUN
 
@@ -396,29 +397,198 @@ def tutor_slide(prs, nombre, credenciales, correo, rol=None, idx=None):
     return s
 
 
-def icebreaker_qr_slide(prs, idx=None, consignas=None, sub=None, qr_path=None, padlet_url=None):
-    """Rompehielos: los estudiantes se presentan en el Padlet oficial (QR + URL).
+# ---------------------------------------------------------------------------
+# ROMPEHIELOS «PRESÉNTATE» — la forma la decide el TAMAÑO del grupo
+# ---------------------------------------------------------------------------
+# Decisión del docente (2026-08-11), con la matrícula real auditada en CDigital:
+#   Investigación 53339 = 20 · Proyecto I 54ES4 = 50 · Creatividad 54408 = 50 ·
+#   TG2 54448 = 50 · TG3 (54450 + 54466 + 54467) = 112 en UNA sola serie.
+#
+#   ≤ ICEBREAKER_MAX_MURO  → MURO de Padlet. Un muro de 20 notas se lee entero y todos
+#                            alcanzan a ser vistos, que es el punto del rompehielos.
+#   >  ICEBREAKER_MAX_MURO → FORMULARIO de Google (gratis, sin tope de participantes, ya
+#                            incluido en la licencia CUN: el estudiante entra con su
+#                            @cun.edu.co y no crea cuenta) + **encuestas y Q&A nativos de
+#                            Meet** para la parte en vivo. Con 50 —o con los 112 de TG3—
+#                            el muro no se alcanza a leer, y los planes gratis de
+#                            Mentimeter (50/mes) y Slido (100 · 3 encuestas) se quedan
+#                            justo por debajo de estos cursos.
+#
+# La elección NO se escribe curso por curso en los builds: `modo_rompehielos()` la deriva
+# de la matrícula, y `contar_estudiantes()` la cuenta de los roster descargados de
+# CDigital. Un curso sin roster completo cae al modo grande, que es el que no se rompe.
+ICEBREAKER_MAX_MURO = 20
+MODO_MURO = "muro"              # Padlet
+MODO_FORMULARIO = "formulario"  # Google Forms + encuestas/Q&A de Meet
+# Roster: `<carpeta de la asignatura>/<año>/<grupo>/Listado estudiantes (CDigital).csv`.
+# El año sale del `inicio` del curso; ROSTER_ANIO es solo el respaldo si el JSON no lo trae.
+ROSTER_ANIO = "2026"
+ROSTER_CSV = "Listado estudiantes (CDigital).csv"
+# Clave del enlace real del formulario en `config/cursos/carga_academica_2026.json`
+# → cursos.<key>.formulario_presentacion. Mismo contrato que `meet` y que `clases`:
+# fuente única, cadena vacía (o clave ausente) ⇒ el material muestra el placeholder.
+FORMULARIO_PRESENTACION_KEY = "formulario_presentacion"
 
-    En Presentación del Curso de los 5 cursos (= momento de Sesión 01 / encuadre).
-    URL canónica: PADLET_PRESENTACION_URL. No se duplica en la deck de Sesión 01.
+_CARGA_MOD = None
+_AVISADO_SIN_CURSO = False
+
+
+def _carga_academica():
+    """Módulo `config/cursos/carga_academica` (import perezoso). None si no está.
+
+    El motor no depende de la carga académica para dibujar: solo la consulta para
+    saber cuántos estudiantes tiene el curso y de dónde sale el enlace del formulario.
+    """
+    global _CARGA_MOD
+    if _CARGA_MOD is None:
+        import importlib
+        ruta = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
+        if ruta not in sys.path:
+            sys.path.insert(0, ruta)
+        try:
+            _CARGA_MOD = importlib.import_module("carga_academica")
+        except Exception:  # pragma: no cover — sin config el motor sigue dibujando
+            _CARGA_MOD = False
+    return _CARGA_MOD or None
+
+
+def _estudiantes_en_roster(path):
+    """Filas de estudiante del roster de CDigital. Devuelve -1 si el archivo no está.
+
+    El CSV descargado del aula trae `nombre,correo,rol`; se cuentan solo las filas con
+    rol de estudiante (el Profesor viene en la misma lista). Si el archivo no tiene
+    columna `rol` se cuenta toda fila con datos: es una aproximación por exceso, y
+    contar de más solo puede llevar al modo formulario, que es el que aguanta.
+    """
+    if not os.path.isfile(path):
+        return -1
+    n = 0
+    try:
+        with open(path, encoding="utf-8-sig", newline="") as f:
+            for fila in csv.DictReader(f):
+                campos = {(k or "").strip().lower(): (v or "").strip() for k, v in fila.items()}
+                rol = campos.get("rol", "")
+                if rol:
+                    if rol.lower().startswith("estudiante"):
+                        n += 1
+                elif campos.get("correo") or campos.get("nombre"):
+                    n += 1
+    except OSError:
+        return -1
+    return n
+
+
+def contar_estudiantes(course_key):
+    """Matrícula del curso = suma de los roster de CDigital de TODOS sus grupos.
+
+    Ruta de cada roster: ``<carpeta de la asignatura>/2026/<grupo>/Listado estudiantes
+    (CDigital).csv`` (los grupos salen de `carga_academica_2026.json`). TG3 suma sus
+    tres grupos porque corren en **una sola serie** de encuentros: el rompehielos lo
+    hacen juntos, así que el tamaño que importa es el de la serie.
+
+    Devuelve ``None`` cuando no se puede afirmar la matrícula completa —sin config, sin
+    grupos, o con el roster de algún grupo ausente—. Quien decide el modo trata ese
+    ``None`` como grupo grande.
+    """
+    carga = _carga_academica()
+    if carga is None or not course_key:
+        return None
+    try:
+        c = carga.curso(course_key)
+        grupos = list(c.get("groups") or [])
+        base = str(carga.course_dir(course_key))
+        anio = str(c.get("inicio") or "")[:4] or ROSTER_ANIO
+    except Exception:
+        return None
+    if not grupos:
+        return None
+    total = 0
+    for g in grupos:
+        n = _estudiantes_en_roster(os.path.join(base, anio, str(g), ROSTER_CSV))
+        if n < 0 and anio != ROSTER_ANIO:
+            n = _estudiantes_en_roster(os.path.join(base, ROSTER_ANIO, str(g), ROSTER_CSV))
+        if n < 0:
+            return None
+        total += n
+    return total
+
+
+def modo_rompehielos(course_key=None, n_estudiantes=None):
+    """`MODO_MURO` (Padlet) o `MODO_FORMULARIO` (Google Forms + Meet), según el tamaño.
+
+    `n_estudiantes` solo para forzar el cálculo en pruebas; en los builds se deja que lo
+    cuente `contar_estudiantes`. Sin matrícula conocida → formulario.
+    """
+    n = n_estudiantes if n_estudiantes is not None else contar_estudiantes(course_key)
+    if n is None:
+        return MODO_FORMULARIO
+    return MODO_MURO if n <= ICEBREAKER_MAX_MURO else MODO_FORMULARIO
+
+
+def usa_padlet(course_key):
+    """True si a ese curso le toca el muro de Padlet por tamaño de grupo."""
+    return modo_rompehielos(course_key) == MODO_MURO
+
+
+def formulario_presentacion_placeholder(curso_corto):
+    return f"[URL Formulario Preséntate — pendiente · {curso_corto}]"
+
+
+def formulario_presentacion_url(course_key, curso_corto=None):
+    """Enlace del formulario «Preséntate» del curso: el real si está en config, si no el
+    marcador de posición.
+
+    Mismo contrato que el Meet cuando falta la sala: la URL vive en
+    `carga_academica_2026.json` → cursos.<key>.formulario_presentacion y **no** se
+    escribe en los builds. Mientras el docente no cree el formulario, la clave está
+    vacía (o no existe) y en la slide se ve el placeholder, que es el aviso de que
+    falta. Uno por asignatura, para que la hoja de respuestas no mezcle cursos.
+    """
+    url = ""
+    corto = curso_corto or ""
+    carga = _carga_academica()
+    if carga is not None and course_key:
+        try:
+            c = carga.curso(course_key)
+            url = (c.get(FORMULARIO_PRESENTACION_KEY) or "").strip()
+            corto = curso_corto or (c.get("titulo_corto") or course_key)
+        except Exception:
+            url = ""
+    return url or formulario_presentacion_placeholder(corto or course_key or "el curso")
+
+
+def _qr_formulario(course_key):
+    """QR del formulario: el del curso si existe en assets, si no el genérico. '' si no hay.
+
+    No se genera aquí: mientras el formulario no tenga enlace real no hay nada que
+    codificar, y la slide muestra el marcador de posición del QR.
+    """
+    nombres = []
+    if course_key:
+        nombres.append(f"qr_formulario_presentacion_{course_key}.png")
+    nombres.append("qr_formulario_presentacion.png")
+    for nombre in nombres:
+        p = os.path.join(_ASSETS, nombre)
+        if os.path.exists(p):
+            return p
+    return ""
+
+
+def _icebreaker_render(prs, idx, sub, items, url, qr, size=14, qr_pendiente=None):
+    """Dibuja la slide del rompehielos (bullets a la izquierda + QR grande a la derecha).
+
+    `qr_pendiente`: si el QR todavía no existe **y se espera que no exista** (formulario
+    sin enlace), el texto que explica el pendiente; se pinta una tarjeta «QR pendiente»
+    en el mismo hueco. Sin ese texto, un QR ausente es un error de assets y se avisa.
     """
     s = blank(prs)
     bg_white(s)
-    url = padlet_url or PADLET_PRESENTACION_URL
-    top = title_block(s, "PRESÉNTATE — ROMPEHIELOS", sub or "Tablero colaborativo (Padlet)")
-    left_w = 6.4
-    items = consignas or [
-        f"**Escanea o abre:** {url}",
-        "En un post-it escribe: **nombre** + **expectativa del curso** o **tema de interés** (1 frase).",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ]
-    bullets(s, items, top=top + 0.15, left=MARGIN, width=left_w, size=14)
-    qr = qr_path or QR_PRESENTACION_ESTUDIANTES
+    top = title_block(s, "PRESÉNTATE — ROMPEHIELOS", sub)
+    bullets(s, items, top=top + 0.15, left=MARGIN, width=6.4, size=size)
     qr_size = 3.4
     qr_x = SW - MARGIN - qr_size
     qr_y = top + 0.25
-    if os.path.exists(qr):
+    if qr and os.path.exists(qr):
         rounded(s, qr_x - 0.12, qr_y - 0.12, qr_size + 0.24, qr_size + 0.85, ALT)
         s.shapes.add_picture(qr, Inches(qr_x), Inches(qr_y), width=Inches(qr_size), height=Inches(qr_size))
         cap = textbox(s, qr_x - 0.12, qr_y + qr_size + 0.02, qr_size + 0.24, 0.28)
@@ -429,11 +599,105 @@ def icebreaker_qr_slide(prs, idx=None, consignas=None, sub=None, qr_path=None, p
         up = url_box.paragraphs[0]
         up.alignment = PP_ALIGN.CENTER
         _run(up.add_run(), url, 9, VERDE, bold=True)
+    elif qr_pendiente:
+        rounded(s, qr_x - 0.12, qr_y - 0.12, qr_size + 0.24, qr_size + 0.85, ALT)
+        tf = textbox(s, qr_x + 0.15, qr_y + 0.9, qr_size - 0.3, 1.6, anchor=MSO_ANCHOR.MIDDLE)
+        p = tf.paragraphs[0]
+        p.alignment = PP_ALIGN.CENTER
+        _run(p.add_run(), "QR pendiente", 18, NAVY, bold=True)
+        p2 = tf.add_paragraph()
+        p2.alignment = PP_ALIGN.CENTER
+        p2.space_before = Pt(10)
+        _rich(p2, qr_pendiente, 12, GRAY)
+        url_box = textbox(s, qr_x - 0.12, qr_y + qr_size + 0.02, qr_size + 0.24, 0.7)
+        up = url_box.paragraphs[0]
+        up.alignment = PP_ALIGN.CENTER
+        _run(up.add_run(), url, 9, VERDE, bold=True)
     else:
         tf = textbox(s, qr_x, qr_y, qr_size, 1.2)
         _rich(tf.paragraphs[0], "⚠️ QR no encontrado en assets.", 14, RED, bold=True)
     footer_num(s, idx)
     return s
+
+
+def icebreaker_qr_slide(prs, idx=None, consignas=None, sub=None, qr_path=None,
+                        padlet_url=None, course_key=None, modo=None,
+                        n_estudiantes=None, pide=None, formulario_url=None):
+    """Rompehielos «Preséntate» de la Presentación del Curso (= momento de Sesión 01).
+
+    **Pase siempre `course_key`.** Con él, la slide que sale la decide el tamaño real del
+    grupo (ver `modo_rompehielos`): muro de Padlet hasta `ICEBREAKER_MAX_MURO`
+    estudiantes, formulario de Google por encima. Ningún build elige el modo a mano.
+
+    - `pide`: lo único que cambia entre cursos — qué se le pide al estudiante además del
+      nombre («**estado actual** del proyecto (1 frase) + expectativa de TG2»).
+    - `consignas`: reemplaza los bullets completos (escotilla de escape; si la usa, el
+      texto deja de seguir al modo y le toca mantenerlo a mano).
+    - `modo` / `n_estudiantes`: forzar la decisión (pruebas y casos puntuales).
+
+    Sin `course_key` no hay tamaño que consultar y se sirve el muro, que es lo que hacía
+    esta función antes de 2026-08-11; se avisa por consola una sola vez.
+    """
+    global _AVISADO_SIN_CURSO
+    n = n_estudiantes
+    if n is None and course_key:
+        n = contar_estudiantes(course_key)
+    if modo is None:
+        if not course_key and n is None:
+            if not _AVISADO_SIN_CURSO:
+                _AVISADO_SIN_CURSO = True
+                print(
+                    "[cun_slides_engine] AVISO: icebreaker_qr_slide sin `course_key`; se "
+                    "sirve el muro de Padlet por compatibilidad. Pase course_key para que "
+                    "la forma del rompehielos la decida el tamaño del grupo.",
+                    file=sys.stderr,
+                )
+            modo = MODO_MURO
+        else:
+            modo = modo_rompehielos(course_key, n)
+
+    if modo == MODO_MURO:
+        url = padlet_url or PADLET_PRESENTACION_URL
+        pide_txt = pide or "**expectativa del curso** o **tema de interés** (1 frase)"
+        # El número del grupo va en las viñetas, no también en el subtítulo.
+        sub_txt = sub or "Tablero colaborativo (Padlet)"
+        items = consignas or [
+            f"**Escanea el QR o abre:** {url}",
+            f"En un post-it escribe: **tu nombre** + {pide_txt}.",
+            (f"**Ahora, ~7 min.** Somos {n}: el muro se lee entero y nadie queda sin ser visto."
+             if n is not None else "**Ahora, ~7 min.** El muro se lee entero: nadie queda sin ser visto."),
+            "Después las leemos en voz alta y agrupamos expectativas — sin juzgar: de ahí salen "
+            "los ejemplos con los que trabajamos el resto del curso.",
+        ]
+        return _icebreaker_render(prs, idx, sub_txt, items, url,
+                                  qr_path or QR_PRESENTACION_ESTUDIANTES, size=14)
+
+    # ---- Modo formulario (grupos de más de ICEBREAKER_MAX_MURO) ----
+    url = formulario_url or formulario_presentacion_url(course_key)
+    pendiente = not url.lower().startswith("http")
+    pide_txt = pide or "**expectativa del curso** o **tema de interés** (1 frase)"
+    sub_txt = sub or "Formulario de Google · encuestas y Q&A en el propio Meet"
+    items = consignas or [
+        f"**Escanea el QR o abre:** {url}",
+        f"**Qué respondes (1 min):** tu **nombre** + {pide_txt}. Entras con tu correo "
+        "**@cun.edu.co**: no hay que crear cuenta ni instalar nada.",
+        (f"**Ahora, ~3 min.** Somos {n}: no alcanzamos a presentarnos uno por uno, "
+         "así que el formulario nos ordena."
+         if n is not None else "**Ahora, ~3 min.** El formulario ordena las presentaciones."),
+        "**Con eso, hoy:** el Docente lee en voz alta **5 o 6 respuestas** y proyecta el "
+        "**resumen** del formulario — ahí quedan todas a la vista, no solo las leídas.",
+        "**En vivo:** las preguntas y las votaciones van por la **encuesta** y el **Q&A** del "
+        "propio Meet; no hay que abrir ninguna otra plataforma.",
+        "**Después:** las respuestas quedan en una hoja que el Docente usa todo el periodo "
+        "(equipos, ejemplos y seguimiento).",
+    ]
+    # Sin enlace real no hay nada que codificar en un QR: se muestra el pendiente.
+    qr = qr_path or ("" if pendiente else _qr_formulario(course_key))
+    return _icebreaker_render(
+        prs, idx, sub_txt, items, url, qr, size=13,
+        qr_pendiente=("Se genera cuando el formulario tenga enlace real."
+                      if pendiente else None),
+    )
 
 def link_callout_slide(prs, title, headline, url, notes=None, idx=None):
     """Slide para remarcar UN enlace obligatorio: caja grande verde + URL en tipografía grande."""

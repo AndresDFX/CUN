@@ -17,9 +17,13 @@ Reglas:
   tutor_slide genérico («Docente» + perfil + correo); CONTENIDO en UNA slide
   (Sesión N — tema; helper contenido_sesiones_slide); recursos/cierre sin grupo ni nombre propio.
 - Si el día de clase cae en festivo colombiano → la sesión queda como CLASE AUTÓNOMA
-  (sigue en el calendario, marcada; no se cancela).
+  (sigue en el calendario, marcada; no se cancela). El material y la actividad de esa
+  clase quedan en la carpeta de la sesión dentro del **Drive de clases** (`Clases/`),
+  no en CDigital: CDigital es donde se ENTREGA y donde están las NOTAS.
 - Eventos de Calendar (encuentros): Subject corto =
-  `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo; sin tema largo).
+  `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo; sin
+  tema largo). El periodo va delante porque el nombre del evento es la clave de
+  búsqueda en la carpeta única de grabaciones, que acumula todos los periodos.
   Fuente de fechas/temas (Description): `sesiones_cun.py`.
 - Horarios confirmados por el docente:
     TG2  → lunes 5:00–6:00 pm
@@ -58,6 +62,7 @@ from sesiones_cun import (  # noqa: E402
 )
 from carga_academica import (  # noqa: E402
     bold_var,
+    clases_url,
     course_dir as _course_dir,
     cover_meta_lines,
     docente as _docente_pair,
@@ -93,6 +98,22 @@ RUTA_PLANTILLA_APA = "Recursos/Plantilla_APA_CUN_Proyecto de grado.docx"
 URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 DIAS = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]
 DIAS_LARGO = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+
+# ---------------------------------------------------------------------------
+# CLASE AUTÓNOMA (festivo en día de clase) — dónde vive el material
+# ---------------------------------------------------------------------------
+# Decisión del docente (2026-08-11): el material y la actividad de la clase autónoma
+# quedan en la **carpeta de esa sesión dentro del Drive de clases** —la carpeta
+# `Clases/` que el Docente comparte, la misma que describe el LEEME del estudiante—,
+# **no** en CDigital. Antes todo el material decía «actividad en el CDigital».
+# Los dos roles no se mezclan: el Drive tiene el MATERIAL; CDigital sigue siendo donde
+# se ENTREGA y donde están las NOTAS. Enlace de la carpeta: `clases_url(<clave>)`
+# (carga_academica_2026.json → cursos.<key>.clases; vacío ⇒ marcador de posición).
+CARPETA_SESION_DRIVE = "`Clases/Sesion NN - …/`"
+AVISO_AUTONOMA_DRIVE = (
+    "la actividad y el material quedan en la **carpeta de esa sesión en el Drive de "
+    f"clases** ({CARPETA_SESION_DRIVE}); la entrega y la nota siguen en **CDigital**"
+)
 
 # Flujo principal vs. respaldo. Los nombres se importan de su dueño (el builder del .gs)
 # para que no haya dos verdades sobre cómo se llama el archivo que el docente debe abrir.
@@ -443,6 +464,10 @@ def recursos_items(course_key: str, titulo_corto: str, *extra: str) -> list[str]
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(cdigital_url(course_key))}",
         f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet(course_key, titulo_corto))}",
+        # Carpeta `Clases/` compartida en Drive: material de cada sesión y, cuando el día
+        # de clase es festivo, la actividad de la clase autónoma.
+        f"**Material de clases (Drive):** {bold_var(clases_url(course_key, titulo_corto))} — "
+        "aquí está el material de cada sesión, incluida la de una **clase autónoma**.",
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
@@ -456,9 +481,16 @@ def add_tutor(prs, idx: int = 2):
     tutor_slide(prs, "Docente", DOCENTE_CREDS, DOCENTE_CORREO, idx=idx)
 
 
-def add_icebreaker(prs, idx: int = 3, consignas=None):
-    """Rompehielos con QR (Presentación del Curso · los 5 cursos)."""
-    icebreaker_qr_slide(prs, idx=idx, consignas=consignas)
+def add_icebreaker(prs, course_key: str, idx: int = 3, *, pide: str | None = None):
+    """Rompehielos «Preséntate» de la Presentación del Curso (los 5 cursos).
+
+    La FORMA no se elige aquí: `icebreaker_qr_slide` cuenta la matrícula real del curso
+    (roster de CDigital) y sirve el muro de Padlet en los grupos de hasta
+    `ICEBREAKER_MAX_MURO` estudiantes y el formulario de Google —con encuestas y Q&A de
+    Meet en vivo— por encima. De este lado viaja solo lo que sí cambia entre cursos:
+    `pide`, lo que se le pide al estudiante además del nombre.
+    """
+    icebreaker_qr_slide(prs, idx=idx, course_key=course_key, pide=pide)
 
 # Festivos Colombia 2026 relevantes al periodo ago–nov (incl. trasladados a lunes)
 FESTIVOS_2026 = {
@@ -611,12 +643,10 @@ def build_investigacion(out: Path):
         ),
     )
     add_tutor(prs, idx=2)
-    add_icebreaker(prs, idx=3, consignas=[
-        f"**Escanea o abre:** {PADLET_PRESENTACION_URL}",
-        "Post-it: **nombre** + **expectativa del curso** + **idea de tema** para el artículo (1 frase).",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ])
+    add_icebreaker(
+        prs, "investigacion", idx=3,
+        pide="**expectativa del curso** + una **idea de tema** para el artículo (1 frase)",
+    )
     content_slide(prs, "¿QUÉ ES ESTA ASIGNATURA?", [
         "Aplicar el **método científico** a una temática de tu entorno (empresarial o vivencial).",
         "Se enmarca en las **6 líneas estratégicas de Ingeniería** (IoT, Big Data, IA, servicios/cloud-FinTech, aplicaciones, telemática).",
@@ -651,7 +681,8 @@ def build_investigacion(out: Path):
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_inv_h)} por Google Meet. El enlace se publica en el aula virtual."),
-        ("aclaracion", "Si el día de clase es festivo colombiano, la sesión NO se cancela: se cursa como **clase autónoma** (material/actividad en el CDigital)."),
+        ("aclaracion", "Si el día de clase es festivo colombiano, la sesión NO se cancela: se cursa "
+                       f"como **clase autónoma** y {AVISO_AUTONOMA_DRIVE}."),
         ("advertencia", "El producto final se construye desde la semana 1 — no es una entrega sorpresa al cierre."),
     ], idx=_i)
     _i += 1
@@ -684,12 +715,10 @@ def build_creatividad(out: Path):
         ),
     )
     add_tutor(prs, idx=2)
-    add_icebreaker(prs, idx=3, consignas=[
-        f"**Escanea o abre:** {PADLET_PRESENTACION_URL}",
-        "Post-it: **nombre** + **expectativa del curso** + **tema/problema** de interés (1 frase).",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ])
+    add_icebreaker(
+        prs, "creatividad", idx=3,
+        pide="**expectativa del curso** + un **tema o problema** que te interese (1 frase)",
+    )
     content_slide(prs, "¿QUÉ ES ESTA ASIGNATURA?", [
         "Identificar tus habilidades de **creatividad e innovación** y aplicarlas a mejorar una realidad observada (producto, proceso u organización).",
         "Hilo conductor: una **Propuesta de Innovación** anunciada desde la semana 1.",
@@ -718,7 +747,8 @@ def build_creatividad(out: Path):
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_cre_h)} por Google Meet."),
-        ("aclaracion", "Festivo en día de clase = **clase autónoma** (actividad en el CDigital), no cancelación."),
+        ("aclaracion", "Festivo en día de clase = **clase autónoma**, no cancelación: "
+                       f"{AVISO_AUTONOMA_DRIVE}."),
         ("advertencia", "La Propuesta de Innovación se explica desde el día 1 y se valida/sustenta hacia la unidad 6."),
     ], idx=_i)
     _i += 1
@@ -751,12 +781,10 @@ def build_tg2(out: Path):
         ),
     )
     add_tutor(prs, idx=2)
-    add_icebreaker(prs, idx=3, consignas=[
-        f"**Escanea o abre:** {PADLET_PRESENTACION_URL}",
-        "Post-it: **nombre** + **estado actual** del proyecto (1 frase) + expectativa de TG2.",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ])
+    add_icebreaker(
+        prs, "tg2", idx=3,
+        pide="el **estado actual** de tu proyecto (1 frase) + tu **expectativa de TG2**",
+    )
     content_slide(prs, "¿QUÉ ES TRABAJO DE GRADO 2?", [
         "Espacio de **opción de grado** (pregrado): avance consolidado del proyecto/artículo antes de la culminación en Trabajo de Grado 3.",
         "No se rige por el instructivo AFI de Especializaciones (Proyecto I/II).",
@@ -794,7 +822,8 @@ def build_tg2(out: Path):
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_tg2_h)} por Google Meet. El Meet es el mismo enlace para toda la serie."),
-        ("aclaracion", "Lunes festivo = **clase autónoma** (guía/actividad en el CDigital), no se pierde el hilo del proyecto."),
+        ("aclaracion", "Lunes festivo = **clase autónoma**, no se pierde el hilo del proyecto: "
+                       f"{AVISO_AUTONOMA_DRIVE}."),
         ("advertencia", "Hasta cargar el Syllabus SIAC, cualquier detalle de rubrica/pesos se verifica en el aula virtual."),
     ], idx=_i)
     _i += 1
@@ -824,12 +853,10 @@ def build_tg3(out: Path):
         ),
     )
     add_tutor(prs, idx=2)
-    add_icebreaker(prs, idx=3, consignas=[
-        f"**Escanea o abre:** {PADLET_PRESENTACION_URL}",
-        "Post-it: **nombre** + **tema del artículo** (1 frase) + expectativa del semestre.",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ])
+    add_icebreaker(
+        prs, "tg3", idx=3,
+        pide="el **tema de tu artículo** (1 frase) + tu **expectativa del semestre**",
+    )
     content_slide(prs, "¿QUÉ ES TRABAJO DE GRADO 3?", [
         "Culminación de la **opción de grado**: artículo resultado de investigación (o obra-creación) + sustentación.",
         "Prerrequisito: Opción de grado II.",
@@ -881,7 +908,9 @@ def build_tg3(out: Path):
             "info",
             f"Encuentro: {bold_var(_tg3_h)}. El Meet es el mismo enlace para toda la serie.",
         ),
-        ("aclaracion", "Martes festivo = **clase autónoma** (avance guiado en el CDigital)."),
+        ("aclaracion", "Martes festivo = **clase autónoma**: el avance guiado queda en la **carpeta "
+                       f"de esa sesión en el Drive de clases** ({CARPETA_SESION_DRIVE}); la entrega "
+                       "y la nota siguen en **CDigital**."),
         ("advertencia", "Antes de la sustentación: verificación antiplagio (unidad 12) y póster listo."),
     ], idx=_i)
     _i += 1
@@ -910,8 +939,9 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
                          out_dir: Path, end: date, *, con_ics: bool = True,
                          grupos_evento: list[str] | None = None):
     """Genera CSV + ICS + markdown para un conjunto de grupos que comparten horario.
-    Pregrado: sin Guests/ATTENDEE. Festivo = clase autónoma (sigue en calendar).
-    Subject: `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo).
+    Pregrado: sin Guests/ATTENDEE. Festivo = clase autónoma (sigue en calendar; su
+    material va a la carpeta de la sesión en el Drive de clases, no a CDigital).
+    Subject: `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo).
 
     `con_ics=False` escribe **solo** el markdown de referencia del grupo. Es lo que se hace
     con los tres grupos de TG3: sus encuentros son UNA sola serie (`2026/_combinado_todos/`),
@@ -979,15 +1009,19 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
 
         # Description corta (2–4 líneas). Location vacío sin Meet real.
         if auto:
+            # El material de la clase autónoma vive en la carpeta de la sesión del Drive
+            # de clases; CDigital es donde se entrega y donde salen las notas.
             if ses:
                 desc = (
                     f"Sesión {int(ses['n']):02d} — {ses['titulo']} (autónoma)\n"
-                    f"Festivo: {fest_name}. Actividad en CDigital."
+                    f"Festivo: {fest_name}. Actividad en la carpeta de la sesión "
+                    "(Drive de clases); la entrega va por CDigital."
                 )
             else:
                 desc = (
                     f"Clase autónoma — {fest_name}\n"
-                    "Actividad en CDigital."
+                    "Actividad en la carpeta de la sesión (Drive de clases); "
+                    "la entrega va por CDigital."
                 )
             location = ""
             tipo = f"Autónoma ({fest_name})"
@@ -1079,9 +1113,13 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
         f"`{gs_nombre}` (Apps Script), que es lo único que añade a los estudiantes como "
         "invitados y pone el Meet. Paso a paso en "
         f"`{LEEME_ENCUENTROS}`.",
-        "> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` "
-        "(fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.",
-        "> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).",
+        "> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` "
+        "(fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo. "
+        "El periodo va delante porque el nombre del evento es la clave de búsqueda en la carpeta "
+        "de grabaciones, que acumula todos los periodos.",
+        "> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa "
+        "como **clase autónoma** (no se cancela): la actividad queda en la carpeta de esa sesión "
+        "en el **Drive de clases**, y la entrega y la nota siguen en **CDigital**.",
         "",
         "| # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |",
         "|---|---|---|---|---|",
@@ -1165,9 +1203,12 @@ def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
         f"Grupos de este periodo: **{', '.join(course['groups'])}**",
         f"Docente: **{DOCENTE}** · {DOCENTE_CORREO}",
         "",
-        "> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma** (actividad en CDigital).",
+        "> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma**: "
+        "la actividad queda en la carpeta de esa sesión del **Drive de clases** "
+        f"({CARPETA_SESION_DRIVE}), y la entrega y la nota siguen en **CDigital**.",
         "> Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.",
-        "> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.",
+        "> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` "
+        "(+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.",
         "",
     ]
     # Nota de cierres distintos (TG3)
@@ -1585,8 +1626,9 @@ def write_calendario_proyecto1(course: dict, course_dir: Path) -> None:
         f"> **Regla de festivo (AFI — distinta de pregrado):** {REGLA_FESTIVO_AFI} "
         "Por eso el catálogo **no numera** los días de clase festivos: aparecen en la "
         "tabla de sesiones sin número, y **no** generan evento en el CSV/ICS.",
-        "> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: "
-        "`sesiones_cun.py`). El CSV/ICS del grupo —con invitados, coanfitrión y el enlace "
+        "> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (fuente: "
+        "`sesiones_cun.py`; el periodo va delante porque el nombre del evento es la clave de "
+        "búsqueda en la carpeta de grabaciones). El CSV/ICS del grupo —con invitados, coanfitrión y el enlace "
         "único de Meet de la serie— lo genera "
         "`python config/slides/build_calendar_proyecto1_54es4.py`, **no** este build.",
         f"> **CDigital (aula del curso):** {cdigital_url(key)} · "
@@ -1769,7 +1811,9 @@ def update_informacion(course: dict):
             f"Créditos / horas: {course['creditos']}\n"
             f"{cupo_ln}"
             "\n"
-            "Regla: si la fecha de clase cae en festivo colombiano, la sesión se cursa como clase autónoma.\n"
+            "Regla: si la fecha de clase cae en festivo colombiano, la sesión se cursa como clase\n"
+            "autónoma: el material queda en la carpeta de esa sesión en el Drive de clases\n"
+            "(Clases/Sesion NN - …/) y la entrega y la nota siguen en CDigital.\n"
             "Fuente de grupos/bloque: config/cursos/carga_academica_2026.json\n"
             "Ver calendario e importación a Calendar en esta carpeta.\n"
         )

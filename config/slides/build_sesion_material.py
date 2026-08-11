@@ -186,7 +186,9 @@ FUNDAMENTOS_S1 = {
 
         ### 2. Tu rol en el primer encuentro
         Diagnosticar el estado real del proyecto de cada estudiante/equipo y fijar el
-        acuerdo pedagógico del encuentro (festivo = clase autónoma en CDigital).
+        acuerdo pedagógico del encuentro (festivo = **clase autónoma**: la actividad
+        queda en la carpeta de esa sesión del **Drive de clases**, y lo que se entregue
+        sigue yendo a CDigital).
         """),
 
     "tg3": textwrap.dedent("""\
@@ -221,14 +223,23 @@ def _paths(course, ses):
     return pptx, md, label, ses_dir
 
 
-# Prompt del post-it en Padlet (Presentación del Curso = Sesión 01; no se duplica en deck S01)
-PADLET_PROMPTS = {
+# Qué se le pide al estudiante en el rompehielos de la Presentación del Curso
+# (= Sesión 01; no se duplica en la deck de sesión).
+ROMPEHIELOS_PROMPTS = {
     "proyecto1": "expectativa del curso + **tema tentativo** de investigación (1 frase)",
     "investigacion": "expectativa del curso + **idea de tema** para el artículo (1 frase)",
     "tg2": "**estado actual** del proyecto (1 frase) + expectativa de TG2",
     "tg3": "**tema del artículo** (1 frase) + expectativa del semestre",
     "creatividad": "expectativa del curso + **tema/problema** de interés",
 }
+
+# --- Rompehielos según el TAMAÑO del grupo -----------------------------------------
+# La forma del rompehielos NO se elige aquí: la decide `cun_slides_engine` a partir de la
+# matrícula real (roster de CDigital) — muro de Padlet hasta ICEBREAKER_MAX_MURO
+# estudiantes, formulario de Google + encuestas y Q&A de Meet por encima. De ahí salen
+# `usa_padlet()` y `formulario_presentacion_url()`, que este módulo solo consume.
+# Hoy: Investigación 53339 = 20 (muro) · Proyecto I 54ES4 = 50 · Creatividad 54408 = 50 ·
+# TG2 54448 = 50 · TG3 (54450 + 54466 + 54467) = 112 en una sola serie (formulario).
 
 
 # Qué hace el estudiante con cada ítem, según su TIPO real de actividad en el aula.
@@ -323,7 +334,12 @@ def build_pptx_presentacion(course, ses, pptx):
     idx += 1
     tutor_slide(prs, "Docente", DOCENTE_CREDS, DOCENTE_CORREO, idx=idx)
     idx += 1
-    icebreaker_qr_slide(prs, idx=idx, sub="Preséntate: quién eres y qué esperas del curso")
+    # Muro o formulario lo decide el motor con la matrícula real: aquí solo se dice de
+    # qué curso es y qué se le pide al estudiante además del nombre.
+    icebreaker_qr_slide(
+        prs, idx=idx, course_key=key,
+        pide=ROMPEHIELOS_PROMPTS.get(key, "expectativa + tema de interés"),
+    )
     idx += 1
     # CÓMO SE EVALÚA: los ítems REALES del libro de calificaciones del aula (quices,
     # parciales, ACA Final, auto y coevaluación) con su tipo y su peso, leídos del
@@ -489,8 +505,8 @@ def build_guion_md(course, ses, label: str) -> str:
         3. Cerrar la clase sin tarea observable para la siguiente sesión.
         """)
 
-    is_s01_encuadre = n == 1 and course["key"] in PADLET_PROMPTS
-    board_prompt = PADLET_PROMPTS.get(course["key"], "expectativa + tema de interés")
+    is_s01_encuadre = n == 1 and course["key"] in ROMPEHIELOS_PROMPTS
+    board_prompt = ROMPEHIELOS_PROMPTS.get(course["key"], "expectativa + tema de interés")
     act_slide = 5
     cont_slide = 6
     close_slide = 7
@@ -533,7 +549,8 @@ def build_guion_md(course, ses, label: str) -> str:
 | **7** | Cierre | Despedida |"""
 
     board_block = ""
-    if is_s01_encuadre:
+    rompehielos_check = ""
+    if is_s01_encuadre and usa_padlet(course["key"]):
         board_block = f"""
 ### Rompehielos Padlet — en Presentación del Curso (no se repite aquí)
 La **Sesión 01 es la de presentación del curso**. El rompehielos “Preséntate” (QR + Padlet) se hace con la **Presentación del Curso** (slide PRESÉNTATE — ROMPEHIELOS), no como un segundo momento en esta deck.
@@ -541,13 +558,42 @@ La **Sesión 01 es la de presentación del curso**. El rompehielos “Preséntat
 2. URL oficial: **{PADLET_PRESENTACION_URL}**
 3. Consigna: post-it con nombre + {board_prompt}.
 4. ~7 min; leer 3–4 notas. Luego continuar con **esta** `Presentacion.pptx` de Sesión 01 (fundamentos / taller).
+
+> El muro sigue aquí porque este grupo tiene **20 estudiantes**: 20 notas se leen enteras en pantalla. En los cursos de más de 20 el rompehielos es un **formulario**, no un muro.
 """
+        rompehielos_check = (
+            f"- [ ] Abrí la **Presentación del Curso** (slide Preséntate / Padlet): {PADLET_PRESENTACION_URL}\n"
+        )
+    elif is_s01_encuadre:
+        _form = formulario_presentacion_url(course["key"])
+        # TG3 son 112 en UNA sola serie (54450 + 54466 + 54467): la regla del grupo grande
+        # se vuelve tajante, porque una ronda de presentaciones se come la hora entera.
+        _nota_tg3 = (
+            "\n> **En TG3 (112 estudiantes en una sola serie) NO se presentan todos:** "
+            "treinta segundos por persona son casi una hora. Se leen **5 o 6** respuestas "
+            "—una por grupo (54450 · 54466 · 54467), dos del estado mayoritario y una que "
+            "se pueda conectar con otra— y el resto se ve en la pantalla de resumen. "
+            "Ninguna respuesta delicada se lee en público: eso va por mensaje privado.\n"
+            if course["key"] == "tg3" else ""
+        )
+        board_block = f"""
+### Rompehielos — formulario del curso (en Presentación del Curso, no se repite aquí)
+La **Sesión 01 es la de presentación del curso**. Con este grupo —**más de 20 estudiantes**— el rompehielos **no es un muro**: es un **formulario de Google** que se responde en cuatro minutos, más las **encuestas** y el **Q&A** que ya trae Meet para la parte en vivo. Un muro con 50 notas nadie lo lee entero y el efecto se pierde: la gente escribe y no se siente vista.
+1. Abrir `Clases/Presentacion del Curso - ….pptx` → slide **Preséntate**.
+2. Enlace del formulario: **{_form}** — se **pega en el chat del Meet**, dos veces: al abrir la fase y otra vez al minuto 3. No dependa del QR: con estos grupos la mitad entra desde el computador.
+3. Consigna: nombre + {board_prompt}. **4 minutos**, y el tiempo se dice en voz alta.
+4. Mientras responden, lance una **encuesta de Meet** de una sola pregunta cerrada y proyecte el resultado: eso da la foto del grupo sin leer cincuenta respuestas.
+5. Cierre leyendo **5 o 6 respuestas** escogidas (variedad, no las cinco primeras que llegaron) y proyectando la pestaña **Respuestas → Resumen** del formulario: ahí quedan todas a la vista.
+6. Deje el **Q&A de Meet** abierto todo el encuentro y responda al final las preguntas más votadas.
+7. La hoja de respuestas **no se bota**: sirve todo el periodo para sacar ejemplos, armar equipos y ver quién nunca respondió.
+{_nota_tg3}"""
+        rompehielos_check = (
+            f"- [ ] **Formulario Preséntate** probado y el enlace listo para el chat: {_form}\n"
+            "- [ ] **Encuesta de Meet** ya redactada (una pregunta) y **Q&A** activado en la sala\n"
+            "- [ ] La slide PRESÉNTATE de la Presentación del Curso ya muestra el **formulario** (si le quedó el QR viejo del Padlet, regenere la deck; en clase, el enlace del chat es el que manda)\n"
+        )
 
     post_clase_block = _post_clase_proyecto1() if course["key"] == "proyecto1" else ""
-    padlet_check = (
-        f"- [ ] Abrí la **Presentación del Curso** (slide Preséntate / Padlet): {PADLET_PRESENTACION_URL}\n"
-        if is_s01_encuadre else ""
-    )
 
     return f"""### GUIÓN DOCENTE — Sesión {n:02d}: {titulo}
 
@@ -601,7 +647,7 @@ La **Sesión 01 es la de presentación del curso**. El rompehielos “Preséntat
 ✅ **Checklist del docente antes de clase**
 - [ ] Leí el fundamento teórico de arriba
 - [ ] Tengo la presentación `{rel_pptx}`
-{padlet_check}- [ ] Publiqué materiales en CDigital
+{rompehielos_check}- [ ] Publiqué el material de la sesión en `Clases/{label}/` (**Drive de clases**) · CDigital queda para la **entrega** y las **notas**
 - [ ] {"Recordé el link de tutorías " + LINK_TUTORIAS if course["key"] == "proyecto1" else "Preparé el ejemplo/modelación del tema de hoy"}
 - [ ] Meet listo: {meet}
 {post_clase_block}

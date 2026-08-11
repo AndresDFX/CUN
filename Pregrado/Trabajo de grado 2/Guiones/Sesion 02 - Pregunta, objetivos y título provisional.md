@@ -108,7 +108,7 @@ Pregunta ‘¿en qué medida un clasificador supervisado reduce el tiempo de ate
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Buenas tardes. Sesión 02. La semana pasada dejamos el proyecto diagnosticado y el tema delimitado; y el lunes pasado, al ser festivo, tuvieron clase autónoma, así que espero que hayan avanzado su matriz. Hoy le ponemos el esqueleto al avance: **pregunta, objetivos y título**.”
+> “Buenas tardes. Sesión 02. La semana pasada dejamos el proyecto diagnosticado y el tema delimitado; y el lunes pasado, al ser festivo, tuvieron clase autónoma con la actividad que les dejé en la carpeta de esa sesión, en el Drive de clases, así que espero que hayan avanzado su matriz. Hoy le ponemos el esqueleto al avance: **pregunta, objetivos y título**.”
 
 > “**OBJETIVOS.** Salimos con tres cosas escritas: una pregunta investigable, un objetivo general con tres específicos, y un título provisional. Tengan abierto su `S01` con el tema delimitado, porque de ahí sale todo.”
 
@@ -172,7 +172,7 @@ Pregunta ‘¿en qué medida un clasificador supervisado reduce el tiempo de ate
 🧩 **Entregable de hoy**
 1. En Google Docs (`S02_PreguntaObjetivos_Apellido`): pregunta investigable + objetivo general + 3 específicos con verbos medibles + título provisional ≤ 21 palabras, con coherencia vertical.
 2. Archivo en CDigital: `S02_PreguntaObjetivos_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

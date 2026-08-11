@@ -2,26 +2,26 @@
 **Grupo 54448** · Horario: **Lunes, 5:00 pm – 6:00 pm (1 hora sincrónica)**
 
 > **Este archivo es de consulta: no crea eventos.** Los encuentros se crean con `PRINCIPAL - Crear encuentros con invitados.gs` (Apps Script), que es lo único que añade a los estudiantes como invitados y pone el Meet. Paso a paso en `LEEME - Crear los eventos de Calendar.md`.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.
-> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo. El periodo va delante porque el nombre del evento es la clave de búsqueda en la carpeta de grabaciones, que acumula todos los periodos.
+> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela): la actividad queda en la carpeta de esa sesión en el **Drive de clases**, y la entrega y la nota siguen en **CDigital**.
 
 | # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |
 |---|---|---|---|---|
-| 1 | 14/08/2026 (vie) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 01 | — |
-| 2 | 17/08/2026 (lun) | Autónoma (Asunción de la Virgen) | 54448 - Trabajo de Grado 2 - Clase autonoma (Asunción de la Virgen) | — |
-| 3 | 24/08/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 02 | — |
-| 4 | 31/08/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 03 | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
-| 5 | 07/09/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 04 | — |
-| 6 | 14/09/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 05 | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
-| 7 | 21/09/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 06 | — |
-| 8 | 28/09/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 07 | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
-| 9 | 05/10/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 08 | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
-| 10 | 12/10/2026 (lun) | Autónoma (Día de la Raza) | 54448 - Trabajo de Grado 2 - Clase autonoma (Día de la Raza) | — |
-| 11 | 19/10/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 09 | — |
-| 12 | 26/10/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 10 | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
-| 13 | 02/11/2026 (lun) | Autónoma (Todos los Santos) | 54448 - Trabajo de Grado 2 - Clase autonoma (Todos los Santos) | — |
-| 14 | 09/11/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 11 | — |
-| 15 | 16/11/2026 (lun) | Autónoma (Independencia de Cartagena) | 54448 - Trabajo de Grado 2 - Clase autonoma (Independencia de Cartagena) | — |
+| 1 | 14/08/2026 (vie) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 01 | — |
+| 2 | 17/08/2026 (lun) | Autónoma (Asunción de la Virgen) | 26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Asunción de la Virgen) | — |
+| 3 | 24/08/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 02 | — |
+| 4 | 31/08/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 03 | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
+| 5 | 07/09/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 04 | — |
+| 6 | 14/09/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 05 | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
+| 7 | 21/09/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 06 | — |
+| 8 | 28/09/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 07 | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
+| 9 | 05/10/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 08 | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
+| 10 | 12/10/2026 (lun) | Autónoma (Día de la Raza) | 26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Día de la Raza) | — |
+| 11 | 19/10/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 09 | — |
+| 12 | 26/10/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 10 | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
+| 13 | 02/11/2026 (lun) | Autónoma (Todos los Santos) | 26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Todos los Santos) | — |
+| 14 | 09/11/2026 (lun) | Sincrónica | 26V04 - 54448 - Trabajo de Grado 2 - Sesion 11 | — |
+| 15 | 16/11/2026 (lun) | Autónoma (Independencia de Cartagena) | 26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Independencia de Cartagena) | — |
 
 ## Fechas institucionales
 - **54448** (26V04): inicio 10/08/2026 · recepción 14/11/2026 · cierre **22/11/2026**

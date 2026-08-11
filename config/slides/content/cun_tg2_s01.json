@@ -1,6 +1,22 @@
 [
   {
     "type": "bullets",
+    "title": "Preséntate: el formulario del curso (2 minutos)",
+    "bullets": [
+      "Somos **50 matriculados** en una hora semanal: un muro de notas no se alcanza a leer y termina siendo ruido.",
+      "El rompehielos es un **formulario de Google**: el Docente lo pega en el chat del Meet y queda en el LEEME de `Clases/`.",
+      "  **Enlace:** [URL Formulario «Preséntate» — pendiente]",
+      "  Se entra con su correo **@cun.edu.co**: no hay que crear cuenta ni instalar nada.",
+      "**Qué responde** (2–3 minutos, una sola vez): nombre, **estado actual de su proyecto** en una frase y qué espera de TG2.",
+      "  Diga de qué tema viene el proyecto: eso permite juntar en el taller a quienes están escribiendo sobre cosas parecidas.",
+      "**Cuándo:** en los primeros minutos del encuentro. Luego se proyecta el resumen y se leen en voz alta cinco o seis respuestas.",
+      "**En vivo, la participación va por el Meet:** encuestas y Q&A de la sala, que aguantan al grupo completo.",
+      "Queda abierto hasta la Sesión 02 para quien no alcance hoy."
+    ],
+    "note": "El Docente conserva esa hoja todo el periodo: le dice en qué punto llega cada quien y a quién hay que apurar en la primera mitad del curso."
+  },
+  {
+    "type": "bullets",
     "title": "Cómo trabajamos: TG2 es un taller de escritura, no una clase magistral",
     "bullets": [
       "**Una hora sincrónica por semana** y once encuentros. Usted **no empieza de cero**: trae un proyecto y lo lleva a un avance consolidado.",
@@ -72,7 +88,7 @@
         "Definiciones operativas y contexto concreto"
       ]
     ],
-    "note": "Cuando un lunes sea **festivo**, esa sesión es **clase autónoma**: no se cancela, la actividad queda publicada en CDigital.",
+    "note": "Cuando un lunes sea **festivo**, esa sesión es **clase autónoma**: no se cancela. La actividad queda en la carpeta de esa sesión en el **Drive de clases** (`Clases/Sesion NN - …/`) y lo que haya que entregar se sube, como siempre, a CDigital.",
     "col_w": [
       1.1,
       5.4,
@@ -145,7 +161,7 @@
       "  **Ritmo:** una sección escrita por sesión, subida antes del siguiente encuentro.",
       "  **Formato:** plantilla APA CUN, abierta en Google Docs.",
       "  **Canal:** CDigital para todo lo que se entrega y se califica.",
-      "  **Festivos:** lunes festivo = **clase autónoma**, con actividad publicada.",
+      "  **Festivos:** lunes festivo = **clase autónoma**. La actividad queda en la carpeta de esa sesión en el **Drive de clases**; la entrega sigue siendo en CDigital.",
       "  **Retroalimentación:** el Docente comenta sobre lo entregado; sin entrega no hay retroalimentación posible.",
       "No es un trámite: es lo que se invoca cuando alguien dice “yo no sabía”. Léalo antes de aceptarlo."
     ]

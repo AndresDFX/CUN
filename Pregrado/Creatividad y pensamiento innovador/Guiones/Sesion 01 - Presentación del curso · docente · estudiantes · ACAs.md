@@ -33,26 +33,27 @@
 | **1** | Portada — SESIÓN 01, PRESENTACIÓN DEL CURSO | Apertura |
 | **2** | AGENDA DE HOY | Encuadre de la hora |
 | **3** | Docente | Presentación del Docente |
-| **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | Rompehielos |
+| **4** | PRESÉNTATE — ROMPEHIELOS (formulario del curso) | Rompehielos |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | Pesos y entregas |
-| **6** | Cómo trabajamos: una hora juntos, el resto por su cuenta | Metodología / aula invertida |
-| **7** | Mapa del curso: las 7 sesiones de un vistazo | Recorrido del curso |
-| **8** | Qué se llevan al final: la Propuesta de Innovación | Producto del curso |
-| **9** | Las tres ACAs: qué se entrega en cada corte | Detalle de cada ACA |
-| **10** | Qué separa un entregable fuerte de uno flojo | Criterio de calidad |
-| **11** | Cómo se entrega: paso a paso en CDigital | Procedimiento de entrega |
-| **12** | Integridad académica: la línea que no se cruza | Plagio y APA 7 |
-| **13** | IA generativa: se usa, se declara y se verifica | Regla de uso de IA |
-| **14** | Herramientas del curso: gratis y desde el navegador | Alistamiento técnico |
-| **15** | Cómo pedir ayuda (y recibir respuesta pronto) | Canales y tiempos |
-| **16** | Acuerdos de convivencia del encuentro | Cámara, micrófono, foro |
-| **17** | Para la Sesión 02: lectura autónoma y qué traer | Encargo autónomo |
-| **18** | Para la Sesión 02: lectura autónoma y qué traer (cont.) | |
-| **19** | Preguntas del primer día | Dudas típicas |
-| **20** | Preguntas del primer día (cont.) | |
-| **21** | ACUERDOS DE TRABAJO | Cierre de reglas |
-| **22** | PARA LA PRÓXIMA SESIÓN | Tarea concreta |
-| **23** | Cierre — Sesión 01 | Despedida |
+| **6** | Preséntate: el formulario del curso (2 minutos) | |
+| **7** | Cómo trabajamos: una hora juntos, el resto por su cuenta | Metodología / aula invertida |
+| **8** | Mapa del curso: las 7 sesiones de un vistazo | Recorrido del curso |
+| **9** | Qué se llevan al final: la Propuesta de Innovación | Producto del curso |
+| **10** | Las tres ACAs: qué se entrega en cada corte | Detalle de cada ACA |
+| **11** | Qué separa un entregable fuerte de uno flojo | Criterio de calidad |
+| **12** | Cómo se entrega: paso a paso en CDigital | Procedimiento de entrega |
+| **13** | Integridad académica: la línea que no se cruza | Plagio y APA 7 |
+| **14** | IA generativa: se usa, se declara y se verifica | Regla de uso de IA |
+| **15** | Herramientas del curso: gratis y desde el navegador | Alistamiento técnico |
+| **16** | Cómo pedir ayuda (y recibir respuesta pronto) | Canales y tiempos |
+| **17** | Acuerdos de convivencia del encuentro | Cámara, micrófono, foro |
+| **18** | Para la Sesión 02: lectura autónoma y qué traer | Encargo autónomo |
+| **19** | Para la Sesión 02: lectura autónoma y qué traer (cont.) | |
+| **20** | Preguntas del primer día | Dudas típicas |
+| **21** | Preguntas del primer día (cont.) | |
+| **22** | ACUERDOS DE TRABAJO | Cierre de reglas |
+| **23** | PARA LA PRÓXIMA SESIÓN | Tarea concreta |
+| **24** | Cierre — Sesión 01 | Despedida |
 
 🎯 **Objetivos de la sesión (encuadre — no hay tema del Syllabus)**
 1. Que el estudiante sepa **qué produce este curso**: una **Propuesta de Innovación** propia, no un ensayo.
@@ -70,7 +71,8 @@
 | Qué abrir / tener listo | Dónde está | Para qué momento |
 | :--- | :--- | :--- |
 | **Aula del curso en CDigital**, con el anuncio de bienvenida publicado y los espacios de entrega visibles | Campus institucional (login CUN) | Fases 5, 7 y 8 |
-| **Padlet oficial** del rompehielos, abierto en una pestaña y con la URL copiada al portapapeles | https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7 | Fase 3 |
+| **Formulario «Preséntate»** creado y probado desde otra cuenta, con el enlace copiado al portapapeles y la hoja de respuestas abierta al lado | [URL Formulario Preséntate — pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR] | Fase 3 |
+| **Encuesta de Meet** ya redactada (una sola pregunta cerrada) y **Q&A** activado en la sala | Panel *Actividades* del Meet | Fase 3 y todo el encuentro |
 | **Libro de calificaciones** del aula, abierto en otra pestaña | Campus institucional (login CUN) | Fase 5 — de ahí salen los nombres, los tipos y los pesos que va a anunciar |
 | **Enunciado de la ACA Final** (única entrega documental) | `Clases/Recursos/ACAs/` | Fase 5 |
 | **Plantilla APA CUN**, ya abierta en **Google Docs** (no en Word de escritorio) | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Fase 5 |
@@ -93,7 +95,7 @@
 | :--- | :---: | :--- |
 | 1️⃣ Apertura y bienvenida | 5 | min 00:00 – 05:00 |
 | 2️⃣ Quién es el Docente | 4 | min 05:00 – 09:00 |
-| 3️⃣ Rompehielos Padlet — que se presenten ellos | 9 | min 09:00 – 18:00 |
+| 3️⃣ Rompehielos: formulario del curso + encuesta en vivo | 9 | min 09:00 – 18:00 |
 | 4️⃣ Cómo trabajamos, recorrido del curso y su producto final | 11 | min 18:00 – 29:00 |
 | 5️⃣ Cómo se evalúa el curso (quices, parciales y ACA Final) y cómo se entrega | 12 | min 29:00 – 41:00 |
 | 6️⃣ Integridad académica y uso de IA | 7 | min 41:00 – 48:00 |
@@ -106,13 +108,13 @@
 
 | Ampliación | Minutos extra | Cómo se hace |
 | :--- | :---: | :--- |
-| Padlet leído completo, no tres notas | +8 | Leer en voz alta todas las notas y agrupar temas parecidos en pantalla |
+| Respuestas del formulario trabajadas en pantalla, no cinco leídas | +8 | Proyectar la hoja de respuestas, agrupar en vivo los problemas parecidos y ponerle nombre a cada grupo |
 | Recorrido lento del **mapa del curso** (slide 7) | +10 | Preguntar sesión por sesión: “¿qué creen que sale de esta?” |
 | **Plantilla APA CUN** en vivo | +12 | Compartir pantalla, crear la copia en Google Docs y mostrar dónde escribe cada quien |
 | **Enunciado de la ACA Final** leído entero con el checklist | +10 | Abrirlo desde `Clases/Recursos/ACAs/` y marcar criterio por criterio |
 | Mini-ejercicio “mi problema en tres líneas” escrito en clase | +15 | Cada quien escribe; dos voluntarios leen; el Docente solo pregunta “¿a quién le pasa?” |
 
-> Lo que no alcance a hacer **no se elimina: se convierte en trabajo autónomo** y se anuncia como tal en CDigital.
+> Lo que no alcance a hacer **no se elimina: se convierte en trabajo autónomo**. La actividad queda en la carpeta de esa sesión, en el **Drive de clases** —la carpeta `Clases/` que ellos ya tienen compartida—, y se anuncia en CDigital, que es donde miran las fechas y las notas.
 
 ---
 
@@ -149,31 +151,36 @@
 
 ---
 
-
-![Padlet — Preséntate](Capturas/Sesion 01/s01_padlet.png)
-
-> **En pantalla:** Tablero oficial del rompehielos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7. ~5 min de escritura.
-
-#### 3️⃣ Rompehielos Padlet — que se presenten ellos (~9 min) — Protagonista: Estudiantes
-**Slides:** 4 (PRESÉNTATE — QR + Padlet)
+#### 3️⃣ Rompehielos: formulario del curso + encuesta en vivo (~9 min) — Protagonista: Estudiantes
+**Slides:** 4 (PRESÉNTATE — formulario del curso)
 
 **Objetivo de la fase:** romper el silencio del primer día y, de paso, tener por escrito los intereses del grupo (le sirven de ejemplo todo el semestre).
 
+> **Por qué formulario y no muro:** en este curso hay **50 matriculados**. Cincuenta notas en un tablero no alcanzan a leerse en clase, y el estudiante que escribe y nunca es leído se desconecta el primer día. El formulario recoge lo mismo, ordenado y en una hoja que usted reutiliza todo el semestre; lo vivo lo ponen la **encuesta** y el **Q&A** de Meet, que aguantan el grupo completo, no piden instalar nada y entran con la cuenta **@cun.edu.co**.
+
 **GUION LITERAL:**
-> “**Slide 4 — PRESÉNTATE.** Ahora los escucho a ustedes, pero por escrito, que es más rápido que veinte presentaciones habladas. Escaneen el **QR** de la pantalla o abran este enlace, que también les pego en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7.”
+> “**Slide 4 — PRESÉNTATE.** Ahora los escucho a ustedes, pero por escrito, que con cincuenta personas es mucho más rápido que cincuenta presentaciones habladas. Les acabo de pegar en el chat el **formulario del curso**: ábranlo ahí mismo — [URL Formulario Preséntate — pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR].”
 
-> “Publiquen **un solo post-it** con tres cosas: (1) su **nombre**; (2) **una expectativa** de este curso —qué quieren llevarse—; y (3) **un tema o problema que les interese**, algo que hayan visto que funciona mal en su trabajo, en su barrio o aquí mismo en la universidad. Sirve una línea. No busquen que suene inteligente: busquen que sea verdad. Tienen **cinco minutos** y yo los voy leyendo en voz alta.”
+> “Son tres preguntas y se responde en **cuatro minutos**: (1) su **nombre**; (2) **una expectativa** de este curso —qué quieren llevarse—; y (3) **un tema o problema que les interese**, algo que hayan visto que funciona mal en su trabajo, en su barrio o aquí mismo en la universidad. Una línea basta. No busquen que suene inteligente: busquen que sea verdad.”
 
-**Cómo conducirlo (esto es lo que hace que funcione):**
-1. Proyecte el tablero mientras escriben: ver aparecer notas ajenas destraba a los que dudan.
-2. Lea en voz alta **tres o cuatro** notas, sin juzgar ninguna, y conecte dos que se parezcan: “miren, dos personas dijeron algo de tiempo perdido en trámites”.
-3. Cierre nombrando lo que ve: “tenemos gente de sistemas, gente que trabaja y gente que viene de otro semestre; eso ayuda, porque los problemas buenos salen de contextos distintos”.
+> “Y mientras responden, contestemos una cosa rápida entre todos.” [Lance la **encuesta de Meet**: *“¿De dónde va a salir su problema? — (1) mi trabajo · (2) la universidad · (3) mi barrio o mi casa · (4) todavía no sé”*.] “Miren la pantalla: esa es la foto del curso. El que votó ‘todavía no sé’ está en el lugar correcto: para eso son las próximas semanas.”
 
-**Si nadie escribe** (pasa, sobre todo en el primer encuentro virtual):
-- **Escriba usted el primer post-it** en vivo, con su nombre y un problema real suyo. El tablero vacío paraliza; el tablero con una nota se llena solo.
+**Cómo conducirlo (esto es lo que hace que funcione con 50):**
+1. **Minuto 0–1:** pegue el enlace en el chat y dígalo en voz alta; repítalo al minuto 3, porque el chat del primer día se llena y el mensaje se entierra. No dependa del QR: la mitad está conectada desde el computador.
+2. **Minuto 1–5:** ellos responden. Usted no llena el silencio con discurso: lanza la **encuesta de Meet** y proyecta el resultado en vivo.
+3. **Minuto 5–7:** abra la pestaña **Respuestas → Resumen** del formulario y **proyéctela**. Ahí están los cincuenta, con sus gráficas ya hechas. Ese es el momento en que el grupo se ve a sí mismo sin que nadie tenga que hablar.
+4. **Minuto 7–9:** lea en voz alta **cinco o seis respuestas**, escogidas, no las cinco primeras que llegaron: dos del tipo de problema más repetido, dos que se parezcan entre sí para poder conectarlas (“miren, dos personas hablaron de tiempo perdido en trámites”) y una rara que valga la pena. Nombre a la persona y devuélvale una frase.
+5. **Cierre nombrando lo que ve:** “tenemos gente de sistemas, gente que trabaja y gente que viene de otro semestre; eso ayuda, porque los problemas buenos salen de contextos distintos”.
+6. **Deje el Q&A de Meet abierto** todo el encuentro y dígalo: “lo que les quede sonando, escríbanlo ahí y al final respondo las más votadas”. Con cincuenta personas, el Q&A ordena lo que el chat desordena.
+
+**Si el formulario no despega** (pasa, sobre todo en el primer encuentro virtual):
+- **Proyecte el contador de respuestas subiendo:** “vamos en cuatro de cincuenta, esperamos un minuto”. Ver el número crecer arrastra más que repetir la consigna.
 - Baje el costo de entrada: “no tiene que ser el tema definitivo, ni tiene que ser original; puede cambiar la próxima semana”.
-- Nombre a dos o tres personas directamente y con amabilidad: “Camila, ¿qué escribiste? Yo lo pego por ti si quieres”.
-- Si aun así no pasa nada, **no alargue**: pida que lo publiquen antes de la Sesión 02 y siga. Un rompehielos que se estira diez minutos en silencio hace más daño que uno corto.
+- Si alguien dice que no le abre, pegue el enlace otra vez y aclare que **se entra con la cuenta institucional y no hay que registrarse en nada**.
+- Nombre a dos o tres personas con amabilidad: “Camila, ¿cuál sería el suyo? Yo lo escribo por usted si quiere”.
+- Si aun así no se mueve, **no alargue**: el formulario queda abierto toda la semana, se recuerda en el cierre y usted revisa la hoja antes de la Sesión 02. Un rompehielos estirado diez minutos en silencio hace más daño que uno corto.
+
+**Después de clase, la hoja de respuestas no se bota:** de ahí salen los ejemplos de las próximas sesiones, los dúos con problemas parecidos y la lista de quién no respondió.
 
 ---
 
@@ -181,15 +188,15 @@
 **Slides:** 6 (CÓMO TRABAJAMOS) → 7 (MAPA DEL CURSO) → 8 (QUÉ SE LLEVAN AL FINAL)
 
 **GUION LITERAL:**
-> “**Slide 6 — Cómo trabajamos.** Esta materia son dos créditos: alrededor de 32 horas conmigo y **64 horas suyas**. Léanlo otra vez: el doble del tiempo lo pone usted, fuera de esta sala. No lo digo para asustar, lo digo para que nadie crea que esta hora semanal es el curso completo.”
+> “**Slide 7 — Cómo trabajamos.** Esta materia son dos créditos: alrededor de 32 horas conmigo y **64 horas suyas**. Léanlo otra vez: el doble del tiempo lo pone usted, fuera de esta sala. No lo digo para asustar, lo digo para que nadie crea que esta hora semanal es el curso completo.”
 
-> “Como la hora es corta, trabajamos en **aula invertida**: el material de cada unidad queda en **CDigital** y ustedes lo leen **antes**. La hora de encuentro no la voy a gastar leyéndoles diapositivas: la vamos a gastar **aplicando** eso a su propia propuesta. Traigan siempre su documento de trabajo abierto; aquí se trabaja sobre lo que ya está escrito, no sobre lo que uno recuerda.”
+> “Como la hora es corta, trabajamos en **aula invertida**: el material de cada unidad queda en la carpeta de esa sesión, en el **Drive de clases** que les comparto, y ustedes lo leen **antes**. La hora de encuentro no la voy a gastar leyéndoles diapositivas: la vamos a gastar **aplicando** eso a su propia propuesta. Traigan siempre su documento de trabajo abierto; aquí se trabaja sobre lo que ya está escrito, no sobre lo que uno recuerda.”
 
-> “**Slide 7 — Mapa del curso.** Son siete encuentros. Hoy encuadre; la próxima, Design Thinking; luego el Manual de Oslo, los tipos de innovación, la validación con Canvas y MVP, la vigilancia tecnológica y, al final, el ecosistema y el pitch. Fíjense en la tercera columna: **cada sesión deja un pedazo del mismo documento**. Ninguna es un taller suelto.”
+> “**Slide 8 — Mapa del curso.** Son siete encuentros. Hoy encuadre; la próxima, Design Thinking; luego el Manual de Oslo, los tipos de innovación, la validación con Canvas y MVP, la vigilancia tecnológica y, al final, el ecosistema y el pitch. Fíjense en la tercera columna: **cada sesión deja un pedazo del mismo documento**. Ninguna es un taller suelto.”
 
 > “Van a notar que el mapa tiene ocho unidades y solo siete encuentros. Las dos primeras —la Propuesta de Innovación y el bloque de creatividad e inteligencia emocional— quedan como **lectura autónoma** y las retomamos al abrir la Sesión 02. Al final de la clase les digo exactamente qué leer.”
 
-> “**Slide 8 — Qué se llevan al final.** El producto es una **Propuesta de Innovación** de ocho a doce páginas más un pitch de una página, que responde en orden: problema, usuario, propuesta de valor, tipo de innovación, validación, vigilancia y siguiente paso. Y una advertencia sincera: si al terminar solo tienen un archivo para la nota, desperdiciaron el semestre. Esto les sirve para una entrevista de trabajo, para proponer una mejora en la empresa donde están, o como semilla de su opción de grado.”
+> “**Slide 9 — Qué se llevan al final.** El producto es una **Propuesta de Innovación** de ocho a doce páginas más un pitch de una página, que responde en orden: problema, usuario, propuesta de valor, tipo de innovación, validación, vigilancia y siguiente paso. Y una advertencia sincera: si al terminar solo tienen un archivo para la nota, desperdiciaron el semestre. Esto les sirve para una entrevista de trabajo, para proponer una mejora en la empresa donde están, o como semilla de su opción de grado.”
 
 **Qué hacer:**
 1. (3 min) Insistir en la proporción 32/64 horas: es la expectativa que evita el reclamo del corte 3.
@@ -208,11 +215,11 @@
 
 > “Y lo más importante de hoy, anótenlo: los quices y los parciales **caen en día de clase** y **cierran ese mismo día**. El primero es el **Quiz 1**, y cierra en la **próxima sesión**. El que falte ese día no lo recupera. Las **fechas exactas no las dicto de memoria**: están en cada ítem de CDigital y en la Presentación del Curso; ábranlas hoy y pónganse alarma.”
 
-> “**Slide 9 — qué se entrega en cada corte.** El hilo del curso no cambia: en el primer corte trabajan la **ficha del problema** —real, observable y de alguien concreto—; en el segundo, la **propuesta tipificada** con FODA, Canvas y MVP, **validada** y no solo descrita; y en el tercero la **propuesta consolidada** con vigilancia, entidades de apoyo y pitch. La diferencia es cómo se califica: ese avance se evalúa en los **cuestionarios** de cada corte y se recoge, completo, en la **ACA Final**. Nada de lo que escriben se pierde: se acumula en ese documento.”
+> “**Slide 10 — qué se entrega en cada corte.** El hilo del curso no cambia: en el primer corte trabajan la **ficha del problema** —real, observable y de alguien concreto—; en el segundo, la **propuesta tipificada** con FODA, Canvas y MVP, **validada** y no solo descrita; y en el tercero la **propuesta consolidada** con vigilancia, entidades de apoyo y pitch. La diferencia es cómo se califica: ese avance se evalúa en los **cuestionarios** de cada corte y se recoge, completo, en la **ACA Final**. Nada de lo que escriben se pierde: se acumula en ese documento.”
 
-> “**Slide 10 — Qué separa un entregable fuerte de uno flojo.** Léanla completa esta semana. Resumo la columna izquierda: usuario genérico, problema deducido de la solución que ya eligieron, evidencia tipo ‘todo el mundo sabe que’, fuentes copiadas de un blog sin autor y un documento escrito la noche anterior. Yo no evalúo **cuánto** escribieron: evalúo si **se entiende, se sostiene y avanzó** desde el corte anterior.”
+> “**Slide 11 — Qué separa un entregable fuerte de uno flojo.** Léanla completa esta semana. Resumo la columna izquierda: usuario genérico, problema deducido de la solución que ya eligieron, evidencia tipo ‘todo el mundo sabe que’, fuentes copiadas de un blog sin autor y un documento escrito la noche anterior. Yo no evalúo **cuánto** escribieron: evalúo si **se entiende, se sostiene y avanzó** desde el corte anterior.”
 
-> “**Slide 11 — Cómo se entrega.** Seis pasos y ninguno es opcional: escriben en la **plantilla APA CUN** abierta en **Google Docs** —no necesitan Office instalado—, revisan el checklist del enunciado, exportan a **PDF**, nombran el archivo **CRE_ACAFinal_Apellido**, lo suben al espacio del corte en **CDigital** y **verifican que abra** desde la plataforma. Un archivo corrupto cuenta como no entregado.”
+> “**Slide 12 — Cómo se entrega.** Seis pasos y ninguno es opcional: escriben en la **plantilla APA CUN** abierta en **Google Docs** —no necesitan Office instalado—, revisan el checklist del enunciado, exportan a **PDF**, nombran el archivo **CRE_ACAFinal_Apellido**, lo suben al espacio del corte en **CDigital** y **verifican que abra** desde la plataforma. Un archivo corrupto cuenta como no entregado.”
 
 > “Y la regla que más disgustos evita: **entrega oficial es CDigital**. No recibo trabajos por correo, ni por WhatsApp, ni por mensaje privado. Si se les complica una fecha, hablamos **antes** del cierre, no después.”
 
@@ -232,11 +239,11 @@
 **Slides:** 12 (INTEGRIDAD ACADÉMICA) → 13 (IA GENERATIVA)
 
 **GUION LITERAL:**
-> “**Slide 12.** Todo lo que no sea suyo se **cita en APA 7**: texto, datos, imágenes, código y también las ideas que resumieron con sus palabras. Citar no les resta mérito; demuestra que leyeron. Cuenta como plagio copiar y pegar sin fuente, parafrasear sin citar, traducir un texto ajeno y presentarlo como propio, o entregar un trabajo que hizo otra persona.”
+> “**Slide 13.** Todo lo que no sea suyo se **cita en APA 7**: texto, datos, imágenes, código y también las ideas que resumieron con sus palabras. Citar no les resta mérito; demuestra que leyeron. Cuenta como plagio copiar y pegar sin fuente, parafrasear sin citar, traducir un texto ajeno y presentarlo como propio, o entregar un trabajo que hizo otra persona.”
 
 > “Sean conscientes de una cosa: si aparece plagio, **esto no se arregla entre ustedes y yo**. Sigue el conducto que fija el Reglamento Estudiantil de la CUN. Por eso les pido que pregunten antes, no que expliquen después: nadie ha perdido puntos por preguntar cómo se cita.”
 
-> “**Slide 13 — IA generativa.** En este curso la IA **no está prohibida: está regulada**. Tres reglas. Primera: **declárenla** en una nota corta al final del documento —qué herramienta, para qué y qué hicieron ustedes con la salida—. Declararlo no baja la nota; ocultarlo sí es una falta. Segunda: **verifiquen toda cita** que les dé; el error número uno son las referencias inventadas, autor y año que suenan perfectos y no existen. Si no lograron abrir el documento original, esa fuente no entra.”
+> “**Slide 14 — IA generativa.** En este curso la IA **no está prohibida: está regulada**. Tres reglas. Primera: **declárenla** en una nota corta al final del documento —qué herramienta, para qué y qué hicieron ustedes con la salida—. Declararlo no baja la nota; ocultarlo sí es una falta. Segunda: **verifiquen toda cita** que les dé; el error número uno son las referencias inventadas, autor y año que suenan perfectos y no existen. Si no lograron abrir el documento original, esa fuente no entra.”
 
 > “Tercera, y es la importante: la IA **no puede hacer lo que este curso evalúa**. No puede observar a un usuario real, no puede elegir su problema y no puede defender su criterio. Un texto impecable sobre un problema que ustedes nunca miraron se cae en la primera pregunta que yo haga. Ustedes firman el entregable: responden por cada frase.”
 
@@ -250,15 +257,15 @@
 **Slides:** 14 (HERRAMIENTAS) → 15 (CÓMO PEDIR AYUDA) → 16 (CONVIVENCIA) → 19 (ACUERDOS DE TRABAJO)
 
 **GUION LITERAL:**
-> “**Slide 14 — Herramientas.** Todas gratis y todas desde el navegador: CDigital para material y entregas; Google Docs y Slides para escribir; Padlet para tableros; Excalidraw para bocetos; Canvanizer para el Canvas del corte 2; Scholar, SciELO y Redalyc para buscar; ZoteroBib para armar las referencias en APA 7 sin instalar nada. **Nada de pagar ni de instalar.** Si una herramienta les pide tarjeta, no es la que estamos pidiendo.”
+> “**Slide 15 — Herramientas.** Todas gratis y todas desde el navegador: CDigital para las entregas y las notas; el **Drive de clases** para el material de cada sesión; Google Docs y Slides para escribir; Excalidraw para bocetos; Canvanizer para el Canvas del corte 2; Scholar, SciELO y Redalyc para buscar; ZoteroBib para armar las referencias en APA 7 sin instalar nada. **Nada de pagar ni de instalar.** Si una herramienta les pide tarjeta, no es la que estamos pidiendo.”
 
-> “**Slide 15 — Cómo pedir ayuda.** Tres canales, en este orden. En el encuentro, los últimos minutos son para dudas y casi nadie los usa. En el **foro de CDigital**, las dudas que le sirven a todo el grupo: formato, entrega, alcance de la **ACA Final**; ahí respondo y la respuesta queda para los demás. Por **correo institucional**, lo personal. Asunto sugerido: **EI004, su nombre y el tema en cuatro palabras**. Respondo en días hábiles, normalmente entre 24 y 48 horas; no hay atención de madrugada ni domingo.”
+> “**Slide 16 — Cómo pedir ayuda.** Tres canales, en este orden. En el encuentro, los últimos minutos son para dudas y casi nadie los usa. En el **foro de CDigital**, las dudas que le sirven a todo el grupo: formato, entrega, alcance de la **ACA Final**; ahí respondo y la respuesta queda para los demás. Por **correo institucional**, lo personal. Asunto sugerido: **EI004, su nombre y el tema en cuatro palabras**. Respondo en días hábiles, normalmente entre 24 y 48 horas; no hay atención de madrugada ni domingo.”
 
 > “Y una petición concreta: pregunten **la duda puntual**. ‘No entendí nada’ no se puede responder. ‘No sé si mi usuario es el estudiante o el laboratorista’ sí se responde en dos líneas.”
 
-> “**Slide 16 — Convivencia.** Empezamos a la hora en punto. Nombre real en la sala. Micrófono cerrado por defecto y abierto para participar; **cámara bienvenida pero no obligatoria** —si no pueden, participen por el chat—. Lo que no funciona es estar conectado y ausente. Aquí se piensa en voz alta y se muestran borradores a medio hacer: **ninguna idea se ridiculiza**; las ideas se critican con criterio, a las personas no. Y si el encuentro se graba, lo aviso al inicio y la grabación queda en CDigital.”
+> “**Slide 17 — Convivencia.** Empezamos a la hora en punto. Nombre real en la sala. Micrófono cerrado por defecto y abierto para participar; **cámara bienvenida pero no obligatoria** —si no pueden, participen por el chat—. Lo que no funciona es estar conectado y ausente. Aquí se piensa en voz alta y se muestran borradores a medio hacer: **ninguna idea se ridiculiza**; las ideas se critican con criterio, a las personas no. Y si el encuentro se graba, lo aviso al inicio y la grabación queda en CDigital.”
 
-> “**Slide 21 — Acuerdos de trabajo.** Son los tres que ya dijimos, juntos: la entrega es en CDigital, se trae el avance escrito a cada encuentro, y se cita siempre en APA 7.”
+> “**Slide 22 — Acuerdos de trabajo.** Son los tres que ya dijimos, juntos: la entrega es en CDigital, se trae el avance escrito a cada encuentro, y se cita siempre en APA 7.”
 
 **Qué hacer:**
 1. (3 min) Recorrer herramientas y pedirles que abran CDigital **ahora**, en otra pestaña, para confirmar que entran.
@@ -271,15 +278,15 @@
 **Slides:** 17 (PARA LA SESIÓN 02) → 18 (PREGUNTAS DEL PRIMER DÍA) → 20 (PARA LA PRÓXIMA SESIÓN) → 21 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 17 — Para la Sesión 02.** Cuatro cosas, y son cortas. Primera: la **lectura autónoma obligatoria**, unidades **U1 y U2** del Syllabus —Propuesta de Innovación, y creatividad e inteligencia emocional—; el material está en CDigital. Las retomamos en los primeros minutos de la próxima sesión: las repasamos, no las dictamos completas. Léanlas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**”
+> “**Slide 18 — Para la Sesión 02.** Cuatro cosas, y son cortas. Primera: la **lectura autónoma obligatoria**, unidades **U1 y U2** del Syllabus —Propuesta de Innovación, y creatividad e inteligencia emocional—; el material está en la carpeta de esta sesión, en el **Drive de clases** (el enlace les llega en el correo de bienvenida). Las retomamos en los primeros minutos de la próxima sesión: las repasamos, no las dictamos completas. Léanlas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**”
 
 > “Segunda: entren al aula y **abran el Quiz 1** —el primer cuestionario, que cierra en la próxima sesión— para ver cuántas preguntas tiene y cuánto tiempo da; y abran el **enunciado de la ACA Final** y léanlo entero, con checklist. Tercera: **traigan escrito**, con tres líneas basta, un problema real que les moleste, **a quién** le pasa y **dónde** lo vieron. No me traigan una solución; tráiganme un problema: la solución es el trabajo del resto del curso. Cuarta: creen su documento en Google Docs con la plantilla APA CUN y déjenlo listo.”
 
-> “**Slide 19 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
+> “**Slide 20 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
 
-> “**Slide 22 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, **Quiz 1** ubicado en el aula, enunciado de la **ACA Final** leído, y su problema escrito. Lo pego también en el chat y lo publico hoy mismo en CDigital.”
+> “**Slide 23 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, **Quiz 1** ubicado en el aula, enunciado de la **ACA Final** leído, y su problema escrito. Lo pego también en el chat y lo anuncio hoy mismo en CDigital; el material para hacerlo está en la carpeta de esta sesión, en el Drive de clases.”
 
-> “**Slide 23 — Cierre.** Hoy no vimos tema y salimos sabiendo cómo se trabaja, qué se entrega y con quién cuentan. La **Sesión 02** arranca el contenido: *Creatividad e innovación en I+D, Design Thinking y técnicas*, y se trabaja sobre lo que ustedes traigan. Mismo enlace de siempre. Nos vemos.”
+> “**Slide 24 — Cierre.** Hoy no vimos tema y salimos sabiendo cómo se trabaja, qué se entrega y con quién cuentan. La **Sesión 02** arranca el contenido: *Creatividad e innovación en I+D, Design Thinking y técnicas*, y se trabaja sobre lo que ustedes traigan. Mismo enlace de siempre. Nos vemos.”
 
 **Qué hacer:**
 1. (2 min) Dictar el encargo autónomo y **escribirlo también en el chat** (lo que solo se dice, se pierde).
@@ -300,7 +307,7 @@
 | “¿Necesito saber programar o diseñar?” | “No. Aquí se evalúa criterio: problema real, propuesta clara y evidencia. La tecnología es un medio, no el requisito.” |
 | “¿Cuándo es la primera entrega?” | “Lo primero que se califica no es una entrega escrita: es el **Quiz 1**, un cuestionario que cierra en la próxima sesión. La fecha exacta está en el ítem de CDigital; ábralo hoy y anótela.” |
 | “¿Los quices y parciales son en clase?” | “Sí: son cuestionarios de CDigital que cierran el mismo día de la sesión y por eso les reservo tiempo en clase. Faltar ese día es perder el ítem.” |
-| “¿Y si no puedo conectarme a un encuentro?” | “Avise antes, revise el material en CDigital y llegue al siguiente con el avance. La ausencia no mueve la fecha de entrega.” |
+| “¿Y si no puedo conectarme a un encuentro?” | “Avise antes, abra la carpeta de esa sesión en el **Drive de clases** —ahí quedan el material y la consigna— y llegue al siguiente con el avance. La ausencia no mueve la fecha de entrega, y las entregas siguen yendo a CDigital.” |
 | “¿Qué tema escojo? No se me ocurre nada.” | “No busque un tema: busque algo que **funcione mal** donde usted está. Un trámite lento, un dato que se pierde, una fila. De ahí sale la propuesta.” |
 | “¿Se puede cambiar de problema después?” | “Sí, y es normal, sobre todo tras la Sesión 02. Lo que no se puede es llegar al Corte 2 sin haber elegido ninguno.” |
 
@@ -310,9 +317,9 @@
 
 **No hay entregable evaluado hoy** (el encuadre no se califica). Se lleva **tres cosas verificables**:
 
-1. Su **post-it publicado** en el Padlet del curso: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+1. Su **respuesta enviada** en el formulario del curso: [URL Formulario Preséntate — pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 2. El **Quiz 1** ubicado en el aula (cierra en la próxima sesión) y el enunciado de la **ACA Final** leído, con sus fechas anotadas en el calendario.
-3. El **encargo autónomo** para la Sesión 02: lectura U1–U2 en CDigital + un problema real escrito en tres líneas (a quién le pasa y dónde lo vio) + documento de trabajo creado en Google Docs con la plantilla APA CUN.
+3. El **encargo autónomo** para la Sesión 02: lectura U1–U2, que está en la carpeta de la Sesión 01 del **Drive de clases**, + un problema real escrito en tres líneas (a quién le pasa y dónde lo vio) + documento de trabajo creado en Google Docs con la plantilla APA CUN.
 
 **Criterio de éxito de la clase:** si al terminar un estudiante puede responder sin dudar *“¿qué produce este curso, cómo entrego y qué debo traer la próxima semana?”*, el encuadre funcionó.
 
@@ -324,15 +331,17 @@
 - [ ] Pantallazos de apoyo abiertos (`Guiones/Capturas/Sesion 01/`)
 - [ ] Aula de **CDigital** abierta, con el anuncio de bienvenida publicado
 - [ ] Abrí `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` (21 slides)
-- [ ] **Padlet** abierto y URL copiada para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+- [ ] **Formulario «Preséntate»** creado, probado desde otra cuenta y con el enlace copiado para el chat: [URL Formulario Preséntate — pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
+- [ ] **Encuesta de Meet** redactada (una pregunta cerrada) y **Q&A** activado en la sala
+- [ ] Material de la sesión cargado en `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/` (**Drive de clases**) — CDigital queda para la entrega y las notas
 - [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** desde `Clases/Recursos/ACAs/`
 - [ ] **Plantilla APA CUN** abierta en Google Docs, lista para compartir pantalla
 - [ ] Tengo decidida mi respuesta a: dúo, IA y entregas tarde
 - [ ] Meet listo: [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 📋 **Después de la clase (mismo día)**
-- [ ] Publiqué en **CDigital** el anuncio con: enlace del Padlet, encargo autónomo (lectura U1–U2) y recordatorio de que el **Quiz 1** ya está abierto en el aula
-- [ ] Revisé el Padlet y anoté 3 problemas del grupo para usarlos como ejemplo en la Sesión 02
+- [ ] Publiqué en **CDigital** el anuncio con: enlace del formulario, encargo autónomo (lectura U1–U2, que está en el Drive de clases) y recordatorio de que el **Quiz 1** ya está abierto en el aula
+- [ ] Revisé la **hoja de respuestas** del formulario y anoté 3 problemas del grupo para usarlos como ejemplo en la Sesión 02 · verifiqué quién no respondió
 - [ ] Verifiqué que el espacio de entrega del Corte 1 esté visible para los estudiantes
 
 ---

@@ -113,7 +113,7 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 11, la última sincrónica del curso. Ojo con el calendario: en este tramo final hay dos lunes festivos, que son clases autónomas, así que hoy es nuestro cierre en vivo. El objetivo es claro: dejar el avance **limpio** y construir el puente a Trabajo de Grado 3.”
+> “Sesión 11, la última sincrónica del curso. Ojo con el calendario: en este tramo final hay dos lunes festivos, que son **clases autónomas** —cada una con su actividad en la carpeta de esa sesión, en el Drive de clases—, así que hoy es nuestro cierre en vivo. El objetivo es claro: dejar el avance **limpio** y construir el puente a Trabajo de Grado 3.”
 
 > “**OBJETIVOS.** Salir con una versión limpia del avance, un checklist de cierre y una lista explícita de pendientes para TG3. Tengan el documento consolidado abierto.”
 
@@ -193,7 +193,7 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 🧩 **Entregable de hoy**
 1. En Google Docs (`S11_CierreTG2_Apellido`): checklist de cierre marcado + versión limpia del avance (formato APA CUN + referencias completas) + lista de pendientes para TG3 en imperativo.
 2. Archivo en CDigital: `S11_CierreTG2_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

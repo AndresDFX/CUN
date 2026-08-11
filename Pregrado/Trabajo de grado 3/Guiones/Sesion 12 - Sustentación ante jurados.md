@@ -215,7 +215,7 @@ Modelar 2 minutos de sustentación con cronómetro visible (problema→pregunta�
 🧩 **Entregable de hoy**
 1. Guion oral + 5 preguntas difíciles con respuesta corta.
 2. Archivo en CDigital: `S12_GuionSustentacion_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

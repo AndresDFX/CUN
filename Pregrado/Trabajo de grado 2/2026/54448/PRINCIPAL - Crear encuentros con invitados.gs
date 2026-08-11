@@ -98,77 +98,77 @@ var INVITADOS = {
 
 var SESIONES = [
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 01',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
     start: '2026-08-14T17:00:00',
     end: '2026-08-14T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 02',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 02',
     description: 'Sesión 02 — Pregunta, objetivos y título provisional',
     start: '2026-08-24T17:00:00',
     end: '2026-08-24T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 03',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 03',
     description: 'Sesión 03 — Estructura del documento / artículo de avance',
     start: '2026-08-31T17:00:00',
     end: '2026-08-31T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 04',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 04',
     description: 'Sesión 04 — Antecedentes y referentes (Fase I)',
     start: '2026-09-07T17:00:00',
     end: '2026-09-07T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 05',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 05',
     description: 'Sesión 05 — Marco teórico — avance',
     start: '2026-09-14T17:00:00',
     end: '2026-09-14T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 06',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 06',
     description: 'Sesión 06 — Marco conceptual y contextual',
     start: '2026-09-21T17:00:00',
     end: '2026-09-21T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 07',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 07',
     description: 'Sesión 07 — Diseño metodológico (propuesto)',
     start: '2026-09-28T17:00:00',
     end: '2026-09-28T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 08',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 08',
     description: 'Sesión 08 — Instrumentos y plan de análisis (propuestos)',
     start: '2026-10-05T17:00:00',
     end: '2026-10-05T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 09',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 09',
     description: 'Sesión 09 — Integración del avance · correcciones',
     start: '2026-10-19T17:00:00',
     end: '2026-10-19T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 10',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 10',
     description: 'Sesión 10 — Socialización de avances',
     start: '2026-10-26T17:00:00',
     end: '2026-10-26T18:00:00',
     grupos: ['54448']
   },
   {
-    subject: '54448 - Trabajo de Grado 2 - Sesion 11',
+    subject: '26V04 - 54448 - Trabajo de Grado 2 - Sesion 11',
     description: 'Sesión 11 — Cierre del avance · preparación para TG3',
     start: '2026-11-09T17:00:00',
     end: '2026-11-09T18:00:00',

@@ -98,49 +98,49 @@ var INVITADOS = {
 
 var SESIONES = [
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 01',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
     start: '2026-08-12T17:00:00',
     end: '2026-08-12T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 02',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 02',
     description: 'Sesión 02 — Creatividad/innovación en I+D · Design Thinking y técnicas',
     start: '2026-08-19T17:00:00',
     end: '2026-08-19T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 03',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 03',
     description: 'Sesión 03 — Gestión de la innovación (Manual de Oslo / OCDE)',
     start: '2026-08-26T17:00:00',
     end: '2026-08-26T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 04',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 04',
     description: 'Sesión 04 — Tipos de innovación',
     start: '2026-09-02T17:00:00',
     end: '2026-09-02T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 05',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 05',
     description: 'Sesión 05 — Validación de la propuesta · vigilancia tecnológica',
     start: '2026-09-09T17:00:00',
     end: '2026-09-09T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 06',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 06',
     description: 'Sesión 06 — Innovación local–internacional · entidades de apoyo',
     start: '2026-09-16T17:00:00',
     end: '2026-09-16T18:00:00',
     grupos: ['54408']
   },
   {
-    subject: '54408 - Creatividad y Pensamiento Innovador - Sesion 07',
+    subject: '26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 07',
     description: 'Sesión 07 — Taller de consolidación y sustentación de la propuesta',
     start: '2026-09-23T17:00:00',
     end: '2026-09-23T18:00:00',

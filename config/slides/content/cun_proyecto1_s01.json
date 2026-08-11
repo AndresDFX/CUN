@@ -1,6 +1,22 @@
 [
   {
     "type": "bullets",
+    "title": "Preséntate: el formulario del curso (y por qué no un muro)",
+    "bullets": [
+      "Somos **50 matriculados**: un muro de notas no se alcanza a leer en clase y la mitad quedaría sin ser vista.",
+      "Por eso el rompehielos es un **formulario de Google**: el Docente lo pega en el chat del Meet y queda en el LEEME de `Clases/`.",
+      "  **Enlace:** [URL Formulario «Preséntate» — pendiente]",
+      "  Se entra con el correo **@cun.edu.co**: no hay que crear cuenta en ninguna plataforma nueva ni instalar nada.",
+      "**Qué se responde** (2–3 minutos, una sola vez): nombre, programa, **expectativa del curso** y **tema tentativo** de investigación en una frase.",
+      "  Digan también con quién piensan hacer equipo, si ya lo tienen: de ahí sale el armado de los equipos de máximo 3.",
+      "**Cuándo:** en los primeros minutos del encuentro. Al cerrar, el Docente proyecta el resumen y lee en voz alta cinco o seis respuestas.",
+      "**En vivo se participa por el Meet:** las **encuestas** y el **Q&A** de la propia sala aguantan al curso completo.",
+      "Queda abierto hasta la Sesión 02 para quien llegó tarde o no alcanzó a responder hoy."
+    ],
+    "note": "Las respuestas quedan en una hoja que el Docente usa todo el periodo: agrupar temas parecidos, escoger los ejemplos de clase y armar los equipos."
+  },
+  {
+    "type": "bullets",
     "title": "Cómo trabajamos: el encuentro tiene dos mitades",
     "bullets": [
       "Nos vemos **una vez por semana, dos horas**. No son dos horas de exposición.",
@@ -18,21 +34,73 @@
   {
     "type": "table",
     "title": "Mapa del curso: qué pasa en cada uno de los 11 encuentros",
-    "headers": ["Sesión", "De qué se ocupa", "Bloque"],
-    "rows": [
-      ["**01**", "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (hoy)", "Encuadre"],
-      ["**02**", "Problema y pregunta de investigación", "Corte 1 · **Quiz**"],
-      ["**03**", "Objetivos, justificación, alcances y limitaciones", "Corte 1 · **Quiz**"],
-      ["**04**", "Retroalimentación del corte 1 · antecedentes de investigación", "Corte 2 · **ACA 1**"],
-      ["**05**", "Marco teórico", "Corte 2 · **ACA 1**"],
-      ["**06**", "Marco conceptual y marco contextual", "Corte 2 · **ACA 1**"],
-      ["**07**", "Marco legal · citación en APA 7", "Corte 2 · **ACA 1**"],
-      ["**08**", "Diseño metodológico: paradigma, enfoque y alcance", "Puente"],
-      ["**09**", "Población y muestra, técnicas e instrumentos **propuestos**", "Corte 3 · **ACA FINAL**"],
-      ["**10**", "Planeación, viabilidad e integración del anteproyecto", "Corte 3 · **ACA FINAL**"],
-      ["**11**", "Integración y evaluación · coevaluación (foro) y autoevaluación (cuestionario): instrumentos individuales", "Cierre"]
+    "headers": [
+      "Sesión",
+      "De qué se ocupa",
+      "Bloque"
     ],
-    "col_w": [1.0, 6.9, 3.1],
+    "rows": [
+      [
+        "**01**",
+        "Presentación del curso, del Docente, de ustedes y de cómo se evalúa (hoy)",
+        "Encuadre"
+      ],
+      [
+        "**02**",
+        "Problema y pregunta de investigación",
+        "Corte 1 · **Quiz**"
+      ],
+      [
+        "**03**",
+        "Objetivos, justificación, alcances y limitaciones",
+        "Corte 1 · **Quiz**"
+      ],
+      [
+        "**04**",
+        "Retroalimentación del corte 1 · antecedentes de investigación",
+        "Corte 2 · **ACA 1**"
+      ],
+      [
+        "**05**",
+        "Marco teórico",
+        "Corte 2 · **ACA 1**"
+      ],
+      [
+        "**06**",
+        "Marco conceptual y marco contextual",
+        "Corte 2 · **ACA 1**"
+      ],
+      [
+        "**07**",
+        "Marco legal · citación en APA 7",
+        "Corte 2 · **ACA 1**"
+      ],
+      [
+        "**08**",
+        "Diseño metodológico: paradigma, enfoque y alcance",
+        "Puente"
+      ],
+      [
+        "**09**",
+        "Población y muestra, técnicas e instrumentos **propuestos**",
+        "Corte 3 · **ACA FINAL**"
+      ],
+      [
+        "**10**",
+        "Planeación, viabilidad e integración del anteproyecto",
+        "Corte 3 · **ACA FINAL**"
+      ],
+      [
+        "**11**",
+        "Integración y evaluación · coevaluación (foro) y autoevaluación (cuestionario): instrumentos individuales",
+        "Cierre"
+      ]
+    ],
+    "col_w": [
+      1.0,
+      6.9,
+      3.1
+    ],
     "note": "La unidad de **fundamentos y enfoque de investigación (U1 del programa)** pasa a **lectura autónoma**: hoy hacemos encuadre y la retomamos al abrir la Sesión 02. Fechas exactas de cada encuentro: calendario del curso en CDigital."
   },
   {
@@ -53,13 +121,38 @@
   {
     "type": "table",
     "title": "Corte por corte: qué hay en el aula y qué separa un buen trabajo de uno flojo",
-    "headers": ["Corte", "Qué hay en el aula (CDigital)", "Qué se prepara para eso", "Bueno vs. flojo"],
-    "rows": [
-      ["**Corte 1**", "**Quiz**: cuestionario individual que se resuelve en el aula, dentro de su ventana. No se sube archivo.", "Formulación del problema: planteamiento, pregunta, objetivos, justificación, alcances y limitaciones. Guía: `Quiz (25%)`.", "**Bueno:** se puede señalar a quién le duele algo y dónde ocurre. **Flojo:** una tecnología de moda sin decir a quién le sirve."],
-      ["**Corte 2**", "**ACA 1**: tarea del equipo — se **sube** el documento.", "Fundamentación referencial: antecedentes (mín. 6), marco teórico, conceptual, contextual y legal, con las correcciones del corte 1. Guía: `ACA 1 (25%)`.", "**Bueno:** cada fuente responde a la pregunta y se nota qué se corrigió. **Flojo:** resúmenes pegados que no se hablan entre sí."],
-      ["**Corte 3**", "**ACA FINAL** (tarea del equipo) + **autoevaluación** (cuestionario) y **coevaluación** (foro), individuales.", "Anteproyecto completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad. Guía: `ACA FINAL (42%)`.", "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos con tres preguntas de investigación distintas."]
+    "headers": [
+      "Corte",
+      "Qué hay en el aula (CDigital)",
+      "Qué se prepara para eso",
+      "Bueno vs. flojo"
     ],
-    "col_w": [0.9, 3.2, 4.0, 3.8],
+    "rows": [
+      [
+        "**Corte 1**",
+        "**Quiz**: cuestionario individual que se resuelve en el aula, dentro de su ventana. No se sube archivo.",
+        "Formulación del problema: planteamiento, pregunta, objetivos, justificación, alcances y limitaciones. Guía: `Quiz (25%)`.",
+        "**Bueno:** se puede señalar a quién le duele algo y dónde ocurre. **Flojo:** una tecnología de moda sin decir a quién le sirve."
+      ],
+      [
+        "**Corte 2**",
+        "**ACA 1**: tarea del equipo — se **sube** el documento.",
+        "Fundamentación referencial: antecedentes (mín. 6), marco teórico, conceptual, contextual y legal, con las correcciones del corte 1. Guía: `ACA 1 (25%)`.",
+        "**Bueno:** cada fuente responde a la pregunta y se nota qué se corrigió. **Flojo:** resúmenes pegados que no se hablan entre sí."
+      ],
+      [
+        "**Corte 3**",
+        "**ACA FINAL** (tarea del equipo) + **autoevaluación** (cuestionario) y **coevaluación** (foro), individuales.",
+        "Anteproyecto completo e integrado: metodología, población, instrumentos **propuestos**, cronograma, presupuesto y viabilidad. Guía: `ACA FINAL (42%)`.",
+        "**Bueno:** se lee de portada a referencias sin contradecirse. **Flojo:** capítulos con tres preguntas de investigación distintas."
+      ]
+    ],
+    "col_w": [
+      0.9,
+      3.2,
+      4.0,
+      3.8
+    ],
     "note": "Los pesos y el tipo de cada ítem están en la slide «CÓMO SE EVALÚA» de esta sesión. Autoevaluación y coevaluación **no son entregables**: se diligencian y se participa en el aula al cierre (instructivo en `Clases/Recursos/ACAs/`, junto con los enunciados y las fechas)."
   },
   {
@@ -82,9 +175,18 @@
     "type": "boxes",
     "title": "Integridad académica: la línea que no se cruza",
     "boxes": [
-      ["advertencia", "**Plagio es tomar lo ajeno y no decirlo.** Cuenta como plagio pegar texto de una fuente sin comillas ni cita, traducir un párrafo ajeno y firmarlo, reusar un trabajo propio de otro semestre como si fuera nuevo, y entregar el documento de otro equipo con la portada cambiada."],
-      ["info", "**Citar no debilita el trabajo: lo sostiene.** En este curso se cita en **APA 7**, dentro del texto y en la lista final de referencias. Una idea que no es suya y no está citada es un problema; esa misma idea citada es un argumento con respaldo."],
-      ["aclaracion", "**Si se detecta, hay debido proceso.** No depende del ánimo del Docente: es un procedimiento institucional, con notificación y derecho a descargos. Por eso siempre conviene preguntar antes que improvisar."]
+      [
+        "advertencia",
+        "**Plagio es tomar lo ajeno y no decirlo.** Cuenta como plagio pegar texto de una fuente sin comillas ni cita, traducir un párrafo ajeno y firmarlo, reusar un trabajo propio de otro semestre como si fuera nuevo, y entregar el documento de otro equipo con la portada cambiada."
+      ],
+      [
+        "info",
+        "**Citar no debilita el trabajo: lo sostiene.** En este curso se cita en **APA 7**, dentro del texto y en la lista final de referencias. Una idea que no es suya y no está citada es un problema; esa misma idea citada es un argumento con respaldo."
+      ],
+      [
+        "aclaracion",
+        "**Si se detecta, hay debido proceso.** No depende del ánimo del Docente: es un procedimiento institucional, con notificación y derecho a descargos. Por eso siempre conviene preguntar antes que improvisar."
+      ]
     ]
   },
   {
@@ -105,17 +207,44 @@
   {
     "type": "table",
     "title": "Herramientas del curso: todas gratis y desde el navegador",
-    "headers": ["Herramienta", "Para qué la usamos en este curso"],
-    "rows": [
-      ["**CDigital**", "Aula oficial: material, **quiz**, espacios de entrega de ACA 1 y ACA FINAL, foro de coevaluación y retroalimentación. Único canal válido."],
-      ["**Google Docs**", "Donde se escribe el anteproyecto, en equipo y a la vez, sobre la plantilla APA CUN. Guarda historial de versiones."],
-      ["**Google Scholar**", "Buscador académico general: artículos, tesis y libros. Punto de partida para rastrear antecedentes."],
-      ["**SciELO y Redalyc**", "Repositorios abiertos en español: producción latinoamericana, clave para los antecedentes nacionales y regionales."],
-      ["**ZoteroBib (zbib.org)**", "Genera la referencia en APA 7 pegando un enlace o un DOI. Sin instalar nada y sin crear cuenta."],
-      ["**Excalidraw**", "Pizarra para dibujar el proceso, el contexto o la idea cuando el texto solo no alcanza para explicarla."],
-      ["**Google Meet**", "El encuentro sincrónico semanal: mismo enlace toda la serie. La sesión se graba."]
+    "headers": [
+      "Herramienta",
+      "Para qué la usamos en este curso"
     ],
-    "col_w": [3.0, 8.0],
+    "rows": [
+      [
+        "**CDigital**",
+        "Aula oficial: material, **quiz**, espacios de entrega de ACA 1 y ACA FINAL, foro de coevaluación y retroalimentación. Único canal válido."
+      ],
+      [
+        "**Google Docs**",
+        "Donde se escribe el anteproyecto, en equipo y a la vez, sobre la plantilla APA CUN. Guarda historial de versiones."
+      ],
+      [
+        "**Google Scholar**",
+        "Buscador académico general: artículos, tesis y libros. Punto de partida para rastrear antecedentes."
+      ],
+      [
+        "**SciELO y Redalyc**",
+        "Repositorios abiertos en español: producción latinoamericana, clave para los antecedentes nacionales y regionales."
+      ],
+      [
+        "**ZoteroBib (zbib.org)**",
+        "Genera la referencia en APA 7 pegando un enlace o un DOI. Sin instalar nada y sin crear cuenta."
+      ],
+      [
+        "**Excalidraw**",
+        "Pizarra para dibujar el proceso, el contexto o la idea cuando el texto solo no alcanza para explicarla."
+      ],
+      [
+        "**Google Meet**",
+        "El encuentro sincrónico semanal: mismo enlace toda la serie. La sesión se graba."
+      ]
+    ],
+    "col_w": [
+      3.0,
+      8.0
+    ],
     "note": "**Nada de esto cuesta ni exige instalación.** Súmenle la **biblioteca virtual de la CUN** con su usuario institucional. Si una herramienta les pide pagar para continuar, no es la que estamos usando: pregunten antes."
   },
   {
@@ -138,9 +267,18 @@
     "type": "boxes",
     "title": "Acuerdos de convivencia del encuentro",
     "boxes": [
-      ["info", "**Puntualidad y cámara.** Empezamos a la hora en punto. Cámara encendida al menos en la presentación y en la tutoría de su equipo: revisar un avance a ciegas no funciona. Micrófono en silencio mientras alguien expone."],
-      ["aclaracion", "**Participar es parte del método.** Cuando el Docente pregunta, el silencio también es una respuesta: alarga la clase. Interrumpan para preguntar; es preferible una duda a destiempo que un capítulo entero mal escrito."],
-      ["advertencia", "**Respeto en el foro y en el chat.** Se critica el documento, nunca a la persona. La retroalimentación entre equipos se escribe con la misma cortesía con la que quisieran recibirla. El encuentro se graba."]
+      [
+        "info",
+        "**Puntualidad y cámara.** Empezamos a la hora en punto. Cámara encendida al menos en la presentación y en la tutoría de su equipo: revisar un avance a ciegas no funciona. Micrófono en silencio mientras alguien expone."
+      ],
+      [
+        "aclaracion",
+        "**Participar es parte del método.** Cuando el Docente pregunta, el silencio también es una respuesta: alarga la clase. Interrumpan para preguntar; es preferible una duda a destiempo que un capítulo entero mal escrito."
+      ],
+      [
+        "advertencia",
+        "**Respeto en el foro y en el chat.** Se critica el documento, nunca a la persona. La retroalimentación entre equipos se escribe con la misma cortesía con la que quisieran recibirla. El encuentro se graba."
+      ]
     ]
   },
   {
@@ -163,9 +301,18 @@
     "type": "boxes",
     "title": "Las preguntas que siempre salen el primer día",
     "boxes": [
-      ["info", "**«¿Esta materia se pierde fácil?»** No se pierde por dificultad: se pierde por entregar tarde o por entregar un documento que nadie leyó antes de subirlo. Quien trae avance cada semana llega al final con el anteproyecto prácticamente listo."],
-      ["aclaracion", "**«¿Puedo trabajar solo?»** Sí, pero el equipo es de máximo 3 y la carga de trabajo es la misma para uno que para tres. Decídanlo esta semana: después del primer corte no conviene cambiar de equipo ni de tema."],
-      ["advertencia", "**«¿Sirve un trabajo de otro semestre?»** Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso."]
+      [
+        "info",
+        "**«¿Esta materia se pierde fácil?»** No se pierde por dificultad: se pierde por entregar tarde o por entregar un documento que nadie leyó antes de subirlo. Quien trae avance cada semana llega al final con el anteproyecto prácticamente listo."
+      ],
+      [
+        "aclaracion",
+        "**«¿Puedo trabajar solo?»** Sí, pero el equipo es de máximo 3 y la carga de trabajo es la misma para uno que para tres. Decídanlo esta semana: después del primer corte no conviene cambiar de equipo ni de tema."
+      ],
+      [
+        "advertencia",
+        "**«¿Sirve un trabajo de otro semestre?»** Como punto de partida sí, si usted lo declara y lo reformula para este curso. Entregarlo tal cual como si fuera nuevo también es plagio y entra en el mismo debido proceso."
+      ]
     ]
   }
 ]

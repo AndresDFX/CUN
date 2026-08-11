@@ -3,9 +3,9 @@ Plantilla del curso · Horario: **Lunes, 5:00 pm – 6:00 pm (1 hora sincrónica
 Grupos de este periodo: **54448**
 Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
-> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma** (actividad en CDigital).
+> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma**: la actividad queda en la carpeta de esa sesión del **Drive de clases** (`Clases/Sesion NN - …/`), y la entrega y la nota siguen en **CDigital**.
 > Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
 
 > **Nota Syllabus:** FALTA SYLLABUS OFICIAL. Temario orientativo — confirmar en Moodle/portal.
 

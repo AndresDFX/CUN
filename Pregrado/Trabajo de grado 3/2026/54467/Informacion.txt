@@ -19,6 +19,8 @@ Fecha de cierre: 22/11/2026
 Créditos / horas: 2
 Cupo / inscritos: 50 / 50
 
-Regla: si la fecha de clase cae en festivo colombiano, la sesión se cursa como clase autónoma.
+Regla: si la fecha de clase cae en festivo colombiano, la sesión se cursa como clase
+autónoma: el material queda en la carpeta de esa sesión en el Drive de clases
+(Clases/Sesion NN - …/) y la entrega y la nota siguen en CDigital.
 Fuente de grupos/bloque: config/cursos/carga_academica_2026.json
 Ver calendario e importación a Calendar en esta carpeta.

@@ -3,9 +3,9 @@ Plantilla del curso · Horario: **Miércoles, 5:00 pm – 6:00 pm (1 hora sincr�
 Grupos de este periodo: **54408**
 Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
-> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma** (actividad en CDigital).
+> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma**: la actividad queda en la carpeta de esa sesión del **Drive de clases** (`Clases/Sesion NN - …/`), y la entrega y la nota siguen en **CDigital**.
 > Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
 
 > **Nota Syllabus:** TEMARIO ADELANTADO (2026-08-11): la ACA Final califica «Ecosistema: entidades de apoyo» (**U8**) y cierra el 19/09, cuatro días antes de la Sesión 07, donde U8 se dictaba. **U7** (vigilancia tecnológica) pasa a la **Sesión 05** —junto con U6, que ya vivía ahí— y **U8** a la **Sesión 06**; la Sesión 07 queda como taller de consolidación y sustentación. Ninguna unidad se elimina: es un reorden, no un recorte. U1–U2 siguen en lectura autónoma desde la Sesión 01.
 

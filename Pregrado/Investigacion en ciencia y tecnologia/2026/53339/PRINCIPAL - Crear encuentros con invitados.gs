@@ -68,42 +68,42 @@ var INVITADOS = {
 
 var SESIONES = [
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 01',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
     start: '2026-08-13T17:00:00',
     end: '2026-08-13T18:00:00',
     grupos: ['53339']
   },
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 02',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 02',
     description: 'Sesión 02 — MinCiencias · 6 líneas de Ingeniería · elección de línea',
     start: '2026-08-20T17:00:00',
     end: '2026-08-20T18:00:00',
     grupos: ['53339']
   },
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 03',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 03',
     description: 'Sesión 03 — Prueba parcial · 1.er avance del artículo',
     start: '2026-08-27T17:00:00',
     end: '2026-08-27T18:00:00',
     grupos: ['53339']
   },
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 04',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 04',
     description: 'Sesión 04 — Problema y pregunta · bases de datos y gestores de citas',
     start: '2026-09-03T17:00:00',
     end: '2026-09-03T18:00:00',
     grupos: ['53339']
   },
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 05',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 05',
     description: 'Sesión 05 — Planteamiento del problema · marco teórico y revisión de literatura',
     start: '2026-09-10T17:00:00',
     end: '2026-09-10T18:00:00',
     grupos: ['53339']
   },
   {
-    subject: '53339 - Investigación Ciencia y Tecnología - Sesion 06',
+    subject: '26P03 - 53339 - Investigación Ciencia y Tecnología - Sesion 06',
     description: 'Sesión 06 — Socialización del artículo y cierre del curso',
     start: '2026-09-17T17:00:00',
     end: '2026-09-17T18:00:00',

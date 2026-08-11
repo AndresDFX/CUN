@@ -305,7 +305,7 @@ De la misma pregunta salen los constructos —**pérdida de paquetes** y **prác
 🧩 **Entregable de hoy**
 1. En Google Docs (`S05_PlanteamientoMarco_Apellido`): pregunta pegada arriba + tabla síntoma/evidencia/consecuencia con 3 filas + cada fila convertida en párrafo + 2 constructos con su subtítulo + 1 ficha de lectura completa (cinco campos). En autónomo esta semana: planteamiento a 1–1.5 páginas con los seis componentes, 5 fuentes fichadas y un párrafo de marco por constructo.
 2. Archivo en CDigital: `S05_PlanteamientoMarco_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

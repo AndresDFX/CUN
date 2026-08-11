@@ -31,18 +31,18 @@ Tras el cambio: regenerar/actualizar las **5 Presentaciones del Curso** (y el mo
 1. **Pie de página = VACÍO** en los 5 cursos (cambio 2026-08-10). La hora de **inicio efectivo** (horario oficial **+ 10 min**) **ya no se repite** en cada slide: aparece **una sola vez**, en la **portada de la Presentación del Curso**, dentro de la línea «Horario confirmado: … · inicio efectivo **h:mm**» que arma `cover_meta_lines()` en `carga_academica.py`. Los builds llaman `set_footer("")`; **no** usar `footer_inicio_efectivo()` en `set_footer`. En el pie solo queda el **nº de slide** a la derecha. **Sin** nombre del curso ni «Curso · Escuela…». Logo CUN sí puede usarse (p. ej. en `tutor_slide`).
 2. **`tutor_slide`:** título genérico **«Docente»** + bullets de perfil + correo. **Sin** nombre propio grande. **Sin** subtítulo «Docente · &lt;curso&gt;».
 3. Plataforma = **CDigital** (nunca la palabra “LMS” como nombre). Placeholder: `[URL CDigital — campus del curso pendiente]`.
-4. Presentación del curso: **grupo(s) solo en la portada** (primera slide), slide docente genérico, **slide rompehielos “Preséntate” con QR** (`config/slides/assets/qr_presentacion_estudiantes.png` · helper `icebreaker_qr_slide`), **slide CONTENIDO** con listado `**Sesión N** — tema` en **UNA sola slide** (helper `contenido_sesiones_slide`; tipografía compacta o 2 columnas en la misma slide si hace falta; sin fechas ni tablas de cronograma), recursos con links/placeholders (sin grupo ni nombre propio), cierre **sin fechas de calendario** (sí día/hora semanal) y sin grupo.
+4. Presentación del curso: **grupo(s) solo en la portada** (primera slide), slide docente genérico, **slide rompehielos “Preséntate” con QR** (helper `icebreaker_qr_slide`; **a dónde apunta el QR depende del tamaño del grupo** — ver «Rompehielos según el tamaño del grupo»), **slide CONTENIDO** con listado `**Sesión N** — tema` en **UNA sola slide** (helper `contenido_sesiones_slide`; tipografía compacta o 2 columnas en la misma slide si hace falta; sin fechas ni tablas de cronograma), recursos con links/placeholders (sin grupo ni nombre propio), cierre **sin fechas de calendario** (sí día/hora semanal) y sin grupo.
 5. En cuerpo de slides / guiones de clase proyectables: **«el Docente»** (no «Julian…»). Correo de contacto sí puede aparecer en portada/`tutor_slide`/recursos.
 6. **Datos de periodo/semestre en negrita** en Presentación del Curso (markup `**…**` → motor `_rich`): periodo, grupo(s) **solo en portada**, bloque, fechas de inicio/recepción/cierre si aparecen, horario de esa oferta, placeholders Meet y CDigital. **No** forzar negrita en correo, temario/syllabus, textos pedagógicos ni marca CUN. Helper: `bold_var()` / `cover_meta_lines()` en `config/cursos/carga_academica.py`.
-7. **QR presentación estudiantes:** en las 5 Presentaciones del Curso **y** en la deck de Sesión 01; apunta al Padlet oficial `https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7`. Consigna: **Escanea o abre** + URL + **Ahora (~7 min)** (asset `qr_presentacion_estudiantes.png` · helper `icebreaker_qr_slide`). Es **el mismo tablero y el mismo momento** (la Sesión 01 es la sesión de presentación): no son dos rompehielos distintos.
+7. **QR presentación estudiantes:** en las 5 Presentaciones del Curso **y** en la deck de Sesión 01, con la consigna **Escanea o abre** + URL + **Ahora (~7 min)** (helper `icebreaker_qr_slide`). Es **el mismo espacio y el mismo momento** (la Sesión 01 *es* la sesión de presentación): no son dos rompehielos distintos. **El destino del QR ya no es el Padlet en los 5 cursos** (cambio 2026-08-11): depende de la matrícula — Padlet **solo en Investigación 53339**; en Proyecto I, Creatividad, TG2 y TG3 apunta al **formulario de Google** del curso (ver «Rompehielos según el tamaño del grupo»). El asset `qr_presentacion_estudiantes.png` es el QR del Padlet: donde cambió el destino hay que **generar el QR de ese destino**, no reutilizar ese archivo.
 
 ## REGLA PERMANENTE — SESIÓN 01 = ENCUADRE (los 5 cursos)
 
-La **primera sesión de todos los cursos no desarrolla tema académico**. Es la sesión de presentación: **el curso · el Docente · los estudiantes (Padlet) · las ACAs** (qué se entrega, cuánto pesa, dónde se sube), más los acuerdos de trabajo y el encargo autónomo. El contenido curricular **arranca en la Sesión 02**.
+La **primera sesión de todos los cursos no desarrolla tema académico**. Es la sesión de presentación: **el curso · el Docente · los estudiantes (rompehielos «Preséntate»: Padlet o formulario de Google según el tamaño del grupo) · las ACAs** (qué se entrega, cuánto pesa, dónde se sube), más los acuerdos de trabajo y el encargo autónomo. El contenido curricular **arranca en la Sesión 02**.
 
 - Título fijo de la Sesión 01: **«Presentación del curso · docente · estudiantes · ACAs»**.
 - En `config/cursos/sesiones_cun.py`, la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y `"unidad_diferida"` (qué unidad del Syllabus pasa a **lectura autónoma** y se retoma al abrir la Sesión 02). La unidad **no se borra** del Syllabus: queda registrada ahí.
-- Deck: `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → Preséntate/Padlet → ACAs → acuerdos → autónomo → cierre). El guion de S01 es de **encuadre**, sin fundamento teórico de unidad.
+- Deck: `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → **Preséntate** → ACAs → acuerdos → autónomo → cierre). El guion de S01 es de **encuadre**, sin fundamento teórico de unidad.
 - Fechas y % de las ACAs **no** van en la deck de S01: viven en `Clases/Recursos/ACAs/` y en la Presentación del Curso (evita arrastrar una fecha que quede vieja).
 
 ## REGLA PERMANENTE — tutorías por grupo (solo Proyecto I / AFI)
@@ -98,8 +98,8 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
   Correo de bienvenida.docx              ← solo si multi-grupo (copia en raíz; interno)
 ```
 
-- **Carpeta compartida con estudiantes = solo `Clases/`.** Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
-- **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`.
+- **Carpeta compartida con estudiantes = solo `Clases/`.** Es lo que en el material se llama el **Drive de clases** (así la nombra el LEEME del estudiante): la carpeta de Drive que el Docente comparte y donde se **publica** todo el material, con **una subcarpeta por sesión**. Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. **Drive ≠ CDigital:** el Drive de clases es de dónde se **baja** el material (incluido el de las clases autónomas — ver «Clase autónoma»); **CDigital** es donde se **entrega** y donde están las **notas**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
+- **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`. Enlaces que debe llevar (grabaciones + material de clases): ver «Correo de bienvenida — enlaces obligatorios».
 - **ACAs (estudiantes):** convención única los 5 cursos → `Clases/Recursos/ACAs/ACA N - <título corto>.docx`. Build: `python config/slides/build_acas_estudiantes.py`. Guiones docentes pueden remitir a esa ruta **sin** duplicar el enunciado largo.
 - **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%, cuestionario)** y la **coevaluación (4%, foro)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* o en los que *participa* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; ids `auto` / `coev` con `kind="cuestionario"` / `"foro"` en `config/cursos/fechas_entrega_aca.py`). **No son exclusivas de Proyecto I:** existen en los 4 cursos de pregrado con peso menor (ver «REGLA VIGENTE DE EVALUACIÓN»). Los cursos de pregrado **todavía no tienen instructivo** para ellas — pendiente.
 - **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
@@ -110,12 +110,14 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 
 # Calendario y Meet
 
-- **Subject de encuentros** (CSV/ICS de clase, no hitos), patrón único los 5 cursos:
-  `{grupos} - {Asignatura corta} - Sesion NN`  
-  Varios grupos: `54450/54466/54467` (códigos unidos con `/`). **Sin** nombre largo del tema (el tema va en Description).  
+- **Subject de encuentros** (CSV/ICS de clase, no hitos), patrón único los 5 cursos — **empieza por el periodo** (cambio 2026-08-11):
+  `{periodo} - {grupos} - {Asignatura corta} - Sesion NN`
+  Varios grupos: `54450/54466/54467` (códigos unidos con `/`). **Sin** nombre largo del tema (el tema va en Description).
+  El **periodo vive por grupo** en `config/cursos/carga_academica_2026.json` (`26ES4` · `26V04` · `26P03` · `26P04`) — no se escribe a mano. **TG3 va en UNA sola serie con DOS periodos** (54450 = `26P04`; 54466 y 54467 = `26V04`): se unen con `/` igual que los códigos de grupo, en el mismo orden (campo `periodos_nota`).
   Helper: `subject_encuentro()` en `sesiones_cun.py`.
-  Ej.: `54ES4 - Proyecto I - Sesion 01` · `54450/54466/54467 - Trabajo de Grado 3 - Sesion 03`
-- **Festivo Pregrado** = clase **autónoma** (no cancelar; queda en Calendar) con el mismo patrón de Subject + ` (autónoma)`.
+  Ej.: `26ES4 - 54ES4 - Proyecto I - Sesion 01` · `26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 03`
+  **Por qué el periodo es obligatorio:** el nombre del evento es la clave con la que el estudiante busca la **grabación**, y la carpeta de grabaciones acumula periodos. Sin el prefijo, en un mismo año conviven varios `54448 - Trabajo de Grado 2 - Sesion 01` indistinguibles.
+- **Festivo Pregrado** = clase **autónoma** (no cancelar; queda en Calendar) con el mismo patrón de Subject + ` (autónoma)`. **El material de esa clase va al Drive de clases, no a CDigital** (ver el apartado «Clase autónoma» más abajo).
 - **Google Meet:** un solo enlace por curso (toda la serie). Mientras no exista el real: `[URL Meet — mismo enlace toda la serie · <Curso>]`.
 - **Pregrado CSV/ICS:** sin invitados/estudiantes (sin Guests/ATTENDEE). Description corta (tema en 1–2 líneas); Location vacío hasta Meet real.
 - **Proyecto I 54ES4 — invitados:** Google Calendar al **Importar** `.ics`/`.csv` **descarta** ATTENDEE/Guests (limitación conocida). Flujo que sí funciona: **`Crear encuentros con invitados.gs`** (Apps Script → `createEncuentrosP1`) o `create_encuentros_p1_calendar_api.py`. El ICS sigue llevando ATTENDEE por compatibilidad Outlook/otros, pero **no** es el flujo Google. Coanfitrión en Description corta + guests del script = roster + `investigacion_especializaciones@cun.edu.co`.
@@ -123,6 +125,27 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - Builds encuentros: `build_calendar_proyecto1_54es4.py` · `build_pregrado_cursos.py --calendar-only`.
 - **CSV hitos docentes** (`Entregas y hitos docentes…`, build `build_hitos_docentes_calendar.py`) = deadlines de **todos los ítems del libro de calificaciones** (quices, parciales, ACA Final, auto y coevaluación: cierre + límite de nota) + trámites AFI/esenciales (Acuerdo, 1 recordatorio registro AFI, recepción/cierre, informe). **No** duplicar encuentros semanales Sesión NN (esos van en CSV/ICS Encuentros…).
 - Cierres oficiales (referencia rápida): Investigación 20/09 · Creatividad 27/09 · TG3 54450 → 15/11 · TG3 54466/54467, TG2 y P1 → 22/11.
+
+## Clase autónoma — el material va al DRIVE DE CLASES, no a CDigital
+
+Cuando una sesión cae en festivo **la clase no se cancela: queda como clase autónoma**, y la actividad se publica en la **subcarpeta de esa sesión dentro del Drive de clases** (`Clases/Sesion NN - <Tema>/`, la carpeta compartida que describe el LEEME del estudiante). Redacción canónica para material del estudiante: «la clase no se cancela: queda como **clase autónoma**, con la actividad en la carpeta de la sesión en el **Drive de clases**».
+
+- ❌ **Retirado (2026-08-11):** «la clase queda como autónoma, **con la actividad publicada en CDigital**» y cualquier variante que ponga el **material** de la clase autónoma en CDigital. Si aparece escrito en un guion, deck, LEEME, manual o correo, **corrígelo en su sitio** — no añadas la versión nueva al lado de la vieja.
+- **CDigital conserva sus dos roles, y esos no cambian:** ahí se **entrega** (ACA, quiz, foro) y ahí están las **notas**. Todo texto sobre subir la entrega o consultar la calificación **sigue diciendo CDigital**.
+- Regla de bolsillo: **material → Drive de clases · entrega y nota → CDigital.** No los presentes como si fueran el mismo sitio.
+
+## Grabaciones de los encuentros
+
+- **Carpeta única**, la misma para los 5 cursos, este periodo **y los siguientes**: <https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing>. No se crea una carpeta por curso ni por periodo, y **no es un pendiente**: este enlace es el definitivo.
+- El estudiante **busca por el nombre del evento**, con la sintaxis **«periodo - grupo - asignatura - sesión»** — que es exactamente el Subject de arriba. Subject y consigna de búsqueda tienen que decir lo mismo: si cambia uno, cambia el otro.
+- Va en el **correo de bienvenida** de los 5 cursos (junto al enlace del Drive de clases) y puede repetirse como recurso en el LEEME / Presentación del Curso.
+
+## Correo de bienvenida — enlaces obligatorios (los 5 cursos)
+
+Además de Meet y CDigital, el correo lleva **dos enlaces** (alta 2026-08-11):
+
+1. **Grabaciones** — la carpeta común de arriba + la sintaxis de búsqueda «periodo - grupo - asignatura - sesión». Enlace real, no placeholder.
+2. **Material de clases** — la carpeta `Clases/` de **esa** asignatura en Drive (el Drive de clases). **Todavía no hay URL:** va como **marcador de posición**, con el mismo patrón que ya usa Meet cuando falta — `[URL Drive — carpeta Clases/ del curso · <Curso>]` — resuelto desde la **fuente única por curso** en `config/cursos/carga_academica_2026.json` (campo vacío ⇒ se muestra el placeholder), igual que `meet_url()` en `sesiones_cun.py`. Nunca inventar una URL de Drive ni dejar el hueco en blanco: debe verse que es un pendiente y dónde se rellena.
 
 # REGLA VIGENTE DE EVALUACIÓN — manda el libro de calificaciones del aula (CDigital)
 
@@ -179,12 +202,25 @@ No confundir nada de esto con la autoevaluación **institucional** SIAC ([acredi
 # Práctica de clase = gratis + nube (SIEMPRE)
 
 - Toda **actividad práctica** (taller, demo en pantalla, entregable de sesión) usa **solo componentes gratis y en la nube**: browser-based / SaaS free tier.
-- **Sí:** Excalidraw, tldraw, diagrams.net, Miro free, Canva free, Canvanizer, Google Docs/Slides/Forms, Google Scholar, SciELO/Redalyc, **ZoteroBib** (zbib.org), citas nativas de Google Docs, CodePen/CodeSandbox/Colab, biblioteca CUN web, CDigital, **Padlet** (tablero oficial de presentación).
-- **Tablero colaborativo (rompehielos / Preséntate):** **Padlet** oficial — `https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7` (mismo enlace en los 5 cursos). Constante: `PADLET_PRESENTACION_URL` en `cun_slides_engine.py`. Sin instrucciones de “Clear posts” / reutilizar borrando posts / “3 padlets del plan gratis”.
-- **Rompehielos en Presentación del Curso (los 5):** slide “Preséntate” con QR + URL; **Sesión 01 = esa presentación** para el Padlet (no “retomar más tarde” ni duplicar en la deck de Sesión 01).
+- **Sí:** Excalidraw, tldraw, diagrams.net, Miro free, Canva free, Canvanizer, **Formularios de Google** (y Docs/Slides), Google Scholar, SciELO/Redalyc, **ZoteroBib** (zbib.org), citas nativas de Google Docs, CodePen/CodeSandbox/Colab, biblioteca CUN web, CDigital, **encuestas y Q&A nativos de Meet**, **Padlet** (solo en grupos de **hasta 20** — ver abajo).
 - **No exigir:** Packet Tracer / Cisco desktop, Visual Studio desktop, Office desktop obligatorio, Adobe de pago, Mendeley Desktop / Mendeley Cite en Word, Zotero Desktop obligatorio, instalaciones locales pesadas ni “abre el .exe”.
 - Teoría/metodología sin tool no cambia. La **plantilla APA CUN** (`.docx`) se abre preferente en **Google Docs** / Word Online — no se exige Office de escritorio.
 - Matriz canónica: `Guías docentes - Matriz herramientas prácticas.md`.
+
+## Rompehielos según el TAMAÑO DEL GRUPO (regla 2026-08-11 · deroga «Padlet siempre»)
+
+El rompehielos «Preséntate» **ya no es Padlet en los 5 cursos**. La herramienta la decide la **matrícula real** del curso (auditada en CDigital): Proyecto I 54ES4 = **50** · Creatividad 54408 = **50** · Investigación 53339 = **20** · TG2 54448 = **50** · TG3 = 13 + 49 + 50 = **112 en una sola serie**.
+
+| Tamaño | Cursos | Herramienta del «Preséntate» |
+|---|---|---|
+| **Hasta 20** | **Investigación 53339** | **Padlet** oficial — `https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7` (constante `PADLET_PRESENTACION_URL` en `cun_slides_engine.py`). Sin instrucciones de “Clear posts” / reutilizar borrando posts / “3 padlets del plan gratis”. |
+| **Más de 20** | **Proyecto I · Creatividad · TG2 · TG3** | **Formulario de Google** del curso (nada de muro). Recoge lo mismo que pedía el Padlet y deja los datos en una hoja que el Docente reutiliza todo el periodo. |
+
+- **En vivo, la interacción va por las encuestas y el Q&A NATIVOS DE MEET** (la edición CUN sí los incluye): cero plataformas nuevas, cero registro, aguantan 100+.
+- **Con 100+ (TG3) el rompehielos NO es «que se presenten todos»** — sería una hora entera. El formulario ordena y agrupa; en vivo se leen en voz alta **5 o 6 respuestas escogidas** y el resto se ve en la **pantalla de resumen** del formulario.
+- **Por qué el formulario y no un muro:** un Padlet de 50 o de 112 notas **no se lee**, y el objetivo del rompehielos (que cada quien sea visto) deja de cumplirse. Con 20 notas sí se lee entero — por eso Investigación se queda en Padlet.
+- **Por qué NO Mentimeter ni Slido** (no volver a proponerlos «porque son más vistosos»): el plan gratis de **Mentimeter corta en 50 participantes al mes** y el de **Slido en 100 con 3 encuestas** — justo por debajo de estos cursos, y **TG3 con 112 no cabe**. El **formulario de Google no tiene tope, es gratis, ya viene con la licencia CUN y no obliga a crear cuenta** (los estudiantes entran con su `@cun.edu.co`).
+- **Sigue vigente:** el «Preséntate» está en la **Presentación del Curso** (slide con QR + URL) y **la Sesión 01 *es* ese momento** — no se “retoma más tarde” ni se duplica como segundo rompehielos en la deck de S01. Lo único que cambió es **a dónde apunta el enlace/QR**.
 
 # Guiones docentes (estándar de calidad)
 
@@ -196,7 +232,7 @@ No confundir nada de esto con la autoevaluación **institucional** SIAC ([acredi
 - Builds: `config/slides/build_sesion_material.py` (PPTX estudiante + invoca regeneradores de guion `.md`; `--guion-only` = solo md, sin docx).
 - Regeneradores ricos (minuto a minuto, solo `.md`): P1 `_regen_guiones_proyecto1.py` · Creatividad `_regen_guiones_creatividad.py` · Inv/TG2/TG3 `config/slides/_regen_guiones_pregrado.py`.
 - **Modelo de calidad (guion de tema):** Creatividad **Sesión 02** (Design Thinking) — fases con protagonista propio, «GUION LITERAL» completo por fase, tabla de errores/preguntas trampa y tabla de acompañamiento en el taller. *(Antes el modelo era la S01 de Creatividad; dejó de serlo el 2026-08-09, cuando la S01 pasó a ser sesión de encuadre en los 5 cursos.)*
-- **Guion de Sesión 01 = encuadre** (los 5 cursos): cómo abrir el curso, presentarse, conducir el Padlet, explicar las ACAs y los acuerdos. Sin fundamento teórico de unidad.
+- **Guion de Sesión 01 = encuadre** (los 5 cursos): cómo abrir el curso, presentarse, **conducir el rompehielos** (Padlet en Investigación; formulario de Google + encuestas/Q&A de Meet en los demás — con 100+ se leen 5 o 6 respuestas, no se presentan todos), explicar las ACAs y los acuerdos. Sin fundamento teórico de unidad.
 
 # Decks de sesión (estándar de densidad)
 
@@ -230,6 +266,8 @@ No confundir nada de esto con la autoevaluación **institucional** SIAC ([acredi
 
 - URLs Meet reales por curso
 - URL CDigital (campus) por curso — placeholder: `[URL CDigital — campus del curso pendiente]`
+- **URL de la carpeta `Clases/` en Drive (Drive de clases) por curso** — va en el correo de bienvenida; placeholder: `[URL Drive — carpeta Clases/ del curso · <Curso>]`. *(La carpeta de **grabaciones** NO es un pendiente: su enlace ya existe y es común a todos los cursos — ver «Grabaciones de los encuentros».)*
+- **Formulario de Google del «Preséntate»** para los cursos de más de 20 (Proyecto I, Creatividad, TG2, TG3) — y su QR correspondiente. Investigación 53339 sigue con el Padlet ya existente.
 - URL pública plantilla APA
 - **Syllabus SIAC de TG2 ausente** — falta el **temario**; la **evaluación ya no depende de él** (sale del aula).
 - **Crear en el aula los quices y parciales**: existen solo como **ítem del libro de calificaciones**, sin la actividad (cuestionario + banco de preguntas). El primero cierra el **19/08** (Creatividad). El material del estudiante ya está listo; lo que falta es el aula.

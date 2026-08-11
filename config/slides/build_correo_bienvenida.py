@@ -25,7 +25,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
 
 from carga_academica import (  # noqa: E402
+    GRABACIONES_URL,
     bold_var,
+    clases_url,
     course_dir,
     curso as carga_curso,
     docente as _docente_pair,
@@ -34,7 +36,7 @@ from carga_academica import (  # noqa: E402
     load_carga,
     _parse_date,
 )
-from sesiones_cun import COURSES, meet_url  # noqa: E402
+from sesiones_cun import COURSES, meet_url, subject_encuentro  # noqa: E402
 
 # Placeholder de respaldo: los usos por curso deben llamar a
 # `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
@@ -61,6 +63,18 @@ def _titulo_display(key: str, c: dict) -> str:
 def _primera_sesion(key: str) -> dict:
     ses = (COURSES.get(key) or {}).get("sesiones") or [{}]
     return ses[0]
+
+
+def _ejemplo_nombre_evento(key: str, c: dict) -> str:
+    """Nombre REAL del evento de la Sesión 01, tal como aparece en la carpeta de grabaciones.
+
+    Se deriva de `subject_encuentro` —la misma función que nombra los eventos del
+    calendario— para que el ejemplo del correo no se desincronice si cambia el patrón.
+    Se pasan TODOS los grupos del curso (no solo el del destinatario): la serie de
+    encuentros es una sola y el evento de TG3 se llama con los tres códigos juntos.
+    """
+    grupos = [str(g) for g in (c.get("groups") or [])]
+    return subject_encuentro(key, grupos, n=1)
 
 
 def correo_md(key: str, grupo: str | None = None) -> str:
@@ -94,6 +108,26 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         + (f" ⚠️ **Ojo:** {s1['reprogramada'].strip()}" if s1.get("reprogramada") else "")
         + " |",
         f"| **Google Meet** (mismo enlace toda la serie) | {meet_url(key, c['titulo_corto'])} |",
+        # Material ≠ entregas: la carpeta `Clases/` del Drive es de dónde SE BAJA el material
+        # (deck, lectura autónoma, enunciados) y CDigital es dónde SE SUBE lo evaluado.
+        f"| **Material de clases** (carpeta `Clases/` en Drive) | {clases_url(key)} — es la carpeta "
+        "que comparte el Docente: Presentación del Curso, una carpeta por sesión "
+        "(`Sesion NN - …/`) y `Recursos/ACAs/`. El **LEEME** de adentro explica qué es cada cosa. |",
+        # La carpeta de grabaciones acumula todos los cursos y todos los periodos: lo que
+        # identifica cada video es el NOMBRE DEL EVENTO, por eso el ejemplo va literal.
+        f"| **Grabaciones de las clases** | {GRABACIONES_URL} — busca por el **nombre del evento**, "
+        "con la sintaxis «periodo - grupo - asignatura - sesión». En este curso, la Sesión 01 es "
+        f"{bold_var(_ejemplo_nombre_evento(key, c))}."
+        # TG3: una sola serie para los tres grupos ⇒ el nombre del evento (y por tanto el de
+        # la grabación) lleva los tres códigos, no solo el del destinatario.
+        + (
+            " El encuentro es **uno solo para los grupos de la serie**: por eso el nombre "
+            "lleva los códigos juntos, aunque tú estés en uno de ellos."
+            if len(list(c.get("groups") or [])) > 1
+            else ""
+        )
+        + " Cada grabación se publica **después** del encuentro (no está disponible durante "
+        "la clase). |",
         f"| **Aula CDigital** (entregas y notas) | {cdigital_url(key)} |",
     ]
     if grupo:
@@ -103,13 +137,15 @@ def correo_md(key: str, grupo: str | None = None) -> str:
             filas.append(f"| **Cierre de tu grupo** | {bold_var(fmt_dmy(cierre))} |")
     filas.append(
         "| **Antes de la Sesión 02** | la **lectura autónoma** de la semana viene en la carpeta "
-        "del curso, en `Clases/Sesion 01 - …/`: el PDF y el archivo "
+        "de *Material de clases*, en `Clases/Sesion 01 - …/`: el PDF y el archivo "
         "`Lectura autonoma - Sesion 01.txt`, que dice qué leer, cuánto tarda y qué traer. |"
     )
     if es_pregrado:
         filas.append(
             "| **Si el día de clase es festivo** | la clase **no se cancela**: queda como "
-            "**clase autónoma**, con la actividad publicada en CDigital. |"
+            "**clase autónoma** y la actividad queda en el **Drive de clases**, en la carpeta "
+            "de esa sesión (`Clases/Sesion NN - …/`). Si la actividad tiene entrega, se sube "
+            "por CDigital, como siempre. |"
         )
     filas.append(f"| **Docente (contacto)** | el Docente · {correo} |")
     tabla = "\n".join(filas)

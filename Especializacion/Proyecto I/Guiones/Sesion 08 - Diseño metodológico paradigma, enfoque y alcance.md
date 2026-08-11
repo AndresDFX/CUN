@@ -173,7 +173,7 @@ Esta sesión anticipa la metodología antes de las semanas más cargadas del tra
 - [ ] Nota de **ACA 1** (25%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 08 - Diseño metodológico paradigma, enfoque y alcance/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

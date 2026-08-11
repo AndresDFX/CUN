@@ -15,17 +15,16 @@
 
 | Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
 | :--- | :--- | :---: | ---: | :--- |
-| **Autoevaluación** | Cuestionario | 3 | 2% | **Abre hoy** — se diligencia en clase (~4 min reservados) |
-| **Coevaluación** | Foro | 3 | 2% | **Abre hoy** — se participa en el foro en clase (~4 min reservados) |
-| **ACA Final** | Tarea | 3 | 32% | Abierto: **cierra antes del próximo encuentro** |
+| **Autoevaluación** | Cuestionario | 3 | 2% | **Cierra hoy**: se diligencia en el encuentro (~4 min reservados) |
+| **Coevaluación** | Foro | 3 | 2% | **Cierra hoy** el foro: se participa en el encuentro (~4 min reservados) |
+| **ACA Final** | Tarea | 3 | 32% | **Ya cerró** — hoy toca devolución y registro de la nota |
 
 **Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
-> “**ACA Final** es la **tarea** del corte 3 y **cierra antes del próximo encuentro**: pesa **32%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
+> “**ACA Final** ya cerró. Quien alcanzó a subir, verifique en CDigital que el archivo abre; un PDF corrupto cuenta como no entregado.”
+
+**Devolución mínima que sí sirve (3–4 min):** los dos errores más repetidos del grupo, con un ejemplo anónimo en pantalla, y una instrucción concreta para el siguiente ítem. Nunca leer notas en voz alta ni comparar estudiantes.
 
 > **Reserva de tiempo:** el plan de clase de abajo ya trae la fase de evaluación (**8 min**) y el resto de las fases están recortadas para que la hora siga sumando lo mismo. No es tiempo adicional.
-> ⚠️ **Este curso tiene grupos con ventanas distintas.** La tabla de arriba es la del grupo de referencia (**54466**). En los demás cambia así:
-> - **Grupo 54450:** **Autoevaluación** cierra hoy; **Coevaluación** cierra hoy; **ACA Final** ya cerró.
-> Antes de anunciar una fecha, ábrala en el libro de calificaciones **del aula de ese grupo**: es la única fuente que no se equivoca de grupo.
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck real: **22 slides** — no es el mapa del curso)
@@ -198,13 +197,13 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 🧩 **Entregable de hoy**
 1. Matriz de ajustes + versión corregida.
 2. Archivo en CDigital: `S14_AjustesPost_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
 - [ ] **Autoevaluación** (Cuestionario · 2%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
 - [ ] **Coevaluación** (Foro · 2%) **habilitada y visible** en CDigital, y la ruta ensayada para mostrarla en pantalla
-- [ ] Anunciar en clase que **ACA Final** (Tarea · 32%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
+- [ ] Nota de **ACA Final** (32%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 14 - Ajustes finales · seguimiento post-sustentación/Presentacion.pptx`
 - [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)

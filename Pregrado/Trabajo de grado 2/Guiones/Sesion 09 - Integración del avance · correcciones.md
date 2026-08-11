@@ -173,7 +173,7 @@ Semáforo: introducción verde, marco amarillo (falta 3.er constructo), metodolo
 🧩 **Entregable de hoy**
 1. En Google Docs (`S09_Integracion_Apellido`): semáforo por sección (verde/amarillo/rojo) + matriz de gaps (qué falta / prioridad / acción concreta) + cierre iniciado del gap de mayor prioridad.
 2. Archivo en CDigital: `S09_Integracion_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

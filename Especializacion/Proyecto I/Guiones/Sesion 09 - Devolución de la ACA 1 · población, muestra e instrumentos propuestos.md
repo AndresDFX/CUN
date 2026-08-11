@@ -198,7 +198,7 @@ La slide RECUERDA y el Manual son claros: en Proyecto I los instrumentos son PRO
 ✅ **Checklist antes de clase**
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 09 - Devolución de la ACA 1 · población, muestra e instrumentos propuestos/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 09 - Devolución de la ACA 1 · población, muestra e instrumentos propuestos/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

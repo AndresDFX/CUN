@@ -9,6 +9,8 @@
     "Inicio operativo del semestre 2026 (pedido docente / clase AFI 10/08): 2026-08-10 en todos los cursos.",
     "Fechas de entrega ACA: cálculo regenerable en config/cursos/fechas_entrega_aca.py (no hardcodear en enunciados).",
     "meet: enlace ÚNICO de Google Meet por curso para toda la serie. Fuente única — no hardcodear en builds; cadena vacía ⇒ el material muestra el placeholder [URL Meet …]. Resolutor: config/cursos/sesiones_cun.py → meet_url(course_key).",
+    "clases: enlace de Drive a la carpeta `Clases/` de ESA asignatura (material que se comparte con estudiantes: Presentación del Curso, Sesion NN - …/, Recursos/ACAs/). Mismo contrato que `meet`: fuente única, cadena vacía ⇒ el material muestra el placeholder [URL Material de clases …]. Resolutor: config/cursos/carga_academica.py → clases_url(course_key). PENDIENTE: pegar aquí el enlace «compartir» de cada carpeta y regenerar el correo de bienvenida.",
+    "Grabaciones de las clases: carpeta ÚNICA de Drive, la misma para todos los cursos y periodos ⇒ no va por curso, es constante en config/cursos/carga_academica.py → GRABACIONES_URL. Dentro se busca por el NOMBRE DEL EVENTO del calendario («periodo - grupo - asignatura - sesion», helper sesiones_cun.subject_encuentro).",
     "Edita este archivo si cambia bloque/horario/grupo y regenera: python config/slides/build_all_course_presentations.py",
     "Carpetas de asignatura en Formato Oración (p. ej. Especializacion/Proyecto I, Pregrado/Creatividad y pensamiento innovador).",
     "Correo de bienvenida (interno · 2026/<grupo>/; nunca en Clases/): python config/slides/build_correo_bienvenida.py (también vía sync_clases_estudiantes.py)."
@@ -85,6 +87,7 @@
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
       "meet": "https://meet.google.com/omk-woqk-vsj",
+      "clases": "",
       "periodos_nota": "26ES4",
       "bloque_portada": null,
       "horario": {
@@ -148,6 +151,7 @@
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
       "meet": "",
+      "clases": "",
       "periodos_nota": "26V04",
       "bloque_portada": "PRIMER BLOQUE",
       "horario": {
@@ -211,6 +215,7 @@
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
       "meet": "",
+      "clases": "",
       "periodos_nota": "26P03",
       "bloque_portada": "SEGUNDO BLOQUE",
       "horario": {
@@ -275,6 +280,7 @@
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
       "meet": "",
+      "clases": "",
       "periodos_nota": "26V04",
       "bloque_portada": "BLOQUE UNICO",
       "sin_syllabus": true,
@@ -339,6 +345,7 @@
       "sede_entrega": "Virtual",
       "aula": "Aula virtual - Google Meet",
       "meet": "",
+      "clases": "",
       "periodos_nota": "26P04 / 26V04",
       "bloque_portada": "BLOQUE UNICO",
       "horario": {

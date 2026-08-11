@@ -13,6 +13,7 @@
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **formulario**.
 
 ⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
 
@@ -103,7 +104,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 | “¿Puedo trabajar solo o toca en grupo?” | “El artículo de este curso es individual, salvo que el enunciado de la **ACA Final** diga otra cosa. Y los cuestionarios —quices y parciales— son **siempre individuales**.” |
 | “¿Los quices y los parciales son en clase?” | “Sí: son cuestionarios de CDigital que cierran el mismo día de la sesión, y por eso les reservo tiempo en clase. El que falte ese día pierde el ítem, así que la asistencia aquí sí pesa en la nota.” |
 | “¿Me sirve un trabajo de otro semestre?” | “Puede partir de un tema suyo, pero el texto debe ser nuevo y hay que citar lo que reutilice. Reentregarlo tal cual es falta académica.” |
-| “¿La clase se graba?” | Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre publicados en CDigital”. |
+| “¿La clase se graba?” | Dígalo con claridad según lo que usted vaya a hacer, y aclare lo que sí es fijo: “el material y la consigna quedan siempre en la carpeta de esa sesión, en el **Drive de clases**; CDigital es para entregar y para las notas”. |
 | “¿Puedo usar ChatGPT para escribir?” | “Como apoyo sí, y se declara en una línea al final del documento. Pero verifique las fuentes: inventa citas. Lo que usted no pueda explicar en voz alta, no le sirve.” |
 | “Todavía no tengo tema, ¿estoy mal?” | “No. Hoy nadie tiene tema definitivo. Salga con una frase tentativa; en la Sesión 02 la afinamos con la línea de investigación.” |
 | “¿Dónde entrego?” | “Solo en CDigital, en el espacio de la sesión. Lo que llegue por WhatsApp o correo personal no cuenta como entregado.” |
@@ -170,7 +171,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 
 > “**Slide 8 — Qué se llevan al final.** El producto es **un artículo**. No seis trabajos sueltos: uno solo, que crece. Al final debe tener título, introducción, problema, pregunta, marco con fuentes citadas y lista de referencias. ¿Para qué sirve de verdad? Es la semilla de su trabajo de grado y la prueba de que usted puede sostener una idea con evidencia y no con opinión.”
 
-> “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, revisen CDigital ese mismo día: la consigna queda publicada.”
+> “**Slide 9 — Este es un periodo corto.** No se lo digo para asustarlos, sino para que se organicen: son seis encuentros, faltar a uno es perder casi la sexta parte del curso, y los avances se acumulan. Si faltan, ese mismo día abran la carpeta de la sesión en el **Drive de clases**: ahí queda la consigna y el material.”
 
 **Pregunte a dos estudiantes:** “¿en qué semana creen que se empieza a escribir el artículo?”. Conviene que la respuesta —**esta semana**— la digan ellos.
 
@@ -207,7 +208,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 **GUION LITERAL:**
 > “**Slides 16 y 17 — Convivencia y dudas frecuentes.** Dos minutos de acuerdos: empezamos a la hora, micrófono apagado mientras alguien habla, cámara si su conexión da, y respeto en el foro —se comenta el texto, nunca a la persona—. En la siguiente slide dejé las dudas que siempre salen el primer día; léanlas con calma después.”
 
-> “**Slide 18 — Lo que debe tener listo para la Sesión 02.** Esta es la tarea, y es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 del Syllabus, publicadas en CDigital. Media hora de lectura y traen **dos dudas anotadas**. Segundo, escriban su **tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una frase con actor, fenómeno y contexto; dos o tres líneas de por qué les importa; y una fuente que encuentren en Google Académico. Súbanlo a CDigital antes de la próxima clase.”
+> “**Slide 18 — Lo que debe tener listo para la Sesión 02.** Esta es la tarea, y es doble. Primero, la **lectura autónoma**: las unidades 1 y 2 del Syllabus, que están en la carpeta de esta sesión, en el **Drive de clases** —el enlace les llega en el correo de bienvenida—. Media hora de lectura y traen **dos dudas anotadas**. Segundo, escriban su **tema tentativo** en un Google Doc llamado `S01_TemaTentativo_Apellido`: una frase con actor, fenómeno y contexto; dos o tres líneas de por qué les importa; y una fuente que encuentren en Google Académico. Súbanlo a CDigital antes de la próxima clase.”
 
 > “**Slides 19 y 20 — Acuerdos y para la próxima.** Resumo el trato: se entrega en CDigital, se trae el avance escrito y se cita en APA 7. Con esas tres, este curso funciona.”
 
@@ -216,16 +217,16 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 ---
 
 🧩 **Encargo autónomo (para la Sesión 02)**
-1. **No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** publicadas en CDigital y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.
+1. **No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2**, publicadas en la carpeta de la Sesión 01 del **Drive de clases**, y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.
 2. Archivo en CDigital: `S01_TemaTentativo_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
 - [ ] **Quiz 1** (Cuestionario · 6% · corte 1) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] **ACA Final** (Tarea · 32,8% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
-- [ ] **Lectura autónoma U1–U2 publicada en CDigital** (sin eso el encargo de hoy no se puede cumplir)
+- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo de hoy no se puede cumplir)
 - [ ] **Padlet** oficial probado y el link listo para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
 - [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)
 - [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 21 slides)

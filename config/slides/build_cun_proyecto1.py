@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
 from cun_slides_engine import *
 from sesiones_cun import COURSES, DOCENTE_CORREO, LINK_TUTORIAS, MSG_TUTORIAS_POR_GRUPO, meet_url
-from carga_academica import bold_var, cover_meta_lines, curso as carga_curso
+from carga_academica import bold_var, clases_url, cover_meta_lines, curso as carga_curso
 from fechas_entrega_aca import (
     blocks_para_slide,
     entrega_por_id,
@@ -49,6 +49,10 @@ URL_MEET = meet_url("proyecto1", "Proyecto I")
 # URL real del aula desde carga_academica_2026.json → cursos.<key>.cdigital
 # (auditada en CDigital el 2026-08-10). Si falta, `cdigital_url` da el placeholder.
 URL_CDIGITAL = cdigital_url("proyecto1")
+# Carpeta `Clases/` compartida en Drive (material del estudiante, sesión por sesión).
+# Mismo contrato que el Meet: carga_academica_2026.json → cursos.proyecto1.clases;
+# vacío ⇒ marcador de posición [URL Material de clases …].
+URL_CLASES = clases_url("proyecto1", "Proyecto I")
 FUENTE_ESP329 = "Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx"
 
 # ---------- Documentos REALES de `Clases/Recursos/ACAs/` ----------
@@ -100,15 +104,16 @@ course_cover(
 tutor_slide(prs, "Docente", DOCENTE_CREDENCIALES, DOCENTE_CORREO, idx=2)
 
 # ---------- 3. ROMPEHIELOS + QR ----------
+# La forma del rompehielos NO se elige aquí: el motor cuenta la matrícula real del curso
+# (roster de CDigital de 2026/54ES4) y sirve el muro de Padlet solo en los grupos que
+# todavía se leen enteros (≤ ICEBREAKER_MAX_MURO). Proyecto I tiene 50 estudiantes, así
+# que le toca el formulario + las encuestas/Q&A nativos de Meet. De aquí solo viaja lo
+# que cambia entre cursos: qué se le pide al estudiante además del nombre.
 icebreaker_qr_slide(
     prs,
     idx=3,
-    consignas=[
-        f"**Escanea o abre:** {PADLET_PRESENTACION_URL}",
-        "Post-it: **nombre** + **expectativa del curso** + **tema tentativo** de investigación (1 frase).",
-        "Tablero oficial: **Padlet** (mismo enlace en los 5 cursos).",
-        "Ahora (~7 min). Leemos juntos 3–4 notas (sin juzgar).",
-    ],
+    course_key="proyecto1",
+    pide="**expectativa del curso** + un **tema tentativo** de investigación (1 frase)",
 )
 
 # ---------- 4. PROPÓSITO (ESP329 · Justificación + macrocompetencia) ----------
@@ -408,6 +413,7 @@ content_slide(
         f"**Registro de tutorías (obligatorio):** @@{LINK_TUTORIAS_ESTUDIANTE}@@",
         MSG_TUTORIAS_POR_GRUPO,
         f"**Google Meet (mismo enlace toda la serie):** {bold_var(URL_MEET)}",
+        f"**Material de clases (Drive):** {bold_var(URL_CLASES)}",
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
@@ -417,6 +423,9 @@ content_slide(
         f"**Syllabus fuente:** `{FUENTE_ESP329}` · Entregas oficiales solo por CDigital.",
     ],
     idx=_i,
+    # 11 viñetas (la de la carpeta `Clases/` en Drive entró el 2026-08-11): a 16 pt la
+    # última quedaba pisando el pie de la slide.
+    size=15,
 )
 
 # ---------- CIERRE ----------

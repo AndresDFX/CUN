@@ -38,6 +38,39 @@ def curso(key: str) -> dict:
     return data
 
 
+# Carpeta `Clases/` de la asignatura compartida en Drive (material del estudiante).
+# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.clases
+# (cadena vacía = el docente aún no comparte la carpeta ⇒ se muestra el placeholder).
+# Mismo contrato que `meet` en sesiones_cun.meet_url: NO hardcodear la URL en los builds.
+def clases_placeholder(curso_corto: str) -> str:
+    return f"[URL Material de clases — carpeta Clases/ en Drive · {curso_corto}]"
+
+
+def clases_url(key: str, curso_corto: str | None = None) -> str:
+    """Enlace de Drive a la carpeta `Clases/` del curso: el real si está en config, si no el placeholder.
+
+    `curso_corto` solo se usa para redactar el placeholder (nombre visible del curso).
+    """
+    url = ""
+    corto = curso_corto or key
+    try:
+        c = curso(key)
+        url = (c.get("clases") or "").strip()
+        corto = curso_corto or c.get("titulo_corto") or key
+    except Exception:
+        url = ""
+    return url or clases_placeholder(corto)
+
+
+# Grabaciones de las clases: UNA sola carpeta de Drive para todos los cursos y todos los
+# periodos (no va por curso en el JSON). Dentro, cada grabación se busca por el NOMBRE DEL
+# EVENTO del calendario: «periodo - grupo - asignatura - sesion»
+# (lo arma `sesiones_cun.subject_encuentro`; por eso el subject lleva el periodo delante).
+GRABACIONES_URL = (
+    "https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing"
+)
+
+
 def workspace_root() -> Path:
     """Raíz del workspace `Cursos/` (dos niveles arriba de este archivo)."""
     return Path(__file__).resolve().parents[2]

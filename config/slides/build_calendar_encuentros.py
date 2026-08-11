@@ -602,6 +602,40 @@ def _sync_fechas_txt(course_key: str, grupo_dir: Path) -> None:
             print(f"   sync {nombre} ({grupo_dir.name})")
 
 
+ROSTER_NAME = "Correos estudiantes (invitados Calendar).txt"
+
+
+def _escribir_roster_txt(course_key: str, dest_dir: Path, etiqueta: str, correos: list[str]) -> None:
+    """Lista de correos del grupo, en UNA línea separada por comas y SIN espacios.
+
+    El formato lo pidió el Docente (11/08/2026) y no es capricho: es el único que Google
+    acepta de una pegada al añadir miembros a un grupo de Chat o de Grupos. Con un correo
+    por línea —como estaba— hay que pegarlos de a uno, y son entre 20 y 112.
+
+    Antes solo Proyecto I regeneraba este archivo (desde su propio builder); los otros
+    cuatro se quedaron congelados desde que se crearon. Ahora lo escribe este build, que
+    ya calcula el roster de los cinco cursos desde `Listado estudiantes (CDigital).csv`.
+    """
+    if not dest_dir.is_dir():
+        return
+    titulo = COURSES[course_key]["titulo"]
+    cuerpo = ",".join(correos)
+    (dest_dir / ROSTER_NAME).write_text(
+        f"Correos de los estudiantes · {titulo} · grupo {etiqueta} · {len(correos)} invitados.\n"
+        "\n"
+        "PARA CREAR EL GRUPO DE GOOGLE (Chat o Grupos): copia la última línea ENTERA y pégala\n"
+        "en «Añadir miembros». Va separada por comas y sin espacios, que es como Google la\n"
+        "acepta de una sola vez.\n"
+        "\n"
+        "El Docente no está en la lista: es el organizador, no un invitado.\n"
+        "Para los eventos de Calendar NO uses esto ni el .ics: usa el «PRINCIPAL - Crear\n"
+        "encuentros con invitados.gs», que ya lleva estos mismos correos dentro.\n"
+        "\n"
+        f"{cuerpo}\n",
+        encoding="utf-8",
+    )
+
+
 def _inventario(out_dir: Path, gs_name: str) -> list[str]:
     """Filas de la tabla «qué hay en esta carpeta», clasificadas por rol."""
     filas = []
@@ -937,6 +971,12 @@ def build_curso(course_key: str) -> str | None:
 
     for g in grupos_titulo:
         _sync_fechas_txt(course_key, base / g)
+        _escribir_roster_txt(course_key, base / g, g, rosters[g])
+    if combinado:
+        # TG3 va en una sola serie: además de la lista por grupo, la de los tres juntos,
+        # que es la que sirve para el grupo de Google Chat de la clase.
+        todos = sorted({e for g in grupos_titulo for e in rosters[g]})
+        _escribir_roster_txt(course_key, out_dir, "+".join(grupos_titulo), todos)
 
     raiz = Path(c["folder"]).parents[1]
     estado_meet = ("Meet ya en config" if meet_url(course_key).startswith("https://")

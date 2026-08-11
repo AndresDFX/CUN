@@ -16,64 +16,64 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-08-12@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260812T170000
 DTEND;TZID=America/Bogota:20260812T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 01
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 01
 DESCRIPTION:Sesión 01 — Presentación del curso · docente · estudiantes · ACAs
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-08-19@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260819T170000
 DTEND;TZID=America/Bogota:20260819T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 02
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 02
 DESCRIPTION:Sesión 02 — Creatividad/innovación en I+D · Design Thinking y técnicas
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-08-26@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260826T170000
 DTEND;TZID=America/Bogota:20260826T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 03
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 03
 DESCRIPTION:Sesión 03 — Gestión de la innovación (Manual de Oslo / OCDE)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-09-02@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260902T170000
 DTEND;TZID=America/Bogota:20260902T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 04
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 04
 DESCRIPTION:Sesión 04 — Tipos de innovación
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-09-09@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260909T170000
 DTEND;TZID=America/Bogota:20260909T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 05
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 05
 DESCRIPTION:Sesión 05 — Validación de la propuesta · vigilancia tecnológica
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-09-16@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260916T170000
 DTEND;TZID=America/Bogota:20260916T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 06
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 06
 DESCRIPTION:Sesión 06 — Innovación local–internacional · entidades de apoyo
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-creatividad-54408-2026-09-23@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260923T170000
 DTEND;TZID=America/Bogota:20260923T180000
-SUMMARY:54408 - Creatividad y Pensamiento Innovador - Sesion 07
+SUMMARY:26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 07
 DESCRIPTION:Sesión 07 — Taller de consolidación y sustentación de la propuesta
 STATUS:CONFIRMED
 END:VEVENT

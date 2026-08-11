@@ -174,7 +174,7 @@ Antes de dar por buena una pregunta, respóndase mentalmente: ¿quién es el act
 - [ ] Anunciar en clase que **Quiz** (Cuestionario · 25%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 02 - Problema y pregunta de investigación/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 02 - Problema y pregunta de investigación/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

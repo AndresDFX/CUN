@@ -201,7 +201,7 @@ Mostrar un marco 'de autores' (Autor 1 dice…, Autor 2 dice…) y reorganizarlo
 🧩 **Entregable de hoy**
 1. Cierre de marco + lista de huecos resueltos.
 2. Archivo en CDigital: `S08_MarcoCierre_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

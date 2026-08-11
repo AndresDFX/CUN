@@ -16,6 +16,7 @@ description: |
   - "¿Esta asignatura es de nota única o por cortes?"
   - "¿En qué línea de investigación encaja este tema para un estudiante de IA?"
   - "¿Qué pasa si un lunes de clase es festivo?"
+  - "¿Dónde quedó la grabación de la sesión pasada y cómo la busca el estudiante?"
   - "Recuérdame el checklist antes de habilitar las entregas en Moodle."
   
   SIEMPRE responde citando de qué documento sale la respuesta (nombre del archivo + sección), y si la
@@ -72,6 +73,16 @@ Raíz: `G:\Mi unidad\Trabajos\Empleo\CUN\Cursos\`. Empieza siempre por `LEEME - 
 | Formulario de registro docente | https://forms.gle/6t6BXqQ2Kwmivpct8 (uso exclusivo docente AFI) | No aplica — usa lo que indique Dirección de Programa |
 
 Si una pregunta no especifica la asignatura, **pregunta primero a cuál se refiere** antes de responder con reglas de la gobernanza equivocada.
+
+---
+
+# DATOS OPERATIVOS VIGENTES (respuestas rápidas · regla canónica: `.cursor/rules/cun-docente.mdc`)
+
+- **Festivo = clase autónoma, y su material va al DRIVE DE CLASES.** La clase no se cancela: queda como clase autónoma y la actividad se publica en la **subcarpeta de esa sesión dentro de la carpeta `Clases/` compartida en Drive** (el «Drive de clases» del LEEME del estudiante). Desde el **2026-08-11 ya no se responde «queda publicada en CDigital»** — eso está derogado. **CDigital sigue siendo donde se entrega y donde están las notas**: material → Drive · entrega y nota → CDigital.
+- **Rompehielos «Preséntate»: depende del tamaño del grupo, no es Padlet siempre.** Hasta 20 estudiantes (solo Investigación 53339) → **Padlet** oficial. Más de 20 (Proyecto I 54ES4 = 50 · Creatividad 54408 = 50 · TG2 54448 = 50 · TG3 = 112 en una sola serie) → **formulario de Google** + **encuestas y Q&A nativos de Meet**; con 100+ **no se presentan todos** (se leen 5 o 6 respuestas y el resto se ve en la pantalla de resumen). Si preguntan por Mentimeter o Slido: **no** — sus planes gratis cortan en 50 participantes/mes y en 100 con 3 encuestas, por debajo de estos cursos; el formulario de Google no tiene tope y ya viene con la licencia CUN.
+- **Grabaciones:** carpeta **única para todos los cursos, este periodo y los siguientes** — https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing. Se buscan por el **nombre del evento**: «periodo - grupo - asignatura - sesión».
+- **Subject de los eventos de clase:** `{periodo} - {grupos} - {Asignatura corta} - Sesion NN` (el periodo va primero; TG3 lleva sus dos periodos `26P04/26V04` unidos con `/`, igual que sus tres grupos). Ese prefijo es lo que evita confundir periodos distintos dentro de la carpeta de grabaciones.
+- **Correo de bienvenida:** lleva el enlace de **grabaciones** (real) y el del **material de clases** de esa asignatura (carpeta `Clases/` en Drive), este último todavía como **marcador de posición** — no lo inventes si te lo preguntan: di que está pendiente.
 
 ---
 

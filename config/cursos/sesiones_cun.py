@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parents[2]
@@ -460,11 +461,21 @@ _verificar_titulos_sin_fecha()
 # Subject de Calendar (encuentros CSV/ICS) — patrón único los 5 cursos
 # ---------------------------------------------------------------------------
 # Formato canónico (CSV/ICS encuentros · los 5 cursos):
-#   {grupos} - {Asignatura corta} - Sesion NN
-#   Varios grupos: 54450/54466/54467 - Trabajo de Grado 3 - Sesion 03
+#   {periodo} - {grupos} - {Asignatura corta} - Sesion NN
+#   Varios grupos: 26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 03
 # Sin nombre largo del tema (el tema va en Description).
 # Festivo Pregrado (clase autónoma) — mismo patrón + sufijo:
-#   {grupos} - {Asignatura} - Sesion NN (autónoma)
+#   {periodo} - {grupos} - {Asignatura} - Sesion NN (autónoma)
+#
+# POR QUÉ EL PERIODO VA DE PRIMERO (2026-08-11, decisión del Docente):
+#   El nombre del evento es la clave de búsqueda de la carpeta única de grabaciones
+#   («periodo - grupo - asignatura - sesion»). Esa carpeta acumula TODOS los periodos,
+#   así que sin el prefijo, dentro de un mismo año hay varios «54448 - Trabajo de
+#   Grado 2 - Sesion 01» indistinguibles. El periodo NO es una constante del build:
+#   se deriva de los MISMOS grupos que entran en el Subject (carga_academica_2026.json
+#   → cursos.<key>.grupos.<grupo>.periodo), porque TG3 corre los tres grupos en una
+#   sola serie con dos periodos (54450 = 26P04 · 54466/54467 = 26V04) y porque el
+#   calendario recorta grupos ya cerrados en las últimas fechas.
 # ---------------------------------------------------------------------------
 
 def titulo_para_calendar(course_key: str) -> str:
@@ -485,6 +496,61 @@ def groups_subject_label(groups: list[str]) -> str:
     return "/".join(gs)
 
 
+# Avisos ya emitidos (course_key, grupos sin periodo): `subject_encuentro` se llama una vez
+# por sesión, y sin memoria el mismo aviso saldría 11–15 veces por curso.
+_PERIODO_AVISADO: set[tuple[str, str]] = set()
+
+
+def periodo_de_grupo(course_key: str, grupo: str) -> str:
+    """Periodo del grupo (26ES4 · 26V04 · 26P03 · 26P04) desde `carga_academica_2026.json`.
+
+    Cadena vacía si no está el JSON, el curso, el grupo o el campo `periodo`.
+    """
+    if _carga_curso is None:
+        return ""
+    try:
+        grupos = _carga_curso(course_key).get("grupos") or {}
+        return str((grupos.get(str(grupo).strip()) or {}).get("periodo") or "").strip()
+    except Exception:
+        return ""
+
+
+def periodos_subject_label(course_key: str, groups: list[str]) -> str:
+    """Periodo(s) en Subject: '26V04' o '26P04/26V04' — de los MISMOS grupos del Subject.
+
+    Sin repetir y en el orden en que llegan los grupos (el mismo que usa
+    `groups_subject_label`, para que las dos etiquetas se lean en paralelo).
+    Si algún grupo no trae periodo devuelve '' (Subject sin prefijo) y avisa por
+    consola: un Subject a medias —unos eventos con periodo y otros sin él— rompe la
+    búsqueda de grabaciones más que no ponerlo.
+    """
+    gs = [str(g).strip() for g in groups if str(g).strip()]
+    if not gs:
+        return ""
+    periodos: list[str] = []
+    faltantes: list[str] = []
+    for g in gs:
+        p = periodo_de_grupo(course_key, g)
+        if not p:
+            faltantes.append(g)
+        elif p not in periodos:
+            periodos.append(p)
+    if faltantes:
+        clave = (course_key, "/".join(faltantes))
+        if clave not in _PERIODO_AVISADO:
+            _PERIODO_AVISADO.add(clave)
+            print(
+                f"[sesiones_cun] AVISO: sin `periodo` para {course_key} → grupo(s) "
+                f"{clave[1]} en carga_academica_2026.json "
+                "(cursos.<key>.grupos.<grupo>.periodo). El Subject de esos encuentros "
+                "sale SIN prefijo de periodo y no se podrá buscar en la carpeta de "
+                "grabaciones con «periodo - grupo - asignatura - sesion».",
+                file=sys.stderr,
+            )
+        return ""
+    return "/".join(periodos)
+
+
 def subject_encuentro(
     course_key: str,
     groups: list[str],
@@ -496,22 +562,27 @@ def subject_encuentro(
 ) -> str:
     """Arma el Subject corto de un evento de encuentro (sincrónico o autónomo).
 
-    Patrón: ``{grupos} - {Asignatura} - Sesion NN`` (sin tema largo).
+    Patrón: ``{periodo} - {grupos} - {Asignatura} - Sesion NN`` (sin tema largo).
+    El periodo sale de los mismos `groups` (ver `periodos_subject_label`); si falta,
+    el Subject cae al patrón anterior ``{grupos} - {Asignatura} - …`` y se avisa.
     ``titulo_sesion`` se ignora en el Subject (queda en Description del evento).
-    Festivo sin entrada en catálogo: ``{grupos} - {Asignatura} - Clase autonoma (…) (autónoma)``.
+    Festivo sin entrada en catálogo:
+    ``{periodo} - {grupos} - {Asignatura} - Clase autonoma (…)``.
     Día festivo con sesión de catálogo: mismo patrón Sesion NN + `` (autónoma)``.
     """
     curso = titulo_para_calendar(course_key)
     g_lbl = groups_subject_label(groups)
+    p_lbl = periodos_subject_label(course_key, groups)
+    pref = f"{p_lbl} - " if p_lbl else ""
     # titulo_sesion: aceptado por compatibilidad; no va en el Subject corto.
     _ = (titulo_sesion or "").strip()
     if n is not None:
-        core = f"{g_lbl} - {curso} - Sesion {int(n):02d}"
+        core = f"{pref}{g_lbl} - {curso} - Sesion {int(n):02d}"
     elif autonoma:
         fest = f" ({festivo_nombre})" if festivo_nombre else ""
-        core = f"{g_lbl} - {curso} - Clase autonoma{fest}"
+        core = f"{pref}{g_lbl} - {curso} - Clase autonoma{fest}"
     else:
-        core = f"{g_lbl} - {curso} - Encuentro"
+        core = f"{pref}{g_lbl} - {curso} - Encuentro"
     # Solo la rama `Sesion NN` necesita el sufijo: la rama `Clase autonoma (Festivo)` ya
     # dice que es autónoma, y añadirlo otra vez daba «Clase autonoma (Asunción…) (autónoma)».
     if autonoma and n is not None and not core.rstrip().endswith("(autónoma)"):

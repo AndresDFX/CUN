@@ -21,10 +21,12 @@ En TG3 hay una trampa extra: esto es **una sola serie para los tres grupos**. An
 | Archivo | Para qué sirve |
 |---|---|
 | `Calendario de clases - Grupos 54450+54466+54467.md` | Referencia: el cronograma en tabla. No se importa: se lee. |
+| `Correos estudiantes (invitados Calendar).txt` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
 | `LEEME - Crear los eventos de Calendar.md` | Este archivo. |
 | `PRINCIPAL - Crear encuentros con invitados (3 grupos).gs` | **FLUJO PRINCIPAL.** El único que crea los eventos con invitados y con Meet. |
 | `RESPALDO sin invitados - Encuentros TRABAJO DE GRADO 3 - Grupos 54450+54466+54467.csv` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
 | `RESPALDO sin invitados - Encuentros TRABAJO DE GRADO 3 - Grupos 54450+54466+54467.ics` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
+| `Rompehielos Slido - Sesion 01.md` | — |
 
 El `Entregas y hitos docentes - Importar a Calendar.csv`, el roster y el correo de bienvenida de cada grupo están en `2026/54450/`, `2026/54466/` y `2026/54467/`: los cierres de ACA **no** son iguales en los tres.
 

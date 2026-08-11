@@ -163,7 +163,7 @@ El marco conceptual **baja a tierra** el marco teórico (traduce constructos abs
 ✅ **Checklist antes de clase**
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 06 - Marco conceptual y marco contextual/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 06 - Marco conceptual y marco contextual/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

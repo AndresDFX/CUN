@@ -134,9 +134,9 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 
 > “Y abro la **bitácora**: una fila por aporte. 'Aporte de Ana: agregar un ítem sobre errores en producción → decisión: adopto → por qué: cubre un objetivo que tenía flojo'. Eso protege mi autoría y deja evidencia del proceso.”
 
-![Padlet / Docs — socialización breve](Capturas/Sesion 01/tg_padlet.png)
+![Docs compartido — socialización breve](Capturas/Sesion 01/tg_padlet.png)
 
-> **En pantalla:** Publicar problema+propuesta en 5 líneas; pedir 1 comentario de par.
+> **En pantalla:** Con 112 no hay ronda: cada quien escribe problema+propuesta en 5 líneas en el Doc del curso y comenta el de un par. En vivo se leen 4 o 5.
 
 #### 4️⃣ Taller (~8 min) — Taller
 **Protagonista:** Estudiantes (taller de socialización) · Docente modera.
@@ -198,7 +198,7 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 🧩 **Entregable de hoy**
 1. Bitácora de co-creación + 3 aprendizajes accionables.
 2. Archivo en CDigital: `S06_CoCreacion_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

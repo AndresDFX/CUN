@@ -30,6 +30,7 @@ Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIP
 | `PRINCIPAL - Crear encuentros con invitados.gs` | **FLUJO PRINCIPAL.** El único que crea los eventos con invitados y con Meet. |
 | `RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.csv` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
 | `RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.ics` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
+| `Rompehielos Slido - Sesion 01.md` | — |
 
 ## Paso a paso
 

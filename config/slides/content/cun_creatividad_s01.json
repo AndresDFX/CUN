@@ -1,6 +1,21 @@
 [
   {
     "type": "bullets",
+    "title": "Preséntate: el formulario del curso (2 minutos)",
+    "bullets": [
+      "En el grupo hay **50 matriculados**. Un muro con 50 notas no se lee en una hora de clase: nadie alcanza a ser visto.",
+      "Por eso nos presentamos en un **formulario de Google**, que el Docente pega en el chat del Meet y queda en el LEEME de `Clases/`.",
+      "  **Enlace:** [URL Formulario «Preséntate» — pendiente]",
+      "  Se entra con su correo **@cun.edu.co**: sin registrarse en nada nuevo, sin instalar nada y sin costo.",
+      "**Qué responde** (2–3 minutos, una sola vez): nombre, expectativa del curso y **el tema o problema** que le interesa mirar.",
+      "**Cuándo:** en los primeros minutos del encuentro. Después el Docente proyecta el resumen y lee cinco o seis respuestas en voz alta, sin juzgar ninguna.",
+      "**Durante el encuentro** se participa con las **encuestas** y el **Q&A** del propio Meet: no se abre otra plataforma.",
+      "Si llegó tarde o se le cayó el internet, el formulario sigue abierto hasta la Sesión 02."
+    ],
+    "note": "Esas respuestas no se pierden: con ellas el Docente escoge los ejemplos del curso y junta a quienes traen problemas parecidos."
+  },
+  {
+    "type": "bullets",
     "title": "Cómo trabajamos: una hora juntos, el resto por su cuenta",
     "bullets": [
       "El curso son **2 créditos**: unas **32 horas** de acompañamiento y unas **64 horas** de trabajo autónomo.",
@@ -17,18 +32,54 @@
   {
     "type": "table",
     "title": "Mapa del curso: las 7 sesiones de un vistazo",
-    "headers": ["Sesión", "Tema del encuentro", "Qué sale de esa sesión"],
+    "headers": [
+      "Sesión",
+      "Tema del encuentro",
+      "Qué sale de esa sesión"
+    ],
     "rows": [
-      ["**01** (hoy)", "Encuadre: el curso, el Docente, ustedes y cómo se evalúa", "Reglas claras + encargo de lectura autónoma"],
-      ["**02**", "Creatividad e innovación en I+D · **Design Thinking** y técnicas", "Su reto bien planteado y un banco de ideas"],
-      ["**03**", "Gestión de la innovación (**Manual de Oslo** / OCDE)", "Su propuesta clasificada y justificada"],
-      ["**04**", "Tipos de innovación", "Cuadro comparativo aplicado a su caso"],
-      ["**05**", "Validación de la propuesta · **vigilancia tecnológica** (sesión doble)", "FODA, Canvas, MVP + tablero de señales con una decisión"],
-      ["**06**", "Innovación local–internacional · entidades de apoyo", "Mapa de entidades + guion del pitch de 60 segundos"],
-      ["**07**", "Taller de consolidación y **sustentación** de la propuesta", "Su propuesta defendida, ajustada y cerrada"]
+      [
+        "**01** (hoy)",
+        "Encuadre: el curso, el Docente, ustedes y cómo se evalúa",
+        "Reglas claras + encargo de lectura autónoma"
+      ],
+      [
+        "**02**",
+        "Creatividad e innovación en I+D · **Design Thinking** y técnicas",
+        "Su reto bien planteado y un banco de ideas"
+      ],
+      [
+        "**03**",
+        "Gestión de la innovación (**Manual de Oslo** / OCDE)",
+        "Su propuesta clasificada y justificada"
+      ],
+      [
+        "**04**",
+        "Tipos de innovación",
+        "Cuadro comparativo aplicado a su caso"
+      ],
+      [
+        "**05**",
+        "Validación de la propuesta · **vigilancia tecnológica** (sesión doble)",
+        "FODA, Canvas, MVP + tablero de señales con una decisión"
+      ],
+      [
+        "**06**",
+        "Innovación local–internacional · entidades de apoyo",
+        "Mapa de entidades + guion del pitch de 60 segundos"
+      ],
+      [
+        "**07**",
+        "Taller de consolidación y **sustentación** de la propuesta",
+        "Su propuesta defendida, ajustada y cerrada"
+      ]
     ],
     "note": "Ocho unidades del Syllabus en siete encuentros: **U1–U2 se leen de forma autónoma** y las retomamos al abrir la Sesión 02. Todo lo que la **ACA Final** califica se dicta hasta la **Sesión 06**; la 07 es taller de cierre.",
-    "col_w": [1.4, 5.6, 4.9]
+    "col_w": [
+      1.4,
+      5.6,
+      4.9
+    ]
   },
   {
     "type": "bullets",
@@ -48,29 +99,81 @@
   {
     "type": "table",
     "title": "Qué evalúa cada corte: lo que está en el libro de calificaciones",
-    "headers": ["Corte", "Qué hay en el aula (CDigital)", "Qué se prepara para eso"],
+    "headers": [
+      "Corte",
+      "Qué hay en el aula (CDigital)",
+      "Qué se prepara para eso"
+    ],
     "rows": [
-      ["**Corte 1**", "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.", "Lo trabajado hasta ahí: problema–oportunidad real y observable, bloqueadores y ensanchadores, técnicas de ideación. Guías escritas: `Quiz 1 (6%)` y `Parcial 1 (24%)` en `Recursos/ACAs/`."],
-      ["**Corte 2**", "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.", "Tipificar la propuesta (**Manual de Oslo**) y validarla: cuadro comparativo, **FODA**, **Canvas** y **MVP** aplicados a su propia propuesta. Guías: `Quiz 2 (9%)` y `Parcial 2 (21%)`."],
-      ["**Corte 3**", "**Quiz 3** (cuestionario) + **ACA Final** (tarea: el único documento que se sube) + **autoevaluación** (cuestionario) y **coevaluación** (foro).", "La **Propuesta de Innovación** consolidada: problema → propuesta → validación → vigilancia → entidades de apoyo + **pitch de 1 página** (8–12 págs.). Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`."]
+      [
+        "**Corte 1**",
+        "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.",
+        "Lo trabajado hasta ahí: problema–oportunidad real y observable, bloqueadores y ensanchadores, técnicas de ideación. Guías escritas: `Quiz 1 (6%)` y `Parcial 1 (24%)` en `Recursos/ACAs/`."
+      ],
+      [
+        "**Corte 2**",
+        "**Quiz 2** y **Parcial 2**: también cuestionarios en el aula.",
+        "Tipificar la propuesta (**Manual de Oslo**) y validarla: cuadro comparativo, **FODA**, **Canvas** y **MVP** aplicados a su propia propuesta. Guías: `Quiz 2 (9%)` y `Parcial 2 (21%)`."
+      ],
+      [
+        "**Corte 3**",
+        "**Quiz 3** (cuestionario) + **ACA Final** (tarea: el único documento que se sube) + **autoevaluación** (cuestionario) y **coevaluación** (foro).",
+        "La **Propuesta de Innovación** consolidada: problema → propuesta → validación → vigilancia → entidades de apoyo + **pitch de 1 página** (8–12 págs.). Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`."
+      ]
     ],
     "note": "El peso de cada ítem está en la slide «CÓMO SE EVALÚA» de esta misma sesión, con el tipo de actividad. Enunciados y checklists: `Clases/Recursos/ACAs/`; fechas exactas, en la Presentación del Curso.",
-    "col_w": [1.1, 4.9, 5.9]
+    "col_w": [
+      1.1,
+      4.9,
+      5.9
+    ]
   },
   {
     "type": "table",
     "title": "Qué separa un entregable fuerte de uno flojo",
-    "headers": ["Aspecto", "Entregable flojo", "Entregable fuerte"],
+    "headers": [
+      "Aspecto",
+      "Entregable flojo",
+      "Entregable fuerte"
+    ],
     "rows": [
-      ["Usuario", "“la sociedad”, “las empresas”, “los usuarios”", "Una persona concreta, en un contexto concreto"],
-      ["Problema", "Se deduce de la solución que ya había elegido", "Se describe con un síntoma que se puede observar"],
-      ["Evidencia", "“todo el mundo sabe que…”", "Un dato, una observación o una frase del usuario"],
-      ["Fuentes", "Copiadas de un blog sin autor ni fecha", "Citadas en **APA 7** y verificables"],
-      ["Avance", "Escrito la noche anterior, de una sola pieza", "Se nota el hilo de varias sesiones encima"],
-      ["Presentación", "Sin formato, sin títulos, sin numerar", "Plantilla APA CUN, ordenado y legible"]
+      [
+        "Usuario",
+        "“la sociedad”, “las empresas”, “los usuarios”",
+        "Una persona concreta, en un contexto concreto"
+      ],
+      [
+        "Problema",
+        "Se deduce de la solución que ya había elegido",
+        "Se describe con un síntoma que se puede observar"
+      ],
+      [
+        "Evidencia",
+        "“todo el mundo sabe que…”",
+        "Un dato, una observación o una frase del usuario"
+      ],
+      [
+        "Fuentes",
+        "Copiadas de un blog sin autor ni fecha",
+        "Citadas en **APA 7** y verificables"
+      ],
+      [
+        "Avance",
+        "Escrito la noche anterior, de una sola pieza",
+        "Se nota el hilo de varias sesiones encima"
+      ],
+      [
+        "Presentación",
+        "Sin formato, sin títulos, sin numerar",
+        "Plantilla APA CUN, ordenado y legible"
+      ]
     ],
     "note": "El Docente no evalúa **cuánto** escribió: evalúa si **se entiende, se sostiene y avanzó** respecto al corte anterior.",
-    "col_w": [1.8, 4.9, 5.2]
+    "col_w": [
+      1.8,
+      4.9,
+      5.2
+    ]
   },
   {
     "type": "bullets",
@@ -92,9 +195,18 @@
     "type": "boxes",
     "title": "Integridad académica: la línea que no se cruza",
     "boxes": [
-      ["info", "Todo lo que no sea suyo **se cita en APA 7**: texto, datos, imágenes, código y también las ideas que resumió con sus palabras. Citar no le resta mérito: demuestra que leyó."],
-      ["advertencia", "Cuenta como **plagio** copiar y pegar sin comillas ni fuente, parafrasear sin citar, traducir un texto ajeno y presentarlo como propio, o entregar un trabajo comprado o hecho por otra persona."],
-      ["aclaracion", "Si aparece plagio, el caso **no se arregla entre usted y el Docente**: sigue el conducto que fija el Reglamento Estudiantil de la CUN. Por eso conviene preguntar antes, no explicar después."]
+      [
+        "info",
+        "Todo lo que no sea suyo **se cita en APA 7**: texto, datos, imágenes, código y también las ideas que resumió con sus palabras. Citar no le resta mérito: demuestra que leyó."
+      ],
+      [
+        "advertencia",
+        "Cuenta como **plagio** copiar y pegar sin comillas ni fuente, parafrasear sin citar, traducir un texto ajeno y presentarlo como propio, o entregar un trabajo comprado o hecho por otra persona."
+      ],
+      [
+        "aclaracion",
+        "Si aparece plagio, el caso **no se arregla entre usted y el Docente**: sigue el conducto que fija el Reglamento Estudiantil de la CUN. Por eso conviene preguntar antes, no explicar después."
+      ]
     ]
   },
   {
@@ -115,18 +227,54 @@
   {
     "type": "table",
     "title": "Herramientas del curso: gratis y desde el navegador",
-    "headers": ["Herramienta", "Para qué la usamos", "Cuenta / acceso"],
+    "headers": [
+      "Herramienta",
+      "Para qué la usamos",
+      "Cuenta / acceso"
+    ],
     "rows": [
-      ["**CDigital**", "Material, anuncios, foro, **quices y parciales** y entrega de la **ACA Final**", "Login institucional CUN"],
-      ["**Google Docs / Slides**", "Escribir la propuesta y armar el pitch (plantilla APA CUN)", "Cuenta CUN o Gmail"],
-      ["**Excalidraw** (excalidraw.com)", "Bocetos, mapas y diagramas: feos pero claros", "Sin cuenta"],
-      ["**Canvanizer**", "Business Model Canvas de su propuesta (Corte 2)", "Gratis en el navegador"],
-      ["**Scholar · SciELO · Redalyc**", "Buscar fuentes serias, antecedentes y referentes", "Sin cuenta"],
-      ["**ZoteroBib** (zbib.org)", "Armar las referencias en APA 7 sin instalar nada", "Sin cuenta"],
-      ["**Canva free** (opcional)", "Una diapositiva de pitch presentable, si la quiere", "Cuenta gratuita"]
+      [
+        "**CDigital**",
+        "Material, anuncios, foro, **quices y parciales** y entrega de la **ACA Final**",
+        "Login institucional CUN"
+      ],
+      [
+        "**Google Docs / Slides**",
+        "Escribir la propuesta y armar el pitch (plantilla APA CUN)",
+        "Cuenta CUN o Gmail"
+      ],
+      [
+        "**Excalidraw** (excalidraw.com)",
+        "Bocetos, mapas y diagramas: feos pero claros",
+        "Sin cuenta"
+      ],
+      [
+        "**Canvanizer**",
+        "Business Model Canvas de su propuesta (Corte 2)",
+        "Gratis en el navegador"
+      ],
+      [
+        "**Scholar · SciELO · Redalyc**",
+        "Buscar fuentes serias, antecedentes y referentes",
+        "Sin cuenta"
+      ],
+      [
+        "**ZoteroBib** (zbib.org)",
+        "Armar las referencias en APA 7 sin instalar nada",
+        "Sin cuenta"
+      ],
+      [
+        "**Canva free** (opcional)",
+        "Una diapositiva de pitch presentable, si la quiere",
+        "Cuenta gratuita"
+      ]
     ],
     "note": "Regla del curso: **nada de pagar ni de instalar**. Si una herramienta le pide tarjeta, no es la que estamos pidiendo.",
-    "col_w": [3.1, 5.3, 3.5]
+    "col_w": [
+      3.1,
+      5.3,
+      3.5
+    ]
   },
   {
     "type": "bullets",
@@ -154,7 +302,7 @@
       "**Participar es parte del método:** aquí se piensa en voz alta y se muestran borradores a medio hacer.",
       "  Ninguna idea se ridiculiza. Las ideas se **critican con criterio**; a las personas no se las critica.",
       "**Respeto en el foro:** se responde a la idea, no a quien la escribió, y no se publican datos ni capturas de terceros.",
-      "Si el encuentro se graba, se avisa al inicio y la grabación queda en **CDigital** para quien no pudo conectarse."
+      "Si el encuentro se graba, se avisa al inicio y la grabación queda en la **carpeta de grabaciones en Drive** (el enlace está en el LEEME de `Clases/` y en el correo de bienvenida)."
     ]
   },
   {
@@ -178,10 +326,22 @@
     "type": "boxes",
     "title": "Preguntas del primer día",
     "boxes": [
-      ["info", "**¿Esta materia se pierde fácil?** No, si trabaja al día. Se pierde por dejar pasar la ventana de un quiz o de un parcial y por armar la ACA Final la última noche: el corte 3 es el que más pesa (vea «CÓMO SE EVALÚA»)."],
-      ["aclaracion", "**¿Puedo trabajar solo o en grupo?** Puede trabajar en dúo si comparten el mismo problema, pero **cada uno entrega** su documento en CDigital."],
-      ["advertencia", "**¿Sirve un trabajo de otro semestre?** Puede partir de un proyecto suyo si lo declara y lo lleva más lejos. Volver a entregar lo mismo es autoplagio."],
-      ["info", "**¿Necesito saber programar o diseñar?** No. Aquí se evalúa criterio, no herramientas."]
+      [
+        "info",
+        "**¿Esta materia se pierde fácil?** No, si trabaja al día. Se pierde por dejar pasar la ventana de un quiz o de un parcial y por armar la ACA Final la última noche: el corte 3 es el que más pesa (vea «CÓMO SE EVALÚA»)."
+      ],
+      [
+        "aclaracion",
+        "**¿Puedo trabajar solo o en grupo?** Puede trabajar en dúo si comparten el mismo problema, pero **cada uno entrega** su documento en CDigital."
+      ],
+      [
+        "advertencia",
+        "**¿Sirve un trabajo de otro semestre?** Puede partir de un proyecto suyo si lo declara y lo lleva más lejos. Volver a entregar lo mismo es autoplagio."
+      ],
+      [
+        "info",
+        "**¿Necesito saber programar o diseñar?** No. Aquí se evalúa criterio, no herramientas."
+      ]
     ]
   }
 ]

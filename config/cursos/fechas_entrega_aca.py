@@ -258,15 +258,27 @@ VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
     },
 }
 
-# Overrides por grupo (mismo formato). TG3: 54450 recibe el 07/11 y cierra notas el
-# 15/11; 54466 y 54467 reciben el 14/11 y cierran el 22/11.
+# Overrides por grupo (mismo formato).
 #
-# Auto y coevaluación cierran en la ÚLTIMA CLASE del grupo, no en el cierre de notas
-# (decisión del Docente, 10/08/2026). Antes cerraban el mismo día del cierre
-# institucional —y en domingo—, así que la coevaluación, que es un FORO y se valora a
-# mano, no tenía ni un día para calificarse y registrarse. Cerrar en día de clase deja
-# 5 días de margen y permite recordarlo en vivo. 54450 termina en la S14 (10/11) porque
-# su curso cierra el 15/11; 54466 y 54467 llegan a la S15 (17/11).
+# TG3 — ENTREGAS ESTANDARIZADAS EN LOS TRES GRUPOS (decisión del Docente, 11/08/2026).
+# El portal da fechas distintas por grupo: 54450 recibe el 07/11 y cierra notas el 15/11;
+# 54466 y 54467 reciben el 14/11 y cierran el 22/11. Pero los tres cursan **una sola serie
+# de encuentros**, con un solo enlace de Meet y el mismo temario, así que comunicar dos
+# calendarios distintos en la misma clase era pedir una confusión.
+#
+# Se estandariza hacia la fecha MÁS TEMPRANA (07/11), no hacia la más tardía, y esa
+# dirección no es arbitraria: el cierre de notas del 54450 es el 15/11 y **sí** es
+# institucional. Subir su entrega al 14/11 le habría dejado UN día para calificar, y su
+# auto/coevaluación no habría podido esperar a la S15 (17/11) sin caer después de su propio
+# cierre. Bajando al 07/11 nadie incumple nada: 54450 tiene 8 días de margen y 54466/54467,
+# quince.
+#
+# Lo único que sigue variando por grupo es el **límite de nota del Docente**, que es la
+# fecha institucional de registro y no se puede mover: 15/11 en 54450, 22/11 en los otros dos.
+#
+# Auto y coevaluación cierran en la ÚLTIMA CLASE COMÚN, la S14 del 10/11, en los tres.
+# Antes cerraban el día del cierre institucional —y en domingo—, así que la coevaluación,
+# que es un FORO y se valora a mano, no tenía ni un día para calificarse.
 VENTANAS_POR_GRUPO: dict[str, dict[str, dict[str, tuple[date, date, date]]]] = {
     "tg3": {
         "54450": {
@@ -275,14 +287,14 @@ VENTANAS_POR_GRUPO: dict[str, dict[str, dict[str, tuple[date, date, date]]]] = {
             "coev":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 15)),   # S14
         },
         "54466": {
-            "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
-            "auto":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
-            "coev":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
+            "aca_final": (date(2026, 8, 11), date(2026, 11, 7), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 22)),   # S14
+            "coev":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 22)),   # S14
         },
         "54467": {
-            "aca_final": (date(2026, 8, 11), date(2026, 11, 14), date(2026, 11, 22)),
-            "auto":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
-            "coev":      (date(2026, 11, 10), date(2026, 11, 17), date(2026, 11, 22)),  # S15
+            "aca_final": (date(2026, 8, 11), date(2026, 11, 7), date(2026, 11, 22)),
+            "auto":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 22)),   # S14
+            "coev":      (date(2026, 11, 3), date(2026, 11, 10), date(2026, 11, 22)),   # S14
         },
     },
 }

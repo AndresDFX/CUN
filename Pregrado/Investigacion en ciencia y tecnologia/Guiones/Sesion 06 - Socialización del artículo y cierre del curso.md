@@ -112,7 +112,7 @@ Y la devolución, en tres frases: *«Me quedó claro el problema y la cifra. No 
 #### Errores frecuentes
 | Error frecuente / pregunta trampa | Qué responde el docente |
 | :--- | :--- |
-| “¿Hoy no vemos bases de datos ni marco teórico?” | Ya se vieron: se adelantaron a las Sesiones 04 y 05 para que la ACA Final los alcanzara. Las decks siguen publicadas en CDigital. |
+| “¿Hoy no vemos bases de datos ni marco teórico?” | Ya se vieron: se adelantaron a las Sesiones 04 y 05 para que la ACA Final los alcanzara. Las decks siguen en la carpeta de esas sesiones, en el **Drive de clases**. |
 | “¿Todavía puedo mejorar mi nota?” | El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revisen sus ventanas hoy. |
 | El estudiante lee la diapositiva en voz alta. | Se corta con respeto: “cuéntemelo, no me lo lea; la única frase que sí se lee es la pregunta”. |
 | El estudiante arranca por la solución. | “Devuélvase: ¿a quién le pasa qué y dónde? La app va después, si es que va.” |
@@ -257,7 +257,7 @@ Y la devolución, en tres frases: *«Me quedó claro el problema y la cifra. No 
 🧩 **Qué se lleva hoy** *(no hay archivo nuevo que subir)*
 1. Ronda de socialización: cada quien cuenta su artículo en cuatro minutos con la estructura de la deck y recibe dos preguntas; quien escucha toma nota con los cuatro criterios de la rúbrica y devuelve las **tres frases**. Producto del taller: una **lista escrita de tres ajustes** al documento.
 2. Archivo en CDigital: **no hay archivo nuevo.** Lo que sí queda registrado hoy en CDigital: la **autoevaluación** (cuestionario) diligenciada y la **coevaluación** (foro) con un comentario propio y una respuesta a otro. Quien no alcance a socializar en vivo lo hace por el **foro del curso**.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

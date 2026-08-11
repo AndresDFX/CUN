@@ -175,7 +175,7 @@ Al terminar esta unidad, el bloque de formulación debe leerse como una sola his
 - [ ] Nota de **Quiz** (25%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 03 - Objetivos, justificación, alcances y limitaciones/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

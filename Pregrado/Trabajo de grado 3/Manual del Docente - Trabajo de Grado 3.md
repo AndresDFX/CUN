@@ -203,12 +203,12 @@ Fuente en vivo: `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — 
 | **Quiz 2** | Cuestionario | 2 | 9% | 22/09/2026 | 29/09/2026 | 06/10/2026 |
 | **Parcial 2** | Cuestionario | 2 | 21% | 06/10/2026 | 13/10/2026 | 20/10/2026 |
 | **ACA Final** (54450) | Tarea | 3 | 32% | 11/08/2026 | 07/11/2026 | 15/11/2026 |
-| **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 11/08/2026 | 14/11/2026 | 22/11/2026 |
+| **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 11/08/2026 | 07/11/2026 | 22/11/2026 |
 | **Quiz 3** | Cuestionario | 3 | 4% | 20/10/2026 | 27/10/2026 | 03/11/2026 |
 | **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 03/11/2026 | 10/11/2026 | 15/11/2026 |
-| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 10/11/2026 | 17/11/2026 | 22/11/2026 |
+| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 03/11/2026 | 10/11/2026 | 22/11/2026 |
 | **Coevaluación** (54450) | Foro | 3 | 2% | 03/11/2026 | 10/11/2026 | 15/11/2026 |
-| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 10/11/2026 | 17/11/2026 | 22/11/2026 |
+| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 03/11/2026 | 10/11/2026 | 22/11/2026 |
 
 **Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32% + Quiz 3 4% + Autoevaluación 2% + Coevaluación 2%.
 

@@ -4,6 +4,8 @@
 - Genera enunciados ACA en Clases/Recursos/ACAs/ (.docx)
 - Copia Plantilla APA a Clases/Recursos/
 - Escribe Clases/LEEME - Material para estudiantes.docx (nunca .md en Clases/)
+  · el rompehielos del LEEME se deriva del tamaño del grupo (ver `rompehielos()`):
+    muro Padlet hasta 20 estudiantes, formulario de Google por encima.
 - Regenera Correo de bienvenida en rutas docentes (`2026/<grupo>/`; nunca en Clases/)
 - (Creatividad) ficha taller S01 en carpeta de sesión como .docx
 
@@ -11,6 +13,7 @@ Uso: python config/slides/sync_clases_estudiantes.py
 """
 from __future__ import annotations
 
+import csv
 import os
 import shutil
 import sys
@@ -26,12 +29,13 @@ from sesiones_cun import (
     LINK_TUTORIAS,
     MSG_TUTORIAS_POR_GRUPO,
     meet_url,
+    subject_encuentro,
 )
 from cun_slides_engine import PADLET_PRESENTACION_URL
 from guion_md_a_docx import convert as md_to_docx
 from build_acas_estudiantes import build_course as build_acas, catalog_for_leeme
 from build_correo_bienvenida import build_course as build_correo, CORREO_NAME
-from carga_academica import curso as carga_curso
+from carga_academica import GRABACIONES_URL, course_dir, curso as carga_curso
 from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -44,6 +48,100 @@ URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 
 LEEME_NAME = "LEEME - Material para estudiantes.docx"
 FICHA_CREATIVIDAD_NAME = "Ficha_problema_oportunidad.docx"
+
+# --- Rompehielos: la herramienta la decide el TAMAÑO del grupo ----------------
+# Decisión del Docente (2026-08-11). Un muro colaborativo solo sirve mientras las
+# notas se puedan leer TODAS en la clase: con 50 matriculados —o los 112 de TG3 en
+# una sola serie— nadie alcanza a ser visto y el muro se vuelve ruido. Por eso el
+# modo NO se escribe curso por curso: se deriva de la matrícula real (listados
+# exportados de CDigital, `<Asignatura>/2026/<grupo>/Listado estudiantes (CDigital).csv`).
+#   hasta ROMPEHIELOS_MAX_MURO estudiantes → muro Padlet (hoy solo Investigación: 20)
+#   por encima                             → Formulario de Google (Proyecto I,
+#                                             Creatividad, TG2 y TG3)
+# Por qué formulario: ya viene con la licencia CUN, se entra con el correo
+# @cun.edu.co (nadie crea cuenta nueva), no tiene tope de participantes y deja las
+# respuestas en una hoja que el Docente reutiliza todo el periodo. La interacción
+# EN VIVO va por las encuestas y el Q&A nativos de Meet. Mentimeter (50
+# participantes/mes) y Slido (100 y 3 encuestas) quedan descartados: estos cursos
+# no caben en su plan gratuito.
+ROMPEHIELOS_MAX_MURO = 20
+LISTADO_CSV = "Listado estudiantes (CDigital).csv"
+
+# Formulario «Preséntate» de los cursos grandes. Cadena vacía = todavía no está
+# creado ⇒ el material muestra el placeholder, mismo contrato que `meet`,
+# `cdigital` y `clases` en carga_academica_2026.json.
+# PENDIENTE: pegar aquí el enlace del formulario y regenerar este LEEME.
+FORMULARIO_PRESENTATE_URL = ""
+
+
+def formulario_presentate_url(curso_corto: str) -> str:
+    """Enlace del formulario «Preséntate»; placeholder mientras no exista."""
+    return (FORMULARIO_PRESENTATE_URL or "").strip() or (
+        f"[URL Formulario «Preséntate» — Google Forms · {curso_corto}]"
+    )
+
+
+def matriculados(key: str) -> int | None:
+    """Estudiantes del curso: filas con rol «Estudiante» en los listados de CDigital.
+
+    Suma **todos** los grupos del curso porque comparten una sola serie de
+    encuentros (TG3 dicta 54450 + 54466 + 54467 en la misma clase). Devuelve
+    `None` si no hay ningún listado exportado, es decir, si no hay con qué decidir.
+    """
+    raiz = course_dir(key)
+    total = 0
+    listados = 0
+    for grupo in carga_curso(key).get("groups") or []:
+        ruta = raiz / "2026" / str(grupo) / LISTADO_CSV
+        if not ruta.is_file():
+            continue
+        listados += 1
+        with open(ruta, encoding="utf-8-sig", newline="") as fh:
+            total += sum(
+                1
+                for fila in csv.DictReader(fh)
+                if (fila.get("rol") or "").strip().lower() == "estudiante"
+            )
+    return total if listados else None
+
+
+def rompehielos(key: str) -> dict:
+    """Modo y textos del rompehielos de este curso, según cuánta gente hay matriculada."""
+    n = matriculados(key)
+    corto = carga_curso(key)["titulo_corto"]
+    if n is not None and n <= ROMPEHIELOS_MAX_MURO:
+        return {
+            "modo": "muro",
+            "n": n,
+            "recurso": "**Padlet** (rompehielos / Preséntate)",
+            "url": PADLET_PRESENTACION_URL,
+            "corto": "rompehielos en el muro de Padlet",
+            "nombre": "El muro de Padlet",
+            "como": (
+                "El **Padlet** es el muro donde te presentas en la Sesión 01: una nota por "
+                "persona (nombre, expectativa y tema de interés). El grupo es pequeño, así que "
+                "las leemos **todas** en clase."
+            ),
+        }
+    # Sin listado tampoco se asume grupo pequeño: el muro es justo lo que se rompe
+    # con volumen, y el formulario funciona igual de bien con 20 que con 112.
+    cuantos = f"{n} matriculados" if n is not None else "un grupo grande"
+    return {
+        "modo": "formulario",
+        "n": n,
+        "recurso": "**Formulario «Preséntate»** (rompehielos · Google Forms)",
+        "url": formulario_presentate_url(corto),
+        "corto": "rompehielos en el formulario «Preséntate»",
+        "nombre": "El formulario «Preséntate»",
+        "como": (
+            "El **formulario «Preséntate»** se responde **una sola vez**, en la Sesión 01: "
+            "2–3 minutos, se entra con tu correo **@cun.edu.co** y no hay que crear cuenta en "
+            f"ninguna plataforma nueva. Con {cuantos} no alcanza a leerse un muro nota por nota, "
+            "así que el formulario **ordena y agrupa** las respuestas: en clase se leen en voz "
+            "alta unas cuantas y el resto se ve en la pantalla de resumen. Durante el encuentro "
+            "se participa con las **encuestas y el Q&A del propio Meet** — nada que instalar."
+        ),
+    }
 
 PRESENTACION_CURSO = {
     "proyecto1": "Presentacion del Curso - Proyecto I.pptx",
@@ -105,8 +203,14 @@ def remove_if_exists(path: str) -> None:
 
 def leeme_md(key: str) -> str:
     c = COURSES[key]
+    cc = carga_curso(key)
     pptx_curso = PRESENTACION_CURSO[key]
     meet = meet_url(key, c["titulo"])
+    rh = rompehielos(key)
+    # Nombre real del evento de la Sesión 01: es la clave con la que el estudiante
+    # busca la grabación dentro de la carpeta única de Drive.
+    evento_s01 = subject_encuentro(key, list(cc.get("groups") or []), n=1)
+    es_pregrado = cc.get("nivel") != "especializacion"
     aca_rows = catalog_for_leeme(key)
     # La tabla lista los **ítems reales del libro de calificaciones** (auditoría
     # CDigital 10/08/2026), no solo las tareas: en pregrado 5 de los 8 ítems son
@@ -142,6 +246,16 @@ def leeme_md(key: str) -> str:
             + "**; si no los diligencias, ese porcentaje queda en cero.\n\n"
             f"{lineas}\n"
         )
+    # Clase autónoma por festivo: el material de esa sesión vive en ESTA carpeta de
+    # Drive (no en CDigital, que sigue siendo el sitio de la entrega y de las notas).
+    festivo_item = ""
+    if es_pregrado:
+        festivo_item = (
+            "\n4. **Si un día de clase cae festivo**, la sesión **no se cancela**: es "
+            "**clase autónoma** y la actividad de ese día queda en la carpeta "
+            "`Sesion NN - …/` de esta misma carpeta compartida, junto al material de "
+            "la sesión. La **entrega**, como siempre, en **CDigital**."
+        )
     tutorias_bloque = ""
     # Solo Proyecto I (AFI). No inventar esta sección en TG2/TG3.
     if key in CURSOS_CON_TUTORIAS_POR_GRUPO:
@@ -165,7 +279,7 @@ Guiones, manuales y calendarios con datos internos **no** van aquí.
 ## Empieza por aquí
 
 1. Este **LEEME** — mapa de la carpeta y listado de ACAs.
-2. **Presentación del Curso** — encuadre, el Docente, rompehielos Padlet y acuerdos.
+2. **Presentación del Curso** — encuadre, el Docente, {rh["corto"]} y acuerdos.
 3. **`Sesion 01 - …/`** — además del deck, trae la **lectura autónoma** de la semana en PDF y el archivo `Lectura autonoma - Sesion 01.txt` con la cita, el enlace y **qué traer a la Sesión 02**. La Sesión 01 es de **encuadre**: no se dicta tema, el contenido arranca en la Sesión 02.
 4. **`Recursos/ACAs/`** — enunciados de las entregas evaluadas.
 
@@ -177,10 +291,15 @@ La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo 
 
 | Recurso | Enlace / ubicación |
 | :--- | :--- |
-| **Padlet** (rompehielos / Preséntate) | {PADLET_PRESENTACION_URL} |
+| {rh["recurso"]} | {rh["url"]} |
 | **Google Meet** (mismo enlace toda la serie) | {meet} |
-| **CDigital** (campus del curso) | {cdigital_url(key)} |
+| **CDigital** (campus del curso: entregas y notas) | {cdigital_url(key)} |
+| **Grabaciones de las clases** (Drive) | {GRABACIONES_URL} |
 | **Plantilla APA CUN** | `Recursos/{APA_NAME}` (ábrela en Google Docs / Word Online) |
+
+{rh["como"]}
+
+La carpeta de **grabaciones** es **una sola para todos los cursos y todos los periodos**: dentro se busca por el **nombre del encuentro**, con la forma «periodo - grupo - asignatura - sesión». En este curso, la Sesión 01 se llama **«{evento_s01}»**.
 
 {tutorias_bloque}
 ---
@@ -215,9 +334,9 @@ Clases/
   …
 ```
 
-1. **Presentación del Curso** — bienvenida, el Docente, rompehielos Padlet (slide Preséntate), contenido, recursos y acuerdos. La **Sesión 01** de encuadre usa este deck para el Preséntate.
+1. **Presentación del Curso** — bienvenida, el Docente, {rh["corto"]} (slide Preséntate), contenido, recursos y acuerdos. La **Sesión 01** de encuadre usa este deck para el Preséntate.
 2. **`Sesion NN - <tema>/`** — diapositivas de esa clase (`Presentacion.pptx`) y, si hay, plantillas o capturas de apoyo para el taller. En **`Sesion 01 - …/`** están además la **lectura autónoma** (PDF de acceso abierto) y el `.txt` que dice qué leer, cuánto tarda y qué traer a la Sesión 02: **no hay que buscarla en ningún otro lado**.
-3. **`Recursos/`** — plantilla APA + carpeta **`ACAs/`** con los enunciados. No busques estos archivos fuera de `Clases/`.
+3. **`Recursos/`** — plantilla APA + carpeta **`ACAs/`** con los enunciados. No busques estos archivos fuera de `Clases/`.{festivo_item}
 
 ---
 
@@ -226,11 +345,11 @@ Clases/
 - Las entregas y notas oficiales van por **CDigital** (cuando esté el enlace del campus).
 - Usa la plantilla APA de `Recursos/` cuando el entregable sea documental.
 - Sigue el enunciado de `Recursos/ACAs/` correspondiente a cada corte/ACA.
-- El Padlet es para presentarte / mapear expectativas; no sustituye la entrega en CDigital.
+- {rh["nombre"]} es para presentarte / mapear expectativas; no sustituye la entrega en CDigital.
 
 ---
 
-*Si falta un enlace (Meet o CDigital), el Docente lo publicará en el canal del curso.*
+*Si falta un enlace (Meet, CDigital o el rompehielos), el Docente lo publicará en el canal del curso.*
 """
 
 

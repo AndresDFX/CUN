@@ -174,7 +174,7 @@ Antecedentes = qué se INVESTIGÓ (estudios). Marco teórico = con qué LENTES c
 - [ ] **ACA 1** (Tarea · 25% · corte 2) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 04 - Retroalimentación del Quiz · Antecedentes de investigación/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 04 - Retroalimentación del Quiz · Antecedentes de investigación/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

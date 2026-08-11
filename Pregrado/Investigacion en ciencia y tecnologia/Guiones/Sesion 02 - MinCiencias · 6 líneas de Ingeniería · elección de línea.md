@@ -199,7 +199,7 @@ Tema 'phishing en correos de estudiantes' → línea **Inteligencia Artificial**
 🧩 **Entregable de hoy**
 1. En Google Docs: línea elegida + párrafo de justificación (afinidad + fuentes + pertinencia local) + 2 referentes exploratorios en APA tentativa (Google Académico).
 2. Archivo en CDigital: `S02_LineaInvestigacion_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

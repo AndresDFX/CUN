@@ -108,7 +108,7 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 **Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 08. La clase pasada definimos el ‘cómo’ a grandes rasgos; hoy lo bajamos a herramientas concretas: **el instrumento y el plan de análisis**. Aviso de calendario: el próximo lunes es festivo, así que será clase autónoma; aprovechen hoy para dejar el instrumento bien armado.”
+> “Sesión 08. La clase pasada definimos el ‘cómo’ a grandes rasgos; hoy lo bajamos a herramientas concretas: **el instrumento y el plan de análisis**. Aviso de calendario: el próximo lunes es festivo, así que será **clase autónoma** —la actividad la dejo en la carpeta de esa sesión, en el Drive de clases—; aprovechen hoy para dejar el instrumento bien armado.”
 
 > “**OBJETIVOS.** Salir con un bosquejo de instrumento alineado a los objetivos y un plan de análisis escrito. Todo **propuesto**. Tengan abierta su matriz del `S07`.”
 
@@ -187,7 +187,7 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) cada ítem del instrumento **se rastrea a un objetivo**; (2) el plan de análisis se decide **antes** de tener datos; (3) todo en propuesto.”
 
-> “**PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; usen esa semana para pulir el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
+> “**PARA CONTINUAR.** Suban `S08_Instrumentos_Apellido`. Recuerden: el próximo lunes es festivo, clase autónoma; la actividad de esa semana queda en la carpeta de esa sesión, en el **Drive de clases**, y con ella pulen el instrumento. Cuando volvamos, la sesión es de **integración del avance y corrección de gaps**: leeremos el documento completo de corrido.”
 
 > “**Cierre.** Gracias; nos leemos en la autónoma y nos vemos en el Meet la siguiente.”
 
@@ -196,7 +196,7 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 🧩 **Entregable de hoy**
 1. En Google Docs (`S08_Instrumentos_Apellido`): tabla de operacionalización (variable → indicador → ítem) + instrumento (~10 ítems o guía de ~8 preguntas) + plan de análisis, todo en ‘propuesto’.
 2. Archivo en CDigital: `S08_Instrumentos_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

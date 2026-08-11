@@ -2,18 +2,18 @@
 **Grupo 54408** · Horario: **Miércoles, 5:00 pm – 6:00 pm (1 hora sincrónica)**
 
 > **Este archivo es de consulta: no crea eventos.** Los encuentros se crean con `PRINCIPAL - Crear encuentros con invitados.gs` (Apps Script), que es lo único que añade a los estudiantes como invitados y pone el Meet. Paso a paso en `LEEME - Crear los eventos de Calendar.md`.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo.
-> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela).
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (fuente: `config/cursos/sesiones_cun.py`). Festivo → mismo patrón + `(autónoma)`. Sin tema largo. El periodo va delante porque el nombre del evento es la clave de búsqueda en la carpeta de grabaciones, que acumula todos los periodos.
+> Regla general Pregrado: si la fecha cae en **festivo colombiano**, la sesión se cursa como **clase autónoma** (no se cancela): la actividad queda en la carpeta de esa sesión en el **Drive de clases**, y la entrega y la nota siguen en **CDigital**.
 
 | # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |
 |---|---|---|---|---|
-| 1 | 12/08/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 01 | — |
-| 2 | 19/08/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 02 | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
-| 3 | 26/08/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 03 | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
-| 4 | 02/09/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 04 | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
-| 5 | 09/09/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 05 | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
-| 6 | 16/09/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 06 | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
-| 7 | 23/09/2026 (mié) | Sincrónica | 54408 - Creatividad y Pensamiento Innovador - Sesion 07 | — |
+| 1 | 12/08/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 01 | — |
+| 2 | 19/08/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 02 | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
+| 3 | 26/08/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 03 | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
+| 4 | 02/09/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 04 | **Cierra Quiz 2** (cuestionario · 9% · corte 2) |
+| 5 | 09/09/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 05 | **Cierra Parcial 2** (cuestionario · 21% · corte 2) |
+| 6 | 16/09/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 06 | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
+| 7 | 23/09/2026 (mié) | Sincrónica | 26V04 - 54408 - Creatividad y Pensamiento Innovador - Sesion 07 | — |
 
 ## Fechas institucionales
 - **54408** (26V04): inicio 10/08/2026 · recepción 19/09/2026 · cierre **27/09/2026**

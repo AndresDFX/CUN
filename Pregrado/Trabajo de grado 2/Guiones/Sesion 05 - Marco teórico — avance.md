@@ -194,7 +194,7 @@ Constructos ‘clasificación supervisada / gestión de mesa de ayuda / tiempo d
 🧩 **Entregable de hoy**
 1. En Google Docs (`S05_MarcoTeorico_Apellido`): 3 constructos derivados de la pregunta + mapa (constructo → fuentes → para qué) + 1–2 páginas de marco parafraseado y citado en APA 7, cada constructo conectado a la pregunta.
 2. Archivo en CDigital: `S05_MarcoTeorico_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw, Padlet según aplique).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

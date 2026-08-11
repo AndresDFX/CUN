@@ -193,7 +193,7 @@ Cierre honesto: dejar por escrito qué queda listo para ejecutar tras el aval y 
 - [ ] Nota de **ACA FINAL** (42%) revisada en el libro de calificaciones antes de entrar: hoy se devuelve
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 11 - Integración y evaluación · coevaluación y autoevaluación/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 11 - Integración y evaluación · coevaluación y autoevaluación/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

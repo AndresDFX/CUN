@@ -3,9 +3,9 @@ Plantilla del curso · Horario: **Martes, 5:00 pm – 6:00 pm (1 hora sincrónic
 Grupos de este periodo: **54450, 54466, 54467**
 Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
-> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma** (actividad en CDigital).
+> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma**: la actividad queda en la carpeta de esa sesión del **Drive de clases** (`Clases/Sesion NN - …/`), y la entrega y la nota siguen en **CDigital**.
 > Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
 
 ## Cierres por grupo (fuente oficial)
 - **54450** (26P04): inicio 10/08/2026 · recepción 07/11/2026 · cierre **15/11/2026**
@@ -35,8 +35,8 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 | 11 | **11** | 20/10/2026 (mar) | Sincrónica | U12: Póster · evidencias · verificación antiplagio | — |
 | 12 | **12** | 27/10/2026 (mar) | Sincrónica | U13: Sustentación ante jurados | **Cierra Quiz 3** (cuestionario · 4% · corte 3) |
 | 13 | **13** | 03/11/2026 (mar) | Sincrónica | U14: Entregables para repositorio institucional | — |
-| 14 | **14** | 10/11/2026 (mar) | Sincrónica | Buffer: Ajustes finales · seguimiento post-sustentación | **Cierra la ventana de Autoevaluación** (cuestionario · 2% · corte 3) · grupos 54450 · **Cierra la ventana de Coevaluación** (foro · 2% · corte 3) · grupos 54450 |
-| 15 | **15** | 17/11/2026 (mar) | Sincrónica | Buffer: Cierre administrativo · recepción de entregables | **Cierra la ventana de Autoevaluación** (cuestionario · 2% · corte 3) · grupos 54466 / 54467 · **Cierra la ventana de Coevaluación** (foro · 2% · corte 3) · grupos 54466 / 54467 |
+| 14 | **14** | 10/11/2026 (mar) | Sincrónica | Buffer: Ajustes finales · seguimiento post-sustentación | **Cierra la ventana de Autoevaluación** (cuestionario · 2% · corte 3) · **Cierra la ventana de Coevaluación** (foro · 2% · corte 3) |
+| 15 | **15** | 17/11/2026 (mar) | Sincrónica | Buffer: Cierre administrativo · recepción de entregables | — |
 
 ## Evaluación en el aula (CDigital) — en qué sesión cae cada ítem
 
@@ -48,13 +48,10 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 | **Parcial 1** | Cuestionario | 1 | 24% | 15/09/2026 | **S06** — Comunidades de práctica y co-creación |
 | **Quiz 2** | Cuestionario | 2 | 9% | 29/09/2026 | **S08** — Fase III de referentes · cierre del marco teórico |
 | **Parcial 2** | Cuestionario | 2 | 21% | 13/10/2026 | **S10** — Resumen, palabras clave UNESCO, conclusiones y referencias |
-| **ACA Final** (54450) | Tarea | 3 | 32% | 07/11/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
-| **ACA Final** (54466 / 54467) | Tarea | 3 | 32% | 14/11/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
+| **ACA Final** | Tarea | 3 | 32% | 07/11/2026 | — (no cae en día de clase: es la fecha máxima de recepción de trabajos) |
 | **Quiz 3** | Cuestionario | 3 | 4% | 27/10/2026 | **S12** — Sustentación ante jurados |
-| **Autoevaluación** (54450) | Cuestionario | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
-| **Autoevaluación** (54466 / 54467) | Cuestionario | 3 | 2% | 17/11/2026 | **S15** — Cierre administrativo · recepción de entregables |
-| **Coevaluación** (54450) | Foro | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
-| **Coevaluación** (54466 / 54467) | Foro | 3 | 2% | 17/11/2026 | **S15** — Cierre administrativo · recepción de entregables |
+| **Autoevaluación** | Cuestionario | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
+| **Coevaluación** | Foro | 3 | 2% | 10/11/2026 | **S14** — Ajustes finales · seguimiento post-sustentación |
 
 **Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32% + Quiz 3 4% + Autoevaluación 2% + Coevaluación 2%.
 

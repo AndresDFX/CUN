@@ -166,7 +166,7 @@ Antecedentes (S04) = estudios previos. Marco teórico (hoy) = andamiaje conceptu
 ✅ **Checklist antes de clase**
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 05 - Marco teórico/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 05 - Marco teórico/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

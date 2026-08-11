@@ -3,9 +3,9 @@ Plantilla del curso · Horario: **Jueves, 5:00 pm – 6:00 pm (1 hora sincrónic
 Grupos de este periodo: **53339**
 Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
-> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma** (actividad en CDigital).
+> Si el día de clase es **festivo colombiano**, la sesión se considera **clase autónoma**: la actividad queda en la carpeta de esa sesión del **Drive de clases** (`Clases/Sesion NN - …/`), y la entrega y la nota siguen en **CDigital**.
 > Los CSV/ICS de Pregrado **no** incluyen invitados/estudiantes.
-> **Subject Calendar:** `{grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
+> **Subject Calendar:** `{periodo} - {grupos} - {Asignatura} - Sesion NN` (+ ` (autónoma)` si festivo). Fuente: `sesiones_cun.py`.
 
 > **Nota Syllabus:** Numeración del Syllabus salta N° 3 y 9. Periodo corto 26P03: el rango institucional tiene 7 jueves calendario (06/08–17/09), pero el inicio operativo del semestre es el 10/08, así que se dictan **6** (13/08–17/09) y el periodo cierra el 20/09. TEMARIO ADELANTADO (2026-08-11): la ACA Final (el artículo) califica marco teórico y revisión de literatura y cierra el 12/09, así que **U8** (bases de datos CUN y gestores de citas) pasa a la **Sesión 04** y **U10–U12** (posturas teóricas · marco teórico y revisión) a la **Sesión 05**. Ninguna unidad se elimina: es un reorden, no un recorte. La Sesión 06 (17/09) queda como socialización del artículo y cierre, sin evaluación.
 

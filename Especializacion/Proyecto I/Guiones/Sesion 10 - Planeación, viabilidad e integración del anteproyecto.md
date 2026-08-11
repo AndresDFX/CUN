@@ -167,7 +167,7 @@ El hilo completo debe cerrar sin saltos: pregunta ↔ objetivos ↔ marco ↔ m�
 - [ ] Anunciar en clase que **ACA FINAL** (Tarea · 42%) cierra **antes del próximo encuentro** (la fecha exacta, leída desde CDigital)
 - [ ] Fundamento teórico leído
 - [ ] PPTX `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/Presentacion.pptx`
-- [ ] Material / plantilla APA en CDigital o Google Docs
+- [ ] Material de la sesión en `Clases/Sesion 10 - Planeación, viabilidad e integración del anteproyecto/` (**Drive de clases**) y plantilla APA lista en Google Docs · CDigital queda para la entrega y las notas
 - [ ] Link tutorías para chat: https://forms.gle/oZ8xCYiUo3KEWr1d9
 - [ ] Meet: https://meet.google.com/omk-woqk-vsj
 

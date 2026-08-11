@@ -16,137 +16,137 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-08-14@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260814T170000
 DTEND;TZID=America/Bogota:20260814T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 01
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 01
 DESCRIPTION:Sesión 01 — Presentación del curso · docente · estudiantes · ACAs
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-08-17@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260817T170000
 DTEND;TZID=America/Bogota:20260817T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Clase autonoma (Asunción de la Virgen)
-DESCRIPTION:Clase autónoma — Asunción de la Virgen\nActividad en CDigital.
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Asunción de la Virgen)
+DESCRIPTION:Clase autónoma — Asunción de la Virgen\nActividad en la carpeta de la sesión (Drive de clases)\; la entrega va por CDigital.
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-08-24@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260824T170000
 DTEND;TZID=America/Bogota:20260824T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 02
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 02
 DESCRIPTION:Sesión 02 — Pregunta\, objetivos y título provisional
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-08-31@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260831T170000
 DTEND;TZID=America/Bogota:20260831T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 03
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 03
 DESCRIPTION:Sesión 03 — Estructura del documento / artículo de avance
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-09-07@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260907T170000
 DTEND;TZID=America/Bogota:20260907T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 04
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 04
 DESCRIPTION:Sesión 04 — Antecedentes y referentes (Fase I)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-09-14@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260914T170000
 DTEND;TZID=America/Bogota:20260914T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 05
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 05
 DESCRIPTION:Sesión 05 — Marco teórico — avance
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-09-21@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260921T170000
 DTEND;TZID=America/Bogota:20260921T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 06
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 06
 DESCRIPTION:Sesión 06 — Marco conceptual y contextual
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-09-28@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20260928T170000
 DTEND;TZID=America/Bogota:20260928T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 07
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 07
 DESCRIPTION:Sesión 07 — Diseño metodológico (propuesto)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-10-05@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261005T170000
 DTEND;TZID=America/Bogota:20261005T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 08
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 08
 DESCRIPTION:Sesión 08 — Instrumentos y plan de análisis (propuestos)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-10-12@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261012T170000
 DTEND;TZID=America/Bogota:20261012T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Clase autonoma (Día de la Raza)
-DESCRIPTION:Clase autónoma — Día de la Raza\nActividad en CDigital.
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Día de la Raza)
+DESCRIPTION:Clase autónoma — Día de la Raza\nActividad en la carpeta de la sesión (Drive de clases)\; la entrega va por CDigital.
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-10-19@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261019T170000
 DTEND;TZID=America/Bogota:20261019T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 09
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 09
 DESCRIPTION:Sesión 09 — Integración del avance · correcciones
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-10-26@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261026T170000
 DTEND;TZID=America/Bogota:20261026T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 10
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 10
 DESCRIPTION:Sesión 10 — Socialización de avances
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-11-02@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261102T170000
 DTEND;TZID=America/Bogota:20261102T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Clase autonoma (Todos los Santos)
-DESCRIPTION:Clase autónoma — Todos los Santos\nActividad en CDigital.
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Todos los Santos)
+DESCRIPTION:Clase autónoma — Todos los Santos\nActividad en la carpeta de la sesión (Drive de clases)\; la entrega va por CDigital.
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-11-09@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261109T170000
 DTEND;TZID=America/Bogota:20261109T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Sesion 11
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Sesion 11
 DESCRIPTION:Sesión 11 — Cierre del avance · preparación para TG3
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:cun-pregrado-tg2-54448-2026-11-16@cun.edu.co
-DTSTAMP:20260811T045719Z
+DTSTAMP:20260811T055912Z
 DTSTART;TZID=America/Bogota:20261116T170000
 DTEND;TZID=America/Bogota:20261116T180000
-SUMMARY:54448 - Trabajo de Grado 2 - Clase autonoma (Independencia de Cartagena)
-DESCRIPTION:Clase autónoma — Independencia de Cartagena\nActividad en CDigital.
+SUMMARY:26V04 - 54448 - Trabajo de Grado 2 - Clase autonoma (Independencia de Cartagena)
+DESCRIPTION:Clase autónoma — Independencia de Cartagena\nActividad en la carpeta de la sesión (Drive de clases)\; la entrega va por CDigital.
 STATUS:CONFIRMED
 END:VEVENT
 END:VCALENDAR
