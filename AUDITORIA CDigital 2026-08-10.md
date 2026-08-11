@@ -118,11 +118,24 @@ Es decir: de cada curso solo son institucionales el **inicio del periodo** y el 
 
 ## 5. Qué queda pendiente
 
-1. **Alinear el material a la estructura del campus** (§2). Es un cambio de fondo: hay que introducir quices y parciales, y renombrar/reagrupar las ACAs. Afecta enunciados, decks, guiones y manuales de los 5 cursos.
-2. **Crear en el aula los quices y parciales** — hoy solo existen como ítems del libro de calificaciones, sin la actividad detrás. *Confirmado por el Docente el 10/08/2026: queda pendiente, lo hace él en la plataforma.* El material del estudiante ya está listo para cuando existan: cada cuestionario tiene su guía con el alcance exacto.
-3. **Salas de Meet** de TG2, TG3, Creatividad e Investigación (solo Proyecto I tiene). Van en `carga_academica_2026.json` → `cursos.<key>.meet`.
-4. **Subir el contenido a las aulas**: no tienen secciones creadas más allá de Avisos.
-5. **Syllabus SIAC de TG2**, aún ausente.
+*Registro actualizado el 11/08/2026. Lo tachado se cerró; lo que queda solo se puede hacer en la plataforma o depende de la Universidad.*
+
+### Ya cerrado
+
+- ~~Alinear el material a la estructura del campus~~ — hecho en los 5 cursos: un documento por ítem real, quices y parciales con su peso, coevaluación como foro. La regla «cada ACA toma el 100% de su corte» queda anulada.
+- ~~Salas de Meet de los otros 4 cursos~~ — ya no hacen falta a mano: **el `.gs` crea la suya**. El primer evento de la serie la crea con el servicio avanzado de Calendar y los demás reutilizan su `conferenceData`, así que la serie entera comparte enlace y chip nativo. El script imprime la URL en el registro.
+- ~~Enlaces del aula~~ — los 7 obtenidos y resueltos por código (§1).
+
+### Lo que solo puedes hacer tú, en la plataforma
+
+1. **Crear en el aula los quices y parciales.** Hoy existen solo como ítem del libro de calificaciones, sin la actividad detrás. *Confirmado por el Docente el 10/08/2026: queda pendiente.* El material ya está listo: cada cuestionario tiene su guía con el alcance exacto, y esa guía se genera desde las sesiones dictadas antes de su cierre, así que nunca pregunta algo no visto.
+2. **Pegar la URL de Meet** que imprima el `.gs` en `carga_academica_2026.json` → `cursos.<key>.meet`, y reconstruir. Con eso el correo de bienvenida y el LEEME del estudiante dejan de mostrar el marcador de posición.
+3. **Subir el contenido a las aulas**: no tienen secciones creadas más allá de Avisos.
+
+### Lo que depende de la Universidad
+
+4. **Syllabus SIAC de TG2**, ausente. Es el único de los cinco sin él; su Manual del Docente lo dice explícitamente en vez de inventar unidades.
+5. **El Syllabus de Creatividad es el de otra escuela.** El archivo se llama `…PARA ESCUELA DE INGENIERIAS EI004_VIR.docx`, pero adentro dice «PARA LA ESCUELA DE CIENCIAS ADMINISTRATIVAS», `CÓDIGO SÍAC: AE003` y nivel «Tecnológico», cuando la oferta es EI004 de Ingenierías, nivel Profesional. **La tabla de unidades sí es la de Creatividad** y coincide con lo que enseña el material, así que el contenido no está en riesgo: es el mismo temario reutilizado entre escuelas. Conviene confirmarlo con Coordinación antes de citar el código en algo formal.
 
 ---
 
