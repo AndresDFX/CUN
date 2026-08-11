@@ -333,10 +333,15 @@ COURSES = {
         "fuente": "Manual del Docente (⚠️ sin Syllabus SIAC) · analogía con TG3",
         "nota_syllabus": "FALTA SYLLABUS OFICIAL. Temario orientativo — confirmar en Moodle/portal.",
         "sesiones": [
-            {"n": 1, "fecha": "10/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
+            # EXCEPCIÓN puntual: esta sesión se corrió del lunes 10/08 al viernes 14/08 porque
+            # la clase del lunes no se pudo dar (decisión del Docente, 11/08/2026). Es la ÚNICA
+            # sesión de TG2 que no cae en lunes; de la S02 en adelante el curso sigue su horario
+            # normal, lunes 5:00–6:00 pm. No cambiar el `weekday` del curso por esto.
+            {"n": 1, "fecha": "14/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
+             "reprogramada": "Del lunes 10/08 al viernes 14/08: la sesión del lunes no se pudo dar. Misma hora (5:00–6:00 pm). La Sesión 02 vuelve al lunes.",
              "unidad_diferida": "Delimitación / reformulación del tema → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.)",
-             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema."},
+             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema. Sesión reprogramada al viernes 14/08; la Sesión 02 vuelve al lunes."},
             {"n": 2, "fecha": "24/08/2026", "titulo": "Pregunta, objetivos y título provisional", "bloque": "Orientativo",
              "detalle": "17/08 es clase autónoma (festivo)."},
             {"n": 3, "fecha": "31/08/2026", "titulo": "Estructura del documento / artículo de avance", "bloque": "Orientativo",

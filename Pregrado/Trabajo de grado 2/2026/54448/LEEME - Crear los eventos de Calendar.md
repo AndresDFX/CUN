@@ -1,12 +1,12 @@
 # Crear los eventos de Calendar — TRABAJO DE GRADO 2
 
-**Grupo 54448** · lunes 17:00–18:00 · **11 encuentros** · **50 estudiantes invitados**
+**Grupo 54448** · viernes 17:00–18:00 · **11 encuentros** · **50 estudiantes invitados**
 
 > **Archivo generado — no editar a mano.** Regenerar: `python config/slides/build_calendar_encuentros.py tg2`
 
 ## Qué vas a conseguir
 
-Los **11 encuentros** del periodo (10/08/2026 → 09/11/2026) en tu Google Calendar, cada uno con **los 50 estudiantes del grupo 54448** en la sección *Invitados* y con **el mismo enlace de Google Meet** en todos. Unos cinco minutos. No hay que crear la sala a mano: la crea el propio script.
+Los **11 encuentros** del periodo (14/08/2026 → 09/11/2026) en tu Google Calendar, cada uno con **los 50 estudiantes del grupo 54448** en la sección *Invitados* y con **el mismo enlace de Google Meet** en todos. Unos cinco minutos. No hay que crear la sala a mano: la crea el propio script.
 
 ## ⚠️ Lo primero: no importes el `.ics`
 
@@ -115,7 +115,7 @@ Mientras ese campo siga vacío, el **correo de bienvenida**, el **LEEME del estu
 
 | # | Fecha | Tema | Invitados |
 |---|---|---|---|
-| 01 | 10/08/2026 (lunes) | Presentación del curso · docente · estudiantes · ACAs | 50 |
+| 01 | 14/08/2026 (viernes) | Presentación del curso · docente · estudiantes · ACAs | 50 |
 | 02 | 24/08/2026 (lunes) | Pregunta, objetivos y título provisional | 50 |
 | 03 | 31/08/2026 (lunes) | Estructura del documento / artículo de avance | 50 |
 | 04 | 07/09/2026 (lunes) | Antecedentes y referentes (Fase I) | 50 |

@@ -507,6 +507,26 @@ def is_festivo(d: date) -> bool:
     return d in FESTIVOS_2026
 
 
+def fechas_de_clase(course_key: str, inicio: date, fin: date, weekday: int) -> list[date]:
+    """Días con evento: los del catálogo de sesiones MÁS los festivos del día de clase.
+
+    Antes se recorría solo la rejilla semanal (`weekday_dates`) y las sesiones se cruzaban
+    por fecha. Eso se rompe en cuanto una sesión se reprograma a otro día de la semana: la
+    sesión desaparece del CSV/ICS y el hueco que deja en la rejilla sale como «Encuentro»
+    genérico. Pasó al mover la Sesión 01 de TG2 del lunes 10/08 al viernes 14/08.
+
+    La rejilla se sigue usando **solo** para detectar los festivos, que sí generan su
+    «clase autónoma» aunque no tengan sesión en el catálogo. En los cursos sin
+    reprogramaciones el resultado es idéntico al anterior.
+    """
+    fechas = {d for d in weekday_dates(inicio, fin, weekday) if is_festivo(d)}
+    for s in SESIONES_COURSES[course_key]["sesiones"]:
+        d = _dt.datetime.strptime(s["fecha"], "%d/%m/%Y").date()
+        if inicio <= d <= fin:
+            fechas.add(d)
+    return sorted(fechas)
+
+
 def groups_label(groups: list[str], for_filename: bool = False) -> str:
     if for_filename:
         if len(groups) == 1:
@@ -908,7 +928,7 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
     de evento que no existe.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
-    sessions = weekday_dates(course["inicio"], end, course["weekday"])
+    sessions = fechas_de_clase(course_key, course["inicio"], end, course["weekday"])
     temas = tema_por_fecha(course_key)
     g_lbl = groups_label(groups_for_event)
     g_file = groups_label(groups_for_event, for_filename=True)
@@ -1135,7 +1155,7 @@ def write_calendar_files(course_key: str, course: dict, groups_for_event: list[s
 def write_calendario_curso(course_key: str, course: dict, course_dir: Path):
     """Calendario oficial en raíz del curso, con mapeo tema↔fecha del Syllabus."""
     end = max(m["cierre"] for m in course["group_meta"].values())
-    sessions = weekday_dates(course["inicio"], end, course["weekday"])
+    sessions = fechas_de_clase(course_key, course["inicio"], end, course["weekday"])
     temas = tema_por_fecha(course_key)
     syllabus = SESIONES_COURSES.get(course_key, {})
     n_temas = len(syllabus.get("sesiones") or [])

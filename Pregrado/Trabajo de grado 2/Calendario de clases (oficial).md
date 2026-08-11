@@ -16,7 +16,7 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 
 | Evento | Sesión | Fecha | Tipo | Tema (Syllabus / plan) | Evaluación (aula CDigital) |
 |---|---|---|---|---|---|
-| 1 | **01** | 10/08/2026 (lun) | Sincrónica | Encuadre: Presentación del curso · docente · estudiantes · ACAs | — |
+| 1 | **01** | 14/08/2026 (vie) | Sincrónica | Encuadre: Presentación del curso · docente · estudiantes · ACAs | — |
 | — | — | (misma semana) | ⚠️ Lectura autónoma | Delimitación / reformulación del tema → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.) | — |
 | 2 | — | 17/08/2026 (lun) | Autónoma (Asunción de la Virgen) | Clase autónoma — continuar avance (festivo: Asunción de la Virgen) | — |
 | 3 | **02** | 24/08/2026 (lun) | Sincrónica | Orientativo: Pregunta, objetivos y título provisional | — |

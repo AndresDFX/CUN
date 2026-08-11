@@ -8,7 +8,7 @@
 
 📌 **De esta sesión**
 - **Sesión:** **01** · **Tema:** Presentación del curso · docente · estudiantes · ACAs
-- **Detalle:** Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema.
+- **Detalle:** Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema. Sesión reprogramada al viernes 14/08; la Sesión 02 vuelve al lunes.
 - **PPTX estudiante:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]
 
@@ -18,10 +18,10 @@
 
 | Ítem en el aula | Tipo | Corte | Peso | Qué pasa en esta sesión |
 | :--- | :--- | :---: | ---: | :--- |
-| **ACA Final** | Tarea | 3 | 32,8% | **Abre hoy** la ventana en CDigital |
+| **ACA Final** | Tarea | 3 | 32,8% | Abierto: **cierra después del último encuentro** |
 
 **Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
-> “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32,8%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
+> “**ACA Final** es la **tarea** del corte 3 y **cierra después del último encuentro**: pesa **32,8%**. Es el documento acumulativo, no un trabajo nuevo: se sube en CDigital, en PDF, y quien no lo vea cargado en la plataforma asuma que no está entregado.”
 
 > **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
@@ -221,7 +221,6 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
-- [ ] **ACA Final** (Tarea · 32,8% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado
 - [ ] **Lectura autónoma sobre delimitación del tema publicada en CDigital** (sin eso el encargo no se puede cumplir)
 - [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)

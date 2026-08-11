@@ -259,7 +259,7 @@ Díselo así al grupo: *la nota de cada corte la ponen los cuestionarios y la AC
 |---|---|---|
 | Aula alistada: bienvenida, material, cortes 30/30/40 y **las actividades de los cinco cuestionarios creadas** | Semana 1 (a partir del **10/08/2026**); Quiz 1 debe estar creado antes del **24/08** | CDigital |
 | Clase sincrónica semanal de 60 min · en festivo, **clase autónoma publicada** (no cancelación) | Lunes 5:00–6:00 pm, todo el periodo | Meet + CDigital |
-| **Acuerdo pedagógico** socializado y por escrito | Sesión 01 (10/08/2026) | CDigital — *canal institucional pendiente de confirmar (§7.3)* |
+| **Acuerdo pedagógico** socializado y por escrito | Sesión 01 (**viernes 14/08/2026**, reprogramada) | CDigital — *canal institucional pendiente de confirmar (§7.3)* |
 | Nota **y retroalimentación** de cada ítem, antes de su fecha límite | **07/09** (Quiz 1) · **21/09** (Parcial 1) · **05/10** (Quiz 2) · **19/10** (Parcial 2) · **09/11** (Quiz 3) · **22/11** (ACA Final, Autoevaluación, Coevaluación) | Libro de calificaciones de CDigital |
 | Autoevaluación (cuestionario) y Coevaluación (**foro**) habilitadas y con participación registrada | Ventana **09/11 → 22/11/2026**; se hacen en la Sesión 11 | CDigital |
 | Evidencias del curso conservadas en la plataforma | Continuo | CDigital |
@@ -348,7 +348,7 @@ Se explica en la Sesión 01 (slides 14 y 15 del deck de encuadre) y se sostiene 
 
 ## 10. Checklist antes de cada hito
 
-**Antes de la Sesión 01 (10/08/2026)**
+**Antes de la Sesión 01 (viernes 14/08/2026 — reprogramada desde el lunes 10/08)**
 - [ ] Guion de la Sesión 01 leído completo (es de encuadre: **no se dicta tema**).
 - [ ] Aula de CDigital revisada: ocho ítems, pesos que suman 30/30/40, ACA Final abierta.
 - [ ] Encuentros creados con el Apps Script y URL de Meet pegada en `carga_academica_2026.json → cursos.tg2.meet`.

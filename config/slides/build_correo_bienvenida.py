@@ -86,8 +86,13 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         f"| **{etiqueta_grupo}** | {bold_var(grupos)} |",
         f"| **Horario** | {bold_var(horario)} · empezamos puntuales a las "
         f"{bold_var(hora_inicio_efectiva(key))} |",
+        # Si la primera sesión se reprogramó a otro día, hay que decirlo AQUÍ: la fila de
+        # «Horario» anuncia el día habitual y, sin esta aclaración, el estudiante lee
+        # «Lunes 5:00 pm» junto a una fecha que cae en viernes y no entiende cuál manda.
         f"| **Primera clase** | {bold_var(primera)} — sesión de **encuadre**: presento el curso, "
-        "las ACAs y nos conocemos. **No se dicta tema**; el contenido arranca en la Sesión 02. |",
+        "las ACAs y nos conocemos. **No se dicta tema**; el contenido arranca en la Sesión 02."
+        + (f" ⚠️ **Ojo:** {s1['reprogramada'].strip()}" if s1.get("reprogramada") else "")
+        + " |",
         f"| **Google Meet** (mismo enlace toda la serie) | {meet_url(key, c['titulo_corto'])} |",
         f"| **Aula CDigital** (entregas y notas) | {cdigital_url(key)} |",
     ]

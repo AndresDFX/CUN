@@ -7,7 +7,7 @@
 
 | # | Fecha | Tipo | Subject (Calendar) | Evaluación (aula CDigital) |
 |---|---|---|---|---|
-| 1 | 10/08/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 01 | — |
+| 1 | 14/08/2026 (vie) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 01 | — |
 | 2 | 17/08/2026 (lun) | Autónoma (Asunción de la Virgen) | 54448 - Trabajo de Grado 2 - Clase autonoma (Asunción de la Virgen) | — |
 | 3 | 24/08/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 02 | — |
 | 4 | 31/08/2026 (lun) | Sincrónica | 54448 - Trabajo de Grado 2 - Sesion 03 | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |

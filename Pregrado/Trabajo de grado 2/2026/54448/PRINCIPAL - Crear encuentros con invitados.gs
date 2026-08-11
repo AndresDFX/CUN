@@ -38,7 +38,7 @@ var CDIGITAL = 'https://cdigital.cun.edu.co/course/view.php?id=129268';
 var PROP_MEET = 'MEET_URL_tg2';
 // Determinista: Google ignora un createRequest con un requestId ya usado, así que ni
 // borrando ScriptProperties se acaba con dos salas para la misma serie.
-var REQUEST_ID = 'cun-tg2-2026-08-10';
+var REQUEST_ID = 'cun-tg2-2026-08-14';
 
 // Roster por grupo (50 invitados distintos en total).
 var INVITADOS = {
@@ -100,8 +100,8 @@ var SESIONES = [
   {
     subject: '54448 - Trabajo de Grado 2 - Sesion 01',
     description: 'Sesión 01 — Presentación del curso · docente · estudiantes · ACAs',
-    start: '2026-08-10T17:00:00',
-    end: '2026-08-10T18:00:00',
+    start: '2026-08-14T17:00:00',
+    end: '2026-08-14T18:00:00',
     grupos: ['54448']
   },
   {
