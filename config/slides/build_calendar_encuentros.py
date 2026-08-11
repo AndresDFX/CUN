@@ -70,7 +70,11 @@ from sesiones_cun import (  # noqa: E402
     meet_url,
     subject_encuentro,
 )
-from carga_academica import curso as carga_curso  # noqa: E402
+from carga_academica import (  # noqa: E402
+    _parse_date as _pdate,
+    curso as carga_curso,
+    fmt_dmy as _fmt_dmy,
+)
 
 EMAIL_RX = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 # LOS CINCO cursos, Proyecto I incluido (2026-08-11). Antes quedaba fuera «porque tenía su
@@ -557,6 +561,47 @@ def _fecha_larga(ddmmyyyy: str) -> str:
     return f"{d.strftime('%d/%m/%Y')} ({DIAS[d.weekday()]})"
 
 
+def _sync_fechas_txt(course_key: str, grupo_dir: Path) -> None:
+    """Refresca las líneas de fecha de `Fechas.txt` e `Informacion.txt` desde la carga académica.
+
+    Estos dos archivos vienen del portal y nadie los sincronizaba salvo en Proyecto I, que tiene
+    su propio `_sync_txt_grupo()`. Resultado: Creatividad e Investigación anunciaban «Fecha de
+    inicio: 03/08/2026» cuando la carga académica dice 10/08 en los cinco cursos. Solo se
+    reescribe la línea de dato, nunca el texto explicativo, así que es idempotente.
+    """
+    if course_key == "proyecto1":
+        return  # tiene su propio sync, más rico (incluye la línea del enlace de Meet)
+    try:
+        c = carga_curso(course_key)
+        campos = {
+            "Fecha de inicio:": _fmt_dmy(_pdate(c["inicio"])),
+            "Fecha máxima para recepción de trabajos:": _fmt_dmy(_pdate(c["recepcion"])),
+            "Recepción de trabajos:": _fmt_dmy(_pdate(c["recepcion"])),
+            "Fecha de cierre:": _fmt_dmy(_pdate(c["cierre"])),
+        }
+    except Exception:
+        return
+    for nombre in ("Fechas.txt", "Informacion.txt"):
+        path = grupo_dir / nombre
+        if not path.is_file():
+            continue
+        out, tocado = [], False
+        for linea in path.read_text(encoding="utf-8").split("\n"):
+            limpio = linea.strip()
+            for clave, valor in campos.items():
+                if limpio.startswith(clave):
+                    resto = limpio[len(clave):].strip()
+                    cola = " " + resto[resto.index("("):] if "(" in resto else ""
+                    nueva = f"{clave} {valor}{cola}"
+                    tocado = tocado or nueva != linea
+                    linea = nueva
+                    break
+            out.append(linea)
+        if tocado:
+            path.write_text("\n".join(out), encoding="utf-8")
+            print(f"   sync {nombre} ({grupo_dir.name})")
+
+
 def _inventario(out_dir: Path, gs_name: str) -> list[str]:
     """Filas de la tabla «qué hay en esta carpeta», clasificadas por rol."""
     filas = []
@@ -581,8 +626,17 @@ def _inventario(out_dir: Path, gs_name: str) -> list[str]:
             rol = "Referencia: el cronograma en tabla. No se importa: se lee."
         elif n.startswith("Correos estudiantes"):
             rol = "Roster en texto plano — de aquí sacó el `.gs` la lista de invitados."
-        elif n.startswith("Listado estudiantes"):
+        elif n.startswith("Listado estudiantes (CDigital)"):
             rol = "Matrícula descargada de CDigital (fuente del roster)."
+        elif n.startswith("Listado estudiantes"):
+            # El .ods que subió el docente se quedó en 40 estudiantes cuando el aula ya tenía
+            # 50 (auditoría 2026-08-10). Decirle «fuente del roster» invitaría a fiarse de él.
+            rol = ("Carga original del docente, anterior a la auditoría del aula. Se conserva como "
+                   "histórico: el roster vigente es el `(CDigital)`.")
+        elif n.startswith("Actualizar Meet"):
+            rol = ("Solo si ya habías creado los encuentros ANTES y quieres ponerles el chip "
+                   "nativo de Meet sin borrarlos. Si creas los eventos con el flujo principal, "
+                   "no hace falta.")
         elif n.startswith("Correo de bienvenida"):
             rol = "Correo para enviar a los estudiantes el primer día."
         elif n in ("Informacion.txt", "Fechas.txt"):
@@ -880,6 +934,9 @@ def build_curso(course_key: str) -> str | None:
         _leeme_texto(course_key, grupos_titulo, rosters, total, out_dir, gs_name, solo_ultima),
         encoding="utf-8",
     )
+
+    for g in grupos_titulo:
+        _sync_fechas_txt(course_key, base / g)
 
     raiz = Path(c["folder"]).parents[1]
     estado_meet = ("Meet ya en config" if meet_url(course_key).startswith("https://")

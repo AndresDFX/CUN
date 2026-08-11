@@ -18,7 +18,7 @@ Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIP
 
 | Archivo | Para qué sirve |
 |---|---|
-| `Actualizar Meet en encuentros (mismo enlace).gs` | — |
+| `Actualizar Meet en encuentros (mismo enlace).gs` | Solo si ya habías creado los encuentros ANTES y quieres ponerles el chip nativo de Meet sin borrarlos. Si creas los eventos con el flujo principal, no hace falta. |
 | `Correo de bienvenida.docx` | Correo para enviar a los estudiantes el primer día. |
 | `Correos estudiantes (invitados Calendar).txt` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
 | `Entregas y hitos docentes - Importar a Calendar.csv` | Cierres de ACA y hitos del docente. Este **sí** se importa a Calendar: son recordatorios tuyos, sin invitados. |
@@ -26,7 +26,7 @@ Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIP
 | `Informacion.txt` | Datos de la oferta del grupo (portal). |
 | `LEEME - Crear los eventos de Calendar.md` | Este archivo. |
 | `Listado estudiantes (CDigital).csv` | Matrícula descargada de CDigital (fuente del roster). |
-| `Listado estudiantes.ods` | Matrícula descargada de CDigital (fuente del roster). |
+| `Listado estudiantes.ods` | Carga original del docente, anterior a la auditoría del aula. Se conserva como histórico: el roster vigente es el `(CDigital)`. |
 | `PRINCIPAL - Crear encuentros con invitados.gs` | **FLUJO PRINCIPAL.** El único que crea los eventos con invitados y con Meet. |
 | `RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.csv` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
 | `RESPALDO sin invitados - Encuentros Proyecto I - Grupo 54ES4.ics` | ⚠️ **Respaldo de fechas. NO importar** salvo emergencia: Google descarta los invitados al importar `.ics`/`.csv`. |
