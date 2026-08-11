@@ -41,7 +41,7 @@ from sesiones_cun import COURSES, meet_url, subject_encuentro  # noqa: E402
 # Placeholder de respaldo: los usos por curso deben llamar a
 # `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
 # en carga_academica_2026.json (auditadas el 2026-08-10) y el placeholder si no.
-from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+from sesiones_cun import cdigital_url, cdigital_urls_por_grupo, CDIGITAL_PLACEHOLDER  # noqa: E402
 URL_CDIGITAL = CDIGITAL_PLACEHOLDER
 from guion_md_a_docx import convert as md_to_docx  # noqa: E402
 
@@ -128,13 +128,37 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         )
         + " Cada grabación se publica **después** del encuentro (no está disponible durante "
         "la clase). |",
-        f"| **Aula CDigital** (entregas y notas) | {cdigital_url(key)} |",
+        # `grupo` importa: TG3 tiene un aula distinta por grupo (54450 → 112321, 54466 →
+        # 116387, 54467 → 129270). Sin pasarlo, los tres correos mandaban a la misma —la de
+        # 54450— y dos tercios del curso habrían entrado a un aula donde no están matriculados.
+        # En la copia de referencia (sin grupo) se listan las tres, porque enseñar una sola
+        # sería exactamente el error que esto corrige.
+        f"| **Aula CDigital** (entregas y notas) | {cdigital_url(key, grupo)} |"
+        if grupo or not cdigital_urls_por_grupo(key) else
+        "| **Aula CDigital** (entregas y notas) | "
+        + " · ".join(f"**{g}**: {u}" for g, u in sorted(cdigital_urls_por_grupo(key).items()))
+        + " — cada grupo tiene su propia aula; al enviar, usa el correo de la carpeta del grupo. |",
     ]
     if grupo:
         meta = (c.get("grupos") or {}).get(grupo) or {}
         cierre = _parse_date(meta.get("cierre"))
         if cierre:
             filas.append(f"| **Cierre de tu grupo** | {bold_var(fmt_dmy(cierre))} |")
+    else:
+        # Copia de referencia multi-grupo: sin ella, la fila de cierre desaparecía y el
+        # Docente perdía de vista que en TG3 los tres grupos NO cierran el mismo día
+        # (54450 el 15/11; 54466 y 54467 el 22/11). Las entregas sí están estandarizadas;
+        # lo que cambia es la fecha institucional de registro de notas, que no se puede mover.
+        cierres = []
+        for g in (c.get("groups") or []):
+            d = _parse_date(((c.get("grupos") or {}).get(str(g)) or {}).get("cierre"))
+            if d:
+                cierres.append(f"{g}: {fmt_dmy(d)}")
+        if len(cierres) > 1:
+            filas.append(
+                "| **Cierre por grupo** | " + " · ".join(cierres)
+                + " — al enviar, usa el correo de la carpeta del grupo, que ya trae solo el suyo. |"
+            )
     filas.append(
         "| **Antes de la Sesión 02** | la **lectura autónoma** de la semana viene en la carpeta "
         "de *Material de clases*, en `Clases/Sesion 01 - …/`: el PDF y el archivo "
@@ -242,6 +266,17 @@ def build_course(key: str, *, copy_to_grupos: bool = True) -> list[Path]:
         write_md_as_docx(correo_md(key), root_copy, subtitle=sub, footer=foot)
         print("OK multi-grupo (raíz)", root_copy)
         written.append(root_copy)
+
+        # Y otra en la carpeta de trabajo combinada, si existe. En TG3 el Docente no abre
+        # `2026/54466/`: abre `2026/_combinado_todos/`, que es donde viven el `.gs` de la
+        # serie única, su runbook y el calendario de los tres. Sin esta copia, esa carpeta
+        # es la única del repo que no tiene su correo al lado y parece que falta.
+        combinado = root / "2026" / "_combinado_todos"
+        if combinado.is_dir():
+            comb_copy = combinado / CORREO_NAME
+            write_md_as_docx(correo_md(key), comb_copy, subtitle=sub, footer=foot)
+            print("OK multi-grupo (carpeta combinada)", comb_copy)
+            written.append(comb_copy)
 
     return written
 

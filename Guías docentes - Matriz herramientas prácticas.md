@@ -24,14 +24,15 @@
 | **06** | Innovación local–internacional · entidades de apoyo | **Canva free** (opcional) · Google Docs / Slides pitch 1 pág. | `S06_EcosistemaPitch_Apellido` | ⏳ Canva no capturó en headless |
 | **07** | Taller de consolidación y sustentación de la propuesta (cierre) | **Google Docs** (documento consolidado) · Slides para la sustentación · CDigital (auto y coevaluación) | `S07_PropuestaConsolidada_Apellido` | ⏳ sin herramienta nueva: se sostiene lo ya escrito |
 
-**Prioridad aula S01–S02:** Padlet (tablero 5–10 min) → Excalidraw (sin cuenta) → export PNG → CDigital.
+**Prioridad aula S01–S02:** rompehielos según el tamaño (Slido con más de 20; Padlet hasta 20) → Excalidraw (sin cuenta) → export PNG → Drive de clases.
 
 **Tablero colaborativo (rompehielos / Preséntate / S01) — decisión 2026-08:**
 
 | Rol | Herramienta | URL | Por qué |
 | :--- | :--- | :--- | :--- |
-| **Oficial (los 5 cursos)** | **Padlet** | https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7 | Tablero único de presentación de estudiantes · QR en Presentación del Curso · misma URL en Sesión 01 |
+| **Hasta 20 estudiantes** (solo Investigación) | **Padlet** | https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7 | Tablero único de presentación de estudiantes · QR en Presentación del Curso · misma URL en Sesión 01 |
 
+> Con **más de 20 estudiantes** el rompehielos es **Slido** («dos verdades y una mentira», tres rondas, con premio): Padlet gratis solo da 3 tableros y un muro de 50 o 112 notas no lo lee nadie. La elección la hace `modo_rompehielos()` contando la matrícula real, no una lista escrita a mano.
 > Constante de build: `PADLET_PRESENTACION_URL` en `config/slides/cun_slides_engine.py`. **No** usar instrucciones de “Clear posts” / reutilizar borrando posts / “3 padlets del plan gratis”. Jamboard discontinuado. Miro/FigJam free útiles más adelante (DT).
 
 ---
@@ -73,7 +74,7 @@
 
 | Curso | Uso típico | Herramienta | Capturas |
 | :--- | :--- | :--- | :--- |
-| TG2 / TG3 S01 | Encuadre / acuerdo pedagógico | **Padlet** (estado del proyecto o expectativa · 5–10 min) | ✅ slide + guion S01 |
+| TG2 / TG3 S01 | Encuadre / acuerdo pedagógico | **Slido** — «dos verdades y una mentira», 3 rondas, 8 min (50 y 112 estudiantes) | ✅ slide + guion S01 |
 | TG2 / TG3 | Búsqueda y citas | Google Scholar · **ZoteroBib** (https://zbib.org/) | ✅ `Guiones/Capturas/Herramientas/tg_*.png` (ambos cursos) |
 | TG2 / TG3 | Formato artículo / APA | Plantilla APA CUN abierta en **Google Docs** · APA Style web | Reutilizar `p1_apa_style.png` |
 | TG2 / TG3 | Antiplagio | Herramienta institucional CUN si existe en CDigital; si no, **no inventar** URL — instruir ruta oficial del semestre | ⏳ pendiente URL real |
@@ -109,7 +110,7 @@
 
 | Preferir (browser / free tier) | No exigir en clase |
 | :--- | :--- |
-| **Padlet** (tablero presentación S01 · URL oficial arriba) | Apps de escritorio de pago; instalaciones locales |
+| **Slido** (rompehielos S01 con más de 20) · **Padlet** (hasta 20) | Apps de escritorio de pago; instalaciones locales |
 | Excalidraw, tldraw, diagrams.net, Miro free, Canva free, Canvanizer | Adobe de pago, Visio, Office desktop obligatorio |
 | Google Docs / Slides / Forms, CDigital | Instalaciones locales pesadas / “abre el .exe” |
 | Google Scholar, SciELO, Redalyc, biblioteca CUN web | — |

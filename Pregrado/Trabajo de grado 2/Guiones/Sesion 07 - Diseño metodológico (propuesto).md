@@ -195,7 +195,7 @@ Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ �
 🧩 **Entregable de hoy**
 1. En Google Docs (`S07_Metodologia_Apellido`): enfoque + alcance + diseño (con justificación) + matriz pregunta–método (fila por objetivo: dato / técnica / análisis), todo redactado en ‘propuesto’.
 2. Archivo en CDigital: `S07_Metodologia_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

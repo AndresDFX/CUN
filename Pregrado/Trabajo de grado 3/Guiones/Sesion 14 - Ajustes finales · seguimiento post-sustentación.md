@@ -197,7 +197,7 @@ En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una
 🧩 **Entregable de hoy**
 1. Matriz de ajustes + versión corregida.
 2. Archivo en CDigital: `S14_AjustesPost_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

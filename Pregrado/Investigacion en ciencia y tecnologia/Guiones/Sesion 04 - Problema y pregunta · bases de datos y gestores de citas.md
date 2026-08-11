@@ -300,7 +300,7 @@ Y con esa pregunta se busca: `problemas de internet en la universidad` no sirve;
 🧩 **Entregable de hoy**
 1. En el navegador (`S04_ProblemaPreguntaFuentes_Apellido`): problema en 8–12 líneas + diagrama en Excalidraw (espina, árbol o 3D) pegado como imagen + pregunta investigable en una frase + **3 fuentes** de Scholar/SciELO/Redalyc que pasen el filtro de 60 segundos, citadas en **APA 7** con ZoteroBib y revisadas a mano.
 2. Archivo en CDigital: `S04_ProblemaPreguntaFuentes_Apellido` en CDigital (documento con la captura del diagrama y las 3 referencias en APA 7).
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

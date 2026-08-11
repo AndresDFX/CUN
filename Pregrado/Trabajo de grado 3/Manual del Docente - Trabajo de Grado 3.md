@@ -6,7 +6,7 @@ Código SIAC **94532** · 2 créditos · **32 h de trabajo con docente + 64 h au
 Docente: **Julian Andres Castaño** · `julian_castanoe@cun.edu.co`.
 
 **Horario confirmado: martes, 5:00–6:00 pm. La clase dura UNA hora, no dos.** No es el formato de dos horas de Proyecto I: aquí no hay una segunda hora de tutoría dentro del encuentro. Si necesitas acompañar a alguien aparte, lo acuerdas por fuera.
-**Festivo en martes → clase autónoma** (actividad en CDigital, no cancelación). En 2026 esto no llega a pasar: las 15 fechas de la serie aparecen como *Sincrónica* en el `Calendario de clases (oficial).md`, sin ninguna marcada como autónoma.
+**Festivo en martes → clase autónoma** (la actividad queda en el **Drive de clases**; no es cancelación). En 2026 esto no llega a pasar: las 15 fechas de la serie aparecen como *Sincrónica* en el `Calendario de clases (oficial).md`, sin ninguna marcada como autónoma.
 
 > **Este curso NO se rige por el instructivo AFI de Proyecto I/II.** Es pregrado. Los formularios AFI —registro docente de sesiones, asistencia de estudiantes a tutorías, informe final de curso, acuerdo pedagógico en Google Forms— **no aplican aquí** salvo indicación escrita de Coordinación. Está dicho así en `Pregrado/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`. Si vienes de leer el Manual de Proyecto I, esa es la primera diferencia que tienes que soltar: **no hay formularios que diligenciar cada 24 horas.**
 
@@ -63,7 +63,7 @@ El producto tiene tres piezas y las tres son obligatorias:
 
 ## 2. Unidades de conocimiento del Syllabus (14 **unidades**, no sesiones)
 
-> **La Sesión 01 (11/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes (Padlet) y las ACAs. U1–U2 (Casos de éxito · retomar proyecto · contexto y planteamiento) → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.) El contenido curricular arranca en la **Sesión 02**.
+> **La Sesión 01 (11/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes y las ACAs. U1–U2 (Casos de éxito · retomar proyecto · contexto y planteamiento) → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.) El contenido curricular arranca en la **Sesión 02**.
 
 > ⚠️ La columna **U#** es la numeración del Syllabus. **U1–U2 se cursan como lectura autónoma de la Sesión 01**, así que a partir de ahí **sesión = unidad − 1**: leer esta tabla como si fueran sesiones es lo que producía el error «sustentación = Sesión 13».
 
@@ -112,7 +112,7 @@ Fechas y títulos salen de `config/cursos/sesiones_cun.py`; la columna de evalua
 
 | Sesión | Fecha | Unidad | Qué tiene que pasar en el encuentro | Entregable del estudiante | Movimiento en CDigital ese día |
 |---|---|---|---|---|---|
-| **S01** | 11/08 | Encuadre | Presentarte, presentar el curso y el grupo (Padlet), explicar los 8 ítems del aula por su nombre real y firmar el acuerdo pedagógico. **Hoy no se dicta tema.** | `S01_AcuerdoRetoma_Apellido` | **Abre ACA Final** (queda abierta todo el periodo) |
+| **S01** | 11/08 | Encuadre | Presentarte, presentar el curso y el grupo (rompehielos en **Slido**), explicar los 8 ítems del aula por su nombre real y firmar el acuerdo pedagógico. **Hoy no se dicta tema.** | `S01_AcuerdoRetoma_Apellido` | **Abre ACA Final** (queda abierta todo el periodo) |
 | **S02** | 18/08 | U3 | Que cada estudiante salga con pregunta, objetivos y título formulados, y con las **variables** identificadas dentro de la pregunta-problema. | `S02_PreguntaObjetivos_Apellido` | **Abre Quiz 1** |
 | **S03** | 25/08 | U4 | Estructura del artículo y taller de introducción: contexto → problema → pregunta → objetivos, encadenados. | `S03_Introduccion_Apellido` | **Cierra Quiz 1** (12 min en clase) |
 | **S04** | 01/09 | U5 | Fase I de referentes: buscar y fichar literatura por las variables del tema, en diálogo colaborativo. | `S04_ReferentesFaseI_Apellido` | — |
@@ -364,7 +364,7 @@ Aparte de la serie de encuentros, cada `2026/<grupo>/` trae su `Entregas y hitos
 
 ### 4.3 Antes de la Sesión 01
 
-Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo: el deck de encuadre (22 slides), el tablero **Padlet** del rompehielos (https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7 — es el mismo tablero de la Presentación del Curso, no dos rompehielos), el **acuerdo pedagógico** para firmar en esa sesión, y el aviso de que la **ACA Final abre hoy**.
+Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo: el deck de encuadre (22 slides), el **evento de Slido** del rompehielos con la mentira de cada ronda ya marcada (montaje en `2026/_combinado_todos/Rompehielos Slido - Sesion 01.md`), el **acuerdo pedagógico** para firmar en esa sesión, y el aviso de que la **ACA Final abre hoy**. Con 112 matriculados en una sola serie, en la ronda final solo hablan los tres del podio: no se presentan todos, no cabe en la hora.
 
 ---
 
@@ -389,7 +389,7 @@ Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo:
 - [ ] Enlace de Meet publicado en las tres aulas; coanfitrión asignado.
 - [ ] `Entregas y hitos docentes - Importar a Calendar.csv` importado **por grupo** (son distintos).
 - [ ] Canal del acuerdo pedagógico preguntado por escrito a Coordinación (ver Parte 2).
-- [ ] Guion y deck de la S01 abiertos; Padlet probado.
+- [ ] Guion y deck de la S01 abiertos; evento de Slido probado y mentiras marcadas.
 
 ### Antes de cada cuestionario (18/08 · 08/09 · 22/09 · 06/10 · 20/10)
 - [ ] **Actividad creada** en las tres aulas, no solo el ítem del libro de calificaciones.

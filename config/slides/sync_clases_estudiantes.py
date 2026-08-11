@@ -5,7 +5,7 @@
 - Copia Plantilla APA a Clases/Recursos/
 - Escribe Clases/LEEME - Material para estudiantes.docx (nunca .md en Clases/)
   · el rompehielos del LEEME se deriva del tamaño del grupo (ver `rompehielos()`):
-    muro Padlet hasta 20 estudiantes, formulario de Google por encima.
+    muro Padlet hasta 20 estudiantes, juego en Slido por encima.
 - Regenera Correo de bienvenida en rutas docentes (`2026/<grupo>/`; nunca en Clases/)
 - (Creatividad) ficha taller S01 en carpeta de sesión como .docx
 
@@ -31,12 +31,16 @@ from sesiones_cun import (
     meet_url,
     subject_encuentro,
 )
-from cun_slides_engine import PADLET_PRESENTACION_URL
+from cun_slides_engine import (
+    ICEBREAKER_MAX_MURO,
+    PADLET_PRESENTACION_URL,
+    slido_url,
+)
 from guion_md_a_docx import convert as md_to_docx
 from build_acas_estudiantes import build_course as build_acas, catalog_for_leeme
 from build_correo_bienvenida import build_course as build_correo, CORREO_NAME
 from carga_academica import GRABACIONES_URL, course_dir, curso as carga_curso
-from sesiones_cun import cdigital_url, CDIGITAL_PLACEHOLDER  # noqa: E402
+from sesiones_cun import cdigital_url, cdigital_urls_por_grupo, CDIGITAL_PLACEHOLDER  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 APA_SRC = os.path.join(ROOT, "Plantilla_APA_CUN_Proyecto de grado.docx")
@@ -55,30 +59,22 @@ FICHA_CREATIVIDAD_NAME = "Ficha_problema_oportunidad.docx"
 # una sola serie— nadie alcanza a ser visto y el muro se vuelve ruido. Por eso el
 # modo NO se escribe curso por curso: se deriva de la matrícula real (listados
 # exportados de CDigital, `<Asignatura>/2026/<grupo>/Listado estudiantes (CDigital).csv`).
-#   hasta ROMPEHIELOS_MAX_MURO estudiantes → muro Padlet (hoy solo Investigación: 20)
-#   por encima                             → Formulario de Google (Proyecto I,
-#                                             Creatividad, TG2 y TG3)
-# Por qué formulario: ya viene con la licencia CUN, se entra con el correo
-# @cun.edu.co (nadie crea cuenta nueva), no tiene tope de participantes y deja las
-# respuestas en una hoja que el Docente reutiliza todo el periodo. La interacción
-# EN VIVO va por las encuestas y el Q&A nativos de Meet. Mentimeter (50
-# participantes/mes) y Slido (100 y 3 encuestas) quedan descartados: estos cursos
-# no caben en su plan gratuito.
-ROMPEHIELOS_MAX_MURO = 20
+#   hasta ICEBREAKER_MAX_MURO estudiantes → muro Padlet (hoy solo Investigación: 20)
+#   por encima                            → juego en **Slido** (Proyecto I,
+#                                            Creatividad, TG2 y TG3)
+# El umbral es el mismo de siempre y vive en `cun_slides_engine` (una sola casa: si
+# cambia allá, cambia aquí). Por qué Slido: el plan gratis (Basic) da 100
+# participantes por evento, 3 encuestas, 1 quiz con tabla de posiciones y Q&A
+# ilimitado — Mentimeter corta en 50 participantes AL MES y no alcanza ni para un
+# curso de 50. En los cursos grandes el rompehielos deja de ser «cada quien se
+# presenta» (que no cabe en la hora) y pasa a ser un juego de 8 minutos con premio:
+# «dos verdades y una mentira» sobre el Docente.
+#
+# OJO — lo que este LEEME NO puede decir: las frases de las rondas y **cuál es la
+# mentira**. Eso es material del Docente y vive en
+# `<Asignatura>/2026/<grupo>/Rompehielos Slido - Sesion 01.md`
+# (`config/slides/build_rompehielos_slido.py`), fuera de `Clases/`.
 LISTADO_CSV = "Listado estudiantes (CDigital).csv"
-
-# Formulario «Preséntate» de los cursos grandes. Cadena vacía = todavía no está
-# creado ⇒ el material muestra el placeholder, mismo contrato que `meet`,
-# `cdigital` y `clases` en carga_academica_2026.json.
-# PENDIENTE: pegar aquí el enlace del formulario y regenerar este LEEME.
-FORMULARIO_PRESENTATE_URL = ""
-
-
-def formulario_presentate_url(curso_corto: str) -> str:
-    """Enlace del formulario «Preséntate»; placeholder mientras no exista."""
-    return (FORMULARIO_PRESENTATE_URL or "").strip() or (
-        f"[URL Formulario «Preséntate» — Google Forms · {curso_corto}]"
-    )
 
 
 def matriculados(key: str) -> int | None:
@@ -106,10 +102,14 @@ def matriculados(key: str) -> int | None:
 
 
 def rompehielos(key: str) -> dict:
-    """Modo y textos del rompehielos de este curso, según cuánta gente hay matriculada."""
+    """Modo y textos del rompehielos de este curso, según cuánta gente hay matriculada.
+
+    Nada de lo que sale de aquí puede adelantar las frases del juego ni cuál es la
+    mentira: esto es material del estudiante.
+    """
     n = matriculados(key)
     corto = carga_curso(key)["titulo_corto"]
-    if n is not None and n <= ROMPEHIELOS_MAX_MURO:
+    if n is not None and n <= ICEBREAKER_MAX_MURO:
         return {
             "modo": "muro",
             "n": n,
@@ -117,6 +117,10 @@ def rompehielos(key: str) -> dict:
             "url": PADLET_PRESENTACION_URL,
             "corto": "rompehielos en el muro de Padlet",
             "nombre": "El muro de Padlet",
+            "cierre": (
+                "**El muro de Padlet** es para presentarte / mapear expectativas; no "
+                "sustituye la entrega en CDigital."
+            ),
             "como": (
                 "El **Padlet** es el muro donde te presentas en la Sesión 01: una nota por "
                 "persona (nombre, expectativa y tema de interés). El grupo es pequeño, así que "
@@ -124,22 +128,40 @@ def rompehielos(key: str) -> dict:
             ),
         }
     # Sin listado tampoco se asume grupo pequeño: el muro es justo lo que se rompe
-    # con volumen, y el formulario funciona igual de bien con 20 que con 112.
+    # con volumen, y el juego funciona igual de bien con 20 que con 112.
     cuantos = f"{n} matriculados" if n is not None else "un grupo grande"
+    url = slido_url(key, corto)
+    # Mientras el evento no exista, la tabla muestra el marcador de posición: no tiene
+    # sentido mandar al estudiante a «el enlace de arriba». El código del chat siempre
+    # sirve, con enlace o sin él, y es la vía real por la que entra la mayoría.
+    tambien_enlace = (
+        " (también puedes usar el enlace de la tabla de arriba)"
+        if url.lower().startswith("http") else ""
+    )
     return {
-        "modo": "formulario",
+        "modo": "slido",
         "n": n,
-        "recurso": "**Formulario «Preséntate»** (rompehielos · Google Forms)",
-        "url": formulario_presentate_url(corto),
-        "corto": "rompehielos en el formulario «Preséntate»",
-        "nombre": "El formulario «Preséntate»",
+        "recurso": "**Slido** (rompehielos de la Sesión 01 · juego con premio)",
+        "url": url,
+        "corto": "el juego de presentación en Slido",
+        "nombre": "El juego de Slido",
+        "cierre": (
+            "**El juego de Slido** es el rompehielos de la Sesión 01: sirve para conocernos "
+            "y **no da nota** ni sustituye ninguna entrega de CDigital."
+        ),
         "como": (
-            "El **formulario «Preséntate»** se responde **una sola vez**, en la Sesión 01: "
-            "2–3 minutos, se entra con tu correo **@cun.edu.co** y no hay que crear cuenta en "
-            f"ninguna plataforma nueva. Con {cuantos} no alcanza a leerse un muro nota por nota, "
-            "así que el formulario **ordena y agrupa** las respuestas: en clase se leen en voz "
-            "alta unas cuantas y el resto se ve en la pantalla de resumen. Durante el encuentro "
-            "se participa con las **encuestas y el Q&A del propio Meet** — nada que instalar."
+            "El rompehielos de la **Sesión 01** es un juego de **8 minutos** en **Slido**: "
+            "«**dos verdades y una mentira**» sobre el Docente. En cada ronda ves tres frases "
+            "suyas y eliges la que **no** es cierta; acertar es 1 entre 3, así que no hay que "
+            "saber nada para ganar. **Cómo entras:** abres **slido.com** y escribes el "
+            "**código del evento**, que el Docente pega en el **chat del Meet** al empezar"
+            f"{tambien_enlace}. No hay que instalar nada "
+            "ni crear cuenta. Al final sale la **tabla de posiciones** y los **tres primeros** "
+            f"juegan la ronda final con sus propias frases. Hay **premio**. Con {cuantos} no "
+            "alcanzamos a presentarnos uno por uno, y así igual nos conocemos. Si te la "
+            "pierdes, el evento queda **abierto 48 horas**: puedes jugar aunque ya no entres "
+            "en la tabla. Las **preguntas** de toda la sesión también van por el **Q&A** de "
+            "ese mismo Slido."
         ),
     }
 
@@ -211,6 +233,14 @@ def leeme_md(key: str) -> str:
     # busca la grabación dentro de la carpeta única de Drive.
     evento_s01 = subject_encuentro(key, list(cc.get("groups") or []), n=1)
     es_pregrado = cc.get("nivel") != "especializacion"
+    # TG3 comparte esta carpeta `Clases/` entre sus TRES grupos, y cada grupo tiene su
+    # PROPIA aula en CDigital (54450 → 112321, 54466 → 116387, 54467 → 129270). Enseñar una
+    # sola mandaría a dos tercios del curso a un aula donde no están matriculados.
+    _aulas = cdigital_urls_por_grupo(key)
+    aula_txt = (
+        " · ".join(f"**{g}**: {u}" for g, u in sorted(_aulas.items())) + " — busca la de tu grupo"
+        if _aulas else cdigital_url(key)
+    )
     aca_rows = catalog_for_leeme(key)
     # La tabla lista los **ítems reales del libro de calificaciones** (auditoría
     # CDigital 10/08/2026), no solo las tareas: en pregrado 5 de los 8 ítems son
@@ -293,7 +323,7 @@ La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo 
 | :--- | :--- |
 | {rh["recurso"]} | {rh["url"]} |
 | **Google Meet** (mismo enlace toda la serie) | {meet} |
-| **CDigital** (campus del curso: entregas y notas) | {cdigital_url(key)} |
+| **CDigital** (campus del curso: entregas y notas) | {aula_txt} |
 | **Grabaciones de las clases** (Drive) | {GRABACIONES_URL} |
 | **Plantilla APA CUN** | `Recursos/{APA_NAME}` (ábrela en Google Docs / Word Online) |
 
@@ -345,11 +375,11 @@ Clases/
 - Las entregas y notas oficiales van por **CDigital** (cuando esté el enlace del campus).
 - Usa la plantilla APA de `Recursos/` cuando el entregable sea documental.
 - Sigue el enunciado de `Recursos/ACAs/` correspondiente a cada corte/ACA.
-- {rh["nombre"]} es para presentarte / mapear expectativas; no sustituye la entrega en CDigital.
+- {rh["cierre"]}
 
 ---
 
-*Si falta un enlace (Meet, CDigital o el rompehielos), el Docente lo publicará en el canal del curso.*
+*Si falta un enlace (Meet, CDigital o el rompehielos), el Docente lo publicará en el canal del curso; el del rompehielos, además, lo pega en el **chat del Meet** al empezar la Sesión 01.*
 """
 
 

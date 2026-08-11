@@ -88,6 +88,7 @@
       "aula": "Aula virtual - Google Meet",
       "meet": "https://meet.google.com/omk-woqk-vsj",
       "clases": "",
+      "slido": "",
       "periodos_nota": "26ES4",
       "bloque_portada": null,
       "horario": {
@@ -152,6 +153,7 @@
       "aula": "Aula virtual - Google Meet",
       "meet": "",
       "clases": "",
+      "slido": "",
       "periodos_nota": "26V04",
       "bloque_portada": "PRIMER BLOQUE",
       "horario": {
@@ -216,6 +218,7 @@
       "aula": "Aula virtual - Google Meet",
       "meet": "",
       "clases": "",
+      "slido": "",
       "periodos_nota": "26P03",
       "bloque_portada": "SEGUNDO BLOQUE",
       "horario": {
@@ -281,6 +284,7 @@
       "aula": "Aula virtual - Google Meet",
       "meet": "",
       "clases": "",
+      "slido": "",
       "periodos_nota": "26V04",
       "bloque_portada": "BLOQUE UNICO",
       "sin_syllabus": true,
@@ -346,6 +350,7 @@
       "aula": "Aula virtual - Google Meet",
       "meet": "",
       "clases": "",
+      "slido": "",
       "periodos_nota": "26P04 / 26V04",
       "bloque_portada": "BLOQUE UNICO",
       "horario": {

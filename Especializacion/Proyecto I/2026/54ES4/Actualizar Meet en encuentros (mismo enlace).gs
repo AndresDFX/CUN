@@ -30,7 +30,11 @@
 
 // ───────────────────────────── CONFIGURACIÓN ─────────────────────────────────
 var MEET_URL = 'https://meet.google.com/omk-woqk-vsj'; // enlace único de toda la serie
-var PREFIJO = '54ES4 - Proyecto I - Sesion';           // título de los encuentros
+// Fragmento que identifica a los encuentros de la serie. Se busca CONTENIDO, no prefijo:
+// el subject lleva ahora el periodo delante («26ES4 - 54ES4 - Proyecto I - Sesion 01»), y un
+// match anclado al inicio dejaba de encontrar los eventos — el script quedaba mudo y parecía
+// que no había nada que actualizar. Corregido 2026-08-11.
+var MARCA = '54ES4 - Proyecto I - Sesion';             // aparece en el título del encuentro
 var DESDE = '2026-08-01';                              // ventana de búsqueda
 var HASTA = '2026-11-30';
 var NOTIFICAR = false;    // true = avisa a los invitados de cada cambio
@@ -45,8 +49,8 @@ var LINEA_MEET = 'Meet (mismo enlace toda la serie): ' + MEET_URL;
 function verificarMeetP1() {
   var eventos = _encuentros_();
   if (!eventos.length) {
-    Logger.log('No se encontró ningún evento cuyo título empiece por "' + PREFIJO + '".');
-    Logger.log('Revisa PREFIJO / DESDE / HASTA, o que estés en la cuenta correcta.');
+    Logger.log('No se encontró ningún evento cuyo título contenga "' + MARCA + '".');
+    Logger.log('Revisa MARCA / DESDE / HASTA, o que estés en la cuenta correcta.');
     return;
   }
   Logger.log('Encontrados ' + eventos.length + ' encuentros. Servicio avanzado: ' +
@@ -123,7 +127,7 @@ function _encuentros_() {
   var cal = CalendarApp.getDefaultCalendar();
   var desde = _fecha_(DESDE), hasta = _fecha_(HASTA);
   return cal.getEvents(desde, hasta)
-    .filter(function (ev) { return (ev.getTitle() || '').indexOf(PREFIJO) === 0; })
+    .filter(function (ev) { return (ev.getTitle() || '').indexOf(MARCA) !== -1; })
     .sort(function (a, b) { return a.getStartTime() - b.getStartTime(); });
 }
 

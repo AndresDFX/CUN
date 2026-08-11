@@ -1,22 +1,6 @@
 [
   {
     "type": "bullets",
-    "title": "Preséntate: el formulario del curso (2 minutos)",
-    "bullets": [
-      "Somos **50 matriculados** en una hora semanal: un muro de notas no se alcanza a leer y termina siendo ruido.",
-      "El rompehielos es un **formulario de Google**: el Docente lo pega en el chat del Meet y queda en el LEEME de `Clases/`.",
-      "  **Enlace:** [URL Formulario «Preséntate» — pendiente]",
-      "  Se entra con su correo **@cun.edu.co**: no hay que crear cuenta ni instalar nada.",
-      "**Qué responde** (2–3 minutos, una sola vez): nombre, **estado actual de su proyecto** en una frase y qué espera de TG2.",
-      "  Diga de qué tema viene el proyecto: eso permite juntar en el taller a quienes están escribiendo sobre cosas parecidas.",
-      "**Cuándo:** en los primeros minutos del encuentro. Luego se proyecta el resumen y se leen en voz alta cinco o seis respuestas.",
-      "**En vivo, la participación va por el Meet:** encuestas y Q&A de la sala, que aguantan al grupo completo.",
-      "Queda abierto hasta la Sesión 02 para quien no alcance hoy."
-    ],
-    "note": "El Docente conserva esa hoja todo el periodo: le dice en qué punto llega cada quien y a quién hay que apurar en la primera mitad del curso."
-  },
-  {
-    "type": "bullets",
     "title": "Cómo trabajamos: TG2 es un taller de escritura, no una clase magistral",
     "bullets": [
       "**Una hora sincrónica por semana** y once encuentros. Usted **no empieza de cero**: trae un proyecto y lo lleva a un avance consolidado.",

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """Genera el CSV y el ICS de respaldo de los encuentros de Proyecto I (grupo 54ES4).
 
-Subject corto: «54ES4 - Proyecto I - Sesion NN» (helper subject_encuentro).
+Subject: «{periodo} - {grupos} - {Asignatura} - Sesion NN» (helper `subject_encuentro`).
+El periodo va delante para que la carpeta de grabaciones, que acumula periodos, no mezcle
+dos «Sesion 01» del mismo grupo de años distintos.
 Description: 2–4 líneas (sin políticas ni placeholders largos).
 Location: enlace único de Meet de la serie, leído de
 `carga_academica_2026.json → cursos.proyecto1.meet` (vacío ⇒ sin sala todavía).

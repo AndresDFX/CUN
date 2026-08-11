@@ -1,5 +1,11 @@
 # Herramientas de ExamLab — TRABAJO DE GRADO 2 (94453 · 54448 · 26V04)
 
+> ⚠️ **Base desactualizada (2026-08-11).** Este análisis se escribió cuando el rompehielos de la
+> Sesión 01 era un muro de Padlet en los cinco cursos. Ya no: con **más de 20 estudiantes** es el
+> juego «dos verdades y una mentira» en **Slido** (Proyecto I, Creatividad, TG2 y TG3), y el muro
+> solo sobrevive en **Investigación**, que tiene 20. Donde el texto proponga sustituir el Padlet,
+> léase «sustituir el rompehielos actual»; el diagnóstico de fondo sigue valiendo.
+
 | Campo | Valor |
 |---|---|
 | Curso | Trabajo de Grado 2 — Modelos de Innovación (Ing. Sistemas) · **94453** |

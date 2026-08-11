@@ -91,8 +91,9 @@ python config/slides/build_calendar_encuentros.py      # 3. .gs de encuentros CO
 python config/slides/build_hitos_docentes_calendar.py  # 4. «Entregas y hitos docentes - Importar a Calendar.csv» (raíz del curso + 2026/<grupo>/)
 python config/slides/build_sesion_material.py all all  # 5. Decks de sesión + guiones .md (invoca solo él los tres _regen_guiones_*)
 python config/slides/build_acas_estudiantes.py         # 6. Clases/Recursos/ACAs/ — un .docx por ítem del aula
-python config/slides/build_correo_bienvenida.py        # 7. Correo de bienvenida.docx en 2026/<grupo>/ (nunca en Clases/)
-python config/slides/sync_clases_estudiantes.py        # 8. SIEMPRE al final — consolida Clases/ (ver por qué, abajo)
+python config/slides/build_rompehielos_slido.py        # 7. Rompehielos del Docente en 2026/<grupo>/ (solo cursos de +20; Investigación se salta)
+python config/slides/build_correo_bienvenida.py        # 8. Correo de bienvenida.docx en 2026/<grupo>/ (nunca en Clases/)
+python config/slides/sync_clases_estudiantes.py        # 9. SIEMPRE al final — consolida Clases/ (ver por qué, abajo)
 ```
 
 Por qué ese orden, y no el que había antes:
@@ -212,7 +213,7 @@ En Proyecto I el `Calendario de clases (oficial).md` **ya no se cura a mano**: d
 
 ## Sesión 01 = encuadre (cambio 2026-08-09)
 
-En **los 5 cursos** la primera sesión **no dicta tema**: presenta el curso, al Docente, a los estudiantes (Padlet) y las ACAs, más acuerdos de trabajo. El contenido curricular arranca en la **Sesión 02**.
+En **los 5 cursos** la primera sesión **no dicta tema**: presenta el curso, al Docente, a los estudiantes y las ACAs, más acuerdos de trabajo. El rompehielos depende del tamaño: muro de Padlet hasta 20 estudiantes (solo Investigación), y por encima el juego «dos verdades y una mentira» en Slido — un muro de 50 o 112 notas no lo lee nadie. El contenido curricular arranca en la **Sesión 02**.
 - Título fijo: `Sesion 01 - Presentación del curso · docente · estudiantes · ACAs` (carpeta en `Clases/` y guion en `Guiones/`).
 - Fuente: `config/cursos/sesiones_cun.py` → la sesión 1 lleva `presentacion: True`, `bloque: "Encuadre"` y `unidad_diferida` (la unidad del Syllabus que pasa a **lectura autónoma** y se retoma al abrir la S02 — no se elimina del Syllabus).
 - Deck: `build_pptx_presentacion()` en `build_sesion_material.py`. El builder rico de tema de Creatividad S01 quedó obsoleto (archivado en `config/_Archivo obsoleto 2026-08-09/slides/`).

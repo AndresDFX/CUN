@@ -33,7 +33,7 @@ donde cada quien escribe su nombre no lo lee nadie. Por eso se cambió.
    la tabla de posiciones.
 3. **Ajusta las frases de abajo a tu realidad y marca la mentira de cada ronda.** Las
    sugeridas son un punto de partida; si no son tuyas, el juego no funciona.
-4. Crea **una encuesta de opcion multiple** vacia, con tres opciones A / B / C: es para la
+4. Crea **una encuesta de opción múltiple** vacía, con tres opciones A / B / C: es para la
    ronda final, que se juega en vivo (paso 4 de la clase).
 5. Deja el **Q&A abierto** toda la sesión. En el plan gratis es ilimitado y, con 50
    matriculados, es donde de verdad van a preguntar: por micrófono no lo hará casi nadie.

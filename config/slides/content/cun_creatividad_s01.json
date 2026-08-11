@@ -1,21 +1,6 @@
 [
   {
     "type": "bullets",
-    "title": "Preséntate: el formulario del curso (2 minutos)",
-    "bullets": [
-      "En el grupo hay **50 matriculados**. Un muro con 50 notas no se lee en una hora de clase: nadie alcanza a ser visto.",
-      "Por eso nos presentamos en un **formulario de Google**, que el Docente pega en el chat del Meet y queda en el LEEME de `Clases/`.",
-      "  **Enlace:** [URL Formulario «Preséntate» — pendiente]",
-      "  Se entra con su correo **@cun.edu.co**: sin registrarse en nada nuevo, sin instalar nada y sin costo.",
-      "**Qué responde** (2–3 minutos, una sola vez): nombre, expectativa del curso y **el tema o problema** que le interesa mirar.",
-      "**Cuándo:** en los primeros minutos del encuentro. Después el Docente proyecta el resumen y lee cinco o seis respuestas en voz alta, sin juzgar ninguna.",
-      "**Durante el encuentro** se participa con las **encuestas** y el **Q&A** del propio Meet: no se abre otra plataforma.",
-      "Si llegó tarde o se le cayó el internet, el formulario sigue abierto hasta la Sesión 02."
-    ],
-    "note": "Esas respuestas no se pierden: con ellas el Docente escoge los ejemplos del curso y junta a quienes traen problemas parecidos."
-  },
-  {
-    "type": "bullets",
     "title": "Cómo trabajamos: una hora juntos, el resto por su cuenta",
     "bullets": [
       "El curso son **2 créditos**: unas **32 horas** de acompañamiento y unas **64 horas** de trabajo autónomo.",

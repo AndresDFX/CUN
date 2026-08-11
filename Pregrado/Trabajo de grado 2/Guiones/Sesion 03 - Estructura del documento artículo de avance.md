@@ -195,7 +195,7 @@ Outline sobre la plantilla APA CUN: introducción (contexto/problema/propósito)
 🧩 **Entregable de hoy**
 1. En Google Docs (`S03_EstructuraAvance_Apellido`): copia de la Plantilla APA CUN + outline completo del documento (3–5 viñetas por sección), con la metodología en ‘propuesto’ y las secciones vacías marcadas.
 2. Archivo en CDigital: `S03_EstructuraAvance_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

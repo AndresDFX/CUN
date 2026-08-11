@@ -181,7 +181,7 @@ En Canva free o Google Slides, montar el esqueleto de un póster (título, probl
 🧩 **Entregable de hoy**
 1. Póster 1 página + anexos rotulados. (Informe de similitud **solo si el curso lo exige**, por la ruta institucional que confirme el Docente.)
 2. Archivo en CDigital: `S11_PosterEvidencias_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

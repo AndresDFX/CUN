@@ -130,21 +130,54 @@ def meet_url(course_key: str, curso_corto: str | None = None) -> str:
 
 
 # Aula del curso en CDigital (Moodle institucional, https://cdigital.cun.edu.co/).
-# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.cdigital
+# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.cdigital y, cuando
+# el curso tiene un aula POR GRUPO, cursos.<key>.grupos.<grupo>.cdigital
 # (cadena vacía = aún no se tiene el enlace del aula ⇒ se muestra el placeholder).
-# NO hardcodear la URL en los builds: usar `cdigital_url(course_key)`.
+# NO hardcodear la URL en los builds: usar `cdigital_url(course_key, grupo)`.
+#
+# UN AULA POR GRUPO — el caso de TG3 (corregido 2026-08-11)
+#   TG3 comparte una sola serie de encuentros pero tiene TRES aulas distintas: 54450 → 112321,
+#   54466 → 116387, 54467 → 129270. Antes esta función ignoraba el grupo y devolvía siempre la
+#   del curso (la de 54450), así que los correos de bienvenida de 54466 y 54467 mandaban a los
+#   estudiantes al aula equivocada — donde no están matriculados y no verían ni sus notas ni
+#   sus entregas. Pasa el grupo siempre que lo tengas.
 CDIGITAL_PLACEHOLDER = "[URL CDigital — campus del curso pendiente]"
 
 
-def cdigital_url(course_key: str) -> str:
-    """Enlace del aula en CDigital: el real si está en config, si no el placeholder."""
+def cdigital_url(course_key: str, grupo: str | None = None) -> str:
+    """Enlace del aula en CDigital. Con `grupo`, la del grupo si el curso tiene una por grupo."""
     url = ""
     if _carga_curso is not None:
         try:
-            url = (_carga_curso(course_key).get("cdigital") or "").strip()
+            c = _carga_curso(course_key)
+            if grupo:
+                url = (((c.get("grupos") or {}).get(str(grupo)) or {}).get("cdigital") or "").strip()
+            if not url:
+                url = (c.get("cdigital") or "").strip()
         except Exception:
             url = ""
     return url or CDIGITAL_PLACEHOLDER
+
+
+def cdigital_urls_por_grupo(course_key: str) -> dict[str, str]:
+    """`{grupo: url}` cuando el curso tiene un aula por grupo; `{}` si comparte una sola.
+
+    Lo necesita todo lo que se comparte a la vez con varios grupos —el LEEME del estudiante
+    de `Clases/`, por ejemplo— donde no se puede enseñar una sola aula sin equivocarse con dos
+    tercios del curso.
+    """
+    if _carga_curso is None:
+        return {}
+    try:
+        c = _carga_curso(course_key)
+    except Exception:
+        return {}
+    aulas = {
+        str(g): (m.get("cdigital") or "").strip()
+        for g, m in (c.get("grupos") or {}).items()
+        if (m.get("cdigital") or "").strip()
+    }
+    return aulas if len(set(aulas.values())) > 1 else {}
 
 
 # Convención carpetas (raíz de asignatura, GENÉRICO — sin código de grupo):
@@ -194,7 +227,7 @@ COURSES = {
              "unidad_esp329": "—",
              "presentacion": True,
              "unidad_diferida": "ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02.",
-             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA). No se dicta tema."},
+             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA). No se dicta tema."},
             {"n": 2, "fecha": "24/08/2026",
              "titulo": "Problema y pregunta de investigación", "bloque": "Quiz",
              "unidad_esp329": "U2",
@@ -272,7 +305,7 @@ COURSES = {
             {"n": 1, "fecha": "13/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
              "unidad_diferida": "U1–U2 (Syllabus y producto final · fundamentos del método científico) → lectura autónoma; se retoma al abrir la Sesión 02.",
-             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato). No se dicta tema."},
+             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato). No se dicta tema."},
             {"n": 2, "fecha": "20/08/2026", "titulo": "MinCiencias · 6 líneas de Ingeniería · elección de línea", "bloque": "U4",
              "detalle": "IoT, Big Data, IA, cloud/FinTech, aplicaciones, telemática."},
             {"n": 3, "fecha": "27/08/2026", "titulo": "Prueba parcial · 1.er avance del artículo", "bloque": "U5",
@@ -307,7 +340,7 @@ COURSES = {
             {"n": 1, "fecha": "12/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
              "unidad_diferida": "U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) → lectura autónoma; se retoma al abrir la Sesión 02.",
-             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato). No se dicta tema."},
+             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato). No se dicta tema."},
             {"n": 2, "fecha": "19/08/2026", "titulo": "Creatividad/innovación en I+D · Design Thinking y técnicas", "bloque": "U3",
              "detalle": "Pensamiento divergente/convergente · ideación."},
             {"n": 3, "fecha": "26/08/2026", "titulo": "Gestión de la innovación (Manual de Oslo / OCDE)", "bloque": "U4",
@@ -380,7 +413,7 @@ COURSES = {
             {"n": 1, "fecha": "11/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
              "unidad_diferida": "U1–U2 (Casos de éxito · retomar proyecto · contexto y planteamiento) → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.)",
-             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema."},
+             "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema."},
             {"n": 2, "fecha": "18/08/2026", "titulo": "Formulación de pregunta, objetivos y título", "bloque": "U3",
              "detalle": "Variables en la pregunta-problema."},
             {"n": 3, "fecha": "25/08/2026", "titulo": "Estructura del artículo · taller de introducción", "bloque": "U4",

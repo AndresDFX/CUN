@@ -71,7 +71,7 @@ Cruce de las ventanas de Coordinación con los festivos colombianos y con el cat
 
 | Sesión | Fecha | Tipo | Bloque | Unidad ESP329 | Contenido | Evaluación (aula CDigital) |
 |---|---|---|---|---|---|---|
-| **01** | 10/08/2026 (lun) | Sincrónica | Encuadre | — | Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato APA). No se dicta tema. | — |
+| **01** | 10/08/2026 (lun) | Sincrónica | Encuadre | — | Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA). No se dicta tema. | — |
 | — | (misma semana) | ⚠️ Lectura autónoma | Encuadre | — | ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02. | — |
 | — | 17/08/2026 (lun) | Sin sincrónico (Asunción de la Virgen) | — | — | **No hay encuentro** (festivo). Clase **pregrabada** en CDigital / trabajo autónomo; el avance del anteproyecto no se detiene. | — |
 | **02** | 24/08/2026 (lun) | Sincrónica | Quiz | U2 | ESP329 U2 · Delimitación del problema · pregunta viable · líneas IA del programa. | **Cierra Quiz** dom 30/08 (cuestionario · 25%) — esta es la última clase antes del cierre |

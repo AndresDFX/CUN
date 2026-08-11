@@ -182,7 +182,7 @@ En pantalla, escribir un párrafo de discusión con el latido completo: retomar 
 🧩 **Entregable de hoy**
 1. Sección resultados+discusión (borrador).
 2. Archivo en CDigital: `S09_ResultadosDiscusion_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

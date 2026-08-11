@@ -28,7 +28,7 @@ sys.path.insert(0, CURSOS)
 from sesiones_cun import COURSES, meet_url  # noqa: E402
 from cun_slides_engine import (  # noqa: E402
     PADLET_PRESENTACION_URL,
-    formulario_presentacion_url,
+    slido_url,
     usa_padlet,
 )
 from guion_evaluacion import (  # noqa: E402
@@ -54,14 +54,42 @@ KEYS = ("investigacion", "tg2", "tg3")
 # --- Rompehielos de la Sesión 01 según el TAMAÑO del grupo --------------------------
 # La forma del rompehielos NO se elige aquí: la decide `cun_slides_engine` con la
 # matrícula real (roster de CDigital) — muro de Padlet hasta ICEBREAKER_MAX_MURO
-# estudiantes, formulario de Google + encuestas y Q&A de Meet por encima. Este módulo
-# solo consume `usa_padlet()` y `formulario_presentacion_url()`, de modo que el guion y
-# la slide nunca digan cosas distintas.
-# Hoy: Investigación 53339 = 20 → muro. TG2 54448 = 50 y TG3 (54450 + 54466 + 54467) =
-# 112 en una sola serie → formulario (con 50 o 112 el muro no se alcanza a leer, y los
-# planes gratis de Mentimeter (50) y Slido (100) se quedan por debajo de estos grupos).
-FORM_TG2 = formulario_presentacion_url("tg2")
-FORM_TG3 = formulario_presentacion_url("tg3")
+# estudiantes, **juego en Slido** por encima. Este módulo solo consume `usa_padlet()` y
+# `slido_url()`, de modo que el guion y la slide nunca digan cosas distintas.
+# Hoy: Investigación 53339 = 20 → muro (veinte notas se leen enteras). TG2 54448 = 50 y
+# TG3 (54450 + 54466 + 54467) = 112 en una sola serie → Slido: con 50 o 112 el muro no se
+# alcanza a leer y una ronda de presentaciones no cabe en la hora, así que el rompehielos
+# pasa a ser un **juego con premio** —«dos verdades y una mentira» sobre el Docente— donde
+# acertar es 1 entre 3, azar puro. Slido y no Mentimeter porque el plan gratis (Basic) da
+# 100 participantes por evento, 3 encuestas, 1 quiz con tabla de posiciones y Q&A
+# ilimitado, mientras Mentimeter corta en 50 participantes AL MES.
+# El estudiante no necesita la URL: entra a slido.com con el **código** que el Docente
+# pega en el chat del Meet. Mientras el evento no exista, `slido_url` da el placeholder.
+SLIDO_TG2 = slido_url("tg2")
+SLIDO_TG3 = slido_url("tg3")
+
+
+def runbook_slido(course_key: str) -> str:
+    """Ruta del runbook del rompehielos — **material del Docente**, no va en `Clases/`.
+
+    Lo genera `config/slides/build_rompehielos_slido.py` en `2026/<grupo>/` (o en
+    `2026/_combinado_todos/` cuando el curso corre sus grupos en una sola serie, que es el
+    caso de TG3). Ahí viven las tres rondas y las casillas donde el Docente marca la
+    mentira: el guion las **remite**, nunca las copia — un guion con las mentiras escritas
+    deja de servir el día que un estudiante lo vea.
+    """
+    folder = COURSES[course_key]["folder"]
+    base = os.path.join(folder, "2026")
+    grupos = sorted(
+        d for d in (os.listdir(base) if os.path.isdir(base) else [])
+        if os.path.isdir(os.path.join(base, d)) and not d.startswith("_")
+    )
+    carpeta = "_combinado_todos" if len(grupos) > 1 else (grupos[0] if grupos else "<grupo>")
+    return f"{os.path.basename(folder)}/2026/{carpeta}/Rompehielos Slido - Sesion 01.md"
+
+
+RUNBOOK_TG2 = runbook_slido("tg2")
+RUNBOOK_TG3 = runbook_slido("tg3")
 
 
 def topic_filename(titulo: str, max_len: int = 70) -> str:
@@ -1123,7 +1151,7 @@ _spec(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (formulario del curso) | 2 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | 2 |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
 | **6** | Cómo trabajamos: TG2 es un taller de escritura | 3 |
 | **7** | Aviso honesto sobre este curso (sin Syllabus SIAC) | 3 |
@@ -1144,7 +1172,7 @@ _spec(
 | **23** | Cierre — Sesión 01 | 5 |
 """,
     objetivos="""1. **Encuadrar** TG2 como **continuación**: qué se hace en la hora sincrónica, qué en autónomo y cuál es el producto (**el avance escrito** que alimenta TG3).
-2. **Presentar** al Docente y **diagnosticar por escrito** el estado real de los 50 proyectos con el **formulario del curso**, no con un muro que nadie alcanza a leer.
+2. **Presentar** al Docente **jugando** —«dos verdades y una mentira» en Slido, con premio— y **diagnosticar por escrito**, en el Q&A del mismo evento, el estado real de los 50 proyectos: ni un muro que nadie alcanza a leer ni una ronda hablada que no cabe en la hora.
 3. **Explicar** las ACAs, la ruta de entrega en CDigital, la integridad académica y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura sobre delimitación + matriz de estado del proyecto.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
@@ -1156,8 +1184,8 @@ _spec(
 | Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística del periodo |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
-| **Formulario «Preséntate»** creado, probado desde otra cuenta y con el enlace copiado | Rompehielos y diagnóstico del grupo. **Son 50 estudiantes: no hay muro que se lea entero**, así que el diagnóstico se recoge por formulario |
-| **Encuesta de Meet** ya escrita (una pregunta cerrada) y **Q&A** activado en la sala | Es la interacción en vivo mientras responden y durante toda la hora; viene con la licencia CUN y aguanta el grupo completo |
+| **Evento de Slido** creado y probado desde el celular: **quiz de 3 preguntas** (una por ronda), **una encuesta A/B/C** vacía para la ronda final y el **Q&A abierto**; el **código** copiado para el chat | Es el rompehielos entero. **Son 50 estudiantes: no hay muro que se lea entero** ni ronda hablada que quepa en la hora, así que el hielo se rompe jugando y el diagnóstico se recoge en el Q&A |
+| **Las tres rondas ajustadas y la mentira de cada una marcada** en `""" + RUNBOOK_TG2 + """` | Es material del Docente y **no** va en `Clases/`. Se marca **antes** de entrar a la sala: llegar sin marcarlas es llegar sin juego |
 | **Libro de calificaciones** del aula, en otra pestaña | De ahí salen los nombres, los tipos y los pesos que va a anunciar: los ítems se muestran, no se citan de memoria |
 | Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental del curso: la **fecha exacta vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
@@ -1176,7 +1204,7 @@ TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Do
 3. **Se entrega en CDigital**, con plantilla APA CUN, y lo acordado hoy queda por escrito.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** el **formulario «Preséntate»** (rompehielos) y, al lado, su **hoja de respuestas** → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
+**1.** el **evento de Slido** en modo presentación (rompehielos), con el quiz listo para lanzar → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -1200,16 +1228,20 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         ("“¿Puedo usar ChatGPT?”",
          "“Como apoyo sí, y se declara en una línea al final del documento. Verifique las referencias: inventa autores y DOIs. En TG3 usted defiende ese texto ante jurados.”"),
     ],
+    # El juego dura 8 minutos exactos (antes el rompehielos tenía 10). Los dos minutos que
+    # se liberan van a las dos fases que siempre se quedan cortas: la de evaluación —seis
+    # slides y hay que mostrar el aula en pantalla— y la del cierre, donde se dicta el
+    # encargo autónomo y es lo primero que se sacrifica cuando el reloj aprieta.
     fases=[
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
-        ("2️⃣ Preséntate: formulario del curso + encuesta en vivo", 10),
+        ("2️⃣ Rompehielos: «Dos verdades y una mentira» en Slido", 8),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
-        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
-        ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
+        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 18),
+        ("5️⃣ Acuerdos, encargo autónomo y cierre", 9),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
-        "Slide 4 (PRESÉNTATE — formulario del curso)",
+        "Slide 4 (PRESÉNTATE — juego en Slido)",
         "Slides 6–11 (cómo trabajamos · aviso honesto · mapa · producto · acuerdo)",
         "Slides 5 y 12–17 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 18–23 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
@@ -1220,40 +1252,70 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 **GUION LITERAL:**
 > “Buenas tardes y bienvenidos a Trabajo de Grado 2. Nos vemos los lunes de cinco a seis, una hora sincrónica. Aclaro dos cosas de entrada. La primera: **hoy no vamos a ver tema**; hoy encuadramos el curso, vemos qué se entrega y pactamos cómo vamos a trabajar. La segunda, más importante: **este curso no empieza de cero**. Ustedes traen un proyecto, y mi trabajo es ayudarlos a llevarlo a un avance consolidado.”
 
-> “**Slide 2 — AGENDA DE HOY.** El orden: les cuento cómo trabajamos y cuál es el producto; me presento; se presentan ustedes en un tablero; vemos las ACAs y cómo se entrega; y cerramos con los acuerdos y con la tarea de esta semana.”
+> “**Slide 2 — AGENDA DE HOY.** El orden: les cuento cómo trabajamos y cuál es el producto; me presento; **jugamos ocho minutos** para conocernos —y sí, hay premio—; vemos las ACAs y cómo se entrega; y cerramos con los acuerdos y con la tarea de esta semana.”
 
-> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia dirigiendo trabajos de grado.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro.”
+> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia dirigiendo trabajos de grado.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro. Del resto de mi vida se van a enterar ahora, jugando.”
 
-**Cómo se maneja este arranque:** salude por nombre a quien va entrando. Y no arranque preguntando “¿cómo van con el proyecto?” en abierto: casi nadie confiesa un atraso por micrófono el primer día, y con **50 conectados** menos todavía. Ese diagnóstico se hace por escrito, en el formulario, que resulta mucho más cómodo y además le queda guardado.""",
-    fase2_texto="""**Protagonista:** Estudiantes (formulario) · Docente conduce.
+**Cómo se maneja este arranque:** salude por nombre a quien va entrando. **Deje corta la slide 3**: no cuente su biografía aquí, que es justo lo que va a salir en el juego de la fase siguiente — si la agota ahora, el rompehielos se queda sin gracia. Y no arranque preguntando “¿cómo van con el proyecto?” en abierto: casi nadie confiesa un atraso por micrófono el primer día, y con **50 conectados** menos todavía. Ese diagnóstico se recoge por escrito en el **Q&A de Slido**, que resulta mucho más cómodo y además le queda guardado.""",
+    fase2_texto="""**Protagonista:** Estudiantes (juegan) · Docente conduce.
 
-**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**. Enlace del formulario: """ + FORM_TG2 + """ — **péguelo en el chat del Meet**, no lo dicte.
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, y al lado el evento de Slido en modo presentación. Evento: """ + SLIDO_TG2 + """ — el estudiante **no** necesita esa URL: entra a **slido.com** con el **código**, que usted **pega en el chat del Meet** y no dicta.
 
-> **Por qué ya no hay muro:** este grupo tiene **50 estudiantes**. Cincuenta notas en un tablero no se leen en clase, y el que escribe y nunca es leído se desconecta. El formulario recoge lo mismo, ordenado y en una hoja que usted reutiliza todo el periodo; la parte viva —la que hace que se sientan grupo— la ponen la **encuesta** y el **Q&A** de Meet, que aguantan el curso completo y no piden registrarse en nada: entran con su cuenta @cun.edu.co.
+> ⚠️ **Antes de entrar a la sala.** Las **tres rondas** y **cuál es la mentira de cada una** están en
+> `""" + RUNBOOK_TG2 + """` — material del Docente, no va en `Clases/`. **Márquelas ahí antes de la clase** y ajústelas a su vida: si las frases no son suyas, el juego no funciona. Aquí no se repiten a propósito: este guion se comparte, y una mentira escrita en él deja de ser mentira.
 
-**GUION LITERAL:**
-> “**Slide 4 — PRESÉNTATE.** Quiero conocerlos y, sobre todo, saber en qué punto llega cada proyecto. Acabo de pegar en el chat el **formulario del curso**: ábranlo ahí mismo, son tres preguntas y se responde en cuatro minutos. (a) su nombre; (b) el tema de su proyecto en una frase; (c) el estado real en el que llega: ‘lo tengo casi listo’, ‘está congelado’, ‘quiero reformularlo’, ‘la verdad, no tengo casi nada’.”
+> **Por qué ya no hay muro:** este grupo tiene **50 estudiantes**. Cincuenta notas en un tablero no se leen en clase, y el que escribe y nunca es leído se desconecta. Así que el rompehielos es un **juego**: acertar en «dos verdades y una mentira» es **1 entre 3**, azar puro, y el que llega con el proyecto congelado arranca igual que el que lo tiene listo — que en TG2, donde media sala llega con culpa, no es un detalle menor. Va **antes de la primera tabla de porcentajes**: si lo primero que ven es la tabla de pesos, ya perdió la sala.
 
-> “Y les pido algo: **sean honestos**. Esto no tiene nota. Si usted dice que está en cero, yo sé por dónde empezar con usted; si dice que está listo y no lo está, perdemos las dos primeras semanas.”
+**(1) GUION LITERAL — explicar el juego y anunciar el premio (~1 min):**
+> “**Slide 4 — PRESÉNTATE.** Antes de hablar de notas y de fechas, ocho minutos de juego. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
 
-> “Mientras responden, hagamos una cosa rápida entre todos.” [Lance la **encuesta de Meet**: *“¿Qué tiene escrito hoy? — (1) nada · (2) tema y poco más · (3) problema y objetivos · (4) marco avanzado”*.] “Ahí lo tienen en pantalla: así llega este curso. No es para señalar a nadie, es para que vean que no están solos en el punto donde están.”
+> “Se llama **dos verdades y una mentira** y va sobre mí. **Tres rondas.** En cada una les muestro **tres frases mías** y **una es falsa**: ustedes votan cuál. Acertar es una entre tres, así que aquí nadie llega con ventaja: no gana el que más haya escrito de su trabajo de grado, gana el que me lea mejor.”
+
+> “Y se juega por algo: quien más veces me pille se gana una **revisión uno a uno conmigo**, media hora solo para su avance, **antes de la primera entrega**. En este curso eso vale más que cualquier décima, y décimas no regalo.”
+
+**(2) GUION LITERAL — las tres rondas (~4 min, unos 80 segundos cada una):**
+> “**Ronda uno.** Ahí están las tres frases. Una de estas tres **no** es cierta: ¿cuál? Veinte segundos… y voten, que el que no vota no puntúa.”
+
+> [Cierre la pregunta, proyecte el reparto de votos y **revele la mentira**.] “La mentira era la número [X]. Y lo bueno es lo otro: la que a más gente le costó creer **sí es verdad**.” [Cuente en **treinta segundos** la historia de la verdad más rara de la ronda. Ahí está su presentación, sin diapositiva de biografía.]
+
+> “**Ronda dos.** Mismas reglas, otras tres frases…” [Vote → revele → historia de treinta segundos.]
+
+> “**Ronda tres**, la última mía…” [Vote → revele → historia de treinta segundos.]
+
+> **Regla de oro:** revele **después de cada ronda**, no al final, y cuente la historia — la gracia del juego es la revelación, y la historia es su presentación. Pero **cronometre**: treinta segundos por historia. Tres rondas caben en cuatro minutos solo si usted se contiene.
+
+**(3) GUION LITERAL — tabla de posiciones (~1 min):**
+> “Veamos quién me leyó mejor.” [Proyecte la **tabla de posiciones** de Slido.] “Podio: [nombre 1], [nombre 2] y [nombre 3]. Aplauso en el chat… y ojo, que el premio todavía no está entregado.”
+
+**(4) GUION LITERAL — la ronda final, la del podio (~2 min):**
+> “Ahora se invierte el juego: **los tres del podio se presentan jugando**. Cada uno abre el micrófono treinta segundos y nos dice **sus** dos verdades y una mentira. El resto vota en la encuesta que tengo abierta —**A, B o C**— y **gana el que engañe a más gente**.”
+
+> [Lance la **encuesta A/B/C** una vez por cada persona del podio y anuncie en voz alta cuántos cayeron con cada una.]
+
+> “Ganó [nombre]: nos engañó a [n] de nosotros. Esa revisión uno a uno es suya — le escribo hoy para agendarla. Y miren lo que acaba de pasar: ya se presentaron tres compañeros, hablando, y hablaron porque se lo ganaron. Con cincuenta personas esa es la única ronda de presentaciones que cabe en una hora.”
 
 **Cómo se conduce (con 50, esto es lo que cambia):**
-1. **Minuto 0–1:** pegue el enlace en el chat y dígalo en voz alta. Repítalo al minuto 3 — el chat se llena y el primer mensaje se pierde.
-2. **Minuto 1–5:** ellos responden. Usted **no llena el silencio**: lanza la encuesta de Meet y proyecta el resultado en vivo. Es la interacción del momento, y no cuesta un minuto más.
-3. **Minuto 5–8:** abra la pestaña **Respuestas → Resumen** del formulario y **proyéctela**. Ahí están los 50: el gráfico de estados y la lista de temas. Nadie queda invisible aunque nadie hable.
-4. **Minuto 8–10:** lea en voz alta **cinco o seis respuestas**, no más, y escogidas: **dos** del estado mayoritario, **una** de un proyecto congelado (sin dramatizar), **una** de un tema que se pueda conectar con otro del grupo y **una o dos** que sirvan de ejemplo el resto del periodo. Nombre a la persona y devuélvale una frase concreta.
-5. **Cierre de la fase:** deje el **Q&A de Meet** abierto y dígalo: “lo que les quede sonando, escríbanlo ahí; al final respondo las más votadas”. Con 50 personas, el Q&A ordena lo que el chat desordena.
-6. **Después de clase:** la hoja de respuestas **se guarda**. De ahí salen los ejemplos de las próximas sesiones, la lista de quién llegó en cero y el cruce con la lista de matriculados para ver quién no respondió.
+1. **Pegue el código en el chat y dígalo en voz alta**, y repítalo al abrir la ronda uno: el chat del primer día entierra el primer mensaje. El QR de la slide es la ayuda, no el camino: la mitad está en computador.
+2. **No espere a que entren los cincuenta.** Arranque cuando el contador de participantes se mueva; quien llegue tarde entra en la ronda dos y no pasa nada — esto no tiene nota.
+3. **Ocho minutos son ocho minutos.** Si una ronda se estira, lo que se recorta es su historia, nunca la revelación.
+4. **Empate en el podio:** deje a los cuatro. Treinta segundos de más se recuperan; discutir un desempate en vivo, no.
+5. **Si alguien del podio no quiere hablar:** no insista ni un segundo. “Pasamos al siguiente” y sigue el cuarto de la tabla. Obligar a hablar el primer día es justo lo que este juego vino a evitar.
+6. **Todo el encuentro:** deje el **Q&A de Slido** abierto y dígalo. Con 50 personas el Q&A ordena lo que el chat desordena, y al cierre usted responde las más votadas.
 
-**Si el formulario no despega:**
+**Cierre de la fase — y el diagnóstico que antes hacía el formulario:**
+> “Última cosa, y esta sí me sirve a mí: en el **Q&A de Slido** escriban una línea con **el tema de su proyecto** y **el estado real** en el que llega — ‘casi listo’, ‘congelado’, ‘quiero reformularlo’, ‘no tengo casi nada’. Sean honestos: esto no tiene nota. Si usted dice que está en cero, yo sé por dónde empezar con usted; si dice que está listo y no lo está, perdemos las dos primeras semanas. Queda abierto toda la sesión y lo leo hoy mismo.”
+
+**Si el juego no despega:**
 | Situación | Qué hace el Docente |
 | :--- | :--- |
-| A los 2 minutos hay 3 respuestas | Proyecta el contador subiendo: “vamos en 3 de 50, esperamos un minuto más”. Verlo subir arrastra al resto. |
-| “No me abre el enlace” | Lo pega otra vez en el chat y confirma que el formulario acepta cualquier cuenta @cun.edu.co; nadie tiene que crear usuario. |
-| Muchos responden “voy bien” | Lo contrasta en voz alta con la encuesta de Meet: “tenemos 30 en ‘voy bien’ y 4 con el problema escrito. ¿Ven la diferencia entre pensado y escrito?”. |
-| Alguien escribe que abandonó el proyecto | **No lo lee en voz alta.** Le escribe por chat privado y lo cita al terminar la sesión. |
-| Faltan 15 por responder al terminar la hora | Deja el formulario abierto toda la semana y lo recuerda en el cierre: la hoja se revisa antes de la Sesión 02. |""",
+| A los 2 minutos hay 6 participantes | Proyecta el contador de Slido subiendo: “vamos en 6, esperamos treinta segundos y arrancamos”. Verlo subir arrastra al resto — pero arranque igual: el juego se ve y engancha a los que faltan. |
+| “No me abre / no me deja entrar” | Repite el código en el chat y aclara que se entra por **slido.com** escribiendo el código, sin crear cuenta y sin instalar nada. |
+| Nadie vota en la ronda uno | Vota usted una en voz alta como ejemplo y baja el costo: “no hay respuesta correcta que estudiar, es una entre tres; adivinen”. |
+| Se acertó la mentira por unanimidad | Lo celebra y sigue: “esta la tenía muy fácil, la siguiente no”. No pierda tiempo justificándose. |
+| El podio no quiere hablar | Baja al siguiente de la tabla, y si tampoco, cierra con la tabla proyectada y entrega el premio ahí mismo. La fase no se estira. |
+| Quedan 15 sin conectarse | Deja el evento **abierto 48 horas** y publica el enlace en el aula: juegan igual, fuera de la tabla de posiciones, y llegan a la Sesión 02 sabiendo quién les da clase. |
+
+**Después de clase:** el **Q&A y la lista de participantes se exportan y se guardan**. De ahí salen los ejemplos de las próximas sesiones, la lista de quién llegó en cero y el cruce con la lista de matriculados para ver quién no se conectó.""",
     fase3_texto="""**Protagonista:** Docente (recorrido de la deck).
 
 **GUION LITERAL:**
@@ -1303,8 +1365,9 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
         "- [ ] **Lectura autónoma sobre delimitación del tema** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
-        "- [ ] **Formulario «Preséntate»** creado y probado desde otra cuenta, con el enlace listo para pegar en el chat: " + FORM_TG2,
-        "- [ ] **Encuesta de Meet** redactada (una pregunta cerrada sobre el estado del proyecto) y **Q&A** activado en la sala",
+        "- [ ] **Las tres rondas ajustadas y la mentira de cada una marcada** en `" + RUNBOOK_TG2 + "` *(material del Docente — sin esto no hay juego)*",
+        "- [ ] **Evento de Slido** creado y probado desde el celular, con el **quiz de 3 preguntas**, la **encuesta A/B/C** de la ronda final y el **Q&A abierto**; el **código** listo para pegar en el chat: " + SLIDO_TG2,
+        "- [ ] Decidido el **premio** y cómo se agenda la revisión uno a uno del ganador",
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 23 slides)",
         "- [ ] **Libro de calificaciones** del aula abierto (ítems, tipos y pesos reales) y enunciado de la **ACA Final** listo para proyectar",
@@ -1313,8 +1376,8 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
     # Sin pantallazo: la captura que había es del Padlet, que este curso ya no usa. Cuando
-    # el formulario exista, se captura `Sesion 01/tg_formulario_resumen.png` (pestaña
-    # Respuestas → Resumen, que es lo que se proyecta) y se enchufa aquí.
+    # el evento de Slido exista, se captura `Sesion 01/tg_slido_leaderboard.png` (la tabla
+    # de posiciones, que es lo que se proyecta en el paso 3) y se enchufa aquí.
     shots_fase2=[],
     shots_taller=[
         ("Herramientas/tg_zoterobib.png", "ZoteroBib (zbib.org) — citar sin instalar nada",
@@ -2310,7 +2373,7 @@ Recuerde que en TG3 la entrega pasa por la **revisión de similitud instituciona
 TG3 = [
     # Sesión 01 = ENCUADRE (no se dicta tema). El detalle vive en TG3_RICH[1], que
     # sobreescribe objetivos, fases, textos de fase, checklist y capturas.
-    (1, "Encuadre: presentación del curso, del Docente, del grupo (formulario «Preséntate») y de las ACAs, más el acuerdo pedagógico.",
+    (1, "Encuadre: presentación del curso, del Docente, del grupo (rompehielos: juego en Slido) y de las ACAs, más el acuerdo pedagógico.",
      "Sesión de presentación: cómo se trabaja, qué se entrega y cómo se evalúa. El contenido arranca en la Sesión 02.",
      "Encargo autónomo: lectura U1–U2 + matriz de herencia.",
      "`S01_AcuerdoRetoma_Apellido`.",
@@ -2452,7 +2515,7 @@ _tg3(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (formulario del curso) | 2 |
+| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | 2 |
 | **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
 | **6** | Cómo trabajamos: una hora semanal para cerrar el trabajo de grado | 3 |
 | **7** | Qué se llevan al final: artículo, sustentación y repositorio | 3 |
@@ -2472,7 +2535,7 @@ _tg3(
 | **22** | Cierre — Sesión 01 | 5 |
 """,
     objetivos="""1. **Encuadrar** TG3 como **culminación**: cómo se usa la hora sincrónica, qué se hace en autónomo y cuál es el producto (**artículo + sustentación + repositorio**).
-2. **Presentar** al Docente y **diagnosticar por escrito** el estado de los 112 proyectos con el **formulario del curso** — en esta serie **no se presentan todos en voz alta**: no cabe en la hora.
+2. **Presentar** al Docente **jugando** —«dos verdades y una mentira» en Slido, con premio— y **diagnosticar por escrito**, en el Q&A del mismo evento, el estado de los 112 proyectos: en esta serie **no se presentan todos en voz alta**, no cabe en la hora; hablan tres, y son los que se ganaron el turno.
 3. **Explicar** la evaluación real del aula (quices y parciales por corte + **ACA Final** + auto y coevaluación) y la sustentación ante jurados, la ruta de entrega en CDigital, la integridad académica con antiplagio institucional y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura U1–U2 + matriz de herencia de lo que traen de TG2.""",
     fundamento_titulo="🧰 **Preparación del Docente ANTES de la clase** *(hoy no hay tema que estudiar: hay logística que dejar lista)*",
@@ -2484,8 +2547,8 @@ _tg3(
 | Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística por grupo (recepción y cierre) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 22 slides, en orden |
-| **Formulario «Preséntate»** creado, probado desde otra cuenta y con **pregunta obligatoria de grupo** (54450 · 54466 · 54467) | Rompehielos y diagnóstico. Son **112 estudiantes en una sola serie**: ningún muro ni ninguna ronda de presentaciones cabe en la hora, y sin la pregunta de grupo la hoja de respuestas no sirve para nada |
-| **Encuesta de Meet** ya escrita (una pregunta cerrada) y **Q&A** activado | Es la interacción en vivo de un grupo de 112: viene con la licencia CUN, no pide registro y aguanta el curso entero |
+| **Evento de Slido** creado y probado desde el celular: **quiz de 3 preguntas** (una por ronda), **una encuesta A/B/C** vacía para la ronda final y el **Q&A abierto**; el **código** copiado para el chat | Es el rompehielos entero. Son **112 estudiantes en una sola serie**: ningún muro ni ninguna ronda de presentaciones cabe en la hora, pero el juego sí. El plan gratis admite **100 participantes por evento**; a una virtual de una hora no se conectan los 112, pero conviene saberlo |
+| **Las tres rondas ajustadas y la mentira de cada una marcada** en `""" + RUNBOOK_TG3 + """` | Es material del Docente y **no** va en `Clases/`. Se marca **antes** de entrar a la sala: llegar sin marcarlas es llegar sin juego |
 | **Libro de calificaciones** del aula **de cada grupo**, abierto en otra pestaña | TG3 **no** es corte único EV05/EXAM: son tres cortes con quices, parciales y **ACA Final**, y las ventanas cambian por grupo. Los ítems se muestran, no se citan de memoria |
 | Enunciado de la **ACA Final** (`Clases/Recursos/ACAs/`) | Única entrega documental: la **fecha exacta por grupo vive ahí y en CDigital**, no en la deck |
 | **Plantilla APA CUN** (`Clases/Recursos/`) | Mostrar en vivo cómo se abre en Google Docs |
@@ -2505,10 +2568,10 @@ _tg3(
 Aquí hay **tres grupos con calendarios de recepción y cierre distintos**. Cuando alguien pregunte por fechas, remita a la Presentación del Curso y a CDigital, y pida que cada quien anote **la de su grupo**. Dar una sola fecha en voz alta es el error administrativo más caro de este curso.
 
 #### 5. El tamaño manda: 112 estudiantes en una sola serie
-Los tres grupos entran al **mismo Meet**. Eso cambia el primer día entero: **nadie se presenta hablando**. Ciento doce presentaciones de treinta segundos son **cincuenta y seis minutos**, es decir, la clase completa sin encuadre. La regla operativa de hoy: **todo lo que dicen 112 personas se recoge por escrito** (formulario), **lo que se decide en vivo se decide por encuesta** (Meet), y **lo que se pregunta va al Q&A**, no al micrófono. Usted lee cinco o seis respuestas, no más, y proyecta el resumen para que el resto se vea representado.""",
+Los tres grupos entran al **mismo Meet**. Eso cambia el primer día entero: **casi nadie se presenta hablando**. Ciento doce presentaciones de treinta segundos son **cincuenta y seis minutos**, es decir, la clase completa sin encuadre. La regla operativa de hoy: **lo que se juega, se juega en Slido y lo juegan los 112 a la vez**; **hablan tres**, los del podio, que se ganaron el turno en un juego de azar puro; **todo lo que 112 personas quieran decir se escribe** en el Q&A del mismo evento; y **lo que se pregunta va al Q&A**, no al micrófono. Nadie sale con la sensación de no haber sido tenido en cuenta, y usted no gastó la hora en una ronda.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** el **formulario «Preséntate»** y su **hoja de respuestas** (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
+**1.** el **evento de Slido** en modo presentación, con el quiz listo para lanzar (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -2530,20 +2593,24 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         ("“¿La clase se graba?”",
          "Dígalo con claridad según lo que usted vaya a hacer, y aclare lo fijo: “el material y la consigna quedan siempre en la carpeta de esa sesión, en el **Drive de clases**; CDigital es para entregar y para las notas”."),
         ("“¿Por qué no nos presentamos todos?”",
-         "“Porque somos **112** en la misma sala: presentarnos de a treinta segundos se lleva la hora entera. Por eso el formulario, que los recoge a todos, y por eso leo unos pocos en voz alta; el resumen con todas las respuestas lo proyecto en pantalla.”"),
+         "“Porque somos **112** en la misma sala: presentarnos de a treinta segundos se lleva la hora entera. Por eso jugamos: en el juego participan los 112 a la vez, y el turno de hablar se lo ganan los tres del podio. El que quiera decir algo más lo escribe en el Q&A, que queda abierto y lo leo completo.”"),
         ("“¿Puedo usar ChatGPT?”",
          "“Como apoyo sí, y se declara al final del documento. Verifique cada referencia: inventa autores y DOIs, y esa bibliografía va al repositorio institucional.”"),
     ],
+    # El juego dura 8 minutos exactos (antes el rompehielos tenía 10). Los dos minutos que
+    # se liberan van a las dos fases que siempre se quedan cortas: la de evaluación —hay que
+    # desmentir en pantalla el mito del corte único y las fechas cambian por grupo— y la del
+    # cierre, donde se dicta el encargo autónomo y es lo primero que se sacrifica.
     fases=[
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
-        ("2️⃣ Preséntate: formulario del curso + encuesta en vivo", 10),
+        ("2️⃣ Rompehielos: «Dos verdades y una mentira» en Slido", 8),
         ("3️⃣ Recorrido del curso, producto final y acuerdo pedagógico", 15),
-        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 17),
-        ("5️⃣ Acuerdos, encargo autónomo y cierre", 8),
+        ("4️⃣ Cómo se evalúa (quices, parciales y ACA Final), entrega e integridad", 18),
+        ("5️⃣ Acuerdos, encargo autónomo y cierre", 9),
     ],
     fase_slides=[
         "Slides 1–3 (Portada · AGENDA · Docente)",
-        "Slide 4 (PRESÉNTATE — formulario del curso)",
+        "Slide 4 (PRESÉNTATE — juego en Slido)",
         "Slides 6–10 (cómo trabajamos · producto · mapa · acuerdo)",
         "Slides 5 y 11–16 (evaluación real del aula · entrega · integridad · IA · herramientas · ayuda)",
         "Slides 17–22 (convivencia · dudas · Sesión 02 · acuerdos · cierre)",
@@ -2553,46 +2620,72 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 **GUION LITERAL:**
 > “Buenas tardes y bienvenidos a **Trabajo de Grado 3**. Nos vemos los martes de cinco a seis. Dos advertencias de entrada. La primera: **hoy no vamos a ver tema**; hoy encuadramos el curso, vemos qué se entrega y pactamos cómo trabajaremos. La segunda, y quiero que se les quede grabada: este curso **no empieza nada, lo termina**. Es la línea de meta del trabajo de grado que vienen cargando desde el semestre pasado.”
 
-> “**Slide 2 — AGENDA DE HOY.** El orden: cómo trabajamos y cuál es el producto —que son tres cosas, no una—; me presento; se presentan ustedes en un tablero; vemos las ACAs y cómo se entrega; y cerramos con los acuerdos y con la tarea de esta semana.”
+> “**Slide 2 — AGENDA DE HOY.** El orden: cómo trabajamos y cuál es el producto —que son tres cosas, no una—; me presento; **jugamos ocho minutos** para conocernos, y hay premio; vemos las ACAs y cómo se entrega; y cerramos con los acuerdos y con la tarea de esta semana.”
 
-> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia acompañando sustentaciones.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro.”
+> “**Slide 3 — Docente.** Un minuto sobre mí, para que sepan a quién le escriben.” [Preséntese con las credenciales de la slide y una frase sobre su experiencia acompañando sustentaciones.] “Mi correo está en pantalla para novedades personales; lo académico va por CDigital, donde queda registro. Del resto de mi vida se van a enterar ahora, jugando.”
 
-**Cómo se maneja este arranque:** salude por nombre. Y no abra con la palabra “jurados” en tono de amenaza: el objetivo del primer día es que sepan que hay defensa oral y que **se prepara desde la primera semana**, no que se asusten. Anuncie de una vez la regla del tamaño: “somos 112 en esta sala, así que hoy nos presentamos **por escrito**”; dicho al principio, nadie lo siente como un recorte.""",
-    fase2_texto="""**Protagonista:** Estudiantes (formulario) · Docente conduce.
+**Cómo se maneja este arranque:** salude por nombre. Y no abra con la palabra “jurados” en tono de amenaza: el objetivo del primer día es que sepan que hay defensa oral y que **se prepara desde la primera semana**, no que se asusten. **Deje corta la slide 3**: su biografía es justo el material del juego de la fase siguiente, y si la agota aquí el rompehielos se queda sin gracia. Anuncie de una vez la regla del tamaño: “somos 112 en esta sala, así que hoy no nos presentamos uno por uno: **nos presentamos jugando**”; dicho al principio, nadie lo siente como un recorte.""",
+    fase2_texto="""**Protagonista:** Estudiantes (juegan) · Docente conduce.
 
-**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**. Enlace del formulario: """ + FORM_TG3 + """ — **péguelo en el chat del Meet**, no lo dicte.
+**En pantalla:** Presentación del Curso → slide **PRESÉNTATE**, y al lado el evento de Slido en modo presentación. Evento: """ + SLIDO_TG3 + """ — el estudiante **no** necesita esa URL: entra a **slido.com** con el **código**, que usted **pega en el chat del Meet** y no dicta.
 
-> **Aquí NO se presentan todos, y se dice en voz alta.** Son **112 estudiantes** (54450 + 54466 + 54467) en una sola serie: treinta segundos por persona son **casi una hora**. El formulario los recoge a todos y los ordena; en vivo se leen **cinco o seis** y el resto se ve en la **pantalla de resumen**. Lo que no se puede es dejar que la fase se convierta en una ronda: se corta sola porque nunca se abre.
+> ⚠️ **Antes de entrar a la sala.** Las **tres rondas** y **cuál es la mentira de cada una** están en
+> `""" + RUNBOOK_TG3 + """` — es el runbook de la serie completa, por eso vive en `_combinado_todos/`: los tres grupos juegan juntos en el mismo Meet. Material del Docente, no va en `Clases/`. **Márquelas ahí antes de la clase** y ajústelas a su vida: si las frases no son suyas, el juego no funciona. Aquí no se repiten a propósito: este guion se comparte, y una mentira escrita en él deja de ser mentira.
 
-**GUION LITERAL:**
-> “**Slide 4 — PRESÉNTATE.** Quiero saber en qué estado llega cada proyecto, y somos ciento doce: si nos presentamos hablando, se nos va la clase entera y no alcanzamos a ver ni la evaluación. Así que nos presentamos **por escrito**, y es rápido. Acabo de pegar en el chat el **formulario del curso**: cuatro preguntas, cuatro minutos. (a) su nombre; (b) **su grupo** —54450, 54466 o 54467, y esta es obligatoria—; (c) el tema de su proyecto en una frase; (d) el estado real: ‘casi listo’, ‘a medias’, ‘congelado desde el semestre pasado’.”
+> **Aquí NO se presentan todos, y se dice en voz alta.** Son **112 estudiantes** (54450 + 54466 + 54467) en una sola serie: treinta segundos por persona son **casi una hora**. Pero **jugar sí lo pueden hacer los 112 a la vez**: acertar en «dos verdades y una mentira» es **1 entre 3**, azar puro, así que el que llega con el proyecto caído arranca igual que el que llega con resultados. **Hablan tres** —el podio—, y hablan porque se ganaron el turno, no porque el Docente los nombrara.
 
-> “Sean honestos, porque esto me sirve para dosificar el curso: si la mayoría llega con el marco a medias, arrancamos distinto que si llegan con resultados. Esto no tiene nota y no lo lee nadie más que yo.”
+**(1) GUION LITERAL — explicar el juego y anunciar el premio (~1 min):**
+> “**Slide 4 — PRESÉNTATE.** Somos ciento doce en esta sala. Si nos presentamos hablando, se nos va la clase entera y no alcanzamos ni a ver cómo se evalúa. Así que nos vamos a conocer de otra manera: ocho minutos de juego, y hay premio. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
 
-> “Mientras responden, una pregunta rápida para todos.” [Lance la **encuesta de Meet**: *“¿Cuántas referencias tiene **citadas en el cuerpo** hoy? — (1) ninguna · (2) menos de 10 · (3) entre 10 y 30 · (4) más de 30”*.] “Miren la pantalla: esa es la foto real del curso. Nadie está señalado ahí, y por eso mismo nadie tiene que fingir.”
+> “Se llama **dos verdades y una mentira** y va sobre mí. **Tres rondas.** En cada una les muestro **tres frases mías** y **una es falsa**: ustedes votan cuál. Acertar es una entre tres, así que aquí no gana el que más lleve escrito de su trabajo de grado: gana el que me lea mejor. Y eso significa que **todos arrancan iguales**, vengan de donde vengan.”
 
-**Cómo se conduce con 112 (el minuto a minuto):**
-1. **Minuto 0–1:** enlace al chat + dicho en voz alta. Repítalo al minuto 3: en una sala de 112 el chat entierra el primer mensaje en segundos.
-2. **Minuto 1–5:** responden. Usted lanza la **encuesta de Meet** y proyecta el resultado. Cero silencio muerto y cero micrófonos abiertos.
-3. **Minuto 5–8:** proyecte **Respuestas → Resumen** del formulario. Los gráficos ya vienen hechos: estado del proyecto y reparto por grupo. Diga en voz alta lo que se ve —“así llegamos: la mitad con el marco a medias”—; ese es el momento en que 112 personas se sienten leídas sin haber hablado.
-4. **Minuto 8–10 — a quién se lee (esto no se improvisa):** **cinco o seis** respuestas, escogidas con este criterio y no por orden de llegada —
-   · **una de cada grupo** (54450, 54466, 54467), para que los tres se sientan nombrados el primer día;
-   · **dos** que representen el estado mayoritario, que es el que hay que atender;
-   · **una** que se pueda conectar con otra parecida (“estos dos temas se parecen; hablen entre ustedes”);
-   · y **ninguna** de las delicadas: el que escribe “mi proyecto se cayó” recibe un mensaje privado, no una lectura pública.
-   Nombre a la persona, agradezca y devuelva **una frase concreta**. Con eso basta: son diez segundos por respuesta.
-5. **Todo el encuentro:** **Q&A de Meet** abierto. Con 112 personas el chat es ilegible; el Q&A ordena por votos y usted responde las tres más votadas al cierre.
-6. **Después de clase:** la hoja de respuestas es la **base de datos del curso**. Se filtra por grupo, se cruza con la lista de matriculados para ver quién no respondió y de ahí salen los ejemplos del resto del periodo.
+> “Se juega por algo: quien más veces me pille se gana una **revisión uno a uno conmigo**, media hora solo para su artículo, **antes de la primera entrega**. Con ciento doce personas, media hora mía a solas es lo más escaso que hay en este curso; y no, no regalo décimas.”
 
-**Si el formulario no despega:**
+**(2) GUION LITERAL — las tres rondas (~4 min, unos 80 segundos cada una):**
+> “**Ronda uno.** Ahí están las tres frases. Una de estas tres **no** es cierta: ¿cuál? Veinte segundos… y voten, que el que no vota no puntúa.”
+
+> [Cierre la pregunta, proyecte el reparto de votos y **revele la mentira**.] “La mentira era la número [X]. Y lo bueno es lo otro: la que a más gente le costó creer **sí es verdad**.” [Cuente en **treinta segundos** la historia de la verdad más rara de la ronda. Ahí está su presentación, sin diapositiva de biografía.]
+
+> “**Ronda dos.** Mismas reglas, otras tres frases…” [Vote → revele → historia de treinta segundos.]
+
+> “**Ronda tres**, la última mía…” [Vote → revele → historia de treinta segundos.]
+
+> **Regla de oro:** revele **después de cada ronda**, no al final, y cuente la historia — la gracia del juego es la revelación, y la historia es su presentación. Pero **cronometre**: treinta segundos por historia. Con 112 personas mirando, tres rondas caben en cuatro minutos solo si usted se contiene.
+
+**(3) GUION LITERAL — tabla de posiciones (~1 min):**
+> “Veamos quién me leyó mejor.” [Proyecte la **tabla de posiciones** de Slido.] “Podio: [nombre 1], [nombre 2] y [nombre 3]. Aplauso en el chat para los tres… y ojo, que el premio todavía no está entregado.”
+
+**(4) GUION LITERAL — la ronda final, la del podio (~2 min):**
+> “Ahora se invierte el juego: **los tres del podio se presentan jugando**. Cada uno abre el micrófono treinta segundos y nos dice **sus** dos verdades y una mentira: de dónde viene, de qué grupo es, sobre qué es su trabajo de grado. El resto vota en la encuesta que tengo abierta —**A, B o C**— y **gana el que engañe a más gente**.”
+
+> [Lance la **encuesta A/B/C** una vez por cada persona del podio y anuncie en voz alta cuántos cayeron con cada una.]
+
+> “Ganó [nombre]: nos engañó a [n] de nosotros. Esa revisión uno a uno es suya — le escribo hoy para agendarla. Y fíjense en lo que acabamos de hacer: en ocho minutos participaron los ciento doce, se presentaron tres y ya saben quién les da clase. Una ronda de presentaciones no habría alcanzado ni para el primer grupo.”
+
+**Cómo se conduce con 112 (lo que decide si funciona):**
+1. **Pegue el código en el chat y dígalo en voz alta**, y repítalo al abrir la ronda uno: en una sala de 112 el chat entierra el primer mensaje en segundos. El QR de la slide es la ayuda, no el camino.
+2. **No espere a que entren los 112** — no van a entrar, y no hace falta. Arranque cuando el contador de participantes se mueva; quien llegue tarde entra en la ronda dos.
+3. **El tope del plan gratis son 100 participantes por evento.** Si algún día se conectaran más, los últimos quedarían fuera del **juego**, no de la clase: siguen viendo la pantalla compartida y el resultado de cada ronda. Dígalo con naturalidad si pasa; no interrumpa la fase.
+4. **Ocho minutos son ocho minutos.** Si una ronda se estira, lo que se recorta es su historia, nunca la revelación.
+5. **Empate en el podio:** deje a los cuatro. Treinta segundos de más se recuperan; discutir un desempate en vivo delante de 112 personas, no.
+6. **Si alguien del podio no quiere hablar:** no insista ni un segundo. “Pasamos al siguiente” y sigue el cuarto de la tabla. Obligar a hablar el primer día es justo lo que este juego vino a evitar.
+7. **Todo el encuentro:** **Q&A de Slido** abierto. Con 112 personas el chat del Meet es ilegible; el Q&A ordena por votos y usted responde las tres más votadas al cierre.
+
+**Cierre de la fase — y el diagnóstico que antes hacía el formulario:**
+> “Última cosa, y esta sí me sirve a mí: en el **Q&A de Slido** escriban una línea con este orden — **su grupo** (54450, 54466 o 54467), **el tema de su proyecto** y **el estado real** en el que llega: ‘casi listo’, ‘a medias’, ‘congelado desde el semestre pasado’. El grupo es obligatorio: sin él no sé de qué calendario de recepción me está hablando, que aquí son distintos. Sean honestos, porque con esto dosifico el curso: si la mayoría llega con el marco a medias, arrancamos distinto que si llegan con resultados. Queda abierto toda la sesión y lo leo hoy mismo.”
+
+**Si el juego no despega:**
 | Situación | Qué hace el Docente |
 | :--- | :--- |
-| A los 2 minutos hay 10 de 112 | Proyecta el contador subiendo: “vamos en 10, esperamos un minuto”. Ver el número crecer arrastra al resto. |
-| “No me abre el enlace” | Lo pega otra vez y aclara que se entra con la cuenta **@cun.edu.co**: no hay que crear usuario en ningún lado. |
-| Muchos dejan el grupo en blanco | Lo pide otra vez en voz alta: sin grupo, la respuesta no sirve para las fechas de recepción, que son distintas por grupo. |
-| Todos escriben “voy bien” | Lo contrasta con el resultado de la encuesta de Meet: “treinta dicen que van bien y cuatro tienen más de diez referencias citadas”. El contraste es el diagnóstico. |
-| Alguien escribe que su proyecto se cayó | **No se lee en público.** Mensaje privado en el chat y cita al terminar la sesión. |
-| Quedan 40 sin responder | Deja el formulario abierto toda la semana y lo recuerda en el cierre; antes de la Sesión 02 revisa quién falta. |""",
+| A los 2 minutos hay 15 participantes | Proyecta el contador de Slido subiendo: “vamos en 15, treinta segundos y arrancamos”. Pero arranca igual: el juego se ve en pantalla y engancha a los que van entrando. |
+| “No me abre / no me deja entrar” | Repite el código en el chat y aclara que se entra por **slido.com** escribiendo el código, sin crear cuenta y sin instalar nada. |
+| Nadie vota en la ronda uno | Vota usted una en voz alta como ejemplo y baja el costo: “no hay nada que estudiar, es una entre tres; adivinen”. |
+| Alguien pregunta si esto tiene nota | “Ninguna. Lo único que se juega es media hora mía revisando su artículo.” |
+| El podio no quiere hablar | Baja al siguiente de la tabla; si tampoco, cierra con la tabla proyectada y entrega el premio ahí mismo. La fase no se estira. |
+| Alguien escribe en el Q&A que su proyecto se cayó | **No se lee en público.** Mensaje privado en el chat y cita al terminar la sesión. |
+| Quedan 40 sin conectarse | Deja el evento **abierto 48 horas** y publica el enlace en el aula: juegan igual, fuera de la tabla de posiciones —sería injusto con quien sí llegó—, y aparecen en la Sesión 02 sabiendo quién les da clase. |
+
+**Después de clase:** el **Q&A y la lista de participantes son la base de datos del curso**. Se exportan, se filtran por grupo, se cruzan con la lista de matriculados para ver quién no se conectó, y de ahí salen los ejemplos del resto del periodo.""",
     fase3_texto="""**Protagonista:** Docente (recorrido de la deck).
 
 **GUION LITERAL:**
@@ -2639,9 +2732,10 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         "- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
         "- [ ] **Fechas de recepción y cierre de cada grupo** a la vista (este curso tiene calendarios distintos)",
-        "- [ ] **Formulario «Preséntate»** creado y probado, **con la pregunta de grupo obligatoria** (54450 · 54466 · 54467), y el enlace listo para el chat: " + FORM_TG3,
-        "- [ ] **Encuesta de Meet** redactada (una pregunta cerrada) y **Q&A** activado: es la interacción de un grupo de 112",
-        "- [ ] Decidido de antemano **a quién se lee** en el rompehielos: 5 o 6 respuestas, una por grupo, ninguna delicada en público",
+        "- [ ] **Las tres rondas ajustadas y la mentira de cada una marcada** en `" + RUNBOOK_TG3 + "` *(material del Docente — sin esto no hay juego)*",
+        "- [ ] **Evento de Slido** creado y probado desde el celular, con el **quiz de 3 preguntas**, la **encuesta A/B/C** de la ronda final y el **Q&A abierto**; el **código** listo para el chat: " + SLIDO_TG3,
+        "- [ ] Decidido el **premio** y cómo se agenda la revisión uno a uno del ganador",
+        "- [ ] Pedido en el Q&A **con el grupo por delante** (54450 · 54466 · 54467): sin grupo, el diagnóstico no sirve para las fechas de recepción, que son distintas",
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE",
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 01 — 22 slides)",
         "- [ ] **Libro de calificaciones** del aula de cada grupo abierto (tres cortes: quices, parciales, **ACA Final**, auto y coevaluación) y enunciado de la **ACA Final** listo para proyectar",
@@ -2649,8 +2743,8 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba) · lista del grupo a la mano",
     ],
     # Sin pantallazo: la captura que había es del Padlet, que este curso ya no usa. Cuando
-    # el formulario exista, se captura `Sesion 01/tg_formulario_resumen.png` (pestaña
-    # Respuestas → Resumen con el reparto por grupo) y se enchufa aquí.
+    # el evento de Slido exista, se captura `Sesion 01/tg_slido_leaderboard.png` (la tabla
+    # de posiciones, que es lo que se proyecta en el paso 3) y se enchufa aquí.
     shots_fase2=[],
 )
 
@@ -3878,15 +3972,16 @@ def build_guion(course_key: str, ses: dict) -> str:
             "shots_taller": [("Herramientas/tg_zoterobib.png", "ZoteroBib", "Generar 1 APA 7 y pegar en Docs.")],
         }
 
-    padlet = ""
+    nota_rompehielos = ""
     if spec.get("s01_rompehielos") and usa_padlet(course_key):
-        padlet = f"""
+        nota_rompehielos = f"""
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: {PADLET_PRESENTACION_URL}
-> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **formulario**.
+> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **juego en Slido**.
 """
     elif spec.get("s01_rompehielos"):
-        padlet = f"""
-> **Rompehielos con grupo grande:** slide **PRESÉNTATE**, pero **sin muro**. Se responde un **formulario de Google** ({formulario_presentacion_url(course_key)}, enlace por el chat del Meet) y la interacción en vivo va por las **encuestas** y el **Q&A** que ya trae Meet. Es el **mismo momento** que el de la Presentación del Curso, no dos rompehielos distintos.
+        nota_rompehielos = f"""
+> **Rompehielos con grupo grande:** slide **PRESÉNTATE**, pero **sin muro** y **sin ronda hablada**: se juega **«dos verdades y una mentira»** sobre el Docente en **Slido** ({slido_url(course_key)}; el estudiante entra a slido.com con el **código** que el Docente pega en el chat del Meet). Ocho minutos: tres rondas, tabla de posiciones y una ronda final en la que el podio se presenta. Es el **mismo momento** que el de la Presentación del Curso, no dos rompehielos distintos.
+> **Las tres rondas y cuál es la mentira de cada una están en `{runbook_slido(course_key)}`** —material del Docente, no va en `Clases/`— y **se marcan antes de la clase**.
 """
 
     # Tutorías por grupo acordadas en la semana = solo Proyecto I (AFI). No inyectar en TG2/TG3.
@@ -3959,9 +4054,13 @@ def build_guion(course_key: str, ses: dict) -> str:
         else:
             gen_f1 += (
                 "\n\n> “Abrimos primero la **Presentación del Curso** → **PRESÉNTATE**. "
-                f"Les pego en el chat el formulario del curso: {formulario_presentacion_url(course_key)}. "
-                "Nombre, tema y expectativa; cuatro minutos. Mientras responden lanzo la **encuesta "
-                "de Meet**, leo cinco o seis respuestas y les muestro el resumen. Luego volvemos a esta deck.”"
+                "Entren a **slido.com** con el código que les pego en el chat y jugamos ocho "
+                "minutos a **dos verdades y una mentira** sobre mí: tres rondas, tabla de "
+                "posiciones y una ronda final donde el podio se presenta. Hay premio. "
+                "Luego volvemos a esta deck.”"
+                f"\n\n> *(Docente: las tres rondas y la mentira de cada una están en "
+                f"`{runbook_slido(course_key)}` y se marcan **antes** de la clase. "
+                f"Evento: {slido_url(course_key)}.)*"
             )
     gen_f2 = (
         "**GUION LITERAL:**\n"
@@ -4000,8 +4099,9 @@ def build_guion(course_key: str, ses: dict) -> str:
         "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
         (("- [ ] Presentación del Curso (Preséntate / Padlet): " + PADLET_PRESENTACION_URL)
          if usa_padlet(course_key)
-         else ("- [ ] Presentación del Curso (Preséntate / formulario): "
-               + formulario_presentacion_url(course_key)))
+         else ("- [ ] Presentación del Curso (Preséntate / juego en Slido): "
+               + slido_url(course_key)
+               + " · rondas y mentiras marcadas en `" + runbook_slido(course_key) + "`"))
         if spec.get("s01_rompehielos") else "- [ ] Ejemplo modelo listo para compartir pantalla",
         "- [ ] Espacio de entrega en CDigital",
         f"- [ ] Meet: {meet}",
@@ -4043,7 +4143,7 @@ def build_guion(course_key: str, ses: dict) -> str:
 - **Detalle:** {detalle}
 - **PPTX estudiante:** `Clases/{label}/Presentacion.pptx`
 - **Meet (serie del curso):** {meet}
-{tutorias_nota}{padlet}
+{tutorias_nota}{nota_rompehielos}
 {slides_map}
 🎯 **Objetivos de la sesión**
 {spec['objetivos']}
@@ -4074,7 +4174,7 @@ def build_guion(course_key: str, ses: dict) -> str:
 {entregable_titulo}
 1. {spec['taller']}
 2. Archivo en CDigital: {spec['entregable']}
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

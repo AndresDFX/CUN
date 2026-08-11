@@ -193,7 +193,7 @@ Checklist recorrido (referencias ‘casi’ = formatear 2) + pendientes TG3: apl
 🧩 **Entregable de hoy**
 1. En Google Docs (`S11_CierreTG2_Apellido`): checklist de cierre marcado + versión limpia del avance (formato APA CUN + referencias completas) + lista de pendientes para TG3 en imperativo.
 2. Archivo en CDigital: `S11_CierreTG2_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

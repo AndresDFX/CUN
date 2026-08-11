@@ -196,7 +196,7 @@ Variable ‘satisfacción’ → indicador ‘escala 1–5’ → ítem ‘¿qu�
 🧩 **Entregable de hoy**
 1. En Google Docs (`S08_Instrumentos_Apellido`): tabla de operacionalización (variable → indicador → ítem) + instrumento (~10 ítems o guía de ~8 preguntas) + plan de análisis, todo en ‘propuesto’.
 2. Archivo en CDigital: `S08_Instrumentos_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

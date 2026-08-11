@@ -78,6 +78,8 @@ from fechas_entrega_aca import (  # noqa: E402
 )
 
 SLIDES_DIR = os.path.dirname(os.path.abspath(__file__))
+# Raíz del árbol de cursos (…/CUN/Cursos): para citar rutas cortas en los guiones.
+ROOT_CURSOS = os.path.abspath(os.path.join(SLIDES_DIR, "..", ".."))
 
 # Guiones minuto-a-minuto viven en regeneradores propios (no sobrescribir aquí).
 RICH_GUION_COURSES = {"creatividad", "proyecto1", "investigacion", "tg2", "tg3"}
@@ -224,7 +226,9 @@ def _paths(course, ses):
 
 
 # Qué se le pide al estudiante en el rompehielos de la Presentación del Curso
-# (= Sesión 01; no se duplica en la deck de sesión).
+# (= Sesión 01; no se duplica en la deck de sesión). Aplica al modo MURO: en el modo
+# juego (Slido) el que se presenta es el Docente y los estudiantes votan, así que este
+# texto solo sobrevive como la consigna de la ronda final del podio.
 ROMPEHIELOS_PROMPTS = {
     "proyecto1": "expectativa del curso + **tema tentativo** de investigación (1 frase)",
     "investigacion": "expectativa del curso + **idea de tema** para el artículo (1 frase)",
@@ -236,10 +240,45 @@ ROMPEHIELOS_PROMPTS = {
 # --- Rompehielos según el TAMAÑO del grupo -----------------------------------------
 # La forma del rompehielos NO se elige aquí: la decide `cun_slides_engine` a partir de la
 # matrícula real (roster de CDigital) — muro de Padlet hasta ICEBREAKER_MAX_MURO
-# estudiantes, formulario de Google + encuestas y Q&A de Meet por encima. De ahí salen
-# `usa_padlet()` y `formulario_presentacion_url()`, que este módulo solo consume.
+# estudiantes; por encima, el juego «Dos verdades y una mentira» en **Slido**. De ahí
+# salen `usa_padlet()` y el resolutor del enlace de Slido, que este módulo solo consume.
 # Hoy: Investigación 53339 = 20 (muro) · Proyecto I 54ES4 = 50 · Creatividad 54408 = 50 ·
-# TG2 54448 = 50 · TG3 (54450 + 54466 + 54467) = 112 en una sola serie (formulario).
+# TG2 54448 = 50 · TG3 (54450 + 54466 + 54467) = 112 en una sola serie (juego).
+#
+# El juego va en la **slide 3**, entre «Docente» y «¿Qué es esta asignatura?», o sea
+# ANTES del primer porcentaje: si lo primero que ve la sala es una tabla de pesos, se
+# pierde. Son 8 minutos y tres rondas de azar puro (1 entre 3), así que el que nunca
+# abre la cámara arranca igual que el que siempre habla; el Docente queda presentado sin
+# diapositiva de biografía, y en la ronda final hablan los TRES del podio, no los 50.
+#
+# Las frases y **cuál es la mentira** NO se escriben en ningún material del estudiante:
+# son del Docente y viven en `<Asignatura>/2026/<grupo>/Rompehielos Slido - Sesion 01.md`
+# (`python config/slides/build_rompehielos_slido.py`). Aquí solo se remite a ese archivo.
+NOMBRE_RUNBOOK_SLIDO = "Rompehielos Slido - Sesion 01.md"
+
+
+def _runbook_slido(course) -> str:
+    """Dónde está el guion de montaje del juego (material del Docente), para citarlo.
+
+    Se busca en disco en vez de recalcular la regla de carpetas de
+    `build_rompehielos_slido` (grupo único → `2026/<grupo>/`; varios grupos en una sola
+    serie, como TG3 → `2026/_combinado_todos/`). Si todavía no se ha generado, se
+    devuelve dónde va a quedar y el comando que lo crea.
+    """
+    base = os.path.join(course["folder"], "2026")
+    encontrados = sorted(
+        os.path.join(d, NOMBRE_RUNBOOK_SLIDO)
+        for d in (
+            os.path.join(base, x) for x in (os.listdir(base) if os.path.isdir(base) else [])
+        )
+        if os.path.isfile(os.path.join(d, NOMBRE_RUNBOOK_SLIDO))
+    )
+    if encontrados:
+        return os.path.relpath(encontrados[0], ROOT_CURSOS).replace("\\", "/")
+    return (
+        f"2026/<grupo>/{NOMBRE_RUNBOOK_SLIDO} — todavía no existe: "
+        f"`python config/slides/build_rompehielos_slido.py {course['key']}`"
+    )
 
 
 # Qué hace el estudiante con cada ítem, según su TIPO real de actividad en el aula.
@@ -302,8 +341,9 @@ def _evaluacion_rows(course_key):
 
 def build_pptx_presentacion(course, ses, pptx):
     """Sesión 01 = ENCUADRE. Presentación del curso, del Docente, de los estudiantes
-    (Padlet) y de **cómo se evalúa** (ítems reales del aula). **No se dicta tema** —
-    el tema empieza en la Sesión 02.
+    (muro de Padlet en los grupos pequeños; juego en Slido en los grandes) y de **cómo se
+    evalúa** (ítems reales del aula). **No se dicta tema** — el tema empieza en la
+    Sesión 02.
     """
     n = ses["n"]
     label = f"Sesión {n:02d}"
@@ -324,18 +364,28 @@ def build_pptx_presentacion(course, ses, pptx):
     # y «PARA LA PRÓXIMA SESIÓN»; sin JSON, la numeración queda idéntica (2…7).
     bloques = contenido.load(key, n)
     idx = 2
+    # La agenda anuncia el rompehielos que a este curso le toca por tamaño. En los grupos
+    # grandes se nombra el juego —y el premio— porque es lo que hace que jueguen; lo que
+    # NUNCA se adelanta en material del estudiante es cuál de las frases es la mentira.
+    agenda_ustedes = (
+        "**Ustedes:** nos presentamos en el tablero colaborativo."
+        if usa_padlet(key) else
+        "**Ustedes:** arrancamos con un juego de 8 minutos —«dos verdades y una mentira»— "
+        "y hay premio."
+    )
     content_slide(prs, "AGENDA DE HOY", [
         "**El curso:** de qué se trata, cómo trabajamos y qué se llevan al final.",
         "**El Docente:** quién los acompaña y cómo contactarlo.",
-        "**Ustedes:** nos presentamos en el tablero colaborativo.",
+        agenda_ustedes,
         "**Cómo se evalúa:** qué ítems tiene el aula, cuánto pesa cada uno y qué se hace con él.",
         "**Acuerdos** de trabajo y el primer encargo autónomo.",
     ], sub="Sesión de encuadre — hoy no vemos tema; el contenido arranca en la Sesión 02.", idx=idx)
     idx += 1
     tutor_slide(prs, "Docente", DOCENTE_CREDS, DOCENTE_CORREO, idx=idx)
     idx += 1
-    # Muro o formulario lo decide el motor con la matrícula real: aquí solo se dice de
-    # qué curso es y qué se le pide al estudiante además del nombre.
+    # Slide 3, justo después de «Docente» y ANTES de la tabla de pesos: muro de Padlet o
+    # juego de Slido lo decide el motor con la matrícula real. Aquí solo se dice de qué
+    # curso es y qué se le pide al estudiante además del nombre (modo muro).
     icebreaker_qr_slide(
         prs, idx=idx, course_key=key,
         pide=ROMPEHIELOS_PROMPTS.get(key, "expectativa + tema de interés"),
@@ -458,8 +508,9 @@ def build_pptx(course, ses, pptx):
         ], idx=4)
 
     next_idx = 5
-    # Padlet / Preséntate vive solo en Presentación del Curso (= Sesión 01 de encuadre).
-    # No duplicar el rompehielos en esta deck de sesión.
+    # El rompehielos «Preséntate» (muro de Padlet o juego de Slido, según el tamaño) vive
+    # solo en la Presentación del Curso (= Sesión 01 de encuadre). No duplicarlo en esta
+    # deck de sesión.
 
     content_slide(prs, "ACTIVIDAD / TALLER", [
         "Aplica el concepto de hoy a **tu propio proyecto / propuesta / avance**.",
@@ -559,38 +610,48 @@ La **Sesión 01 es la de presentación del curso**. El rompehielos “Preséntat
 3. Consigna: post-it con nombre + {board_prompt}.
 4. ~7 min; leer 3–4 notas. Luego continuar con **esta** `Presentacion.pptx` de Sesión 01 (fundamentos / taller).
 
-> El muro sigue aquí porque este grupo tiene **20 estudiantes**: 20 notas se leen enteras en pantalla. En los cursos de más de 20 el rompehielos es un **formulario**, no un muro.
+> El muro sigue aquí porque este grupo tiene **20 estudiantes**: 20 notas se leen enteras en pantalla. En los cursos de más de 20 el rompehielos no es un muro sino un **juego en Slido** («dos verdades y una mentira»), porque allá nadie alcanza a ser visto nota por nota.
 """
         rompehielos_check = (
             f"- [ ] Abrí la **Presentación del Curso** (slide Preséntate / Padlet): {PADLET_PRESENTACION_URL}\n"
         )
     elif is_s01_encuadre:
-        _form = formulario_presentacion_url(course["key"])
+        _slido = slido_url(course["key"])
+        _runbook = _runbook_slido(course)
+        # Matrícula real (roster de CDigital): el argumento de por qué el muro no sirve
+        # es el número, así que se dice el del curso y no un «50» genérico.
+        _n = contar_estudiantes(course["key"])
+        _cuantos = f"{_n}" if _n is not None else "cincuenta"
         # TG3 son 112 en UNA sola serie (54450 + 54466 + 54467): la regla del grupo grande
         # se vuelve tajante, porque una ronda de presentaciones se come la hora entera.
         _nota_tg3 = (
             "\n> **En TG3 (112 estudiantes en una sola serie) NO se presentan todos:** "
-            "treinta segundos por persona son casi una hora. Se leen **5 o 6** respuestas "
-            "—una por grupo (54450 · 54466 · 54467), dos del estado mayoritario y una que "
-            "se pueda conectar con otra— y el resto se ve en la pantalla de resumen. "
-            "Ninguna respuesta delicada se lee en público: eso va por mensaje privado.\n"
+            "treinta segundos por persona son casi una hora, y por eso el juego lo resuelve "
+            "en ocho. El plan gratis de Slido admite **100 participantes por evento**: a una "
+            "virtual de una hora no se conectan los 112, pero si alguna vez pasara, los "
+            "últimos se quedan fuera del **juego**, no de la clase — dígalo así y siga. En la "
+            "ronda final procure que el podio no sea del mismo grupo: uno de 54450, uno de "
+            "54466 y uno de 54467 si la tabla lo permite.\n"
             if course["key"] == "tg3" else ""
         )
         board_block = f"""
-### Rompehielos — formulario del curso (en Presentación del Curso, no se repite aquí)
-La **Sesión 01 es la de presentación del curso**. Con este grupo —**más de 20 estudiantes**— el rompehielos **no es un muro**: es un **formulario de Google** que se responde en cuatro minutos, más las **encuestas** y el **Q&A** que ya trae Meet para la parte en vivo. Un muro con 50 notas nadie lo lee entero y el efecto se pierde: la gente escribe y no se siente vista.
+### Rompehielos — el juego de Slido (en Presentación del Curso, no se repite aquí)
+La **Sesión 01 es la de presentación del curso**. Con este grupo —**más de 20 estudiantes**— el rompehielos **no es un muro**: son **8 minutos** de «**dos verdades y una mentira**» en **Slido**, en la **slide 3**, entre «Docente» y «¿Qué es esta asignatura?» — es decir, **antes del primer porcentaje**. Si lo primero que ve la sala es una tabla de pesos, ya la perdió. Un muro con {_cuantos} notas no lo lee nadie y el efecto se pierde: la gente escribe y no se siente vista; acertar en el juego es **1 entre 3**, azar puro, así que el que nunca abre la cámara arranca igual que el que siempre habla.
 1. Abrir `Clases/Presentacion del Curso - ….pptx` → slide **Preséntate**.
-2. Enlace del formulario: **{_form}** — se **pega en el chat del Meet**, dos veces: al abrir la fase y otra vez al minuto 3. No dependa del QR: con estos grupos la mitad entra desde el computador.
-3. Consigna: nombre + {board_prompt}. **4 minutos**, y el tiempo se dice en voz alta.
-4. Mientras responden, lance una **encuesta de Meet** de una sola pregunta cerrada y proyecte el resultado: eso da la foto del grupo sin leer cincuenta respuestas.
-5. Cierre leyendo **5 o 6 respuestas** escogidas (variedad, no las cinco primeras que llegaron) y proyectando la pestaña **Respuestas → Resumen** del formulario: ahí quedan todas a la vista.
-6. Deje el **Q&A de Meet** abierto todo el encuentro y responda al final las preguntas más votadas.
-7. La hoja de respuestas **no se bota**: sirve todo el periodo para sacar ejemplos, armar equipos y ver quién nunca respondió.
+2. **Montaje previo (5 min, una sola vez) y las tres rondas —con la mentira ya marcada— están en `{_runbook}`.** Ese archivo es **solo del Docente**: no se comparte, no va en `Clases/` y no se dicta en voz alta.
+3. **Cómo entran:** el estudiante abre **slido.com** y escribe el **código del evento**, que usted **pega en el chat del Meet** al abrir la fase y otra vez al minuto 3. Enlace directo del evento: **{_slido}**. No dependa del QR: con estos grupos la mitad entra desde el computador.
+4. **Minuto a minuto (8 min):** 1 min explicar y **anunciar el premio** · 4 min las **tres rondas** (20–30 s cada una; tras cada una **revele la mentira y cuente la historia de la verdad más rara** — ahí queda hecha su presentación, sin diapositiva de biografía) · 1 min **tabla de posiciones**, salen los tres primeros · 2 min **ronda final**: el podio toma el micrófono, cada uno dice **sus** dos verdades y una mentira y el curso vota en la encuesta. **Gana el que engañe a más gente.**
+5. El paso final es el que cierra el círculo: los estudiantes también se presentan, pero hablan **tres**, no {_cuantos}, y hablan los que se ganaron el turno, no los de siempre. Si quiere darle contenido de curso a esa ronda, pídales que una de las tres frases sea su {board_prompt}.
+6. **Premio, anunciado ANTES de la primera ronda:** revisión **1 a 1** con el Docente del avance del ganador, antes de la primera entrega. No regale décimas: distorsiona la evaluación y se lo van a pedir todo el semestre.
+7. Deje el **Q&A de Slido** abierto todo el encuentro (en el plan gratis es ilimitado) y responda al final las preguntas más votadas: con estos grupos es ahí donde de verdad preguntan, no por micrófono.
+8. Deje el evento **abierto 48 horas** para los que no se conectaron: juegan igual y llegan a la Sesión 02 sabiendo quién les da clase, pero **no entran en la tabla** — sería injusto con los que sí llegaron.
 {_nota_tg3}"""
         rompehielos_check = (
-            f"- [ ] **Formulario Preséntate** probado y el enlace listo para el chat: {_form}\n"
-            "- [ ] **Encuesta de Meet** ya redactada (una pregunta) y **Q&A** activado en la sala\n"
-            "- [ ] La slide PRESÉNTATE de la Presentación del Curso ya muestra el **formulario** (si le quedó el QR viejo del Padlet, regenere la deck; en clase, el enlace del chat es el que manda)\n"
+            f"- [ ] **Evento de Slido** creado y probado, con el **código** listo para el chat: {_slido}\n"
+            f"- [ ] **Quiz de 3 rondas** montado y **la mentira marcada** en `{_runbook}` (ajustadas a mis propias frases: si no son mías, no funciona)\n"
+            "- [ ] **Encuesta** de la ronda final creada (A / B / C, vacía) y **Q&A** abierto en el evento\n"
+            "- [ ] **Premio decidido** y listo para anunciarlo en el primer minuto (sin décimas)\n"
+            "- [ ] La slide PRESÉNTATE de la Presentación del Curso ya muestra el **juego de Slido** (si le quedó el QR viejo del Padlet, regenere la deck; en clase, el código del chat es el que manda)\n"
         )
 
     post_clase_block = _post_clase_proyecto1() if course["key"] == "proyecto1" else ""

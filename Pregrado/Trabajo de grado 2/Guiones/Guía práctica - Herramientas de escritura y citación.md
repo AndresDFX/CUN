@@ -28,4 +28,4 @@ Use **solo** la herramienta institucional vigente en CDigital/CUN. Si el semestr
 ## Checklist rápido
 - [ ] Scholar + ZoteroBib abiertos en el navegador
 - [ ] Estudiantes saben el nombre de archivo de la entrega
-- [ ] Recordar: festivo en día de clase = actividad autónoma en CDigital
+- [ ] Recordar: festivo en día de clase = actividad autónoma, en el Drive de clases

@@ -21,6 +21,7 @@ En TG3 hay una trampa extra: esto es **una sola serie para los tres grupos**. An
 | Archivo | Para qué sirve |
 |---|---|
 | `Calendario de clases - Grupos 54450+54466+54467.md` | Referencia: el cronograma en tabla. No se importa: se lee. |
+| `Correo de bienvenida.docx` | Correo para enviar a los estudiantes el primer día. |
 | `Correos estudiantes (invitados Calendar).txt` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
 | `LEEME - Crear los eventos de Calendar.md` | Este archivo. |
 | `PRINCIPAL - Crear encuentros con invitados (3 grupos).gs` | **FLUJO PRINCIPAL.** El único que crea los eventos con invitados y con Meet. |

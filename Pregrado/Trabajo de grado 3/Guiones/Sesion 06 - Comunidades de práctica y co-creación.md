@@ -198,7 +198,7 @@ Modelar un pitch de 3 minutos con el cronómetro en pantalla (problema→pregunt
 🧩 **Entregable de hoy**
 1. Bitácora de co-creación + 3 aprendizajes accionables.
 2. Archivo en CDigital: `S06_CoCreacion_Apellido`.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

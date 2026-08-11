@@ -55,7 +55,7 @@ Hasta confirmar: tratar los eventos de Calendar de pregrado marcados “(confirm
 - [ ] Alistar CDigital semana 1: bienvenida, syllabus, cortes, rúbricas/actividades.
 - [ ] Socializar evaluación Art. 52 (**30% + 30% + 40%**) y reglas de entrega.
 - [ ] **Acuerdo pedagógico** — *confirmar canal con Coordinación* (no usar el form AFI salvo indicación).
-- [ ] Rompehielos “Preséntate” (QR/Padlet oficial) en Presentación del Curso.
+- [ ] Rompehielos listo según el tamaño del grupo: con más de 20 estudiantes, el evento de Slido del juego «dos verdades y una mentira» (montaje en `2026/<grupo>/Rompehielos Slido - Sesion 01.md`); hasta 20, el muro de Padlet.
 - [ ] Importar CSV/ICS de **encuentros** (clases semanales) y, aparte, CSV de **hitos docentes** (mínimo: deadlines ACA + inicio/cierre) desde `2026/<grupo>/`.
 
 ### Fechas de oferta 2026 (confirmadas en carga académica)
@@ -72,7 +72,7 @@ Hasta confirmar: tratar los eventos de Calendar de pregrado marcados “(confirm
 
 ## Checklist — DESARROLLO
 
-- [ ] Clase sincrónica semanal (60 min) · festivo = **autónoma** en CDigital (no cancelar; queda en Calendar).
+- [ ] Clase sincrónica semanal (60 min) · festivo = **autónoma**, con la actividad en el **Drive de clases** (no cancelar; queda en Calendar y se entrega en CDigital).
 - [ ] Publicar y calificar actividades de **Corte 1 / 2 / 3** según fechas del aula (confirmar en CDigital; no hay cronograma ACA AFI en pregrado).
 - [ ] Retroalimentación verificable antes del cierre de cada corte.
 - [ ] Mantener evidencias en CDigital (Drive/correo no sustituyen).

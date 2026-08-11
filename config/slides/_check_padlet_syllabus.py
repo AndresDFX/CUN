@@ -5,9 +5,9 @@ Qué comprueba, deck por deck (`Presentacion del Curso*.pptx` y `Sesion 01*/Pres
 
 1. **Rompehielos según el TAMAÑO del grupo.** Desde el 2026-08-11 el Padlet dejó de ser
    «el mismo tablero en los 5 cursos»: solo lo usan los grupos que todavía se leen
-   enteros (≤ `ICEBREAKER_MAX_MURO` estudiantes) y los demás van con el formulario de
-   Google + encuestas/Q&A de Meet. Este chequeo NO trae una lista de cursos escrita a
-   mano: le pregunta el modo a `cun_slides_engine.modo_rompehielos()`, que lo deriva de
+   enteros (≤ `ICEBREAKER_MAX_MURO` estudiantes) y los demás van con el juego «dos
+   verdades y una mentira» en **Slido**. Este chequeo NO trae una lista de cursos escrita
+   a mano: le pregunta el modo a `cun_slides_engine.modo_rompehielos()`, que lo deriva de
    la matrícula real (roster de CDigital). Así, el día que cambie una matrícula, cambia
    la regla y cambia lo que aquí se exige.
    - Deck con slide de rompehielos (la Presentación del Curso): tiene que traer el del
@@ -16,7 +16,10 @@ Qué comprueba, deck por deck (`Presentacion del Curso*.pptx` y `Sesion 01*/Pres
      curso que ya no lo usa (era el caso al hacer este cambio: las 5 decks de Sesión 01
      traían el QR del Padlet).
 2. **Terminología:** «Syllabus», nunca «sílabo» (ver memoria del proyecto).
-3. **Restos de versiones anteriores:** «Clear posts», «3 padlets», IdeaBoardz.
+3. **Restos de versiones anteriores:** «Clear posts», «3 padlets», IdeaBoardz y el
+   **formulario de Google**, que fue el rompehielos de los grupos grandes durante unas
+   horas del 2026-08-11 y quedó descartado («muy nerd»): si una deck todavía lo nombra,
+   es que no se regeneró.
 
 Solo audita: no regenera nada. Cada CHK dice qué build hay que volver a correr.
 Uso: `python config/slides/_check_padlet_syllabus.py` (código de salida 1 si hay CHK).
@@ -31,8 +34,8 @@ from pptx import Presentation
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cun_slides_engine import (  # noqa: E402
     ICEBREAKER_MAX_MURO,
-    MODO_FORMULARIO,
     MODO_MURO,
+    MODO_SLIDO,
     PADLET_PRESENTACION_URL,
     contar_estudiantes,
     modo_rompehielos,
@@ -45,10 +48,18 @@ root = Path(__file__).resolve().parents[2]
 CURSOS = ("proyecto1", "creatividad", "investigacion", "tg2", "tg3")
 
 # Marca del rompehielos de grupo grande en el texto de la slide. Sirve tanto con el
-# enlace real como con el marcador de posición: en los dos casos la slide habla de un
-# «formulario» (y, mientras esté pendiente, del «[URL Formulario Preséntate …]»).
-RX_FORMULARIO = re.compile(r"formulario", re.IGNORECASE)
+# enlace real como con el marcador de posición: en los dos casos la slide nombra a
+# «Slido» (y, mientras esté pendiente, el «[URL Slido — evento del rompehielos …]»).
+RX_SLIDO = re.compile(r"slido", re.IGNORECASE)
 RX_ROMPEHIELOS = re.compile(r"PRES[EÉ]NTATE|ROMPEHIELOS", re.IGNORECASE)
+# Rastro del rompehielos que se descartó el mismo 2026-08-11 (formulario de Google): si
+# una deck lo conserva, se quedó sin regenerar. Se busca en TODA la deck, no solo en la
+# slide de rompehielos, porque también se colaba en el guion de la Sesión 01.
+# «Formulario» a secas es palabra legítima en otras slides (asistencia a tutorías,
+# registro docente AFI), así que solo cuenta el que habla de presentarse.
+RX_FORMULARIO_VIEJO = re.compile(
+    r"formulario\s+(?:de\s+google|«?pres[eé]ntate»?)|google\s+forms", re.IGNORECASE
+)
 
 
 def _carpetas_de_curso() -> dict[str, Path]:
@@ -104,7 +115,7 @@ def auditar(path: Path, key: str | None = None) -> tuple[str | None, int | None,
 
     problemas: list[str] = []
     has_pad = PADLET_PRESENTACION_URL in text
-    has_form = any(RX_FORMULARIO.search(b) for b in slides_rh)
+    has_slido = any(RX_SLIDO.search(b) for b in slides_rh)
 
     if key is None:
         problemas.append("deck fuera de las carpetas de los 5 cursos: no sé qué rompehielos le toca")
@@ -113,16 +124,16 @@ def auditar(path: Path, key: str | None = None) -> tuple[str | None, int | None,
         if esperado == MODO_MURO:
             if not has_pad:
                 problemas.append(f"grupo de {n_txt} (≤ {ICEBREAKER_MAX_MURO}): falta el muro de Padlet")
-            if has_form:
-                problemas.append("mezcla muro y formulario en la misma deck")
+            if has_slido:
+                problemas.append("mezcla muro de Padlet y juego de Slido en la misma deck")
         else:
             if has_pad:
                 problemas.append(f"grupo de {n_txt}: sigue mandando al Padlet")
-            if not has_form:
+            if not has_slido:
                 problemas.append(
-                    f"grupo de {n_txt} (> {ICEBREAKER_MAX_MURO}): falta el rompehielos por formulario"
+                    f"grupo de {n_txt} (> {ICEBREAKER_MAX_MURO}): falta el rompehielos en Slido"
                 )
-    elif esperado == MODO_FORMULARIO and has_pad:
+    elif esperado == MODO_SLIDO and has_pad:
         # Deck sin slide de rompehielos que aun así deja el enlace del muro a la vista.
         problemas.append(f"grupo de {n_txt}: resto del Padlet en una deck sin rompehielos")
 
@@ -133,6 +144,12 @@ def auditar(path: Path, key: str | None = None) -> tuple[str | None, int | None,
         problemas.append("resto de versión anterior: «Clear posts» / «3 padlets»")
     if "IdeaBoardz" in text:
         problemas.append("resto de versión anterior: IdeaBoardz")
+    viejo = RX_FORMULARIO_VIEJO.search(text)
+    if viejo:
+        problemas.append(
+            f"resto de versión anterior: «{viejo.group(0)}» — el rompehielos de los grupos "
+            "grandes es el juego de Slido, no el formulario de Google"
+        )
     return esperado, n, problemas
 
 

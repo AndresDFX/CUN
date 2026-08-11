@@ -62,6 +62,35 @@ def clases_url(key: str, curso_corto: str | None = None) -> str:
     return url or clases_placeholder(corto)
 
 
+# Evento de Slido del curso — rompehielos de la Sesión 01 en los grupos grandes
+# (juego «dos verdades y una mentira»; ver `cun_slides_engine.modo_rompehielos`).
+# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.slido
+# (cadena vacía = el docente aún no creó el evento ⇒ se muestra el placeholder).
+# Mismo contrato que `meet` y que `clases`: NO hardcodear la URL en los builds.
+#
+# El estudiante NO necesita este enlace para jugar: entra a slido.com y escribe el
+# **código del evento** que el Docente pega en el chat del Meet. La URL solo sirve para
+# generar el QR de la slide y para dejarlo publicado en el aula.
+def slido_placeholder(curso_corto: str) -> str:
+    return f"[URL Slido — evento del rompehielos pendiente · {curso_corto}]"
+
+
+def slido_url(key: str, curso_corto: str | None = None) -> str:
+    """Enlace del evento de Slido del curso: el real si está en config, si no el placeholder.
+
+    `curso_corto` solo se usa para redactar el placeholder (nombre visible del curso).
+    """
+    url = ""
+    corto = curso_corto or key
+    try:
+        c = curso(key)
+        url = (c.get("slido") or "").strip()
+        corto = curso_corto or c.get("titulo_corto") or key
+    except Exception:
+        url = ""
+    return url or slido_placeholder(corto)
+
+
 # Grabaciones de las clases: UNA sola carpeta de Drive para todos los cursos y todos los
 # periodos (no va por curso en el JSON). Dentro, cada grabación se busca por el NOMBRE DEL
 # EVENTO del calendario: «periodo - grupo - asignatura - sesion»

@@ -406,28 +406,40 @@ def tutor_slide(prs, nombre, credenciales, correo, rol=None, idx=None):
 #
 #   ≤ ICEBREAKER_MAX_MURO  → MURO de Padlet. Un muro de 20 notas se lee entero y todos
 #                            alcanzan a ser vistos, que es el punto del rompehielos.
-#   >  ICEBREAKER_MAX_MURO → FORMULARIO de Google (gratis, sin tope de participantes, ya
-#                            incluido en la licencia CUN: el estudiante entra con su
-#                            @cun.edu.co y no crea cuenta) + **encuestas y Q&A nativos de
-#                            Meet** para la parte en vivo. Con 50 —o con los 112 de TG3—
-#                            el muro no se alcanza a leer, y los planes gratis de
-#                            Mentimeter (50/mes) y Slido (100 · 3 encuestas) se quedan
-#                            justo por debajo de estos cursos.
+#   >  ICEBREAKER_MAX_MURO → SLIDO, y el rompehielos deja de ser «preséntate» para ser un
+#                            **juego con premio**: «dos verdades y una mentira» sobre el
+#                            Docente, tres rondas, tabla de posiciones y ronda final con
+#                            el podio. Con 50 —o con los 112 de TG3— el muro no se
+#                            alcanza a leer y una ronda de presentaciones no cabe en la
+#                            hora; el juego sí, y de paso deja hecha la presentación del
+#                            Docente. Acertar es 1 entre 3, azar puro: quien nunca abre
+#                            la cámara arranca igual que quien siempre habla.
+#
+# Por qué Slido: el plan gratis (Basic) da 100 participantes por evento, 3 encuestas,
+# 1 quiz con tabla de posiciones y Q&A ilimitado. Mentimeter corta en 50 participantes AL
+# MES, así que no alcanza ni para un curso de 50. A una virtual de una hora no se conecta
+# la matrícula completa, así que el tope de 100 no estorba ni en TG3.
 #
 # La elección NO se escribe curso por curso en los builds: `modo_rompehielos()` la deriva
 # de la matrícula, y `contar_estudiantes()` la cuenta de los roster descargados de
 # CDigital. Un curso sin roster completo cae al modo grande, que es el que no se rompe.
+#
+# GUION DEL DOCENTE (frases de cada ronda, cuál es la mentira, montaje del evento, premio):
+# lo genera `config/slides/build_rompehielos_slido.py` en
+# `<Asignatura>/2026/<grupo>/Rompehielos Slido - Sesion 01.md` (TG3 en `_combinado_todos/`).
+# Es material del DOCENTE: no va en `Clases/`, y la slide del estudiante NO puede revelar
+# ninguna de las mentiras. Aquí solo se dibuja lo que el estudiante necesita para jugar.
 ICEBREAKER_MAX_MURO = 20
-MODO_MURO = "muro"              # Padlet
-MODO_FORMULARIO = "formulario"  # Google Forms + encuestas/Q&A de Meet
+MODO_MURO = "muro"    # Padlet
+MODO_SLIDO = "slido"  # Slido: juego «dos verdades y una mentira» + Q&A de la sesión
 # Roster: `<carpeta de la asignatura>/<año>/<grupo>/Listado estudiantes (CDigital).csv`.
 # El año sale del `inicio` del curso; ROSTER_ANIO es solo el respaldo si el JSON no lo trae.
 ROSTER_ANIO = "2026"
 ROSTER_CSV = "Listado estudiantes (CDigital).csv"
-# Clave del enlace real del formulario en `config/cursos/carga_academica_2026.json`
-# → cursos.<key>.formulario_presentacion. Mismo contrato que `meet` y que `clases`:
-# fuente única, cadena vacía (o clave ausente) ⇒ el material muestra el placeholder.
-FORMULARIO_PRESENTACION_KEY = "formulario_presentacion"
+# Clave del enlace real del evento de Slido en `config/cursos/carga_academica_2026.json`
+# → cursos.<key>.slido. Mismo contrato que `meet` y que `clases`: fuente única, cadena
+# vacía (o clave ausente) ⇒ el material muestra el marcador de posición.
+SLIDO_KEY = "slido"
 
 _CARGA_MOD = None
 _AVISADO_SIN_CURSO = False
@@ -437,7 +449,7 @@ def _carga_academica():
     """Módulo `config/cursos/carga_academica` (import perezoso). None si no está.
 
     El motor no depende de la carga académica para dibujar: solo la consulta para
-    saber cuántos estudiantes tiene el curso y de dónde sale el enlace del formulario.
+    saber cuántos estudiantes tiene el curso y de dónde sale el enlace de Slido.
     """
     global _CARGA_MOD
     if _CARGA_MOD is None:
@@ -458,7 +470,7 @@ def _estudiantes_en_roster(path):
     El CSV descargado del aula trae `nombre,correo,rol`; se cuentan solo las filas con
     rol de estudiante (el Profesor viene en la misma lista). Si el archivo no tiene
     columna `rol` se cuenta toda fila con datos: es una aproximación por exceso, y
-    contar de más solo puede llevar al modo formulario, que es el que aguanta.
+    contar de más solo puede llevar al modo Slido, que es el que aguanta.
     """
     if not os.path.isfile(path):
         return -1
@@ -514,15 +526,15 @@ def contar_estudiantes(course_key):
 
 
 def modo_rompehielos(course_key=None, n_estudiantes=None):
-    """`MODO_MURO` (Padlet) o `MODO_FORMULARIO` (Google Forms + Meet), según el tamaño.
+    """`MODO_MURO` (Padlet) o `MODO_SLIDO` (juego en Slido), según el tamaño del grupo.
 
     `n_estudiantes` solo para forzar el cálculo en pruebas; en los builds se deja que lo
-    cuente `contar_estudiantes`. Sin matrícula conocida → formulario.
+    cuente `contar_estudiantes`. Sin matrícula conocida → Slido.
     """
     n = n_estudiantes if n_estudiantes is not None else contar_estudiantes(course_key)
     if n is None:
-        return MODO_FORMULARIO
-    return MODO_MURO if n <= ICEBREAKER_MAX_MURO else MODO_FORMULARIO
+        return MODO_SLIDO
+    return MODO_MURO if n <= ICEBREAKER_MAX_MURO else MODO_SLIDO
 
 
 def usa_padlet(course_key):
@@ -530,43 +542,58 @@ def usa_padlet(course_key):
     return modo_rompehielos(course_key) == MODO_MURO
 
 
-def formulario_presentacion_placeholder(curso_corto):
-    return f"[URL Formulario Preséntate — pendiente · {curso_corto}]"
+def slido_placeholder(curso_corto):
+    return f"[URL Slido — evento del rompehielos pendiente · {curso_corto}]"
 
 
-def formulario_presentacion_url(course_key, curso_corto=None):
-    """Enlace del formulario «Preséntate» del curso: el real si está en config, si no el
-    marcador de posición.
+def slido_url(course_key, curso_corto=None):
+    """Enlace del evento de Slido del curso: el real si está en config, si no el marcador
+    de posición.
 
     Mismo contrato que el Meet cuando falta la sala: la URL vive en
-    `carga_academica_2026.json` → cursos.<key>.formulario_presentacion y **no** se
-    escribe en los builds. Mientras el docente no cree el formulario, la clave está
-    vacía (o no existe) y en la slide se ve el placeholder, que es el aviso de que
-    falta. Uno por asignatura, para que la hoja de respuestas no mezcle cursos.
+    `carga_academica_2026.json` → cursos.<key>.slido y **no** se escribe en los builds.
+    Mientras el docente no cree el evento, la clave está vacía (o no existe) y en la
+    slide se ve el placeholder, que es el aviso de que falta. Uno por asignatura, para
+    que la tabla de posiciones no mezcle cursos.
+
+    Ojo: el estudiante **no necesita esta URL** para jugar. Entra a `slido.com` y escribe
+    el **código del evento** que el Docente pega en el chat del Meet; la URL solo sirve
+    para el QR y para dejar el evento publicado en el aula.
     """
+    carga = _carga_academica()
+    if carga is None or not course_key:
+        return slido_placeholder(curso_corto or course_key or "el curso")
+    # El accesor vive en `carga_academica` (mismo contrato que `meet_url`/`clases_url`);
+    # aquí solo se delega. El `getattr` es por si el motor corre contra una carga vieja
+    # que todavía no lo trae: entonces se lee la clave a mano.
+    accesor = getattr(carga, "slido_url", None)
+    if callable(accesor):
+        try:
+            return accesor(course_key, curso_corto)
+        except Exception:
+            pass
     url = ""
     corto = curso_corto or ""
-    carga = _carga_academica()
-    if carga is not None and course_key:
-        try:
-            c = carga.curso(course_key)
-            url = (c.get(FORMULARIO_PRESENTACION_KEY) or "").strip()
-            corto = curso_corto or (c.get("titulo_corto") or course_key)
-        except Exception:
-            url = ""
-    return url or formulario_presentacion_placeholder(corto or course_key or "el curso")
+    try:
+        c = carga.curso(course_key)
+        url = (c.get(SLIDO_KEY) or "").strip()
+        corto = curso_corto or (c.get("titulo_corto") or course_key)
+    except Exception:
+        url = ""
+    return url or slido_placeholder(corto or course_key or "el curso")
 
 
-def _qr_formulario(course_key):
-    """QR del formulario: el del curso si existe en assets, si no el genérico. '' si no hay.
+def _qr_slido(course_key):
+    """QR del evento de Slido: el del curso si existe en assets, si no el genérico.
+    '' si no hay ninguno.
 
-    No se genera aquí: mientras el formulario no tenga enlace real no hay nada que
-    codificar, y la slide muestra el marcador de posición del QR.
+    No se genera aquí: mientras el evento no tenga enlace real no hay nada que codificar,
+    y la slide se dibuja **sin QR** (el ingreso por código sigue funcionando).
     """
     nombres = []
     if course_key:
-        nombres.append(f"qr_formulario_presentacion_{course_key}.png")
-    nombres.append("qr_formulario_presentacion.png")
+        nombres.append(f"qr_slido_{course_key}.png")
+    nombres.append("qr_slido.png")
     for nombre in nombres:
         p = os.path.join(_ASSETS, nombre)
         if os.path.exists(p):
@@ -574,16 +601,18 @@ def _qr_formulario(course_key):
     return ""
 
 
-def _icebreaker_render(prs, idx, sub, items, url, qr, size=14, qr_pendiente=None):
+def _icebreaker_render(prs, idx, sub, items, url, qr, size=14, panel=None,
+                       titulo="PRESÉNTATE — ROMPEHIELOS"):
     """Dibuja la slide del rompehielos (bullets a la izquierda + QR grande a la derecha).
 
-    `qr_pendiente`: si el QR todavía no existe **y se espera que no exista** (formulario
-    sin enlace), el texto que explica el pendiente; se pinta una tarjeta «QR pendiente»
-    en el mismo hueco. Sin ese texto, un QR ausente es un error de assets y se avisa.
+    `panel`: `(titular, detalle)` que ocupa el hueco del QR cuando **no hay QR que pintar
+    y eso es lo esperado** — el caso de Slido sin enlace del evento: se entra por código,
+    no por QR, así que no se dibuja un QR falso ni un cuadro de «pendiente». Sin QR y sin
+    `panel`, un QR ausente sí es un error de assets y se avisa en rojo.
     """
     s = blank(prs)
     bg_white(s)
-    top = title_block(s, "PRESÉNTATE — ROMPEHIELOS", sub)
+    top = title_block(s, titulo, sub)
     bullets(s, items, top=top + 0.15, left=MARGIN, width=6.4, size=size)
     qr_size = 3.4
     qr_x = SW - MARGIN - qr_size
@@ -599,16 +628,17 @@ def _icebreaker_render(prs, idx, sub, items, url, qr, size=14, qr_pendiente=None
         up = url_box.paragraphs[0]
         up.alignment = PP_ALIGN.CENTER
         _run(up.add_run(), url, 9, VERDE, bold=True)
-    elif qr_pendiente:
+    elif panel:
+        titular, detalle = panel
         rounded(s, qr_x - 0.12, qr_y - 0.12, qr_size + 0.24, qr_size + 0.85, ALT)
-        tf = textbox(s, qr_x + 0.15, qr_y + 0.9, qr_size - 0.3, 1.6, anchor=MSO_ANCHOR.MIDDLE)
+        tf = textbox(s, qr_x + 0.1, qr_y + 0.55, qr_size - 0.2, 2.3, anchor=MSO_ANCHOR.MIDDLE)
         p = tf.paragraphs[0]
         p.alignment = PP_ALIGN.CENTER
-        _run(p.add_run(), "QR pendiente", 18, NAVY, bold=True)
+        _run(p.add_run(), titular, 30, VERDE, bold=True)
         p2 = tf.add_paragraph()
         p2.alignment = PP_ALIGN.CENTER
-        p2.space_before = Pt(10)
-        _rich(p2, qr_pendiente, 12, GRAY)
+        p2.space_before = Pt(14)
+        _rich(p2, detalle, 13, NAVY)
         url_box = textbox(s, qr_x - 0.12, qr_y + qr_size + 0.02, qr_size + 0.24, 0.7)
         up = url_box.paragraphs[0]
         up.alignment = PP_ALIGN.CENTER
@@ -622,18 +652,27 @@ def _icebreaker_render(prs, idx, sub, items, url, qr, size=14, qr_pendiente=None
 
 def icebreaker_qr_slide(prs, idx=None, consignas=None, sub=None, qr_path=None,
                         padlet_url=None, course_key=None, modo=None,
-                        n_estudiantes=None, pide=None, formulario_url=None):
-    """Rompehielos «Preséntate» de la Presentación del Curso (= momento de Sesión 01).
+                        n_estudiantes=None, pide=None, slido_url_manual=None):
+    """Rompehielos de la Presentación del Curso (= momento de Sesión 01).
 
     **Pase siempre `course_key`.** Con él, la slide que sale la decide el tamaño real del
     grupo (ver `modo_rompehielos`): muro de Padlet hasta `ICEBREAKER_MAX_MURO`
-    estudiantes, formulario de Google por encima. Ningún build elige el modo a mano.
+    estudiantes, juego en Slido por encima. Ningún build elige el modo a mano.
 
-    - `pide`: lo único que cambia entre cursos — qué se le pide al estudiante además del
-      nombre («**estado actual** del proyecto (1 frase) + expectativa de TG2»).
+    - `pide`: qué se le pide al estudiante además del nombre («**estado actual** del
+      proyecto (1 frase) + expectativa de TG2»). **Solo aplica al muro**: en Slido el
+      juego es sobre el Docente y el estudiante no escribe nada.
     - `consignas`: reemplaza los bullets completos (escotilla de escape; si la usa, el
       texto deja de seguir al modo y le toca mantenerlo a mano).
     - `modo` / `n_estudiantes`: forzar la decisión (pruebas y casos puntuales).
+    - `slido_url_manual`: enlace del evento a mano. Normalmente NO se usa: sale de
+      `slido_url(course_key)` → `carga_academica_2026.json` → cursos.<key>.slido.
+
+    En modo Slido esta slide es **material del estudiante**: dice qué se juega, cuántas
+    rondas y cómo entrar, y **no revela ninguna de las frases ni cuál es la mentira**.
+    Eso vive en el guion del Docente que genera
+    `config/slides/build_rompehielos_slido.py` →
+    `<Asignatura>/2026/<grupo>/Rompehielos Slido - Sesion 01.md`.
 
     Sin `course_key` no hay tamaño que consultar y se sirve el muro, que es lo que hacía
     esta función antes de 2026-08-11; se avisa por consola una sola vez.
@@ -672,31 +711,41 @@ def icebreaker_qr_slide(prs, idx=None, consignas=None, sub=None, qr_path=None,
         return _icebreaker_render(prs, idx, sub_txt, items, url,
                                   qr_path or QR_PRESENTACION_ESTUDIANTES, size=14)
 
-    # ---- Modo formulario (grupos de más de ICEBREAKER_MAX_MURO) ----
-    url = formulario_url or formulario_presentacion_url(course_key)
+    # ---- Modo Slido (grupos de más de ICEBREAKER_MAX_MURO) ----
+    # OJO: material del estudiante. Ni las frases de las rondas ni cuál es la mentira
+    # pueden aparecer aquí — eso es del guion del Docente («Rompehielos Slido - Sesion
+    # 01.md», ver el encabezado de esta sección).
+    url = slido_url_manual or slido_url(course_key)
     pendiente = not url.lower().startswith("http")
-    pide_txt = pide or "**expectativa del curso** o **tema de interés** (1 frase)"
-    sub_txt = sub or "Formulario de Google · encuestas y Q&A en el propio Meet"
+    sub_txt = sub or "Dos verdades y una mentira · Slido · 8 minutos"
+    # Sin enlace real no hay nada que codificar en un QR: no se pinta ninguno. Da igual,
+    # el ingreso normal es por código del evento y la slide no queda coja. El texto de la
+    # primera viñeta sigue al QR que de verdad se va a pintar, no al enlace.
+    qr = qr_path or ("" if pendiente else _qr_slido(course_key))
+    hay_qr = bool(qr) and os.path.exists(qr)
     items = consignas or [
-        f"**Escanea el QR o abre:** {url}",
-        f"**Qué respondes (1 min):** tu **nombre** + {pide_txt}. Entras con tu correo "
-        "**@cun.edu.co**: no hay que crear cuenta ni instalar nada.",
-        (f"**Ahora, ~3 min.** Somos {n}: no alcanzamos a presentarnos uno por uno, "
-         "así que el formulario nos ordena."
-         if n is not None else "**Ahora, ~3 min.** El formulario ordena las presentaciones."),
-        "**Con eso, hoy:** el Docente lee en voz alta **5 o 6 respuestas** y proyecta el "
-        "**resumen** del formulario — ahí quedan todas a la vista, no solo las leídas.",
-        "**En vivo:** las preguntas y las votaciones van por la **encuesta** y el **Q&A** del "
-        "propio Meet; no hay que abrir ninguna otra plataforma.",
-        "**Después:** las respuestas quedan en una hoja que el Docente usa todo el periodo "
-        "(equipos, ejemplos y seguimiento).",
+        "**Entra a slido.com** y escribe el **código del evento** que el Docente pega en el "
+        "chat del Meet"
+        + (" — o escanea el QR." if hay_qr else ".")
+        + " Sin cuenta ni instalar nada.",
+        "**El juego:** «**dos verdades y una mentira**» sobre el Docente. Se proyectan tres "
+        "frases suyas y votas **cuál de las tres NO es cierta** — acertar es **1 entre 3**, "
+        "así que arrancamos todos iguales.",
+        "**Tres rondas (~4 min).** Al cerrar cada una el Docente revela la mentira y cuenta la "
+        "historia de la verdad más rara: ahí queda hecha su presentación.",
+        ("**Ronda final (~2 min):** sale la tabla de posiciones y los **tres primeros** toman el "
+         "micrófono con **sus** dos verdades y una mentira. Gana quien engañe a más gente."
+         + (f" Hablan tres, no {n}." if n is not None else "")),
+        "**Premio:** **revisión 1 a 1 con el Docente** del avance del ganador, antes de la "
+        "primera entrega.",
+        "**Las preguntas** de toda la sesión van por el **Q&A** del mismo Slido.",
     ]
-    # Sin enlace real no hay nada que codificar en un QR: se muestra el pendiente.
-    qr = qr_path or ("" if pendiente else _qr_formulario(course_key))
     return _icebreaker_render(
         prs, idx, sub_txt, items, url, qr, size=13,
-        qr_pendiente=("Se genera cuando el formulario tenga enlace real."
-                      if pendiente else None),
+        titulo="ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA",
+        panel=(None if hay_qr else
+               ("slido.com",
+                "El **código del evento** te lo pega el Docente en el **chat del Meet**.")),
     )
 
 def link_callout_slide(prs, title, headline, url, notes=None, idx=None):

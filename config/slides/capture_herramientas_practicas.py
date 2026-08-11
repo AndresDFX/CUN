@@ -31,8 +31,9 @@ TG3 = ROOT / "Pregrado" / "Trabajo de grado 3"
 
 # (grupo, id_archivo, url, espera_extra_s)
 SHOTS = [
-    # Creatividad S01 — taller ficha + pizarra + tablero colaborativo
-    ("creatividad_s01", "s01_padlet", "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7", 4),
+    # Creatividad S01 — taller ficha + pizarra
+    # (El Padlet salió de aquí el 2026-08-11: con 50 estudiantes el rompehielos es el juego de
+    #  Slido, y Slido no se puede capturar sin evento creado. Cuando exista, añadir su URL.)
     ("creatividad_s01", "s01_excalidraw_pizarra", "https://excalidraw.com/", 4),
     ("creatividad_s01", "s01_google_docs_inicio", "https://docs.google.com/document/u/0/?tgif=d", 4),
     ("creatividad_s01", "s01_google_forms_plantilla", "https://docs.google.com/forms/u/0/", 3),
@@ -45,7 +46,7 @@ SHOTS = [
     ("creatividad_tools", "dt_ideo_designkit", "https://www.designkit.org/methods", 4),
     ("creatividad_tools", "bmc_canvanizer", "https://canvanizer.com/new/business-model-canvas", 4),
     ("creatividad_tools", "strategyzer_bmc", "https://www.strategyzer.com/library/the-business-model-canvas", 4),
-    # Investigación S01 — tablero encuadre
+    # Investigación S01 — tablero encuadre (ÚNICO curso que conserva el muro: 20 estudiantes)
     ("investigacion_s01", "inv_s01_padlet", "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7", 4),
     # Investigación S06 — Scholar + gestores + bases abiertas (periodo corto)
     ("investigacion_s06", "inv_google_scholar", "https://scholar.google.com/", 3),
@@ -54,14 +55,12 @@ SHOTS = [
     ("investigacion_s06", "inv_scielo", "https://scielo.org/es/", 3),
     ("investigacion_s06", "inv_redalyc", "https://www.redalyc.org/", 3),
     ("investigacion_s06", "inv_google_docs", "https://docs.google.com/document/u/0/?tgif=d", 3),
-    # Proyecto I — tablero + formulario tutorías + APA + ZoteroBib
-    ("proyecto1_s01", "p1_padlet", "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7", 4),
+    # Proyecto I — formulario tutorías + APA + ZoteroBib (sin Padlet: 50 estudiantes → Slido)
     ("proyecto1_s01", "p1_form_tutorias_estudiante", "https://forms.gle/oZ8xCYiUo3KEWr1d9", 5),
     ("proyecto1_s01", "p1_zoterobib", "https://zbib.org/", 3),
     ("proyecto1_s01", "p1_apa_style", "https://apastyle.apa.org/style-grammar-guidelines/citations", 4),
     ("proyecto1_s01", "p1_cun_home", "https://cun.edu.co/", 3),
-    # TG — escritura / antiplagio público + tablero S01
-    ("tg_tools", "tg_padlet", "https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7", 4),
+    # TG — escritura / antiplagio público (sin Padlet: TG2 son 50 y TG3 112 → Slido)
     ("tg_tools", "tg_scholar", "https://scholar.google.com/", 2),
     ("tg_tools", "tg_zoterobib", "https://zbib.org/", 4),
 ]

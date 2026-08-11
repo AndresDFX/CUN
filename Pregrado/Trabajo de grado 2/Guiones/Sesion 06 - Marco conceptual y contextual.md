@@ -167,7 +167,7 @@ Estas definiciones operativas son las que en TG3 se convierten en **variables me
 🧩 **Entregable de hoy**
 1. En Google Docs (`S06_ConceptualContextual_Apellido`): tabla de ≥ 4 términos con definiciones operativas + 1 página de contexto acotada (organización/área/proceso) con citas APA 7.
 2. Archivo en CDigital: `S06_ConceptualContextual_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

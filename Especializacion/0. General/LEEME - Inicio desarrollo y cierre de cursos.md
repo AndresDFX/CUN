@@ -78,7 +78,7 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
 - [ ] Configurar **grupos / elección de grupo** (PDF en `01_Instructivos_AFI_Proyecto_I_II/`) **antes** de habilitar ACA grupales.
 - [ ] Configurar los tres ítems calificables — **Quiz** (cuestionario), **ACA 1** y **ACA FINAL** (tareas) — + rúbricas (apertura/cierre/peso según cronograma 26ES4).
 - [ ] Diligenciar / socializar **Acuerdo Pedagógico**: https://forms.gle/EPHb7tbrEJTC6ey77
-- [ ] Rompehielos “Preséntate” (QR/Padlet oficial) + recordatorio formulario de tutorías estudiante.
+- [ ] Rompehielos listo: con más de 20 estudiantes, el evento de Slido del juego «dos verdades y una mentira» (montaje en `2026/<grupo>/Rompehielos Slido - Sesion 01.md`); hasta 20, el muro de Padlet. + recordatorio del formulario de tutorías del estudiante.
 - [ ] Importar CSV/ICS de **encuentros** (clases semanales) y, aparte, CSV de **hitos docentes** (mínimo: ACA + AFI) a Calendar (`Proyecto I/2026/54ES4/`).
 - [ ] **10/08/2026:** clase P1 realizada y grabada (anotado en hito de inicio; encuentro en Calendar de Encuentros).
 

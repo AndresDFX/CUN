@@ -486,9 +486,16 @@ def add_icebreaker(prs, course_key: str, idx: int = 3, *, pide: str | None = Non
 
     La FORMA no se elige aquí: `icebreaker_qr_slide` cuenta la matrícula real del curso
     (roster de CDigital) y sirve el muro de Padlet en los grupos de hasta
-    `ICEBREAKER_MAX_MURO` estudiantes y el formulario de Google —con encuestas y Q&A de
-    Meet en vivo— por encima. De este lado viaja solo lo que sí cambia entre cursos:
-    `pide`, lo que se le pide al estudiante además del nombre.
+    `ICEBREAKER_MAX_MURO` estudiantes; por encima sirve el juego **«Dos verdades y una
+    mentira» en Slido** (quiz de 3 rondas sobre el Docente + Q&A), que con 50 —o con los
+    112 de TG3— es lo único que cabe en la hora: un muro de 50 notas no lo lee nadie y
+    una ronda de presentaciones se come la clase. De este lado viaja solo lo que sí
+    cambia entre cursos: `pide`, lo que se le pide al estudiante además del nombre (lo
+    usa el modo muro; en el juego, el que se presenta es el Docente).
+
+    Las frases de las tres rondas y **cuál es la mentira** no viven en ninguna deck: son
+    material del Docente, en `<Asignatura>/2026/<grupo>/Rompehielos Slido - Sesion 01.md`
+    (`python config/slides/build_rompehielos_slido.py`).
     """
     icebreaker_qr_slide(prs, idx=idx, course_key=course_key, pide=pide)
 

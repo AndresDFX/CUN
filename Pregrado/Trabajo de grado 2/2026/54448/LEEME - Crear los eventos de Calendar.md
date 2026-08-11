@@ -20,6 +20,7 @@ Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIP
 |---|---|
 | `Calendario de clases - Grupo 54448.md` | Referencia: el cronograma en tabla. No se importa: se lee. |
 | `Correo de bienvenida.docx` | Correo para enviar a los estudiantes el primer día. |
+| `Correos estudiantes (invitados Calendar).gdoc` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
 | `Correos estudiantes (invitados Calendar).txt` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
 | `Entregas y hitos docentes - Importar a Calendar.csv` | Cierres de ACA y hitos del docente. Este **sí** se importa a Calendar: son recordatorios tuyos, sin invitados. |
 | `Informacion.txt` | Datos de la oferta del grupo (portal). |

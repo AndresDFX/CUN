@@ -38,7 +38,7 @@ Fuente: syllabus `CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIA
 - **`HERRAMIENTAS_EXAMLAB.md`** (raíz del curso) — análisis de herramientas de apoyo. Es un **borrador para decisión del Docente**, no material obligatorio ni parte de la nota; su recuadro de corrección del 2026-08-10 ya está alineado con la estructura real del aula.
 
 **Horario confirmado:** miércoles, **5:00–6:00 pm** (60 minutos).
-**Festivo en día de clase → clase autónoma** (CDigital). *En este periodo ningún miércoles de los siete cae en festivo, así que las siete sesiones son sincrónicas.*
+**Festivo en día de clase → clase autónoma** (la actividad queda en el **Drive de clases**). *En este periodo ningún miércoles de los siete cae en festivo, así que las siete sesiones son sincrónicas.*
 
 ## 1. Propósito
 Que el estudiante identifique habilidades de creatividad e innovación y formule una **Propuesta de Innovación** (hilo conductor desde la semana 1).
@@ -47,7 +47,7 @@ Traducido a lo que verás en clase: **no es un curso sobre innovación, es un cu
 
 ## 2. Unidades de conocimiento (syllabus)
 
-> **La Sesión 01 (12/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes (Padlet) y las ACAs. U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) → lectura autónoma; se retoma al abrir la Sesión 02. El contenido curricular arranca en la **Sesión 02**.
+> **La Sesión 01 (12/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes y las ACAs. U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) → lectura autónoma; se retoma al abrir la Sesión 02. El contenido curricular arranca en la **Sesión 02**.
 
 | # | Temática | Dónde se dicta |
 |---|---|---|
@@ -165,7 +165,7 @@ Siete encuentros, todos miércoles 5:00–6:00 pm. Guion en `Guiones/Sesion NN -
 
 | # | Fecha | Qué pasa realmente en el encuentro | Cierra ese día |
 |---|---|---|---|
-| **01** | 12/08 | **Encuadre, no tema.** Ocho fases: bienvenida, quién es el Docente, rompehielos en Padlet (los 50 escriben un post-it con nombre, expectativa y un problema que les moleste), recorrido del curso y su producto, cómo se evalúa, integridad e IA, herramientas y acuerdos, encargo autónomo. Del Padlet salen los ejemplos que usarás todo el semestre: anota tres. | — (abren Quiz 1 y ACA Final) |
+| **01** | 12/08 | **Encuadre, no tema.** Ocho fases: bienvenida, quién es el Docente, rompehielos en **Slido** —«dos verdades y una mentira» sobre ti, tres rondas, 8 minutos, con premio—, recorrido del curso y su producto, cómo se evalúa, integridad e IA, herramientas y acuerdos, encargo autónomo. Con 50 estudiantes un muro de post-its no lo lee nadie; el juego va **antes** de los porcentajes y de paso te presenta. Guion del montaje en `2026/54408/Rompehielos Slido - Sesion 01.md`. | — (abren Quiz 1 y ACA Final) |
 | **02** | 19/08 | **Design Thinking, divergencia/convergencia y ideación.** Modelas un *How Might We* y SCAMPER en vivo; ellos producen su HMW + banco de ideas + boceto. Es la sesión donde cada estudiante elige la semilla de su propuesta. | **Quiz 1** (12 min) |
 | **03** | 26/08 | **Gestión de la innovación con el Manual de Oslo.** Clasificas tres casos en vivo (producto, proceso, organización, marketing, social) y ellos tipifican el suyo con las dos condiciones de Oslo: novedad **e** implementación. | **Parcial 1** (22 min) |
 | **04** | 02/09 | **Tipos de innovación en serio: de clasificar a argumentar.** Incremental vs. radical y prueba de realidad en contexto socioeconómico; ellos arman la matriz comparativa de su propuesta con criterios, no con gusto. | **Quiz 2** (15 min) |
@@ -179,7 +179,7 @@ El Syllabus declara **32 h con docente y 64 h autónomas**, pero la oferta real 
 
 | Sesión | Lo que sube el estudiante | Para qué sirve |
 |---|---|---|
-| 01 | Post-it en el Padlet + lectura autónoma U1–U2 + su problema en tres líneas + documento de trabajo creado con la plantilla APA | Insumo de la S02 (`Ficha_problema_oportunidad.docx` y `Ejemplo_ficha_modelo.html` están en la carpeta de la S01) |
+| 01 | Participación en el rompehielos de Slido + lectura autónoma U1–U2 + su problema en tres líneas + documento de trabajo creado con la plantilla APA | Insumo de la S02 (`Ficha_problema_oportunidad.docx` y `Ejemplo_ficha_modelo.html` están en la carpeta de la S01) |
 | 02 | `S02_Ideacion_Apellido` (HMW + banco de ideas + boceto) | Semilla de la propuesta |
 | 03 | `S03_FichaOslo_Apellido` | Tipo de innovación justificado |
 | 04 | `S04_MatrizTipos_Apellido` | Argumentación del tipo y del grado |
@@ -317,7 +317,7 @@ Se socializa en la fase 6 de la Sesión 01 (slides 12–13) y el guion trae el t
 - [ ] Eventos de Calendar creados con el `.gs` según el runbook de `2026/54408/`, y la URL de Meet pegada en `carga_academica_2026.json` + material regenerado.
 - [ ] **Quiz 1** (6%) y **ACA Final** (32,8%) **habilitados**: su ventana abre este día.
 - [ ] Enunciados de `Clases/Recursos/ACAs/` y plantilla APA publicados en el aula.
-- [ ] Padlet abierto y URL lista para pegar en el chat: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
+- [ ] Evento de Slido creado, con el quiz de las tres rondas y **la mentira marcada** en `2026/54408/Rompehielos Slido - Sesion 01.md`; código listo para pegar en el chat del Meet
 - [ ] Decidida tu respuesta a las tres preguntas que siempre salen: trabajo en pareja, uso de IA y entregas tarde.
 - [ ] Canal con Coordinación abierto para lo pendiente de §6 (acuerdo pedagógico, cargue de notas, informe de cierre).
 

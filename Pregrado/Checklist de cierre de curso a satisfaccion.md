@@ -59,7 +59,7 @@ Los **cuatro** cursos tienen la misma estructura (los pesos del tercer corte cam
 
 ## 3. Clases, festivos y evidencias
 
-- [ ] Encuentros semanales cumplidos (60 min); festivo en día de clase = **clase autónoma** en CDigital (no cancelación).
+- [ ] Encuentros semanales cumplidos (60 min); festivo en día de clase = **clase autónoma**, con la actividad en el **Drive de clases** (carpeta de esa sesión). No es cancelación, y la entrega sigue siendo en CDigital.
 - [ ] Entregas y retroalimentación verificables en CDigital (Drive/correo no sustituyen).
 - [ ] Plantilla APA CUN usada cuando el producto lo exige (TG / investigación).
 
@@ -101,7 +101,7 @@ Los **cuatro** cursos tienen la misma estructura (los pesos del tercer corte cam
 | Coevaluación = foro | Foro con participación registrada en su ventana (no una entrega de archivo) |
 | Autoevaluación diligenciada | Cuestionario individual respondido dentro de la ventana |
 | Suma de pesos correcta | 30 + 30 + 40 = 100 en el libro de calificaciones |
-| Festivos = autónomas | Calendar + actividad en CDigital |
+| Festivos = autónomas | Calendar + actividad en el Drive de clases (entrega en CDigital) |
 | Notas al cierre | Gradebook completo en la fecha de oferta del grupo |
 
 ---

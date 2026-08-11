@@ -196,7 +196,7 @@ Pitch cronometrado (30/40/70/40 s) + feedback ‘fortaleza + pregunta + sugerenc
 🧩 **Entregable de hoy**
 1. En Google Docs (`S10_Socializacion_Apellido`): guion de pitch de 3 minutos (problema → pregunta → avance → pedido) + notas de feedback recibido (fortaleza + pregunta + sugerencia de ≥ 2 pares).
 2. Archivo en CDigital: `S10_Socializacion_Apellido` en CDigital.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

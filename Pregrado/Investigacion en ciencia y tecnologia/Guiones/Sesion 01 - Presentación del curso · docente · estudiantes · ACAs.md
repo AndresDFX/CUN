@@ -8,12 +8,12 @@
 
 📌 **De esta sesión**
 - **Sesión:** **01** · **Tema:** Presentación del curso · docente · estudiantes · ACAs
-- **Detalle:** Encuadre: presentación del curso, del Docente, de los estudiantes (Padlet) y de las ACAs (peso, fechas, formato). No se dicta tema.
+- **Detalle:** Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato). No se dicta tema.
 - **PPTX estudiante:** `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx`
 - **Meet (serie del curso):** [URL Meet — mismo enlace toda la serie · INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA]
 
 > **Rompehielos Padlet:** slide **PRESÉNTATE** (QR + URL). Es el **mismo tablero y el mismo momento** que el de la Presentación del Curso —la Sesión 01 *es* la sesión de presentación—, no dos rompehielos distintos. URL: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7
-> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **formulario**.
+> Este curso conserva el muro porque tiene **20 estudiantes**: veinte notas se leen enteras en pantalla. En los grupos de más de 20 el rompehielos es un **juego en Slido**.
 
 ⏱️ **Evaluación de esta sesión en CDigital** *(ítems reales del libro de calificaciones)*
 
@@ -219,7 +219,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
 🧩 **Encargo autónomo (para la Sesión 02)**
 1. **No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2**, publicadas en la carpeta de la Sesión 01 del **Drive de clases**, y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.
 2. Archivo en CDigital: `S01_TemaTentativo_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.
-3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el formulario del curso, según el tamaño del grupo).
+3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
 4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**

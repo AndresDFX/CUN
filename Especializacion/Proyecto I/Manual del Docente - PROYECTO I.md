@@ -44,7 +44,7 @@ Según el **ESP329**: inicia la ruta de trabajo de grado; el estudiante delimita
 
 Las sesiones semanales del calendario AFI **desarrollan** estas unidades (ver `config/cursos/sesiones_cun.py` · campo `unidad_esp329`).
 
-> **La Sesión 01 (10/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes (Padlet) y las ACAs. ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02. El contenido curricular arranca en la **Sesión 02**.
+> **La Sesión 01 (10/08/2026) es de ENCUADRE: no se dicta tema.** Se presenta el curso, el Docente, los estudiantes y las ACAs. ESP329 U1 (Fundamentos y enfoque de investigación) → lectura autónoma; se retoma al abrir la Sesión 02. El contenido curricular arranca en la **Sesión 02**.
 >
 > Consecuencia operativa para el **Quiz** (cuestionario del corte 1, 25%; cierra dom 30/08, fecha institucional — **no** es la ACA 1, que es la tarea del corte 2 y cierra el 04/10): la única sesión sincrónica de contenido antes del cierre es la **Sesión 02** (24/08). Objetivos, justificación y alcances se acompañan en **tutoría acordada de esa semana**; la Sesión 03 (31/08) los amplía ya después del cierre. Anúncialo en la Sesión 01.
 
@@ -176,7 +176,7 @@ El estudiante debe diligenciar **su propio** formulario de asistencia (distinto 
 ⚠️ **No cambies esta configuración después de recibir entregas** — puede desincronizar calificaciones.
 
 ### 4.2 Google Meet — encuentro sincrónico (resumen; detalle en `Instructivo_encuentros_sincronicos_Especializaciones_AFI.pdf` + correo Coordinación 6/08/2026)
-1. Crear el evento **desde tu cuenta institucional** en Google Calendar, lunes 8:00–10:00 pm (ya confirmado). Para fechas **e invitados del roster**, importa `2026/<TU GRUPO>/Encuentros Proyecto I - Importar a Calendar.ics` (**no** el `.csv`: Google Calendar ignora Guests al importar CSV; ver `LEEME - Importar encuentros a Calendar.md`). Subject corto: `54ES4 - Proyecto I - Sesion NN`. **Aparte**, importa `Entregas y hitos docentes - Importar a Calendar.csv` (mínimo: Acuerdo/Meet AFI + deadlines ACA/auto·coeval + 1 recordatorio registro AFI + recepción/cierre/informe — **no** duplica las Sesión NN).
+1. Crear el evento **desde tu cuenta institucional** en Google Calendar, lunes 8:00–10:00 pm (ya confirmado). Para fechas **e invitados del roster**, usa `2026/<TU GRUPO>/PRINCIPAL - Crear encuentros con invitados.gs` y sigue su `LEEME - Crear los eventos de Calendar.md`. **No importes** los `RESPALDO sin invitados - ….ics/.csv`: Google descarta los invitados al importar esos formatos, y te quedan los eventos con cero estudiantes. Subject: `26ES4 - 54ES4 - Proyecto I - Sesion NN`. **Aparte**, importa `Entregas y hitos docentes - Importar a Calendar.csv` (mínimo: Acuerdo/Meet AFI + deadlines ACA/auto·coeval + 1 recordatorio registro AFI + recepción/cierre/informe — **no** duplica las Sesión NN).
 2. Añadir Google Meet **dentro del evento ya creado** (el mismo enlace se reutiliza automáticamente en todas las repeticiones — "el mismo link siempre"). Programar **todos** los encuentros del periodo 26ES4.
 3. Repetición semanal, terminando en la última semana del curso (09/11/2026); los 4 lunes festivos quedan excluidos automáticamente si usas el .ics.
 4. Invitar **solo** a estudiantes inscritos del grupo + a `investigacion_especializaciones@cun.edu.co`. **No** agregar otros correos.

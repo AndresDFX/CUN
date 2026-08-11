@@ -186,7 +186,7 @@ Fechas y temas salen de `config/cursos/sesiones_cun.py`; el movimiento de plataf
 
 | # | Fecha | Qué haces tú en el encuentro | Qué se lleva el estudiante | Plataforma ese día |
 |:--:|---|---|---|---|
-| **01** | 10/08 | **Encuadre: no dictas tema.** Presentas curso, Docente y grupo (rompehielos en Padlet), abres en pantalla el **libro de calificaciones** para leer los ítems con sus nombres reales, explicas entrega e integridad y **dejas por escrito el acuerdo pedagógico**. | Lectura autónoma sobre delimitación del tema (Arias Castrillón, 2020, en la carpeta de la sesión) + inventario del estado de su proyecto. | Abre la ventana de la **ACA Final** (queda abierta todo el periodo). |
+| **01** | 10/08 | **Encuadre: no dictas tema.** Presentas curso, Docente y grupo (rompehielos en **Slido**: «dos verdades y una mentira», tres rondas, 8 minutos, con premio), abres en pantalla el **libro de calificaciones** para leer los ítems con sus nombres reales, explicas entrega e integridad y **dejas por escrito el acuerdo pedagógico**. | Lectura autónoma sobre delimitación del tema (Arias Castrillón, 2020, en la carpeta de la sesión) + inventario del estado de su proyecto. | Abre la ventana de la **ACA Final** (queda abierta todo el periodo). |
 | — | 17/08 | **Festivo (Asunción). Clase autónoma:** no se cancela — la semana se cursa con la lectura y el inventario en CDigital. | — | — |
 | **02** | 24/08 | Primera sesión de contenido. Pregunta investigable, objetivo general + 3 específicos con **verbos medibles**, título provisional ≤ 21 palabras, y coherencia vertical entre los tres. | `S02_PreguntaObjetivos_Apellido` | **Abre Quiz 1.** Ábrelo en pantalla en el cierre de la clase. |
 | **03** | 31/08 | Estructura del artículo/documento sobre la plantilla APA CUN: outline completo, secciones vacías marcadas, metodología escrita en «propuesto». | `S03_EstructuraAvance_Apellido` | **Cierra Quiz 1** — se aplica en clase (~12 min). |
@@ -215,7 +215,7 @@ Es la regla operativa más importante del curso y hay que anunciarla en la Sesi�
 
 ### 5.5 Los cuatro festivos
 
-Caen **17/08, 12/10, 02/11 y 16/11** — todos lunes, todos día de clase. **Festivo no es cancelación: es clase autónoma**, con actividad publicada en CDigital. Los cuatro ya están en el calendario y en los archivos de Calendar como eventos marcados «(autónoma)». Cuatro semanas de las quince quedan sin encuentro: si dejas la ACA Final para «las últimas clases», te encuentras con que entre la S11 (09/11) y la recepción (14/11) no hay ningún encuentro más.
+Caen **17/08, 12/10, 02/11 y 16/11** — todos lunes, todos día de clase. **Festivo no es cancelación: es clase autónoma**, con la actividad en la carpeta de esa sesión del **Drive de clases**. Lo que se entregue sigue subiéndose a CDigital. Los cuatro ya están en el calendario y en los archivos de Calendar como eventos marcados «(autónoma)». Cuatro semanas de las quince quedan sin encuentro: si dejas la ACA Final para «las últimas clases», te encuentras con que entre la S11 (09/11) y la recepción (14/11) no hay ningún encuentro más.
 
 ## 6. Qué entregan los estudiantes
 
@@ -352,7 +352,7 @@ Se explica en la Sesión 01 (slides 14 y 15 del deck de encuadre) y se sostiene 
 - [ ] Guion de la Sesión 01 leído completo (es de encuadre: **no se dicta tema**).
 - [ ] Aula de CDigital revisada: ocho ítems, pesos que suman 30/30/40, ACA Final abierta.
 - [ ] Encuentros creados con el Apps Script y URL de Meet pegada en `carga_academica_2026.json → cursos.tg2.meet`.
-- [ ] Padlet del rompehielos abierto y probado: https://padlet.com/andres_dfx/cun-wruz81hmf9k06gd7 (el QR está en la presentación del curso).
+- [ ] Evento de Slido creado, con el quiz de las tres rondas y **la mentira marcada** en `2026/54448/Rompehielos Slido - Sesion 01.md`; código listo para pegar en el chat del Meet.
 - [ ] Acuerdo pedagógico redactado y listo para dejar por escrito en CDigital.
 - [ ] Preguntado a Coordinación: ¿individual o en equipo? ¿canal del acuerdo pedagógico?
 - [ ] Anunciado en clase: los cuestionarios **se aplican en clase** y quien falte pierde el ítem.
