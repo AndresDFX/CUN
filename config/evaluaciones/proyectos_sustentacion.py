@@ -20,7 +20,9 @@ Dos cosas que no son evidentes y cuestan un rato:
 Uso:
     python config/evaluaciones/proyectos_sustentacion.py
     python config/evaluaciones/proyectos_sustentacion.py --correo julian_castanoe@cun.edu.co
-    python config/evaluaciones/proyectos_sustentacion.py --json salida.json
+    # El JSON lleva la cédula de cada integrante: solo se escribe dentro de
+    # `Especializacion/Evaluaciones/`, donde `*.json` está ignorado por git.
+    python config/evaluaciones/proyectos_sustentacion.py --json "Especializacion/Evaluaciones/salida.json"
     python config/evaluaciones/proyectos_sustentacion.py --xlsx "otra/ruta.xlsx" --hoja MARIA-ESPTD
 """
 from __future__ import annotations
@@ -158,7 +160,9 @@ def main() -> None:
     ap.add_argument("--correo", default=CORREO_POR_DEFECTO)
     ap.add_argument("--xlsx", default="")
     ap.add_argument("--hoja", default="", help="forzar una hoja de detalle concreta")
-    ap.add_argument("--json", default="", help="volcar el resultado a este archivo")
+    ap.add_argument("--json", default="",
+                    help="volcar el resultado a este archivo; lleva cédulas, así que solo dentro "
+                         "de Especializacion/Evaluaciones/ (allí *.json está fuera de git)")
     a = ap.parse_args()
 
     from openpyxl import load_workbook
@@ -192,6 +196,13 @@ def main() -> None:
                 print(f"   - {d['nombre']}  ({d['bytes']:,} B)")
 
     if a.json:
+        # El volcado lleva un campo "cedula" por integrante. Fuera de
+        # `Especializacion/Evaluaciones/` no hay regla de .gitignore que lo cubra, y un
+        # `git add -A` lo dejaría en el historial para siempre.
+        seguro = os.path.join("Especializacion", "Evaluaciones").lower()
+        if seguro not in os.path.abspath(a.json).lower().replace("/", os.sep):
+            print(f"\n!! ATENCIÓN: {a.json} queda FUERA de Especializacion/Evaluaciones/ y lleva "
+                  f"cédulas.\n   Ahí git no lo ignora. Muévelo o bórralo antes de cualquier commit.")
         with open(a.json, "w", encoding="utf-8") as f:
             json.dump(salida, f, ensure_ascii=False, indent=2)
         print(f"\n-> {a.json}")

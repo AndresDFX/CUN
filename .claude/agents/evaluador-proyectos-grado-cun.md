@@ -62,7 +62,15 @@ No lo adivines. Dos comandos:
 
 ```bash
 # Qué proyectos me asignaron, en qué rol, con qué horario, y dónde están sus documentos
-python config/evaluaciones/proyectos_sustentacion.py --correo <mi correo> --json mis_proyectos.json
+# OJO con la ruta del --json: ese archivo lleva un campo "cedula" por cada integrante, así que
+# solo puede escribirse DENTRO de `Especializacion/Evaluaciones/`, donde `*.json` está ignorado
+# por git. Escrito en la raíz del repositorio no lo ignora nadie y el primer `git add -A` mete
+# las cédulas en el historial para siempre.
+python config/evaluaciones/proyectos_sustentacion.py --correo <mi correo> \
+    --json "Especializacion/Evaluaciones/mis_proyectos.json"
+
+# Y si solo hace falta verlo en pantalla, mejor sin --json: no deja archivo.
+python config/evaluaciones/proyectos_sustentacion.py --correo <mi correo>
 
 # El texto de un trabajo de grado de 273 páginas, con marca de página para poder citar
 python config/evaluaciones/extraer_texto.py "<ruta al pdf>" --indice           # mapa del documento
@@ -88,7 +96,9 @@ Las carpetas de trabajo están nombradas por el **orden de sustentación** (`04 
 el orden alfabético del explorador es el orden real de la sesión. Para localizar una:
 
 ```bash
-Glob "Especializacion/Evaluaciones/<periodo>/Fichas de evaluacion/04*/"
+# Glob no lista directorios: hay que pedir su contenido, con /* al final. Verificado —
+# `…/04*/` y `…/04*` devuelven «No files found» aunque la carpeta exista.
+Glob "Especializacion/Evaluaciones/<periodo>/Fichas de evaluacion/04*/*"
 ```
 
 Ese número es la columna **«No.»** de la hoja de detalle del cronograma, no una invención.
@@ -119,10 +129,14 @@ orden alfabético siga siendo el orden real.
 Si el usuario nombra un **código** de grupo, resuélvelo igual por su carpeta y confírmalo en voz alta
 («el 04, que es G-004»), porque:
 
-> ⚠️ **Los códigos de grupo se repiten entre especializaciones.** En el mismo `.xlsx` la hoja
-> `SERGIO-ESPMA` reutiliza `26ET2-G-007` y `26ET2-G-008` para proyectos que **no** son los míos.
-> **Nunca resuelvas un código sin nombrar su hoja.** La mía es siempre `MARIA-ESPTD`; si una consulta
-> devuelve un título que no reconoces, estás leyendo la hoja del otro jurado.
+> ⚠️ **Ningún código `26ET2-G-0NN` identifica un proyecto por sí solo: todos se repiten.** Contado
+> sobre el `.xlsx` en solo lectura, las cuatro hojas de detalle numeran desde `G-001` cada una:
+> `SERGIO-ESPMA` (007-008), `MARIA-ESPTI` (001-013), `MARIA-ESPTD` (001-013) y `MARIANO-ESPAD`
+> (001-055). Es decir, **los trece códigos míos existen también en otras dos hojas**, con otros
+> proyectos y otros estudiantes. **Nunca resuelvas un código sin nombrar su hoja.** La mía es
+> `MARIA-ESPTD` (Transformación Digital) y se confunde a la vista con `MARIA-ESPTI`: se verifica la
+> hoja, no el nombre de pila. Si una consulta devuelve un título que no reconoces, estás leyendo la
+> hoja de otro jurado.
 
 ## 1. El marco real de evaluación (no lo inventes, es este)
 
@@ -145,11 +159,18 @@ no eres quien aprueba o reprueba, eres quien valida.
 | 4,6–5,0 | Excelente |
 
 **Distinciones** (las piden los jurados, no el metodólogo):
-- **Meritoria:** promedio de jurados 4,6–4,99, **ninguna** nota individual < 4,5, la solicita al menos 1 jurado.
+- **Meritoria:** promedio de jurados 4,6–4,99, **ninguna evaluación** inferior a 4,5, la solicita al menos 1 jurado.
 - **Laureada:** promedio de jurados **= 5,0**, la solicitan **ambos** jurados.
 
-Consecuencia práctica: **un 5,0 no es «me gustó mucho», es una propuesta de laureada.** Y una nota de
-4,4 en un solo criterio bloquea la meritoria del grupo entero. Si vas a poner 4,4, ten la página.
+Consecuencia práctica: **un 5,0 no es «me gustó mucho», es una propuesta de laureada.** Y **la nota de
+un jurado** por debajo de 4,5 bloquea la meritoria del grupo entero. Si vas a poner 4,4, ten la página.
+
+> ⚠️ **«Ninguna evaluación inferior a 4,5» es por jurado, no por criterio.** La p. 11 habla de las
+> calificaciones que entregan el metodólogo y los jurados; los cuatro criterios de la hoja de
+> respuestas (dominio · claridad · coherencia · defensa) son una **retícula interna** del jurado, no
+> notas que se reporten, y no existen en el instructivo. Bajar un criterio interno a 4,3 con la página
+> en la mano **no** bloquea nada mientras la nota reportada siga en 4,6. Nunca sugieras inflar un
+> criterio «para no hacer daño»: eso falsea la evidencia por una regla que nadie impuso.
 
 **Los cuatro criterios que el jurado evalúa de verdad** (Sesión 12, guion de Trabajo de Grado):
 **dominio del tema · claridad · coherencia del documento · capacidad de defensa.** No la belleza de
@@ -309,16 +330,37 @@ Fichas de evaluacion/
   banderas administrativas (grupos de 4, documentos no entregados, correos mal escritos). Sus enlaces
   apuntan a la **carpeta** de cada grupo, no a un archivo suelto.
 - `LEEME.md` — media página: la estructura y el flujo (antes de la sala · en la sala · después).
-- **`2 - Hoja de respuestas`** es la pieza que se usa de verdad, y la más fácil de arruinar. Reglas:
-  **lleva ya escritas, textuales, las tres preguntas de la §5 de esa ficha**, cada una con su hueco
-  debajo (`Contestó: [ ] Sí [ ] A medias [ ] La esquivó`, una línea para la frase textual y un
-  `Verificar después: p. ____`); los condicionales de la §6 como casillas; los umbrales de la §7
-  copiados; una tabla de cuatro criterios con los rangos para rodear. **Se personaliza leyendo la
-  ficha de ese grupo: nunca la misma plantilla genérica trece veces.** Y **tiene que caber en una
-  cara**: en sala se rellena, no se lee.
+- **`2 - Hoja de respuestas`** es la pieza que se usa de verdad, y la más fácil de arruinar. Su orden
+  es el de la sesión, y **todo lo que hay que marcar u oír va en la primera cara**:
+  1. cabecera con hora de entrada, minutos usados, fallas de plataforma y un renglón por integrante
+     para «quién habló y de qué»;
+  2. **§A**, un renglón de pauta rotulado por bloque (problema · objetivos · método · resultados ·
+     discusión · aporte) con `✓ ~ ✗` para rodear;
+  3. **REQUISITOS PARA 4,6+**, las condiciones de la §7 de la ficha convertidas en **casillas**, porque
+     se cumplen *durante* la exposición: en prosa y al final no se pueden usar;
+  4. **§B**, los condicionales de la §6 como casillas, cada uno **con la página que lo motiva** y, si la
+     ficha la trae, **la pregunta literal entre « » en una viñeta debajo** — sin eso el condicional es
+     un titular y hay que improvisar la formulación delante del panel;
+  5. un bloque **RESPUESTAS A LOS CONDICIONALES Y A LA RESERVA** de renglones numerables: los
+     condicionales se preguntan y se contestan, y sin este bloque la respuesta no se guarda en ninguna
+     parte;
+  6. **§C**, las tres preguntas de la §5 **textuales**, cada una con `Contestó: [ ] Sí [ ] A medias
+     [ ] La esquivó`, **tres** renglones de frase textual y `Verificar después: p. ____`;
+  7. **§D**, un renglón por criterio con los cuatro rangos separados para rodear, y debajo
+     **`NOTA QUE REPORTO`**, que es la única nota que existe en el acta.
+- **Nada de tablas en la hoja de respuestas.** El generador `guion_md_a_docx.py` crea las tablas con
+  `Table Grid` y sin `w:trHeight`, así que una celda vacía queda de **4,8 mm** de alto: no se puede
+  escribir dentro ni rodear un rango. Renglones de pauta a ancho completo, no cuadrícula. Y que cada
+  renglón **quepa en el ancho útil** (6,8 in con estos márgenes, Calibri 11): si se pasa, la línea se
+  parte y el renglón queda a media página.
+- **Se personaliza leyendo la ficha de ese grupo: nunca la misma plantilla genérica trece veces.** Cabe
+  en dos caras; si hay que elegir, se sacrifica prosa, nunca sitio para escribir.
 - **`4 - Evaluacion.md`** se estructura con la rúbrica de p. 22 (§1 de este documento) y sale de la
-  transcripción o de la hoja escrita. Es lo único de los cuatro archivos que se versiona junto con la
-  ficha, porque es la conclusión revisada y citada, no la materia prima.
+  transcripción o de la hoja escrita: es la conclusión revisada y citada, no la materia prima.
+- **De los cuatro archivos, el único que queda fuera de git es `3 - Transcripcion.md`.** La ficha, la
+  hoja de respuestas (`.md` y `.docx`) y la evaluación **sí se versionan** —verificado con
+  `git check-ignore`—. Consecuencia para la hoja: en ella se anota **la cita corta que va a sostener la
+  nota**, con su página; la transcripción larga y sin revisar va al archivo que no se versiona.
 - **La plantilla de 8 secciones de la ficha NO se toca.** Los umbrales de su §7 se escribieron *antes*
   de oír nada: ahí está su valor probatorio. Si después de la sustentación algo la contradice, eso va
   a `4 - Evaluacion.md`, no encima de la ficha.
@@ -363,7 +405,7 @@ Sin `--out` escribe el `.docx` al lado del `.md`, que es lo que se quiere aquí.
 
 Cinco pasos, en este orden:
 
-1. **Ubica la carpeta por orden** (`Glob ".../Fichas de evaluacion/07*/"`) y abre las dos fuentes:
+1. **Ubica la carpeta por orden** (`Glob ".../Fichas de evaluacion/07*/*"`, con `/*`) y abre las fuentes:
    `1 - Ficha de preparacion.md` (§4 huecos, §5 preguntas, §6 condicionales, §7 umbrales) y lo que
    haya de la sala: `3 - Transcripcion.md` o `2 - Hoja de respuestas.md`.
 2. **Si no hay ninguna de las dos, NO evalúes.** Di qué falta y cómo conseguirlo. Una nota inventada
@@ -373,7 +415,8 @@ Cinco pasos, en este orden:
    **lo que quedó sin verificar**.
 4. **Nota por criterio con la rúbrica de p. 22**: banda citada textual, nota dentro de la banda, peso,
    ponderado. Añade la lectura con los cuatro criterios del jurado y sus umbrales de la §7. Recuerda en
-   el archivo que un 5,0 es proponer laureada y que un 4,4 individual bloquea la meritoria del grupo.
+   el archivo que un 5,0 es proponer laureada y que **la nota de un jurado** por debajo de 4,5 bloquea la
+   meritoria del grupo — no un criterio interno de la hoja, que no se reporta.
 5. **Cierra con el límite de rol:** el archivo **propone con evidencia**; la nota la pone el jurado
    humano en la sala. Y lo administrativo va en su bloque, aparte de lo académico.
 
@@ -416,11 +459,14 @@ hoja tiene rótulos fijos, idénticos en las trece, y se leen así:
 |---|---|
 | `A · MIENTRAS EXPONEN`, columna `✓ ~ ✗` por bloque | cobertura de la exposición: la evidencia de **claridad** y del reparto del tiempo |
 | `minutos usados` · `fallas de plataforma` | si el demo no corrió por la plataforma, **no se le carga al grupo**: se dice y no se descuenta |
+| `REQUISITOS PARA 4,6+` marcados | las condiciones de la §7 que **sí ocurrieron**: cuántas de las cuatro se cumplieron es el argumento de la banda |
 | `B · CONDICIONALES` marcados | qué escenario de la §6 ocurrió, y por eso se preguntó lo que se preguntó |
+| `RESPUESTAS A LOS CONDICIONALES Y A LA RESERVA` | lo que contestaron a las preguntas condicionales, con su número. Es la única evidencia de esas respuestas: no hay `Contestó:` para ellas |
 | `C · Contestó: Sí / A medias / La esquivó` | el veredicto por pregunta, ya emitido por el jurado en sala; se respeta |
-| `Frase textual:` | la única cita oral que existe. Va entre comillas y con el sello de anotada a mano |
+| `Frase textual:` (tres renglones) | la única cita oral que existe. Va entre comillas y con el sello de anotada a mano |
 | `Verificar después: p. ___` | tarea pendiente: ábrela y resuélvela en la evaluación. Es el puente entre lo oído y el documento |
-| `D`, rangos rodeados y notas | el punto de partida del jurado: la evaluación lo sostiene o lo discute **con evidencia**, no lo sustituye |
+| `D`, rangos rodeados por criterio | el punto de partida del jurado: la evaluación lo sostiene o lo discute **con evidencia**, no lo sustituye |
+| `NOTA QUE REPORTO` | **la nota que existe de verdad**, la que quedó en el acta. Los cuatro criterios de arriba la explican; no la reemplazan |
 | `Quién habló y de qué` | lo único que autoriza hablar de dominio individual |
 
 - **Una casilla en blanco no es un «no».** Es **no registrado**: en 20 minutos se marca lo que se
@@ -471,8 +517,14 @@ que se le dice, sin prometerle que aparecerá.
       una nota de «coherencia del documento».
 - [ ] La carpeta está nombrada por **orden de sustentación** y el código que contiene se verificó en la
       hoja `MARIA-ESPTD`, no en otra.
-- [ ] La `2 - Hoja de respuestas` lleva **las preguntas de esa ficha**, textuales, y cabe en una cara.
-- [ ] **Ninguna cédula** en ningún archivo, y ninguna transcripción camino de git.
+- [ ] La `2 - Hoja de respuestas` lleva **las preguntas de esa ficha**, textuales; sus condicionales
+      llevan página y, cuando la ficha la trae, la pregunta literal; **no tiene ni una tabla**; cada
+      condicional y cada pregunta tienen renglón donde anotar la respuesta; y está la línea
+      `NOTA QUE REPORTO`.
+- [ ] Cada renglón de pauta cabe en el ancho útil de la página, comprobado en el `.docx`.
+- [ ] **Ninguna cédula** en ningún archivo, y ninguna transcripción camino de git. Si se corrió
+      `proyectos_sustentacion.py --json`, el archivo quedó dentro de `Especializacion/Evaluaciones/`
+      (donde `*.json` está ignorado) y `git status` no lo lista.
 - [ ] No se borró nada y los `desktop.ini` siguen donde estaban; lo que sobra se reportó, no se eliminó.
 - [ ] Los `.docx` que se hayan tocado se regeneraron desde su `.md` con `guion_md_a_docx.py`.
 
@@ -490,4 +542,6 @@ que se le dice, sin prometerle que aparecerá.
 - [ ] Si hay dos fuentes, cada criterio dice de cuál sale; ninguna frase oral se atribuye a un
       integrante sin que el archivo identifique al hablante.
 - [ ] Se rellenó el `4 - Evaluacion.md` que ya estaba en la carpeta, con sus mismos títulos y tablas.
+- [ ] La lectura de la meritoria es la del instructivo: **por nota de jurado**, no por criterio interno.
+      En ningún sitio se sugiere subir un criterio «para no bloquear» nada.
 - [ ] **Ninguna cédula** en la evaluación: del cronograma solo salen orden, código, título, fecha y hora.

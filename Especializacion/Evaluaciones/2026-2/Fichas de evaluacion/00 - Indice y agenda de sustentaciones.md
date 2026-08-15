@@ -226,10 +226,11 @@ Se listan juntos porque en un solo correo se resuelven: **ninguno de los 13 docu
 
 1. **Antes del turno de cada grupo**, abrir su subcarpeta y leer de `1 - Ficha de preparacion` solo las secciones 1 y 4: cinco minutos de resumen y los huecos con página.
 2. **Al empezar el turno, lo que se tiene delante es `2 - Hoja de respuestas`, no la ficha.** Ahí ya están impresas las tres preguntas de ese grupo, sus condicionales y sus umbrales, con los huecos para escribir: en sala se rellena, no se redacta. La ficha queda al lado, para consultar una página.
-3. **Durante la exposición**, marcar en la §A y la §B de esa hoja **lo que sí dijeron**: cada condicional marcado elige la pregunta que voy a hacer.
-4. **En mis 3 minutos**, leer la pregunta tal cual está escrita en la §C y anotar debajo la frase textual; si solo cabe una, la 1 (excepción anotada: en G-009, la 1 y la 3).
-5. **Al cerrar**, rodear el rango en la §D con los umbrales de la §7, no con la impresión general: si voy a bajar de 4,5, tengo que poder decir la página.
-6. **Después de la sesión**, pegar la transcripción en `3 - Transcripcion.md` **si llegó** (lo normal es que no llegue: la sala es de la moderadora) y pasar la hoja escrita a `4 - Evaluacion.md`, que es lo único de esos cuatro archivos que se versiona junto con la ficha.
+3. **Durante la exposición**, todo se marca en la primera cara: la §A (qué bloque cubrieron, con un renglón para la frase que importe), las casillas de **REQUISITOS PARA 4,6+** —esas condiciones se cumplen mientras hablan, no al final— y la §B, donde cada condicional marcado elige la pregunta que voy a hacer y trae ya la página y, cuando la ficha la tiene, la pregunta literal para leerla tal cual.
+4. **Lo que contesten a un condicional se escribe en el bloque `RESPUESTAS A LOS CONDICIONALES Y A LA RESERVA`**, con el número del condicional delante. Es el único sitio donde queda: esas preguntas no tienen `Contestó:`.
+5. **En mis 3 minutos**, leer la pregunta tal cual está escrita en la §C y anotar debajo la frase textual —hay tres renglones por pregunta—; si solo cabe una, la 1 (excepción anotada: en G-009, la 1 y la 3).
+6. **Al cerrar**, rodear el rango de cada criterio en la §D con los umbrales de la §7, no con la impresión general, y **escribir la nota única en `NOTA QUE REPORTO`**: es la que queda en el acta. Los cuatro criterios son mi retícula interna; el instructivo no publica ponderación entre ellos. Si esa nota baja de 4,5, tengo que poder decir la página.
+7. **Después de la sesión**, pegar la transcripción en `3 - Transcripcion.md` **si llegó** (lo normal es que no llegue: la sala es de la moderadora) y pasar la hoja escrita a `4 - Evaluacion.md`. De los cuatro archivos, el único que no entra a git es la transcripción.
 7. **Lo administrativo va por escrito a la Dirección** (§3 de este documento) y **nunca a la sala**: no se le pregunta a un estudiante por la carpeta vacía de su grupo en público.
 
 ---

@@ -8,6 +8,13 @@ __pycache__/
 config/slides/_secrets/credentials.json
 config/slides/_secrets/token*.json
 
+# Volcados de `config/evaluaciones/proyectos_sustentacion.py --json`: llevan un campo
+# "cedula" por cada integrante. Su sitio es `Especializacion/Evaluaciones/`, donde el
+# .gitignore de esa carpeta ignora todo `*.json`; esto es solo el cinturón por si el
+# comando se corre desde la raíz con el nombre de ejemplo.
+mis_proyectos.json
+proyectos_sustentacion*.json
+
 # Temporales de sistema / Google Drive
 .DS_Store
 Thumbs.db

@@ -25,14 +25,18 @@ El índice y la agenda hora por hora están en `00 - Indice y agenda de sustenta
 página). Imprimir o abrir en tableta las 13 `2 - Hoja de respuestas.docx`.
 
 **En la sala** — la hoja de respuestas delante, la ficha al lado por si hay que confirmar una página.
-Se marca mientras exponen (§A qué bloque cubrieron, §B qué condicional se cumplió), se lee en voz alta
-la pregunta **tal como está escrita** en la §C y se anota la frase textual debajo, y al cerrar se rodea
-el rango en la §D. Escribir es rellenar, no redactar.
+Mientras exponen se marca todo en la primera cara: §A qué bloque cubrieron y una frase por bloque, las
+casillas **REQUISITOS PARA 4,6+** (se cumplen mientras hablan, no al final) y §B qué condicional se
+cumplió —cada marca trae su página y, cuando existe, la pregunta literal—; lo que contesten a un
+condicional va en el bloque **RESPUESTAS A LOS CONDICIONALES Y A LA RESERVA**, con su número delante.
+En mis 3 minutos se lee la pregunta **tal como está escrita** en la §C y se anota la frase textual en
+sus tres renglones. Al cerrar se rodea el rango de cada criterio en la §D y se escribe la nota única en
+`NOTA QUE REPORTO`. Escribir es rellenar, no redactar.
 
 **Después** — pegar la transcripción en `3 - Transcripcion.md` si la moderadora la comparte (lo normal
 es que **no** llegue: la sala es suya y solo el anfitrión puede transcribir), y pasar la hoja escrita a
 `4 - Evaluacion.md` con el agente `evaluador-proyectos-grado-cun`. Sin transcripción ni hoja, el agente
-no evalúa: dice qué falta.
+no evalúa: dice qué falta. De los cuatro archivos, el único que no entra a git es la transcripción.
 
 ## Tres reglas que no se negocian
 
