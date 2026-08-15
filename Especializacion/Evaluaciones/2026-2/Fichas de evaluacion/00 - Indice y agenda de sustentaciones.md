@@ -5,7 +5,16 @@
 **Dos jornadas, 13 grupos, 32 estudiantes:** martes 18 de agosto, 6:00–9:00 p. m. (G-001 a G-009) y miércoles 19 de agosto, 6:00–7:20 p. m. (G-010 a G-013).
 **Fuente administrativa:** hoja `MARIA-ESPTD` del `CRONOGRAMA SUSTENTACIÓN 26ET2.xlsx` (día, horario, integrantes, correos, línea y objetivo general transcrito por la Dirección).
 
-> Este archivo es el mapa, no el territorio. Lo que sustenta cada pregunta —el resumen del proyecto, la evidencia por objetivo, las fortalezas, los huecos con página, las preguntas condicionales y los umbrales de nota— está en la ficha de cada grupo, un archivo por grupo en esta misma carpeta.
+> Este archivo es el mapa, no el territorio. Lo que sustenta cada pregunta —el resumen del proyecto, la evidencia por objetivo, las fortalezas, los huecos con página, las preguntas condicionales y los umbrales de nota— está en la ficha de cada grupo, y cada grupo tiene **su propia subcarpeta** en esta carpeta, nombrada por el **orden de sustentación**: `01 - G-001 - …` hasta `13 - G-013 - …`. El orden alfabético del explorador es el orden en que van a sustentar.
+>
+> **Dentro de cada subcarpeta, siempre los mismos cuatro nombres, numerados por el orden en que se usan:**
+>
+> | Archivo | Cuándo | Para qué |
+> |---|---|---|
+> | `1 - Ficha de preparacion.md` / `.docx` | los 5 minutos **antes** del turno | las 8 secciones de siempre: resumen, huecos con página, preguntas, umbrales. No se escribe en ella |
+> | `2 - Hoja de respuestas.md` / `.docx` | **en sala**, los 20 minutos | lo único que hay que tener delante: las 3 preguntas de esa ficha ya impresas, con casillas y huecos. **Se llena a mano** |
+> | `3 - Transcripcion.md` | **si** llega la transcripción de la llamada | donde se pega. **Fuera de git** (voz y nombres de estudiantes) |
+> | `4 - Evaluacion.md` | **después** | la evaluación criterio por criterio con la rúbrica de Proyecto II · ACA 3; la escribe el agente, la nota la pone el jurado |
 
 **Cuadro de tiempos.** 9 grupos × 20 minutos = 180 minutos exactos el martes; 4 × 20 = 80 minutos exactos el miércoles. **No hay un solo minuto de holgura:** cada retraso lo paga el último turno (G-009 el martes, G-013 el miércoles). Con exposición de 10–12 minutos y preguntas de tres evaluadores en lo que queda, **al Jurado 2 le tocan unos 3 minutos**: alcanzan dos preguntas bien hechas, tres si el grupo responde corto. Las preguntas de cada bloque están en orden de prioridad: si solo cabe una, es la 1.
 
@@ -28,63 +37,63 @@
 | 8:40 – 9:00 | **G-009** | Ecosistema digital de RR. HH. con células ágiles | 2 | 126 p. + 23 diap. |
 
 #### 6:00 – 6:20 · G-001 · TuFinca: módulo pecuario y chatbot
-*Ficha: `26ET2-G-001 - Sistema agropecuario TuFinca con chatbot.md`*
+*Carpeta: `01 - G-001 - Sistema agropecuario TuFinca con chatbot/`*
 1. «¿Los tiempos del procedimiento manual que reportan en la Tabla 26 se midieron antes de implementar el sistema, o los mismos seis operarios reprodujeron el método manual en la misma jornada de pruebas, cuando ya conocían TuFinca?»
 2. «El documento nombra la tecnología de todas las capas —Blazor Server, ASP.NET Core, Entity Framework, SQL Server— menos la del motor conversacional, del que solo dice qué hace: ¿con qué se implementó concretamente la interpretación de intenciones y la extracción de entidades?»
 3. «El sistema quedó desplegado en Azure y ustedes le recomiendan a la finca dejar los registros en papel en una fecha definida: ¿quién paga y administra ese hosting a partir de hoy, y el sistema sigue en línea?»
 > Abren la jornada: si el demo se cae por la plataforma y no por el proyecto, no cargárselo a ellos (ficha §8).
 
 #### 6:20 – 6:40 · G-002 · PWA turística de Rivera (Huila)
-*Ficha: `26ET2-G-002 - Plataforma turistica PWA Rivera Huila.md`*
+*Carpeta: `02 - G-002 - Plataforma turistica PWA Rivera Huila/`*
 1. «El documento dice, al cerrar el apartado 8.6 —folio 68, página 70 del PDF—, que el módulo de chat se contempla como la siguiente fase de desarrollo, y al cerrar el 8.7 —folio 71, página 73 del PDF— que ya opera sobre el entorno productivo. ¿Cuál de las dos es el estado a hoy? Y si está operando, hágale en vivo una pregunta que esté fuera de alcance, para ver la respuesta que ustedes describen en el folio 69.»
 2. «El objetivo 4 es evaluar el impacto potencial. Ustedes diseñaron el protocolo de usabilidad de las tablas 21 a 23, pero la columna “Valor obtenido” de la tabla 23 está vacía. ¿Consideran el objetivo cumplido con el diseño del instrumento, y qué impidió aplicarlo si el prototipo estaba en producción desde julio?»
 3. «El objetivo general habla de fortalecer los emprendimientos productivos, y la tabla 18 registra las pruebas de los perfiles empresario, editor y administrador como “por anexar la captura”. ¿Cuántos empresarios de Rivera tienen hoy una publicación creada por ellos mismos en la plataforma y qué pasó cuando pasó por el flujo de moderación de la Secretaría?»
 > Al citar en voz alta: el folio impreso va **dos números por debajo** de la página del PDF. Decir el apartado, no solo el número.
 
 #### 6:40 – 7:00 · G-003 · Archivo municipal de San Francisco (Putumayo)
-*Ficha: `26ET2-G-003 - Modernizacion archivo municipal San Francisco.md`*
+*Carpeta: `03 - G-003 - Modernizacion archivo municipal San Francisco/`*
 1. «Su Tabla 14 distingue con mucho cuidado lo implementado y probado de lo que está solo representado en la interfaz, y ubica el cifrado AES-256 y el hash SHA-256 en el segundo grupo. La diapositiva 10 concluye, en cambio, que se verificó la integridad con cifrado AES-256. ¿Me pueden precisar qué quedó implementado y probado en el prototipo y qué está representado a nivel de interfaz?»
 2. «El documento precisa tres veces que el FUID se aplicó sobre una muestra y no sobre el censo de la vigencia 2024, mientras la diapositiva 4 dice muestra de tipo censal. ¿Cuántos expedientes o cuántos folios quedaron efectivamente inventariados, y con qué criterio se escogieron?»
 3. «Su cuarto objetivo es verificar el prototipo en un entorno institucional controlado. La verificación documentada se hizo sobre un portátil personal, en localhost, y la implementación institucional aparece como proyectada. ¿Algún funcionario de la Secretaría usó el prototipo, y con qué datos: expedientes reales de 2024 o datos de prueba?»
 > Son cuatro integrantes en 20 minutos: pedir de entrada a la moderadora que expongan máximo dos y respondan los otros. La diapositiva 9 depende de un video y el `.pptx` pesa ~52 MB.
 
 #### 7:00 – 7:20 · G-004 · Gestión del cambio en seguridad electrónica
-*Ficha: `26ET2-G-004 - Gestion del cambio en seguridad electronica.md`*
+*Carpeta: `04 - G-004 - Gestion del cambio en seguridad electronica/`*
 1. «Su objetivo general es *determinar la incidencia*. En la página 98 el modelo OLS les da p = 0,000 y un beta de 0,5746, y en la 99 un R² de 0,076, y lo presentan como incidencia positiva probada. En la página 102, con los mismos mil registros, el modelo les da R² = 0,003 y p = 0,063, y ustedes mismos escriben que carece de significancia estadística. ¿Cuál de los dos responde el objetivo general, y qué cambió entre uno y otro?»
 2. «Necesito entender el denominador: en la página 42 los mil usuarios del Nivel Central son el 33 % del total de la entidad; en la página 48 los mil registros son el 33 % de la población contactada; y en la página 74 hablan de “los 1.000 funcionarios del Nivel Central”. ¿Cuántas personas trabajan en Nivel Central, a cuántas se les envió el formulario y cuántas respondieron?»
 3. «En la página 102 la capacitación es la variable de impacto casi nulo, con beta de 0,008, y en la página 101 ustedes concluyen que la gente usa los sistemas por obligatoriedad y no por la gestión. Su Línea I apuesta justamente por más capacitación, con laboratorios de simulación. ¿Por qué esa apuesta, y con qué indicador sabrían en 2027 que funcionó?»
 > 32 diapositivas para 20 minutos: si el moderador lo permite, pedirles al inicio que prioricen resultados y producto.
 
 #### 7:20 – 7:40 · G-005 · Predicción de fallas SCADA-OMS-GIS en CENS
-*Ficha: `26ET2-G-005 - Prediccion de fallas SCADA-OMS-GIS en CENS.md`*
+*Carpeta: `05 - G-005 - Prediccion de fallas SCADA-OMS-GIS en CENS/`*
 1. «El documento dice con claridad que no hubo acceso a los sistemas productivos de CENS y que todo el análisis se hizo sobre un conjunto sintético —lo dicen en la página 14 y lo repiten en la 112—, pero en las diapositivas 7 y 10 la población aparece como 87.500 eventos históricos y 600.000 usuarios de CENS sin ese matiz: cuéntenme cómo generaron ese conjunto y qué de lo que concluyen sigue en pie sabiendo que los patrones que el modelo aprendió los pusieron ustedes al generar los datos.»
 2. «Ustedes fijaron como resultados esperados un AUC superior a 0,75 y un recall mínimo del 70 % —página 28—, y lo que obtuvieron fue un AUC de 0,616 con XGBoost y un recall máximo de 0,297 con Random Forest: ¿por qué esa comparación no aparece en las conclusiones y qué lectura técnica hacen de esa distancia?»
 3. «En la página 71 y en la diapositiva 13 hablan de un prototipo funcional en Streamlit que integra el modelo y SHAP, pero entre las dieciséis figuras del documento no hay ni una captura del tablero: ¿está corriendo hoy, y pueden describirme qué se ve en pantalla cuando se consulta el activo ACT-012907?»
 > Lo del dato sintético conviene acordarlo antes con la moderadora: que lo pida ella al inicio o que el grupo lo aclare motu proprio. No convertirlo en un «pillado» del jurado.
 
 #### 7:40 – 8:00 · G-006 · Sistema web de licitaciones (Agroindustrial de Palma)
-*Ficha: `26ET2-G-006 - Sistema web de licitaciones Agroindustrial Palma.md`*
+*Carpeta: `06 - G-006 - Sistema web de licitaciones Agroindustrial Palma/`*
 1. «Su cuarto objetivo pide medición comparativa de madurez digital, y en la página 76 declaran un instrumento de cinco dimensiones —automatización, integración, analítica, seguridad y gobernanza— en escala de 1 a 5, antes y después. Lo que reportan en la página 235 es la matriz ADKAR de adopción. ¿Con qué instrumento, cuándo y a quiénes midieron el 35 % de línea base?»
 2. «El valor del proyecto está en el motor multicriterio que genera el ranking, y ustedes conservaron la decisión final en la Dirección Administrativa. En las 10 licitaciones ya ejecutadas, ¿en cuántas se adjudicó al proveedor sugerido por el sistema, y qué pasó en las que no?»
 3. «La página 100 dice que consolidación y evaluación, juntas, tomaban unas 32 horas. La Tabla 55 de la página 233 abre dos indicadores y le asigna 32 horas a cada uno, los dos con una reducción del 98,4 %. ¿Son dos bloques distintos de tiempo o es el mismo bloque contado dos veces?»
 > El documento va marcado «CONFIDENCIAL» y las capturas traen datos de proveedores y estados financieros: cuidado con lo que se lea en voz alta.
 
 #### 8:00 – 8:20 · G-007 · Modelo de diagnóstico de madurez digital en pymes
-*Ficha: `26ET2-G-007 - Diagnostico de madurez digital en pymes.md`*
+*Carpeta: `07 - G-007 - Diagnostico de madurez digital en pymes/`*
 1. «En la tabla 13 de la página 84, y también en su diapositiva 16, la correlación entre madurez digital y competitividad aparece como “001”. ¿Cuál es el coeficiente que obtuvieron, con qué prueba lo calcularon —Pearson o Spearman— y sobre qué par de variables?»
 2. «El índice de competitividad digital que reportan empresa por empresa en la tabla 12 de la página 83, ¿con qué ítems y con qué fórmula se calcula, si el cuestionario de la página 34 solo pregunta por dimensiones de madurez digital?»
 3. «En la página 79 su tabla de validación certifica “OK” la distribución de 12 avanzado, 10 intermedio y 8 inicial-intermedio; en la página 80, la tabla 10 reporta 13 avanzado, 1 intermedio, 6 básico y 10 inicial para las mismas 30 empresas. ¿Cuál de las dos clasifica el modelo que entregan, y con qué escala: 0 a 3 o 1 a 4?»
 > El título del cronograma trae tres erratas: el título correcto es el de la portada (p. 1). Avisar al moderador antes de leerlo en público.
 
 #### 8:20 – 8:40 · G-008 · Modelo conceptual de energía solar rural (Valle del Cauca)
-*Ficha: `26ET2-G-008 - Modelo conceptual energia solar rural.md`*
+*Carpeta: `08 - G-008 - Modelo conceptual energia solar rural/`*
 1. «En el documento el corpus son 35 fuentes (p. 40), en su diapositiva de metodología dicen 52, y en la matriz de las pp. 44 y 45 la IEA 2022 está registrada dos veces, como D06 y como D16 —igual que Deloitte, McKinsey y Verhoef—. ¿Cuántas fuentes distintas analizaron realmente y cómo controlaron la duplicación?»
 2. «El título y el objetivo general están anclados al Valle del Cauca, pero en la matriz de caracterización (pp. 43-48) ninguna de las fuentes tiene alcance Valle del Cauca, y los documentos de la Gobernación, la CVC y el DANE están en las referencias y no en el corpus. ¿Qué parte del modelo es específica del Valle del Cauca y qué parte sería idéntica para cualquier zona rural del país?»
 3. «En su diapositiva de resultados aparecen tres porcentajes: 87 %, 81 % y 76 %. ¿Cómo se calcularon y sobre cuántas fuentes, considerando que la p. 42 del documento dice que la codificación en Excel no se usó como procedimiento de análisis estadístico?»
 > Aviso operativo: el PDF de la presentación tiene 141 páginas porque desde la p. 13 trae pegado el documento completo. Hay que pararse en la diapositiva 12.
 
 #### 8:40 – 9:00 · G-009 · Ecosistema digital de RR. HH. con células ágiles
-*Ficha: `26ET2-G-009 - Ecosistema digital RRHH con celulas agiles.md`*
+*Carpeta: `09 - G-009 - Ecosistema digital RRHH con celulas agiles/`*
 1. «En el diseño metodológico, la fase 2 registra como actividad la conformación de cuatro células ágiles de cinco a siete miembros, con Scrum/Kanban y sprints quincenales (p. 48); pero al cerrar el capítulo el modelo se plantea como guía para una futura implementación (p. 88). ¿Esas cuatro células se conformaron con personas de la empresa y alcanzaron a correr algún sprint, o el segundo objetivo se cerró en el nivel de diseño?»
 2. «En la Tabla 14 los dieciséis indicadores llevan como línea base la palabra “Diagnóstico inicial” (pp. 93-97). Denme un número: ¿cuánto es hoy el tiempo promedio de cubrimiento de una vacante en esa empresa, y de dónde sale ese dato?»
 3. «Las figuras 11 a 14 muestran interfaces del ecosistema (pp. 89-91) y ustedes aclaran que los datos del tablero son ilustrativos (p. 97). ¿Esas pantallas son aplicaciones construidas en Power Apps que se pueden abrir en un entorno, o son maquetas del diseño funcional? Y si están construidas, ¿sobre qué listas de SharePoint corren?»
@@ -100,14 +109,14 @@
 | 7:00 – 7:20 | **G-013** | Estrategia digital para tesorería de cooperativas | 1 | 85 p. + 16 diap. |
 
 #### 6:00 – 6:20 · G-010 · Plataforma de preparación para concursos DIAN
-*Ficha: `26ET2-G-010 - Plataforma preparacion concursos DIAN.md`*
+*Carpeta: `10 - G-010 - Plataforma preparacion concursos DIAN/`*
 1. «¿Cuál de las dos arquitecturas es la que ustedes construyeron y por qué el documento no registra el cambio?» — los objetivos comprometen Glide Apps/AppSheet, Google Sheets y Looker Studio (pp. 15-16, 26-27) y los resultados describen Power Pages, Microsoft Forms, Excel y Power BI (pp. 38, 50-51).
 2. «En el objetivo 4 aparecen 10 personas (p. 42) y luego 100 funcionarios de la DIAN (pp. 52, 59, 65): ¿cuántos usuarios probaron realmente el prototipo, quiénes eran y cómo consiguieron ese acceso?»
 3. «Su pregunta de investigación es cómo influye la plataforma en el *rendimiento* (p. 14) y la metodología anuncia medir “rendimiento inicial y final” (p. 28), pero el diseño es no experimental transeccional (p. 30) y todos los datos reportados son de percepción (pp. 53-73): ¿tienen puntajes del mismo usuario en dos momentos y, si no, cómo debería leerse la conclusión de la p. 74?»
 > No entregaron presentación: si sustentan con diapositivas no cargadas, no hubo posibilidad de revisarlas y califico contra el documento.
 
 #### 6:20 – 6:40 · G-011 · Intranet CDS para atención al cliente
-*Ficha: `26ET2-G-011 - Intranet CDS para atencion al cliente.md`*
+*Carpeta: `11 - G-011 - Intranet CDS para atencion al cliente/`*
 > **Grupo sin documentos.** Las tres preguntas salen solo del título y del objetivo general del cronograma; ninguna presupone contenido de un documento que no existe. **El paradero del documento se habla con el director, no en sala.**
 1. «Su objetivo general dice “diseñar e implementar”. Cuéntenos en qué estado está hoy la intranet en el Centro de Servicios: ¿está en operación, desde qué fecha y quiénes la usan?»
 2. «El título promete optimizar la atención al cliente y el objetivo trabaja sobre la higienización de bases de datos. ¿Qué indicador midió antes y después de la intranet, y cuánto cambió?»
@@ -115,14 +124,14 @@
 > Reserva útil si la exposición va desordenada: «enúncienos sus objetivos específicos y dígame, uno por uno, dónde quedó el resultado de cada uno».
 
 #### 6:40 – 7:00 · G-012 · Simulador de asignación de pauta digital
-*Ficha: `26ET2-G-012 - Simulador presupuestal de pauta digital.md`*
+*Carpeta: `12 - G-012 - Simulador presupuestal de pauta digital/`*
 1. «En su Tabla 10 la distribución recomendada sube el promedio de clics de 6.902 a 10.441, pero el intervalo p10-p90 se abre de 5.484–8.384 a 7.064–14.228, y ustedes mismos escriben que la función objetivo no penaliza el riesgo. Si un director de agencia les pide una recomendación con ese resultado en la mano, ¿le entregan la distribución que maximiza el promedio o la que protege el p10, y con qué argumento?»
 2. «Con CPC y tarifa constante, los clics crecen proporcionalmente a la inversión, y su Tabla 13 muestra que con 500, 1.000 o 3.000 distribuciones candidatas el óptimo es el mismo 88 % en TikTok. ¿Qué aporta entonces evaluar 5.000 distribuciones, y qué tendría que incorporar el modelo para que la recomendación no fuera siempre “todo a la plataforma más barata con el 5 % mínimo en las otras”?»
 3. «La nota de su Tabla 7 y el paso 5 de su manual dicen que la validación documentada usó clics como función objetivo; su presentación anuncia tres casos con objetivos de alcance, clics y visualizaciones, con presupuestos que no aparecen en el documento. ¿Ejecutaron el simulador maximizando alcance y visualizaciones, y dónde quedó registrada esa corrida?»
 > Son cuatro integrantes: pedir que responda quien no expuso.
 
 #### 7:00 – 7:20 · G-013 · Estrategia digital para tesorería de cooperativas
-*Ficha: `26ET2-G-013 - Estrategia digital tesoreria cooperativas Bogota.md`*
+*Carpeta: `13 - G-013 - Estrategia digital tesoreria cooperativas Bogota/`*
 1. «Su tercer objetivo específico, en la página 16, es desarrollar un prototipo funcional del MACM en un entorno de simulación y validarlo con pruebas funcionales e indicadores. El panel de la página 62 reporta 94,2 % de conciliación autónoma y 12 casos por auditar: ¿sobre cuántos registros y sobre qué archivo de datos simulados se calculó ese 94,2 %, y dónde está el informe de pruebas que usted anuncia como entregable en la página 42?»
 2. «La metodología, en la página 33, anuncia seis participantes: dos directivos, tres funcionarios de tesorería y un responsable de TI, con entrevistas semiestructuradas; los resultados de la página 45 reportan una encuesta con n igual a 10, seis auxiliares y cuatro analistas; y el anexo trae tres encuestas diligenciadas de Control Operativo, Contabilidad y Cartera. ¿Cuántas encuestas se aplicaron finalmente, a qué áreas, y qué pasó con las entrevistas a directivos y a TI?»
 3. «El título y el objetivo general hablan de las cooperativas financieras de la ciudad de Bogotá, pero el diseño es un estudio de caso único en una sola cooperativa, con diez encuestas de un área. ¿Qué parte de su estrategia es transferible a otra cooperativa de Bogotá y qué parte solo funciona en la entidad que estudió?»
@@ -215,11 +224,13 @@ Se listan juntos porque en un solo correo se resuelven: **ninguno de los 13 docu
 
 ## 4. CÓMO SE USA ESTO
 
-1. **Antes del turno de cada grupo**, abrir su ficha y leer solo las secciones 1 y 4: cinco minutos de resumen y los huecos con página.
-2. **Durante la exposición**, tener a la vista la §6 de la ficha y **marcar lo que sí dijeron**: cada condicional cumplido cambia la pregunta que voy a hacer.
-3. **En mis 3 minutos**, preguntar en el orden del bloque de esta agenda; si solo cabe una, la 1 (excepción anotada: en G-009, la 1 y la 3).
-4. **Al cerrar**, poner la nota con los umbrales de la §7 de la ficha, no con la impresión general: si voy a bajar de 4,5, tengo que poder decir la página.
-5. **Lo administrativo va por escrito a la Dirección** (§3 de este documento) y **nunca a la sala**: no se le pregunta a un estudiante por la carpeta vacía de su grupo en público.
+1. **Antes del turno de cada grupo**, abrir su subcarpeta y leer de `1 - Ficha de preparacion` solo las secciones 1 y 4: cinco minutos de resumen y los huecos con página.
+2. **Al empezar el turno, lo que se tiene delante es `2 - Hoja de respuestas`, no la ficha.** Ahí ya están impresas las tres preguntas de ese grupo, sus condicionales y sus umbrales, con los huecos para escribir: en sala se rellena, no se redacta. La ficha queda al lado, para consultar una página.
+3. **Durante la exposición**, marcar en la §A y la §B de esa hoja **lo que sí dijeron**: cada condicional marcado elige la pregunta que voy a hacer.
+4. **En mis 3 minutos**, leer la pregunta tal cual está escrita en la §C y anotar debajo la frase textual; si solo cabe una, la 1 (excepción anotada: en G-009, la 1 y la 3).
+5. **Al cerrar**, rodear el rango en la §D con los umbrales de la §7, no con la impresión general: si voy a bajar de 4,5, tengo que poder decir la página.
+6. **Después de la sesión**, pegar la transcripción en `3 - Transcripcion.md` **si llegó** (lo normal es que no llegue: la sala es de la moderadora) y pasar la hoja escrita a `4 - Evaluacion.md`, que es lo único de esos cuatro archivos que se versiona junto con la ficha.
+7. **Lo administrativo va por escrito a la Dirección** (§3 de este documento) y **nunca a la sala**: no se le pregunta a un estudiante por la carpeta vacía de su grupo en público.
 
 ---
 

@@ -16,3 +16,27 @@
 
 # Atajos de Google Drive a la carpeta compartida: son específicos de esta máquina.
 *.lnk
+
+# Transcripciones de las sustentaciones y cualquier medio de la llamada: TAMPOCO ENTRAN.
+#
+# `3 - Transcripcion.md` guarda lo que se dijo en sala: voz, nombres completos, datos de
+# la empresa donde trabaja cada estudiante y todo lo que alguien mencione sin pensar que
+# queda escrito. Es materia prima sin revisar y el mismo criterio que dejó fuera las 196
+# cédulas aplica aquí: al historial de git no entra. Vive en Google Drive, junto a su
+# ficha, y lo que sí se versiona es `4 - Evaluacion.md`, que es la conclusión revisada y
+# citada. Si hace falta citar una frase textual, se cita en la evaluación con su turno o
+# su marca de tiempo, no se copia el archivo entero.
+3 - Transcripcion.md
+3 - Transcripcion*
+*.mp4
+*.mkv
+*.mov
+*.m4a
+*.mp3
+*.wav
+*.srt
+*.vtt
+
+# El JSON de `config/evaluaciones/proyectos_sustentacion.py` emite un campo "cedula".
+# Si alguna vez se corre con `--json` dentro de esta carpeta, que no se pueda commitear.
+*.json
