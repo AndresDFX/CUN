@@ -157,6 +157,47 @@ async () => {
 """
 
 
+def _ventana_cerrada(e: Exception) -> bool:
+    """¿La excepción es «cerraron la ventana», y no un fallo real?"""
+    t = f"{type(e).__name__} {e}".lower()
+    return "targetclosed" in t or "has been closed" in t
+
+
+def _cerrar(ctx) -> None:
+    try:
+        ctx.close()
+    except Exception:
+        pass          # si ya la cerró el usuario, cerrarla otra vez no es un error
+
+
+def _auth_del_perfil(p) -> dict | None:
+    """Lee la sesión del perfil en disco, sin pedirle nada más al usuario.
+
+    El contexto de Chrome es **persistente**: si el SSO llegó a completarse, Firebase dejó la
+    sesión en la IndexedDB del perfil y sigue ahí aunque la ventana se haya cerrado. Así que
+    cerrar la ventana a mitad del proceso no obliga a repetir el inicio de sesión: se vuelve a
+    abrir el perfil —esta vez sin interfaz, porque aquí no hay nada que teclear— solo para leerla.
+    """
+    try:
+        ctx = p.chromium.launch_persistent_context(
+            PERFIL_CHROME, channel="chrome", headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
+    except Exception as e:
+        print(f"   no pude reabrir el perfil para comprobarlo: {str(e)[:200]}")
+        return None
+    try:
+        pg = ctx.pages[0] if ctx.pages else ctx.new_page()
+        pg.goto(URL_APP, wait_until="domcontentloaded", timeout=60000)
+        pg.wait_for_timeout(3000)
+        return pg.evaluate(JS_LEER_AUTH)
+    except Exception as e:
+        print(f"   no pude leer el perfil: {str(e)[:200]}")
+        return None
+    finally:
+        _cerrar(ctx)
+
+
 def cmd_login(args) -> int:
     try:
         from playwright.sync_api import sync_playwright
@@ -195,28 +236,43 @@ def cmd_login(args) -> int:
                 except Exception:
                     print(f"   (no pude pulsar «{etiqueta}» automáticamente; hazlo tú en la ventana)")
 
-        esperado_ms = args.espera * 1000
+        # `--espera 0` significa esperar sin límite: la ventana se queda ahí hasta que el usuario
+        # entre o la cierre. Es lo cómodo cuando no se sabe cuándo va a poder atenderla.
+        esperado_ms = args.espera * 1000 if args.espera else float("inf")
         transcurrido = 0
+        cerrada = False
         while auth is None and transcurrido < esperado_ms:
-            pg.wait_for_timeout(2000)
-            transcurrido += 2000
             try:
+                pg.wait_for_timeout(2000)
                 auth = pg.evaluate(JS_LEER_AUTH)
-            except Exception:
+            except Exception as e:
+                if _ventana_cerrada(e):
+                    cerrada = True
+                    break
                 auth = None       # navegación en curso (redirección de Google)
-            if transcurrido % 20000 == 0 and auth is None:
+            transcurrido += 2000
+            if transcurrido % 60000 == 0 and auth is None:
                 print(f"   ...esperando el inicio de sesión ({transcurrido // 1000}s)")
+
+        if cerrada:
+            # No es un error: quizá inició sesión y cerró la ventana enseguida.
+            print("\nSe cerró la ventana. Compruebo si la sesión quedó en el perfil...")
+            _cerrar(ctx)
+            auth = _auth_del_perfil(p)
 
         if not auth:
             print("\nNo se detectó sesión. Nada se guardó.", file=sys.stderr)
-            ctx.close()
+            if cerrada:
+                print("   (la ventana se cerró antes de completar el inicio de sesión en Google)",
+                      file=sys.stderr)
+            _cerrar(ctx)
             return 1
 
         gestor = auth.get("stsTokenManager") or {}
         refresh = gestor.get("refreshToken")
         if not refresh:
             print("\nSesión detectada pero sin refresh token utilizable.", file=sys.stderr)
-            ctx.close()
+            _cerrar(ctx)
             return 1
 
         correo = (auth.get("email") or "").lower()
@@ -233,10 +289,10 @@ def cmd_login(args) -> int:
             "guardado": datetime.now(timezone.utc).isoformat(),
         })
         print(f"Credencial guardada FUERA del repositorio, en:\n   {ARCHIVO_CRED}")
-        ctx.close()
+        _cerrar(ctx)
 
     print("\nListo. Ya no hace falta el navegador; usa:")
-    print("   python Investigacion/dashboard/synapse.py pendientes")
+    print("   python Investigacion/dashboard/synapse.py calendario")
     return 0
 
 
