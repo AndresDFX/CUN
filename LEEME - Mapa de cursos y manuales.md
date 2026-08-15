@@ -277,6 +277,33 @@ encabezado y `titulos_pptx()` la toma por título.
 
 ---
 
+## Si git dice «bad object refs/desktop.ini»
+
+Este repositorio vive **dentro de Google Drive**, y Drive escribe un `desktop.ini` en cada carpeta
+que decora — incluidas las de `.git`. Git lee cualquier archivo bajo `.git/refs/` como si fuera una
+referencia, así que en cuanto aparece uno ahí, `git fetch` muere con:
+
+```
+fatal: bad object refs/desktop.ini
+error: ... did not send all necessary objects
+```
+
+No es corrupción: son 150 archivos idénticos de 246 bytes (`[.ShellClassInfo]`, UTF-16, apuntando al
+icono de `GoogleDriveFS.exe`). El arreglo es borrarlos y comprobar que el repositorio quedó sano:
+
+```bash
+find .git -iname "desktop.ini" -delete
+git fsck --no-progress    # sin salida = sano
+git fetch origin && git status --short --branch
+```
+
+Va a volver a pasar cada vez que Drive redecore las carpetas. `.gitignore` no sirve para esto: lo
+ignorado es lo del árbol de trabajo, y estos están **dentro** de `.git`, donde `.gitignore` no
+aplica. Ojo con el orden de los síntomas: `git commit` y `git push` siguen funcionando —lo que se
+rompe primero es `fetch`—, así que se puede llevar días sin notarlo.
+
+---
+
 ## Contexto rápido (para un agente nuevo)
 
 Workspace de material docente CUN. Cinco cursos 2026: Proyecto I (esp. IA, 54ES4) + Creatividad, Investigación, TG2 y TG3 (pregrado). Config editable en `config/cursos/carga_academica_2026.json`. Material de estudiantes solo en `Clases/`; guiones solo `.md` en `Guiones/`; oferta en `2026/<grupo>/`. Marca y motor en `cun.json` + `cun_slides_engine.py`.
