@@ -290,8 +290,17 @@ respeta las prórrogas por usuario o por grupo.
 
 ### 5c. Lo que sigue pendiente
 
-1. Activar lo que está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**. Es
-   además la única forma de que un ítem entre al canal nativo: oculto está mudo.
+1. ~~Activar lo que está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**.~~
+   **El Quiz de Proyecto I ya está VISIBLE (15/08/2026)**, con 0 intentos y ventana 03/08 → 30/08.
+   Antes de abrirlo hubo que apagarle «la respuesta correcta» mientras el cuestionario está abierto:
+   con 2 intentos y nota más alta, el intento 1 entregaba la clave y el intento 2 era un 5,0
+   regalado. El detalle y la decisión que queda abierta —¿se abre la clave después de cerrar, sabiendo
+   que el banco se reutiliza?— están en `ALISTAMIENTO CDigital 2026-08-15.md` §5.2 y §5.3.
+
+   **Sigue oculto todo lo demás**: los 30 cuestionarios restantes y las 28 carpetas de material. Es
+   la única forma de que un ítem entre al canal nativo: oculto está mudo. Un cuestionario, además,
+   **no dispara correo nativo ni estando visible** (§5c.3): el proveedor de vencimientos solo cubre
+   tareas.
 2. Volver a correr el paso 3 (`recordatorios.py --programar`) para las seis aulas restantes; los
    avisos de ítems ocultos se saltan solos y aparecerán cuando se activen.
 3. **Cubrir el cierre de los cuestionarios**, que ningún proveedor nativo cubre: pedir el cambio de

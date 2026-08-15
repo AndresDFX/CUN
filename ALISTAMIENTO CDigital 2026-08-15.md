@@ -125,7 +125,7 @@ Dos cosas que el censo encontró y que no podían quedarse así:
 
 | Actividad | cmid | Contenido | Ventana | Estado |
 |---|---|---|---|---|
-| Quiz | `7563699` | 10 preguntas · PRO-Q01 … PRO-Q10 · total 10,00 sobre nota 5 · 45 minutos | **sin fechas** | oculto · 0 intentos |
+| Quiz | `7563699` | 10 preguntas · PRO-Q01 … PRO-Q10 · total 10,00 sobre nota 5 · 45 minutos · 2 intentos, nota más alta | 03/agosto/2026 → 30/agosto/2026 | **VISIBLE desde el 15/08/2026** · 0 intentos |
 | Presentaciones de clase | `7706012` | 12 archivos | — | oculta |
 | Guías de las ACAs y de los cuestionarios | `7706013` | 5 archivos | — | oculta |
 | Lecturas obligatorias | `7706014` | 3 archivos | — | oculta |
@@ -206,10 +206,49 @@ Están aquí para que las puedas revertir, no para justificarlas.
    ```
 
    **La regla sigue en pie para la próxima vez: antes de correr el comando en un aula, mira si ya hay algo entregado.** Mover la ventana de algo ya trabajado sí le quita trabajo a alguien; aquí se pudo porque el censo dio cero en los 19.
-2. **Con las fechas puestas, el Quiz 1 ya tiene cierre — y sigue oculto.** Cierra el 19/08 en Creatividad, el 20/08 en Investigación, el 25/08 en las tres aulas de TG3 y el 31/08 en TG2; el Quiz de Proyecto I, que vale **25%**, cierra el **30/08**. Ninguno se puede contestar todavía porque está oculto. El Quiz 1 pregunta contenido de las Unidades 1 y 2 (detalle en `AUDITORIA CDigital 2026-08-10.md` §4 ter): si en algún grupo no se ha dictado, hay que mover la fecha en `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, no editarla en el aula.
-3. **El material queda duplicado con los enlaces a Drive.** Las aulas ya reparten material con recursos visibles que apuntan a Drive («Clases», «Material clases»). Las carpetas nuevas traen los mismos archivos dentro del campus: si actualizas un `.pptx` en Drive, la copia del campus se queda vieja. Se subieron porque el material tenía que quedar en CDigital; decide tú si el canal bueno es la carpeta o el enlace, y borra el otro.
-4. **Falta el PDF de Aperribai et al. (2024)** en las lecturas obligatorias de Creatividad. Las otras 8 de las 10 preguntas del Quiz 1 se responden con el PDF de REDIE, que sí está subido (carpeta «Lecturas obligatorias», cmid `7705994`).
-5. **Las 3 encuestas de evaluación docente y la Autoevaluación no se tocaron**: no son nuestras.
+2. **El Quiz de Proyecto I ya está VISIBLE — y hubo que arreglarle la revisión antes de abrirlo (15/08/2026).**
+
+   Permite **2 intentos** y califica por **nota más alta**, y las cuatro columnas de «Opciones de revisión» venían en el valor de fábrica de Moodle: todo encendido mientras el cuestionario está abierto y **nada** después de cerrarlo. Con esos dos ajustes juntos, terminar el intento 1 entregaba la respuesta correcta de las 10 preguntas y el intento 2 era un 5,0 garantizado para los 50 estudiantes de un ítem que pesa **25%**; y al revés de lo útil, después del 30/08 nadie podía repasar en qué falló.
+
+   **Este cuestionario era el único así.** Se censaron los **otros 30** —los 18 Quices y los 12 Parciales de las seis aulas de Pregrado— y **ninguno** filtra nada: los seis cursos de Pregrado traen una configuración distinta y sensata, idéntica en los 30. La diferencia no la puso el repositorio; el aula de Especialización vino con el valor por omisión de Moodle y las de Pregrado no.
+
+   > `python config/moodle/revision_quiz.py censar <cmid...>` → **0 de 31 regalan la nota.**
+
+   Quedó así —18 casillas movidas, ninguna otra cosa tocada:
+
+   | Cuándo | Qué ve el estudiante |
+   |---|---|
+   | Durante el intento | su intento · «sobre 1,00» — inerte, el comportamiento es *Retroalimentación diferida* |
+   | Justo después y mientras esté abierto (→ 30/08) | su intento · su nota · «sobre 1,00». **No** ve si acertó, **ni** la respuesta correcta, **ni** retroalimentación |
+   | Después de cerrar (30/08 →) | **todo**: aciertos, respuesta correcta, retroalimentación específica, general y global |
+
+   Con `2 intentos` y las respuestas ocultas, el segundo intento vuelve a ser lo que debía ser: una red de seguridad ante un corte de internet en 45 minutos cronometrados, no una segunda pasada con la clave en la mano. Ayuda que «Reordenar las respuestas» esté en **Sí**: el orden de las opciones cambia entre intentos.
+
+   > **Una honestidad sobre el resultado:** «Puntos» (la nota por pregunta) sí queda encendido mientras está abierto, porque es lo que hace visible la nota. Con eso el estudiante puede deducir *cuáles* falló, aunque no cuál era la respuesta. Cerrar también eso es un cambio de una casilla (`marks` en las columnas *justo después* y *mientras esté abierto*); se dejó encendido porque un estudiante que no puede ver su propia nota durante quince días es peor negocio.
+
+   Se hizo reenviando el formulario completo de `modedit.php` con el mismo mecanismo de `fijar_fechas` —**round-trip nulo** antes de escribir— y se releyeron del servidor las 32 casillas, más `intentos`, `nota`, `método de calificación`, `límite de tiempo` y las dos fechas: sin cambios. `cdigital.py` **no** tiene subcomando para esto; se hizo con `config/moodle/revision_quiz.py`, que queda en el repositorio con `--simular` por omisión.
+
+3. **Queda una decisión abierta, y tiene quince días de plazo: ¿se abre la clave después de cerrar?**
+
+   Ahora que se sabe cómo están los otros 18, hay una inconsistencia que conviene resolver a propósito y no por descuido. Así quedan las dos configuraciones:
+
+   | Casilla | Los 18 de Pregrado | Proyecto I (como quedó hoy) |
+   |---|---|---|
+   | *Mientras esté abierto:* su propio intento | no | **sí** |
+   | *Mientras esté abierto:* su nota y «sobre 1,00» | sí | sí |
+   | *Después de cerrar:* su intento, su nota | sí | sí |
+   | *Después de cerrar:* si acertó, la respuesta correcta, la retroalimentación | **no** | **sí** |
+
+   Ninguna de las dos filtra la clave mientras el cuestionario está abierto, así que el 5,0 regalado está cerrado en los 19. La diferencia real está en la última fila, y hay un argumento de peso a favor de la columna de Pregrado que no venía al caso esta mañana: **el banco de preguntas se reutiliza.** El maestro es el XML del repositorio y en cada edición del curso se reimporta, no se reescribe. Abrir la respuesta correcta de las 10 preguntas a 50 estudiantes el 30/08 pone el banco de Proyecto I en circulación para las ediciones siguientes; el resto de los cursos no corre ese riesgo porque nunca muestran la clave.
+
+   Contra eso pesa lo obvio: un cuestionario del que no se puede aprender nada es solo una nota. Un camino intermedio que se lleva lo mejor de los dos es dejar *si acertó* y *la retroalimentación* encendidas después de cerrar, y apagar solo *la respuesta correcta* — el estudiante ve en qué falló y por qué, sin que el enunciado correcto quede transcrito.
+
+   No hay prisa: la columna «después de cerrar» no hace nada hasta el 30/08. Cuando decidas, el cambio es una corrida de `revision_quiz.py` con el perfil que elijas, y sirve igual para llevar a los 18 de Pregrado a lo que prefieras.
+
+4. **Con las fechas puestas, el Quiz 1 de los otros cursos ya tiene cierre — y sigue oculto.** Cierra el 19/08 en Creatividad, el 20/08 en Investigación, el 25/08 en las tres aulas de TG3 y el 31/08 en TG2. Ninguno se puede contestar todavía porque está oculto, y sus opciones de revisión ya están sanas (§5.2): se pueden desocultar sin tocarles nada. El Quiz 1 pregunta contenido de las Unidades 1 y 2 (detalle en `AUDITORIA CDigital 2026-08-10.md` §4 ter): si en algún grupo no se ha dictado, hay que mover la fecha en `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, no editarla en el aula.
+5. **El material queda duplicado con los enlaces a Drive.** Las aulas ya reparten material con recursos visibles que apuntan a Drive («Clases», «Material clases»). Las carpetas nuevas traen los mismos archivos dentro del campus: si actualizas un `.pptx` en Drive, la copia del campus se queda vieja. Se subieron porque el material tenía que quedar en CDigital; decide tú si el canal bueno es la carpeta o el enlace, y borra el otro.
+6. **Falta el PDF de Aperribai et al. (2024)** en las lecturas obligatorias de Creatividad. Las otras 8 de las 10 preguntas del Quiz 1 se responden con el PDF de REDIE, que sí está subido (carpeta «Lecturas obligatorias», cmid `7705994`).
+7. **Las 3 encuestas de evaluación docente y la Autoevaluación no se tocaron**: no son nuestras.
 
 ---
 
