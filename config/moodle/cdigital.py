@@ -1474,9 +1474,20 @@ def alinear_fechas(cd: CDigital, curso: int, confirmar: bool, incluir_visibles: 
 # Avisos: el canal de mensajería del campus
 #
 # Las 7 aulas traen un foro «Avisos» VISIBLE y con **suscripción forzada** (verificado leyendo
-# `forcesubscribe` en los ajustes de los 7). Publicar un tema ahí manda correo a todos los
-# matriculados, nadie puede darse de baja, sale con el nombre del Docente y además queda como
-# registro dentro del aula. No hace falta ninguna credencial de Gmail ni servidor de correo propio.
+# `forcesubscribe` en los ajustes de los 7). Publicar un tema ahí deja el aviso dentro del aula, con
+# el nombre del Docente, y manda un *push* a quien tenga la app de Moodle.
+#
+# OJO, y esto es lo contrario de lo que decía este comentario hasta el 15/08/2026: **no manda correo
+# a los matriculados**. CDigital tiene el proveedor `mod_forum_posts` reducido a **sólo Móvil** en los
+# valores por omisión del SITIO (Web y Email apagados), mientras Moodle lo trae con los tres
+# encendidos. Como `lib/messagelib.php` cae al valor del sitio cuando el usuario no tiene preferencia
+# propia —y casi ningún estudiante la tiene—, el correo no sale. Suscripción forzada garantiza que
+# está *suscrito*, no que le llegue algo. Detalle y cómo pedir el arreglo al administrador
+# (`/admin/message.php`), en `RECORDATORIOS - Canales y plan 2026-08-15.md` §2b.
+#
+# Lo que sí llega por correo, de fábrica, son los vencimientos de TAREAS
+# (`mod/assign/classes/notification_helper.php`): 7 días, 48 horas y 2 horas después del cierre, por
+# estudiante y excluyendo a quien ya entregó. Para eso está el comando `fechas`, no este.
 
 def foro_avisos(cd: CDigital, curso: int) -> tuple[int, int] | None:
     """(cmid, id del foro) del foro de anuncios del aula, o None si no lo encuentro.
@@ -1629,8 +1640,9 @@ def publicar_aviso(cd: CDigital, curso: int, asunto: str, mensaje_html: str,
     else:
         print(f"   correo : {'inmediato (mailnow)' if enviar_ya else 'tras la ventana de edición'}")
     if not confirmar:
-        print("   SIMULACIÓN: no se publicó nada (falta --confirmar). "
-              "Publicar manda correo a TODOS los matriculados.")
+        print("   SIMULACIÓN: no se publicó nada (falta --confirmar). Publicar deja el aviso a la "
+              "vista de TODOS los matriculados y les manda un push a la app; por correo NO les "
+              "llega (el sitio tiene apagado el correo del foro).")
         return 0
 
     cd.post("/mod/forum/post.php", campos + [(_boton_guardar(h), "Publicar")])
@@ -1735,8 +1747,9 @@ def main(argv: list[str]) -> int:
                         "calendario). Sin esto sólo se tocan los ocultos")
     p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
 
-    p = sub.add_parser("aviso", help="Publicar un anuncio en el foro «Avisos» del aula. OJO: le "
-                                     "llega por correo a TODOS los matriculados")
+    p = sub.add_parser("aviso", help="Publicar un anuncio en el foro «Avisos» del aula. OJO: lo ven "
+                                     "TODOS los matriculados (por correo no les llega: el sitio "
+                                     "tiene apagado el correo del foro)")
     p.add_argument("curso", type=int, help="Id del aula en CDigital")
     p.add_argument("asunto")
     p.add_argument("mensaje", help="Cuerpo del anuncio. Admite HTML sencillo")

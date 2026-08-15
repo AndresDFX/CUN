@@ -8,22 +8,43 @@ no se arregla desde la cuenta del Docente).
 
 ## La respuesta corta
 
-**El campus manda el correo, y el campus también hace de reloj.** El foro «Avisos» de cada aula
-tiene suscripción forzada; publicar en él le llega por correo a todos los matriculados. Y con
-«Mostrar período» (`timestart`) se puede publicar hoy un aviso cuyo correo el cron de CDigital
-retiene hasta la fecha que se le diga.
+**No es el foro. Son las fechas de las tareas.** Y la corrección importa, porque durante un día
+entero este documento afirmó lo contrario.
 
-Eso resuelve las tres cosas a la vez, y hay que verlo bien porque es la parte que no es obvia:
+CDigital tiene **apagado el correo del proveedor «Mensajes suscritos del foro»** en los valores por
+omisión del sitio (§2b). Publicar en el foro «Avisos» deja el aviso **visible dentro del aula** y
+manda un *push* a quien tenga la app de Moodle — pero **no manda correo** a los 282. La suscripción
+forzada garantiza que el estudiante está suscrito, no que le llegue nada.
 
-| Problema | Cómo queda resuelto |
+Lo que **sí** sale por correo, sin pedirle nada a nadie, son los avisos de vencimiento de las
+**tareas** (`assign`), que Moodle trae encendidos de fábrica y que en CDigital siguen encendidos:
+
+| Proveedor | Cuándo dispara | Con qué antelación exacta |
+|---|---|---|
+| `mod_assign_assign_due_digest` | resumen de lo que vence | **7 días** (`INTERVAL_DUE_DIGEST = WEEKSECS`) |
+| `mod_assign_assign_due_soon` | la tarea está por cerrar | **48 horas** (`INTERVAL_DUE_SOON = DAYSECS * 2`) |
+| `mod_assign_assign_overdue` | la tarea se cerró y no entregó | **2 horas después** (`INTERVAL_OVERDUE = HOURSECS * 2`) |
+
+Y son mejores que el foro en lo que de verdad cuenta: van **por estudiante**, y
+`get_users_within_assignment()` **excluye a quien ya entregó**. No le insiste a quien ya hizo el
+trabajo. Respetan las excepciones por usuario y por grupo (`ao.duedate`). El precio: exigen
+`cm.visible = 1 AND c.visible = 1` —la actividad y el curso visibles— y sólo cubren **tareas**.
+
+Así queda repartido el semestre, y hay un hueco que hay que decir en voz alta:
+
+| Entregable | Canal que de verdad le llega por correo |
 |---|---|
-| Sin contraseña de aplicación | La cuenta de Gmail **no participa**. El correo lo emite el servidor de la CUN |
-| Automático | Lo programa el propio Moodle. **Este computador puede estar apagado** |
-| Costo | 0. No hay proveedor, ni cuenta de AWS, ni dominio, ni cuota que agotar |
-| Reutilizable el próximo semestre | Los ids del foro se redescubren solos; lo único con fechas dentro es `config/cursos/fechas_entrega_aca.py` |
+| **ACAs** (son tareas `assign`) | **Nativo de Moodle.** Basta la `duedate` correcta y el ítem visible |
+| **Quices y Parciales** (`quiz`) | `mod_quiz_quiz_open_soon` avisa cuando **abre**. Del **cierre no avisa nada** |
+| **Coevaluación** (foro) | Nada por correo |
 
-No hace falta AWS, ni GitHub Actions, ni el Programador de tareas de Windows. Se pueden usar (§4),
-pero para este caso son un reloj de repuesto para algo que ya trae reloj.
+Para ese hueco —el cierre de los cuestionarios— sólo hay dos salidas reales: pedirle al
+administrador que devuelva el correo del proveedor de foros a su valor de fábrica (§2b), o mandarlo
+desde el buzón del Docente con **Apps Script + `MailApp`** (§3), que no necesita contraseña ni token.
+
+Lo que sí sigue en pie del diseño anterior: **el campus hace de reloj.** Con «Mostrar período»
+(`timestart`) se publica hoy un aviso que el cron suelta el día indicado, sin AWS, sin GitHub
+Actions, sin Programador de tareas y sin que este computador esté encendido (§4).
 
 ## 1. La herramienta ya está escrita
 
@@ -72,27 +93,83 @@ Verificado contra el servidor real, no supuesto:
 - `timestart` retiene el correo: la consulta del cron de foros exige que la fecha de inicio ya haya
   pasado, y **`mailnow` no se la salta** —van unidas—. Un aviso programado se puede borrar antes de
   su fecha **sin que salga ningún correo**: por eso el modo programado es reversible.
-- **El envío también, y sin escribirle a ningún estudiante.** Se creó en Creatividad un foro
+- **El envío llega, y se comprobó sin escribirle a ningún estudiante.** En Creatividad hay un foro
   `Prueba de recordatorios` **oculto** y de suscripción **opcional**, con **un único suscriptor: el
-  Docente**, y se publicó dentro el aviso del Quiz 1 con `mailnow`. Ese es el correo que hay que buscar
-  en la bandeja: asunto `EI004/…: [PRUEBA] Faltan 3 días para Quiz 1 (cierra el miércoles 19 de
-  agosto)`. El foro es `cmid 7706181` y se puede borrar cuando ya no haga falta.
+  Docente** (`cmid 7706181`, instancia `909536`). Publicando ahí con `mailnow`, el correo llegó al
+  buzón del Docente el 15/08 a las 12:20, remitido por `restablecimiento_digital1@cun.edu.co` con
+  asunto `EI004/54408/26V04/B1/FINVV/FINVI: [PRUEBA 2 · 17:19] Comprobación de correo del foro`.
+  **Ese foro se conserva a propósito**: es el único banco de pruebas seguro que hay: no existe aula
+  de pruebas y la más pequeña tiene 13 estudiantes.
 
-Por qué la prueba tuvo que ser así y no «un foro oculto cualquiera»: el cron de foros **no comprueba
-visibilidad**, sólo suscripción, suscripción a la discusión y grupos. Un foro oculto con suscripción
-*forzada* les habría llegado igual a los 50. Lo que aísla la prueba es la suscripción **opcional**. Y
-como ese mismo cron **no excluye al autor**, el aviso le llega al propio Docente: por eso se puede
-comprobar de verdad y no sólo «suponer que salió».
+### 2a. Y lo que se cayó al comprobarlo
 
-Dos avisos que hay que dar antes de apretar:
+**La primera prueba no llegó.** Este documento afirmó durante un día que el envío estaba verificado,
+y era falso: se había verificado que el POST publicaba el tema, no que el correo saliera. La causa
+del silencio no fue el foro ni el cron, sino la cuenta: el proveedor «Mensajes suscritos del foro»
+tenía **Web y Email apagados y sólo Móvil encendido**. Nada podía entregarse. Con los tres
+encendidos, la segunda prueba llegó a la primera.
 
-- **El estudiante puede apagar el correo del foro.** El proveedor «Mensajes suscritos del foro» está
-  activo por defecto, pero no está bloqueado por el administrador: quien lo apague en sus
-  preferencias no recibirá el correo (sí verá el aviso al entrar al aula). Y quien tenga «resumen
-  diario» lo recibirá de madrugada agrupado. Suscripción forzada garantiza que **está suscrito**, no
-  que el correo le llegue.
+Dos cosas más que hay que tener presentes, porque las dos me llevaron por el camino equivocado:
+
+- **La campana nunca muestra tu propio mensaje de foro.** `message/output/popup/message_output_popup.php`
+  se niega a insertar en `message_popup_notifications` cuando `userfrom == userto`, con el comentario
+  «*Prevent users from getting popup notifications from themselves (happens with forum notifications)*»,
+  y la campana sólo consulta esa tabla. Al probar un envío propio, **la campana vacía no es evidencia
+  de nada**: sólo cuenta el buzón.
+- **Ocultar el foro sigue sin bastar**, y ahora está comprobado por dos vías. Por código:
+  `mod/forum/classes/task/cron_task.php` no mira visibilidad; `mod/forum/classes/subscriptions.php`
+  filtra con `get_enrolled_sql()` y con `info_module::filter_user_list()`, que **no hace nada** si el
+  ítem no tiene restricciones de acceso (`availability/classes/info.php`: `if (is_null($this->availability)
+  || !$CFG->enableavailability) { return $users; }`); la única puerta de visibilidad es
+  `forum_user_can_see_post()` → `$cm->uservisible`, y un `editingteacher` la pasa por arquetipo porque
+  tiene `moodle/course:viewhiddenactivities`. Y por experimento: **el correo de la PRUEBA 2 salió de un
+  foro oculto**. Luego un foro oculto con suscripción *forzada* les llegaría igual a los 50; lo que
+  aísla la prueba es la suscripción **opcional**.
+
+### 2b. El hallazgo grave: el sitio trae el correo del foro apagado
+
+`core_user_get_user_preferences` mostró que esta cuenta **no tenía guardada ni una sola preferencia
+`message_provider_*`** antes del 15/08 (las que hay son las que se escribieron ese día). Y
+`lib/messagelib.php` y `message/classes/output/preferences/notification_list_processor.php` usan la
+misma cadena de respaldo: si el usuario no tiene valor propio, manda
+`get_message_output_default_preferences()`, el **valor por omisión del sitio**. Luego lo que la
+pantalla mostraba —Móvil sí, Web no, Email no— **es el valor del sitio**, y es el que hereda todo
+estudiante que nunca haya abierto Preferencias → Notificaciones. Que son casi todos.
+
+Moodle trae ese proveedor con los tres canales encendidos
+(`mod/forum/db/messages.php`: `'posts' => ['popup' => MESSAGE_PERMITTED + MESSAGE_DEFAULT_ENABLED,
+'email' => …, 'airnotifier' => …]`). **La divergencia la introdujo la institución.** Y no es un
+descuido al azar: mirando los 31 proveedores del sitio se ve un criterio claro —apagaron los dos más
+ruidosos, `mod_forum_posts` (a Móvil) y `mod_assign_assign_notification` (a nada), y dejaron
+intactos los avisos de vencimiento—. Lo que el sitio **sí** manda por correo a un estudiante que no
+ha tocado sus preferencias:
+
+| Encendido de fábrica y sigue encendido | Apagado por el sitio |
+|---|---|
+| `mod_assign_assign_due_soon`, `assign_overdue`, `assign_due_digest` | `mod_forum_posts` → **sólo Móvil** |
+| `mod_quiz_quiz_open_soon` (avisa al **abrir**, no al cerrar) | `mod_assign_assign_notification` → **nada** |
+| `moodle_enrolcoursewelcomemessage`, `mod_googlemeet_notification` | `moodle_gradenotifications` → sólo campana |
+| `enrol_manual_expiry_notification`, `enrol_self_expiry_notification` | `mod_forum_digests`, `mod_feedback_*` → nada |
+
+**Cómo se arregla de raíz, si algún día se puede:** Administración del sitio → Mensajería →
+*Preferencias de notificación por omisión* (`/admin/message.php`), marcando Email en «Mensajes
+suscritos del foro». Requiere administrador; no se puede desde la cuenta del Docente. Vale la pena
+pedirlo por dos razones: arregla el canal para las 7 aulas de una vez, y es volver al valor de fábrica
+de Moodle, no un permiso especial.
+
+**Cómo se comprueba, y cómo NO.** Borrar la preferencia con `core_user_update_user_preferences` sin
+`value` **no la elimina: escribe vacío**. Eso invalidó la primera medición del valor del sitio y por
+poco deja documentado un hallazgo falso. Se detectó con un control: se hizo lo mismo con
+`mod_quiz_quiz_open_soon`, que estaba con los tres canales encendidos, y «al borrarlo» apareció con
+los tres apagados. La vía buena es el volcado de preferencias, que dice qué claves existen de verdad.
+
+Dos avisos más, menores:
+
 - **El asunto del correo lleva delante el nombre corto del aula**, que es feo y no se puede cambiar
   sin ser administrador: el estudiante ve `EI004/54408/26V04/B1/FINVV/FINVI: Falta 1 día para Quiz 1`.
+- **Quien tenga «resumen diario»** (`maildigest > 0`) lo recibirá de madrugada agrupado;
+  `mod/forum/classes/task/cron_task.php` desvía a `forum_queue` y `mailnow` tampoco se salta eso.
+  En esta cuenta el resumen está en **0 (Sin resumen)**.
 
 ## 3. Gmail sin contraseña de aplicación — lo que sí se puede
 
@@ -148,12 +225,30 @@ Un recordatorio con la fecha mala es peor que no mandarlo: por eso el paso 2 va 
 sólo se avisa de lo visible, **los avisos de los Quices y Parciales aparecerán solos** el día que se
 activen esos ítems — basta volver a correr el paso 3, que no repite lo ya publicado.
 
+**El paso 2 dejó de ser sólo higiene: es el canal.** Descubierto lo de §2b, alinear la `duedate` de
+las tareas ya no es «que el aula diga lo mismo que la guía», es **lo único que hace que le llegue un
+correo al estudiante** — 7 días antes por el resumen, 48 horas antes, y 2 horas después si no
+entregó. De ahí que el orden correcto de prioridades hoy sea:
+
 **Lo que queda de este semestre**, para las otras seis aulas:
 
 1. Las **19 discrepancias de fechas** que siguen en pie (`ALISTAMIENTO CDigital 2026-08-15.md` §5:
-   Proyecto I anuncia sus dos ACAs para **enero de 2028**).
+   Proyecto I anuncia sus dos ACAs para **enero de 2028**). **Esto es ahora lo más urgente de todo**:
+   una ACA con `duedate` en 2028 no sólo confunde, es que su aviso de vencimiento no dispara nunca.
 2. Activar lo que ya está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**.
+   Doble motivo: `assign_due_soon` exige `cm.visible = 1`, así que un ítem oculto está mudo también
+   para el canal nativo.
 3. Repetir los pasos 2 y 3 de arriba aula por aula, o de golpe sin `--aula`.
+4. **Cubrir el cierre de los cuestionarios**, que ningún proveedor nativo cubre: pedir el cambio de
+   `/admin/message.php` al administrador, o montar el Apps Script de §3. Mientras no esté, el aviso
+   del foro para un Quiz vive **sólo dentro del aula**.
+
+Una comprobación que falta y no se puede hacer sin administrador: que las tareas programadas
+`\mod_assign\task\queue_all_assignment_due_soon_notification_tasks` y sus hermanas estén **habilitadas**
+en `/admin/tool/task/scheduledtasks.php`. Vienen habilitadas de fábrica, y se sabe que el cron del
+sitio corre —el correo de la PRUEBA 2 lo entregó el cron de foros—, pero eso no prueba que estas
+concretas no estén deshabilitadas. La prueba barata: cuando la primera ACA visible quede a 48 horas,
+mirar si llega el correo.
 
 **El próximo semestre** cambian tres cosas y nada más: las fechas en
 `config/cursos/fechas_entrega_aca.py`, los ids de aula en `AULAS_CURSO`

@@ -81,10 +81,26 @@ un ítem visible le mueve el calendario a los estudiantes matriculados, y eso se
 
 ## `aviso` y los recordatorios automáticos
 
-El foro **«Avisos»** existe, es visible y tiene **suscripción forzada** en las 7 aulas: publicar un
-tema ahí manda correo a todos los matriculados desde el servidor de la CUN. Sin cuenta de correo del
-Docente en el circuito, sin contraseña de aplicación —que esta cuenta institucional no puede
-generar— y sin cuota que se pueda agotar.
+El foro **«Avisos»** existe, es visible y tiene **suscripción forzada** en las 7 aulas. Publicar un
+tema ahí deja el aviso **dentro del aula** y manda un *push* a quien tenga la app de Moodle.
+
+**Lo que NO hace es mandar correo, y esto hay que leerlo antes de confiar en el canal.** CDigital
+tiene el proveedor `mod_forum_posts` («Mensajes suscritos del foro») reducido en los valores por
+omisión del **sitio** a **sólo Móvil**: Web y Email apagados. Moodle lo trae con los tres canales
+encendidos (`mod/forum/db/messages.php`), así que la divergencia es institucional. Como
+`lib/messagelib.php` cae a `get_message_output_default_preferences()` cuando el usuario no tiene
+preferencia propia —y casi nadie la tiene—, **el aviso del foro no le llega por correo al
+estudiante**. Suscripción forzada garantiza que está *suscrito*, no que le llegue nada. El detalle
+completo, con cómo se estableció y cómo se pide el arreglo al administrador, en
+`RECORDATORIOS - Canales y plan 2026-08-15.md` §2b.
+
+Lo que sí llega por correo, de fábrica y sin pedirle nada a nadie, son los avisos de vencimiento de
+las **tareas** (`mod/assign/classes/notification_helper.php`): `assign_due_digest` a **7 días**
+(`INTERVAL_DUE_DIGEST = WEEKSECS`), `assign_due_soon` a **48 horas** (`DAYSECS * 2`) y
+`assign_overdue` **2 horas después** del cierre (`HOURSECS * 2`). Son por estudiante, respetan las
+excepciones por usuario y grupo (`ao.duedate`) y **excluyen a quien ya entregó**. Exigen
+`cm.visible = 1 AND c.visible = 1`. Por eso poner bien la `duedate` de las ACAs con el comando
+`fechas` no es higiene: **es el canal de recordatorios que de verdad entrega**.
 
 El id que pide `/mod/forum/post.php?forum=N` **no es el cmid**, es el de la instancia del foro, y
 según cómo pinte el aula la página aparece de tres formas distintas; `foro_avisos()` las prueba en
@@ -106,11 +122,32 @@ El planificador que usa todo esto es `config/cursos/recordatorios.py`. Ver su ca
 único suscriptor, y `publicar_aviso(..., destino=(cmid, foro))` publica ahí. Las dos cerraduras son
 independientes: nadie más está suscrito y la actividad está oculta.
 
-Ojo con el razonamiento, porque lo intuitivo es falso: **ocultar el foro no basta**. El cron de foros
-de Moodle 4.5 (`mod/forum/classes/task/cron_task.php`) no comprueba visibilidad ni capacidades —sólo
-suscripción, suscripción a la discusión y grupos—, así que un foro *oculto* con suscripción *forzada*
-sí les llegaría a los 50. Lo que aísla la prueba es la suscripción **opcional**. Y como ese cron
-tampoco excluye al autor, el aviso le llega al propio Docente: eso es lo que lo hace comprobable.
+Ojo con el razonamiento, porque lo intuitivo es falso: **ocultar el foro no basta**, y está
+comprobado por las dos vías. Por código: `mod/forum/classes/task/cron_task.php` no comprueba
+visibilidad; `mod/forum/classes/subscriptions.php` filtra con `get_enrolled_sql()` y con
+`info_module::filter_user_list()`, que **es un no-op** si el ítem no tiene restricciones de acceso
+(`availability/classes/info.php`: `if (is_null($this->availability) || !$CFG->enableavailability)
+{ return $users; }`); la única puerta de visibilidad llega después, en `forum_user_can_see_post()` →
+`$cm->uservisible`, y un `editingteacher` la pasa por arquetipo (`moodle/course:viewhiddenactivities`,
+`lib/db/access.php`). Y por experimento: el correo de la segunda prueba **salió de un foro oculto**.
+Luego un foro oculto con suscripción *forzada* sí les llegaría a los 50: lo que aísla la prueba es la
+suscripción **opcional**. Y como el cron tampoco excluye al autor, el aviso le llega al propio
+Docente: eso es lo que lo hace comprobable.
+
+**Dos trampas al comprobar un envío propio, las dos costaron horas:**
+
+1. **La campana nunca muestra tu propio mensaje de foro.** `message/output/popup/message_output_popup.php`
+   se niega a insertar en `message_popup_notifications` cuando `userfrom == userto` («*Prevent users
+   from getting popup notifications from themselves (happens with forum notifications)*»), y la
+   campana sólo consulta esa tabla. **La campana vacía no es evidencia de fallo**: sólo cuenta el
+   buzón. Tratarla como segundo síntoma llevó a descartar por error las causas que sólo afectan al
+   correo — que era justamente la causa real.
+2. **Borrar una preferencia con `core_user_update_user_preferences` sin `value` no la borra: escribe
+   vacío.** Así que no sirve para leer el valor por omisión del sitio, y si se usa para eso se
+   «descubre» que el sitio lo trae todo apagado, que es falso. Se detecta con un control: hacerlo
+   con un proveedor que esté encendido y ver que también aparece apagado. La vía buena es
+   `core_user_get_user_preferences` con `name` vacío, que devuelve **qué claves existen de verdad**;
+   si no hay clave `message_provider_*`, lo que pinta la pantalla es el valor del sitio.
 
 Para crear el foro **no vale reenviar el formulario completo** como hace `fechas`. Con los 98 campos,
 `modedit.php` contesta 200, repinta el formulario de alta con los datos escritos, no marca ni un campo
@@ -355,6 +392,32 @@ El nombre del usuario no aparece en el HTML del panel; se lee de `/user/profile.
   `mailnow`, y se releyó la discusión (`d=1546426`) para ver el cuerpo tal como sale al correo. Es el
   primer POST de publicación que se ejecuta. Buscando el porqué del fallo inicial se descubrió que en
   el **alta** de una actividad hay que enviar sólo el mínimo estructural (ver arriba).
+  **Ese foro se conserva a propósito**, no es basura pendiente de borrar: es el único banco de pruebas
+  seguro que hay —no existe aula de pruebas y la más pequeña tiene 13 estudiantes—. Está oculto y de
+  suscripción opcional con un solo suscriptor; mientras siga así, publicar ahí no toca a nadie.
+- **2026-08-15, el correo comprobado de verdad — y la corrección.** Aquel primer envío **no llegó**, y
+  durante un día quedó documentado como «verificado» cuando lo verificado era sólo que el POST creaba
+  el tema. Causa real: el proveedor «Mensajes suscritos del foro» de esta cuenta tenía **Web y Email
+  apagados, sólo Móvil**. Con los tres encendidos
+  (`message_provider_mod_forum_posts_enabled = popup,email,airnotifier`), la segunda publicación llegó
+  al buzón a las **12:20**, de `restablecimiento_digital1@cun.edu.co`, asunto
+  `EI004/…: [PRUEBA 2 · 17:19] Comprobación de correo del foro`. Eso cierra la cadena completa —POST,
+  cron, entrega— **y confirma de paso que un foro oculto no frena el correo**.
+- **2026-08-15, el valor por omisión del sitio.** `core_user_get_user_preferences` reveló que la cuenta
+  **no tenía ninguna** preferencia `message_provider_*` antes de ese día: luego lo que la pantalla de
+  notificaciones mostraba era el valor **del sitio**, el que hereda cualquier estudiante que nunca la
+  haya abierto. Y ese valor tiene el correo del foro **apagado**. Se censaron los 31 proveedores: el
+  sitio manda por correo los vencimientos de tareas (`assign_due_soon`, `assign_overdue`,
+  `assign_due_digest`), `quiz_open_soon`, la bienvenida y Google Meet; y tiene mudos `mod_forum_posts`
+  (sólo Móvil), `mod_assign_assign_notification` (nada) y `moodle_gradenotifications` (sólo campana).
+  Consecuencia para el plan de recordatorios: ver `RECORDATORIOS - Canales y plan 2026-08-15.md` §2b.
+- **2026-08-15, preferencias de la cuenta del Docente.** Quedaron encendidos los tres canales de
+  «Mensajes suscritos del foro», de «Mensajes personales entre los usuarios»
+  (`moodle_instantmessage`, verificado con `core_message_get_user_message_preferences`: Email
+  encendido y sin bloqueo del administrador) y de las solicitudes de contacto. `disableall = 0`: no
+  hay silencio general. Ojo con un efecto lateral: al escribirlas, esas claves pasan a ser
+  **preferencias explícitas de la cuenta**, así que si algún día el administrador arregla los valores
+  del sitio, esta cuenta ya no los seguirá.
 - **2026-08-15, Creatividad alineada y programada.** Los **8 ítems** del aula 115463 quedaron con las
   fechas del repositorio, incluidos los 3 visibles, después de comprobar que **no había nada entregado**
   (0 intentos en los cuestionarios, 0 envíos en la tarea —con 50 participantes— y 0 temas en el foro de

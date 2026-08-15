@@ -3,9 +3,23 @@
 Qué es esto
 -----------
 Un planificador que, dado un día, dice **qué recordatorios toca mandar hoy** y los publica en el
-foro «Avisos» del aula (que tiene suscripción forzada, así que el campus manda el correo a todos los
-matriculados). Nada de credenciales de Gmail, nada de servidor de correo propio, nada de contraseñas
-de aplicación —que esta cuenta institucional no puede generar—.
+foro «Avisos» del aula, que tiene suscripción forzada. Nada de credenciales de Gmail, nada de
+servidor de correo propio, nada de contraseñas de aplicación —que esta cuenta institucional no puede
+generar—.
+
+QUÉ ALCANCE TIENE DE VERDAD (corregido el 15/08/2026; antes esta cabecera decía otra cosa)
+------------------------------------------------------------------------------------------
+Esto es un **tablón de anuncios dentro del aula**, más un *push* a quien tenga la app de Moodle.
+**No es un canal de correo.** CDigital tiene el proveedor `mod_forum_posts` reducido a sólo Móvil en
+los valores por omisión del SITIO, y `lib/messagelib.php` cae a ese valor cuando el estudiante no
+tiene preferencia propia —lo normal—, así que el correo no sale. La suscripción forzada garantiza que
+está *suscrito*, no que le llegue algo.
+
+El recordatorio que SÍ le llega al estudiante por correo lo manda Moodle solo, a partir de la
+`duedate` de las **tareas**: resumen a 7 días, «por vencer» a 48 horas y «vencida» 2 horas después
+del cierre (`mod/assign/classes/notification_helper.php`), por estudiante y excluyendo a quien ya
+entregó. Para eso no sirve este archivo, sirve `python config/moodle/cdigital.py fechas <aula>`.
+Ver `RECORDATORIOS - Canales y plan 2026-08-15.md` §2b y §5.
 
 Tres decisiones de diseño que conviene no deshacer:
 
@@ -14,8 +28,8 @@ Tres decisiones de diseño que conviene no deshacer:
 2. **Sólo se recuerda lo que el estudiante puede ver.** Si la actividad está oculta en el aula, el
    enlace del recordatorio sería un 404 y el aviso, ruido. Se omite y se dice por qué. Así, los
    recordatorios se encienden solos a medida que el Docente va activando los ítems.
-3. **Simula por defecto.** Publicar manda correo a 282 personas y no se puede deshacer. Hace falta
-   `--canal campus --confirmar` para que salga algo de verdad.
+3. **Simula por defecto.** Publicar deja el aviso a la vista de 282 personas y no se puede deshacer.
+   Hace falta `--canal campus --confirmar` para que salga algo de verdad.
 
 Sirve igual el semestre que viene: lo único con año dentro es `fechas_entrega_aca.py`, y las aulas
 nuevas se declaran en `AULAS_CURSO` de `config/moodle/cdigital.py`.
