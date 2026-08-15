@@ -250,6 +250,16 @@ El nombre del usuario no aparece en el HTML del panel; se lee de `/user/profile.
   `/mod/folder/view.php` — **167 archivos**, 16,3 MB, en la sección 0 de las 7 aulas. Los 21 bancos
   maestros se importaron 31 veces (los 5 de TG3, tres veces cada uno). El inventario aula por aula,
   con los 59 cmid, está en `ALISTAMIENTO CDigital 2026-08-15.md`, en la raíz del repositorio.
+- **2026-08-15, las dos mezclas.** Reordenar los slots sólo sirve si el estudiante ve ese orden, así
+  que se leyó la casilla de la página de edición en los 31 cuestionarios: **«Reordenar las preguntas
+  al azar» está desactivada en los 31**, luego el orden del `.xml` maestro es el que llega.
+  «Mezclar dentro de las preguntas» (`shuffleanswers`) está en **Sí** en los 31, heredado de la
+  plantilla, y se dejó así: se revisaron las 210 preguntas de los 21 bancos y **ninguna depende de la
+  posición de una opción** —ni un «todas las anteriores»; los siete casos donde aparece «opción A / B»
+  son las alternativas del proyecto descritas en el enunciado, no letras de respuesta—.
+  La casilla es `<input type="checkbox" id="shuffle-<sectionid>">` en `/mod/quiz/edit.php` (sin
+  atributo `checked` = desactivada) y el desplegable es `name="shuffleanswers"` en
+  `/course/modedit.php?update=<cmid>`.
 - **2026-08-15, reordenar slots.** `Quiz 1` de Creatividad (cmid `6745720`) servía las 10 preguntas
   buenas pero en orden de código (`CRE-Q06`→`CRE-Q15`), porque `preguntas_de_categoria` las lista
   así; su `.xml` maestro tiene un orden deliberado (`CRE-Q11, Q10, Q12, Q09, Q13, Q14, Q08, Q07,

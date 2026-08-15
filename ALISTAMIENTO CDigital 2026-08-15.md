@@ -166,6 +166,7 @@ Están aquí para que las puedas revertir, no para justificarlas.
 | **El mismo banco de TG3 se importó en las 3 aulas**, y las categorías se nombran sin el número de grupo (`Quiz 1 - TG3 U1-U2`) | Una carpeta del repositorio, tres aulas del campus. Si el nombre llevara el grupo, el mismo banco tendría tres nombres distintos | Renombrar no se puede desde la herramienta; se reimporta |
 | El **Quiz 1 de Creatividad** se reordenó al orden del `.xml` del repositorio | El aula lo había dejado en orden de código (Q06→Q15) y el banco maestro tiene un orden deliberado (Q11, Q10, Q12, Q09, …). El maestro manda | `quiz-ordenar <cmid> --xml <banco>` |
 | **Las ventanas de fechas no se tocaron** | Cambiar cuándo abre un examen es una decisión académica tuya, no de la herramienta. Se reportan tal como están (§5) | En el aula, ajustes del cuestionario |
+| **Las dos mezclas se dejaron como venían de plantilla**: «Reordenar las preguntas al azar» **desactivada** en los 31, «Mezclar dentro de las preguntas» en **Sí** en los 31 | Así el orden del `.xml` maestro es el que ve el estudiante, y las opciones sí se barajan en cada intento. Barajarlas es seguro: ninguna de las 210 preguntas depende de la posición de una opción —no hay «todas las anteriores», y donde se lee «opción A / B» son las alternativas del proyecto descritas en el enunciado, no letras de respuesta | La casilla, en la página de edición del cuestionario; el desplegable, en sus ajustes |
 
 ---
 
