@@ -172,7 +172,15 @@ Están aquí para que las puedas revertir, no para justificarlas.
 
 ## 5. Lo que hay que decidir tú (no se tocó a propósito)
 
-1. **Quedan 19 ítems visibles con la fecha de la plantilla, y a 3 de ellos les corre prisa.** Ya coinciden con el repositorio los 31 ocultos y **los 3 de Creatividad** (alineados el 15/08 antes de programarle los recordatorios, tras comprobar que no había nada entregado: 0 intentos, 0 envíos con 50 participantes, 0 temas en el foro). Los otros 19 que ven los estudiantes, no. Verificado releyendo el aula el 15/08/2026:
+1. ~~**Quedan 19 ítems visibles con la fecha de la plantilla.**~~ **HECHO el 15/08/2026 — ya no hay nada que decidir aquí.** Las **siete** aulas coinciden con el repositorio: comprobación posterior, **0 discrepancias**. La tabla se conserva como registro de lo que había antes.
+
+   Lo que autorizó tocar ítems que los estudiantes ya veían fue un censo previo de sólo lectura de los 19 —`participantes`/`enviados` de cada tarea, informe de intentos de cada cuestionario, temas de cada foro—: **0 envíos, 0 intentos, 0 temas** entre los 282 matriculados. Nadie perdió trabajo hecho, que era la única objeción de peso.
+
+   Dos cosas que el estudiante sí nota, por si quieres revertirlas: los **cierres de las 6 ACA Final se adelantaron 8 días** (TG2, 1 día), y las **5 Autoevaluación dejaron de estar abiertas desde el 11/08** para abrir en su semana de noviembre. Esto último es lo único que quita algo que ya existía; se hizo porque una autoevaluación del curso al día siguiente de empezarlo no evalúa nada, y porque nadie la había abierto. Revertir un ítem es editar `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, nunca editarlo en el aula.
+
+   El efecto útil: con la `duedate` correcta y el ítem visible, Moodle manda **24 correos** solo, del 05/09 al 14/11 (`RECORDATORIOS - Canales y plan 2026-08-15.md` §5b). Con las fechas de 2028 que tenía Proyecto I, su aviso de 48 horas no habría disparado nunca.
+
+   Estado anterior, verificado releyendo el aula el 15/08/2026:
 
    | Aula | Ítem | cmid | Lo que ve el estudiante | Lo que dice el repositorio |
    |---|---|---|---|---|
@@ -190,13 +198,14 @@ Están aquí para que las puedas revertir, no para justificarlas.
    | tg3 (3 aulas) | Autoevaluación | `6608181`, `6785575`, `7448543` | 11/08 → 15/11 | 03/11 → 10/11/2026 |
    | 6 aulas | Coevaluación | `6522214`, `6608182`, `6785576`, `7448478`, `7448544`, `7563724` | **sin fecha ninguna** | según curso |
 
-   Las tres primeras filas son las que más engañan: **Proyecto I anuncia que sus dos ACAs se entregan en enero de 2028** (42% + 25% de la nota). Las seis Coevaluaciones sin fecha no muestran plazo al estudiante. Un comando por aula lo arregla:
+   Las tres primeras filas eran las que más engañaban: **Proyecto I anunciaba que sus dos ACAs se entregaban en enero de 2028** (42% + 25% de la nota). Las seis Coevaluaciones no mostraban plazo alguno. El comando que se corrió, aula por aula:
 
    ```bash
    python config/moodle/cdigital.py fechas 130378 --incluir-visibles --confirmar   # Proyecto I
+   # y lo mismo con 111070, 129268, 112321, 116387, 129270 (115463 ya estaba)
    ```
 
-   Creatividad es la única hecha, y sólo porque le programé los recordatorios: un aviso que diga una fecha distinta de la que el estudiante ve en el aula es peor que no mandarlo. Las otras seis no las toqué porque cambiar la fecha de un ítem visible les mueve el calendario a los estudiantes matriculados, y eso es una decisión tuya. **Antes de correr el comando en un aula, mira si ya hay algo entregado**: mover la ventana de algo ya trabajado sí le quita trabajo a alguien. Lo que había antes queda registrado en `diff_fechas.json` (temporal) y en esta tabla.
+   **La regla sigue en pie para la próxima vez: antes de correr el comando en un aula, mira si ya hay algo entregado.** Mover la ventana de algo ya trabajado sí le quita trabajo a alguien; aquí se pudo porque el censo dio cero en los 19.
 2. **Con las fechas puestas, el Quiz 1 ya tiene cierre — y sigue oculto.** Cierra el 19/08 en Creatividad, el 20/08 en Investigación, el 25/08 en las tres aulas de TG3 y el 31/08 en TG2; el Quiz de Proyecto I, que vale **25%**, cierra el **30/08**. Ninguno se puede contestar todavía porque está oculto. El Quiz 1 pregunta contenido de las Unidades 1 y 2 (detalle en `AUDITORIA CDigital 2026-08-10.md` §4 ter): si en algún grupo no se ha dictado, hay que mover la fecha en `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, no editarla en el aula.
 3. **El material queda duplicado con los enlaces a Drive.** Las aulas ya reparten material con recursos visibles que apuntan a Drive («Clases», «Material clases»). Las carpetas nuevas traen los mismos archivos dentro del campus: si actualizas un `.pptx` en Drive, la copia del campus se queda vieja. Se subieron porque el material tenía que quedar en CDigital; decide tú si el canal bueno es la carpeta o el enlace, y borra el otro.
 4. **Falta el PDF de Aperribai et al. (2024)** en las lecturas obligatorias de Creatividad. Las otras 8 de las 10 preguntas del Quiz 1 se responden con el PDF de REDIE, que sí está subido (carpeta «Lecturas obligatorias», cmid `7705994`).

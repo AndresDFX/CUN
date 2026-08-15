@@ -46,6 +46,11 @@ Lo que sí sigue en pie del diseño anterior: **el campus hace de reloj.** Con �
 (`timestart`) se publica hoy un aviso que el cron suelta el día indicado, sin AWS, sin GitHub
 Actions, sin Programador de tareas y sin que este computador esté encendido (§4).
 
+**Estado al cierre del 15/08/2026:** las **siete** aulas ya tienen sus fechas iguales a las del
+repositorio —0 discrepancias— y las 8 tareas están visibles, así que el canal está encendido: **24
+correos** salen solos entre el 05/09 y el 14/11 (§5b). Lo que falta es activar los ítems ocultos y
+tapar el hueco del cierre de los cuestionarios (§5c).
+
 ## 1. La herramienta ya está escrita
 
 ```bash
@@ -228,18 +233,68 @@ activen esos ítems — basta volver a correr el paso 3, que no repite lo ya pub
 **El paso 2 dejó de ser sólo higiene: es el canal.** Descubierto lo de §2b, alinear la `duedate` de
 las tareas ya no es «que el aula diga lo mismo que la guía», es **lo único que hace que le llegue un
 correo al estudiante** — 7 días antes por el resumen, 48 horas antes, y 2 horas después si no
-entregó. De ahí que el orden correcto de prioridades hoy sea:
+entregó.
 
-**Lo que queda de este semestre**, para las otras seis aulas:
+### 5a. Las siete aulas ya están alineadas (15/08/2026)
 
-1. Las **19 discrepancias de fechas** que siguen en pie (`ALISTAMIENTO CDigital 2026-08-15.md` §5:
-   Proyecto I anuncia sus dos ACAs para **enero de 2028**). **Esto es ahora lo más urgente de todo**:
-   una ACA con `duedate` en 2028 no sólo confunde, es que su aviso de vencimiento no dispara nunca.
-2. Activar lo que ya está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**.
-   Doble motivo: `assign_due_soon` exige `cm.visible = 1`, así que un ítem oculto está mudo también
-   para el canal nativo.
-3. Repetir los pasos 2 y 3 de arriba aula por aula, o de golpe sin `--aula`.
-4. **Cubrir el cierre de los cuestionarios**, que ningún proveedor nativo cubre: pedir el cambio de
+Las 19 discrepancias que quedaban se cerraron ese día, aula por aula, con
+`python config/moodle/cdigital.py fechas <aula> --incluir-visibles --confirmar`. Comprobación
+posterior sobre las **siete** aulas: **0 discrepancias**. En particular, **de Proyecto I desaparecieron
+las fechas de 2028**.
+
+Lo que autorizó tocar ítems que los estudiantes ya veían fue un censo previo de sólo lectura de los 19
+(`participantes`/`enviados` de cada tarea, informe de intentos de cada cuestionario, temas de cada
+foro): **0 envíos, 0 intentos, 0 temas** entre los 282 matriculados. Nadie perdió trabajo hecho. Lo
+que sí cambia para el estudiante, y conviene saberlo por si hay que revertir:
+
+| Qué se movió | Cuántos | Efecto que nota el estudiante |
+|---|---|---|
+| Proyecto I: ACA 1, ACA FINAL, Autoevaluación | 3 | enero/febrero de 2028 → sept–nov de 2026 |
+| ACA Final de Investigación, TG2 y los tres TG3 | 6 | el cierre se adelanta 8 días (TG2, 1 día) |
+| Las cinco Autoevaluación | 5 | dejan de estar abiertas desde el 11/08; abren en su semana |
+| Las seis Coevaluación | 6 | ganan cierre; sin `cutoffdate` el foro no cerraba nunca |
+
+Las cinco Autoevaluación son el único cambio que *quita* algo que hoy existía —estaban abiertas desde
+el primer día del semestre—. Se movieron igual porque una autoevaluación del curso al día siguiente
+de empezarlo no evalúa nada, y porque nadie la había abierto.
+
+### 5b. Los 24 correos que salen solos
+
+Consecuencia directa de lo anterior: sobre las 8 tareas visibles de las 7 aulas, Moodle manda **24
+correos** sin que nadie corra nada. El primero es el **05/09/2026**; ninguno ha pasado.
+
+| Sale | Correo | Aula | Curso | Actividad | Cierra |
+|---|---|---|---|---|---|
+| 05/09 | resumen 7 días | 111070 | investigacion | ACA Final | 12/09 (32,8%) |
+| 10/09 | por vencer 48 h | 111070 | investigacion | ACA Final | 12/09 |
+| 12/09 | vencida (+2 h) | 111070 | investigacion | ACA Final | 12/09 |
+| 12/09 | resumen 7 días | 115463 | creatividad | ACA Final | 19/09 (32,8%) |
+| 17/09 | por vencer 48 h | 115463 | creatividad | ACA Final | 19/09 |
+| 19/09 | vencida (+2 h) | 115463 | creatividad | ACA Final | 19/09 |
+| 27/09 | resumen 7 días | 130378 | proyecto1 | ACA 1 | 04/10 (25%) |
+| 02/10 | por vencer 48 h | 130378 | proyecto1 | ACA 1 | 04/10 |
+| 04/10 | vencida (+2 h) | 130378 | proyecto1 | ACA 1 | 04/10 |
+| 31/10 | resumen 7 días | 112321 · 116387 · 129270 | tg3 (los tres) | ACA Final | 07/11 (32%) |
+| 01/11 | resumen 7 días | 130378 | proyecto1 | ACA FINAL | 08/11 (42%) |
+| 05/11 | por vencer 48 h | 112321 · 116387 · 129270 | tg3 (los tres) | ACA Final | 07/11 |
+| 06/11 | por vencer 48 h | 130378 | proyecto1 | ACA FINAL | 08/11 |
+| 07/11 | resumen 7 días | 129268 | tg2 | ACA Final | 14/11 (32,8%) |
+| 07/11 | vencida (+2 h) | 112321 · 116387 · 129270 | tg3 (los tres) | ACA Final | 07/11 |
+| 08/11 | vencida (+2 h) | 130378 | proyecto1 | ACA FINAL | 08/11 |
+| 12/11 | por vencer 48 h | 129268 | tg2 | ACA Final | 14/11 |
+| 14/11 | vencida (+2 h) | 129268 | tg2 | ACA Final | 14/11 |
+
+Las 8 tareas están **visibles** en sus aulas —comprobado el 15/08—, que es requisito del canal
+(`cm.visible = 1 AND c.visible = 1`). El «vencida» sólo le llega a quien no entregó, y el de 48 horas
+respeta las prórrogas por usuario o por grupo.
+
+### 5c. Lo que sigue pendiente
+
+1. Activar lo que está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**. Es
+   además la única forma de que un ítem entre al canal nativo: oculto está mudo.
+2. Volver a correr el paso 3 (`recordatorios.py --programar`) para las seis aulas restantes; los
+   avisos de ítems ocultos se saltan solos y aparecerán cuando se activen.
+3. **Cubrir el cierre de los cuestionarios**, que ningún proveedor nativo cubre: pedir el cambio de
    `/admin/message.php` al administrador, o montar el Apps Script de §3. Mientras no esté, el aviso
    del foro para un Quiz vive **sólo dentro del aula**.
 
