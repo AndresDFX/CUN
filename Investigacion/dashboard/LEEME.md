@@ -10,6 +10,7 @@ sobre todo los **pendientes de Producción** del docente.
 python Investigacion/dashboard/synapse.py login        # una sola vez — abre Chrome
 python Investigacion/dashboard/synapse.py estado       # ¿hay sesión? ¿de quién?
 python Investigacion/dashboard/synapse.py pendientes   # lo que se usa a diario
+python Investigacion/dashboard/synapse.py calendario   # CSV de eventos: alerta + fecha exacta
 python Investigacion/dashboard/synapse.py recopilar    # volcado de todo lo accesible
 python Investigacion/dashboard/synapse.py cerrar       # borrar la credencial local
 ```
@@ -25,6 +26,51 @@ los vencidos primero), `pendientes_produccion.json` (el mismo análisis, para ot
 `recopilar` añade `inventario_synapse.json`. Por defecto trae **solo los datos propios**; con
 `--todo` barre además las colecciones globales, que pueden contener fichas y correos de otros
 docentes — úselo solo si de verdad lo necesita.
+
+## `calendario` — los eventos de Producción, con la alerta a siete días
+
+```bash
+python Investigacion/dashboard/synapse.py calendario                  # alerta a 7 días
+python Investigacion/dashboard/synapse.py calendario --alerta 14      # otra antelación
+python Investigacion/dashboard/synapse.py calendario --sep ";"        # si Excel no separa bien
+```
+
+**Synapse no tiene colección de calendario.** El apartado de Producción arma sus eventos a partir
+de los productos del docente, y este subcomando reconstruye las mismas dos fuentes:
+
+| Evento | De dónde sale |
+|---|---|
+| Entrega final | `deliveryDate` del producto (o `dueDate` si falta) |
+| Hito parcial | un evento por cada `partialMilestones[]`, con su `title` y su `dueDate` |
+
+Es el mismo par que usa el panel de administración para su `Reporte_Entregas.xlsx`, donde cada
+fila sale marcada `Tipo: Final` o como hito. Si un día apareciera una colección de calendario de
+verdad, este es el sitio a cambiar.
+
+Escribe dos CSV en `datos/` (y el mismo análisis en `eventos_produccion.json`):
+
+- **`eventos_produccion.csv`** — el de revisar. Una fila por evento, con `fecha_alerta`
+  (= entrega − 7 días), `fecha_entrega` exacta, `dias_para_entrega` y dos columnas para filtrar:
+  `alerta_activa` (¿ya entré en la ventana de siete días?) y `requiere_accion`.
+- **`eventos_produccion_google_calendar.csv`** — importable en Google Calendar.
+
+Tres decisiones que no son obvias:
+
+1. **`Rechazado` cuenta como pendiente.** El producto volvió al docente y hay que reentregarlo, así
+   que sigue necesitando alerta. Solo `Aprobado` y `Entregado` se consideran cerrados.
+2. **La importación por CSV de Google Calendar no sabe crear recordatorios.** La alerta no puede
+   viajar como propiedad del evento, así que el segundo CSV escribe **dos** eventos de día completo
+   por entrega: `[Revisar 7d]` en la fecha de alerta y `[ENTREGA]` el día del vencimiento. Sus
+   fechas van en `MM/DD/YYYY`, que es lo que exige el importador, y con coma obligatoria. Solo
+   entran los eventos que requieren acción: importar vencimientos ya aprobados sería ruido pasado.
+3. **Una fecha ausente y una fecha ilegible no son lo mismo.** La segunda sale como
+   `FECHA ILEGIBLE: <valor>` y se muestra tal cual, sin adivinar si `20/08/2026` es día/mes o
+   mes/día. Es un dato roto en la plataforma: Synapse la lee con `new Date(fecha + "T00:00:00")`,
+   así que allí también sale «Invalid Date». Los eventos sin fecha utilizable **no** entran al CSV
+   de Calendar —no hay dónde ponerlos— y por eso el subcomando los lista aparte al final: lo que no
+   se puede vigilar hay que decirlo, no callarlo.
+
+Los CSV van a `datos/`, que está en `.gitignore`.
 
 ## Sobre las credenciales
 

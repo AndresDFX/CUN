@@ -33,6 +33,7 @@ USO
     python Investigacion/dashboard/synapse.py login        # una sola vez (abre Chrome)
     python Investigacion/dashboard/synapse.py estado       # ¿hay sesión válida? ¿de quién?
     python Investigacion/dashboard/synapse.py pendientes   # informe de pendientes de Producción
+    python Investigacion/dashboard/synapse.py calendario   # CSV de eventos: alerta + fecha exacta
     python Investigacion/dashboard/synapse.py recopilar     # volcado completo de lo accesible
 
 Para revocar el acceso: ``python Investigacion/dashboard/synapse.py cerrar`` borra el token y el
@@ -41,11 +42,12 @@ perfil local. La sesión de Google se revoca aparte, desde la cuenta del usuario
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import os
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Any
 
 import requests
@@ -348,17 +350,33 @@ def _lista_productos(doc: dict) -> list[dict]:
     return []
 
 
-def _vencido(fecha: str | None) -> bool:
+def _a_fecha(fecha: str | None) -> date | None:
+    """La fecha de un campo de Synapse, o None si no se puede leer.
+
+    Las fechas de entrega llegan como `YYYY-MM-DD` (la app hace
+    `new Date(deliveryDate + "T00:00:00")`), pero `deliveredAt` y `lastActivity` son ISO con hora.
+    Se acepta cualquiera de las dos formas y se descarta lo demás sin romperse.
+    """
     if not fecha:
-        return False
-    try:
-        f = datetime.fromisoformat(str(fecha)[:19].replace("Z", ""))
-    except ValueError:
+        return None
+    t = str(fecha).strip()
+    for intento in (t[:19].replace("Z", ""), t[:10]):
         try:
-            f = datetime.strptime(str(fecha)[:10], "%Y-%m-%d")
+            return datetime.fromisoformat(intento).date()
         except ValueError:
-            return False
-    return f.date() < datetime.now().date()
+            continue
+    return None
+
+
+def _iso(fecha: str | None) -> str:
+    """La fecha en `YYYY-MM-DD`, o cadena vacía si no hay o no se entiende."""
+    f = _a_fecha(fecha)
+    return f.isoformat() if f else ""
+
+
+def _vencido(fecha: str | None) -> bool:
+    f = _a_fecha(fecha)
+    return bool(f and f < datetime.now().date())
 
 
 def analizar_productos(doc: dict) -> dict:
@@ -399,6 +417,140 @@ def analizar_productos(doc: dict) -> dict:
 
     resumen["abiertos"].sort(key=lambda x: (not x["vencido"], str(x["fecha_limite"] or "9999")))
     return resumen
+
+
+# =============================================================================================
+# Eventos de calendario del apartado «Producción»
+# =============================================================================================
+# Synapse NO tiene colección de calendario: el apartado de Producción arma sus eventos a partir
+# de los productos del docente. Cada producto aporta un evento por su **entrega final**
+# (`deliveryDate`) y uno por cada **hito parcial** (`partialMilestones[].dueDate` + `title`). Es
+# exactamente el mismo par de fuentes que usa el panel de administración para su
+# «Reporte_Entregas.xlsx», donde cada fila sale marcada `Tipo: Final` o como hito.
+#
+# `Rechazado` cuenta como pendiente: el producto volvió al docente y hay que reentregarlo.
+ESTADOS_REQUIEREN_ACCION = ESTADOS_ABIERTOS | {"rechazado"}
+
+
+def eventos_calendario(doc: dict, dias_alerta: int = 7, hoy: date | None = None) -> list[dict]:
+    """Un evento por fecha de entrega, con su fecha de alerta `dias_alerta` días antes.
+
+    Devuelve la lista ordenada por fecha de entrega. Los eventos sin fecha legible se conservan
+    —son un hallazgo, no basura: un hito sin `dueDate` no se puede vigilar— y se van al final.
+    """
+    hoy = hoy or datetime.now().date()
+    eventos: list[dict] = []
+
+    for pr in _lista_productos(doc):
+        producto = pr.get("productName") or pr.get("title") or pr.get("id") or "(sin nombre)"
+        categoria = pr.get("categoriaMinciencias") or pr.get("categoryId") or ""
+
+        crudas = [("Entrega final", "", pr.get("deliveryDate") or pr.get("dueDate"),
+                   str(pr.get("status") or ""), pr.get("deliveredAt"), pr.get("documentUrl"))]
+        hitos = pr.get("partialMilestones") or []
+        hitos = hitos if isinstance(hitos, list) else list(hitos.values())
+        for i, h in enumerate(x for x in hitos if isinstance(x, dict)):
+            crudas.append(("Hito parcial", h.get("title") or h.get("name") or f"Hito {i + 1}",
+                           h.get("dueDate"), str(h.get("status") or ""),
+                           h.get("deliveredAt"), h.get("documentUrl")))
+
+        for tipo, hito, fecha_txt, estado, entregado, url in crudas:
+            f = _a_fecha(fecha_txt)
+            vacia = not str(fecha_txt or "").strip()
+            if tipo == "Entrega final" and vacia:
+                continue   # un producto sin fecha final no es un evento; un hito sin fecha SÍ lo
+                           # es, y sale marcado «SIN FECHA»: un hito que no se puede vigilar
+                           # es justo lo que hay que ver en el informe.
+            accion = estado.lower() in ESTADOS_REQUIEREN_ACCION
+            alerta = f - timedelta(days=dias_alerta) if f else None
+            eventos.append({
+                "producto": producto,
+                "categoria_minciencias": categoria,
+                "tipo": tipo,
+                "hito": hito,
+                "estado": estado or "(sin estado)",
+                "fecha_entrega": f.isoformat() if f else "",
+                "fecha_alerta": alerta.isoformat() if alerta else "",
+                "dias_para_entrega": (f - hoy).days if f else "",
+                "requiere_accion": "sí" if accion else "no",
+                # Lo que de verdad se mira cada mañana: ¿ya entré en la ventana de 7 días?
+                "alerta_activa": "sí" if (accion and alerta and alerta <= hoy) else "no",
+                # Una fecha ausente y una fecha ilegible no son lo mismo: la segunda es un dato
+                # roto en la plataforma —Synapse la lee con `new Date(fecha+"T00:00:00")`, así
+                # que allí también sale «Invalid Date»— y se muestra tal como vino para poder
+                # corregirla. No se adivina si `20/08/2026` es día/mes o mes/día.
+                "situacion": ("SIN FECHA" if vacia else
+                              f"FECHA ILEGIBLE: {str(fecha_txt).strip()}" if not f else
+                              "VENCIDO" if (accion and f < hoy) else
+                              "cerrado" if not accion else
+                              f"faltan {(f - hoy).days} días"),
+                "entregado_el": _iso(entregado),
+                "documento": url or "",
+                "fecha_entrega_cruda": str(fecha_txt or ""),
+            })
+
+    eventos.sort(key=lambda e: (e["fecha_entrega"] == "", e["fecha_entrega"],
+                                e["tipo"] != "Hito parcial", e["hito"]))
+    return eventos
+
+
+COLUMNAS_CSV = ["producto", "categoria_minciencias", "tipo", "hito", "estado",
+                "fecha_alerta", "fecha_entrega", "dias_para_entrega",
+                "alerta_activa", "requiere_accion", "situacion", "entregado_el", "documento"]
+
+
+def escribir_csv(eventos: list[dict], ruta: str, sep: str = ",") -> str:
+    """El CSV de revisión: una fila por evento, con la fecha de alerta y la fecha exacta.
+
+    Se escribe en `utf-8-sig` (con BOM) porque sin él Excel en Windows abre las tildes como
+    «Producción», y `newline=""` para que no salgan filas en blanco entre líneas.
+    """
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    with open(ruta, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNAS_CSV, delimiter=sep, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(eventos)
+    return ruta
+
+
+def escribir_csv_google(eventos: list[dict], ruta: str) -> str:
+    """CSV importable en Google Calendar, con dos eventos por entrega.
+
+    La importación por CSV de Google Calendar **no sabe crear recordatorios**, así que la alerta
+    de 7 días no puede viajar como propiedad del evento: se crea como un evento propio en la
+    fecha de alerta («Revisar»), y el día del vencimiento va otro («ENTREGA»). Las fechas van en
+    `MM/DD/YYYY`, que es el formato que exige el importador, y el separador es coma obligatoria.
+
+    Solo entran los eventos que requieren acción: importar vencimientos ya aprobados llenaría el
+    calendario de ruido pasado.
+    """
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    cols = ["Subject", "Start Date", "All Day Event", "Description", "Private"]
+
+    def mmddyyyy(iso: str) -> str:
+        d = _a_fecha(iso)
+        return d.strftime("%m/%d/%Y") if d else ""
+
+    filas = []
+    for e in eventos:
+        if e["requiere_accion"] != "sí" or not e["fecha_entrega"]:
+            continue
+        que = f"{e['producto']}" + (f" — {e['hito']}" if e["hito"] else "")
+        desc = (f"Synapse CUN · {e['tipo']} · estado: {e['estado']}"
+                f" · vence {e['fecha_entrega']}"
+                + (f" · categoría {e['categoria_minciencias']}" if e["categoria_minciencias"] else "")
+                + (f" · {e['documento']}" if e["documento"] else ""))
+        if e["fecha_alerta"]:
+            filas.append({"Subject": f"[Revisar 7d] {que}", "Start Date": mmddyyyy(e["fecha_alerta"]),
+                          "All Day Event": "True", "Description": desc, "Private": "True"})
+        filas.append({"Subject": f"[ENTREGA] {que}", "Start Date": mmddyyyy(e["fecha_entrega"]),
+                      "All Day Event": "True", "Description": desc, "Private": "True"})
+
+    with open(ruta, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols, delimiter=",")
+        w.writeheader()
+        w.writerows(filas)
+    return ruta
 
 
 # =============================================================================================
@@ -502,6 +654,67 @@ def cmd_pendientes(args) -> int:
     return 0
 
 
+def cmd_calendario(args) -> int:
+    tok, cred = token_de_acceso()
+    doc = obtener_documento(tok, f"{COL_POR_DOCENTE}/{cred['uid']}")
+    if doc is None:
+        print("No existe documento de productos para esta cuenta "
+              f"(`{COL_POR_DOCENTE}/{cred['uid']}`): no hay nada que calendarizar.")
+        return 0
+    if "_error" in doc:
+        print(f"No pude leer los productos: {doc['_error']}")
+        return 1
+
+    hoy = datetime.now().date()
+    eventos = eventos_calendario(doc, dias_alerta=args.alerta, hoy=hoy)
+    if not eventos:
+        print("Los productos no traen ninguna fecha de entrega ni hito: no hay eventos.")
+        return 0
+
+    ruta = args.csv or os.path.join(DIR_DATOS, "eventos_produccion.csv")
+    escribir_csv(eventos, ruta, sep=args.sep)
+    ruta_gc = escribir_csv_google(
+        eventos, os.path.splitext(ruta)[0] + "_google_calendar.csv")
+    _escribir("eventos_produccion.json", eventos)
+
+    accionables = [e for e in eventos if e["requiere_accion"] == "sí"]
+    print(f"Cuenta: {cred['email']} · hoy {hoy.isoformat()} · alerta {args.alerta} días antes")
+    print(f"{len(eventos)} eventos ({len(accionables)} requieren acción) de "
+          f"{len(_lista_productos(doc))} productos\n")
+
+    anchos = [46, 13, 12, 12, 13, 22]
+    cab = ("producto / hito", "tipo", "alerta", "ENTREGA", "estado", "situación")
+    print("  ".join(t[:a].ljust(a) for t, a in zip(cab, anchos)))
+    print("  ".join("-" * a for a in anchos))
+    for e in eventos:
+        que = e["producto"] + (f" » {e['hito']}" if e["hito"] else "")
+        fila = (que, "Final" if e["tipo"] == "Entrega final" else "Hito",
+                e["fecha_alerta"] or "—", e["fecha_entrega"] or "—",
+                e["estado"], e["situacion"])
+        marca = "  <-- ALERTA" if e["alerta_activa"] == "sí" else ""
+        print("  ".join(str(t)[:a].ljust(a) for t, a in zip(fila, anchos)) + marca)
+
+    activas = [e for e in eventos if e["alerta_activa"] == "sí"]
+    print(f"\ncon alerta activa hoy (dentro de los {args.alerta} días, o ya vencido): "
+          f"{len(activas)}")
+
+    # Lo que NO se puede vigilar hay que decirlo: sin fecha legible no hay alerta posible, y
+    # estos eventos tampoco entran al CSV de Google Calendar.
+    sin_fecha = [e for e in eventos if not e["fecha_entrega"]]
+    if sin_fecha:
+        print(f"\n!!! {len(sin_fecha)} evento(s) SIN fecha utilizable: no generan alerta ni "
+              f"entran al CSV de Calendar.")
+        for e in sin_fecha:
+            print(f"       {e['producto']}{' » ' + e['hito'] if e['hito'] else ''} "
+                  f"[{e['estado']}] -> {e['situacion']}")
+
+    print(f"\nCSV de revisión:      {ruta}")
+    print(f"CSV para Calendar:    {ruta_gc}")
+    print("   (la importación por CSV de Google Calendar no crea recordatorios: la alerta va "
+          "como\n    un evento propio «[Revisar 7d]» en la fecha de alerta.)")
+    return 0
+
+
 def cmd_recopilar(args) -> int:
     tok, cred = token_de_acceso()
     print(f"Sesión: {cred['email']} (uid {cred['uid']})\n")
@@ -549,6 +762,10 @@ def cmd_recopilar(args) -> int:
 
 # =============================================================================================
 def main(argv: list[str]) -> int:
+    try:  # la consola de Windows llega en cp1252 y parte de esta salida no cabe ahí
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
     ap = argparse.ArgumentParser(
         description="Conector a Synapse CUN (dashboard-investigaciones.web.app).",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -567,6 +784,15 @@ def main(argv: list[str]) -> int:
 
     p = sub.add_parser("pendientes", help="Informe de pendientes de Producción (lo habitual)")
     p.set_defaults(func=cmd_pendientes)
+
+    p = sub.add_parser("calendario",
+                       help="CSV de los eventos de calendario de Producción (fecha exacta + alerta)")
+    p.add_argument("--alerta", type=int, default=7,
+                   help="Días antes del vencimiento en que salta la alerta (por omisión 7)")
+    p.add_argument("--csv", help="Ruta del CSV (por omisión datos/eventos_produccion.csv)")
+    p.add_argument("--sep", default=",",
+                   help='Separador de columnas. Usa --sep ";" si Excel te mete todo en una sola')
+    p.set_defaults(func=cmd_calendario)
 
     p = sub.add_parser("recopilar", help="Volcado de todo lo accesible de la plataforma")
     p.add_argument("--todo", action="store_true",
