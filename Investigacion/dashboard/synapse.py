@@ -47,6 +47,7 @@ import json
 import os
 import shutil
 import sys
+import tempfile
 from datetime import date, datetime, timedelta, timezone
 from typing import Any
 
@@ -170,17 +171,21 @@ def _cerrar(ctx) -> None:
         pass          # si ya la cerró el usuario, cerrarla otra vez no es un error
 
 
-def _auth_del_perfil(p) -> dict | None:
-    """Lee la sesión del perfil en disco, sin pedirle nada más al usuario.
+def _auth_del_perfil(p, perfil: str = PERFIL_CHROME) -> dict | None:
+    """Lee la sesión de un perfil en disco, sin pedirle nada más al usuario.
 
     El contexto de Chrome es **persistente**: si el SSO llegó a completarse, Firebase dejó la
     sesión en la IndexedDB del perfil y sigue ahí aunque la ventana se haya cerrado. Así que
     cerrar la ventana a mitad del proceso no obliga a repetir el inicio de sesión: se vuelve a
     abrir el perfil —esta vez sin interfaz, porque aquí no hay nada que teclear— solo para leerla.
+
+    Abrir el perfil con Chrome es la **única** lectura fiable. leveldb comprime sus bloques con
+    snappy, así que buscar texto plano dentro de los ``.ldb`` da falsos negativos: que no aparezca
+    ``firebase:authUser`` no demuestra que no haya sesión.
     """
     try:
         ctx = p.chromium.launch_persistent_context(
-            PERFIL_CHROME, channel="chrome", headless=True,
+            perfil, channel="chrome", headless=True,
             args=["--disable-blink-features=AutomationControlled"],
         )
     except Exception as e:
@@ -196,6 +201,120 @@ def _auth_del_perfil(p) -> dict | None:
         return None
     finally:
         _cerrar(ctx)
+
+
+def _guardar_sesion(auth: dict, esperada: str | None = None) -> int:
+    """Guarda el token de refresco de una sesión ya detectada. Devuelve 0 si quedó guardada."""
+    refresh = (auth.get("stsTokenManager") or {}).get("refreshToken")
+    if not refresh:
+        print("\nSesión detectada pero sin refresh token utilizable.", file=sys.stderr)
+        return 1
+
+    correo = (auth.get("email") or "").lower()
+    print(f"\nSesión detectada: {correo}  (uid {auth.get('uid')})")
+    if esperada and correo != esperada:
+        print(f"AVISO: esperaba {esperada} y la sesión es de {correo}.")
+        print("       Se guarda igual, pero verifica que sea la cuenta correcta.")
+
+    _guardar_credenciales({
+        "email": correo,
+        "uid": auth.get("uid"),
+        "displayName": auth.get("displayName"),
+        "refreshToken": refresh,
+        "guardado": datetime.now(timezone.utc).isoformat(),
+    })
+    print(f"Credencial guardada FUERA del repositorio, en:\n   {ARCHIVO_CRED}")
+    return 0
+
+
+# Carpeta donde el navegador guarda la IndexedDB del origen de Synapse, dentro de cada perfil.
+CARPETA_IDB = "https_dashboard-investigaciones.web.app_0.indexeddb.leveldb"
+
+
+def _perfiles_con_synapse() -> list[tuple[str, str]]:
+    """Perfiles del navegador del usuario que ya tienen datos de Synapse en disco."""
+    local = os.environ.get("LOCALAPPDATA", "")
+    raices = [
+        ("Chrome", os.path.join(local, "Google", "Chrome", "User Data")),
+        ("Edge", os.path.join(local, "Microsoft", "Edge", "User Data")),
+        ("Brave", os.path.join(local, "BraveSoftware", "Brave-Browser", "User Data")),
+    ]
+    hallados: list[tuple[str, str]] = []
+    for navegador, raiz in raices:
+        if not os.path.isdir(raiz):
+            continue
+        for nombre in sorted(os.listdir(raiz)):
+            if nombre != "Default" and not nombre.startswith("Profile"):
+                continue
+            carpeta = os.path.join(raiz, nombre, "IndexedDB", CARPETA_IDB)
+            if os.path.isdir(carpeta):
+                hallados.append((f"{navegador} · {nombre}", carpeta))
+    return hallados
+
+
+def _copia_para_leer(origen: str, raiz_temporal: str) -> int:
+    """Copia SOLO la IndexedDB de Synapse a un perfil nuevo: ni cookies, ni historial, ni otros
+    sitios. Se copia en vez de leer el perfil original porque el navegador del usuario suele estar
+    abierto y mantiene la carpeta bloqueada; así no hay que cerrarle nada ni tocar su perfil."""
+    destino = os.path.join(raiz_temporal, "Default", "IndexedDB", CARPETA_IDB)
+    os.makedirs(destino, exist_ok=True)
+    copiados = 0
+    for nombre in os.listdir(origen):
+        if nombre == "LOCK":
+            continue          # el LOCK pertenece al navegador abierto; copiarlo bloquea la lectura
+        try:
+            shutil.copy2(os.path.join(origen, nombre), os.path.join(destino, nombre))
+            copiados += 1
+        except OSError as e:
+            print(f"   no pude copiar {nombre}: {str(e)[:120]}")
+    return copiados
+
+
+def cmd_importar(args) -> int:
+    """Traer la sesión que el usuario ya inició en SU navegador de siempre.
+
+    Es la alternativa a ``login`` cuando Google se niega a autenticar en la ventana que abre
+    Playwright (ahí ve marcas de automatización y a veces bloquea el SSO). El usuario entra a
+    Synapse en su Chrome normal, como cualquier día, y este subcomando lee la sesión resultante.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("Falta Playwright. Instálalo con:  pip install playwright", file=sys.stderr)
+        return 1
+
+    perfiles = _perfiles_con_synapse()
+    if not perfiles:
+        print("Ningún perfil de tu navegador tiene datos de Synapse todavía.", file=sys.stderr)
+        print(f"Abre {URL_APP} en tu Chrome de siempre, inicia sesión con Google y repite.",
+              file=sys.stderr)
+        return 1
+
+    print(f"Perfiles con datos de Synapse: {len(perfiles)}")
+    with sync_playwright() as p:
+        for etiqueta, origen in perfiles:
+            tmp = tempfile.mkdtemp(prefix="synapse-lectura-")
+            try:
+                copiados = _copia_para_leer(origen, tmp)
+                print(f"\n-- {etiqueta}: {copiados} archivo(s) copiado(s) a un perfil temporal")
+                auth = _auth_del_perfil(p, tmp)
+                if not auth:
+                    print("   sin sesión de Firebase en este perfil")
+                    continue
+                codigo = _guardar_sesion(auth, (args.cuenta or "").lower() or None)
+                if codigo == 0:
+                    print(f"   (importada de {etiqueta})")
+                    print("\nListo. Ya no hace falta el navegador; usa:")
+                    print("   python Investigacion/dashboard/synapse.py calendario")
+                    return 0
+            finally:
+                shutil.rmtree(tmp, ignore_errors=True)
+
+    print("\nNinguno de tus perfiles tiene sesión de Synapse.", file=sys.stderr)
+    print(f"Abre {URL_APP} en tu Chrome de siempre, completa el inicio de sesión con Google "
+          f"—hasta ver tu nombre dentro de la aplicación— y vuelve a ejecutar «importar».",
+          file=sys.stderr)
+    return 1
 
 
 def cmd_login(args) -> int:
@@ -268,28 +387,10 @@ def cmd_login(args) -> int:
             _cerrar(ctx)
             return 1
 
-        gestor = auth.get("stsTokenManager") or {}
-        refresh = gestor.get("refreshToken")
-        if not refresh:
-            print("\nSesión detectada pero sin refresh token utilizable.", file=sys.stderr)
-            _cerrar(ctx)
-            return 1
-
-        correo = (auth.get("email") or "").lower()
-        print(f"\nSesión detectada: {correo}  (uid {auth.get('uid')})")
-        if esperada and correo != esperada:
-            print(f"AVISO: esperaba {esperada} y la sesión es de {correo}.")
-            print("       Se guarda igual, pero verifica que sea la cuenta correcta.")
-
-        _guardar_credenciales({
-            "email": correo,
-            "uid": auth.get("uid"),
-            "displayName": auth.get("displayName"),
-            "refreshToken": refresh,
-            "guardado": datetime.now(timezone.utc).isoformat(),
-        })
-        print(f"Credencial guardada FUERA del repositorio, en:\n   {ARCHIVO_CRED}")
+        codigo = _guardar_sesion(auth, esperada)
         _cerrar(ctx)
+        if codigo:
+            return codigo
 
     print("\nListo. Ya no hace falta el navegador; usa:")
     print("   python Investigacion/dashboard/synapse.py calendario")
@@ -834,6 +935,11 @@ def main(argv: list[str]) -> int:
     p.add_argument("--rol", default="Docente", help="Rol a preseleccionar (Docente/Administrador)")
     p.add_argument("--espera", type=int, default=300, help="Segundos de espera para el SSO")
     p.set_defaults(func=cmd_login)
+
+    p = sub.add_parser("importar",
+                       help="Traer la sesión que ya iniciaste en tu propio Chrome (sin abrir nada)")
+    p.add_argument("--cuenta", default=CUENTA_ESPERADA, help="Correo institucional esperado")
+    p.set_defaults(func=cmd_importar)
 
     p = sub.add_parser("estado", help="Verificar la sesión guardada y la ficha propia")
     p.set_defaults(func=cmd_estado)

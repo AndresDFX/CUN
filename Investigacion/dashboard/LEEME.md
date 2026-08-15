@@ -8,6 +8,7 @@ sobre todo los **pendientes de Producción** del docente.
 
 ```bash
 python Investigacion/dashboard/synapse.py login        # una sola vez — abre Chrome
+python Investigacion/dashboard/synapse.py importar     # si el login falla: usa tu propio Chrome
 python Investigacion/dashboard/synapse.py estado       # ¿hay sesión? ¿de quién?
 python Investigacion/dashboard/synapse.py pendientes   # lo que se usa a diario
 python Investigacion/dashboard/synapse.py calendario   # CSV de eventos: alerta + fecha exacta
@@ -26,6 +27,30 @@ los vencidos primero), `pendientes_produccion.json` (el mismo análisis, para ot
 `recopilar` añade `inventario_synapse.json`. Por defecto trae **solo los datos propios**; con
 `--todo` barre además las colecciones globales, que pueden contener fichas y correos de otros
 docentes — úselo solo si de verdad lo necesita.
+
+## Si `login` no consigue la sesión: `importar`
+
+Google a veces se niega a autenticar en la ventana que abre el script, porque detecta marcas de
+automatización; la ventana se queda en la pantalla de Synapse y el SSO nunca se completa. La salida
+es no pelear con ella:
+
+1. Abra <https://dashboard-investigaciones.web.app/> en **su Chrome de siempre** e inicie sesión
+   como cualquier otro día, hasta ver su nombre dentro de la aplicación.
+2. `python Investigacion/dashboard/synapse.py importar`
+
+`importar` recorre los perfiles de Chrome, Edge y Brave, y de cada uno **copia solo la IndexedDB del
+origen de Synapse** a un perfil temporal que borra al terminar: ni cookies, ni historial, ni otros
+sitios, y nada se escribe en el perfil del usuario. Se copia en vez de leer el original porque el
+navegador suele estar abierto y mantiene esa carpeta bloqueada.
+
+Dos cosas que conviene saber, porque cuestan tiempo si se descubren a mano:
+
+- **Los perfiles no comparten sesión.** Iniciar sesión en su Chrome no autentica la ventana del
+  script, ni al revés. Por eso hacen falta los dos caminos.
+- **Buscar texto plano dentro de los `.ldb` no sirve como prueba.** leveldb comprime los bloques con
+  snappy: que no aparezca `firebase:authUser` no demuestra que no haya sesión. La única lectura
+  concluyente es abrir el perfil con Chrome y preguntarle a la IndexedDB, que es lo que hace este
+  subcomando.
 
 ## `calendario` — los eventos de Producción, con la alerta a siete días
 
