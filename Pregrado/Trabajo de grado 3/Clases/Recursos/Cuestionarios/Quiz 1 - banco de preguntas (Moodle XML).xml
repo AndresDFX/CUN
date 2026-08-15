@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 1 - TG3 U1-U3</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 1 (6% de la nota del curso · Corte 1) — TRABAJO DE GRADO 3 (Modelos de Innovación · Ingeniería de Sistemas · SIAC 94532).</strong></p><p>Ventana: 18/08/2026 a 25/08/2026. Se resuelve en CDigital y se aplica dentro del encuentro del 25/08, que reserva 12 minutos para ello.</p><p><strong>Alcance:</strong> la <strong>Sesión 01</strong> —de encuadre, con su <strong>lectura autónoma obligatoria</strong> de las unidades <strong>U1–U2</strong> del Syllabus: Itriago C. y Zerpa (2011), «El planteamiento del problema en el proyecto de investigación en Ingeniería», del que entra <em>lo que propone</em>: la estructura del problema, las ocho interrogantes-guía y los criterios de revisión— y la <strong>Sesión 02</strong> (U3: formulación de pregunta, objetivos y título, con las variables visibles en la pregunta-problema). <strong>No entra la Sesión 03</strong> (25/08/2026 · estructura del artículo y taller de introducción), que se dicta el mismo día en que cierra la ventana, <strong>ni ninguna sesión posterior</strong>: no se pregunta por fichas de referentes, matriz de consistencia, enfoque/alcance/diseño, instrumento, comunidades de práctica, co-creación, análisis de datos, cierre de marco teórico, resultados y discusión, tesauro UNESCO, póster, verificación antiplagio, sustentación ante jurados ni repositorio institucional. Tampoco se pregunta por administración del curso (pesos, cortes, fechas, canal de entrega, créditos o reglas de uso de IA).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción y cita literal de la fuente en la retroalimentación general. <strong>Las 10 preguntas son temáticas:</strong> 4 sobre la lectura obligatoria (U1–U2) y 6 sobre los conceptos de la Sesión 02 (U3). Tiempo total estimado: 10 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-01 Las partes de la estructura de un problema]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura autónoma obligatoria de la Sesión 01 propone, como primera heurística, entender el problema de investigación <strong>como una estructura</strong>. ¿Cuáles son las partes que componen esa estructura?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Las partes son <strong>los datos, las metas, las restricciones y las operaciones</strong>. Los datos son el estado inicial (de dónde parte la situación); la meta, el estado final (a dónde se quiere llegar); las restricciones condicionan qué solución es admisible; y las operaciones son las acciones para ir de los datos a la meta. No es el índice del proyecto ni la lista de secciones del documento: es el armazón del problema.</p><p>Cita literal (Itriago C. y Zerpa, 2011, p. 44): «Para ello se requiere primero recordar la idea de problema como estructura: datos, metas, restricciones, operaciones y asumir como producto final (lo que resultará del planteamiento del problema de investigación) una composición (texto escrito) de tres partes.» En la primera presentación del modelo (p. 41) el artículo las enuncia como «los datos, las metas, las condiciones y las operaciones», y unas páginas después nombra esas condiciones «Restricciones».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Los datos, las metas, las restricciones y las operaciones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las cuatro partes interrelacionadas con que la lectura representa el problema: los datos como estado inicial, la meta como estado final, las restricciones que condicionan la solución y las operaciones que llevan de los datos a la meta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El tema, la pregunta, los objetivos y la hipótesis del estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde la estructura del problema con la lista de piezas que se redactan en un proyecto. El tema es el punto de partida desde el que se identifica el problema, no un componente de su estructura, y la lectura no incluye la hipótesis en ese modelo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los antecedentes, la justificación, el marco teórico y la metodología.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Enumera partes del documento y no del problema. Los antecedentes sí aparecen en la lectura, pero como información que alimenta los datos del problema; el marco teórico y la metodología son secciones posteriores del manuscrito.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El objeto de estudio, el sujeto que investiga, el método y el resultado esperado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada al problema un esquema de manual de metodología general. La lectura describe el problema por sus componentes internos —datos, metas, restricciones y operaciones—, no por los roles de quien investiga y lo investigado.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-02 Qué significa que algo esté problematizado]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la lectura obligatoria, la sexta interrogante-guía pregunta qué resulta <strong>problematizado</strong> dentro de la situación observada. ¿Qué quiere decir allí «problematizado»?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Significa <strong>lo que no está bien en la situación</strong>: lo que hace falta, lo que no está claro, lo que representa desacuerdo, lo que se desconoce o lo que amerita detenida atención. Es el corazón de la segunda parte del planteamiento: no basta describir la situación, hay que señalar qué de ella constituye el problema.</p><p>Cita literal (Itriago C. y Zerpa, 2011, p. 46): «Es necesario aclarar aquí que su significado gira alrededor de la idea de "lo que anda mal", o mejor, "lo que no está bien", o "lo que requiere intervenirse", o simplemente "lo que amerita detenida atención" en la situación.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que en la situación se aprecia algo que no está bien, que hace falta, que no está claro o que amerita detenida atención.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura define «problematizado» como «lo que no está bien», «lo que requiere intervenirse» o «lo que amerita detenida atención» dentro de la situación observada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la situación ya fue estudiada por otros autores y existe bibliografía suficiente para discutirla en los antecedentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde la problematización con los antecedentes. Quién ha investigado antes es la cuarta interrogante y pertenece a la primera parte del texto, la de los datos; la problematización viene después y señala qué anda mal.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el problema ya quedó escrito como una pregunta con sus variables observables y su contexto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Adelanta un paso posterior: redactar la pregunta es el trabajo de la Sesión 02. Problematizar es identificar en la situación aquello que no está bien, todavía en prosa y antes de darle forma interrogativa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la situación afecta a una comunidad, una empresa o un sistema que se puede identificar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Responde a la séptima interrogante («¿para quién o para qué ente es un problema?»), que va en la misma parte del texto pero contesta otra cosa: a quién afecta, no qué es lo que anda mal.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-03 El papel de las restricciones]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Dentro de la estructura del problema que describe la lectura obligatoria, ¿qué son las <strong>restricciones</strong> y por qué la lectura insiste en no ignorarlas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Son los factores de la situación que <strong>condicionan el tipo de solución</strong> que se puede aportar: una solución que no las cumple no es viable. Por eso la lectura afirma que dejarlas fuera equivale a no resolver el problema. No son las limitaciones de tiempo o presupuesto de quien investiga, ni las acciones para llegar a la meta (esas son las operaciones).</p><p>Cita literal (Itriago C. y Zerpa, 2011, p. 42): «se identifica cierta clase de elementos en la situación, factores específicamente, que tienden a poner condicionantes para alcanzar la meta; es decir, condicionan el tipo de solución que se puede aportar para el problema. De otra manera, la solución no es factible, no sería viable pues no cumple con la condicionante señalada. A esta parte del problema se le conoce como Restricciones y constituyen un factor crítico para la solución. No considerar las restricciones del problema es similar a no resolverlo o no dar la respuesta que se solicite.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Son factores de la situación que condicionan qué solución es viable; no considerarlos equivale a no resolver el problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura las define como condicionantes para alcanzar la meta y advierte que «no considerar las restricciones del problema es similar a no resolverlo o no dar la respuesta que se solicite».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Son las limitaciones de tiempo, presupuesto y acceso que tiene quien investiga para terminar el proyecto en el plazo del semestre.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la confusión más frecuente: cambia las restricciones del problema por las limitaciones del investigador. Las restricciones pertenecen a la situación estudiada y filtran qué soluciones son admisibles, no al calendario de quien escribe.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Son los aspectos que se dejan por fuera del estudio y que se declaran para delimitar su alcance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde restricción con delimitación. Delimitar es decidir qué se estudia y qué no; una restricción, en cambio, es una condición que la solución tiene que cumplir para ser viable dentro de lo que sí se estudia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Son las acciones concretas que hay que ejecutar para pasar de los datos a la meta del problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la definición de las operaciones, el cuarto componente. Las operaciones se generan justamente después de considerar datos, metas y restricciones, y tienen que respetar estas últimas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-04 El cierre del texto de problema-solución]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante trae su planteamiento del problema redactado así: primero los antecedentes y la situación actual, después aquello que resulta problematizado y a quién afecta, y ahí termina el texto. Según la lectura obligatoria, ¿qué le falta a ese planteamiento?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le falta la <strong>tercera parte</strong>: el cierre en que se formula la meta o propósito del estudio y se indica, de manera general, cómo se prevé abordar el problema. Es la respuesta a la octava interrogante y se deriva como consecuencia lógica de las dos partes anteriores; sin ella el texto describe el problema pero no anuncia hacia dónde va la investigación.</p><p>Cita literal (Itriago C. y Zerpa, 2011, p. 44): «la primera parte de la redacción incluirá los antecedentes y la situación actual; la segunda parte incluirá lo que más adelante se explicará como la "problematización" del problema; y la parte final incluirá la forma general como se prevé abordar el problema para darle una posible solución y la aproximación al propósito del estudio.» La interrogante de esa parte es: «Octava interrogante: ¿qué puede hacerse para intentar resolver el problema?» (p. 47).</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La parte final, en la que se formula el propósito del estudio y se anuncia de manera general cómo se prevé abordar el problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El texto de problema-solución tiene tres partes y la última «incluirá la forma general como se prevé abordar el problema para darle una posible solución y la aproximación al propósito del estudio».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las conclusiones, que son el lugar donde por fin se responde la pregunta que quedó formulada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el cierre del planteamiento con el cierre del artículo. En el planteamiento no se responde nada todavía: solo se anuncia el propósito y la vía por la que se piensa abordar el problema.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La justificación, en la que se argumenta por qué el tema es importante para el país, para el sector productivo y para la disciplina.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Suena razonable, pero no es lo que el modelo de la lectura pide. La relevancia ya quedó dicha al problematizar y al señalar a quién afecta; lo que falta es el propósito y la aproximación a la solución.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La lista de referencias de los autores citados, sin la cual los antecedentes no quedan sustentados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Señala un requisito de forma, no un componente del texto de problema-solución. Las referencias acompañan a todo el manuscrito; la parte que falta aquí es el cierre con la meta y las posibles operaciones.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-05 Cuál formulación funciona como pregunta de investigación]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la Sesión 02, ¿cuál de estas formulaciones funciona como <strong>pregunta de investigación</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Sirve la que se abre con un conector («en qué medida», «cómo»), deja ver dos variables y dice en quién y dónde. Las otras tres son los tres casos que la Sesión 02 descarta de forma expresa: un <em>tema</em> (no se puede responder), una pregunta de <em>sí/no</em> (se agota en una palabra) y una <em>consulta de manual</em> (ya está respondida y no genera conocimiento nuevo).</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «Qué es (y qué NO es) una pregunta de investigación»): «<strong>Es</strong> una oración interrogativa que deja <strong>ver sus variables</strong>: qué se relaciona con qué, en quién y dónde. […] <strong>NO es</strong> un tema. "Automatización de pruebas" es un tema; no se puede responder. <strong>NO es</strong> de sí/no. "¿Sirve la automatización?" se responde con "sí" y se acabó el trabajo de grado. <strong>NO es</strong> una consulta de Google. "¿Qué es DevOps?" ya está respondido en un manual: eso no genera conocimiento nuevo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«¿En qué medida un tablero de indicadores mejora el control de inventario de una microempresa de comercio de la ciudad?»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Tiene conector («en qué medida»), dos variables que se pueden registrar (el tablero de indicadores y el control de inventario) y un actor con su contexto (una microempresa de comercio de la ciudad).</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Automatización de las pruebas de software en los equipos de desarrollo del sector público de la ciudad.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un tema, no una pregunta: aunque nombra actor y contexto, no se puede responder porque no hay interrogación ni relación entre variables. Delimitar el tema es el paso previo, no la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Sirve la automatización de las pruebas de software en el área de tecnología de una entidad pública del orden nacional?»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se responde con «sí» y se acabó el trabajo de grado: es una pregunta de sí/no. Tampoco dice qué se mediría, porque «sirve» no es una variable registrable.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Qué es DevOps y cuáles son las prácticas que lo componen según los manuales del área?»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una consulta de manual: la respuesta ya está publicada y por eso no genera conocimiento nuevo. Que empiece con «qué es» no la convierte en pregunta de investigación.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-06 Qué es una variable]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 pide que en su pregunta se puedan subrayar <strong>dos variables</strong>. Según esa sesión, ¿qué es una variable?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una variable es <strong>aquello que puede cambiar y que usted va a observar o medir</strong>: el tiempo, la cobertura, el número de errores, la percepción de los usuarios. El criterio práctico es que se pueda registrar con un cronómetro, un log, una encuesta o una rúbrica. No es el tema, no es la herramienta y no es el actor.</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «Qué es (y qué NO es) una pregunta de investigación»): «Variable = aquello que puede cambiar y que usted va a observar o medir (tiempo, cobertura, número de errores, percepción).» Y en «Las cuatro piezas que debe tener su pregunta»: «Debe poder registrarse: con un cronómetro, un log, una encuesta o una rúbrica.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Aquello que puede cambiar y que usted va a observar o medir, como el tiempo, la cobertura o el número de errores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Esa es la definición de la sesión, y su prueba práctica es que la variable pueda registrarse con un cronómetro, un log, una encuesta o una rúbrica.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El asunto general del que trata el proyecto, resumido en dos o tres palabras clave del área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde la variable con el tema. Precisamente por quedarse en el tema, «automatización de pruebas» no llega a ser una pregunta: falta decir qué de eso cambia y se mide.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El nombre técnico de la herramienta o el software con el que se va a desarrollar el trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Toma la herramienta por la variable. Un prototipo o un modelo puede ser la variable que usted propone, pero lo que lo vuelve variable es que se observe su efecto sobre algo medible, no su nombre comercial.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El grupo de personas y el lugar en los que se realiza el estudio: es decir, en quién se estudia el fenómeno y dónde ocurre.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Describe el actor y el contexto, que son la cuarta pieza de la pregunta y no una variable. La pregunta necesita las dos cosas, pero son piezas distintas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-07 Qué pieza le falta a una pregunta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante presenta esta pregunta: <em>«¿En qué medida un modelo de clasificación de tickets reduce el tiempo de respuesta?»</em>. De las cuatro piezas que exige la Sesión 02, ¿cuál le falta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le falta la cuarta pieza: <strong>el actor y el contexto</strong>. Ya tiene el conector («en qué medida»), la variable que propone (el modelo de clasificación) y la variable que observa (el tiempo de respuesta), pero no dice en quién ni dónde. Sin eso la investigación no queda delimitada ni es replicable.</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «Las cuatro piezas que debe tener su pregunta»): «<strong>4. El actor y el contexto</strong> — quién y dónde. "El equipo de TI de la empresa X", "los estudiantes de séptimo semestre". Sin contexto, su investigación no es replicable ni delimitada, y el jurado lo va a notar. Si al escribir su pregunta le sobra o le falta una de las cuatro piezas, todavía no está lista.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El actor y el contexto: la pregunta no dice en quién ni dónde se estudiaría el efecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Falta el «quién y dónde». Basta con cerrarla, por ejemplo, «…en la mesa de ayuda del área de TI de la empresa X» para que quede delimitada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El conector que abre la pregunta e impide que se responda con un sí o un no.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa pieza sí está: «en qué medida» es justamente uno de los conectores que la sesión recomienda, y por eso la pregunta no se puede responder con sí o no.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La variable que el estudiante mueve o propone, porque un modelo no se puede proponer.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El modelo de clasificación de tickets es exactamente eso: la variable que el estudiante diseña, aplica u observa. La sesión la ejemplifica con «el prototipo, el modelo, la estrategia».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La variable que se observa, porque el tiempo de respuesta no se puede registrar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El tiempo de respuesta es un ejemplo de variable observable y registrable —con un log o un cronómetro—, así que esa pieza está presente y bien elegida.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-08 Cuántos objetivos específicos y por qué]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante propone <strong>siete objetivos específicos</strong> «para que el proyecto se vea completo». Según la regla de oro de la Sesión 02, ¿por qué eso es un problema?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Porque <strong>cada objetivo específico se convierte después en una sección</strong>: con siete específicos hay que escribir siete secciones y el trabajo se vuelve inmanejable. La sesión pide <strong>tres o cuatro</strong>, ordenados en secuencia lógica —primero describir lo que hay, luego diseñar o intervenir, al final comparar o evaluar— y advierte que con uno solo no hay proyecto sino tarea.</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «Del objetivo general a los específicos»): «Los <strong>objetivos específicos</strong> son los pasos para lograr el general: <strong>tres o cuatro</strong>, ni más ni menos. <strong>Regla de oro de esta sesión:</strong> cada objetivo específico se convierte después en una <strong>sección del artículo</strong>. Si tiene 7 específicos, va a escribir 7 secciones y el artículo se le vuelve inmanejable. Si tiene 1 solo, no tiene un proyecto: tiene una tarea.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque cada específico se convierte en una sección: con siete hay que escribir siete y el trabajo se vuelve inmanejable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la regla de oro de la sesión, y de ahí sale el número recomendado: tres o cuatro específicos bien alineados con la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque los específicos deben ser tantos como variables tenga la pregunta: con dos variables, dos objetivos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa una equivalencia que la sesión no plantea. Las variables se cuentan en la pregunta; los específicos se cuentan por las secciones que producirán, y son tres o cuatro.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque siete objetivos obligan a formular siete preguntas de investigación, y la pregunta debe ser siempre una sola.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla dos reglas distintas. Es cierto que la pregunta manda y es una, pero varios específicos no multiplican la pregunta: la desarrollan por pasos. El problema del número está en las secciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque ningún objetivo específico puede repetir el verbo del general, y con siete es imposible evitarlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La restricción real que enuncia la sesión es otra: ningún específico puede pedir algo que la pregunta no pidió. No hay una prohibición de repetir el verbo del objetivo general.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-09 La prueba del verbo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 destierra de los objetivos verbos como «conocer», «entender», «aprender sobre» o «profundizar en». ¿Cuál es la prueba que propone la sesión para decidir si un verbo sirve?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La prueba es preguntarse <strong>«¿cómo demuestro que ya lo cumplí?»</strong>: si no se puede responder con una evidencia concreta, hay que cambiar el verbo. Por eso «conocer», «entender» o «saber» quedan fuera —ocurren dentro de la cabeza de quien investiga y nadie puede verificarlos— y entran «identificar», «caracterizar», «comparar», «diseñar», «evaluar», «validar», «medir», «determinar» o «establecer».</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «Verbos: los que hunden el proyecto y los que lo sostienen»): «Prueba del verbo: pregúntese <strong>"¿cómo demuestro que ya lo cumplí?"</strong>. Si no puede responder con una evidencia concreta, cambie el verbo.» En la misma tabla: «Conocer / entender / saber — Ocurre dentro de su cabeza: nadie puede verificarlo» y «Profundizar en — No tiene punto de llegada: nunca se sabe si se cumplió».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Preguntarse cómo demostraría que ya lo cumplió; si no hay una evidencia concreta que mostrar, hay que cambiar el verbo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la «prueba del verbo» de la sesión: un verbo sirve cuando su cumplimiento se puede mostrar con una evidencia concreta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Verificar que el verbo esté en infinitivo y que encabece la oración en la que se escribe el objetivo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una exigencia de redacción, no la prueba del verbo. «Conocer» y «profundizar» también son infinitivos y encabezan la oración, y aun así la sesión los rechaza.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Comprobar que el verbo aparezca en la literatura del campo con el mismo sentido que usted le da.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada al verbo un paso que la sesión pide para otra cosa: buscar en Google Académico cómo nombran los autores sus <em>variables</em>. El verbo se juzga por la evidencia que produce.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Confirmar que la acción del verbo la pueda ejecutar usted solo, sin depender de terceros ni de permisos institucionales.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La factibilidad importa, pero no es el criterio que la sesión propone. «Comparar» o «validar» pueden requerir terceros y son verbos operables; «entender» se hace solo y no sirve.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q1-10 Cómo se corrige un título eslogan]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante propone como título de su trabajo: <em>«Innovando el futuro con IA: la revolución del software»</em>. Según la Sesión 02, ¿qué le pasa a ese título y cómo se corrige?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un <strong>eslogan</strong>: no dice qué se hizo, con quién, ni dónde. El título se arma con la fórmula <strong>fenómeno + actor + contexto</strong> y sin adjetivos de folleto («innovador», «revolucionario», «del futuro»), signos de admiración, preguntas retóricas ni siglas que el lector todavía no conoce. El ejemplo que da la sesión —«Detección de phishing con aprendizaje automático en los correos institucionales de la CUN»— lo dice todo sin adornos.</p><p>Cita literal (Presentación de la Sesión 02, diapositiva «El título es la puerta de entrada del jurado»): «Fórmula: <strong>fenómeno + actor + contexto</strong> […] <strong>Prohibido</strong> en un título académico: eslóganes y adjetivos de folleto: "innovador", "revolucionario", "del futuro". Signos de admiración, preguntas retóricas y juegos de palabras. […] "Innovando el futuro con IA" no dice nada: no se sabe qué se hizo, con quién, ni dónde.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Es un eslogan sin fenómeno, actor ni contexto: hay que decir qué se estudia o construye, con quién y dónde, y quitar los adjetivos de folleto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión usa ese mismo título como contraejemplo y lo corrige con la fórmula fenómeno + actor + contexto, sin adjetivos publicitarios.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falta nombrar la metodología usada, que es lo primero que el jurado busca cuando abre el documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Va contra lo que dice la sesión: el jurado no empieza por la metodología, empieza por el título y por la pregunta. Y el título se compone de fenómeno, actor y contexto, no del método.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falta convertirse en una pregunta retórica, para que anuncie desde el mismo título la interrogante de investigación que se resolvió.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Las preguntas retóricas están expresamente prohibidas en el título. Lo que sí dice la sesión es que el título suele ser la pregunta <em>sin</em> el signo de interrogación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No le pasa nada: un título llamativo es lo que hace que el jurado quiera leer el artículo completo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error que la sesión combate. El título es la puerta de entrada del jurado justamente porque debe informar en una leída qué investigó usted, no porque deba llamar la atención.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

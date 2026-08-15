@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 2 - TG2 S02-S06</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 2 (9% de la nota del curso · Corte 2) — TRABAJO DE GRADO 2, Modelos de Innovación (Ingeniería de Sistemas).</strong></p><p>Ventana: 21/09/2026 a 28/09/2026. Se resuelve dentro del encuentro, en unos 15 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> contenido académico de las sesiones ya dictadas al cierre — Sesión 02 (pregunta, objetivos y título provisional), Sesión 03 (estructura del documento de avance y tiempo verbal del método), Sesión 04 (antecedentes y referentes, Fase I), Sesión 05 (marco teórico y constructos) y Sesión 06 (marco conceptual y contextual). El énfasis está en lo nuevo desde el cierre del Parcial 1: Sesión 05 y Sesión 06.</p><p><strong>Lo que NO entra:</strong> el tema de la Sesión 07 (diseño metodológico propuesto) se dicta el mismo día en que cierra el cuestionario, así que queda fuera; entra en el Parcial 2. Tampoco entra nada de la Sesión 08 en adelante (instrumentos, plan de análisis, operacionalización, integración, socialización, cierre).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Tiempo total estimado: 13 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-01 Pregunta de investigación que cumple las cuatro exigencias]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted revisa cuatro preguntas escritas por compañeros del curso. Según la Sesión 02, una pregunta de investigación debe ser <strong>clara, delimitada, viable y abierta</strong>, y las cuatro exigencias al mismo tiempo. ¿Cuál de estas preguntas las cumple?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La única investigable es la que nombra <strong>fenómeno, actor y contexto</strong> y no se agota en un sí o un no. Las otras tres fallan cada una en una exigencia distinta: una se responde sí/no y no tiene actor ni contexto, otra ya trae la solución decidida y la tercera abarca un contexto imposible.</p><p>Cita literal (Presentación de la Sesión 02): «Cuatro exigencias, y las cuatro al tiempo: Clara: se entiende sin que usted la explique en voz alta. Delimitada: nombra actor, fenómeno y contexto. Viable: hay fuentes y acceso; cabe en el tiempo del curso. Abierta: no se contesta con sí o con no.» Y en la tabla de la misma sesión: «¿Sirve la IA para la empresa? → Se responde sí/no; sin actor ni contexto» · «¿Cómo implementar Python en la empresa? → La solución ya está decidida; no hay problema» · «¿Cómo mejorar los procesos de las empresas colombianas? → Contexto imposible de abarcar». La opción correcta es, literalmente, la «versión investigable» que la tabla propone para el caso de Python: «¿Cómo afecta la clasificación manual de tickets la carga de trabajo del analista de soporte de X?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>¿Cómo afecta la clasificación manual de tickets la carga de trabajo del analista de soporte de la empresa X?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Se le ven las cuatro piezas: fenómeno (la carga de trabajo), actor o unidad (el analista de soporte), contexto (la empresa X) y la relación que se quiere establecer (el efecto de clasificar a mano). Abre con «¿cómo…?», uno de los arranques que la sesión señala como seguros, y no trae ninguna solución decidida de antemano.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Sirve la inteligencia artificial para mejorar de forma apreciable la atención que hoy reciben todos los usuarios internos de la empresa X?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Falla la exigencia de ser abierta: se contesta con sí o con no. «¿Sirve…?» es uno de los arranques peligrosos de la sesión, y «mejorar la atención» no es un fenómeno medible.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo implementar un clasificador programado en Python en el área de soporte de la empresa X para repartir los tickets entrantes?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Aquí la solución ya está decidida: la pregunta nombra la herramienta que se va a usar. Quien la elige no está investigando, está justificando lo que ya escogió, y el problema desaparece del planteamiento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo mejorar los tiempos de respuesta de todas las mesas de ayuda de las empresas colombianas del sector de servicios tecnológicos?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Falla la delimitación y con ella la viabilidad: el contexto es imposible de abarcar en un trabajo de grado. Suena ambiciosa, pero después ningún método puede decir sobre qué se mide.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-02 Único dato que sí puede aparecer en el diseño metodológico del avance]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el avance de Trabajo de Grado 2 el diseño metodológico se escribe en «propuesto» y no lleva resultados. Aun así, la Sesión 03 aclara que hay un tipo de dato que <strong>sí</strong> puede aparecer en esa sección. ¿Cuál?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Lo que puede entrar son <strong>datos de contexto ya existentes y citados</strong> —informes internos, registros institucionales, fuentes publicadas—, porque no son hallazgos propios del estudiante. Todo lo que responda «¿qué encontré?» queda fuera del método; solo entra lo que responde «¿qué voy a hacer?».</p><p>Cita literal (Presentación de la Sesión 03): «Lo que sí puede aparecer: datos de contexto ya publicados o registros institucionales existentes, siempre citados. “El área reporta un promedio de N tickets diarios según su informe interno” es contexto, no resultado propio. Frase de control: si la oración responde “¿qué encontré?”, no va en método. Si responde “¿qué voy a hacer?”, sí va.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Un dato de contexto ya publicado o un registro institucional existente, siempre citado: «el área reporta N tickets diarios según su informe».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese dato no lo produjo el estudiante: existía antes y está citado, así que es contexto y no resultado propio. La sesión lo autoriza expresamente con esa misma frase de ejemplo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El porcentaje de reducción de tiempos que arrojó una prueba piloto que el estudiante ya alcanzó a correr con datos reales del área este semestre.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un hallazgo propio, es decir, exactamente lo que no va: responde «¿qué encontré?». Aunque la prueba se haya hecho de verdad, un número de resultado en el método hace dudar del resto del documento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La conclusión de que el método propuesto es el más eficiente para el área, presentada de forma explícita como preliminar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Rotular una conclusión como «preliminar» no la convierte en plan de trabajo. Quien evalúa lee el método para saber si el plan es realizable, no para enterarse de conclusiones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El tamaño de la muestra ya encuestada, acompañado de las primeras respuestas obtenidas entre los analistas del área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>«La muestra estuvo conformada por…» es justamente la redacción que el avance todavía no admite: aquí la población y la muestra se plantean en condicional, porque el trabajo de campo es del semestre siguiente.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-03 Qué texto cuenta como antecedente]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted reunió cuatro textos sobre clasificación de solicitudes de soporte. Según la Sesión 04, ¿cuál de ellos cuenta como <strong>antecedente</strong> de su proyecto?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Un antecedente es un <strong>estudio previo</strong>: tiene método verificable y hallazgos. El capítulo de libro pertenece al marco teórico (explica el fenómeno, no lo estudia); el blog y el informe del proveedor no tienen método que se pueda verificar.</p><p>Cita literal (Presentación de la Sesión 04): «Sí cuentan: artículos de revistas académicas, tesis y trabajos de grado, ponencias de congresos, informes técnicos de entidades reconocidas. Todos tienen algo en común: dicen qué método usaron y qué encontraron. No cuentan como antecedente: blogs, videos de opinión, páginas comerciales de productos, ni respuestas de un asistente de inteligencia artificial. Un texto sin método verificable no es un estudio previo; es una opinión.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una tesis de grado de 2023 que clasificó solicitudes en una mesa de ayuda universitaria y reporta qué método usó y qué encontró.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es un estudio previo con las dos marcas que pide la sesión: dice qué método usó y qué encontró. Además se parece al proyecto en el problema y en el tipo de organización.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un capítulo de libro que explica con detalle qué es el aprendizaje supervisado y cómo se entrena un clasificador.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error que más devoluciones genera: confundir antecedentes con teoría. Ese capítulo explica el fenómeno, no lo estudia en un caso, así que su lugar es el marco teórico.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una entrada de blog técnico de 2024 donde un ingeniero de una empresa parecida cuenta cómo organizó los tickets de soporte de su área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es reciente y trata el mismo problema, pero no declara método ni hallazgos verificables: es una experiencia contada, es decir, una opinión. La sesión excluye los blogs de forma expresa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un informe de un proveedor que compara su producto de mesa de ayuda con los de la competencia del sector.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Tiene apariencia técnica y hasta cifras, pero es material comercial: su propósito es vender, no investigar. Las páginas comerciales de productos quedan fuera de los antecedentes.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-04 Qué pieza del marco referencial define los términos del proyecto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el cuadro comparativo de la Sesión 04, cada pieza del marco referencial responde una pregunta distinta. ¿Cuál de ellas responde «¿qué significa exactamente cada palabra en <strong>mi</strong> proyecto?»?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Esa pregunta la responde el <strong>marco conceptual</strong>, que fija las definiciones operativas de los términos clave tal como los usa el proyecto. El teórico responde «¿con qué teoría entiendo el fenómeno?», los antecedentes «¿quién ya hizo algo así y qué halló?» y el contextual «¿dónde ocurre esto exactamente?».</p><p>Cita literal (Presentación de la Sesión 04, tabla «Las tres piezas del marco referencial no son lo mismo»): «Marco conceptual · Definiciones operativas de sus términos · ¿Qué significa exactamente cada palabra en MI proyecto? · “Tiempo de atención” = minutos entre apertura y cierre». Y en la Sesión 06: «“¿Conceptual y contextual no son lo mismo?” — No: el conceptual define los términos; el contextual describe el lugar y el proceso donde ocurren.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El marco conceptual, que fija la definición operativa de cada término clave tal como lo usa el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El marco conceptual es el que dice qué significa cada palabra en este proyecto, con una definición acotada y medible, no con la entrada de un diccionario.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El marco teórico, que reúne las teorías y modelos de fondo con los que se entiende el fenómeno.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El marco teórico responde otra pregunta: «¿con qué teoría entiendo el fenómeno?». Explica cómo funciona lo que se estudia, pero no acota el significado que cada término tendrá en este proyecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los antecedentes, que muestran quién ya trabajó un problema parecido al suyo y qué encontró en su propio estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Los antecedentes responden «¿quién ya hizo algo así y qué halló?». Ahí se pueden tomar términos prestados, pero la definición que regirá el propio proyecto se escribe en el marco conceptual.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El marco contextual, que describe el escenario real y acotado donde vive el problema estudiado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde las dos piezas cortas del cierre del marco: el contextual describe el lugar y el proceso donde ocurren los términos; el conceptual es el que los define.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-05 Cómo se organiza el marco teórico]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante organiza su marco teórico así: un párrafo con «Pérez (2021) afirma…», otro con «López (2022) sostiene…» y otro con «Ramírez (2023) plantea…». Según la Sesión 05, ¿qué está mal y cómo debe ordenarse?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El marco se ordena <strong>por constructo</strong>: para cada concepto clave, qué dicen las fuentes y para qué se necesita. Ordenarlo por autor —o por fecha— produce un listado, no un argumento.</p><p>Cita literal (Presentación de la Sesión 05): «El marco se ordena por constructo: para cada uno, qué dicen las fuentes y para qué lo necesito. Nunca por autor (“Pérez dice… López dice…”) ni por orden cronológico: eso produce un listado, no un argumento.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Está mal ordenado por autor, que produce un listado; debe ordenarse por constructo: qué dicen las fuentes de cada concepto clave.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión lo prohíbe con esas palabras: nunca por autor ni por orden cronológico. El marco se arma por constructos porque así cada bloque discute una idea, no un apellido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El orden por autor es correcto, pero falta ponerlo en secuencia cronológica para que se vea la evolución del área en el tiempo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia un listado por otro. La sesión descarta las dos opciones en la misma frase: ni por autor ni por orden cronológico, porque ninguna de las dos construye un argumento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema es la cantidad de fuentes: con tres autores no se sostiene un marco y hay que llegar por lo menos a ocho autores citados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Atribuye al volumen un problema que es de organización. La sesión insiste en lo contrario: tres constructos bien desarrollados valen más que ocho superficiales, y sumar autores no arregla la estructura.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema es que faltan los números de página: al citar autor por autor, toda mención exige la página exacta de la fuente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte un asunto de estructura en un detalle de formato. La página solo es obligatoria en la cita textual; en la paráfrasis basta autor y año, y el marco seguiría mal organizado igual.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-06 Ocho constructos: qué indica y qué hacer]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al subrayar los sustantivos técnicos de su pregunta, a un estudiante le salen <strong>ocho constructos</strong>. Según la regla de los tres constructos de la Sesión 05, ¿qué indica eso y qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Ocho constructos no son señal de un proyecto ambicioso: son señal de que la <strong>pregunta quedó sin delimitar</strong>. La corrección se hace en la pregunta, no en el marco, y se conservan los tres conceptos centrales.</p><p>Cita literal (Presentación de la Sesión 05): «Tres constructos bien desarrollados valen más que ocho superficiales. En un avance no hay espacio para más. Si le salen ocho, el problema no es el marco: es que la pregunta quedó sin delimitar. Vuelva a la pregunta.» Y en el mismo deck: «“Tengo siete constructos.” — Se dispersó. Vuelva a la pregunta y quédese con los tres conceptos centrales; el resto no es marco, es antojo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Indica que la pregunta quedó sin delimitar: hay que volver a la pregunta y quedarse con los tres conceptos centrales.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión lo dice sin rodeos: si salen ocho, el problema no está en el marco sino en la pregunta. Se corrige la pregunta y los constructos se reducen solos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Indica que el proyecto es ambicioso: se desarrollan los ocho, con un párrafo citado cada uno para no quedar corto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el razonamiento del miedo a «quedar corto», que la sesión identifica como origen del relleno. Ocho constructos de un párrafo dan ocho tratamientos superficiales, no un marco.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Indica que faltan fuentes: se buscan dos o tres por constructo y el marco se reparte en ocho apartados equivalentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el síntoma con la causa. Conseguir fuentes para los ocho no delimita nada: multiplica el trabajo y deja el marco disperso, que es justo lo que la regla evita.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Indica que sobran los constructos menos citados: se eliminan los que no aparezcan en las fichas de antecedentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Recorta con el criterio equivocado. El filtro no es cuántas fuentes tiene un constructo, sino si es un concepto central de la pregunta; con este criterio se podría borrar el concepto más importante.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-07 El párrafo de marco teórico que trabaja]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la Sesión 05, un párrafo de marco teórico «que trabaja» tiene tres partes: idea del autor, cita y para qué sirve en el propio proyecto. ¿Cuál de estos párrafos cumple las tres?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La fórmula es <strong>idea del autor + cita + para qué me sirve en MI proyecto</strong>, y las tres partes siempre. Una definición general, una afirmación de relleno sin fuente o una enumeración de catálogo son párrafos que adornan: no cambian nada en el proyecto.</p><p>Cita literal (Presentación de la Sesión 05, tabla «Cita que trabaja frente a cita que adorna»): «Párrafo que trabaja: “La clasificación supervisada asigna categorías a partir de ejemplos etiquetados (Autor, 2023); en este proyecto, esos ejemplos son el histórico de tickets ya categorizados.” Fórmula del párrafo que trabaja: idea del autor + cita + para qué me sirve en MI proyecto. Las tres partes, siempre.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«La clasificación supervisada asigna categorías a partir de ejemplos etiquetados (Autor, 2023); aquí esos ejemplos son el histórico de tickets ya categorizados.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Tiene la idea del autor, la cita en APA 7 y la frase que amarra la teoría con el caso propio («en este proyecto…»). Es la fórmula completa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Según la Real Academia Española, un algoritmo es un conjunto ordenado de operaciones sistemáticas que permite hallar la solución de un problema de cálculo.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Tiene fuente, pero es una definición general que no cambia nada en el proyecto: falta la tercera parte, el «para qué me sirve a mí». Es el párrafo que adorna.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«La inteligencia artificial ha revolucionado el mundo moderno y hoy está presente en casi todos los sectores productivos de la economía global.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Afirmación de relleno: no tiene fuente ni consecuencia para el proyecto. Suena impresionante y por eso engaña, pero no le aporta nada a la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Existen muchos tipos de aprendizaje automático: supervisado, no supervisado y por refuerzo, y cada uno de ellos tiene aplicaciones distintas en la industria actual.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una enumeración de catálogo: informa, pero no elige ninguna opción ni justifica la del proyecto. Un párrafo que trabaja habría dicho por qué se opta por uno de esos enfoques.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-08 Cuándo corresponde una cita en bloque]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la Sesión 05, ¿cuándo corresponde usar una <strong>cita en bloque</strong> y cómo se escribe?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La cita en bloque aplica desde las <strong>40 palabras</strong>: va en párrafo aparte, con sangría y <strong>sin comillas</strong>. Es excepcional: una en todo el avance ya es mucho, porque el 90 % del marco teórico se escribe parafraseando.</p><p>Cita literal (Presentación de la Sesión 05, tabla «Parafrasear, citar textual y copiar: no son lo mismo»): «Cita en bloque · 40 palabras o más: párrafo aparte, con sangría y sin comillas · Excepcional; una en todo el avance ya es mucho.» En la misma tabla: «Paráfrasis (lo normal) · Se lee, se cierra la fuente y se escribe con palabras propias + (Autor, año) · En el 90 % del marco teórico.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cuando la cita textual llega a 40 palabras o más: va en párrafo aparte, con sangría y sin comillas, y es excepcional en el avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El umbral son 40 palabras y el bloque no lleva comillas: la sangría ya indica que es cita textual. La sesión advierte que una sola en todo el avance ya es mucho.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuando la cita textual pasa de 20 palabras: va en párrafo aparte, con sangría y entre comillas, y es el modo habitual del marco.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Dos errores juntos: baja el umbral a 20 palabras y conserva las comillas, que en el bloque se quitan. Y el modo habitual del marco no es la cita textual, es la paráfrasis.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuando se parafrasea a un autor extenso: va dentro del mismo párrafo, con sangría francesa, y sustituye el número de página.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde bloque con paráfrasis: la paráfrasis se escribe con palabras propias y va en el cuerpo del texto. La sangría francesa, además, es de la lista de referencias, no de las citas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuando la fuente es un autor clásico del área: va en párrafo aparte, en cursiva y con comillas, para destacar su importancia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El criterio no es el prestigio del autor sino la extensión de lo citado. Y el bloque no se pone en cursiva ni entre comillas: solo en párrafo aparte con sangría.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-09 Por qué una definición todavía no es operativa]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante escribe en su marco conceptual: «<em>Tiempo de atención: lo que se demora el área de soporte en resolver una solicitud</em>». Según la Sesión 06, ¿por qué esa definición todavía no es operativa?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le faltan las <strong>cuatro piezas</strong>: qué se observa, en qué unidad, de dónde sale el dato y con qué límite. Como está escrita, dos personas distintas medirían cosas diferentes, y esa es exactamente la prueba que la sesión propone.</p><p>Cita literal (Presentación de la Sesión 06): «Prueba de la definición operativa: “si dos personas distintas midieran esto, ¿darían el mismo número?”. Si la respuesta es no, la definición todavía está floja.» Y en la misma sesión: «1. Qué se observa… 2. En qué unidad — minutos, número de casos, porcentaje, sí/no. Si no tiene unidad, no es operativa. 3. De dónde sale el dato… 4. Con qué límite… “Tiempo de atención” no es “lo que se demora un servicio”; es “minutos transcurridos entre la apertura y el cierre del ticket en el sistema X”.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque no dice qué se observa, en qué unidad, de dónde sale el dato ni con qué límite: dos personas distintas no darían el mismo número.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Sin unidad, sin fuente del dato y sin límite, la definición no se puede medir. La versión operativa sería «minutos transcurridos entre la apertura y el cierre del ticket, según el registro del sistema X».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque no está citada en APA 7: toda definición del marco conceptual debe tomarse de un autor publicado y luego adaptarse.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La sesión admite las dos rutas: tomarla de un autor y citarla, o construirla uno mismo diciendo «para efectos de este proyecto se entenderá por…». Lo que no admite es una definición sin límites ni unidad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque está escrita con palabras propias: las definiciones del marco conceptual se transcriben tal como las trae la fuente consultada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la regla. Copiar la entrada de un diccionario o de una enciclopedia en línea es justo lo que la sesión rechaza: el marco conceptual define los términos como los usa el proyecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque el término ya aparece en el título del proyecto: los términos de la pregunta se definen en el marco teórico, no en el conceptual.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Al contrario: la tabla de definiciones se arma con los términos que aparecen en la pregunta y en los objetivos. Que el término esté en el título es señal de que hay que definirlo, no de que no corresponde.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q2-10 Proporción entre los niveles del marco contextual]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El marco contextual de un estudiante dedica dos páginas al sector de tecnología del país y cuatro líneas al área de soporte donde ocurre el problema. Según la Sesión 06, ¿cómo debe quedar la proporción entre los niveles?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El <strong>80 % del marco contextual vive en el nivel micro</strong> —el área y el proceso concretos—. El macro cabe en dos frases y solo si aporta pertinencia; el meso ubica la organización. El estudiante del caso tiene la proporción invertida.</p><p>Cita literal (Presentación de la Sesión 06): «Macro — el sector o el país. Máximo dos frases, solo si aporta pertinencia. Meso — la organización: tamaño, actividad, estructura relevante para el problema. Micro — el área y el proceso concretos. Aquí vive el 80 % de su marco contextual. Regla de proporción: si el proyecto ocurre en un área de una empresa, el país no puede ocupar más renglones que el área.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El 80 % debe ir al nivel micro, el área y el proceso concretos; el nivel macro cabe en máximo dos frases y solo si aporta pertinencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de proporción es explícita: si el proyecto ocurre en un área de una empresa, el país no puede ocupar más renglones que el área.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los tres niveles se reparten en extensiones equivalentes, para que el lector recorra el contexto de lo general a lo particular.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El orden de lo general a lo particular sí es correcto, pero la extensión no es simétrica: el peso está en el micro. Repartir en tercios deja el área con la misma cantidad de texto que el país.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El nivel macro debe ser el más extenso, porque es el que justifica la pertinencia del problema antes de bajar a la organización.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente el error que la sesión corrige: «Mi contexto es Colombia y el sector TI». La pertinencia se sostiene con dos frases de macro, no con dos páginas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El nivel meso, la organización, concentra la mayor parte, y el área y el proceso se detallan más adelante en el documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Deja para después lo que el marco contextual debe dejar claro ahora: qué área, cuántas personas, qué proceso, con qué sistema y con qué volumen. Ese detalle es el corazón del nivel micro.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

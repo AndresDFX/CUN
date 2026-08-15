@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 3 - Creatividad U1-U7</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 3 (4% de la nota del curso · Corte 3) — CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIAS.</strong></p><p>Ventana: 10/09/2026 a 16/09/2026. Se resuelve dentro del encuentro, en unos 10 minutos. No se sube archivo y no usa plantilla APA. Es el último cuestionario del curso.</p><p><strong>Materia evaluada (contenido académico, acumulativo):</strong> Sesión 02 (Design Thinking, el doble diamante, divergencia/convergencia, How Might We, técnicas de ideación), Sesión 03 (gestión de la innovación y Manual de Oslo: cinco tipos con dominante y secundario, novedad e implementación), Sesión 04 (tipo frente a grado y la matriz comparativa con criterios argumentados) y Sesión 05 (FODA, Business Model Canvas, MVP, cadena de validación y vigilancia tecnológica). Peso principal en la Sesión 05, que es lo nuevo desde el cierre del Parcial 2.</p><p><strong>Lo que NO entra:</strong> la Sesión 06 (innovación local–internacional, escalas de impacto, mapa de entidades de apoyo y pitch de 60 segundos) se dicta el mismo día en que cierra la ventana, así que ninguna pregunta ni ninguna opción la usa. Ese tema sigue siendo materia de la ACA Final. Tampoco entra la Sesión 07.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Tiempo total estimado: unos 9 minutos y 20 segundos. Ninguna pregunta repite un ítem del Quiz 1, del Parcial 1, del Quiz 2 ni del Parcial 2: las tres preguntas de base acumulativa (Sesiones 02, 03 y 04) evalúan subtemas que ningún ítem anterior preguntó.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-01 FODA: cuadrante de una exigencia del entorno]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al armar el FODA de su propuesta usted escribe esta frase: <em>«El laboratorio exige autorización escrita para cualquier piloto»</em>. ¿En qué cuadrante va y por qué?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es una <strong>amenaza</strong>: una condición del entorno que usted no controla. Fortalezas y debilidades son <strong>internas</strong> (dependen de usted y de su equipo, y las puede cambiar); oportunidades y amenazas son <strong>externas</strong> (solo puede aprovecharlas o cubrirse). El error típico es meter en «debilidades» todo lo que estorba, aunque venga de afuera.</p><p>Cita literal (Presentación de la Sesión 05): «Fortalezas y Debilidades son INTERNAS — dependen de usted y de su equipo. Puede cambiarlas. / Oportunidades y Amenazas son EXTERNAS — están en el entorno. Solo puede aprovecharlas o cubrirse. / Error típico: poner "falta de presupuesto de la universidad" como debilidad. No es interna: es una amenaza.» En la tabla de la misma sesión, la fila «Amenaza (externa)» trae como ejemplo verificable «El laboratorio exige autorización escrita para cualquier piloto».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>En amenazas, porque es una condición del entorno que usted no controla y frente a la cual solo puede cubrirse.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La exigencia la impone el laboratorio, no su equipo: es externa, y como restringe el piloto en vez de habilitarlo, va en amenazas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En debilidades, porque es una carencia del proyecto que hoy le impide poner en marcha el piloto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error típico del aula: llamar debilidad a todo lo que estorba. Una debilidad es interna y usted puede cambiarla; el requisito del laboratorio no depende de su equipo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En oportunidades, porque el requisito ya está definido y usted puede cumplirlo para obtener el permiso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta en que es externa, pero confunde el signo: una oportunidad es algo del entorno que le abre camino. Un requisito que puede bloquear el piloto limita, no habilita.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En fortalezas, porque conocer de antemano ese requisito le da ventaja sobre propuestas que lo ignoran.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el hecho con el mérito de haberlo detectado. Su hallazgo puede ser valioso, pero lo que escribió en la frase es una exigencia del entorno, no una capacidad de su equipo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-02 Canvas: cómo se escribe la propuesta de valor]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está llenando el bloque <strong>Propuesta de valor</strong> del Business Model Canvas para el caso de los turnos de laboratorio. ¿Cuál de estas frases corresponde a ese bloque, tal como se pidió escribirlo en la Sesión 05?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La propuesta de valor dice <strong>lo que gana el usuario</strong>, no lo que hace el sistema. Las otras tres frases están bien escritas, pero pertenecen a otros bloques: describir la plataforma es hablar de la solución técnica, nombrar a quién le sirve es el <strong>segmento de clientes</strong> y enumerar lo que hay que hacer sí o sí son las <strong>actividades clave</strong>.</p><p>Cita literal (Presentación de la Sesión 05): «Propuesta de valor — lo que gana el usuario, no lo que hace su sistema. Vago: "una plataforma de gestión de turnos". Concreto: "llegas y ya tienes equipo asignado; dejas de perder tu hora".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«Llega al laboratorio y ya tiene el equipo asignado: deja de perder su hora de práctica.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Está escrita desde lo que gana el usuario —no perder su hora— y no menciona cómo funciona el sistema por dentro.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Una plataforma web de gestión de turnos con asignación automática desde el horario del curso.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Describe lo que hace el sistema, que es exactamente el contraste que la sesión marca como versión vaga. El bloque pide el beneficio para la persona, no la arquitectura de la solución.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Estudiantes de Ingeniería de cuarto semestre que cursan laboratorio los días martes.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una frase bien escrita, pero del bloque equivocado: eso es el segmento de clientes. Dice para quién es, no qué gana esa persona.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Conseguir el horario real de ocupación y obtener el permiso del laboratorio para el piloto.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>También está bien escrita y también es de otro bloque: son las actividades clave, lo que hay que hacer sí o sí. Confunde el trabajo propio con el valor entregado al usuario.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-03 Qué descalifica a un supuesto MVP]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero afirma: <em>«Mi MVP es la aplicación completa, con todas las funciones, pero sin diseño gráfico ni animaciones»</em>. Según la Sesión 05, ¿por qué eso todavía no es un MVP?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El MVP es la versión más pequeña que permite <strong>aprender de un usuario real</strong>: en la definición operativa del curso, <strong>lo más barato que responde su duda más cara</strong>. Una aplicación completa cuesta lo mismo en tiempo aunque se vea fea, así que no cumple lo de «mínimo». Y como la pregunta que responde no es «¿funciona el código?» sino «¿esto le importa a alguien?», un MVP <strong>puede no tener nada de software</strong> y seguir siendo válido.</p><p>Cita literal (Presentación de la Sesión 05): «Lo que el MVP NO es: No es "la app fea pero completa". No es "la fase 1 del software grande". No es una versión reducida en funciones pero igual de costosa en tiempo. […] Definición operativa que pueden usar hoy: lo más barato que responde su duda más cara.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque quitar el diseño no lo vuelve mínimo: sigue costando el mismo tiempo y no es lo más barato que responde su duda más cara.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Lo mínimo se mide en costo de aprendizaje, no en acabado visual. Una landing o un prototipo en papel responden la misma duda en una tarde.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque un MVP debe ser la fase 1 de un software mayor, con las funciones restantes ya planeadas para las fases siguientes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte el MVP en el primer tramo de un plan de desarrollo. La sesión lo descarta de forma expresa: «No es "la fase 1 del software grande"».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque un MVP solo es válido si ya tiene código funcionando: sin software no hay nada que un usuario pueda probar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la creencia contraria a la del curso: un MVP puede no tener nada de software —storyboard, prototipo en papel, piloto hecho a mano— y seguir siendo un MVP válido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque un MVP debe incluir el diseño gráfico terminado: es lo primero que el usuario juzga cuando se le muestra la solución.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el problema. Lo que sobra en esa definición no es el diseño que falta, sino el alcance completo que se conservó; la estética no es el criterio.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-04 Por qué el criterio de éxito se fija antes de la prueba]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la cadena de validación (supuesto → riesgo si es falso → prueba → criterio de éxito → decisión), el criterio de éxito se escribe <strong>antes</strong> de ejecutar la prueba. ¿Cuál es la razón?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Porque un criterio fijado después se acomoda al resultado: uno acaba «viendo lo que quiere ver». Ese sesgo no se corrige con buena voluntad, se corrige anticipando el número que decide. Y por eso las tres decisiones posibles —seguir, pivotar y parar— son resultados válidos del método: el criterio no existe para que la prueba pase.</p><p>Cita literal (Presentación de la Sesión 05): «Criterio de éxito — el número que decide, y se fija ANTES de probar. […] Si lo fija después, va a "ver lo que quiere ver". Ese sesgo no se vence con buena voluntad: se vence con anticipación.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque un criterio escrito después se acomoda al resultado obtenido, y ese sesgo solo se evita fijando antes el número que decide.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Con el criterio escrito antes, el resultado obliga; escrito después, uno termina interpretando cualquier dato como confirmación de lo que ya creía.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque el criterio fijado antes asegura que la prueba se apruebe y que la propuesta pueda seguir sin necesidad de pivotar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Malentiende para qué sirve el criterio: no está para garantizar que pase, sino para poder reconocer que no pasó. Seguir, pivotar y parar son las tres salidas válidas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque solo con el criterio escrito antes se puede calcular cuántos usuarios hacen que la muestra sea estadísticamente representativa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada el asunto a la representatividad estadística, que no es lo que pide la cadena: con cinco usuarios y un umbral observable ya se decide. El problema que resuelve el orden es el sesgo, no el tamaño de muestra.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque el orden de la cadena es formal: si el criterio se escribe al final, la prueba ya no puede vincularse al supuesto elegido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Lee la secuencia como una formalidad de redacción. El vínculo con el supuesto no se pierde por el orden en que se escriba; lo que se pierde es la capacidad de que el resultado lo contradiga.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-05 Informarse no es vigilar: la prueba de fuego]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted reunió en un documento ocho enlaces de artículos sobre el tema de su propuesta, con sus resúmenes, y no ajustó ni confirmó nada de la propuesta. Según la Sesión 05, ¿qué hizo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Se <strong>informó</strong>. La vigilancia tecnológica es un proceso sistemático de cuatro pasos —observar, analizar, comunicar y <strong>usar</strong>— y el cuarto es el que casi siempre falta y el único que justifica los tres anteriores. La prueba de fuego cabe en una pregunta: <strong>¿cambió alguna decisión de su propuesta?</strong></p><p>Cita literal (Presentación de la Sesión 05): «Lo que NO es: no es "me informé"; no es acumular enlaces en un documento; no es leer solo lo que confirma lo que ya pensaba. La prueba de fuego, en una pregunta: ¿cambió alguna decisión de su propuesta? Si no ajustó ni confirmó nada, no vigiló: leyó.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Se informó: mientras ninguna señal ajuste o confirme una decisión, no hubo vigilancia, por muchas fuentes que se hayan reunido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Falta el cuarto paso del ciclo, «usar», que es el único que convierte la lectura en vigilancia: un ajuste concreto de alcance, usuario, tecnología o riesgo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vigiló: la vigilancia se mide por el número y la calidad de las fuentes que se logran reunir sobre el tema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mide la vigilancia por volumen de lectura. La sesión dice lo contrario: la diferencia no está en cuánto se lee, sino en si al final hay una decisión escrita.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vigiló de forma incompleta: lo que falta es añadir señales de frentes distintos al tecnológico para cubrir todo el entorno.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambiar de frente no arregla el problema de fondo. Aunque sumara señales normativas o sociales, seguirían siendo enlaces acumulados mientras ninguna cambie una decisión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No hizo ninguna de las dos cosas: sin fichas de señal diligenciadas tampoco puede decirse que se haya informado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Exagera en la otra dirección. Leer y resumir sí es informarse; lo que la ficha añade es el análisis y el uso, es decir, el paso a vigilancia.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-06 Frentes de señal: el sesgo más común]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 05 advierte sobre un sesgo al levantar señales de vigilancia y sobre el frente que suele tumbar las propuestas de los estudiantes. ¿Cuál es cada uno?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El sesgo es mirar <strong>solo el frente tecnológico</strong>; el que suele tumbar las propuestas es el <strong>normativo</strong>, que casi nadie revisa. De ahí que el taller exija señales de frentes distintos. Cada frente responde una pregunta propia: tecnología, «¿qué se volvió posible o barato?»; mercado, «¿quién ya paga por esto y cuánto?»; normativa, «¿qué me limita o me habilita?»; social, «¿qué cambió en el usuario?».</p><p>Cita literal (Presentación de la Sesión 05): «El error más común es mirar solo el frente tecnológico. Las propuestas de estudiantes suelen morir por el frente normativo, que nadie revisó.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El sesgo es mirar solo el frente tecnológico, y el que suele tumbarlas es el normativo, porque nadie revisó qué lo limita o lo habilita.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Buscar solo lo técnico deja fuera la norma o la política institucional, que aparece al final, cuando ya no hay tiempo de ajustar nada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El sesgo es mirar solo el frente de mercado, y el que suele tumbarlas es el tecnológico, porque la propuesta nace desactualizada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte los papeles. El frente tecnológico es el que los estudiantes sí revisan; quedar desactualizado es un riesgo real, pero no es el que la sesión señala como causa de muerte.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El sesgo es mirar solo el frente social, y el que suele tumbarlas es el de mercado, porque al final nadie paga por la propuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La pregunta de quién paga es propia del frente de mercado y es pertinente, pero el sesgo que la sesión describe no es hacia lo social: es hacia lo tecnológico.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El sesgo es mirar solo el frente normativo, y el que suele tumbarlas es el social, porque el usuario ya cambió de hábito.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Da por revisado justo el frente que casi nadie revisa. El cambio de hábito del usuario es la pregunta del frente social, no la causa que la sesión advierte.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-07 Encontrar una patente parecida a su idea]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Buscando en Google Patents encuentra una solución ya documentada muy parecida a su idea. Según la Sesión 05, ¿qué debe quedar escrito en su ficha de señal?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Encontrar algo parecido no mata la idea: ahora usted <strong>sabe contra qué compite</strong>. Lo que se escribe no es «existe algo parecido», sino <strong>«existe X; mi diferencia está en Y»</strong>. Esa frase es la implicación de la señal, es decir, lo que la vuelve útil para decidir.</p><p>Cita literal (Presentación de la Sesión 05): «La reacción típica al encontrar algo parecido es "mi idea murió". Es exactamente al revés: ahora sabe contra qué compite. […] Lo que escribe no es "existe algo parecido", sino: "existe X; mi diferencia está en Y".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que existe esa solución y en qué se diferencia la suya, porque ahora sabe contra qué compite.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La ficha no se queda en «existe algo parecido»: nombra la solución encontrada y declara la diferencia propia, que es lo que orienta la decisión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la idea ya está tomada y conviene cambiar de problema, porque no tiene sentido competir con algo patentado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la reacción típica que la sesión desmonta: «mi idea murió». Encontrar un referente documentado da información sobre la competencia, no una sentencia sobre el problema elegido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que existe algo parecido, y dejar la comparación con su propuesta para cuando el prototipo esté terminado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Deja la señal a mitad de camino. Sin la diferencia escrita, la ficha se queda en el hallazgo y no llega a la implicación, que es el paso que sirve para decidir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la patente confirma la viabilidad técnica de la idea, así que ya no hace falta probarla con usuarios reales.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde dos cosas distintas: que algo sea técnicamente posible no dice que a su usuario le importe. La validación por dentro sigue siendo necesaria.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-08 Cuando la matriz favorece a la opción descartada]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted terminó su matriz comparativa y, fila por fila, la opción B —la que había descartado desde el principio— queda mejor que su opción A. Según la Sesión 04, ¿qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La matriz existe para <strong>decidir</strong>, no para confirmar lo que ya se prefería. Si al llenarla gana la opción que había descartado, lo que corresponde es cambiarse: la conclusión sale de la comparación y no de la preferencia. Descartar no es despreciar, así que la opción A puede quedar nombrada en la conclusión sin ser la elegida.</p><p>Cita literal (Presentación de la Sesión 04, lista de verificación «Antes de entregar: revise usted mismo»): «Prueba de honestidad: si al llenar la matriz ganó la opción B, cámbiese a B. Eso no es perder: es que el método funcionó.» En la misma sesión: «La conclusión sale de la comparación, no de la preferencia» y «Llene fila por fila, no columna por columna. Así compara lo mismo contra lo mismo y evita inflar su favorita.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cambiarse a la opción B: que la comparación contradiga la preferencia inicial no es perder trabajo, es la señal de que el método funcionó.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la prueba de honestidad de la sesión: si al llenar la matriz ganó B, se cambia a B. La decisión la toma la comparación, no el punto de partida.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Mantener la opción A y dejar la B mencionada como alternativa, porque la elección final le corresponde al autor de la propuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Devuelve la decisión al gusto, que la sesión descarta de forma expresa: «la conclusión sale de la comparación, no de la preferencia». Si la tabla dice B y el documento dice A, la matriz quedó de adorno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ajustar los criterios o su puntuación hasta que la comparación respalde la opción A, que es la que se venía trabajando.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es inflar la favorita, justo lo que la sesión previene al pedir llenar la matriz «fila por fila, no columna por columna». Cambiar los criterios después de ver el resultado anula la comparación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Declarar un empate entre A y B y aplazar la elección hasta tener más información sobre las dos opciones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>No hay empate que declarar: las filas no dan igual, dan B. El empate es señal de que la matriz no discrimina, y aquí discrimina; aplazar no agrega información, porque ya está en la tabla.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-09 Tipo dominante de una aplicación comunitaria]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo presenta una aplicación gratuita con la que los vecinos reportan las fugas de agua del barrio, y esos reportes llegan articulados a la empresa pública que las repara. Lo que el equipo se compromete a mostrar es cuánta agua deja de perderse en el sector. Con la taxonomía de los cinco tipos de la Sesión 03, ¿cuál es el tipo dominante y cuál el secundario?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La columna que decide es «qué cambia realmente», no la tecnología visible. Una aplicación gratuita que articula a una comunidad con una entidad pública <strong>mejora un bien común medible</strong>: eso es innovación <strong>social</strong>, y la aplicación entra como tipo secundario (producto), porque es el vehículo y no el eje. Prueba del dominante: si le quita el bien común, la propuesta pierde el sentido; si le quita la aplicación, el reporte se puede sostener por otro medio.</p><p>Cita literal (Presentación de la Sesión 03, tabla «Los cinco tipos de innovación»): «Social | El valor público o comunitario | Mejora un bien común medible | App gratuita que articula a la comunidad con la alcaldía.» Ejemplo modelado de la misma sesión: «Caso 3 · App gratuita para reportar huecos en las vías, articulada con la alcaldía. Sí, hay una app. Pero lo importante es el bien común: conectar ciudadanos con la entidad que repara. → Dominante: Social. Secundario: producto (la app es el vehículo, no el eje).» Cierre del ejemplo: «la tecnología visible casi nunca decide el tipo. Decide qué cambió para quién.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Dominante social y secundario producto: lo que cambia es un bien común medible, y la aplicación es el vehículo, no el eje.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el caso 3 del ejemplo modelado: hay una app, pero lo que importa es conectar a los vecinos con la entidad que repara, y eso se mide en agua que deja de perderse.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dominante producto y secundario social: el usuario recibe un servicio que antes no existía, y ese servicio es el eje de la propuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error que la sesión desmonta: sí aparece una app, pero «la tecnología visible casi nunca decide el tipo». El producto queda como secundario, porque es el medio para conseguir el bien común.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dominante proceso y secundario social: cambia el método con el que la empresa pública atiende las reparaciones que le llegan.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La señal de proceso es que baje el tiempo, el error o el costo del método propio de producción o de entrega. El equipo no cambia cómo repara la empresa: la articula con quien detecta la fuga.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dominante marketing y secundario producto: aparece un canal nuevo por el que el barrio se comunica con la empresa pública.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Marketing cambia diseño, precio, promoción o canal para mover la adopción o el posicionamiento de una oferta. Aquí el canal es el medio del reporte, no una estrategia de adopción.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q3-10 El doble diamante: qué se cierra en cada uno]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 representó el proceso como un <strong>doble diamante</strong>: se abre y se cierra dos veces. ¿Qué se cierra en cada uno de los dos diamantes?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El primer diamante trabaja el <strong>problema</strong>: se abre para explorar todo lo que le pasa al usuario y se cierra escogiendo un problema, que queda escrito como el <em>How Might We</em>. El segundo trabaja la <strong>solución</strong>: se abre para generar muchas ideas y se cierra escogiendo una o dos para prototipar. Cerrar es escoger; las notas de observación y el banco de ideas son productos de los momentos de apertura.</p><p>Cita literal (Presentación de la Sesión 02, «El doble diamante: abrir y cerrar, dos veces»): «Diamante 1 — el problema: abro para explorar todo lo que le pasa al usuario; cierro para escoger un problema (el HMW). Diamante 2 — la solución: abro para generar muchas ideas; cierro para escoger 1 o 2 y prototiparlas.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El primero cierra escogiendo el problema, que queda escrito como el <em>How Might We</em>; el segundo cierra escogiendo una o dos ideas para prototipar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Primero se cierra el problema y solo después se abre la búsqueda de soluciones: el HMW es la bisagra entre los dos diamantes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El primero cierra escogiendo la idea que se va a prototipar; el segundo cierra escogiendo el problema definitivo, ya con el usuario al frente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte los dos diamantes. El problema se cierra primero —de ahí sale el HMW—; escoger la idea es el cierre del segundo, cuando ya hay un reto acotado que atacar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El primero cierra con las notas de observación del usuario; el segundo cierra con el banco completo de ideas todavía sin filtrar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde cerrar con abrir: las notas y el banco sin filtrar son productos de los momentos de apertura. Cerrar es escoger: un problema en el primero, una o dos ideas en el segundo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El primero cierra con el prototipo terminado; el segundo cierra con los aprendizajes que deja el usuario cuando lo prueba.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Son productos de Prototipar y de Evaluar, posteriores a los dos cierres. El doble diamante describe dónde se escoge —problema y luego idea—, no dónde se construye.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

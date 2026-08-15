@@ -116,9 +116,41 @@ Es decir: de cada curso solo son institucionales el **inicio del periodo** y el 
 
 ---
 
+## 4 ter. ⚠️ Corrección al pendiente 1: las actividades SÍ existen, y están vacías y abiertas
+
+*Verificado el 15/08/2026 leyendo las 7 aulas con `config/moodle/cdigital.py` (servicio `core_courseformat_get_state` + `/mod/quiz/edit.php`), no con Playwright.*
+
+El pendiente 1 de §5 decía que los quices y parciales «existen solo como ítem del libro de calificaciones, sin la actividad detrás». **Eso es falso.** El censo de los **38 cuestionarios** de las 7 aulas encuentra:
+
+| Aula | Curso | Cuestionarios evaluativos | Estado real |
+|---|---|---|---|
+| 115463 | Creatividad 54408 | 6 | Quiz 1 con nuestras 10 preguntas; los otros 4 con **10 slots aleatorios de plantilla** |
+| 111070 | Investigación 53339 | — | **0 slots**: vacíos, puntuación total 0.00 |
+| 129268 | TG2 54448 | — | **0 slots** |
+| 112321 · 116387 · 129270 | TG3 54450/54466/54467 | — | **0 slots** |
+| 130378 | Proyecto I 54ES4 | — | **0 slots** |
+
+Dos consecuencias, y ninguna es cosmética:
+
+1. **Un cuestionario vacío pero visible es peor que uno que no existe.** Los de esas 6 aulas están **visibles y abiertos desde el 11/08/2026, cierran el 20/09**, con 2 intentos y 45 minutos (comprobado en `cmid 6522194` y `7448451`). El estudiante puede entrar, no ver ninguna pregunta y gastar un intento. No hay que «crearlos»: hay que **llenarlos**, y mientras no estén llenos deberían estar ocultos.
+2. **La buena noticia: los 38 tienen 0 intentos.** Nadie ha entrado. Nada está bloqueado, así que todos se pueden recomponer sin hablar con nadie. Ese freno —`quiz-sustituir` aborta con intentos ≠ 0— no se ha activado ni una vez.
+
+### Decisión que NO tomé: la ventana del Quiz 1 de Creatividad
+
+Hay dos ventanas distintas para el mismo cuestionario y **no las igualé a propósito**:
+
+| Fuente | Abre | Cierra | Intentos | Tiempo |
+|---|---|---|---|---|
+| El material entregado al estudiante | 12/08/2026 | 19/08/2026 | 1 | ~12 min |
+| El aula 115463 (`cmid 6745720`), hoy | 11/08/2026 | 20/09/2026 | 2 | 30 min |
+
+El aula es **más permisiva** que lo anunciado, así que nadie queda fuera y no hay urgencia. Pero cambiar la ventana de un cuestionario **ya visible y ya cargado con las 10 preguntas reales**, con 50 estudiantes matriculados, es modificar una evaluación en curso: no es alistamiento, es intervención. Eso lo decide el Docente. **Recomendación:** dejar cerrar el **19/08 a las 23:59, 1 intento, 12 minutos**, que es lo que dice el documento que los estudiantes ya tienen; si se prefiere la ventana ancha del aula, entonces hay que corregir la guía del cuestionario, no al revés.
+
+---
+
 ## 5. Qué queda pendiente
 
-*Registro actualizado el 11/08/2026. Lo tachado se cerró; lo que queda solo se puede hacer en la plataforma o depende de la Universidad.*
+*Registro actualizado el 11/08/2026; §4 ter lo corrige el 15/08/2026. Lo tachado se cerró; lo que queda solo se puede hacer en la plataforma o depende de la Universidad.*
 
 ### Ya cerrado
 
@@ -128,13 +160,14 @@ Es decir: de cada curso solo son institucionales el **inicio del periodo** y el 
 
 ### Lo que solo puedes hacer tú, en la plataforma
 
-1. **Crear en el aula los quices y parciales.** Hoy existen solo como ítem del libro de calificaciones, sin la actividad detrás. *Confirmado por el Docente el 10/08/2026: queda pendiente.* El material ya está listo: cada cuestionario tiene su guía con el alcance exacto, y esa guía se genera desde las sesiones dictadas antes de su cierre, así que nunca pregunta algo no visto.
+1. ~~**Crear en el aula los quices y parciales.**~~ **Reformulado el 15/08/2026 (ver §4 ter): las actividades ya existen; están vacías, visibles y abiertas.** Lo que queda no es crearlas sino **revisar y activar** lo que el alistamiento deja puesto y oculto: los bancos de preguntas importados, los cuestionarios ya apuntados a esos bancos y el material de estudio subido como recurso. Todo llega oculto y ninguno se activa sin ti. El material ya está listo: cada cuestionario tiene su guía con el alcance exacto, generada desde las sesiones dictadas antes de su cierre, así que nunca pregunta algo no visto.
 2. **Pegar la URL de Meet** que imprima el `.gs` en `carga_academica_2026.json` → `cursos.<key>.meet`, y reconstruir. Con eso el correo de bienvenida y el LEEME del estudiante dejan de mostrar el marcador de posición.
-3. **Subir el contenido a las aulas**: no tienen secciones creadas más allá de Avisos.
+3. **Subir el contenido a las aulas**: no tienen secciones creadas más allá de Avisos. *Parcialmente en marcha:* el `subir-recurso` de `cdigital.py` ya publica material como recurso oculto en la sección del tema — probado con el `Material de estudio U2` de Creatividad (`cmid 7705987`, sección «Tema 2», oculto).
+4. **Decidir la ventana del Quiz 1 de Creatividad** (§4 ter): el aula deja hasta el 20/09 con 2 intentos y 30 min; el documento del estudiante dice 19/08, 1 intento, 12 min.
 
 ### Lo que depende de la Universidad
 
-4. **Syllabus SIAC de TG2**, ausente. Es el único de los cinco sin él; su Manual del Docente lo dice explícitamente en vez de inventar unidades.
+5. **Syllabus SIAC de TG2**, ausente. Es el único de los cinco sin él; su Manual del Docente lo dice explícitamente en vez de inventar unidades.
 5. **El Syllabus de Creatividad es el de otra escuela.** El archivo se llama `…PARA ESCUELA DE INGENIERIAS EI004_VIR.docx`, pero adentro dice «PARA LA ESCUELA DE CIENCIAS ADMINISTRATIVAS», `CÓDIGO SÍAC: AE003` y nivel «Tecnológico», cuando la oferta es EI004 de Ingenierías, nivel Profesional. **La tabla de unidades sí es la de Creatividad** y coincide con lo que enseña el material, así que el contenido no está en riesgo: es el mismo temario reutilizado entre escuelas. Conviene confirmarlo con Coordinación antes de citar el código en algo formal.
 
 ---

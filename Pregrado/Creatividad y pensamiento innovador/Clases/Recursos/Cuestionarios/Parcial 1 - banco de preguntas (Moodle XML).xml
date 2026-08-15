@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 1 - Creatividad U1-U3</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 1 (24% de la nota del curso · Corte 1) — CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIAS.</strong></p><p>Ventana: 20/08/2026 a 26/08/2026. Se resuelve dentro del encuentro, en unos 22 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada (contenido académico, acumulativo):</strong> la lectura autónoma de la Sesión 01 —U1 y U2 del Syllabus, incluido el material de estudio «Bloqueadores y ensanchadores de la creatividad»— y la <strong>Sesión 02</strong> (U3): Design Thinking y sus cinco etapas, pensamiento divergente y convergente, <em>How Might We</em>, técnicas de ideación (SCAMPER, brainwriting 6-3-5, analogías de otra industria) y prototipo conceptual.</p><p><strong>Fuera de alcance:</strong> todo lo que se dicta el 26/08 o después — Manual de Oslo y gestión de la innovación, taxonomía y grados de los tipos de innovación, FODA, Canvas, MVP, vigilancia tecnológica, entidades de apoyo y pitch. Ninguna pregunta ni ninguna opción usa ese vocabulario.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Formato de aplicación con caso corto (prueba tipo estándar, Art. 47–48). Tiempo total estimado: 14 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-01 Etapa que falta y su producto mínimo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo ya tiene sus notas de observación del usuario y quiere pasar de inmediato a generar ideas. Según las cinco etapas del Design Thinking trabajadas en la Sesión 02, ¿cuál es la etapa que se está saltando y qué producto mínimo debería dejar?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Entre <strong>Empatizar</strong> e <strong>Idear</strong> va <strong>Definir</strong>, y su producto mínimo es la pregunta <em>How Might We</em>. Sin ese paso el equipo genera ideas para un problema que todavía no acotó.</p><p>Cita literal (Presentación de la Sesión 02, tabla «Las cinco etapas del Design Thinking»): «Definir | ¿Cuál es el problema real? | Pregunta <strong>How Might We (HMW)</strong>». En la misma tabla: «Empatizar | ¿Qué vive y siente el usuario? | Notas de observación o entrevista» y «Prototipar | ¿Cómo se ve o se toca la idea? | Boceto, storyboard, mock feo».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Definir: debe dejar la pregunta <em>How Might We</em> que acota cuál es el problema real.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La tabla de la Sesión 02 asigna a Definir la pregunta «¿Cuál es el problema real?» y como producto mínimo la pregunta <em>How Might We</em>: es la bisagra entre el problema y las ideas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Empatizar: debe dejar las notas de observación o de entrevista con el usuario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El emparejamiento etapa–producto es correcto, pero esa es justamente la etapa que el equipo ya cumplió: el enunciado dice que las notas de observación ya existen.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Prototipar: debe dejar un boceto o storyboard del flujo, aunque sea feo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un producto real del método, pero de una etapa posterior: no se prototipa antes de idear. Quien elige esta opción salta directo a mostrar algo sin haber acotado el problema ni generado alternativas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Evaluar: debe dejar tres aprendizajes tomados directamente del usuario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el producto de la última etapa del ciclo, no de la que falta aquí. No hay nada que testear todavía: el equipo no ha definido el reto ni ha generado ideas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-02 Volver atrás después de mostrar el boceto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted le muestra su boceto a un usuario real y descubre, mientras se lo explica, que el dolor que de verdad lo afecta es otro: no era la demora del trámite, era no saber si va a alcanzar cupo. ¿Qué corresponde hacer según el Design Thinking tal como se trabajó en la Sesión 02?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El método es <strong>iterativo</strong>: se vuelve a <strong>Definir</strong> y se reescribe el reto con el dolor que apareció. Ese retorno no es un fracaso ni un retroceso, es el ciclo haciendo su trabajo, y además es la forma de descubrir el error barato y temprano.</p><p>Cita literal (Presentación de la Sesión 02): «<strong>No es lineal, es iterativo</strong>: se avanza, se prueba con un usuario, se descubre que el problema estaba mal planteado y se retrocede. Ese ir y volver <strong>no es fracaso</strong>: es el método funcionando.» En la misma sesión: «No es una escalera: es un <strong>ciclo</strong>. Volver a Definir después de testear es lo normal, no un retroceso.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Volver a la etapa de Definir y reescribir el reto con el dolor que acaba de aparecer.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El ciclo es iterativo: probar con un usuario y descubrir que el problema estaba mal planteado obliga a regresar a Definir, y ese regreso «no es fracaso: es el método funcionando».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Continuar con el boceto y anotar el hallazgo para una versión posterior de la propuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Lee el ciclo como una escalera de un solo sentido y aplaza el aprendizaje más valioso que tiene. Guardar el hallazgo «para después» es la manera de descubrir el error caro y tarde, que es lo contrario de lo que el método busca.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Mostrar el mismo boceto a más usuarios hasta que alguno confirme el dolor que se había supuesto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Usa el testeo para confirmar la suposición inicial en lugar de para aprender. Buscar al usuario que le dé la razón no valida el reto: solo demora la corrección.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Descartar el problema y comenzar con otro distinto, porque el reto planteado quedó invalidado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde reescribir el reto con cambiar de problema. Lo que quedó mal planteado es la formulación, no el problema: el usuario y el contexto siguen siendo los mismos y el trabajo hecho se reutiliza.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-03 Converger a los 30 segundos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el taller, alguien propone una idea y otra persona responde «eso no se puede». Dos minutos después nadie del grupo vuelve a proponer nada. ¿Cómo se lee esa escena según la Sesión 02 y qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es el error clásico de <strong>converger a los 30 segundos</strong>: se juzgó mientras se estaba generando. La salida no es prohibir el juicio, es <strong>separarlo en el tiempo</strong>: primero se abre, y unos minutos después se filtra con criterios.</p><p>Cita literal (Presentación de la Sesión 02): «El error clásico que verán hoy en clase: <strong>converger a los 30 segundos</strong>. Alguien propone algo y otro dice “eso no se puede”. Ahí mataron la idea antes de que naciera. […] La solución no es prohibir el juicio: es <strong>separarlo en el tiempo</strong>. “Ahora solo generamos. En cinco minutos filtramos.”»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Convergieron demasiado pronto: hay que separar los dos momentos y anunciar que ahora solo se genera y en unos minutos se filtra.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es «converger a los 30 segundos». El juicio no se elimina del proceso, se corre en el tiempo: «ahora solo generamos, en cinco minutos filtramos».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Fue un filtro sano: descartar de entrada lo que no se puede hacer ahorra tiempo de generación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente el razonamiento que el método desmonta. Ese «ahorro» mata la idea antes de que nazca y, con ella, las variaciones que habría destrabado: idear juzgando es manejar con el freno de mano puesto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Faltaron criterios: hay que fijar deseabilidad, factibilidad y viabilidad antes de empezar a generar ideas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Los tres criterios son reales, pero pertenecen al momento de cerrar. En la divergencia todavía no hay criterios («ninguno todavía»); ponerlos antes de generar produce el mismo bloqueo que se quería evitar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El error fue pedir ideas en grupo: conviene que cada persona genere y decida por su cuenta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Culpa al trabajo colectivo de un problema de secuencia. El grupo sí funciona cuando se separan los momentos; de hecho la sesión propone técnicas escritas justamente para que aporten todos, no para evitar al grupo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-04 Cuál de los tres criterios de convergencia falla]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al cerrar su banco de ideas, usted evalúa una de ellas: los usuarios la piden expresamente, su costo de operación una vez montada es casi nulo, pero para probarla necesita un equipo de medición que la sede no tiene y que no llegará este semestre. Según los tres criterios de convergencia de la Sesión 02, ¿qué criterio no pasa?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Falla la <strong>factibilidad</strong>: es el criterio que pregunta si se puede hacer con lo que hay, en el semestre. La deseabilidad está cubierta (los usuarios la piden) y la viabilidad también (se sostiene, porque operar cuesta casi nada).</p><p>Cita literal (Presentación de la Sesión 02, tabla «Divergir y converger son dos oficios distintos»): «<strong>Deseabilidad</strong>: ¿lo quiere el usuario? · <strong>Factibilidad</strong>: ¿lo podemos hacer en el semestre? · <strong>Viabilidad</strong>: ¿se sostiene en el tiempo?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La factibilidad, porque pregunta si la idea se puede hacer en el semestre con lo que hay.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Factibilidad es «¿lo podemos hacer en el semestre?», y el equipo de medición que falta es justamente lo que impide probarla dentro del periodo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La deseabilidad, porque pregunta si la idea es realmente querida por el usuario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese criterio sí se cumple: el enunciado dice que los usuarios la piden expresamente. Quien marca aquí confunde «no se puede hacer» con «no la quieren».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La viabilidad, porque pregunta si la idea se sostiene en el tiempo una vez montada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La viabilidad también se cumple: el costo de operación es casi nulo, así que la idea se sostendría. El obstáculo está en poder construirla y probarla ahora, no en mantenerla después.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La originalidad, porque pregunta si la idea es lo bastante infrecuente frente a las demás.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La originalidad es un indicador de la calidad de la producción divergente, no uno de los tres criterios con los que se cierra. Los tres criterios de convergencia son deseabilidad, factibilidad y viabilidad.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-05 Cuál How Might We está bien redactado]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su problema es este: en una planta de alimentos, los operarios del turno de la noche no reportan las fallas menores de las máquinas y esas fallas se acumulan hasta volverse paradas largas. ¿Cuál de estas cuatro versiones es un <em>How Might We</em> bien redactado?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La fórmula obliga a tres ingredientes —<strong>acción</strong>, <strong>usuario</strong> concreto y <strong>resultado</strong> que esa persona gana— y prohíbe nombrar la tecnología. Un buen HMW no es tan amplio que no se pueda atacar ni tan estrecho que ya traiga la solución adentro.</p><p>Cita literal (Presentación de la Sesión 02): «Fórmula: <strong>¿Cómo podríamos [acción] para [usuario] de modo que [resultado deseado]?</strong> […] Prueba rápida: si su HMW menciona una tecnología (<strong>app, IA, sensor, plataforma</strong>), está mal escrito.» Y sobre el punto medio: «Demasiado amplio: “¿Cómo salvamos la educación?” — no se puede atacar. Demasiado estrecho: “¿Cómo hacemos un botón de reserva?” — ya contiene la solución.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>¿Cómo podríamos facilitar el reporte de fallas menores para que el operario del turno de la noche no herede paradas largas?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Tiene los tres ingredientes —acción (facilitar el reporte), usuario concreto (el operario del turno de la noche) y resultado (no heredar paradas largas)— y no menciona ninguna tecnología, así que deja espacio para muchas soluciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo podríamos implementar una aplicación móvil de reporte de fallas para los operarios de la planta?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Falla la prueba rápida: nombra la tecnología. Empezar por la app encierra la respuesta antes de explorarla, y de paso deja sin decir qué gana el operario.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo podríamos elevar la productividad de la industria de alimentos del país en los próximos años?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es demasiado amplio: no hay usuario ni dolor identificable, así que no se puede atacar. Es el equivalente a «¿cómo salvamos la educación?».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo podríamos instalar un botón de reporte en el tablero de control de cada máquina de la planta?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es demasiado estrecho: ya es la solución disfrazada de pregunta. Si el reto nombra el botón, se pierden todas las alternativas que no pasan por ese botón.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-06 Qué letra de SCAMPER se está aplicando]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El equipo llegó a cuatro ideas y se secó. Para forzar una más, propone esto: que el registro de entrada del turno y el reporte de fallas de la máquina queden en un mismo paso, uno solo. ¿Qué letra de SCAMPER está aplicando?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es <strong>C — Combinar</strong>: la pregunta que se hace es «¿qué dos cosas junto en una?». Poner dos actividades que ya existen dentro de un solo paso es exactamente esa operación.</p><p>Cita literal (Presentación de la Sesión 02, tabla «SCAMPER: siete preguntas para no quedarse en blanco»): «<strong>C</strong> — Combinar | ¿Qué dos cosas junto en una? | Unir la lista de asistencia con la asignación de equipo». La misma tabla define «<strong>S</strong> — Sustituir | ¿Qué pieza puedo reemplazar por otra?», «<strong>P</strong> — Poner en otro uso | ¿Para qué más sirve lo que ya existe?» y «<strong>R</strong> — Reordenar | ¿Qué pasa si invierto el orden?».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Combinar: la pregunta es «¿qué dos cosas junto en una?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Dos actividades que hoy van por separado quedan en un solo paso: es la operación que SCAMPER llama Combinar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Sustituir: la pregunta es «¿qué pieza puedo reemplazar por otra?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La definición es correcta, pero aquí no se reemplaza nada por otra cosa: los dos elementos siguen existiendo, solo pasan a ocurrir juntos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Reordenar: la pregunta es «¿qué pasa si invierto el orden?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Reordenar cambia la secuencia y deja los pasos separados. En el caso no se invierte el orden de dos pasos: se fusionan en uno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Poner en otro uso: la pregunta es «¿para qué más sirve lo que ya existe?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa letra le busca una función nueva a algo que ya está ahí, como usar el carné como llave. Aquí ninguno de los dos elementos cambia de función: cambian de lugar en el flujo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-07 Brainwriting 6-3-5 cuando solo habla uno]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En una sesión de ideación de ocho personas termina hablando siempre la misma, y el resto calla. Según la Sesión 02, ¿cómo funciona el <strong>brainwriting 6-3-5</strong> que se propone justamente para ese caso?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es la lluvia de ideas <strong>silenciosa</strong>: cada quien escribe 3 ideas en 5 minutos y pasa la hoja; quien la recibe <strong>no critica</strong>, construye sobre lo que ya está escrito y agrega 3 más. Así no depende de quién se atreve a hablar y el volumen de ideas se multiplica.</p><p>Cita literal (Presentación de la Sesión 02): «<strong>Brainwriting 6-3-5</strong> — la lluvia de ideas silenciosa: cada persona escribe <strong>3 ideas</strong> en silencio durante 5 minutos y <strong>pasa la hoja</strong> al de al lado. El siguiente <strong>no critica</strong>: construye sobre lo que ya está escrito y agrega 3 más. Por qué funciona: evita que hable solo el extrovertido y <strong>multiplica el volumen</strong> de ideas en minutos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cada persona escribe tres ideas en silencio y pasa la hoja; quien la recibe no critica, construye sobre lo escrito y agrega tres más.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la lluvia de ideas silenciosa: se escribe, se pasa la hoja y se construye encima sin criticar. Por eso no depende de quién tenga más facilidad para hablar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cada persona expone su idea en voz alta por turnos y el grupo vota de inmediato cuál de todas conviene.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ordena los turnos, pero mezcla generar con decidir en el mismo momento: votar de inmediato es converger mientras se está abriendo, y el silencioso sigue sin aportar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un relator recoge las ideas de todos y descarta las repetidas o débiles antes de mostrarlas al grupo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Introduce un filtro justo donde debe haber cero juicio, y encima lo aplica una sola persona. La técnica pide que la siguiente mano construya sobre la idea ajena, no que la depure.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cada persona trabaja aparte y al final se adopta la propuesta de quien tenga más experiencia en el tema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Resuelve el silencio eliminando el intercambio y decide por autoridad, no por criterio. En la técnica las hojas circulan precisamente para que una idea se apoye en la anterior.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-08 A qué familia de bloqueadores corresponde el caso]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El usuario reporta que «el sistema está lento». El equipo dedica tres semanas a optimizar consultas y nada mejora: el cuello de botella era un reporte que un funcionario exportaba a mano cada mañana. Nadie fue a mirar. Según el material de estudio de la U2, ¿a qué familia de bloqueadores corresponde este caso?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un bloqueador <strong>perceptual</strong>: se vio mal el problema antes de intentar resolverlo —se dio por sentado lo que nadie verificó y se confundió el síntoma con la causa—. Note que el equipo sí se atrevió, sí tenía tiempo y sí supo expresar su idea: lo que falló fue el diagnóstico.</p><p>Cita literal (Material de estudio U2 — Bloqueadores y ensanchadores de la creatividad, §3.1): «<strong>Bloqueadores perceptuales — no ve el problema completo.</strong> Ver mal el problema antes de intentar resolverlo: delimitarlo demasiado pronto, dar por sentado lo que nadie verificó, no distinguir causa de síntoma […] el usuario reporta “el sistema está lento” y el equipo pasa tres semanas optimizando consultas SQL. El cuello de botella estaba en un reporte que un funcionario exportaba a mano cada mañana. Nadie fue a mirar.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Perceptual: se dio por cierto lo que nadie verificó y se atacó el síntoma en lugar de la causa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La familia perceptual agrupa los obstáculos de mirada: delimitar el problema demasiado pronto, no distinguir causa de síntoma y dar por sentado lo que nadie fue a verificar en el sitio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Emocional: se vio el problema con claridad y no se tuvo el atrevimiento de plantearlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La familia emocional aparece cuando alguien ve el problema y no se atreve —miedo al ridículo, ideas que solo quedan en el cuaderno—. Aquí nadie se contuvo: el equipo trabajó tres semanas convencido de otro diagnóstico.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cultural: el grupo ya había decidido qué clase de propuesta se considera seria.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa familia son las reglas no escritas sobre lo que «es de ingeniería» o merece tomarse en serio. En el caso no se descartó ninguna idea por cómo se vería: simplemente nadie fue a observar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>De entorno: las condiciones del sitio y la carga de trabajo no dejaron espacio para pensar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La familia de entorno son las condiciones materiales y organizacionales: interrupciones, cero tiempo protegido, nadie con quien contrastar. Al equipo no le faltó tiempo, le faltó ir a mirar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-09 Qué cuenta como ensanchador]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su autodiagnóstico de la U2 muestra un bloqueador <strong>emocional</strong> dominante: usted descarta sus ideas antes de terminar de escribirlas. De las siguientes, ¿cuál es un ensanchador en el sentido que le da el material de la U2?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Un ensanchador es una <strong>acción</strong> que aumenta la cantidad y variedad de opciones antes de decidir, y para valer tiene que tener <strong>verbo, momento y persona concreta</strong>. Una intención no es un ensanchador, y cerrar antes tampoco: primero se abre, después se cierra.</p><p>Cita literal (Material de estudio U2, §4 y tabla 4.2): «<strong>Un ensanchador no es una frase motivacional.</strong> “Voy a ser más creativo” no es un ensanchador. “El jueves 7:00 p. m. le hago tres preguntas al operario del turno de la noche” sí lo es: tiene verbo, hora y alguien concreto. […] Emocional | Juzgar la idea antes de terminar de escribirla | Fijar una regla de «10 ideas antes de la primera crítica»; escribir la idea incompleta en el canal del equipo el mismo día.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Fijar la regla de diez ideas antes de la primera crítica y escribir hoy mismo la idea incompleta en el canal del equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la acción que el material asigna al bloqueador emocional: tiene verbo, tiene plazo y saca la idea del cuaderno privado antes de haberla juzgado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Proponerse tener más confianza y ser más creativo en la próxima reunión del equipo de trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la frase motivacional que el material descarta de forma expresa: no tiene verbo ejecutable, ni momento, ni nadie concreto. Es una intención, no un ensanchador.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Elegir cuanto antes la mejor de las ideas que ya tiene, para no gastar tiempo generando más.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde ensanchar con decidir. Un ensanchador aumenta las opciones disponibles antes de elegir; cerrar más rápido es converger, y hacerlo temprano es justamente lo que apaga las ideas propias.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pedirle a alguien con más experiencia que revise y apruebe cada idea antes de escribirla completa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Suena responsable, pero agrega una aprobación previa donde el bloqueador ya era el juicio anticipado: refuerza el problema en vez de abrirlo. Contrastar sirve después de escribir, no como filtro de entrada.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P1-10 Por qué la inteligencia emocional es el insumo de la U2]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El material de estudio de la U2 sostiene que la inteligencia emocional es el «insumo» de la creatividad y no un tema aparte. ¿Cuál es el argumento con el que lo sostiene?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Porque los bloqueadores <strong>se sienten antes de entenderse</strong>: llegan como emoción y solo después se disfrazan de argumento técnico. Si no se nombra la emoción, se discute un argumento que nunca era el problema.</p><p>Cita literal (Material de estudio U2, §2 «El marco: inteligencia emocional como insumo»): «<strong>Casi todos los bloqueadores de la creatividad se sienten antes de entenderse.</strong> Llegan como una emoción —vergüenza, miedo al ridículo, fastidio, prisa, resignación— y solo después se disfrazan de argumento técnico («no es viable», «no es mi área», «no hay tiempo»). Si usted no puede nombrar la emoción, no puede desmontar el argumento, porque el argumento no era el problema.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque el bloqueador llega primero como emoción y luego se disfraza de argumento técnico: sin nombrar la emoción no se puede desmontar el argumento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese es el argumento del material: «no es viable» o «no hay tiempo» suelen ser la versión presentable de una vergüenza, una prisa o un miedo al ridículo que nadie nombró.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque el buen ánimo aumenta el número de ideas, así que basta sostener un clima agradable en el equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Reduce la inteligencia emocional a estar de buen humor. Reconocer, nombrar y regular la propia emoción no es lo mismo que mantener un ambiente amable, y es lo segundo lo que aquí no alcanza.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque permite presentar las ideas con más seguridad ante el grupo una vez que ya están terminadas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La corre al final del proceso, cuando el material la pone al comienzo: lo emocional decide qué ideas llegan a escribirse, no solo cómo se exponen las que sobrevivieron.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque la creatividad es un rasgo fijo de cada persona y lo emocional resulta ser lo único entrenable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Contradice el punto de partida del material: la creatividad se asocia a factores personales entrenables, no a un talento fijo. Si fuera un rasgo fijo, no habría nada que desbloquear.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

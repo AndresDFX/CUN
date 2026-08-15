@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 2 - TG3 S01-S09</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 2 (21% de la nota del curso · Corte 2) — TRABAJO DE GRADO 3, Modelos de Innovación (Ingeniería de Sistemas).</strong></p><p>Ventana: 06/10/2026 a 13/10/2026. Se resuelve dentro del encuentro, en unos 22 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> alcance acumulativo hasta la <strong>Sesión 09</strong>. Lo nuevo desde el Quiz 2 son las Sesiones 08 y 09 —saturación teórica, marco por constructos, auditoría de referencias citadas, Resultados frente a Discusión, los cuatro movimientos del párrafo de discusión, los verbos confirma / contradice / extiende y la redacción de limitaciones—, y sobre eso van siete de las diez preguntas. Las otras tres verifican retención de la Sesión 05 (reglas de redacción de los ítems del instrumento), de la Sesión 07 (reglas de presentación de datos que el jurado revisa) y de la lectura autónoma obligatoria de la Sesión 01 (Itriago y Zerpa, 2011: la séptima interrogante-guía del planteamiento del problema en ingeniería). Los tres subtemas se eligieron para no repetir ninguna pregunta del Quiz 1 ni del Quiz 2, que ya cubren la estructura del problema, la matriz de consistencia y el paso de dato a hallazgo.</p><p><strong>NO entra</strong> el tema de la Sesión 10 (resumen, palabras clave del tesauro UNESCO, conclusiones y armado final de la lista de referencias), que se dicta el mismo día del cierre: ninguna pregunta ni ninguna opción usa tesauro UNESCO, palabras clave descriptoras ni redacción del resumen. Tampoco entra nada de las Sesiones 11 a 15: no se menciona póster, anexos de evidencias, verificación antiplagio institucional, sustentación ante jurados ni paquete para el repositorio institucional.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Las diez son de contenido temático de las unidades en alcance; ninguna pregunta por la administración del curso (pesos, fechas, canal de entrega, créditos o reglas de uso de IA). Tiempo total estimado: 18 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-01 Cuál frase pertenece a la sección de Resultados]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está redactando la sección de <strong>Resultados</strong> de su artículo. De las siguientes cuatro frases, ¿cuál pertenece a esa sección tal como quedó definida en la Sesión 09?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Resultados es el acta neutral de lo que encontró: dato, magnitud y número de casos, en pasado y sin adjetivos de valor. Interpretar, citar autores y reconocer límites son tareas de la <strong>Discusión</strong>. La regla mnemotécnica de la sesión: Resultados = cámara de seguridad (graba sin opinar); Discusión = mesa de debate (todos opinan y se citan).</p><p>Cita literal (Presentación de la Sesión 09, diapositiva «Resultados: qué es y qué NO es»): «Redacción correcta: <strong>"El tiempo promedio de despliegue pasó de 42 a 18 minutos (n = 12 despliegues)."</strong> Redacción incorrecta: "El tiempo bajó muchísimo, lo que demuestra que la automatización funciona." (…) <strong>NO es</strong> el lugar para citar autores: aquí nadie más habla, solo sus datos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«El tiempo promedio de despliegue pasó de 42 a 18 minutos (n = 12 despliegues).»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la redacción que la sesión pone como modelo: reporta qué salió, cuánto y en cuántos casos, en tono neutral y sin interpretar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«El tiempo bajó muchísimo, lo que demuestra que la automatización funciona.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la redacción que la sesión marca como incorrecta: «muchísimo» es un adjetivo de valor y «demuestra» es interpretación. Ese contenido pertenece a la Discusión, no a Resultados.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Esta reducción confirma lo reportado por Ramírez (2022) en equipos ágiles.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error frecuente: adelantar el diálogo con los autores. En Resultados no se cita a nadie —«aquí nadie más habla, solo sus datos»—; confrontar el hallazgo con un autor es el segundo movimiento de la Discusión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Con doce despliegues no se puede afirmar que el efecto se sostenga a largo plazo.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el reconocimiento de un límite con el reporte del dato. Declarar qué todavía no se puede concluir es el cuarto movimiento del párrafo de discusión; en Resultados solo va lo que se registró.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-02 Los cuatro movimientos del párrafo de discusión]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 09 llamó «el latido» a los cuatro movimientos que tiene todo párrafo de discusión bien escrito. ¿En qué orden van esos cuatro movimientos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es: <strong>retomar un hallazgo → confrontarlo con un autor del marco → implicación para el problema planteado → límite de lo que todavía no se puede concluir</strong>. Un hallazgo por párrafo, y el autor entra segundo: es la confrontación la que convierte el dato en significado. Cuando un párrafo cojea, casi siempre le falta el autor o el límite.</p><p>Cita literal (Presentación de la Sesión 09, diapositiva «El latido: los cuatro movimientos de un párrafo de discusión»): «<strong>1. Retomar</strong> un hallazgo concreto —uno solo por párrafo—. <strong>2. Confrontar</strong> con un autor del marco: ¿lo confirma, lo contradice o lo extiende? <strong>3. Implicación</strong>: qué cambia para el problema que usted planteó. <strong>4. Límite</strong>: qué <strong>todavía no</strong> se puede concluir con estos datos. (…) Si un párrafo no tiene los cuatro latidos, casi siempre le falta el <strong>2</strong> (el autor) o el <strong>4</strong> (el límite).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Retomar un hallazgo, confrontarlo con un autor del marco, plantear la implicación y reconocer el límite.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el pulso completo: un hallazgo, el autor que lo confirma, lo contradice o lo extiende, qué cambia eso para su problema y qué no alcanza a concluirse con esos datos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Retomar un hallazgo, plantear la implicación, reconocer el límite y cerrar con el autor que lo respalda.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Deja el autor de último, como adorno final. El orden importa: la implicación se sostiene <em>porque</em> el hallazgo ya se confrontó con la literatura, así que el autor entra en el segundo movimiento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Definir el concepto, citar al autor que lo sostiene, mostrar el hallazgo que lo ilustra y plantear la implicación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la lógica de un bloque del marco teórico —donde el autor va debajo del concepto—, no la de un párrafo de discusión. La discusión arranca en un hallazgo propio, no en una definición.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Citar al autor del marco, mostrar el hallazgo que lo confirma, agregar un dato nuevo que refuerce y concluir.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el arranque y además incurre en lo que la sesión prohíbe expresamente: la discusión «NO es traer datos nuevos que no aparecieron en Resultados».</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-03 Qué significa que un hallazgo extiende a un autor]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la Discusión, la Sesión 09 distinguió tres verbos para nombrar la relación entre su hallazgo y un autor del marco: <em>confirma</em>, <em>contradice</em> y <em>extiende</em>. ¿Qué está diciendo usted cuando afirma que su hallazgo <strong>extiende</strong> a ese autor?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Extender</strong> es entrar donde el autor no llegó: usted aporta evidencia sobre un escenario, un tamaño o un contexto que ese estudio no abordó. Los otros tres movimientos son distintos: <em>confirmar</em> es ir en la misma dirección, <em>contradecir</em> es ir en dirección opuesta y <em>seguir el método</em> es tomarle prestada la lógica de medición.</p><p>Cita literal (Presentación de la Sesión 09, diapositiva «Los tres verbos del diálogo: confirma, contradice, extiende»): «<strong>Extiende</strong> — su hallazgo entra donde el autor no llegó. Fórmula: "Z (2021) analizó… ; este trabajo agrega evidencia sobre…, no abordado por ese estudio".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que su hallazgo aporta evidencia sobre un escenario que ese autor no abordó en su estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Extender es entrar donde el autor no llegó: la fórmula de la sesión es «Z (2021) analizó…; este trabajo agrega evidencia sobre…, no abordado por ese estudio».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que su hallazgo va en la misma dirección que el de ese autor, en un contexto equivalente al suyo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la definición de <em>confirmar</em>, no de extender. Confirmar es coincidir en la dirección del resultado; extender es cubrir un terreno que el autor dejó sin estudiar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que su hallazgo va en dirección opuesta a lo que ese autor reportó en su investigación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la definición de <em>contradecir</em>, el movimiento que la sesión llama el más valioso y el que más miedo da. Extender no supone oposición: supone territorio nuevo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que usted retomó de ese autor la lógica de medición con la que construyó su propio instrumento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el movimiento «sigo el método de W», que se declara aparte. Tomar prestada la forma de medir no dice nada sobre el alcance de su hallazgo frente al de ese autor.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-04 Qué no cuenta como limitación del estudio]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el párrafo de limitaciones de su artículo aparecen estas cuatro frases. Según los criterios de la Sesión 09, ¿cuál de ellas <strong>NO</strong> es una limitación del estudio y debe salir de ahí?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una limitación es un <strong>acotamiento del alcance</strong> del estudio, no una disculpa sobre las condiciones en que usted trabajó. Muestra qué limitó, cómo afecta la lectura del resultado y qué se propone al respecto. La falta de tiempo propio o la dificultad para encontrar literatura hablan del autor, no del alcance de la evidencia.</p><p>Cita literal (Presentación de la Sesión 09, diapositiva «Cómo se escriben las limitaciones sin hundir el trabajo»): «Una limitación <strong>no</strong> es una disculpa ni una confesión de incompetencia: es un <strong>acotamiento del alcance</strong>. (…) Limitaciones típicas y legítimas en Ingeniería: Tamaño reducido de la muestra o del periodo de observación. Contexto único (una sola empresa, un solo entorno de pruebas). Instrumento autoaplicado (los usuarios reportan su percepción, no una medición objetiva). (…) Lo que <strong>no</strong> es limitación: "tuve poco tiempo", "no encontré artículos", "el docente pidió mucho".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«El tiempo disponible para el trabajo fue corto y no se encontraron artículos suficientes sobre el tema.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión las nombra textualmente entre lo que «no es limitación»: «tuve poco tiempo» y «no encontré artículos» describen las condiciones del autor, no el alcance de la evidencia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«El instrumento fue autoaplicado: los usuarios reportaron su percepción y no una medición objetiva.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Sí es una limitación legítima, y la sesión la lista entre las típicas de Ingeniería. Declararla le dice al lector hasta dónde se puede leer el dato, y eso da credibilidad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«El periodo de observación se limitó a ocho semanas, por lo que no se puede afirmar que el efecto se sostenga.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Sí es una limitación: el periodo reducido de observación aparece expresamente entre las legítimas, y aquí además está redactada con qué limitó y cómo afecta la lectura del resultado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«El estudio se hizo en un solo entorno de pruebas de una única empresa, lo que restringe la generalización.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Sí es una limitación: el contexto único —una sola empresa, un solo entorno de pruebas— es el ejemplo canónico de acotamiento del alcance en un trabajo de grado de Ingeniería.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-05 Qué es la saturación teórica del marco]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 08 usó la <strong>saturación</strong> como el criterio para dejar de buscar literatura. ¿Qué significa que su marco teórico llegó a la saturación?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Saturación es el punto en que las fuentes nuevas ya no aportan conceptos nuevos: solo repiten lo que usted ya tiene. La meta no es un marco <strong>completo</strong> —que se puede agrandar hasta el infinito— sino uno <strong>suficiente y usable</strong>. La prueba definitiva no es un número de referencias, sino esta pregunta: ¿puedo discutir mis hallazgos con lo que tengo?</p><p>Cita literal (Presentación de la Sesión 08, diapositiva «Saturación teórica: cómo saber cuándo parar de buscar»): «<strong>Saturación</strong> es el punto en que las fuentes nuevas <strong>ya no aportan conceptos nuevos</strong>: solo repiten lo que usted ya tiene. (…) La prueba definitiva: <strong>¿puedo discutir mis hallazgos con lo que tengo?</strong> Si sí, el marco está cerrado. Si no, ahí está el hueco que falta.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que las fuentes nuevas ya no aportan conceptos nuevos y solo repiten lo que usted ya tiene.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese es el punto de saturación, y se comprueba con una pregunta práctica: ¿puedo discutir mis hallazgos con lo que ya tengo?</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el marco ya cubre todos los conceptos vecinos del tema, aunque no estén en su pregunta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde saturación con un marco completo. La sesión advierte lo contrario: el bloque que no cae bajo ninguno de sus constructos <em>sobra</em>, por interesante que sea; perseguir los conceptos vecinos es lo que impide cerrar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que usted ya revisó todo lo que se ha publicado sobre su tema en los últimos cinco años.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el criterio por una meta inalcanzable y confunde saturación con vigencia. La saturación no se mide por lo publicado, sino por lo que las fuentes nuevas dejan de aportarle.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la lista de referencias ya alcanzó la cantidad mínima que exige el Syllabus del curso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte un criterio conceptual en un conteo. Se puede llegar al mínimo de referencias con el marco todavía abierto —sin saber cómo se mide una variable, por ejemplo— y también saturar antes de alcanzarlo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-06 Diagnóstico de un marco organizado por autores]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un párrafo del marco teórico dice: «Pérez (2021) señala que automatizar reduce el esfuerzo manual. Luego González (2020) explica que el tiempo de despliegue depende de la infraestructura. Luego Ramírez (2022) midió el efecto de la automatización en tres equipos.»</p><p>Según la Sesión 08, ¿cuál es el diagnóstico y qué hay que hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un <strong>marco por autores</strong>: una lista de resúmenes pegados, ordenada por la secuencia en que usted leyó. Se reorganiza <strong>por constructos</strong> —los conceptos que su propia pregunta pone en juego—, y cada autor entra debajo del concepto que sostiene. En el ejemplo modelado de la sesión, la reescritura no agregó ni una fuente nueva: solo reordenó, y el texto pasó de inventario a argumento.</p><p>Cita literal (Presentación de la Sesión 08, tabla «Marco por autores vs. marco por constructos» y su nota): «Marco por autores (malo): "Pérez dice… Luego González dice… Luego Ramírez dice…" (…) Una lista de resúmenes pegados (…) Regla: <strong>el autor va debajo del concepto</strong>, nunca al revés. Si un párrafo de su marco empieza con el apellido de un autor, revíselo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Es un marco por autores: hay que reorganizarlo por constructos y poner cada autor debajo del concepto que sostiene.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de la sesión es que el autor va debajo del concepto, nunca al revés; si un párrafo del marco empieza con un apellido, hay que revisarlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es un marco por constructos incompleto: hay que sumarle más autores a cada uno de los tres bloques.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Diagnostica un problema de cantidad donde hay un problema de orden. La sesión lo dice con precisión: «Muchos marcos flojos no necesitan más fuentes: necesitan orden». Agregar autores a una lista deja una lista más larga.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Está bien organizado: ordenar por autores le permite al lector rastrear qué dijo exactamente cada fuente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Toma por virtud lo que la sesión señala como defecto. Con ese orden manda la secuencia en que usted leyó, no los conceptos de su pregunta, y para la discusión hay que volver a rastrear todo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falta vigencia: hay que reemplazar las tres fuentes por publicaciones de los dos últimos años.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el problema de estructura por uno de fechas. Las tres fuentes pueden ser perfectamente pertinentes; lo que está mal es que el párrafo se lea como inventario y no como argumento.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-07 Auditoría del conteo real de referencias]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante tiene <strong>41</strong> referencias en su lista final. Al buscar con Ctrl+F cada apellido en el cuerpo del artículo, comprueba que solo <strong>34</strong> aparecen citadas. Frente al mínimo de 50 referencias que exige el Syllabus, ¿cuántas le faltan y qué hace con las siete restantes?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Para el mínimo cuenta lo que está <strong>citado en el cuerpo</strong>, no lo que está en la lista final: 50 − 34 = <strong>16</strong> referencias por conseguir, no 9. Con las siete de adorno hay solo dos salidas: citarlas de verdad donde aporten, o borrarlas. Dejarlas «por si acaso» infla el conteo y le señala al jurado que la lista se armó para cumplir un número.</p><p>Cita literal (Presentación de la Sesión 08, diapositivas «Auditoría de referencias» y «Ejemplo modelado — la auditoría con números reales»): «El Syllabus exige <strong>mínimo 50 referencias</strong>. Pero cuenta lo que está <strong>citado en el cuerpo</strong>, no lo que está en la lista final. (…) <strong>Cuenta real:</strong> 50 − 34 = <strong>16 referencias</strong> por conseguir, no 9. (…) Con las que quedaron sin citar, decida una de dos: <strong>cítelas de verdad</strong> donde aporten, o <strong>bórrelas</strong> de la lista. No las deje ahí "por si acaso".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Le faltan 16, porque solo cuentan las citadas; las siete se citan donde aporten o se borran de la lista.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El conteo real es 50 − 34 = 16, y con las siete de adorno hay dos salidas legítimas: usarlas de verdad en el bloque de constructo que les corresponda, o eliminarlas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le faltan 9, porque el mínimo se cuenta sobre la lista final; las siete se conservan tal como están.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente el error del ejemplo de la sesión: el estudiante creía que le faltaban 9. El mínimo se cuenta sobre lo citado en el cuerpo, no sobre la lista.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le faltan 16, y las siete se dejan en la lista para no perder el trabajo de haberlas buscado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta la cuenta y falla la decisión. Una referencia listada y nunca citada es, para el jurado, una alarma de que la lista se infló; el trabajo de haberla buscado no la vuelve válida.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le faltan 9, y las siete se pasan a un apartado aparte de bibliografía consultada al final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Falla la cuenta y además inventa una salida que la sesión no contempla: la regla es de doble vía —toda referencia de la lista aparece citada al menos una vez en el cuerpo—, y un apartado aparte no la cumple.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-08 Un porcentaje al que le falta algo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Debajo de una tabla ya numerada, titulada en APA y referida desde el texto, usted escribió: <em>«Se observa que el 70% de los despliegues superó los 40 minutos, lo que indica que la demora no es un caso aislado sino el comportamiento habitual del proceso»</em>. Según las <strong>reglas de presentación</strong> que la Sesión 07 dice que el jurado revisa, ¿qué le falta todavía a esa frase?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le falta el <strong>total al lado del porcentaje</strong>. La frase ya tiene su lectura en prosa («se observa que… lo que indica que…») y la tabla ya cumple el rotulado APA, así que el único requisito pendiente es el que hace verificable el porcentaje: cuántos casos hay detrás de ese 70%. Sin el total, un 70% calculado sobre 20 despliegues y uno calculado sobre 5 se leen igual, y no valen lo mismo.</p><p>Cita literal (Presentación de la Sesión 07, diapositiva «Análisis cuantitativo: lo mínimo que necesita y sabe hacer (cont.)», bajo el título «Reglas de presentación que el jurado revisa»): «Los porcentajes se reportan con el <strong>total al lado</strong>: "70% (14 de 20)". <strong>Un porcentaje sobre 5 casos es engañoso.</strong>» El ejemplo modelado de la misma sesión la escribe completa: «Se observa que el 70% de los despliegues <strong>(14 de 20)</strong> superó los 40 minutos, lo que indica que la demora no es un caso aislado sino el comportamiento habitual del proceso.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El total al lado del porcentaje, «70% (14 de 20)»: un porcentaje sin el número de casos sobre el que se calculó resulta engañoso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de la sesión es literal: «Los porcentajes se reportan con el total al lado: "70% (14 de 20)". Un porcentaje sobre 5 casos es engañoso.» Con el total, el lector puede verificar la cifra.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La lectura en prosa de la tabla: sin una frase que diga qué significa el dato, lo que hay es una tabla muda y un volcado de datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa parte ya está hecha: «se observa que… lo que indica que…» es exactamente la fórmula de lectura que la sesión entrega para copiar. La tabla muda es la que no tiene ninguna frase alrededor, y esta sí la tiene.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La explicación de la causa de la demora, porque un resultado que no dice por qué ocurre lo que ocurre queda incompleto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Al contrario: la causa no va aquí. El checklist de la sesión lo pregunta así: «Neutralidad: ¿mi sección de Resultados está libre de juicios y de explicaciones de causa? Eso va en la Discusión.»</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La mediana al lado del promedio, porque cuando hay un valor extremo el promedio miente y hay que reportar las dos medidas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La regla es verdadera —«si hay un valor extremo, el promedio miente. Reporte también la mediana»— pero no aplica: esta frase no reporta ningún promedio, reporta una proporción de casos.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-09 Un ítem que falla dos veces]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le muestra un ítem de su cuestionario que ya tiene anotado al frente el objetivo específico al que apunta: <em>«¿No cree que el proceso manual actual es ineficiente y lento?»</em>. Según las reglas de redacción de ítems de la Sesión 05, ¿qué tiene de malo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Ese ítem rompe <strong>dos</strong> de las cuatro reglas de redacción de la sesión a la vez. Primero <strong>induce la respuesta</strong>: «¿no cree que…?» ya trae adentro lo que se espera oír. Y segundo <strong>pregunta dos cosas a la vez</strong> —ineficiente y lento—, de modo que si alguien responde «sí» no se sabe a cuál de las dos dijo sí. Se arregla partiéndolo en dos ítems neutrales, uno por idea.</p><p>Cita literal (Presentación de la Sesión 05, diapositiva «El instrumento: cada ítem responde a un objetivo», apartado «Cómo se redacta un buen ítem»): «<strong>Una idea por ítem.</strong> "¿Es rápido y confiable el proceso?" son dos preguntas disfrazadas de una. <strong>Sin inducir la respuesta.</strong> "¿No cree que el proceso manual es ineficiente?" ya trae la respuesta adentro.» El checklist de la misma sesión lo verifica así: «<strong>Instrumento:</strong> ¿cada ítem tiene su objetivo anotado al frente? <strong>¿ningún ítem pregunta dos cosas a la vez? ¿ninguno induce la respuesta?</strong>»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Falla dos veces: induce la respuesta, que ya viene adentro, y pregunta dos cosas a la vez; hay que partirlo en dos ítems neutrales.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las dos reglas que el checklist de la sesión pregunta seguidas: «¿ningún ítem pregunta dos cosas a la vez? ¿ninguno induce la respuesta?». Y la tabla de instrumentos advierte justo eso del cuestionario: «Ojo con… preguntas dobles y respuestas inducidas».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Nada de fondo: basta convertirlo en una escala de acuerdo, porque un ítem cerrado de sí o no desperdicia el matiz de la respuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambiar el formato no arregla el fondo. Una escala de acuerdo sobre una pregunta que induce y que junta dos ideas produce respuestas igual de inservibles: no se sabrá si el acuerdo es con lo ineficiente o con lo lento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que está en el lenguaje del investigador: hay que cambiar «proceso manual» por el término técnico del área, que es «despliegue».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Está invertido. La regla dice «en el lenguaje del que responde, no en el suyo: si el usuario no dice "despliegue", no se lo pregunte así». Meter la jerga técnica es el error, no la solución.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que le falta anotar al frente el objetivo al que responde, y sin esa anotación ningún ítem puede quedarse en el instrumento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El enunciado dice que el objetivo ya está anotado al frente, así que esa parte está resuelta. El problema es cómo está escrita la pregunta, no a qué objetivo apunta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P2-10 Para quién o para qué ente es un problema]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Entre las ocho interrogantes-guía que propone la lectura autónoma obligatoria de la Sesión 01 (Itriago y Zerpa, 2011), la <strong>séptima</strong> pregunta: <em>«¿para quién o para qué ente es un problema?»</em>. Según ese texto, ¿para qué sirve responderla?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Sirve para dejar en claro que el problema <strong>afecta a alguien o a algo</strong> —una comunidad, una empresa, un sistema— y que por eso vale como reto en un contexto real, y no como un problema personal de quien está armando el proyecto. Junto con la quinta y la sexta interrogante, es la que da los referentes para escribir la <strong>segunda parte</strong> del planteamiento: la problematización.</p><p>Cita literal (Itriago y Zerpa, 2011, p. 46): «Esta última interrogante en esta parte del esfuerzo en la redacción del problema ayuda a clarificar, de manera muy precisa, que <strong>el problema identificado afecta a algo o alguien (una comunidad, una empresa, un sistema, entre otras posibilidades) y por ello cobra sentido como reto (más que como problema para quien elabora el proyecto de investigación) en un contexto real y con implicaciones diversas</strong>.» La tabla resumen del mismo artículo (p. 50) la ubica en la «Segunda parte (la problematización de la situación y restricciones identificables)».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Para dejar claro que el problema afecta a algo o a alguien —una comunidad, una empresa, un sistema— y que por eso cobra sentido como reto en un contexto real.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El texto insiste en el matiz: cobra sentido como reto «más que como problema para quien elabora el proyecto de investigación». Si nadie más lo padece, no hay problema de investigación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Para incorporar los antecedentes de las investigaciones preliminares, directa o indirectamente vinculadas con el problema, que otros ya publicaron antes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la <strong>cuarta</strong> interrogante, «¿quién ha investigado antes acerca de ello?», y pertenece a la primera parte del planteamiento —la situación actual—, no a la problematización.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Para especificar la dimensión espacial donde ocurre lo observado, que abarca tanto el contexto geográfico como el espacio temático o discursivo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la <strong>tercera</strong> interrogante, «¿dónde está sucediendo?». Responde por el lugar, no por el afectado: se puede saber muy bien dónde ocurre algo y no haber dicho todavía a quién le pesa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Para anunciar de manera general qué puede hacerse metodológicamente para intentar resolverlo, con lo cual se cierra la redacción del planteamiento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la <strong>octava</strong> y última interrogante, «¿qué puede hacerse para intentar resolver el problema?», que da paso a la tercera parte del texto: la aproximación al propósito del estudio.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

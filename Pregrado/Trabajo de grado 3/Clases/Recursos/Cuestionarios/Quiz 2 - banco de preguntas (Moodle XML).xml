@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 2 - TG3 U1-U8</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 2 (9% de la nota del curso · Corte 2) — TRABAJO DE GRADO 3, Modelos de Innovación (Ingeniería de Sistemas), código SIAC 94532.</strong></p><p>Ventana: 22/09/2026 a 29/09/2026. Se resuelve dentro del encuentro de la Sesión 08, en los 15 minutos que el plan de clase reserva. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> contenido temático de las sesiones ya dictadas cuando cierra la ventana. Sesión 07 (U8) — dato, hallazgo y resultado, las cuatro comparaciones, tabla de hallazgos, la lectura de cada tabla y el análisis cualitativo por categorías. Sesión 06 (U7) — comunidades de práctica, co-creación frente a copia y feedback accionable. Base acumulativa: Sesión 05 (U6) — enfoque, alcance y diseño, e investigación-creación documentada.</p><p><strong>No entra la Sesión 08</strong> (Fase III de referentes · cierre del marco teórico), que se dicta el mismo día en que cierra la ventana: ninguna pregunta ni ninguna opción usa su vocabulario. Tampoco entra nada de la Sesión 09 o posteriores (relación explícita de resultados con referentes, resumen y palabras clave del tesauro UNESCO, conclusiones, póster, evidencias, verificación antiplagio, sustentación ante jurados, repositorio institucional).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Las 10 son de contenido temático: ninguna pregunta por pesos, fechas, ventanas, créditos, canal de entrega ni reglas del curso. Reparto: 5 preguntas de la Sesión 07, 3 de la Sesión 06 y 2 de la Sesión 05. Tiempo total estimado: 10 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-01 Dato, hallazgo y resultado no son lo mismo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 07 separó tres niveles que suelen usarse como sinónimos: <strong>dato</strong>, <strong>hallazgo</strong> y <strong>resultado</strong>. ¿Cuál de estas afirmaciones corresponde a esa distinción?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El <strong>dato</strong> es el registro en bruto; el <strong>hallazgo</strong> es ese dato interpretado a la luz de la pregunta; el <strong>resultado</strong> es el hallazgo que ya responde a un objetivo y por eso puede escribirse en la sección de Resultados. Interpretar no es calcular, y explicar la causa no es hallar.</p><p>Cita literal (Presentación de la Sesión 07, tabla «Dato, hallazgo y resultado no son lo mismo»): «<strong>Dato</strong> · El registro en bruto, tal como se capturó · "El despliegue tardó 42 minutos"» · «<strong>Hallazgo</strong> · La interpretación del dato a la luz de la pregunta · "El tiempo de despliegue casi duplica el estándar del equipo"» · «<strong>Resultado</strong> · El hallazgo que <strong>responde a un objetivo</strong> · "Se caracterizó el proceso actual: lento y con 6 pasos manuales"». En la diapositiva «Cómo se convierte un dato en hallazgo»: «<strong>Ojo:</strong> el hallazgo describe lo que muestra el dato. La explicación de <strong>por qué</strong> ocurre eso va en la Discusión, no aquí.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El dato es el registro en bruto; el hallazgo es la interpretación de ese dato a la luz de la pregunta; el resultado es el hallazgo que responde a un objetivo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la tabla de la sesión, y el orden importa: sin interpretación no hay hallazgo, y sin objetivo al que responder el hallazgo todavía no es un resultado que pueda reportarse.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato es el registro en bruto; el hallazgo es el promedio o el porcentaje calculado sobre ese registro; el resultado es la tabla que reúne los cálculos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde interpretar con calcular. Un promedio sigue siendo un dato: «un número solo no significa nada hasta que se le pone un punto de comparación y una pregunta», y una tabla de cálculos sin lectura es justamente lo que la sesión llama tabla muda.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato es lo que arroja el instrumento; el hallazgo es lo que el autor esperaba encontrar; el resultado es lo que finalmente decide reportar en el artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: pone la expectativa del autor donde va la evidencia. La sesión es explícita: «Mi opinión sobre el tema es un hallazgo. — No. Un hallazgo se sostiene en un dato», y un resultado inesperado se reporta igual.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato es el registro en bruto; el hallazgo explica por qué ocurre lo que el dato muestra; el resultado es la conclusión con que cierra el artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: adelanta la explicación causal. El hallazgo describe lo que muestra el dato; el «por qué» ocurre no va ahí. Y el resultado no es la conclusión del artículo: es el hallazgo amarrado a un objetivo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-02 Un dato que no se puede comparar contra nada]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su bitácora registra que un despliegue toma en promedio 42 minutos. Al revisar sus registros descubre que no anotó el tiempo objetivo del área, ni una medición anterior, ni el tiempo de otro equipo, y tampoco tiene un autor que reporte una cifra comparable. Con los criterios de la Sesión 07, ¿qué está pasando y qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Un dato se vuelve hallazgo cuando se pone <strong>contra algo</strong>: un estándar o meta, otro momento, otro grupo o caso, o la literatura. Si no hay contra qué compararlo, el problema está en el <strong>instrumento</strong>, que no capturó el punto de referencia, y se arregla mientras todavía queda tiempo de volver a medir.</p><p>Cita literal (Presentación de la Sesión 07, «Cómo se convierte un dato en hallazgo: cuatro comparaciones»): «Un dato se vuelve hallazgo cuando usted lo pone <strong>contra algo</strong>. Hay cuatro contras posibles: <strong>1.</strong> Contra un estándar o meta […] <strong>2.</strong> Contra otro momento […] <strong>3.</strong> Contra otro grupo o caso […] <strong>4.</strong> Contra la literatura […] Si su dato no se puede comparar contra nada, revise: probablemente su instrumento no capturó el punto de referencia. Ese es un error que se arregla ahora, no cuando ya no quede tiempo de volver a medir.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El dato todavía no es un hallazgo porque le falta un punto de comparación, y hay que revisar el instrumento: es lo que no capturó esa referencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Faltando las cuatro comparaciones posibles, la cifra se queda en dato. Y el diagnóstico apunta al instrumento, que es lo que todavía se puede corregir mientras haya tiempo de volver a medir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato ya es un hallazgo, porque los 42 minutos son una medición válida obtenida con el instrumento que usted mismo diseñó para el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde que el dato sea válido con que ya signifique algo. «"42 minutos" no dice nada. "42 minutos cuando el estándar del equipo son 20" ya dice algo»: sin referencia no hay interpretación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato ya es un hallazgo, y lo que falta es explicar en esa misma sección por qué el proceso de ese equipo tarda tanto en cada despliegue.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble: el salto a hallazgo se hace comparando, no explicando, y la explicación de por qué ocurre algo no va en esa sección. Aquí lo que falta es el punto de referencia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El dato no sirve y hay que descartarlo del análisis, porque una cifra sin punto de comparación no puede aparecer en ninguna parte del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la sesión no manda botar el dato, manda revisar el instrumento y conseguir la referencia. Descartar es la salida para los datos que no responden a ningún objetivo, que es un problema distinto.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-03 La tercera columna de la tabla de hallazgos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está llenando su <strong>tabla de hallazgos</strong> (dato · hallazgo · objetivo que responde) y llega a una fila cuya tercera columna no puede completar: ninguno de sus objetivos cubre ese dato. Según la Sesión 07, ¿qué corresponde concluir?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una celda vacía en la tercera columna es un diagnóstico, no un descuido: <strong>o ese dato sobra, o falta un objetivo</strong>. La sesión pide decidir cuál de las dos cosas es, en el momento, y no dejar la fila colgada.</p><p>Cita literal (Presentación de la Sesión 07, nota de la tabla «Tabla de hallazgos — la herramienta del día»): «Si una fila no puede llenar la tercera columna, hay dos posibilidades: <strong>o ese dato sobra, o le falta un objetivo</strong>. Decida hoy cuál de las dos.» En el paso a paso de la misma sesión: «<strong>4.</strong> Elija <strong>solo lo que responde a un objetivo</strong>. Todo lo demás va a un anexo o se descarta.» Y en el checklist: «¿toda fila tiene su objetivo? ¿algún objetivo específico se quedó sin ninguna fila? Si es así, ahí tiene un hueco de evidencia.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que hay dos posibilidades y hay que decidir en el momento cuál es: o ese dato sobra, o al proyecto le falta un objetivo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el uso que la sesión le da a la tercera columna: sirve de prueba de consistencia, y una celda que no se puede llenar delata un dato de más o un objetivo de menos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la fila se deja con la tercera columna en blanco y se resuelve más adelante, cuando el artículo esté más avanzado y se vea mejor el conjunto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: aplaza justo lo que la sesión pide decidir hoy. El criterio de éxito del taller es explícito: «ninguna celda de la tercera columna vacía».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que en esa celda se anota el objetivo general del proyecto, porque todo dato recogido responde de alguna manera al propósito general del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: llena la celda por llenarla y pierde la prueba. La columna amarra cada dato a un objetivo específico; con el general cabría cualquier cosa y la tabla dejaría de servir para detectar datos sueltos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el dato se reporta igual en la tabla, porque toda la evidencia recogida con el instrumento tiene que quedar visible en los resultados del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: reportar todo lo recogido es lo que la sesión advierte que dispersa. «Analizo cosas que no pregunté porque son interesantes» le resta foco: lo que no responde a un objetivo va a un anexo o se descarta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-04 La tabla muda y el data dump]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le muestra su avance: seis tablas de cifras, una tras otra, sin ninguna frase alrededor de ellas. Con los criterios de la Sesión 07, ¿qué le señalaría y cómo se corrige?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un <strong>data dump</strong>: un volcado, no un análisis. La corrección es por tabla, no en bloque: cada tabla lleva su <strong>lectura</strong> —qué se ve y qué significa— y la que no la tenga sobra o se manda a anexos.</p><p>Cita literal (Presentación de la Sesión 07, «La advertencia del día: el "data dump"»): «<strong>Data dump</strong> es pegar diez tablas seguidas sin una sola frase que las explique. No es análisis: es un volcado. El jurado lo detecta en la primera hojeada.» · «<strong>Regla simple:</strong> si una tabla no tiene lectura, sobra. O la interpreta, o la manda a anexos.» · «<strong>Fórmula de lectura, para copiar y usar:</strong> "<strong>Se observa que</strong> [lo que muestra el dato], <strong>lo que indica que</strong> [qué significa para mi pregunta]." Dos frases por tabla bastan.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que es un data dump: a cada tabla le falta su lectura —qué se ve y qué significa— y la que no la tenga sobra o se manda a anexos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de la sesión es por tabla y bastan dos frases: «se observa que… lo que indica que…». Sin esa lectura, lo que hay es un volcado de cifras.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que le sobran tablas y debe dejar una sola por objetivo, porque presentar varias tablas para un mismo objetivo confunde a quien lee.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: inventa un límite de cantidad que la sesión no fija. El problema de esas seis tablas no es que sean seis, es que ninguna está interpretada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que debe convertir esas tablas en gráficos, porque una figura comunica mejor que una tabla de cifras y el lector la entiende sin explicación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: cambia el formato y deja el problema intacto. Un gráfico sin lectura queda igual de mudo que la tabla; además la sesión advierte no usar torta con más de cinco categorías.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que agregue al final de la sección un párrafo que resuma en conjunto lo que muestran las seis tablas, para que el lector no quede sin interpretación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error atractivo pero insuficiente: un resumen final no salva a las tablas mudas. La lectura es de cada tabla, y la prueba de calidad es que el texto se entienda incluso tapando todas las tablas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-05 Qué es una comunidad de práctica]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 06 definió qué es una <strong>comunidad de práctica</strong> y qué no lo es. ¿Cuál de estas afirmaciones corresponde a esa definición?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un grupo que comparte un interés y <strong>aprende junto al hacer</strong>, con tres ingredientes: <strong>dominio</strong>, <strong>comunidad</strong> y <strong>práctica</strong>. No es un grupo de trabajo con entregable común —cada quien mantiene su proyecto y su autoría—, no es un club de elogios y no es un canal donde nadie discute.</p><p>Cita literal (Presentación de la Sesión 06, «Qué es una comunidad de práctica»): «Concepto popularizado por <strong>Wenger</strong>: un grupo de personas que comparte un interés y <strong>aprende junto al hacer</strong>. […] <strong>Dominio</strong> — un tema común que a todos les importa. […] <strong>Comunidad</strong> — se interactúa de verdad: se pregunta, se responde, se discute. Un chat mudo no es comunidad. <strong>Práctica</strong> — se comparten recursos, plantillas, trucos y errores. […] <strong>No es</strong> un grupo de trabajo con un entregable común: aquí cada quien mantiene <strong>su</strong> proyecto y <strong>su</strong> autoría. <strong>No es</strong> un club de elogios: si todos dicen "está muy bien", la comunidad no está funcionando.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Un grupo que comparte un interés y aprende junto al hacer, con dominio, comunidad y práctica, en el que cada quien mantiene su propio proyecto y su autoría.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Los tres ingredientes están todos, y la aclaración sobre la autoría es la que separa la comunidad de práctica de un grupo de trabajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un grupo que se organiza para producir un entregable común, repartiendo entre sus integrantes las secciones del documento que van a presentar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: describe un grupo de trabajo, que es justo lo que la sesión descarta. En una comunidad de práctica no hay entregable compartido: cada proyecto y cada autoría siguen siendo individuales.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un espacio de apoyo mutuo en el que se sostiene el ánimo del grupo destacando lo que cada proyecto ya tiene bien logrado y evitando la crítica.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el club de elogios. «Si todos dicen "está muy bien", la comunidad no está funcionando»: el valor de que otro mire su proyecto está justamente en lo que le señala.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un canal en el que los integrantes comparten materiales y recursos sobre el mismo tema, aunque no lleguen a preguntarse ni a discutir sus avances.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: tiene práctica pero le falta comunidad. La sesión lo dice con esas palabras: «un chat mudo no es comunidad», porque sin interacción real nadie aprende del otro.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-06 Co-crear y copiar: la linea que no se cruza]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la socialización, una compañera le sugiere agregar un campo a su instrumento. Usted lo agrega y el instrumento mejora. Según la Sesión 06, ¿qué corresponde hacer para que eso sea <strong>co-creación</strong> y no apropiación?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La diferencia práctica de la sesión es de una línea: <strong>co-crear se declara, copiar se esconde</strong>. Un aporte de un par se registra con el nombre de quien lo hizo y con lo que usted decidió; una frase o una figura de una fuente publicada se cita. Reescribir el aporte con otras palabras para presentarlo como propio es la lógica de la copia, no de la co-creación.</p><p>Cita literal (Presentación de la Sesión 06, tabla «Co-creación vs. copia: la línea que no se cruza»): «Un compañero le sugiere una idea · Co-crear (correcto): La adapta a su proyecto y la <strong>registra en la bitácora</strong>: "aporte de X" · Copiar (falta grave): La usa como propia y no la menciona en ninguna parte» · «Encuentra una frase perfecta en un artículo · La cita entre comillas con autor, año y página · La pega en su texto y le cambia dos palabras». Nota de la misma diapositiva: «La diferencia práctica es sencilla: <strong>co-crear se declara, copiar se esconde</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Dejar registrado el aporte con el nombre de quien lo hizo y qué decidió usted con él: el cambio sigue siendo su decisión, pero declarada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la fila exacta de la tabla: el aporte de un par se adapta y se registra como «aporte de X». Declararlo es lo que protege su autoría en vez de ponerla en duda.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Reformular el campo con palabras propias antes de incorporarlo, de modo que la versión que entra al instrumento sea ya de su autoría.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es «le cambia dos palabras», que la tabla clasifica del lado de la copia. Cambiar la redacción no borra el origen del aporte; lo que lo resuelve es declararlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Incluir a la compañera en la lista de referencias en APA del artículo, igual que se hace con cualquier fuente que se haya consultado durante el proceso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: aplica al aporte de un par la regla de las fuentes publicadas. La sesión distingue las dos cosas: la fuente se cita; el aporte de un compañero se registra y se declara, y sirve además para los agradecimientos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Incorporarlo sin ningún registro, porque una sugerencia hecha de viva voz durante una clase es del grupo y no exige atribuir nada a nadie.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es la apropiación que la sesión señala como falta grave, «la usa como propia y no la menciona en ninguna parte». Y deja el cambio sin evidencia: lo que no se registra, no ocurrió.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-07 De feedback vago a feedback accionable]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Terminado su pitch, un compañero le dice: «le falta profundidad». Con los criterios de la Sesión 06, ¿por qué ese comentario no le sirve y cómo se vuelve <strong>accionable</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>«Le falta profundidad» falla porque <strong>no dice dónde ni de qué tipo</strong>. Se vuelve accionable cuando señala el punto exacto del proyecto: por ejemplo, que en el problema no se dijo a cuántas personas afecta ni con qué frecuencia. Un aprendizaje accionable es el que se puede convertir en una tarea concreta esta misma semana.</p><p>Cita literal (Presentación de la Sesión 06, tabla «Feedback vago vs. feedback accionable»): «"Le falta profundidad" · Por qué no sirve: No dice dónde ni de qué tipo · Cómo decirlo para que sirva: "En el problema no dijo cuántas personas afecta ni con qué frecuencia"». En la misma diapositiva: «"Yo lo haría distinto" · Habla del otro proyecto, no del suyo» y la fórmula «"Cuando dijo X, yo entendí Y; si su intención era Z, considere W."» En el paso a paso: «los oyentes responden <strong>primero al pedido concreto</strong> y solo después agregan otras observaciones».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>No dice dónde ni de qué tipo; sirve cuando señala el punto exacto, por ejemplo que en el problema usted no dijo a cuántas personas afecta ni con qué frecuencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la fila literal de la tabla de la sesión, y la reescritura cumple la prueba del aprendizaje accionable: se puede convertir en una tarea concreta esta misma semana.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No dice dónde ni de qué tipo; sirve cuando el compañero le propone la solución que él aplicaría si estuviera trabajando un proyecto como el suyo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: acierta el diagnóstico y falla la salida. Eso es «yo lo haría distinto», que según la sesión habla del proyecto del otro y no del suyo; lo accionable es que le describan qué no entendieron de lo que usted dijo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es un juicio sobre la persona que expuso; sirve cuando se reemplaza por el reconocimiento de lo que sí quedó bien logrado en la presentación del avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: cambia un comentario inútil por otro. «Está muy bien, me gustó» encabeza la lista de lo que no sirve, porque «no se puede hacer nada con eso».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Llegó sin que usted lo hubiera pedido; sirve solo si responde al pedido concreto que usted hizo, y cualquier otra observación se descarta de entrada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: exagera la regla del pedido. Los oyentes responden primero al pedido concreto «y solo después agregan otras observaciones»: esas otras se anotan igual, no se descartan.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-08 Las categorias salen de los datos, no al contrario]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Aplicó seis entrevistas cortas. Antes de leer las transcripciones ya tenía escritas las tres categorías con las que iba a clasificar las respuestas, y las usó tal cual. Según la Sesión 07, ¿qué problema tiene ese procedimiento?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El procedimiento está invertido. El orden de la sesión es <strong>codificar primero</strong> —marcar y etiquetar los fragmentos relevantes— y <strong>agrupar después</strong> esas etiquetas en categorías. Unas categorías traídas de antemano no analizan: confirman lo que ya se creía.</p><p>Cita literal (Presentación de la Sesión 07, «Análisis cualitativo: de las respuestas a las categorías»): «<strong>Paso 2 — Codifique</strong>: lea y marque con color los fragmentos que dicen algo relevante, poniéndoles una etiqueta corta.» · «<strong>Paso 3 — Agrupe</strong> las etiquetas parecidas en <strong>categorías</strong>. Tres o cuatro categorías bien construidas bastan.» · «<strong>Paso 5 — Sostenga cada categoría con una cita textual</strong> del participante, entre comillas y con su código: "…" (P3).» · «Las categorías se <strong>derivan de los datos</strong>, no se inventan antes. Si usted ya sabía las categorías, no analizó: confirmó su prejuicio.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que invirtió el orden: primero se codifican los fragmentos y de esas etiquetas se agrupan las categorías, que se derivan de los datos y no se traen decididas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Los pasos 2 y 3 van en ese orden por una razón: unas categorías escritas antes de leer las transcripciones no analizan nada, «confirman el prejuicio» de quien las escribió.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguno, siempre que cada categoría quede sostenida con una cita textual de un participante, que es lo que la sesión exige del análisis cualitativo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: usa un requisito real —el paso 5 pide sostener cada categoría con una cita textual y su código— para validar un atajo. Con seis transcripciones se encuentra una frase que respalde casi cualquier etiqueta, y eso no vuelve la categoría un producto del análisis.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que tres categorías son muy pocas para seis entrevistas: hay que abrir una categoría por participante para no perder ninguna de las voces del grupo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: inventa una regla de cantidad que la sesión no fija; dice lo contrario, «tres o cuatro categorías bien construidas bastan». Y una categoría por participante haría imposible el paso siguiente, que es ver qué se repite en casi todos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que codificar con colores dentro de un documento no se sostiene: sin software especializado de análisis cualitativo esas categorías no se pueden defender.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: descalifica la herramienta que la propia sesión propone —Google Docs con colores y comentarios— y deja intacto el problema real, que es el orden en que se construyeron las categorías.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-09 Que alcance y que diseno declara este trabajo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su trabajo estudia <strong>una sola</strong> área de TI de una empresa. La pregunta busca caracterizar cómo funciona hoy el proceso de atención de incidencias, <strong>sin</strong> establecer causas y <strong>sin</strong> relacionar dos variables entre sí; en la Fase I encontró referentes suficientes. Según la Sesión 05, ¿qué alcance y qué diseño le corresponde declarar en su metodología?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Alcance <strong>descriptivo</strong> —«caracterizar cómo es algo, sin explicar causas», el más común en pregrado— y diseño de <strong>estudio de caso</strong> —«un solo escenario estudiado a fondo»—. Enfoque, alcance y diseño son las tres decisiones que se enuncian de forma explícita en la sección de Metodología del artículo.</p><p>Cita literal (Presentación de la Sesión 05, tabla «Decisión 2 y 3 — Alcance y diseño»): «<strong>Alcance: descriptivo</strong> · Caracterizar cómo es algo, sin explicar causas · Lo más común en trabajos de grado de pregrado» · «<strong>Alcance: correlacional</strong> · Ver si dos variables se mueven juntas · Cuando su pregunta relaciona dos variables medibles» · «<strong>Alcance: explicativo</strong> · Establecer causa y efecto · Exige control de condiciones; rara vez viable en un semestre» · «<strong>Alcance: exploratorio</strong> · Tema poco estudiado, primeras aproximaciones · Cuando encontró muy pocos referentes en la Fase I» · «<strong>Diseño: estudio de caso</strong> · Un solo escenario estudiado a fondo · Cuando trabaja con una sola empresa, área o comunidad». Nota de la misma diapositiva: «Estas tres decisiones —enfoque, alcance, diseño— se <strong>enuncian explícitamente</strong> en la sección de Metodología del artículo. El jurado las busca.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Alcance descriptivo y diseño de estudio de caso: caracteriza cómo es algo sin explicar causas, y lo hace en un solo escenario estudiado a fondo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Las dos celdas de la tabla se leen directamente en el enunciado: «caracterizar cómo es algo, sin explicar causas» y «cuando trabaja con una sola empresa, área o comunidad».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Alcance explicativo y diseño de cuasi-experimento: describir a fondo el proceso es la manera de establecer las causas de las demoras que hoy tiene.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: describir no es explicar. El alcance explicativo establece causa y efecto y «exige control de condiciones; rara vez viable en un semestre», y el cuasi-experimento mide antes y después de una intervención que aquí nadie introduce.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Alcance correlacional y diseño de estudio de caso: trabajar en una sola área obliga a relacionar entre sí las variables para poder sostener un resultado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: acierta el diseño y falla el alcance. El correlacional se usa «cuando su pregunta relaciona dos variables medibles», y el enunciado dice expresamente que la suya no las relaciona. El diseño no impone ningún alcance.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Alcance exploratorio y diseño de investigación-creación: al no buscar causas, el trabajo es una primera aproximación y se documenta como obra-creación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el exploratorio es para un tema poco estudiado, «cuando encontró muy pocos referentes en la Fase I», y aquí encontró suficientes. La investigación-creación es para cuando el producto del trabajo es el prototipo, y aquí no se construye ninguno.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q2-10 El prototipo que todavia no es investigacion-creacion]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su trabajo de grado es de obra-creación: tiene el prototipo funcionando y su documentación técnica al día. Según la Sesión 05, ¿qué le falta para que eso cuente como <strong>investigación-creación</strong> y no como un desarrollo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Falta la <strong>bitácora de iteraciones</strong>: por cada versión, la decisión de diseño, el criterio con que se eligió, la prueba con que se verificó y el aprendizaje que dejó. En obra-creación el proceso de construir el prototipo <strong>es</strong> parte del método, y el instrumento no es una encuesta sino la rúbrica del prototipo más esa bitácora.</p><p>Cita literal (Presentación de la Sesión 05, «Investigación-creación: el prototipo es método y resultado a la vez»): «En obra-creación el prototipo <strong>no es solo el producto final</strong>: el proceso de construirlo es parte del método. […] <strong>La decisión de diseño</strong> — qué se eligió (arquitectura, librería, flujo de pantallas) y qué alternativas se descartaron. <strong>El criterio</strong> — por qué se eligió eso […] <strong>La prueba</strong> — cómo se verificó que funcionaba y con quién se probó. <strong>El aprendizaje</strong> — qué salió mal y qué se cambió en la siguiente versión. Su instrumento aquí no es una encuesta: es una <strong>rúbrica del prototipo</strong> con criterios verificables y una <strong>bitácora de iteraciones</strong>. Un prototipo sin bitácora es una tarea de programación; un prototipo con bitácora es investigación-creación.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La bitácora de iteraciones: por cada versión, la decisión de diseño, el criterio con que se eligió, la prueba y el aprendizaje que dejó.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la frase con que cierra la diapositiva: «un prototipo sin bitácora es una tarea de programación; un prototipo con bitácora es investigación-creación».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una encuesta de satisfacción a los usuarios que probaron el prototipo, que es el instrumento con el que se sostiene un trabajo de obra-creación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la sesión lo descarta con esas palabras, «su instrumento aquí no es una encuesta». La percepción de los usuarios puede sumar, pero no reemplaza la documentación de las decisiones de diseño.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Nada le falta: en obra-creación el producto es el resultado, y con el prototipo funcionando y su documentación técnica el método ya queda demostrado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: niega lo que sostiene la sesión, que el proceso de construirlo es parte del método. Sin la bitácora, lo entregado es una tarea de programación y no una investigación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Entregar además el manual de usuario y el código fuente comentado, para que cualquiera pueda instalar el prototipo y verificar que funciona.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde el entregable técnico con la evidencia de método. Que otro pueda instalarlo no muestra qué alternativas se descartaron, con qué criterio ni qué se aprendió en cada iteración.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

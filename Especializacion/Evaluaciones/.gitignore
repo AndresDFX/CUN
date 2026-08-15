@@ -1,0 +1,18 @@
+# Cronogramas de sustentación de la Dirección del Programa: NO ENTRAN AL REPOSITORIO.
+#
+# `CRONOGRAMA SUSTENTACIÓN 26ET2.xlsx` trae una columna «No. Cédula» con 196 cédulas
+# repartidas en cuatro hojas (ESPMA, ESPTI, ESPTD, ESPAD) — es decir, también las de
+# estudiantes de programas que no son los míos. Este repositorio está versionado en git
+# **y** sincronizado con Google Drive: meter ahí un dato de identificación personal lo
+# deja en el historial para siempre, y `git rm` no lo borra del pasado.
+#
+# Las fichas de evaluación sí se versionan: se generaron a partir de este archivo pero
+# citan solo lo académico —código de grupo, título, objetivo, correo institucional— y se
+# verificaron sin una sola cédula antes de hacer commit. El cronograma se lee en su sitio
+# original, no se copia.
+*.xlsx
+*.xls
+*.csv
+
+# Atajos de Google Drive a la carpeta compartida: son específicos de esta máquina.
+*.lnk

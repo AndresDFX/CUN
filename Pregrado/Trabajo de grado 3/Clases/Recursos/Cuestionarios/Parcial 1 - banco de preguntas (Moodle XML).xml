@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 1 - TG3 S01-S05</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 1 (24% de la nota del curso · Corte 1) — TRABAJO DE GRADO 3, Modelos de Innovación (Ingeniería de Sistemas), código 94532.</strong></p><p>Ventana: 08/09/2026 a 15/09/2026. Se resuelve dentro del encuentro, en unos 22 minutos.</p><p><strong>Alcance (acumulativo, hasta la Sesión 05):</strong> la lectura autónoma obligatoria de la Sesión 01 —unidades U1–U2 del Syllabus, artículo de Itriago y Zerpa (2011) sobre el planteamiento del problema en ingeniería, del que entra <em>lo que el texto sostiene</em>: la estructura del problema y las partes del texto de problema-solución—; la <strong>Sesión 02</strong> (pregunta, objetivos, título y variables); la <strong>Sesión 03</strong> (estructura del artículo e introducción como embudo); la <strong>Sesión 04</strong> (Fase I de referentes, ficha de lectura y mapa de diálogo); y la <strong>Sesión 05</strong> (matriz de consistencia, enfoque, alcance, diseño e instrumento). <strong>No entra la Sesión 06 ni ninguna posterior</strong>: nada de comunidades de práctica ni de co-creación entre pares (S06, que se dicta el mismo día en que cierra este cuestionario), ni análisis de datos y tabla de hallazgos (S07), ni Fase III de referentes y cierre del marco teórico (S08), ni resultados y discusión escritos (S09), ni resumen, tesauro UNESCO, conclusiones y referencias (S10), ni póster, evidencias o verificación antiplagio (S11), ni sustentación ante jurados (S12) o repositorio institucional (S13). Ninguna opción usa el vocabulario de esas sesiones.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. <strong>Las 10 son de contenido temático</strong> (conceptos, criterios técnicos y casos cortos de aplicación de las unidades en alcance): 1 de la lectura obligatoria, 1 de la Sesión 02, 2 de la Sesión 03, 3 de la Sesión 04 y 3 de la Sesión 05. Ninguna pregunta versa sobre administración del curso. Tiempo total estimado: 15 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-01 El componente que pone en marcha el trabajo de ingeniería]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante ya identificó, en la situación que quiere investigar, la información de partida, el lugar al que quiere llegar y los factores que condicionan qué solución sería viable. Según la lectura autónoma obligatoria de la Sesión 01, ¿qué componente de la <strong>estructura del problema</strong> le falta todavía y qué contiene?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le falta el cuarto componente: las <strong>operaciones</strong>. La lectura las define como las acciones específicas que hay que realizar para ir de los datos a la meta considerando las restricciones, y precisa que el trabajo en Ingeniería empieza justamente cuando ya se han considerado los tres factores anteriores: datos, metas y restricciones.</p><p>Cita literal (lectura obligatoria, Itriago y Zerpa, 2011, p. 42): «una vez que se han considerado los tres factores anteriores (datos, metas y restricciones) es cuando el trabajo en Ingeniería comienza: se requiere generar las Operaciones necesarias para dar con la solución más eficiente y económica; en otras palabras, el componente "operaciones" se refiere a las acciones específicas que deben realizarse para ir de los datos a la meta, considerando las restricciones que la situación impone.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Las operaciones: las acciones específicas que hay que realizar para ir de los datos a la meta, considerando las restricciones que la situación impone.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El texto reserva ese nombre para «las acciones específicas que deben realizarse para ir de los datos a la meta, considerando las restricciones que la situación impone», y aclara que el trabajo en Ingeniería comienza justo cuando ya se consideraron datos, metas y restricciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las restricciones: los factores de la situación que ponen condicionantes para alcanzar la meta y deciden cuál solución resulta admisible y cuál no lo es.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Las restricciones ya están en el enunciado: son «los factores que condicionan el tipo de solución que se puede aportar». El componente que falta es el que se genera <em>después</em> de tenerlas identificadas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los antecedentes: la revisión de lo que otros autores ya publicaron sobre la misma situación problemática, que el texto cuenta como cuarto componente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Los antecedentes sí aparecen en la lectura, pero no como un componente aparte: alimentan los <em>datos</em> del problema. El texto lo dice así: «Esta información puede estar referida a los antecedentes de la situación-problema.»</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La hipótesis: la respuesta anticipada al problema, que según el texto debe quedar formulada antes de empezar a redactar el planteamiento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La lectura no incluye la hipótesis entre los componentes de la estructura del problema: su modelo es datos, metas, restricciones y operaciones, y ninguno de los cuatro anticipa la respuesta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-02 El orden en que van los objetivos específicos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante presenta sus tres objetivos específicos en este orden: (1) <em>comparar</em> los tiempos de despliegue antes y después de la automatización; (2) <em>caracterizar</em> el proceso actual del equipo; (3) <em>diseñar</em> la automatización de las pruebas. Según la Sesión 02, ¿qué está mal y cómo se corrige?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El problema no es el número —tres es lo que pide la sesión— ni los verbos —los tres son operables—: es el <strong>orden</strong>. Los objetivos específicos van en secuencia lógica (describir, después intervenir, al final comparar) y, como cada uno se convierte en una sección del artículo, ese orden fija también el orden del documento. El orden correcto aquí es 2, 3, 1.</p><p>Cita literal (deck de la Sesión 02, «Del objetivo general a los específicos»): «Los objetivos específicos son los pasos para lograr el general: tres o cuatro, ni más ni menos. Regla de oro de esta sesión: cada objetivo específico se convierte después en una sección del artículo. (…) Los específicos se ordenan en secuencia lógica: primero describir lo que hay, luego diseñar o intervenir, al final comparar o evaluar.» El ejemplo modelado de la misma sesión los presenta justo así: «Específico 1: Caracterizar… Específico 2: Diseñar… Específico 3: Comparar…».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El orden: van en secuencia lógica —primero describir lo que hay, luego diseñar o intervenir y al final comparar—, así que quedan 2, 3, 1.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. «Los específicos se ordenan en secuencia lógica: primero describir lo que hay, luego diseñar o intervenir, al final comparar o evaluar.» Y como cada específico se convierte en una sección, ese es también el orden en que se escribirá el artículo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Nada: como los tres se derivan de la pregunta y cada uno usa un verbo operable y verificable, el orden en que se enumeran no cambia nada de lo que se escribe.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El orden sí importa, y por una razón concreta: cada objetivo específico se convierte después en una sección del artículo. Enumerarlos así produce un documento que compara antes de haber descrito o construido nada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El número: tres objetivos específicos dejan el proyecto corto y la sesión pide entre cinco y siete, para que cada variable de la pregunta tenga el suyo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Al contrario: la sesión pide «tres o cuatro, ni más ni menos», y advierte que con siete específicos «va a escribir 7 secciones y el artículo se le vuelve inmanejable». Tres es exactamente lo pedido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los verbos: comparar, caracterizar y diseñar ocurren dentro de la cabeza del estudiante y nadie puede verificarlos, así que hay que cambiarlos por conocer, entender y profundizar en.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Está invertido. Comparar, caracterizar y diseñar están los tres en la columna de verbos operables de la sesión; conocer y entender son los débiles porque «ocurre dentro de su cabeza: nadie puede verificarlo», y profundizar en porque «no tiene punto de llegada: nunca se sabe si se cumplió».</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-03 Un párrafo que responde dos preguntas a la vez]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted escribió este párrafo: <em>«El tiempo promedio de despliegue bajó de 42 a 15 minutos, lo cual coincide con lo que reporta Ramírez (2022) y sugiere que la manualidad era el cuello de botella del proceso»</em>. Según la regla mental de la Sesión 03, ¿qué hay que hacer con él?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El párrafo responde <strong>dos</strong> de las cuatro preguntas: «qué encontré» (el dato de 42 a 15 minutos) y «qué significa» (el diálogo con Ramírez y la interpretación del cuello de botella). Por eso se parte en dos: la primera mitad va a Resultados, en tono neutral; la segunda, a Discusión.</p><p>Cita literal (deck de la Sesión 03, «La regla mental que evita el 90% de las mezclas»): «<strong>Resultados = qué encontré.</strong> Los datos y hallazgos, sin adjetivos ni juicios. <strong>Discusión = qué significa.</strong> Qué implican esos hallazgos frente a lo que dicen otros autores. (…) Si un párrafo responde dos preguntas a la vez, pártalo en dos y mande cada mitad a su sección.» La tabla de anatomía de la misma sesión lo confirma: en Resultados «NO va» interpretar y opinar.</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Partirlo: el dato medido se queda en Resultados, en tono neutral, y el contraste con el autor pasa a Discusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El párrafo responde a «qué encontré» y a «qué significa» al mismo tiempo, y la regla de la sesión es partirlo y mandar cada mitad a su sección.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dejarlo completo en Resultados: el hallazgo y su explicación son la misma cosa y separarlos fragmenta la lectura.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error más frecuente. La sesión pide Resultados «en tono neutral», «sin adjetivos ni juicios», y señala expresamente que interpretar y opinar es lo que NO va en esa sección.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dejarlo completo en Discusión: desde el momento en que cita a un autor, el párrafo dejó de ser un resultado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Razonamiento invertido: no es la presencia de la cita la que decide la sección, sino la pregunta que responde cada oración. El dato de los 42 a 15 minutos es un hallazgo y debe aparecer en Resultados; si solo vive en Discusión, esa sección termina repitiendo resultados que nunca se presentaron.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Subirlo a la introducción: allí se anuncia el hallazgo principal para que el lector sepa a qué atenerse.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La introducción responde «por qué», no «qué encontré». La propia sesión usa como ejemplo de mezcla clásica un texto de método y resultados escrito en la introducción, y concluye que allí «no debía ir ninguna de las dos».</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-04 El tramo del vacío en el embudo de la introducción]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 03 presenta la introducción como un embudo con seis tramos: contexto, problema, <strong>vacío</strong>, pregunta, objetivos y propósito. ¿Qué tiene que decir el tramo del <strong>vacío</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El vacío enuncia <strong>qué no se ha estudiado, documentado o resuelto todavía</strong>: es el hueco en el que entra el trabajo del estudiante, y se anuncia con conectores que el lector reconoce. No son las limitaciones del propio estudio, ni los conceptos pendientes de definir, ni el mapa de lo que sigue en el artículo.</p><p>Cita literal (deck de la Sesión 03, «La introducción es un embudo: de lo ancho a lo estrecho»): «<strong>3. Vacío</strong> — qué no se ha estudiado o resuelto todavía. Es el hueco donde entra su trabajo. Se enuncia con giros como "sin embargo", "no obstante", "aún no se ha documentado".» En el ejemplo modelado de esa sesión: «<strong>No obstante</strong>, no existe un registro que documente el efecto de esa manualidad sobre los errores en producción.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Qué no se ha estudiado ni resuelto todavía: el hueco donde entra su trabajo, anunciado con giros como «sin embargo».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El vacío es lo que aún no está documentado sobre el problema, y por eso justifica que valga la pena investigarlo. El conector es la señal con la que el lector reconoce ese tramo del embudo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las limitaciones del propio estudio y los datos que no se lograron conseguir, declarados desde el principio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el vacío de la literatura con las limitaciones del trabajo. La tabla de anatomía de la sesión ubica los límites en las Conclusiones, junto con el trabajo futuro; el vacío habla de lo que no ha hecho <em>nadie</em>, no de lo que no alcanzó a hacer usted.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los conceptos que todavía no se han definido, para anunciar que el marco teórico se encargará de definirlos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error atractivo porque la palabra «vacío» sugiere algo pendiente de llenar en el documento. Pero el vacío es un hueco en el conocimiento sobre el problema, no un pendiente de redacción; y la sesión advierte que una introducción larga «ya está invadiendo el marco teórico».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Qué encontrará el lector en las páginas siguientes, sección por sección, para que sepa cómo está organizado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el sexto tramo del embudo, el propósito del artículo, y en la tabla de la sesión aparece incluso como párrafo opcional. Se confunde el hueco de conocimiento con el mapa de lectura.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-05 Qué pregunta responde la Fase I de referentes]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 04 separa tres cosas que suelen confundirse: los antecedentes o referentes, el marco teórico y el estado del arte. La <strong>Fase I de referentes</strong> que se trabajó ese día responde a una pregunta concreta. ¿A cuál?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La Fase I levanta el <strong>mapa de quién ya estudió el problema y qué encontró</strong>. Las otras tres opciones son las preguntas de las otras piezas: los conceptos y teorías corresponden al marco teórico, lo más reciente y avanzado al estado del arte, y el hueco de conocimiento es el tramo del vacío de la introducción.</p><p>Cita literal (deck de la Sesión 04, tabla «Tres palabras que todo el mundo confunde»): «<strong>Antecedentes / referentes</strong> — ¿Quién más lo ha estudiado y qué encontró? — <strong>Hoy — Fase I</strong>»; «<strong>Marco teórico</strong> — ¿Qué conceptos y teorías sostienen mi pregunta?»; «<strong>Estado del arte</strong> — ¿Qué es lo más reciente y avanzado del tema?». Y en la nota de la misma tabla: «Hoy NO estamos construyendo el marco teórico. Estamos levantando el <strong>mapa de quién ya caminó por aquí</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>¿Quién más ha estudiado este problema y qué encontró?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la pregunta de los antecedentes o referentes, y la tabla de la sesión la marca expresamente como el trabajo de la Fase I.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Qué conceptos y teorías sostienen mi pregunta?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la pregunta del marco teórico, que se cierra más adelante en el curso. La sesión insiste en que la Fase I no construye el marco teórico.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Qué es lo más reciente y avanzado que existe hoy sobre el tema?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la pregunta del estado del arte, que se alimenta durante todo el proceso. Es cierto que la Fase I prioriza los últimos cinco años en temas tecnológicos, pero el criterio de vigencia no convierte a los antecedentes en estado del arte.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Qué hueco deja la literatura y cómo lo llena mi propuesta?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese hueco es el vacío que se enuncia en la introducción, y se puede formular <em>después</em> de haber leído a los autores. La Fase I es el paso previo: primero se averigua quién estudió qué, y solo entonces se ve qué falta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-06 El campo de la ficha que decide si la fuente entra]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted encontró un artículo muy citado, con autor, año y DOI. Lo leyó, escribió con sus palabras la idea principal y copió una cita textual con su página. Sin embargo, no logra escribir en una línea qué le aporta a <strong>su</strong> proyecto. Según el criterio de la Sesión 04, ¿qué hace con esa fuente?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Se descarta. La cuarta fila de la ficha —la relación con su pregunta— es la que decide si la fuente entra al artículo, y la sesión pide descartar en el momento, sin culpa, para no perder tiempo. Tener autor, año y DOI resuelve la <em>trazabilidad</em>, no la <em>pertinencia</em>.</p><p>Cita literal (deck de la Sesión 04, tabla «La ficha de lectura: el ladrillo de todo lo que viene»): «Nadie cita bien lo que no leyó. Si usted no logra escribir la <strong>última fila</strong> de la ficha, esa fuente no entra a su artículo.» Y en «Qué hace que una fuente sea un buen referente»: «<strong>Aporte declarable:</strong> usted puede escribir en una línea qué le aporta a <strong>su</strong> proyecto. Si no puede escribir esa línea, la fuente sobra.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La descarta en el momento: si no puede declarar el aporte a su proyecto, esa fuente no entra al artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la regla explícita de la sesión: sin la última fila de la ficha, la fuente sobra, y descartar temprano es ganar tiempo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La incluye igual: tener autor, año y DOI ya la hace trazable, y una fuente más nunca sobra en la lista.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde trazabilidad con pertinencia: son dos criterios distintos de la misma sesión. Y contradice su advertencia de que «cantidad sin pertinencia no cuenta», además de que una referencia listada y no citada en el cuerpo es una alarma para el jurado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Deja ese campo en blanco y lo completa más adelante, cuando ya se vea qué autores le sirven de verdad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Aplazar es justamente lo que la sesión prohíbe: la ficha no admite campos en blanco, y el criterio de éxito del taller es que ninguna ficha quede sin su línea de relación con la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Sustituye ese campo por el número de veces que la fuente ha sido citada, que es una medida más objetiva.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El «citado por» sirve para <em>encontrar</em> más fuentes a partir de un artículo semilla, no para justificar una que ya se tiene. Que un artículo sea muy citado no lo vuelve pertinente para su pregunta: la sesión advierte que si no toca alguna de sus variables, «no entra, así sea un artículo famoso».</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-07 Mapa de diálogo: el autor que aporta método]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el <strong>mapa de diálogo</strong> de la Sesión 04 los autores se agrupan por lo que hacen entre ellos. ¿Qué caracteriza a un autor que se clasifica como «<strong>aporta método</strong>»?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>De ese autor no interesa su resultado, sino <strong>cómo midió</strong>: su valor está en la lógica del instrumento, que se puede reutilizar en la propia metodología (nunca el texto). Las otras tres opciones describen las otras tres posturas del mapa: confirman, extienden y contradicen.</p><p>Cita literal (deck de la Sesión 04, «El mapa de diálogo»): «<strong>Aportan método</strong> — no le interesa su resultado, sino cómo midieron. Sirven para su metodología.» Y en la tabla de ejemplo: «<strong>Aportan método</strong> | Pérez (2021) | Usó bitácora de despliegues durante 8 semanas | Copio la <strong>lógica</strong> del instrumento, no el texto».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que lo aprovechable no es su hallazgo sino cómo midió: de él se copia la lógica del instrumento, no el texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la postura que alimenta la metodología: sirve el diseño de la medición, aunque su resultado no tenga nada que ver con el suyo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que su hallazgo coincide con el que usted espera encontrar, de modo que los dos se citan juntos en un paréntesis.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la postura «confirman»: coinciden en el mismo hallazgo y se citan juntos, como en (Ramírez, 2022; Pérez, 2021). Sostiene su expectativa, pero no le presta un instrumento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que lleva más lejos el hallazgo de otro autor o lo aplica a un contexto nuevo, más parecido al suyo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la postura «extienden». Sirve sobre todo para delimitar mejor el contexto del propio caso, no para decidir con qué se van a capturar los datos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que encuentra lo contrario de lo que reportan los demás, lo cual abre una tensión que vale la pena discutir.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Esa es la postura «contradicen», que la sesión califica como «su mejor material» precisamente por la tensión que genera. Pero contradecir no es aportar método.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-08 El orden en que se llena la matriz de consistencia]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 05 insiste en un orden para llenar la <strong>matriz de consistencia</strong> y advierte que invertirlo es el error más caro del trabajo de grado. ¿Cuál es ese orden, y qué pasa si se empieza por el otro extremo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La matriz se llena <strong>de izquierda a derecha: objetivo específico → variable → técnica → instrumento → análisis</strong>. Empezar por el instrumento es lo que produce encuestas que no miden lo que se preguntó, porque el método deja de derivarse de la pregunta y pasa a elegirse por comodidad.</p><p>Cita literal (deck de la Sesión 05, «Cómo se construye la matriz: el orden importa»): «<strong>No empiece por el instrumento.</strong> Casi todo el mundo lo hace y por eso termina con encuestas que no miden nada. <strong>Paso 1 — Copie sus objetivos específicos</strong> (…) <strong>Paso 2 — Extraiga la variable</strong> (…) <strong>Paso 3 — Elija la técnica</strong> (…) <strong>Paso 4 — Nombre el instrumento</strong> (…) <strong>Paso 5 — Declare el análisis</strong>». Y en la nota de la tabla: «Léala de izquierda a derecha: <strong>qué quiero lograr → qué observo → cómo lo capturo → con qué herramienta → cómo lo interpreto</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Objetivo específico → variable → técnica → instrumento → análisis: empezar por el instrumento produce encuestas que no miden lo que se preguntó.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el orden de las cinco columnas y la razón que la sesión da para respetarlo: el método se deriva de la pregunta y de los objetivos, no se elige por comodidad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Instrumento → variable → objetivo específico → técnica → análisis: conviene partir de lo que de verdad se puede aplicar en el tiempo disponible.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente el orden que la sesión prohíbe, con el argumento que también desmonta: «Elegí encuesta porque es lo más fácil» aparece como error frecuente. La viabilidad se revisa al final, sobre una matriz ya coherente, no como punto de partida.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Variable → objetivo específico → análisis → técnica → instrumento: primero se fija qué se va a medir y después para qué sirve medirlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte las dos primeras columnas. La variable no se inventa: se <em>extrae</em> del objetivo, y la propia sesión advierte que si un objetivo no tiene variable identificable, el que estaba mal escrito era el objetivo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Análisis → instrumento → técnica → variable → objetivo específico: se parte del tipo de tabla o gráfico que se quiere presentar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Empezar por cómo se verá el resultado es otra forma del mismo error, y agravada: el análisis es la última columna, la de «cómo lo interpreto». Decidirlo primero obliga a forzar los datos para que quepan en el gráfico previsto.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-09 Técnica e instrumento no son la misma cosa]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le muestra una fila de su matriz de consistencia en la que la columna <strong>técnica</strong> dice «entrevista» y la columna <strong>instrumento</strong> también dice «entrevista». Según la Sesión 05, ¿qué está mal y cómo se arregla?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Técnica e instrumento son cosas distintas y no pueden ser la misma palabra repetida: la técnica es la <strong>forma de acercarse</strong> al dato y el instrumento es el <strong>objeto</strong> con el que se captura. La fila correcta diría técnica «entrevista» e instrumento «guía de entrevista de 8 preguntas abiertas».</p><p>Cita literal (deck de la Sesión 05, «Cómo se construye la matriz»): «La técnica es la <strong>forma de acercarse</strong> al dato; el instrumento es el <strong>objeto</strong> con el que lo captura. <strong>Paso 4 — Nombre el instrumento</strong> concreto: "cuestionario de 10 ítems", "guía de entrevista de 8 preguntas", "bitácora de despliegues", "rúbrica del prototipo".» Y en el checklist de la misma sesión: «¿la técnica y el instrumento son cosas distintas y no la misma repetida?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La técnica es la forma de acercarse al dato y el instrumento el objeto que lo captura: hay que nombrarlo concreto, «guía de entrevista de 8 preguntas».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La técnica se queda como «entrevista» y el instrumento se nombra concreto, con su tamaño. El checklist de la sesión pregunta justamente si las dos columnas dicen cosas distintas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No está mal: cuando el acercamiento al dato es cualitativo, técnica e instrumento coinciden y basta con nombrarlos una vez.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La sesión no establece ninguna excepción de ese tipo: la distinción entre forma de acercarse y objeto de captura vale para todas las filas, y la guía de entrevista es precisamente el instrumento de una técnica cualitativa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Está mal el orden de las columnas: el instrumento va antes que la técnica, porque primero se elige la herramienta concreta y después la forma de aplicarla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El problema no es el orden, sino que las dos celdas dicen lo mismo. Y el orden que propone esta opción es el que la sesión desaconseja de manera expresa: «No empiece por el instrumento».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Lo que falta es el análisis: mientras la fila no diga cómo se interpretan los datos, distinguir técnica de instrumento es secundario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El análisis es otra columna y también es obligatoria —«si al terminar hay una celda vacía, ahí tiene su tarea pendiente»—, pero eso no vuelve secundaria la confusión: una fila con técnica e instrumento repetidos no cierra, aunque el análisis esté escrito.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-P1-10 El ítem huérfano del instrumento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su bitácora de despliegues ya tiene tres campos, cada uno anotado con el objetivo al que responde. Se le ocurre agregar un cuarto: <em>«¿Le gusta trabajar en equipo?»</em>, porque le parece interesante. Según la <strong>regla dura</strong> de la Sesión 05, ¿qué se hace con ese ítem?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Se borra. La regla dura es que cada ítem o criterio del instrumento tiene que responder a un objetivo; el que no responde a ninguno es un ítem huérfano y sale. Un instrumento se llena porque un objetivo lo necesita, no porque una pregunta suene interesante.</p><p>Cita literal (deck de la Sesión 05, «El instrumento: cada ítem responde a un objetivo»): «<strong>Regla dura:</strong> por cada pregunta o criterio de su instrumento, pregúntese <strong>"¿a qué objetivo responde?"</strong>. Si no responde a ninguno, se borra. Sin discusión, sin lástima.» Y en el ejemplo modelado: «<strong>Y ahora el ítem huérfano:</strong> "¿Le gusta trabajar en equipo?". ¿A qué objetivo responde? A <strong>ninguno</strong>. Se borra. Así de simple. <strong>Ese es el estándar:</strong> ningún ítem entra porque "suena interesante"; entra porque un objetivo lo necesita.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Se borra: ningún ítem entra porque suene interesante, sino porque un objetivo lo necesita.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el ítem huérfano del ejemplo modelado de la sesión: no responde a ningún objetivo, así que sale «sin discusión, sin lástima».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Se conserva al final del instrumento como campo de contexto: aporta información sobre el clima del equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la excusa más frecuente para dejar ítems huérfanos. La sesión advierte que así se llega a instrumentos dispersos, que cansan a quien responde y producen datos que después nadie sabe cómo analizar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Se conserva y se le asigna el objetivo más cercano, para que ninguna celda de la matriz quede vacía.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla dos reglas distintas y termina falsificando la consistencia. Lo que no puede quedar vacío son las celdas de la matriz; forzarle un objetivo a un ítem que no lo tiene es lo contrario de la prueba que la sesión propone.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Se reformula como pregunta abierta, porque un ítem sin objetivo funciona mejor si no fuerza una escala.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambiar el formato no resuelve el problema de fondo: el ítem sigue sin responder a ningún objetivo. Los criterios de redacción de la sesión —una idea por ítem, sin inducir la respuesta, con escala clara— se aplican a los ítems que ya pasaron la prueba del objetivo.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

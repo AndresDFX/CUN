@@ -534,9 +534,10 @@ def bloque_aviso(key: str, n: int, ag: AgendaEval | None = None) -> str:
     if n == 1:
         lines.append(
             "> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso "
-            f"hay: {frase_cortes(key)} Si alguna slide del deck todavía habla de «las tres ACAs», "
-            "corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el "
-            "estudiante en CDigital."
+            f"hay: {frase_cortes(key)} Úselos con **esos** nombres: son los que el estudiante va a "
+            "buscar en CDigital. (La antigua numeración «ACA 1 / ACA 2 / ACA 3» quedó anulada el "
+            "10/08/2026 y ya no aparece en ningún deck; si alguien la menciona, remítalo a esta "
+            "lista.)"
         )
     lines.append(NOTA_SIN_FECHAS)
     return "\n".join(lines) + "\n"

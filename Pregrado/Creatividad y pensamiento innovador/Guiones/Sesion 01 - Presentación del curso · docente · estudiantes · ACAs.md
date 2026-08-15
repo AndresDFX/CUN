@@ -23,22 +23,27 @@
 > “Aviso de plataforma: **Quiz 1** ya está **abierto** en CDigital, en la sección del corte 1. Es un **cuestionario** y vale **6%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
 > “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32,8%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
 
-> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Úselos con **esos** nombres: son los que el estudiante va a buscar en CDigital. (La antigua numeración «ACA 1 / ACA 2 / ACA 3» quedó anulada el 10/08/2026 y ya no aparece en ningún deck; si alguien la menciona, remítalo a esta lista.)
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (Sesión 01 — encuadre; aquí no hay tema del Syllabus)
+
+> **Criterio de numeración (declarado, para que no haya desfase):** los números de este guion
+> son los del **PPTX en disco**, donde la **portada es la slide 1**. El deck tiene **23 slides**
+> y en él se cuentan también las **«(cont.)»** que el motor inserta al partir un bloque largo
+> (slides **18** y **20**). Si el conteo del deck cambia, se regenera el guion: no se corrige a mano.
 
 | Slide | Título en el PPTX | Cuándo usarla |
 | :---: | :--- | :--- |
 | **1** | Portada — SESIÓN 01, PRESENTACIÓN DEL CURSO | Apertura |
 | **2** | AGENDA DE HOY | Encuadre de la hora |
 | **3** | Docente | Presentación del Docente |
-| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | Rompehielos |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | Pesos y entregas |
+| **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA | Rompehielos (juego en Slido) |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | Pesos y tipo de cada ítem |
 | **6** | Cómo trabajamos: una hora juntos, el resto por su cuenta | Metodología / aula invertida |
 | **7** | Mapa del curso: las 7 sesiones de un vistazo | Recorrido del curso |
 | **8** | Qué se llevan al final: la Propuesta de Innovación | Producto del curso |
-| **9** | Las tres ACAs: qué se entrega en cada corte | Detalle de cada ACA |
+| **9** | Qué evalúa cada instrumento: lo que está en el libro de calificaciones | Alcance de Quiz 1 vs. Parcial 1 y de cada corte |
 | **10** | Qué separa un entregable fuerte de uno flojo | Criterio de calidad |
 | **11** | Cómo se entrega: paso a paso en CDigital | Procedimiento de entrega |
 | **12** | Integridad académica: la línea que no se cruza | Plagio y APA 7 |
@@ -47,9 +52,9 @@
 | **15** | Cómo pedir ayuda (y recibir respuesta pronto) | Canales y tiempos |
 | **16** | Acuerdos de convivencia del encuentro | Cámara, micrófono, foro |
 | **17** | Para la Sesión 02: lectura autónoma y qué traer | Encargo autónomo |
-| **18** | Para la Sesión 02: lectura autónoma y qué traer (cont.) | |
+| **18** | Para la Sesión 02: lectura autónoma y qué traer (cont.) | Sigue el encargo (misma slide partida) |
 | **19** | Preguntas del primer día | Dudas típicas |
-| **20** | Preguntas del primer día (cont.) | |
+| **20** | Preguntas del primer día (cont.) | Sigue el bloque de dudas |
 | **21** | ACUERDOS DE TRABAJO | Cierre de reglas |
 | **22** | PARA LA PRÓXIMA SESIÓN | Tarea concreta |
 | **23** | Cierre — Sesión 01 | Despedida |
@@ -75,7 +80,7 @@
 | **Libro de calificaciones** del aula, abierto en otra pestaña | Campus institucional (login CUN) | Fase 5 — de ahí salen los nombres, los tipos y los pesos que va a anunciar |
 | **Enunciado de la ACA Final** (única entrega documental) | `Clases/Recursos/ACAs/` | Fase 5 |
 | **Plantilla APA CUN**, ya abierta en **Google Docs** (no en Word de escritorio) | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Fase 5 |
-| **PPTX de esta sesión** (21 slides) | `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` | Toda la clase |
+| **PPTX de esta sesión** (**23 slides**, portada incluida) | `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` | Toda la clase |
 | **Sala de Meet** abierta 5 minutos antes | [URL Meet — mismo enlace toda la serie · CREATIVIDAD Y PENSAMIENTO INNOVADOR] | Fase 1 |
 
 **Tres decisiones que debe tener tomadas ANTES de entrar** (se las van a preguntar hoy, no la próxima semana):
@@ -151,7 +156,7 @@
 ---
 
 #### 3️⃣ Rompehielos: «Dos verdades y una mentira» en Slido (~8 min) — Protagonista: Estudiantes
-**Slides:** 4 (PRESÉNTATE — juego en Slido)
+**Slides:** 4 (ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA · juego en Slido)
 
 **Objetivo de la fase:** romper el silencio del primer día jugando, dejar hecha la presentación del Docente sin diapositiva de biografía y que **tres estudiantes** se presenten habiéndose ganado el turno.
 
@@ -163,7 +168,7 @@
 > **Por qué un juego y no un muro:** en este curso hay **50 matriculados**. Cincuenta notas en un tablero no alcanzan a leerse en clase, y el estudiante que escribe y nunca es leído se desconecta el primer día. Acertar en «dos verdades y una mentira» es **1 entre 3**: azar puro, así que el que nunca abre la cámara arranca igual que el que siempre habla. Va **aquí, antes de la primera tabla de porcentajes**: si lo primero que ven es una tabla de pesos, ya perdió la sala. Evento de Slido: [URL Slido — evento del rompehielos pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 
 **(1) GUION LITERAL — explicar el juego y anunciar el premio (~1 min):**
-> “**Slide 4 — PRESÉNTATE.** Antes de hablar de notas, de cortes y de porcentajes, ocho minutos de juego. Entren a **slido.com** —desde el celular o en otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta: se pone el código y ya están adentro. Pongan su **nombre real**, porque con ese nombre se arma la tabla de posiciones.”
+> “**Slide 4 — ROMPEHIELOS.** Antes de hablar de notas, de cortes y de porcentajes, ocho minutos de juego. Entren a **slido.com** —desde el celular o en otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta: se pone el código y ya están adentro. Pongan su **nombre real**, porque con ese nombre se arma la tabla de posiciones.”
 
 > “Se llama **dos verdades y una mentira**, y va sobre mí. **Tres rondas.** En cada una les muestro **tres frases mías** y **una es falsa**: ustedes votan cuál creen que es la mentira. Acertar es una entre tres, así que aquí no gana el que sepa de innovación: gana el que me lea mejor. Todos empezamos empatados.”
 
@@ -227,7 +232,7 @@
 ---
 
 #### 5️⃣ Cómo se evalúa el curso (quices, parciales y ACA Final) y cómo se entrega (~12 min) — Protagonista: Docente
-**Slides:** 5 (LAS ACAs — QUÉ SE EVALÚA) → 9 (LAS TRES ACAs EN DETALLE) → 10 (FUERTE vs. FLOJO) → 11 (CÓMO SE ENTREGA)
+**Slides:** 5 (CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA) → 9 (QUÉ EVALÚA CADA INSTRUMENTO) → 10 (Qué separa un entregable fuerte de uno flojo) → 11 (CÓMO SE ENTREGA)
 
 **GUION LITERAL:**
 > “**Slide 5.** Evaluación por cortes: **30, 30 y 40 por ciento**. Pero escuchen los **nombres reales** de lo que van a ver en el aula, porque de ahí sale la nota: **Quiz 1 6% + Parcial 1 24%** en el primer corte, **Quiz 2 9% + Parcial 2 21%** en el segundo y **ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%** en el tercero. Los quices y los parciales son **cuestionarios de CDigital**; la **ACA Final** es la única entrega con documento; y la **coevaluación es un foro**, o sea que hay que escribir en él.”
@@ -236,7 +241,13 @@
 
 > “Y lo más importante de hoy, anótenlo: los quices y los parciales **caen en día de clase** y **cierran ese mismo día**. El primero es el **Quiz 1**, y cierra en la **próxima sesión**. El que falte ese día no lo recupera. Las **fechas exactas no las dicto de memoria**: están en cada ítem de CDigital y en la Presentación del Curso; ábranlas hoy y pónganse alarma.”
 
-> “**Slide 9 — qué se entrega en cada corte.** El hilo del curso no cambia: en el primer corte trabajan la **ficha del problema** —real, observable y de alguien concreto—; en el segundo, la **propuesta tipificada** con FODA, Canvas y MVP, **validada** y no solo descrita; y en el tercero la **propuesta consolidada** con vigilancia, entidades de apoyo y pitch. La diferencia es cómo se califica: ese avance se evalúa en los **cuestionarios** de cada corte y se recoge, completo, en la **ACA Final**. Nada de lo que escriben se pierde: se acumula en ese documento.”
+> “**Slide 9 — qué evalúa cada instrumento.** Fíjense en la primera columna: el **Corte 1 aparece en dos filas** y no es un error de la diapositiva. **Quiz 1 y Parcial 1 no evalúan lo mismo**, y confundirlos es la forma más tonta de estudiar de más y perder puntos.”
+
+> “El **Quiz 1** —6%, cierra en la próxima sesión— se responde **solo con el material de hoy**: la lectura autónoma **U1 y U2** del Syllabus. Es decir: la **Propuesta de Innovación** y el orden de sus partes, el **problema–oportunidad real y observable** con un **usuario concreto**, y **la inteligencia emocional y su incidencia en la innovación y la creatividad**. De la lectura obligatoria les pregunto **lo que el estudio reporta**: qué miró y qué encontró. Dicho sin rodeos: **el archivo de la lectura entra; el método Design Thinking, no** —el método lo dictamos la próxima semana, así que no puedo preguntarlo antes de explicarlo.”
+
+> “El **Parcial 1** —24%— es el que **sí** les pregunta el método: las **fases del Design Thinking** y las **técnicas de ideación** de la Sesión 02 —árbol de problemas, seis sombreros, SCAMPER, océano azul— más **divergencia y convergencia**, y todo lo que se dicte antes de que cierre su ventana. Regla para estudiar sin desperdiciar tiempo: **para el Quiz 1, lo de hoy; para el Parcial 1, lo de hoy más lo de la Sesión 02.** Si alguien viene a preguntarme si SCAMPER está en el quiz: no está, y lo tienen por escrito en la diapositiva.”
+
+> “Las otras dos filas son los cortes que siguen, y el hilo del curso no cambia: en el **Corte 2** tipifican la propuesta con el **Manual de Oslo** y la validan con **FODA, Canvas y MVP**; en el **Corte 3** la consolidan con vigilancia y entidades de apoyo, y ahí sí hay un documento que se sube, la **ACA Final**. Nada de lo que escriben se pierde: se acumula en ese documento.”
 
 > “**Slide 10 — Qué separa un entregable fuerte de uno flojo.** Léanla completa esta semana. Resumo la columna izquierda: usuario genérico, problema deducido de la solución que ya eligieron, evidencia tipo ‘todo el mundo sabe que’, fuentes copiadas de un blog sin autor y un documento escrito la noche anterior. Yo no evalúo **cuánto** escribieron: evalúo si **se entiende, se sostiene y avanzó** desde el corte anterior.”
 
@@ -246,7 +257,7 @@
 
 **Qué hacer:**
 1. (3 min) Recorrer los ítems **en el libro de calificaciones del aula**, en pantalla: nombre, tipo y peso. No de memoria.
-2. (4 min) Abrir el enunciado de la **ACA Final**, mostrar dónde está el checklist de criterios y abrir también el **Quiz 1** para que vean que ya existe y cuándo cierra.
+2. (4 min) Abrir el enunciado de la **ACA Final**, mostrar dónde está el checklist de criterios y abrir también el **Quiz 1** para que vean que ya existe y cuándo cierra. **Diga en voz alta la separación de alcance de la slide 9:** el **Quiz 1** se resuelve con el material de hoy (U1–U2 + la lectura **en lo que reporta**) y el **método Design Thinking** se pregunta en el **Parcial 1**. Las dos guías escritas están en `Clases/Recursos/ACAs/`: `Quiz 1 (6%)` y `Parcial 1 (24%)`.
 3. (5 min) Compartir pantalla con la **plantilla APA CUN en Google Docs** y mostrar el flujo real: copia propia → escribir → exportar PDF → subir a CDigital.
 
 ![Google Docs — plantilla APA CUN y flujo de entrega](Capturas/Sesion 01/s01_google_docs_inicio.png)
@@ -275,7 +286,7 @@
 ---
 
 #### 7️⃣ Herramientas, canales de ayuda y acuerdos (~7 min) — Protagonista: Docente
-**Slides:** 14 (HERRAMIENTAS) → 15 (CÓMO PEDIR AYUDA) → 16 (CONVIVENCIA) → 19 (ACUERDOS DE TRABAJO)
+**Slides:** 14 (HERRAMIENTAS) → 15 (CÓMO PEDIR AYUDA) → 16 (Acuerdos de convivencia del encuentro) → 21 (ACUERDOS DE TRABAJO)
 
 **GUION LITERAL:**
 > “**Slide 14 — Herramientas.** Todas gratis y todas desde el navegador: CDigital para las entregas y las notas; el **Drive de clases** para el material de cada sesión; Google Docs y Slides para escribir; Excalidraw para bocetos; Canvanizer para el Canvas del corte 2; Scholar, SciELO y Redalyc para buscar; ZoteroBib para armar las referencias en APA 7 sin instalar nada. **Nada de pagar ni de instalar.** Si una herramienta les pide tarjeta, no es la que estamos pidiendo.”
@@ -296,14 +307,14 @@
 ---
 
 #### 8️⃣ Encargo autónomo y cierre (~5 min) — Protagonista: Docente
-**Slides:** 17 (PARA LA SESIÓN 02) → 18 (PREGUNTAS DEL PRIMER DÍA) → 20 (PARA LA PRÓXIMA SESIÓN) → 21 (Cierre)
+**Slides:** 17–18 (PARA LA SESIÓN 02, la segunda es la «(cont.)») → 19–20 (PREGUNTAS DEL PRIMER DÍA) → 22 (PARA LA PRÓXIMA SESIÓN) → 23 (Cierre)
 
 **GUION LITERAL:**
-> “**Slide 17 — Para la Sesión 02.** Cuatro cosas, y son cortas. Primera: la **lectura autónoma obligatoria**, unidades **U1 y U2** del Syllabus —Propuesta de Innovación, y creatividad e inteligencia emocional—; el material está en la carpeta de esta sesión, en el **Drive de clases** (el enlace les llega en el correo de bienvenida). Las retomamos en los primeros minutos de la próxima sesión: las repasamos, no las dictamos completas. Léanlas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**”
+> “**Slide 17 — Para la Sesión 02** (sigue en la **18**). Cuatro cosas, y son cortas. Primera: la **lectura autónoma obligatoria**, unidades **U1 y U2** del Syllabus —Propuesta de Innovación, y creatividad e inteligencia emocional—; el material está en la carpeta de esta sesión, en el **Drive de clases** (el enlace les llega en el correo de bienvenida). Las retomamos en los primeros minutos de la próxima sesión: las repasamos, no las dictamos completas. Léanlas con una pregunta en la mano: **¿qué de esto me sirve para el problema que voy a elegir?**”
 
 > “Segunda: entren al aula y **abran el Quiz 1** —el primer cuestionario, que cierra en la próxima sesión— para ver cuántas preguntas tiene y cuánto tiempo da; y abran el **enunciado de la ACA Final** y léanlo entero, con checklist. Tercera: **traigan escrito**, con tres líneas basta, un problema real que les moleste, **a quién** le pasa y **dónde** lo vieron. No me traigan una solución; tráiganme un problema: la solución es el trabajo del resto del curso. Cuarta: creen su documento en Google Docs con la plantilla APA CUN y déjenlo listo.”
 
-> “**Slide 19 — Preguntas del primer día.** Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
+> “**Slide 19 — Preguntas del primer día** (sigue en la **20**). Las dejo en pantalla mientras me preguntan lo que quieran: si se pierde fácil, si se puede en dúo, si sirve un trabajo de otro semestre y si hace falta programar. Las respuestas cortas están ahí; las largas se las doy ahora.”
 
 > “**Slide 22 — Para la próxima sesión.** Resumido en tres líneas para que nadie lo pierda: lectura autónoma U1–U2, **Quiz 1** ubicado en el aula, enunciado de la **ACA Final** leído, y su problema escrito. Lo pego también en el chat y lo anuncio hoy mismo en CDigital; el material para hacerlo está en la carpeta de esta sesión, en el Drive de clases.”
 
@@ -311,7 +322,7 @@
 
 **Qué hacer:**
 1. (2 min) Dictar el encargo autónomo y **escribirlo también en el chat** (lo que solo se dice, se pierde).
-2. (2 min) Preguntas abiertas con la slide 18 proyectada.
+2. (2 min) Preguntas abiertas con la slide 19 proyectada (y la 20, si alcanzan las dudas de la segunda mitad).
 3. (1 min) Cierre y despedida.
 
 ---
@@ -351,7 +362,7 @@
 - [ ] **ACA Final** (Tarea · 32,8% · corte 3) **habilitado hoy** en CDigital y anunciado en clase (su ventana abre en esta sesión)
 - [ ] Pantallazos de apoyo abiertos (`Guiones/Capturas/Sesion 01/`)
 - [ ] Aula de **CDigital** abierta, con el anuncio de bienvenida publicado
-- [ ] Abrí `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` (21 slides)
+- [ ] Abrí `Clases/Sesion 01 - Presentación del curso · docente · estudiantes · ACAs/Presentacion.pptx` (**23 slides**, portada incluida)
 - [ ] **Las tres rondas ajustadas y la mentira de cada una marcada** en `Creatividad y pensamiento innovador/2026/54408/Rompehielos Slido - Sesion 01.md` *(material del Docente — sin esto el juego no se puede jugar)*
 - [ ] **Evento de Slido** creado y probado desde el celular, con el **quiz de 3 preguntas**, la **encuesta A/B/C** de la ronda final y el **Q&A abierto**; el **código** copiado para el chat: [URL Slido — evento del rompehielos pendiente · CREATIVIDAD Y PENSAMIENTO INNOVADOR]
 - [ ] Decidido el **premio** y cómo se agenda la revisión uno a uno del ganador

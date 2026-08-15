@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz - Proyecto I U1-U2</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz (25% de la nota del curso · Corte 1) — PROYECTO I, Especialización en Inteligencia Artificial (ESP329).</strong></p><p>Ventana: 03/08/2026 a 30/08/2026. Cuestionario individual que se resuelve en CDigital dentro de su ventana; no se sube archivo.</p><p><strong>Alcance:</strong> la <strong>lectura autónoma obligatoria de la Sesión 01</strong> —unidad <strong>U1 del Syllabus, «Fundamentos y enfoque de investigación»</strong>, de la que entra <em>lo que dicen las lecturas</em>: Cadena-Iñiguez et al. (2017) completa y las secciones 1 y 2 (pp. 91-102) de Montes del Castillo y Montes Martínez (2014)— y la <strong>Sesión 02 (24/08), unidad U2, «Problema y pregunta de investigación»</strong>. <strong>No entra la Sesión 03</strong> (31/08 · objetivos, justificación, alcances y limitaciones), que se dicta después del cierre, ni ninguna sesión posterior: no se pregunta cómo se redactan objetivos específicos, ni justificación, ni alcances y limitaciones, ni antecedentes, marco teórico, conceptual, contextual o legal, ni citación APA 7, ni paradigmas, población y muestra, técnicas e instrumentos, cronograma, presupuesto o viabilidad. Tampoco se pregunta la administración del curso (pesos, fechas, canal de entrega, plantilla, integridad, uso de IA).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. <strong>Las 10 evalúan contenido temático</strong>: 5 sobre lo que dicen las lecturas obligatorias de la U1 y 5 sobre los conceptos y criterios de la Sesión 02 (U2). Tiempo total estimado: 10 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q01 La falsa disputa entre métodos cuantitativos y cualitativos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La primera lectura obligatoria de la Sesión 01 (métodos cuantitativos, cualitativos o su combinación) arranca hablando de «la eterna discusión de qué método usar cuando se inicia una investigación». ¿Qué sostiene esa lectura sobre la oposición entre los métodos cuantitativos y los cualitativos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La lectura la llama <strong>una falsa disputa</strong>: los dos enfoques son <strong>complementarios</strong> y lo que decide cuál usar es <strong>la naturaleza del problema</strong>, a criterio del investigador. Esto importa para su anteproyecto: el enfoque no se escoge por gusto ni por prestigio, se justifica desde el problema.</p><p>Cita literal (Cadena-Iñiguez et al., 2017, Introducción): «La oposición absoluta entre los métodos cuantitativos y cualitativos, es una falsa disputa, frente a ella se apoya por una complementariedad, pero en mayores términos de igualdad (…)». Y en Conclusiones: «La pertinencia de los métodos y su aplicación en las ciencias sociales, está en función de la naturaleza del problema. Por lo tanto es a criterio del investigador que enfoque utiliza, cualitativos o cuantitativos o la combinación de ambos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que es una falsa disputa: los dos enfoques son complementarios y su pertinencia depende de la naturaleza del problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura habla textualmente de «una falsa disputa» frente a la que «se apoya por una complementariedad», y cierra diciendo que la pertinencia del método «está en función de la naturaleza del problema».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la incompatibilidad epistemológica entre ambos es real, así que un proyecto debe escoger uno de los dos y renunciar al otro.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se queda en la mitad de la frase. La lectura sí recoge que, según Orozco (1997), los dos métodos «no son compatibles desde el punto de vista epistemológico», pero en la misma oración añade que «sin embargo, pueden ser complementarios», y así lo repite en las conclusiones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que lo cualitativo es solo una etapa exploratoria previa, porque sin medición cuantitativa ninguna investigación alcanza validez.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte la complementariedad en una jerarquía. La lectura reporta que para Grawitz la cuantificación es «una segunda etapa de la recolección de datos cualitativos», pero también que la investigación cualitativa es «fuerte en validez interna»: no es un paso preparatorio sin valor propio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la superioridad de lo cuantitativo ya está zanjada, pues da datos numéricos y lo cualitativo solo sirve para formular preguntas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente la idea que la lectura desmiente citando a Reichardt y Cook (1986): «los métodos cualitativos no solo son para formular preguntas ni los cuantitativos solo para responderlas», y «no existe un choque fundamental entre los fines y las capacidades» de unos y otros.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q02 Un tema acotable y realista]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La segunda lectura obligatoria (guía de proyectos de investigación) pide que la temática de un proyecto sea «acotable y realista, actual y con una dimensión aplicada». Un equipo propone estudiar <em>«el impacto de la inteligencia artificial en el empleo a nivel mundial»</em>. Según esa lectura, ¿qué le falla a ese tema?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Le falla ser <strong>acotable y realista</strong>. La lectura pide las tres condiciones a la vez —<strong>acotable y realista, actual y con una dimensión aplicada</strong>— y advierte que hay temas tan amplios que «ni con un equipo de investigadores sería posible abordarlos», cuando el proyecto «debería poder ser realizado por el autor que lo propone». Ojo: la viabilidad se le exige al <em>diseño</em>, aunque el proyecto no llegue a ejecutarse. Es lo mismo que la Sesión 02 llama «pregunta planetaria: no cabe en el tiempo del programa».</p><p>Cita literal (Montes del Castillo y Montes Martínez, 2014, §2.1 «Delimitación del problema o tema de estudio»): «Se recomienda, como es lógico, que la temática del proyecto de investigación sea acotable y realista, actual y con una dimensión aplicada. Acotable y realista quiere decir que sea posible realizar la investigación. Algunos alumnos plantean, a veces, temas o problemas de investigación tan difusos y amplios, que ni con un equipo de investigadores sería posible abordarlos. En principio, un proyecto de investigación debería poder ser realizado por el autor que lo propone. Se trata del diseño de un proyecto de investigación viable, aunque no llegue a ejecutarse.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El criterio de ser acotable y realista: es tan amplio que ni un equipo de investigadores podría abordarlo, y el proyecto debe poder realizarlo quien lo propone.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura pide que la temática sea «acotable y realista» y explica qué significa: hay temas «tan difusos y amplios, que ni con un equipo de investigadores sería posible abordarlos», cuando «un proyecto de investigación debería poder ser realizado por el autor que lo propone».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No le falla nada: como es un asunto de plena actualidad social, ya cumple con eso lo que la lectura le exige a la temática de un proyecto de investigación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ser actual es una de las tres condiciones, no la única: la lectura las pide a la vez —acotable y realista, actual y con dimensión aplicada—. Un tema de plena actualidad puede seguir siendo inabordable.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falla la dimensión aplicada, y para corregirlo hay que prometer en el proyecto una herramienta que dé respuesta al problema del empleo en el mundo entero.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el significado de «dimensión aplicada». Para la lectura, aplicada quiere decir investigar «no por pura especulación, sino para abordar problemas concretos de un grupo humano determinado»: exige acotar el grupo, no prometer un producto —que es además el error que la Sesión 02 llama empezar por la solución—.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falla solo el calendario: como en Proyecto I la investigación no se ejecuta, el tema sirve tal cual y ya se recortará al llegar el trabajo de campo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el criterio. La lectura pide que el diseño sea viable precisamente aunque no se ejecute: «Se trata del diseño de un proyecto de investigación viable, aunque no llegue a ejecutarse». Que en Proyecto I no haya trabajo de campo no vuelve abordable un tema planetario.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q03 En qué etapa del proceso se selecciona el método]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La primera lectura obligatoria enumera las etapas del proceso de una investigación, desde que se concibe la idea hasta que se proponen nuevas líneas. Según esa secuencia, ¿en qué momento se <strong>selecciona el método</strong> de investigación?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La selección del método es la <strong>quinta</strong> etapa: va <strong>después</strong> de plantear el problema y de elaborar el marco teórico, y <strong>antes</strong> de seleccionar la muestra y recolectar datos. Es la misma lógica que se trabajó en la Sesión 02: primero el problema, después las decisiones técnicas. Quien elige el método primero termina buscando un problema que le sirva a su método.</p><p>Cita literal (Cadena-Iñiguez et al., 2017, Introducción): «(…) mencionan al menos 10 etapas en el proceso de una investigación (…) a) concepción de la idea para investigar; b) plantear el problema a investigar; c) elaborar el marco teórico; d) establecer hipótesis; e) selección del método apropiado de investigación; f) selección de la muestra; g) recolección de datos; h) análisis de datos; i) presentación de resultados; y j) nuevas ideas de investigación.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Después de plantear el problema y de elaborar el marco teórico, y antes de seleccionar la muestra y de recolectar los datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. En la lista de la lectura la selección del método es la etapa (e): el problema y el marco teórico van antes; la muestra, la recolección y el análisis van después.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En la primera etapa, junto con la concepción de la idea, porque el método define qué problemas se pueden llegar a investigar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la dependencia. En la secuencia de la lectura la idea se concibe primero y el método se elige varias etapas después; además, sus conclusiones dicen que la pertinencia del método «está en función de la naturaleza del problema», no al contrario.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Inmediatamente después de concebir la idea y antes de plantear el problema, para saber desde el comienzo qué datos habrá que buscar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Adelanta el método al lugar del problema. Suena razonable —«necesito saber qué datos buscar»—, pero en la secuencia de la lectura entre la idea y el método hay tres etapas: plantear el problema, elaborar el marco teórico y establecer las hipótesis.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Al final del proceso, cuando ya se recolectaron y analizaron los datos y hay que decidir cómo presentar los resultados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el método de investigación con la forma de presentar resultados. La recolección y el análisis de datos son etapas posteriores a la selección del método: no se puede recolectar sin haber decidido con qué método.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q04 El problema no es la población en la que se investiga]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La guía de proyectos de investigación (segunda lectura obligatoria) advierte de una «confusión frecuente» al plantear el problema. Un equipo escribe: <em>«Queremos identificar y describir la diversidad cultural en la región de Murcia»</em>. Según esa lectura, ¿qué es aquí el problema y qué es la población en la que se investigará?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El <strong>problema</strong> es <strong>la diversidad cultural</strong>; <strong>la región de Murcia</strong> es la <strong>población</strong> en la que ese problema se va a estudiar. La lectura insiste en que son dos decisiones distintas, y que de las características de la población depende hasta dónde se pueden extender las conclusiones.</p><p>Cita literal (Montes del Castillo y Montes Martínez, 2014, §2.2 «Planteamiento del problema»): «Esta es una confusión frecuente. Una cosa es el problema teórico que se pretende resolver y otra diferente la muestra o población objeto del estudio.» Y con el mismo ejemplo: «También podemos tener un problema teórico que consiste en identificar y describir la diversidad cultural en la región de Murcia (…). Lo primero, la diversidad cultural, es nuestro problema teórico. Lo segundo, la región de Murcia, es la población en la que vamos a investigar el problema propuesto o una parte de esa población.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El problema es la diversidad cultural; la región de Murcia es la población en la que ese problema se va a investigar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el ejemplo textual de la lectura: la diversidad cultural es el problema teórico y la región de Murcia, la población en la que se investiga ese problema.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema es la región de Murcia, porque allí ocurre la dificultad; la diversidad cultural es la población que se estudia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia los dos términos de lugar. El lugar donde se investiga no es el problema: es donde está la población. Confundirlos hace que el proyecto se describa por su geografía y no por lo que quiere entender.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema y la población son lo mismo en este caso: la frase ya está delimitada y no hace falta separarlas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es justo la confusión que la lectura señala como frecuente. Separarlas no es un formalismo: la lectura advierte que el alcance de las conclusiones depende de las características de la población, así que hay que poder nombrarla aparte.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema es la propuesta de intervención que se quiere generar; la diversidad cultural es la población objeto de estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Pone en el lugar del problema el resultado que se espera producir. La propuesta de intervención es a lo que se quiere llegar; el problema es lo que todavía no se conoce y por eso se investiga.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q05 Cuándo se justifica replicar una investigación ya realizada]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La guía de proyectos de investigación (segunda lectura obligatoria) critica los proyectos que «repiten una y otra vez» investigaciones ya realizadas. Según esa lectura, ¿en qué caso <strong>sí</strong> se justifica replicar una investigación anterior?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Solo cuando se replica <strong>para poner a prueba una teoría</strong>, es decir, para confirmarla o para rebatirla. El criterio de fondo es el mismo de toda la lectura: una investigación se justifica si aumenta el conocimiento disponible; repetir por repetir no lo aumenta.</p><p>Cita literal (Montes del Castillo y Montes Martínez, 2014, §2 «Justificación de la investigación»): «Hay multitud de investigaciones, de proyectos de investigación, incluso de tesis doctorales, que repiten una y otra vez proyectos de investigación que han sido realizados con anterioridad y que no permiten crear ni aumentar el conocimiento, que es de lo que se trata. Replicar investigaciones realizadas con anterioridad sólo se justifica si se quiere poner a prueba, para confirmar o rebatir una determinada teoría.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cuando se replica para poner a prueba una teoría determinada, es decir, para confirmarla o para rebatirla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la única excepción que la lectura admite, y la admite con la palabra «sólo»: replicar se justifica cuando la réplica sirve para confirmar o rebatir una teoría.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuando se cambian la población y el periodo del estudio, porque con otros datos los resultados ya son nuevos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde tener datos distintos con aportar conocimiento. Cambiar población y fechas puede ser una buena delimitación, pero por sí solo no es la razón que la lectura acepta para repetir un estudio ya hecho.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuando el tema le resulta personalmente motivador a quien investiga y le supone un reto abordarlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un motivo que la lectura sí reconoce, pero para <em>elegir</em> un tema, no para <em>repetir</em> un estudio. El interés personal no responde a la pregunta de si la investigación aumenta el conocimiento disponible.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En ningún caso: la lectura sostiene que un asunto ya investigado queda cerrado y no debe volver a plantearse.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Endurece la advertencia hasta volverla otra cosa. La lectura no cierra ningún tema: critica la repetición que no aporta nada y deja abierta de forma expresa la réplica que pone a prueba una teoría.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q06 Tema, problema, pregunta y solución: dónde queda «un bot que corrija informes»]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 distinguió cuatro niveles «que se confunden todo el tiempo». Un equipo abre su documento con esta frase: <em>«Vamos a hacer un bot que corrija informes»</em>. ¿En qué nivel está ese enunciado y qué implica?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es una <strong>solución</strong>: el producto imaginado. No es el nivel por donde se empieza. La consigna de la sesión es devolverse al nivel del problema —la tensión observable— y solo mucho después volver a la solución.</p><p>Cita literal (deck de la Sesión 02, tabla «Cuatro niveles que se confunden todo el tiempo»): «<strong>Solución</strong> | El producto imaginado | “Un bot que corrija informes” | Llega al final; empezar por aquí sesga todo el trabajo». Y la nota de la misma diapositiva: «Si su documento arranca en la fila 4, devuélvase a la fila 2: <strong>el dolor primero</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Es la solución, el producto imaginado: hay que devolverse a la tensión observable antes de seguir escribiendo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La tabla de la sesión ubica «un bot que corrija informes» en la fila de la solución y advierte que empezar por ahí sesga todo el trabajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es el problema de investigación, porque ya nombra una dificultad concreta y la manera de resolverla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El problema es la tensión observable, no el remedio. La frase no dice a quién le duele algo, dónde ocurre ni qué se pierde: no hay dificultad nombrada, solo un producto que se quiere construir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es la pregunta de investigación en versión corta: basta ponerle signos de interrogación para completarla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ponerle interrogación produce «¿hago un bot?», que la sesión clasifica como pregunta que arranca por la solución y que no deja fenómeno que estudiar. La forma interrogativa no convierte una solución en pregunta investigable.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es el tema de investigación, es decir, el territorio amplio dentro del cual el equipo va a trabajar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El tema es el territorio («IA en educación», «IA en la industria»), algo más amplio que la frase. Un producto concreto no es un territorio: es lo que se imagina construir dentro de él.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q07 Cuál de las cuatro piezas del planteamiento falta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 fijó las cuatro piezas que deben poder señalarse en un planteamiento del problema. Lea este borrador: <em>«En la planta de confección de la empresa X, los operarios anotan a mano en una libreta las paradas de la máquina cortadora al cierre de cada turno, y el supervisor de producción recibe esas libretas solo al terminar la semana»</em>. ¿Cuál de las cuatro piezas falta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Falta la <strong>consecuencia</strong>: el borrador no dice <em>qué se pierde si nada cambia</em> (tiempo, calidad, reprocesos, aprendizaje). Las otras tres sí están: el síntoma (se anota a mano y llega con retraso), el contexto (la planta de confección, el turno) y los actores (los operarios que registran y el supervisor que usa el dato).</p><p>Cita literal (deck de la Sesión 02, «Anatomía del planteamiento: las cuatro piezas»): «<strong>(a) Síntoma</strong> — el hecho observable que alguien puede constatar hoy. <strong>(b) Contexto</strong> — dónde ocurre: una organización, un aula, un proceso o un turno concretos. <strong>(c) Actor</strong> — quién padece el síntoma y quién decide sobre él. <strong>(d) Consecuencia</strong> — qué se pierde si nada cambia: tiempo, calidad, reprocesos, aprendizaje.» Y la nota: «si al leer sus 10 líneas no se pueden señalar (a), (b), (c) y (d), el texto todavía no es un problema».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La consecuencia: el borrador no dice qué se pierde si nada cambia en ese registro.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El texto describe el hecho, el lugar y a los implicados, pero se detiene antes de decir qué cuesta que siga igual: sin esa pieza no se sabe por qué valdría la pena investigarlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El síntoma: el borrador no describe ningún hecho observable dentro de la operación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El síntoma sí está, y es el más visible: se registra a mano al cierre del turno y la información llega una semana después. Es un hecho que otra persona podría constatar sin creerle a nadie.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El contexto: el borrador no dice dónde ocurre lo que se está describiendo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El contexto sí está: la planta de confección, la máquina cortadora y el cierre de turno. La sesión pedía justamente eso —una organización, un proceso o un turno concretos— y no un país.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El actor: el borrador no nombra a nadie que padezca el síntoma ni que decida sobre él.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Los actores sí aparecen, y son los dos que la sesión anunciaba: quien sufre el síntoma (los operarios que registran a mano) y quien podría cambiarlo (el supervisor de producción).</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q08 El filtro de las cinco preguntas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Antes de dar por buena una pregunta de investigación, la Sesión 02 propuso pasarla por un filtro de cinco preguntas. ¿Cuáles son las cinco?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Son: <strong>¿quién?</strong> (el actor concreto), <strong>¿dónde?</strong> (la organización, el aula o el proceso, con frontera), <strong>¿qué fenómeno?</strong> (el hecho que se va a observar, no la tecnología que gusta), <strong>¿en qué lapso?</strong> (si cabe en el tiempo del programa) y <strong>¿con qué acceso a la información?</strong>. Ojo con la trampa del quinto: tener acceso no significa que hoy se vaya a recolectar datos.</p><p>Cita literal (deck de la Sesión 02, «El filtro de las cinco preguntas»): «<strong>1. ¿Quién?</strong> — el actor concreto. Si la respuesta es “todo el mundo”, no hay actor. <strong>2. ¿Dónde?</strong> — la organización, el aula o el proceso, con nombre y frontera. <strong>3. ¿Qué fenómeno?</strong> — el hecho que voy a observar, no la tecnología que me gusta. <strong>4. ¿En qué lapso?</strong> — ¿cabe en el tiempo del programa? (…) <strong>5. ¿Con qué acceso a la información?</strong> (…) Cuidado con la trampa: tener acceso <strong>no</strong> significa que hoy vaya a recolectar datos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Quién es el actor, dónde ocurre, qué fenómeno se observa, en qué lapso cabe y con qué acceso a la información se cuenta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las cinco de la sesión, en ese orden. Si alguna respuesta es «no sé» o «todos», la pregunta está cruda y hay que recortarla.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Quién es el actor, dónde ocurre, qué fenómeno se observa, en qué lapso cabe y qué solución se entregará al terminar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta cuatro y cambia la quinta por un compromiso de producto. El quinto criterio es el acceso a la información; y la sesión advierte, además, que prometer la solución desde la pregunta es el error que se vino a corregir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Quién es el actor, dónde ocurre, con qué presupuesto se cuenta, con qué permiso de la organización y con qué herramienta se construirá.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte el filtro en una lista de requisitos de ejecución. Presupuesto, permisos y herramienta son asuntos de un proyecto que se va a ejecutar; el filtro de la sesión sirve para saber si la <em>pregunta</em> está delimitada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Qué tecnología se usará, para qué cliente, con qué datos, en qué plazo y con qué resultado se compromete el equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la lista de un pliego técnico, no el filtro de una pregunta. La sesión insiste en lo contrario: el fenómeno que se observa, «no la tecnología que me gusta», y nada de prometer resultados.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q09 Con qué arranque abrir la pregunta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo ya describió cómo funciona hoy el proceso que estudia y ahora quiere <strong>fundamentar los criterios que debería cumplir</strong> una propuesta de asistente de IA para ese proceso. Según la tabla de arranques de la Sesión 02, ¿con qué arranque debe abrir su pregunta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Con <strong>«¿Qué requisitos…?»</strong>, que es el arranque que establece criterios para una propuesta y sirve, según la tabla, cuando el equipo «va a diseñar algo y debe fundamentarlo».</p><p>Cita literal (deck de la Sesión 02, tabla «Cómo se abre una pregunta»): «<strong>¿Qué requisitos…?</strong> | Establece criterios para una propuesta | Va a diseñar algo y debe fundamentarlo». En la misma tabla: «<strong>¿En qué medida…?</strong> | Compara o gradúa | Ya tiene categorías o variables definidas»; «<strong>¿Es…? / ¿Sirve…?</strong> | Sí o no | <strong>Nunca</strong>: cierra la investigación en una palabra»; «<strong>¿Debo hacer…?</strong> | Una decisión personal | <strong>Nunca</strong>: eso es gestión, no investigación».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«¿Qué requisitos…?», porque establece criterios para una propuesta que se va a diseñar y fundamentar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el caso exacto que la tabla le asigna a ese arranque: se va a diseñar algo y hay que fundamentarlo, así que la pregunta pide criterios, no un veredicto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿En qué medida…?», porque compara o gradúa el aporte que tendría el asistente en el proceso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el mejor de los distractores, pero llega antes de tiempo: la tabla reserva «¿en qué medida…?» para cuando ya hay categorías o variables definidas. El equipo todavía está estableciendo los criterios.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Sirve…?», porque permite confirmar de entrada si la propuesta tiene sentido para la organización.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La tabla marca este arranque con un «nunca»: se responde sí o no y cierra la investigación en una palabra. Confirmar de entrada no es investigar, es pedir permiso.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Debo hacer…?», porque deja explícito que el equipo decidirá si construye o no la herramienta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>También lleva un «nunca» en la tabla: plantea una decisión personal y eso «es gestión, no investigación». La decisión de construir no es el conocimiento que el proyecto debe producir.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[PRO-Q10 Objetivo y pregunta no son lo mismo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Entre los errores que la Sesión 02 se propuso «cortar de raíz» está confundir el objetivo con la pregunta. Según esa sesión, ¿cómo se distinguen?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Por su forma y por su lugar: <strong>el objetivo empieza con un verbo</strong> («Caracterizar…») y <strong>la pregunta empieza con un interrogante</strong> («¿Cómo…?»), y cada uno va en una <strong>sección distinta</strong> del documento. No son la misma frase escrita de dos maneras.</p><p>Cita literal (deck de la Sesión 02, «Errores frecuentes que hoy vamos a cortar de raíz»): «<strong>Objetivo no es lo mismo que pregunta.</strong> El objetivo empieza con verbo (“Caracterizar…”); la pregunta empieza con interrogante (“¿Cómo…?”). Van en secciones distintas del documento.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El objetivo empieza con un verbo y la pregunta con un interrogante, y van en secciones distintas del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la distinción textual de la sesión: verbo frente a interrogante, y cada uno en su propia sección del anteproyecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La pregunta empieza con un verbo y el objetivo con un interrogante, y ese orden se invierte en el documento final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Recuerda las dos formas pero se las asigna al revés. Una pregunta que empieza con verbo deja de ser pregunta, y un objetivo con signos de interrogación deja de comprometer una acción.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dicen lo mismo con otras palabras, así que se redacta una sola vez y se copia en las dos secciones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es precisamente el error que la sesión vino a cortar. Que estén alineados no los vuelve intercambiables: uno formula lo que se ignora y el otro compromete lo que se va a hacer al respecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El objetivo se redacta dentro de la sección del problema y la pregunta se deja para el cierre del anteproyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta en que son cosas distintas, pero les asigna lugares que la sesión no dice. Lo que la sesión afirma es que van en secciones distintas, no que la pregunta se posponga al final del documento.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

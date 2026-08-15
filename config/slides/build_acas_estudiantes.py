@@ -466,6 +466,31 @@ def _temario_block(course_key: str, item_id: str, n: int) -> str:
             )
             break
 
+    # Material de estudio publicado aparte del deck. Entra en el alcance en cuanto su sesión ya
+    # se dictó, salvo que su propia consigna lo excluya de este ítem — y cuando lo excluye hay
+    # que **decirlo**, no callarlo: el estudiante ya leyó esa consigna y necesita ver las dos
+    # guías de acuerdo. Un cuestionario no pregunta por material que se declaró fuera, y tampoco
+    # se calla un material que sí evalúa.
+    codigo = cuest[pos]["code"]
+    vistas = {s["n"] for s in hasta}
+    materiales = []
+    for s in COURSES[course_key].get("sesiones") or []:
+        for m in s.get("material_estudio") or []:
+            if s["n"] not in vistas and not s.get("unidad_diferida"):
+                continue
+            det = f" — {m['detalle']}" if m.get("detalle") else ""
+            if codigo in (m.get("excluido_de") or []):
+                materiales.append(
+                    f"**{m['nombre']}**: publicado en la carpeta de la Sesión {s['n']:02d} y en el "
+                    f"aula, pero **NO entra en {codigo}**, tal como dice su propia consigna. "
+                    f"Entra a partir del siguiente cuestionario.")
+            else:
+                materiales.append(
+                    f"**{m['nombre']}**: sí entra{det}. Está en la carpeta de la Sesión "
+                    f"{s['n']:02d} del Drive de clases y como recurso del aula.")
+    material = ("\n**Material de estudio publicado aparte del deck:**\n\n"
+                + "\n".join(f"- {x}" for x in materiales) + "\n") if materiales else ""
+
     return f"""## {n}. Qué cubre
 
 Sesiones **ya dictadas** cuando cierra este cuestionario ({fmt_dmy(cierre)}) — eso es lo que entra:
@@ -473,7 +498,7 @@ Sesiones **ya dictadas** cuando cierra este cuestionario ({fmt_dmy(cierre)}) —
 {_lista_sesiones(hasta)}
 
 {detalle}
-{fuera}{diferida}
+{fuera}{diferida}{material}
 > El **recorte exacto** de temas, el número de preguntas y el tipo de pregunta los publica **el Docente** en la actividad del aula. Este documento no los inventa: si CDigital dice otra cosa, manda CDigital.
 """
 

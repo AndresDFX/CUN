@@ -24,7 +24,7 @@
 **Cómo anunciarlo (guion literal, en el cierre de la clase — no en el último minuto):**
 > “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
 
-> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 2%), **Coevaluación** (foro, 2%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 2%), **Coevaluación** (foro, 2%). Úselos con **esos** nombres: son los que el estudiante va a buscar en CDigital. (La antigua numeración «ACA 1 / ACA 2 / ACA 3» quedó anulada el 10/08/2026 y ya no aparece en ningún deck; si alguien la menciona, remítalo a esta lista.)
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck de **encuadre**, 22 slides — no es el mapa del curso)
@@ -34,13 +34,13 @@
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | 2 |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA (juego en Slido) | 2 |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: una hora semanal para cerrar el trabajo de grado | 3 |
 | **7** | Qué se llevan al final: artículo, sustentación y repositorio | 3 |
 | **8–9** | Mapa del curso (1/2 y 2/2): los 15 encuentros | 3 |
 | **10** | El acuerdo pedagógico: qué pactamos hoy | 3 |
-| **11** | Las dos ACAs: qué se entrega y qué se mira | 4 |
+| **11** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
 | **12** | Cómo se entrega, paso a paso | 4 |
 | **13** | Integridad académica: aquí sí pasa por antiplagio | 4 |
 | **14** | Inteligencia artificial generativa | 4 |

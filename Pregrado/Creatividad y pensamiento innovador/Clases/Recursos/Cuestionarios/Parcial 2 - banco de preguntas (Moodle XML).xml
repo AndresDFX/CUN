@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 2 - Creatividad U1-U5</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 2 (21% de la nota del curso · Corte 2) — CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIAS.</strong></p><p>Ventana: 03/09/2026 a 09/09/2026. Se resuelve dentro del encuentro, en unos 22 minutos.</p><p><strong>Materia evaluada (temario acumulativo):</strong> la lectura autónoma de la Sesión 01 (U1–U2: creatividad e inteligencia emocional, bloqueadores y ensanchadores, indicadores de la divergencia), la <strong>Sesión 02</strong> (U3: Design Thinking, divergencia y convergencia, How Might We, ideación y prototipo conceptual), la <strong>Sesión 03</strong> (U4: gestión de la innovación, las cuatro preguntas del gestor, el Manual de Oslo / OCDE como taxonomía, los cinco tipos, dominante y secundario) y la <strong>Sesión 04</strong> (U5: tipo y grado, incremental y radical, prueba de realidad socioeconómica, comparación con criterios).</p><p><strong>Lo que NO entra:</strong> la Sesión 05, que se dicta el mismo día en que cierra la ventana. Ninguna pregunta ni ninguna opción usa su vocabulario (FODA, Business Model Canvas, MVP, supuesto más riesgoso, vigilancia tecnológica, fichas de señal, patentes). Tampoco entra la Sesión 06 (escalas local–internacional, entidades de apoyo, pitch).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Formato de prueba estándar tipo ICFES–SABER PRO: preguntas de aplicación con caso corto, no de definición memorística. Reparto: 2 de la lectura autónoma U1–U2, 1 de la Sesión 02, 3 de la Sesión 03 y 4 de la Sesión 04 (lo único nuevo desde el cierre del Quiz 2). Ninguna pregunta repite un ítem del Quiz 1, del Parcial 1 ni del Quiz 2. Tiempo total estimado: 14 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-01 El ensanchador que corresponde a la idea que no sale]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un ingeniero tiene clara la solución de arquitectura que evitaría el problema del proyecto. La escribió en un párrafo de correo, ya la explicó tres veces con las mismas palabras y su interlocutor sigue entendiendo otra cosa.</p><p>Según la tabla de bloqueadores y ensanchadores del material de estudio de la U2, ¿qué ensanchador le corresponde a este caso?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un bloqueador <strong>de expresión</strong>: la idea existe y no se puede poner en un lenguaje que otro examine. Su ensanchador es <strong>obligarse a un segundo lenguaje</strong> —diagrama, boceto, maqueta, número, analogía—, porque lo que falta no son más palabras sino un cambio de lenguaje.</p><p>Cita literal (Material de estudio U2 — Bloqueadores y ensanchadores de la creatividad, 3.5 y tabla 4.2): «<strong>Señal de que lo tiene:</strong> explica lo mismo tres veces y su interlocutor sigue entendiendo otra cosa. Casi siempre falta un cambio de lenguaje, no más palabras.» · Fila «De expresión» de la tabla: «Bloqueador (cierra): la idea no sale del párrafo de correo — Ensanchador (abre): obligarse a un <strong>segundo lenguaje</strong>: diagrama, boceto, maqueta, número, analogía.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Obligarse a un segundo lenguaje: sacar la idea del texto y pasarla a un diagrama, un boceto, una maqueta, un número o una analogía.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El caso trae la señal exacta del bloqueador de expresión: explicar lo mismo tres veces sin que el otro entienda. Lo que falta no son más palabras, es un cambio de lenguaje que permita examinar la idea.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Bloquear 90 minutos protegidos en el calendario, el mismo día y hora cada semana, y conseguir una persona con quien contrastar la idea.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el ensanchador de la familia <em>de entorno</em>, la del sitio que no deja pensar. Aquí no falta tiempo ni interlocutor —ya hubo tres intentos de explicación—, falta el lenguaje en que la idea se pueda examinar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Reescribir el problema cinco veces cambiando el sujeto afectado, e ir al sitio a observar 20 minutos sin proponer nada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el ensanchador de la familia <em>perceptual</em>, la de quien no ve el problema completo. En este caso el problema está bien visto y la solución ya existe: lo que falla es su transmisión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Fijar la regla de diez ideas antes de la primera crítica y escribir la idea incompleta en el canal del equipo el mismo día.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el ensanchador de la familia <em>emocional</em>, la de quien juzga su idea antes de terminar de escribirla. El ingeniero del caso no se está callando: ya compartió la idea tres veces y no fue entendida.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-02 Diez ideas que son la misma idea]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante llega al taller con diez ideas escritas. Al leerlas, las diez son la misma solución con cambios menores: la misma pantalla de reserva con distinto botón, distinto color y distinto nombre.</p><p>Con los indicadores de la divergencia que el material de la U2 retoma de Torrance —fluidez, flexibilidad, originalidad y elaboración—, ¿cómo se describe técnicamente ese banco de ideas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Hay <strong>fluidez</strong> —diez ideas son cantidad— y no hay <strong>flexibilidad</strong>, porque las diez caben en una sola categoría. La flexibilidad mide cuántas <em>categorías distintas</em> aparecen, no cuántas ideas hay; por eso el material lo usa como criterio de autocontrol al divergir.</p><p>Cita literal (Material de estudio U2 — Bloqueadores y ensanchadores de la creatividad, 4.1): «Los indicadores de la divergencia son los que Torrance (1966) operacionalizó después en sus pruebas: <strong>fluidez</strong> (cuántas ideas), <strong>flexibilidad</strong> (cuántas categorías distintas), <strong>originalidad</strong> (qué tan infrecuentes) y <strong>elaboración</strong> (cuánto detalle). Sirven como criterio propio: si sus diez ideas son diez variaciones de la misma, tiene fluidez y no tiene flexibilidad.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Tiene fluidez, porque hay cantidad de ideas, y le falta flexibilidad, porque las diez pertenecen a una sola categoría de solución.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el ejemplo con que el material explica el par: diez variaciones de la misma idea dan fluidez y no dan flexibilidad. El remedio no es escribir más variantes, es forzar categorías distintas de solución.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falta fluidez, porque diez ideas son muy pocas para hablar de divergencia, y la flexibilidad ya está resuelta porque todas apuntan al mismo problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte las dos definiciones. La fluidez es justamente la cantidad, y aquí la hay; y apuntar todas al mismo problema no es flexibilidad, es lo contrario, porque la flexibilidad cuenta categorías distintas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Le falta elaboración, porque ninguna de las diez está descrita con suficiente detalle, y la flexibilidad se cumple porque las ideas no son idénticas entre sí.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la elaboración mide cuánto detalle tiene cada idea, y el caso no dice que falte detalle. Que las ideas «no sean idénticas» tampoco alcanza: cambiar el color de la misma pantalla no abre una categoría nueva.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No cumple ninguno de los cuatro indicadores, porque repetir una misma solución con variaciones no cuenta como haber generado ideas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: descalifica de más. El estudiante sí produjo cantidad, y eso es fluidez; el diagnóstico útil es nombrar el indicador que falta, para saber qué corregir en la siguiente ronda.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-03 Qué cuenta como prototipo en esta etapa]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo dice que esta semana no puede mostrar nada porque «prototipar es programar la versión 1» y todavía no tienen ni la base de datos.</p><p>Según la Sesión 02, ¿qué corresponde responderles?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Prototipar es <strong>lo más barato que responde su duda más cara</strong>: en esta etapa el producto mínimo de Prototipar es un boceto, un <em>storyboard</em> o una maqueta fea que otro pueda entender y opinar. Esperar a tener la versión funcional retrasa justo lo que el método busca: descubrir el error barato y temprano.</p><p>Cita literal (Presentación de la Sesión 02, «Errores frecuentes y mitos que hay que desarmar»): «<strong>“Prototipar es programar la versión 1.”</strong> No. Prototipar es <strong>lo más barato que responde su duda más cara</strong>. Un dibujo en Excalidraw es un prototipo válido hoy.» Y en la tabla de las cinco etapas: «<strong>Prototipar</strong> — ¿Cómo se ve o se toca la idea? — Producto mínimo: boceto, storyboard, mock feo».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que un prototipo es lo más barato que responde su duda más cara: un boceto de cajas y flechas o un guion de cuatro viñetas ya sirve, y esta semana sí pueden mostrar algo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El producto mínimo de la etapa de Prototipar es un boceto, un <em>storyboard</em> o una maqueta fea. Lo que importa no es la estética ni la funcionalidad: es que otro entienda la idea y pueda opinar sobre ella.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que tienen razón: un prototipo es la primera versión que ya funciona, así que corresponde esperar a tener la base de datos antes de mostrarle algo a un usuario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el mito que la sesión desarma con nombre propio. Si el prototipo exige la versión funcional, el error se descubre caro y tarde, que es precisamente lo que el método busca evitar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el prototipo debe ser lo más completo posible, porque un dibujo no permite recoger opiniones útiles sobre lo que el usuario recibiría al final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde fidelidad con utilidad. Un dibujo feo que se entiende sin explicación ya produce opiniones aprovechables, y cuesta unos minutos en lugar de varias semanas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que prototipar es una etapa opcional del método: si el equipo ya eligió su idea con criterios, puede pasar directamente a evaluarla con el usuario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: sin algo que el usuario pueda ver o tocar, la evaluación no tiene sobre qué hacerse. Prototipar es lo que hace posible la etapa siguiente, no un adorno que se pueda saltar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-04 Qué cambió: el caso del tablero de mantenimiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un área de mantenimiento deja de asignar los trabajos por WhatsApp uno por uno: ahora hay un tablero visible donde cada técnico toma la siguiente tarea y el supervisor ya no reparte. El servicio que recibe el usuario final es el mismo y los tiempos de atención apenas se mueven, pero nadie vuelve a preguntar «¿esto quién lo tiene?».</p><p>Con la taxonomía de la Sesión 03, ¿cuál es el tipo dominante?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es <strong>organización</strong>: lo que cambió son las prácticas, los roles y las relaciones de trabajo —quién decide y con quién habla—, no el servicio ni sus tiempos. La señal de la taxonomía es «el equipo se coordina distinto», y aquí es la única que se cumple.</p><p>Cita literal (Presentación de la Sesión 03, tabla «Los cinco tipos de innovación»): «<strong>Organización</strong> — Qué cambia: prácticas, roles y relaciones de trabajo — Señal de que “sí es” ese tipo: <strong>el equipo se coordina distinto</strong> — Ejemplo: pasar de sprints caóticos a Kanban con rituales.» Y en la tabla de desempate: «¿Lo que cambió fue quién decide y con quién habla? — Sí, la coordinación → <strong>Organización</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Organización, porque lo que cambió son los roles y la coordinación del equipo: quién decide qué trabajo sigue y con quién se habla para saberlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La señal del tipo organización es que el equipo se coordina distinto, y es lo único que el caso reporta como cambio: el supervisor deja de repartir y el propio técnico toma la tarea.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Proceso, porque el método de trabajo del área cambió por completo y esa es la definición del tipo proceso en la taxonomía del curso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el distractor más fino, pero la señal del tipo proceso es que <em>baje el tiempo, el error o el costo</em>, y el caso dice expresamente que los tiempos apenas se mueven. Lo que cambió fue la coordinación, no el rendimiento de la entrega.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Producto, porque el tablero es una herramienta nueva que antes no existía y que los técnicos usan todos los días para trabajar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: deja que la herramienta visible decida el tipo. La señal de producto es que <em>el usuario</em> perciba una función nueva, y el caso aclara que el servicio que recibe el usuario final es el mismo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Marketing, porque cambió el canal por el que circulan las solicitudes de trabajo, que antes iban por WhatsApp y ahora van al tablero.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde cualquier cambio de canal con el tipo marketing, cuya señal es que cambie la <em>adopción</em> o el posicionamiento frente a quien recibe el servicio. Este canal es interno del equipo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-05 Para qué sirve el Manual de Oslo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al terminar la Sesión 03, un compañero resume así lo visto: «entonces el Manual de Oslo es la norma que decide si una idea merece llamarse innovación».</p><p>¿Qué le corrige usted, según cómo se trabajó el Manual en esa sesión?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El Manual se usa como <strong>taxonomía</strong>, es decir, como un vocabulario común: sirve para decir <em>de qué tipo</em> es una innovación, y así la discusión deja de ser una pelea de opiniones sobre si algo «es innovador» y se vuelve concreta y verificable. No se usa como norma contable ni estadística.</p><p>Cita literal (Presentación de la Sesión 03, «El Manual de Oslo: el idioma común de la innovación»): «En este curso <strong>no</strong> lo usamos como norma contable ni estadística. Lo usamos como <strong>taxonomía</strong>: un vocabulario. ¿Para qué? Para dejar de discutir en abstracto si algo “es innovador o no”. En vez de eso decimos <strong>de qué tipo</strong> es. La discusión se vuelve concreta y verificable.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que aquí se usa como taxonomía: un vocabulario común para decir de qué tipo es una innovación, con lo que la discusión se vuelve concreta y verificable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El Manual da el idioma común, no el veredicto. En lugar de discutir en abstracto si algo «es innovador», se dice de qué tipo es y se muestra qué cambió para quién.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que no es una norma sino una guía metodológica: ordena las fases que debe seguir un proyecto de innovación, desde la idea inicial hasta el piloto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde taxonomía con método. El Manual aporta categorías para <em>nombrar</em> lo que se hizo; las fases del trabajo las trae el enfoque de diseño que se vio en la sesión anterior.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que es un manual estadístico de la OCDE y por eso en el curso se emplea para reportar cifras comparables de innovación entre empresas y países.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: describe el origen del documento y lo traslada al uso de la clase. La OCDE sí lo creó para medir y comparar, pero en el curso no se hace estadística: se usa su vocabulario para clasificar una propuesta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que sí decide, pero solo para empresas: en un trabajo académico cada autor puede quedarse con la clasificación de innovación que prefiera.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: cambia un veredicto por otro y termina en el relativismo. El Manual no certifica nada, pero tampoco deja la clasificación al gusto: es el criterio compartido con el que se sustenta el tipo elegido.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-06 La idea que nadie se atreve a cerrar]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo lleva cinco semanas con la misma idea y no tiene ni un hallazgo que la respalde. Cada semana concluye que le dará «una semana más», y nadie se atreve a cerrarla.</p><p>Según las cuatro preguntas del gestor de innovación de la Sesión 03, ¿qué omitió el equipo y cuándo debía resolverlo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Omitió <strong>definir la señal de parada</strong>, y debía definirla <strong>antes de empezar</strong>. Sin ese acuerdo previo aparece el proyecto zombi que nadie se atreve a enterrar, y decidir cuándo parar es la decisión más difícil de la gestión, no un fracaso.</p><p>Cita literal (Presentación de la Sesión 03, «Las cuatro preguntas que se hace un gestor de innovación»): «<strong>4. ¿Cuándo paramos?</strong> Definir la señal de parada <strong>antes</strong> de empezar evita el proyecto zombi que nadie se atreve a enterrar.» Y en «Qué significa “gestionar” la innovación»: «Y la decisión más difícil de todas: <strong>decidir cuándo parar</strong> una idea que no funciona.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Definir la señal de parada, y debía definirla antes de empezar: sin ese acuerdo previo aparece el proyecto que nadie se atreve a enterrar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La cuarta pregunta del gestor es «¿cuándo paramos?», y se responde al comienzo, no en la semana cinco. Con la señal fijada de antemano, parar es cumplir el acuerdo y no admitir una derrota.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Asignar más tiempo y más personas a la idea, y debía resolverlo en la tercera semana, cuando quedó claro que exigía más esfuerzo del previsto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es la trampa que produce el proyecto zombi. Sumar recursos a una idea sin hallazgos no genera aprendizaje; solo encarece la decisión de pararla, que sigue pendiente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Abrir varios frentes a la vez, y debía resolverlo al inicio: si todas las ideas del equipo son prioritarias, siempre hay alguna avanzando.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte la primera pregunta del gestor. Priorizar es renunciar explícitamente a algo, y la sesión lo dice al revés de esta opción: si todo es prioritario, nada lo es.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dejar acta escrita de cada reunión semanal, y debía hacerlo desde la primera, para que la decisión de cerrar quedara documentada y fuera defendible.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde gestionar con documentar. Una reunión sin decisión no gestiona nada, y su acta tampoco: lo que faltaba era el criterio con el cual decidir, no el registro de las cinco semanas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-07 Declarar el grado de la innovación con evidencia]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En su comparación, un estudiante escribe: «declaro mi innovación como radical porque es muy ambiciosa e importante para el campus».</p><p>Según lo trabajado en la Sesión 04, ¿qué objeción técnica recibe y cuál es la salida honesta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>«Radical» no es sinónimo de «importante» ni de «ambicioso»: es una descripción <strong>estructural</strong> y exige mostrar <strong>qué regla del juego se rompe</strong> y con qué evidencia. Si esa evidencia no existe, la salida honesta es declarar el grado que sí se puede demostrar: incremental —«incremental ambiciosa», si se quiere—. El tipo dice qué cambia y el grado dice cuánto rompe: son dimensiones independientes.</p><p>Cita literal (Presentación de la Sesión 04): «El error de vocabulario más común del salón: usar “radical” como sinónimo de “importante” o “ambicioso”. No lo es. Radical es una descripción <strong>estructural</strong>, y exige mostrar <strong>qué regla se rompió</strong>.» Y: «Reformulación honesta si su idea es ambiciosa: <strong>“incremental ambiciosa”</strong> — y está perfectamente bien. Regla práctica: <strong>declare el grado que pueda demostrar</strong>, no el que suene mejor.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que radical es una descripción estructural y exige mostrar qué regla del juego se rompe y con qué evidencia; si no la tiene, debe declarar el grado que pueda demostrar, incremental.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. En sustentación, quien dice «radical» recibe la pregunta «¿qué regla del juego rompe y con qué evidencia?». Sin respuesta, la propuesta entera pierde credibilidad; al reformularla como «incremental ambiciosa» no se pierde nada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que «radical» no es un grado sino un tipo del Manual de Oslo; la salida es reemplazarlo por el tipo que corresponda, producto o proceso, y no volver a hablar de grado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: colapsa las dos dimensiones. El tipo dice qué cambia (producto, proceso, organización, marketing, social) y el grado dice cuánto rompe (incremental o radical); son independientes y ambos se declaran.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que en un trabajo de semestre ningún grado se puede declarar; la salida es dejarlo sin definir hasta tener un piloto en operación con datos de varios meses de funcionamiento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: exagera la exigencia. Lo que la sesión pide no es aplazar el grado, sino declarar el que se pueda sostener: una innovación incremental bien medida es plenamente declarable en un semestre.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguna objeción: ambicioso e importante equivalen a radical, y declararlo así fortalece la sustentación porque muestra el alcance real que tiene la propuesta en el campus.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es precisamente el uso de «radical» como adorno. La sesión advierte que consigue lo contrario de lo buscado: lo radical sin datos es solo una ilusión ambiciosa y arrastra también a las partes bien hechas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-08 Leer la matriz: contar altos no es comparar]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Una estudiante compara su opción <strong>A</strong> con la alternativa <strong>B</strong> usando los cinco criterios de la Sesión 04, y su matriz queda así: <em>impacto en el dolor</em>, alto en A y alto en B; <em>esfuerzo / costo</em>, bajo en A y alto en B; <em>evidencia posible este semestre</em>, alta en A y media en B; <em>riesgo</em>, bajo en A y alto en B; <em>beneficio socioeconómico</em>, medio en A y medio en B.</p><p>Ella concluye que gana B «porque tiene más altos». ¿Qué corresponde según la Sesión 04?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Gana <strong>A</strong>. En <em>esfuerzo / costo</em> y en <em>riesgo</em> el valor <strong>bajo es mejor</strong>: contar «altos» ignora la dirección de cada criterio. Con impacto y beneficio equivalentes, la decisión la deciden los otros tres, y en los tres gana A.</p><p>Cita literal (Presentación de la Sesión 04, «Comparar con criterios, no con gusto»): «<strong>Esfuerzo / costo</strong> — ¿cuánto trabajo, dinero y permisos exige? (aquí bajo es mejor) […] <strong>Riesgo</strong> — ¿qué tan probable es que se caiga por algo fuera de mi control? (aquí bajo es mejor)». Y la nota de la matriz modelada: «Con <strong>impacto equivalente</strong>, el tipo A gana en <strong>esfuerzo, evidencia y riesgo</strong>. Ahí está la decisión — y no la tomó el gusto.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Gana A: en esfuerzo y en riesgo un valor bajo es mejor, y con impacto y beneficio equivalentes A gana además en evidencia posible este semestre.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Cada criterio tiene su dirección: en esfuerzo/costo y en riesgo lo deseable es «bajo». Leída así, la matriz empata en dos filas y en las otras tres gana A, que es exactamente la forma de la matriz modelada en clase.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Gana B: los cinco criterios se leen de la misma manera y B es la que acumula más valores altos, así que la comparación la favorece.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el razonamiento de la estudiante. Un esfuerzo «alto» y un riesgo «alto» son malas noticias, no puntos a favor; sumar altos sin mirar la dirección del criterio invierte la decisión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Hay empate técnico: cada opción gana en dos filas, así que hay que decidir con un sexto criterio o, si nada discrimina, con la preferencia de la autora.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: fabrica un empate que la matriz no tiene y termina en la preferencia, que la sesión descarta como criterio. Con la dirección correcta de cada fila, A gana en tres criterios y no empata en ninguno de esos tres.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La matriz no sirve: hay dos criterios en que las dos opciones quedan iguales, así que no discrimina y debe reemplazarse por otra con cinco criterios distintos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: aplica mal la señal de alarma de la sesión, que es que <em>todas</em> las casillas den igual. Que dos filas empaten es normal y hasta útil: deja ver con claridad en qué criterios se juega de verdad la decisión.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-09 Una comparación que no discrimina]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Otra matriz comparativa puntúa «alto» en los cinco criterios, tanto para la opción elegida como para la descartada, y su conclusión dice: «elijo la opción A porque me parece más innovadora».</p><p>Según lo trabajado en la Sesión 04, ¿qué dos cosas hay que corregir?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Dos fallas: (1) la matriz <strong>no discrimina</strong> —si todas las casillas dan igual, no comparó: describió—; y (2) la conclusión no sale de la comparación, porque «me parece más innovadora» no es un criterio. La conclusión debe seguir la estructura: qué elijo · en qué empatan · en qué criterios gana la elegida · por qué descarto la otra sin descalificarla.</p><p>Cita literal (Presentación de la Sesión 04): «La conclusión <strong>sale de la comparación</strong>, no de la preferencia. Señal de que su matriz no sirve: <strong>todas las casillas dan igual</strong>. Si nada discrimina, no comparó — describió.» Y: «Nunca escriban “me gusta más”, “me parece más innovador” ni “es lo que domino”. Ninguna de las tres es un criterio.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que la matriz no discrimina —si todo empata, describió en vez de comparar— y que la conclusión debe nombrar criterios: en qué empatan, en qué gana la elegida y por qué se descarta la otra.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las dos señales de la sesión: «si nada discrimina, no comparó — describió», y la conclusión sale de la comparación, no de la preferencia. «Me parece más innovadora» no es un criterio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que faltan criterios, porque con cinco no se alcanza a diferenciar, y que la conclusión es muy corta: hay que llegar a diez criterios y redactar al menos una página de análisis.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: culpa a la cantidad. Cinco criterios bastan si de verdad discriminan; el problema es que se puntuó todo igual. Y la conclusión pedida es de cuatro líneas: su defecto es de contenido, no de extensión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la escala es demasiado gruesa y que la conclusión no está numerada: hay que pasar a una escala de 1 a 10, sumar los puntajes y presentar la decisión como un ranking.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: cambia el instrumento en lugar de corregir el juicio. La escala alto/medio/bajo se usa a propósito, y con ella se debe anotar entre paréntesis por qué ese valor; una escala más fina no evita puntuar todo igual.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que no se declaró el grado de la innovación y que la conclusión descalifica la opción descartada: hay que agregar el grado y suavizar la redacción del párrafo final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: señala un requisito real (declarar el grado) pero deja pasar las dos fallas del caso, e inventa una tercera: esa conclusión no descalifica nada, simplemente no argumenta con criterios.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-P2-10 La prueba de realidad del contexto socioeconómico]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un equipo propone una herramienta gratuita para que los estudiantes de primer semestre reserven asesorías. De la prueba de realidad ya tienen resueltas tres cosas: quién usa (esos estudiantes), qué restricción real hay (la conexión en la sede es intermitente) y qué beneficio socioeconómico genera (menos materias reprobadas).</p><p>Según la Sesión 04, ¿qué pregunta les falta y por qué importa?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Falta <strong>¿quién paga?</strong>. Que sea gratuita para quien la usa no elimina la pregunta: quien usa puede no ser el mismo que paga, y si la respuesta es «nadie», hay que decir explícitamente cómo se sostiene. Una innovación sin modelo de sostenibilidad es un hobby caro.</p><p>Cita literal (Presentación de la Sesión 04, «La prueba de realidad: contexto socio-económico»): «<strong>1. ¿Quién paga?</strong> — el usuario, una empresa, el Estado, la publicidad... o nadie, y entonces hay que decir <strong>cómo se sostiene</strong>. <strong>2. ¿Quién usa?</strong> — puede <strong>no ser el mismo</strong> que paga. En la CUN, el estudiante usa y la institución sostiene.» Y la nota: «Una innovación sin modelo de sostenibilidad es <strong>un hobby caro</strong>. Contestar “¿quién paga?” no la vuelve mercantil: la vuelve viable.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Quién paga: aunque sea gratuita para quien la usa, alguien la sostiene, y si la respuesta es «nadie» hay que decir explícitamente cómo se va a sostener.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Quien usa y quien paga pueden no ser la misma persona: en la CUN, el estudiante usa y la institución sostiene. Responder «¿quién paga?» no vuelve mercantil la propuesta: la vuelve viable.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguna: al ser gratuita para el usuario y de beneficio social, la propuesta queda eximida de responder por su sostenibilidad económica dentro del contexto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde «gratuito para el usuario» con «sin costo». Alguien asume la operación; si nadie lo hace, la propuesta no se implementa, por buena que sea la ingeniería.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuál es el grado de la innovación: sin decir si es incremental o radical, la prueba de realidad del contexto socioeconómico queda incompleta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: mezcla dos cosas distintas. Declarar el grado es una exigencia de la argumentación del tipo; la prueba de realidad pregunta por quién paga, quién usa, qué restricción hay y qué beneficio se genera.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuántos estudiantes la usarán el primer mes: sin una proyección de demanda no se puede sostener la restricción de conectividad que el equipo ya identificó.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: pide una proyección que la prueba de realidad no exige, y la usa para una restricción que ya estaba resuelta. La pregunta pendiente es la de sostenibilidad: quién paga.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

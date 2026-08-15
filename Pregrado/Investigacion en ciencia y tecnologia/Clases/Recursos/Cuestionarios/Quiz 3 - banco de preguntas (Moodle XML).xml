@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 3 - Investigacion U1-U12</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 3 (4% de la nota del curso · Corte 3) — INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA, Escuela de Ingenierías (EI005).</strong></p><p>Ventana: 11/09/2026 a 12/09/2026. No cae en día de clase: se resuelve por cuenta propia dentro de la ventana del aula. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> es el cierre conceptual del curso y es acumulativo. Entra la <strong>Sesión 05</strong> (planteamiento del problema · posturas teóricas · marco teórico y revisión de literatura), que es lo nuevo desde el Parcial 2, y sigue entrando lo anterior: la <strong>lectura autónoma de la Sesión 01</strong> (U1–U2), la <strong>Sesión 02</strong> (MinCiencias y las 6 líneas de Ingeniería), la <strong>Sesión 03</strong> (primer avance, tipos de conocimiento y tipos de fuente) y la <strong>Sesión 04</strong> (problema y pregunta, bases de datos, APA 7). <strong>Nada de la Sesión 06</strong> (socialización y cierre del curso, 17/09), que es posterior al cierre de esta ventana.</p><p><strong>Todas las preguntas son de contenido académico.</strong> Ninguna pregunta por pesos, fechas, créditos, canal de entrega, reglas de integridad ni mecánica del cuestionario. Reparto: 6 preguntas de la Sesión 05, 1 de la Sesión 04, 1 de la Sesión 03, 1 de la Sesión 02 y 1 de la lectura obligatoria de la Sesión 01.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Tiempo total estimado: 10 minutos.</p><p>Ninguna pregunta repite el enunciado, el caso ni el conjunto de opciones de otro banco del curso.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-01 Orden de los seis componentes del planteamiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 05 presenta el planteamiento del problema como un embudo con seis componentes. ¿En qué orden van?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es <strong>estado actual → evidencias → causas → consecuencias → vacío → pregunta</strong>. El lector necesita ubicarse antes de entender por qué le debe importar; las causas solo tienen sentido después de saber qué está pasando; y el vacío solo se nota después de ver todo lo que sí se sabe. El último párrafo contiene la pregunta, literal, sin sorpresas.</p><p>Cita literal (Presentación de la Sesión 05, «La estructura de embudo»): «Arriba, ancho: el estado actual del asunto, en su contexto. Luego se cierra por evidencias, causas y consecuencias. Se estrecha en el vacío: lo que todavía no se sabe. Y cae en un solo punto: su pregunta. […] Error de orden más común: empezar por el vacío o por la pregunta. El lector no sabe de qué le hablan.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Estado actual → evidencias → causas → consecuencias → vacío → pregunta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el embudo de la Sesión 05: se abre en el estado actual, se cierra con evidencias, causas y consecuencias, se estrecha en el vacío y cae en un solo punto, la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pregunta → estado actual → causas → evidencias → consecuencias → vacío.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error de orden más común, en su primera versión: empezar por la pregunta. Quien lee todavía no sabe de qué se le habla, y el texto ya no tiene dónde caer al final.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Vacío → estado actual → evidencias → consecuencias → causas → pregunta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: abre por el vacío. Lo que falta saber solo se nota después de mostrar lo que sí se sabe, así que arrancar ahí deja al lector sin referencia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Estado actual → causas → consecuencias → pregunta → evidencias → vacío.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: deja las evidencias y el vacío después de la pregunta. Las evidencias van dentro de los párrafos que sostienen el problema, y la pregunta es la frase final del texto.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-02 Evidencia, no opinion: que vuelve fuerte una afirmacion]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está revisando su planteamiento y debe conservar solo las afirmaciones que la Sesión 05 considera <strong>fuertes</strong>. ¿Cuál de estas frases cumple la regla?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Lo que vuelve fuerte una afirmación es <strong>cifra + fuente + año</strong>, o <strong>conteo + registro verificable</strong>. Una proporción vaga, un registro citado sin conteo y una apelación a la experiencia propia no cumplen: en los tres casos falta el dato que el lector puede verificar.</p><p>Cita literal (Presentación de la Sesión 05, «La regla dura de hoy: evidencia, no opinión»): «"Creo que muchos estudiantes reprueban." / "El 34 % del grupo reprobó, según el reporte académico (2024)." / Qué la volvió fuerte: Cifra + fuente + año». Y la prueba de control de la misma slide: «subraye cada afirmación fuerte de su texto. Si no tiene cifra ni cita al lado, es opinión.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«El 34 % del grupo reprobó la asignatura, según el reporte académico del programa (2024).»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Tiene los tres elementos que pide la regla: la cifra, la fuente de donde salió y el año. El lector puede ir a verificarla.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«La bitácora del laboratorio registra que la red se ha caído en varias ocasiones durante el mes.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Tiene el registro verificable, pero le falta el conteo: «varias ocasiones» no dimensiona nada. La versión fuerte de esta misma frase es «registró 12 interrupciones en un mes».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Un porcentaje muy alto de los estudiantes ha recibido correos que suplantan a la institución.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Suena a dato porque habla de porcentaje, pero no dice cuál ni de dónde salió. Sin cifra y sin estudio citado sigue siendo una impresión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Es evidente que la retroalimentación llega tarde, como lo confirma la experiencia de todo el programa.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Apela a la obviedad y a la experiencia compartida en lugar de a una medida. La versión fuerte sería «el tiempo promedio entre la entrega y la retroalimentación fue de 9 días».</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-03 De donde salen los constructos del marco]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su pregunta de investigación quedó así: <em>«¿En qué medida la latencia de la red afecta la participación en las clases sincrónicas de la sede Y?»</em> Según la Sesión 05, ¿cuáles son los <strong>constructos</strong> que debe definir y sostener con literatura en su marco?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los constructos se extraen <strong>subrayando la propia pregunta</strong>: son los conceptos clave que el artículo necesita definir y sostener con autores. Aquí son <strong>la latencia de la red</strong> (qué es, cómo se mide, qué valores se consideran críticos) y <strong>la participación en las clases sincrónicas</strong> (qué es, cómo se observa). El actor y el contexto —la sede Y, los estudiantes— delimitan el caso, pero no son constructos; y el marco se organiza por constructos, no por autores.</p><p>Cita literal (Presentación de la Sesión 05, «Constructos: cómo salen de su propia pregunta»): «Un constructo es un concepto clave que su artículo necesita definir y sostener con literatura. Se extraen subrayando la pregunta. […] Constructo 1: pérdida de paquetes (qué es, cómo se mide, qué valores se consideran críticos). Constructo 2: prácticas de laboratorio (qué son, qué condiciones requieren, cómo se evalúan).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La latencia de la red y la participación en las clases sincrónicas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los dos conceptos que están subrayados en la propia pregunta y que el marco tiene que definir con literatura; cada uno se vuelve un subtítulo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La sede Y y los estudiantes matriculados en las clases sincrónicas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el actor y el contexto con los constructos. La sede y los estudiantes delimitan su caso, pero no son conceptos que haya que definir con autores.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los autores más citados sobre redes y sobre educación virtual, uno por subtítulo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Organiza el marco por autores, que es justo lo que la sesión rechaza: el marco se ordena por constructos, y cada fuente entra porque ayuda a responder algo de la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El aumento del ancho de banda y el cambio de plataforma de videoconferencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Toma los constructos de la solución imaginada y no de la pregunta. Lo que hay que definir es lo que se observa, no lo que se propondría hacer después.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-04 Posturas teoricas: en que consiste tomar postura]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al armar su marco encuentra dos artículos que no coinciden sobre el umbral aceptable de una misma medida. Según la Sesión 05, <strong>tomar postura</strong> consiste en:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Tomar postura es decir <strong>cuál de las dos fuentes le sirve a su caso y por qué</strong>, precisando para qué contexto sirve cada una. Ese «por qué» es su aporte. No se borra una fuente, no se declara equivocado al autor y no basta con citar las dos como si coincidieran: eso último es <em>acumular</em>, que es otro de los tres movimientos.</p><p>Cita literal (Presentación de la Sesión 05, «Posturas teóricas: cuando dos autores no dicen lo mismo»): «Tomar postura — usted dice cuál de las dos le sirve a su caso y por qué. Ese "por qué" es su aporte. […] Cómo se toma postura sin arrogancia: no se dice "el autor está equivocado". Se dice para qué contexto sirve cada uno.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Decir cuál de los dos umbrales le sirve a su caso y por qué, precisando para qué contexto sirve cada uno.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el tercer movimiento: usted elige, justifica la elección para su contexto y ahí queda su aporte, sin descalificar a nadie.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dejar en el marco solo el artículo que respalda lo que usted observó, para que no se contradiga.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la salida del estudiante inseguro: borrar una de las dos «para que no se note». La contradicción entre fuentes es la parte interesante y hay que ponerla a conversar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Escribir que uno de los dos autores está equivocado y sostenerlo con el dato de su propio caso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde tomar postura con descalificar. La sesión lo dice expresamente: no se dice «el autor está equivocado», se dice para qué contexto sirve cada uno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Citar los dos artículos y señalar que ambos coinciden en lo esencial, sin entrar en la diferencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Eso es acumular —«ambos coinciden en que…»—, y aquí las fuentes no coinciden. Suma respaldo, pero no dice desde dónde va a mirar usted su problema.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-05 Ficha de lectura: el campo que decide]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La ficha de lectura de la Sesión 05 tiene cinco campos. ¿Cuál de ellos <strong>decide</strong> si la fuente entra o no en su marco, y con qué criterio?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El campo que decide es <strong>«relación con mi pregunta»</strong>: si no se puede llenar, la fuente no entra, por interesante que sea. Los otros cuatro campos —referencia APA 7, constructo al que responde, idea principal y cita textual con página— describen la fuente, pero no deciden su ingreso.</p><p>Cita literal (Presentación de la Sesión 05, «La ficha de lectura: campos y qué escribir»): «Relación con mi pregunta — Por qué esta fuente entra en mi marco. […] El último campo es el que decide. Si no puede llenarlo, la fuente no entra en su marco.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«Relación con mi pregunta»: si no puede escribir por qué esa fuente entra en su marco, no entra.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el último campo de la ficha y el que funciona como filtro: una fuente sin relación escrita con la pregunta queda fuera, aunque sea interesante.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Cita textual con página»: si no consigue una cita de máximo dos líneas, la fuente no se puede usar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La cita textual con página es un campo de la ficha, pero no es el filtro. Una fuente puede aportar sin que usted la cite palabra por palabra.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Referencia APA 7»: si ZoteroBib no logra armar la referencia completa, la fuente queda descartada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde un problema de formato con un problema de pertinencia. Una referencia incompleta se corrige a mano; lo que no se arregla es que la fuente no responda a su pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Idea principal»: si no logra resumirla en una frase con sus propias palabras, la fuente no entra.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un campo útil y exigente, pero no es el que decide. Se puede resumir muy bien un artículo que no tiene nada que ver con la pregunta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-06 Parrafo de marco: el movimiento que lo separa de un resumen]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 05 redacta el párrafo de marco en cuatro movimientos. ¿Cuál de ellos es el que separa un marco teórico de un resumen de lecturas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El cuarto movimiento: <strong>amarrar el concepto a su caso</strong> al cerrar el párrafo. Los otros tres —enunciar el concepto con su fuente, ampliar o matizar con otra, contrastar o acumular— también son necesarios, pero un texto que solo los tiene sigue siendo un resumen de lo que otros dijeron.</p><p>Cita literal (Presentación de la Sesión 05, «Cómo se redacta un párrafo de marco»): «4. Amarre a su caso: "Este umbral sirve como referencia para interpretar las interrupciones del laboratorio X." / El movimiento 4 es el que separa un marco de un resumen: siempre vuelva a su pregunta.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cerrar amarrando el concepto a su caso: para qué le sirve a usted, en su laboratorio, su sede o su empresa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el cuarto movimiento. Si ningún párrafo vuelve al caso propio, lo escrito es un resumen de lecturas y así se califica.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Enunciar el concepto con la fuente que lo define, en la primera frase del párrafo y con su cita en APA 7.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el primer movimiento y es indispensable, pero un resumen de lecturas también enuncia conceptos con su fuente y su cita: por ahí no se distingue.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ampliar o matizar esa definición con una segunda fuente que hable del mismo concepto desde otro contexto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el segundo movimiento. Sumar autores hace el párrafo más completo, pero no lo conecta con su pregunta ni con su caso.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contrastar o acumular lo que dicen las dos fuentes citadas, para que el párrafo no quede en fila india.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el tercer movimiento y hace bien su trabajo, pero sigue siendo conversación entre autores; falta decir qué le aporta todo eso a su caso.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-07 La busqueda no devuelve nada: que hacer primero]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Busca en Google Académico los dos términos principales de su pregunta, escritos como los diría en una conversación, y no aparece nada pertinente. Según la prueba de viabilidad de la Sesión 04, ¿qué hace primero?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Cambiar el <strong>vocabulario</strong>: buscar con los términos técnicos de la disciplina y probar en inglés. El lenguaje cotidiano devuelve miles de resultados irrelevantes; el vocabulario de la disciplina es el que abre la literatura. Cambiar la pregunta es el último recurso, no el primero.</p><p>Cita literal (Presentación de la Sesión 04, prueba de viabilidad): «Si no aparece nada, no abandone: <strong>cambie el vocabulario</strong> (busque en inglés, use términos técnicos) antes de cambiar la pregunta.» Y la lección del ejemplo modelado: «<strong>si no encuentra nada, casi nunca es que el tema no exista: es que buscó con las palabras equivocadas</strong>. Tome los términos técnicos de los artículos que sí sirvieron y vuelva a buscar con ellos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cambiar el vocabulario: buscar con los términos técnicos de la disciplina y probar en inglés, antes de tocar la pregunta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Si no encuentra nada, casi nunca es que el tema no exista: es que buscó con las palabras equivocadas. Los términos técnicos de los artículos que sí sirvieron son el mejor punto de partida.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cambiar la pregunta y, si tampoco aparece literatura, cambiar el tema: sin fuentes, la pregunta no era investigable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el orden que fija la sesión. Cambiar la pregunta es el último recurso: primero se prueba con otro vocabulario, con términos técnicos y en inglés.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Anotar que nadie ha estudiado el asunto y usar ese silencio como el vacío en el conocimiento que justifica su artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte una búsqueda fallida en evidencia. El vacío se demuestra después de una revisión de literatura, no cuando no se encontró nada buscando en lenguaje cotidiano.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Volver a Google normal y quedarse con los blogs y las notas de prensa que sí hablan del tema en lenguaje corriente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Regla del curso: Google normal sirve para orientarse, pero no sostiene un artículo. Los blogs y las notas de prensa orientan; el artículo se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-08 Tipos de fuente: el articulo de revision]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Encuentra un artículo de revisión que sintetiza y compara veinte estudios previos sobre detección de phishing. Según la clasificación de la Sesión 03, ¿qué tipo de fuente es y cómo se usa en su artículo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es una fuente <strong>secundaria</strong>: interpreta, sintetiza o comenta los estudios primarios. Se usa para entender el panorama y para ubicar las primarias, y sí se puede citar; lo que no se cita como autoridad son las <strong>terciarias</strong> (enciclopedias, catálogos, buscadores, Wikipedia), que solo sirven para orientarse.</p><p>Cita literal (Presentación de la Sesión 03, «Tipos de fuente: primaria, secundaria y terciaria»): «Secundaria — Interpreta, sintetiza o comenta las primarias — Libro de texto, artículo de revisión, estado del arte — Útil para entender el panorama y ubicar primarias.» Y el truco de la misma slide: «si el texto cuenta un estudio que alguien más hizo, es secundaria; si cuenta lo que sus autores hicieron, es primaria.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Secundaria: interpreta y sintetiza las primarias, y sirve para entender el panorama y ubicar los estudios originales.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Cuenta estudios que hicieron otros, así que es secundaria, y su mejor uso es orientarlo hacia las primarias que después va a citar como autoridad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Primaria: es un artículo publicado en una revista académica, con autores, año y revisión de pares.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el prestigio del medio con el tipo de fuente. Lo primario no es estar publicado en revista, sino contar el estudio que sus propios autores hicieron.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Terciaria: al compilar veinte trabajos funciona como un índice que remite a las otras fuentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Las terciarias son índices y compilaciones que solo llevan a otras fuentes (catálogos, enciclopedias, buscadores). Una revisión no lista trabajos: los interpreta y los compara.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Secundaria, y por eso solo sirve para orientarse: no se puede citar como fuente del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta el tipo y falla el uso: le aplica a la secundaria la regla de la terciaria. Un artículo de revisión sí se cita; lo que no se cita como autoridad es una enciclopedia o un buscador.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-09 Ubicar el tema en una de las 6 lineas de Ingenieria]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante quiere estudiar cuánta energía consumen los laboratorios de la sede en las horas pico, instalando dispositivos que midan el consumo y reporten la medición. Según la Sesión 02, ¿en cuál de las 6 líneas de Ingeniería se ubica ese trabajo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es <strong>IoT</strong>: el objeto de estudio se construye con sensores y dispositivos conectados que capturan el mundo físico. Big Data trabaja con grandes volúmenes de datos <em>ya existentes</em>; Telemática estudia la red y sus protocolos como objeto, no como medio; y Cloud/FinTech se ocupa de los servicios en la nube y los servicios financieros digitales. La línea define el ángulo, y el ángulo define el vocabulario, los autores y la evidencia que le van a exigir.</p><p>Cita literal (Presentación de la Sesión 02, «Las 6 líneas de Ingeniería del programa»): «IoT (Internet de las Cosas) — Sensores y dispositivos conectados que capturan el mundo físico — sensor, telemetría, ESP32, MQTT — ¿Cómo monitorear el consumo eléctrico de un laboratorio con sensores?» y «Big Data — Analítica de grandes volúmenes de datos ya existentes».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>IoT, porque el trabajo se apoya en sensores y dispositivos conectados que capturan el mundo físico.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es exactamente el ángulo de la línea de IoT, cuya pregunta de ejemplo en el deck es monitorear el consumo eléctrico de un laboratorio con sensores.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Big Data, porque todo el trabajo consiste en analizar los datos de consumo que se van a recoger.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Big Data es analítica de grandes volúmenes de datos <em>ya existentes</em>. Aquí los datos todavía no existen: hay que capturarlos con dispositivos, y eso es IoT.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Telemática, porque los dispositivos necesitan una red para transmitir sus mediciones a un servidor.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el medio con el objeto de estudio. En Telemática lo que se estudia es la red misma —latencia, ancho de banda, topología—, no el consumo eléctrico que viaja por ella.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cloud / FinTech, porque las mediciones se van a almacenar y consultar en un servicio en la nube.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Que el almacenamiento sea en la nube no vuelve el trabajo un estudio de servicios en la nube. Esa línea investiga la migración, la disponibilidad o los servicios financieros digitales.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q3-10 Tablas y figuras: cual usar para cada cosa]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Sus resultados incluyen dos cosas: los valores exactos de latencia medidos en ocho puntos de la red y la evolución de esa latencia hora por hora durante una semana. Según la lectura obligatoria de la Sesión 01 (Casares-Salazar et al., 2019), ¿cómo conviene presentarlas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Cada medio sirve para una cosa: las <strong>tablas</strong> para datos precisos y las <strong>figuras</strong> para tendencias o patrones. Lo que hay que evitar es la <strong>redundancia</strong>: repetir los mismos datos en la tabla, la figura y el texto. Y en lugar de dejar al lector deduciendo la tabla, se resume en palabras lo más importante.</p><p>Cita literal (lectura obligatoria, Casares-Salazar et al., 2019, «Los resultados»): «En cuanto a los medios para presentar los resultados, las tablas son ideales para mostrar datos precisos, mientras que las figuras son adecuadas para ilustrar tendencias o patrones importantes. Se debe evitar repetir innecesariamente los datos entre las figuras, las tablas y el texto (redundancia); sin embargo, en vez de pretender que el lector estudie alguna tabla y deduzca los resultados, es preferible resumir en palabras lo más importante (Mari-Mutt, s.f.).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Los valores exactos en una tabla y la evolución en una figura, sin repetir los mismos datos en la tabla, la figura y el texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La tabla es el medio de los datos precisos y la figura el de las tendencias; lo que la lectura pide evitar es repetir tres veces la misma información.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Al contrario: los valores exactos en una figura y la evolución en una tabla, porque la figura da precisión y la tabla muestra bien el paso del tiempo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte los medios. En una figura no se puede leer el valor exacto de cada punto, y una tabla de 168 filas no deja ver la tendencia que sí se ve en una curva.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las dos cosas en tabla y también en figura, para que el lector las tenga de las dos formas y no tenga que interpretar nada por su cuenta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente la redundancia que la lectura pide evitar entre figuras, tablas y texto. Y tampoco le ahorra trabajo al lector: para eso está el resumen en palabras de lo más importante.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Todo en prosa, describiendo cada valor uno por uno: las tablas y las figuras solo se aceptan en los apéndices y en los anexos del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa una prohibición. Las figuras y las tablas van en los resultados, en una secuencia lógica y acompañadas del texto que explique su material clave; los apéndices y los anexos guardan material muy detallado o ajeno al autor.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

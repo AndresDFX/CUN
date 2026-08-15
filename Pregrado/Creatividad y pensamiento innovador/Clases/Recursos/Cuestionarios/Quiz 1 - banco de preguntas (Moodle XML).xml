@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 1 - Creatividad U1-U2</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 1 (6% de la nota del curso · Corte 1) — CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIAS.</strong></p><p>Ventana: 12/08/2026 a 19/08/2026. Se resuelve dentro del encuentro, en unos 12 minutos.</p><p><strong>Alcance:</strong> únicamente el material de la Sesión 01 (sesión de encuadre). Es decir: la lectura autónoma obligatoria de las unidades <strong>U1–U2</strong> del Syllabus —el artículo de REDIE 2020, del que entra <em>lo que reporta</em>: qué estudió, con qué instrumento, qué encontró y qué concluye— y los conceptos de U1 y U2. <strong>No entra la Sesión 02 ni ninguna posterior</strong>: ni el método Design Thinking y sus fases, ni How Might We, ni SCAMPER, ni divergencia/convergencia, ni el Manual de Oslo, ni los tipos de innovación, ni FODA, Canvas, MVP o vigilancia tecnológica. Tampoco entra el «Material de estudio U2 — Bloqueadores y ensanchadores», publicado el 15/08/2026 y reservado por consigna para el Parcial 1.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Ocho preguntas evalúan contenido temático (la lectura obligatoria y los conceptos de U1–U2) y dos evalúan método del curso: la estructura del producto final y un criterio de la ficha de trabajo. Tiempo total estimado: 9,5 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q11 Participantes del estudio de la lectura obligatoria]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura autónoma obligatoria de la Sesión 01 informa de una experiencia realizada en una universidad española. ¿Con qué participantes se hizo el estudio?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Fueron <strong>107 estudiantes universitarios de primer curso del Grado de Magisterio en Educación Primaria</strong>, de entre 18 y 25 años. Saberlo importa para leer el artículo con criterio: los resultados provienen de futuros maestros en su primer año, no de ingenieros ni de docentes en ejercicio, así que lo que reporta se traslada a la ingeniería con cautela.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Método): «La muestra participante en el estudio estuvo conformada por 107 estudiantes universitarios del Grado de Magisterio en Educación Primaria del curso 2018-19 (…) todos ellos se encontraban matriculados en el primer curso del mencionado grado universitario. La edad de los participantes se encuentra comprendida entre los 18 y los 25 años.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>107 estudiantes de primer curso del Grado de Magisterio en Educación Primaria.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La muestra fueron 107 estudiantes universitarios matriculados en el primer curso del Grado de Magisterio en Educación Primaria, con edades entre 18 y 25 años.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>107 estudiantes de los últimos semestres de ingeniería de una escuela politécnica.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: proyecta sobre el estudio el perfil de quien lo lee. El artículo menciona la ingeniería solo al citar antecedentes de otros autores; su propia muestra es de un grado de Magisterio, y por eso conviene trasladar sus resultados con cautela.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>107 maestros de Educación Primaria en ejercicio en centros de su entorno.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde a los futuros docentes con docentes en ejercicio. Los participantes estaban estudiando el grado que forma maestros; los centros educativos del entorno aparecen como el contexto de los problemas que analizaron, no como su lugar de trabajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>107 estudiantes de un posgrado en innovación educativa y gestión escolar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: sube el nivel formativo de la muestra. Que el objeto sea un proyecto de innovación no implica que los participantes fueran de posgrado: eran estudiantes de primer curso de un grado.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q10 Instrumento con que el estudio recogió las percepciones]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>¿Con qué instrumento recogió el estudio de la lectura obligatoria las percepciones de los estudiantes sobre la experiencia?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Fue un cuestionario adaptado de 12 ítems con escala Likert de 5 puntos, más dos preguntas abiertas al final. Es un estudio descriptivo de percepciones, no un experimento con grupo control.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Método): «Para la recogida de datos se adaptó un cuestionario de 12 ítems con una escala Likert de 5 puntos (desde “totalmente en desacuerdo”, a “totalmente de acuerdo”).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Un cuestionario adaptado de 12 ítems con una escala Likert de 5 puntos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura indica que «se adaptó un cuestionario de 12 ítems con una escala Likert de 5 puntos», de «totalmente en desacuerdo» a «totalmente de acuerdo».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un cuestionario de 12 ítems con una escala Likert de 10 puntos, para afinar más las respuestas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Recuerda bien el número de ítems pero cambia la amplitud de la escala: era de 5 puntos, no de 10.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Solo dos preguntas abiertas al cierre de la experiencia, analizadas por categorías de contenido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Toma la parte cualitativa por el instrumento completo: las dos preguntas abiertas iban al final del cuestionario, no en lugar de sus 12 ítems cerrados.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un diseño experimental con grupo control y medición antes y después de la intervención.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde un estudio descriptivo de percepciones con un experimento: no hubo grupo control ni medición pre-post, sino un cuestionario aplicado a los participantes.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q12 Los seis bloques de ventajas percibidas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al analizar las respuestas a las preguntas abiertas, el estudio de la lectura obligatoria agrupó en <strong>seis bloques de contenido</strong> las ventajas que percibió el alumnado. ¿Cuáles son esos seis bloques?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los seis bloques son <strong>creatividad, implicación activa, cooperación, motivación, reflexión y aprendizaje duradero</strong>. Son categorías que salieron del análisis de contenido de las respuestas abiertas, no una lista de competencias genéricas.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Resultados): «(…) surgen seis grandes bloques de contenido que configuran las temáticas centrales alrededor de las que se sitúan las respuestas de los estudiantes: creatividad, implicación activa, cooperación, motivación, reflexión y aprendizaje duradero.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Creatividad, implicación activa, cooperación, motivación, reflexión y aprendizaje duradero.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los seis bloques que el estudio obtiene del análisis de contenido de las preguntas abiertas, con la creatividad como la ventaja más destacada por el alumnado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Creatividad, motivación, cooperación, liderazgo, autonomía y rendimiento académico.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla tres bloques reales con tres que el estudio no reporta como categorías de las respuestas. El liderazgo no aparece, y el rendimiento académico no se midió: lo que se recogió fueron percepciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Empatía, comunicación, resolución de conflictos, gestión del tiempo, evaluación y trabajo en equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Sustituye las categorías del estudio por una lista de habilidades blandas de sonido plausible. Algunas de esas ideas aparecen en el artículo, pero no como los seis bloques que ordenan las ventajas percibidas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Creatividad, pensamiento crítico, innovación, tecnología, cooperación y aprendizaje duradero.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Toma las palabras clave del título del artículo por los resultados del análisis. Pensamiento crítico e innovación encabezan el artículo, pero no son bloques de esa clasificación, y la tecnología fue justamente uno de sus puntos débiles.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q09 Diferencias de opinión al compartir ideas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la lectura obligatoria, ¿qué reparo mencionó una de las estudiantes sobre el momento de compartir ideas dentro del equipo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El reparo es el riesgo de pequeños conflictos por diferencias de opinión personales, y la misma estudiante cierra valorando la variedad como algo positivo. No es un fracaso del trabajo en equipo: los equipos sí cumplieron el objetivo.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Resultados): «mencionan la posibilidad de que surjan pequeños conflictos derivados de las diferencias en las opiniones personales en el momento de compartir ideas. No obstante, la misma estudiante finaliza su argumento apuntando que “también es cierto que la variedad es positiva”.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que pueden surgir pequeños conflictos por diferencias de opinión personales, aunque la variedad es positiva.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El estudio recoge el riesgo de «pequeños conflictos derivados de las diferencias en las opiniones personales» y, en el mismo testimonio, que «también es cierto que la variedad es positiva».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que las diferencias de opinión impidieron que los equipos llegaran a diseñar una solución conjunta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte un reparo menor en un fracaso del trabajo en equipo: el estudio reporta que los equipos sí cumplieron el objetivo de diseñar soluciones a problemas reales.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que hizo falta más tiempo y más tutoría del profesorado dentro del aula para construir el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde las dos recomendaciones recogidas en el estudio: esa es la otra sugerencia, no la que se refiere al momento de compartir ideas en el equipo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el alumnado no formuló ninguna recomendación de mejora sobre el trabajo en equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El estudio no registró desventajas serias, pero sí recogió recomendaciones de mejora; una de ellas es justamente el riesgo de pequeños conflictos al compartir ideas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q13 Carencias detectadas al autoevaluar los proyectos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En el estudio de la lectura obligatoria, cada equipo autoevaluó con una rúbrica el diseño de su proyecto de innovación. Según esos resultados, ¿dónde estaban las carencias más notables?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Las carencias estuvieron en <strong>el aprendizaje digital</strong> y en <strong>el uso de la evaluación como herramienta de aprendizaje</strong>. Los aspectos mejor valorados fueron los opuestos: el aprendizaje colaborativo y el carácter auténtico y vital de la experiencia.</p><p>Cita literal (lectura obligatoria, REDIE 2020, resultados de las rúbricas de evaluación del proyecto): «La mayor parte de los grupos de trabajo ha valorado el diseño de sus proyectos de innovación como experiencias que fomentan el aprendizaje colaborativo y un aprendizaje auténtico y vital. Por otro lado, se han detectado las carencias más notables en la inclusión de un aprendizaje digital, así como en el uso de la evaluación como herramienta de aprendizaje.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>En la inclusión de un aprendizaje digital y en el uso de la evaluación como herramienta de aprendizaje.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los dos aspectos que el estudio señala como las carencias más notables de los proyectos diseñados por los equipos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En el aprendizaje colaborativo y en el carácter auténtico y vital de la experiencia de aprendizaje.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el resultado: son precisamente los dos aspectos que la mayoría de los equipos valoró mejor en sus propios proyectos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En la creatividad de las ideas y en la motivación de los integrantes de cada equipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Contradice lo que el propio alumnado destacó: la creatividad fue la ventaja más señalada de la experiencia y la motivación, uno de los bloques de ventajas percibidas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En el uso de metodologías activas y en el aprendizaje más allá del aula del centro educativo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Nombra dos aspectos que la rúbrica sí valoraba, pero que quedaron en la zona intermedia. Las carencias que el estudio destaca son el aprendizaje digital y el uso de la evaluación como herramienta de aprendizaje.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q14 Efecto que el estudio atribuye a la metodología activa]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según el resumen y las conclusiones de la lectura obligatoria, ¿qué efecto sobre el alumnado atribuye el estudio a esta metodología activa?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El estudio no afirma haber mejorado notas ni herramientas: sostiene que la metodología <strong>impulsa la confianza de los estudiantes en sus capacidades creativas y el desarrollo de habilidades empáticas</strong>.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Resumen): «Esta metodología activa supone un impulso a la confianza de los estudiantes en sus capacidades creativas y desarrollo de las habilidades empáticas.» En las conclusiones: «Despertemos, por tanto, la confianza de los estudiantes sobre su capacidad creativa, para que logren convertirse en agentes activos de sus propios aprendizajes.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Un impulso a la confianza en sus propias capacidades creativas y al desarrollo de habilidades empáticas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la afirmación con que el estudio cierra su resumen y que retoma en las conclusiones al hablar de despertar la confianza en la capacidad creativa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una mejora comprobada de las calificaciones finales de la asignatura respecto de cursos anteriores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Atribuye al estudio un resultado que nunca midió: no comparó calificaciones con otros cursos, sino que recogió percepciones de los participantes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un aumento del dominio de las herramientas digitales aplicadas al diseño de proyectos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Va contra lo que el estudio reporta: el aprendizaje digital fue una de las carencias más notables al autoevaluar los proyectos, no una ganancia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una reducción del tiempo que los equipos necesitaron para resolver la tarea en clase.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el efecto declarado con eficiencia. De hecho, la suficiencia del tiempo en las sesiones presenciales fue el punto en que aparecieron más desacuerdos entre los participantes.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q08 Inteligencia emocional y rendimiento creativo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En sus conclusiones, la lectura obligatoria de la Sesión 01 sostiene que la práctica de la inteligencia emocional es, respecto del rendimiento creativo:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La lectura no la presenta como un adorno ni como una etapa posterior: la pone <strong>dentro</strong> del desarrollo del rendimiento creativo. Es la unidad U2 del Syllabus en una frase.</p><p>Cita literal (lectura obligatoria, REDIE 2020, Conclusiones): «Resulta lógico, por tanto, que la práctica de la inteligencia emocional constituya una parte inherente al desarrollo del rendimiento creativo».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una parte inherente a su desarrollo, es decir, no se puede separar del proceso creativo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura concluye que «la práctica de la inteligencia emocional constituya una parte inherente al desarrollo del rendimiento creativo»: va dentro del proceso, no al lado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un complemento deseable pero ajeno al proceso: el rendimiento creativo depende del talento de cada persona.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte en accesorio lo que la lectura declara inherente y devuelve la explicación al talento individual; es el error que la U2 corrige.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una etapa posterior: primero se desarrolla el rendimiento creativo y después se trabaja lo emocional al presentar los resultados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ordena en fases sucesivas lo que la lectura presenta como parte inherente del mismo desarrollo; confunde inteligencia emocional con habilidad de presentación final.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un recurso útil solo para evitar conflictos en el equipo, sin efecto sobre la calidad de las ideas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Limita la inteligencia emocional a la gestión de conflictos y le niega incidencia en el rendimiento creativo, que es justamente lo que la conclusión sostiene.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q07 La creatividad de la U2 como proceso compartido]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la consigna de la lectura autónoma de la Sesión 01, ¿cómo plantea el curso el trabajo de la unidad U2 sobre la creatividad?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La U2 trabaja la creatividad como un proceso que se hace en grupo y que lleva lo emocional y lo relacional <strong>dentro</strong>: empatía, escucha y manejo de las diferencias de opinión. No es un talento innato ni una técnica individual.</p><p>Cita literal (Lectura autónoma · Sesión 01): «U2 (creatividad e inteligencia emocional): trabaja la creatividad como algo que se hace en grupo, con lo emocional y lo relacional dentro (empatia, escucha, manejo de las diferencias de opinion en el equipo), no como un talento individual con el que se nace.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Como algo que se hace en grupo, con lo emocional y lo relacional dentro del proceso creativo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La consigna define así la U2: la creatividad es un proceso compartido que incluye lo emocional y lo relacional (empatía, escucha, manejo de las diferencias de opinión).</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Como un trabajo en grupo en el que basta repartir tareas y sumar ideas, sin escucha ni manejo de las diferencias.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Reconoce el trabajo en grupo, pero deja fuera lo que la consigna pone dentro: la empatía, la escucha y el manejo de las diferencias de opinión. Sumar ideas repartidas no es construirlas juntos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Como un talento individual con el que se nace, que el curso solo ayuda a detectar en quienes ya lo traen.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente la visión innatista que la consigna rechaza cuando aclara «no como un talento individual con el que se nace»: lee la U2 como diagnóstico de dones y no como proceso que se construye en equipo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Como una técnica que se aplica en solitario, dejando lo emocional fuera para que no sesgue las ideas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Separa lo emocional del proceso creativo, cuando la consigna lo pone dentro («con lo emocional y lo relacional dentro»); confunde neutralidad emocional con rigor creativo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q15 Leer la tabla de medias y desviaciones del estudio]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La tabla I de la lectura obligatoria informa, para cada uno de los 12 &iacute;tems del cuestionario, la <strong>media</strong> y la <strong>desviaci&oacute;n est&aacute;ndar</strong>. Dos &iacute;tems se apartan del resto: son a la vez los de media m&aacute;s baja y los <strong>&uacute;nicos con una desviaci&oacute;n por encima de 1,1 puntos</strong> (el resto queda entre 0,70 y 0,90). &iquest;Cu&aacute;les son, y qu&eacute; permite concluir esa desviaci&oacute;n tan alta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los dos &iacute;tems son <strong>P5</strong>, la necesidad de consultar recursos adicionales a los propuestos en el aula (<strong>M = 2,79 · DE = 1,180</strong>), y <strong>P12</strong>, la suficiencia del tiempo en las sesiones presenciales (<strong>M = 3,23 · DE = 1,154</strong>). Todas las dem&aacute;s desviaciones de la tabla est&aacute;n entre 0,706 y 0,898.</p><p>Una <strong>media</strong> dice por d&oacute;nde va el grupo; una <strong>desviaci&oacute;n</strong> dice si el grupo va junto. Cuando la desviaci&oacute;n es alta, la media deja de describir a un estudiante t&iacute;pico: describe el punto medio entre respuestas repartidas. Los propios autores lo advierten: &laquo;resulta necesario considerar tambi&eacute;n las desviaciones est&aacute;ndar que, en cada uno de los &iacute;tems, se observan, pues es indicativo de la existencia de cierta variedad de opiniones entre la muestra de alumnos&raquo; (Latorre et al., 2020, p. 7-8).</p><p><em>Un detalle m&aacute;s, para leer la tabla con criterio:</em> P5 est&aacute; redactado al rev&eacute;s que los dem&aacute;s &mdash;puntuar alto significa <em>haber necesitado</em> m&aacute;s recursos&mdash;, as&iacute; que su media baja no es una mala noticia para el curso: la mayor&iacute;a se arregl&oacute; con los recursos del aula. Lo que llama la atenci&oacute;n en ese &iacute;tem no es el nivel, es la dispersi&oacute;n. Antes de interpretar el signo de una media, hay que mirar c&oacute;mo est&aacute; enunciado el &iacute;tem.</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La necesidad de consultar recursos adicionales a los ofrecidos en el aula (M&nbsp;=&nbsp;2,79) y la suficiencia del tiempo en las sesiones presenciales (M&nbsp;=&nbsp;3,23): ah&iacute; es donde el grupo <strong>no coincide</strong>, as&iacute; que esa media baja no describe a todos por igual, sino a un grupo dividido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los dos &iacute;tems con la media m&aacute;s baja (2,79 y 3,23) y las dos &uacute;nicas desviaciones sobre 1,1 (1,180 y 1,154). La desviaci&oacute;n alta es justo lo que impide leer esa media como &laquo;al grupo le pareci&oacute; insuficiente&raquo;: hubo estudiantes que puntuaron alto y otros muy bajo, y el promedio cae en medio de los dos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los dos &iacute;tems de media m&aacute;s <strong>alta</strong> &mdash;que fue buena idea elegir la tem&aacute;tica del proyecto siguiendo el Design Thinking (M&nbsp;=&nbsp;4,45) y el inter&eacute;s por los recursos propuestos (M&nbsp;=&nbsp;4,31)&mdash;: cuando la media sube, la desviaci&oacute;n sube con ella.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble. Esos son los dos &iacute;tems <em>mejor</em> valorados y sus desviaciones son de las m&aacute;s <em>bajas</em> de la tabla (0,743 y 0,706): en ellos el grupo estuvo de acuerdo. Y la desviaci&oacute;n no acompa&ntilde;a a la media: mide cu&aacute;nto se separan las respuestas entre s&iacute;, y puede ser peque&ntilde;a con media alta o con media baja.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La necesidad de consultar recursos adicionales (M&nbsp;=&nbsp;2,79) y la suficiencia del tiempo (M&nbsp;=&nbsp;3,23): la desviaci&oacute;n alta <strong>confirma</strong> que casi todo el grupo valor&oacute; mal esos dos aspectos, y por eso la media cay&oacute;.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Identifica bien los dos &iacute;tems, pero invierte el significado de la desviaci&oacute;n. &laquo;Casi todo el grupo&raquo; coincidiendo dar&iacute;a una desviaci&oacute;n <em>peque&ntilde;a</em>; la desviaci&oacute;n alta dice lo contrario: las respuestas est&aacute;n repartidas y hay opiniones opuestas dentro de la misma muestra. Si de verdad todos hubieran valorado igual, la media bastar&iacute;a para describirlos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No se puede concluir nada de la tabla: la variedad de opiniones del estudio sali&oacute; de las preguntas abiertas, y una respuesta cualitativa no admite media ni desviaci&oacute;n est&aacute;ndar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla los dos an&aacute;lisis del estudio, que son paralelos y no intercambiables. La dispersi&oacute;n de opiniones se lee <strong>en la tabla</strong>, con la desviaci&oacute;n est&aacute;ndar de cada &iacute;tem; las preguntas abiertas dan otra cosa: los seis bloques de ventajas percibidas. Es cierto que una respuesta abierta no se promedia, pero los 12 &iacute;tems s&iacute; se puntuaron en escala Likert y por eso tienen media y desviaci&oacute;n.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[CRE-Q06 Ficha problema-oportunidad: usuario concreto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la ficha problema–oportunidad de la Sesión 01, ¿cuál de estas respuestas sirve para el campo «Usuario concreto»?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El campo pide <strong>quién sufre el problema</strong>, identificable y situado en un contexto, no un colectivo indefinido, no la solución imaginada y no el lector del documento. El criterio de éxito de la ficha es que alguien externo entienda usuario + dolor + contexto sin pedir aclaración.</p><p>Cita literal (Ficha_problema_oportunidad.docx): «Usuario concreto: (quién sufre el problema; no “la gente”)». El ejemplo que el Docente dejó diligenciado (Ejemplo_ficha_modelo.html, campo 2) tiene esta misma forma: «Estudiantes de Ingeniería que reservan laboratorios para prácticas de circuitos / redes (turno mañana y noche)».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Los estudiantes de séptimo semestre del turno nocturno que esperan turno en el laboratorio de suelos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcto. La ficha pide «Usuario concreto: (quién sufre el problema; no “la gente”)»: un grupo identificable en un contexto identificable, del que se puede decir quién padece el problema y dónde.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La gente que se ve afectada por el mal servicio de los laboratorios de la universidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Usa exactamente la formulación que la ficha prohíbe de forma expresa («no “la gente”»): un colectivo indefinido no permite saber quién sufre el problema ni en qué contexto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una aplicación móvil que asigne los turnos del laboratorio de suelos por orden de llegada.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el usuario con la solución: escribe la herramienta que ya imaginó en lugar de la persona que padece el problema. Ese campo pide quién sufre, no qué se va a construir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El Docente y los compañeros del curso que van a leer y calificar la propuesta escrita.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el usuario del problema con el lector del documento. Quien evalúa el texto no es quien sufre el problema; el usuario está en el contexto donde se observó el síntoma.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 2 - TG2 S02-S07</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 2 (21% de la nota del curso · Corte 2) — TRABAJO DE GRADO 2, Modelos de Innovación (Ingeniería de Sistemas).</strong></p><p>Ventana: 29/09/2026 a 05/10/2026. Se resuelve dentro del encuentro, en unos 22 minutos reservados. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> acumula de la Sesión 02 a la Sesión 07 —pregunta, objetivos y título provisional; estructura del documento sobre la Plantilla APA CUN; antecedentes y referentes (Fase I); marco teórico por constructos; marco conceptual y contextual; y diseño metodológico propuesto— más la lectura autónoma obligatoria de la Sesión 01 (Arias Castrillón, 2020, sobre plantear y formular un problema de investigación). Cinco preguntas son de la Sesión 07, que es el tema nuevo desde el cierre de Quiz 2; las otras cinco recorren la base acumulada (lectura de la Sesión 01, Sesión 02, Sesión 04, Sesión 05 y Sesión 06).</p><p><strong>NO entra</strong> el tema de la Sesión 08 (instrumentos y plan de análisis propuestos), que se dicta el mismo día del cierre: ninguna pregunta ni ninguna opción usa operacionalización de variables, indicadores, ítems de instrumento, escalas de respuesta ni plan de análisis. Tampoco entra nada de las Sesiones 09 a 11.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción y cita literal de la fuente en la retroalimentación general. Las 10 son de contenido temático de las sesiones en alcance: ninguna pregunta por la administración del curso (pesos, fechas, créditos, canal de entrega o reglas de uso de IA). Tiempo total estimado: 17 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-01 Qué exige la descripción espaciotemporal]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura autónoma obligatoria de la Sesión 01 (Arias Castrillón, 2020) sostiene que un problema de investigación debe contener cuatro descripciones. La tercera es la <strong>descripción espaciotemporal</strong>.</p><p>¿Qué exige exactamente esa descripción, según el artículo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La descripción espaciotemporal responde <strong>dónde y cuándo</strong>, pero no basta con nombrarlo: hay que <strong>justificarlo</strong>. Del lugar se justifica por qué ese y no otro, y qué características suyas hacen que valga la pena investigar allí el problema. Del tiempo se justifica la ubicación histórica del problema y la duración prevista del estudio.</p><p>Cita literal (Arias Castrillón, 2020, p. 309): «3. <em>Descripción espaciotemporal</em>: implica una descripción del espacio y el tiempo en que se va a realizar la investigación. Justificar por qué en ese lugar geográfico y no en otro, cuáles son las características de ese lugar que hacen que el problema sea importante de investigar. De igual manera el tiempo, situar históricamente el problema a investigar y justificar la duración de la investigación, especialmente si son investigaciones longitudinales.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Justificar el lugar y el tiempo del estudio: por qué en ese lugar y no en otro, qué características suyas vuelven importante el problema, y en qué momento se sitúa y cuánto durará.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El artículo pide describir el espacio y el tiempo en que se va a realizar la investigación y, sobre todo, justificar ambos: el lugar geográfico frente a otros posibles y la ubicación histórica junto con la duración prevista.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Fijar el cronograma del proyecto: las actividades previstas, la fecha exacta en que empieza y termina cada una y el tiempo estimado para redactar cada capítulo del documento de avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde justificar la duración del estudio con hacer un cronograma de actividades. Lo que el artículo pide es situar históricamente el problema y argumentar por qué la investigación dura lo que dura; el reparto de tareas en el tiempo es otra cosa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Describir la población con la que se va a trabajar, cuáles son sus características principales y por qué la investigación se hace con esas personas y no con otras personas distintas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el cuarto criterio, la descripción de los sujetos de investigación. El artículo lo distingue del tercero: investigar un fenómeno en adolescentes no es lo mismo que investigarlo en adultos jóvenes, pero eso no dice ni dónde ni cuándo se investiga.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Explicar por qué el fenómeno descrito constituye un verdadero problema, apoyándose en la revisión de antecedentes y en cifras de informes oficiales que muestren su prevalencia actual.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el segundo criterio, la descripción del desequilibrio, que responde «¿por qué eso es un problema?». Es el criterio donde entran los antecedentes y las cifras oficiales, no el que ubica el estudio en un lugar y en un tiempo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-02 Una pregunta con el contexto sin acotar]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante llega a la asesoría con esta pregunta de investigación: «¿Cómo mejorar los procesos de las empresas colombianas?».</p><p>Según la Sesión 02, ¿cuál es el defecto de esa pregunta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El defecto es el <strong>contexto</strong>: «las empresas colombianas» es un universo imposible de abarcar en un trabajo de grado. Una pregunta delimitada nombra actor, fenómeno y contexto, y el contexto baja hasta un área concreta de una organización concreta. La versión investigable que trae la sesión es del estilo «¿Cómo varía el tiempo de atención entre categorías de ticket en el área de soporte de X?».</p><p>Cita literal (Presentación de la Sesión 02, tabla «Preguntas que no sirven y su versión investigable»): «¿Cómo mejorar los procesos de las empresas colombianas? — <em>Contexto imposible de abarcar</em> — <strong>¿Cómo</strong> varía el tiempo de atención entre categorías de ticket en el área de soporte de X?». Y de las cuatro exigencias: «<strong>Delimitada</strong>: nombra actor, fenómeno y contexto.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El contexto es imposible de abarcar: hay que bajarlo a un área concreta de una organización, de modo que se vean actor, fenómeno y contexto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión clasifica esa pregunta justamente como «contexto imposible de abarcar». La corrección no es cambiarle el verbo: es acotar el escenario a un área y una organización identificables.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Se contesta con un sí o con un no, porque empieza con «¿cómo…?», que es uno de los arranques peligrosos que agotan la respuesta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la lista de la sesión: «¿cómo…?» está entre los arranques que casi siempre funcionan, junto con «¿en qué medida…?» y «¿qué relación…?». Los peligrosos son «¿es…?», «¿sirve…?» y «¿debería…?», y esta pregunta no se agota en un sí o un no: se agota en su tamaño.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es una consulta de buscador y no una investigación: la respuesta ya está publicada en los libros y basta con leer para encontrarla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el defecto de «¿Qué es el aprendizaje automático?», que la sesión describe como «es consulta, no investigación: ya está en los libros». Aquí el problema es distinto: nadie tiene publicada la respuesta, pero el contexto es tan amplio que no se puede estudiar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ya trae decidida la solución que se va a aplicar, así que la pregunta solo sirve para justificar una decisión que el estudiante ya había tomado antes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el defecto de «¿Cómo implementar Python en la empresa?»: la solución ya está escogida y no hay problema por investigar. La pregunta del caso no nombra ninguna solución; lo que le sobra es contexto.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-03 Para qué sirve cada una: fuente nacional e internacional]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 04 exige que en el bloque de antecedentes haya <strong>al menos una fuente nacional o local</strong> y <strong>al menos una internacional</strong>.</p><p>¿Qué aporta cada una de las dos al avance?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>No es un requisito de idioma ni de cantidad: cada fuente cumple una función distinta. La nacional o local sostiene la <strong>pertinencia</strong> —que el problema también ocurre acá—; la internacional trae el <strong>estado del arte</strong>, es decir los métodos y resultados más recientes del área. Sin la primera, el lector pregunta «¿y eso aplica aquí?»; sin la segunda, el proyecto parece atrasado.</p><p>Cita literal (Presentación de la Sesión 04): «<strong>Fuente nacional o local</strong> → demuestra <strong>pertinencia</strong>: que el problema también ocurre en el contexto colombiano. Sin ella, el lector pregunta "¿y eso aplica aquí?" y el proyecto pierde justificación. <strong>Fuente internacional</strong> → trae el <strong>estado del arte</strong>: los métodos y resultados más recientes del área. Sin ella, el proyecto parece atrasado frente a lo que ya se hace en el mundo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La nacional o local demuestra la pertinencia —que el problema también ocurre en el contexto colombiano—; la internacional trae el estado del arte, con los métodos y resultados más recientes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son dos funciones distintas y por eso ninguna reemplaza a la otra: la local justifica que el problema exista aquí y la internacional muestra hasta dónde ha llegado el área.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La nacional aporta el marco legal y normativo que aplica en Colombia; la internacional aporta la teoría de fondo, que casi siempre se produce fuera del país.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el propósito del bloque. Los antecedentes son estudios previos con método y hallazgos, no normas ni teoría: la teoría de fondo se trabaja en el marco teórico. Y la fuente nacional no está ahí por ser normativa, sino por mostrar que el problema ocurre en el contexto colombiano.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La nacional garantiza que haya bibliografía en español y la internacional que haya bibliografía en inglés: lo que se busca es equilibrar los dos idiomas en la lista final de referencias del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se queda en el idioma. La sesión recomienda traducir los términos y buscar también en inglés, pero como estrategia de búsqueda; la razón de la mezcla es argumentativa —pertinencia y estado del arte—, no de equilibrio idiomático.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La nacional muestra el vacío que su proyecto viene a llenar y la internacional confirma que el método que usted propone ya fue validado antes por otros autores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Reparte mal las funciones. El vacío no lo aporta una fuente por ser nacional: lo construye usted en el párrafo puente, después de comparar todas las fichas. Y un antecedente internacional no valida su método: le muestra lo más reciente del área.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-04 Cuántos constructos salen de la pregunta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Siguiendo el procedimiento de la Sesión 05, un estudiante escribe su pregunta en una línea y subraya cuatro sustantivos técnicos: <em>modelo</em>, <em>clasificador</em>, <em>mesa de ayuda</em> y <em>tiempo de atención</em>. En su proyecto, «modelo» y «clasificador» nombran exactamente lo mismo.</p><p>¿Cuántos constructos tiene y por qué?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Tres, y la razón está en el tercer paso del procedimiento: después de subrayar los sustantivos técnicos <strong>se agrupan los sinónimos</strong>. Dos palabras que apuntan al mismo concepto no son dos constructos: son uno solo, que después se desarrolla en un único apartado del marco.</p><p>Cita literal (Presentación de la Sesión 05): «Cómo se extraen, en dos minutos: <strong>1.</strong> Escriba su pregunta en una línea. <strong>2.</strong> Subraye los sustantivos técnicos, no las palabras de relleno. <strong>3.</strong> Agrupe los sinónimos: si "modelo" y "clasificador" apuntan a lo mismo, es un solo constructo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Tres, porque el procedimiento manda agrupar los sinónimos: si «modelo» y «clasificador» apuntan a lo mismo, son un solo constructo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El número no se decide de antemano: sale de agrupar los sinónimos entre los sustantivos técnicos subrayados. Aquí quedan clasificación, mesa de ayuda y tiempo de atención.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cuatro, porque cada sustantivo técnico subrayado en la pregunta exige su propio apartado teórico dentro del marco.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se queda en el paso 2 y no hace el paso 3. Subrayar es el insumo; agrupar sinónimos es lo que convierte esos sustantivos en constructos. Con cuatro apartados, dos dirían lo mismo con nombres distintos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Tres, porque todo marco teórico de avance lleva exactamente tres constructos y se descarta de la lista el sustantivo menos importante.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Llega al número correcto por el camino equivocado. La sesión no manda descartar el término menos importante: manda agrupar sinónimos. La regla de los tres es un tope razonable —si salen ocho, el problema está en la pregunta—, no una cuota que se cumple recortando.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dos, porque solo cuentan como constructos los términos que se van a medir; los demás pertenecen al marco contextual.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa un filtro que no existe. Un constructo es un concepto clave de la pregunta que necesita explicación teórica, se mida o no: «mesa de ayuda» explica el proceso donde vive el problema y por eso tiene su lugar en el marco.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-05 Una definición construida por el propio estudiante]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Para su marco conceptual, un estudiante necesita definir «categoría frecuente». Ninguna de las definiciones que encontró le sirve, así que construye la suya: «categoría que concentra al menos el 5 % de los tickets del periodo analizado».</p><p>Según la Sesión 06, ¿cómo debe quedar eso en el documento?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Construir la propia definición es una de las dos rutas válidas, con una condición: <strong>decirlo expresamente</strong>. La fórmula que da la sesión es «para efectos de este proyecto se entenderá por…». Lo que nunca es válido es una definición sin origen y sin límites; la del caso sí los tiene, porque trae qué se observa, la unidad, la fuente del dato y el límite del 5 %.</p><p>Cita literal (Presentación de la Sesión 06): «Cuándo se cita y cuándo no: Si toma la definición de un autor, <strong>cite en APA 7</strong> y luego adáptela a su caso. Si la construye usted para su proyecto, dígalo: "para efectos de este proyecto se entenderá por…". […] Ambas rutas son válidas. Lo que no es válido es una definición sin origen y sin límites.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Es válido construirla si lo advierte con la fórmula «para efectos de este proyecto se entenderá por…» y la definición conserva unidad, fuente del dato y límite.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Las dos rutas son válidas —tomarla de un autor y adaptarla, o construirla—, pero la propia hay que declararla. Y la del caso está bien armada: dice qué se observa, en qué unidad, de dónde sale el dato y con qué límite.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No es válido: toda definición del marco conceptual debe provenir de un autor citado en APA 7, así que le toca adoptar la definición que más se parezca a su propio caso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cierra una ruta que la sesión deja abierta. Se puede construir la definición para el proyecto; lo que se exige es declararla como propia. Adoptar una definición ajena que no se ajusta al caso produce justamente el problema que la sesión quiere evitar: un término que no se puede medir.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es válido y no hace falta advertirlo: como la definición es del propio proyecto, se escribe igual que cualquier otra afirmación del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Le quita a la definición su origen. La sesión pide decirlo con todas sus letras —«para efectos de este proyecto se entenderá por…»—; sin esa advertencia el lector no sabe si el criterio del 5 % lo fijó usted o lo tomó de alguien más.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es válido solo si primero transcribe la definición del diccionario o de una enciclopedia en línea y después le agrega la parte propia de su caso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte en requisito lo que la sesión descarta. La definición de diccionario es la insuficiente —«las más comunes» no se puede medir— y la enciclopedia en línea es fuente débil: no hay que pasar por ellas para llegar a la definición operativa.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-06 Qué decide el enfoque de la investigación]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La pregunta de un estudiante es: «¿En qué medida un módulo de registro digital reduce los errores de digitación del área de facturación de la empresa Z?». En su ficha metodológica declara <strong>enfoque cualitativo</strong> y lo justifica diciendo que le parece más sencillo que trabajar con números.</p><p>Según la Sesión 07, ¿qué corresponde responderle?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El enfoque no se escoge por comodidad: lo decide <strong>la forma de la pregunta</strong>. Una pregunta que dice «en qué medida» pide medir —cuántos errores antes y después—, y eso es enfoque cuantitativo. La pregunta que hay que hacerse es simple: ¿mi pregunta mide o interpreta?</p><p>Cita literal (Presentación de la Sesión 07): «Si su pregunta dice "en qué medida", ya es cuantitativa. El enfoque sale de la pregunta, no de la comodidad ni de la moda.» Y del recuadro de errores frecuentes: «"Elijo enfoque cualitativo porque suena más fácil." Se elige por la pregunta, no por comodidad. Pregúntese si su pregunta <strong>mide</strong> o <strong>interpreta</strong>: eso decide.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que el enfoque lo decide la forma de la pregunta: «en qué medida» pide medir, así que corresponde un enfoque cuantitativo, y la comodidad no es criterio de elección.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El enfoque es la primera de las cinco decisiones encadenadas y lo determina la forma de la pregunta. Con «en qué medida», la pregunta mide: el enfoque es cuantitativo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que primero defina el diseño y la técnica de recolección, porque el enfoque se deduce después, a partir de las herramientas con las que finalmente cuente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la cadena de decisiones. La sesión las ordena enfoque → alcance → diseño → población o datos → técnicas, y advierte que se leen de arriba abajo: si cambia el enfoque, cambian obligatoriamente las filas siguientes, no al revés.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que declare enfoque mixto, porque en TG2 la metodología va en propuesto y todavía no se sabe si el proyecto va a medir o a interpretar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde dos cosas distintas. Que la metodología esté en propuesto se refiere al tiempo verbal y a que aún no hay campo, no a que las decisiones queden sin tomar. El enfoque mixto se declara cuando conviven las dos preguntas, y aquí solo hay una, que mide.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el enfoque queda bien sustentado si lo respalda con un referente metodológico citado en APA 7 que haya usado también el enfoque cualitativo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Una cita no arregla una incoherencia. El referente metodológico sirve para copiar la lógica del método y sostener una decisión, pero la decisión sigue saliendo de la pregunta: si la pregunta mide y el enfoque interpreta, la cita solo le da apariencia de fundamento.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-07 Alcance correlacional frente a alcance explicativo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Compare estas dos formulaciones de un mismo proyecto sobre una mesa de ayuda:</p><p>(1) «Establecer la relación entre el volumen diario de tickets y el tiempo de respuesta».</p><p>(2) «Establecer que el clasificador reduce el tiempo de atención».</p><p>Según la Sesión 07, ¿en qué se diferencian en cuanto a <strong>alcance</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La (1) es <strong>correlacional</strong>: mide si dos variables se mueven juntas y no afirma que una cause la otra. La (2) es <strong>explicativa</strong>, porque decir que el clasificador «reduce» el tiempo es una afirmación de causa-efecto, y eso obliga a controlar las demás variables que podrían explicar la reducción. No es un matiz de redacción: es lo que el proyecto se compromete a defender.</p><p>Cita literal (Presentación de la Sesión 07): «<strong>Correlacional</strong>: mide si dos variables se mueven juntas, sin afirmar que una causa la otra. "Relación entre el volumen diario de tickets y el tiempo de respuesta". <strong>Explicativo</strong>: busca causa-efecto y exige controlar otras variables. Decir "el clasificador <strong>reduce</strong> el tiempo" es una afirmación explicativa: prepárese a defenderla.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La (1) es correlacional: mide si dos variables se mueven juntas sin afirmar causa; la (2) es explicativa: afirma causa-efecto y exige controlar otras variables.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El verbo «reduce» es lo que sube el alcance de correlacional a explicativo, y con él sube también lo que hay que controlar para poder sostener la afirmación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La (1) es exploratoria, porque no promete conclusiones firmes; la (2) es correlacional, porque pone en relación el clasificador con el tiempo de atención del área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Baja un nivel las dos. El alcance exploratorio es para temas casi no estudiados, cuando la búsqueda de antecedentes trae muy poco y disperso; y la (2) no se queda en relacionar: afirma que uno reduce al otro, que es causa-efecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las dos son descriptivas, porque ambas caracterizan cómo se comporta el tiempo de atención del área; la diferencia entre ellas es solo de redacción.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El alcance descriptivo caracteriza cómo se comporta algo sin buscar causas ni relaciones, como «caracterizar el flujo actual de tickets». Ninguna de las dos se queda ahí: una relaciona variables y la otra afirma un efecto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La (1) es explicativa, porque nombra dos variables a la vez; la (2) es descriptiva, porque solo informa lo que le pasa al tiempo de atención.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia los dos alcances de lugar. Nombrar dos variables no vuelve explicativo a un estudio —hace falta afirmar causa-efecto— y la (2), que sí la afirma, es la explicativa, no la descriptiva.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-08 Qué diseño corresponde a una medición antes y después]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un proyecto propone medir el tiempo de atención de los tickets <strong>antes y después</strong> de poner en marcha el clasificador, en la misma mesa de ayuda y con los mismos analistas, sin repartirlos al azar en dos grupos.</p><p>Según la Sesión 07, ¿qué diseño corresponde declarar y por qué?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es <strong>cuasiexperimental</strong>: la marca de este diseño es que hay medición antes y después, pero los grupos no se asignan al azar. Ese es exactamente el caso de la mesa de ayuda que la sesión usa como ejemplo. La decisión del diseño responde una sola pregunta: ¿intervengo o solo observo?</p><p>Cita literal (Presentación de la Sesión 07): «<strong>No experimental</strong>: se observa el fenómeno tal como ocurre, sin intervenir. Es lo más común en avances de pregrado. <strong>Cuasiexperimental</strong>: hay medición antes y después, pero los grupos no se asignan al azar. El caso de los tickets encaja aquí: se compararían tiempos antes y después del clasificador propuesto. <strong>Estudio de caso</strong>: una sola unidad estudiada a fondo — una empresa, un área, un sistema.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cuasiexperimental, porque hay medición antes y después de introducir el clasificador, pero los analistas no se asignan al azar a dos grupos distintos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Las dos condiciones juntas —medición antes y después, sin asignación al azar— definen el diseño cuasiexperimental, y es el que la sesión asigna al caso de la mesa de ayuda.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No experimental, porque el fenómeno se observa tal como ocurre en la operación diaria y es además el diseño más común en los avances de pregrado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la opción más tentadora, porque en efecto es la más frecuente en pregrado. Pero aquí no se observa el fenómeno tal como ocurre: se introduce el clasificador y se mide el antes y el después, o sea que hay intervención.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Estudio de caso, porque todo ocurre en una sola organización y en una sola área, que se estudia a fondo durante el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el alcance del escenario con el diseño. Que haya una sola unidad no basta: lo que define el diseño es si se interviene y cómo se mide. Con medición antes y después de una intervención, el diseño es cuasiexperimental aunque ocurra en una sola empresa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Experimental, porque se introduce el clasificador y se mide su efecto sobre el tiempo de atención en dos momentos diferentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se queda a mitad de camino. La intervención y las dos mediciones no alcanzan: al diseño experimental le falta aquí la asignación al azar de los grupos, y justamente por eso el enunciado aclara que los analistas no se repartieron al azar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-09 Qué se está pidiendo cuando piden la unidad de análisis]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En su ficha metodológica, un estudiante escribe: «Población: los tickets registrados en el último año. Muestra propuesta: los tickets del último semestre, por disponibilidad del histórico». El Docente le pide que agregue su <strong>unidad de análisis</strong>.</p><p>Según la Sesión 07, ¿qué le está pidiendo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La unidad de análisis responde <strong>qué es exactamente un caso</strong> en su estudio: ¿un ticket? ¿un agente? ¿un día de operación? Es distinta de la población (el conjunto sobre el que quiere concluir) y de la muestra propuesta (la parte que analizará, con criterio explícito de selección). Sin ella no se sabe qué se está contando.</p><p>Cita literal (Presentación de la Sesión 07): «<strong>Población</strong>: todo el conjunto sobre el que quiere concluir (por ejemplo, los tickets del último año). <strong>Muestra propuesta</strong>: la parte que se analizará, con criterio explícito de selección. Escriba el criterio, no un número mágico […]. <strong>Unidad de análisis</strong>: qué es exactamente un caso — ¿un ticket? ¿un agente? ¿un día de operación?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que precise qué es exactamente un caso en su estudio: si un ticket, si un agente o si un día de operación del área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La unidad de análisis nombra el caso: la pieza que se cuenta y se analiza una por una. Población y muestra ya están escritas; lo que falta es decir de qué están hechas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que agregue el número exacto de tickets que va a analizar, porque sin una cifra la muestra propuesta queda indefinida.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde la unidad de análisis con el tamaño de la muestra, y además pide lo contrario de lo que dice la sesión: «Escriba el criterio, no un número mágico». El criterio ya está —la disponibilidad del histórico del último semestre—.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que indique de qué sistema va a exportar el histórico y en qué formato quedará el archivo con el que trabajará.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Eso pertenece a la decisión de técnicas: con qué se recoge la evidencia. La unidad de análisis es anterior y más básica: dice qué es un caso, no de dónde sale el archivo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que justifique por qué la población es de un año y no de dos, es decir, que sustente el recorte temporal de su estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una pregunta legítima, pero es otra: se refiere a cómo delimitó la población en el tiempo. La unidad de análisis no discute el tamaño del periodo, sino qué entidad se analiza dentro de él.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P2-10 Dos fallas que revela la matriz pregunta-método]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante tiene tres objetivos específicos en su documento. Su matriz pregunta–método quedó con tres filas: una para el objetivo 1, una para el objetivo 2 y una tercera con una encuesta de satisfacción que no corresponde a ningún objetivo. El objetivo 3 no aparece en la matriz.</p><p>Según la Sesión 07, ¿qué muestra esa matriz y qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La matriz revela las dos fallas al tiempo: un <strong>objetivo huérfano</strong> —el 3, que se prometió y no dice cómo se cumple— y un <strong>método huérfano</strong> —la encuesta, que no responde a ningún objetivo—. Se corrigen así: el objetivo 3 recibe su fila con dato, técnica y análisis; y la encuesta o se conecta con un objetivo o se saca del documento.</p><p>Cita literal (Presentación de la Sesión 07): «Una fila por <strong>objetivo específico</strong>. […] <strong>Objetivo huérfano</strong>: un objetivo sin método. Lo prometió y no dijo cómo lo cumple. <strong>Método huérfano</strong>: una técnica que no responde a ningún objetivo. Sobra, y hace ruido en la sustentación.» Y del recuadro de errores frecuentes: «Es un método huérfano: o lo conecta con un objetivo en la matriz, o lo elimina del documento.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Muestra un objetivo huérfano y un método huérfano: hay que darle su fila al objetivo 3 y, con la encuesta, conectarla con un objetivo o eliminarla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las dos incoherencias que la matriz hace visibles de un vistazo y que en prosa pasan desapercibidas. Arreglarlas aquí cuesta veinte minutos; arrastrarlas hasta la sustentación cuesta mucho más.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Muestra una sola falla, el objetivo 3 sin método; la encuesta no estorba, porque recoger información adicional siempre enriquece el avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ve la mitad del problema. La sesión es explícita con la técnica que no responde a ningún objetivo: «Sobra, y hace ruido en la sustentación». Recoger datos que nadie pidió no enriquece el avance, lo desenfoca.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No muestra ninguna falla: la matriz admite más filas que objetivos, porque cada técnica prevista ocupa su propia fila independiente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia la regla de construcción. La matriz lleva <em>una fila por objetivo específico</em>, y al frente el dato, la técnica y el análisis. Si las filas se organizan por técnica, se pierde justamente lo que la herramienta sirve para ver.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Muestra un problema de forma: la matriz se arma con una fila por cada técnica prevista, así que hay que reorganizarla y repartir los objetivos entre esas filas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la unidad de la matriz y deja intacto el problema de fondo. Reorganizar por técnica no hace aparecer el método del objetivo 3 ni justifica la encuesta: la incoherencia sigue ahí, solo queda peor señalada.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

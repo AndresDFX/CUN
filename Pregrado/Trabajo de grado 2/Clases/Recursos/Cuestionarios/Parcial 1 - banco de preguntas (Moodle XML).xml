@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 1 - TG2 S01-S04</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 1 (24% de la nota del curso · Corte 1) — TRABAJO DE GRADO 2, Modelos de Innovación (Ingeniería de Sistemas), código 94453.</strong></p><p>Ventana: 07/09/2026 a 14/09/2026. Se resuelve dentro del encuentro, en unos 22 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> el contenido académico de la lectura autónoma obligatoria de la Sesión 01 (Arias Castrillón, 2020: los cuatro criterios del problema de investigación) y de las Sesiones 02, 03 y 04: pregunta investigable y objetivos con verbos observables; estructura del documento de avance sobre la Plantilla APA CUN, metodología en tiempo propuesto y outline; antecedentes, ficha de cinco campos y párrafo puente. El peso está en las Sesiones 03 y 04, que son el material nuevo desde el cierre del Quiz 1.</p><p><strong>Lo que NO entra:</strong> nada de la Sesión 05 (marco teórico), que se dicta el mismo día en que cierra la ventana, ni de las sesiones posteriores (marco conceptual y contextual, diseño metodológico, instrumentos y plan de análisis, integración, socialización). Tampoco se pregunta la administración del curso: pesos, fechas, créditos, canal de entrega, reglas de integridad ni mecánica del cuestionario.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Tiempo total estimado: 15 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-01 Los cuatro criterios aplicados a un planteamiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le muestra su planteamiento: describe con detalle qué ocurre con la clasificación de tickets y argumenta con cifras por qué eso constituye un problema, pero no dice en qué área ni en qué periodo trabajará, ni con quiénes lo hará. Según los cuatro criterios de la lectura autónoma obligatoria de la Sesión 01 (Arias Castrillón, 2020), ¿cuáles son las dos descripciones que le faltan?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El planteamiento ya tiene la <strong>descripción del fenómeno</strong> (qué sucede) y la <strong>descripción del desequilibrio</strong> (por qué eso es un problema, con cifras). Le faltan las otras dos: la <strong>espacio-temporal</strong> y la de los <strong>sujetos de investigación</strong>. Sin ellas el objeto queda sin delimitar y después el método no sabe dónde, cuándo ni con quién se trabaja.</p><p>Cita literal (Arias Castrillón, 2020, p. 309): «3. Descripción espaciotemporal: implica una descripción del espacio y el tiempo en que se va a realizar la investigación. Justificar por qué en ese lugar geográfico y no en otro […] De igual manera el tiempo, situar históricamente el problema a investigar. 4. Descripción de los sujetos de investigación: describir la población con la que se va a trabajar. Cuáles son las características de estas personas y por qué se hace la investigación con ellos y no con otras personas. […] Estas descripciones nos van a permitir delimitar claramente el objeto de investigación.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La descripción espacio-temporal y la descripción de los sujetos de investigación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Falta situar dónde y cuándo se investigará —y justificar por qué ahí y no en otro lugar— y describir la población con la que se va a trabajar. Son los criterios 3 y 4.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La descripción del fenómeno y la descripción del desequilibrio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Son justamente las dos que el planteamiento ya tiene: contar qué ocurre es la descripción del fenómeno, y argumentar con cifras por qué eso es un problema es la del desequilibrio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La descripción del desequilibrio y la descripción de los sujetos de investigación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta con los sujetos, pero el desequilibrio ya está resuelto: las cifras que muestran por qué el fenómeno es problemático son exactamente ese criterio. Lo que falta con ellos es el dónde y el cuándo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La descripción del fenómeno y la descripción espacio-temporal.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta con la espacio-temporal, pero el fenómeno ya está descrito con detalle en el planteamiento. La otra ausencia es la población con la que se va a trabajar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-02 Una pregunta que ya trae la solución decidida]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero llega con esta pregunta de investigación: «¿Cómo implementar Python en la empresa X para agilizar el registro de incidentes?». Según los criterios de la Sesión 02, ¿cuál es el defecto de fondo de esa pregunta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El problema no es la forma, es que la <strong>solución ya está escogida</strong>: la pregunta no indaga, justifica una herramienta decidida de antemano. Sí es abierta (empieza por «cómo») y sí tiene el contexto acotado (la empresa X), así que el defecto no está por ahí.</p><p>Cita literal (Presentación de la Sesión 02): «Si la pregunta ya nombra la solución ("¿cómo implementar Python para…?"), no está investigando: está justificando lo que ya escogió.» Y en la tabla de preguntas que no sirven: «¿Cómo implementar Python en la empresa? — La solución ya está decidida; no hay problema».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que la solución ya está decidida: justifica una herramienta escogida en vez de indagar un problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Nombrar la solución dentro de la pregunta convierte el trabajo en la defensa de una decisión previa; no queda nada por investigar, solo por implementar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que se contesta con un sí o con un no, así que incumple la exigencia de ser abierta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Aplica el criterio correcto al caso equivocado: esta pregunta empieza por «cómo», luego sí es abierta. Los arranques que se agotan en sí o no son «¿es…?», «¿sirve…?», «¿debería…?».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el contexto es imposible de abarcar y habría que reducirlo a una organización identificable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El contexto ya está acotado a la empresa X, que es una organización identificable. Ese defecto corresponde a preguntas del tipo «¿cómo mejorar los procesos de las empresas colombianas?».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que es una consulta de buscador: la respuesta ya está publicada en la documentación del lenguaje.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde este defecto con el de «¿qué es el aprendizaje automático?», que se responde leyendo. Aquí el problema no es que la respuesta ya exista, sino que la solución se escogió antes de investigar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-03 El objetivo general como espejo de la pregunta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su pregunta quedó así: «¿En qué medida un modelo de clasificación supervisada reduce el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X?». Según la Sesión 02, ¿cuál de estos objetivos generales está bien formulado para esa pregunta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El objetivo general es la pregunta convertida en propósito: <strong>un solo verbo observable</strong> + qué + sobre qué o en quién + en qué contexto. «Evaluar el efecto…» cumple la regla del espejo; «diseñar e implementar» son dos verbos y dos proyectos; «comparar tiempos» es uno de los tres específicos, no el propósito completo; y «conocer» no se puede verificar con ninguna evidencia.</p><p>Cita literal (Presentación de la Sesión 02): «Fórmula: verbo observable + qué + sobre qué o en quién + en qué contexto. "Evaluar el efecto de un modelo de clasificación supervisada sobre el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X." […] Un solo verbo en el general. "Evaluar y diseñar" son dos proyectos, no uno.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Evaluar el efecto de un modelo de clasificación supervisada sobre el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Un solo verbo observable, el mismo fenómeno de la pregunta y el mismo contexto: leídos seguidos, pregunta y objetivo dicen lo mismo, uno en interrogación y el otro en propósito.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Diseñar e implementar un modelo de clasificación supervisada que reduzca el tiempo de clasificación de tickets en la mesa de ayuda de la empresa X.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Lleva dos verbos —«diseñar e implementar»—, que son dos proyectos y no uno; además da por probado lo que la pregunta quiere establecer, porque afirma de entrada que el modelo reduce el tiempo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Comparar el tiempo de clasificación de tickets con y sin el modelo de clasificación supervisada en la mesa de ayuda de la empresa X.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un objetivo específico —el tercero del ejemplo modelado, el paso de contrastar—, no el general. Cubre un paso del camino, pero no el propósito completo que responde la pregunta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Conocer el funcionamiento de los modelos de clasificación supervisada aplicados al manejo de tickets en las mesas de ayuda.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Usa un verbo que nadie puede verificar: no hay evidencia con la que se demuestre que usted «conoció». Además se sale del contexto de la pregunta y habla de las mesas de ayuda en general.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-04 La introducción como embudo de tres párrafos]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la Sesión 03, la introducción del documento de avance es un embudo de tres párrafos. ¿En qué orden van esos párrafos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es <strong>contexto → problema → propósito</strong>: primero el escenario real con un dato verificable, después qué está fallando y a quién le duele, y al final qué se propone hacer el proyecto y para qué sirve. El embudo va de lo general a su caso en tres párrafos, no en tres páginas, y nunca arranca con un recorrido histórico universal.</p><p>Cita literal (Presentación de la Sesión 03): «Párrafo 1 — contexto: el escenario real donde vive el problema, con un dato verificable. […] Párrafo 2 — problema: qué está fallando y a quién le duele. […] Párrafo 3 — propósito: qué se propone hacer el proyecto y para qué sirve. […] Prohibido el arranque histórico universal: la introducción no empieza en la prehistoria, empieza en el contexto del problema.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Contexto, problema y propósito: el escenario real con un dato verificable, qué está fallando y a quién le duele, y qué propone el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el embudo de la Sesión 03: se entra por el escenario, se aterriza en la falla concreta y se cierra anunciando qué se propone hacer.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Problema, contexto y propósito: primero la falla que se detectó, después el escenario donde ocurre y al final para qué sirve el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte los dos primeros movimientos: la falla se enuncia sin haber situado el escenario, y el lector no sabe todavía dónde ocurre lo que se está reclamando.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Propósito, contexto y problema: primero lo que hará el proyecto, después el escenario y al final la falla que lo justifica.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Arranca por la solución: anuncia qué se va a hacer antes de mostrar qué está fallando, así que el problema termina puesto para justificar una decisión ya tomada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Recorrido histórico, contexto y propósito: primero los orígenes del tema, después el escenario actual y al final lo que hará el proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el arranque que la sesión prohíbe de forma expresa: la introducción no empieza en la prehistoria del tema, empieza en el contexto real del problema, y además así desaparece el párrafo del problema.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-05 Cómo se escribe la metodología del avance]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la sección de diseño metodológico de su documento de avance, ¿cuál de estas frases está bien escrita según la Sesión 03?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>En este avance todavía no hay resultados: el trabajo de campo es del semestre siguiente. Por eso la metodología se escribe en <strong>propuesto</strong> («se propone», «se aplicará», «se seleccionará») y no puede contener hallazgos, porcentajes ni conclusiones, ni siquiera envueltos en una frase que empiece por «se propone».</p><p>Cita literal (Presentación de la Sesión 03): «Por eso la metodología se escribe en propuesto: "se propone", "se aplicará", "se seleccionará". Si en la sección de método aparece un porcentaje, un hallazgo o una conclusión, algo está fuera de lugar. […] Frase de control: si la oración responde "¿qué encontré?", no va en método. Si responde "¿qué voy a hacer?", sí va.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«Se propone aplicar una encuesta a los analistas del área de soporte de la empresa X.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Responde a «¿qué voy a hacer?», que es lo único que va en el método de un avance, y no adelanta ningún hallazgo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Se aplicó una encuesta a 30 analistas del área de soporte de la empresa X.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Está en pasado y da por ejecutado un trabajo de campo que pertenece al semestre siguiente. Todo verbo en pasado en esta sección es una alarma.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Se propone aplicar una encuesta cuyos resultados muestran una reducción del tiempo de clasificación.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Empieza bien y termina mal: usa el tiempo propuesto, pero mete un hallazgo dentro de la frase. Un dato colado en el método hace dudar de todo lo demás.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Se concluye que el modelo propuesto es más eficiente que la clasificación manual de tickets.»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una conclusión, y responde a «¿qué encontré?». Sin haber aplicado nada, esa eficiencia no se puede sostener con ninguna evidencia del avance.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-06 Viñetas del outline: afirmación, no etiqueta]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 03 pide que cada viñeta del outline sea una afirmación y no una etiqueta. ¿Cuál de estas viñetas del planteamiento cumple ese criterio?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una viñeta de outline afirma algo concreto que después se convierte en párrafo. Los rótulos de sección, las promesas de lo que se escribirá y los pendientes no dicen nada: al leerlos no se entiende el documento, y son justo lo que produce la hoja en blanco de la semana siguiente.</p><p>Cita literal (Presentación de la Sesión 03): «Outline = cada sección del documento con 3 a 5 viñetas de lo que irá adentro. […] Cada viñeta debe ser una afirmación, no una etiqueta. Mal: "contexto". Bien: "la mesa de ayuda recibe tickets por tres canales distintos y sin categoría previa".»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La mesa de ayuda recibe los tickets por tres canales distintos y sin categoría previa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Afirma un hecho concreto del caso: se puede convertir en párrafo tal como está y se puede verificar si es cierto o no.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contexto del problema y su importancia para el área de soporte de la empresa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una etiqueta: nombra el tema del párrafo pero no dice nada sobre el caso. Es el ejemplo que la sesión marca como «mal» y no ayuda a escribir después.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aquí se explicará por qué la clasificación manual afecta el trabajo del analista.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una promesa, no una afirmación: anuncia lo que se dirá en vez de decirlo. Cuando llegue el momento de redactar, la viñeta seguirá sin contenido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Planteamiento del problema, pendiente de redactar cuando aparezcan las fuentes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un rótulo con un pendiente. Las secciones vacías se marcan con color para verlas como plan de trabajo, pero eso no reemplaza la viñeta que afirma algo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-07 Qué tienen en común las fuentes que sí cuentan]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 04 acepta como antecedentes los artículos de revistas académicas, las tesis y trabajos de grado, las ponencias de congresos y los informes técnicos de entidades reconocidas. ¿Qué tienen en común todas ellas, y que en cambio le falta a un blog o a un video de opinión?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Lo que las hace antecedentes es que <strong>dicen qué método usaron y qué encontraron</strong>. Un texto sin método verificable no es un estudio previo: es una opinión. Los otros tres enunciados no son el criterio: la base donde se busca es un lugar, no una garantía; la ventana de cinco años es una recomendación con excepción para los trabajos fundacionales; y el parecido exigido es en al menos una de tres cosas —el problema, el método o el tipo de organización—, no en el problema exacto.</p><p>Cita literal (Presentación de la Sesión 04): «Sí cuentan: artículos de revistas académicas, tesis y trabajos de grado, ponencias de congresos, informes técnicos de entidades reconocidas. Todos tienen algo en común: dicen qué método usaron y qué encontraron. […] Un texto sin método verificable no es un estudio previo; es una opinión.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que dicen qué método usaron y qué encontraron, de modo que su resultado se puede verificar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese es el criterio de la sesión: sin método verificable no hay estudio previo, hay opinión, por bien escrita que esté.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que se consiguen en las bases de datos de la biblioteca CUN, y no en un buscador abierto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el lugar de búsqueda con la calidad de la fuente. La sesión propone buscar también en Google Académico, SciELO y Redalyc; lo que decide no es dónde apareció, sino si reporta método y hallazgo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que se publicaron en los últimos cinco años, requisito que ninguna fuente puede incumplir.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Convierte en regla absoluta una recomendación: la ventana de cinco años admite excepción cuando se trata de un trabajo fundacional del área. Y una fuente reciente sin método sigue sin ser antecedente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que estudian exactamente el mismo problema del proyecto, en el mismo tipo de organización.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Endurece el criterio de parecido: la sesión pide que el antecedente se parezca en <em>al menos una</em> de tres cosas —el problema, el método o el tipo de organización—. Exigir las tres dejaría el bloque de antecedentes vacío.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-08 Qué va en el bloque de antecedentes]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está armando el bloque de <strong>antecedentes</strong> del marco referencial. De acuerdo con la Sesión 04, ¿cuál de estos contenidos corresponde a ese bloque?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los antecedentes son <strong>estudios previos</strong> parecidos al suyo y responden «¿quién ya hizo algo así y qué halló?». Las otras tres opciones son piezas distintas del marco referencial: la teoría de fondo del fenómeno, la definición operativa de un término del proyecto y el escenario real y acotado donde ocurre.</p><p>Cita literal (Presentación de la Sesión 04, tabla «Las tres piezas del marco referencial no son lo mismo»): «Antecedentes — Estudios previos parecidos al suyo — ¿Quién ya hizo algo así y qué halló? — Un estudio que clasificó tickets con aprendizaje automático en 2022.» Y en la misma sesión: «antecedentes no es marco teórico. Los antecedentes son estudios previos parecidos al suyo —qué hicieron, cómo y qué hallaron—.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Un estudio de 2022 que clasificó tickets de soporte con aprendizaje automático y reporta qué encontró.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es un estudio previo parecido al suyo, con método y hallazgo: responde «¿quién ya hizo algo así y qué halló?», que es la pregunta del bloque de antecedentes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La explicación de qué es la clasificación supervisada y cómo funciona como modelo de fondo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la teoría con la que se entiende el fenómeno, no un precedente. Confundir antecedentes con teoría de fondo es el error que más devoluciones genera en esta sección.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La definición de «tiempo de atención» como los minutos entre la apertura y el cierre del ticket.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una definición operativa de un término del proyecto: dice qué significa exactamente esa palabra en su trabajo. No informa de ningún estudio previo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La descripción del área de soporte de la empresa X como escenario real y acotado del proyecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Responde «¿dónde ocurre esto exactamente?»: es el escenario del proyecto. Sitúa el trabajo, pero no muestra qué se hizo antes ni qué se halló.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-09 La línea «me aporta» de la ficha]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La ficha de antecedente de la Sesión 04 tiene cinco campos y el último es «Aporte a mi proyecto». ¿Cuál de estas líneas cumple lo que ese campo exige?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El campo pide algo <strong>específico</strong> que usted se lleva del estudio y puede usar en su propio proyecto. Sin esa línea la ficha es decorativa; y con una línea vaga («sirve de referencia») tampoco cumple, porque no dice qué se lleva.</p><p>Cita literal (Presentación de la Sesión 04): «Aporte a mi proyecto — ¿Para qué me sirve a mí? — Una línea, obligatoria. […] Sin la última línea la ficha es decorativa: se convierte en una lista de lecturas, no en un argumento. Empiécela siempre con "Me aporta…".» Y en el ejemplo modelado: «Note también que el aporte es específico: no dice "me sirve de referencia", dice qué se lleva.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Me aporta el criterio de «coincidencia con el analista» para medir el acierto, que puedo adaptar a mi caso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Nombra algo concreto —un criterio de medición— y dice qué va a hacer usted con eso. Así la ficha deja de ser una lectura y pasa a ser un argumento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Me aporta una referencia muy importante y actualizada, que respalda todo mi marco referencial.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la fórmula vaga que la sesión descarta: equivale a «me sirve de referencia». No dice qué se lleva, así que cualquier artículo del mundo cabría en esa línea.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Me aporta el resumen del artículo, que copié tal cual para no alterar lo que quisieron decir los autores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La ficha se redacta con palabras propias, y este campo no recoge lo que dijeron los autores: recoge para qué le sirve a usted. Copiar el resumen llena el campo equivocado y además no es admisible.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Me aporta el año y el nombre de la revista, datos que necesito para completar la referencia en APA 7.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Repite el primer campo de la ficha, la referencia en APA 7. Los datos bibliográficos no son un aporte al proyecto: son la identificación de la fuente.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-P1-10 El párrafo puente y el vacío]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Después de las cuatro fichas, la Sesión 04 pide un <strong>párrafo puente</strong> que convierta la lista en argumento. ¿Cuál es su fórmula de tres movimientos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La fórmula es <strong>coinciden en… · difieren en… · ninguno abordó…</strong> El tercer movimiento —el vacío— es la razón de ser de todo el bloque de antecedentes: es lo que justifica que su proyecto exista y no sea una repetición. Vacíos válidos y frecuentes: contexto no estudiado, población distinta, método no aplicado antes, actualización de un estudio viejo.</p><p>Cita literal (Presentación de la Sesión 04): «Fórmula de tres movimientos: coinciden en… · difieren en… · ninguno abordó… […] El tercer movimiento —el vacío— es la razón de ser de todo el bloque de antecedentes.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Coinciden en…, difieren en… y ninguno abordó…, que es el vacío que el proyecto viene a llenar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Los dos primeros movimientos ordenan lo que ya se sabe y el tercero nombra el vacío, que es lo que justifica que su proyecto exista.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Coinciden en…, difieren en… y por eso conviene…, que anuncia la solución técnica que se construirá.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el vacío por el anuncio de la solución. El párrafo puente cierra mostrando qué falta por saber, no proponiendo la herramienta: eso va después, en su propio apartado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Resumen de cada estudio en orden cronológico y cierre con el más reciente, que fija el estado del arte.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ordenar por fecha no crea argumento: sigue siendo un catálogo, ahora numerado por años. Falta decir en qué coinciden, en qué difieren y qué quedó sin abordar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Objetivo, método y hallazgo de cada estudio, uno tras otro, para que el lector compare por su cuenta.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Eso es lo que ya hacen las fichas, campo por campo. Dejarle la comparación al lector es exactamente el catálogo que el párrafo puente viene a reemplazar.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

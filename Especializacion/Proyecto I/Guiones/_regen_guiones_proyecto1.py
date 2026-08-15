@@ -216,12 +216,12 @@ def guion_01(ses):
 | **1** | Portada — Sesión 01 | Apertura |
 | **2** | AGENDA DE HOY | Apertura |
 | **3** | Docente | Presentación del Docente |
-| **4** | PRESÉNTATE — ROMPEHIELOS | Juego en Slido (dos verdades y una mentira) |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | Pesos de las entregas |
+| **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA | Juego en Slido (dos verdades y una mentira) |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | Pesos de las entregas |
 | **6** | Cómo trabajamos: el encuentro tiene dos mitades | Método del curso |
 | **7–8** | Mapa del curso (11 encuentros) | Recorrido del curso |
 | **9** | El producto del curso: qué archivo entregan al final | Producto final |
-| **10** | Las tres ACAs en detalle | Qué se entrega y qué se evalúa |
+| **10** | Corte por corte: qué hay en el aula y qué separa un buen trabajo de uno flojo | Qué se entrega y qué se evalúa |
 | **11** | Cómo se entrega: paso a paso en CDigital | Procedimiento de entrega |
 | **12** | Integridad académica: la línea que no se cruza | Plagio y debido proceso |
 | **13** | IA generativa: se puede usar, con tres condiciones | Uso responsable de IA |
@@ -301,7 +301,7 @@ def guion_01(ses):
 ---
 
 #### 3️⃣ Rompehielos: «Dos verdades y una mentira» en Slido (~8 min) — Protagonistas: Estudiantes
-**Slides:** 4 (PRESÉNTATE — ROMPEHIELOS)
+**Slides:** 4 (ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA)
 
 > ⚠️ **Antes de entrar a la sala.** Las **tres rondas** y **cuál es la mentira de cada una** están en
 > `{RUNBOOK_SLIDO}` — material del Docente, no va en `Clases/`. **Márquelas ahí antes de la clase** y
@@ -381,7 +381,7 @@ def guion_01(ses):
 ---
 
 #### 5️⃣ Las ACAs y cómo se entrega (~12 min) — Protagonista: Docente
-**Slides:** 5 (LAS ACAs — QUÉ SE EVALÚA) → 10 (Las tres ACAs en detalle) → 11 (Cómo se entrega)
+**Slides:** 5 (CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA) → 10 (Corte por corte: qué hay en el aula…) → 11 (Cómo se entrega)
 
 **GUION LITERAL:**
 > "**Slide 5.** Estos son los pesos, y los nombres que van a ver en el aula son estos: **{items_corte_txt('proyecto1', 1)}** en el primer corte, **{items_corte_txt('proyecto1', 2)}** en el segundo y **{items_corte_txt('proyecto1', 3)}** en el tercero. Retengan dos cosas: la **ACA FINAL es, por lejos, la que más pesa**, y no es un trabajo nuevo —es todo lo anterior corregido e integrado—; y el **primer corte se juega en un cuestionario**, no en un documento."
@@ -437,7 +437,7 @@ def guion_01(ses):
 ---
 
 #### 8️⃣ Encargo autónomo y cierre del bloque (~5 min) — Protagonista: Docente
-**Slides:** 17 (Antes de la Sesión 02) → 18 (Preguntas del primer día) → 20 (PARA LA PRÓXIMA SESIÓN) → 21 (Cierre)
+**Slides:** 17 (Antes de la Sesión 02) → 18 (Las preguntas que siempre salen el primer día) → 20 (PARA LA PRÓXIMA SESIÓN) → 21 (Cierre)
 
 **GUION LITERAL:**
 > "**Slide 17 — lo que hay que hacer antes de la próxima sesión.** Escuchen bien esta parte, porque es la única tarea de hoy y es la que define cómo arranca la Sesión 02."

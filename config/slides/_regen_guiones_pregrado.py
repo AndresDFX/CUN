@@ -161,12 +161,12 @@ _spec(
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
 | **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: una hora en vivo, el resto en su documento | 3 |
 | **7** | Mapa del curso: las 6 sesiones | 3 |
 | **8** | Qué se llevan al final: un artículo | 3 |
 | **9** | Este es un periodo corto: qué implica | 3 |
-| **10** | Las ACAs, una por una | 4 |
+| **10** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
 | **11** | Cómo se entrega, paso a paso | 4 |
 | **12** | Integridad académica | 4 |
 | **13** | Inteligencia artificial generativa | 4 |
@@ -1151,14 +1151,14 @@ _spec(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | 2 |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA (juego en Slido) | 2 |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: TG2 es un taller de escritura | 3 |
 | **7** | Aviso honesto sobre este curso (sin Syllabus SIAC) | 3 |
 | **8–9** | Mapa del curso (1/2 y 2/2): los 11 encuentros | 3 |
 | **10** | Qué se llevan al final: el avance escrito | 3 |
 | **11** | El acuerdo pedagógico: qué pactamos hoy | 3 |
-| **12** | Las ACAs, una por una | 4 |
+| **12** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
 | **13** | Cómo se entrega, paso a paso | 4 |
 | **14** | Integridad académica | 4 |
 | **15** | Inteligencia artificial generativa | 4 |
@@ -2515,13 +2515,13 @@ _tg3(
 | **1** | Portada — Sesión 01 | 1 |
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
-| **4** | PRESÉNTATE — ROMPEHIELOS (juego en Slido) | 2 |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA (juego en Slido) | 2 |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: una hora semanal para cerrar el trabajo de grado | 3 |
 | **7** | Qué se llevan al final: artículo, sustentación y repositorio | 3 |
 | **8–9** | Mapa del curso (1/2 y 2/2): los 15 encuentros | 3 |
 | **10** | El acuerdo pedagógico: qué pactamos hoy | 3 |
-| **11** | Las dos ACAs: qué se entrega y qué se mira | 4 |
+| **11** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
 | **12** | Cómo se entrega, paso a paso | 4 |
 | **13** | Integridad académica: aquí sí pasa por antiplagio | 4 |
 | **14** | Inteligencia artificial generativa | 4 |

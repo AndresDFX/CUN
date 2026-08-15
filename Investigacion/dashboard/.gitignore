@@ -1,0 +1,9 @@
+# Datos descargados de Synapse CUN: pueden contener información de terceros
+# (correos y fichas de otros docentes). No entran a git ni se comparten.
+datos/
+
+# Segunda línea de defensa: la credencial vive en %LOCALAPPDATA%\synapse-cun\,
+# nunca aquí. Si alguna vez apareciera un archivo así en esta carpeta, se ignora.
+credenciales.json
+*.token
+perfil-chrome/

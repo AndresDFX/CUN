@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 2 - Investigacion S01-S03 (U1-U2, U4-U5)</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 2 (9% de la nota del curso · Corte 2) — INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA para Escuela de Ingenierías (EI005).</strong></p><p>Ventana: 28/08/2026 a 03/09/2026. Se resuelve dentro del encuentro, en unos 15 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> la lectura autónoma de la Sesión 01 (unidades U1 y U2 del Syllabus: producto final del curso y fundamentos del método científico, con la lectura obligatoria de Casares-Salazar et al., 2019), la <strong>Sesión 02</strong> (MinCiencias, Sistema Nacional de CTeI, las 6 líneas de Ingeniería y los criterios para elegir línea) y la <strong>Sesión 03</strong> (las cuatro piezas del primer avance, el título, la introducción en tres párrafos, tipos de conocimiento, tipos de fuente y la verificación de una fuente antes de citarla). <em>APA 7 con ZoteroBib se practica en la Sesión 03, pero el Manual del Docente lo evalúa en el Parcial 2: aquí no se pregunta por el formato de la cita.</em></p><p><strong>Lo que NO entra:</strong> la Sesión 04 se dicta el mismo día en que cierra la ventana, así que ninguna pregunta ni ninguna opción usa su vocabulario (espina de pescado, árbol de problemas, método 3D, bases de datos suscritas de la biblioteca CUN, operadores de búsqueda). Tampoco entra nada de las Sesiones 05 y 06 (planteamiento del problema, posturas teóricas, revisión de literatura, matriz de fuentes).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Todas evalúan contenido académico de las unidades: ninguna pregunta por pesos, fechas, canales de entrega ni reglas del curso. El peso cae en la sesión que este ítem añade: 7 preguntas de la Sesión 03, 2 de la lectura autónoma de la Sesión 01 y 1 de la Sesión 02. Ninguna pregunta repite el enunciado, el caso ni el conjunto de opciones de otro banco del curso.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-01 Qué es y qué no es el primer avance]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero cree que el primer avance del artículo es un texto largo que resume todo lo que ha leído, con la metodología ya planteada y el marco teórico completo. Según la Sesión 03, ¿qué le corrige?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El avance es un <strong>borrador mínimo viable de cuatro piezas</strong>: título tentativo, introducción breve, el problema convertido en pregunta y las referencias iniciales. No es un resumen de todo lo leído, no es la metodología —eso viene después— y no es el marco teórico completo, que se trabaja al final del ciclo. Sirve para una cosa muy concreta: detectar temprano si el tema es investigable.</p><p>Cita literal (Presentación de la Sesión 03): «El avance es un borrador mínimo viable: cuatro piezas bien planteadas (…) Sí es: un texto corto donde ya se ve qué se va a investigar y por qué. Tiene título, una introducción breve, el problema convertido en pregunta y las primeras referencias. Está escrito en prosa: párrafos, no viñetas sueltas ni un esquema. No es: un resumen de todo lo que ha leído. No es la metodología (eso viene después). No es el marco teórico completo (eso se trabaja al final del ciclo) (…) Sirve para algo muy concreto: detectar temprano si su tema es investigable.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que el avance son cuatro piezas —título, introducción breve, problema convertido en pregunta y referencias iniciales—: ni la metodología ni el marco completo van todavía.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es un borrador mínimo viable, el equivalente al prototipo funcional: con esas cuatro piezas ya se puede ver si el tema es investigable, y para eso existe.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que además de eso le falta la sección de resultados, porque sin datos ya obtenidos nadie puede juzgar si el tema del artículo es investigable o no.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: pide una sección que aún no puede existir. Lo que permite juzgar si el tema es investigable es la pregunta bien planteada con sus primeras referencias, no un resultado que todavía no se ha medido.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el problema no es el contenido sino la forma: el avance se escribe en viñetas y como esquema de puntos, no en párrafos de prosa continua.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es exactamente al revés. La sesión pide que el avance esté «escrito en prosa: párrafos, no viñetas sueltas ni un esquema». Y el defecto de fondo sigue siendo qué piezas trae y qué piezas sobran.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el texto está bien orientado y solo hay que recortarlo a la mitad, porque un avance se valora por su extensión antes que por su enfoque.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte el lema del curso, que es «calidad &gt; extensión». Media página con un problema claro vale más que cinco de relleno, y recortar no arregla que falten piezas y sobren otras.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-02 Orden conveniente para redactar las secciones]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura obligatoria sugiere redactar las partes del documento «iniciando con lo más fácil», en un orden que no coincide con el orden en que se leen. ¿Cuál de estas afirmaciones describe ese orden sugerido?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La metodología y los resultados se escriben antes que la introducción, y el <strong>resumen queda casi al final</strong>, porque solo se puede sintetizar lo que ya está escrito. La lectura añade que la introducción «suele ser de las últimas en ser redactada» por su complejidad.</p><p>Cita literal (Casares-Salazar et al., 2019, Introducción): «Por conveniencia, se sugiere redactar las partes en el siguiente orden, iniciando con lo más fácil: título, autores, palabras clave, marco teórico o conceptual (en el caso de tesis), metodología, resultados, introducción, discusión, conclusiones, recomendaciones (opcional), reconocimientos, resumen, referencias y material complementario (opcional).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La metodología y los resultados se redactan antes que la introducción, y el resumen queda casi al final del proceso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El orden sugerido pasa por metodología y resultados antes de la introducción, y deja el resumen entre las últimas partes: es una versión reducida de un trabajo que ya tiene que estar escrito.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El resumen se redacta primero, porque condensa el trabajo completo y sirve de guion para las demás secciones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error muy común: usar el resumen como plan de trabajo. El resumen sintetiza introducción, métodos, resultados y conclusiones, así que escribirlo primero obliga a resumir algo que todavía no existe.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La introducción se redacta primero, porque plantea el problema y de ahí se deducen las secciones siguientes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es justo la sección que la lectura describe como una de las últimas en redactarse, y advierte que muchos autores le dedican mucho tiempo antes de darse cuenta de que es relativamente corta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Se redacta en el mismo orden en que se lee el documento, de la primera sección hasta la última.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde el orden de lectura con el orden de escritura. La lectura propone un orden de redacción distinto, por conveniencia, que arranca por lo más fácil y no por la primera página.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-03 Wikipedia y los blogs: hasta dónde llegan]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Para sostener una afirmación de su avance tiene a mano dos cosas: una entrada de <strong>Wikipedia</strong> muy bien escrita y el <strong>blog</strong> de un ingeniero reconocido que explica el mismo asunto. Según la Sesión 03, ¿cómo se usan?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Las dos <strong>orientan, pero no sostienen</strong>. Wikipedia sirve como puerta: se lee para entender el concepto y luego se baja a su sección de referencias, donde están las fuentes reales que sí se pueden citar. El blog puede explicar bien el tema, pero no pasó revisión; y si lo que afirma es cierto, existe una fuente académica que lo respalda y esa es la que hay que buscar.</p><p>Cita literal (Presentación de la Sesión 03): «Wikipedia sí sirve, pero como puerta. Léala para entender un concepto y luego baje a la sección de referencias del artículo: allí están las fuentes reales que sí puede citar.» Y: «Un blog o un video no son fuente del artículo. Pueden explicarle bien un tema, pero no pasaron revisión. Si lo que dice el blog es cierto, existe una fuente académica que lo respalda: busque esa.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Para entender el concepto, no para sostener el artículo: de Wikipedia se baja a su sección de referencias, y del blog se busca la fuente académica que lo respalde.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Las dos son puertas de entrada. La afirmación del avance se sostiene con lo que hay detrás de ellas: los documentos que ellas mismas citan y que usted sí puede abrir y verificar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las dos se pueden citar si se indica la fecha de consulta, porque lo que importa es que la información sea correcta y esté disponible en línea para el lector.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el criterio no es la disponibilidad ni la fecha de consulta, sino que el material haya pasado revisión. Un texto sin revisión no se vuelve citable por indicar cuándo se leyó.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Wikipedia no se debe abrir en ningún caso, y el blog sí se cita, porque tiene un autor identificable con trayectoria reconocida en ese tema concreto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: se equivoca en los dos extremos. Wikipedia sí se lee, como puerta hacia sus referencias; y la trayectoria del autor de un blog no sustituye la revisión que sí tiene un artículo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguna de las dos se debe leer ni citar: solo se consultan artículos académicos, y todo lo demás se descarta desde el comienzo mismo de la búsqueda.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: prohíbe más de lo que dice la sesión. Leer para entender es legítimo y hasta recomendable; lo que no es legítimo es apoyar una afirmación del artículo en un material que no pasó revisión.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-04 Qué tan reciente debe ser la bibliografía]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lista de referencias de un avance trae ocho fuentes, todas publicadas entre 1996 y 2004, y el texto fundacional del tema tampoco aparece. Según la lectura obligatoria, ¿qué corresponde corregir?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La lectura pide <strong>dos cosas al mismo tiempo</strong>: bibliografía de publicación reciente —de los últimos cinco años— y, cuando existe, el documento <strong>clásico</strong> del tema. Esa lista falla por los dos lados: no tiene literatura reciente y le falta la clásica. Y no se arregla sumando más títulos: el problema no es la cantidad.</p><p>Cita literal (Casares-Salazar et al., 2019, «Las referencias»): «Se recomienda utilizar artículos y bibliografía de publicación reciente, de los últimos 5 años, a menos que se trate de un documento clásico del tema en cuestión.» Y en la guía rápida de la misma sección, entre los errores comunes: «poca o nula cantidad de publicaciones recientes sobre el tema (de los últimos 5 años), o falta de literatura clásica del tema en cuestión».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Buscar publicaciones de los últimos cinco años y sumar el documento clásico del tema: la lista falla por las dos cosas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura pide las dos: literatura reciente para mostrar el estado actual del asunto y el documento clásico cuando existe, porque es el que fijó los conceptos que usted usa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No hay nada que corregir: si las ocho fuentes son artículos publicados en revistas con revisión, su antigüedad no cambia lo que afirman.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde validez con vigencia. Un artículo de 1998 pudo estar bien hecho y seguir siendo cierto, pero una lista sin nada de los últimos cinco años sugiere que usted no revisó qué se ha publicado desde entonces.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Reemplazar las ocho por fuentes de los últimos cinco años y no citar ningún documento anterior, por decisivo que haya sido su aporte.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: se pasa al otro extremo. La propia recomendación deja la excepción escrita —«a menos que se trate de un documento clásico del tema»—, y entre los errores comunes figura la falta de literatura clásica.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Dejar la lista como está y compensar el problema subiendo al doble el número total de referencias que aparecen al final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la cantidad no arregla la vigencia. Dieciséis fuentes igual de antiguas siguen dejando el mismo hueco, y además aparece el otro error común: citar de más.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-05 Verificar la fuente antes de citarla]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero armó su lista de referencias copiando autor, año y título <strong>del listado de resultados</strong> del buscador, sin abrir ninguno de los documentos. Según la Sesión 03, ¿qué corresponde hacer antes de citarlos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Hay que <strong>abrir cada documento y verificar en la fuente original</strong> el autor, el año y la revista, y solo entonces generar la cita. La regla que la sesión repite es corta: si no abrió el documento, no lo cita. Y la razón por la que no es un trámite: una referencia falsa en un artículo es una falta grave, no un descuido.</p><p>Cita literal (Presentación de la Sesión 03): «Regla: si no abrió el documento, no lo cita.» Y la nota institucional de la misma sesión: «Verifique siempre en la fuente original. Abra el artículo, confirme autor, año y revista, y solo entonces genere la cita. Una referencia falsa en un artículo es una falta grave, no un descuido.» El checklist de la sesión lo vuelve a pedir: «Abrí los dos documentos que cito: no los tomé del listado de resultados.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Abrir cada documento y confirmar en la fuente original el autor, el año y la revista: si no abrió el documento, no lo cita.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El listado de resultados es un índice, no el documento. Solo al abrirlo se comprueba que existe, que dice lo que se le atribuye y que los datos de la ficha son los correctos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Basta con que el título coincida con el tema de su avance, porque el listado del buscador toma esos datos directamente de la revista que publicó el artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la coincidencia del título no dice nada de lo que el documento afirma por dentro, y el listado puede traer datos incompletos o mal atribuidos. La verificación se hace en la fuente original.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Basta con que la referencia quede bien formateada por el generador de citas, porque es el formato lo que el lector verifica cuando revisa la lista final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde forma con verdad. Un generador puede formatear impecablemente una referencia inexistente; el responsable de que la cita corresponda a un documento real es siempre quien la usa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Puede citarlos ya y corregir después los datos que resulten equivocados, porque una referencia incompleta se considera un descuido menor de la redacción.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la sesión lo dice con esas palabras: «una referencia falsa en un artículo es una falta grave, no un descuido». No es algo que se arregle después de haber afirmado algo con ella.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-06 Criterio de viabilidad de fuentes al elegir la línea]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted se inclina por una línea porque «está de moda». Busca diez minutos con el vocabulario propio de esa línea y no aparece ningún artículo pertinente para su ángulo. Según la Sesión 02, ¿qué significa ese resultado?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El criterio de <strong>viabilidad de fuentes</strong> se cumple cuando usted encuentra hoy, con el vocabulario de esa línea, al menos dos artículos usables de su ángulo. Si busca diez minutos y no aparece nada pertinente, la línea no es viable para usted en este periodo, por popular que sea.</p><p>Cita literal (Presentación de la Sesión 02): «"Elijo IA porque está de moda." La moda no le entrega fuentes. Si busca 10 minutos y no aparecen artículos de su ángulo, esa línea no es viable para usted este periodo, por popular que sea.» El criterio, en la tabla de la misma sesión: «Viabilidad de fuentes — ¿Encuentro hoy, en Google Académico, al menos 2 artículos usables de este ángulo?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que esa línea no es viable para usted este periodo: el criterio se cumple solo si encuentra al menos dos artículos usables de su ángulo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La popularidad de una línea no entrega fuentes. Si con su vocabulario no aparecen artículos usables de su ángulo, conviene mover el ángulo hacia la línea donde sí hay literatura.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que le faltó tiempo de búsqueda: si la línea es popular, la literatura pertinente aparecerá tarde o temprano.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde el volumen general de publicaciones con la existencia de fuentes para su ángulo concreto. La prueba del criterio es lo que usted encuentra hoy, no lo que supone que existe.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que debe sostener la línea de todos modos y reemplazar los artículos por entradas de blog y videos que expliquen bien el tema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: un blog o un video pueden explicarle el tema, pero no pasaron revisión y no son fuente del artículo. Cambiar el tipo de fuente no arregla la falta de literatura de la línea.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el criterio de fuentes no aplica en su caso, porque la afinidad con el tema pesa más que la literatura disponible.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: los tres criterios se aplican juntos, no se eligen. La afinidad no sustituye la viabilidad: sin fuentes del ángulo elegido no hay con qué sostener lo que usted afirme.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-07 Tipos de conocimiento: clasificar un enunciado]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero afirma: «Llevo un año trabajando en el laboratorio y siempre se cae la red a las 3 de la tarde». Según la Sesión 03, ¿qué tipo de conocimiento es y qué valor tiene para su artículo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es conocimiento <strong>empírico</strong>: viene de observación repetida, pero sin sistematizar, así que solo se sostiene como indicio inicial. Se vuelve científico cuando queda registrado el cómo y por eso puede verificarse y repetirse.</p><p>Cita literal (Presentación de la Sesión 03, tabla «Tipos de conocimiento»): «Empírico — Por observación repetida, sin sistematizar — ¿Se verifica? Parcialmente — "Llevo un año y siempre se cae la red a las 3 p.m." — ¿Sostiene el artículo? Solo como indicio inicial». Y la nota de la misma tabla: «La diferencia entre empírico y científico no es la verdad: es que el científico se puede verificar y repetir porque quedó registrado el cómo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Empírico: procede de observación repetida pero sin sistematizar, así que sirve como indicio inicial y no como evidencia del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el ejemplo mismo de la tabla: un año de observación repetida, sin registro sistemático, sirve para sospechar dónde está el problema, no para sostenerlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Empírico: al provenir de la experiencia directa de quien lo vivió, se verifica por sí mismo y no necesita quedar registrado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta el tipo pero falla en lo decisivo: el conocimiento empírico se verifica solo parcialmente, justamente porque no quedó registrado el cómo. Sin registro, otra persona no puede comprobar nada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Científico: un año de observación constituye medición suficiente, de modo que el enunciado ya puede sostener el artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error frecuente: cree que la cantidad de tiempo convierte una impresión en dato. Lo científico no lo da la duración, sino el método, la medición y la evidencia documentada que otros puedan verificar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cotidiano: es experiencia personal y sentido común, de manera que no aporta ni siquiera un indicio para empezar a investigar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: lo cotidiano nace de la experiencia inmediata («sé que llueve porque me mojé»). Aquí hay observación repetida durante un año, que es empírica y sí sirve como indicio inicial.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-08 Fuente primaria, secundaria y terciaria]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Para su avance reunió tres materiales: <strong>(1)</strong> el estudio en el que sus propios autores midieron la pérdida de paquetes de una red universitaria; <strong>(2)</strong> un artículo que sintetiza y comenta cuarenta estudios sobre el tema; <strong>(3)</strong> la entrada de una enciclopedia en línea. ¿Cómo se clasifican y cómo se usan?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El estudio original es <strong>primaria</strong> y se cita como autoridad; el artículo que sintetiza y comenta lo que otros hicieron es <strong>secundaria</strong> y sirve para entender el panorama y ubicar primarias; la enciclopedia es <strong>terciaria</strong> y solo se usa para orientarse.</p><p>Cita literal (Presentación de la Sesión 03, tabla «Tipos de fuente»): «Primaria — El estudio original, donde se generó el conocimiento — Es su fuente principal; se cita como autoridad». «Secundaria — Interpreta, sintetiza o comenta las primarias — Útil para entender el panorama y ubicar primarias». «Terciaria — Índices y compilaciones que llevan a las otras dos — Solo para orientarse; no se cita como autoridad». Y el truco de la misma tabla: «si el texto cuenta un estudio que alguien más hizo, es secundaria; si cuenta lo que sus autores hicieron, es primaria».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>(1) primaria, se cita como autoridad; (2) secundaria, sirve para ver el panorama y llegar a primarias; (3) terciaria, solo para orientarse.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El criterio es quién generó el conocimiento: (1) lo midieron sus autores, (2) cuenta lo que hicieron otros, (3) es un índice que lleva a las otras dos y no se cita como autoridad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>(1) primaria; (2) terciaria, porque compila cuarenta estudios; (3) secundaria, porque explica el concepto con sus propias palabras.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde «compilar» con «sintetizar y comentar». Terciaria es el índice o catálogo que apunta a otros documentos; un artículo que discute cuarenta estudios los interpreta, y eso es secundaria.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>(1) y (2) primarias, porque están publicadas y firmadas; (3) secundaria, y las tres se pueden citar como autoridad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: usa el hecho de estar publicado y firmado como criterio. Lo que define la primaria es que allí se generó el conocimiento, no el prestigio del sitio donde aparece.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>(1) secundaria, porque describe una red ajena; (2) primaria, porque revisa la literatura existente; (3) terciaria, y ninguna se puede citar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte las dos primeras y deja el artículo sin fuentes citables. El estudio que midió la red es primaria aunque la red no sea suya, y una revisión de literatura es secundaria.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-09 El movimiento que falta en la introducción]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La introducción de un avance dice, completa: «En la sede se dictan clases sincrónicas que dependen de la conexión de los estudiantes. Este artículo se propone describir cómo la calidad de esa conexión afecta la participación en clase». Según la Sesión 03, ¿qué le falta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Están el contexto y el propósito, pero falta el <strong>vacío</strong>: lo que todavía no se sabe, no se ha medido o no se ha documentado. Es el párrafo que casi siempre entra con un giro («sin embargo», «no obstante») y sin el cual no hay artículo.</p><p>Cita literal (Presentación de la Sesión 03): «Párrafo 2 — Vacío. Qué no se sabe todavía, o qué no se ha medido, o qué no se ha documentado. Este párrafo casi siempre empieza con un giro: "Sin embargo...", "No obstante...", "A pesar de ello...". Sin vacío no hay artículo: si ya todo está resuelto, no hay nada que investigar.» La prueba de control de la misma sesión: «subraye el vacío. Si no puede subrayarlo, no lo escribió».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El vacío: lo que aún no se sabe, no se ha medido o no se ha documentado, que suele entrar con un «sin embargo».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La introducción va de contexto a vacío y de ahí al propósito. Sin el segundo movimiento, el texto describe una situación y anuncia un trabajo, pero no dice qué es lo que hace falta averiguar.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un párrafo de antecedentes históricos que explique desde cuándo existen las clases a distancia en el país.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el arranque que la sesión pide evitar de forma expresa («desde la antigüedad el ser humano...»). La introducción entra por el problema real en la primera línea, no por la historia del tema.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un párrafo que anuncie la solución que se va a implementar, para que se vea el aporte práctico del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde propósito con solución. El tercer movimiento declara un verbo de propósito —describir, caracterizar, comparar, evaluar—, no promete una obra que todavía no se puede sostener con evidencia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Nada: contexto y propósito son los dos movimientos obligatorios y el tercero se agrega solo si sobra extensión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: los tres movimientos son obligatorios y el vacío es el que justifica el artículo. Si todo está resuelto en el contexto, no queda nada que investigar y el propósito se cae solo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q2-10 El título que cumple la fórmula del curso]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su tema es la deserción de estudiantes de primer semestre. ¿Cuál de estos títulos cumple la fórmula del curso —actor + fenómeno + contexto— y evita los errores señalados en la Sesión 03 y en la lectura obligatoria?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El título describe, no vende: dice <strong>quién o qué se estudia</strong> (estudiantes de primer semestre de Ingeniería), <strong>qué le pasa</strong> (deserción) y <strong>dónde o cuándo</strong> (una sede virtual de Bogotá, en 2026), en 20 palabras o menos.</p><p>Cita literal (Presentación de la Sesión 03): «Un título de artículo no vende: describe. Su fórmula mínima: Actor (¿quién o qué se estudia?) + fenómeno (¿qué le pasa?) + contexto (¿dónde, cuándo?). Máximo 20 palabras; sin signos de admiración; sin juegos de palabras.» La lectura obligatoria coincide (Casares-Salazar et al., 2019, «El título»): «no se recomienda usar títulos en forma de preguntas», ni «iniciar con frases genéricas como "Un estudio de"», y «se deben evitar los términos grandilocuentes como "nuevo", "primero", "paradigma"».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Deserción de estudiantes de primer semestre de Ingeniería en una sede virtual de Bogotá durante 2026.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Nombra el actor (estudiantes de primer semestre de Ingeniería), el fenómeno (deserción) y el contexto (una sede virtual de Bogotá, en 2026), sin pasar de 20 palabras y sin juegos de palabras.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Por qué desertan los estudiantes? Un estudio de la deserción en la educación superior colombiana.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble: está redactado en forma de pregunta y arranca con una frase genérica del tipo «Un estudio de», dos cosas que la lectura obligatoria desaconseja. Además el contexto queda demasiado ancho.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La deserción estudiantil: el gran desafío del nuevo paradigma de la educación virtual en el mundo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es un título-eslogan. Usa términos grandilocuentes («nuevo», «paradigma») que la lectura pide evitar y no dice a quién se estudia ni dónde: al leerlo, cualquiera preguntaría de qué se trata.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aplicación móvil de acompañamiento para reducir la deserción de los estudiantes de la universidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: anuncia una solución en lugar de un objeto de estudio, como el ejemplo débil «Mi app para el laboratorio». El título debe reflejar qué se investiga, no qué se piensa construir.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

@@ -1,6 +1,6 @@
 ---
 name: examlab-practica
-model: claude-opus-4-8
+model: opus
 description: |
   Experto en **examlab**, la plataforma web propia del usuario (LMS React/TanStack + Supabase,
   https://examlab.lovable.app/app), usada como PLATAFORMA DE PRÁCTICA de los cursos de FESNA / La Nueva América.

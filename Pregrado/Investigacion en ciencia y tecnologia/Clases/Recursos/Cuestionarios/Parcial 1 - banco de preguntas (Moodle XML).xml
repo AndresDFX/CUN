@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 1 - Investigacion U1-U4</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 1 (24% de la nota del curso · Corte 1) — INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA PARA LA ESCUELA DE INGENIERÍAS.</strong></p><p>Ventana: 21/08/2026 a 27/08/2026. Se resuelve dentro del encuentro de la Sesión 03, en unos 22 minutos. No se sube archivo y no usa la plantilla APA.</p><p><strong>Alcance</strong> (Manual del Docente y «Parcial 1 (24%) - guia del cuestionario»): la <strong>lectura autónoma obligatoria de la Sesión 01</strong> —unidades <strong>U1</strong> (presentación del Syllabus y producto final: el artículo de nuevo conocimiento) y <strong>U2</strong> (fundamentos del método científico y sus etapas) del Syllabus, con su lectura obligatoria: Casares-Salazar, González-Herrera y Quintal-Franco (2019), «Cómo organizar eficientemente un documento científico»— y la <strong>Sesión 02</strong> (U4: MinCiencias, el Sistema Nacional de CTeI, las 6 líneas de Ingeniería del programa y la elección de línea). La numeración de unidades del Syllabus salta el N° 3, así que «U1-U4» equivale a U1, U2 y U4.</p><p><strong>Lo que NO entra.</strong> La Sesión 03 se dicta el mismo día en que cierra el cuestionario, así que su tema queda fuera: nada de tipos de conocimiento (cotidiano / empírico / científico), tipos de fuente (primaria, secundaria, terciaria), la fórmula del título de esa sesión ni su introducción en tres párrafos. Tampoco nada de la Sesión 04 o posteriores: espina de pescado, árbol de problemas, método 3D, formulación de la pregunta de investigación, bases de datos de la biblioteca CUN (EBSCO, SciELO, Redalyc, Latindex), operadores de búsqueda, APA 7 con ZoteroBib, planteamiento del problema, posturas teóricas, marco teórico y revisión de literatura.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. <strong>Las 10 son de contenido temático</strong>: 5 de U1-U2 y de su lectura obligatoria, 5 de U4 (Sesión 02). Ninguna pregunta por administración del curso (pesos, fechas, créditos, canal de entrega, reglas de IA). Ninguna pregunta repite el enunciado, el caso ni el conjunto de opciones de otro banco del curso. Tiempo total estimado: 13 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-01 Para qué sirven las palabras clave]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Ya tiene escrito el título de su artículo y ahora debe elegir las <strong>palabras clave</strong>. Según la lectura obligatoria de la Sesión 01, ¿para qué sirven y qué conviene evitar al elegirlas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Las palabras clave <strong>sirven para la indexación en las bases de datos</strong>: son las que otros lectores teclean cuando buscan en línea. Precisamente por eso no conviene repetir las mismas palabras del título: si se repiten, el trabajo se vuelve recuperable por un solo conjunto de términos, y lo que se busca es ampliar las posibilidades de búsqueda.</p><p>Cita literal (Casares-Salazar et al., 2019, «Las palabras clave»): «Las palabras clave son una lista corta de palabras relevantes del trabajo. Sirven para la indexación en las bases de datos, por lo que son usadas por los lectores en el momento de hacer búsquedas en línea. Por lo tanto, no conviene que sean las mismas palabras del título, a fin de ampliar las posibilidades de búsqueda.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Sirven para la indexación en las bases de datos y son las que usan los lectores al buscar en línea; por eso no conviene que sean las mismas palabras del título.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son el mecanismo por el que otro investigador encuentra su trabajo, así que repetir las palabras del título desperdicia la mitad de las entradas posibles de búsqueda.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Sirven para resumir el contenido a quien no leerá el artículo completo, así que conviene repetir las palabras del título para reforzar el tema del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: quien no lee el artículo completo lee el resumen, no las palabras clave. Y la lectura pide justo lo contrario de repetir el título, para ampliar las posibilidades de búsqueda.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Sirven para anunciar las secciones que contiene el documento, de modo que se toman de los encabezados de la estructura IMRyD del propio artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde palabras clave con índice. No describen la estructura del documento, sino su contenido temático, y su destino es el buscador de la base de datos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Sirven para declarar el área de conocimiento a la que se adscribe el trabajo, y por eso las fija la revista y no el autor del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: las elige el autor, y son una lista corta de palabras relevantes de su trabajo. No son una clasificación temática impuesta por la revista.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-02 Quiénes entran en la lista de autores]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Tres personas intervinieron en su trabajo: la primera concibió la investigación y redactó el manuscrito, la segunda ejecutó las mediciones, y la tercera solo facilitó el laboratorio y revisó la ortografía del texto. Según la lectura obligatoria de la Sesión 01, ¿cómo queda la lista de autores?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La lista de autores solo incluye a quien contribuyó a la <strong>concepción</strong> de la investigación, a la <strong>ejecución</strong> de los experimentos o a la <strong>interpretación</strong> de los resultados: aquí, las dos primeras personas. Facilitar un espacio o revisar la ortografía no es ninguna de esas tres cosas, y quien participó sin ser autor va en la sección de reconocimientos. El orden no es alfabético ni jerárquico: es el orden de importancia con relación a los experimentos.</p><p>Cita literal (Casares-Salazar et al., 2019, «Los autores»): «La lista de autores debe incluir solamente a aquellos que contribuyeron a la concepción general de la investigación, a la ejecución de los experimentos o a la interpretación de los resultados. Cuando se incluye como autores a personas cuyas contribuciones fueron mínimas o nulas se incurre en una falta ética conocida como autoría injustificada (Mari-Mutt, s.f.). Todas las personas que de alguna forma participaron en la investigación pero que no son autores pueden y deben mencionarse en la sección de reconocimientos. Los autores deben colocarse en orden de importancia con relación a los experimentos. El primer autor es por lo general la persona que más contribuyó al desarrollo de la investigación y a la redacción del manuscrito.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Las dos primeras son autoras, colocadas en orden de importancia con relación a los experimentos, y la tercera se menciona en la sección de reconocimientos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Concebir la investigación y ejecutar las mediciones son contribuciones de autoría; prestar el laboratorio y corregir la ortografía se reconocen, pero no dan firma.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las tres son autoras y se ordenan alfabéticamente por apellido, porque las tres participaron de alguna forma en la realización del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble: incluir a quien tuvo una contribución mínima es la falta ética que la lectura llama autoría injustificada, y el orden no es alfabético sino de importancia con relación a los experimentos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las tres son autoras y encabeza la lista quien facilitó el laboratorio, por ser quien aportó los recursos y la afiliación institucional del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el primer autor es por lo general quien más contribuyó al desarrollo de la investigación y a la redacción del manuscrito. Quien aportó recursos o instalaciones va en los reconocimientos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Solo la primera es autora, y las otras dos se citan en la sección de referencias junto con las fuentes que se consultaron durante el trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: deja fuera a quien ejecutó los experimentos, que sí es contribución de autoría, y confunde reconocimientos con referencias. En las referencias van las fuentes citadas, no las personas que colaboraron.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-03 Qué va y qué no va en las conclusiones]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al cerrar su artículo usted escribe, en la sección de <strong>Conclusiones</strong>, un dato de campo que no había aparecido en ninguna sección anterior, y vuelve a explicar en detalle por qué su medición es válida. Según la lectura obligatoria de la Sesión 01, ¿cuál es el error?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Las conclusiones <strong>enuncian los principales resultados sin justificarlos de nuevo y sin presentar nuevos hallazgos</strong>: cada una debe estar basada en material ya presentado antes en el documento. Un dato inédito en las conclusiones deja al lector sin la metodología con la que se obtuvo, y volver a defender la validez de la medición es repetir lo que ya se hizo en la metodología y en la discusión.</p><p>Cita literal (Casares-Salazar et al., 2019, «Las conclusiones»): «En esta sección se enuncian los principales resultados de la investigación sin justificarlos de nuevo y sin presentar nuevos hallazgos. Cada conclusión debe presentarse brevemente y estar basada en el material que ha sido presentado previamente en el documento. Conviene enfatizar lo que es importante y significativo, así como cualquier autocrítica. Se recomienda iniciar con las conclusiones más importantes y seguir con las demás (Silyn-Roberts, 2013).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que las conclusiones enuncian los principales resultados sin justificarlos de nuevo y sin presentar hallazgos nuevos: cada una se basa en material ya presentado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Un hallazgo que aparece por primera vez en las conclusiones llega sin metodología que lo sostenga, y volver a justificar la medición repite trabajo ya hecho en secciones anteriores.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que las conclusiones no deben mencionar resultados, porque los resultados ya tienen su propia sección dentro de la estructura del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: sí los enuncian. La sección presenta brevemente los principales resultados de la investigación; lo que no hace es volver a justificarlos ni añadir hallazgos que nadie vio antes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que las conclusiones deben ordenarse de la menos importante a la más importante, para dejar el punto fuerte en la última línea del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte la recomendación de la lectura, que pide iniciar con las conclusiones más importantes y seguir con las demás. Y ese no es el defecto del párrafo descrito.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que las conclusiones deben ir siempre unidas a las recomendaciones en un solo apartado, porque separadas pierden fuerza ante el lector.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: las recomendaciones son una sección <em>opcional</em> que <em>puede</em> ir junto con las conclusiones, no una obligación. Combinar secciones depende de los lineamientos de la revista, y no arregla el problema real.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-04 Para qué sirve la sección de metodología]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero escribe completa su sección de metodología así: «Se recogieron datos de los usuarios y se procesaron con herramientas estadísticas». Según la lectura obligatoria de la Sesión 01, ¿por qué esa redacción no cumple el propósito de la sección?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La metodología existe para que <strong>otro investigador competente pueda repetir el trabajo</strong> y para que el lector pueda juzgar la validez de los resultados. Esa frase no dice qué datos, ni de cuántos usuarios, ni cómo se obtuvieron, ni qué método estadístico se aplicó y por qué: nadie podría reproducirla. Por eso la lectura la llama «la piedra angular del artículo» y advierte que, si hay dudas sobre la reproductibilidad, el revisor suele recomendar el rechazo.</p><p>Cita literal (Casares-Salazar et al., 2019, La metodología): «El objetivo de la metodología consiste en describir los procedimientos experimentales con suficiente detalle como para que otro investigador competente pueda repetir el trabajo, permitiendo a la vez que el lector juzgue la validez de los resultados».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque no da el detalle suficiente para que otro investigador competente repita el trabajo ni para que el lector juzgue la validez de los resultados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese es el propósito declarado de la sección, y la frase no lo cumple: no dice qué datos, de cuántos usuarios, cómo se obtuvieron ni qué método estadístico se usó, de modo que nadie podría reproducir el trabajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque está escrita en estilo impersonal; la metodología debe ir en primera persona para dejar clara la responsabilidad de quien ejecutó cada paso.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el estilo impersonal es precisamente lo que la lectura recomienda («mantener el estilo impersonal propio de la redacción científica: se midió, se realizó una prueba»). El problema de la frase es la falta de detalle, no el «se recogieron».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque menciona los datos, que pertenecen a la sección de resultados; la metodología describe solo los materiales y los equipos empleados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la lectura pide expresamente describir en la metodología «los datos con los que se trabajará», cómo se obtuvieron y cualquier detalle que permita repetir el estudio. Lo que va en resultados son los hallazgos, no la descripción de los datos de partida.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque toda metodología debe abrir con las hipótesis y los objetivos del estudio, que son los que justifican los métodos que se eligieron.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: las preguntas de investigación, las hipótesis y los objetivos se formulan en la introducción, según la lectura. Repetirlos al abrir la metodología no arreglaría el defecto real, que es que el procedimiento no se puede reproducir.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-05 Las tres partes de la Discusión]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura obligatoria de la Sesión 01 afirma que la sección de <strong>Discusión</strong> consta básicamente de tres partes o componentes. ¿Cuáles son, y en qué orden?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Primero se explican los resultados <strong>confrontándolos con las preguntas de investigación, las hipótesis o los objetivos</strong>; después se contrastan con los <strong>trabajos ya publicados</strong>, a favor y en contra, explicando las discrepancias; y al final se <strong>interpreta el significado de cada conclusión</strong>, se declaran las limitaciones del estudio y se expone la trascendencia del hallazgo. La lectura resume la prueba de la tercera parte así: al terminar de leer la discusión, el lector no debería preguntar «bueno, ¿y qué?».</p><p>Cita literal (Casares-Salazar et al., 2019, «La discusión»): «La sección de Discusión consta básicamente de tres partes o componentes: 1) En la primera parte se deben explicar los resultados confrontándolos con las preguntas de investigación, hipótesis u objetivos (…) 2) En la segunda parte se discute cómo concuerdan (o no) los resultados e interpretaciones con los trabajos anteriormente publicados (Day, 2005), tanto los que están a favor como en contra, explicando las posibles razones de las discrepancias (…) 3) En la tercera parte se explica o interpreta el significado de cada conclusión previamente deducida (…) Se debe dejar en claro las limitaciones del estudio y la forma como estas pudieron afectar las conclusiones.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Explicar los resultados frente a las preguntas, hipótesis u objetivos; contrastarlos con los trabajos ya publicados; e interpretar el significado de cada conclusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese es el recorrido de la Discusión: se responde si se cumplieron las hipótesis, se confronta con lo que hallaron otros autores y se explica para qué sirvió el trabajo, con sus limitaciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Resumir de nuevo los datos obtenidos, agradecer a las personas e instituciones que colaboraron y enunciar las recomendaciones para investigaciones futuras.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: reúne tres secciones distintas del documento. Los agradecimientos son los reconocimientos y las recomendaciones son una sección opcional aparte; ninguno de los dos es una parte de la Discusión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Describir los materiales y los procedimientos empleados, presentar los datos ya procesados y compararlos con la hipótesis que se formuló al inicio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: las dos primeras son la metodología y los resultados. La Discusión no describe procedimientos ni vuelve a presentar los datos: parte de resultados ya expuestos para explicarlos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Repetir el contenido de la introducción, ampliar el estado del arte con las fuentes que faltaron y anunciar la siguiente investigación del grupo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el estado del arte y el contexto van en la introducción, y los trabajos con los que se compara «se habrían citado en la introducción». La Discusión los retoma para confrontar, no para ampliar la revisión.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-06 «Mi tema no cabe en ninguna línea»]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero sostiene que su tema <strong>no cabe en ninguna</strong> de las seis líneas de Ingeniería del programa. Según la Sesión 02, ¿qué corresponde responderle?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Casi siempre cabe. La sesión da una pregunta de desbloqueo: hay que averiguar <strong>qué duele en el tema</strong> —los datos, la red, el software, el dispositivo o el servicio en la nube— porque esa respuesta ya es la línea. Lo que no es una opción es avanzar sin línea: la línea define el vocabulario de búsqueda, los autores de referencia y las revistas, y por eso se elige al comienzo y no al final.</p><p>Cita literal (Presentación de la Sesión 02, «Cuatro mitos que hay que desactivar hoy»): «"Mi tema no cabe en ninguna línea." Casi siempre cabe. Pregúntese qué duele en su tema: ¿los datos, la red, el software, el dispositivo o el servicio en la nube? Esa respuesta ya es la línea.» Y de la misma sesión: «Léala como un menú de ángulos, no de temas: casi cualquier tema cabe en varias líneas, pero se trabaja desde una.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que casi siempre cabe: hay que preguntarse qué duele en el tema —los datos, la red, el software, el dispositivo o el servicio en la nube—.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Las seis líneas son un menú de ángulos, no de temas: casi cualquier tema cabe en varias, y el ángulo se descubre identificando qué es lo que falla en el caso.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que puede avanzar sin línea mientras el tema sea pertinente, y declararla al final del periodo cuando ya tenga escrito el marco teórico.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el mito de la línea como requisito administrativo. La línea define el vocabulario y los referentes desde el primer día; cambiarla o dejarla para el final obliga a reescribir el marco teórico completo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que debe proponer una línea nueva ante MinCiencias, porque el listado de seis del programa solo recoge las líneas de mayor demanda del país.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: MinCiencias no es una ventanilla donde se registran temas ni líneas nuevas por estudiante. Es el ministerio que organiza el conocimiento por áreas y líneas: un mapa de comunidades, no una lista de temas permitidos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que conviene tomar la línea más popular del momento, porque es la que le va a ofrecer la mayor cantidad de literatura disponible.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la sesión desactiva ese mito de entrada («la moda no le entrega fuentes»). Lo que importa no es el volumen global de publicaciones de la línea, sino que haya artículos usables del ángulo concreto que él quiere trabajar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-07 Qué es MinCiencias y para qué le sirve al artículo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>De acuerdo con la Sesión 02, ¿qué es MinCiencias y en qué le sirve concretamente a la escritura de su artículo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es el Ministerio de Ciencia, Tecnología e Innovación de Colombia: coordina el Sistema Nacional de CTeI y <strong>organiza el conocimiento por áreas y líneas</strong>. La utilidad práctica para el estudiante es que esa organización define el vocabulario con el que buscará, los autores que citará y las revistas donde encontrará literatura. La sesión aclara también qué NO es: ni un trámite que se llena y se olvida, ni una lista de temas permitidos.</p><p>Cita literal (Presentación de la Sesión 02): «MinCiencias = Ministerio de Ciencia, Tecnología e Innovación de Colombia. Coordina el Sistema Nacional de CTeI (…) Su función clave para usted: organiza el conocimiento por áreas y líneas (…) Lo que MinCiencias NO es: No es un requisito de trámite que se llena y se olvida. No es una lista de temas permitidos; es un mapa de comunidades de conocimiento. Traducción práctica: la línea define el vocabulario que usará, los autores que citará y las revistas donde buscará.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El Ministerio de Ciencia, Tecnología e Innovación: coordina el Sistema Nacional de CTeI y organiza el conocimiento en áreas y líneas, y esa línea define su vocabulario, sus autores y sus revistas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión lo resume así: MinCiencias organiza el conocimiento por áreas y líneas, y la línea «define el vocabulario que usará, los autores que citará y las revistas donde buscará».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un catálogo oficial de los temas de investigación autorizados en el país: si su tema no figura en ese catálogo, hay que reemplazarlo por uno que sí aparezca.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es exactamente lo que la sesión niega («No es una lista de temas permitidos; es un mapa de comunidades de conocimiento»). No autoriza temas: agrupa comunidades que investigan con un mismo lenguaje.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un requisito de trámite del artículo: se menciona en la portada y en las referencias para acreditar que el proyecto cumple la normativa nacional de investigación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la sesión lo descarta con esas palabras («No es un requisito de trámite que se llena y se olvida») y la lista de mitos insiste en que la línea no es administrativa, porque condiciona el contenido del texto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El repositorio nacional en el que se consultan a texto completo las tesis y los artículos publicados por las universidades colombianas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde el ministerio con una base de datos de consulta. MinCiencias coordina el Sistema Nacional de CTeI y orienta convocatorias, financiación y categorización de grupos; no es el lugar donde se descargan los textos.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-08 Ubicar un caso en una de las 6 líneas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted quiere estudiar los riesgos de <strong>disponibilidad y seguridad</strong> que aparecen cuando la institución deja de alojar la plataforma de notas en su propio servidor y la traslada a un proveedor externo que la aloja y la opera. De las seis líneas de Ingeniería del programa, ¿en cuál se ubica ese ángulo?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Lo que «duele» en el caso es el <strong>servicio alojado en un tercero</strong>: quién lo opera, si sigue disponible y qué riesgos trae el traslado. Ese es el ángulo de Cloud / FinTech, cuyo vocabulario en la sesión es exactamente «SaaS, migración, disponibilidad». No se está midiendo la red que transporta el servicio (telemática), ni construyendo software (aplicaciones), ni analizando un volumen de datos ya existente (Big Data).</p><p>Cita literal (Presentación de la Sesión 02, tabla «Las 6 líneas de Ingeniería del programa»): «Cloud / FinTech | Servicios en la nube y servicios financieros digitales | SaaS, migración, disponibilidad, pasarela de pago | ¿Qué riesgos de seguridad tiene migrar los pagos a la nube?» · «Pregúntese qué duele en su tema: ¿los datos, la red, el software, el dispositivo o el servicio en la nube? Esa respuesta ya es la línea.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cloud / FinTech: servicios en la nube y servicios financieros digitales, con vocabulario de SaaS, migración y disponibilidad.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Lo que duele en el caso es el servicio alojado en un tercero, y el vocabulario que la sesión asigna a esta línea es justamente migración y disponibilidad.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Telemática: redes, protocolos y comunicaciones, con vocabulario de latencia, ancho de banda y topología.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error atractivo: la palabra «disponibilidad» hace pensar en la red. Pero el objeto de estudio no es el enlace que transporta el servicio, sino el servicio alojado en un tercero; si el ángulo fuera telemático, mediría latencia o pérdida de paquetes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aplicaciones: desarrollo de software y experiencia de uso, con vocabulario de usabilidad, requisitos y prototipo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: se queda en que el objeto es «una plataforma» y la trata como software por construir. Aquí no se estudia cómo se usa ni cómo se desarrolla la plataforma, sino los riesgos de trasladar su alojamiento y su operación a un tercero.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Big Data: analítica de grandes volúmenes de datos ya existentes, con vocabulario de dataset, ETL y minería de datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: se engancha con la palabra «notas» y supone que hay datos por analizar. En el caso no se analiza ningún volumen de datos: se estudia el traslado y la operación de un servicio.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-09 Los tres criterios para elegir la línea]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 02 fija <strong>tres criterios</strong> para elegir la línea de investigación, cada uno con su pregunta de control. ¿Cuáles son?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los tres criterios son <strong>afinidad</strong>, <strong>viabilidad de fuentes</strong> y <strong>pertinencia local</strong>. Ninguno es la moda, el aval del Docente ni el presupuesto. Y la viabilidad de fuentes no se mide por el total de resultados que devuelve el buscador, sino por cuántos son <em>usables</em>: la sesión pide anotar «cuántos resultados usables halló por línea (no cuántos resultados totales)».</p><p>Cita literal (Presentación de la Sesión 02, tabla «Los tres criterios para elegir su línea»): «Afinidad | ¿Esta línea conserva lo que a mí me interesa del tema, o lo desvía? (…) Viabilidad de fuentes | ¿Encuentro hoy, en Google Académico, al menos 2 artículos usables de este ángulo? (…) Pertinencia local | ¿Le sirve a algo de mi entorno: mi sede, mi empresa, mi barrio, mi práctica?»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Afinidad (¿la línea conserva lo que me interesa del tema?), viabilidad de fuentes (¿hay hoy al menos dos artículos usables de este ángulo?) y pertinencia local (¿le sirve a algo de mi entorno?).</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los tres criterios de la tabla, con sus preguntas de control: afinidad con el tema, existencia real de fuentes usables hoy y utilidad en el propio entorno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Novedad (¿la línea está de moda y se habla mucho de ella?), disponibilidad de herramientas (¿tengo instalado el software que hace falta?) y aval del Docente (¿aprueba la línea que elegí?).</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: reúne tres criterios que la sesión descarta. El primero es el mito que abre la lista («la moda no le entrega fuentes»), y la elección de línea la hace y la justifica el estudiante: no se decide por el visto bueno del Docente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Afinidad (¿me interesa la línea que voy a trabajar?), dificultad técnica (¿puedo con el nivel matemático que exige?) y cantidad total de resultados que devuelve el buscador.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: acierta con la afinidad y falla en los otros dos. La sesión no evalúa dificultad técnica, y sobre el buscador es explícita: se anota «cuántos resultados usables» hay por línea, no cuántos resultados totales.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pertinencia local (¿sirve en mi entorno inmediato?), tamaño de la muestra (¿tengo suficientes casos para observar?) y presupuesto disponible (¿puedo pagar el acceso a los datos?).</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: acierta con la pertinencia local y sustituye los otros dos por criterios de ejecución posterior. Además contradice el enfoque del curso: las herramientas y las fuentes que se piden son gratuitas y en el navegador, así que el presupuesto no es criterio de elección.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P1-10 Consecuencia de elegir una línea u otra]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la Sesión 02, dos estudiantes escriben el mismo tema tentativo, «seguridad informática»: el primero lo trabaja desde <strong>Inteligencia Artificial</strong> y el segundo desde <strong>Telemática</strong>. ¿Qué consecuencia tiene esa decisión para el artículo de cada uno?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La línea decide el ángulo, y el ángulo decide todo lo demás: cambian los conceptos que hay que definir, los autores que son referencia obligada y el tipo de evidencia que le van a exigir. Por eso la sesión advierte que dos personas con el mismo tema terminan con dos bibliografías que casi no se cruzan, y que cambiar de línea a mitad de camino obliga a reescribir el marco teórico completo.</p><p>Cita literal (Presentación de la Sesión 02): «Mismo tema, dos bibliografías que casi no se cruzan y dos artículos distintos» · «la línea decide el ángulo, y el ángulo decide todo lo demás. Efecto sobre el artículo: Cambia el marco teórico (qué conceptos hay que definir). Cambian los antecedentes (qué autores son referencia obligada). Cambia la evidencia que le van a exigir (un log de red no sirve para argumentar un modelo de IA).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cambian los conceptos por definir, los autores de referencia y la evidencia exigible: terminan con dos bibliografías que casi no se cruzan y dos artículos distintos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la conclusión que la sesión pide anotar: la línea decide el ángulo y el ángulo decide todo lo demás, así que el mismo tema produce dos artículos distintos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cambia el enfoque de la redacción, pero los conceptos y los autores de referencia son los mismos porque el tema de fondo no cambió.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: reduce la línea a un asunto de estilo. Si el tema se aborda desde IA se hablará de clasificadores, entrenamiento y falsos positivos; desde telemática, de segmentación, firewall y tráfico anómalo. Son literaturas distintas, no la misma redactada de otro modo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguna consecuencia de fondo, siempre que los dos citen en el mismo formato: la línea afecta el registro del proyecto, no el contenido del texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: es el mito que la sesión desactiva expresamente. La línea no es un requisito administrativo; define el vocabulario y los referentes, y cambiarla a mitad del periodo obliga a reescribir el marco teórico completo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cambia la evidencia que cada uno debe recoger, pero no las fuentes: la literatura sobre seguridad informática es común a las dos líneas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: concede la mitad. La sesión muestra que el primero busca «phishing detection, classifier, dataset» y el segundo «firewall, segmentación de red, latencia»: precisamente por eso las bibliografías casi no se cruzan.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

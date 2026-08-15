@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 3 - TG2 S08-S09</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 3 (4% de la nota del curso · Corte 3) — TRABAJO DE GRADO 2, Modelos de Innovación (Ingeniería de Sistemas).</strong></p><p>Ventana: 19/10/2026 a 26/10/2026. Se resuelve dentro del encuentro, en unos 10 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> lo que el Manual del Docente declara como alcance del ítem — «acumula hasta S09: instrumentos, plan de análisis e integración». Las diez preguntas caen en la Sesión 08 (qué es un instrumento y qué no, tipos de instrumento, operacionalización variable → dimensión → indicador → ítem, trazabilidad ítem–objetivo, reglas de redacción de ítems y plan de análisis) y en la Sesión 09 (coherencia global y sus cadenas, semáforo por sección, matriz de gaps e higiene de citas). Varias preguntas de la Sesión 09 exigen además la base acumulada: constructos del marco teórico (S05), variables del diseño metodológico (S07) y citación en APA 7 (S03).</p><p><strong>Lo que NO entra:</strong> el tema de la Sesión 10 (socialización de avances) se dicta el mismo día en que cierra el cuestionario, así que queda fuera; ninguna pregunta ni ninguna opción usa pitch de tres minutos, retroalimentación entre pares ni pedido de ayuda. Tampoco entra nada de la Sesión 11 (cierre del avance y checklist de paso a TG3).</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Las 10 son de contenido temático; ninguna pregunta por la administración del curso. Tiempo total estimado: 9 minutos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-01 Qué se hace con el instrumento en TG2 y qué es ya TG3]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted terminó de redactar la encuesta de diez ítems que propone para su proyecto. ¿Cuál de estas acciones corresponde a lo que Trabajo de Grado 2 pide hacer con el instrumento?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>En TG2 el instrumento se <strong>diseña, se justifica y se deja listo</strong>; nadie responde nada todavía. Maquetarlo en Google Forms está permitido como ejercicio de visualización, pero <strong>sin publicar y sin enviarlo a nadie</strong>: la maqueta se anexa como captura. Publicarlo, difundirlo o recoger respuestas ya es trabajo de campo, y eso es TG3.</p><p>Cita literal (Presentación de la Sesión 08, «Qué es un instrumento y qué NO es»): «<strong>No es</strong> un formulario de Google publicado y enviado a un grupo de WhatsApp. Eso ya es trabajo de campo, y es TG3.» Y en el paso a paso de la misma sesión: «Si quiere ver cómo se vería digital, puede maquetarlo en <strong>Google Forms</strong>, pero déjelo <strong>sin publicar y sin enviar a nadie</strong>. En TG2 el formulario es una maqueta para anexar como captura; la aplicación real es de TG3.» Y en el recuadro de cierre: «En TG2 el instrumento es <strong>propuesto</strong>: se diseña, se justifica y se deja listo. Aplicarlo, difundirlo o recoger respuestas es tarea de TG3.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Maquetarla en Google Forms, dejarla sin publicar y sin enviar a nadie, y anexar la captura al documento como evidencia del diseño.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La maqueta digital es legítima mientras no se publique ni se difunda: en TG2 el instrumento se diseña y se justifica, y la aplicación real queda para TG3.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Publicar el formulario y compartirlo en el grupo de WhatsApp del área, para tener las primeras respuestas antes del cierre del periodo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente el caso que la sesión señala como error: un formulario publicado y enviado a un grupo de WhatsApp ya es trabajo de campo, y el trabajo de campo es de TG3.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Aplicarla a cinco compañeros del curso y reportar el promedio de sus respuestas en la sección de resultados del avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde la prueba de escritorio con la aplicación. Pedirle a alguien que lea el instrumento y marque los ítems que no entendió sí es válido; recoger respuestas y reportar promedios es recolección de datos y producción de resultados propios, que en el avance no van.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ampliarla a cuarenta ítems antes de mostrarla, para que el instrumento se vea completo y demuestre el trabajo invertido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mide el instrumento por volumen y no por alineación. La sesión es explícita: cuarenta preguntas dispersas valen menos que diez alineadas, y lo que se evalúa es que cada ítem se rastree hasta un objetivo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-02 Qué formulación puede ocupar la casilla del indicador]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En su tabla de operacionalización la variable es «tiempo de atención» y la dimensión es «duración del ciclo del ticket». ¿Cuál de estas formulaciones puede ocupar la casilla del <strong>indicador</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El indicador es la <strong>señal observable</strong> de la dimensión: algo que se pueda registrar sin discusión. «Minutos transcurridos entre la apertura y el cierre» cumple. Un deseo («que atiendan rápido») no es indicador porque no se registra; una pregunta con su escala es el <strong>ítem</strong>, un escalón más abajo; y «eficiencia del proceso» es otro constructo abstracto, un escalón más arriba.</p><p>Cita literal (Presentación de la Sesión 08, «Operacionalización: el puente entre la idea y la pregunta»): «<strong>Indicador</strong>: la señal observable que representa esa dimensión. Debe ser algo que se pueda registrar sin discusión. “Minutos transcurridos entre apertura y cierre” es un indicador; “que atiendan rápido” no lo es. <strong>Ítem</strong>: la pregunta o el campo concreto del instrumento que captura el indicador.» Y en la misma sesión: «Operacionalizar es bajar por esa escalera sin saltarse escalones.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Minutos transcurridos entre la hora de apertura y la hora de cierre del ticket.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es una señal observable que se registra sin discusión, y por eso puede representar la dimensión «duración del ciclo del ticket».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el área atienda los tickets con la rapidez que el usuario espera del servicio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el ejemplo que la sesión usa para lo contrario: «que atiendan rápido» no es indicador. Nombra una expectativa, no un dato que alguien pueda registrar sin discutir el criterio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Qué tan oportuna le pareció la respuesta recibida?», con escala de 1 a 5.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se salta un escalón hacia abajo: eso es el <em>ítem</em>, la pregunta concreta del instrumento que captura el indicador. Además mide percepción de rapidez, que es otra dimensión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La eficiencia del proceso de soporte que presta la mesa de ayuda del área.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Se sube un escalón: es un constructo abstracto, del mismo nivel que «tiempo de atención». Un indicador tiene que ser observable, y «eficiencia» todavía habría que operacionalizarla.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-03 Qué instrumento corresponde cuando el dato ya existe]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Uno de sus objetivos específicos exige reconstruir cuántos tickets atendió cada agente por turno durante el último año. Ese dato ya está registrado en el histórico del sistema. Según la Sesión 08, ¿qué instrumento corresponde?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La <strong>ficha de registro documental</strong>, de seis a diez campos, es la que conviene cuando el dato <strong>ya existe</strong> en logs, actas o bases. En el ejemplo modelado del caso, «tickets atendidos por turno» aparece justamente como campo de registro documental extraído del histórico. Preguntarle a la gente lo que el sistema ya registra cambia un dato duro por un recuerdo.</p><p>Cita literal (Presentación de la Sesión 08, tabla «Tipos de instrumento: cuál le sirve a su proyecto»): «<strong>Ficha de registro documental</strong> · Datos extraídos de archivos o históricos · El dato ya existe en logs, actas o bases · 6 a 10 campos». Y en la tabla de operacionalización modelada: «Carga de trabajo del agente · Volumen atendido · Tickets atendidos por turno · Campo de registro documental extraído del histórico».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una ficha de registro documental de seis a diez campos, porque el dato ya existe en el histórico del sistema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Cuando el dato ya está en logs, actas o bases, el instrumento es la ficha con la que se extrae, no uno que produzca el dato de nuevo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una encuesta de unos diez ítems a los agentes, para que reporten cuántos tickets recuerdan haber atendido por turno.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia un dato registrado por un recuerdo. La encuesta sirve para datos numéricos y categóricos que hay que <em>pedir</em>; aquí el dato ya está y solo hay que extraerlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una guía de entrevista de unas ocho preguntas abiertas a los agentes, porque son quienes conocen de cerca su propia carga.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La guía de entrevista produce relatos, percepciones y razones, y conviene cuando se busca el <em>porqué</em>. Para un conteo por turno del último año no entrega el dato que el objetivo pide.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una ficha de observación de seis a diez criterios, para registrar la carga de cada agente durante los turnos siguientes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La ficha de observación registra conductas y eventos de un proceso en funcionamiento, es decir lo que pase de ahora en adelante. No reconstruye el último año, que es lo que el objetivo exige.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-04 Los dos defectos de un ítem mal redactado]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le muestra este ítem de su encuesta: <em>«¿Le parece que el sistema actual es lento e ineficiente?»</em>. Según las siete reglas de redacción de ítems de la Sesión 08, ¿qué dos defectos tiene?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Falla la regla 1 (<strong>una idea por ítem</strong>): «lento» e «ineficiente» son dos cosas, y si alguien responde «sí» no se sabe a cuál se refiere. Y falla la regla 3 (<strong>sin preguntas que inducen la respuesta</strong>): el enunciado ya trae puesto el juicio que el encuestado debería emitir. La versión corregida que da la sesión pregunta por el hecho: cuánto tiempo esperó.</p><p>Cita literal (Presentación de la Sesión 08, «Siete reglas para redactar ítems que sí funcionan»): «<strong>1. Una idea por ítem.</strong> “Rapidez y amabilidad” son dos preguntas: si responden 3, usted no sabe a cuál se refieren. (…) <strong>3. Sin preguntas que inducen la respuesta.</strong> “¿No cree que el sistema actual es demasiado lento?” ya trae la respuesta puesta.» Y en la tabla «Ítem mal redactado vs. ítem corregido»: «“¿Le parece que el sistema es lento e ineficiente?” → Dos ideas juntas y además induce la respuesta → “¿Cuánto tiempo esperó desde que reportó hasta la primera respuesta?”».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Junta dos ideas en un solo ítem y, además, induce la respuesta que el encuestado debería dar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son las reglas 1 y 3: «lento» e «ineficiente» son dos preguntas distintas, y el enunciado ya trae el juicio puesto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Usa vocabulario técnico que el encuestado no maneja y no rotula los extremos de la escala.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el defecto de otro ejemplo de la sesión, «¿considera adecuada la latencia del pipeline?». «Lento» e «ineficiente» son palabras corrientes: el problema aquí no es la jerga.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contiene una doble negación y pide un dato personal que ningún análisis del proyecto va a cruzar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla las reglas 4 y 7, que aquí no aplican: el ítem no está negado dos veces («no considera inadecuado que…» sí lo estaría) y no pide ningún dato personal.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cambia el sentido de la escala respecto del resto del bloque y no ofrece la opción «otro, ¿cuál?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Son las reglas 5 y 6, que se refieren a la coherencia de la escala y a las opciones de las preguntas cerradas. El ítem citado falla antes de eso: en su propia redacción.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-05 Un objetivo al que no llega ningún ítem]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su proyecto tiene tres objetivos específicos y su encuesta quedó con catorce ítems. Al revisar la tabla de operacionalización usted comprueba que todos los ítems se rastrean a los objetivos 1 y 2, y ninguno al 3. ¿Qué le dice la regla de trazabilidad de la Sesión 08?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es la <strong>falla típica número dos</strong>: un objetivo específico que ningún ítem del instrumento alimenta. El conteo de control de la sesión no se cumple, porque solo dos de los tres objetivos tienen al menos un ítem. La corrección es bajar la escalera desde el objetivo 3 (variable → dimensión → indicador → ítem) y crear los ítems que le faltan.</p><p>Cita literal (Presentación de la Sesión 08, «La regla de trazabilidad: cada ítem apunta a un objetivo»): «Falla típica número dos: <strong>el objetivo sin ítems</strong>. Un objetivo que ningún ítem del instrumento alimenta. Haga el conteo al final: número de objetivos con al menos un ítem = número total de objetivos específicos.» Y en el mismo bloque: «Trazabilidad significa que se puede seguir el hilo <strong>objetivo → variable → indicador → ítem</strong> sin perderse.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que hay un objetivo sin ítems: el instrumento no alimenta el objetivo 3 y hay que crearle ítems bajando la escalera desde su variable.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El conteo de control exige que cada objetivo específico tenga al menos un ítem, y aquí el tercero se quedó sin ninguno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que sobran ítems: catorce para dos objetivos es demasiado, y basta con recortar el instrumento hasta dejarlo en unos diez.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Atiende el tamaño y deja intacto el problema. Recortar de catorce a diez no le da ni un solo ítem al objetivo 3, que seguiría sin nada que lo alimente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el objetivo 3 está mal formulado, porque un objetivo al que no llega ningún ítem no es medible y hay que reescribirlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la responsabilidad. La trazabilidad se rompió en el instrumento, no en el objetivo: lo que falta son los ítems que bajen desde ese objetivo, y culpar al objetivo suele ser la excusa para no escribirlos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el instrumento está bien mientras los dos primeros objetivos queden cubiertos, porque el tercero se atiende luego en el plan de análisis.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El plan de análisis dice qué hacer con datos que <em>ya se van a recoger</em>: no puede analizar un dato que ningún ítem produce. Si el objetivo 3 no tiene ítems, se queda sin evidencia.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-06 Cómo se organiza y en qué tiempo se escribe el plan de análisis]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Dos compañeros discuten cómo armar el plan de análisis del avance. Según la Sesión 08, ¿cómo se organiza y en qué tiempo verbal se escribe?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El plan de análisis se escribe <strong>por tipo de dato</strong> —numéricos, categóricos y textuales—, no por instrumento, y se redacta en <strong>propuesto</strong>, antes de tener un solo dato en la mano. Escribirlo antes es lo que obliga a comprobar si el dato previsto responde de verdad a la pregunta.</p><p>Cita literal (Presentación de la Sesión 08, «El plan de análisis se decide ANTES de tener un solo dato»): «Un plan de análisis se escribe por tipo de dato, no por instrumento: numéricos, categóricos y textuales. Numéricos: promedio, dispersión y comparación antes/después. Categóricos: frecuencias y porcentajes. Textuales: agrupación por temas recurrentes. (…) Y todo en propuesto: “se calculará”, “se compararán”, “se agruparán”.» Y en el mismo bloque: «El error más caro del trabajo de grado: recoger primero y preguntarse después “¿y ahora qué hago con esto?”.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Por tipo de dato —numéricos, categóricos y textuales— y en propuesto: «se calculará», «se compararán», «se agruparán».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión lo dice con esas palabras: por tipo de dato y no por instrumento, y todo en propuesto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Por instrumento, con un bloque para cada uno, y en pasado, porque describe lo que se hizo con las respuestas recibidas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la organización que la sesión descarta expresamente («por tipo de dato, no por instrumento») y además usa el pasado, que solo cabe cuando ya hay datos. En TG2 todavía no los hay.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Por objetivo específico y en presente, dejando anotado el resultado que arrojó cada uno de los análisis realizados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El objetivo es una <em>columna</em> de la tabla del plan («¿a qué objetivo responde este dato?»), no el criterio de organización; y anotar resultados convierte el plan en un informe de hallazgos que en el avance no corresponde.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Por herramienta de cálculo y en propuesto, justificando la licencia y el costo del programa que se va a utilizar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde el plan con la lista de herramientas. La sesión menciona una hoja de cálculo gratuita como medio previsto para TG3, pero el plan responde qué se hará con cada tipo de dato, no con qué programa.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-07 Qué eslabón de coherencia está roto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al leer su documento de corrido usted encuentra que el marco teórico desarrolla tres variables y que el diseño metodológico se propone medir una cuarta que el marco nunca nombra. Según las cadenas de coherencia de la Sesión 09, ¿qué eslabón está roto?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El eslabón roto es <strong>Marco → Metodología</strong>, y su pregunta de verificación es: ¿las variables del marco son las que se van a medir? El síntoma que la sesión describe es literalmente este caso. Se cierra por cualquiera de los dos extremos: se desarrolla en el marco la variable que se va a medir, o se ajusta la metodología a las variables que el marco sí sostiene.</p><p>Cita literal (Presentación de la Sesión 09, tabla «Las cadenas de coherencia y su síntoma cuando se rompen»): «<strong>Marco → Metodología</strong> · ¿Las variables del marco son las que se van a medir? · El marco define tres variables y la metodología mide otra». Y en el mismo bloque de la sesión: «<strong>Coherencia global</strong> es que cada sección exista <strong>por causa</strong> de la anterior y <strong>para</strong> la siguiente.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Marco → Metodología: las variables que desarrolla el marco no son las que la metodología se propone medir.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el síntoma que la sesión describe para ese eslabón: el marco define unas variables y la metodología mide otra.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Problema → Pregunta: la pregunta de investigación no apunta al dolor que el planteamiento describió.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese eslabón se rompe cuando, por ejemplo, el problema habla de costos y la pregunta habla de satisfacción. En el caso descrito el desajuste aparece más adelante, entre el marco y la metodología.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pregunta → Objetivos: hay un objetivo específico de más, que la pregunta de investigación nunca pidió.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ese es el síntoma de otro eslabón, el que se verifica preguntando si los objetivos sumados responden la pregunta. Aquí el enunciado no dice nada de objetivos sobrantes.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Todo → Título: el título promete un alcance que el documento, leído completo, no llega a cumplir.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El eslabón del título se verifica preguntando si describe lo que el documento realmente hace. Puede estar roto también, pero el desajuste que el caso reporta es entre las variables del marco y las de la metodología.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-08 Qué color del semáforo le corresponde a la sección]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su marco teórico desarrolla dos de los tres constructos que aparecen en sus objetivos; el tercero está apenas enunciado en una línea. Según los criterios del semáforo de la Sesión 09, ¿qué color le corresponde a esa sección y por qué?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Amarillo</strong>: la sección existe y se entiende, pero le falta algo <strong>concreto y nombrable</strong>, y aquí se puede nombrar con precisión: el desarrollo del tercer constructo. Es exactamente la fila del ejemplo modelado del caso. No es rojo, porque no falta ni contradice a otra sección; y no es verde, porque no está completa.</p><p>Cita literal (Presentación de la Sesión 09, «El semáforo por sección: criterios, no sensaciones»): «<strong>Verde</strong> = la sección está completa, es coherente con el resto y está citada. No requiere trabajo estructural. <strong>Amarillo</strong> = existe y se entiende, pero le falta algo concreto y nombrable: un constructo, una justificación, dos referencias. <strong>Rojo</strong> = falta, está a medias o contradice otra sección. Es lo que hunde el avance si no se atiende.» Y en el ejemplo modelado: «Marco teórico · <strong>Amarillo</strong> · Dos constructos desarrollados; el tercero está apenas enunciado».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Amarillo: existe y se entiende, pero le falta algo concreto y nombrable, que es el desarrollo del tercer constructo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El amarillo se reserva para lo que existe pero le falta algo que se puede nombrar con precisión, como un constructo, una justificación o dos referencias.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Rojo: toda sección que no esté terminada hunde el avance, así que se marca como faltante hasta cerrarla.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la trampa del perfeccionismo que la sesión advierte: pintar todo rojo deja sin saber por dónde empezar. El rojo es para lo que falta, está a medias o contradice; esta sección existe y se entiende.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Verde: la sección ya está escrita y citada, y el tercer constructo se puede completar al final del periodo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es la otra trampa que la sesión nombra: pintar verde para sentirse bien. El verde exige que la sección esté completa y coherente, y aquí falta un constructo que los objetivos sí usan.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Rojo: el tercer constructo contradice a los otros dos y esa contradicción rompe la coherencia del marco.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Lee bien el criterio del rojo, pero le atribuye al caso algo que no dice: nadie reportó contradicción entre los constructos, solo que uno está apenas enunciado.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-09 Fila de la matriz de gaps bien escrita]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Debe convertir en una fila de la matriz de gaps este amarillo del semáforo: «tercer constructo del marco apenas enunciado». ¿Cuál de estas filas cumple con lo que la Sesión 09 exige en las columnas de <strong>acción concreta</strong> y <strong>evidencia de cierre</strong>?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La acción tiene que ser un <strong>verbo ejecutable hoy</strong>, con cantidad y con material («redactar dos párrafos con dos fuentes»), y la evidencia de cierre tiene que ser <strong>verificable</strong>: algo que se pueda mirar y contar. «Mejorar», «revisar» y «profundizar» no producen nada comprobable, y «quedó mejor» o «se siente más sólido» no son evidencias.</p><p>Cita literal (Presentación de la Sesión 09, «La matriz de gaps: convertir el color en acción»): «<strong>Acción concreta</strong>: un verbo que se pueda ejecutar hoy. “Redactar”, “buscar”, “agregar fila”, “formatear”. Compare: “mejorar el marco” no es acción; “redactar dos párrafos del tercer constructo con dos fuentes” sí lo es. <strong>Evidencia de cierre</strong>: cómo sabrá que lo terminó. “La matriz tiene tres filas” es verificable; “quedó mejor” no.» Y en la tabla «Gap vago vs. gap accionable»: «Regla práctica: si no puede decir cómo verificará que el gap quedó cerrado, todavía no lo escribió bien.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Acción: redactar dos párrafos del tercer constructo con dos fuentes de los últimos cinco años. Evidencia: dos párrafos nuevos con dos citas en APA 7.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El verbo se puede ejecutar hoy, la acción dice cuánto y con qué, y la evidencia se puede mirar y contar en el documento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Acción: mejorar la redacción del marco teórico completo. Evidencia: la sección quedó mejor escrita y más clara que en la versión anterior.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el ejemplo textual de gap vago: «mejorar el marco» no es acción y «quedó mejor» no es evidencia de cierre, porque no hay forma de verificarlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Acción: revisar toda la bibliografía disponible sobre el constructo. Evidencia: se leyeron las fuentes que aparecieron en la búsqueda académica.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>«Revisar» no produce nada verificable en el documento: se puede revisar durante horas y no cambiar una línea. Y leer fuentes no es evidencia de que el constructo quedó escrito.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Acción: profundizar en el constructo que quedó faltante. Evidencia: el marco teórico se siente más sólido y mejor sustentado que antes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>«Profundizar» no dice cuánto ni con qué material, y «se siente más sólido» es una sensación. La sesión pide una evidencia que se pueda comprobar sin discutir.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG2-Q3-10 Un apellido de la lista que no aparece en el cuerpo]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al pegar en un solo archivo secciones que escribió en semanas distintas, usted recorre la lista de referencias con Ctrl+F y encuentra un apellido que no aparece en ninguna parte del cuerpo del documento. Según la Sesión 09, ¿qué es eso y qué se hace?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es una <strong>referencia huérfana</strong>: está en la lista final y nunca se citó en el cuerpo. La sesión es explícita en que <strong>también es error</strong>, no solo la cita sin referencia. Se corrige por uno de los dos lados: o se cita en el cuerpo donde corresponda, o se saca de la lista.</p><p>Cita literal (Presentación de la Sesión 09, «Higiene de citas: el gap silencioso»): «<strong>Cita huérfana</strong>: aparece Autor (2022) en el texto y no está en las referencias. <strong>Referencia huérfana</strong>: está en la lista final y nunca se citó en el cuerpo. <strong>También es error.</strong> Verificación rápida: recorra la lista de referencias y busque cada apellido con Ctrl+F en el cuerpo del documento. Si el apellido no aparece, esa referencia sobra o falta citarla.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Es una referencia huérfana y también es error: o se cita en el cuerpo donde corresponda, o se saca de la lista final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La sesión trata las dos direcciones como error: la cita sin referencia y la referencia sin cita. Esa referencia sobra o falta citarla.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>No es error: la lista final puede recoger todo lo que se consultó durante el semestre, aunque no se haya citado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde una lista de lecturas con una lista de referencias. En APA 7 la lista final es el reverso exacto de las citas del cuerpo, y la sesión llama a este caso «referencia huérfana» precisamente porque es un error.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es una cita huérfana y se corrige generando en ZoteroBib la referencia que falta y pegándola en la lista.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte los dos casos. La cita huérfana es la que aparece en el texto y no está en la lista; aquí pasa lo contrario, así que generar la referencia no arregla nada: ya está.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Es un asunto de formato: basta con revisar el orden alfabético y la sangría francesa de la lista de referencias.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El orden alfabético y la sangría francesa también se revisan, pero son otra cosa. La sesión advierte que esta higiene no es cosmética: una cita sin respaldo se lee como texto sin fuente.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

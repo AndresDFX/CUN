@@ -340,6 +340,16 @@ COURSES = {
             {"n": 1, "fecha": "12/08/2026", "titulo": "Presentación del curso · docente · estudiantes · ACAs", "bloque": "Encuadre",
              "presentacion": True,
              "unidad_diferida": "U1–U2 (Propuesta de Innovación · creatividad e inteligencia emocional) → lectura autónoma; se retoma al abrir la Sesión 02.",
+             # Documento publicado aparte del deck, en la carpeta de la sesión y como recurso del
+             # aula. Su consigna le dice al estudiante que NO entra en el Quiz 1; sí entra desde
+             # el Parcial 1, y el banco de ese parcial ya lo evalúa. `excluido_de` mantiene las dos
+             # guías diciendo lo mismo que la consigna, sin que haya que recordarlo a mano.
+             "material_estudio": [
+                 {"nombre": "Material de estudio U2 — Bloqueadores y ensanchadores de la creatividad",
+                  "detalle": "bloqueadores perceptivos, emocionales y culturales · ensanchadores · "
+                             "la inteligencia emocional como insumo de la creatividad · autodiagnóstico",
+                  "excluido_de": ["Quiz 1"]},
+             ],
              "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato). No se dicta tema."},
             {"n": 2, "fecha": "19/08/2026", "titulo": "Creatividad/innovación en I+D · Design Thinking y técnicas", "bloque": "U3",
              "detalle": "Pensamiento divergente/convergente · ideación."},

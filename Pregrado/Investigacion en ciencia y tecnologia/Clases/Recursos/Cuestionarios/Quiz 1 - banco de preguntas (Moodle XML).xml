@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 1 - Investigacion U1-U2</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 1 (6% de la nota del curso · Corte 1) — INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA PARA LA ESCUELA DE INGENIERÍA (SIAC EI005).</strong></p><p>Ventana: 13/08/2026 a 20/08/2026. Se resuelve en el aula, dentro del encuentro, en unos 12 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada:</strong> únicamente la lectura autónoma asignada en la Sesión 01 —unidades U1 y U2 del Syllabus— y el material publicado en CDigital: la consigna <em>Lectura autonoma - Sesion 01.txt</em>, la lectura obligatoria <em>Casares-Salazar, R., González-Herrera, R. A. y Quintal-Franco, C. A. (2019). Cómo organizar eficientemente un documento científico</em> (Ingeniería, 23(1), 21-35) y el Syllabus SIAC. La Sesión 01 fue de encuadre y no dictó tema.</p><p><strong>Nada de lo que se dicta en la Sesión 02 o después:</strong> MinCiencias, SNCTI, las 6 líneas estratégicas de Ingeniería, elección de línea, tipos de conocimiento y fuentes del primer avance, espina de pescado, árbol de problemas, método 3D, bases de datos suscritas, operadores de búsqueda, gestores de citas, posturas teóricas y matriz de fuentes.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Todas evalúan contenido temático de U1–U2: ninguna pregunta por pesos, fechas, créditos, canal de entrega ni reglas de convivencia. Tiempo total estimado: 10 minutos y 20 segundos.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-01 Etapas del método científico]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El Syllabus de la asignatura, en su unidad 2 («Fundamentos básicos: Método científico de investigación»), enumera las etapas del método científico. ¿En qué orden las presenta?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es <strong>planteamiento del problema → obtención de datos → procesamiento de la información → análisis e interpretación de datos</strong>. Primero se define qué se va a investigar; solo entonces se recogen los datos, se los organiza y, al final, se los interpreta. Procesar es ordenar y depurar la información; analizar e interpretar es decir qué significa.</p><p>Cita literal (Syllabus SIAC EI005, «Unidades de conocimiento», N.° 2): «Método científico: Versión popular del método. Etapas del método científico: a. Planteamiento del problema b. obtención de datos c. procesamiento de la información d. Análisis e interpretación de datos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Planteamiento del problema → obtención de datos → procesamiento de la información → análisis e interpretación de datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el orden textual del Syllabus: el problema abre el proceso, los datos se obtienen después, luego se procesan y por último se analizan e interpretan.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Planteamiento del problema → obtención de datos → análisis e interpretación de datos → procesamiento de la información.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte las dos últimas etapas. Se interpretaría información que todavía no ha sido organizada ni depurada; el procesamiento es lo que hace interpretables los datos crudos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Obtención de datos → planteamiento del problema → procesamiento de la información → análisis e interpretación de datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error muy común: arrancar recogiendo datos y buscar después el problema que los justifique. Sin problema planteado no hay criterio para decidir qué datos hacen falta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Planteamiento del problema → procesamiento de la información → obtención de datos → análisis e interpretación de datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: pone el procesamiento antes de la obtención. No se puede depurar ni organizar información que aún no se ha recogido.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-02 Qué hace que un producto sea artículo de nuevo conocimiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>El Syllabus define el producto de la asignatura como un <strong>artículo de nuevo conocimiento</strong>. Según ese documento, ¿qué condición hace que un producto de investigación pueda considerarse así?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Lo que lo convierte en nuevo conocimiento es que sea <strong>inédito</strong> y que aborde la solución <strong>desde la perspectiva propia de quien lo escribe</strong>. No depende del número de fuentes ni de que el tema no haya sido tocado por nadie: depende de que haya un aporte propio y no publicado antes.</p><p>Cita literal (Syllabus SIAC EI005, «Propósito de formación»): «Explorar diferentes herramientas y métodos de selección, recolección, y organización de la información que apoyen la elaboración de un producto de investigación que pueda considerarse como un artículo de nuevo conocimiento, toda vez que es inédito y aborda una solución desde la perspectiva única del estudiante.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que sea inédito y que aborde la solución desde la perspectiva propia de quien lo escribe.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El Syllabus lo dice así: es artículo de nuevo conocimiento «toda vez que es inédito y aborda una solución desde la perspectiva única del estudiante».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que reúna y ordene las conclusiones de los autores ya publicados, sin agregar una postura propia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: eso es un resumen de lo que otros dijeron. Ordenar bien lo ajeno es un insumo del artículo, pero sin postura propia no hay conocimiento nuevo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que se apoye en el mayor número posible de fuentes recientes, sea cual sea la pregunta que responda.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde cantidad de bibliografía con aporte. Muchas fuentes recientes pueden sostener un texto que no dice nada nuevo ni responde a una pregunta propia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que reproduzca un estudio ya publicado con sus mismos pasos, para comprobar que arroja igual resultado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: repetir un estudio ajeno es replicarlo, no producir conocimiento inédito. Falta justamente la perspectiva propia que exige el Syllabus.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-03 La estructura IMRyD]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura obligatoria de la Sesión 01 (Casares-Salazar et al., 2019) señala que existe una estructura adoptada internacionalmente para el documento científico: la estructura IMRyD. ¿Qué secciones nombra esa sigla?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>IMRyD son <strong>Introducción, Metodología, Resultados y Discusión</strong>. Ese esqueleto es el método científico puesto por escrito: la introducción plantea el problema y la pregunta, la metodología describe el diseño, los resultados presentan la evidencia y la discusión cierra el razonamiento.</p><p>Cita literal (Casares-Salazar et al., 2019, Introducción): «La estructura adoptada internacionalmente es la denominada IMRyD (Introducción, Metodología, Resultados y Discusión).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Introducción, Metodología, Resultados y Discusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la sigla tal como la define la lectura: Introducción, Metodología, Resultados y Discusión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Introducción, Marco teórico, Resultados y Discusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error frecuente: cambia la metodología por el marco teórico. La lectura aclara que el marco teórico o conceptual es una sección propia de la tesis, no una de las cuatro del IMRyD.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Introducción, Metodología, Referencias y Discusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la R de la sigla es de Resultados, no de Referencias. Las referencias son una sección obligatoria del documento, pero no forman parte del esqueleto IMRyD.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Introducción, Metodología, Resultados y Datos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la D final es de Discusión. Los datos se presentan en Resultados; lo que falta en esta opción es justamente la sección donde se los interpreta.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-04 Criterios para redactar el título]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted ya tiene el objetivo de su artículo y va a escribir el título. De acuerdo con los criterios de la lectura obligatoria, ¿cuál de estos títulos está bien formulado?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El título correcto empieza por una palabra clave asociada al objetivo («Efecto de…»), no supera las 12 palabras, no está en forma de pregunta, no arranca con artículo y no incluye palabras que no aportan información.</p><p>Cita literal (Casares-Salazar et al., 2019, «El título»): «el título debe contener la esencia del trabajo con el mínimo de palabras, empleando hasta 12 […] el título no deberá comenzar con artículos o preposiciones […] es preferible comenzar con una palabra asociada a un verbo de acción (e.g. Relación de…, Diseño de…, Comparación de…, Determinación de…) o palabra clave (e.g. Efecto de…, Causas de…, Influencia de…) que refleje el objetivo central; no se recomienda usar títulos en forma de preguntas […] Tampoco es recomendable incluir en el título palabras que no aportan información, como “método” y “resultados”, ni iniciar con frases genéricas como “Un estudio de” o “Una investigación experimental de” […] También se deben evitar los términos grandilocuentes como “nuevo”, “primero”, “paradigma”.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>«Efecto del mantenimiento preventivo en la disponibilidad de la flota de buses»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Doce palabras, abre con la palabra clave «Efecto de…» que refleja el objetivo central, no es una pregunta y no incluye términos vacíos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«¿Cómo mejorar la disponibilidad de la flota de buses con mantenimiento preventivo?»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: está redactado en forma de pregunta, y la lectura lo desaconseja expresamente. La pregunta de investigación va en la introducción, no en el título.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«Un estudio de los métodos y resultados del mantenimiento preventivo de buses»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble: arranca con la frase genérica «Un estudio de» y gasta palabras en «métodos» y «resultados», que la lectura señala como palabras que no aportan información.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>«El mantenimiento preventivo: la primera investigación experimental sobre la flota de buses»</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: comienza con el artículo «El» y usa un término grandilocuente («la primera»), dos cosas que la lectura pide evitar. El uso de dos puntos, en cambio, sí está permitido.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-05 Cómo se escribe el resumen]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la lectura obligatoria de la Sesión 01, ¿cómo se escribe el resumen (<em>abstract</em>) de un documento científico?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es un solo párrafo a texto continuo y <strong>sin referencias</strong>, que sintetiza el propósito y el vacío que se busca cubrir, los métodos, los resultados —que ocupan la mayor parte— y las conclusiones. Es una versión reducida de todo el trabajo, no una introducción ampliada.</p><p>Cita literal (Casares-Salazar et al., 2019, «El resumen»): «El resumen se escribe en un párrafo a texto continuo, sin referencias, que sintetiza la introducción (objetivos, importancia o motivación), los métodos (técnicas), resultados (hallazgos más importantes) y principales conclusiones. […] Usualmente los resultados ocupan la mayor parte del resumen.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>En un solo párrafo a texto continuo y sin referencias, sintetizando propósito, métodos, resultados y conclusiones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura lo describe como «un párrafo a texto continuo, sin referencias», que resume la introducción, los métodos, los resultados y las conclusiones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En varios párrafos con un subtítulo por cada sección del documento y con las citas de los autores más relevantes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: convierte el resumen en un índice comentado. Va en un solo párrafo continuo, sin subtítulos, y no lleva referencias.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En un párrafo dedicado sobre todo al contexto y a los antecedentes, dejando los resultados para el cuerpo del texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte las proporciones. El contexto es solo la entrada del resumen; son los resultados los que suelen ocupar la mayor parte.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En un párrafo donde se enuncian los objetivos y se anuncia lo que el lector encontrará, sin adelantar hallazgos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: guardar los hallazgos para «que el lector siga leyendo» es lo contrario de lo que se pide. El resumen debe decir qué se encontró y qué se concluye.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-06 Orden de las ideas en la introducción]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura obligatoria sugiere plantear el problema de investigación en la introducción «en forma lógica, transitando de lo general a lo particular». ¿En qué orden encadena las ideas?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es: <strong>contexto → estado del arte → vacío en el conocimiento → aporte del trabajo con preguntas, hipótesis y objetivos</strong>. Se sitúa al lector, se muestra qué han hecho otros, se señala lo que aún no se sabe y solo entonces se declara qué va a hacer este trabajo.</p><p>Cita literal (Casares-Salazar et al., 2019, «La introducción»): «1. Iniciar con una breve descripción del contexto (problemática o tema de estudio) para situar al lector y captar su atención. 2. Describir el estado actual de los antecedentes más relevantes en el tema (trabajos realizados por otros autores), a lo cual se le llama “estado del arte”. 3. Describir la problemática existente en el tema de estudio, las limitaciones o vacíos en el conocimiento (lo que se desconoce aún). […] 4. Describir cómo el trabajo contribuirá al avance del tema de estudio, incluyendo las preguntas de investigación, las hipótesis, el propósito y objetivos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Contexto del tema → estado del arte → vacío en el conocimiento → aporte del trabajo, con preguntas, hipótesis y objetivos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es la secuencia de los cuatro puntos de la lectura: contexto, antecedentes, vacío y, al final, lo que este trabajo se propone hacer.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contexto del tema → vacío en el conocimiento → aporte del trabajo, con preguntas y objetivos → estado del arte.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error sutil: deja los antecedentes de último. El vacío solo se puede afirmar después de mostrar qué han hecho otros autores; si el estado del arte va al final, el vacío queda sin sustento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Preguntas, hipótesis y objetivos → contexto del tema → estado del arte → vacío en el conocimiento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: abre con la pregunta y los objetivos. Es cómodo para quien escribe, pero rompe el tránsito de lo general a lo particular y deja al lector sin contexto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Estado del arte → vacío en el conocimiento → contexto del tema → aporte del trabajo, con preguntas y objetivos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: arranca en los antecedentes sin haber situado el tema. El contexto es la entrada de la introducción, no una aclaración posterior.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-07 El vacío en el conocimiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le dice que no puede empezar su artículo porque «todo lo que se le ocurre ya lo estudió alguien». Según la lectura obligatoria, ¿dónde se identifica el vacío en el conocimiento y de qué tamaño debe ser?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El vacío se identifica <strong>al elaborar el estado del arte</strong>, tras una revisión bibliográfica exhaustiva en la que se detectan lagunas, contradicciones o un problema actual del campo. Y <strong>no tiene que ser enorme</strong>: basta un pequeño aporte sobre algo que aún no queda del todo claro.</p><p>Cita literal (Casares-Salazar et al., 2019, «La introducción»): «Con la investigación se pretende cubrir un vacío en el conocimiento, sin que tenga este que ser enorme, sino apenas un pequeño aporte en el campo de estudio que aún no queda del todo claro. Dicho vacío se puede identificar al elaborar el estado del arte, es decir, luego de realizar una revisión bibliográfica exhaustiva donde se detecten: lagunas en el conocimiento […]; contradicciones, inconsistencias o ambigüedades en la literatura (evidencias en conflicto); o bien un problema actual en el campo del conocimiento.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Al elaborar el estado del arte, buscando lagunas o contradicciones; basta un pequeño aporte, no hace falta un vacío enorme.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La lectura pide detectar lagunas, contradicciones o un problema actual del campo al construir el estado del arte, y aclara que el vacío puede ser «apenas un pequeño aporte».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Al leer las conclusiones del artículo más reciente del tema; debe ser un vacío que ningún autor haya señalado antes.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: reduce la revisión a un solo texto y exige originalidad absoluta. Es exactamente la creencia que bloquea a su compañero, y la lectura la desmiente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Al analizar los resultados que uno mismo ya obtuvo; debe ser lo bastante amplio para justificar toda una investigación nueva.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error de secuencia: el vacío se identifica antes de investigar, no después de tener resultados. Si aparece al final, la investigación se hizo sin saber qué le faltaba al campo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En la discusión, al comparar los propios hallazgos con los de otros autores; debe abarcar todo el campo de estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde dos momentos. En la discusión sí se compara con otros autores, pero el vacío que motiva el trabajo se declara en la introducción, apoyado en el estado del arte.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-08 Qué es una hipótesis de investigación]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la lectura obligatoria, ¿qué es una hipótesis de investigación y qué se hace cuando el proyecto no permite plantear ninguna?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una hipótesis es <strong>una proposición que puede ponerse a prueba</strong> para determinar su validez, es decir, que conduce a una prueba empírica. Cuando no es posible plantearla —por ejemplo en un desarrollo tecnológico o una investigación aplicada donde se ejecutan cálculos, modelos o simulaciones— basta con plantear las preguntas de investigación o los objetivos.</p><p>Cita literal (Casares-Salazar et al., 2019, «La introducción»): «Una hipótesis de investigación es una proposición que puede ser puesta a prueba para determinar su validez, por lo que conduce a una prueba empírica. […] Sin embargo, habrá ocasiones en las que no sea posible plantear alguna, como en el caso de un proyecto de desarrollo tecnológico o investigación aplicada donde se ejecuten ciertos cálculos, modelos matemáticos o simulaciones […]; en tales casos bastará con plantear las preguntas de investigación, o bien los objetivos.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una proposición que puede ponerse a prueba para determinar su validez; si no es posible plantearla, bastan las preguntas de investigación o los objetivos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La hipótesis conduce a una prueba empírica; y cuando el proyecto no admite una, la lectura autoriza trabajar con las preguntas de investigación o los objetivos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El resultado que el autor espera obtener y que no se somete a prueba; si no es posible plantearla, el trabajo se reformula hasta que admita una.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error doble: una expectativa que no se pone a prueba no es una hipótesis, y no todo proyecto tiene que forzar una. Hay trabajos válidos que solo llevan preguntas y objetivos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una afirmación que la revisión de literatura ya deja demostrada; si no es posible plantearla, se reemplaza por las conclusiones de otros autores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: si algo ya está demostrado por otros, no hay nada que probar. La hipótesis se formula precisamente porque su validez está pendiente de verificación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El hallazgo principal que el estudio confirma al final; si no es posible plantearla, el trabajo se presenta sin preguntas ni objetivos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: confunde la hipótesis con el resultado. La hipótesis se enuncia antes y dirige la investigación; y ningún trabajo se presenta sin preguntas ni objetivos.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-09 Propósito de la metodología]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La lectura obligatoria llama a la metodología «la piedra angular del artículo» y advierte que en el arbitraje se la analiza con especial cuidado. ¿Cuál es su propósito?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Su propósito es <strong>dar detalles suficientes para que otro investigador competente pueda repetir el trabajo</strong>, porque el método científico exige que los resultados obtenidos puedan reproducirse. De ahí que se la revise con tanto cuidado: si hay dudas sobre la reproducibilidad, el revisor recomienda rechazar el trabajo.</p><p>Cita literal (Casares-Salazar et al., 2019, «La metodología»): «El objetivo de la metodología consiste en describir los procedimientos experimentales con suficiente detalle como para que otro investigador competente pueda repetir el trabajo, permitiendo a la vez que el lector juzgue la validez de los resultados […] Puesto que el método científico exige que los resultados obtenidos puedan ser reproducidos, en el proceso de arbitraje la metodología es un aspecto que se analiza cuidadosamente.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Dar los detalles suficientes para que otro investigador competente pueda repetir el trabajo, porque el método científico exige resultados reproducibles.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La reproducibilidad es el criterio: si otro no puede repetir el procedimiento con lo que usted escribió, la metodología está incompleta.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Explicar qué significan los datos obtenidos y compararlos con los de otros autores, porque de eso depende la validez de las conclusiones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: eso es la discusión. La metodología cuenta cómo se hizo el trabajo; interpretar y comparar es tarea de otra sección.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Demostrar que el autor domina las técnicas más avanzadas del área, porque es lo que le da prestigio al trabajo ante los revisores.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la metodología no es una vitrina de técnicas. La lectura pide explicar por qué se eligió cada método, y los métodos poco conocidos hay que explicarlos, no exhibirlos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Justificar la importancia del tema y su posible aplicación práctica, porque es lo que motiva al lector a seguir leyendo el documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la justificación y la aplicación práctica son parte de la introducción (la motivación). La metodología responde a qué se usó y cómo se hizo.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-Q1-10 Resultados y discusión: qué va en cada sección]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la sección de <strong>Resultados</strong> de su artículo usted escribió: «La disponibilidad de la flota cayó al 62 %, lo cual probablemente se explica por la falta de repuestos, tal como lo reportó Gómez (2021)». Según la lectura obligatoria, ¿cuál es el error?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Está adelantando la discusión. En Resultados los datos se presentan <strong>sin comentarios, argumentos ni juicios de valor</strong>: explicar el dato y compararlo con lo que reportaron otros autores es tarea de la Discusión. La frase correcta en Resultados sería solo «La disponibilidad de la flota cayó al 62 %».</p><p>Cita literal (Casares-Salazar et al., 2019, «Los resultados»): «Los datos deben presentarse sin comentarios, argumentos o juicios de valor (la interpretación de los mismos deberá hacerse en la sección de Discusión) […] Un error muy común es el de adelantarse a comentar, explicar o interpretar el significado de los resultados, lo cual se presenta en la sección de Discusión.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Adelanta la discusión: en Resultados los datos van sin comentarios ni juicios de valor, y su interpretación corresponde a la Discusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La explicación del dato y la comparación con Gómez (2021) pertenecen a la Discusión; en Resultados va la cifra y nada más.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Mezcla la metodología con los resultados: explicar por qué ocurrió el dato corresponde a materiales y métodos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la metodología describe cómo se obtuvo el dato, no por qué salió así. La causa probable es interpretación, y eso va en la Discusión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Confunde resultados con conclusiones: la cifra debe ir en las conclusiones y en Resultados solo queda su explicación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: invierte las dos secciones. La cifra es un resultado; las conclusiones retoman los principales resultados sin volver a justificarlos ni agregar hallazgos nuevos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Presenta el dato en cifras dentro del texto: los porcentajes solo pueden aparecer en las tablas y en el texto se los resume en palabras.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: la lectura recomienda resumir en palabras lo más importante de una tabla, pero no prohíbe dar cifras en el texto. El problema de la frase no es el 62 %, sino el «probablemente se explica por».</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

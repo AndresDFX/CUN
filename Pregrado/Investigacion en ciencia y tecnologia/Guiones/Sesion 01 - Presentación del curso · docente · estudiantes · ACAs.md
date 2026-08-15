@@ -26,7 +26,7 @@
 > “Aviso de plataforma: **Quiz 1** ya está **abierto** en CDigital, en la sección del corte 1. Es un **cuestionario** y vale **6%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
 > “Aviso de plataforma: **ACA Final** ya está **abierto** en CDigital, en la sección del corte 3. Es un **tarea** y vale **32,8%** del curso. Ábranlo hoy mismo aunque no lo vayan a resolver todavía: así saben cuántas preguntas tiene y cuánto tiempo les da.”
 
-> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Si alguna slide del deck todavía habla de «las tres ACAs», corríjalo en voz alta: los ítems son estos y con estos nombres los va a buscar el estudiante en CDigital.
+> **Nómbrelos como están en el aula.** En el libro de calificaciones de este curso hay: **corte 1** (30%): **Quiz 1** (cuestionario, 6%), **Parcial 1** (cuestionario, 24%); **corte 2** (30%): **Quiz 2** (cuestionario, 9%), **Parcial 2** (cuestionario, 21%); **corte 3** (40%): **ACA Final** (tarea, 32,8%), **Quiz 3** (cuestionario, 4%), **Autoevaluación** (cuestionario, 1,6%), **Coevaluación** (foro, 1,6%). Úselos con **esos** nombres: son los que el estudiante va a buscar en CDigital. (La antigua numeración «ACA 1 / ACA 2 / ACA 3» quedó anulada el 10/08/2026 y ya no aparece en ningún deck; si alguien la menciona, remítalo a esta lista.)
 > **En este guion no van fechas de periodo.** El aviso dice *hoy*, *antes del próximo encuentro* o *ya cerró*: las fechas exactas están en la Presentación del Curso, en el enunciado del ítem y en el propio ítem de CDigital.
 
 🗺️ **Slides de esta presentación** (deck de **encuadre**, 21 slides — no es el mapa del curso)
@@ -37,12 +37,12 @@
 | **2** | AGENDA DE HOY | 1 |
 | **3** | Docente | 1 |
 | **4** | PRESÉNTATE — ROMPEHIELOS (QR + Padlet) | 2 |
-| **5** | LAS ACAs — QUÉ SE EVALÚA | 4 |
+| **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: una hora en vivo, el resto en su documento | 3 |
 | **7** | Mapa del curso: las 6 sesiones | 3 |
 | **8** | Qué se llevan al final: un artículo | 3 |
 | **9** | Este es un periodo corto: qué implica | 3 |
-| **10** | Las ACAs, una por una | 4 |
+| **10** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
 | **11** | Cómo se entrega, paso a paso | 4 |
 | **12** | Integridad académica | 4 |
 | **13** | Inteligencia artificial generativa | 4 |

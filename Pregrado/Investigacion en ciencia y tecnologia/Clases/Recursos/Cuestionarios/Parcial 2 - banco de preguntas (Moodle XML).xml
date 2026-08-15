@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Parcial 2 - Investigacion S01-S04</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Parcial 2 (21% de la nota del curso · Corte 2) — INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA, Escuela de Ingenierías (EI005).</strong></p><p>Ventana: 04/09/2026 a 10/09/2026. Se resuelve dentro del encuentro, en unos 22 minutos. No se sube archivo y no usa plantilla APA.</p><p><strong>Materia evaluada (acumulativa):</strong> la lectura autónoma de la Sesión 01 (U1 y U2: producto final del curso y fundamentos del método científico, sobre Casares-Salazar et al., 2019), la Sesión 02 (MinCiencias, SNCTI y las 6 líneas de Ingeniería), la Sesión 03 (primer avance: título, introducción, tipos de conocimiento y tipos de fuente) y la Sesión 04 (problema y pregunta con espina de pescado, árbol de problemas y método 3D; bases de datos, operadores de búsqueda y citación en APA 7 con ZoteroBib).</p><p><strong>Lo que NO entra:</strong> nada de la Sesión 05, que se dicta el mismo día en que cierra este cuestionario (planteamiento del problema y su estructura de embudo, sus seis componentes, constructos, posturas teóricas, fichas de lectura, matriz de fuentes, marco teórico y revisión de literatura como método de trabajo). Ese temario entra en el Quiz 3.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Reparto: 9 preguntas de la Sesión 04 —la sesión que este ítem añade y donde está lo que el Manual del Docente manda revisar aquí: diferenciar deseo de producto y problema de investigación, y saber buscar y citar— y 1 de la Sesión 03. La lectura obligatoria de la Sesión 01 respalda además la pregunta sobre citas y referencias. Lo de las Sesiones 01 y 02 ya se evaluó en los ítems del corte 1 y en el Quiz 2, y vuelve en el Quiz 3.</p><p>Ninguna pregunta repite el enunciado, el caso ni el conjunto de opciones de otro banco del curso.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-01 Problema de investigación frente a deseo de producto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero le pide revisar el arranque de su documento. De las cuatro formulaciones que escribió, ¿cuál corresponde a un <strong>problema de investigación</strong> según el criterio de la Sesión 04?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Un problema de investigación es un <strong>hecho observable que produce consecuencias</strong>, con afectados y con huella (registros, bitácoras, tiempos, quejas). No es la ausencia de la solución que usted quiere construir, no es un tema y no es una molestia sin consecuencias verificables. La prueba de control es preguntarse qué seguiría doliendo si su solución nunca existiera.</p><p>Cita literal (Presentación de la Sesión 04): «<strong>Es</strong> un hecho que se puede <strong>observar, describir o medir</strong> en un lugar y un tiempo concretos. Tiene <strong>afectados</strong>: alguien pierde algo (tiempo, dinero, calidad, oportunidades). […] <strong>No es</strong> la ausencia de su solución favorita. <strong>No es</strong> un tema ("la inteligencia artificial" es un tema, no un problema). <strong>No es</strong> una molestia personal sin consecuencias verificables. […] Prueba de control: pregúntese <strong>"¿qué duele hoy, si mi solución nunca existiera?"</strong>. La respuesta es su problema.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Las fallas de los equipos del laboratorio se anotan en un cuaderno y no se sabe cuánto tardan en atenderse ni cuántas prácticas quedan incompletas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es un hecho situado que se puede describir y medir, tiene afectados (los estudiantes que pierden la práctica) y deja huella (el cuaderno de fallas). Además nombra lo que no se sabe, que es por donde entra la investigación.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El programa necesita una aplicación móvil que permita reportar en línea las fallas de los equipos del laboratorio y avisar al área de mantenimiento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un deseo de producto disfrazado de problema: describe la solución que se quiere construir, no el hecho que duele. Si esa aplicación nunca existiera, ¿qué seguiría pasando en el laboratorio? Esa respuesta era el problema.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El mantenimiento predictivo de equipos de laboratorio con inteligencia artificial en las universidades colombianas de los últimos años.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un tema, no un problema: nombra un campo de interés, pero no dice qué hecho ocurre, a quién afecta ni qué consecuencias tiene. Un tema delimita por dónde leer; no se puede investigar tal cual.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>A los estudiantes de la franja de la noche les molesta que los equipos del laboratorio se dañen tan seguido y que nadie parezca hacer nada al respecto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es una molestia sin consecuencias verificables: expresa incomodidad y una suposición ("nadie hace nada"), pero no ofrece nada que se pueda observar, medir o rastrear en un registro.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-02 Espina de pescado con todas las causas en una sola familia]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted dibuja la espina de pescado de su problema y, al terminar, las siete causas quedaron colgadas de la familia <strong>tecnología</strong>: personas, proceso y entorno están vacías. ¿Qué indica eso, según la Sesión 04?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>La cabeza del pescado es el efecto y las espinas son <strong>familias de causas</strong>: personas, proceso, tecnología y entorno. Se espera un mínimo de tres familias con al menos una causa concreta cada una, y las causas se escriben como hechos, no como adjetivos ("un tutor por cada 45 estudiantes", no "faltan tutores"). Concentrar todo en una familia no es foco: es haber vuelto a escribir la explicación con la que usted ya llegó.</p><p>Cita literal (Presentación de la Sesión 04): «Regla práctica: <strong>mínimo tres familias con al menos una causa cada una</strong>. Si todo le cabe en una sola familia, no ha abierto el problema: ha repetido su hipótesis.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que todavía no abrió el problema: repitió su hipótesis inicial. Se esperan al menos tres familias con una causa concreta cada una.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de la sesión es explícita: si todo cabe en una sola familia, el diagrama no exploró el problema, solo confirmó la explicación con la que usted llegó.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el problema es de naturaleza técnica y por eso la espina quedó bien: reunir las causas en una familia demuestra foco en el diagnóstico.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde foco con estrechez. La espina se dibuja precisamente para obligarse a mirar donde uno no estaba mirando; si el resultado coincide entero con la sospecha previa, la herramienta no hizo su trabajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la herramienta no le sirve para su tema y conviene cambiarla por el método 3D, que no exige separar familias de causas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia de herramienta cuando lo que falló fue el uso. El método 3D sirve para otra cosa: acotar un tema demasiado amplio describiendo, dimensionando y decidiendo. No corrige el hecho de haber mirado una sola familia de causas.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que le faltan causas por escribir en las otras tres familias, aunque sean adjetivos generales, para que el diagrama quede completo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acierta en que faltan familias, pero se equivoca en el relleno: la sesión pide colgar hechos, no adjetivos. "Faltan tutores" es vago; "un tutor por cada 45 estudiantes" es una causa.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-03 Reformular una pregunta que se responde con sí o no]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su pregunta dice: «¿Existe deserción en el programa de Ingeniería?». Según la anatomía de una pregunta investigable de la Sesión 04, ¿cuál reformulación la vuelve investigable?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Una pregunta investigable es clara, delimitada, viable, relevante y <strong>abierta</strong>: empieza por cómo, qué, cuál o en qué medida, y trae actor y contexto. El patrón de corrección es siempre el mismo: agregar actor y lugar, y cambiar el verbo de apertura.</p><p>Cita literal (Presentación de la Sesión 04, tabla «Preguntas mal formuladas y su reformulación»): «"¿Existe deserción en el programa?" — Sí/no; además ya se sabe la respuesta — "¿Qué factores académicos anteceden la deserción en los dos primeros semestres del programa X?"». Y la nota de la tabla: «Patrón de la corrección: <strong>agregar actor y lugar</strong>, y cambiar el verbo de apertura por <em>qué</em>, <em>cómo</em> o <em>en qué medida</em>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>¿Qué factores académicos anteceden la deserción en los dos primeros semestres del programa de Ingeniería de la sede X?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Abre con "qué", nombra el actor y el contexto (los dos primeros semestres del programa en una sede concreta) y obliga a describir, no a contestar sí o no.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Es la deserción del programa de Ingeniería de la sede X tan grave como en el resto de los programas del país?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Agrega actor y contexto, pero conserva el defecto de origen: sigue abriendo con "¿es...?", así que se responde con sí o no. Además "tan grave como" compara sin decir con qué criterio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cómo diseñar un tablero que le muestre a la sede X las cifras de deserción del programa de Ingeniería?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Empieza por "cómo", que suena bien, pero es una pregunta de diseño y no de investigación: pide construir un producto en lugar de comprender un fenómeno.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>¿Cuál es la mejor estrategia para reducir la deserción del programa de Ingeniería en la sede X?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Usa "cuál" y trae contexto, pero se apoya en la palabra "mejor" sin definir criterio ni con qué se compara, que es uno de los defectos que la tabla de la sesión corrige.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-04 Operador que cubre dos términos equivalentes]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su pregunta usa el término «correo malicioso», pero buena parte de la literatura lo llama «phishing», y usted quiere que una sola búsqueda le recupere los resultados de los dos términos. Según la Sesión 04, ¿qué operador usa y cómo se escribe?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El operador que amplía la búsqueda para cubrir sinónimos es <strong>OR</strong>: basta con que aparezca cualquiera de los dos términos. Los otros tres hacen lo contrario o algo distinto: AND exige que aparezcan ambos, las comillas piden la frase exacta en ese orden y el signo menos excluye un término.</p><p>Cita literal (Presentación de la Sesión 04, tabla «Operadores de búsqueda que ahorran horas»): «<strong>OR</strong> — Amplía: sirve cualquiera de los dos (útil para sinónimos) — <code>phishing OR "correo malicioso"</code>». En la misma tabla: «<strong>AND</strong> — Exige que aparezcan <strong>ambos</strong> términos»; «<strong>Comillas</strong> — Busca la <strong>frase exacta</strong>, en ese orden»; «<strong>Signo menos</strong> — <strong>Excluye</strong> un término que le ensucia los resultados».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>OR, que amplía la búsqueda porque sirve cualquiera de los dos términos: <code>phishing OR "correo malicioso"</code>.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. OR es el operador de los sinónimos: recupera los documentos que traen cualquiera de los dos términos, que es justo lo que se necesita cuando la literatura llama de otra forma a lo mismo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>AND, que reúne los dos términos en una sola consulta: <code>phishing AND "correo malicioso"</code>.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde reunir con exigir. AND obliga a que los dos términos aparezcan en el mismo documento, así que en lugar de ampliar deja fuera los artículos que solo usan uno de los dos nombres.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Las comillas, que agrupan los términos equivalentes en una sola expresión: <code>"phishing correo malicioso"</code>.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Las comillas no agrupan sinónimos: piden la frase exacta en ese orden. Esa búsqueda solo devolvería textos donde aparezca, literalmente, "phishing correo malicioso".</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El signo menos, que vincula el término técnico con su equivalente en español: <code>phishing -"correo malicioso"</code>.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>El signo menos no vincula: excluye. Esa consulta pide resultados de phishing y descarta expresamente los que mencionen "correo malicioso", es decir, lo contrario de lo que usted busca.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-05 Cita en el texto y referencia final al parafrasear]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted parafrasea, con sus propias palabras, una idea de un artículo que abrió y leyó. Según lo trabajado en la Sesión 04 sobre APA 7, ¿cómo debe quedar eso en su documento?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Parafrasear no exime de citar. La fuente aparece <strong>dos veces</strong>: como cita corta en el cuerpo del texto y como ficha completa en el listado final, y las dos listas tienen que coincidir. La página solo se agrega cuando la cita es textual.</p><p>Cita literal (Presentación de la Sesión 04): «<strong>6.</strong> <em>Copy to clipboard</em> y pegue en su documento, bajo <strong>Referencias</strong>, en <strong>orden alfabético</strong>. <strong>7.</strong> En el cuerpo del texto cite <strong>(Apellido, año)</strong>; para cita textual agregue la página: <strong>(Apellido, año, p. 12)</strong>.» Y la nota de la misma slide: «Cada referencia del listado debe estar citada en el texto, y cada cita del texto debe estar en el listado.»</p><p>Cita literal (lectura obligatoria, Casares-Salazar et al., 2019, «Las referencias»): «Es una práctica de la investigación citar las fuentes de información ajenas al autor del trabajo en el caso de los enunciados que no son del conocimiento común. De lo contrario, se trataría de un plagio […]. Esto incluye enunciados o conceptos copiados textualmente, o bien que sean parafraseados».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Con la cita (Apellido, año) en el cuerpo del texto y la ficha completa de la fuente bajo «Referencias», en orden alfabético.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La idea parafraseada se marca en el texto con (Apellido, año) y la fuente se describe completa en el listado final; si además fuera cita textual, se agregaría la página.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Solo con la ficha completa bajo «Referencias»: al reescribir la idea con sus palabras, en el texto ya no hace falta marcar la fuente.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el error más costoso: cree que parafrasear vuelve propia la idea. Un listado de referencias sin citas en el texto no permite saber qué afirmación salió de dónde, y la lectura obligatoria trata igual lo copiado y lo parafraseado.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Solo con la cita (Apellido, año) en el texto: la ficha completa al final se reserva para las citas textuales entre comillas.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa una distinción que no existe. Toda fuente citada en el texto —textual o parafraseada— debe tener su ficha completa en el listado final; lo que cambia con la cita textual es que se agrega la página.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Con el enlace del artículo pegado dentro del párrafo, para que el lector pueda abrirlo, y sin repetirlo en un listado al final.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Sustituye la referencia por una URL suelta. El enlace no identifica autoría ni año y desaparece si el sitio cambia; APA 7 pide la cita breve en el texto y la ficha bibliográfica completa en el listado.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-06 Clasificar una afirmación por tipo de conocimiento]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En su documento un compañero escribe: «el registro de la mesa de ayuda documenta 47 incidentes de conexión durante marzo, con la hora y la duración de cada uno». Según la tabla de tipos de conocimiento de la Sesión 03, ¿qué tipo de conocimiento es y qué puede hacer con él?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es conocimiento <strong>científico</strong>: hay medición y evidencia documentada, y quedó registrado el cómo —hora y duración de cada incidente—, así que otra persona puede verificarlo y repetirlo. Por eso sí sostiene el artículo. Lo que lo hace científico no es que esté publicado ni que lo firme una autoridad: es que está medido y documentado.</p><p>Cita literal (Presentación de la Sesión 03, tabla «Tipos de conocimiento»): «<strong>Científico</strong> — Con método, medición y evidencia documentada — ¿Se verifica? Sí, por otros — "La bitácora registra 12 caídas en un mes" — ¿Sostiene el artículo? Sí». Y la nota de la misma tabla: «La diferencia entre empírico y científico no es la verdad: es que el científico <strong>se puede verificar y repetir</strong> porque quedó registrado el cómo.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Científico: hay medición y evidencia documentada que otra persona puede verificar, de modo que sí sirve para sostener el artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. No es una impresión: es un conteo con hora y duración por incidente. Quedó registrado el cómo, y eso es exactamente lo que permite verificarlo y repetirlo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Empírico: aunque el registro exista, sigue siendo una observación hecha dentro de la propia institución, así que solo vale como indicio inicial.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error atractivo, pero el criterio no es de quién es el escenario observado. Lo empírico es la observación repetida <em>sin sistematizar</em>; aquí hay sistema: fecha, hora y duración de cada incidente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Cotidiano: recoge la experiencia de quienes usan el servicio a diario, de manera que no aporta ni siquiera un indicio para empezar a investigar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: el conocimiento cotidiano viene de la experiencia inmediata y del sentido común («sé que llueve porque me mojé»). Un registro con 47 casos fechados no es una impresión personal.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Científico, pero solo si ese registro llega a publicarse en una revista: mientras siga siendo un documento interno, no puede sostener ninguna afirmación.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: acierta el tipo y añade una condición que la tabla no pone. Lo que define lo científico es método, medición y evidencia documentada verificable, no el hecho de haber sido publicado.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-07 Árbol de problemas: distinguir una causa de un efecto]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Está armando el árbol de problemas de su caso y tiene dos hechos anotados: «los equipos del laboratorio tienen ocho años» y «los grupos deben repetir la práctica en otra franja». Según la Sesión 04, ¿dónde va cada uno y con qué pregunta se decide?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El árbol tiene tres niveles: <strong>raíces</strong> = causas, <strong>tronco</strong> = el problema central en una sola frase y <strong>ramas</strong> = efectos. La antigüedad de los equipos responde a «¿por qué ocurre?»: es causa, va abajo. Repetir la práctica responde a «¿qué provoca esto?»: es efecto, va arriba. Ese par de preguntas es todo el criterio.</p><p>Cita literal (Presentación de la Sesión 04): «<strong>Raíces</strong> = causas. Se llega a ellas preguntando <strong>"¿por qué ocurre?"</strong> · <strong>Tronco</strong> = el problema central, en una sola frase. · <strong>Ramas</strong> = efectos. Se llega a ellos preguntando <strong>"¿qué provoca esto?"</strong>». Y en los errores frecuentes de la misma sesión: «<strong>Confundir causas con efectos.</strong> Dos preguntas distintas las separan: <em>¿por qué ocurre?</em> señala una <strong>causa</strong>; <em>¿qué provoca esto?</em> señala un <strong>efecto</strong>. En el árbol: causas abajo, efectos arriba.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La antigüedad de los equipos es causa y va en las raíces; repetir la práctica es efecto y va en las ramas. Lo deciden «¿por qué ocurre?» y «¿qué provoca esto?».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Los equipos viejos explican por qué ocurre el problema, así que van abajo; repetir la práctica es lo que el problema provoca, así que va arriba.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Al revés: la antigüedad de los equipos es el efecto que se escribe en las ramas y repetir la práctica es la causa que se cuelga de las raíces del árbol.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte el árbol, que es el error más frecuente de la sesión. Pruebe con la pregunta: repetir la práctica no explica por qué ocurre el problema; es lo que el problema provoca.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Los dos son causas y van juntos en las raíces, porque ambos son hechos observables del laboratorio que se pueden verificar en un registro o en el inventario.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Ser observable no convierte un hecho en causa. Los dos se pueden verificar, pero solo uno responde a «¿por qué ocurre?»; el otro responde a «¿qué provoca esto?».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Ninguno entra en el árbol: en las raíces y en las ramas solo se escriben las cifras del problema, y los hechos redactados en palabras se dejan para el texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa una restricción que la sesión no pone. En el árbol se cuelgan hechos concretos, no adjetivos ni cifras sueltas: las cifras entran cuando se dimensiona el problema, no como requisito del diagrama.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-08 Los tres movimientos del método 3D]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Su tema quedó demasiado grande y la Sesión 04 propone el método <strong>3D</strong> para bajarlo a escala. ¿En qué consisten sus tres movimientos?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Los tres movimientos son <strong>describir</strong> (qué pasa exactamente, sin adjetivos, como si narrara una escena), <strong>dimensionar</strong> (cuánto, a cuántos, cada cuánto, desde cuándo: aquí entran las cifras) y <strong>decidir</strong> (qué parte de todo eso puede estudiar este periodo con las fuentes que tiene). Por eso es el antídoto contra la pregunta planetaria: obliga a bajar a escala.</p><p>Cita literal (Presentación de la Sesión 04): «<strong>Método 3D</strong> — para temas demasiado grandes, tres movimientos: <strong>Describir:</strong> ¿qué pasa exactamente? Escríbalo sin adjetivos, como si narrara una escena. <strong>Dimensionar:</strong> ¿cuánto, a cuántos, cada cuánto, desde cuándo? Aquí entran las cifras. <strong>Decidir:</strong> de todo lo anterior, ¿qué parte puedo estudiar <strong>este periodo</strong> con las fuentes que tengo?». Y en la slide siguiente: «El 3D es el mejor antídoto contra la pregunta planetaria: obliga a bajar a escala.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Describir qué pasa exactamente sin adjetivos, dimensionar cuánto, a cuántos y cada cuánto, y decidir qué parte puede estudiar este periodo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Los tres movimientos van en ese orden: primero la escena, después las cifras y al final el recorte que cabe en un periodo con las fuentes que tiene.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Diagnosticar el estado actual del área, diseñar la solución que va a construir y desplegarla para comprobar si el problema quedó resuelto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un ciclo de proyecto de ingeniería, no el 3D. Además vuelve a poner la solución en el centro, que es justo lo que la sesión pide sacar del planteamiento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Definir el tema en una frase, dibujar el diagrama de causas en Excalidraw y documentar en el texto las fuentes que va a citar en el avance.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla tres tareas del taller y las llama 3D. El diagrama y las fuentes son otras herramientas de la sesión; el 3D se aplica cuando el tema todavía está demasiado amplio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Delimitar el tema por área de conocimiento, por año de publicación y por país, de modo que la búsqueda quede reducida a lo que alcanza a leer.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde acotar el problema con filtrar la búsqueda. Los filtros de año y de región se aplican después, al buscar literatura; el 3D acota el hecho que va a estudiar.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-09 Buscador académico, base de datos y gestor de citas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un compañero afirma que da igual entrar por Google Académico, por SciELO o por ZoteroBib, «porque los tres sirven para encontrar artículos». Según la Sesión 04, ¿qué hay que corregirle?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Son tres cosas distintas y conviene separarlas desde el principio: un <strong>buscador académico</strong> (Google Académico) rastrea muchísimo pero mezcla calidades; una <strong>base de datos</strong> (SciELO, Redalyc, las suscritas por la CUN) es una colección curada con texto completo; y un <strong>gestor de citas</strong> (ZoteroBib) no busca nada: arma la referencia en el formato correcto.</p><p>Cita literal (Presentación de la Sesión 04): «Tres nombres que hay que separar desde ya: <strong>Buscador académico</strong> (Google Académico): rastrea muchísimo, pero mezcla calidades. <strong>Base de datos</strong> (SciELO, Redalyc, las suscritas por la CUN): colecciones curadas, con texto completo. <strong>Gestor de citas</strong> (ZoteroBib): no busca nada; <strong>arma la referencia</strong> en el formato correcto.» Y en la tabla comparativa: «ZoteroBib (zbib.org) — Generador de citas en línea — APA 7 al instante, sin instalar ni registrarse — No guarda su biblioteca: copie lo que genere.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que Google Académico es un buscador amplio que mezcla calidades, SciELO es una base de datos con texto completo y ZoteroBib no busca nada: arma la referencia.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Un buscador, una colección curada y un generador de citas: solo los dos primeros sirven para encontrar artículos, y hacen cosas distintas entre sí.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que solo cambia la cobertura: los tres buscan artículos, pero Google Académico indexa más títulos, SciELO menos y ZoteroBib únicamente los de acceso abierto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Acepta la premisa falsa. ZoteroBib no tiene catálogo ni indexa nada: usted le entrega un DOI, un título o una URL y él devuelve la referencia ya formateada.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que el orden importa: primero se busca en ZoteroBib, que reúne las bases suscritas, y después se comprueba en Google Académico si hay texto completo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Le atribuye a ZoteroBib el papel de la biblioteca CUN. Las bases suscritas se consultan con el login institucional; ZoteroBib es la última parada, cuando ya tiene la fuente y necesita la referencia.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que tiene razón en los tres casos, aunque conviene instalar Zotero de escritorio para que la búsqueda y la referencia queden en un mismo programa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Doble error. La premisa sigue siendo falsa y la sesión pide expresamente lo contrario: todo se hace en el navegador, sin instalar Zotero ni Mendeley de escritorio.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[INV-P2-10 El filtro de 60 segundos: en qué orden se lee]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Tiene ocho resultados de búsqueda abiertos y poco tiempo para decidir con cuáles se queda. Según el <strong>filtro de 60 segundos</strong> de la Sesión 04, ¿en qué orden recorre cada documento y qué límite tiene esa lectura rápida?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El truco de lectura rápida va en este orden: <strong>título → resumen → conclusiones → método</strong>, y con eso se decide en un minuto si vale la pena leer el artículo completo. Antes de descargar se revisan cinco cosas —autoría, año, dónde se publicó, si tiene método y pertinencia frente a su pregunta—: si falla más de una, siga de largo. Y queda la advertencia de honestidad: la lectura rápida sirve para descartar, no para citar.</p><p>Cita literal (Presentación de la Sesión 04, «El filtro de 60 segundos: ¿me quedo con esta fuente?»): «Truco de lectura rápida, en este orden: <strong>título → resumen → conclusiones → método</strong>. Con eso decide en un minuto si vale la pena leer el artículo completo. Y una advertencia de honestidad: <strong>si solo leyó el resumen, no cite el interior del artículo</strong>.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Título, resumen, conclusiones y método; y si solo leyó el resumen, no puede citar el interior del artículo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Ese recorrido alcanza para decidir en un minuto, y marca su propio límite: sirve para descartar fuentes, no para respaldar afirmaciones que están en el cuerpo del texto.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Título, introducción y bibliografía; y si el resumen ya afirma lo que usted necesita, puede citar cualquier parte del artículo sin abrirlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Dos errores. La bibliografía no dice si el artículo sirve para su pregunta, y la advertencia de la sesión es la contraria: con el resumen no se cita el interior del artículo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>En el orden en que está escrito —método, resultados, discusión y conclusiones—; leer el resumen basta para citar la idea general del trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Leer en orden de imprenta gasta el minuto en lo más denso. El filtro empieza por lo que resume el trabajo y deja el método para el final, cuando ya decidió que el artículo le interesa.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Primero el número de veces que aparece en «citado por»; si supera a los demás resultados, ya no hace falta abrir el documento para citarlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>«Citado por» sirve para saber quién retomó ese artículo después, no para reemplazar la lectura. Un artículo muy citado puede no responder a nada de su pregunta.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>

@@ -1,6 +1,6 @@
 ---
 name: cun-dudas-material
-model: claude-opus-4-8
+model: opus
 description: |
   Experto de consulta rápida sobre TODO el material y las normas de las asignaturas del usuario en la
   **CUN** (Corporación Unificada Nacional de Educación Superior): Proyecto I (Especialización en

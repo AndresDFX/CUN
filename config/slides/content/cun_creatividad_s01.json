@@ -83,17 +83,22 @@
   },
   {
     "type": "table",
-    "title": "Qué evalúa cada corte: lo que está en el libro de calificaciones",
+    "title": "Qué evalúa cada instrumento: lo que está en el libro de calificaciones",
     "headers": [
-      "Corte",
+      "Corte · ítem",
       "Qué hay en el aula (CDigital)",
-      "Qué se prepara para eso"
+      "Qué se estudia para eso (y qué no)"
     ],
     "rows": [
       [
-        "**Corte 1**",
-        "**Quiz 1** y **Parcial 1**: cuestionarios que se resuelven en el aula, dentro de su ventana. No se sube archivo.",
-        "Lo trabajado hasta ahí: problema–oportunidad real y observable, bloqueadores y ensanchadores, técnicas de ideación. Guías escritas: `Quiz 1 (6%)` y `Parcial 1 (24%)` en `Recursos/ACAs/`."
+        "**Corte 1** · **Quiz 1** (6%)",
+        "Cuestionario que se resuelve en el aula, dentro de su ventana. No se sube archivo.",
+        "**Solo el material de la Sesión 01**: la lectura autónoma **U1–U2** del Syllabus —la **Propuesta de Innovación** y el orden de sus partes, el problema–oportunidad **real y observable** con un **usuario concreto**, y **la inteligencia emocional y su incidencia en la innovación y la creatividad** (U2, en palabras del Syllabus)—. De la **lectura obligatoria** entra **lo que reporta** (qué estudió y qué encontró): el **archivo está en alcance**, el **método Design Thinking no**. Guía: `Quiz 1 (6%)` en `Recursos/ACAs/`."
+      ],
+      [
+        "**Corte 1** · **Parcial 1** (24%)",
+        "Cuestionario que se resuelve en el aula, dentro de su ventana. No se sube archivo.",
+        "Lo del Quiz 1 **más la Sesión 02**: **Design Thinking como método** y sus fases, las **técnicas de ideación** del Syllabus (árbol de problemas, seis sombreros, SCAMPER, océano azul) y **divergencia/convergencia**. Aquí sí se pregunta el **método**, y entra todo lo dictado **antes** de que cierre la ventana. Guía: `Parcial 1 (24%)` en `Recursos/ACAs/`."
       ],
       [
         "**Corte 2**",
@@ -106,11 +111,11 @@
         "La **Propuesta de Innovación** consolidada: problema → propuesta → validación → vigilancia → entidades de apoyo + **pitch de 1 página** (8–12 págs.). Guías: `Quiz 3 (4%)` y `ACA Final (32,8%)`."
       ]
     ],
-    "note": "El peso de cada ítem está en la slide «CÓMO SE EVALÚA» de esta misma sesión, con el tipo de actividad. Enunciados y checklists: `Clases/Recursos/ACAs/`; fechas exactas, en la Presentación del Curso.",
+    "sub": "**Quiz 1 y Parcial 1 no evalúan lo mismo** · pesos: slide «CÓMO SE EVALÚA» · fechas: Presentación del Curso",
     "col_w": [
-      1.1,
-      4.9,
-      5.9
+      1.9,
+      3.9,
+      6.1
     ]
   },
   {
