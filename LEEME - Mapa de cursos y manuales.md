@@ -7,7 +7,8 @@
 ## Compartido
 - `Plantilla_APA_CUN_Proyecto de grado.docx` — se distribuye **dentro de la carpeta del estudiante**: `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` (ruta relativa; **no** se usa URL pública). La copia a cada curso la hace `sync_clases_estudiantes.py`.
 - **Carga académica 2026:** `config/cursos/carga_academica_2026.json` · loader: `config/cursos/carga_academica.py` · Excel: `Carga academica 2026.xlsx`
-- Builds: `config/slides/build_all_course_presentations.py`, `build_sesion_material.py`, `build_pregrado_cursos.py`, `build_cun_proyecto1.py`, `build_calendar_proyecto1_54es4.py`, `build_calendar_encuentros.py`, `build_hitos_docentes_calendar.py`, `build_acas_estudiantes.py`, `build_correo_bienvenida.py`, `sync_clases_estudiantes.py`
+- Builds: `config/slides/build_all_course_presentations.py`, `build_sesion_material.py`, `build_pregrado_cursos.py`, `build_cun_proyecto1.py`, `build_calendar_proyecto1_54es4.py`, `build_calendar_encuentros.py`, `build_apps_script_grabaciones.py`, `build_hitos_docentes_calendar.py`, `build_acas_estudiantes.py`, `build_correo_bienvenida.py`, `sync_clases_estudiantes.py`
+- **Grabaciones de clase (automático):** `PRINCIPAL - Mover grabaciones de Meet.gs` + `LEEME - Mover las grabaciones de Meet.md` (esta raíz) — un solo proyecto de Apps Script, transversal a los 5 cursos, que cada 30 min saca las grabaciones de la carpeta por omisión de Meet en Mi unidad (hoy «Meet Recordings»; algunas cuentas ven «Google Meet») y las deja en la carpeta **única** de grabaciones (`carga_academica.py → GRABACIONES_URL`) con el nombre buscable «periodo - grupo - asignatura - sesión». Sin credenciales. Generados por `config/slides/build_apps_script_grabaciones.py`; el `ORIGEN_ID` lo pega el Docente (no existe en el repositorio).
 - Motor PPTX: `config/slides/cun_slides_engine.py` · Sesiones: `config/cursos/sesiones_cun.py`
 - Agentes: `.cursor/agents/` (sync a `.claude/agents/` con `python config/sync_agents_cursor_claude.py`)
 
@@ -88,6 +89,7 @@
 python config/cursos/sync_manuales_fechas.py           # 1. Manuales de pregrado: sección 3 (Evaluación) + tabla de fechas
 python config/slides/build_all_course_presentations.py # 2. Presentaciones del Curso de los 5 + calendarios oficiales + Informacion.txt/Fechas.txt + CSV/ICS de encuentros
 python config/slides/build_calendar_encuentros.py      # 3. .gs de encuentros CON invitados de los otros 4 cursos (TG3 = un solo .gs en 2026/_combinado_todos/)
+python config/slides/build_apps_script_grabaciones.py  # 3b. .gs + runbook para mover las grabaciones de Meet (lee salas y horarios; el ORIGEN_ID lo pega el Docente)
 python config/slides/build_hitos_docentes_calendar.py  # 4. «Entregas y hitos docentes - Importar a Calendar.csv» (raíz del curso + 2026/<grupo>/)
 python config/slides/build_sesion_material.py all all  # 5. Decks de sesión + guiones .md (invoca solo él los tres _regen_guiones_*)
 python config/slides/build_acas_estudiantes.py         # 6. Clases/Recursos/ACAs/ — un .docx por ítem del aula
