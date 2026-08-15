@@ -101,9 +101,13 @@ def plan(dia: dt.date, aulas: dict) -> list[Aviso]:
             if e.apertura == dia:
                 fuera.append(Aviso(aula, clave, grupo, e, "abre", dia))
             faltan = (e.entrega - dia).days
-            # Si el ítem abre hoy, el aviso de apertura ya dice cuándo cierra: no se manda además
-            # un «faltan N días» del mismo ítem el mismo día. Pasa en las entregas de ventana corta.
-            if faltan in DIAS_ANTES and e.apertura != dia:
+            # Dos avisos que no se mandan aunque la cuenta de días dé:
+            #  · el mismo día que abre, porque el aviso de apertura ya dice cuándo cierra (pasa en
+            #    las entregas de ventana corta);
+            #  · antes de que abra, porque avisar de un cierre de algo que todavía no se puede
+            #    abrir es ruido, y al día siguiente llegaría el «abre hoy» diciendo lo mismo. Con
+            #    ventanas de 7 días —las de Creatividad— el «faltan 7» caía siempre la víspera.
+            if faltan in DIAS_ANTES and (e.apertura is None or e.apertura < dia):
                 fuera.append(Aviso(aula, clave, grupo, e,
                                    "cierra_hoy" if faltan == 0 else "faltan", dia))
     return sorted(fuera, key=lambda a: (a.dias_para_cierre, a.aula))

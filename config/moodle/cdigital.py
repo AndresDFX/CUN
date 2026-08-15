@@ -1191,8 +1191,37 @@ def visibilidad(cd: CDigital, cmid: int, mostrar: bool) -> int:
 # vino y verificar que no cambió ni un ajuste. Si el reenvío idéntico altera algo, el parser no es
 # fiel y no se puede confiar en él para escribir.
 
-_VOLATILES = re.compile(r'(itemid|sesskey|_qf__|mform_isexpanded|filemanager_)', re.I)
+#   3. **Campos apagados por JavaScript.** Moodle esconde con `hideIf`/`disabledIf` los que dependen
+#      de una casilla sin marcar, y un campo deshabilitado **no lo manda el navegador**. El parser no
+#      ve esas reglas, así que las que hacen daño van escritas a mano en `_DEPENDEN_DE`.
+#
+# `introattachments` va en los volátiles porque es un área de borrador: cada carga de la página trae
+# un id nuevo (976601260 -> 535944914 entre dos lecturas de la misma tarea). Cualquier elemento de
+# tipo gestor de archivos se comporta igual.
+_VOLATILES = re.compile(r'(itemid|sesskey|_qf__|mform_isexpanded|filemanager_|introattachments)',
+                        re.I)
 _TIPOS_IGNORADOS = {"submit", "button", "reset", "image", "file"}
+
+# Campo -> casilla de la que depende. Si la casilla está apagada, el campo no se envía.
+# Comprobado en la Coevaluación de Creatividad (cmid 6745734, foro con nota): mandar
+# `completiongradeitemnumber` —que el `<select>` trae sin `selected`, así que el parser eligió su
+# primera opción, «0»— con `completionusegrade` sin marcar hace que Moodle encienda «la finalización
+# exige nota». El round-trip nulo lo detectó y abortó antes de escribir las fechas.
+_DEPENDEN_DE = {"completiongradeitemnumber": "completionusegrade"}
+
+
+def _sin_apagados(campos: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Quita los campos que el navegador no mandaría porque su casilla está sin marcar."""
+    valores: dict[str, list[str]] = {}
+    for k, v in campos:
+        valores.setdefault(k, []).append(v)
+
+    def apagada(nombre: str) -> bool:
+        vs = valores.get(nombre)
+        return not vs or all(v in ("", "0") for v in vs)
+
+    return [(k, v) for k, v in campos
+            if not (k in _DEPENDEN_DE and apagada(_DEPENDEN_DE[k]))]
 
 # Cómo se llama cada fecha según el tipo de actividad. `None` = ese tipo no tiene ese concepto.
 CAMPOS_FECHA = {
@@ -1246,7 +1275,7 @@ def _campos_formulario(h: str, accion: str = "modedit.php") -> list[tuple[str, s
         else:
             cierre = cuerpo.find("</textarea>", m.end())
             campos.append((nombre, html.unescape(cuerpo[m.end():cierre]) if cierre > 0 else ""))
-    return campos
+    return _sin_apagados(campos)
 
 
 def _boton_guardar(h: str) -> str:
@@ -1475,8 +1504,89 @@ def foro_avisos(cd: CDigital, curso: int) -> tuple[int, int] | None:
     return None
 
 
+# Modos de suscripción de un foro, tal como los numera Moodle.
+SUSC_OPCIONAL, SUSC_FORZADA, SUSC_AUTOMATICA, SUSC_PROHIBIDA = 0, 1, 2, 3
+
+# Al **crear** una actividad no vale la técnica de `fijar_fechas` —reenviar el formulario completo—.
+# Comprobado contra el servidor: con los 98 campos, `modedit.php` contesta 200, repinta el formulario
+# de alta con los datos escritos, no marca ni un solo campo como inválido y no crea nada. Es el
+# camino silencioso de `moodleform::get_data()`: cuando algo hace que el envío se descarte antes de
+# validar, mform vuelve a pintar el formulario sin errores, así que no hay mensaje que leer. Los
+# nombres de campo del alta y de la edición son idénticos (salvo `completionview`), luego lo que
+# estorba es el *valor* que trae alguno en el alta, no un campo que falte. Enviando sólo estos, el
+# foro se crea; del resto se encarga Moodle poniendo sus valores por omisión, que para un foro de
+# avisos es justo lo que se quiere.
+_MINIMOS_ALTA = frozenset({
+    "course", "section", "module", "modulename", "instance", "coursemodule", "add", "update",
+    "return", "sr", "sesskey", "_qf__mod_forum_mod_form",
+    "introeditor[text]", "introeditor[format]", "introeditor[itemid]",
+    "name", "type", "forcesubscribe", "visible", "completion", "groupmode",
+    "grade_forum[modgrade_type]", "scale[modgrade_type]", "availabilityconditionsjson",
+})
+
+
+def crear_foro(cd: CDigital, curso: int, nombre: str, seccion: int = 0,
+               suscripcion: int = SUSC_OPCIONAL, oculto: bool = True,
+               confirmar: bool = False) -> tuple[int, int] | None:
+    """Crea un foro en el aula y devuelve (cmid, id de instancia). Por defecto oculto y opcional.
+
+    Existe para poder **probar el envío sin escribirle a nadie**. Leyendo el código de Moodle 4.5 se
+    ve que el único filtro real de destinatarios es la suscripción
+    (`subscriptions::fetch_subscribed_users`: con suscripción opcional el SQL une contra
+    `forum_subscriptions`, así que sólo reciben correo los suscritos de verdad). Ocultar la actividad
+    **no basta**: el cron del foro no comprueba visibilidad, sólo suscripción, grupos y
+    disponibilidad. De ahí que un foro oculto con suscripción *forzada* sí les llegaría a todos.
+    """
+    print(f"Aula {curso} · sección {seccion} · foro «{nombre}»")
+    print(f"   suscripción: {['opcional', 'forzada', 'automática', 'prohibida'][suscripcion]}")
+    print(f"   visible    : {'NO (oculto)' if oculto else 'SÍ'}")
+    if not confirmar:
+        print("   Simulación: no se creó nada.")
+        return None
+
+    url = f"/course/modedit.php?add=forum&type=&course={curso}&section={seccion}&return=0&sr=0"
+    h = cd.get(url).text
+    campos = _poner([(k, v) for k, v in _campos_formulario(h) if k in _MINIMOS_ALTA], [
+        ("name", nombre), ("type", "general"),
+        ("forcesubscribe", str(suscripcion)), ("visible", "0" if oculto else "1"),
+        ("completion", "0"),
+        # Igual que en subir_recurso: el textarea viene vacío y modedit responde 404 sin esto.
+        ("availabilityconditionsjson", '{"op":"&","c":[],"showc":[]}'),
+    ])
+    r = cd.post("/course/modedit.php", campos + [(_boton_guardar(h), "Guardar")])
+    if r.status_code != 200:
+        print(f"   !!! modedit devolvió HTTP {r.status_code}")
+        return None
+    creados = [c for c in cd.estado_curso(curso).get("cm", [])
+               if str(c.get("name", "")).strip() == nombre and str(c.get("module")) == "forum"]
+    if not creados:
+        print("   !!! El POST salió bien pero el foro no aparece en el aula.")
+        return None
+    cmid = int(creados[0]["id"])
+    # El id de instancia, igual que en foro_avisos: un foro recién creado no tiene ningún tema, así
+    # que su página puede no traer el formulario de publicar; el de ajustes siempre lleva `instance`.
+    e = cd.get(f"/course/modedit.php?update={cmid}").text
+    m = re.search(r'<input[^>]*\bname="instance"[^>]*\bvalue="(\d+)"', e)
+    print(f"   creado: cmid {cmid} · visible={creados[0].get('visible')} · "
+          f"instancia {m.group(1) if m else '?'}")
+    return (cmid, int(m.group(1))) if m else None
+
+
+def suscribir(cd: CDigital, foro: int, cmid: int) -> bool:
+    """Suscribe al usuario de la sesión a un foro y lo comprueba en la lista de suscriptores."""
+    cd.get(f"/mod/forum/subscribe.php?id={foro}&sesskey={cd.sesskey}")
+    h = cd.get(f"/mod/forum/subscribers.php?id={foro}").text
+    texto = html.unescape(re.sub(r"<[^>]+>", " ", h))
+    apellido = (cd.nombre or "").split()[-1] if cd.nombre else ""
+    n = len(re.findall(r'/user/view\.php\?id=\d+', h))
+    ok = bool(apellido) and apellido.lower() in texto.lower()
+    print(f"   suscriptores del foro: {n} · yo incluido: {'sí' if ok else 'NO'}")
+    return ok
+
+
 def publicar_aviso(cd: CDigital, curso: int, asunto: str, mensaje_html: str,
-                   confirmar: bool, enviar_ya: bool = True, desde=None, hora: int = 7) -> int:
+                   confirmar: bool, enviar_ya: bool = True, desde=None, hora: int = 7,
+                   destino: tuple[int, int] | None = None) -> int:
     """Publica un tema en el foro de anuncios del aula. Con `confirmar=False` sólo enseña el envío.
 
     `enviar_ya` marca «Enviar notificaciones sin tiempo de espera para edición» (`mailnow`): sin
@@ -1490,7 +1600,7 @@ def publicar_aviso(cd: CDigital, curso: int, asunto: str, mensaje_html: str,
     la fecha llega. Un aviso programado se puede borrar antes de su fecha sin que salga ningún
     correo, que es lo que lo hace reversible.
     """
-    par = foro_avisos(cd, curso)
+    par = destino or foro_avisos(cd, curso)
     if not par:
         print(f"El aula {curso} no tiene un foro de anuncios que yo reconozca.")
         return 1

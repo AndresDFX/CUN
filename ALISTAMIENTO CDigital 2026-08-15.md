@@ -172,32 +172,31 @@ Están aquí para que las puedas revertir, no para justificarlas.
 
 ## 5. Lo que hay que decidir tú (no se tocó a propósito)
 
-1. **Los 22 ítems visibles siguen con la fecha de la plantilla, y a 3 de ellos les corre prisa.** Ya coinciden con el repositorio los 31 ocultos; los 22 que ven los estudiantes, no. Verificado releyendo el aula el 15/08/2026:
+1. **Quedan 19 ítems visibles con la fecha de la plantilla, y a 3 de ellos les corre prisa.** Ya coinciden con el repositorio los 31 ocultos y **los 3 de Creatividad** (alineados el 15/08 antes de programarle los recordatorios, tras comprobar que no había nada entregado: 0 intentos, 0 envíos con 50 participantes, 0 temas en el foro). Los otros 19 que ven los estudiantes, no. Verificado releyendo el aula el 15/08/2026:
 
    | Aula | Ítem | cmid | Lo que ve el estudiante | Lo que dice el repositorio |
    |---|---|---|---|---|
    | proyecto1 | ACA 1 | `7563707` | 06/01/2028 → **18/01/2028** | 07/09 → 04/10/2026 |
    | proyecto1 | ACA FINAL | `7563715` | 06/01/2028 → **18/01/2028** | 12/10 → 08/11/2026 |
    | proyecto1 | Autoevaluación | `7563723` | 14/02/2028 | 16/11 → 22/11/2026 |
-   | creatividad | Coevaluación | `6745734` | cierra **27/10/2030** | 23/09 → 27/09/2026 |
+   | ~~creatividad~~ | ~~Coevaluación~~ | `6745734` | ~~cierra 27/10/2030~~ | **hecho**: cierra 27/09/2026 |
    | investigacion | ACA Final | `6522210` | 11/08 → 20/09 | 13/08 → 12/09/2026 |
    | investigacion | Autoevaluación | `6522213` | 11/08 → 20/09 | 17/09 → 20/09/2026 |
-   | creatividad | ACA Final | `6745731` | 11/08 → 20/09 | 12/08 → 19/09/2026 |
-   | creatividad | Autoevaluación | `6745735` | 11/08 → 20/09 | 23/09 → 27/09/2026 |
+   | ~~creatividad~~ | ~~ACA Final~~ | `6745731` | ~~11/08 → 20/09~~ | **hecho**: 12/08 → 19/09/2026 |
+   | ~~creatividad~~ | ~~Autoevaluación~~ | `6745735` | ~~11/08 → 20/09~~ | **hecho**: 23/09 → 27/09/2026 |
    | tg2 | ACA Final | `7448472` | 11/08 → 15/11 | 10/08 → 14/11/2026 |
    | tg2 | Autoevaluación | `7448477` | 11/08 → 15/11 | 09/11 → 22/11/2026 |
    | tg3 (3 aulas) | ACA Final | `6608179`, `6785573`, `7448541` | 11/08 → 15/11 | 11/08 → 07/11/2026 |
    | tg3 (3 aulas) | Autoevaluación | `6608181`, `6785575`, `7448543` | 11/08 → 15/11 | 03/11 → 10/11/2026 |
    | 6 aulas | Coevaluación | `6522214`, `6608182`, `6785576`, `7448478`, `7448544`, `7563724` | **sin fecha ninguna** | según curso |
 
-   Las tres primeras filas son las que más engañan: **Proyecto I anuncia que sus dos ACAs se entregan en enero de 2028** (42% + 25% de la nota) y Creatividad, que la Coevaluación cierra en 2030. Las seis Coevaluaciones sin fecha no muestran plazo al estudiante. Un comando por aula lo arregla:
+   Las tres primeras filas son las que más engañan: **Proyecto I anuncia que sus dos ACAs se entregan en enero de 2028** (42% + 25% de la nota). Las seis Coevaluaciones sin fecha no muestran plazo al estudiante. Un comando por aula lo arregla:
 
    ```bash
    python config/moodle/cdigital.py fechas 130378 --incluir-visibles --confirmar   # Proyecto I
-   python config/moodle/cdigital.py fechas 115463 --incluir-visibles --confirmar   # Creatividad
    ```
 
-   No lo hice yo porque cambiar la fecha de un ítem visible les mueve el calendario a los 282 estudiantes matriculados, y eso es una decisión tuya. Lo que había antes queda registrado en `diff_fechas.json` (temporal) y en esta tabla.
+   Creatividad es la única hecha, y sólo porque le programé los recordatorios: un aviso que diga una fecha distinta de la que el estudiante ve en el aula es peor que no mandarlo. Las otras seis no las toqué porque cambiar la fecha de un ítem visible les mueve el calendario a los estudiantes matriculados, y eso es una decisión tuya. **Antes de correr el comando en un aula, mira si ya hay algo entregado**: mover la ventana de algo ya trabajado sí le quita trabajo a alguien. Lo que había antes queda registrado en `diff_fechas.json` (temporal) y en esta tabla.
 2. **Con las fechas puestas, el Quiz 1 ya tiene cierre — y sigue oculto.** Cierra el 19/08 en Creatividad, el 20/08 en Investigación, el 25/08 en las tres aulas de TG3 y el 31/08 en TG2; el Quiz de Proyecto I, que vale **25%**, cierra el **30/08**. Ninguno se puede contestar todavía porque está oculto. El Quiz 1 pregunta contenido de las Unidades 1 y 2 (detalle en `AUDITORIA CDigital 2026-08-10.md` §4 ter): si en algún grupo no se ha dictado, hay que mover la fecha en `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, no editarla en el aula.
 3. **El material queda duplicado con los enlaces a Drive.** Las aulas ya reparten material con recursos visibles que apuntan a Drive («Clases», «Material clases»). Las carpetas nuevas traen los mismos archivos dentro del campus: si actualizas un `.pptx` en Drive, la copia del campus se queda vieja. Se subieron porque el material tenía que quedar en CDigital; decide tú si el canal bueno es la carpeta o el enlace, y borra el otro.
 4. **Falta el PDF de Aperribai et al. (2024)** en las lecturas obligatorias de Creatividad. Las otras 8 de las 10 preguntas del Quiz 1 se responden con el PDF de REDIE, que sí está subido (carpeta «Lecturas obligatorias», cmid `7705994`).

@@ -59,9 +59,9 @@ Cuándo avisa: el día que abre, y **7, 3 y 1 días antes** del cierre, más el 
 cuándo abre, cuándo cierra a las 23:59, cuándo se publica la nota, y lleva el enlace directo a la
 actividad.
 
-## 2. Lo verificado y lo que falta por probar
+## 2. Lo verificado
 
-Verificado leyendo el servidor real, no supuesto:
+Verificado contra el servidor real, no supuesto:
 
 - Los **7 foros «Avisos»** existen, están visibles y tienen **suscripción forzada**. Nadie se puede
   dar de baja del aviso.
@@ -72,14 +72,17 @@ Verificado leyendo el servidor real, no supuesto:
 - `timestart` retiene el correo: la consulta del cron de foros exige que la fecha de inicio ya haya
   pasado, y **`mailnow` no se la salta** —van unidas—. Un aviso programado se puede borrar antes de
   su fecha **sin que salga ningún correo**: por eso el modo programado es reversible.
+- **El envío también, y sin escribirle a ningún estudiante.** Se creó en Creatividad un foro
+  `Prueba de recordatorios` **oculto** y de suscripción **opcional**, con **un único suscriptor: el
+  Docente**, y se publicó dentro el aviso del Quiz 1 con `mailnow`. Ese es el correo que hay que buscar
+  en la bandeja: asunto `EI004/…: [PRUEBA] Faltan 3 días para Quiz 1 (cierra el miércoles 19 de
+  agosto)`. El foro es `cmid 7706181` y se puede borrar cuando ya no haga falta.
 
-**Lo único sin probar es el POST final.** No lo probé porque cada publicación es un correo a los 282
-matriculados y no hay aula de pruebas: la más pequeña (TG3 grupo 54450) tiene 13 estudiantes reales.
-El primer aviso de verdad es también su prueba — hacerlo con **una sola aula** y mirar el resultado:
-
-```bash
-python config/cursos/recordatorios.py --canal campus --aula 111070 --confirmar
-```
+Por qué la prueba tuvo que ser así y no «un foro oculto cualquiera»: el cron de foros **no comprueba
+visibilidad**, sólo suscripción, suscripción a la discusión y grupos. Un foro oculto con suscripción
+*forzada* les habría llegado igual a los 50. Lo que aísla la prueba es la suscripción **opcional**. Y
+como ese mismo cron **no excluye al autor**, el aviso le llega al propio Docente: por eso se puede
+comprobar de verdad y no sólo «suponer que salió».
 
 Dos avisos que hay que dar antes de apretar:
 
@@ -129,14 +132,28 @@ repositorio.
 
 ## 5. El plan
 
-**Este semestre**, en este orden:
+**Creatividad ya está hecha, y sirve de plantilla para las otras seis.** El orden que se siguió:
 
-1. Poner las fechas de los 22 ítems visibles (ver `ALISTAMIENTO CDigital 2026-08-15.md` §5: Proyecto
-   I anuncia sus dos ACAs para **enero de 2028**). Un recordatorio con la fecha mala es peor que no
-   mandarlo.
+1. **Probar el envío** en un foro oculto de suscripción opcional (§2). Sin esto, publicar es apostar.
+2. **Alinear las fechas del aula con el repositorio**, incluidos los visibles:
+   `python config/moodle/cdigital.py fechas 115463 --incluir-visibles --confirmar`. Los 8 ítems
+   quedaron alineados. Antes de tocar un ítem visible hay que comprobar que **no haya nada
+   entregado** —en Creatividad: 0 intentos, 0 envíos con 50 participantes, 0 temas en el foro—, porque
+   mover la ventana de algo ya trabajado sí le quita trabajo a alguien.
+3. **Programar el semestre**:
+   `python config/cursos/recordatorios.py --canal campus --programar --aula 115463 --confirmar`.
+   Quedaron **12 avisos** del 12/09 al 27/09; los otros 19 se saltaron porque sus ítems están ocultos.
+
+Un recordatorio con la fecha mala es peor que no mandarlo: por eso el paso 2 va antes del 3. Y como
+sólo se avisa de lo visible, **los avisos de los Quices y Parciales aparecerán solos** el día que se
+activen esos ítems — basta volver a correr el paso 3, que no repite lo ya publicado.
+
+**Lo que queda de este semestre**, para las otras seis aulas:
+
+1. Las **19 discrepancias de fechas** que siguen en pie (`ALISTAMIENTO CDigital 2026-08-15.md` §5:
+   Proyecto I anuncia sus dos ACAs para **enero de 2028**).
 2. Activar lo que ya está listo y oculto — **el Quiz de Proyecto I vale 25% y cierra el 30/08**.
-3. Mandar el primer aviso a **una** aula y mirarlo.
-4. Programar el resto del semestre de una vez: `--programar --confirmar`.
+3. Repetir los pasos 2 y 3 de arriba aula por aula, o de golpe sin `--aula`.
 
 **El próximo semestre** cambian tres cosas y nada más: las fechas en
 `config/cursos/fechas_entrega_aca.py`, los ids de aula en `AULAS_CURSO`

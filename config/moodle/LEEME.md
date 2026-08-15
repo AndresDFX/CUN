@@ -101,10 +101,24 @@ antes de su fecha sin que salga ningún correo: por eso es reversible.
 
 El planificador que usa todo esto es `config/cursos/recordatorios.py`. Ver su cabecera.
 
-**Lo único que no está probado contra el servidor es el POST final.** Se verificó el camino completo
-—login, censo del aula, descubrimiento del foro, lectura del formulario y armado del envío en los 7
-foros— pero no la publicación, porque probarla es mandarles un correo de prueba a 282 estudiantes.
-El primer aviso de verdad es también su prueba: hacer el primero con una sola aula y mirarlo.
+**El POST de publicación está probado** (15/08/2026), y se probó sin escribirle a ningún estudiante:
+`crear_foro` levanta un foro **oculto y de suscripción opcional**, `suscribir` deja al Docente como
+único suscriptor, y `publicar_aviso(..., destino=(cmid, foro))` publica ahí. Las dos cerraduras son
+independientes: nadie más está suscrito y la actividad está oculta.
+
+Ojo con el razonamiento, porque lo intuitivo es falso: **ocultar el foro no basta**. El cron de foros
+de Moodle 4.5 (`mod/forum/classes/task/cron_task.php`) no comprueba visibilidad ni capacidades —sólo
+suscripción, suscripción a la discusión y grupos—, así que un foro *oculto* con suscripción *forzada*
+sí les llegaría a los 50. Lo que aísla la prueba es la suscripción **opcional**. Y como ese cron
+tampoco excluye al autor, el aviso le llega al propio Docente: eso es lo que lo hace comprobable.
+
+Para crear el foro **no vale reenviar el formulario completo** como hace `fechas`. Con los 98 campos,
+`modedit.php` contesta 200, repinta el formulario de alta con los datos escritos, no marca ni un campo
+como inválido y no crea nada: es el camino silencioso de `moodleform::get_data()`, que descarta el
+envío antes de validar y por tanto no deja ningún mensaje que leer. Los nombres de campo del alta y de
+la edición son idénticos salvo `completionview`, luego lo que estorba es el *valor* que trae alguno en
+el alta. Se envía sólo el mínimo estructural (`_MINIMOS_ALTA`, 24 campos) y del resto se encarga
+Moodle con sus valores por omisión.
 
 ## Credenciales
 
@@ -332,9 +346,23 @@ El nombre del usuario no aparece en el HTML del panel; se lee de `/user/profile.
   ACAs para **enero de 2028** y Creatividad, la Coevaluación para **2030**; seis Coevaluaciones no
   tienen fecha ninguna. El round-trip nulo se disparó una vez de verdad (cmid `6785577`) y era un
   falso positivo por los selectores desactivados; se arregló y volvió a correr limpio.
-- **2026-08-15, foro de avisos: verificado todo menos el envío.** Los 7 foros «Avisos» existen, están
-  visibles y tienen suscripción forzada; sus 7 ids de instancia se descubrieron solos; el formulario de
-  `/mod/forum/post.php` se leyó y se armó el envío completo en los 7, con `mailnow` y con `timestart`.
-  **No se publicó nada**: cada publicación es un correo a los 282 estudiantes matriculados y no hay
-  aula de pruebas donde ensayar (la más pequeña, TG3 grupo 54450, tiene 13). El POST final es el único
-  paso sin probar de toda la herramienta, y está dicho arriba a propósito.
+- **2026-08-15, foro de avisos.** Los 7 foros «Avisos» existen, están visibles y tienen suscripción
+  forzada; sus 7 ids de instancia se descubrieron solos; el formulario de `/mod/forum/post.php` se leyó
+  y se armó el envío completo en los 7, con `mailnow` y con `timestart`.
+- **2026-08-15, el envío probado sin tocar a nadie.** Foro `Prueba de recordatorios` en el aula 115463
+  (cmid `7706181`, instancia `909536`), **oculto** y de suscripción **opcional**, con la lista de
+  suscriptores comprobada: **1, el Docente**. Se publicó dentro el aviso que le tocaba al Quiz 1 con
+  `mailnow`, y se releyó la discusión (`d=1546426`) para ver el cuerpo tal como sale al correo. Es el
+  primer POST de publicación que se ejecuta. Buscando el porqué del fallo inicial se descubrió que en
+  el **alta** de una actividad hay que enviar sólo el mínimo estructural (ver arriba).
+- **2026-08-15, Creatividad alineada y programada.** Los **8 ítems** del aula 115463 quedaron con las
+  fechas del repositorio, incluidos los 3 visibles, después de comprobar que **no había nada entregado**
+  (0 intentos en los cuestionarios, 0 envíos en la tarea —con 50 participantes— y 0 temas en el foro de
+  Coevaluación), así que mover las ventanas no le quitó trabajo a nadie. El round-trip nulo abortó dos
+  veces y las dos eran del parser, no del servidor: `introattachments` es un id de área de borrador
+  (volátil, arreglado) y `completiongradeitemnumber` no lo manda el navegador cuando su casilla está
+  apagada (`_DEPENDEN_DE`, arreglado). Antes del arreglo, ese segundo caso ya había encendido
+  `completionusegrade` en la Coevaluación; queda **inerte** porque su finalización es *manual*, y no
+  hay forma de apagarlo desde ese formulario mientras lo siga siendo. Luego se programaron los **12
+  avisos** del semestre (los 19 restantes se saltaron por estar ocultos sus ítems): 12 temas con
+  período, del **12/09** al **27/09**, invisibles para el estudiante hasta su fecha.
