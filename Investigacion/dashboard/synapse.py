@@ -332,6 +332,30 @@ def cmd_login(args) -> int:
     print("Este script NO ve ni guarda tu contraseña: la escribes tú en la ventana de Google.")
     print(f"Esperando hasta {args.espera} segundos...\n")
 
+    # Capturar el token de las respuestas de Firebase Auth, porque la aplicación NO lo persiste
+    # en disco (ni en IndexedDB ni en localStorage). La sesión vive solo en memoria del navegador.
+    token_capturado = {}
+
+    def interceptar_respuesta(respuesta):
+        try:
+            url = respuesta.url
+            if not ("identitytoolkit.googleapis.com" in url or "securetoken.googleapis.com" in url):
+                return
+            if respuesta.status != 200:
+                return
+            cuerpo = respuesta.json()
+            # Firebase Auth devuelve refreshToken en varias rutas: signInWithIdp, signInWithCustomToken, token
+            refresh = cuerpo.get("refreshToken") or cuerpo.get("refresh_token")
+            if refresh:
+                token_capturado["refreshToken"] = refresh
+                token_capturado["email"] = cuerpo.get("email")
+                token_capturado["localId"] = cuerpo.get("localId") or cuerpo.get("user_id")
+                token_capturado["displayName"] = cuerpo.get("displayName")
+                token_capturado["idToken"] = cuerpo.get("idToken") or cuerpo.get("id_token")
+                print(f"\n[red capturada] sesión de {token_capturado.get('email')} (uid {token_capturado.get('localId')})")
+        except Exception:
+            pass   # no todas las respuestas son JSON, y eso es normal
+
     with sync_playwright() as p:
         ctx = p.chromium.launch_persistent_context(
             PERFIL_CHROME,
@@ -341,6 +365,7 @@ def cmd_login(args) -> int:
             args=["--disable-blink-features=AutomationControlled"],
         )
         pg = ctx.pages[0] if ctx.pages else ctx.new_page()
+        pg.on("response", interceptar_respuesta)
         pg.goto(URL_APP, wait_until="domcontentloaded", timeout=60000)
         pg.wait_for_timeout(2500)
 
@@ -360,7 +385,7 @@ def cmd_login(args) -> int:
         esperado_ms = args.espera * 1000 if args.espera else float("inf")
         transcurrido = 0
         cerrada = False
-        while auth is None and transcurrido < esperado_ms:
+        while auth is None and not token_capturado and transcurrido < esperado_ms:
             try:
                 pg.wait_for_timeout(2000)
                 auth = pg.evaluate(JS_LEER_AUTH)
@@ -370,10 +395,19 @@ def cmd_login(args) -> int:
                     break
                 auth = None       # navegación en curso (redirección de Google)
             transcurrido += 2000
-            if transcurrido % 60000 == 0 and auth is None:
+            if transcurrido % 60000 == 0 and auth is None and not token_capturado:
                 print(f"   ...esperando el inicio de sesión ({transcurrido // 1000}s)")
 
-        if cerrada:
+        # Priorizar el token capturado de la red: es la única fuente fiable, porque la aplicación
+        # NO persiste la sesión en disco (ni IndexedDB ni localStorage).
+        if token_capturado:
+            auth = {
+                "email": token_capturado.get("email"),
+                "uid": token_capturado.get("localId"),
+                "displayName": token_capturado.get("displayName"),
+                "stsTokenManager": {"refreshToken": token_capturado.get("refreshToken")},
+            }
+        elif cerrada:
             # No es un error: quizá inició sesión y cerró la ventana enseguida.
             print("\nSe cerró la ventana. Compruebo si la sesión quedó en el perfil...")
             _cerrar(ctx)
@@ -507,6 +541,37 @@ def _lista_productos(doc: dict) -> list[dict]:
     return []
 
 
+def productos_de_coautoria(tok: str, email: str, uid: str) -> list[dict]:
+    """Busca productos donde el usuario es coautor (aparece en coauthors[]).
+
+    La UI de Producción los mezcla con los propios, así que el calendario debe incluirlos.
+    Devuelve la lista de productos con un campo adicional `_esCoautoria: true` y
+    `_docentePrincipalUid` para identificar de qué documento vienen.
+    """
+    todos = listar_coleccion(tok, COL_POR_DOCENTE, limite=500)  # limitado: 500 docentes
+    if isinstance(todos, dict) and "_error" in todos:
+        print(f"AVISO: no pude listar {COL_POR_DOCENTE} para buscar coautorías: {todos['_error']}",
+              file=sys.stderr)
+        return []
+
+    coautorias: list[dict] = []
+    email_norm = email.lower().strip()
+    for doc_otro in todos:
+        uid_otro = doc_otro.get("_id", "")
+        if uid_otro == uid:
+            continue  # los propios no son coautoría
+        for prod in _lista_productos(doc_otro):
+            coautores = prod.get("coauthors")
+            if not isinstance(coautores, list):
+                continue
+            # La UI busca userId==uid o email==email (normalizado)
+            if any((c.get("userId") == uid or (c.get("email") or "").lower().strip() == email_norm)
+                   for c in coautores if isinstance(c, dict)):
+                marcado = {**prod, "_esCoautoria": True, "_docentePrincipalUid": uid_otro}
+                coautorias.append(marcado)
+    return coautorias
+
+
 def _a_fecha(fecha: str | None) -> date | None:
     """La fecha de un campo de Synapse, o None si no se puede leer.
 
@@ -601,6 +666,8 @@ def eventos_calendario(doc: dict, dias_alerta: int = 7, hoy: date | None = None)
     for pr in _lista_productos(doc):
         producto = pr.get("productName") or pr.get("title") or pr.get("id") or "(sin nombre)"
         categoria = pr.get("categoriaMinciencias") or pr.get("categoryId") or ""
+        es_coautoria = pr.get("_esCoautoria", False)
+        docente_principal = pr.get("_docentePrincipalUid", "")
 
         crudas = [("Entrega final", "", pr.get("deliveryDate") or pr.get("dueDate"),
                    str(pr.get("status") or ""), pr.get("deliveredAt"), pr.get("documentUrl"))]
@@ -644,6 +711,8 @@ def eventos_calendario(doc: dict, dias_alerta: int = 7, hoy: date | None = None)
                 "entregado_el": _iso(entregado),
                 "documento": url or "",
                 "fecha_entrega_cruda": str(fecha_txt or ""),
+                "es_coautoria": "sí" if es_coautoria else "no",
+                "docente_principal_uid": docente_principal,
             })
 
     eventos.sort(key=lambda e: (e["fecha_entrega"] == "", e["fecha_entrega"],
@@ -653,7 +722,8 @@ def eventos_calendario(doc: dict, dias_alerta: int = 7, hoy: date | None = None)
 
 COLUMNAS_CSV = ["producto", "categoria_minciencias", "tipo", "hito", "estado",
                 "fecha_alerta", "fecha_entrega", "dias_para_entrega",
-                "alerta_activa", "requiere_accion", "situacion", "entregado_el", "documento"]
+                "alerta_activa", "requiere_accion", "situacion", "entregado_el", "documento",
+                "es_coautoria", "docente_principal_uid"]
 
 
 def escribir_csv(eventos: list[dict], ruta: str, sep: str = ",") -> str:
@@ -814,16 +884,22 @@ def cmd_pendientes(args) -> int:
 def cmd_calendario(args) -> int:
     tok, cred = token_de_acceso()
     doc = obtener_documento(tok, f"{COL_POR_DOCENTE}/{cred['uid']}")
-    if doc is None:
-        print("No existe documento de productos para esta cuenta "
-              f"(`{COL_POR_DOCENTE}/{cred['uid']}`): no hay nada que calendarizar.")
+    propios = _lista_productos(doc) if doc and "_error" not in doc else []
+
+    # La UI de Producción mezcla los productos propios con aquellos donde eres coautor.
+    # El calendario debe reflejar eso, o esconde vencimientos reales.
+    coautorias = productos_de_coautoria(tok, cred["email"], cred["uid"])
+    if coautorias:
+        print(f"Encontrados {len(coautorias)} productos de coautoría (se incluyen en el calendario)")
+
+    # Documento sintético que une propios + coautorías
+    doc_completo = {"products": propios + coautorias}
+    if not propios and not coautorias:
+        print("No hay productos propios ni coautorías: nada que calendarizar.")
         return 0
-    if "_error" in doc:
-        print(f"No pude leer los productos: {doc['_error']}")
-        return 1
 
     hoy = datetime.now().date()
-    eventos = eventos_calendario(doc, dias_alerta=args.alerta, hoy=hoy)
+    eventos = eventos_calendario(doc_completo, dias_alerta=args.alerta, hoy=hoy)
     if not eventos:
         print("Los productos no traen ninguna fecha de entrega ni hito: no hay eventos.")
         return 0
@@ -836,8 +912,8 @@ def cmd_calendario(args) -> int:
 
     accionables = [e for e in eventos if e["requiere_accion"] == "sí"]
     print(f"Cuenta: {cred['email']} · hoy {hoy.isoformat()} · alerta {args.alerta} días antes")
-    print(f"{len(eventos)} eventos ({len(accionables)} requieren acción) de "
-          f"{len(_lista_productos(doc))} productos\n")
+    resumen_productos = f"{len(propios)} propios" + (f" + {len(coautorias)} coautorías" if coautorias else "")
+    print(f"{len(eventos)} eventos ({len(accionables)} requieren acción) de {resumen_productos}\n")
 
     anchos = [46, 13, 12, 12, 13, 22]
     cab = ("producto / hito", "tipo", "alerta", "ENTREGA", "estado", "situación")

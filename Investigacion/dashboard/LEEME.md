@@ -72,11 +72,19 @@ Es el mismo par que usa el panel de administración para su `Reporte_Entregas.xl
 fila sale marcada `Tipo: Final` o como hito. Si un día apareciera una colección de calendario de
 verdad, este es el sitio a cambiar.
 
+**Productos de coautoría:** la UI de Producción mezcla tus productos propios (`products/<uid>`) con
+aquellos donde apareces en el array `coauthors[]` de otros docentes. El subcomando `calendario`
+refleja eso: barre toda la colección `products`, identifica productos donde eres coautor (por
+`userId` o `email`), y los incluye en el calendario marcados con `es_coautoria: sí`. Sin esto, el
+CSV ocultaría vencimientos que SÍ aparecen en tu pantalla de Producción.
+
 Escribe dos CSV en `datos/` (y el mismo análisis en `eventos_produccion.json`):
 
 - **`eventos_produccion.csv`** — el de revisar. Una fila por evento, con `fecha_alerta`
   (= entrega − 7 días), `fecha_entrega` exacta, `dias_para_entrega` y dos columnas para filtrar:
-  `alerta_activa` (¿ya entré en la ventana de siete días?) y `requiere_accion`.
+  `alerta_activa` (¿ya entré en la ventana de siete días?) y `requiere_accion`. Incluye dos
+  columnas adicionales: `es_coautoria` (sí/no) y `docente_principal_uid` (el uid del docente
+  principal si es coautoría, vacío si es producto propio).
 - **`eventos_produccion_google_calendar.csv`** — importable en Google Calendar.
 
 Tres decisiones que no son obvias:
