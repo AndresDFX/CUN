@@ -65,6 +65,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import xml.etree.ElementTree as ET
 
@@ -83,6 +84,19 @@ ARCHIVO_CRED = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser("~
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36")
 REPO_SUBIDA = 5  # id del repositorio "Subir un archivo" en esta instalación
+
+# Aula de CDigital -> (curso del repositorio, grupo). El grupo sólo hace falta en Trabajo de Grado 3,
+# que es UNA carpeta del repositorio y TRES aulas del campus, cada una con sus propias fechas.
+# Las claves de curso son las de `config/cursos/fechas_entrega_aca.py`.
+AULAS_CURSO = {
+    111070: ("investigacion", None),
+    115463: ("creatividad", None),
+    129268: ("tg2", None),
+    112321: ("tg3", "54450"),
+    116387: ("tg3", "54466"),
+    129270: ("tg3", "54467"),
+    130378: ("proyecto1", None),
+}
 
 
 # =============================================================================================
@@ -1160,6 +1174,365 @@ def visibilidad(cd: CDigital, cmid: int, mostrar: bool) -> int:
     return 0
 
 
+# =============================================================================================
+# Fechas de los ítems evaluativos
+#
+# No hay atajo: el sitio no trae el editor masivo de fechas (`/report/editdates/` da 404) y Moodle
+# 4.5 no expone servicio web para cambiarlas. Hay que reenviar el formulario de ajustes completo,
+# igual que lo hace el navegador. Dos detalles que, si se ignoran, borran ajustes:
+#
+#   1. **Orden del documento.** Moodle usa el patrón `advcheckbox`: un `<input type="hidden"
+#      name="X" value="0">` seguido de `<input type="checkbox" name="X" value="1">`. Con la casilla
+#      marcada el navegador envía los dos y PHP se queda con el último. Por eso los campos viajan
+#      como lista de pares en orden, no como diccionario.
+#   2. **`<select>` sin `selected`.** El navegador manda la primera opción; hay que emularlo.
+#
+# Antes de escribir nada se comprueba con un **round-trip nulo**: reenviar el formulario tal como
+# vino y verificar que no cambió ni un ajuste. Si el reenvío idéntico altera algo, el parser no es
+# fiel y no se puede confiar en él para escribir.
+
+_VOLATILES = re.compile(r'(itemid|sesskey|_qf__|mform_isexpanded|filemanager_)', re.I)
+_TIPOS_IGNORADOS = {"submit", "button", "reset", "image", "file"}
+
+# Cómo se llama cada fecha según el tipo de actividad. `None` = ese tipo no tiene ese concepto.
+CAMPOS_FECHA = {
+    "quiz":   {"abre": "timeopen", "cierra": "timeclose", "corte": None, "nota": None},
+    "assign": {"abre": "allowsubmissionsfromdate", "cierra": "duedate", "corte": "cutoffdate",
+               "nota": "gradingduedate"},
+    "forum":  {"abre": None, "cierra": "duedate", "corte": "cutoffdate", "nota": None},
+}
+
+
+def _campos_formulario(h: str, accion: str = "modedit.php") -> list[tuple[str, str]]:
+    """Todos los campos del formulario que apunta a `accion`, en orden de documento."""
+    ini = None
+    for m in re.finditer(r'<form\b[^>]*>', h):
+        act = re.search(r'action="([^"]*)"', m.group(0))
+        if act and accion in html.unescape(act.group(1)):
+            ini = m.end()
+            break
+    if ini is None:
+        raise SystemExit(f"No encontré un formulario que apunte a {accion}.")
+    fin = h.find("</form>", ini)
+    cuerpo = h[ini:fin if fin > 0 else len(h)]
+
+    campos: list[tuple[str, str]] = []
+    for m in re.finditer(r'<(input|select|textarea)\b(.*?)(?:/?>)', cuerpo, re.S):
+        tag, attrs = m.group(1), m.group(2)
+        nom = re.search(r'\bname="([^"]*)"', attrs)
+        if not nom:
+            continue
+        nombre = html.unescape(nom.group(1))
+        if tag == "input":
+            tipo = (re.search(r'\btype="([^"]*)"', attrs) or [None, "text"])[1].lower()
+            if tipo in _TIPOS_IGNORADOS:
+                continue
+            val = re.search(r'\bvalue="([^"]*)"', attrs)
+            valor = html.unescape(val.group(1)) if val else ""
+            if tipo in ("checkbox", "radio"):
+                if "checked" not in attrs:
+                    continue
+                valor = valor or "1"
+            campos.append((nombre, valor))
+        elif tag == "select":
+            cierre = cuerpo.find("</select>", m.end())
+            opciones = re.findall(r'<option\b([^>]*)>', cuerpo[m.end():cierre])
+            elegidas = [o for o in opciones if "selected" in o]
+            if not elegidas and opciones and "multiple" not in attrs:
+                elegidas = opciones[:1]
+            for o in elegidas:
+                v = re.search(r'\bvalue="([^"]*)"', o)
+                campos.append((nombre, html.unescape(v.group(1)) if v else ""))
+        else:
+            cierre = cuerpo.find("</textarea>", m.end())
+            campos.append((nombre, html.unescape(cuerpo[m.end():cierre]) if cierre > 0 else ""))
+    return campos
+
+
+def _boton_guardar(h: str) -> str:
+    for nombre in ("submitbutton2", "submitbutton"):
+        if re.search(rf'name="{nombre}"', h):
+            return nombre
+    raise SystemExit("El formulario de ajustes no tiene botón de guardar.")
+
+
+_PARTE_FECHA = re.compile(r'^(.+)\[(?:day|month|year|hour|minute)\]$')
+
+
+def _sin_volatiles(campos: list[tuple[str, str]]) -> dict[str, list[str]]:
+    """Los campos comparables: fuera los que cambian solos en cada carga de página.
+
+    Además de los `itemid` de borrador, hay que descartar los selectores de fecha **apagados**:
+    Moodle los pinta con la hora actual por defecto y no guarda nada mientras su casilla
+    `[enabled]` esté sin marcar. Sin esto, un `completionexpected` desactivado hace fallar la
+    comprobación por el solo hecho de que el reloj pasó de :29 a :30 entre las dos páginas.
+    """
+    encendidas = {k[: -len("[enabled]")] for k, _ in campos if k.endswith("[enabled]")}
+    d: dict[str, list[str]] = {}
+    for k, v in campos:
+        if _VOLATILES.search(k):
+            continue
+        parte = _PARTE_FECHA.match(k)
+        if parte and parte.group(1) not in encendidas:
+            continue
+        d.setdefault(k, []).append(v)
+    return d
+
+
+def _diferencias(antes: list[tuple[str, str]], despues: list[tuple[str, str]]) -> list[str]:
+    a, b = _sin_volatiles(antes), _sin_volatiles(despues)
+    return [f"{k}: {a.get(k)!r} -> {b.get(k)!r}"
+            for k in sorted(set(a) | set(b)) if a.get(k) != b.get(k)]
+
+
+def _leer_fecha(h: str, pref: str) -> str | None:
+    """La fecha de un selector de Moodle, como `AAAA-MM-DD`, o None si está desactivada."""
+    def uno(nombre: str) -> str | None:
+        e = re.escape(nombre)
+        m = re.search(rf'<select[^>]*name="{e}"[^>]*>(.*?)</select>', h, re.S)
+        if m:
+            o = re.search(r'<option[^>]*value="([^"]*)"[^>]*selected', m.group(1))
+            return o.group(1) if o else None
+        m = re.search(rf'<input[^>]*name="{e}"[^>]*>', h)
+        return m.group(0) if m else None
+
+    casilla = uno(pref + "[enabled]")
+    if not casilla or "checked" not in casilla:
+        return None
+    y, mo, d = uno(pref + "[year]"), uno(pref + "[month]"), uno(pref + "[day]")
+    if not (y and mo and d):
+        return None
+    return f"{int(y):04d}-{int(mo):02d}-{int(d):02d}"
+
+
+def _poner(campos: list[tuple[str, str]], cambios: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Reemplaza el valor de cada campo; si no venía en el formulario, lo añade al final."""
+    claves = {k for k, _ in cambios}
+    nuevos = [(k, v) for k, v in campos if k not in claves]
+    return nuevos + list(cambios)
+
+
+def _cambios_fecha(pref: str, fecha, hora: int, minuto: int) -> list[tuple[str, str]]:
+    return [(f"{pref}[enabled]", "1"), (f"{pref}[day]", str(fecha.day)),
+            (f"{pref}[month]", str(fecha.month)), (f"{pref}[year]", str(fecha.year)),
+            (f"{pref}[hour]", str(hora)), (f"{pref}[minute]", str(minuto))]
+
+
+def fijar_fechas(cd: CDigital, cmid: int, pedido: dict, confirmar: bool) -> int:
+    """Escribe las fechas de una actividad reenviando su formulario de ajustes.
+
+    `pedido` lleva claves de CAMPOS_FECHA (`abre`, `cierra`, `corte`, `nota`) con `datetime.date`.
+    Verifica dos veces: round-trip nulo antes de escribir y relectura del servidor después.
+    """
+    h = cd.get(f"/course/modedit.php?update={cmid}").text
+    modulo = (re.search(r'name="modulename"[^>]*value="([^"]*)"', h) or [None, "?"])[1]
+    nombre = html.unescape((re.search(r'name="name"[^>]*value="([^"]*)"', h) or [None, "?"])[1])
+    curso = int((re.search(r'name="course"[^>]*value="(\d+)"', h) or [None, 0])[1])
+    if modulo not in CAMPOS_FECHA:
+        print(f"   No sé qué campos de fecha tiene un «{modulo}»; no lo toco.")
+        return 1
+
+    mapa = CAMPOS_FECHA[modulo]
+    campos = _campos_formulario(h)
+    cambios: list[tuple[str, str]] = []
+    lineas: list[str] = []
+    for concepto, fecha in pedido.items():
+        pref = mapa.get(concepto)
+        if fecha is None:
+            continue
+        if not pref:
+            lineas.append(f"      {concepto:6} -> un «{modulo}» no tiene esa fecha, se omite")
+            continue
+        if f'name="{pref}[year]"' not in h:
+            lineas.append(f"      {concepto:6} -> el formulario no trae {pref}, se omite")
+            continue
+        hora, minuto = (0, 0) if concepto == "abre" else (23, 59)
+        antes = _leer_fecha(h, pref)
+        cambios += _cambios_fecha(pref, fecha, hora, minuto)
+        lineas.append(f"      {concepto:6} {pref:26} {antes or 'desactivada':10} -> {fecha}")
+
+    print(f"   «{nombre}» (cmid {cmid}, {modulo}, aula {curso})")
+    for ln in lineas:
+        print(ln)
+    if not cambios:
+        print("      nada que cambiar")
+        return 0
+    if not confirmar:
+        print("      SIMULACIÓN: no se envió nada (falta --confirmar)")
+        return 0
+
+    # Round-trip nulo: si reenviar el formulario tal cual altera algo, el parser no es fiel.
+    boton = _boton_guardar(h)
+    cd.post("/course/modedit.php", campos + [(boton, "Guardar")])
+    h2 = cd.get(f"/course/modedit.php?update={cmid}").text
+    difs = _diferencias(campos, _campos_formulario(h2))
+    if difs:
+        print("      !!! ABORTO: el reenvío idéntico cambió ajustes, no puedo confiar en el parser:")
+        for d in difs[:10]:
+            print(f"          {d}")
+        return 1
+
+    cd.post("/course/modedit.php", _poner(_campos_formulario(h2), cambios) + [(boton, "Guardar")])
+    h3 = cd.get(f"/course/modedit.php?update={cmid}").text
+    malas = 0
+    for concepto, fecha in pedido.items():
+        pref = mapa.get(concepto)
+        if fecha is None or not pref or f'name="{pref}[year]"' not in h:
+            continue
+        quedo = _leer_fecha(h3, pref)
+        if quedo != str(fecha):
+            print(f"      !!! {pref}: pedí {fecha} y quedó {quedo}")
+            malas += 1
+    vis = next((c.get("visible") for c in cd.estado_curso(curso).get("cm", [])
+                if str(c["id"]) == str(cmid)), None)
+    print(f"      {'OK' if not malas else 'CON PROBLEMAS'} · verificado releyendo el servidor · "
+          f"sigue {'visible' if vis else 'oculta'}")
+    return 1 if malas else 0
+
+
+def alinear_fechas(cd: CDigital, curso: int, confirmar: bool, incluir_visibles: bool) -> int:
+    """Pone las fechas del aula iguales a las del repositorio (`config/cursos/fechas_entrega_aca.py`).
+
+    La fuente única de fechas es ese módulo, no el aula: es la decisión del Docente y es la que ya
+    llevan impresa las guías `.docx` que tienen los estudiantes. La plantilla institucional deja a
+    todos los ítems una misma ventana genérica, que no se corresponde con ninguna sesión.
+    """
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                    "cursos"))
+    import fechas_entrega_aca as fea  # noqa: PLC0415  (opcional: solo hace falta para este comando)
+
+    aula = AULAS_CURSO.get(curso)
+    if not aula:
+        print(f"No sé a qué curso del repositorio corresponde el aula {curso}. "
+              f"Aulas conocidas: {sorted(AULAS_CURSO)}")
+        return 1
+    clave, grupo = aula
+    entregas = fea.entregas_curso(clave)
+    if isinstance(entregas, dict):
+        entregas = entregas[grupo]
+
+    def norma(s: str) -> str:
+        s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
+        return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+    modulos = {norma(c.get("name")): c for c in cd.estado_curso(curso).get("cm", [])}
+    print(f"Aula {curso} · curso «{clave}»{' grupo ' + grupo if grupo else ''} · "
+          f"{len(entregas)} ítems evaluativos")
+    print("Fuente de las fechas: config/cursos/fechas_entrega_aca.py (decisión del Docente)\n")
+    fallos = omitidos = 0
+    for e in entregas:
+        cm = modulos.get(norma(e.code))
+        if not cm:
+            print(f"   «{e.code}» no existe como actividad en el aula")
+            fallos += 1
+            continue
+        if cm.get("visible") and not incluir_visibles:
+            print(f"   «{e.code}» (cmid {cm['id']}) está VISIBLE para los estudiantes: "
+                  f"la salto. Con --incluir-visibles se cambia igual")
+            omitidos += 1
+            continue
+        fallos += fijar_fechas(cd, int(cm["id"]),
+                               {"abre": e.apertura, "cierra": e.entrega, "corte": e.entrega,
+                                "nota": e.nota_docente}, confirmar)
+    print(f"\nítems: {len(entregas)} · con problema: {fallos} · omitidos por visibles: {omitidos}")
+    if omitidos:
+        print("Cambiar la fecha de un ítem visible lo ven los estudiantes (les mueve el calendario), "
+              "así que eso se decide a mano.")
+    return 1 if fallos else 0
+
+
+# =============================================================================================
+# Avisos: el canal de mensajería del campus
+#
+# Las 7 aulas traen un foro «Avisos» VISIBLE y con **suscripción forzada** (verificado leyendo
+# `forcesubscribe` en los ajustes de los 7). Publicar un tema ahí manda correo a todos los
+# matriculados, nadie puede darse de baja, sale con el nombre del Docente y además queda como
+# registro dentro del aula. No hace falta ninguna credencial de Gmail ni servidor de correo propio.
+
+def foro_avisos(cd: CDigital, curso: int) -> tuple[int, int] | None:
+    """(cmid, id del foro) del foro de anuncios del aula, o None si no lo encuentro.
+
+    El `id` que pide `/mod/forum/post.php?forum=` **no es el cmid**: es el id de la instancia del
+    foro. Aparece de dos formas distintas según cómo pinte el aula la página del foro —unas traen el
+    enlace «Añadir un nuevo tema» y otras el formulario ya incrustado—, así que se prueban las dos y,
+    si ninguna sirve, se lee del propio formulario de ajustes, que siempre lo lleva en `instance`.
+    """
+    candidatos = [c for c in cd.estado_curso(curso).get("cm", [])
+                  if str(c.get("module")) == "forum"
+                  and re.search(r"(?i)^\s*(avisos|anuncios|novedades)", c.get("name") or "")]
+    if not candidatos:
+        return None
+    cmid = int(candidatos[0]["id"])
+    v = cd.get(f"/mod/forum/view.php?id={cmid}").text
+    for texto, patron in ((v, r'<input[^>]*\bname="forum"[^>]*\bvalue="(\d+)"'),
+                          (v, r'post\.php\?forum=(\d+)'),
+                          (None, r'<input[^>]*\bname="instance"[^>]*\bvalue="(\d+)"')):
+        if texto is None:
+            texto = cd.get(f"/course/modedit.php?update={cmid}").text
+        m = re.search(patron, texto)
+        if m:
+            return cmid, int(m.group(1))
+    return None
+
+
+def publicar_aviso(cd: CDigital, curso: int, asunto: str, mensaje_html: str,
+                   confirmar: bool, enviar_ya: bool = True, desde=None, hora: int = 7) -> int:
+    """Publica un tema en el foro de anuncios del aula. Con `confirmar=False` sólo enseña el envío.
+
+    `enviar_ya` marca «Enviar notificaciones sin tiempo de espera para edición» (`mailnow`): sin
+    eso, Moodle espera la ventana de edición (30 min por defecto) antes de mandar los correos.
+
+    `desde` (un `datetime.date`) usa «Mostrar período» para **programar el aviso**: el tema queda
+    publicado hoy pero oculto para el estudiante, y el correo lo retiene el propio cron del campus
+    hasta esa fecha. Es la forma de automatizar sin planificador externo: no hace falta que este
+    computador esté encendido el día del recordatorio. `mailnow` no se salta esa espera —las dos
+    condiciones van unidas en la consulta del cron—, sólo evita el retardo extra de edición cuando
+    la fecha llega. Un aviso programado se puede borrar antes de su fecha sin que salga ningún
+    correo, que es lo que lo hace reversible.
+    """
+    par = foro_avisos(cd, curso)
+    if not par:
+        print(f"El aula {curso} no tiene un foro de anuncios que yo reconozca.")
+        return 1
+    cmid, foro = par
+    h = cd.get(f"/mod/forum/post.php?forum={foro}").text
+    if not re.search(r'<form[^>]*action="[^"]*post\.php', h):
+        print(f"No puedo publicar en el foro {foro} del aula {curso}: no me sirve el formulario "
+              "(¿permisos?).")
+        return 1
+
+    cambios = ([("subject", asunto), ("message[text]", mensaje_html), ("message[format]", "1")]
+               + ([("mailnow", "1")] if enviar_ya else []))
+    if desde is not None:
+        if not re.search(r'name="timestart\[enabled\]"', h):
+            print(f"   El foro {foro} no ofrece «Mostrar período»: no puedo programar el aviso. "
+                  "Habría que publicarlo el mismo día.")
+            return 1
+        cambios += _cambios_fecha("timestart", desde, hora, 0)
+        cambios += [("mform_isexpanded_id_displayperiod", "1")]
+    campos = _poner(_campos_formulario(h, "post.php"), cambios)
+    print(f"Aula {curso} · foro «Avisos» (cmid {cmid}, foro {foro})")
+    print(f"   asunto : {asunto}")
+    print(f"   cuerpo : {len(mensaje_html)} caracteres")
+    if desde is not None:
+        print(f"   correo : programado · sale el {desde} a las {hora:02d}:00 (lo manda el campus)")
+    else:
+        print(f"   correo : {'inmediato (mailnow)' if enviar_ya else 'tras la ventana de edición'}")
+    if not confirmar:
+        print("   SIMULACIÓN: no se publicó nada (falta --confirmar). "
+              "Publicar manda correo a TODOS los matriculados.")
+        return 0
+
+    cd.post("/mod/forum/post.php", campos + [(_boton_guardar(h), "Publicar")])
+    v = cd.get(f"/mod/forum/view.php?id={cmid}").text
+    if html.escape(asunto[:40]) in v or asunto[:40] in v:
+        print("   OK · el tema aparece en el foro (verificado releyéndolo)")
+        return 0
+    print("   !!! Lo envié pero no encuentro el tema en el foro. Revísalo a mano antes de repetir: "
+          "no quiero publicar dos veces lo mismo.")
+    return 1
+
+
 def ver_preguntas(cd: CDigital, curso: int) -> int:
     h = cd.get(f"/question/bank/importquestions/import.php?courseid={curso}").text
     campos = _campos_import(h)
@@ -1243,6 +1616,24 @@ def main(argv: list[str]) -> int:
                    help="Crearla VISIBLE. Sin esto queda oculta, que es lo que quiere el alistamiento")
     p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
 
+    p = sub.add_parser("fechas",
+                       help="Poner las fechas del aula iguales a las del repositorio "
+                            "(config/cursos/fechas_entrega_aca.py)")
+    p.add_argument("curso", type=int, help="Id del aula en CDigital")
+    p.add_argument("--incluir-visibles", action="store_true",
+                   help="Cambiar también los ítems que los estudiantes ya ven (les mueve el "
+                        "calendario). Sin esto sólo se tocan los ocultos")
+    p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
+
+    p = sub.add_parser("aviso", help="Publicar un anuncio en el foro «Avisos» del aula. OJO: le "
+                                     "llega por correo a TODOS los matriculados")
+    p.add_argument("curso", type=int, help="Id del aula en CDigital")
+    p.add_argument("asunto")
+    p.add_argument("mensaje", help="Cuerpo del anuncio. Admite HTML sencillo")
+    p.add_argument("--esperar", action="store_true",
+                   help="No marcar «enviar ya»: el correo sale tras la ventana de edición")
+    p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
+
     p = sub.add_parser("ocultar", help="Ocultar una actividad a los estudiantes")
     p.add_argument("cmid", type=int)
 
@@ -1280,6 +1671,11 @@ def main(argv: list[str]) -> int:
     if args.cmd == "subir-carpeta":
         return subir_carpeta(cd, args.curso, [(os.path.abspath(a), None) for a in args.archivos],
                              args.seccion, args.nombre, args.intro, args.visible, args.confirmar)
+    if args.cmd == "fechas":
+        return alinear_fechas(cd, args.curso, args.confirmar, args.incluir_visibles)
+    if args.cmd == "aviso":
+        return publicar_aviso(cd, args.curso, args.asunto, args.mensaje, args.confirmar,
+                              enviar_ya=not args.esperar)
     if args.cmd == "ocultar":
         return visibilidad(cd, args.cmid, mostrar=False)
     if args.cmd == "mostrar":

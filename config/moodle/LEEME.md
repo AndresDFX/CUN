@@ -20,6 +20,9 @@ python config/moodle/cdigital.py quiz-sustituir 6745720 --categoria 4976278,8271
 python config/moodle/cdigital.py quiz-ordenar 6745720 --xml "ruta/al/banco.xml" --dejar-oculto --confirmar
 python config/moodle/cdigital.py subir-recurso "ruta/Material U2.docx" --curso 115463 --seccion 3 --confirmar
 python config/moodle/cdigital.py subir-carpeta "ruta/S01.pptx" "ruta/S02.pptx" --curso 115463 --nombre "Presentaciones de clase" --confirmar
+python config/moodle/cdigital.py fechas 115463 --confirmar
+python config/moodle/cdigital.py fechas 115463 --incluir-visibles --confirmar
+python config/moodle/cdigital.py aviso 115463 "Asunto" "<p>Cuerpo en HTML</p>" --confirmar
 python config/moodle/cdigital.py ocultar 7705987
 python config/moodle/cdigital.py mostrar 7705987
 ```
@@ -48,6 +51,60 @@ para eso está `quiz-sustituir`. Ver «Los cuestionarios de plantilla» más aba
 `quiz-ordenar` sirve para lo que `quiz-sustituir` **no puede**: cambiar el orden de las preguntas que
 el cuestionario ya tiene. Toma el orden del `.xml` maestro —que es el que manda— y aborta si las
 preguntas del cuestionario no son exactamente las del archivo: reordena, nunca añade ni borra.
+
+## `fechas` — poner las ventanas del aula iguales a las del repositorio
+
+La fuente única de las fechas de entrega es `config/cursos/fechas_entrega_aca.py`, **no el aula**: es
+la decisión del Docente y es la que ya llevan impresa las guías `.docx` que tienen los estudiantes.
+La plantilla institucional deja a todos los ítems una misma ventana genérica que no corresponde a
+ninguna sesión (en Proyecto I decía enero de **2028**; la Coevaluación de Creatividad, **2030**).
+
+Este sitio **no tiene editor masivo de fechas** —`/report/editdates/index.php` y
+`/admin/tool/dates/index.php` dan 404— y Moodle 4.5 no expone un servicio web para cambiarlas, así
+que la única vía es reenviar el formulario completo de `/course/modedit.php`. Eso es delicado: un
+campo que se pierda en el camino es un ajuste que se borra. Tres defensas, en este orden:
+
+1. **Round-trip nulo.** Antes de escribir nada se reenvía el formulario *idéntico* y se comprueba que
+   el aula no cambió. Si un reenvío igual altera algo, el parser no es fiel y la escritura se aborta.
+2. **Orden del documento.** Los campos viajan como lista de pares, no como diccionario: el patrón
+   `advcheckbox` de Moodle pone un `<input type=hidden name=X value=0>` justo antes del checkbox
+   `name=X value=1`, y PHP se queda con el último. Un diccionario perdería la casilla marcada.
+3. **Relectura.** Después de guardar se vuelve a leer del servidor y se compara con lo pedido.
+
+Una trampa que costó un aborto en falso: los selectores de fecha **desactivados** los pinta Moodle
+con la hora actual, así que entre dos cargas de la misma página cambian solos (`:29` → `:30`). Se
+excluyen de la comparación los que no tienen su `[enabled]` marcado.
+
+Por defecto **sólo toca los ítems ocultos**. Los visibles se saltan y se listan: cambiarle la fecha a
+un ítem visible le mueve el calendario a los estudiantes matriculados, y eso se decide a mano
+(`--incluir-visibles`).
+
+## `aviso` y los recordatorios automáticos
+
+El foro **«Avisos»** existe, es visible y tiene **suscripción forzada** en las 7 aulas: publicar un
+tema ahí manda correo a todos los matriculados desde el servidor de la CUN. Sin cuenta de correo del
+Docente en el circuito, sin contraseña de aplicación —que esta cuenta institucional no puede
+generar— y sin cuota que se pueda agotar.
+
+El id que pide `/mod/forum/post.php?forum=N` **no es el cmid**, es el de la instancia del foro, y
+según cómo pinte el aula la página aparece de tres formas distintas; `foro_avisos()` las prueba en
+orden (`<input name="forum">`, el enlace `post.php?forum=`, y `instance` en el formulario de
+ajustes). Los siete, a 15/08/2026: `111070`→770097, `112321`→778919, `115463`→906293,
+`116387`→802859, `129268`→885879, `129270`→885889, `130378`→897760. Se redescubren solos.
+
+**`desde` programa el aviso y esa es la parte importante.** Con «Mostrar período» (`timestart`) el
+tema se publica hoy pero el correo lo retiene el cron del propio campus hasta la fecha indicada: no
+hace falta que este computador esté encendido el día del recordatorio, ni un planificador en la nube.
+`mailnow` no se salta esa espera —las dos condiciones van unidas en la consulta del cron—, sólo evita
+el retardo extra de la ventana de edición cuando la fecha llega. Un aviso programado se puede borrar
+antes de su fecha sin que salga ningún correo: por eso es reversible.
+
+El planificador que usa todo esto es `config/cursos/recordatorios.py`. Ver su cabecera.
+
+**Lo único que no está probado contra el servidor es el POST final.** Se verificó el camino completo
+—login, censo del aula, descubrimiento del foro, lectura del formulario y armado del envío en los 7
+foros— pero no la publicación, porque probarla es mandarles un correo de prueba a 282 estudiantes.
+El primer aviso de verdad es también su prueba: hacer el primero con una sola aula y mirarlo.
 
 ## Credenciales
 
@@ -267,3 +324,17 @@ El nombre del usuario no aparece en el HTML del panel; se lee de `/user/profile.
   coincidían por casualidad. `quiz-ordenar` lo dejó en el orden del maestro con **9 movimientos**,
   puntuación total 10.00 igual que antes, **0 intentos** y oculto. La verificación completa volvió a
   correr después: 31/31.
+- **2026-08-15, fechas.** Los **53 ítems evaluativos** de las 7 aulas discrepaban del repositorio:
+  todos. `fechas` corrigió los **31 ocultos** y dejó los **22 visibles** como estaban. La comprobación
+  la hizo un script aparte que releyó `/course/modedit.php` de los 53: **31 coinciden, 22 discrepan**,
+  y los 22 son exactamente los visibles. Están listados uno por uno, con cmid y con los dos valores,
+  en `ALISTAMIENTO CDigital 2026-08-15.md` §5. Lo peor que decía el aula: Proyecto I anunciaba sus dos
+  ACAs para **enero de 2028** y Creatividad, la Coevaluación para **2030**; seis Coevaluaciones no
+  tienen fecha ninguna. El round-trip nulo se disparó una vez de verdad (cmid `6785577`) y era un
+  falso positivo por los selectores desactivados; se arregló y volvió a correr limpio.
+- **2026-08-15, foro de avisos: verificado todo menos el envío.** Los 7 foros «Avisos» existen, están
+  visibles y tienen suscripción forzada; sus 7 ids de instancia se descubrieron solos; el formulario de
+  `/mod/forum/post.php` se leyó y se armó el envío completo en los 7, con `mailnow` y con `timestart`.
+  **No se publicó nada**: cada publicación es un correo a los 282 estudiantes matriculados y no hay
+  aula de pruebas donde ensayar (la más pequeña, TG3 grupo 54450, tiene 13). El POST final es el único
+  paso sin probar de toda la herramienta, y está dicho arriba a propósito.

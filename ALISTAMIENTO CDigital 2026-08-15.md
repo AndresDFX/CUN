@@ -165,15 +165,40 @@ Están aquí para que las puedas revertir, no para justificarlas.
 | **10 preguntas por cuestionario, 1,00 cada una, total 10,00, en 5 páginas de 2** | Es lo que traía la plantilla en el único cuestionario que estaba armado; se respetó | En el aula, «Editar cuestionario» |
 | **El mismo banco de TG3 se importó en las 3 aulas**, y las categorías se nombran sin el número de grupo (`Quiz 1 - TG3 U1-U2`) | Una carpeta del repositorio, tres aulas del campus. Si el nombre llevara el grupo, el mismo banco tendría tres nombres distintos | Renombrar no se puede desde la herramienta; se reimporta |
 | El **Quiz 1 de Creatividad** se reordenó al orden del `.xml` del repositorio | El aula lo había dejado en orden de código (Q06→Q15) y el banco maestro tiene un orden deliberado (Q11, Q10, Q12, Q09, …). El maestro manda | `quiz-ordenar <cmid> --xml <banco>` |
-| **Las ventanas de fechas no se tocaron** | Cambiar cuándo abre un examen es una decisión académica tuya, no de la herramienta. Se reportan tal como están (§5) | En el aula, ajustes del cuestionario |
+| **Las fechas se pusieron sólo en los 31 ítems OCULTOS** (los 22 visibles se dejaron como estaban) | Los 53 ítems evaluativos de las 7 aulas traían la ventana genérica de la plantilla, que no coincide con ninguna sesión: Proyecto I decía **enero de 2028** y la Coevaluación de Creatividad, **2030**. En los ocultos no hay nada que romper —ningún estudiante los ve— y la fecha correcta ya está decidida y publicada en las guías `.docx`. En los visibles, cambiar la fecha les mueve el calendario a 282 estudiantes: eso se decide a mano (§5) | `fechas <aula> --confirmar` (y `--incluir-visibles` para los otros 22) |
 | **Las dos mezclas se dejaron como venían de plantilla**: «Reordenar las preguntas al azar» **desactivada** en los 31, «Mezclar dentro de las preguntas» en **Sí** en los 31 | Así el orden del `.xml` maestro es el que ve el estudiante, y las opciones sí se barajan en cada intento. Barajarlas es seguro: ninguna de las 210 preguntas depende de la posición de una opción —no hay «todas las anteriores», y donde se lee «opción A / B» son las alternativas del proyecto descritas en el enunciado, no letras de respuesta | La casilla, en la página de edición del cuestionario; el desplegable, en sus ajustes |
 
 ---
 
 ## 5. Lo que hay que decidir tú (no se tocó a propósito)
 
-1. **La ventana del Quiz 1 abre el 11/08 y cierra el 20/09 en Investigación y Creatividad, y el 15/11 en TG2 y TG3.** Con las preguntas de tema que ahora sirve, el Quiz 1 pregunta contenido de las Unidades 1 y 2 — que en algunos grupos todavía no se ha dictado completo. El detalle está en `AUDITORIA CDigital 2026-08-10.md` §4 ter. Está oculto, así que no corre prisa, pero al activarlo hay que decidir la fecha.
-2. **El Quiz de Proyecto I no tiene fechas** (abre y cierra desactivados). Si se activa así, queda abierto todo el periodo.
+1. **Los 22 ítems visibles siguen con la fecha de la plantilla, y a 3 de ellos les corre prisa.** Ya coinciden con el repositorio los 31 ocultos; los 22 que ven los estudiantes, no. Verificado releyendo el aula el 15/08/2026:
+
+   | Aula | Ítem | cmid | Lo que ve el estudiante | Lo que dice el repositorio |
+   |---|---|---|---|---|
+   | proyecto1 | ACA 1 | `7563707` | 06/01/2028 → **18/01/2028** | 07/09 → 04/10/2026 |
+   | proyecto1 | ACA FINAL | `7563715` | 06/01/2028 → **18/01/2028** | 12/10 → 08/11/2026 |
+   | proyecto1 | Autoevaluación | `7563723` | 14/02/2028 | 16/11 → 22/11/2026 |
+   | creatividad | Coevaluación | `6745734` | cierra **27/10/2030** | 23/09 → 27/09/2026 |
+   | investigacion | ACA Final | `6522210` | 11/08 → 20/09 | 13/08 → 12/09/2026 |
+   | investigacion | Autoevaluación | `6522213` | 11/08 → 20/09 | 17/09 → 20/09/2026 |
+   | creatividad | ACA Final | `6745731` | 11/08 → 20/09 | 12/08 → 19/09/2026 |
+   | creatividad | Autoevaluación | `6745735` | 11/08 → 20/09 | 23/09 → 27/09/2026 |
+   | tg2 | ACA Final | `7448472` | 11/08 → 15/11 | 10/08 → 14/11/2026 |
+   | tg2 | Autoevaluación | `7448477` | 11/08 → 15/11 | 09/11 → 22/11/2026 |
+   | tg3 (3 aulas) | ACA Final | `6608179`, `6785573`, `7448541` | 11/08 → 15/11 | 11/08 → 07/11/2026 |
+   | tg3 (3 aulas) | Autoevaluación | `6608181`, `6785575`, `7448543` | 11/08 → 15/11 | 03/11 → 10/11/2026 |
+   | 6 aulas | Coevaluación | `6522214`, `6608182`, `6785576`, `7448478`, `7448544`, `7563724` | **sin fecha ninguna** | según curso |
+
+   Las tres primeras filas son las que más engañan: **Proyecto I anuncia que sus dos ACAs se entregan en enero de 2028** (42% + 25% de la nota) y Creatividad, que la Coevaluación cierra en 2030. Las seis Coevaluaciones sin fecha no muestran plazo al estudiante. Un comando por aula lo arregla:
+
+   ```bash
+   python config/moodle/cdigital.py fechas 130378 --incluir-visibles --confirmar   # Proyecto I
+   python config/moodle/cdigital.py fechas 115463 --incluir-visibles --confirmar   # Creatividad
+   ```
+
+   No lo hice yo porque cambiar la fecha de un ítem visible les mueve el calendario a los 282 estudiantes matriculados, y eso es una decisión tuya. Lo que había antes queda registrado en `diff_fechas.json` (temporal) y en esta tabla.
+2. **Con las fechas puestas, el Quiz 1 ya tiene cierre — y sigue oculto.** Cierra el 19/08 en Creatividad, el 20/08 en Investigación, el 25/08 en las tres aulas de TG3 y el 31/08 en TG2; el Quiz de Proyecto I, que vale **25%**, cierra el **30/08**. Ninguno se puede contestar todavía porque está oculto. El Quiz 1 pregunta contenido de las Unidades 1 y 2 (detalle en `AUDITORIA CDigital 2026-08-10.md` §4 ter): si en algún grupo no se ha dictado, hay que mover la fecha en `config/cursos/fechas_entrega_aca.py` y volver a correr `fechas`, no editarla en el aula.
 3. **El material queda duplicado con los enlaces a Drive.** Las aulas ya reparten material con recursos visibles que apuntan a Drive («Clases», «Material clases»). Las carpetas nuevas traen los mismos archivos dentro del campus: si actualizas un `.pptx` en Drive, la copia del campus se queda vieja. Se subieron porque el material tenía que quedar en CDigital; decide tú si el canal bueno es la carpeta o el enlace, y borra el otro.
 4. **Falta el PDF de Aperribai et al. (2024)** en las lecturas obligatorias de Creatividad. Las otras 8 de las 10 preguntas del Quiz 1 se responden con el PDF de REDIE, que sí está subido (carpeta «Lecturas obligatorias», cmid `7705994`).
 5. **Las 3 encuestas de evaluación docente y la Autoevaluación no se tocaron**: no son nuestras.
