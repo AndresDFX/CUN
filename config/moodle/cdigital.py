@@ -32,6 +32,9 @@ USO
     python config/moodle/cdigital.py quiz-sustituir 6745720 --categoria 4976278,8271261 --confirmar
     python config/moodle/cdigital.py subir-recurso "Material U2.docx" --curso 115463 --seccion 2
     python config/moodle/cdigital.py subir-recurso "Material U2.docx" --curso 115463 --confirmar
+    python config/moodle/cdigital.py encuestas 111070
+    python config/moodle/cdigital.py encuestas 111070 --abre 2026-08-18
+    python config/moodle/cdigital.py encuestas 111070 --abre 2026-08-18 --confirmar
     python config/moodle/cdigital.py ocultar 6745720
     python config/moodle/cdigital.py mostrar 6745720
 
@@ -58,6 +61,7 @@ apuntando al **contexto del módulo**. Hay que sustituir los slots — eso hace 
 from __future__ import annotations
 
 import argparse
+import datetime
 import html
 import io
 import json
@@ -1224,11 +1228,29 @@ def _sin_apagados(campos: list[tuple[str, str]]) -> list[tuple[str, str]]:
             if not (k in _DEPENDEN_DE and apagada(_DEPENDEN_DE[k]))]
 
 # Cómo se llama cada fecha según el tipo de actividad. `None` = ese tipo no tiene ese concepto.
+#
+# `feedback` (las encuestas institucionales: «Evaluación Docente 1..3» y «Evalúa tu Entorno») estuvo
+# FUERA de esta tabla hasta el 17/08/2026, y por eso el ajuste de fechas del semestre pasó de largo
+# por las 28 encuestas de las 7 aulas: se quedaron con las de la plantilla —2028 y 2030— y trece de
+# ellas nunca abrieron. Su cierre NO se puede escribir: el formulario de esta instalación sólo trae
+# `timeopen` («Disponibilidad» → «Permitir respuestas de»), y de `timeclose` no hay ni rastro
+# —comprobado leyendo el HTML de /course/modedit.php?update=6522193—, aunque la vista de la encuesta
+# sí muestre un «Cierra:» que sale de la BD. De ahí `"cierra": None`, el caso simétrico del `forum`,
+# que no tiene apertura: `fijar_fechas` avisa «un «feedback» no tiene esa fecha, se omite» y no
+# escribe nada. Quien las corrige es el comando `encuestas`, no `fechas`: ver más abajo el por qué.
+#
+# `scorm` NO está en la tabla, a propósito. Su formulario sí trae `timeopen` y `timeclose`, pero en
+# el aula llegan los dos DESACTIVADOS y con la fecha de hoy de relleno (comprobado en el cmid
+# 7448441, «Ingreso a la biblioteca virtual» de TG2). Añadirlo no arreglaría un desajuste: le
+# ENCENDERÍA una ventana a un recurso que hoy no tiene ninguna, y a partir de ese día el estudiante
+# dejaría de poder entrar a la biblioteca fuera de ella. Eso es un cambio de comportamiento y lo
+# decide el Docente a mano, no este script.
 CAMPOS_FECHA = {
-    "quiz":   {"abre": "timeopen", "cierra": "timeclose", "corte": None, "nota": None},
-    "assign": {"abre": "allowsubmissionsfromdate", "cierra": "duedate", "corte": "cutoffdate",
-               "nota": "gradingduedate"},
-    "forum":  {"abre": None, "cierra": "duedate", "corte": "cutoffdate", "nota": None},
+    "quiz":     {"abre": "timeopen", "cierra": "timeclose", "corte": None, "nota": None},
+    "assign":   {"abre": "allowsubmissionsfromdate", "cierra": "duedate", "corte": "cutoffdate",
+                 "nota": "gradingduedate"},
+    "forum":    {"abre": None, "cierra": "duedate", "corte": "cutoffdate", "nota": None},
+    "feedback": {"abre": "timeopen", "cierra": None, "corte": None, "nota": None},
 }
 
 
@@ -1377,6 +1399,19 @@ def fijar_fechas(cd: CDigital, cmid: int, pedido: dict, confirmar: bool) -> int:
             continue
         hora, minuto = (0, 0) if concepto == "abre" else (23, 59)
         antes = _leer_fecha(h, pref)
+        # NUNCA encender una ventana que el aula trae apagada en una encuesta. `_cambios_fecha`
+        # emite siempre `[enabled]=1`, así que sin esta guarda un `fechas <aula> --incluir-visibles
+        # --confirmar` le pondría una ventana a las quince encuestas del grupo A —las que hoy no
+        # tienen ninguna y llevan dentro 206 respuestas de estudiantes—, y a partir de ese día
+        # dejarían de estar disponibles fuera de ella. Es el mismo peligro por el que `scorm` se
+        # dejó fuera de `CAMPOS_FECHA`; aquí no se puede dejar fuera el tipo entero, porque las
+        # trece encuestas rotas sí hay que corregirlas, así que la guarda va en quien escribe.
+        # `abrir_encuestas` ya filtra esos casos antes de llamar: esto es la red por si otro camino
+        # llega hasta aquí.
+        if antes is None and modulo == "feedback":
+            lineas.append(f"      {concepto:6} -> {pref} está DESACTIVADA en esta encuesta "
+                          "(siempre disponible): no la enciendo")
+            continue
         cambios += _cambios_fecha(pref, fecha, hora, minuto)
         lineas.append(f"      {concepto:6} {pref:26} {antes or 'desactivada':10} -> {fecha}")
 
@@ -1467,6 +1502,240 @@ def alinear_fechas(cd: CDigital, curso: int, confirmar: bool, incluir_visibles: 
     if omitidos:
         print("Cambiar la fecha de un ítem visible lo ven los estudiantes (les mueve el calendario), "
               "así que eso se decide a mano.")
+    return 1 if fallos else 0
+
+
+# =============================================================================================
+# Encuestas institucionales (`feedback`)
+#
+# Las 7 aulas traen 4 encuestas cada una —«Evaluación Docente 1..3» y «Evalúa tu Entorno»—, las 28
+# VISIBLES. No las pone el Docente ni son ítems evaluativos: no tienen nota, no están en
+# `config/cursos/fechas_entrega_aca.py` y por tanto `fechas`, que recorre esa tabla buscando cada
+# `code` en el aula, no las mira nunca. Por eso llevan comando aparte y no una rama de `fechas`:
+#
+#   1. **No hay fecha del repositorio que darles.** La tabla de entregas no las contempla, así que la
+#      apertura la dice el Docente en la línea de comando; `fechas` no tendría de dónde sacarla.
+#   2. **Están visibles.** `fechas` salta por diseño todo lo visible, para no moverle el calendario a
+#      los estudiantes; con `--incluir-visibles` sí las tocaría, pero de paso movería también los
+#      quices y las tareas. Un comando propio corrige la encuesta sin arriesgar lo demás.
+#   3. **La regla de seguridad es distinta**, y es la razón de fondo. De las 28, quince tienen la
+#      apertura DESACTIVADA: no muestran ni «Abre» ni «Cierra», llevan 206 respuestas de estudiantes
+#      dentro y funcionan. Ponerles una ventana podría cerrar una encuesta que está recogiendo datos
+#      ahora mismo. Las trece rotas son las que tienen la apertura ACTIVADA en una fecha FUTURA
+#      (2028 o 2030, de la plantilla): nunca abren y el estudiante recibe «Ha ocurrido un error».
+#      De ahí las dos condiciones que este comando exige para escribir —apertura encendida y todavía
+#      por llegar—: nunca enciende una ventana apagada ni mueve una encuesta que ya abrió.
+#
+# QUÉ PONERLES, que es la decisión de verdad y no es «una fecha». Lo correcto en una encuesta
+# institucional es `--sin-apertura`: quitarle la ventana y dejarla siempre disponible, que es la
+# configuración de las quince que funcionan. Dos razones, las dos comprobadas en el aula:
+#
+#   * **No hay cierre que escribir.** El formulario sólo trae `timeopen`, así que darle una apertura
+#     no acota nada: la encuesta queda abierta de ese día en adelante, con el cierre de la plantilla
+#     (2028, 2030) o sin ninguno. Alinearla «al primer día de su corte» no la limita al corte: sólo
+#     retrasa el día en que aparece.
+#   * **Retrasarla puede dejar candada una entrega.** En Creatividad e Investigación el «ACA Final»
+#     está restringido por la FINALIZACIÓN de «Evaluación Docente 3», y esa encuesta exige
+#     responderla para contar como finalizada. Darle apertura a la encuesta le pone la misma fecha,
+#     de rebote, a un ítem del 32,8 % — y el estudiante ve la tarea pero no puede entregarla. En las
+#     otras cinco aulas ese candado se puede pasar cualquier día precisamente porque la encuesta no
+#     tiene ventana. Los demás candados del aula (Quiz/Parcial N ↔ Evaluación Docente N,
+#     auto/coevaluación ↔ «Evalúa tu Entorno») abren el mismo día que su llave o después, así que
+#     ésos no estorban.
+#
+# `--abre` se queda por si algún día hace falta una apertura de verdad, pero con el aviso puesto.
+
+# Moodle rotula estas fechas en PASADO en cuanto han llegado: «Abre:» pasa a «Abrió:» y «Cierra:» a
+# «Cerró:». Reconocer sólo el presente tiene dos consecuencias, y la segunda es la grave: (1) toda
+# encuesta corregida a una fecha ya pasada se informa como «abre None», que es indistinguible de
+# haber perdido la apertura; (2) si el cierre estuviera en el pasado, la función devolvería
+# `cierra=None` antes Y después de guardar, así que la comparación saldría «igual» y dejaría pasar
+# justo el efecto colateral que esta función existe para vigilar. Se aceptan las formas sin tilde
+# porque el acento viaja según la codificación de la página.
+_ETIQUETA_FECHA = re.compile(r"\b(Abre|Abrió|Abrio|Cierra|Cerró|Cerro)\s*:")
+
+
+def _ventana_vista(cd: CDigital, cmid: int) -> dict[str, str | None]:
+    """El «Abre:» y el «Cierra:» tal como los lee el estudiante en la cabecera de la encuesta.
+
+    Hay que leerlos de la vista porque el cierre de un `feedback` sale de la BD y el formulario de
+    ajustes no lo trae: es el único sitio donde se puede comprobar que escribir la apertura no se
+    llevó por delante el cierre. Devuelve None en la clave que el aula no muestre.
+    """
+    h = cd.get(f"/mod/feedback/view.php?id={cmid}").text
+    m = re.search(r'data-region="activity-dates".*?(?:</div>\s*){2}', h, re.S)
+    trozos = _ETIQUETA_FECHA.split(_texto(m.group(0)) if m else "")
+    ventana: dict[str, str | None] = {"abre": None, "cierra": None}
+    for i in range(1, len(trozos) - 1, 2):
+        clave = "abre" if trozos[i].startswith(("Abre", "Abri", "Abrió")) else "cierra"
+        ventana[clave] = trozos[i + 1].strip() or None
+    return ventana
+
+
+def _cierre_intacto(cd: CDigital, cmid: int, antes: dict[str, str | None]) -> int:
+    """Comprueba que guardar no se llevó por delante el «Cierra:», que no viaja en el formulario.
+
+    El cierre de un `feedback` vive sólo en la BD, así que reenviar el formulario no debería tocarlo.
+    Si cambió, es un efecto colateral de guardar y hay que verlo, no taparlo. Devuelve 1 si cambió.
+    """
+    despues = _ventana_vista(cd, cmid)
+    if despues["cierra"] != antes["cierra"]:
+        print(f"      !!! el «Cierra:» de la vista pasó de {antes['cierra']!r} a "
+              f"{despues['cierra']!r}. El formulario no tiene ese campo: esto es un efecto "
+              "colateral de guardar y hay que revisarlo a mano.")
+        return 1
+    cierre = f"cierra {despues['cierra']}" if despues["cierra"] else "sin cierre"
+    abre = despues["abre"] or "sin apertura (siempre disponible)"
+    print(f"      vista del estudiante: abre {abre} · {cierre} (intacto)")
+    return 0
+
+
+def _quitar_apertura(cd: CDigital, cmid: int, confirmar: bool) -> int:
+    """Apaga la casilla «Permitir respuestas de» de una encuesta: la deja SIEMPRE disponible.
+
+    Es la configuración de las quince encuestas que funcionan y que llevan dentro las 206 respuestas
+    de los estudiantes: sin ventana, sin «Abre:» ni «Cierra:» en la cabecera. Se apaga igual que lo
+    haría el navegador —el formulario se reenvía SIN la casilla `timeopen[enabled]`, que es
+    exactamente lo que manda un checkbox desmarcado—; los selectores de día/mes/año sí viajan,
+    porque Moodle los ignora cuando la casilla no viene y quitarlos rompería el `date_time_selector`.
+    """
+    h = cd.get(f"/course/modedit.php?update={cmid}").text
+    modulo = (re.search(r'name="modulename"[^>]*value="([^"]*)"', h) or [None, "?"])[1]
+    nombre = html.unescape((re.search(r'name="name"[^>]*value="([^"]*)"', h) or [None, "?"])[1])
+    curso = int((re.search(r'name="course"[^>]*value="(\d+)"', h) or [None, 0])[1])
+    if modulo != "feedback":
+        print(f"      «{nombre}» es un «{modulo}», no una encuesta; no lo toco.")
+        return 1
+    if _leer_fecha(h, "timeopen") is None:
+        print("      ya está sin apertura, nada que cambiar")
+        return 0
+    if not confirmar:
+        print("      SIMULACIÓN: no se envió nada (falta --confirmar)")
+        return 0
+
+    # Mismo doble control que `fijar_fechas`: round-trip nulo antes de escribir y relectura después.
+    campos = _campos_formulario(h)
+    boton = _boton_guardar(h)
+    cd.post("/course/modedit.php", campos + [(boton, "Guardar")])
+    h2 = cd.get(f"/course/modedit.php?update={cmid}").text
+    difs = _diferencias(campos, _campos_formulario(h2))
+    if difs:
+        print("      !!! ABORTO: el reenvío idéntico cambió ajustes, no puedo confiar en el parser:")
+        for d in difs[:10]:
+            print(f"          {d}")
+        return 1
+
+    sin_casilla = [(k, v) for k, v in _campos_formulario(h2) if k != "timeopen[enabled]"]
+    cd.post("/course/modedit.php", sin_casilla + [(boton, "Guardar")])
+    quedo = _leer_fecha(cd.get(f"/course/modedit.php?update={cmid}").text, "timeopen")
+    if quedo is not None:
+        print(f"      !!! pedí quitar la apertura y quedó {quedo}")
+        return 1
+    vis = next((c.get("visible") for c in cd.estado_curso(curso).get("cm", [])
+                if str(c["id"]) == str(cmid)), None)
+    print(f"      OK · apertura desactivada, queda siempre disponible · verificado releyendo el "
+          f"servidor · sigue {'visible' if vis else 'oculta'}")
+    return 0
+
+
+def _fecha_iso(texto: str) -> datetime.date:
+    """`AAAA-MM-DD` -> date, con un mensaje claro si viene mal escrita."""
+    try:
+        return datetime.date.fromisoformat(texto)
+    except ValueError:
+        raise SystemExit(f"«{texto}» no es una fecha AAAA-MM-DD (ejemplo: 2026-08-18).")
+
+
+def abrir_encuestas(cd: CDigital, curso: int, fecha: datetime.date | None,
+                    solo: int | None, confirmar: bool, sin_apertura: bool = False) -> int:
+    """Censa las encuestas del aula y corrige las que nunca abren, con `--abre` o `--sin-apertura`.
+
+    Sin ninguna de las dos es un censo de lectura. Con `--abre` es idempotente: la encuesta que ya
+    abre ese día se informa y se deja quieta, así que se puede repetir el comando sin miedo.
+    `--sin-apertura` hace lo contrario y es lo que suele querer una encuesta institucional: le quita
+    la ventana y la deja siempre disponible, como las quince que funcionan.
+    """
+    encuestas = [c for c in cd.estado_curso(curso).get("cm", []) if c.get("module") == "feedback"]
+    if solo is not None:
+        encuestas = [c for c in encuestas if str(c["id"]) == str(solo)]
+        if not encuestas:
+            print(f"El cmid {solo} no es una encuesta «feedback» del aula {curso}.")
+            return 1
+    hoy = datetime.date.today()
+    if sin_apertura:
+        pedido = "quitar la ventana: quedan SIEMPRE disponibles"
+    elif fecha:
+        pedido = f"apertura pedida: {fecha}"
+    else:
+        pedido = "censo de lectura: sin --abre ni --sin-apertura no propongo nada"
+    print(f"Aula {curso} · {len(encuestas)} encuesta(s) «feedback» · {pedido}")
+    if sin_apertura:
+        print("Sólo se toca la encuesta que TIENE ventana. La que no tiene ya está como debe.\n")
+    else:
+        print("Sólo se corrige la encuesta con la apertura ENCENDIDA y aún POR LLEGAR, que es la "
+              "que\nnunca abre, o la que tiene la ventana DEGENERADA (abre y cierra a la vez). La "
+              "que no\ntiene ventana está recogiendo respuestas: ponerle fechas podría cerrarla, "
+              "así que no se\ntoca.\n")
+    if fecha and fecha > hoy:
+        print(f"OJO: {fecha} todavía no ha llegado; las encuestas seguirán cerradas hasta ese día.\n")
+    fallos = rotas = tocadas = intactas = 0
+    for c in sorted(encuestas, key=lambda x: int(x["id"])):
+        cmid = int(c["id"])
+        nombre = html.unescape(str(c.get("name", "?")))
+        abre = _leer_fecha(cd.get(f"/course/modedit.php?update={cmid}").text, "timeopen")
+        antes = _ventana_vista(cd, cmid)
+        estado = (f"abre {abre}" if abre else "sin apertura programada") + \
+                 (f" · cierra {antes['cierra']}" if antes["cierra"] else "")
+
+        if sin_apertura:
+            if abre is None:
+                print(f"   «{nombre}» (cmid {cmid}): {estado} · ya está siempre disponible")
+                intactas += 1
+                continue
+            print(f"   «{nombre}» (cmid {cmid}): {estado} · le quito la ventana")
+            tocadas += 1
+            fallos += _quitar_apertura(cd, cmid, confirmar)
+            if confirmar:
+                fallos += _cierre_intacto(cd, cmid, antes)
+            continue
+
+        if abre is None:
+            print(f"   «{nombre}» (cmid {cmid}): {estado} · FUNCIONA, no la toco")
+            intactas += 1
+            continue
+        # La ventana DEGENERADA —abre y cierra en el mismo instante, que es lo que traía la
+        # plantilla: 18/02/2028 11:04 → 18/02/2028 11:04— hay que detectarla ANTES del «ya abrió».
+        # Si no, en cuanto esa fecha pase, la rama de abajo la declara sana y el defecto que originó
+        # todo este trabajo se vuelve invisible justo cuando ya es irreparable.
+        degenerada = bool(antes["abre"]) and antes["abre"] == antes["cierra"]
+        if not degenerada and datetime.date.fromisoformat(abre) <= hoy:
+            print(f"   «{nombre}» (cmid {cmid}): {estado} · YA ABRIÓ, no la toco")
+            intactas += 1
+            continue
+        motivo = "VENTANA DEGENERADA: abre y cierra a la vez" if degenerada else "NUNCA ABRE"
+        print(f"   «{nombre}» (cmid {cmid}): {estado} · {motivo}")
+        rotas += 1
+        if not fecha:
+            continue
+        if abre == str(fecha):
+            print("      ya abre ese día, nada que cambiar")
+            continue
+        # Sólo la apertura: un «feedback» no tiene campo de cierre y `CAMPOS_FECHA` lo dice con
+        # `"cierra": None`, así que pasarle el cierre aquí sólo imprimiría «se omite».
+        tocadas += 1
+        fallos += fijar_fechas(cd, cmid, {"abre": fecha}, confirmar)
+        if confirmar:
+            fallos += _cierre_intacto(cd, cmid, antes)
+    if sin_apertura:
+        hecho = f"{'sin ventana' if confirmar else 'por dejar sin ventana'}: {tocadas}"
+    elif fecha:
+        hecho = f"{'corregidas' if confirmar else 'por corregir'}: {tocadas}"
+    else:
+        hecho = "para corregir hace falta --abre o --sin-apertura"
+    print(f"\nencuestas: {len(encuestas)} · que nunca abren: {rotas} · {hecho} · "
+          f"intactas por seguridad: {intactas} · con problema: {fallos}")
+    if fecha and not confirmar:
+        print("SIMULACIÓN: no se envió nada. Con --confirmar se escribe la apertura.")
     return 1 if fallos else 0
 
 
@@ -1747,6 +2016,22 @@ def main(argv: list[str]) -> int:
                         "calendario). Sin esto sólo se tocan los ocultos")
     p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
 
+    p = sub.add_parser("encuestas",
+                       help="Censar las encuestas institucionales («feedback») del aula y destrabar "
+                            "las que nunca abren, con --sin-apertura o --abre")
+    p.add_argument("curso", type=int, help="Id del aula en CDigital")
+    g = p.add_mutually_exclusive_group()
+    g.add_argument("--sin-apertura", action="store_true",
+                   help="Quitarles la ventana: quedan siempre disponibles, como las que funcionan. "
+                        "Es lo que suele querer una encuesta institucional")
+    g.add_argument("--abre", type=_fecha_iso, default=None, metavar="AAAA-MM-DD",
+                   help="Día en que deben abrir. OJO: no hay campo de cierre, así que la encuesta "
+                        "queda abierta desde ese día en adelante")
+    p.add_argument("--cmid", type=int, default=None,
+                   help="Trabajar sólo sobre esa encuesta, no sobre las del aula. Obligatorio en la "
+                        "práctica si cada encuesta lleva una fecha distinta")
+    p.add_argument("--confirmar", action="store_true", help="Sin esto solo simula")
+
     p = sub.add_parser("aviso", help="Publicar un anuncio en el foro «Avisos» del aula. OJO: lo ven "
                                      "TODOS los matriculados (por correo no les llega: el sitio "
                                      "tiene apagado el correo del foro)")
@@ -1796,6 +2081,9 @@ def main(argv: list[str]) -> int:
                              args.seccion, args.nombre, args.intro, args.visible, args.confirmar)
     if args.cmd == "fechas":
         return alinear_fechas(cd, args.curso, args.confirmar, args.incluir_visibles)
+    if args.cmd == "encuestas":
+        return abrir_encuestas(cd, args.curso, args.abre, args.cmid, args.confirmar,
+                               args.sin_apertura)
     if args.cmd == "aviso":
         return publicar_aviso(cd, args.curso, args.asunto, args.mensaje, args.confirmar,
                               enviar_ya=not args.esperar)

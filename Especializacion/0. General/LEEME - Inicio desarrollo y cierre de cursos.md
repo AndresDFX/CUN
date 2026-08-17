@@ -71,6 +71,17 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
 
 ## Checklist — INICIO (semana 1 / primera clase)
 
+### PRE-INICIO: ALISTAMIENTO DE AULAS (OBLIGATORIO)
+- [ ] **EJECUTAR ALISTAMIENTO DE AULAS 1-2 DÍAS ANTES DEL INICIO DE CLASES** — seguir el procedimiento completo en `../../ALISTAMIENTO_DE_AULAS_CDIGITAL.md`. Incluye:
+  - [ ] Activar material (carpetas y cuestionarios) en el aula de Proyecto I
+  - [ ] **Ocultar lo no evaluativo:** `python config/moodle/ocultar_no_evaluativo.py --confirmar` — el aula de Proyecto I es la más ruidosa: traía 35 componentes de plantilla sin nota (NotebookLM, podcast, FUNCUN, Infografía, Tarjetas Clave × 5 temas). Detalle en `../../OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md`
+  - [ ] Verificar que cuestionarios tengan preguntas correctas (no slots aleatorios)
+  - [ ] Ajustar fechas de todos los elementos evaluativos con `--incluir-visibles`
+  - [ ] Generar documentos de auditoría
+  - **Duración:** 2-3 horas para las 7 aulas (pregrado + especialización)
+  - **Nota:** El alistamiento cubre las 7 aulas (6 pregrado + 1 especialización) en un solo proceso
+
+### INICIO DEL SEMESTRE
 - [ ] Revisar syllabus ESP329 + Manual del Docente de Proyecto I + este LEEME.
 - [ ] Consultar asignación (link arriba) y confirmar grupos/cursos.
 - [ ] Publicar Meet único en CDigital y en Calendar (sustituir placeholder) · coanfitrión + grabación.

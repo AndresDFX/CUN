@@ -50,6 +50,16 @@ Hasta confirmar: tratar los eventos de Calendar de pregrado marcados “(confirm
 
 ## Checklist — INICIO
 
+### PRE-INICIO: ALISTAMIENTO DE AULAS (OBLIGATORIO)
+- [ ] **EJECUTAR ALISTAMIENTO DE AULAS 1-2 DÍAS ANTES DEL INICIO DE CLASES** — seguir el procedimiento completo en `../../ALISTAMIENTO_DE_AULAS_CDIGITAL.md`. Incluye:
+  - [ ] Activar material (carpetas y cuestionarios) en las 4 aulas de pregrado
+  - [ ] **Ocultar lo no evaluativo:** `python config/moodle/ocultar_no_evaluativo.py --confirmar` — la plantilla trae foros vacíos y SCORM «Contenido N» visibles y sin nota, y los estudiantes preguntan por ellos (caso 2026-2: `DIAGNOSTICO_FORO_1_CREATIVIDAD.md`)
+  - [ ] Verificar que cuestionarios tengan preguntas correctas (no slots aleatorios)
+  - [ ] Ajustar fechas de todos los elementos evaluativos con `--incluir-visibles`
+  - [ ] Generar documentos de auditoría
+  - **Duración:** 2-3 horas para las 7 aulas (pregrado + especialización)
+
+### INICIO DEL SEMESTRE
 - [ ] Revisar Manual del Docente + syllabus SIAC de la asignatura (⚠️ TG2 sin syllabus SIAC — temario orientativo).
 - [ ] Publicar Meet único + placeholder CDigital en Presentación del Curso / aula.
 - [ ] Alistar CDigital semana 1: bienvenida, syllabus, cortes, rúbricas/actividades.

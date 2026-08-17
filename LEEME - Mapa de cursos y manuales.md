@@ -13,6 +13,7 @@
 - Agentes: `.cursor/agents/` (sync a `.claude/agents/` con `python config/sync_agents_cursor_claude.py`)
 
 ## Ciclo inicio → desarrollo → cierre (docente)
+- **ALISTAMIENTO DE AULAS (OBLIGATORIO CADA SEMESTRE):** `ALISTAMIENTO_DE_AULAS_CDIGITAL.md` — procedimiento estándar completo para preparar las 7 aulas en CDigital antes del inicio de clases. **Ejecutar 1-2 días antes del inicio del semestre.** Incluye: activación de material, **depuración de lo no evaluativo** (`config/moodle/ocultar_no_evaluativo.py` — la plantilla trae foros vacíos y SCORM «Contenido N» visibles y sin nota; ver `OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md` y `DIAGNOSTICO_FORO_1_CREATIVIDAD.md`), verificación de cuestionarios, ajuste de fechas y documentación. Duración: 2-3 horas.
 - **Especialización / AFI:** `Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md` (+ instructivos en `01_`…`03_`)
 - **Pregrado:** `Pregrado/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`
 - **Checklists de cierre:** `Especializacion/Checklist…md` (+ `.docx`) · `Pregrado/Checklist…md` (+ `.docx`) — la fuente editable es el `.md`; el `.docx` se rehace desde él.

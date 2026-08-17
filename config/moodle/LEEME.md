@@ -22,6 +22,9 @@ python config/moodle/cdigital.py subir-recurso "ruta/Material U2.docx" --curso 1
 python config/moodle/cdigital.py subir-carpeta "ruta/S01.pptx" "ruta/S02.pptx" --curso 115463 --nombre "Presentaciones de clase" --confirmar
 python config/moodle/cdigital.py fechas 115463 --confirmar
 python config/moodle/cdigital.py fechas 115463 --incluir-visibles --confirmar
+python config/moodle/cdigital.py encuestas 111070
+python config/moodle/cdigital.py encuestas 111070 --sin-apertura --cmid 6522193 --confirmar
+python config/moodle/cdigital.py encuestas 111070 --abre 2026-08-10 --cmid 6522212 --confirmar
 python config/moodle/cdigital.py aviso 115463 "Asunto" "<p>Cuerpo en HTML</p>" --confirmar
 python config/moodle/cdigital.py ocultar 7705987
 python config/moodle/cdigital.py mostrar 7705987
@@ -78,6 +81,48 @@ excluyen de la comparación los que no tienen su `[enabled]` marcado.
 Por defecto **sólo toca los ítems ocultos**. Los visibles se saltan y se listan: cambiarle la fecha a
 un ítem visible le mueve el calendario a los estudiantes matriculados, y eso se decide a mano
 (`--incluir-visibles`).
+
+## `encuestas` — las encuestas institucionales, que `fechas` no ve
+
+Las 7 aulas traen 4 encuestas (`feedback`) cada una, las 28 visibles: «Evaluación Docente 1/2/3» y
+«Evalúa tu Entorno». **`fechas` no las toca nunca**, y no por descuido: ese comando recorre
+`fechas_entrega_aca.py` buscando cada `code` en el aula, y las encuestas no están en esa tabla —no
+tienen nota—. Por eso se quedaron con las fechas de plantilla (2028 y 2030) cuando se ajustó todo lo
+demás, y **13 de las 28 nunca abrían**: al estudiante le salía «Ha ocurrido un error».
+
+```bash
+python config/moodle/cdigital.py encuestas 111070                                        # censo, no propone nada
+python config/moodle/cdigital.py encuestas 111070 --sin-apertura --cmid 6522208 --confirmar
+python config/moodle/cdigital.py encuestas 111070 --abre 2026-08-10 --cmid 6522212 --confirmar
+```
+
+**Lo normal es `--sin-apertura`**, y esto es la parte que no es obvia. Dos hechos del aula lo
+imponen:
+
+1. **El formulario de un `feedback` no tiene campo de cierre.** Los únicos selectores de fecha en su
+   `modedit` son `timeopen` y `completionexpected`; la cadena `timeclose` no aparece en el HTML
+   (comprobado en las 28). El «Cierra:» que sí se ve en la vista sale de la BD y no se puede editar
+   desde aquí. Consecuencia: darle una apertura **no acota nada**, solo retrasa el día en que
+   aparece. Alinear una encuesta «al primer día de su corte» no la limita al corte.
+2. **Retrasar una encuesta puede candar una entrega.** En Creatividad e Investigación el «ACA Final»
+   está restringido por la *finalización* de la «Evaluación Docente 3», y esa encuesta exige
+   responderla para contar como finalizada. Darle apertura a la encuesta le puso, de rebote, esa
+   misma fecha a un ítem del **32,8 %**: el estudiante veía la tarea y no podía entregarla. **Antes
+   de darle apertura a un `feedback`, mirar quién lo tiene como condición de finalización.**
+
+La regla de seguridad, codificada para que no dependa de la memoria de nadie: **nunca se enciende una
+ventana apagada**. De las 28, quince no tenían ninguna y llevan dentro 206 respuestas de estudiantes;
+funcionan precisamente por eso. La guarda está en `fijar_fechas`, que es quien escribe, no solo en
+`abrir_encuestas`, que es quien decide — si no, un `fechas --incluir-visibles --confirmar` podría
+ponerle una ventana a una encuesta que está recogiendo datos ahora mismo. Y el censo marca como rota
+tanto la apertura futura (`NUNCA ABRE`) como la **ventana degenerada** (`abre == cierra`, que es lo
+que traía la plantilla), esta última **aunque la fecha ya haya pasado**: sin eso el defecto se
+volvería invisible justo cuando ya no tiene arreglo.
+
+Usar **siempre `--cmid`**: en un aula conviven las tres «Evaluación Docente» (sin ventana) con
+«Evalúa tu Entorno» (con fecha), así que un comando sobre el aula completa le aplicaría lo mismo a las
+cuatro. Detalle del episodio y tablas de cmid, en
+[`FECHAS_AJUSTADAS_CDIGITAL.md`](../../FECHAS_AJUSTADAS_CDIGITAL.md).
 
 ## `aviso` y los recordatorios automáticos
 
