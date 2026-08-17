@@ -56,6 +56,7 @@ Hasta confirmar: tratar los eventos de Calendar de pregrado marcados “(confirm
   - [ ] **Ocultar lo no evaluativo:** `python config/moodle/ocultar_no_evaluativo.py --confirmar` — la plantilla trae foros vacíos y SCORM «Contenido N» visibles y sin nota, y los estudiantes preguntan por ellos (caso 2026-2: `DIAGNOSTICO_FORO_1_CREATIVIDAD.md`)
   - [ ] Verificar que cuestionarios tengan preguntas correctas (no slots aleatorios)
   - [ ] Ajustar fechas de todos los elementos evaluativos con `--incluir-visibles`
+  - [ ] **Destrabar las encuestas institucionales:** `python config/moodle/cdigital.py encuestas <aula>` — las 4 encuestas por aula («Evaluación Docente 1/2/3» y «Evalúa tu Entorno») **no las toca el paso anterior**, porque no dan nota. En 2026-2 llegaron abriendo en **2028/2030** y nunca abrían: el estudiante recibía «Ha ocurrido un error». ED 1/2/3 → `--sin-apertura`; «Evalúa tu Entorno» → `--abre <inicio del curso>`. **Siempre con `--cmid`**, y nunca las que digan «sin apertura programada» (tienen respuestas dentro)
   - [ ] Generar documentos de auditoría
   - **Duración:** 2-3 horas para las 7 aulas (pregrado + especialización)
 

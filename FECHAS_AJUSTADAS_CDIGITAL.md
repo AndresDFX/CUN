@@ -11,7 +11,7 @@
 
 **Elementos verificados:** 53 elementos evaluativos en 7 aulas
 **Elementos con problemas:** 0
-**Fuente de fechas:** [config/cursos/fechas_entrega_aca.py](../../config/cursos/fechas_entrega_aca.py)
+**Fuente de fechas:** [config/cursos/fechas_entrega_aca.py](config/cursos/fechas_entrega_aca.py)
 
 > **ADENDA del mismo día — segundo ajuste:** el ajuste de arriba dejó fuera las **28 encuestas
 > institucionales** (`feedback`) de las 7 aulas, y **13 de ellas nunca abrían** (fechas de
@@ -417,7 +417,8 @@ comprobada: el plan en seco de `fechas 111070 --incluir-visibles` y `fechas 1154
 sigue proponiendo los mismos **8 ítems** cada uno, **cero** `feedback`, 0 problemas.
 
 **Pendiente 8 · La «Autoevaluación» de Proyecto I cierra después del fin del aula.**
-`cmid 7563723` cierra 22/11/2026 23:59 y el curso termina 21/11/2026 19:00. Es la única de las 7
+`cmid 7563723` —que es un **cuestionario**, no una encuesta— cierra 22/11/2026 23:59 y el curso
+termina 21/11/2026 19:00. Es la única de las 7
 aulas donde una actividad sobrevive al fin del curso; la fecha coincide con el repositorio, así que
 no se tocó. Aparte, las fechas de curso de Proyecto I están a las 19:00 y no a las 00:00 como las
 otras seis (parece medianoche UTC en vez de medianoche de Bogotá). Las fechas de curso llegan

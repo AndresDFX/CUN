@@ -42,7 +42,7 @@
 - **[VERIFICACION_MATERIAL_VISIBLE_CDIGITAL.md](VERIFICACION_MATERIAL_VISIBLE_CDIGITAL.md)** — Análisis detallado de activación
 - **[CONFIRMACION_MATERIAL_CORRECTO_CDIGITAL.md](CONFIRMACION_MATERIAL_CORRECTO_CDIGITAL.md)** — Resumen ejecutivo
 - **[VALIDACION_CALIDAD_PREGUNTAS_CUESTIONARIOS.md](VALIDACION_CALIDAD_PREGUNTAS_CUESTIONARIOS.md)** — Validación de preguntas (no genéricas)
-- **[FECHAS_AJUSTADAS_CDIGITAL.md](FECHAS_AJUSTADAS_CDIGITAL.md)** — Desglose de fechas ajustadas · incluye las **13 encuestas institucionales que nunca abrían** (2028/2030) y las 8 cosas que quedaron pendientes
+- **[FECHAS_AJUSTADAS_CDIGITAL.md](FECHAS_AJUSTADAS_CDIGITAL.md)** — Desglose de fechas ajustadas · incluye las **13 encuestas institucionales que nunca abrían** (2028/2030), el hallazgo del **ACA Final candado por la Evaluación Docente 3** y los 8 pendientes que salieron de la auditoría: **5 resueltos, 1 a medias y 2 que necesitan a la plataforma** (los cierres en 2028/2030, que no son editables desde el formulario)
 - **[OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md](OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md)** — 101 componentes de plantilla ocultados · regla y reversa
 - **[DIAGNOSTICO_FORO_1_CREATIVIDAD.md](DIAGNOSTICO_FORO_1_CREATIVIDAD.md)** — Los foros vacíos por los que preguntaban los estudiantes
 
@@ -102,6 +102,14 @@ python config/moodle/ocultar_no_evaluativo.py --confirmar  # ejecuta
 ```
 Deja visible solo lo que da nota + el material del Docente + Avisos + el foro de
 presentación. Detalle en [OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md](OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md).
+
+### Opciones de revisión de los cuestionarios
+```bash
+python config/moodle/revision_quiz.py censar 6745720   # lee las 32 casillas de revisión
+```
+Las cuatro columnas («Durante el intento / Inmediatamente después / Más tarde / Después de cerrar»)
+deciden si un cuestionario **regala la respuesta correcta**. `cdigital.py` no tiene subcomando para
+esto. Va en seco por omisión.
 
 ### Builds y Regeneración
 ```bash

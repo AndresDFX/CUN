@@ -76,7 +76,8 @@ Detalle de importación Calendar P1 54ES4: `Especializacion/Proyecto I/2026/54ES
   - [ ] Activar material (carpetas y cuestionarios) en el aula de Proyecto I
   - [ ] **Ocultar lo no evaluativo:** `python config/moodle/ocultar_no_evaluativo.py --confirmar` — el aula de Proyecto I es la más ruidosa: traía 35 componentes de plantilla sin nota (NotebookLM, podcast, FUNCUN, Infografía, Tarjetas Clave × 5 temas). Detalle en `../../OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md`
   - [ ] Verificar que cuestionarios tengan preguntas correctas (no slots aleatorios)
-  - [ ] Ajustar fechas de todos los elementos evaluativos con `--incluir-visibles`
+  - [ ] Ajustar fechas de todos los elementos evaluativos con `--incluir-visibles` — ⚠️ el cuestionario «Autoevaluación» (`7563723`) cierra el **22/11/2026 23:59**, un día después de que termine el curso (21/11 19:00). El rol Docente **no puede mover las fechas del curso**, así que o se adelanta el cierre del cuestionario o se pide el cambio a la plataforma
+  - [ ] **Destrabar las encuestas institucionales:** `python config/moodle/cdigital.py encuestas 130378` — las 4 encuestas del aula («Evaluación Docente 1/2/3» y «Evalúa tu Entorno») **no las toca el paso anterior**, porque no dan nota. En 2026-2 llegaron abriendo en **2028** y nunca abrían: el estudiante recibía «Ha ocurrido un error». ED 1/2/3 → `--sin-apertura`; «Evalúa tu Entorno» → `--abre <inicio del curso>`. **Siempre con `--cmid`**, y nunca las que digan «sin apertura programada» (tienen respuestas dentro)
   - [ ] Generar documentos de auditoría
   - **Duración:** 2-3 horas para las 7 aulas (pregrado + especialización)
   - **Nota:** El alistamiento cubre las 7 aulas (6 pregrado + 1 especialización) en un solo proceso

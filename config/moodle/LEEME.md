@@ -124,6 +124,37 @@ Usar **siempre `--cmid`**: en un aula conviven las tres «Evaluación Docente» 
 cuatro. Detalle del episodio y tablas de cmid, en
 [`FECHAS_AJUSTADAS_CDIGITAL.md`](../../FECHAS_AJUSTADAS_CDIGITAL.md).
 
+## Los otros dos scripts de esta carpeta
+
+`cdigital.py` es la biblioteca y la navaja suiza, pero no todo cabe en un subcomando. En
+`config/moodle/` hay dos scripts más, los dos importan `cdigital` y los dos van **en seco por
+omisión**:
+
+| Script | Para qué | Cuándo |
+|--------|----------|--------|
+| `ocultar_no_evaluativo.py` | Censa las 7 aulas, clasifica cada componente y **oculta lo que no da nota ni es material del Docente**: SCORM «Contenido N (Haz clic aquí)», páginas de podcast, imágenes interactivas, `Actividad h5p`, placeholders «G1/Video 1/Recurso 1» y **foros vacíos sin consigna**. En 2026-2 eran **101 de 269** componentes | Fase 2 bis del alistamiento, entre activar el material y ajustar fechas |
+| `revision_quiz.py` | Toca las **opciones de revisión** de un cuestionario (las 32 casillas de «Durante el intento / Inmediatamente después / Más tarde / Después de cerrar»), para que un quiz no regale la respuesta correcta. `cdigital.py` no tiene subcomando para esto | Después de apuntar los cuestionarios al banco |
+
+```bash
+python config/moodle/ocultar_no_evaluativo.py                 # plan de las 7 aulas, no toca nada
+python config/moodle/ocultar_no_evaluativo.py --curso 115463   # plan de una
+python config/moodle/ocultar_no_evaluativo.py --confirmar      # ejecuta
+python config/moodle/revision_quiz.py censar 6745720           # lee las 32 casillas
+```
+
+**Lo evaluativo se detecta por el peso en el libro de calificaciones**
+(`/grade/edit/tree/index.php?id=<curso>` → campos `weight_<id>`), **no por el nombre**. Y ojo: el libro
+**renombra** los ítems —el foro «Coevaluación» figura como «Coevaluación calificación»—, así que hay
+que casar por prefijo.
+
+Tres excepciones que **se quedan visibles** aunque no den nota, y por eso el script las lista aparte:
+las 4 encuestas institucionales (son evaluación de la institución, ver arriba), «Normas APA» e «Ingreso
+a Biblioteca virtual» (la consigna del ACA Final exige citas APA y fuentes de la biblioteca CUN), el
+«Acuerdo Pedagógico CUN» (es ítem del checklist de INICIO) y el foro de presentación «Te queremos
+Conocer» (es el espacio social del aula). Ocultar es reversible: `cdigital.py mostrar <cmid>`, y el
+listado completo de cmid ocultados está en
+[`OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md`](../../OCULTAMIENTO_NO_EVALUATIVO_CDIGITAL.md).
+
 ## `aviso` y los recordatorios automáticos
 
 El foro **«Avisos»** existe, es visible y tiene **suscripción forzada** en las 7 aulas. Publicar un
@@ -264,7 +295,15 @@ nombre. El orden:
    secciones; TG3, 15 sesiones y 9 secciones. Cualquier reparto automático sería una adivinanza que
    el Docente tendría que verificar archivo por archivo — justo lo contrario de «listo para revisión
    manual». Puestas juntas y ocultas, se arrastran a donde toque en dos gestos.
-5. **Informar por aula** qué quedó puesto, qué quedó oculto y qué decidió la herramienta sola.
+5. **Depurar lo que trae la plantilla**: `ocultar_no_evaluativo.py --confirmar`. Lo que se pone es
+   solo la mitad del trabajo — el aula llega con ~100 componentes visibles y sin nota por aula, y un
+   foro vacío pero visible confunde igual que un cuestionario vacío pero abierto.
+6. **Fechas** de los ítems evaluativos: `fechas <curso> --confirmar` (o `--incluir-visibles`, que ya es
+   decisión del Docente). Manda `fechas_entrega_aca.py`, no el aula.
+7. **Encuestas institucionales**: `encuestas <curso>` y destrabar las de 2028/2030 una por una con
+   `--cmid`. `fechas` **no las ve** porque no dan nota. Paso obligatorio: es el que faltaba en 2026-2 y
+   dejó 13 encuestas que nunca abrían.
+8. **Informar por aula** qué quedó puesto, qué quedó oculto y qué decidió la herramienta sola.
 
 Dos detalles de contexto que cambian el trabajo: **una carpeta del repositorio puede ser varias aulas
 del campus** —Trabajo de Grado 3 es una carpeta y son tres aulas (54450 → 112321, 54466 → 116387,
