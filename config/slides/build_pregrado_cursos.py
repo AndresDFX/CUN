@@ -632,7 +632,7 @@ NOTA_EQUIPOS_AFI = (
 
 def ensure_dirs(course_dir: Path):
     (course_dir / "Clases").mkdir(parents=True, exist_ok=True)
-    (course_dir / "Guiones" / "Capturas").mkdir(parents=True, exist_ok=True)
+    (course_dir / "Docente" / "Guiones" / "Capturas").mkdir(parents=True, exist_ok=True)
 
 
 # ---------------------------------------------------------------------------
@@ -793,7 +793,7 @@ def build_tg2(out: Path):
         pide="el **estado actual** de tu proyecto (1 frase) + tu **expectativa de TG2**",
     )
     content_slide(prs, "¿QUÉ ES TRABAJO DE GRADO 2?", [
-        "Espacio de **opción de grado** (pregrado): avance consolidado del proyecto/artículo antes de la culminación en Trabajo de Grado 3.",
+        "Espacio de **opción de grado** (pregrado): avance consolidado del **documento** de grado antes de la culminación en Trabajo de Grado 3.",
         "No se rige por el instructivo AFI de Especializaciones (Proyecto I/II).",
         "Enfoque: formulación y desarrollo metodológico del trabajo, con acompañamiento semanal de 1 hora.",
         "Formato de referencia: **Plantilla APA CUN – Proyecto de Grado**.",
@@ -862,12 +862,13 @@ def build_tg3(out: Path):
     add_tutor(prs, idx=2)
     add_icebreaker(
         prs, "tg3", idx=3,
-        pide="el **tema de tu artículo** (1 frase) + tu **expectativa del semestre**",
+        pide="el **tema de tu trabajo de grado** (1 frase) + tu **expectativa del semestre**",
     )
     content_slide(prs, "¿QUÉ ES TRABAJO DE GRADO 3?", [
-        "Culminación de la **opción de grado**: artículo resultado de investigación (o obra-creación) + sustentación.",
+        "Culminación de la **opción de grado**: **documento** de grado + **producto** + sustentación.",
         "Prerrequisito: Opción de grado II.",
-        "Artículo con revisión rigurosa (≥ 50 referencias; extensión no inferior a 4.000 palabras, según Syllabus).",
+        "El documento —por defecto, **artículo resultado de investigación**— con revisión rigurosa (≥ 50 referencias; extensión no inferior a 4.000 palabras, según Syllabus).",
+        "Otras modalidades (proyecto aplicado, prototipo, sistematización) cumplen los **mismos mínimos**: cambia el peso de las secciones, no el esqueleto.",
         "32 h con docente + 64 h de trabajo autónomo.",
     ], idx=4)
     _n_cont = contenido_sesiones_slide(
@@ -929,7 +930,7 @@ def build_tg3(out: Path):
     ), idx=_i)
     closing_slide(prs, "¡Empezamos!", [
         f"Nos vemos en el primer encuentro sincrónico: {bold_var(_tg3_h)}.",
-        "Objetivo del periodo: artículo listo + sustentación ante jurados.",
+        "Objetivo del periodo: documento listo + sustentación ante jurados.",
     ], "94532 · Trabajo de Grado 3")
     prs.save(str(out))
     print("OK PPTX", out, "slides", len(prs.slides))

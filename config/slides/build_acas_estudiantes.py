@@ -628,10 +628,10 @@ FOCOS_SESION: dict[str, dict[int, tuple[str, str]]] = {
             "Formula **pregunta, objetivos y título provisional** de tu propio proyecto y prepárate "
             "para explicar por qué son coherentes entre sí. Recuerda que el 17/08 fue clase autónoma "
             "por festivo."),
-        3: ("Estructura del documento / artículo de avance",
+        3: ("Estructura del documento de avance",
             "Ten clara la **estructura del documento** de avance en plantilla APA CUN: qué va en cada "
-            "apartado y en qué orden. Repasa **APA 7** —cita en texto, referencia final— y qué "
-            "constituye plagio."),
+            "apartado y en qué orden —es el mismo esqueleto para cualquier modalidad de grado. Repasa "
+            "**APA 7** —cita en texto, referencia final— y qué constituye plagio."),
         4: ("Antecedentes y referentes (Fase I)",
             "Ten claro qué es un **antecedente / referente** (Fase I), cómo se busca en las bases CUN "
             "y cómo se conecta con tu pregunta."),
@@ -659,9 +659,9 @@ FOCOS_SESION: dict[str, dict[int, tuple[str, str]]] = {
         2: ("Formulación de pregunta, objetivos y título",
             "Formula **pregunta, objetivos y título** e identifica las **variables** que aparecen en la "
             "pregunta-problema."),
-        3: ("Estructura del artículo · taller de introducción",
-            "Ten clara la **estructura del artículo** y qué va en la introducción: contexto, problema, "
-            "pregunta y objetivos."),
+        3: ("Estructura del documento · taller de introducción",
+            "Ten clara la **estructura del documento** —la misma para cualquier modalidad de grado— y "
+            "qué va en la introducción: contexto, problema, pregunta y objetivos."),
         4: ("Fase I de referentes de investigación",
             "Ten claro qué es un **referente** (Fase I) y cómo se elige: pertinencia, vigencia y "
             "relación con tu pregunta."),
@@ -722,8 +722,8 @@ FOCO_CASO_PROPIO: dict[str, str] = {
                    "mejor pensando en tu caso.",
     "tg2": "Piensa las respuestas **sobre tu propio proyecto**: varios ítems se responden mejor con "
            "tu documento a la vista.",
-    "tg3": "Piensa las respuestas **sobre tu propio artículo**: varios ítems se responden mejor con "
-           "tu documento a la vista.",
+    "tg3": "Piensa las respuestas **sobre tu propio trabajo de grado**: varios ítems se responden "
+           "mejor con tu documento a la vista.",
 }
 
 
@@ -1786,7 +1786,7 @@ def docs_tg2() -> list[dict]:
         "Manual del Docente TG2 (⚠️ sin Syllabus SIAC en carpeta) · Art. 52: tres cortes "
         f"30/30/40. **Libro de calificaciones del aula (CDigital, auditoría 2026-08-10):** "
         f"{desglose_corte_texto(key)} — ya verificado en el aula, no orientativo. Producto: "
-        "avance consolidado del proyecto/artículo hacia TG3, que se entrega como **ACA Final** "
+        "avance consolidado del **documento** de grado hacia TG3, que se entrega como **ACA Final** "
         "(única tarea calificada); quices y parciales son **cuestionarios** del aula. Plantilla APA CUN."
     )
     curso = "TRABAJO DE GRADO 2 — Modelos de Innovación (Ing. Sistemas)"
@@ -1920,9 +1920,9 @@ def docs_tg3() -> list[dict]:
     fuente = (
         "Syllabus SIAC 94532 (declara «corte único 100%: EV05 50% + EXAM 50%») frente al "
         "**libro de calificaciones del aula (CDigital, auditoría 2026-08-10), que es el que "
-        f"califica:** {desglose_corte_texto(key)}. El artículo se entrega como **ACA Final** "
-        "(tarea); la sustentación ante jurados sigue siendo requisito del proceso pero **no "
-        "tiene ítem propio** en el aula. Artículo ≥ 50 referencias y ≥ 4.000 palabras. "
+        f"califica:** {desglose_corte_texto(key)}. El documento de grado se entrega como "
+        "**ACA Final** (tarea); la sustentación ante jurados sigue siendo requisito del proceso "
+        "pero **no tiene ítem propio** en el aula. Documento ≥ 50 referencias y ≥ 4.000 palabras. "
         "Cierre: póster, antiplagio, repositorio."
     )
     curso = "TRABAJO DE GRADO 3 — Modelos de Innovación (Ing. Sistemas)"
@@ -1933,7 +1933,7 @@ def docs_tg3() -> list[dict]:
         _header(key, "aca_final", curso, codigo, fuente)
         + f"""## 1. Qué es y cuánto pesa
 
-**ACA Final — Artículo de investigación** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
+**ACA Final — Documento final de grado** · {_peso_item_txt(key, 'aca_final', con_code=False)}.
 
 Es la **única entrega documental calificada** del curso. Ojo con el Syllabus: dice «corte único 100% (EV05 + EXAM)», pero **el aula califica en tres cortes** (ver punto 9) y **EV05/EXAM no existen** como ítems. La **sustentación ante jurados** sigue siendo requisito del proceso de grado (punto 7) aunque no tenga ítem propio en el libro de calificaciones.
 
@@ -1941,14 +1941,25 @@ Es la **única entrega documental calificada** del curso. Ojo con el Syllabus: d
 
 ## 2. Propósito / competencia que evalúa
 
-Desarrollar y consolidar el **artículo resultado de investigación** (o investigación-creación) con calidad argumentativa, bajo acompañamiento del Docente (Syllabus U1–U14).
+Desarrollar y consolidar el **documento final de grado** con calidad argumentativa, bajo acompañamiento del Docente (Syllabus U1–U14).
+
+### Tu modalidad de grado
+
+El Syllabus 94532 pide **dos cosas**: un **documento escrito** y un **producto** que evidencie desempeño profesional. Su **forma por defecto** es el *artículo resultado de investigación*, y es la que se usa como referencia en todo el curso — pero **no es la única**. Si tu trabajo es un **proyecto aplicado o de desarrollo**, un **prototipo o sistema documentado**, una **sistematización de experiencia** o un **emprendimiento**, el documento **reporta ese producto**: el producto no reemplaza al documento, se documenta e investiga dentro de él.
+
+Lo que **no cambia** con la modalidad:
+
+- el **esqueleto**: introducción → referentes → metodología → resultados → discusión → conclusiones;
+- los **mínimos**: ≥ 4.000 palabras, ≥ 50 referencias, plantilla APA CUN, antiplagio verificado.
+
+Lo que **sí cambia**: el peso de cada sección y **qué cuenta como «resultado»** (una medición, un sistema funcionando y evaluado, una experiencia sistematizada…). **Confirma tu modalidad con el Docente y con la Dirección del Programa** antes de cerrar la estructura: la lista oficial de opciones de grado la fija el programa, no este documento.
 
 {_ruta_cortes_block(key, [
-    (1, "formulación y estructura del artículo",
-     "Retoma o define el proyecto, formula pregunta, objetivos y título, y redacta introducción y estructura del artículo en plantilla APA CUN (contexto, problema, pregunta, objetivos)."),
+    (1, "formulación y estructura del documento",
+     "Retoma o define el proyecto, formula pregunta, objetivos y título, y redacta introducción y estructura del documento en plantilla APA CUN (contexto, problema, pregunta, objetivos)."),
     (2, "referentes, metodología y análisis",
-     "Desarrolla las fases de referentes, diseña el instrumento o el prototipado/obra-creación, ejecuta tu ruta metodológica y trabaja el análisis de datos y la experiencia creativa."),
-    (3, "cierre del artículo y alistamiento",
+     "Desarrolla las fases de referentes, diseña el instrumento (o el prototipado / desarrollo / obra-creación), ejecuta tu ruta metodológica y trabaja el análisis de datos y la experiencia creativa."),
+    (3, "cierre del documento y alistamiento",
      "Cierra marco teórico, resultados y discusión, resumen, palabras clave UNESCO, conclusiones y referencias; alista póster, evidencias/anexos y la verificación antiplagio institucional."),
 ], 3)}
 
@@ -1957,7 +1968,7 @@ Desarrollar y consolidar el **artículo resultado de investigación** (o investi
 1. **Título**, resumen y **palabras clave UNESCO**.
 2. **Introducción**: contexto, problema, pregunta y objetivos.
 3. **Marco teórico / referentes** (fases completas) articulados a la pregunta.
-4. **Metodología** e instrumento (o prototipado / obra-creación) efectivamente trabajados.
+4. **Metodología** e instrumento (o prototipado / desarrollo / obra-creación) efectivamente trabajados.
 5. **Resultados y discusión**, con relación explícita a los referentes.
 6. **Conclusiones** y **referencias**: mínimo **50**, en APA 7.
 7. **Anexos/evidencias** y **póster** según indique el Docente.
@@ -1965,9 +1976,9 @@ Desarrollar y consolidar el **artículo resultado de investigación** (o investi
 
 ## 5. Producto entregable
 
-- Artículo en plantilla APA CUN (`{APA_REL}`).
-- Requisitos del Syllabus: **≥ 50 referencias** · **≥ 4.000 palabras**.
-- Póster + evidencias para anexos (formato que indique el Docente).
+- Documento en plantilla APA CUN (`{APA_REL}`) — por defecto, *artículo resultado de investigación*.
+- Requisitos del Syllabus: **≥ 50 referencias** · **≥ 4.000 palabras** (los mismos en cualquier modalidad).
+- Póster + evidencias para anexos (formato que indique el Docente). Si tu modalidad tiene un producto (prototipo, sistema, obra), sus evidencias van aquí.
 - Nombre sugerido: `TG3_ACAFinal_Articulo_Apellido`.
 
 ## 6. Criterios de evaluación / checklist
@@ -1981,15 +1992,15 @@ Desarrollar y consolidar el **artículo resultado de investigación** (o investi
 
 ## 7. Sustentación ante jurados (requisito del proceso, sin ítem propio en el aula)
 
-La sustentación **no** aparece como ítem del libro de calificaciones, pero **sí** es parte del proceso de grado: la evalúan los pares/jurados que asigna la Dirección del Programa (Syllabus U13) y su preparación se refleja en la calidad de este artículo.
+La sustentación **no** aparece como ítem del libro de calificaciones, pero **sí** es parte del proceso de grado: la evalúan los pares/jurados que asigna la Dirección del Programa (Syllabus U13) y su preparación se refleja en la calidad de este documento.
 
 1. Confirma **fecha, modalidad y requisitos** con el Docente / el programa.
-2. Prepara la exposición: póster + síntesis del artículo (problema, método, hallazgos, aporte).
+2. Prepara la exposición: póster + síntesis del documento (problema, método, hallazgos, aporte). Si tienes un producto, **muéstralo funcionando**.
 3. Ensaya tiempos y respuestas a preguntas de jurados.
 4. Realiza la **sustentación**.
 5. Carga los **entregables al repositorio institucional** según el checklist oficial (Syllabus U14).
 
-- [ ] Dominio del contenido del artículo
+- [ ] Dominio del contenido del documento
 - [ ] Claridad y argumentación en la defensa
 - [ ] Material visual (póster) adecuado
 - [ ] Entregables de repositorio completos
@@ -2004,7 +2015,7 @@ La sustentación **no** aparece como ítem del libro de calificaciones, pero **s
 {_nota_curso_block(key, "aca_final", 9)}
 {_relacion_block(
     "Proceso a lo largo de **Sesiones 02–11** (formulación → referentes → instrumento → análisis "
-    "→ cierre del artículo → póster y antiplagio). **Sesión 12** = sustentación ante jurados · "
+    "→ cierre del documento → póster y antiplagio). **Sesión 12** = sustentación ante jurados · "
     "**Sesión 13** = entregables para repositorio · **Sesiones 14–15** son buffer de calendario "
     "(el grupo 54450 no tiene la Sesión 15). La **Sesión 01** fue de encuadre y allí se firmó el "
     "acuerdo pedagógico.",
@@ -2030,7 +2041,7 @@ La sustentación **no** aparece como ítem del libro de calificaciones, pero **s
     }
 
     docs = [_doc(key, "aca_final", kind=KIND_ACA,
-                 title="Artículo de investigación", slug="Articulo de investigacion",
+                 title="Documento final de grado", slug="Documento final de grado",
                  md=aca_final, source=fuente)]
     docs += _guias_pregrado(key, curso=curso, codigo=codigo, fuente=fuente,
                             relaciones=relaciones)

@@ -2,7 +2,7 @@
 """
 Convierte Markdown a .docx bien formateado.
 
-Nota CUN: los guiones docentes en `Guiones/` son **solo .md** (no usar este
+Nota CUN: los guiones docentes en `Docente/Guiones/` son **solo .md** (no usar este
 script para regenerar docx de guiones). Sí aplica para material de estudiantes
 en `Clases/` (LEEME, fichas, ACAs) vía `sync_clases_estudiantes.py` /
 `build_acas_estudiantes.py`.
@@ -65,15 +65,46 @@ def shade_cell(c, fill):
     tcPr.append(shd)
 
 
+# `**negrita**` va primero para que no se la coma la cursiva. La cursiva exige que el texto no
+# empiece ni acabe en espacio (`*así*` sí, `3 * 4 * 5` no) y que quepa en una línea, de modo que un
+# asterisco suelto o una multiplicación no abren cursiva por accidente.
+# NO anida: en `*una cursiva con **negrita** dentro*` gana la negrita y los asteriscos de la
+# cursiva se imprimen tal cual. Si hace falta destacar dentro de una frase, se usa una de las dos,
+# no las dos a la vez.
+INLINE = re.compile(r"(\*\*.*?\*\*|`[^`]+`|\*(?!\s)[^*\n]+?(?<!\s)\*)")
+
+
 def add_inline(p, text, base_size=11, base_color=GRAY, base_bold=False):
-    """Parseo inline: **negrita** y `código`."""
-    for part in re.split(r"(\*\*.*?\*\*|`[^`]+`)", text):
+    """Parseo inline: **negrita**, *cursiva* y `código`."""
+    for part in re.split(INLINE, text):
         if not part:
             continue
         r = p.add_run()
         if part.startswith("**") and part.endswith("**"):
-            r.text = part[2:-2]
+            dentro = part[2:-2]
+            if "*" in dentro:
+                # Cursiva anidada dentro de la negrita: se reparte en varios runs, si no los
+                # asteriscos interiores saldrían impresos.
+                p._p.remove(r._r)
+                for trozo in re.split(INLINE, dentro):
+                    if not trozo:
+                        continue
+                    cursiva = len(trozo) > 2 and trozo.startswith("*") and trozo.endswith("*")
+                    rr = p.add_run(trozo[1:-1] if cursiva else trozo)
+                    rr.bold = True
+                    rr.italic = cursiva
+                    rr.font.size = Pt(base_size)
+                    rr.font.color.rgb = base_color
+                    rr.font.name = FONT
+                continue
+            r.text = dentro
             r.bold = True
+            r.font.size = Pt(base_size)
+            r.font.color.rgb = base_color
+            r.font.name = FONT
+        elif len(part) > 2 and part.startswith("*") and part.endswith("*"):
+            r.text = part[1:-1]
+            r.italic = True
             r.font.size = Pt(base_size)
             r.font.color.rgb = base_color
             r.font.name = FONT

@@ -81,7 +81,7 @@ NOTAS_CURSO: dict[str, list[str]] = {
         "vivir: son los **Parcial 1 y Parcial 2** del aula (24% y 21%).",
     ],
     "tg2": [
-        "**Producto documental del curso:** avance consolidado del proyecto/artículo "
+        "**Producto documental del curso:** avance consolidado del **documento** de grado "
         "(`Plantilla_APA_CUN_Proyecto de grado.docx`), que se entrega como **ACA Final** "
         "(tarea) en el tercer corte.",
         "**Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem "
@@ -91,9 +91,10 @@ NOTAS_CURSO: dict[str, list[str]] = {
         "no la evaluación.",
     ],
     "tg3": [
-        "**Producto documental del curso:** el **artículo** (≥ 50 referencias, ≥ 4.000 "
-        "palabras) + sustentación ante jurados + carga a repositorio. Se entrega como "
-        "**ACA Final** (tarea) en el tercer corte.",
+        "**Producto documental del curso:** el **documento** de grado —por defecto, "
+        "*artículo resultado de investigación*— (≥ 50 referencias, ≥ 4.000 palabras) + "
+        "sustentación ante jurados + carga a repositorio. Se entrega como **ACA Final** "
+        "(tarea) en el tercer corte. Otras modalidades cumplen los mismos mínimos.",
         "**Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem "
         "del aula**. Los antiguos «ACA 1 (EV05)» y «ACA 2 (EXAM)» se refundieron en el "
         "enunciado de la **ACA Final**, que es el único entregable documental del aula.",

@@ -407,7 +407,7 @@ Clases/
 
 ---
 
-*Si falta un enlace (Meet, CDigital o el rompehielos), el Docente lo publicará en el canal del curso; el del rompehielos, además, lo pega en el **chat del Meet** al empezar la Sesión 01.*
+Si falta un enlace (Meet, CDigital o el rompehielos), el Docente lo publicará en el canal del curso; el del rompehielos, además, lo pega en el **chat del Meet** al empezar la Sesión 01.
 """
 
 

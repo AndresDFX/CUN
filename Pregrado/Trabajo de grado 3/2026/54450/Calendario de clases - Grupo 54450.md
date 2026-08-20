@@ -40,7 +40,7 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 
 | Ítem | Tipo | Corte | Peso | Cierre | Sesión en que cae |
 | :--- | :--- | :---: | ---: | :--- | :--- |
-| **Quiz 1** | Cuestionario | 1 | 6% | 25/08/2026 | **S03** — Estructura del artículo · taller de introducción |
+| **Quiz 1** | Cuestionario | 1 | 6% | 25/08/2026 | **S03** — Estructura del documento · taller de introducción |
 | **Parcial 1** | Cuestionario | 1 | 24% | 15/09/2026 | **S06** — Comunidades de práctica y co-creación |
 | **Quiz 2** | Cuestionario | 2 | 9% | 29/09/2026 | **S08** — Fase III de referentes · cierre del marco teórico |
 | **Parcial 2** | Cuestionario | 2 | 21% | 13/10/2026 | **S10** — Resumen, palabras clave UNESCO, conclusiones y referencias |

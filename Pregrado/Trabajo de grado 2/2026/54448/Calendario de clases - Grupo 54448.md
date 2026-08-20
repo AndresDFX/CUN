@@ -39,7 +39,7 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 
 | Ítem | Tipo | Corte | Peso | Cierre | Sesión en que cae |
 | :--- | :--- | :---: | ---: | :--- | :--- |
-| **Quiz 1** | Cuestionario | 1 | 6% | 31/08/2026 | **S03** — Estructura del documento / artículo de avance |
+| **Quiz 1** | Cuestionario | 1 | 6% | 31/08/2026 | **S03** — Estructura del documento de avance |
 | **Parcial 1** | Cuestionario | 1 | 24% | 14/09/2026 | **S05** — Marco teórico — avance |
 | **Quiz 2** | Cuestionario | 2 | 9% | 28/09/2026 | **S07** — Diseño metodológico (propuesto) |
 | **Parcial 2** | Cuestionario | 2 | 21% | 05/10/2026 | **S08** — Instrumentos y plan de análisis (propuestos) |

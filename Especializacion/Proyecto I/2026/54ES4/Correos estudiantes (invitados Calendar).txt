@@ -1,11 +1,56 @@
-Correos de los estudiantes · PROYECTO I · grupo 54ES4 · 51 invitados.
+Correos invitados (estudiantes 54ES4). El coanfitrión se añade aparte en el script.
+NO uses import CSV/ICS para invitados: Google Calendar descarta Guests/ATTENDEE.
+Flujo correcto: ejecutar «PRINCIPAL - Crear encuentros con invitados.gs» (Apps Script).
+Coanfitrión: investigacion_especializaciones@cun.edu.co
 
-PARA CREAR EL GRUPO DE GOOGLE (Chat o Grupos): copia la última línea ENTERA y pégala
-en «Añadir miembros». Va separada por comas y sin espacios, que es como Google la
-acepta de una sola vez.
-
-El Docente no está en la lista: es el organizador, no un invitado.
-Para los eventos de Calendar NO uses esto ni el .ics: usa el «PRINCIPAL - Crear
-encuentros con invitados.gs», que ya lleva estos mismos correos dentro.
-
-aide.moreno@cun.edu.co,alejandro.munozd@cun.edu.co,andres.abrilt@cun.edu.co,andres.lopezhe@cun.edu.co,angela.castilloro@cun.edu.co,anternol.bedoya@cun.edu.co,baldwin.foschini@cun.edu.co,bayron.carranza@cun.edu.co,bonny.galindosa@cun.edu.co,camilo.rodriguezay@cun.edu.co,carlos.nunezf@cun.edu.co,carlos.palta@cun.edu.co,christiam.fischer@cun.edu.co,cielo.angulo@cun.edu.co,clara.vieco@cun.edu.co,cristhian.cortesm@cun.edu.co,daimer.cardona@cun.edu.co,david.paezd@cun.edu.co,diana.bonillaa@cun.edu.co,diego.leonz@cun.edu.co,elva.tenganan@cun.edu.co,fabian.rincong@cun.edu.co,harold.villamilo@cun.edu.co,hernan.gomezs@cun.edu.co,investigacion_especializaciones@cun.edu.co,jaime.cortesg@cun.edu.co,jair.vargasa@cun.edu.co,jhon.guerrerom@cun.edu.co,jhonatan.diazc@cun.edu.co,jhonny.roseroc@cun.edu.co,johann.gonzalez@cun.edu.co,juan.guerrerotu@cun.edu.co,juan.salcedoo@cun.edu.co,juan.sandovala@cun.edu.co,juan.vargassi@cun.edu.co,julio.rodriguezca@cun.edu.co,karen.ospinal@cun.edu.co,kevin.diazch@cun.edu.co,leidy.henaor@cun.edu.co,libardo.cabarcas@cun.edu.co,luis.ospinad@cun.edu.co,mayra.bernate@cun.edu.co,michel.ortizr@cun.edu.co,miguel.gutierrezca@cun.edu.co,miguel.sierrari@cun.edu.co,natalia.sepulvedar@cun.edu.co,oscar.hernandezbo@cun.edu.co,over.cometa@cun.edu.co,santiago.bahamon@cun.edu.co,sebastian.castanos@cun.edu.co,william_marinch@cun.edu.co
+aide.moreno@cun.edu.co
+alejandro.munozd@cun.edu.co
+andres.abrilt@cun.edu.co
+andres.lopezhe@cun.edu.co
+angela.castilloro@cun.edu.co
+anternol.bedoya@cun.edu.co
+baldwin.foschini@cun.edu.co
+bayron.carranza@cun.edu.co
+bonny.galindosa@cun.edu.co
+camilo.rodriguezay@cun.edu.co
+carlos.nunezf@cun.edu.co
+carlos.palta@cun.edu.co
+christiam.fischer@cun.edu.co
+cielo.angulo@cun.edu.co
+clara.vieco@cun.edu.co
+cristhian.cortesm@cun.edu.co
+daimer.cardona@cun.edu.co
+david.paezd@cun.edu.co
+diana.bonillaa@cun.edu.co
+diego.leonz@cun.edu.co
+elva.tenganan@cun.edu.co
+fabian.rincong@cun.edu.co
+harold.villamilo@cun.edu.co
+hernan.gomezs@cun.edu.co
+investigacion_especializaciones@cun.edu.co
+jaime.cortesg@cun.edu.co
+jair.vargasa@cun.edu.co
+jhon.guerrerom@cun.edu.co
+jhonatan.diazc@cun.edu.co
+jhonny.roseroc@cun.edu.co
+johann.gonzalez@cun.edu.co
+juan.guerrerotu@cun.edu.co
+juan.salcedoo@cun.edu.co
+juan.sandovala@cun.edu.co
+juan.vargassi@cun.edu.co
+julio.rodriguezca@cun.edu.co
+karen.ospinal@cun.edu.co
+kevin.diazch@cun.edu.co
+leidy.henaor@cun.edu.co
+libardo.cabarcas@cun.edu.co
+luis.ospinad@cun.edu.co
+mayra.bernate@cun.edu.co
+michel.ortizr@cun.edu.co
+miguel.gutierrezca@cun.edu.co
+miguel.sierrari@cun.edu.co
+natalia.sepulvedar@cun.edu.co
+oscar.hernandezbo@cun.edu.co
+over.cometa@cun.edu.co
+santiago.bahamon@cun.edu.co
+sebastian.castanos@cun.edu.co
+william_marinch@cun.edu.co

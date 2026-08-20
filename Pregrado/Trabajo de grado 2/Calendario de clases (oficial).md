@@ -20,7 +20,7 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 | — | — | (misma semana) | ⚠️ Lectura autónoma | Delimitación / reformulación del tema → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.) | — |
 | 2 | — | 17/08/2026 (lun) | Autónoma (Asunción de la Virgen) | Clase autónoma — continuar avance (festivo: Asunción de la Virgen) | — |
 | 3 | **02** | 24/08/2026 (lun) | Sincrónica | Orientativo: Pregunta, objetivos y título provisional | — |
-| 4 | **03** | 31/08/2026 (lun) | Sincrónica | Orientativo: Estructura del documento / artículo de avance | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
+| 4 | **03** | 31/08/2026 (lun) | Sincrónica | Orientativo: Estructura del documento de avance | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
 | 5 | **04** | 07/09/2026 (lun) | Sincrónica | Orientativo: Antecedentes y referentes (Fase I) | — |
 | 6 | **05** | 14/09/2026 (lun) | Sincrónica | Orientativo: Marco teórico — avance | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
 | 7 | **06** | 21/09/2026 (lun) | Sincrónica | Orientativo: Marco conceptual y contextual | — |
@@ -39,7 +39,7 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 
 | Ítem | Tipo | Corte | Peso | Cierre | Sesión en que cae |
 | :--- | :--- | :---: | ---: | :--- | :--- |
-| **Quiz 1** | Cuestionario | 1 | 6% | 31/08/2026 | **S03** — Estructura del documento / artículo de avance |
+| **Quiz 1** | Cuestionario | 1 | 6% | 31/08/2026 | **S03** — Estructura del documento de avance |
 | **Parcial 1** | Cuestionario | 1 | 24% | 14/09/2026 | **S05** — Marco teórico — avance |
 | **Quiz 2** | Cuestionario | 2 | 9% | 28/09/2026 | **S07** — Diseño metodológico (propuesto) |
 | **Parcial 2** | Cuestionario | 2 | 21% | 05/10/2026 | **S08** — Instrumentos y plan de análisis (propuestos) |

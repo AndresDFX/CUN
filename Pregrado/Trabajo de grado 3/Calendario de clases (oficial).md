@@ -24,7 +24,7 @@ Docente: **Julian Andres Castaño** · julian_castanoe@cun.edu.co
 | 1 | **01** | 11/08/2026 (mar) | Sincrónica | Encuadre: Presentación del curso · docente · estudiantes · ACAs | — |
 | — | — | (misma semana) | ⚠️ Lectura autónoma | U1–U2 (Casos de éxito · retomar proyecto · contexto y planteamiento) → lectura autónoma; se retoma al abrir la Sesión 02. (El acuerdo pedagógico se firma en esta sesión de encuadre.) | — |
 | 2 | **02** | 18/08/2026 (mar) | Sincrónica | U3: Formulación de pregunta, objetivos y título | — |
-| 3 | **03** | 25/08/2026 (mar) | Sincrónica | U4: Estructura del artículo · taller de introducción | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
+| 3 | **03** | 25/08/2026 (mar) | Sincrónica | U4: Estructura del documento · taller de introducción | **Cierra Quiz 1** (cuestionario · 6% · corte 1) |
 | 4 | **04** | 01/09/2026 (mar) | Sincrónica | U5: Fase I de referentes de investigación | — |
 | 5 | **05** | 08/09/2026 (mar) | Sincrónica | U6: Diseño de instrumento · desarrollo metodológico | — |
 | 6 | **06** | 15/09/2026 (mar) | Sincrónica | U7: Comunidades de práctica y co-creación | **Cierra Parcial 1** (cuestionario · 24% · corte 1) |
@@ -44,7 +44,7 @@ Fuente: libro de calificaciones de cada aula (auditoría 2026-08-10), en `config
 
 | Ítem | Tipo | Corte | Peso | Cierre | Sesión en que cae |
 | :--- | :--- | :---: | ---: | :--- | :--- |
-| **Quiz 1** | Cuestionario | 1 | 6% | 25/08/2026 | **S03** — Estructura del artículo · taller de introducción |
+| **Quiz 1** | Cuestionario | 1 | 6% | 25/08/2026 | **S03** — Estructura del documento · taller de introducción |
 | **Parcial 1** | Cuestionario | 1 | 24% | 15/09/2026 | **S06** — Comunidades de práctica y co-creación |
 | **Quiz 2** | Cuestionario | 2 | 9% | 29/09/2026 | **S08** — Fase III de referentes · cierre del marco teórico |
 | **Parcial 2** | Cuestionario | 2 | 21% | 13/10/2026 | **S10** — Resumen, palabras clave UNESCO, conclusiones y referencias |

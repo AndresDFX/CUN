@@ -24,7 +24,7 @@ Ningún dato duro de este documento se escribió de memoria. Cada uno sale de aq
 
 | # | Fuente | Qué aporta |
 |---|---|---|
-| 1 | `TRABAJO DE GRADO 3-MDI_INGENIERIA DE SISTEMAS_94532_PRES_VIR.docx` (en esta carpeta) | **Syllabus SIAC.** Descripción, propósito, competencia, **14 unidades de conocimiento**, requisitos del artículo (≥ 50 referencias, ≥ 4.000 palabras), bibliografía, mecanismos de evaluación. |
+| 1 | `TRABAJO DE GRADO 3-MDI_INGENIERIA DE SISTEMAS_94532_PRES_VIR.docx` (en esta carpeta) | **Syllabus SIAC.** Descripción, propósito, competencia, **14 unidades de conocimiento**, requisitos del documento —lo nombra «**artículo resultado de investigación**», ≥ 50 referencias, ≥ 4.000 palabras—, el **producto** que se pide además del escrito, bibliografía y mecanismos de evaluación. **No enumera modalidades de grado:** la palabra «modalidad» no aparece en él (ver §1). |
 | 2 | `config/cursos/fechas_entrega_aca.py` | Los **ítems reales del libro de calificaciones** (auditoría CDigital del 2026-08-10): nombre, tipo, peso, corte y ventana **por grupo**. |
 | 3 | `config/cursos/carga_academica_2026.json` | Grupos, periodos, horario, inicio/recepción/cierre, aulas de CDigital. |
 | 4 | `config/cursos/sesiones_cun.py` | Catálogo de las **15 sesiones**: fecha, título, unidad y detalle. |
@@ -32,7 +32,7 @@ Ningún dato duro de este documento se escribió de memoria. Cada uno sale de aq
 | 6 | `2026/_combinado_todos/LEEME - Crear los eventos de Calendar.md` | **Runbook** para crear los encuentros con invitados y Meet. |
 | 7 | `Pregrado/0. General/LEEME - Inicio desarrollo y cierre de cursos.md` | Ciclo inicio → desarrollo → cierre de pregrado, y **qué sigue pendiente de confirmar con Coordinación**. |
 | 8 | `Pregrado/Checklist de cierre de curso a satisfaccion.md` | Verificables de cierre, comunes a los cuatro cursos de pregrado. |
-| 9 | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Formato obligatorio del artículo (hay copia en la raíz `Cursos/`). |
+| 9 | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` | Formato obligatorio del documento (hay copia en la raíz `Cursos/`). |
 
 Si un dato de este manual choca con el aula de CDigital, **manda el aula** y avisa para corregir la fuente.
 
@@ -40,7 +40,7 @@ Si un dato de este manual choca con el aula de CDigital, **manda el aula** y avi
 
 - **`Clases/`** — lo que ve el estudiante. `Presentacion del Curso - Trabajo de Grado 3.pptx` (encuadre del semestre) + una carpeta `Sesion NN - <tema>/Presentacion.pptx` por cada una de las **15 sesiones** + `LEEME - Material para estudiantes.docx`.
 - **`Clases/Recursos/`** — `Plantilla_APA_CUN_Proyecto de grado.docx` y la subcarpeta **`ACAs/`**, con **un documento por ítem del aula** (8 documentos: 3 guías de quiz, 2 de parcial, el enunciado de la ACA Final y los instructivos de auto y coevaluación).
-- **`Guiones/`** — tu material, **solo Markdown**, `Sesion NN - <tema>.md`, uno por sesión (entre ~1.960 y ~4.000 palabras cada uno; el de la S01 es el más largo porque es el de encuadre). Incluye `Capturas/` con los pantallazos que se comparten en pantalla, y `Guía práctica - Herramientas de escritura y citación.md`.
+- **`Docente/Guiones/`** — tu material, **solo Markdown**, `Sesion NN - <tema>.md`, uno por sesión (entre ~1.960 y ~4.000 palabras cada uno; el de la S01 es el más largo porque es el de encuadre). Incluye `Capturas/` con los pantallazos que se comparten en pantalla, y `Guía práctica - Herramientas de escritura y citación.md`.
 - **`Calendario de clases (oficial).md`** — cronograma + evaluación por sesión. **Generado.**
 - **`HERRAMIENTAS_EXAMLAB.md`** — borrador de trabajo sobre el banco de preguntas de los cuestionarios. Es material de decisión, no normativa.
 - **`2026/<grupo>/`** (`54450`, `54466`, `54467`) — `Informacion.txt`, `Listado estudiantes (CDigital).csv`, `Correos estudiantes (invitados Calendar).txt`, correo de bienvenida y el calendario recortado al cierre de **ese** grupo.
@@ -53,13 +53,29 @@ Es la **culminación del trabajo de grado**. El Syllabus lo define como el espac
 
 El producto tiene tres piezas y las tres son obligatorias:
 
-1. **El artículo.** El Syllabus fija el estándar: revisión bibliográfica rigurosa de **al menos 50 referencias** (citando Colciencias, 2009) y una extensión **no inferior a cuatro mil palabras**. En plantilla APA CUN.
+1. **El documento escrito.** Su **forma por defecto** es el *artículo resultado de investigación* —así lo nombra el Syllabus—, y el Syllabus fija su estándar: revisión bibliográfica rigurosa de **al menos 50 referencias** (citando Colciencias, 2009) y una extensión **no inferior a cuatro mil palabras**. En plantilla APA CUN.
 2. **La sustentación ante jurados.** La evalúan pares/jurados asignados por la **Dirección del Programa** (Syllabus U13), no solo tú. En el libro de calificaciones **no existe un ítem separado para esto**: se refleja dentro de la ACA Final.
 3. **La carga al repositorio institucional** de los entregables del trabajo de grado (Syllabus U14).
 
-**Tu rol.** El Syllabus dice que «se evaluará la calidad argumentativa de los artículos» y que «la evaluación será dada por el docente y por jurados asignados por la Dirección del Programa». En la práctica eres el **garante metodológico y de escritura académica**: llevas a 112 estudiantes desde un proyecto a medio hacer hasta un artículo publicable y defendible. No eres el experto temático de cada uno de los proyectos, y no tienes que serlo.
+**Tu rol.** El Syllabus dice que «se evaluará la calidad argumentativa de los artículos» y que «la evaluación será dada por el docente y por jurados asignados por la Dirección del Programa». En la práctica eres el **garante metodológico y de escritura académica**: llevas a 112 estudiantes desde un proyecto a medio hacer hasta un documento de grado defendible. No eres el experto temático de cada uno de los proyectos, y no tienes que serlo.
 
 > **Ojo con el lenguaje del Syllabus.** El documento 94532 es la plantilla MDI (Modelos de Innovación) y habla de «comunicación visual», «obra-creación» y «producto de diseño». Aplicado a **Ingeniería de Sistemas**, léelo como *artefacto o prototipo de software / sistema* donde dice obra-creación. No lo cites literal frente al grupo: confunde.
+
+### 1.1 «Artículo» es la forma por defecto, no la única modalidad
+
+Este es el malentendido que más cuesta desarmar en la S01, y hasta 2026-08-18 el material lo alimentaba: hablaba de «el artículo» como si fuera la única salida posible.
+
+**Lo que el Syllabus realmente pide son dos cosas.** Por un lado, «el soporte investigativo corresponderá a un **artículo resultado de investigación**… cuya extensión no será inferior a cuatro mil palabras». Por otro, «definir y desarrollar un **producto** orientado a la generación de nuevo conocimiento». El material anterior había colapsado las dos en una sola, y el estudiante que llega con un proyecto aplicado, un prototipo o un sistema no se veía en ninguna diapositiva.
+
+**Cómo se dice ahora en clase.** El entregable se llama **el documento**. Su forma por defecto es el artículo resultado de investigación, y sigue siendo el ejemplo que se modela. Cuando el estudiante trae otra cosa —**proyecto aplicado o de desarrollo**, **prototipo o sistema documentado**, **sistematización de experiencia**, **emprendimiento**—, el documento **reporta ese producto**: el producto no reemplaza al documento, se documenta e investiga dentro de él.
+
+| No cambia con la modalidad | Sí cambia |
+|---|---|
+| El **esqueleto**: introducción → referentes → metodología → resultados → discusión → conclusiones | El **peso** de cada sección |
+| Los **mínimos**: ≥ 4.000 palabras, ≥ 50 referencias, plantilla APA CUN | Qué cuenta como **«resultado»** (una medición, un sistema funcionando y evaluado, una experiencia sistematizada…) |
+| Antiplagio, póster, sustentación, repositorio | Qué evidencias van a los anexos |
+
+> ⚠️ **Lo que este manual NO puede decirte.** El Syllabus 94532 **no contiene la palabra «modalidad» ni «monografía»**, y en esta carpeta no hay ningún documento que enumere las opciones de grado oficiales de la CUN. Las cuatro de arriba están como **ejemplos de lo que llega**, no como lista cerrada. Antes de autorizarle a un estudiante una modalidad distinta al artículo, **confírmalo con la Dirección del Programa** y déjalo por escrito. Si consigues la lista oficial, pásala para incorporarla aquí y en los decks.
 
 ## 2. Unidades de conocimiento del Syllabus (14 **unidades**, no sesiones)
 
@@ -70,7 +86,7 @@ El producto tiene tres piezas y las tres son obligatorias:
 | U# (Syllabus) | Sesión real | Temática |
 |---|---|---|
 | U1–U2 | **S01** (lectura autónoma) | Casos de éxito · retomar proyecto · contexto y planteamiento |
-| U3–U4 | S02–S03 | Pregunta/objetivos · estructura del artículo · introducción |
+| U3–U4 | S02–S03 | Pregunta/objetivos · estructura del documento · introducción |
 | U5–U6 | S04–S05 | Referentes I · diseño metodológico / instrumento |
 | U7–U8 | S06–S07 | Comunidades de práctica · co-creación · análisis de datos |
 | U9–U10 | S08–S09 | Cierre marco teórico · resultados y discusión |
@@ -78,7 +94,7 @@ El producto tiene tres piezas y las tres son obligatorias:
 | U13–U14 | **S12–S13** | Sustentación ante jurados · repositorio institucional |
 | — | S14–S15 | Buffer de calendario (el grupo 54450 no tiene la S15) |
 
-Elementos de competencia que el Syllabus pide evidenciar: **analizar** información para resolver un problema, **decidir** qué información usar según la función comunicativa del artículo y **argumentar** en procesos de investigación. Resultado de aprendizaje esperado: **divulgar** resultados de investigación con evidencia epistemológica y procedimental.
+Elementos de competencia que el Syllabus pide evidenciar: **analizar** información para resolver un problema, **decidir** qué información usar según la función comunicativa del documento y **argumentar** en procesos de investigación. Resultado de aprendizaje esperado: **divulgar** resultados de investigación con evidencia epistemológica y procedimental.
 
 ---
 
@@ -94,7 +110,7 @@ No improvises la estructura: los guiones ya la traen, y está calibrada para una
 | 1️⃣ **Encuadre** | ~6 min | Portada, objetivos del día, avisos de plataforma. |
 | 2️⃣ **Exposición / criterios** | ~14 min | El concepto del día con el deck. |
 | 3️⃣ **Modelación** | ~12 min | Lo haces tú en pantalla, con un ejemplo. Es la parte que más se agradece. |
-| 4️⃣ **Taller** | ~20 min | Ellos aplican sobre **su propio** artículo. Tú circulas. |
+| 4️⃣ **Taller** | ~20 min | Ellos aplican sobre **su propio** documento. Tú circulas. |
 | 5️⃣ **Cierre** | ~8 min | Tres ideas fuerza + tarea autónoma + anuncio de la próxima sesión. |
 
 **En los cinco días en que se aplica un cuestionario, el reparto se recorta** para dejarle sitio a la evaluación dentro de la hora: **S03 → 12 min**, **S06 → 22 min**, **S08 → 15 min**, **S10 → 22 min**, **S12 → 10 min**. En **S14 y S15** se reservan **4 + 4 min** para autoevaluación y coevaluación. Eso ya está descontado en el guion de esas sesiones; no le agregues contenido nuevo.
@@ -102,9 +118,11 @@ No improvises la estructura: los guiones ya la traen, y está calibrada para una
 **Cada guion cierra con dos cosas que te sirven el mismo día:** un bloque «🧩 Entregable de hoy» (el archivo que el estudiante sube a CDigital) y un «✅ Checklist del docente antes de clase» (deck, capturas, ejemplo modelo, espacio de entrega y el ítem de CDigital que se habilita ese día). Ábrelo la noche anterior.
 
 **Dónde está cada cosa, para la sesión NN:**
-- Guion → `Guiones/Sesion NN - <tema>.md`
+- Guion → `Docente/Guiones/Sesion NN - <tema>.md`
 - Deck → `Clases/Sesion NN - <tema>/Presentacion.pptx`
-- Capturas de pantalla → `Guiones/Capturas/` (subcarpetas `Sesion NN/` y `Herramientas/`)
+- Capturas de pantalla → `Docente/Guiones/Capturas/` (subcarpetas `Sesion NN/` y `Herramientas/`)
+
+**La penúltima slide de todos los decks de sesión es `RUTA DE ENTREGABLES DEL CURSO`, y no se edita.** La escribe `config/slides/ruta_entregables.py` con los ítems del libro de calificaciones, su tipo, su peso y —en **número de sesión, nunca en fecha**— el punto del curso en que cierra cada uno, más una línea de qué tiene que tener listo el estudiante. Te sirve para cerrar la clase en treinta segundos («esto es lo que viene»); y como no hay fechas escritas, cuando el próximo periodo mueva el calendario se recoloca sola sin reeditar deck alguno. La **fecha** exacta de cada ventana sigue viviendo solo en el enunciado del ACA y en CDigital, que es lo que manda.
 
 ## 1.2 Las 15 sesiones, una línea útil cada una
 
@@ -114,14 +132,14 @@ Fechas y títulos salen de `config/cursos/sesiones_cun.py`; la columna de evalua
 |---|---|---|---|---|---|
 | **S01** | 11/08 | Encuadre | Presentarte, presentar el curso y el grupo (rompehielos en **Slido**), explicar los 8 ítems del aula por su nombre real y firmar el acuerdo pedagógico. **Hoy no se dicta tema.** | `S01_AcuerdoRetoma_Apellido` | **Abre ACA Final** (queda abierta todo el periodo) |
 | **S02** | 18/08 | U3 | Que cada estudiante salga con pregunta, objetivos y título formulados, y con las **variables** identificadas dentro de la pregunta-problema. | `S02_PreguntaObjetivos_Apellido` | **Abre Quiz 1** |
-| **S03** | 25/08 | U4 | Estructura del artículo y taller de introducción: contexto → problema → pregunta → objetivos, encadenados. | `S03_Introduccion_Apellido` | **Cierra Quiz 1** (12 min en clase) |
+| **S03** | 25/08 | U4 | Estructura del documento y taller de introducción: contexto → problema → pregunta → objetivos, encadenados. | `S03_Introduccion_Apellido` | **Cierra Quiz 1** (12 min en clase) |
 | **S04** | 01/09 | U5 | Fase I de referentes: buscar y fichar literatura por las variables del tema, en diálogo colaborativo. | `S04_ReferentesFaseI_Apellido` | — |
 | **S05** | 08/09 | U6 | Matriz de consistencia, enfoque/alcance/diseño, instrumento (o prototipado) y ética de datos. | `S05_MetodoInstrumento_Apellido` | **Abre Parcial 1** |
 | **S06** | 15/09 | U7 | Comunidades de práctica y co-creación: socializar problemas y propuestas entre pares. | `S06_CoCreacion_Apellido` | **Cierra Parcial 1** (22 min en clase — la sesión más recortada) |
 | **S07** | 22/09 | U8 | Análisis de datos y experiencia creativa; socialización del avance con correcciones aplicadas. | `S07_AnalisisHallazgos_Apellido` | **Abre Quiz 2** |
 | **S08** | 29/09 | U9 | Fase III de referentes: cerrar el marco teórico y presentar el cuerpo del documento. | `S08_MarcoCierre_Apellido` | **Cierra Quiz 2** (15 min en clase) |
 | **S09** | 06/10 | U10 | Resultados y discusión **con relación explícita a los referentes**: hallazgo contra literatura, no hallazgo suelto. | `S09_ResultadosDiscusion_Apellido` | **Abre Parcial 2** |
-| **S10** | 13/10 | U11 | Resumen, palabras clave con **tesauro UNESCO**, conclusiones y referencias: el artículo queda completo hoy. | `S10_CierreArticulo_Apellido` | **Cierra Parcial 2** (22 min en clase) |
+| **S10** | 13/10 | U11 | Resumen, palabras clave con **tesauro UNESCO**, conclusiones y referencias: el documento queda completo hoy. | `S10_CierreArticulo_Apellido` | **Cierra Parcial 2** (22 min en clase) |
 | **S11** | 20/10 | U12 | Póster, anexos/evidencias y **verificación antiplagio institucional**. Alistamiento para sustentar. | `S11_PosterEvidencias_Apellido` | **Abre Quiz 3** |
 | **S12** | 27/10 | U13 | **Sustentación ante jurados.** Defensa oral. Los jurados los asigna la Dirección del Programa: confírmalos con semanas de anticipación. | `S12_GuionSustentacion_Apellido` | **Cierra Quiz 3** (10 min en clase) |
 | **S13** | 03/11 | U14 | Paquete de entregables para el repositorio institucional. Cierre formal del trabajo de grado. | `S13_PaqueteRepositorio_Apellido` | **Abren Autoevaluación y Coevaluación** del **54450** |
@@ -186,7 +204,7 @@ Régimen: **Art. 52 · tres cortes** — **Corte 1 = 30%** · **Corte 2 = 30%** 
 
 ### Notas de este curso
 
-- **Producto documental del curso:** el **artículo** (≥ 50 referencias, ≥ 4.000 palabras) + sustentación ante jurados + carga a repositorio. Se entrega como **ACA Final** (tarea) en el tercer corte.
+- **Producto documental del curso:** el **documento** de grado —por defecto, *artículo resultado de investigación*— (≥ 50 referencias, ≥ 4.000 palabras) + sustentación ante jurados + carga a repositorio. Se entrega como **ACA Final** (tarea) en el tercer corte. Otras modalidades cumplen los mismos mínimos.
 - **Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem del aula**. Los antiguos «ACA 1 (EV05)» y «ACA 2 (EXAM)» se refundieron en el enunciado de la **ACA Final**, que es el único entregable documental del aula.
 - La **sustentación ante jurados** sigue siendo obligatoria (Sesión 12) y se califica dentro de la **ACA Final**: en el aula no existe un ítem «EXAM» separado.
 
@@ -243,7 +261,7 @@ Fuente editable: `config/cursos/carga_academica_2026.json` (Excel: `Carga academ
 | Calificación **con retroalimentación** de cada ítem | Antes de su «nota docente»: Quiz 1 **01/09** · Parcial 1 **22/09** · Quiz 2 **06/10** · Parcial 2 **20/10** · Quiz 3 **03/11** | Libro de calificaciones |
 | Habilitar **Autoevaluación** (cuestionario) y **Coevaluación** (foro) | 54450: ventana 03/11–10/11 · 54466/54467: 10/11–17/11 | CDigital |
 | Confirmar **jurados y logística de la sustentación** con la Dirección del Programa | Con semanas de anticipación a la **S12 (27/10)** | Dirección del Programa |
-| Verificación **antiplagio institucional** de los artículos | Antes de la sustentación (se trabaja en la **S11, 20/10**) | Ruta oficial del semestre en CDigital |
+| Verificación **antiplagio institucional** de los documentos | Antes de la sustentación (se trabaja en la **S11, 20/10**) | Ruta oficial del semestre en CDigital |
 | Calificar la **ACA Final** | 54450: antes del **15/11** · 54466/54467: antes del **22/11** | Libro de calificaciones |
 
 ### Al cierre — y aquí las fechas son dos, no una
@@ -286,7 +304,7 @@ Su documento en `Recursos/ACAs/` es una **guía de estudio**, no el cuestionario
 | Ítem | Guía en `Clases/Recursos/ACAs/` | Alcance (acumulativo) y qué revisas |
 |---|---|---|
 | **Quiz 1** (6%) | `Quiz 1 (6%) - guia del cuestionario.docx` | Hasta **S02**. Pregunta, objetivos, título y variables. Es el primero: úsalo como diagnóstico. |
-| **Parcial 1** (24%) | `Parcial 1 (24%) - guia del cuestionario.docx` | Hasta **S05** *(nuevo desde Quiz 1: S03–S05)*. Estructura del artículo, referentes fase I, diseño metodológico e instrumento. El ítem más pesado del curso después de la ACA Final. |
+| **Parcial 1** (24%) | `Parcial 1 (24%) - guia del cuestionario.docx` | Hasta **S05** *(nuevo desde Quiz 1: S03–S05)*. Estructura del documento, referentes fase I, diseño metodológico e instrumento. El ítem más pesado del curso después de la ACA Final. |
 | **Quiz 2** (9%) | `Quiz 2 (9%) - guia del cuestionario.docx` | Hasta **S07** *(nuevo: S06–S07)*. Co-creación y análisis de datos. |
 | **Parcial 2** (21%) | `Parcial 2 (21%) - guia del cuestionario.docx` | Hasta **S09** *(nuevo: S08–S09)*. Cierre de marco teórico, resultados y discusión. |
 | **Quiz 3** (4%) | `Quiz 3 (4%) - guia del cuestionario.docx` | Hasta **S11** *(nuevo: S10–S11)*. Resumen y UNESCO, póster, evidencias y antiplagio. Cae el día de la sustentación. |
@@ -295,7 +313,7 @@ Su documento en `Recursos/ACAs/` es una **guía de estudio**, no el cuestionario
 
 ### ACA Final (Tarea · 32%) — la única entrega documental del curso
 
-`Clases/Recursos/ACAs/ACA Final (32%) - Articulo de investigacion.docx`. Abierta desde el **11/08** hasta el 07/11 (54450) o el 14/11 (54466/54467). Nombre sugerido: `TG3_ACAFinal_Articulo_Apellido`.
+`Clases/Recursos/ACAs/ACA Final (32%) - Documento final de grado.docx`. Abierta desde el **11/08** hasta el 07/11 (54450) o el 14/11 (54466/54467). Nombre sugerido: `TG3_ACAFinal_Articulo_Apellido`.
 
 Qué debe contener, y qué revisas en cada cosa:
 
@@ -311,7 +329,7 @@ Qué debe contener, y qué revisas en cada cosa:
 | Anexos, evidencias y póster | Según lo que hayas pedido en la S11. |
 | **Antiplagio verificado** | Antes de la sustentación, por la ruta institucional. |
 
-La **sustentación (S12)** no tiene ítem propio: su desempeño —dominio del contenido, claridad en la defensa, calidad del póster, entregables de repositorio completos— entra dentro de esta misma calificación. El artículo es **acumulativo**: lo que revisas el 07/11 es lo que se fue construyendo desde la S02.
+La **sustentación (S12)** no tiene ítem propio: su desempeño —dominio del contenido, claridad en la defensa, calidad del póster, entregables de repositorio completos— entra dentro de esta misma calificación. El documento es **acumulativo**: lo que revisas el 07/11 es lo que se fue construyendo desde la S02.
 
 ### Autoevaluación (cuestionario · 2%) y Coevaluación (foro · 2%)
 
@@ -364,7 +382,7 @@ Aparte de la serie de encuentros, cada `2026/<grupo>/` trae su `Entregas y hitos
 
 ### 4.3 Antes de la Sesión 01
 
-Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo: el deck de encuadre (22 slides), el **evento de Slido** del rompehielos con la mentira de cada ronda ya marcada (montaje en `2026/_combinado_todos/Rompehielos Slido - Sesion 01.md`), el **acuerdo pedagógico** para firmar en esa sesión, y el aviso de que la **ACA Final abre hoy**. Con 112 matriculados en una sola serie, en la ronda final solo hablan los tres del podio: no se presentan todos, no cabe en la hora.
+Guion `Docente/Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo: el deck de encuadre (22 slides), el **evento de Slido** del rompehielos con la mentira de cada ronda ya marcada (montaje en `2026/_combinado_todos/Rompehielos Slido - Sesion 01.md`), el **acuerdo pedagógico** para firmar en esa sesión, y el aviso de que la **ACA Final abre hoy**. Con 112 matriculados en una sola serie, en la ronda final solo hablan los tres del podio: no se presentan todos, no cabe en la hora.
 
 ---
 
@@ -373,8 +391,8 @@ Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo:
 - **Verificación antiplagio institucional obligatoria** antes de la sustentación; es una unidad del Syllabus (U12), no un trámite opcional. Usa la ruta oficial que publique el semestre en CDigital — **no cites una URL de herramienta que no sea la institucional**.
 - Un porcentaje de similitud alto **no es plagio automático**: exige tu análisis cualitativo y debido proceso. Similitud depurada baja es orientativamente aceptable; lo que descalifica es la copia sin atribución.
 - **Los cuestionarios son individuales.** Suplantación, copia o compartir preguntas y respuestas tienen debido proceso disciplinario. Con 112 estudiantes en una sola sala, aleatoriza el orden de preguntas y respuestas en CDigital.
-- **IA generativa:** para entender, no para transcribir. El criterio que ya está escrito en las guías del estudiante es que el cuestionario pregunta por comprensión y el artículo se defiende ante jurados — quien no escribió su texto no lo sostiene en la S12.
-- **Toda entrega en APA 7**, con las correcciones de la revisión anterior incorporadas. El artículo es acumulativo: entregar el 07/11 algo que no pasó por las revisiones semanales es la señal de alarma más confiable.
+- **IA generativa:** para entender, no para transcribir. El criterio que ya está escrito en las guías del estudiante es que el cuestionario pregunta por comprensión y el documento se defiende ante jurados — quien no escribió su texto no lo sostiene en la S12.
+- **Toda entrega en APA 7**, con las correcciones de la revisión anterior incorporadas. El documento es acumulativo: entregar el 07/11 algo que no pasó por las revisiones semanales es la señal de alarma más confiable.
 
 ---
 
@@ -400,7 +418,7 @@ Guion `Guiones/Sesion 01 - …md` (léelo casi literal, dura 60 min). Ten listo:
 
 ### Antes de la sustentación (S12 · 27/10)
 - [ ] Jurados confirmados con la Dirección del Programa.
-- [ ] Antiplagio institucional corrido para todos los artículos (trabajado en la S11).
+- [ ] Antiplagio institucional corrido para todos los documentos (trabajado en la S11).
 - [ ] Póster y evidencias revisados.
 - [ ] Orden, tiempos y modalidad de la defensa comunicados al grupo.
 
