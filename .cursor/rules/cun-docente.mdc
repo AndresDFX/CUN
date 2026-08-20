@@ -90,19 +90,22 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
       Presentacion.pptx
       (fichas / capturas de apoyo al estudiante · .docx)
     Sesion 02 - …
-  Guiones/                               ← interno docente
-    Sesion 01 - <Tema>.md                ← solo Markdown (sin .docx)
-    Capturas/                            ← pantallazos docentes (no en Clases/)
+  Docente/                               ← interno docente: NUNCA se comparte
+    LEEME - Solo para el Docente.md
+    Cuestionarios/                       ← bancos maestros (.xml a Moodle + .md legible)
+    Guiones/
+      Sesion 01 - <Tema>.md              ← solo Markdown (sin .docx)
+      Capturas/                          ← pantallazos docentes (no en Clases/)
   2026/<grupo>/                          ← interno / Calendar
     Informacion.txt, CSV/ICS Calendar… · Correo de bienvenida.docx
   Correo de bienvenida.docx              ← solo si multi-grupo (copia en raíz; interno)
 ```
 
-- **Carpeta compartida con estudiantes = solo `Clases/`.** Es lo que en el material se llama el **Drive de clases** (así la nombra el LEEME del estudiante): la carpeta de Drive que el Docente comparte y donde se **publica** todo el material, con **una subcarpeta por sesión**. Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. **Drive ≠ CDigital:** el Drive de clases es de dónde se **baja** el material (incluido el de las clases autónomas — ver «Clase autónoma»); **CDigital** es donde se **entrega** y donde están las **notas**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Guiones/Capturas/` únicamente.
+- **Carpeta compartida con estudiantes = solo `Clases/`.** Es lo que en el material se llama el **Drive de clases** (así la nombra el LEEME del estudiante): la carpeta de Drive que el Docente comparte y donde se **publica** todo el material, con **una subcarpeta por sesión**. Ahí va: Presentación del Curso (`Presentacion del Curso - ….pptx`, sin sufijos «nuevo»/«copia»), `Sesion NN/Presentacion.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (APA + **`ACAs/`** con enunciados), fichas de taller en **`.docx`**. **Drive ≠ CDigital:** el Drive de clases es de dónde se **baja** el material (incluido el de las clases autónomas — ver «Clase autónoma»); **CDigital** es donde se **entrega** y donde están las **notas**. Sync: `config/slides/sync_clases_estudiantes.py` (regenera ACAs; el correo de bienvenida solo en rutas docentes vía `build_correo_bienvenida.py`). Capturas de herramientas → `Docente/Guiones/Capturas/` únicamente.
 - **Correo de bienvenida = interno / docente.** Vive en `2026/<grupo>/Correo de bienvenida.docx` (TG3: cada grupo); si hay varios grupos, también copia en la raíz del curso. **Nunca** en `Clases/`. El estudiante lo recibe por email, no como archivo de la carpeta compartida. Build: `python config/slides/build_correo_bienvenida.py`. Enlaces que debe llevar (grabaciones + material de clases): ver «Correo de bienvenida — enlaces obligatorios».
 - **ACAs (estudiantes):** convención única los 5 cursos → `Clases/Recursos/ACAs/ACA N - <título corto>.docx`. Build: `python config/slides/build_acas_estudiantes.py`. Guiones docentes pueden remitir a esa ruta **sin** duplicar el enunciado largo.
 - **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%, cuestionario)** y la **coevaluación (4%, foro)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* o en los que *participa* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; ids `auto` / `coev` con `kind="cuestionario"` / `"foro"` en `config/cursos/fechas_entrega_aca.py`). **No son exclusivas de Proyecto I:** existen en los 4 cursos de pregrado con peso menor (ver «REGLA VIGENTE DE EVALUACIÓN»). Los cursos de pregrado **todavía no tienen instructivo** para ellas — pendiente.
-- **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
+- **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Docente/Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
 - **NO meter en `Clases/`:** Guiones docentes, Manual del Docente, CSV/ICS Calendar con roster, formularios solo-docente AFI, `Informacion.txt` de grupo, **`Correo de bienvenida.docx`**, builds/`config/`, ni archivos `.md`.
 - **Raíz** = material genérico/reutilizable (sin código de grupo en títulos ni nombres de archivo de sesión).
 - **`2026/<grupo>/`** = oferta puntual (Informacion, roster si aplica, Calendar, correo de bienvenida para pegar/enviar).
@@ -192,7 +195,7 @@ No confundir nada de esto con la autoevaluación **institucional** SIAC ([acredi
   - `formulario_acuerdo_pedagogico` / `formulario_informe_cierre` — **distintos** (no intercambiar)
   - `coanfitrion_meet`
 - Loader Python: `config/cursos/sesiones_cun.py` (`LINK_TUTORIAS`, `LINK_REGISTRO_DOCENTE_AFI`, …). No hardcodear URLs dispersos en guiones/builds.
-- **Guiones P1:** cada `Guiones/Sesion NN - ….md` cierra con checklist post-clase leyendo esos links. Regen (solo `.md`): `python Especializacion/Proyecto I/Guiones/_regen_guiones_proyecto1.py` o `python config/slides/build_sesion_material.py proyecto1 all --guion-only`.
+- **Guiones P1:** cada `Docente/Guiones/Sesion NN - ….md` cierra con checklist post-clase leyendo esos links. Regen (solo `.md`): `python Especializacion/Proyecto I/Docente/Guiones/_regen_guiones_proyecto1.py` o `python config/slides/build_sesion_material.py proyecto1 all --guion-only`.
 - **Meet AFI:** grabación obligatoria; coanfitrión = `links_afi.coanfitrion_meet`; invitados solo ese correo + estudiantes inscritos; programar toda la serie del periodo.
 - Ciclo inicio/cierre AFI: `Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md`
 - Plantilla APA local: `Plantilla_APA_CUN_Proyecto de grado.docx`

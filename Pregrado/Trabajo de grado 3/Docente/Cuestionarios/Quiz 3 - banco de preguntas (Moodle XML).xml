@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/Quiz 3 - TG3 S02-S11</text></category>
+    <info format="html"><text><![CDATA[<p><strong>Quiz 3 (4% de la nota del curso · Corte 3) — TRABAJO DE GRADO 3, Modelos de Innovación (Ingeniería de Sistemas).</strong></p><p>Ventana: 20/10/2026 a 27/10/2026. Se resuelve dentro del encuentro, en unos 10 minutos.</p><p><strong>Alcance (acumulativo):</strong> hasta la <strong>Sesión 11</strong>. Nuevo desde el cierre de Parcial 2: <strong>Sesión 10</strong> (resumen, palabras clave del tesauro UNESCO, conclusiones y referencias sin huérfanas) y <strong>Sesión 11</strong> (póster de divulgación, evidencias y anexos, verificación antiplagio). Lo anterior sigue siendo base: la lectura autónoma de la Sesión 01 (U1–U2) y las Sesiones 02 a 09. <strong>No entra la Sesión 12</strong> (Sustentación ante jurados), que se dicta el mismo día en que cierra el cuestionario, ni la Sesión 13 (entregables y metadatos del repositorio institucional): ninguna pregunta ni ninguna opción de este banco las necesita.</p><p>Banco de 10 preguntas de selección única, 4 opciones, con retroalimentación por opción. Las 10 evalúan contenido temático de las unidades del Syllabus: cinco de la Sesión 10 (U11), cuatro de la Sesión 11 (U12) y una de la Sesión 09 (U10) como anclaje acumulativo. No se evalúan pesos, fechas, canales de entrega ni reglas de la actividad.</p>]]></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-01 Las cinco piezas del resumen y su orden]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 10 arma el resumen (abstract) con cinco piezas que se redactan una por frase y en un orden fijo. ¿Cuál es ese orden?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El orden es <strong>contexto → objetivo → método → resultado principal → conclusión</strong>. El resumen abre por el problema y por qué importa, dice qué se propuso el estudio, cómo se hizo, qué se encontró (con el dato fuerte) y para qué sirve. La pieza más extensa es el resultado (~30 %), no el contexto.</p><p>Cita literal (Presentación de la Sesión 10, tabla «Las cinco piezas del resumen y cuánto ocupa cada una»): «<strong>1. Contexto</strong> · ¿Cuál es el problema y por qué importa? · 1–2 frases (~15 %) | <strong>2. Objetivo</strong> · ¿Qué se propuso este estudio? · 1 frase (~15 %) | <strong>3. Método</strong> · ¿Cómo se hizo? (enfoque, población, instrumento) · 1–2 frases (~25 %) | <strong>4. Resultado principal</strong> · ¿Qué se encontró? Con el dato fuerte · 1–2 frases (~30 %) | <strong>5. Conclusión</strong> · ¿Qué se concluye y para quién sirve? · 1 frase (~15 %)». Y en la nota de esa misma diapositiva: «redacte <strong>una frase por pieza</strong>, en ese orden, y después una las cinco».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Contexto → objetivo → método → resultado principal → conclusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es el orden fijado en la Sesión 10: el resumen entra por el problema y por qué importa, y solo después aparecen el objetivo, el método, el resultado con su dato y la conclusión.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Objetivo → contexto → método → conclusión → resultado principal.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: arranca por el objetivo y deja el resultado de último. Quien lee solo el resumen necesita primero el problema que lo justifica, y el resultado principal va antes de la conclusión porque es lo que la sostiene.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contexto → objetivo → método → discusión → recomendaciones.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error frecuente: copia el índice del documento dentro del resumen. La cuarta pieza es el resultado principal con su dato, no una discusión, y la quinta es la conclusión, no un listado de recomendaciones.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Contexto → antecedentes → objetivo → método → resultado principal.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: mete los antecedentes y se queda sin conclusión. Los autores del marco viven en el cuerpo del documento, y el resumen debe cerrar diciendo qué se concluye y para quién sirve.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-02 Un resumen que abre citando autores]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante abre su resumen así: «Según Pérez (2021) y Gómez (2020), la automatización mejora los tiempos; en este trabajo se confirma dicha postura». ¿Qué defecto señala la Sesión 10 en esa apertura?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>El resumen <strong>no cita</strong>. Sintetiza lo que usted hizo y encontró; los autores del marco pertenecen al cuerpo del documento, no a las ~200–250 palabras que muchos lectores serán los únicos que lean.</p><p>Cita literal (Presentación de la Sesión 10, «Tres resúmenes que se rechazan»): «"Según Pérez (2021) y Gómez (2020), la automatización mejora los tiempos; en este trabajo se confirma dicha postura." → El resumen <strong>no cita</strong>. Los autores viven en el marco y en la discusión. Aquí solo va lo que usted hizo y encontró.» En la misma sesión, entre lo que no lleva un resumen: «<strong>Citas</strong>: nada de (Pérez, 2021) adentro. El resumen sintetiza su trabajo, no el de otros.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que el resumen no cita: ahí solo va lo que usted hizo y encontró, y los autores viven en el cuerpo del documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La regla de la Sesión 10 es tajante: el resumen sintetiza su trabajo, no el de otros. Ninguna cita entra ahí, ni siquiera para justificar el tema.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que menciona dos autores en lugar de uno: en el resumen se admite una sola cita, la imprescindible para situar el estudio.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Error: convierte una prohibición en una cuota. El máximo de tres citas es una regla del póster, no del resumen; en el resumen no cabe ninguna.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que anuncia lo que se va a hacer en vez de informar, como en «en este documento se hablará de…».</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde los dos resúmenes rechazados de la sesión. La frase de anuncio es otro caso distinto; el defecto de este fragmento es que le entrega el resumen a la literatura en lugar de al propio estudio.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que usa siglas y términos técnicos sin desarrollarlos la primera vez que aparecen en el texto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es un defecto real de otro ejemplo de la sesión (la sopa de siglas), pero este fragmento no trae ninguna sigla: su problema son las citas.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-03 Vocabulario controlado: por qué las palabras clave no se inventan]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 10 sostiene que las palabras clave se toman de un <strong>vocabulario controlado</strong> —en educación superior, el tesauro de la UNESCO— y no se inventan. ¿Qué es un vocabulario controlado y qué problema resuelve?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Es una <strong>lista normalizada en la que cada concepto tiene un solo término oficial</strong>. Resuelve la dispersión: si un autor escribe «software libre», otro «código abierto» y otro «open source», los tres trabajos quedan separados y nadie los encuentra juntos. El beneficio directo es que su documento <strong>aparece</strong> cuando alguien busca por el término oficial de su campo.</p><p>Cita literal (Presentación de la Sesión 10, «Palabras clave: por qué NO se inventan»): «<strong>¿Qué es un vocabulario controlado?</strong> Una lista normalizada donde cada concepto tiene <strong>un solo término oficial</strong>. Si un autor escribe <em>software libre</em>, otro <em>código abierto</em> y otro <em>open source</em>, los tres trabajos quedan <strong>dispersos</strong> y nadie los encuentra juntos. El tesauro decide cuál es el término normalizado, y todos usan ese.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una lista normalizada donde cada concepto tiene un solo término oficial; evita que trabajos sobre lo mismo queden dispersos bajo nombres distintos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. El tesauro decide cuál es el término normalizado y todos usan ese; por eso el documento se vuelve encontrable en repositorios y bases de datos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una lista de términos prohibidos en textos académicos, que impide el uso de anglicismos y de siglas sin desarrollar.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Lee «controlado» como censura. El tesauro no prohíbe palabras: normaliza cuál de varias formas equivalentes es la oficial, para que la búsqueda funcione.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Un listado de descriptores que asigna la revista al momento de publicar, de modo que el autor no elige sus palabras clave.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada la decisión al editor. La sesión pone el paso a paso en manos del autor: escribir términos en bruto, buscarlos en el tesauro y contrastarlos en Scholar antes de dejar los definitivos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El conjunto de términos que ya aparecen en el título del documento, que se repiten como palabras clave para reforzar el tema ante el buscador.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Va justo contra la regla dura de la sesión: «una palabra clave que ya está en el título aporta poco»; las keywords sirven para lo que el título no alcanzó a decir.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-04 Dos palabras clave que fallan por razones distintas]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante propone como palabras clave «cositas de calidad» y «la empresa XYZ S.A.S.». Según los criterios de la Sesión 10, cada una falla por una razón distinta. ¿Cuáles son?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>«Cositas de calidad» es <strong>imprecisa y no académica</strong> (se normaliza como «control de calidad»); «la empresa XYZ S.A.S.» es <strong>demasiado local</strong>: nadie busca por ahí (se normaliza como «pequeñas y medianas empresas»). Son los dos extremos que el paso 2 del procedimiento manda tachar: términos demasiado generales o imprecisos y términos demasiado locales.</p><p>Cita literal (Presentación de la Sesión 10, tabla «Del término inventado al término que sí se busca»): «"cositas de calidad" · Impreciso y no académico · <strong>control de calidad</strong>» y «"la empresa XYZ S.A.S." · Local; nadie busca por ahí · <strong>pequeñas y medianas empresas</strong>». En el paso a paso: «Táchelos si son demasiado generales (<em>tecnología</em>, <em>sistemas</em>, <em>investigación</em>) o demasiado locales (el nombre de la empresa).»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>La primera es imprecisa y no académica; la segunda es local, y nadie busca por el nombre de una empresa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Se normalizan como «control de calidad» y «pequeñas y medianas empresas», que sí son términos por los que otro investigador buscaría.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La primera es una sigla sin desarrollar; la segunda es tan amplia que no filtra ningún resultado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia los diagnósticos de fila. La sigla sin desarrollar es el caso de «CI/CD», y el término tan amplio que no filtra nada es «tecnología»: ninguno de los dos es el de este estudiante.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La primera es adjetivación de marketing; la segunda repite un término que ya venía en el título.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>La adjetivación de marketing es el caso de «innovación disruptiva total», y aquí el problema del nombre de la empresa no es que se repita, sino que es tan local que nadie lo busca.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La primera es demasiado general para filtrar; la segunda es coloquial y no existe en ningún tesauro.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte parcialmente los diagnósticos: lo coloquial es «cositas de calidad», y el nombre de la empresa falla por local, no por general. Que ninguna esté en el tesauro es cierto de las dos y no distingue nada.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-05 Por qué esa conclusion es pobre]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Un estudiante escribe como única conclusión de su documento: «Se logró reducir el tiempo de despliegue de 42 a 18 minutos». La Sesión 10 la califica de <strong>conclusión pobre</strong>. ¿Por qué?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Porque eso es un <strong>resultado que ya se reportó</strong>. Una conclusión responde la pregunta de investigación y lleva cuatro piezas en orden: respuesta a la pregunta, cumplimiento de los objetivos, limitaciones y trabajo futuro.</p><p>Cita literal (Presentación de la Sesión 10, «Conclusiones: responden la pregunta, no repiten los resultados»): «<strong>Conclusión pobre:</strong> "Se logró reducir el tiempo de despliegue de 42 a 18 minutos." → eso es un resultado, ya lo dijo.» Y antes, en la misma diapositiva: «Cuatro piezas obligatorias, en este orden: <strong>1. Respuesta a la pregunta</strong>, en una frase directa. <strong>2. Cumplimiento de los objetivos</strong> (…). <strong>3. Limitaciones</strong> (…). <strong>4. Trabajo futuro</strong> (…)».</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Porque repite un resultado ya reportado, en vez de responder la pregunta y agregar objetivos cumplidos, límites y trabajo futuro.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La frase es un dato, no una conclusión: falta la respuesta directa a la pregunta de investigación y las otras tres piezas obligatorias.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque le falta la cita del autor del marco que respalde esa reducción, obligatoria en toda conclusión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada a las conclusiones una exigencia de la discusión. Citar es obligatorio cuando se confronta el hallazgo con la literatura; en las conclusiones lo que falta es responder la pregunta, no traer un autor.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque no aporta ningún dato nuevo que no se hubiera presentado antes en la sección de resultados.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Invierte la regla: la sesión prohíbe expresamente que algo se estrene en las conclusiones, «ni ideas nuevas ni datos que no aparecieron antes».</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Porque una conclusión no puede mencionar cifras: los datos se quedan en resultados y aquí solo cabe la interpretación cualitativa.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Exagera la regla hasta volverla falsa. La conclusión correcta que modela la sesión sí menciona el efecto y sus límites; el problema no es la cifra, es que la frase se queda únicamente en el dato.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-06 Referencias huerfanas en dos direcciones]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>La Sesión 10 llama <strong>referencia huérfana</strong> a un desajuste que ocurre en dos direcciones. ¿En cuáles?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Tipo A: se citó a alguien en el cuerpo y esa fuente <strong>no está</strong> en la lista final; el jurado lo lee como cita inventada. Tipo B: hay una entrada en la lista que <strong>nunca</strong> se citó en el cuerpo; se lee como bibliografía de relleno. La auditoría es sencilla: recorrer la lista final y buscar cada apellido con Ctrl+F dentro del cuerpo.</p><p>Cita literal (Presentación de la Sesión 10, «Referencias sin huérfanas: el flujo con ZoteroBib»): «<strong>Referencia huérfana</strong> = desajuste entre el cuerpo y la lista. Ocurre en dos direcciones: <strong>Tipo A:</strong> cité a alguien en el texto y <strong>no está</strong> en la lista final. (El jurado lo lee como cita inventada.) <strong>Tipo B:</strong> hay una entrada en la lista que <strong>nunca</strong> se citó en el cuerpo. (Se lee como bibliografía de relleno.)»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Una cita del cuerpo que no aparece en la lista final, y una entrada de la lista que nunca se citó en el cuerpo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Son los tipos A y B: la primera se lee como cita inventada y la segunda como bibliografía de relleno. La regla es doble: toda cita va en la lista y toda entrada se cita.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una fuente sin DOI ni URL para rastrearla, y una fuente publicada hace más de cinco años.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde huérfana con difícil de rastrear o desactualizada. La huérfana se define por el desajuste entre cuerpo y lista, no por el enlace ni por la antigüedad de la fuente.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una fuente citada una sola vez en todo el documento, y una fuente citada únicamente dentro de una nota.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cuenta apariciones en lugar de cuadrar cuerpo y lista. Una fuente citada una sola vez está perfectamente bien si figura en la lista final.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Una entrada sin autor identificable, y una entrada con autor institucional en lugar de autor personal.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Traslada el problema a la autoría. Los autores institucionales son válidos en APA 7; el desajuste que define la huérfana es entre lo que se cita y lo que se lista.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-07 Que ocupa el centro visual del poster]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>En la anatomía del póster de la Sesión 11, el <strong>centro visual</strong> es el punto donde cae primero el ojo de quien pasa. ¿Qué debe ir ahí?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Ahí va el <strong>hallazgo principal</strong>: un gráfico más una frase con el dato fuerte, y es el elemento más grande de la pieza. No el logo, no el título, no la conclusión. El lector recorre el póster en tres saltos —título e imagen grande, luego hallazgo y conclusión, y solo al final problema y método—, así que se diseña por orden de importancia y no por el orden del documento.</p><p>Cita literal (Presentación de la Sesión 11, tabla «Anatomía del póster: bloque por bloque»): «<strong>Hallazgo principal</strong> · <strong>1 gráfico + 1 frase</strong> con el dato fuerte · El elemento más grande · Columna 2, centro visual». Y en la nota de la diapositiva: «El <strong>centro visual</strong> es donde el ojo cae primero. Ahí va el hallazgo, no el logo ni el título. Si su gráfico no está en el centro, el póster está mal armado.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>El hallazgo principal: un gráfico con una frase que dice el dato fuerte, y es el elemento más grande del póster.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Si el gráfico del hallazgo no domina el centro, el póster está mal armado: quien pasa se queda sin saber qué encontró usted.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El título junto con el logo institucional, para que se identifique el trabajo y el programa desde lejos.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es lo que la sesión descarta de forma expresa: «ahí va el hallazgo, no el logo ni el título». El título ocupa la cabecera a todo el ancho, no el centro.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>El problema y la pregunta de investigación, porque son el punto de partida de todo el trabajo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Diseña el póster con el orden del documento. El problema y la pregunta van arriba en la primera columna: el que pasa por el pasillo se engancha con el hallazgo, no con el planteamiento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>La conclusión con las referencias clave, que es lo que un evaluador busca al acercarse a la pieza.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mezcla dos bloques que van en otro sitio: la conclusión ocupa la tercera columna y las referencias, máximo tres, van al pie en tamaño pequeño.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-08 Un bloque del poster que no se lee a un metro]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Usted proyecta su póster, se aleja un metro y hay un bloque que no alcanza a leer. Según la Sesión 11, ¿qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p><strong>Cortar texto</strong> hasta que el bloque quepa sin achicar la letra. El póster no es el documento en miniatura: es una pieza de divulgación visual que tiene un metro de distancia y un minuto de atención. Lo que falte lo explica usted en vivo.</p><p>Cita literal (Presentación de la Sesión 11, «Un metro y un minuto: la regla que define el póster»): «Prueba brutal y honesta: proyecte su póster, <strong>aléjese un metro de la pantalla</strong> y trate de leerlo. Lo que no se lee, sobra. No se achica la fuente: <strong>se corta el texto</strong>.» Y en el paso a paso del montaje: «<strong>7.</strong> Corte texto hasta que cada bloque quepa sin achicar la letra. <strong>Achicar fuente es hacer trampa consigo mismo.</strong>»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Cortar texto de ese bloque hasta que quepa: lo que no se lee a un metro, sobra.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La prueba del metro se resuelve recortando contenido, nunca reduciendo la letra; el detalle que se pierda lo aporta usted en la conversación frente al póster.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Reducir el tamaño de la fuente de ese bloque lo necesario para que entre todo el contenido.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es exactamente lo que la sesión llama hacerse trampa: achicar la letra deja el texto en la pieza pero ilegible, y el resultado es el documento en miniatura que nadie lee de pie.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Pasar ese bloque al pie del póster, junto a las referencias, en un cuerpo de letra más pequeño.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Mueve el problema de sitio. El pie es para máximo tres referencias en tamaño pequeño; un bloque ilegible sigue siendo ilegible abajo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Repartir el contenido en dos columnas más, para conservar completo el texto que ya estaba redactado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Conserva el texto a costa de la retícula. El póster se arma con cabecera y tres columnas, y con la proporción de ~40 % texto, 40 % visuales y 20 % espacio en blanco: agregar columnas elimina el aire que lo hace legible.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-09 El anexo que sobra]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Al armar la lista de anexos, un estudiante deja vacía la columna «se referencia en…» de su Anexo D. Según las reglas de la Sesión 11, ¿qué significa eso y qué corresponde hacer?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Significa que ese anexo <strong>no está referenciado desde el cuerpo</strong> del documento, y un anexo que nadie menciona es ruido: o se cita en el texto con un «(ver Anexo A)» desde la sección que lo sustenta, o sale del documento. Las tres reglas no negociables de un anexo son estar <strong>rotulado</strong>, estar <strong>referenciado</strong> y ser <strong>legible</strong>.</p><p>Cita literal (Presentación de la Sesión 11, «Evidencias y anexos: qué se anexa y qué no»): «<strong>Referenciado</strong> desde el cuerpo — en el texto debe aparecer "(ver Anexo A)". Si nunca se menciona, no debería estar.» Y en la nota de la tabla «Cómo se arma la lista de anexos»: «La columna <strong>"Se referencia en…"</strong> es la que delata los anexos de relleno: si queda vacía, el anexo sale.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Que es un anexo de relleno: hay que citarlo en el cuerpo con un «ver Anexo D» desde la sección que lo sustenta, o retirarlo.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. La columna vacía es justamente la que delata los anexos de relleno. Un anexo que nadie referencia resta orden al documento.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que basta con rotularlo bien, porque el rótulo con letra y nombre descriptivo ya lo integra al documento.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cumple una de las tres reglas y deja fuera otra. Rotular es necesario, pero no sustituye la referencia desde el cuerpo: son requisitos distintos.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que la columna solo se llena cuando el anexo tiene datos crudos, así que en las demás filas la celda puede quedar vacía sin problema.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Inventa una excepción que no existe. Todo anexo —instrumento, capturas, bitácora, tablas o autorizaciones— se referencia desde alguna sección del cuerpo.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Que conviene conservarlo igual, por si el jurado pide más evidencia del proceso durante la revisión.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Es el criterio de «anexo todo por si acaso» que la sesión descarta: se anexa lo que sustenta, no todo lo que se tiene.</p>]]></text></feedback></answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text><![CDATA[TG3-Q3-10 Que mide de verdad el software de similitud]]></text></name>
+    <questiontext format="html"><text><![CDATA[<p>Según la Sesión 11, ¿qué mide realmente un software de similitud y qué se puede concluir de su porcentaje?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Mide <strong>coincidencia textual</strong> entre el documento y un conjunto de fuentes, y nada más: es un comparador de cadenas de texto, no un juez. Por eso una <strong>cita textual correcta, entrecomillada y referenciada, también aparece marcada</strong>, y el porcentaje no es un veredicto de plagio sino un punto de partida para revisar qué quedó marcado y por qué.</p><p>Cita literal (Presentación de la Sesión 11, «Antiplagio: qué mide de verdad y qué NO mide»): «El software de similitud <strong>mide coincidencia textual</strong> entre su documento y un conjunto de fuentes. Eso es todo. Es un comparador de cadenas de texto, no un juez. <strong>Lo que NO hace:</strong> no distingue entre una cita bien hecha y un párrafo copiado. Una <strong>cita textual correcta, entrecomillada y referenciada, también aparece marcada como coincidencia</strong>. Por eso un porcentaje <strong>no es</strong> un veredicto de plagio: es un punto de partida para revisar.»</p>]]></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <answer fraction="100" format="html"><text><![CDATA[<p>Mide coincidencia textual con otras fuentes; como marca también las citas bien hechas, el porcentaje es un punto de partida para revisar, no un veredicto.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correcta. Es un comparador de cadenas de texto, no un juez: por eso hay que mirar <em>qué</em> quedó marcado y por qué, y no solo la cifra.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Detecta el plagio y distingue una cita correcta de un párrafo copiado, así que el porcentaje ya viene depurado.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Le atribuye al software un juicio que no hace. No distingue entre cita y copia; esa lectura cualitativa la hace la persona que revisa el informe.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Compara las ideas del documento con la literatura publicada, de modo que un porcentaje bajo garantiza originalidad conceptual.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Confunde coincidencia de texto con originalidad de ideas. La herramienta compara cadenas de texto: una idea tomada sin crédito y reescrita puede no aparecer marcada y sigue exigiendo la cita.</p>]]></text></feedback></answer>
+    <answer fraction="0" format="html"><text><![CDATA[<p>Mide qué proporción del texto fue escrita con inteligencia artificial, y por eso el porcentaje sube con el uso de esas herramientas de redacción.</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Cambia el objeto de la medición. Lo que reporta es coincidencia con fuentes existentes; el uso de herramientas de escritura es otro asunto y no es lo que ese porcentaje informa.</p>]]></text></feedback></answer>
+  </question>
+
+</quiz>
