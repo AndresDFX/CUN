@@ -15,7 +15,9 @@ CURSOR = ROOT / ".cursor" / "agents"
 CLAUDE = ROOT / ".claude" / "agents"
 
 FRONT_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.S)
-DEFAULT_CLAUDE_MODEL = "claude-opus-4-8"
+# Alias, no versión fija: es lo que ya declaran los demás agentes y así no se queda anclado a un
+# modelo viejo cuando sale el siguiente.
+DEFAULT_CLAUDE_MODEL = "opus"
 
 
 def split_fm(text: str):
@@ -31,7 +33,10 @@ def get_simple(fm: str, key: str):
 
 
 def get_description_block(fm: str) -> str:
-    m = re.search(r"^description:\s*\|\s*\n(.*?)(?=^[a-zA-Z_][\w-]*:|\Z)", fm, re.M | re.S)
+    # Bloque literal (|) o plegado (>), con indicadores de recorte/sangría (|- >- |2 …).
+    # Reconocer solo «|» no basta: con «description: >» el bloque cae al caso de una línea y se
+    # pierde TODO el cuerpo de la descripción, que es justo lo que usa Claude para elegir el agente.
+    m = re.search(r"^description:\s*[|>][-+0-9]*[ \t]*\n(.*?)(?=^[a-zA-Z_][\w-]*:|\Z)", fm, re.M | re.S)
     if m:
         return m.group(0).rstrip()
     m = re.search(r"^description:\s*(.+)$", fm, re.M)
