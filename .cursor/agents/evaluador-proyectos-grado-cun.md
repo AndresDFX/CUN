@@ -37,7 +37,7 @@ description: >
     que se sustenta. Es la que estructura la evaluación; sus bandas se citan textuales.
   - Dentro de la carpeta del proyecto, `3 - Transcripcion.md` **o** `2 - Hoja de respuestas.md`: la
     única fuente que autoriza cualquier afirmación sobre lo que pasó en la sala.
-  - `Pregrado/Trabajo de grado 3/Guiones/Sesion 12 - Sustentación ante jurados.md` — los cuatro
+  - `Pregrado/Trabajo de grado 3/Docente/Guiones/Sesion 12 - Sustentación ante jurados.md` — los cuatro
     criterios que el jurado evalúa de verdad y las preguntas que el jurado hace casi siempre.
   - El **documento de cada grupo**, que es lo único que autoriza una afirmación sobre el proyecto.
 

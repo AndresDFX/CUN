@@ -23,14 +23,14 @@
 **Discusión y conclusión (2-3 min)** ✓ ~ ✗ · _______________________________________________________
 **Aporte y cierre (1 min)** ✓ ~ ✗ · _______________________________________________________________
 
-**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§7 de la ficha; se cumplen durante la exposición, no al final)
+**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§8 de la ficha; se cumplen durante la exposición, no al final)
 
 - [ ] Que sostengan en vivo la distinción de la Tabla 14 sin inflar el producto, corrigiendo ellos mismos la diapositiva del AES-256 —**sin (a) no hay 4,6**
 - [ ] Una cifra concreta de la muestra del FUID con su criterio
 - [ ] Que reconozcan que la verificación fue de laboratorio
 - [ ] Que hablen al menos tres de los cuatro
 
-## B · CONDICIONALES (§6 de la ficha) — marcar oyendo; cada marca elige la pregunta
+## B · CONDICIONALES (§7 de la ficha) — marcar oyendo; cada marca elige la pregunta
 
 > Lo que va entre « » se lee tal cual. La página en negrita es la que sostiene la pregunta: si la respuesta la contradice, se anota abajo con esa página.
 
@@ -46,7 +46,7 @@
 - [ ] Si no mencionan una sola limitación → preguntar directamente cuáles son los tres límites del trabajo y qué no se puede concluir de él; es el hueco de la sección 5 (pp. 23-32)
 - [ ] Si solo habla uno o dos integrantes → pedir explícitamente a quien no habló que explique su parte: al que sostenga la parte archivística, cómo se construyó el DCF de tres niveles (p. 88); al de la parte técnica, cómo se probó la persistencia (CP-01, p. 109)
 - [ ] Si atribuyen a la plataforma el «blindaje jurídico» de la Secretaría (p. 134) → preguntar qué obligación normativa concreta queda cubierta hoy y cuál solo quedará cubierta cuando se implemente, en particular frente a la Ley 1581 de 2012, que el propio diagnóstico calificó en 1/5 (p. 80) y cuyo protocolo se recomienda redactar (p. 136)
-- [ ] Si el director ya preguntó por la muestra o por el estado del prototipo → pasar a P1 y a reserva
+- [ ] Si el director ya preguntó por la muestra o por el estado del prototipo → conservar P2 y pasar a reserva
 - [ ] Si se pasan de tiempo y saltan resultados → ir directo al objetivo 4
   - Preguntar así: «¿qué se verificó, dónde y con quién?»
 
@@ -61,22 +61,9 @@ ____  __________________________________________________________________________
 
 ## C · MIS 3 MINUTOS — leer la pregunta tal cual está escrita
 
-**Pregunta 1 — Qué quedó implementado y qué está solo representado**
+**Pregunta 1 — ¿Existe hoy un respaldo cifrado, sí o no?**
 
-> «Su Tabla 14 distingue con mucho cuidado lo implementado y probado de lo que está solo representado en la interfaz, y ubica el cifrado AES-256 y el hash SHA-256 en el segundo grupo. La diapositiva 10 concluye, en cambio, que se verificó la integridad con cifrado AES-256. ¿Me pueden precisar qué quedó implementado y probado en el prototipo y qué está representado a nivel de interfaz?»
-
-`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
-
-`Frase textual:`
-________________________________________________________________________________________
-________________________________________________________________________________________
-________________________________________________________________________________________
-
-`Verificar después: p. ____`
-
-**Pregunta 2 — Cuántos expedientes se inventariaron de verdad**
-
-> «El documento precisa tres veces que el FUID se aplicó sobre una muestra y no sobre el censo de la vigencia 2024, mientras la diapositiva 4 dice muestra de tipo censal. ¿Cuántos expedientes o cuántos folios quedaron efectivamente inventariados, y con qué criterio se escogieron?»
+> «La diapositiva 10 concluye que se verificó la integridad con cifrado AES-256, y su página 134 sostiene que el diseño de ese cifrado resolvió la obligación de confidencialidad de la Ley 1581, blindando jurídicamente a la Secretaría. Su Tabla 14, en la página 105, lo deja como representado en prototipo, con integración real proyectada. Una sola cosa: ¿existe hoy un respaldo del prototipo efectivamente cifrado, sí o no? Si es diseño y no operación, dígalo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -87,9 +74,9 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Pregunta 3 — Quién usó el prototipo y con qué datos**
+**Pregunta 2 — Fecha y asistente de la capacitación de la p. 27**
 
-> «Su cuarto objetivo es verificar el prototipo en un entorno institucional controlado. La verificación documentada se hizo sobre un portátil personal, en localhost, y la implementación institucional aparece como proyectada. ¿Algún funcionario de la Secretaría usó el prototipo, y con qué datos: expedientes reales de 2024 o datos de prueba?»
+> «Su página 27 afirma en pasado que se realizaron sesiones de capacitación para el personal de la Secretaría, y enumera diez temas. Pero sus cuatro entrevistas, aplicadas el 24 de junio de 2026, todavía preguntan si el funcionario estaría dispuesto a recibir capacitación. Una sola cosa: ¿qué fecha tuvo esa capacitación y quién asistió? Si quedó planeada y no dictada, dígalo y lo registramos así.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -100,12 +87,25 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Reserva (solo si sobra tiempo):** el «blindaje jurídico» atribuido a la plataforma (p. 134) · qué de las cifras de las pp. 24, 92 y 113 es proyección · cómo funciona el prototipo por dentro: DCF, DRS, RBAC, persistencia
+**Pregunta 3 — El número de la muestra: expedientes, folios o metros lineales**
+
+> «Su página 71 define el enfoque cuantitativo por medir volúmenes documentales en metros lineales y cantidad de folios, y presenta el FUID como el instrumento para cuantificar la muestra. En las 169 páginas, metros lineales y folios no vuelven a aparecer. ¿Cuántos expedientes, folios o metros lineales cubrió la muestra representativa de las páginas 78 y 86? Denos el número; si no se cuantificó, dígalo con esas palabras.»
+
+`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
+
+`Frase textual:`
+________________________________________________________________________________________
+________________________________________________________________________________________
+________________________________________________________________________________________
+
+`Verificar después: p. ____`
+
+**Reserva (solo si sobra tiempo):** ¿tres o seis perfiles del RBAC? (pp. 26 y 30 contra pp. 94 y 105) · sobre cuántos registros corrió CP-03, si `psql` confirma cuatro (pp. 110 y 121) · las tres metas del indicador de tiempos: ≥ 40 % (p. 24), menos de cinco minutos (p. 92) y más del 50 % (diapositiva 8)
 
 ## D · AL CIERRE — rodear el rango y poner la nota
 
 
-**Partida antes de oír (§7 de la ficha):** 4,0 – 4,4 es el escenario más probable con el estado de los dos entregables.
+**Partida antes de oír (§8 de la ficha):** 4,0 – 4,4 es el escenario más probable con el estado de los dos entregables.
 
 **Dominio del tema** — rodear:   0,1–2,9   ·   3,0–3,5   ·   3,6–4,5   ·   4,6–5,0   →   nota  ______
 
@@ -128,3 +128,21 @@ Es **una sola** nota, y es la única que queda en el acta. Regla: promedio simpl
 ⚠️ **Un 5,0 es proponer laureada** y exige que el Jurado 1 coincida. **Meritoria** (instructivo p. 11): promedio de jurados ≥ 4,6 y < 5,0, **ninguna nota de jurado** inferior a 4,5, y la pide al menos un jurado. Los cuatro criterios de arriba son **mi retícula interna**, no notas que se reporten: si la que baja de 4,5 es mi nota única, tengo que poder decir la página.
 
 **Taquigrafía:** ✓ lo dijo · ✗ no lo dijo · ~ ambiguo · ! contradice el documento (p. __) · ☐ verificar después
+
+## E · FORMULARIO OFICIAL DEL JURADO — 5 criterios, escala 1–5
+
+Instrumento **distinto** de los cuatro criterios de la §D: aquellos dan la **nota del acta**, estos cinco van al formulario de la Dirección y **no son notas**. Las cinco se responden con el documento, así que vienen **precargadas** desde la §8.1 de la ficha, que trae la página que sostiene cada casilla. En sala solo se confirma; si la sustentación cambia una, se tacha y se rodea otra.
+
+**1. Problemática y objetivos** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**2. Marco teórico y referentes** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **2**
+
+**3. Metodología, muestra y diseño** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **2**
+
+**4. Resultados y conclusiones** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**5. Pertinencia disciplinar** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**Suma:  ______ / 25**   ·   precargada: **14 / 25**
+
+**Si cambio una casilla, la razón en una línea** (la §8.1 trae el sustento del precargado):   ______________________________________________________

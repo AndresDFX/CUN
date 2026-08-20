@@ -24,17 +24,17 @@
 **Discusión y conclusión (2-3 min)** ✓ ~ ✗ · _______________________________________________________
 **Aporte y cierre (1 min)** ✓ ~ ✗ · _______________________________________________________________
 
-**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§7 de la ficha; se cumplen durante la exposición, no al final)
+**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§8 de la ficha; se cumplen durante la exposición, no al final)
 
 - [ ] El chat respondiendo en vivo sobre la URL pública, con dato que venga de la base y con «no sé» ante una pregunta fuera de alcance
 - [ ] Distinguir con precisión «impacto potencial» de «impacto medido», asumiendo sin defensas que el protocolo no se aplicó. Más que los tres respondan, cada uno de lo suyo
 
-## B · CONDICIONALES (§6 de la ficha) — marcar oyendo; cada marca elige la pregunta
+## B · CONDICIONALES (§7 de la ficha) — marcar oyendo; cada marca elige la pregunta
 
 > Lo que va entre « » se lee tal cual. La página en negrita es la que sostiene la pregunta: si la respuesta la contradice, se anota abajo con esa página.
 
 - [ ] Si mostraron el chat funcionando y respondió bien → pedir una pregunta fuera de alcance
-- [ ] Si NO mostraron el chat o solo lo mencionaron → P1 completa, incluida la fecha de puesta en producción
+- [ ] Si NO mostraron el chat o solo lo mencionaron → P1 completa: compartir pantalla y hacer la tarea 1 de la Tabla 21 (folio 79). **El documento no da fecha de despliegue: no pedirla como si constara**
 - [ ] Si presentaron todo con capturas y no abrieron la aplicación → pedir la URL pública en vivo
   - Preguntar así: «Están invitando a probarlo desde el teléfono en la diapositiva 16. ¿Podemos abrirlo ahora y hacer la tarea 1 del guion de la tabla 21: localizar las termales y decir a qué hora abren hoy?»
 - [ ] Si dijeron que ya aplicaron la prueba de usabilidad → pedir n, fecha y el valor obtenido de la tabla 23
@@ -57,22 +57,9 @@ ____  __________________________________________________________________________
 
 ## C · MIS 3 MINUTOS — leer la pregunta tal cual está escrita
 
-**Pregunta 1 — Estado real del chat: ¿fase siguiente o en producción?**
+**Pregunta 1 — El chat sin fila de prueba: demostrarlo en vivo**
 
-> «El documento dice, al cerrar el apartado 8.6 —folio 68, página 70 del PDF—, que el módulo de chat se contempla como la siguiente fase de desarrollo, y al cerrar el 8.7 —folio 71, página 73 del PDF— que ya opera sobre el entorno productivo. ¿Cuál de las dos es el estado a hoy? Y si está operando, hágale en vivo una pregunta que esté fuera de alcance, para ver la respuesta que ustedes describen en el folio 69.»
-
-`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
-
-`Frase textual:`
-________________________________________________________________________________________
-________________________________________________________________________________________
-________________________________________________________________________________________
-
-`Verificar después: p. ____`
-
-**Pregunta 2 — Objetivo 4: ¿instrumento diseñado o aplicado?**
-
-> «El objetivo 4 es evaluar el impacto potencial. Ustedes diseñaron el protocolo de usabilidad de las tablas 21 a 23, pero la columna “Valor obtenido” de la tabla 23 está vacía. ¿Consideran el objetivo cumplido con el diseño del instrumento, y qué impidió aplicarlo si el prototipo estaba en producción desde julio?»
+> «El capítulo de pruebas mide la latencia de cuatro servicios REST y la Tabla 17, folios 74 y 75, trae filas de catálogo, autenticación, favoritos, comentarios, agenda y publicación: ninguna del chat inteligente. La Tabla 20, folio 77, le asigna como evidencia la Tabla 15 y la Figura 18, que son diseño. Compartan pantalla en riveraturismohuila.com y háganle al asistente la tarea 1 de su Tabla 21, folio 79: a qué hora abren hoy las termales. Si no está en ejecución, díganlo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -83,9 +70,9 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Pregunta 3 — Empresarios publicando y flujo de moderación**
+**Pregunta 2 — De qué ítem del instrumento salió el 4,7 de emprendimientos**
 
-> «El objetivo general habla de fortalecer los emprendimientos productivos, y la tabla 18 registra las pruebas de los perfiles empresario, editor y administrador como “por anexar la captura”. ¿Cuántos empresarios de Rivera tienen hoy una publicación creada por ellos mismos en la plataforma y qué pasó cuando pasó por el flujo de moderación de la Secretaría?»
+> «Su Tabla 8, folio 43, reporta cinco promedios de impacto —visibilidad 5,0, emprendimientos 4,7, flujo 4,3— y su diapositiva 7 los rotula como escala Likert de 1 a 5 con n igual a tres. La ficha técnica del folio 34 sí declara una Likert de cinco niveles, pero ninguna de las 15 preguntas de los folios 35 y 36 es un ítem escalado. Nómbrenme el ítem del que salió el 4,7 de emprendimientos. Si ese promedio no viene de un ítem, díganlo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -96,13 +83,26 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Reserva (solo si sobra tiempo):** arquitectura de la PWA y quién la sostiene · muestra del diagnóstico y su alcance · qué queda de la plataforma cuando cambie la administración municipal
+**Pregunta 3 — Empresario: la evidencia remitida a un anexo que no existe**
+
+> «El folio 71 dice que las funcionalidades de empresario, editor y administrador están disponibles y que su evidencia se detalla en el capítulo siguiente. En ese capítulo, la Tabla 18, folio 75, marca las filas autenticadas como por anexar la captura, y el folio 74 remite esa evidencia a un anexo separado que no está en el documento ni en el índice. Compartan pantalla, inicien sesión como empresario y creen una publicación. Si esa evidencia no existe todavía, díganlo con esas palabras.»
+
+`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
+
+`Frase textual:`
+________________________________________________________________________________________
+________________________________________________________________________________________
+________________________________________________________________________________________
+
+`Verificar después: p. ____`
+
+**Reserva (solo si sobra tiempo; banco completo en la §6 de la ficha):** R4 el 26 % con tres entrevistados (Tabla 7, folio 42) · R5 el 5,0 del catálogo sin pregunta que lo produzca (Tabla 6, folio 40) · R7 cuántas publicaciones hay hoy en producción (folio 63) · R8 cuántos roles, al que no ha hablado (folios 47 y 60) · R9 proveedor y costo mensual del modelo (Tabla 10, folios 46-47) · R12 abrir la agenda y mostrar un evento con su fecha (diap. 13 vs Tabla 17, folio 74)
 
 ## D · AL CIERRE — rodear el rango y poner la nota
 
 - **Sin demostración en vivo del producto que ellos mismos invitan a probar, difícilmente pasa de 4,4.**
 
-**Partida antes de oír (§7 de la ficha):** 4,3 – 4,7. Mueve la aguja una sola cosa: que el chat y el perfil de empresario se vean funcionando.
+**Partida antes de oír (§8 de la ficha):** 4,3 – 4,7. Mueve la aguja una sola cosa: que el chat y el perfil de empresario se vean funcionando.
 
 **Dominio del tema** — rodear:   0,1–2,9   ·   3,0–3,5   ·   3,6–4,5   ·   4,6–5,0   →   nota  ______
 
@@ -125,3 +125,21 @@ Es **una sola** nota, y es la única que queda en el acta. Regla: promedio simpl
 ⚠️ **Un 5,0 es proponer laureada** y exige que el Jurado 1 coincida. **Meritoria** (instructivo p. 11): promedio de jurados ≥ 4,6 y < 5,0, **ninguna nota de jurado** inferior a 4,5, y la pide al menos un jurado. Los cuatro criterios de arriba son **mi retícula interna**, no notas que se reporten: si la que baja de 4,5 es mi nota única, tengo que poder decir la página.
 
 **Taquigrafía:** ✓ lo dijo · ✗ no lo dijo · ~ ambiguo · ! contradice el documento (p. __) · ☐ verificar después
+
+## E · FORMULARIO OFICIAL DEL JURADO — 5 criterios, escala 1–5
+
+Instrumento **distinto** de los cuatro criterios de la §D: aquellos dan la **nota del acta**, estos cinco van al formulario de la Dirección y **no son notas**. Las cinco se responden con el documento, así que vienen **precargadas** desde la §8.1 de la ficha, que trae la página que sostiene cada casilla. En sala solo se confirma; si la sustentación cambia una, se tacha y se rodea otra.
+
+**1. Problemática y objetivos** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**2. Marco teórico y referentes** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **2**
+
+**3. Metodología, muestra y diseño** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**4. Resultados y conclusiones** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**5. Pertinencia disciplinar** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**Suma:  ______ / 25**   ·   precargada: **16 / 25**
+
+**Si cambio una casilla, la razón en una línea** (la §8.1 trae el sustento del precargado):   ______________________________________________________

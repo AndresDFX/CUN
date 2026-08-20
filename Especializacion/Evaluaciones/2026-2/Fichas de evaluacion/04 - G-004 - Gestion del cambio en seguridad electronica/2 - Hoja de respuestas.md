@@ -21,12 +21,12 @@
 **Discusión y conclusión (2-3 min)** ✓ ~ ✗ · _______________________________________________________
 **Aporte y cierre (1 min)** ✓ ~ ✗ · _______________________________________________________________
 
-**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§7 de la ficha; se cumplen durante la exposición, no al final)
+**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§8 de la ficha; se cumplen durante la exposición, no al final)
 
 - [ ] Que expliquen por iniciativa propia la diferencia entre los dos modelos y asuman que la respuesta al objetivo general es que la gestión actual no explica la adopción, convirtiendo el hallazgo negativo en el argumento de su producto
 - [ ] Que den los tres números —población, invitaciones, respuestas— sin titubear. Con un indicador y línea base para la Línea I, 4,8–5,0
 
-## B · CONDICIONALES (§6 de la ficha) — marcar oyendo; cada marca elige la pregunta
+## B · CONDICIONALES (§7 de la ficha) — marcar oyendo; cada marca elige la pregunta
 
 > Lo que va entre « » se lee tal cual. La página en negrita es la que sostiene la pregunta: si la respuesta la contradice, se anota abajo con esa página.
 
@@ -54,22 +54,9 @@ ____  __________________________________________________________________________
 
 ## C · MIS 3 MINUTOS — leer la pregunta tal cual está escrita
 
-**Pregunta 1 — Dos modelos, dos respuestas al objetivo general**
+**Pregunta 1 — El Pearson que está en la diapositiva y no en el trabajo**
 
-> «Su objetivo general es determinar la incidencia. En la página 98 el modelo OLS les da p = 0,000 y un beta de 0,5746, y en la 99 un R² de 0,076, y lo presentan como incidencia positiva probada. En la página 102, con los mismos mil registros, el modelo les da R² = 0,003 y p = 0,063, y ustedes mismos escriben que carece de significancia estadística. ¿Cuál de los dos responde el objetivo general, y qué cambió entre uno y otro?»
-
-`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
-
-`Frase textual:`
-________________________________________________________________________________________
-________________________________________________________________________________________
-________________________________________________________________________________________
-
-`Verificar después: p. ____`
-
-**Pregunta 2 — El denominador**
-
-> «Necesito entender el denominador: en la página 42 los mil usuarios del Nivel Central son el 33 % del total de la entidad; en la página 48 los mil registros son el 33 % de la población contactada; y en la página 74 hablan de “los 1.000 funcionarios del Nivel Central”. ¿Cuántas personas trabajan en Nivel Central, a cuántas se les envió el formulario y cuántas respondieron?»
+> «En la página 82 dicen que contrastaron las preguntas 3 y 7 frente a la pregunta 10 con el coeficiente de Pearson. Sus diapositivas 23 y 24 lo traen resuelto: 0,159 y 0,189. Ninguno de esos dos valores aparece en las 140 páginas; la página 101 reporta un Spearman de 0,052. Díganme en qué página del trabajo escrito quedó ese Pearson. Si se calculó después de la entrega, díganlo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -80,9 +67,22 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Pregunta 3 — Apostar por capacitación cuando su propio modelo la anula**
+**Pregunta 2 — Tres porcentajes que suman 100**
 
-> «En la página 102 la capacitación es la variable de impacto casi nulo, con beta de 0,008, y en la página 101 ustedes concluyen que la gente usa los sistemas por obligatoriedad y no por la gestión. Su Línea I apuesta justamente por más capacitación, con laboratorios de simulación. ¿Por qué esa apuesta, y con qué indicador sabrían en 2027 que funcionó?»
+> «En la página 107, la fila de Formación y comunicación de la Tabla 9 dice que a mayor antigüedad la percepción es más favorable, y da tres cifras de la pregunta 3: 55,75 %, 29,18 % y 15,07 %. Suman exactamente 100. Díganme qué mide ese porcentaje: ¿cuántos funcionarios hay en cada rango de antigüedad, o qué tan favorable respondió cada rango? Si es lo primero, díganlo con esas palabras.»
+
+`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
+
+`Frase textual:`
+________________________________________________________________________________________
+________________________________________________________________________________________
+________________________________________________________________________________________
+
+`Verificar después: p. ____`
+
+**Pregunta 3 — La tabla de indicadores que la Línea I nunca presentó**
+
+> «La página 116 anuncia, para la Línea I, indicadores de cobertura, desarrollo y resultado, y enseguida arranca el apartado 11.4 sin ninguna tabla. Las Líneas II y III sí tienen la suya, Tabla 10 en la 119 y Tabla 11 en la 126. Nómbrenme el indicador de cobertura de los laboratorios de simulación. Si esa tabla no quedó en el documento, díganlo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -99,7 +99,7 @@ ________________________________________________________________________________
 
 - **No castigo** (nivel profesionalizante): muestra autoseleccionada, adopción medida por percepción, producto no implementado, R² bajo. Un R² bajo bien interpretado vale más que uno alto inventado.
 
-**Partida antes de oír (§7 de la ficha):** 4,0 – 4,5. La estructura y la honestidad están; la inferencia central está mal comunicada.
+**Partida antes de oír (§8 de la ficha):** 4,0 – 4,5. La estructura y la honestidad están; la inferencia central está mal comunicada.
 
 **Dominio del tema** — rodear:   0,1–2,9   ·   3,0–3,5   ·   3,6–4,5   ·   4,6–5,0   →   nota  ______
 
@@ -122,3 +122,21 @@ Es **una sola** nota, y es la única que queda en el acta. Regla: promedio simpl
 ⚠️ **Un 5,0 es proponer laureada** y exige que el Jurado 1 coincida. **Meritoria** (instructivo p. 11): promedio de jurados ≥ 4,6 y < 5,0, **ninguna nota de jurado** inferior a 4,5, y la pide al menos un jurado. Los cuatro criterios de arriba son **mi retícula interna**, no notas que se reporten: si la que baja de 4,5 es mi nota única, tengo que poder decir la página.
 
 **Taquigrafía:** ✓ lo dijo · ✗ no lo dijo · ~ ambiguo · ! contradice el documento (p. __) · ☐ verificar después
+
+## E · FORMULARIO OFICIAL DEL JURADO — 5 criterios, escala 1–5
+
+Instrumento **distinto** de los cuatro criterios de la §D: aquellos dan la **nota del acta**, estos cinco van al formulario de la Dirección y **no son notas**. Las cinco se responden con el documento, así que vienen **precargadas** desde la §8.1 de la ficha, que trae la página que sostiene cada casilla. En sala solo se confirma; si la sustentación cambia una, se tacha y se rodea otra.
+
+**1. Problemática y objetivos** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**2. Marco teórico y referentes** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**3. Metodología, muestra y diseño** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **3**
+
+**4. Resultados y conclusiones** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **2**
+
+**5. Pertinencia disciplinar** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**Suma:  ______ / 25**   ·   precargada: **15 / 25**
+
+**Si cambio una casilla, la razón en una línea** (la §8.1 trae el sustento del precargado):   ______________________________________________________

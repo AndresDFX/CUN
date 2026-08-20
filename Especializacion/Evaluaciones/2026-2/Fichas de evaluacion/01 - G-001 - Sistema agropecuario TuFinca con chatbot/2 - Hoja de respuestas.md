@@ -9,7 +9,7 @@
 - Adolfo Escobar Buelvas: _______________________________________________________________
 - Jorge Carlos Polo Muñoz: ______________________________________________________________
 
-> ⚠️ Abre la noche: si el demo de la diapositiva 12 se cae por la plataforma y no por el proyecto, **no se lo cargo a ellos** — paso a la pregunta 3 y evalúo el producto por la evidencia documental (pp. 192-194, 218).
+> ⚠️ Abre la noche: si el demo de la diapositiva 12 se cae por la plataforma y no por el proyecto, **no se lo cargo a ellos** — no ejecuto la pregunta 2, paso a la reserva del hosting y evalúo el producto por la evidencia documental (pp. 191-194, 218).
 
 ---
 
@@ -24,16 +24,16 @@
 **Discusión y conclusión (2-3 min)** ✓ ~ ✗ · _______________________________________________________
 **Aporte y cierre (1 min)** ✓ ~ ✗ · _______________________________________________________________
 
-## B · CONDICIONALES (§6 de la ficha) — marcar oyendo; cada marca elige la pregunta
+## B · CONDICIONALES (§7 de la ficha) — marcar oyendo; cada marca elige la pregunta
 
 > Lo que va entre « » se lee tal cual. La página en negrita es la que sostiene la pregunta: si la respuesta la contradice, se anota abajo con esa página.
 
-- [ ] Si el demo de la diapositiva 12 no ocurre o falla → «¿el sistema está en línea ahora?» y la P3 pasa a prioritaria  **(pp. 192-194 · sustituye P3)**
+- [ ] Si el demo de la diapositiva 12 no ocurre o falla → la P2 no se puede ejecutar: «¿el sistema está en línea ahora?» y reserva del hosting  **(pp. 191-194 · sustituye P2)**
   - Preguntar así: «¿El sistema está en línea en este momento? Si no, ¿desde cuándo no lo está?»
-- [ ] Si el demo sí corre → pedir una consulta improvisada al chatbot, con otras palabras
-- [ ] Si presentan las reducciones de 63-95 % como impacto del proyecto sin matizar → P1, directa
-- [ ] Si ya explicaron bien la línea base y la alternancia de condiciones → soltar pregunta 1 y usar el tiempo en la reserva de trazabilidad-auditoría, que es más fina
-- [ ] Si dicen «inteligencia artificial» o «IA» sin nombrar tecnología → P2 + «¿corre en su infraestructura o llama a un servicio externo?»
+- [ ] Si el demo sí corre → lanzar la P2 con la pantalla ya compartida, y luego pedir una consulta improvisada al chatbot, con otras palabras
+- [ ] Si presentan las reducciones de 63-95 % como impacto del proyecto sin matizar → recordar la p. 196: la condición manual se reprodujo en la misma jornada, no es línea base histórica
+- [ ] Si ya explicaron bien la línea base y la alternancia de condiciones → usar el tiempo en la P3 (ITZ-08 e ITZ-09) o en la reserva de trazabilidad-auditoría
+- [ ] Si dicen «inteligencia artificial» o «IA» sin nombrar tecnología → P1 + «¿corre en su infraestructura o llama a un servicio externo?»
   - Preguntar así: «¿el modelo corre en su infraestructura o llama a un servicio externo?»
 - [ ] Si se pasan del tiempo y saltan el OE4 → ir directo a los resultados
   - Preguntar así: «en una frase, ¿cuál fue el resultado del objetivo 4 y qué tan lejos está de ser generalizable?»
@@ -55,22 +55,9 @@ ____  __________________________________________________________________________
 
 ## C · MIS 3 MINUTOS — leer la pregunta tal cual está escrita
 
-**Pregunta 1 — La línea base**
+**Pregunta 1 — Qué interpreta el lenguaje del usuario**
 
-> «¿Los tiempos del procedimiento manual que reportan en la Tabla 26 se midieron antes de implementar el sistema, o los mismos seis operarios reprodujeron el método manual en la misma jornada de pruebas, cuando ya conocían TuFinca?»
-
-`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
-
-`Frase textual:`
-________________________________________________________________________________________
-________________________________________________________________________________________
-________________________________________________________________________________________
-
-`Verificar después: p. ____`
-
-**Pregunta 2 — Qué es exactamente el motor conversacional**
-
-> «El documento nombra la tecnología de todas las capas —Blazor Server, ASP.NET Core, Entity Framework, SQL Server— menos la del motor conversacional, del que solo dice qué hace: ¿con qué se implementó concretamente la interpretación de intenciones y la extracción de entidades?»
+> «Página 171: el documento dice que la solución se apoya exclusivamente en Blazor Server, ASP.NET Core Web API, Entity Framework Core y SQL Server, y del motor conversacional solo dice lo que hace: interpretar intenciones y extraer entidades. Pero el cuerpo cita a OpenAI, 2021, en las páginas 29, 32 y 36. ¿Qué componente interpreta hoy el lenguaje del usuario? Nómbrelo; y si son reglas y palabras clave propias en C#, dígalo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -81,9 +68,9 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Pregunta 3 — Quién sostiene el producto entregado**
+**Pregunta 2 — Un registro por el WebChat, en vivo**
 
-> «El sistema quedó desplegado en Azure y ustedes le recomiendan a la finca dejar los registros en papel en una fecha definida: ¿quién paga y administra ese hosting a partir de hoy, y el sistema sigue en línea?»
+> «La evidencia del chatbot en las páginas 189 y 190 es solo de consulta: la Figura 82 se titula interacción con consultas y el cierre habla de ejecutar consultas sobre la información registrada. Pero la Tabla 26, página 209, reporta tiempos de registro por chatbot: 2,80, 1,75 y 2,43 minutos. Compartan pantalla y registren una vacunación por el WebChat, y muéstrenla en el detalle del animal. Si hoy no está disponible, díganlo.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -94,7 +81,20 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Reserva (solo si sobra tiempo):** trazabilidad para auditoría (p. 210 vs. p. 232) · denominadores de la Tabla 30 (p. 213) · conectividad durante las mediciones (p. 46) · escalar a una segunda finca (p. 43)
+**Pregunta 3 — ITZ-08 e ITZ-09, los dos indicadores que medirían la interpretación**
+
+> «En la Tabla 25, página 202, ITZ-08 es intenciones interpretadas correctamente e ITZ-09 errores de interpretación del chatbot, y son códigos distintos de ITZ-07, exactitud de las respuestas. En las tablas de resultados, páginas 209 a 213, no aparece ningún dato de ITZ-08 ni de ITZ-09. Déme el número de esos dos indicadores; si no se midieron, dígalo con esas palabras.»
+
+`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
+
+`Frase textual:`
+________________________________________________________________________________________
+________________________________________________________________________________________
+________________________________________________________________________________________
+
+`Verificar después: p. ____`
+
+**Reserva (solo si sobra tiempo):** los cuatro denominadores de la Tabla 30 (p. 213 vs. pp. 196 y 208) · ¿está en línea? dicte la dirección (pp. 191-194) · costo mensual del hosting (pp. 46, 245) · vínculo de los seis operarios con un autor (pp. 4-5 vs. pp. 67-68) · consentimiento sin anexar (p. 69 vs. pp. 256-270)
 
 ## D · AL CIERRE — rodear el rango y poner la nota
 
@@ -103,7 +103,7 @@ ________________________________________________________________________________
 - **Coherencia:** ya está en 4,6 (pp. 34-35, 195-213); solo baja si contradicen lo escrito sobre la línea base.
 - **Defensa:** que reconozcan el límite de la línea base y del hosting en vez de defenderlo, y que responda más de uno.
 
-**Partida antes de oír (§7 de la ficha):** alto por el documento; lo que se juega es si el dominio acompaña. 4,6–4,8 es el escenario más probable.
+**Partida antes de oír (§8 de la ficha):** alto por el documento; lo que se juega es si el dominio acompaña. 4,6–4,8 es el escenario más probable.
 
 **Dominio del tema** — rodear:   0,1–2,9   ·   3,0–3,5   ·   3,6–4,5   ·   4,6–5,0   →   nota  ______
 
@@ -126,3 +126,21 @@ Es **una sola** nota, y es la única que queda en el acta. Regla: promedio simpl
 ⚠️ **Un 5,0 es proponer laureada** y exige que el Jurado 1 coincida. **Meritoria** (instructivo p. 11): promedio de jurados ≥ 4,6 y < 5,0, **ninguna nota de jurado** inferior a 4,5, y la pide al menos un jurado. Los cuatro criterios de arriba son **mi retícula interna**, no notas que se reporten: si la que baja de 4,5 es mi nota única, tengo que poder decir la página.
 
 **Taquigrafía:** ✓ lo dijo · ✗ no lo dijo · ~ ambiguo · ! contradice el documento (p. __) · ☐ verificar después
+
+## E · FORMULARIO OFICIAL DEL JURADO — 5 criterios, escala 1–5
+
+Instrumento **distinto** de los cuatro criterios de la §D: aquellos dan la **nota del acta**, estos cinco van al formulario de la Dirección y **no son notas**. Las cinco se responden con el documento, así que vienen **precargadas** desde la §8.1 de la ficha, que trae la página que sostiene cada casilla. En sala solo se confirma; si la sustentación cambia una, se tacha y se rodea otra.
+
+**1. Problemática y objetivos** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **5**
+
+**2. Marco teórico y referentes** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**3. Metodología, muestra y diseño** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **4**
+
+**4. Resultados y conclusiones** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **5**
+
+**5. Pertinencia disciplinar** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   precargado **5**
+
+**Suma:  ______ / 25**   ·   precargada: **23 / 25**
+
+**Si cambio una casilla, la razón en una línea** (la §8.1 trae el sustento del precargado):   ______________________________________________________

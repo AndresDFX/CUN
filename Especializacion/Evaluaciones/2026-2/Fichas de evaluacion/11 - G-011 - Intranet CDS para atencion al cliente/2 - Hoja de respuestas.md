@@ -22,7 +22,7 @@
 **Discusión y conclusión (2-3 min)** ✓ ~ ✗ · _______________________________________________________
 **Aporte y cierre (1 min)** ✓ ~ ✗ · _______________________________________________________________
 
-**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§7 de la ficha; se cumplen durante la exposición, no al final)
+**REQUISITOS PARA 4,6+ — marcarlos aquí, cuando ocurran** (§8 de la ficha; se cumplen durante la exposición, no al final)
 
 - [ ] Ver la intranet funcionando o evidencia fechada
 - [ ] Un indicador con línea base y medición posterior
@@ -30,21 +30,23 @@
 - [ ] Enunciar objetivos y cerrar cada uno con un resultado
 - [ ] Declarar sus límites sin que se los pregunten
 
-## B · CONDICIONALES (§6 de la ficha) — marcar oyendo; cada marca elige la pregunta
+## B · CONDICIONALES (§7 de la ficha) — marcar oyendo; cada marca elige la pregunta
 
 > Lo que va entre « » se lee tal cual. La página en negrita es la que sostiene la pregunta: si la respuesta la contradice, se anota abajo con esa página.
 
-- [ ] Si NO mostró el sistema funcionando → P1 y pedir captura fechada o entorno donde corre
-  - Preguntar así: «¿Puede mostrarnos ahora la intranet, o describirnos la pantalla que usa el operador cuando llega una base nueva?»
+- [ ] Si NO mostró el sistema funcionando → la P1 ya pide la pantalla; ir al segundo escalón
+  - Preguntar así: «¿en qué servidor o en qué dirección está instalada, y quién puede abrirla?»
 - [ ] Si dijo que está en producción → pedir fecha de puesta en marcha, área dueña y número de usuarios
   - Preguntar así: «¿Desde qué fecha, cuántos usuarios y quién le da soporte hoy?»
-- [ ] Si dio cifras de mejora (por ejemplo «reducimos el 60% del tiempo») → (Una cifra sin denominador no es un resultado.)
+- [ ] Si dio cifras de mejora (por ejemplo, un 60 % de reducción del tiempo) → (Una cifra sin denominador no es un resultado. La cifra del ejemplo es hipotética y no se lee en sala.)
   - Preguntar así: «¿Sobre cuántas bases, en qué periodo y medido cómo?»
 - [ ] Si dijo que usó datos reales de clientes → P3: aval de la empresa y anonimización
   - Preguntar así: «¿Anonimizados? ¿Con qué autorización?»
+- [ ] Si remite el indicador a lo escrito («está en el documento», «está en los anexos») → insistir por el número aproximado, sin mencionar nunca en sala que el documento no llegó a los jurados
+  - Preguntar así: «no importa el dato exacto: deme el número aproximado, de memoria»
 - [ ] Si habló solo de la herramienta y nada del método → pedir el diseño y los instrumentos
   - Preguntar así: «¿Cuál fue el alcance de su estudio y cómo sostiene metodológicamente la afirmación de que hubo optimización?»
-- [ ] Si NO enunció los objetivos específicos → pedirlos y pedir el resultado de cada uno
+- [ ] Si NO enunció los objetivos específicos → reserva 4: pedirlos y pedir el resultado de cada uno
 - [ ] Si se pasó del tiempo y saltó los resultados → ir directo al último objetivo específico que haya alcanzado a mencionar: (El objetivo que se salta suele ser el que no se ejecutó.)
   - Preguntar así: «¿Del objetivo N, qué resultado concreto obtuvo?»
 - [ ] Si no declaró ninguna limitación → preguntarle qué quedó fuera del alcance
@@ -67,22 +69,9 @@ ____  __________________________________________________________________________
 
 ## C · MIS 3 MINUTOS — leer la pregunta tal cual está escrita
 
-**Pregunta 1 — Estado real de la intranet**
+**Pregunta 1 — Abrir la intranet ahora, o decir dónde está instalada**
 
-> «Su objetivo general dice “diseñar e implementar”. Cuéntenos en qué estado está hoy la intranet en el Centro de Servicios: ¿está en operación, desde qué fecha y quiénes la usan?»
-
-`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
-
-`Frase textual:`
-________________________________________________________________________________________
-________________________________________________________________________________________
-________________________________________________________________________________________
-
-`Verificar después: p. ____`
-
-**Pregunta 2 — Qué indicador midió antes y después**
-
-> «El título promete optimizar la atención al cliente y el objetivo trabaja sobre la higienización de bases de datos. ¿Qué indicador midió antes y después de la intranet, y cuánto cambió?»
+> «El objetivo general que quedó inscrito en el cronograma dice “diseñar e implementar”. Comparta pantalla, por favor, y ábrame la intranet ahora. Si no la puede abrir aquí, dígame la URL o el nombre del servidor donde está instalada; y si no está instalada en ninguna parte, dígalo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -93,9 +82,9 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Pregunta 3 — Con qué autorización trató datos de clientes**
+**Pregunta 2 — Cuántos minutos tarda hoy higienizar y validar una base**
 
-> «La intranet recibe bases de datos de clientes para validar pólizas: ¿con qué autorización de la empresa trabajó esos datos y cómo protegió los datos personales en el proyecto y en el documento?»
+> «Su objetivo general dice “estandarizar, automatizar y optimizar el proceso”, y el título promete “optimizar la atención al cliente”. ¿Cuántos minutos tarda hoy un operador del CDS en higienizar y validar una base de un cliente? Aproximado y de memoria me sirve, pero deme el número. Si nunca se midió, dígalo con esas palabras.»
 
 `Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
 
@@ -106,7 +95,20 @@ ________________________________________________________________________________
 
 `Verificar después: p. ____`
 
-**Reserva (solo si sobra tiempo):** quién es el responsable del tratamiento de datos en la empresa · qué pasa con la intranet si ella cambia de trabajo · cómo se enteró de que el proceso era el problema
+**Pregunta 3 — Quién autorizó el uso de las bases: nombre, cargo y mes**
+
+> «Nombre y cargo: ¿quién en la empresa autorizó el uso de las bases de datos enviadas por los clientes, y en qué mes se dio esa autorización? Si el permiso fue verbal, o si nadie lo dio, dígalo así.»
+
+`Contestó:  [ ] Sí   [ ] A medias   [ ] La esquivó`
+
+`Frase textual:`
+________________________________________________________________________________________
+________________________________________________________________________________________
+________________________________________________________________________________________
+
+`Verificar después: p. ____`
+
+**Reserva (solo si sobra tiempo):** los objetivos específicos, uno por uno, con su resultado (reserva 4) · qué es el CDS y cuántas bases procesa al mes (reserva 5) · un ejemplo de error típico que la intranet corrige (reserva 6) · quién sostiene el sistema cuando no esté (reserva 7)
 
 ## D · AL CIERRE — rodear el rango y poner la nota
 
@@ -114,7 +116,7 @@ ________________________________________________________________________________
 - **3,6–4,5:** producto demostrado y proceso bien explicado, pero «optimización» sin línea base. **Aquí cae razonablemente si sustenta bien y el documento sigue ausente.**
 - **0,1–2,9:** una nota en este rango con documento ausente exige acta y respaldo del director: no se pone en solitario.
 
-**Partida antes de oír (§7 de la ficha):** 3,6 – 4,5 si sustenta bien; el vacío documental se resuelve con la Dirección, no en sala.
+**Partida antes de oír (§8 de la ficha):** 3,6 – 4,5 si sustenta bien; el vacío documental se resuelve con la Dirección, no en sala.
 
 **Dominio del tema** — rodear:   0,1–2,9   ·   3,0–3,5   ·   3,6–4,5   ·   4,6–5,0   →   nota  ______
 
@@ -137,3 +139,23 @@ Es **una sola** nota, y es la única que queda en el acta. Regla: promedio simpl
 ⚠️ **Un 5,0 es proponer laureada** y exige que el Jurado 1 coincida. **Meritoria** (instructivo p. 11): promedio de jurados ≥ 4,6 y < 5,0, **ninguna nota de jurado** inferior a 4,5, y la pide al menos un jurado. Los cuatro criterios de arriba son **mi retícula interna**, no notas que se reporten: si la que baja de 4,5 es mi nota única, tengo que poder decir la página.
 
 **Taquigrafía:** ✓ lo dijo · ✗ no lo dijo · ~ ambiguo · ! contradice el documento (p. __) · ☐ verificar después
+
+## E · FORMULARIO OFICIAL DEL JURADO — 5 criterios, escala 1–5
+
+Instrumento **distinto** de los cuatro criterios de la §D: aquellos dan la **nota del acta**, estos cinco van al formulario de la Dirección y **no son notas**. Las cinco se responden con el documento, así que vienen **precargadas** desde la §8.1 de la ficha, que trae la página que sostiene cada casilla. En sala solo se confirma; si la sustentación cambia una, se tacha y se rodea otra.
+
+⚠️ **Este grupo no entregó documento ni presentación** (cero archivos, verificado el 15/08/2026). Los cinco criterios se responden con el escrito, así que **ninguno pasa de 3**: por encima de 3 la escala afirma calidad verificable, y aquí no hay qué verificar. Marcar por lo que se escuche y dejar la constancia de abajo.
+
+**1. Problemática y objetivos** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   con orden y objetivos cerrados **3**; si no, **2**
+
+**2. Marco teórico y referentes** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   con orden y objetivos cerrados **2**; si no, **1**
+
+**3. Metodología, muestra y diseño** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   con orden y objetivos cerrados **2**; si no, **1**
+
+**4. Resultados y conclusiones** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   con orden y objetivos cerrados **2**; si no, **1**
+
+**5. Pertinencia disciplinar** — rodear:   1   ·   2   ·   3   ·   4   ·   5   →   con orden y objetivos cerrados **3**; si no, **2**
+
+**Suma:  ______ / 25**   ·   escenarios de referencia: **12 / 25** si expone con orden y cierra sus objetivos, **7 / 25** si no los cierra.
+
+**Constancia obligatoria en el formulario y en el acta, copiar tal cual:** «respondido únicamente sobre la exposición oral; el grupo no entregó trabajo de grado ni presentación a la carpeta de jurados (verificado el 15/08/2026)». Sin esa frase, un 2 se lee como juicio sobre el trabajo, y el hallazgo es que no hay trabajo que leer.
