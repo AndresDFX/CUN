@@ -1,0 +1,197 @@
+{
+ "proyecto1": [
+  {
+   "id": "quiz",
+   "code": "Quiz",
+   "que_tener_listo": "Estudia **problema y pregunta** de investigación; resuélvelo en CDigital dentro de su ventana."
+  },
+  {
+   "id": "aca1",
+   "code": "ACA 1",
+   "que_tener_listo": "Sube en **plantilla APA** problema, pregunta, objetivos, mínimo 6 antecedentes y los marcos."
+  },
+  {
+   "id": "aca_final",
+   "code": "ACA FINAL",
+   "que_tener_listo": "Sube el anteproyecto integrado con las **correcciones** de la ACA 1, metodología y viabilidad."
+  },
+  {
+   "id": "auto",
+   "code": "Autoevaluación",
+   "que_tener_listo": "Diligénciala tú, en CDigital y dentro de su ventana, según tu **participación real**."
+  },
+  {
+   "id": "coev",
+   "code": "Coevaluación",
+   "que_tener_listo": "**Publica** tu propio aporte y valora hechos del trabajo del equipo, con respeto."
+  }
+ ],
+ "investigacion": [
+  {
+   "id": "quiz1",
+   "code": "Quiz 1",
+   "que_tener_listo": "Ten claras las **etapas del método** y qué es un artículo de nuevo conocimiento."
+  },
+  {
+   "id": "parcial1",
+   "code": "Parcial 1",
+   "que_tener_listo": "Ten memorizadas las **6 líneas** de MinCiencias y en cuál se ubica tu tema, y por qué."
+  },
+  {
+   "id": "quiz2",
+   "code": "Quiz 2",
+   "que_tener_listo": "Distingue **tipos de fuente** y qué la hace confiable: quién firma, dónde y de cuándo es."
+  },
+  {
+   "id": "parcial2",
+   "code": "Parcial 2",
+   "que_tener_listo": "Domina problema, pregunta y objetivo, búsqueda con operadores y citas en **APA 7**."
+  },
+  {
+   "id": "aca_final",
+   "code": "ACA Final",
+   "que_tener_listo": "Sube el **artículo consolidado**: problema, pregunta, marco, matriz de fuentes y APA 7."
+  },
+  {
+   "id": "quiz3",
+   "code": "Quiz 3",
+   "que_tener_listo": "Ten claras las partes del **planteamiento** y qué es una revisión de literatura articulada."
+  },
+  {
+   "id": "auto",
+   "code": "Autoevaluación",
+   "que_tener_listo": "Diligénciala tú en CDigital, según tu **participación real** en el periodo."
+  },
+  {
+   "id": "coev",
+   "code": "Coevaluación",
+   "que_tener_listo": "**Publica tu aporte**: valora con respeto hechos del trabajo del equipo, no personas."
+  }
+ ],
+ "creatividad": [
+  {
+   "id": "quiz1",
+   "code": "Quiz 1",
+   "que_tener_listo": "Ten leída la unidad del encuadre: **Propuesta de Innovación** e inteligencia emocional."
+  },
+  {
+   "id": "parcial1",
+   "code": "Parcial 1",
+   "que_tener_listo": "Domina **Design Thinking**, dos técnicas de ideación, bloqueadores y ensanchadores."
+  },
+  {
+   "id": "quiz2",
+   "code": "Quiz 2",
+   "que_tener_listo": "Suma el **Manual de Oslo**: qué cuenta como innovación y cómo se gestiona; el curso acumula."
+  },
+  {
+   "id": "parcial2",
+   "code": "Parcial 2",
+   "que_tener_listo": "Tipifica tu innovación (producto, proceso, organización, marketing, social) y **justifícala**."
+  },
+  {
+   "id": "aca_final",
+   "code": "ACA Final",
+   "que_tener_listo": "Sube la **propuesta consolidada**: problema, tipo Oslo, FODA, Canvas, MVP, vigilancia y pitch."
+  },
+  {
+   "id": "quiz3",
+   "code": "Quiz 3",
+   "que_tener_listo": "Ten claros **FODA, Canvas y MVP** (verificable) y para qué sirve la vigilancia tecnológica."
+  },
+  {
+   "id": "auto",
+   "code": "Autoevaluación",
+   "que_tener_listo": "Diligénciala tú, y solo tú, en CDigital **con honestidad** sobre tu participación real."
+  },
+  {
+   "id": "coev",
+   "code": "Coevaluación",
+   "que_tener_listo": "**Publica** tu aporte: valora hechos del trabajo en equipo, no a las personas."
+  }
+ ],
+ "tg2": [
+  {
+   "id": "quiz1",
+   "code": "Quiz 1",
+   "que_tener_listo": "Ten formulados **pregunta, objetivos y título** provisional y resuélvelo en CDigital."
+  },
+  {
+   "id": "parcial1",
+   "code": "Parcial 1",
+   "que_tener_listo": "Repasa **estructura APA CUN** y antecedentes Fase I, más pregunta, objetivos y título."
+  },
+  {
+   "id": "quiz2",
+   "code": "Quiz 2",
+   "que_tener_listo": "Distingue **marco teórico, conceptual y contextual** y cómo se articulan con tu pregunta."
+  },
+  {
+   "id": "parcial2",
+   "code": "Parcial 2",
+   "que_tener_listo": "Repasa los tres marcos y el **diseño metodológico**: enfoque, tipo, alcance y diseño."
+  },
+  {
+   "id": "quiz3",
+   "code": "Quiz 3",
+   "que_tener_listo": "Ten claros **instrumentos y plan de análisis** propuestos y la integración del avance."
+  },
+  {
+   "id": "aca_final",
+   "code": "ACA Final",
+   "que_tener_listo": "Sube el **avance consolidado** en plantilla APA CUN, integrado y listo para TG3."
+  },
+  {
+   "id": "auto",
+   "code": "Autoevaluación",
+   "que_tener_listo": "Diligénciala tú, de forma **individual**, valorando tu participación real en el periodo."
+  },
+  {
+   "id": "coev",
+   "code": "Coevaluación",
+   "que_tener_listo": "**Publica** tu aporte: valora hechos del trabajo del equipo, nunca a las personas."
+  }
+ ],
+ "tg3": [
+  {
+   "id": "quiz1",
+   "code": "Quiz 1",
+   "que_tener_listo": "Repasa la **Sesión 02**: pregunta, objetivos, título y variables; resuélvelo en CDigital."
+  },
+  {
+   "id": "parcial1",
+   "code": "Parcial 1",
+   "que_tener_listo": "Estudia las **Sesiones 02 a 05**: introducción, referentes Fase I e instrumento diseñado."
+  },
+  {
+   "id": "quiz2",
+   "code": "Quiz 2",
+   "que_tener_listo": "Estudia hasta la **Sesión 07**: comunidades de práctica, co-creación y análisis de datos."
+  },
+  {
+   "id": "parcial2",
+   "code": "Parcial 2",
+   "que_tener_listo": "Estudia hasta la **Sesión 09**: cierre del marco teórico, resultados y discusión."
+  },
+  {
+   "id": "quiz3",
+   "code": "Quiz 3",
+   "que_tener_listo": "Estudia hasta la **Sesión 11**: resumen, palabras clave UNESCO, póster y antiplagio."
+  },
+  {
+   "id": "aca_final",
+   "code": "ACA Final",
+   "que_tener_listo": "Sube el **documento final** en plantilla APA CUN: mínimo 4.000 palabras y 50 referencias."
+  },
+  {
+   "id": "auto",
+   "code": "Autoevaluación",
+   "que_tener_listo": "Diligénciala **tú**, en CDigital y dentro de su ventana, sobre tu participación real."
+  },
+  {
+   "id": "coev",
+   "code": "Coevaluación",
+   "que_tener_listo": "**Publica** tu aporte en el foro dentro de la ventana: un borrador sin enviar no cuenta."
+  }
+ ]
+}

@@ -1,0 +1,543 @@
+{
+  "proyecto1": {
+    "titulo": "PROYECTO I",
+    "carpeta": "Especializacion/Proyecto I",
+    "n_sesiones": 11,
+    "sesiones": [
+      {
+        "n": 1,
+        "titulo": "Presentación del curso · docente · estudiantes · ACAs"
+      },
+      {
+        "n": 2,
+        "titulo": "Problema y pregunta de investigación"
+      },
+      {
+        "n": 3,
+        "titulo": "Objetivos, justificación, alcances y limitaciones"
+      },
+      {
+        "n": 4,
+        "titulo": "Retroalimentación del Quiz · Antecedentes de investigación"
+      },
+      {
+        "n": 5,
+        "titulo": "Marco teórico"
+      },
+      {
+        "n": 6,
+        "titulo": "Marco conceptual y marco contextual"
+      },
+      {
+        "n": 7,
+        "titulo": "Marco legal · citación APA 7"
+      },
+      {
+        "n": 8,
+        "titulo": "Diseño metodológico: paradigma, enfoque y alcance"
+      },
+      {
+        "n": 9,
+        "titulo": "Devolución de la ACA 1 · población, muestra e instrumentos propuestos"
+      },
+      {
+        "n": 10,
+        "titulo": "Planeación, viabilidad e integración del anteproyecto"
+      },
+      {
+        "n": 11,
+        "titulo": "Integración y evaluación · coevaluación y autoevaluación"
+      }
+    ],
+    "entregables": [
+      {
+        "id": "quiz",
+        "code": "Quiz",
+        "tipo": "Cuestionario",
+        "peso": "25%",
+        "corte": 1,
+        "ancla_sesion": 2
+      },
+      {
+        "id": "aca1",
+        "code": "ACA 1",
+        "tipo": "Tarea",
+        "peso": "25%",
+        "corte": 2,
+        "ancla_sesion": 7
+      },
+      {
+        "id": "aca_final",
+        "code": "ACA FINAL",
+        "tipo": "Tarea",
+        "peso": "42%",
+        "corte": 3,
+        "ancla_sesion": 10
+      },
+      {
+        "id": "auto",
+        "code": "Autoevaluación",
+        "tipo": "Cuestionario",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 11
+      },
+      {
+        "id": "coev",
+        "code": "Coevaluación",
+        "tipo": "Foro",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 11
+      }
+    ]
+  },
+  "investigacion": {
+    "titulo": "INVESTIGACIÓN, CIENCIA Y TECNOLOGÍA",
+    "carpeta": "Pregrado/Investigacion en ciencia y tecnologia",
+    "n_sesiones": 6,
+    "sesiones": [
+      {
+        "n": 1,
+        "titulo": "Presentación del curso · docente · estudiantes · ACAs"
+      },
+      {
+        "n": 2,
+        "titulo": "MinCiencias · 6 líneas de Ingeniería · elección de línea"
+      },
+      {
+        "n": 3,
+        "titulo": "Prueba parcial · 1.er avance del artículo"
+      },
+      {
+        "n": 4,
+        "titulo": "Problema y pregunta · bases de datos y gestores de citas"
+      },
+      {
+        "n": 5,
+        "titulo": "Planteamiento del problema · marco teórico y revisión de literatura"
+      },
+      {
+        "n": 6,
+        "titulo": "Socialización del artículo y cierre del curso"
+      }
+    ],
+    "entregables": [
+      {
+        "id": "quiz1",
+        "code": "Quiz 1",
+        "tipo": "Cuestionario",
+        "peso": "6%",
+        "corte": 1,
+        "ancla_sesion": 2
+      },
+      {
+        "id": "parcial1",
+        "code": "Parcial 1",
+        "tipo": "Cuestionario",
+        "peso": "24%",
+        "corte": 1,
+        "ancla_sesion": 3
+      },
+      {
+        "id": "quiz2",
+        "code": "Quiz 2",
+        "tipo": "Cuestionario",
+        "peso": "9%",
+        "corte": 2,
+        "ancla_sesion": 4
+      },
+      {
+        "id": "parcial2",
+        "code": "Parcial 2",
+        "tipo": "Cuestionario",
+        "peso": "21%",
+        "corte": 2,
+        "ancla_sesion": 5
+      },
+      {
+        "id": "aca_final",
+        "code": "ACA Final",
+        "tipo": "Tarea",
+        "peso": "32,8%",
+        "corte": 3,
+        "ancla_sesion": 5
+      },
+      {
+        "id": "quiz3",
+        "code": "Quiz 3",
+        "tipo": "Cuestionario",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 5
+      },
+      {
+        "id": "auto",
+        "code": "Autoevaluación",
+        "tipo": "Cuestionario",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 6
+      },
+      {
+        "id": "coev",
+        "code": "Coevaluación",
+        "tipo": "Foro",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 6
+      }
+    ]
+  },
+  "creatividad": {
+    "titulo": "CREATIVIDAD Y PENSAMIENTO INNOVADOR",
+    "carpeta": "Pregrado/Creatividad y pensamiento innovador",
+    "n_sesiones": 7,
+    "sesiones": [
+      {
+        "n": 1,
+        "titulo": "Presentación del curso · docente · estudiantes · ACAs"
+      },
+      {
+        "n": 2,
+        "titulo": "Creatividad/innovación en I+D · Design Thinking y técnicas"
+      },
+      {
+        "n": 3,
+        "titulo": "Gestión de la innovación (Manual de Oslo / OCDE)"
+      },
+      {
+        "n": 4,
+        "titulo": "Tipos de innovación"
+      },
+      {
+        "n": 5,
+        "titulo": "Validación de la propuesta · vigilancia tecnológica"
+      },
+      {
+        "n": 6,
+        "titulo": "Innovación local–internacional · entidades de apoyo"
+      },
+      {
+        "n": 7,
+        "titulo": "Taller de consolidación y sustentación de la propuesta"
+      }
+    ],
+    "entregables": [
+      {
+        "id": "quiz1",
+        "code": "Quiz 1",
+        "tipo": "Cuestionario",
+        "peso": "6%",
+        "corte": 1,
+        "ancla_sesion": 2
+      },
+      {
+        "id": "parcial1",
+        "code": "Parcial 1",
+        "tipo": "Cuestionario",
+        "peso": "24%",
+        "corte": 1,
+        "ancla_sesion": 3
+      },
+      {
+        "id": "quiz2",
+        "code": "Quiz 2",
+        "tipo": "Cuestionario",
+        "peso": "9%",
+        "corte": 2,
+        "ancla_sesion": 4
+      },
+      {
+        "id": "parcial2",
+        "code": "Parcial 2",
+        "tipo": "Cuestionario",
+        "peso": "21%",
+        "corte": 2,
+        "ancla_sesion": 5
+      },
+      {
+        "id": "aca_final",
+        "code": "ACA Final",
+        "tipo": "Tarea",
+        "peso": "32,8%",
+        "corte": 3,
+        "ancla_sesion": 6
+      },
+      {
+        "id": "quiz3",
+        "code": "Quiz 3",
+        "tipo": "Cuestionario",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 6
+      },
+      {
+        "id": "auto",
+        "code": "Autoevaluación",
+        "tipo": "Cuestionario",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 7
+      },
+      {
+        "id": "coev",
+        "code": "Coevaluación",
+        "tipo": "Foro",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 7
+      }
+    ]
+  },
+  "tg2": {
+    "titulo": "TRABAJO DE GRADO 2",
+    "carpeta": "Pregrado/Trabajo de grado 2",
+    "n_sesiones": 11,
+    "sesiones": [
+      {
+        "n": 1,
+        "titulo": "Presentación del curso · docente · estudiantes · ACAs"
+      },
+      {
+        "n": 2,
+        "titulo": "Pregunta, objetivos y título provisional"
+      },
+      {
+        "n": 3,
+        "titulo": "Estructura del documento de avance"
+      },
+      {
+        "n": 4,
+        "titulo": "Antecedentes y referentes (Fase I)"
+      },
+      {
+        "n": 5,
+        "titulo": "Marco teórico — avance"
+      },
+      {
+        "n": 6,
+        "titulo": "Marco conceptual y contextual"
+      },
+      {
+        "n": 7,
+        "titulo": "Diseño metodológico (propuesto)"
+      },
+      {
+        "n": 8,
+        "titulo": "Instrumentos y plan de análisis (propuestos)"
+      },
+      {
+        "n": 9,
+        "titulo": "Integración del avance · correcciones"
+      },
+      {
+        "n": 10,
+        "titulo": "Socialización de avances"
+      },
+      {
+        "n": 11,
+        "titulo": "Cierre del avance · preparación para TG3"
+      }
+    ],
+    "entregables": [
+      {
+        "id": "quiz1",
+        "code": "Quiz 1",
+        "tipo": "Cuestionario",
+        "peso": "6%",
+        "corte": 1,
+        "ancla_sesion": 3
+      },
+      {
+        "id": "parcial1",
+        "code": "Parcial 1",
+        "tipo": "Cuestionario",
+        "peso": "24%",
+        "corte": 1,
+        "ancla_sesion": 5
+      },
+      {
+        "id": "quiz2",
+        "code": "Quiz 2",
+        "tipo": "Cuestionario",
+        "peso": "9%",
+        "corte": 2,
+        "ancla_sesion": 7
+      },
+      {
+        "id": "parcial2",
+        "code": "Parcial 2",
+        "tipo": "Cuestionario",
+        "peso": "21%",
+        "corte": 2,
+        "ancla_sesion": 8
+      },
+      {
+        "id": "quiz3",
+        "code": "Quiz 3",
+        "tipo": "Cuestionario",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 10
+      },
+      {
+        "id": "aca_final",
+        "code": "ACA Final",
+        "tipo": "Tarea",
+        "peso": "32,8%",
+        "corte": 3,
+        "ancla_sesion": 11
+      },
+      {
+        "id": "auto",
+        "code": "Autoevaluación",
+        "tipo": "Cuestionario",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 11
+      },
+      {
+        "id": "coev",
+        "code": "Coevaluación",
+        "tipo": "Foro",
+        "peso": "1,6%",
+        "corte": 3,
+        "ancla_sesion": 11
+      }
+    ]
+  },
+  "tg3": {
+    "titulo": "TRABAJO DE GRADO 3",
+    "carpeta": "Pregrado/Trabajo de grado 3",
+    "n_sesiones": 15,
+    "sesiones": [
+      {
+        "n": 1,
+        "titulo": "Presentación del curso · docente · estudiantes · ACAs"
+      },
+      {
+        "n": 2,
+        "titulo": "Formulación de pregunta, objetivos y título"
+      },
+      {
+        "n": 3,
+        "titulo": "Estructura del documento · taller de introducción"
+      },
+      {
+        "n": 4,
+        "titulo": "Fase I de referentes de investigación"
+      },
+      {
+        "n": 5,
+        "titulo": "Diseño de instrumento · desarrollo metodológico"
+      },
+      {
+        "n": 6,
+        "titulo": "Comunidades de práctica y co-creación"
+      },
+      {
+        "n": 7,
+        "titulo": "Experiencia creativa · análisis de datos"
+      },
+      {
+        "n": 8,
+        "titulo": "Fase III de referentes · cierre del marco teórico"
+      },
+      {
+        "n": 9,
+        "titulo": "Resultados, discusión y relación con referentes"
+      },
+      {
+        "n": 10,
+        "titulo": "Resumen, palabras clave UNESCO, conclusiones y referencias"
+      },
+      {
+        "n": 11,
+        "titulo": "Póster · evidencias · verificación antiplagio"
+      },
+      {
+        "n": 12,
+        "titulo": "Sustentación ante jurados"
+      },
+      {
+        "n": 13,
+        "titulo": "Entregables para repositorio institucional"
+      },
+      {
+        "n": 14,
+        "titulo": "Ajustes finales · seguimiento post-sustentación"
+      },
+      {
+        "n": 15,
+        "titulo": "Cierre administrativo · recepción de entregables"
+      }
+    ],
+    "entregables": [
+      {
+        "id": "quiz1",
+        "code": "Quiz 1",
+        "tipo": "Cuestionario",
+        "peso": "6%",
+        "corte": 1,
+        "ancla_sesion": 3
+      },
+      {
+        "id": "parcial1",
+        "code": "Parcial 1",
+        "tipo": "Cuestionario",
+        "peso": "24%",
+        "corte": 1,
+        "ancla_sesion": 6
+      },
+      {
+        "id": "quiz2",
+        "code": "Quiz 2",
+        "tipo": "Cuestionario",
+        "peso": "9%",
+        "corte": 2,
+        "ancla_sesion": 8
+      },
+      {
+        "id": "parcial2",
+        "code": "Parcial 2",
+        "tipo": "Cuestionario",
+        "peso": "21%",
+        "corte": 2,
+        "ancla_sesion": 10
+      },
+      {
+        "id": "quiz3",
+        "code": "Quiz 3",
+        "tipo": "Cuestionario",
+        "peso": "4%",
+        "corte": 3,
+        "ancla_sesion": 12
+      },
+      {
+        "id": "aca_final",
+        "code": "ACA Final",
+        "tipo": "Tarea",
+        "peso": "32%",
+        "corte": 3,
+        "ancla_sesion": 13
+      },
+      {
+        "id": "auto",
+        "code": "Autoevaluación",
+        "tipo": "Cuestionario",
+        "peso": "2%",
+        "corte": 3,
+        "ancla_sesion": 14
+      },
+      {
+        "id": "coev",
+        "code": "Coevaluación",
+        "tipo": "Foro",
+        "peso": "2%",
+        "corte": 3,
+        "ancla_sesion": 14
+      }
+    ]
+  }
+}
