@@ -31,16 +31,48 @@
   {
     "type": "table",
     "title": "Cómo se traduce cada comentario de la retroalimentación",
-    "headers": ["Si el comentario dice…", "Significa que…", "Lo que hay que hacer"],
-    "rows": [
-      ["“Delimite el actor”", "El texto habla de un grupo demasiado amplio", "Nombrar el grupo concreto: qué curso, qué área, qué turno"],
-      ["“Este objetivo no responde la pregunta”", "Hay un escalón que sobra o que apunta a otro lado", "Reescribir el específico o ajustar la pregunta, no ambos a la vez"],
-      ["“Justificación sin argumento”", "Se apoya en gusto personal o en frases genéricas", "Reemplazar por vacío + beneficiario + línea del programa"],
-      ["“Esto exige trabajo de campo”", "El objetivo o el alcance prometen aplicar instrumentos", "Bajarlo a diseño y proponer la ruta de validación para Proyecto II"],
-      ["“Falta fuente”", "Hay una afirmación prestada sin autor", "Citar en APA 7 o borrar la afirmación"],
-      ["“Alcance y limitación mezclados”", "Están en el mismo párrafo", "Partirlos en dos listas, cada una con su título"]
+    "headers": [
+      "Si el comentario dice…",
+      "Significa que…",
+      "Lo que hay que hacer"
     ],
-    "col_w": [3.0, 3.4, 4.6],
+    "rows": [
+      [
+        "“Delimite el actor”",
+        "El texto habla de un grupo demasiado amplio",
+        "Nombrar el grupo concreto: qué curso, qué área, qué turno"
+      ],
+      [
+        "“Este objetivo no responde la pregunta”",
+        "Hay un escalón que sobra o que apunta a otro lado",
+        "Reescribir el específico o ajustar la pregunta, no ambos a la vez"
+      ],
+      [
+        "“Justificación sin argumento”",
+        "Se apoya en gusto personal o en frases genéricas",
+        "Reemplazar por vacío + beneficiario + línea del programa"
+      ],
+      [
+        "“Esto exige trabajo de campo”",
+        "El objetivo o el alcance prometen aplicar instrumentos",
+        "Bajarlo a diseño y proponer la ruta de validación para Proyecto II"
+      ],
+      [
+        "“Falta fuente”",
+        "Hay una afirmación prestada sin autor",
+        "Citar en APA 7 o borrar la afirmación"
+      ],
+      [
+        "“Alcance y limitación mezclados”",
+        "Están en el mismo párrafo",
+        "Partirlos en dos listas, cada una con su título"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      3.4,
+      4.6
+    ],
     "note": "Marquen en el documento cada corrección aplicada: en la tutoría se revisan justamente esas."
   },
   {
@@ -61,32 +93,100 @@
   {
     "type": "table",
     "title": "¿Es antecedente o no lo es?",
-    "headers": ["Fuente", "¿Antecedente?", "Por qué"],
-    "rows": [
-      ["Artículo de revista arbitrada con método y resultados", "**Sí**", "Es investigación verificable y citable"],
-      ["Tesis o trabajo de grado de posgrado", "**Sí**", "Tiene estructura investigativa completa"],
-      ["Ponencia en memorias de congreso académico", "**Sí, con cuidado**", "Verifique que reporte método y hallazgos, no solo la idea"],
-      ["Informe técnico de entidad pública o gremio", "**A veces**", "Sirve si documenta metodología; si no, es dato de contexto"],
-      ["Noticia de prensa sobre IA", "**No**", "Reporta un hecho; no investiga un fenómeno"],
-      ["Entrada de blog o publicación en redes", "**No**", "Sin método, sin revisión, sin trazabilidad"],
-      ["Página comercial de un proveedor", "**No**", "Es publicidad: sus “resultados” no son verificables"],
-      ["Wikipedia o un diccionario", "**No**", "Sirve para orientarse, nunca para citar como antecedente"]
+    "headers": [
+      "Fuente",
+      "¿Antecedente?",
+      "Por qué"
     ],
-    "col_w": [4.0, 2.0, 4.5],
+    "rows": [
+      [
+        "Artículo de revista arbitrada con método y resultados",
+        "**Sí**",
+        "Es investigación verificable y citable"
+      ],
+      [
+        "Tesis o trabajo de grado de posgrado",
+        "**Sí**",
+        "Tiene estructura investigativa completa"
+      ],
+      [
+        "Ponencia en memorias de congreso académico",
+        "**Sí, con cuidado**",
+        "Verifique que reporte método y hallazgos, no solo la idea"
+      ],
+      [
+        "Informe técnico de entidad pública o gremio",
+        "**A veces**",
+        "Sirve si documenta metodología; si no, es dato de contexto"
+      ],
+      [
+        "Noticia de prensa sobre IA",
+        "**No**",
+        "Reporta un hecho; no investiga un fenómeno"
+      ],
+      [
+        "Entrada de blog o publicación en redes",
+        "**No**",
+        "Sin método, sin revisión, sin trazabilidad"
+      ],
+      [
+        "Página comercial de un proveedor",
+        "**No**",
+        "Es publicidad: sus “resultados” no son verificables"
+      ],
+      [
+        "Wikipedia o un diccionario",
+        "**No**",
+        "Sirve para orientarse, nunca para citar como antecedente"
+      ]
+    ],
+    "col_w": [
+      4.0,
+      2.0,
+      4.5
+    ],
     "note": "Duda razonable: si no puede decir **qué método usaron**, no es antecedente."
   },
   {
     "type": "table",
     "title": "Antecedente vs. marco teórico (la confusión número uno)",
-    "headers": ["", "Antecedentes (hoy)", "Marco teórico (próxima sesión)"],
-    "rows": [
-      ["**Qué reúne**", "Estudios previos", "Teorías, modelos y constructos"],
-      ["**Pregunta que responde**", "¿Qué se ha **investigado** sobre esto?", "¿Con qué **lentes** se explica esto?"],
-      ["**Unidad mínima**", "Un estudio con autor, año, método y hallazgo", "Un concepto con su definición y su autor"],
-      ["**Cómo se organiza**", "Por fenómeno, por contexto o por cronología", "Por concepto, de lo general a lo específico"],
-      ["**Qué aporta**", "Muestra el vacío que su pregunta viene a ocupar", "Da el vocabulario con el que va a mirar el fenómeno"]
+    "headers": [
+      "",
+      "Antecedentes (hoy)",
+      "Marco teórico (próxima sesión)"
     ],
-    "col_w": [2.4, 3.9, 3.9],
+    "rows": [
+      [
+        "**Qué reúne**",
+        "Estudios previos",
+        "Teorías, modelos y constructos"
+      ],
+      [
+        "**Pregunta que responde**",
+        "¿Qué se ha **investigado** sobre esto?",
+        "¿Con qué **lentes** se explica esto?"
+      ],
+      [
+        "**Unidad mínima**",
+        "Un estudio con autor, año, método y hallazgo",
+        "Un concepto con su definición y su autor"
+      ],
+      [
+        "**Cómo se organiza**",
+        "Por fenómeno, por contexto o por cronología",
+        "Por concepto, de lo general a lo específico"
+      ],
+      [
+        "**Qué aporta**",
+        "Muestra el vacío que su pregunta viene a ocupar",
+        "Da el vocabulario con el que va a mirar el fenómeno"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      3.9,
+      3.9
+    ],
     "note": "Un mismo autor puede aparecer en ambos, con **función distinta**: como estudio comparable aquí, como definidor de un constructo allá. Hoy: solo estudios."
   },
   {
@@ -120,15 +220,43 @@
   {
     "type": "table",
     "title": "La ficha de antecedente: cinco casillas, ni una más",
-    "headers": ["Casilla", "Qué se escribe", "Extensión"],
-    "rows": [
-      ["**1. Autor y año**", "Apellidos y año, más el DOI o el enlace estable", "Una línea"],
-      ["**2. Objetivo del estudio**", "Qué se propusieron los autores, redactado por usted", "Una o dos líneas"],
-      ["**3. Método**", "Enfoque, población y técnica que usaron", "Dos líneas"],
-      ["**4. Hallazgo clave**", "El resultado principal, no todos los resultados", "Dos líneas"],
-      ["**5. Vínculo con mi pregunta**", "“Esto le aporta a mi pregunta porque…”", "Dos o tres líneas"]
+    "headers": [
+      "Casilla",
+      "Qué se escribe",
+      "Extensión"
     ],
-    "col_w": [2.4, 5.8, 1.8],
+    "rows": [
+      [
+        "**1. Autor y año**",
+        "Apellidos y año, más el DOI o el enlace estable",
+        "Una línea"
+      ],
+      [
+        "**2. Objetivo del estudio**",
+        "Qué se propusieron los autores, redactado por usted",
+        "Una o dos líneas"
+      ],
+      [
+        "**3. Método**",
+        "Enfoque, población y técnica que usaron",
+        "Dos líneas"
+      ],
+      [
+        "**4. Hallazgo clave**",
+        "El resultado principal, no todos los resultados",
+        "Dos líneas"
+      ],
+      [
+        "**5. Vínculo con mi pregunta**",
+        "“Esto le aporta a mi pregunta porque…”",
+        "Dos o tres líneas"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      5.8,
+      1.8
+    ],
     "note": "La casilla 5 es la que distingue una revisión de una lista de enlaces. **Es obligatoria** y se redacta de su puño y letra."
   },
   {
@@ -149,10 +277,22 @@
     "type": "boxes",
     "title": "Errores frecuentes con los antecedentes",
     "boxes": [
-      ["advertencia", "**Traer una noticia o un blog.** Si el texto no reporta método ni resultados, no es antecedente. Vuelva a Scholar o SciELO y busque un estudio; una nota de prensa a lo sumo sirve como dato de contexto, citada como tal."],
-      ["advertencia", "**Listar estudios sin decir qué aportan.** Una ficha sin la frase “esto le sirve a mi pregunta porque…” es decoración. Si no logra escribir esa frase, ese estudio no va en su documento."],
-      ["aclaracion", "**Copiar el resumen del artículo tal cual.** Resuma con sus palabras propósito, método y hallazgo. El copiar y pegar dispara el índice de similitud del documento y compromete la entrega."],
-      ["info", "**Solo fuentes internacionales, o solo nacionales.** El programa pide equilibrio entre unas y otras. SciELO y Redalyc son la mejor ruta para la parte latinoamericana y colombiana."]
+      [
+        "advertencia",
+        "**Traer una noticia o un blog.** Si el texto no reporta método ni resultados, no es antecedente. Vuelva a Scholar o SciELO y busque un estudio; una nota de prensa a lo sumo sirve como dato de contexto, citada como tal."
+      ],
+      [
+        "advertencia",
+        "**Listar estudios sin decir qué aportan.** Una ficha sin la frase “esto le sirve a mi pregunta porque…” es decoración. Si no logra escribir esa frase, ese estudio no va en su documento."
+      ],
+      [
+        "aclaracion",
+        "**Copiar el resumen del artículo tal cual.** Resuma con sus palabras propósito, método y hallazgo. El copiar y pegar dispara el índice de similitud del documento y compromete la entrega."
+      ],
+      [
+        "info",
+        "**Solo fuentes internacionales, o solo nacionales.** El programa pide equilibrio entre unas y otras. SciELO y Redalyc son la mejor ruta para la parte latinoamericana y colombiana."
+      ]
     ]
   },
   {
@@ -171,35 +311,63 @@
     "note": "Alternativa integrada: en Google Docs, menú **Herramientas → Citas**, con estilo APA. No se requiere ningún programa de escritorio."
   },
   {
-    "type": "bullets",
-    "title": "TALLER (20 minutos) — búsqueda y fichaje",
-    "bullets": [
-      "**Consigna literal:** 20 minutos de búsqueda y fichaje en el documento del equipo.",
-      "  **(1)** Localicen **al menos dos antecedentes** nuevos en Google Scholar, SciELO o Redalyc.",
-      "  **(2)** Al menos uno debe ser **latinoamericano o colombiano**.",
-      "  **(3)** Llenen la ficha de cinco casillas de cada uno, con la casilla 5 redactada por ustedes.",
-      "  **(4)** Generen las dos referencias en APA 7 con ZoteroBib y péguenlas al final del documento.",
-      "El Docente pasa resolviendo dudas de términos de búsqueda y de vínculo con la pregunta.",
-      "**Criterio de éxito (verificable):** al leer cada ficha queda claro **qué método usó el estudio** y **por qué le sirve a esta pregunta**.",
-      "  Van rumbo a seis: dos hoy, el resto en trabajo autónomo."
-    ],
-    "note": "Si en 20 minutos consiguen solo un antecedente bien fichado, eso vale más que cinco enlaces pegados sin leer."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de subir el avance",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
-    "rows": [
-      ["Cada fuente es un estudio", "Puedo nombrar el método que usaron", "[  ]"],
-      ["Ninguna es noticia, blog o publicidad", "Reviso el tipo de fuente una por una", "[  ]"],
-      ["Hay equilibrio nacional e internacional", "Cuento cuántas son de la región y cuántas de fuera", "[  ]"],
-      ["Las fichas tienen las cinco casillas", "Ninguna se queda sin método ni sin hallazgo", "[  ]"],
-      ["La casilla 5 está redactada por mí", "Contiene la frase “le aporta a mi pregunta porque…”", "[  ]"],
-      ["No hay párrafos copiados", "Todo está parafraseado con mis palabras", "[  ]"],
-      ["Las referencias están en APA 7", "Revisé a mano la salida de ZoteroBib", "[  ]"],
-      ["Apliqué las correcciones recibidas", "Cada comentario tiene un cambio visible en el documento", "[  ]"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "Listo"
     ],
-    "col_w": [3.0, 5.6, 0.8],
+    "rows": [
+      [
+        "Cada fuente es un estudio",
+        "Puedo nombrar el método que usaron",
+        "[  ]"
+      ],
+      [
+        "Ninguna es noticia, blog o publicidad",
+        "Reviso el tipo de fuente una por una",
+        "[  ]"
+      ],
+      [
+        "Hay equilibrio nacional e internacional",
+        "Cuento cuántas son de la región y cuántas de fuera",
+        "[  ]"
+      ],
+      [
+        "Las fichas tienen las cinco casillas",
+        "Ninguna se queda sin método ni sin hallazgo",
+        "[  ]"
+      ],
+      [
+        "La casilla 5 está redactada por mí",
+        "Contiene la frase “le aporta a mi pregunta porque…”",
+        "[  ]"
+      ],
+      [
+        "No hay párrafos copiados",
+        "Todo está parafraseado con mis palabras",
+        "[  ]"
+      ],
+      [
+        "Las referencias están en APA 7",
+        "Revisé a mano la salida de ZoteroBib",
+        "[  ]"
+      ],
+      [
+        "Apliqué las correcciones recibidas",
+        "Cada comentario tiene un cambio visible en el documento",
+        "[  ]"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      5.6,
+      0.8
+    ],
     "note": "La última casilla es la que más pesa: la siguiente entrega se construye encima de la anterior."
   },
   {
@@ -215,6 +383,6 @@
       "Para la próxima sesión traigan subrayados los **tres conceptos** que su pregunta obliga a definir.",
       "  Son la semilla del marco teórico: pasamos de “qué se investigó” a “con qué lentes se explica”."
     ],
-    "note": "Las tutorías por equipo se acuerdan con el Docente durante la semana. [URL CDigital — campus del curso pendiente]"
+    "note": "Las tutorías por equipo se acuerdan con el Docente durante la semana. {{CDIGITAL}}"
   }
 ]

@@ -32,33 +32,110 @@
   {
     "type": "table",
     "title": "Ejemplo modelado de cronograma por fases hacia Proyecto II",
-    "headers": ["Fase", "Actividad", "Producto verificable", "Duración estimada"],
+    "headers": [
+      "Fase",
+      "Actividad",
+      "Producto verificable",
+      "Duración estimada"
+    ],
     "rows": [
-      ["**1. Gestión de acceso**", "Solicitar aval institucional y firma de confidencialidad", "Carta de aval radicada y respondida", "3 semanas"],
-      ["**2. Validación**", "Someter el instrumento a juicio de 3 expertos", "Formatos de validación diligenciados", "2 semanas"],
-      ["**3. Ajuste**", "Corregir ítems según observaciones y hacer prueba piloto", "Instrumento versión 2 + informe de piloto", "2 semanas"],
-      ["**4. Recolección**", "Aplicar el instrumento a la muestra definida", "Base de datos anonimizada", "4 semanas"],
-      ["**5. Análisis**", "Procesar datos y codificar respuestas abiertas", "Tablas de resultados y matriz de categorías", "3 semanas"],
-      ["**6. Redacción**", "Escribir resultados, discusión y conclusiones", "Capítulos finales del informe", "3 semanas"],
-      ["**7. Sustentación**", "Preparar y presentar el trabajo final", "Documento y presentación aprobados", "2 semanas"]
+      [
+        "**1. Gestión de acceso**",
+        "Solicitar aval institucional y firma de confidencialidad",
+        "Carta de aval radicada y respondida",
+        "3 semanas"
+      ],
+      [
+        "**2. Validación**",
+        "Someter el instrumento a juicio de 3 expertos",
+        "Formatos de validación diligenciados",
+        "2 semanas"
+      ],
+      [
+        "**3. Ajuste**",
+        "Corregir ítems según observaciones y hacer prueba piloto",
+        "Instrumento versión 2 + informe de piloto",
+        "2 semanas"
+      ],
+      [
+        "**4. Recolección**",
+        "Aplicar el instrumento a la muestra definida",
+        "Base de datos anonimizada",
+        "4 semanas"
+      ],
+      [
+        "**5. Análisis**",
+        "Procesar datos y codificar respuestas abiertas",
+        "Tablas de resultados y matriz de categorías",
+        "3 semanas"
+      ],
+      [
+        "**6. Redacción**",
+        "Escribir resultados, discusión y conclusiones",
+        "Capítulos finales del informe",
+        "3 semanas"
+      ],
+      [
+        "**7. Sustentación**",
+        "Preparar y presentar el trabajo final",
+        "Documento y presentación aprobados",
+        "2 semanas"
+      ]
     ],
     "note": "Observe la **fase 1**: pedir permiso toma semanas y casi nadie la incluye. Un cronograma que arranca directo en \"recolectar\" ya es irreal.",
-    "col_w": [2.4, 3.8, 3.4, 2.4]
+    "col_w": [
+      2.4,
+      3.8,
+      3.4,
+      2.4
+    ]
   },
   {
     "type": "table",
     "title": "Recursos y presupuesto: los rubros que sí se piden",
-    "headers": ["Rubro", "Qué incluye", "Nota para este proyecto"],
+    "headers": [
+      "Rubro",
+      "Qué incluye",
+      "Nota para este proyecto"
+    ],
     "rows": [
-      ["**Talento humano**", "Horas del equipo investigador y asesorías", "Se valoriza aunque no haya pago: hora × cantidad"],
-      ["**Equipos**", "Computadores, conectividad, capacidad de cómputo", "Declare si necesita GPU o servicio en la nube"],
-      ["**Software**", "Herramientas de análisis y almacenamiento", "En este curso casi todo es **gratuito y en la nube**"],
-      ["**Transporte y logística**", "Desplazamientos a la entidad, refrigerios de grupo focal", "Cero si el trabajo es remoto: **declárelo**"],
-      ["**Papelería y reproducción**", "Impresión de consentimientos y formatos", "Bajo, pero existe si hay firmas físicas"],
-      ["**Imprevistos**", "Reserva para lo que no se anticipó", "Se estima entre **5 % y 10 %** del total"]
+      [
+        "**Talento humano**",
+        "Horas del equipo investigador y asesorías",
+        "Se valoriza aunque no haya pago: hora × cantidad"
+      ],
+      [
+        "**Equipos**",
+        "Computadores, conectividad, capacidad de cómputo",
+        "Declare si necesita GPU o servicio en la nube"
+      ],
+      [
+        "**Software**",
+        "Herramientas de análisis y almacenamiento",
+        "En este curso casi todo es **gratuito y en la nube**"
+      ],
+      [
+        "**Transporte y logística**",
+        "Desplazamientos a la entidad, refrigerios de grupo focal",
+        "Cero si el trabajo es remoto: **declárelo**"
+      ],
+      [
+        "**Papelería y reproducción**",
+        "Impresión de consentimientos y formatos",
+        "Bajo, pero existe si hay firmas físicas"
+      ],
+      [
+        "**Imprevistos**",
+        "Reserva para lo que no se anticipó",
+        "Se estima entre **5 % y 10 %** del total"
+      ]
     ],
     "note": "Un presupuesto de **cero pesos** es válido si está **justificado**: \"todas las herramientas propuestas son gratuitas y de acceso web\". Lo que no se acepta es dejar la sección vacía.",
-    "col_w": [2.6, 4.4, 5.0]
+    "col_w": [
+      2.6,
+      4.4,
+      5.0
+    ]
   },
   {
     "type": "bullets",
@@ -78,17 +155,49 @@
   {
     "type": "table",
     "title": "Viable o deseo: enunciados reales y cómo se arreglan",
-    "headers": ["Lo que dice el anteproyecto", "Veredicto", "Cómo se arregla"],
+    "headers": [
+      "Lo que dice el anteproyecto",
+      "Veredicto",
+      "Cómo se arregla"
+    ],
     "rows": [
-      ["\"Se encuestará a 500 ciudadanos en una semana\"", "**Deseo**", "Reducir a una muestra justificada y ampliar el plazo"],
-      ["\"Se analizará la base de datos de la entidad\"", "**Deseo**, si no hay aval", "Añadir la fase de solicitud de aval y un plan B con datos abiertos"],
-      ["\"Se entrevistará a 10 funcionarios en 3 semanas\"", "**Viable**", "Confirmar disponibilidad de agenda y dejar margen"],
-      ["\"Se entrenará un modelo con datos de historias clínicas\"", "**Deseo**, sin comité de ética", "Prever aval, anonimización o usar un dataset público"],
-      ["\"Se usarán herramientas gratuitas en la nube\"", "**Viable**", "Nombrar cuáles y verificar límites de la versión gratuita"],
-      ["\"El equipo dedicará 20 horas semanales cada uno\"", "**Deseo**, en un posgrado", "Ajustar a horas reales y redistribuir tareas"]
+      [
+        "\"Se encuestará a 500 ciudadanos en una semana\"",
+        "**Deseo**",
+        "Reducir a una muestra justificada y ampliar el plazo"
+      ],
+      [
+        "\"Se analizará la base de datos de la entidad\"",
+        "**Deseo**, si no hay aval",
+        "Añadir la fase de solicitud de aval y un plan B con datos abiertos"
+      ],
+      [
+        "\"Se entrevistará a 10 funcionarios en 3 semanas\"",
+        "**Viable**",
+        "Confirmar disponibilidad de agenda y dejar margen"
+      ],
+      [
+        "\"Se entrenará un modelo con datos de historias clínicas\"",
+        "**Deseo**, sin comité de ética",
+        "Prever aval, anonimización o usar un dataset público"
+      ],
+      [
+        "\"Se usarán herramientas gratuitas en la nube\"",
+        "**Viable**",
+        "Nombrar cuáles y verificar límites de la versión gratuita"
+      ],
+      [
+        "\"El equipo dedicará 20 horas semanales cada uno\"",
+        "**Deseo**, en un posgrado",
+        "Ajustar a horas reales y redistribuir tareas"
+      ]
     ],
     "note": "Cuando un jurado lee \"500 en una semana\", no piensa \"qué ambiciosos\": piensa **\"no calcularon\"**. La credibilidad del anteproyecto se juega aquí.",
-    "col_w": [4.4, 2.6, 5.0]
+    "col_w": [
+      4.4,
+      2.6,
+      5.0
+    ]
   },
   {
     "type": "bullets",
@@ -108,44 +217,150 @@
   {
     "type": "table",
     "title": "El hilo completo: sección por sección, con su pregunta de control",
-    "headers": ["Sección", "Pregunta de control", "Señal de alarma"],
+    "headers": [
+      "Sección",
+      "Pregunta de control",
+      "Señal de alarma"
+    ],
     "rows": [
-      ["**Problema**", "¿Se entiende qué está mal y a quién afecta?", "Es un tema general, no un problema situado"],
-      ["**Pregunta**", "¿Es una sola pregunta, delimitada y respondible?", "Hay dos preguntas distintas en el documento"],
-      ["**Objetivos**", "¿El general responde la pregunta y los específicos lo desglosan?", "Objetivos que ya no coinciden con el método"],
-      ["**Marco referencial**", "¿Sustenta los conceptos que el método va a medir?", "Teoría que nunca se vuelve a usar"],
-      ["**Método**", "¿El enfoque se deriva del verbo de la pregunta?", "Enfoque elegido \"porque sí\""],
-      ["**Instrumento propuesto**", "¿Cada bloque cuelga de un objetivo específico?", "Ítems sueltos sin objetivo"],
-      ["**Cronograma y viabilidad**", "¿Los tiempos alcanzan para lo que el método promete?", "No aparece la gestión de permisos"],
-      ["**Referencias**", "¿Cero citas y cero referencias huérfanas?", "Fuentes nuevas que no llegaron a la lista"]
+      [
+        "**Problema**",
+        "¿Se entiende qué está mal y a quién afecta?",
+        "Es un tema general, no un problema situado"
+      ],
+      [
+        "**Pregunta**",
+        "¿Es una sola pregunta, delimitada y respondible?",
+        "Hay dos preguntas distintas en el documento"
+      ],
+      [
+        "**Objetivos**",
+        "¿El general responde la pregunta y los específicos lo desglosan?",
+        "Objetivos que ya no coinciden con el método"
+      ],
+      [
+        "**Marco referencial**",
+        "¿Sustenta los conceptos que el método va a medir?",
+        "Teoría que nunca se vuelve a usar"
+      ],
+      [
+        "**Método**",
+        "¿El enfoque se deriva del verbo de la pregunta?",
+        "Enfoque elegido \"porque sí\""
+      ],
+      [
+        "**Instrumento propuesto**",
+        "¿Cada bloque cuelga de un objetivo específico?",
+        "Ítems sueltos sin objetivo"
+      ],
+      [
+        "**Cronograma y viabilidad**",
+        "¿Los tiempos alcanzan para lo que el método promete?",
+        "No aparece la gestión de permisos"
+      ],
+      [
+        "**Referencias**",
+        "¿Cero citas y cero referencias huérfanas?",
+        "Fuentes nuevas que no llegaron a la lista"
+      ]
     ],
     "note": "Este es el **hilo**: pregunta ↔ objetivos ↔ marco ↔ método ↔ instrumento ↔ cronograma. Cualquier eslabón que no conecte es un **gap** que hay que registrar.",
-    "col_w": [2.8, 4.6, 4.6]
+    "col_w": [
+      2.8,
+      4.6,
+      4.6
+    ]
   },
   {
     "type": "table",
     "title": "Ejemplo modelado: matriz de coherencia con gaps y responsables",
-    "headers": ["Sección", "¿Existe?", "¿Alineada con la pregunta?", "Gap detectado", "Responsable"],
+    "headers": [
+      "Sección",
+      "¿Existe?",
+      "¿Alineada con la pregunta?",
+      "Gap detectado",
+      "Responsable"
+    ],
     "rows": [
-      ["Planteamiento del problema", "Sí", "Sí", "—", "—"],
-      ["Objetivos específicos", "Sí", "**No (OE3)**", "OE3 habla de \"implementar\", pero el estudio solo propone", "Ana"],
-      ["Marco teórico", "Sí", "Parcial", "Falta la teoría que sustenta la categoría \"carga operativa\"", "Luis"],
-      ["Diseño metodológico", "Sí", "Sí", "—", "—"],
-      ["Instrumento propuesto", "Sí", "Parcial", "Los ítems 11 a 14 no cuelgan de ningún objetivo", "Ana"],
-      ["Cronograma", "**No**", "—", "Falta completo; incluir fase de aval institucional", "Camila"],
-      ["Referencias", "Sí", "Parcial", "3 referencias huérfanas y 2 citas sin referencia", "Luis"]
+      [
+        "Planteamiento del problema",
+        "Sí",
+        "Sí",
+        "—",
+        "—"
+      ],
+      [
+        "Objetivos específicos",
+        "Sí",
+        "**No (OE3)**",
+        "OE3 habla de \"implementar\", pero el estudio solo propone",
+        "Ana"
+      ],
+      [
+        "Marco teórico",
+        "Sí",
+        "Parcial",
+        "Falta la teoría que sustenta la categoría \"carga operativa\"",
+        "Luis"
+      ],
+      [
+        "Diseño metodológico",
+        "Sí",
+        "Sí",
+        "—",
+        "—"
+      ],
+      [
+        "Instrumento propuesto",
+        "Sí",
+        "Parcial",
+        "Los ítems 11 a 14 no cuelgan de ningún objetivo",
+        "Ana"
+      ],
+      [
+        "Cronograma",
+        "**No**",
+        "—",
+        "Falta completo; incluir fase de aval institucional",
+        "Camila"
+      ],
+      [
+        "Referencias",
+        "Sí",
+        "Parcial",
+        "3 referencias huérfanas y 2 citas sin referencia",
+        "Luis"
+      ]
     ],
     "note": "Un **gap** sin responsable no se cierra nunca. La columna de la derecha es la que convierte el diagnóstico en trabajo real.",
-    "col_w": [2.8, 1.4, 2.2, 3.8, 1.8]
+    "col_w": [
+      2.8,
+      1.4,
+      2.2,
+      3.8,
+      1.8
+    ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes en la integración final",
     "boxes": [
-      ["advertencia", "**Entregar un fragmento nuevo pegado al final.** El entregable de cierre es el **documento completo e integrado**, no el capítulo que faltaba enviado como anexo suelto."],
-      ["advertencia", "**No incorporar las correcciones anteriores.** El producto es **acumulativo**: si las observaciones de los avances previos siguen sin aplicarse, el documento no está integrado, está remendado."],
-      ["aclaracion", "**Objetivos que ya no cuadran con el método.** Es normal que el método evolucione. Lo que no es normal es dejar los objetivos viejos: si el método cambió, **realinee los objetivos**."],
-      ["info", "**Viabilidad de acceso sin declarar.** Si necesita permiso para llegar a esa población o a esos datos en Proyecto II, dígalo por escrito y ubíquelo en el cronograma. Callarlo no lo hace desaparecer."]
+      [
+        "advertencia",
+        "**Entregar un fragmento nuevo pegado al final.** El entregable de cierre es el **documento completo e integrado**, no el capítulo que faltaba enviado como anexo suelto."
+      ],
+      [
+        "advertencia",
+        "**No incorporar las correcciones anteriores.** El producto es **acumulativo**: si las observaciones de los avances previos siguen sin aplicarse, el documento no está integrado, está remendado."
+      ],
+      [
+        "aclaracion",
+        "**Objetivos que ya no cuadran con el método.** Es normal que el método evolucione. Lo que no es normal es dejar los objetivos viejos: si el método cambió, **realinee los objetivos**."
+      ],
+      [
+        "info",
+        "**Viabilidad de acceso sin declarar.** Si necesita permiso para llegar a esa población o a esos datos en Proyecto II, dígalo por escrito y ubíquelo en el cronograma. Callarlo no lo hace desaparecer."
+      ]
     ]
   },
   {
@@ -165,19 +380,7 @@
     "note": "Priorice por impacto: un objetivo desalineado pesa mucho más que un margen mal puesto. Arregle primero lo que rompe el hilo."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Matriz de coherencia y lista de gaps (20 minutos)",
-    "bullets": [
-      "**Consigna literal**, con el documento completo abierto en un solo archivo:",
-      "  **(a)** Cree en Google Docs una tabla con cinco columnas: **Sección | ¿Existe? | ¿Alineada con la pregunta? | Gap | Responsable**.",
-      "  **(b)** Use como filas las **ocho secciones** del hilo (problema, pregunta, objetivos, marco, método, instrumento, cronograma, referencias).",
-      "  **(c)** Marque cada casilla con evidencia: si dice \"sí\", debe poder señalar **en qué página** está.",
-      "  **(d)** Convierta cada casilla en rojo o parcial en un **gap con responsable** y ordénelos por impacto.",
-      "  **(e)** Termine el bosquejo del **cronograma** con las fases que le falten, empezando por la gestión de permisos.",
-      "**Criterio de éxito verificable:** **ningún gap queda sin responsable** y las ocho secciones tienen casilla marcada.",
-      "El Docente circula por los equipos; tenga la matriz en pantalla cuando llegue su turno.",
-      "**Entrega:** suba el archivo como `S10_IntegracionViabilidad_Apellidos` en [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

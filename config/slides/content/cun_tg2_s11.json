@@ -30,16 +30,52 @@
   {
     "type": "table",
     "title": "Checklist de cierre: ítem, verificación y evidencia",
-    "headers": ["Ítem", "Cómo se verifica", "Evidencia de que está listo"],
+    "headers": [
+      "Ítem",
+      "Cómo se verifica",
+      "Evidencia de que está listo"
+    ],
     "rows": [
-      ["Título coherente con el contenido", "Léalo y pregúntese si describe lo que el documento hace", "El título nombra el objeto, el propósito y el contexto"],
-      ["Pregunta y objetivos alineados", "Los objetivos, sumados, deben responder la pregunta", "Ningún objetivo sobra ni falta frente a la pregunta"],
-      ["Marco referencial completo", "Antecedentes + marco teórico + conceptual y contextual", "Cada constructo de los objetivos está definido en el marco"],
-      ["Metodología propuesta", "Enfoque, alcance, diseño y matriz pregunta–método", "La matriz tiene tantas filas como objetivos específicos"],
-      ["Instrumento y plan de análisis", "Operacionalización, ítems y qué se hará con cada dato", "Cada ítem se rastrea a un objetivo por la tabla"],
-      ["Referencias en APA 7", "Cruce la lista final contra las citas del cuerpo", "Cero citas huérfanas y cero referencias sin citar"],
-      ["Plantilla APA CUN aplicada", "Compare márgenes, interlineado, títulos y portada", "El documento se ve idéntico a la plantilla institucional"],
-      ["Redacción en propuesto", "Ctrl+F de 'se aplicó', 'se obtuvo', 'demostró'", "La búsqueda devuelve cero resultados"]
+      [
+        "Título coherente con el contenido",
+        "Léalo y pregúntese si describe lo que el documento hace",
+        "El título nombra el objeto, el propósito y el contexto"
+      ],
+      [
+        "Pregunta y objetivos alineados",
+        "Los objetivos, sumados, deben responder la pregunta",
+        "Ningún objetivo sobra ni falta frente a la pregunta"
+      ],
+      [
+        "Marco referencial completo",
+        "Antecedentes + marco teórico + conceptual y contextual",
+        "Cada constructo de los objetivos está definido en el marco"
+      ],
+      [
+        "Metodología propuesta",
+        "Enfoque, alcance, diseño y matriz pregunta–método",
+        "La matriz tiene tantas filas como objetivos específicos"
+      ],
+      [
+        "Instrumento y plan de análisis",
+        "Operacionalización, ítems y qué se hará con cada dato",
+        "Cada ítem se rastrea a un objetivo por la tabla"
+      ],
+      [
+        "Referencias en APA 7",
+        "Cruce la lista final contra las citas del cuerpo",
+        "Cero citas huérfanas y cero referencias sin citar"
+      ],
+      [
+        "Plantilla APA CUN aplicada",
+        "Compare márgenes, interlineado, títulos y portada",
+        "El documento se ve idéntico a la plantilla institucional"
+      ],
+      [
+        "Redacción en propuesto",
+        "Ctrl+F de 'se aplicó', 'se obtuvo', 'demostró'",
+        "La búsqueda devuelve cero resultados"
+      ]
     ],
     "note": "Lo que no pueda marcar como listo no se esconde: pasa tal cual a la lista de pendientes para TG3."
   },
@@ -60,14 +96,42 @@
   {
     "type": "table",
     "title": "Errores de APA 7 que más se repiten en los avances",
-    "headers": ["Como suele quedar", "Qué está mal", "Como debe quedar"],
+    "headers": [
+      "Como suele quedar",
+      "Qué está mal",
+      "Como debe quedar"
+    ],
     "rows": [
-      ["'Según (Pérez, 2022) la clasificación…'", "Cita narrativa con el apellido dentro del paréntesis", "'Según Pérez (2022), la clasificación…'"],
-      ["'…reduce el tiempo (Pérez).'", "Cita sin año", "'…reduce el tiempo (Pérez, 2022).'"],
-      ["Referencias en el orden en que se leyeron", "APA 7 exige orden alfabético por apellido", "Lista alfabética con sangría francesa"],
-      ["Enlace pegado como URL suelta", "Falta el formato de referencia completo", "Apellido, N. (Año). Título. Fuente. https://doi.org/…"],
-      ["Cita textual larga entre comillas y sin página", "Toda cita textual exige número de página o párrafo", "(Pérez, 2022, p. 45); si pasa de 40 palabras, va en bloque sin comillas"],
-      ["Autor citado en el texto y ausente en la lista", "Cita huérfana: el lector no puede rastrear la fuente", "Toda cita del cuerpo aparece en referencias"]
+      [
+        "'Según (Pérez, 2022) la clasificación…'",
+        "Cita narrativa con el apellido dentro del paréntesis",
+        "'Según Pérez (2022), la clasificación…'"
+      ],
+      [
+        "'…reduce el tiempo (Pérez).'",
+        "Cita sin año",
+        "'…reduce el tiempo (Pérez, 2022).'"
+      ],
+      [
+        "Referencias en el orden en que se leyeron",
+        "APA 7 exige orden alfabético por apellido",
+        "Lista alfabética con sangría francesa"
+      ],
+      [
+        "Enlace pegado como URL suelta",
+        "Falta el formato de referencia completo",
+        "Apellido, N. (Año). Título. Fuente. https://doi.org/…"
+      ],
+      [
+        "Cita textual larga entre comillas y sin página",
+        "Toda cita textual exige número de página o párrafo",
+        "(Pérez, 2022, p. 45); si pasa de 40 palabras, va en bloque sin comillas"
+      ],
+      [
+        "Autor citado en el texto y ausente en la lista",
+        "Cita huérfana: el lector no puede rastrear la fuente",
+        "Toda cita del cuerpo aparece en referencias"
+      ]
     ],
     "note": "Genere y corrija sus referencias en **ZoteroBib (zbib.org)**: gratis, en el navegador y sin instalar nada."
   },
@@ -102,15 +166,47 @@
   {
     "type": "table",
     "title": "Ejemplo modelado: pendientes para TG3 del caso 'mesa de ayuda'",
-    "headers": ["Acción (en imperativo)", "Por qué quedó pendiente", "Qué necesita para ejecutarla"],
+    "headers": [
+      "Acción (en imperativo)",
+      "Por qué quedó pendiente",
+      "Qué necesita para ejecutarla"
+    ],
     "rows": [
-      ["Solicitar autorización formal a la empresa", "En TG2 no hay trabajo de campo", "Carta institucional y contacto del jefe de soporte"],
-      ["Exportar el histórico de tickets del último semestre", "El dato existe pero no se ha extraído", "Acceso de consulta al sistema de mesa de ayuda"],
-      ["Aplicar la encuesta propuesta a los agentes", "El instrumento se diseñó, no se aplicó", "Instrumento validado y consentimiento informado"],
-      ["Etiquetar la muestra de tickets por categoría", "Requiere apoyo de agentes con experiencia", "Acuerdo de dos agentes y criterios de etiquetado"],
-      ["Analizar tiempos con el plan de análisis del S08", "No hay datos todavía", "Hoja de cálculo en Google Sheets con los datos recogidos"],
-      ["Redactar resultados, discusión y conclusiones", "Dependen del análisis", "Resultados del punto anterior"],
-      ["Preparar sustentación y alistar el documento para la revisión de similitud", "Corresponde al cierre de TG3", "Documento final e indicaciones del Docente de TG3"]
+      [
+        "Solicitar autorización formal a la empresa",
+        "En TG2 no hay trabajo de campo",
+        "Carta institucional y contacto del jefe de soporte"
+      ],
+      [
+        "Exportar el histórico de tickets del último semestre",
+        "El dato existe pero no se ha extraído",
+        "Acceso de consulta al sistema de mesa de ayuda"
+      ],
+      [
+        "Aplicar la encuesta propuesta a los agentes",
+        "El instrumento se diseñó, no se aplicó",
+        "Instrumento validado y consentimiento informado"
+      ],
+      [
+        "Etiquetar la muestra de tickets por categoría",
+        "Requiere apoyo de agentes con experiencia",
+        "Acuerdo de dos agentes y criterios de etiquetado"
+      ],
+      [
+        "Analizar tiempos con el plan de análisis del S08",
+        "No hay datos todavía",
+        "Hoja de cálculo en Google Sheets con los datos recogidos"
+      ],
+      [
+        "Redactar resultados, discusión y conclusiones",
+        "Dependen del análisis",
+        "Resultados del punto anterior"
+      ],
+      [
+        "Preparar sustentación y alistar el documento para la revisión de similitud",
+        "Corresponde al cierre de TG3",
+        "Documento final e indicaciones del Docente de TG3"
+      ]
     ],
     "note": "Fíjese que las dos primeras acciones son de gestión, no de escritura: son las que más demoran y las que casi nadie prevé."
   },
@@ -132,10 +228,22 @@
     "type": "boxes",
     "title": "Errores frecuentes en el cierre",
     "boxes": [
-      ["advertencia", "'Ya terminé el trabajo de grado.' No: terminó el **avance**. Lo que falta está en la lista de pendientes, y es la mitad del camino."],
-      ["advertencia", "'Escondo las secciones que quedaron a medias.' Esconderlas se paga el próximo semestre con intereses. Hágalas explícitas en los pendientes."],
-      ["aclaracion", "'El antiplagio lo veo en TG3.' El hábito se cierra hoy: parafraseo propio y citas completas. Revisar al final es demasiado tarde para reescribir."],
-      ["info", "Entregar sin la Plantilla APA CUN aplicada no es un descuido menor: el formato institucional es parte de lo que se evalúa en el avance."]
+      [
+        "advertencia",
+        "'Ya terminé el trabajo de grado.' No: terminó el **avance**. Lo que falta está en la lista de pendientes, y es la mitad del camino."
+      ],
+      [
+        "advertencia",
+        "'Escondo las secciones que quedaron a medias.' Esconderlas se paga el próximo semestre con intereses. Hágalas explícitas en los pendientes."
+      ],
+      [
+        "aclaracion",
+        "'El antiplagio lo veo en TG3.' El hábito se cierra hoy: parafraseo propio y citas completas. Revisar al final es demasiado tarde para reescribir."
+      ],
+      [
+        "info",
+        "Entregar sin la Plantilla APA CUN aplicada no es un descuido menor: el formato institucional es parte de lo que se evalúa en el avance."
+      ]
     ]
   },
   {
@@ -155,10 +263,22 @@
   {
     "type": "table",
     "title": "Parafraseo mal hecho vs. parafraseo correcto",
-    "headers": ["Texto fuente (ficticio)", "Parafraseo perezoso", "Parafraseo correcto"],
+    "headers": [
+      "Texto fuente (ficticio)",
+      "Parafraseo perezoso",
+      "Parafraseo correcto"
+    ],
     "rows": [
-      ["'La clasificación manual de solicitudes incrementa el tiempo de respuesta en las mesas de servicio.'", "'La clasificación manual de peticiones aumenta el tiempo de respuesta en las mesas de servicio.'", "'Cuando las solicitudes se categorizan a mano, la mesa de servicio tarda más en responder (Pérez, 2022).'"],
-      ["'Los modelos supervisados requieren conjuntos etiquetados de calidad.'", "'Los modelos supervisados necesitan conjuntos etiquetados de calidad.'", "'Sin un conjunto de datos bien etiquetado, un modelo supervisado no alcanza un desempeño confiable (Gómez, 2021).'"]
+      [
+        "'La clasificación manual de solicitudes incrementa el tiempo de respuesta en las mesas de servicio.'",
+        "'La clasificación manual de peticiones aumenta el tiempo de respuesta en las mesas de servicio.'",
+        "'Cuando las solicitudes se categorizan a mano, la mesa de servicio tarda más en responder (Pérez, 2022).'"
+      ],
+      [
+        "'Los modelos supervisados requieren conjuntos etiquetados de calidad.'",
+        "'Los modelos supervisados necesitan conjuntos etiquetados de calidad.'",
+        "'Sin un conjunto de datos bien etiquetado, un modelo supervisado no alcanza un desempeño confiable (Gómez, 2021).'"
+      ]
     ],
     "note": "El parafraseo perezoso cambia palabras y conserva la estructura: es lo que la revisión de similitud marca y lo que un lector experto reconoce de inmediato."
   },
@@ -173,22 +293,12 @@
       "**5.** Cruce citas y referencias: recorra la lista final buscando cada apellido con Ctrl+F en el cuerpo.",
       "**6.** Complete lo que falte en **ZoteroBib (zbib.org)** en formato APA 7 y ordene la lista alfabéticamente.",
       "**7.** Recorra el **checklist de cierre** y marque cada ítem; lo no marcado pasa a los pendientes de TG3.",
-      "**8.** Descargue en PDF, nombre el archivo S11_CierreTG2_Apellido y súbalo a **CDigital** — [URL CDigital — campus del curso pendiente]."
+      "**8.** Descargue en PDF, nombre el archivo S11_CierreTG2_Apellido y súbalo a **CDigital** — {{CDIGITAL}}."
     ],
     "note": "Todo con herramientas gratuitas: Google Docs, la Plantilla APA CUN, ZoteroBib y CDigital. Nada que instalar."
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Versión limpia, checklist y pendientes para TG3",
-    "bullets": [
-      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
-      "**Archivo:** un documento en Google Docs llamado S11_CierreTG2_Apellido.",
-      "**Consigna 1.** Recorra el **checklist de cierre** ítem por ítem y marque lo que está listo y lo que no.",
-      "**Consigna 2.** Deje una **versión limpia** del avance: formato de la Plantilla APA CUN aplicado y referencias completas en APA 7.",
-      "**Consigna 3.** Escriba la **lista de pendientes para TG3** en imperativo, con por qué quedó pendiente y qué necesita para ejecutarlo.",
-      "**Criterio de éxito (verificable):** el documento se lee coherente de punta a punta; ningún ítem del checklist quedó sin marcar ni sin pasar a pendientes; cualquier persona que abra su lista sabe qué falta para TG3.",
-      "**Entrega:** suba S11_CierreTG2_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

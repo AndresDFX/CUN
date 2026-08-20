@@ -7,6 +7,7 @@
       "  El bloqueo casi nunca es falta de ideas: es **no saber en qué sección va cada idea**.",
       "El documento de avance no se inventa. Ya existe un mapa: la **Plantilla APA CUN de proyecto de grado**.",
       "  Su trabajo es **llenarla**, no diseñarla. Reordenar secciones solo genera devoluciones.",
+      "  **Y sirve para cualquier modalidad de grado:** artículo, proyecto aplicado o de desarrollo, prototipo o sistema documentado, sistematización. Cambia el **peso** de cada sección, no la estructura.",
       "Al terminar la sesión usted sabrá dos cosas: **qué va en cada sección** y —más importante— **qué NO va**.",
       "Y sale con un **outline** completo: todo el documento en viñetas, listo para convertirse en prosa.",
       "Regla del día: nadie escribe bien un párrafo si no sabe qué está haciendo ese párrafo en el documento."
@@ -31,17 +32,49 @@
   {
     "type": "table",
     "title": "Sección por sección: qué va y qué no va",
-    "headers": ["Sección", "Qué va exactamente", "Error típico"],
+    "headers": [
+      "Sección",
+      "Qué va exactamente",
+      "Error típico"
+    ],
     "rows": [
-      ["Introducción", "Contexto → problema → propósito, en ese orden", "Arrancar \"desde la antigüedad, el ser humano…\""],
-      ["Planteamiento y pregunta", "El problema argumentado con datos y fuentes, que aterriza en la pregunta", "Meter aquí la solución que ya se escogió"],
-      ["Objetivos", "General (uno) + específicos (tres)", "Verbos no medibles: conocer, entender"],
-      ["Marco referencial", "Antecedentes + marco teórico + conceptual y contextual", "Collage de definiciones sin relación con la pregunta"],
-      ["Diseño metodológico", "Enfoque, tipo, alcance, población e instrumentos **propuestos**", "Mezclarlo con hallazgos o resultados"],
-      ["Referencias", "APA 7, en orden alfabético, solo lo que se citó en el texto", "URLs sueltas pegadas sin formato"]
+      [
+        "Introducción",
+        "Contexto → problema → propósito, en ese orden",
+        "Arrancar \"desde la antigüedad, el ser humano…\""
+      ],
+      [
+        "Planteamiento y pregunta",
+        "El problema argumentado con datos y fuentes, que aterriza en la pregunta",
+        "Meter aquí la solución que ya se escogió"
+      ],
+      [
+        "Objetivos",
+        "General (uno) + específicos (tres)",
+        "Verbos no medibles: conocer, entender"
+      ],
+      [
+        "Marco referencial",
+        "Antecedentes + marco teórico + conceptual y contextual",
+        "Collage de definiciones sin relación con la pregunta"
+      ],
+      [
+        "Diseño metodológico",
+        "Enfoque, tipo, alcance, población e instrumentos **propuestos**",
+        "Mezclarlo con hallazgos o resultados"
+      ],
+      [
+        "Referencias",
+        "APA 7, en orden alfabético, solo lo que se citó en el texto",
+        "URLs sueltas pegadas sin formato"
+      ]
     ],
     "note": "Prueba de ubicación: si una idea puede ir en dos secciones, es que está mal redactada. Reescríbala hasta que solo quepa en una.",
-    "col_w": [2.6, 5.2, 4.1]
+    "col_w": [
+      2.6,
+      5.2,
+      4.1
+    ]
   },
   {
     "type": "bullets",
@@ -74,16 +107,37 @@
   {
     "type": "table",
     "title": "Tiempo verbal: cómo se escribe cada cosa en el avance",
-    "headers": ["Frase que NO va todavía", "Cómo se escribe en este avance"],
+    "headers": [
+      "Frase que NO va todavía",
+      "Cómo se escribe en este avance"
+    ],
     "rows": [
-      ["\"Se aplicó una encuesta a 30 analistas.\"", "\"Se propone aplicar una encuesta a los analistas del área de soporte.\""],
-      ["\"Los resultados muestran una reducción del 40 %.\"", "\"Se espera comparar el tiempo de clasificación con y sin el modelo propuesto.\""],
-      ["\"Se concluye que el modelo es eficiente.\"", "\"El avance concluye con el diseño del modelo; su evaluación empírica queda planteada.\""],
-      ["\"La muestra estuvo conformada por…\"", "\"La población objeto sería el equipo de soporte; la muestra se definiría por conveniencia.\""],
-      ["\"Se observó que los tickets de red demoran más.\"", "\"Se propone verificar si el tiempo varía entre categorías de ticket.\""]
+      [
+        "\"Se aplicó una encuesta a 30 analistas.\"",
+        "\"Se propone aplicar una encuesta a los analistas del área de soporte.\""
+      ],
+      [
+        "\"Los resultados muestran una reducción del 40 %.\"",
+        "\"Se espera comparar el tiempo de clasificación con y sin el modelo propuesto.\""
+      ],
+      [
+        "\"Se concluye que el modelo es eficiente.\"",
+        "\"El avance concluye con el diseño del modelo; su evaluación empírica queda planteada.\""
+      ],
+      [
+        "\"La muestra estuvo conformada por…\"",
+        "\"La población objeto sería el equipo de soporte; la muestra se definiría por conveniencia.\""
+      ],
+      [
+        "\"Se observó que los tickets de red demoran más.\"",
+        "\"Se propone verificar si el tiempo varía entre categorías de ticket.\""
+      ]
     ],
     "note": "Buscador rápido en Google Docs (Ctrl+B / Buscar): \"se aplicó\", \"se obtuvo\", \"los resultados\", \"se concluye\". Cada coincidencia en la metodología es una alarma.",
-    "col_w": [5.9, 6.0]
+    "col_w": [
+      5.9,
+      6.0
+    ]
   },
   {
     "type": "bullets",
@@ -116,10 +170,22 @@
     "type": "boxes",
     "title": "Lo que más se corrige en esta sesión",
     "boxes": [
-      ["advertencia", "**\"Pongo mis resultados en la metodología.\"** — En este avance aún no hay resultados: el método se escribe en \"se propone / se aplicará\", sin hallazgos."],
-      ["advertencia", "**\"Escribo directo en párrafos, sin plan.\"** — Primero el outline: 3 a 5 viñetas por sección. La prosa viene después y sale en la mitad del tiempo."],
-      ["aclaracion", "**\"Reordené las secciones a mi gusto.\"** — El orden ya existe en la Plantilla APA CUN. Reinventarlo no suma originalidad: genera devolución."],
-      ["info", "**\"La introducción arranca con la historia de la humanidad.\"** — Arranque en el contexto real del problema: contexto → problema → propósito, tres párrafos."]
+      [
+        "advertencia",
+        "**\"Pongo mis resultados en la metodología.\"** — En este avance aún no hay resultados: el método se escribe en \"se propone / se aplicará\", sin hallazgos."
+      ],
+      [
+        "advertencia",
+        "**\"Escribo directo en párrafos, sin plan.\"** — Primero el outline: 3 a 5 viñetas por sección. La prosa viene después y sale en la mitad del tiempo."
+      ],
+      [
+        "aclaracion",
+        "**\"Reordené las secciones a mi gusto.\"** — El orden ya existe en la Plantilla APA CUN. Reinventarlo no suma originalidad: genera devolución."
+      ],
+      [
+        "info",
+        "**\"La introducción arranca con la historia de la humanidad.\"** — Arranque en el contexto real del problema: contexto → problema → propósito, tres párrafos."
+      ]
     ]
   },
   {
@@ -140,32 +206,48 @@
   {
     "type": "table",
     "title": "Formato APA 7 que la plantilla ya trae (no lo cambie)",
-    "headers": ["Elemento", "Cómo debe quedar"],
+    "headers": [
+      "Elemento",
+      "Cómo debe quedar"
+    ],
     "rows": [
-      ["Márgenes", "2,54 cm en los cuatro lados"],
-      ["Interlineado", "Doble en todo el cuerpo del documento"],
-      ["Fuente", "Una sola fuente legible en todo el texto (por ejemplo, 12 pt tipo Times New Roman o 11 pt tipo Arial)"],
-      ["Sangría", "Primera línea de cada párrafo a 1,27 cm"],
-      ["Referencias", "Orden alfabético y sangría francesa de 1,27 cm"],
-      ["Numeración", "Número de página en la esquina superior derecha"],
-      ["Niveles de título", "Nivel 1 centrado y en negrita · Nivel 2 al margen izquierdo en negrita · Nivel 3 al margen izquierdo, negrita y cursiva"]
+      [
+        "Márgenes",
+        "2,54 cm en los cuatro lados"
+      ],
+      [
+        "Interlineado",
+        "Doble en todo el cuerpo del documento"
+      ],
+      [
+        "Fuente",
+        "Una sola fuente legible en todo el texto (por ejemplo, 12 pt tipo Times New Roman o 11 pt tipo Arial)"
+      ],
+      [
+        "Sangría",
+        "Primera línea de cada párrafo a 1,27 cm"
+      ],
+      [
+        "Referencias",
+        "Orden alfabético y sangría francesa de 1,27 cm"
+      ],
+      [
+        "Numeración",
+        "Número de página en la esquina superior derecha"
+      ],
+      [
+        "Niveles de título",
+        "Nivel 1 centrado y en negrita · Nivel 2 al margen izquierdo en negrita · Nivel 3 al margen izquierdo, negrita y cursiva"
+      ]
     ],
     "note": "Si algo del formato se ve distinto a esto, probablemente se pegó texto \"con formato de origen\". Use Ctrl+Shift+V para pegar sin formato.",
-    "col_w": [3.3, 8.6]
+    "col_w": [
+      3.3,
+      8.6
+    ]
   },
   {
-    "type": "bullets",
-    "title": "Taller — 20 minutos para dejar el documento armado",
-    "bullets": [
-      "**Consigna:** haga una copia de la **Plantilla APA CUN** en Google Docs, llámela `S03_EstructuraAvance_Apellido` y complete el **outline de todo el documento**.",
-      "  **(1)** Cada sección con 3 a 5 viñetas afirmativas de lo que irá.",
-      "  **(2)** La metodología escrita en \"se propone / se aplicará\", sin ningún resultado.",
-      "  **(3)** Las secciones aún vacías resaltadas en color.",
-      "  **(4)** La sección Referencias creada, aunque tenga solo una entrada.",
-      "**Tiempo:** 20 minutos; el Docente revisa mientras tanto ubicación de ideas y tiempo verbal.",
-      "**Criterio de éxito:** al leer solo su outline se entiende el documento completo de un vistazo, y no hay un solo resultado colado en la metodología.",
-      "Si le sobran minutos: convierta en párrafo únicamente el **primer punto de la introducción**."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -186,7 +268,7 @@
     "title": "Trabajo autónomo y qué viene la próxima sesión",
     "bullets": [
       "**Entrega:** suba `S03_EstructuraAvance_Apellido` a **CDigital** con la plantilla copiada y el outline completo.",
-      "  [URL CDigital — campus del curso pendiente]",
+      "  {{CDIGITAL}}",
       "**Autónomo 1:** convierta a prosa la sección de introducción, siguiendo sus propias viñetas.",
       "**Autónomo 2:** revise su metodología con el buscador y elimine todo verbo en pasado.",
       "**Autónomo 3:** liste tres términos de su pregunta con los que buscará estudios previos la próxima semana.",

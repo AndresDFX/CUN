@@ -30,16 +30,44 @@
   {
     "type": "table",
     "title": "Todas son \"una app\" — y ninguna es del mismo tipo",
-    "headers": ["La propuesta se describe así", "Lo que realmente cambia", "Tipo dominante"],
+    "headers": [
+      "La propuesta se describe así",
+      "Lo que realmente cambia",
+      "Tipo dominante"
+    ],
     "rows": [
-      ["\"Una app para reservar el laboratorio\"", "Se elimina un trámite: el equipo se asigna desde el horario", "**Proceso**"],
-      ["\"Una app que avisa cuándo hay equipo libre\"", "Aparece un servicio que antes no existía para el usuario", "**Producto**"],
-      ["\"Una app con el tablero del equipo\"", "El equipo se coordina distinto: quién decide y cuándo", "**Organización**"],
-      ["\"Una app para inscribirse al semillero\"", "Cambia el canal de captación y la adopción del programa", "**Marketing**"],
-      ["\"Una app para reportar fallas del barrio\"", "Se genera un bien común medible con una entidad pública", "**Social**"]
+      [
+        "\"Una app para reservar el laboratorio\"",
+        "Se elimina un trámite: el equipo se asigna desde el horario",
+        "**Proceso**"
+      ],
+      [
+        "\"Una app que avisa cuándo hay equipo libre\"",
+        "Aparece un servicio que antes no existía para el usuario",
+        "**Producto**"
+      ],
+      [
+        "\"Una app con el tablero del equipo\"",
+        "El equipo se coordina distinto: quién decide y cuándo",
+        "**Organización**"
+      ],
+      [
+        "\"Una app para inscribirse al semillero\"",
+        "Cambia el canal de captación y la adopción del programa",
+        "**Marketing**"
+      ],
+      [
+        "\"Una app para reportar fallas del barrio\"",
+        "Se genera un bien común medible con una entidad pública",
+        "**Social**"
+      ]
     ],
     "note": "Mismo envase, cinco tipos distintos. Si su descripción empieza por \"una app que...\", todavía no dijo de qué tipo es.",
-    "col_w": [3.6, 4.6, 2.0]
+    "col_w": [
+      3.6,
+      4.6,
+      2.0
+    ]
   },
   {
     "type": "bullets",
@@ -58,17 +86,49 @@
   {
     "type": "table",
     "title": "Incremental vs. radical, criterio por criterio",
-    "headers": ["", "Incremental", "Radical"],
+    "headers": [
+      "",
+      "Incremental",
+      "Radical"
+    ],
     "rows": [
-      ["Naturaleza del cambio", "Mejora paso a paso sobre lo existente", "Rompe las reglas del juego / crea una categoría"],
-      ["Riesgo", "Menor y más predecible", "Mayor y más incierto"],
-      ["Evidencia posible en un semestre", "**Alta** — se puede medir la mejora", "**Baja** — requiere apuestas grandes"],
-      ["Qué hay que demostrar", "Cuánto mejoró, con un número", "Qué regla se rompió, con hechos"],
-      ["Ejemplo", "Reducir un **30%** el tiempo de reserva", "Un modelo que elimina por completo al intermediario"],
-      ["Riesgo típico del estudiante", "Subestimarla (\"es poquito\")", "Declararla sin evidencia (\"es revolucionario\")"]
+      [
+        "Naturaleza del cambio",
+        "Mejora paso a paso sobre lo existente",
+        "Rompe las reglas del juego / crea una categoría"
+      ],
+      [
+        "Riesgo",
+        "Menor y más predecible",
+        "Mayor y más incierto"
+      ],
+      [
+        "Evidencia posible en un semestre",
+        "**Alta** — se puede medir la mejora",
+        "**Baja** — requiere apuestas grandes"
+      ],
+      [
+        "Qué hay que demostrar",
+        "Cuánto mejoró, con un número",
+        "Qué regla se rompió, con hechos"
+      ],
+      [
+        "Ejemplo",
+        "Reducir un **30%** el tiempo de reserva",
+        "Un modelo que elimina por completo al intermediario"
+      ],
+      [
+        "Riesgo típico del estudiante",
+        "Subestimarla (\"es poquito\")",
+        "Declararla sin evidencia (\"es revolucionario\")"
+      ]
     ],
     "note": "En **un semestre**, una innovación incremental **bien ejecutada y medida** casi siempre es más defendible que una \"radical\" sin datos.",
-    "col_w": [3.0, 3.6, 3.6]
+    "col_w": [
+      3.0,
+      3.6,
+      3.6
+    ]
   },
   {
     "type": "bullets",
@@ -118,16 +178,44 @@
   {
     "type": "table",
     "title": "Ejemplo modelado: matriz del caso del laboratorio",
-    "headers": ["Criterio", "**Tipo A: Proceso** (asignación automática)", "**Tipo B: Producto** (app nueva de reservas)"],
+    "headers": [
+      "Criterio",
+      "**Tipo A: Proceso** (asignación automática)",
+      "**Tipo B: Producto** (app nueva de reservas)"
+    ],
     "rows": [
-      ["Impacto en el dolor", "**Alto** — el estudiante no vuelve a buscar equipo", "**Alto** — también resuelve la búsqueda"],
-      ["Esfuerzo / costo", "**Bajo** — se prueba con el horario y una hoja de cálculo", "**Alto** — hay que construir y mantener una app"],
-      ["Evidencia este semestre", "**Alta** — 5 usuarios y cronómetro en una semana", "**Media** — sin app funcional no hay medición real"],
-      ["Riesgo", "**Bajo** — si falla, se vuelve al método anterior", "**Alto** — depende de permisos, datos y adopción"],
-      ["Beneficio socio-económico", "**Medio** — ahorra horas de laboratorio al campus", "**Medio** — mismo ahorro, con más inversión"]
+      [
+        "Impacto en el dolor",
+        "**Alto** — el estudiante no vuelve a buscar equipo",
+        "**Alto** — también resuelve la búsqueda"
+      ],
+      [
+        "Esfuerzo / costo",
+        "**Bajo** — se prueba con el horario y una hoja de cálculo",
+        "**Alto** — hay que construir y mantener una app"
+      ],
+      [
+        "Evidencia este semestre",
+        "**Alta** — 5 usuarios y cronómetro en una semana",
+        "**Media** — sin app funcional no hay medición real"
+      ],
+      [
+        "Riesgo",
+        "**Bajo** — si falla, se vuelve al método anterior",
+        "**Alto** — depende de permisos, datos y adopción"
+      ],
+      [
+        "Beneficio socio-económico",
+        "**Medio** — ahorra horas de laboratorio al campus",
+        "**Medio** — mismo ahorro, con más inversión"
+      ]
     ],
     "note": "Con **impacto equivalente**, el tipo A gana en **esfuerzo, evidencia y riesgo**. Ahí está la decisión — y no la tomó el gusto.",
-    "col_w": [2.6, 4.0, 4.0]
+    "col_w": [
+      2.6,
+      4.0,
+      4.0
+    ]
   },
   {
     "type": "bullets",
@@ -147,12 +235,30 @@
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
-      ["advertencia", "**\"Mi innovación es radical\"** (como adorno). ¿Qué regla del juego rompe y con qué evidencia? Si no la tiene, es **incremental ambiciosa** — y está bien."],
-      ["advertencia", "**\"Es innovación porque es digital / usa IA.\"** Digital es el envase. ¿Qué cambia para el usuario: el servicio, el proceso o la coordinación?"],
-      ["advertencia", "**Comparar \"porque me gusta más uno\".** El gusto no es criterio. Ponga los **mismos 5 criterios** a ambos y deje que decida la comparación."],
-      ["advertencia", "**Olvidar quién paga y quién usa.** Una innovación sin modelo de sostenibilidad es un hobby caro. Agregue esa fila a la matriz."],
-      ["advertencia", "**Puntuar todo igual.** Si todo empata, su comparación no discrimina. Sea honesto: ¿dónde difieren **de verdad** las dos opciones?"],
-      ["aclaracion", "**Descartar no es despreciar.** El tipo B puede ser excelente y aun así no caber en un semestre. Dígalo así en la conclusión: gana claridad y credibilidad."]
+      [
+        "advertencia",
+        "**\"Mi innovación es radical\"** (como adorno). ¿Qué regla del juego rompe y con qué evidencia? Si no la tiene, es **incremental ambiciosa** — y está bien."
+      ],
+      [
+        "advertencia",
+        "**\"Es innovación porque es digital / usa IA.\"** Digital es el envase. ¿Qué cambia para el usuario: el servicio, el proceso o la coordinación?"
+      ],
+      [
+        "advertencia",
+        "**Comparar \"porque me gusta más uno\".** El gusto no es criterio. Ponga los **mismos 5 criterios** a ambos y deje que decida la comparación."
+      ],
+      [
+        "advertencia",
+        "**Olvidar quién paga y quién usa.** Una innovación sin modelo de sostenibilidad es un hobby caro. Agregue esa fila a la matriz."
+      ],
+      [
+        "advertencia",
+        "**Puntuar todo igual.** Si todo empata, su comparación no discrimina. Sea honesto: ¿dónde difieren **de verdad** las dos opciones?"
+      ],
+      [
+        "aclaracion",
+        "**Descartar no es despreciar.** El tipo B puede ser excelente y aun así no caber en un semestre. Dígalo así en la conclusión: gana claridad y credibilidad."
+      ]
     ]
   },
   {
@@ -171,18 +277,7 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Matriz comparativa de su propuesta (21 minutos)",
-    "bullets": [
-      "Armen su **matriz comparativa**: su **tipo elegido (A)** contra un **tipo alternativo que descartaron (B)**.",
-      "**Minutos 0–3** · Nombren A y B, y declaren el **grado** (incremental / radical) con una razón.",
-      "**Minutos 3–8** · Escriban **mínimo 5 criterios** en las filas. Uno de ellos debe tocar el **contexto socio-económico** (quién paga / quién usa / restricción).",
-      "**Minutos 8–15** · Puntúen **alto / medio / bajo** para **ambas** columnas, fila por fila, con el porqué entre paréntesis.",
-      "**Minutos 15–21** · Escriban la **conclusión de 4 líneas** siguiendo la estructura: elijo / empatan en / gana en / descarto porque.",
-      "Al final, **dos personas** leen **solo su conclusión** — no la tabla completa.",
-      "**Criterio de éxito verificable:** la conclusión **cita al menos dos criterios de la tabla por su nombre** y no contiene la frase \"me gusta más\" ni equivalentes.",
-      "  Segunda verificación: si tapo la conclusión, ¿alguien más llegaría a la misma decisión leyendo solo la tabla? Si sí, está bien hecha."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -208,7 +303,7 @@
       "  2. **Incremental bien medido** vence a radical sin evidencia.",
       "  3. Se compara con **criterios**, no con gusto.",
       "**(a)** Suban su matriz como **`S04_MatrizTipos_Apellido`** a **CDigital**.",
-      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "  Plataforma: {{CDIGITAL}}",
       "**(b)** Preparen un listado de **mínimo 5 supuestos** que su propuesta da por verdaderos.",
       "  Un supuesto es algo que usted **cree** pero **no ha comprobado**, y que si fuera falso **tumbaría el proyecto**.",
       "  Ejemplos del caso: \"el estudiante estaría dispuesto a registrarse\", \"la ocupación real sigue el horario oficial\", \"el laboratorio permitiría el piloto\".",

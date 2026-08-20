@@ -1,7 +1,7 @@
 [
   {
     "type": "bullets",
-    "title": "El corazón del artículo: aquí se demuestra que hay conocimiento nuevo",
+    "title": "El corazón del documento: aquí se demuestra que hay conocimiento nuevo",
     "bullets": [
       "Todo lo anterior fue **preparación**: pregunta, marco, método, instrumento, datos.",
       "  Un jurado puede perdonar un marco teórico corto; no perdona unos resultados confusos.",
@@ -11,7 +11,7 @@
       "  Se vuelve aporte cuando alguien dice **qué significa** frente a lo que ya escribieron otros autores.",
       "Ese salto —del número al significado— es exactamente lo que separa Resultados de Discusión.",
       "Y ahí está el error de forma **más penalizado** del trabajo de grado: mezclarlos.",
-      "Hoy escribimos las dos secciones, separadas, y dejamos el cuerpo del artículo casi completo."
+      "Hoy escribimos las dos secciones, separadas, y dejamos el cuerpo del documento casi completo."
     ],
     "note": "Tengan abiertas su **tabla de hallazgos** (Sesión 07) y su **marco teórico cerrado** (Sesión 08): hoy se usan las dos."
   },
@@ -48,18 +48,54 @@
   {
     "type": "table",
     "title": "Resultados vs. Discusión: dos secciones, dos tareas distintas",
-    "headers": ["Criterio", "RESULTADOS", "DISCUSIÓN"],
+    "headers": [
+      "Criterio",
+      "RESULTADOS",
+      "DISCUSIÓN"
+    ],
     "rows": [
-      ["Pregunta que responde", "¿Qué encontré?", "¿Qué significa lo que encontré?"],
-      ["Tono", "Neutral, descriptivo", "Interpretativo, argumentado"],
-      ["¿Se cita a otros autores?", "**No**", "**Sí, obligatorio**"],
-      ["Verbos típicos", "se observó, se registró, aumentó, disminuyó", "confirma, contradice, extiende, sugiere, se explica por"],
-      ["Elementos de apoyo", "Tablas y figuras rotuladas", "Argumentos que remiten a esas tablas"],
-      ["Ejemplo", "\"El tiempo pasó de 42 a 18 minutos.\"", "\"Esta reducción **confirma** lo reportado por X (2022)…\""],
-      ["Error que la arruina", "Interpretar dentro de ella", "Repetir el dato sin confrontarlo"]
+      [
+        "Pregunta que responde",
+        "¿Qué encontré?",
+        "¿Qué significa lo que encontré?"
+      ],
+      [
+        "Tono",
+        "Neutral, descriptivo",
+        "Interpretativo, argumentado"
+      ],
+      [
+        "¿Se cita a otros autores?",
+        "**No**",
+        "**Sí, obligatorio**"
+      ],
+      [
+        "Verbos típicos",
+        "se observó, se registró, aumentó, disminuyó",
+        "confirma, contradice, extiende, sugiere, se explica por"
+      ],
+      [
+        "Elementos de apoyo",
+        "Tablas y figuras rotuladas",
+        "Argumentos que remiten a esas tablas"
+      ],
+      [
+        "Ejemplo",
+        "\"El tiempo pasó de 42 a 18 minutos.\"",
+        "\"Esta reducción **confirma** lo reportado por X (2022)…\""
+      ],
+      [
+        "Error que la arruina",
+        "Interpretar dentro de ella",
+        "Repetir el dato sin confrontarlo"
+      ]
     ],
     "note": "Regla mnemotécnica: **Resultados = cámara de seguridad** (graba sin opinar). **Discusión = mesa de debate** (todos opinan y se citan).",
-    "col_w": [2.4, 3.4, 3.6]
+    "col_w": [
+      2.4,
+      3.4,
+      3.6
+    ]
   },
   {
     "type": "bullets",
@@ -81,15 +117,45 @@
   {
     "type": "table",
     "title": "Tabla puente: de sus hallazgos a sus párrafos de discusión",
-    "headers": ["Hallazgo (de Resultados)", "Autor del marco", "Relación", "Implicación"],
+    "headers": [
+      "Hallazgo (de Resultados)",
+      "Autor del marco",
+      "Relación",
+      "Implicación"
+    ],
     "rows": [
-      ["El tiempo de despliegue bajó a la mitad", "X (2022)", "**Confirma**", "La automatización sí impacta el despliegue en equipos pequeños"],
-      ["Aparecieron 2 fallos nuevos en producción", "Y (2020)", "**Contradice / matiza**", "El contexto local introduce riesgos que la literatura no reporta"],
-      ["El equipo tardó 3 semanas en adoptar la herramienta", "Z (2021)", "**Extiende**", "El costo de adopción es una variable que Z no midió"],
-      ["Dos desarrolladores dejaron de correr pruebas locales", "—", "**Sin referente**", "Hallazgo emergente: se reporta y se propone como trabajo futuro"]
+      [
+        "El tiempo de despliegue bajó a la mitad",
+        "X (2022)",
+        "**Confirma**",
+        "La automatización sí impacta el despliegue en equipos pequeños"
+      ],
+      [
+        "Aparecieron 2 fallos nuevos en producción",
+        "Y (2020)",
+        "**Contradice / matiza**",
+        "El contexto local introduce riesgos que la literatura no reporta"
+      ],
+      [
+        "El equipo tardó 3 semanas en adoptar la herramienta",
+        "Z (2021)",
+        "**Extiende**",
+        "El costo de adopción es una variable que Z no midió"
+      ],
+      [
+        "Dos desarrolladores dejaron de correr pruebas locales",
+        "—",
+        "**Sin referente**",
+        "Hallazgo emergente: se reporta y se propone como trabajo futuro"
+      ]
     ],
     "note": "Llenen esta tabla **antes** de escribir: cada fila se convierte después en un párrafo. La última fila muestra qué hacer cuando ningún autor habla de su hallazgo: se dice, no se esconde.",
-    "col_w": [2.9, 1.3, 1.7, 3.5]
+    "col_w": [
+      2.9,
+      1.3,
+      1.7,
+      3.5
+    ]
   },
   {
     "type": "bullets",
@@ -103,7 +169,7 @@
       "  Contradecir no es atacar al autor: es mostrar que el contexto cambia el resultado.",
       "**Extiende** — su hallazgo entra donde el autor no llegó.",
       "  Fórmula: \"Z (2021) analizó… ; este trabajo agrega evidencia sobre…, no abordado por ese estudio\".",
-      "Un artículo con los tres verbos presentes se lee como investigación; uno con puro *confirma* se lee como resumen."
+      "Un documento con los tres verbos presentes se lee como investigación; uno con puro *confirma* se lee como resumen."
     ]
   },
   {
@@ -126,7 +192,7 @@
     "type": "bullets",
     "title": "Ningún objetivo huérfano: la discusión cierra uno por uno",
     "bullets": [
-      "Su artículo prometió unos **objetivos específicos**. La discusión es donde se cobran.",
+      "Su documento prometió unos **objetivos específicos**. La discusión es donde se cobran.",
       "Técnica sencilla: haga una tabla de dos columnas —**objetivo específico | párrafo que lo responde**—.",
       "  Si una fila queda vacía, ese objetivo está **huérfano** y el jurado lo va a encontrar.",
       "  Es la pregunta más fácil de hacer en una sustentación: *\"¿dónde respondió su segundo objetivo?\"*.",
@@ -141,13 +207,34 @@
     "type": "boxes",
     "title": "Mitos y errores frecuentes de esta sección",
     "boxes": [
-      ["advertencia", "\"En Resultados ya explico qué significa cada dato, para que se entienda mejor.\""],
-      ["aclaracion", "Resultados es neutral: **qué encontró**. El significado va en Discusión. Si le duele soltar la interpretación, córtela y péguela en la sección siguiente: la va a necesitar."],
-      ["advertencia", "\"En la Discusión repito los resultados con otras palabras; total, es lo mismo.\""],
-      ["aclaracion", "Si solo repite, no aporta. La discusión **dialoga con autores**: confirma, contradice o extiende. Sin citas no hay discusión."],
-      ["advertencia", "\"El dato que contradice mi hipótesis mejor lo dejo por fuera.\""],
-      ["aclaracion", "Reportarlo **da credibilidad**, ocultarlo es un problema de integridad académica. Discuta la limitación: los jurados premian la honestidad, no la perfección fingida."],
-      ["info", "Un objetivo sin párrafo que lo responda es la falla más detectable del artículo. Revise la tabla objetivo → párrafo antes de entregar."]
+      [
+        "advertencia",
+        "\"En Resultados ya explico qué significa cada dato, para que se entienda mejor.\""
+      ],
+      [
+        "aclaracion",
+        "Resultados es neutral: **qué encontró**. El significado va en Discusión. Si le duele soltar la interpretación, córtela y péguela en la sección siguiente: la va a necesitar."
+      ],
+      [
+        "advertencia",
+        "\"En la Discusión repito los resultados con otras palabras; total, es lo mismo.\""
+      ],
+      [
+        "aclaracion",
+        "Si solo repite, no aporta. La discusión **dialoga con autores**: confirma, contradice o extiende. Sin citas no hay discusión."
+      ],
+      [
+        "advertencia",
+        "\"El dato que contradice mi hipótesis mejor lo dejo por fuera.\""
+      ],
+      [
+        "aclaracion",
+        "Reportarlo **da credibilidad**, ocultarlo es un problema de integridad académica. Discuta la limitación: los jurados premian la honestidad, no la perfección fingida."
+      ],
+      [
+        "info",
+        "Un objetivo sin párrafo que lo responda es la falla más detectable del documento. Revise la tabla objetivo → párrafo antes de entregar."
+      ]
     ]
   },
   {
@@ -179,54 +266,79 @@
       "**7.** Agregue el párrafo de **limitaciones** con la fórmula de tres partes.",
       "**8.** Verifique la tabla objetivo → párrafo: ningún objetivo sin respuesta.",
       "**9.** Genere y pegue las referencias nuevas desde **ZoteroBib (zbib.org)** en APA 7; no las escriba a mano.",
-      "**10.** Guarde y suba a **CDigital** — [URL CDigital — campus del curso pendiente]."
+      "**10.** Guarde y suba a **CDigital** — {{CDIGITAL}}."
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Resultados y discusión de su artículo (20 minutos)",
-    "bullets": [
-      "**Consigna literal.** En un documento llamado **S09_ResultadosDiscusion_Apellido**:",
-      "  **(1)** Redacte la sección **Resultados** en tono neutral, apoyándose en su tabla de hallazgos. Mínimo tres hallazgos, cada uno con su dato.",
-      "  **(2)** Escriba al menos **dos párrafos de Discusión** con el latido completo: hallazgo → autor que confirma/contradice/extiende → implicación → límite.",
-      "  **(3)** Agregue el párrafo de **limitaciones** con la fórmula de tres partes.",
-      "  **(4)** Cierre con la tabla **objetivo específico | párrafo que lo responde** y verifique que ninguna fila quede vacía.",
-      "**Tiempo:** 20 minutos de trabajo individual; el Docente pasa acompañando.",
-      "**Criterio de éxito (verificable, no opinable):**",
-      "  Resultados **sin ninguna frase interpretativa** (búsquela con Ctrl+F: *significa*, *demuestra*, *claramente*).",
-      "  Discusión con **mínimo dos autores citados** en APA 7 dentro del texto.",
-      "  **Cero objetivos huérfanos** en la tabla de cierre.",
-      "**Entrega:** el archivo en CDigital, formato Google Docs o PDF."
-    ],
-    "note": "Si su proyecto todavía no tiene datos finales, trabaje con los **hallazgos preliminares**: el objetivo de hoy es dominar la estructura, no cerrar el artículo."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de entregar",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
-    "rows": [
-      ["Resultados no interpreta", "Busco *significa / demuestra / claramente*: cero coincidencias", "☐"],
-      ["Resultados no cita autores", "No aparece ningún (Apellido, año) en la sección", "☐"],
-      ["Cada tabla y figura está rotulada", "Tabla 1, Figura 1… y se menciona en el texto", "☐"],
-      ["Cada párrafo de discusión tiene los 4 latidos", "Subrayo hallazgo, autor, implicación y límite", "☐"],
-      ["Hay al menos 2 autores en la discusión", "Los cuento uno por uno", "☐"],
-      ["Reporté también lo que no salió", "Existe al menos una frase que matiza o contradice mi expectativa", "☐"],
-      ["Ningún objetivo quedó huérfano", "Tabla objetivo → párrafo, sin filas vacías", "☐"],
-      ["Referencias nuevas en APA 7", "Generadas en ZoteroBib y ya en la lista final", "☐"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "¿Listo?"
     ],
-    "col_w": [3.6, 4.4, 1.0]
+    "rows": [
+      [
+        "Resultados no interpreta",
+        "Busco *significa / demuestra / claramente*: cero coincidencias",
+        "☐"
+      ],
+      [
+        "Resultados no cita autores",
+        "No aparece ningún (Apellido, año) en la sección",
+        "☐"
+      ],
+      [
+        "Cada tabla y figura está rotulada",
+        "Tabla 1, Figura 1… y se menciona en el texto",
+        "☐"
+      ],
+      [
+        "Cada párrafo de discusión tiene los 4 latidos",
+        "Subrayo hallazgo, autor, implicación y límite",
+        "☐"
+      ],
+      [
+        "Hay al menos 2 autores en la discusión",
+        "Los cuento uno por uno",
+        "☐"
+      ],
+      [
+        "Reporté también lo que no salió",
+        "Existe al menos una frase que matiza o contradice mi expectativa",
+        "☐"
+      ],
+      [
+        "Ningún objetivo quedó huérfano",
+        "Tabla objetivo → párrafo, sin filas vacías",
+        "☐"
+      ],
+      [
+        "Referencias nuevas en APA 7",
+        "Generadas en ZoteroBib y ya en la lista final",
+        "☐"
+      ]
+    ],
+    "col_w": [
+      3.6,
+      4.4,
+      1.0
+    ]
   },
   {
     "type": "bullets",
     "title": "Trabajo autónomo y qué viene después",
     "bullets": [
-      "**Suba** `S09_ResultadosDiscusion_Apellido` a CDigital — [URL CDigital — campus del curso pendiente].",
+      "**Suba** `S09_ResultadosDiscusion_Apellido` a CDigital — {{CDIGITAL}}.",
       "**Complete** en casa los párrafos de discusión que falten: la meta es una discusión que responda **todos** los objetivos.",
       "**Recupere** de su marco teórico los autores que aún no ha usado: si un referente nunca aparece en la discusión, revise si merece seguir en el marco.",
       "**Cuente** cuántas referencias distintas lleva citadas en el cuerpo; la lista final debe caminar hacia el mínimo exigido.",
-      "Con esta sección, el **cuerpo del artículo queda casi completo**.",
+      "Con esta sección, el **cuerpo del documento queda casi completo**.",
       "**Próxima sesión:** le ponemos la cabeza y la cola —**resumen, palabras clave del tesauro UNESCO, conclusiones y referencias**—.",
-      "  Llegue con el artículo completo a la vista: el resumen solo se puede escribir cuando ya existe todo lo demás."
+      "  Llegue con el documento completo a la vista: el resumen solo se puede escribir cuando ya existe todo lo demás."
     ]
   }
 ]

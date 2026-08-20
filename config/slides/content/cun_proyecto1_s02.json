@@ -31,14 +31,44 @@
   {
     "type": "table",
     "title": "Cuatro niveles que se confunden todo el tiempo",
-    "headers": ["Nivel", "Qué es", "Ejemplo (línea educación)", "Por qué no basta"],
-    "rows": [
-      ["**Tema**", "El territorio amplio", "“IA en educación”", "No se puede responder ni delimitar"],
-      ["**Problema**", "La tensión observable", "“Los informes del curso X se devuelven semanas después y los errores se repiten”", "Aún no está en forma de pregunta"],
-      ["**Pregunta**", "La interrogación que guía el método", "“¿Qué prácticas de retroalimentación mediadas por IA pueden proponerse para el curso X?”", "Es la única que el método puede responder"],
-      ["**Solución**", "El producto imaginado", "“Un bot que corrija informes”", "Llega al final; empezar por aquí sesga todo el trabajo"]
+    "headers": [
+      "Nivel",
+      "Qué es",
+      "Ejemplo (línea educación)",
+      "Por qué no basta"
     ],
-    "col_w": [1.3, 2.2, 4.6, 2.9],
+    "rows": [
+      [
+        "**Tema**",
+        "El territorio amplio",
+        "“IA en educación”",
+        "No se puede responder ni delimitar"
+      ],
+      [
+        "**Problema**",
+        "La tensión observable",
+        "“Los informes del curso X se devuelven semanas después y los errores se repiten”",
+        "Aún no está en forma de pregunta"
+      ],
+      [
+        "**Pregunta**",
+        "La interrogación que guía el método",
+        "“¿Qué prácticas de retroalimentación mediadas por IA pueden proponerse para el curso X?”",
+        "Es la única que el método puede responder"
+      ],
+      [
+        "**Solución**",
+        "El producto imaginado",
+        "“Un bot que corrija informes”",
+        "Llega al final; empezar por aquí sesga todo el trabajo"
+      ]
+    ],
+    "col_w": [
+      1.3,
+      2.2,
+      4.6,
+      2.9
+    ],
     "note": "Si su documento arranca en la fila 4, devuélvase a la fila 2: **el dolor primero**."
   },
   {
@@ -59,14 +89,38 @@
   {
     "type": "table",
     "title": "Pregunta débil vs. pregunta fuerte",
-    "headers": ["Pregunta débil", "Por qué falla", "Versión fuerte"],
-    "rows": [
-      ["¿La IA es útil en las empresas?", "Sin actor, sin contexto y sin fenómeno; se responde “sí” y se acabó", "¿Cómo perciben los supervisores de turno de la planta X el registro de paradas de máquina y qué apoyo esperarían de un asistente de IA?"],
-      ["¿ChatGPT ayuda a estudiar?", "Pregunta de sí/no y de opinión; no delimita tarea ni población", "¿Qué prácticas de uso de un asistente conversacional reportan los estudiantes del curso X al elaborar informes de laboratorio y qué fricciones aparecen?"],
-      ["¿Cómo mejorar la educación con IA?", "Pregunta planetaria: no cabe en el tiempo del programa", "¿Qué requisitos debería cumplir una propuesta de retroalimentación asistida por IA para el curso X, según docente y estudiantes?"],
-      ["¿Hago un bot para mi empresa?", "Empieza por la solución; no hay fenómeno que estudiar", "¿Cómo funciona hoy el proceso Y en la empresa Z y qué necesidades de información revela?"]
+    "headers": [
+      "Pregunta débil",
+      "Por qué falla",
+      "Versión fuerte"
     ],
-    "col_w": [2.4, 2.8, 5.8],
+    "rows": [
+      [
+        "¿La IA es útil en las empresas?",
+        "Sin actor, sin contexto y sin fenómeno; se responde “sí” y se acabó",
+        "¿Cómo perciben los supervisores de turno de la planta X el registro de paradas de máquina y qué apoyo esperarían de un asistente de IA?"
+      ],
+      [
+        "¿ChatGPT ayuda a estudiar?",
+        "Pregunta de sí/no y de opinión; no delimita tarea ni población",
+        "¿Qué prácticas de uso de un asistente conversacional reportan los estudiantes del curso X al elaborar informes de laboratorio y qué fricciones aparecen?"
+      ],
+      [
+        "¿Cómo mejorar la educación con IA?",
+        "Pregunta planetaria: no cabe en el tiempo del programa",
+        "¿Qué requisitos debería cumplir una propuesta de retroalimentación asistida por IA para el curso X, según docente y estudiantes?"
+      ],
+      [
+        "¿Hago un bot para mi empresa?",
+        "Empieza por la solución; no hay fenómeno que estudiar",
+        "¿Cómo funciona hoy el proceso Y en la empresa Z y qué necesidades de información revela?"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      2.8,
+      5.8
+    ],
     "note": "Las preguntas fuertes son largas y no suenan elegantes. **Eso está bien**: una pregunta delimitada casi nunca es bonita."
   },
   {
@@ -86,28 +140,80 @@
   {
     "type": "table",
     "title": "Cómo se abre una pregunta: arranques que sirven y arranques que la matan",
-    "headers": ["Arranque", "Qué tipo de respuesta pide", "Sirve cuando…"],
-    "rows": [
-      ["**¿Cómo…?**", "Describe un proceso o una práctica", "Quiere entender cómo ocurre algo hoy"],
-      ["**¿Qué factores…?**", "Identifica elementos que influyen", "Sospecha causas y quiere caracterizarlas"],
-      ["**¿Qué características…?**", "Caracteriza un fenómeno o una población", "Necesita describir antes de proponer"],
-      ["**¿Qué requisitos…?**", "Establece criterios para una propuesta", "Va a diseñar algo y debe fundamentarlo"],
-      ["**¿En qué medida…?**", "Compara o gradúa", "Ya tiene categorías o variables definidas"],
-      ["**¿Es…? / ¿Sirve…?**", "Sí o no", "**Nunca**: cierra la investigación en una palabra"],
-      ["**¿Debo hacer…?**", "Una decisión personal", "**Nunca**: eso es gestión, no investigación"]
+    "headers": [
+      "Arranque",
+      "Qué tipo de respuesta pide",
+      "Sirve cuando…"
     ],
-    "col_w": [2.4, 4.0, 4.6],
+    "rows": [
+      [
+        "**¿Cómo…?**",
+        "Describe un proceso o una práctica",
+        "Quiere entender cómo ocurre algo hoy"
+      ],
+      [
+        "**¿Qué factores…?**",
+        "Identifica elementos que influyen",
+        "Sospecha causas y quiere caracterizarlas"
+      ],
+      [
+        "**¿Qué características…?**",
+        "Caracteriza un fenómeno o una población",
+        "Necesita describir antes de proponer"
+      ],
+      [
+        "**¿Qué requisitos…?**",
+        "Establece criterios para una propuesta",
+        "Va a diseñar algo y debe fundamentarlo"
+      ],
+      [
+        "**¿En qué medida…?**",
+        "Compara o gradúa",
+        "Ya tiene categorías o variables definidas"
+      ],
+      [
+        "**¿Es…? / ¿Sirve…?**",
+        "Sí o no",
+        "**Nunca**: cierra la investigación en una palabra"
+      ],
+      [
+        "**¿Debo hacer…?**",
+        "Una decisión personal",
+        "**Nunca**: eso es gestión, no investigación"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      4.0,
+      4.6
+    ],
     "note": "Truco de reescritura: cambie “¿es…?” por “¿cómo…?”, “¿qué factores…?” o “¿en qué medida…?” y la pregunta se abre sola."
   },
   {
     "type": "table",
     "title": "Las dos líneas oficiales de IA del programa",
-    "headers": ["Línea", "De qué se ocupa", "Ejemplo de problema que encaja"],
-    "rows": [
-      ["**Uso y adaptación de IA para entornos productivos**", "IA aplicada a procesos de empresas, plantas, servicios y operación", "El registro manual de paradas de máquina en una línea de empaque impide priorizar mantenimiento"],
-      ["**Implementación de IA en la educación**", "IA aplicada a enseñanza, aprendizaje, evaluación y acompañamiento", "La retroalimentación de informes llega semanas después y pierde su función formativa"]
+    "headers": [
+      "Línea",
+      "De qué se ocupa",
+      "Ejemplo de problema que encaja"
     ],
-    "col_w": [3.0, 3.4, 4.6],
+    "rows": [
+      [
+        "**Uso y adaptación de IA para entornos productivos**",
+        "IA aplicada a procesos de empresas, plantas, servicios y operación",
+        "El registro manual de paradas de máquina en una línea de empaque impide priorizar mantenimiento"
+      ],
+      [
+        "**Implementación de IA en la educación**",
+        "IA aplicada a enseñanza, aprendizaje, evaluación y acompañamiento",
+        "La retroalimentación de informes llega semanas después y pierde su función formativa"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      3.4,
+      4.6
+    ],
     "note": "**No hay una tercera línea.** Si su tema no encaja en ninguna, se reformula: no se inventa una línea nueva. Escoja una sola."
   },
   {
@@ -144,10 +250,22 @@
     "type": "boxes",
     "title": "Errores frecuentes que hoy vamos a cortar de raíz",
     "boxes": [
-      ["advertencia", "**Empezar por la solución.** “Voy a hacer un chatbot” no es un problema. Guarde la solución un minuto y responda: ¿qué le duele hoy a alguien SIN ese chatbot? Ese dolor es su problema."],
-      ["advertencia", "**Pregunta que no cabe en el periodo.** Si no puede responderla con los recursos de un semestre, recórtela a un actor y un contexto. Recortar es una decisión metodológica, no una derrota."],
-      ["aclaracion", "**Objetivo no es lo mismo que pregunta.** El objetivo empieza con verbo (“Caracterizar…”); la pregunta empieza con interrogante (“¿Cómo…?”). Van en secciones distintas del documento."],
-      ["info", "**En Proyecto I no se recolecta nada.** No hay encuestas aplicadas, ni entrevistas, ni observación en campo: hoy se diseña y se propone. El trabajo de campo llega en Proyecto II, con aval previo."]
+      [
+        "advertencia",
+        "**Empezar por la solución.** “Voy a hacer un chatbot” no es un problema. Guarde la solución un minuto y responda: ¿qué le duele hoy a alguien SIN ese chatbot? Ese dolor es su problema."
+      ],
+      [
+        "advertencia",
+        "**Pregunta que no cabe en el periodo.** Si no puede responderla con los recursos de un semestre, recórtela a un actor y un contexto. Recortar es una decisión metodológica, no una derrota."
+      ],
+      [
+        "aclaracion",
+        "**Objetivo no es lo mismo que pregunta.** El objetivo empieza con verbo (“Caracterizar…”); la pregunta empieza con interrogante (“¿Cómo…?”). Van en secciones distintas del documento."
+      ],
+      [
+        "info",
+        "**En Proyecto I no se recolecta nada.** No hay encuestas aplicadas, ni entrevistas, ni observación en campo: hoy se diseña y se propone. El trabajo de campo llega en Proyecto II, con aval previo."
+      ]
     ]
   },
   {
@@ -163,38 +281,66 @@
       "**7.** Si ya consultaron alguna fuente, generen la cita en **ZoteroBib (zbib.org)** o con las citas integradas de Docs.",
       "**8.** Suban el avance a CDigital como **S02_ProblemaPregunta_Apellidos**."
     ],
-    "note": "Todo se hace desde el navegador, gratis y sin instalar nada. [URL CDigital — campus del curso pendiente]"
+    "note": "Todo se hace desde el navegador, gratis y sin instalar nada. {{CDIGITAL}}"
   },
   {
-    "type": "bullets",
-    "title": "TALLER (18 minutos) — borrador de problema y pregunta",
-    "bullets": [
-      "**Consigna literal:** en el documento del equipo, y en 18 minutos, produzcan tres cosas.",
-      "  **(1)** De 8 a 12 líneas de planteamiento: síntoma, contexto, actores y consecuencia.",
-      "  **(2)** Su pregunta de investigación en **una sola frase**.",
-      "  **(3)** La línea oficial de IA en la que encaja, escrita tal cual aparece en el programa.",
-      "El Docente pasa por los equipos mientras escriben; levanten la mano si se atascan en el síntoma.",
-      "**Últimos 3 minutos:** tres equipos leen en voz alta **solo su pregunta**, en 20 segundos cada uno.",
-      "**Criterio de éxito (verificable):** al escuchar la pregunta se identifican **actor + fenómeno + contexto**.",
-      "  Si falta uno de los tres, la pregunta vuelve a taller: no avanza a objetivos todavía."
-    ],
-    "note": "Prohibido durante el taller: escribir la solución, prometer resultados o nombrar la herramienta que van a construir."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de subir el avance",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
-    "rows": [
-      ["Hay un actor concreto", "Puedo señalar quién sufre el síntoma, con nombre de rol", "[  ]"],
-      ["Hay un contexto delimitado", "Nombro organización, aula o proceso; no un país", "[  ]"],
-      ["El síntoma es observable", "Otra persona podría constatarlo sin creerme a mí", "[  ]"],
-      ["La pregunta cabe en una frase", "La leo en 20 segundos sin quedarme sin aire", "[  ]"],
-      ["No empieza por “¿es…?”", "Arranca con cómo, qué factores, qué características, qué requisitos o en qué medida", "[  ]"],
-      ["No propone una solución", "Las palabras app, bot o sistema no aparecen en la pregunta", "[  ]"],
-      ["Encaja en una línea oficial", "La escribí textualmente debajo de la pregunta", "[  ]"],
-      ["No aplico instrumentos", "No hay ninguna frase que diga “se aplicó” o “se encuestó”", "[  ]"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "Listo"
     ],
-    "col_w": [3.0, 5.6, 0.8],
+    "rows": [
+      [
+        "Hay un actor concreto",
+        "Puedo señalar quién sufre el síntoma, con nombre de rol",
+        "[  ]"
+      ],
+      [
+        "Hay un contexto delimitado",
+        "Nombro organización, aula o proceso; no un país",
+        "[  ]"
+      ],
+      [
+        "El síntoma es observable",
+        "Otra persona podría constatarlo sin creerme a mí",
+        "[  ]"
+      ],
+      [
+        "La pregunta cabe en una frase",
+        "La leo en 20 segundos sin quedarme sin aire",
+        "[  ]"
+      ],
+      [
+        "No empieza por “¿es…?”",
+        "Arranca con cómo, qué factores, qué características, qué requisitos o en qué medida",
+        "[  ]"
+      ],
+      [
+        "No propone una solución",
+        "Las palabras app, bot o sistema no aparecen en la pregunta",
+        "[  ]"
+      ],
+      [
+        "Encaja en una línea oficial",
+        "La escribí textualmente debajo de la pregunta",
+        "[  ]"
+      ],
+      [
+        "No aplico instrumentos",
+        "No hay ninguna frase que diga “se aplicó” o “se encuestó”",
+        "[  ]"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      5.6,
+      0.8
+    ],
     "note": "Ocho casillas. Si alguna queda vacía, el avance todavía no está listo para subir a CDigital."
   },
   {

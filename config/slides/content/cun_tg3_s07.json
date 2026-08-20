@@ -3,7 +3,7 @@
     "type": "bullets",
     "title": "El dato en bruto no dice nada; el hallazgo sí",
     "bullets": [
-      "Esta es la sesión que separa un buen artículo de uno mediocre: **convertir datos en hallazgos**.",
+      "Esta es la sesión que separa un buen documento de uno mediocre: **convertir datos en hallazgos**.",
       "Muchos estudiantes entregan tablas y creen que entregaron resultados. **No.** Les falta el paso del medio: interpretar.",
       "Ejemplo que se repite todos los semestres: el estudiante escribe \"el 70% respondió que sí\" y ahí termina el párrafo.",
       "  ¿70% de cuántos? ¿Sí a qué? ¿Eso es mucho o es poco? ¿Comparado con qué? ¿Qué objetivo responde?",
@@ -17,14 +17,39 @@
   {
     "type": "table",
     "title": "Dato, hallazgo y resultado no son lo mismo",
-    "headers": ["Nivel", "Qué es", "Ejemplo", "Qué le falta si se queda ahí"],
+    "headers": [
+      "Nivel",
+      "Qué es",
+      "Ejemplo",
+      "Qué le falta si se queda ahí"
+    ],
     "rows": [
-      ["**Dato**", "El registro en bruto, tal como se capturó", "\"El despliegue tardó 42 minutos\"", "Falta el significado: es solo un número"],
-      ["**Hallazgo**", "La interpretación del dato a la luz de la pregunta", "\"El tiempo de despliegue casi duplica el estándar del equipo\"", "Falta amarrarlo a un objetivo del proyecto"],
-      ["**Resultado**", "El hallazgo que **responde a un objetivo**", "\"Se caracterizó el proceso actual: lento y con 6 pasos manuales\"", "Nada: esto sí va en la sección de Resultados"]
+      [
+        "**Dato**",
+        "El registro en bruto, tal como se capturó",
+        "\"El despliegue tardó 42 minutos\"",
+        "Falta el significado: es solo un número"
+      ],
+      [
+        "**Hallazgo**",
+        "La interpretación del dato a la luz de la pregunta",
+        "\"El tiempo de despliegue casi duplica el estándar del equipo\"",
+        "Falta amarrarlo a un objetivo del proyecto"
+      ],
+      [
+        "**Resultado**",
+        "El hallazgo que **responde a un objetivo**",
+        "\"Se caracterizó el proceso actual: lento y con 6 pasos manuales\"",
+        "Nada: esto sí va en la sección de Resultados"
+      ]
     ],
     "note": "El salto de dato a hallazgo se hace **comparando**: contra un estándar, contra otro grupo, contra el momento anterior o contra lo que dice la literatura.",
-    "col_w": [1.8, 3.0, 3.6, 3.5]
+    "col_w": [
+      1.8,
+      3.0,
+      3.6,
+      3.5
+    ]
   },
   {
     "type": "bullets",
@@ -43,15 +68,45 @@
   {
     "type": "table",
     "title": "Cómo se analiza según su enfoque",
-    "headers": ["Enfoque", "Qué se hace con los datos", "Qué se muestra", "Herramienta gratis"],
+    "headers": [
+      "Enfoque",
+      "Qué se hace con los datos",
+      "Qué se muestra",
+      "Herramienta gratis"
+    ],
     "rows": [
-      ["**Cuantitativo**", "Promedios, frecuencias, porcentajes, rangos, mínimos y máximos", "Tablas y gráficos, **cada uno con su lectura en prosa**", "Hojas de cálculo de Google"],
-      ["**Cualitativo**", "Codificar (etiquetar fragmentos), agrupar en categorías, buscar patrones", "Categorías con citas textuales de los participantes", "Google Docs con colores y comentarios"],
-      ["**Investigación-creación**", "Describir decisiones de diseño, iteraciones y aprendizajes del prototipo", "Bitácora de iteraciones y rúbrica aplicada", "Docs + Excalidraw para los esquemas"],
-      ["**Mixto**", "Se analiza cada parte por separado y luego se cruzan", "Un número y la explicación de la gente sobre ese número", "Hojas de cálculo + Docs"]
+      [
+        "**Cuantitativo**",
+        "Promedios, frecuencias, porcentajes, rangos, mínimos y máximos",
+        "Tablas y gráficos, **cada uno con su lectura en prosa**",
+        "Hojas de cálculo de Google"
+      ],
+      [
+        "**Cualitativo**",
+        "Codificar (etiquetar fragmentos), agrupar en categorías, buscar patrones",
+        "Categorías con citas textuales de los participantes",
+        "Google Docs con colores y comentarios"
+      ],
+      [
+        "**Investigación-creación**",
+        "Describir decisiones de diseño, iteraciones y aprendizajes del prototipo",
+        "Bitácora de iteraciones y rúbrica aplicada",
+        "Docs + Excalidraw para los esquemas"
+      ],
+      [
+        "**Mixto**",
+        "Se analiza cada parte por separado y luego se cruzan",
+        "Un número y la explicación de la gente sobre ese número",
+        "Hojas de cálculo + Docs"
+      ]
     ],
     "note": "En cualquiera de los cuatro casos la regla es la misma: **nada se deja solo**. Toda tabla, gráfico o categoría lleva su frase de interpretación.",
-    "col_w": [2.4, 3.5, 3.3, 2.7]
+    "col_w": [
+      2.4,
+      3.5,
+      3.3,
+      2.7
+    ]
   },
   {
     "type": "bullets",
@@ -92,48 +147,106 @@
       "**Lo comparo:** el acuerdo interno del área fija 20 minutos como tiempo objetivo.",
       "**Hallazgo:** \"el tiempo actual de despliegue **duplica** el tiempo objetivo del área\".",
       "**¿A qué objetivo responde?** Al objetivo específico 1: *caracterizar el proceso actual de despliegue*.",
-      "**Resultado (así se escribe en el artículo):** \"Se caracterizó el proceso actual: un despliegue toma en promedio 42 minutos (rango 31-58), frente al tiempo objetivo de 20 minutos, y exige seis pasos manuales.\"",
+      "**Resultado (así se escribe en el documento):** \"Se caracterizó el proceso actual: un despliegue toma en promedio 42 minutos (rango 31-58), frente al tiempo objetivo de 20 minutos, y exige seis pasos manuales.\"",
       "**Ahora una tabla muda y su arreglo:**",
       "  *Tabla muda:* tres columnas de números pegadas en el documento, sin una sola frase alrededor.",
       "  *Tabla con lectura:* debajo se agrega — \"**Se observa que** el 70% de los despliegues (14 de 20) superó los 40 minutos, **lo que indica que** la demora no es un caso aislado sino el comportamiento habitual del proceso.\"",
       "**Esa frase es la diferencia** entre un anexo y un resultado."
     ],
-    "note": "Repita este recorrido con cada tabla y cada gráfico de su artículo. Sin excepción."
+    "note": "Repita este recorrido con cada tabla y cada gráfico de su documento. Sin excepción."
   },
   {
     "type": "table",
     "title": "Tabla de hallazgos — la herramienta del día",
-    "headers": ["Dato (evidencia)", "Hallazgo (interpretación)", "Objetivo que responde"],
+    "headers": [
+      "Dato (evidencia)",
+      "Hallazgo (interpretación)",
+      "Objetivo que responde"
+    ],
     "rows": [
-      ["Promedio de 42 min por despliegue (n=20)", "Duplica el tiempo objetivo del área (20 min)", "**Obj. 1** — Caracterizar el proceso actual"],
-      ["6 pasos ejecutados manualmente", "Alta dependencia de intervención humana en cada salida", "**Obj. 1** — Caracterizar el proceso actual"],
-      ["3 incidencias por semana en producción", "Los errores llegan al usuario con frecuencia sostenida", "**Obj. 3** — Comparar antes y después"],
-      ["Cobertura de pruebas del 35%", "Dos tercios del código sale sin verificación automática", "**Obj. 2** — Diseñar la automatización"],
-      ["\"toca esperar a que aprueben\" (P3, P5)", "La espera por terceros es una fricción reconocida por el equipo", "**Obj. 1** — Caracterizar el proceso actual"]
+      [
+        "Promedio de 42 min por despliegue (n=20)",
+        "Duplica el tiempo objetivo del área (20 min)",
+        "**Obj. 1** — Caracterizar el proceso actual"
+      ],
+      [
+        "6 pasos ejecutados manualmente",
+        "Alta dependencia de intervención humana en cada salida",
+        "**Obj. 1** — Caracterizar el proceso actual"
+      ],
+      [
+        "3 incidencias por semana en producción",
+        "Los errores llegan al usuario con frecuencia sostenida",
+        "**Obj. 3** — Comparar antes y después"
+      ],
+      [
+        "Cobertura de pruebas del 35%",
+        "Dos tercios del código sale sin verificación automática",
+        "**Obj. 2** — Diseñar la automatización"
+      ],
+      [
+        "\"toca esperar a que aprueben\" (P3, P5)",
+        "La espera por terceros es una fricción reconocida por el equipo",
+        "**Obj. 1** — Caracterizar el proceso actual"
+      ]
     ],
     "note": "Si una fila no puede llenar la tercera columna, hay dos posibilidades: **o ese dato sobra, o le falta un objetivo**. Decida hoy cuál de las dos.",
-    "col_w": [3.6, 4.4, 3.9]
+    "col_w": [
+      3.6,
+      4.4,
+      3.9
+    ]
   },
   {
     "type": "boxes",
     "title": "La advertencia del día: el \"data dump\"",
     "boxes": [
-      ["advertencia", "**Data dump** es pegar diez tablas seguidas sin una sola frase que las explique. No es análisis: es un volcado. El jurado lo detecta en la primera hojeada."],
-      ["aclaracion", "**Regla simple:** si una tabla no tiene lectura, sobra. O la interpreta, o la manda a anexos."],
-      ["aclaracion", "**Fórmula de lectura, para copiar y usar:** \"**Se observa que** [lo que muestra el dato], **lo que indica que** [qué significa para mi pregunta].\" Dos frases por tabla bastan."],
-      ["info", "Prueba de calidad: tape todas las tablas de su sección de Resultados. Si el texto se sigue entendiendo y se sabe qué encontró usted, está bien escrito."],
-      ["advertencia", "Al revés también falla: **texto sin evidencia**. Toda afirmación de la sección de Resultados debe poder señalar el dato que la sostiene."]
+      [
+        "advertencia",
+        "**Data dump** es pegar diez tablas seguidas sin una sola frase que las explique. No es análisis: es un volcado. El jurado lo detecta en la primera hojeada."
+      ],
+      [
+        "aclaracion",
+        "**Regla simple:** si una tabla no tiene lectura, sobra. O la interpreta, o la manda a anexos."
+      ],
+      [
+        "aclaracion",
+        "**Fórmula de lectura, para copiar y usar:** \"**Se observa que** [lo que muestra el dato], **lo que indica que** [qué significa para mi pregunta].\" Dos frases por tabla bastan."
+      ],
+      [
+        "info",
+        "Prueba de calidad: tape todas las tablas de su sección de Resultados. Si el texto se sigue entendiendo y se sabe qué encontró usted, está bien escrito."
+      ],
+      [
+        "advertencia",
+        "Al revés también falla: **texto sin evidencia**. Toda afirmación de la sección de Resultados debe poder señalar el dato que la sostiene."
+      ]
     ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes de esta sesión",
     "boxes": [
-      ["advertencia", "\"Pego mis tablas y ya están los resultados.\" — Falta la lectura de cada tabla: qué se ve y qué significa."],
-      ["advertencia", "\"Mi opinión sobre el tema es un hallazgo.\" — No. Un hallazgo se sostiene en un dato. Opinión sin dato no entra al artículo."],
-      ["advertencia", "\"Analizo cosas que no pregunté porque son interesantes.\" — Dispersan y le restan foco. Analice solo lo que responde a un objetivo."],
-      ["advertencia", "\"Tengo el dato pero no sé a qué objetivo va.\" — Revise: o el dato sobra, o le falta un objetivo, o su instrumento capturó cosas que nadie pidió."],
-      ["aclaracion", "\"¿Y si mis resultados contradicen lo que yo esperaba?\" — Excelente material. Un resultado inesperado bien sustentado vale más que uno predecible; se reporta igual y se discute."]
+      [
+        "advertencia",
+        "\"Pego mis tablas y ya están los resultados.\" — Falta la lectura de cada tabla: qué se ve y qué significa."
+      ],
+      [
+        "advertencia",
+        "\"Mi opinión sobre el tema es un hallazgo.\" — No. Un hallazgo se sostiene en un dato. Opinión sin dato no entra al documento."
+      ],
+      [
+        "advertencia",
+        "\"Analizo cosas que no pregunté porque son interesantes.\" — Dispersan y le restan foco. Analice solo lo que responde a un objetivo."
+      ],
+      [
+        "advertencia",
+        "\"Tengo el dato pero no sé a qué objetivo va.\" — Revise: o el dato sobra, o le falta un objetivo, o su instrumento capturó cosas que nadie pidió."
+      ],
+      [
+        "aclaracion",
+        "\"¿Y si mis resultados contradicen lo que yo esperaba?\" — Excelente material. Un resultado inesperado bien sustentado vale más que uno predecible; se reporta igual y se discute."
+      ]
     ]
   },
   {
@@ -153,41 +266,42 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Tabla de hallazgos y página de lectura",
-    "bullets": [
-      "**Tiempo: 20 minutos.** Trabajo individual. Entregable: `S07_AnalisisHallazgos_Apellido`.",
-      "**Consigna literal:**",
-      "  **(1)** Arme una **tabla de hallazgos** con las columnas *dato · hallazgo · objetivo que responde*, con **mínimo 3 filas**.",
-      "  **(2)** Escriba **una página de lectura en prosa** que interprete esos hallazgos: qué se ve y qué significa.",
-      "  **(3)** Use al menos una vez la fórmula \"**se observa que… lo que indica que…**\".",
-      "  **(4)** Marque con color los hallazgos que piensa retomar en la discusión.",
-      "**Criterio de éxito (así se verifica):**",
-      "  Cada dato tiene su interpretación y está amarrado a un objetivo: **ninguna celda de la tercera columna vacía**.",
-      "  Si **el Docente** lee su página **sin ver las tablas**, entiende qué encontró usted.",
-      "  **No hay ni una tabla muda** en su documento."
-    ],
-    "note": "Si todavía tiene pocos datos, haga el ejercicio con los que tenga. Lo que se evalúa hoy es la **lógica del análisis**, no el volumen de la muestra."
+    "type": "taller"
   },
   {
     "type": "boxes",
     "title": "Checklist de autoevaluación antes de subir a CDigital",
     "boxes": [
-      ["info", "**Trazabilidad:** ¿puedo señalar de dónde salió cada número de mi tabla? ¿mis registros originales están guardados y disponibles?"],
-      ["info", "**Interpretación:** ¿cada dato de mi tabla tiene un hallazgo redactado, y ese hallazgo compara contra algo (estándar, momento anterior, otro grupo o literatura)?"],
-      ["info", "**Amarre a objetivos:** ¿toda fila tiene su objetivo? ¿algún objetivo específico se quedó sin ninguna fila? Si es así, ahí tiene un hueco de evidencia."],
-      ["aclaracion", "**Neutralidad:** ¿mi sección de Resultados está libre de juicios y de explicaciones de causa? Eso va en la Discusión."],
-      ["advertencia", "**Formato:** ¿todas las tablas y figuras están numeradas, tituladas en APA y referidas en el texto? ¿ninguna quedó suelta sin su lectura?"]
+      [
+        "info",
+        "**Trazabilidad:** ¿puedo señalar de dónde salió cada número de mi tabla? ¿mis registros originales están guardados y disponibles?"
+      ],
+      [
+        "info",
+        "**Interpretación:** ¿cada dato de mi tabla tiene un hallazgo redactado, y ese hallazgo compara contra algo (estándar, momento anterior, otro grupo o literatura)?"
+      ],
+      [
+        "info",
+        "**Amarre a objetivos:** ¿toda fila tiene su objetivo? ¿algún objetivo específico se quedó sin ninguna fila? Si es así, ahí tiene un hueco de evidencia."
+      ],
+      [
+        "aclaracion",
+        "**Neutralidad:** ¿mi sección de Resultados está libre de juicios y de explicaciones de causa? Eso va en la Discusión."
+      ],
+      [
+        "advertencia",
+        "**Formato:** ¿todas las tablas y figuras están numeradas, tituladas en APA y referidas en el texto? ¿ninguna quedó suelta sin su lectura?"
+      ]
     ]
   },
   {
     "type": "bullets",
     "title": "Para continuar — trabajo autónomo",
     "bullets": [
-      "**Suba** `S07_AnalisisHallazgos_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Suba** `S07_AnalisisHallazgos_Apellido` a **CDigital**: {{CDIGITAL}}",
       "**Trabajo autónomo (extensión de la sesión):**",
       "  Complete la tabla de hallazgos con **todos** sus datos, no solo con los tres del taller.",
-      "  Redacte ya la sección de **Resultados** del artículo: la tabla de hallazgos se traduce a prosa casi directamente.",
+      "  Redacte ya la sección de **Resultados** del documento: la tabla de hallazgos se traduce a prosa casi directamente.",
       "  Genere en Hojas de cálculo los **gráficos** que de verdad aporten y péguelos en el documento, cada uno con su lectura.",
       "  Vuelva a sus **fichas de lectura** y anote, al lado de cada hallazgo, qué autor dice algo parecido o contrario. Esa lista es el esqueleto de la discusión.",
       "  Si su trabajo es obra-creación, cierre la **bitácora de iteraciones** con el aprendizaje de la última versión del prototipo.",

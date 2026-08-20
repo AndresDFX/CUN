@@ -5,7 +5,7 @@
     "bullets": [
       "La palabra de la sesión es **cerrar**. No vamos a abrir frentes nuevos: vamos a rematar lo que quedó cojo.",
       "El marco teórico tiene un defecto tentador: **se puede agrandar hasta el infinito**.",
-      "  Siempre hay un autor más, un concepto vecino, una teoría interesante. Y mientras tanto el artículo no avanza.",
+      "  Siempre hay un autor más, un concepto vecino, una teoría interesante. Y mientras tanto el documento no avanza.",
       "El síntoma típico: el estudiante lleva seis semanas \"leyendo\" y no ha escrito ni un párrafo de resultados.",
       "  Leer se siente productivo, pero si no cierra el marco, está aplazando el trabajo real.",
       "La meta no es un marco **completo**: es un marco **suficiente y usable**.",
@@ -33,16 +33,44 @@
   {
     "type": "table",
     "title": "Marco por autores vs. marco por constructos",
-    "headers": ["Aspecto", "Marco por autores (malo)", "Marco por constructos (correcto)"],
+    "headers": [
+      "Aspecto",
+      "Marco por autores (malo)",
+      "Marco por constructos (correcto)"
+    ],
     "rows": [
-      ["Cómo se lee", "\"Pérez dice… Luego González dice… Luego Ramírez dice…\"", "\"La automatización de pruebas se entiende como… (Pérez, 2021; Ramírez, 2022)\""],
-      ["Qué es en realidad", "Una lista de resúmenes pegados", "Un **argumento** construido por usted"],
-      ["Quién manda", "El orden en que usted leyó los artículos", "Los **conceptos de su pregunta**"],
-      ["Qué pasa con dos autores del mismo tema", "Quedan separados, cada uno en su párrafo", "Quedan juntos, y usted muestra si coinciden o no"],
-      ["Qué sirve para la discusión", "Poco: hay que volver a rastrear todo", "Todo: cada bloque ya está listo para dialogar"]
+      [
+        "Cómo se lee",
+        "\"Pérez dice… Luego González dice… Luego Ramírez dice…\"",
+        "\"La automatización de pruebas se entiende como… (Pérez, 2021; Ramírez, 2022)\""
+      ],
+      [
+        "Qué es en realidad",
+        "Una lista de resúmenes pegados",
+        "Un **argumento** construido por usted"
+      ],
+      [
+        "Quién manda",
+        "El orden en que usted leyó los artículos",
+        "Los **conceptos de su pregunta**"
+      ],
+      [
+        "Qué pasa con dos autores del mismo tema",
+        "Quedan separados, cada uno en su párrafo",
+        "Quedan juntos, y usted muestra si coinciden o no"
+      ],
+      [
+        "Qué sirve para la discusión",
+        "Poco: hay que volver a rastrear todo",
+        "Todo: cada bloque ya está listo para dialogar"
+      ]
     ],
     "note": "Regla: **el autor va debajo del concepto**, nunca al revés. Si un párrafo de su marco empieza con el apellido de un autor, revíselo.",
-    "col_w": [2.5, 4.6, 4.8]
+    "col_w": [
+      2.5,
+      4.6,
+      4.8
+    ]
   },
   {
     "type": "bullets",
@@ -52,7 +80,7 @@
       "Ejemplo: \"¿En qué medida la **automatización de pruebas** reduce el **tiempo de despliegue** en el equipo de TI?\"",
       "  Constructo 1: automatización de pruebas. Constructo 2: tiempo de despliegue. Y falta el tercero, que casi todos olvidan:",
       "  Constructo 3: **la relación entre los dos**. Qué dice la literatura sobre ese vínculo.",
-      "Con **dos o tres constructos basta** para un artículo de pregrado. Cinco constructos ya es un marco que no va a cerrar nunca.",
+      "Con **dos o tres constructos basta** para un documento de pregrado. Cinco constructos ya es un marco que no va a cerrar nunca.",
       "Bajo cada constructo debe quedar claro:",
       "  **La definición** que usted adopta, y de qué autor la toma. Si hay definiciones en disputa, dígalo y elija una.",
       "  **La clasificación o los tipos**, si el concepto los tiene.",
@@ -63,15 +91,45 @@
   {
     "type": "table",
     "title": "Tabla de constructos — el mapa de su marco",
-    "headers": ["Constructo", "Qué debe quedar claro", "Fuentes que lo sostienen", "Estado"],
+    "headers": [
+      "Constructo",
+      "Qué debe quedar claro",
+      "Fuentes que lo sostienen",
+      "Estado"
+    ],
     "rows": [
-      ["**Automatización de pruebas**", "Definición, tipos, beneficios y riesgos", "Pérez (2021); Ramírez (2022); Gómez (2023)", "**Cerrado**"],
-      ["**Tiempo de despliegue**", "Cómo se mide, qué factores lo afectan", "Torres (2024); Ramírez (2022)", "Falta cómo se mide en equipos pequeños"],
-      ["**Relación entre ambos**", "Qué evidencia hay del vínculo y en qué condiciones", "Ramírez (2022); Gómez (2023)", "Falta 1 fuente que matice"],
-      ["**Integración continua**", "Marco tecnológico donde ocurre el proceso", "Torres (2024)", "**Cerrado** con una fuente; suficiente"]
+      [
+        "**Automatización de pruebas**",
+        "Definición, tipos, beneficios y riesgos",
+        "Pérez (2021); Ramírez (2022); Gómez (2023)",
+        "**Cerrado**"
+      ],
+      [
+        "**Tiempo de despliegue**",
+        "Cómo se mide, qué factores lo afectan",
+        "Torres (2024); Ramírez (2022)",
+        "Falta cómo se mide en equipos pequeños"
+      ],
+      [
+        "**Relación entre ambos**",
+        "Qué evidencia hay del vínculo y en qué condiciones",
+        "Ramírez (2022); Gómez (2023)",
+        "Falta 1 fuente que matice"
+      ],
+      [
+        "**Integración continua**",
+        "Marco tecnológico donde ocurre el proceso",
+        "Torres (2024)",
+        "**Cerrado** con una fuente; suficiente"
+      ]
     ],
     "note": "La columna **Estado** es su lista de tareas. Solo se busca lo que falta ahí: nada más. Así se cierra el marco en lugar de agrandarlo.",
-    "col_w": [2.7, 3.4, 3.0, 2.8]
+    "col_w": [
+      2.7,
+      3.4,
+      3.0,
+      2.8
+    ]
   },
   {
     "type": "bullets",
@@ -108,7 +166,7 @@
     "type": "bullets",
     "title": "Paso a paso — auditar el conteo en Google Docs",
     "bullets": [
-      "**1.** Abra su documento en Google Docs y separe visualmente el cuerpo del artículo de la lista de Referencias.",
+      "**1.** Abra su documento en Google Docs y separe visualmente el cuerpo del documento de la lista de Referencias.",
       "**2.** Numere la lista de referencias temporalmente para saber cuántas tiene. Anote el número: ese es su **total listado**.",
       "**3.** Tome el primer apellido de la lista y búsquelo en el cuerpo con **Ctrl+F**.",
       "  Si aparece al menos una vez fuera de la lista → cuenta. Márquela con un color.",
@@ -126,7 +184,7 @@
     "title": "Ejemplo modelado — la auditoría con números reales",
     "bullets": [
       "**Lo que el estudiante creía:** \"tengo 41 referencias, me faltan 9\".",
-      "**Lo que mostró el Ctrl+F:** solo **34** apellidos aparecen citados en el cuerpo del artículo.",
+      "**Lo que mostró el Ctrl+F:** solo **34** apellidos aparecen citados en el cuerpo del documento.",
       "  Siete referencias estaban **de adorno**: se listaron y nunca se usaron.",
       "**Cuenta real:** 50 − 34 = **16 referencias** por conseguir, no 9. Casi el doble de lo que pensaba.",
       "**Decisión sobre las siete de adorno, una por una:**",
@@ -154,60 +212,106 @@
   {
     "type": "table",
     "title": "De cada constructo a un movimiento de la discusión",
-    "headers": ["Hallazgo propio", "Autor del marco", "Movimiento", "Frase que escribiré"],
+    "headers": [
+      "Hallazgo propio",
+      "Autor del marco",
+      "Movimiento",
+      "Frase que escribiré"
+    ],
     "rows": [
-      ["Despliegue de 42 min, doble del objetivo", "Ramírez (2022)", "**Confirma**", "\"Coincide con lo reportado por Ramírez (2022) en equipos ágiles\""],
-      ["El ahorro se mantuvo tras 8 semanas", "Gómez (2023)", "**Contradice**", "\"A diferencia de Gómez (2023), el costo de mantenimiento no anuló el ahorro\""],
-      ["Efecto mayor en un equipo de 4 personas", "Torres (2024)", "**Extiende**", "\"Extiende el hallazgo de Torres (2024) a equipos aún más pequeños\""],
-      ["Bitácora de despliegues por 8 semanas", "Pérez (2021)", "**Método**", "\"Se siguió la lógica de registro propuesta por Pérez (2021)\""]
+      [
+        "Despliegue de 42 min, doble del objetivo",
+        "Ramírez (2022)",
+        "**Confirma**",
+        "\"Coincide con lo reportado por Ramírez (2022) en equipos ágiles\""
+      ],
+      [
+        "El ahorro se mantuvo tras 8 semanas",
+        "Gómez (2023)",
+        "**Contradice**",
+        "\"A diferencia de Gómez (2023), el costo de mantenimiento no anuló el ahorro\""
+      ],
+      [
+        "Efecto mayor en un equipo de 4 personas",
+        "Torres (2024)",
+        "**Extiende**",
+        "\"Extiende el hallazgo de Torres (2024) a equipos aún más pequeños\""
+      ],
+      [
+        "Bitácora de despliegues por 8 semanas",
+        "Pérez (2021)",
+        "**Método**",
+        "\"Se siguió la lógica de registro propuesta por Pérez (2021)\""
+      ]
     ],
     "note": "Esta tabla es literalmente el **borrador de su discusión**. Cada fila se convierte en un párrafo cuando llegue esa sección.",
-    "col_w": [3.2, 2.2, 1.9, 4.6]
+    "col_w": [
+      3.2,
+      2.2,
+      1.9,
+      4.6
+    ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes de esta sesión",
     "boxes": [
-      ["advertencia", "\"Sigo agregando teoría, nunca siento que es suficiente.\" — Aplique saturación: pare cuando las fuentes solo repitan. El marco es suficiente y usable, no infinito."],
-      ["advertencia", "\"Organizo el marco autor por autor.\" — Reorganícelo por constructos: los autores entran debajo del concepto que sostienen, no al revés."],
-      ["advertencia", "\"Tengo 50 referencias en la lista.\" — ¿Cuántas están **citadas en el cuerpo**? Las que solo están listadas no cuentan y le alertan al jurado que la lista se infló."],
-      ["advertencia", "\"El marco no tiene nada que ver con lo que voy a discutir.\" — Entonces sobra. Cada autor del marco debe ser alguien con quien luego dialogue."],
-      ["aclaracion", "\"¿Puedo citar el mismo autor varias veces?\" — Claro, y es buena señal: significa que esa fuente es central. Lo que no puede es contarla como varias referencias distintas."]
+      [
+        "advertencia",
+        "\"Sigo agregando teoría, nunca siento que es suficiente.\" — Aplique saturación: pare cuando las fuentes solo repitan. El marco es suficiente y usable, no infinito."
+      ],
+      [
+        "advertencia",
+        "\"Organizo el marco autor por autor.\" — Reorganícelo por constructos: los autores entran debajo del concepto que sostienen, no al revés."
+      ],
+      [
+        "advertencia",
+        "\"Tengo 50 referencias en la lista.\" — ¿Cuántas están **citadas en el cuerpo**? Las que solo están listadas no cuentan y le alertan al jurado que la lista se infló."
+      ],
+      [
+        "advertencia",
+        "\"El marco no tiene nada que ver con lo que voy a discutir.\" — Entonces sobra. Cada autor del marco debe ser alguien con quien luego dialogue."
+      ],
+      [
+        "aclaracion",
+        "\"¿Puedo citar el mismo autor varias veces?\" — Claro, y es buena señal: significa que esa fuente es central. Lo que no puede es contarla como varias referencias distintas."
+      ]
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Cierre del marco y auditoría de referencias",
-    "bullets": [
-      "**Tiempo: 20 minutos.** Trabajo individual. Entregable: `S08_MarcoCierre_Apellido`.",
-      "**Consigna literal:**",
-      "  **(1)** Reorganice su marco **por constructos** —mínimo 2, máximo 3— y verifique que bajo cada uno haya definición, tipos y forma de medición.",
-      "  **(2)** Arme su **tabla de constructos** con la columna de estado: cerrado o qué le falta.",
-      "  **(3)** Audite el conteo con **Ctrl+F**: escriba cuántas referencias tiene **listadas**, cuántas están **citadas en el cuerpo** y cuántas le faltan para 50.",
-      "  **(4)** Haga la **lista de huecos**: cuáles resolvió hoy y cuáles quedan para trabajo autónomo, con fecha propia de cumplimiento.",
-      "**Criterio de éxito (así se verifica):**",
-      "  El marco **se lee como argumento por constructos**, no como lista de resúmenes por autor.",
-      "  El conteo de referencias citadas es **real, no inflado**: usted puede mostrar dónde se cita cada una.",
-      "  Cada bloque del marco tiene anotado su movimiento previsto para la discusión."
-    ],
-    "note": "Mientras trabajan, **el Docente** revisa dos cosas: que ningún párrafo empiece con un apellido y que el conteo sea el del Ctrl+F, no el de la lista."
+    "type": "taller"
   },
   {
     "type": "boxes",
     "title": "Checklist de autoevaluación antes de subir a CDigital",
     "boxes": [
-      ["info", "**Constructos:** ¿los saqué de mi propia pregunta? ¿son 2 o 3, no cinco? ¿bajo cada uno hay definición, tipos y forma de medición?"],
-      ["info", "**Argumento:** ¿algún párrafo de mi marco empieza con el apellido de un autor? Si sí, todavía tengo marco de autores; reescríbalo."],
-      ["info", "**Conteo real:** ¿hice el Ctrl+F referencia por referencia? ¿anoté el total listado, el total citado y la diferencia frente a 50?"],
-      ["aclaracion", "**Limpieza:** ¿borré o cité las referencias que estaban de adorno? ¿toda cita del cuerpo tiene su referencia completa en la lista?"],
-      ["advertencia", "**Utilidad:** ¿cada bloque del marco me sirve para confirmar, contradecir, extender o aportar método en la discusión? Lo que no sirva para ninguna de las cuatro, sobra."]
+      [
+        "info",
+        "**Constructos:** ¿los saqué de mi propia pregunta? ¿son 2 o 3, no cinco? ¿bajo cada uno hay definición, tipos y forma de medición?"
+      ],
+      [
+        "info",
+        "**Argumento:** ¿algún párrafo de mi marco empieza con el apellido de un autor? Si sí, todavía tengo marco de autores; reescríbalo."
+      ],
+      [
+        "info",
+        "**Conteo real:** ¿hice el Ctrl+F referencia por referencia? ¿anoté el total listado, el total citado y la diferencia frente a 50?"
+      ],
+      [
+        "aclaracion",
+        "**Limpieza:** ¿borré o cité las referencias que estaban de adorno? ¿toda cita del cuerpo tiene su referencia completa en la lista?"
+      ],
+      [
+        "advertencia",
+        "**Utilidad:** ¿cada bloque del marco me sirve para confirmar, contradecir, extender o aportar método en la discusión? Lo que no sirva para ninguna de las cuatro, sobra."
+      ]
     ]
   },
   {
     "type": "bullets",
     "title": "Para continuar — trabajo autónomo",
     "bullets": [
-      "**Suba** `S08_MarcoCierre_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Suba** `S08_MarcoCierre_Apellido` a **CDigital**: {{CDIGITAL}}",
       "**Trabajo autónomo (extensión de la sesión):**",
       "  **Cierre los huecos** que dejó marcados en la tabla de constructos. Busque **solo eso**: no abra temas nuevos.",
       "  Consiga las referencias que le faltan para 50, en Google Académico, SciELO y Redalyc, y haga su **ficha de lectura** a cada una. Sin ficha, no entra.",

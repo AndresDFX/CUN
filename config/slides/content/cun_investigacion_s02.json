@@ -32,17 +32,57 @@
   {
     "type": "table",
     "title": "Las 6 líneas de Ingeniería del programa",
-    "headers": ["Línea", "De qué trata", "Palabras clave para buscar", "Pregunta de ejemplo"],
+    "headers": [
+      "Línea",
+      "De qué trata",
+      "Palabras clave para buscar",
+      "Pregunta de ejemplo"
+    ],
     "rows": [
-      ["**IoT** (Internet de las Cosas)", "Sensores y dispositivos conectados que capturan el mundo físico", "sensor, telemetría, ESP32, MQTT", "¿Cómo monitorear el consumo eléctrico de un laboratorio con sensores?"],
-      ["**Big Data**", "Analítica de grandes volúmenes de datos ya existentes", "dataset, ETL, minería de datos, dashboard", "¿Qué patrones de deserción revelan los datos de matrícula?"],
-      ["**Inteligencia Artificial**", "Modelos que aprenden de datos y clasifican o predicen", "clasificador, entrenamiento, precisión, sesgo", "¿Puede un clasificador detectar correos de phishing institucionales?"],
-      ["**Cloud / FinTech**", "Servicios en la nube y servicios financieros digitales", "SaaS, migración, disponibilidad, pasarela de pago", "¿Qué riesgos de seguridad tiene migrar los pagos a la nube?"],
-      ["**Aplicaciones**", "Desarrollo de software y experiencia de uso", "usabilidad, requisitos, prototipo, accesibilidad", "¿Qué barreras de usabilidad tiene el portal X para adultos mayores?"],
-      ["**Telemática**", "Redes, protocolos y comunicaciones", "latencia, ancho de banda, pérdida de paquetes, topología", "¿Cómo afecta la latencia a las clases sincrónicas en la sede Y?"]
+      [
+        "**IoT** (Internet de las Cosas)",
+        "Sensores y dispositivos conectados que capturan el mundo físico",
+        "sensor, telemetría, ESP32, MQTT",
+        "¿Cómo monitorear el consumo eléctrico de un laboratorio con sensores?"
+      ],
+      [
+        "**Big Data**",
+        "Analítica de grandes volúmenes de datos ya existentes",
+        "dataset, ETL, minería de datos, dashboard",
+        "¿Qué patrones de deserción revelan los datos de matrícula?"
+      ],
+      [
+        "**Inteligencia Artificial**",
+        "Modelos que aprenden de datos y clasifican o predicen",
+        "clasificador, entrenamiento, precisión, sesgo",
+        "¿Puede un clasificador detectar correos de phishing institucionales?"
+      ],
+      [
+        "**Cloud / FinTech**",
+        "Servicios en la nube y servicios financieros digitales",
+        "SaaS, migración, disponibilidad, pasarela de pago",
+        "¿Qué riesgos de seguridad tiene migrar los pagos a la nube?"
+      ],
+      [
+        "**Aplicaciones**",
+        "Desarrollo de software y experiencia de uso",
+        "usabilidad, requisitos, prototipo, accesibilidad",
+        "¿Qué barreras de usabilidad tiene el portal X para adultos mayores?"
+      ],
+      [
+        "**Telemática**",
+        "Redes, protocolos y comunicaciones",
+        "latencia, ancho de banda, pérdida de paquetes, topología",
+        "¿Cómo afecta la latencia a las clases sincrónicas en la sede Y?"
+      ]
     ],
     "note": "Léala como un menú de **ángulos**, no de temas: casi cualquier tema cabe en varias líneas, pero se trabaja desde **una**.",
-    "col_w": [2.2, 3.2, 2.8, 4.0]
+    "col_w": [
+      2.2,
+      3.2,
+      2.8,
+      4.0
+    ]
   },
   {
     "type": "bullets",
@@ -63,11 +103,27 @@
   {
     "type": "table",
     "title": "Los tres criterios para elegir su línea",
-    "headers": ["Criterio", "Pregunta de control que debe responderse", "Señal de alerta"],
+    "headers": [
+      "Criterio",
+      "Pregunta de control que debe responderse",
+      "Señal de alerta"
+    ],
     "rows": [
-      ["**Afinidad**", "¿Esta línea conserva lo que a mí me interesa del tema, o lo desvía?", "Tiene que forzar el tema para que quepa"],
-      ["**Viabilidad de fuentes**", "¿Encuentro hoy, en Google Académico, al menos 2 artículos usables de este ángulo?", "Busca 10 minutos y no aparece nada pertinente"],
-      ["**Pertinencia local**", "¿Le sirve a algo de mi entorno: mi sede, mi empresa, mi barrio, mi práctica?", "Solo tiene sentido en un país o una escala que no puede observar"]
+      [
+        "**Afinidad**",
+        "¿Esta línea conserva lo que a mí me interesa del tema, o lo desvía?",
+        "Tiene que forzar el tema para que quepa"
+      ],
+      [
+        "**Viabilidad de fuentes**",
+        "¿Encuentro hoy, en Google Académico, al menos 2 artículos usables de este ángulo?",
+        "Busca 10 minutos y no aparece nada pertinente"
+      ],
+      [
+        "**Pertinencia local**",
+        "¿Le sirve a algo de mi entorno: mi sede, mi empresa, mi barrio, mi práctica?",
+        "Solo tiene sentido en un país o una escala que no puede observar"
+      ]
     ],
     "note": "Regla de oro: **una sola línea principal**. Puede mencionar que su tema roza otra, pero el marco se escribe para una."
   },
@@ -87,13 +143,37 @@
   {
     "type": "table",
     "title": "Ejemplo modelado (2/2): la tabla de decisión resuelta",
-    "headers": ["Criterio", "Opción A — Inteligencia Artificial", "Opción B — Telemática"],
+    "headers": [
+      "Criterio",
+      "Opción A — Inteligencia Artificial",
+      "Opción B — Telemática"
+    ],
     "rows": [
-      ["Afinidad con el tema", "Alta: el interés es reconocer el correo malicioso", "Media: el interés se desplaza a la infraestructura"],
-      ["¿Hay fuentes accesibles?", "**Sí**: mucha literatura y datasets públicos de phishing", "Sí, pero más orientada a configuración que a investigación"],
-      ["¿Hay datos que yo pueda ver?", "**Sí**: corpus públicos de correos, sin pedir permisos", "Requiere acceso a la red institucional (permiso incierto)"],
-      ["Pertinencia local", "Alta: afecta a los estudiantes de la sede", "Alta, pero la decisión la toma el área de TI, no yo"],
-      ["**Decisión**", "**Gana: viabilidad de datos y de literatura**", "Se menciona como línea que roza, no como principal"]
+      [
+        "Afinidad con el tema",
+        "Alta: el interés es reconocer el correo malicioso",
+        "Media: el interés se desplaza a la infraestructura"
+      ],
+      [
+        "¿Hay fuentes accesibles?",
+        "**Sí**: mucha literatura y datasets públicos de phishing",
+        "Sí, pero más orientada a configuración que a investigación"
+      ],
+      [
+        "¿Hay datos que yo pueda ver?",
+        "**Sí**: corpus públicos de correos, sin pedir permisos",
+        "Requiere acceso a la red institucional (permiso incierto)"
+      ],
+      [
+        "Pertinencia local",
+        "Alta: afecta a los estudiantes de la sede",
+        "Alta, pero la decisión la toma el área de TI, no yo"
+      ],
+      [
+        "**Decisión**",
+        "**Gana: viabilidad de datos y de literatura**",
+        "Se menciona como línea que roza, no como principal"
+      ]
     ],
     "note": "Fíjese en cuál fue el criterio que desempató: **no la moda, sino de dónde puedo sacar fuentes y datos este periodo**."
   },
@@ -101,10 +181,22 @@
     "type": "boxes",
     "title": "Cuatro mitos que hay que desactivar hoy",
     "boxes": [
-      ["advertencia", "**\"Elijo IA porque está de moda.\"** La moda no le entrega fuentes. Si busca 10 minutos y no aparecen artículos de su ángulo, esa línea no es viable para usted este periodo, por popular que sea."],
-      ["advertencia", "**\"Puedo trabajar tres líneas a la vez.\"** No. Tres líneas = tres vocabularios = ningún marco sólido. Una principal; las demás, a lo sumo, una frase de contexto."],
-      ["aclaracion", "**\"La línea es un requisito administrativo.\"** Es lo contrario: define su vocabulario y sus referentes. Cambiarla en la mitad del periodo obliga a reescribir el marco teórico completo."],
-      ["info", "**\"Mi tema no cabe en ninguna línea.\"** Casi siempre cabe. Pregúntese qué duele en su tema: ¿los **datos**, la **red**, el **software**, el **dispositivo** o el **servicio en la nube**? Esa respuesta ya es la línea."]
+      [
+        "advertencia",
+        "**\"Elijo IA porque está de moda.\"** La moda no le entrega fuentes. Si busca 10 minutos y no aparecen artículos de su ángulo, esa línea no es viable para usted este periodo, por popular que sea."
+      ],
+      [
+        "advertencia",
+        "**\"Puedo trabajar tres líneas a la vez.\"** No. Tres líneas = tres vocabularios = ningún marco sólido. Una principal; las demás, a lo sumo, una frase de contexto."
+      ],
+      [
+        "aclaracion",
+        "**\"La línea es un requisito administrativo.\"** Es lo contrario: define su vocabulario y sus referentes. Cambiarla en la mitad del periodo obliga a reescribir el marco teórico completo."
+      ],
+      [
+        "info",
+        "**\"Mi tema no cabe en ninguna línea.\"** Casi siempre cabe. Pregúntese qué duele en su tema: ¿los **datos**, la **red**, el **software**, el **dispositivo** o el **servicio en la nube**? Esa respuesta ya es la línea."
+      ]
     ]
   },
   {
@@ -153,23 +245,11 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Línea elegida + justificación (~20 min)",
-    "bullets": [
-      "**Consigna literal.** En su documento `S02_LineaInvestigacion_Apellido` escriba:",
-      "  **(1)** La **línea elegida**, con su nombre exacto de las seis del programa.",
-      "  **(2)** Un **párrafo de justificación** con los tres movimientos: afinidad, fuentes y pertinencia local, más la línea descartada.",
-      "  **(3)** **Dos referentes exploratorios** encontrados en Google Académico, en APA tentativa (autor, año, título, fuente).",
-      "  **(4)** La **tabla de decisión** con las dos líneas candidatas comparadas.",
-      "**Tiempo:** ~20 minutos de trabajo individual; el Docente pasa acompañando.",
-      "**Criterio de éxito (verificable):** al leer solo su párrafo, sin conocer su tema, se entiende **por qué esa línea y no la otra**, y los dos referentes demuestran que ya existe literatura para trabajarla.",
-      "Si sus dos referentes no aparecen, la justificación **no está terminada**: el criterio de fuentes no se cumplió."
-    ],
-    "note": "Herramientas: Google Docs + Google Académico. Todo gratis y en el navegador; no se instala nada."
+    "type": "taller"
   },
   {
     "type": "bullets",
-    "title": "Checklist antes de subir su entrega",
+    "title": "Checklist antes de cerrar su avance",
     "bullets": [
       "[ ] El documento se llama exactamente `S02_LineaInvestigacion_Apellido`.",
       "[ ] Elegí **una sola** línea principal, con el nombre exacto de la lista de seis.",
@@ -179,7 +259,7 @@
       "[ ] Cada referente trae autor, año, título y dónde se publicó.",
       "[ ] Mi justificación no dice \"porque me gusta\" ni \"porque está de moda\".",
       "[ ] La tabla de decisión está en el documento (es evidencia de que comparé).",
-      "[ ] Subí el archivo a **CDigital** en el espacio de la sesión: [URL CDigital — campus del curso pendiente]"
+      "[ ] Guardé el archivo en mi Drive y lo traigo a la próxima sesión: este avance **no se sube**, alimenta la **ACA Final**, que es lo que recibe {{CDIGITAL}}."
     ]
   },
   {
@@ -192,7 +272,7 @@
       "**Traiga listos** a la próxima sesión: su tema, su línea y sus referentes.",
       "La próxima sesión es bisagra: **prueba parcial y primer avance del artículo**.",
       "  Lo que escriba hoy es **materia prima directa** de ese avance: si la línea queda floja, el avance queda flojo.",
-      "Toda la entrega y los materiales viven en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "Toda la entrega y los materiales viven en **CDigital**: {{CDIGITAL}}"
     ]
   }
 ]

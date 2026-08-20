@@ -33,15 +33,39 @@
   {
     "type": "table",
     "title": "FODA: la versión que no sirve y la que sí",
-    "headers": ["Cuadrante", "Versión vacía (no sirve)", "Versión verificable (sí sirve)"],
+    "headers": [
+      "Cuadrante",
+      "Versión vacía (no sirve)",
+      "Versión verificable (sí sirve)"
+    ],
     "rows": [
-      ["**Fortaleza** (interna)", "\"Somos creativos y comprometidos\"", "\"Tengo acceso a **30 usuarios del laboratorio** esta semana\""],
-      ["**Debilidad** (interna)", "\"Nos falta experiencia\"", "\"**Nadie del equipo** ha hecho una entrevista de usuario antes\""],
-      ["**Oportunidad** (externa)", "\"Hay mucha tecnología disponible\"", "\"El campus **ya publica el horario** de laboratorios en un archivo abierto\""],
-      ["**Amenaza** (externa)", "\"Puede haber competencia\"", "\"El laboratorio **exige autorización escrita** para cualquier piloto\""]
+      [
+        "**Fortaleza** (interna)",
+        "\"Somos creativos y comprometidos\"",
+        "\"Tengo acceso a **30 usuarios del laboratorio** esta semana\""
+      ],
+      [
+        "**Debilidad** (interna)",
+        "\"Nos falta experiencia\"",
+        "\"**Nadie del equipo** ha hecho una entrevista de usuario antes\""
+      ],
+      [
+        "**Oportunidad** (externa)",
+        "\"Hay mucha tecnología disponible\"",
+        "\"El campus **ya publica el horario** de laboratorios en un archivo abierto\""
+      ],
+      [
+        "**Amenaza** (externa)",
+        "\"Puede haber competencia\"",
+        "\"El laboratorio **exige autorización escrita** para cualquier piloto\""
+      ]
     ],
     "note": "Prueba rápida: si un compañero **no puede comprobar su frase esta semana**, todavía es un adjetivo, no un dato. Fíjense en las dos filas externas: **ya son señales de vigilancia**.",
-    "col_w": [2.4, 3.8, 4.6]
+    "col_w": [
+      2.4,
+      3.8,
+      4.6
+    ]
   },
   {
     "type": "bullets",
@@ -61,20 +85,75 @@
   {
     "type": "table",
     "title": "Los nueve bloques del Canvas y su pregunta clave",
-    "headers": ["#", "Bloque", "Pregunta clave que responde", "Hoy"],
+    "headers": [
+      "#",
+      "Bloque",
+      "Pregunta clave que responde",
+      "Hoy"
+    ],
     "rows": [
-      ["1", "**Segmento de clientes**", "¿Para quién es? ¿Quién **usa**?", "**Obligatorio**"],
-      ["2", "**Propuesta de valor**", "¿Qué dolor alivia o qué gana el usuario?", "**Obligatorio**"],
-      ["3", "**Canales**", "¿Cómo **llega** la propuesta al usuario?", "**Obligatorio**"],
-      ["4", "Relación con el cliente", "¿Cómo se capta y se retiene?", "Autónomo"],
-      ["5", "**Actividades clave**", "¿Qué hay que hacer **sí o sí**?", "**Obligatorio**"],
-      ["6", "Recursos clave", "¿Qué se necesita: datos, gente, infraestructura?", "Autónomo"],
-      ["7", "Socios clave", "¿Quién ayuda desde afuera?", "Autónomo"],
-      ["8", "Estructura de costos", "¿Qué cuesta? (aunque sea cualitativo)", "Autónomo"],
-      ["9", "Fuentes de ingreso", "¿Quién paga o cómo se sostiene si es social?", "Autónomo"]
+      [
+        "1",
+        "**Segmento de clientes**",
+        "¿Para quién es? ¿Quién **usa**?",
+        "**Obligatorio**"
+      ],
+      [
+        "2",
+        "**Propuesta de valor**",
+        "¿Qué dolor alivia o qué gana el usuario?",
+        "**Obligatorio**"
+      ],
+      [
+        "3",
+        "**Canales**",
+        "¿Cómo **llega** la propuesta al usuario?",
+        "**Obligatorio**"
+      ],
+      [
+        "4",
+        "Relación con el cliente",
+        "¿Cómo se capta y se retiene?",
+        "Autónomo"
+      ],
+      [
+        "5",
+        "**Actividades clave**",
+        "¿Qué hay que hacer **sí o sí**?",
+        "**Obligatorio**"
+      ],
+      [
+        "6",
+        "Recursos clave",
+        "¿Qué se necesita: datos, gente, infraestructura?",
+        "Autónomo"
+      ],
+      [
+        "7",
+        "Socios clave",
+        "¿Quién ayuda desde afuera?",
+        "Autónomo"
+      ],
+      [
+        "8",
+        "Estructura de costos",
+        "¿Qué cuesta? (aunque sea cualitativo)",
+        "Autónomo"
+      ],
+      [
+        "9",
+        "Fuentes de ingreso",
+        "¿Quién paga o cómo se sostiene si es social?",
+        "Autónomo"
+      ]
     ],
     "note": "Los cuatro obligatorios **aclaran la propuesta**. Los otros cinco se llenan esta semana, en casa: el bloque 7 (socios clave) es justo el puente con la próxima sesión.",
-    "col_w": [0.6, 3.0, 5.2, 1.6]
+    "col_w": [
+      0.6,
+      3.0,
+      5.2,
+      1.6
+    ]
   },
   {
     "type": "bullets",
@@ -94,15 +173,45 @@
   {
     "type": "table",
     "title": "Cuatro MVP baratos que sí caben en un semestre",
-    "headers": ["Tipo de MVP", "En qué consiste", "Qué pregunta responde", "Costo"],
+    "headers": [
+      "Tipo de MVP",
+      "En qué consiste",
+      "Qué pregunta responde",
+      "Costo"
+    ],
     "rows": [
-      ["**Landing page**", "Una página con la promesa y un botón de lista de espera", "¿Cuánta gente se anota? ¿A alguien le interesa?", "1 tarde"],
-      ["**Prototipo clicable**", "Pantallas enlazadas entre sí, sin backend ni datos reales", "¿La persona entiende el flujo sin que yo se lo explique?", "2–3 horas"],
-      ["**Piloto \"concierge\"**", "Usted hace **a mano** lo que después haría el sistema", "¿El usuario valora el resultado, aunque sea manual?", "1 semana"],
-      ["**Storyboard**", "4 viñetas del antes/durante/después, mostradas a 5 usuarios", "¿Reconocen el dolor? ¿La solución les hace sentido?", "1 hora"]
+      [
+        "**Landing page**",
+        "Una página con la promesa y un botón de lista de espera",
+        "¿Cuánta gente se anota? ¿A alguien le interesa?",
+        "1 tarde"
+      ],
+      [
+        "**Prototipo clicable**",
+        "Pantallas enlazadas entre sí, sin backend ni datos reales",
+        "¿La persona entiende el flujo sin que yo se lo explique?",
+        "2–3 horas"
+      ],
+      [
+        "**Piloto \"concierge\"**",
+        "Usted hace **a mano** lo que después haría el sistema",
+        "¿El usuario valora el resultado, aunque sea manual?",
+        "1 semana"
+      ],
+      [
+        "**Storyboard**",
+        "4 viñetas del antes/durante/después, mostradas a 5 usuarios",
+        "¿Reconocen el dolor? ¿La solución les hace sentido?",
+        "1 hora"
+      ]
     ],
     "note": "El piloto **concierge** es el más subestimado: prueba el **valor** antes de escribir una sola línea de código.",
-    "col_w": [2.2, 3.8, 3.8, 1.2]
+    "col_w": [
+      2.2,
+      3.8,
+      3.8,
+      1.2
+    ]
   },
   {
     "type": "bullets",
@@ -123,15 +232,39 @@
   {
     "type": "table",
     "title": "Criterios de éxito: el que no sirve y el que sí",
-    "headers": ["Criterio que NO sirve", "Por qué falla", "Criterio reescrito"],
+    "headers": [
+      "Criterio que NO sirve",
+      "Por qué falla",
+      "Criterio reescrito"
+    ],
     "rows": [
-      ["\"Que a la gente le guste\"", "\"Gustar\" no se observa ni se cuenta", "\"**4 de 5** dicen que lo usarían **la próxima semana**\""],
-      ["\"Que sea fácil de usar\"", "Sin umbral, cualquier resultado \"pasa\"", "\"**4 de 5** terminan el flujo **en menos de 60 s** sin ayuda\""],
-      ["\"Que muchos se interesen\"", "\"Muchos\" no es un número", "\"**Al menos 15** de 40 dejan su correo en la lista de espera\""],
-      ["\"Que funcione bien\"", "Mide el sistema, no al usuario", "\"**Ningún** usuario pregunta '¿y ahora qué hago?' durante la prueba\""]
+      [
+        "\"Que a la gente le guste\"",
+        "\"Gustar\" no se observa ni se cuenta",
+        "\"**4 de 5** dicen que lo usarían **la próxima semana**\""
+      ],
+      [
+        "\"Que sea fácil de usar\"",
+        "Sin umbral, cualquier resultado \"pasa\"",
+        "\"**4 de 5** terminan el flujo **en menos de 60 s** sin ayuda\""
+      ],
+      [
+        "\"Que muchos se interesen\"",
+        "\"Muchos\" no es un número",
+        "\"**Al menos 15** de 40 dejan su correo en la lista de espera\""
+      ],
+      [
+        "\"Que funcione bien\"",
+        "Mide el sistema, no al usuario",
+        "\"**Ningún** usuario pregunta '¿y ahora qué hago?' durante la prueba\""
+      ]
     ],
     "note": "Fórmula: **[cuántos] de [cuántos]** hacen **[qué acción observable]** en **[qué condición]**. Si su criterio no cabe en esa fórmula, todavía es un deseo.",
-    "col_w": [3.0, 3.2, 4.8]
+    "col_w": [
+      3.0,
+      3.2,
+      4.8
+    ]
   },
   {
     "type": "bullets",
@@ -151,30 +284,86 @@
   {
     "type": "table",
     "title": "Informarse vs. vigilar, y el ciclo de cuatro pasos",
-    "headers": ["", "Informarse", "**Vigilar**"],
+    "headers": [
+      "",
+      "Informarse",
+      "**Vigilar**"
+    ],
     "rows": [
-      ["**1. Observar**", "Cuando algo aparece por casualidad", "En un momento **planeado**, con fuentes definidas de antemano"],
-      ["**2. Analizar**", "Se lee y se sigue de largo", "Se separa el **hallazgo** (lo que dice la fuente) de la **implicación** (lo que significa para usted)"],
-      ["**3. Comunicar**", "Un enlace guardado, o nada", "Una **ficha** que otro entiende sin explicación: fuente, fecha, implicación"],
-      ["**4. Usar**", "Ningún efecto visible", "Un **ajuste concreto**: de alcance, usuario, tecnología o riesgo"],
-      ["Frecuencia", "Aleatoria", "Repetible: se puede volver a hacer igual"],
-      ["Cómo se sabe que sirvió", "Uno \"se enteró\"", "**Cambió o confirmó una decisión**"]
+      [
+        "**1. Observar**",
+        "Cuando algo aparece por casualidad",
+        "En un momento **planeado**, con fuentes definidas de antemano"
+      ],
+      [
+        "**2. Analizar**",
+        "Se lee y se sigue de largo",
+        "Se separa el **hallazgo** (lo que dice la fuente) de la **implicación** (lo que significa para usted)"
+      ],
+      [
+        "**3. Comunicar**",
+        "Un enlace guardado, o nada",
+        "Una **ficha** que otro entiende sin explicación: fuente, fecha, implicación"
+      ],
+      [
+        "**4. Usar**",
+        "Ningún efecto visible",
+        "Un **ajuste concreto**: de alcance, usuario, tecnología o riesgo"
+      ],
+      [
+        "Frecuencia",
+        "Aleatoria",
+        "Repetible: se puede volver a hacer igual"
+      ],
+      [
+        "Cómo se sabe que sirvió",
+        "Uno \"se enteró\"",
+        "**Cambió o confirmó una decisión**"
+      ]
     ],
     "note": "El paso 4 es el que casi siempre falta, y es el único que justifica los tres anteriores. La diferencia no está en cuánto se lee: está en si al final **hay una decisión escrita**.",
-    "col_w": [2.6, 3.8, 4.4]
+    "col_w": [
+      2.6,
+      3.8,
+      4.4
+    ]
   },
   {
     "type": "table",
     "title": "Cuatro frentes de señal y dónde buscarlos (todo gratis, en el navegador)",
-    "headers": ["Tipo de señal", "Fuentes gratis / web", "Pregunta que responde"],
+    "headers": [
+      "Tipo de señal",
+      "Fuentes gratis / web",
+      "Pregunta que responde"
+    ],
     "rows": [
-      ["**Tecnología**", "**Google Scholar** (scholar.google.com) · **Google Patents** (patents.google.com) · repositorios de GitHub · documentación oficial de estándares (IEEE)", "¿Qué se volvió **posible** o **barato**?"],
-      ["**Mercado**", "Reportes públicos · listas de precios · notas de adopción · portales de **datos abiertos**", "¿Quién **ya paga** por esto y cuánto?"],
-      ["**Normativa**", "Leyes y resoluciones · políticas institucionales · sitios de entidades públicas", "¿Qué me **limita** o me **habilita**?"],
-      ["**Social**", "Hábitos y demografía · quejas públicas en redes y prensa · foros de usuarios", "¿Qué **cambió en el usuario**?"]
+      [
+        "**Tecnología**",
+        "**Google Scholar** (scholar.google.com) · **Google Patents** (patents.google.com) · repositorios de GitHub · documentación oficial de estándares (IEEE)",
+        "¿Qué se volvió **posible** o **barato**?"
+      ],
+      [
+        "**Mercado**",
+        "Reportes públicos · listas de precios · notas de adopción · portales de **datos abiertos**",
+        "¿Quién **ya paga** por esto y cuánto?"
+      ],
+      [
+        "**Normativa**",
+        "Leyes y resoluciones · políticas institucionales · sitios de entidades públicas",
+        "¿Qué me **limita** o me **habilita**?"
+      ],
+      [
+        "**Social**",
+        "Hábitos y demografía · quejas públicas en redes y prensa · foros de usuarios",
+        "¿Qué **cambió en el usuario**?"
+      ]
     ],
     "note": "El error más común es mirar **solo** el frente tecnológico. Las propuestas de estudiantes suelen morir por el frente **normativo**, que nadie revisó.",
-    "col_w": [1.8, 5.4, 3.0]
+    "col_w": [
+      1.8,
+      5.4,
+      3.0
+    ]
   },
   {
     "type": "bullets",
@@ -195,27 +384,73 @@
   {
     "type": "table",
     "title": "La ficha de señal: cinco campos, con el ejemplo resuelto",
-    "headers": ["Campo", "Señal 1 (académica)", "Señal 2 (patente)"],
+    "headers": [
+      "Campo",
+      "Señal 1 (académica)",
+      "Señal 2 (patente)"
+    ],
     "rows": [
-      ["**1. Título** (frase suya, no la del documento)", "Los sistemas de turnos reducen el tiempo muerto de laboratorio", "Ya existe reserva de espacios por código QR"],
-      ["**2. Fuente + fecha + enlace** (los tres; sin fecha ni autor, no vale)", "Artículo sobre gestión de turnos en laboratorios universitarios, Google Scholar, 2021", "Patente de sistema de reserva por QR, Google Patents, 2019"],
-      ["**3. Hallazgo en 2 líneas** (con sus palabras)", "La mayor pérdida no está en reservar, sino en los **choques de horario entre cursos**", "El registro por QR ya está documentado como solución de reserva de espacios"],
-      ["**4. Implicación** (confirma · obliga a pivotar · es un riesgo)", "**Confirma** el problema, pero **desplaza el foco**: atacar los choques, no el trámite", "**Obliga a pivotar**: mi diferencia debe estar en la **asignación automática**, no en el registro"],
-      ["**5. Confianza** (alta · media · baja)", "**Alta** — publicación académica con revisión", "**Alta** — documento oficial de patente"]
+      [
+        "**1. Título** (frase suya, no la del documento)",
+        "Los sistemas de turnos reducen el tiempo muerto de laboratorio",
+        "Ya existe reserva de espacios por código QR"
+      ],
+      [
+        "**2. Fuente + fecha + enlace** (los tres; sin fecha ni autor, no vale)",
+        "Artículo sobre gestión de turnos en laboratorios universitarios, Google Scholar, 2021",
+        "Patente de sistema de reserva por QR, Google Patents, 2019"
+      ],
+      [
+        "**3. Hallazgo en 2 líneas** (con sus palabras)",
+        "La mayor pérdida no está en reservar, sino en los **choques de horario entre cursos**",
+        "El registro por QR ya está documentado como solución de reserva de espacios"
+      ],
+      [
+        "**4. Implicación** (confirma · obliga a pivotar · es un riesgo)",
+        "**Confirma** el problema, pero **desplaza el foco**: atacar los choques, no el trámite",
+        "**Obliga a pivotar**: mi diferencia debe estar en la **asignación automática**, no en el registro"
+      ],
+      [
+        "**5. Confianza** (alta · media · baja)",
+        "**Alta** — publicación académica con revisión",
+        "**Alta** — documento oficial de patente"
+      ]
     ],
     "note": "Miren la fila 4: **las dos señales cambiaron algo**. Una movió el foco del problema; la otra movió la diferencia de la solución. **Eso es vigilar.** Confianza baja no invalida la señal: solo indica que todavía no puede decidir sola.",
-    "col_w": [2.6, 3.9, 3.9]
+    "col_w": [
+      2.6,
+      3.9,
+      3.9
+    ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
-      ["advertencia", "**\"Mi FODA: fortaleza, somos creativos.\"** Eso no se verifica. Cámbielo por un hecho: \"acceso a 30 usuarios esta semana\"."],
-      ["advertencia", "**\"El MVP es la app terminada pero sin diseño.\"** No. El MVP es **lo más barato que responde su duda más cara**: una landing o un prototipo en papel sirven."],
-      ["advertencia", "**\"Ya validé: a mis amigos les gustó.\"** Sus amigos **no son el segmento** y no le van a decir que no. Pruebe con usuarios reales y un criterio medible."],
-      ["advertencia", "**\"Ya vigilé: leí un artículo.\"** ¿Cambió alguna decisión de su propuesta? Si no, se **informó**, no vigiló."],
-      ["advertencia", "**\"Encontré una patente igual, mi idea murió.\"** Al contrario: ahora sabe **contra qué compite**. ¿En qué se diferencia la suya?"],
-      ["aclaracion", "**Que la prueba falle es un buen resultado.** Descubrir en la semana 3 que el supuesto era falso vale mucho más que descubrirlo el día de la sustentación."]
+      [
+        "advertencia",
+        "**\"Mi FODA: fortaleza, somos creativos.\"** Eso no se verifica. Cámbielo por un hecho: \"acceso a 30 usuarios esta semana\"."
+      ],
+      [
+        "advertencia",
+        "**\"El MVP es la app terminada pero sin diseño.\"** No. El MVP es **lo más barato que responde su duda más cara**: una landing o un prototipo en papel sirven."
+      ],
+      [
+        "advertencia",
+        "**\"Ya validé: a mis amigos les gustó.\"** Sus amigos **no son el segmento** y no le van a decir que no. Pruebe con usuarios reales y un criterio medible."
+      ],
+      [
+        "advertencia",
+        "**\"Ya vigilé: leí un artículo.\"** ¿Cambió alguna decisión de su propuesta? Si no, se **informó**, no vigiló."
+      ],
+      [
+        "advertencia",
+        "**\"Encontré una patente igual, mi idea murió.\"** Al contrario: ahora sabe **contra qué compite**. ¿En qué se diferencia la suya?"
+      ],
+      [
+        "aclaracion",
+        "**Que la prueba falle es un buen resultado.** Descubrir en la semana 3 que el supuesto era falso vale mucho más que descubrirlo el día de la sustentación."
+      ]
     ]
   },
   {
@@ -235,21 +470,7 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Validar por dentro y por fuera (25 minutos)",
-    "bullets": [
-      "**Bloque A · Por dentro (13 min)**",
-      "  **(1)** FODA de **máximo 6 bullets**, todos verificables, con interna/externa bien separadas. **(3 min)**",
-      "  **(2)** Canvas mínimo en Canvanizer: **propuesta de valor, segmento, canales y actividades clave**. **(5 min)**",
-      "  **(3)** **MVP en 5 líneas** + **una prueba** de su supuesto más riesgoso con criterio **numérico u observable**. **(5 min)**",
-      "**Bloque B · Por fuera (12 min)**",
-      "  **(4)** Escriban la pregunta de vigilancia y busquen en Scholar y/o Patents. **(5 min)**",
-      "  **(5)** **Mínimo 2 fichas de señal** —de **frentes distintos**, no las dos tecnológicas— con fuente, **fecha**, hallazgo, implicación y confianza. **(5 min)**",
-      "  **(6)** Escriban abajo **su decisión** en una frase. **(2 min)**",
-      "Al final, **dos personas** comparten **solo la implicación** de una señal y **solo el criterio** de su prueba — no el documento completo.",
-      "**Criterio de éxito verificable:** una prueba con criterio que **se puede medir hoy mismo y podría fallar**, y **2 señales con fuente y fecha** que produjeron **1 decisión** escrita."
-    ],
-    "note": "Si se pierde llenando los nueve bloques del Canvas, deténgase: hoy solo cuatro. Si una ficha no cambia ni confirma nada, bórrela: ocupa el lugar de una que sí decide."
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -276,7 +497,7 @@
       "  1. El **MVP** es la maqueta que responde la duda más cara, **no el edificio**.",
       "  2. Validar es **supuesto → prueba → criterio → decisión**, con el criterio fijado **antes**.",
       "  3. Vigilar es un **sistema**: si la señal **no cambia una decisión**, no sirvió.",
-      "**(a)** Suban su documento como **`S05_ValidacionVigilancia_Apellido`** a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**(a)** Suban su documento como **`S05_ValidacionVigilancia_Apellido`** a **CDigital**: {{CDIGITAL}}",
       "**(b)** **Ejecuten la prueba** —aunque sea con **3 usuarios**— y anoten lo que pasó **tal cual**, incluso si el criterio no se cumplió. Ese dato es el más valioso que van a tener.",
       "**(c)** Completen el tablero hasta **3 señales** y llenen los **cinco bloques restantes** del Canvas. Empiecen por **socios clave**: es el puente con la próxima sesión.",
       "**(d)** Preparen un listado de **mínimo 3 entidades de apoyo** —con el **nombre correcto**— a las que podrían acercarse: **universitarias**, **públicas**, **privadas/redes** e **internacionales**.",

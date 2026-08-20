@@ -30,31 +30,95 @@
   {
     "type": "table",
     "title": "Objetivo general vs. objetivos específicos",
-    "headers": ["", "Objetivo general", "Objetivos específicos"],
-    "rows": [
-      ["**Cuántos**", "Uno", "Tres, normalmente (entre dos y cuatro)"],
-      ["**Qué declara**", "El propósito global del estudio", "Los escalones verificables para alcanzarlo"],
-      ["**Relación con la pregunta**", "Es la pregunta puesta en afirmativo", "Cada uno responde una parte de la pregunta"],
-      ["**Prueba de calidad**", "Suena igual que la pregunta", "Sumados, y solo sumados, dan el general"],
-      ["**Error típico**", "Prometer más de lo que se podrá cumplir", "Escribir actividades de clase o pasos administrativos"],
-      ["**Cuándo se “tacha”**", "Al cerrar Proyecto II", "Uno por uno, a medida que se cumplen"]
+    "headers": [
+      "",
+      "Objetivo general",
+      "Objetivos específicos"
     ],
-    "col_w": [2.4, 3.8, 4.8],
+    "rows": [
+      [
+        "**Cuántos**",
+        "Uno",
+        "Tres, normalmente (entre dos y cuatro)"
+      ],
+      [
+        "**Qué declara**",
+        "El propósito global del estudio",
+        "Los escalones verificables para alcanzarlo"
+      ],
+      [
+        "**Relación con la pregunta**",
+        "Es la pregunta puesta en afirmativo",
+        "Cada uno responde una parte de la pregunta"
+      ],
+      [
+        "**Prueba de calidad**",
+        "Suena igual que la pregunta",
+        "Sumados, y solo sumados, dan el general"
+      ],
+      [
+        "**Error típico**",
+        "Prometer más de lo que se podrá cumplir",
+        "Escribir actividades de clase o pasos administrativos"
+      ],
+      [
+        "**Cuándo se “tacha”**",
+        "Al cerrar Proyecto II",
+        "Uno por uno, a medida que se cumplen"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      3.8,
+      4.8
+    ],
     "note": "Regla de la suma: si cumplo los tres específicos y **aún así** no cumplí el general, falta un específico. Si cumplo dos y el general ya está cumplido, sobra uno."
   },
   {
     "type": "table",
     "title": "Verbos: los que puedo verificar y los que no",
-    "headers": ["Verbos que SÍ (observables)", "Qué producen", "Verbos prohibidos (no observables)"],
-    "rows": [
-      ["**Caracterizar**", "Una descripción organizada de un fenómeno", "**Conocer** — ¿cómo se ve que alguien “conoció”?"],
-      ["**Identificar**", "Un listado justificado de elementos", "**Aprender** — es un estado interno, no un resultado"],
-      ["**Analizar**", "Una descomposición con criterios explícitos", "**Entender** — nadie puede auditarlo"],
-      ["**Contrastar**", "Una comparación entre casos o fuentes", "**Interesarse** — no es un logro de investigación"],
-      ["**Diseñar / proponer**", "Un artefacto o una propuesta documentada", "**Concientizar** — es una intención, no un objetivo"],
-      ["**Establecer**", "Criterios, requisitos o relaciones", "**Profundizar** — no dice dónde termina"]
+    "headers": [
+      "Verbos que SÍ (observables)",
+      "Qué producen",
+      "Verbos prohibidos (no observables)"
     ],
-    "col_w": [2.6, 4.2, 4.2],
+    "rows": [
+      [
+        "**Caracterizar**",
+        "Una descripción organizada de un fenómeno",
+        "**Conocer** — ¿cómo se ve que alguien “conoció”?"
+      ],
+      [
+        "**Identificar**",
+        "Un listado justificado de elementos",
+        "**Aprender** — es un estado interno, no un resultado"
+      ],
+      [
+        "**Analizar**",
+        "Una descomposición con criterios explícitos",
+        "**Entender** — nadie puede auditarlo"
+      ],
+      [
+        "**Contrastar**",
+        "Una comparación entre casos o fuentes",
+        "**Interesarse** — no es un logro de investigación"
+      ],
+      [
+        "**Diseñar / proponer**",
+        "Un artefacto o una propuesta documentada",
+        "**Concientizar** — es una intención, no un objetivo"
+      ],
+      [
+        "**Establecer**",
+        "Criterios, requisitos o relaciones",
+        "**Profundizar** — no dice dónde termina"
+      ]
+    ],
+    "col_w": [
+      2.6,
+      4.2,
+      4.2
+    ],
     "note": "Prueba del verbo: si no puedo **ver** que se cumplió, no sirve. Y en Proyecto I “diseñar” y “proponer” son legítimos; “aplicar” e “implementar” todavía no."
   },
   {
@@ -89,15 +153,36 @@
   {
     "type": "table",
     "title": "El mismo hilo en la línea de entornos productivos",
-    "headers": ["Pieza", "Redacción"],
-    "rows": [
-      ["**Pregunta**", "“¿Cómo se registra hoy la información de paradas de máquina en la línea de empaque de la planta X y qué requisitos debería cumplir una propuesta de asistente de IA, según los supervisores de turno?”"],
-      ["**General**", "“Proponer los requisitos de un asistente de IA para el registro de paradas de máquina en la línea de empaque de la planta X, a partir de la caracterización del proceso actual.”"],
-      ["**Específico 1**", "“Caracterizar el procedimiento actual de registro de paradas y sus puntos de pérdida de información.”"],
-      ["**Específico 2**", "“Identificar, desde antecedentes y marco teórico, los criterios de calidad de un registro operativo asistido por IA.”"],
-      ["**Específico 3**", "“Establecer los requisitos funcionales y las restricciones de la propuesta, junto con su ruta de validación para Proyecto II.”"]
+    "headers": [
+      "Pieza",
+      "Redacción"
     ],
-    "col_w": [1.5, 8.5],
+    "rows": [
+      [
+        "**Pregunta**",
+        "“¿Cómo se registra hoy la información de paradas de máquina en la línea de empaque de la planta X y qué requisitos debería cumplir una propuesta de asistente de IA, según los supervisores de turno?”"
+      ],
+      [
+        "**General**",
+        "“Proponer los requisitos de un asistente de IA para el registro de paradas de máquina en la línea de empaque de la planta X, a partir de la caracterización del proceso actual.”"
+      ],
+      [
+        "**Específico 1**",
+        "“Caracterizar el procedimiento actual de registro de paradas y sus puntos de pérdida de información.”"
+      ],
+      [
+        "**Específico 2**",
+        "“Identificar, desde antecedentes y marco teórico, los criterios de calidad de un registro operativo asistido por IA.”"
+      ],
+      [
+        "**Específico 3**",
+        "“Establecer los requisitos funcionales y las restricciones de la propuesta, junto con su ruta de validación para Proyecto II.”"
+      ]
+    ],
+    "col_w": [
+      1.5,
+      8.5
+    ],
     "note": "Mismo patrón que en el ejemplo anterior: **describir → fundamentar → proponer**. Cambia el contexto, no la estructura."
   },
   {
@@ -118,38 +203,102 @@
   {
     "type": "table",
     "title": "Justificación: frases que se caen y frases que se sostienen",
-    "headers": ["Se cae", "Por qué", "Se sostiene"],
-    "rows": [
-      ["“Este proyecto es muy importante para la sociedad.”", "Genérico: sirve igual para cualquier trabajo del mundo", "“La propuesta le da al docente del curso un criterio para devolver retroalimentación en días y no en semanas.”"],
-      ["“Me apasiona la inteligencia artificial.”", "Autobiografía; no es un argumento de investigación", "“Los antecedentes revisados abordan cursos virtuales, pero no laboratorios presenciales como el de este estudio.”"],
-      ["“Con esto la empresa ahorrará millones.”", "Promete un resultado que aún no se ha medido", "“El registro actual pierde información de turno, lo que impide priorizar mantenimiento; documentarlo es el primer paso.”"],
-      ["“Hay mucha información sobre el tema.”", "Eso justifica **no** hacerlo", "“El fenómeno está documentado a nivel internacional, pero hay poca evidencia en plantas medianas del país.”"]
+    "headers": [
+      "Se cae",
+      "Por qué",
+      "Se sostiene"
     ],
-    "col_w": [2.8, 2.4, 5.4],
+    "rows": [
+      [
+        "“Este proyecto es muy importante para la sociedad.”",
+        "Genérico: sirve igual para cualquier trabajo del mundo",
+        "“La propuesta le da al docente del curso un criterio para devolver retroalimentación en días y no en semanas.”"
+      ],
+      [
+        "“Me apasiona la inteligencia artificial.”",
+        "Autobiografía; no es un argumento de investigación",
+        "“Los antecedentes revisados abordan cursos virtuales, pero no laboratorios presenciales como el de este estudio.”"
+      ],
+      [
+        "“Con esto la empresa ahorrará millones.”",
+        "Promete un resultado que aún no se ha medido",
+        "“El registro actual pierde información de turno, lo que impide priorizar mantenimiento; documentarlo es el primer paso.”"
+      ],
+      [
+        "“Hay mucha información sobre el tema.”",
+        "Eso justifica **no** hacerlo",
+        "“El fenómeno está documentado a nivel internacional, pero hay poca evidencia en plantas medianas del país.”"
+      ]
+    ],
+    "col_w": [
+      2.8,
+      2.4,
+      5.4
+    ],
     "note": "Regla: si la frase sirve igual para el trabajo de otro equipo, bórrela. Una justificación es **intransferible**."
   },
   {
     "type": "table",
     "title": "Alcance y limitación: la promesa y la honestidad",
-    "headers": ["", "Alcance (lo que SÍ)", "Limitación (lo que NO)"],
-    "rows": [
-      ["**Qué declara**", "Hasta dónde llega el estudio", "Qué restricciones reales lo condicionan"],
-      ["**Ejemplos**", "Población objetivo, periodo, categorías o variables, tipo de producto entregado", "Acceso restringido a la organización, tiempo del programa, disponibilidad de informantes"],
-      ["**Restricción propia del curso**", "Se entrega un **diseño propuesto**", "En Proyecto I **no se aplican instrumentos** ni se recolectan datos"],
-      ["**Cómo se escribe**", "Viñetas afirmativas: “el estudio abarca…”", "Viñetas honestas: “el estudio no incluye…”"],
-      ["**Efecto en el lector**", "Sabe qué esperar y no exige de más", "Confía: quien declara sus límites conoce su trabajo"]
+    "headers": [
+      "",
+      "Alcance (lo que SÍ)",
+      "Limitación (lo que NO)"
     ],
-    "col_w": [2.4, 3.9, 3.9],
+    "rows": [
+      [
+        "**Qué declara**",
+        "Hasta dónde llega el estudio",
+        "Qué restricciones reales lo condicionan"
+      ],
+      [
+        "**Ejemplos**",
+        "Población objetivo, periodo, categorías o variables, tipo de producto entregado",
+        "Acceso restringido a la organización, tiempo del programa, disponibilidad de informantes"
+      ],
+      [
+        "**Restricción propia del curso**",
+        "Se entrega un **diseño propuesto**",
+        "En Proyecto I **no se aplican instrumentos** ni se recolectan datos"
+      ],
+      [
+        "**Cómo se escribe**",
+        "Viñetas afirmativas: “el estudio abarca…”",
+        "Viñetas honestas: “el estudio no incluye…”"
+      ],
+      [
+        "**Efecto en el lector**",
+        "Sabe qué esperar y no exige de más",
+        "Confía: quien declara sus límites conoce su trabajo"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      3.9,
+      3.9
+    ],
     "note": "Declarar limitaciones **no** debilita el anteproyecto: lo hace creíble. Lo que sí lo debilita es prometer lo que no se podrá cumplir."
   },
   {
     "type": "boxes",
     "title": "Lo que más se devuelve corregido en este bloque",
     "boxes": [
-      ["advertencia", "**Específicos que son tareas.** “Leer autores”, “reunirnos con el equipo”, “buscar papers” son su agenda de trabajo, no objetivos. Pregúntese qué **conocimiento** produce ese paso y escriba eso."],
-      ["advertencia", "**Verbos que no se ven.** Conocer, entender, aprender, concientizar. Cámbielos por analizar, caracterizar, identificar, contrastar, establecer, diseñar o proponer."],
-      ["aclaracion", "**Alcance y limitación en el mismo párrafo.** Sepárelos en dos listas: lo que SÍ hará y lo que NO podrá. Si están revueltos, el lector no sabe qué le prometieron."],
-      ["info", "**Objetivos que exigen campo.** “Evaluar el impacto”, “medir la satisfacción”, “aplicar el instrumento” pertenecen a Proyecto II. En Proyecto I se propone el diseño y su ruta de validación."]
+      [
+        "advertencia",
+        "**Específicos que son tareas.** “Leer autores”, “reunirnos con el equipo”, “buscar papers” son su agenda de trabajo, no objetivos. Pregúntese qué **conocimiento** produce ese paso y escriba eso."
+      ],
+      [
+        "advertencia",
+        "**Verbos que no se ven.** Conocer, entender, aprender, concientizar. Cámbielos por analizar, caracterizar, identificar, contrastar, establecer, diseñar o proponer."
+      ],
+      [
+        "aclaracion",
+        "**Alcance y limitación en el mismo párrafo.** Sepárelos en dos listas: lo que SÍ hará y lo que NO podrá. Si están revueltos, el lector no sabe qué le prometieron."
+      ],
+      [
+        "info",
+        "**Objetivos que exigen campo.** “Evaluar el impacto”, “medir la satisfacción”, “aplicar el instrumento” pertenecen a Proyecto II. En Proyecto I se propone el diseño y su ruta de validación."
+      ]
     ]
   },
   {
@@ -165,38 +314,66 @@
       "**6.** Escriba alcances y limitaciones como **dos listas** de viñetas separadas, nunca en prosa mezclada.",
       "**7.** Suba el avance a CDigital como **S03_ObjetivosJustificacion_Apellidos**."
     ],
-    "note": "El documento es **acumulativo**: no abran un archivo nuevo; sigan escribiendo debajo de lo de la sesión anterior. [URL CDigital — campus del curso pendiente]"
+    "note": "El documento es **acumulativo**: no abran un archivo nuevo; sigan escribiendo debajo de lo de la sesión anterior. {{CDIGITAL}}"
   },
   {
-    "type": "bullets",
-    "title": "TALLER (20 minutos) — redacción del bloque de formulación",
-    "bullets": [
-      "**Consigna literal:** 20 minutos en el documento del equipo. Cuatro productos.",
-      "  **(1)** Objetivo general con la fórmula verbo + qué + dónde + para qué.",
-      "  **(2)** Tres específicos numerados, un verbo cada uno, en el orden describir → fundamentar → proponer.",
-      "  **(3)** De media a una página de justificación: tres párrafos, un pilar por párrafo.",
-      "  **(4)** Alcances y limitaciones en dos listas de viñetas separadas.",
-      "El Docente circula por los equipos; prioridad para quienes no logren pasar del específico 1.",
-      "**Criterio de éxito (verificable):** cada específico se puede “tachar” el día que se cumpla, y el general suena igual que la pregunta en afirmativo.",
-      "  Prueba final: tache mentalmente los tres específicos. ¿Ya quedó cumplido el general? Si no, falta uno."
-    ],
-    "note": "Prohibido en este taller: verbos no observables, objetivos que exijan recolectar datos y justificaciones que hablen de ustedes."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de subir el avance",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
-    "rows": [
-      ["El general refleja la pregunta", "Los leo seguidos y dicen lo mismo", "[  ]"],
-      ["Hay un solo objetivo general", "Cuento los verbos principales: uno", "[  ]"],
-      ["Cada específico tiene un verbo observable", "Ninguno usa conocer, entender ni aprender", "[  ]"],
-      ["Los específicos suman el general", "Al tacharlos los tres, el general queda cumplido", "[  ]"],
-      ["Ningún específico exige campo", "No aparece aplicar, medir impacto ni encuestar", "[  ]"],
-      ["La justificación tiene los tres pilares", "Señalo el párrafo del vacío, el de relevancia y el de pertinencia", "[  ]"],
-      ["Alcance y limitación están separados", "Son dos listas distintas, con título propio", "[  ]"],
-      ["Las citas van en APA 7", "Cada afirmación prestada tiene autor y año", "[  ]"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "Listo"
     ],
-    "col_w": [3.0, 5.6, 0.8],
+    "rows": [
+      [
+        "El general refleja la pregunta",
+        "Los leo seguidos y dicen lo mismo",
+        "[  ]"
+      ],
+      [
+        "Hay un solo objetivo general",
+        "Cuento los verbos principales: uno",
+        "[  ]"
+      ],
+      [
+        "Cada específico tiene un verbo observable",
+        "Ninguno usa conocer, entender ni aprender",
+        "[  ]"
+      ],
+      [
+        "Los específicos suman el general",
+        "Al tacharlos los tres, el general queda cumplido",
+        "[  ]"
+      ],
+      [
+        "Ningún específico exige campo",
+        "No aparece aplicar, medir impacto ni encuestar",
+        "[  ]"
+      ],
+      [
+        "La justificación tiene los tres pilares",
+        "Señalo el párrafo del vacío, el de relevancia y el de pertinencia",
+        "[  ]"
+      ],
+      [
+        "Alcance y limitación están separados",
+        "Son dos listas distintas, con título propio",
+        "[  ]"
+      ],
+      [
+        "Las citas van en APA 7",
+        "Cada afirmación prestada tiene autor y año",
+        "[  ]"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      5.6,
+      0.8
+    ],
     "note": "Ocho casillas. Si alguna queda vacía, el bloque de formulación todavía no está listo para la entrega acumulativa."
   },
   {

@@ -32,33 +32,101 @@
   {
     "type": "table",
     "title": "¿A usted le aplica marco legal? Semáforo de decisión",
-    "headers": ["Si su estudio…", "¿Aplica?", "Qué debe quedar escrito"],
+    "headers": [
+      "Si su estudio…",
+      "¿Aplica?",
+      "Qué debe quedar escrito"
+    ],
     "rows": [
-      ["Trata datos personales (nombres, cédulas, correos, historias clínicas)", "**Sí, obligatorio**", "Protección de datos y tratamiento de la información"],
-      ["Involucra **menores de edad**", "**Sí, sin excepción**", "Protección reforzada + consentimiento del representante legal"],
-      ["Usa información propiedad de una empresa o entidad", "**Sí**", "Confidencialidad, aval institucional y uso autorizado"],
-      ["Reutiliza datasets, código o modelos de terceros", "**Sí**", "Licencias de uso y derechos de autor"],
-      ["Trabaja con información pública abierta ya anonimizada", "Parcial", "Basta con citar la fuente y su licencia de uso"],
-      ["Solo diseña una arquitectura o compara algoritmos con datos sintéticos", "**No aplica**", "Una **declaración explícita** de no aplicabilidad, argumentada"]
+      [
+        "Trata datos personales (nombres, cédulas, correos, historias clínicas)",
+        "**Sí, obligatorio**",
+        "Protección de datos y tratamiento de la información"
+      ],
+      [
+        "Involucra **menores de edad**",
+        "**Sí, sin excepción**",
+        "Protección reforzada + consentimiento del representante legal"
+      ],
+      [
+        "Usa información propiedad de una empresa o entidad",
+        "**Sí**",
+        "Confidencialidad, aval institucional y uso autorizado"
+      ],
+      [
+        "Reutiliza datasets, código o modelos de terceros",
+        "**Sí**",
+        "Licencias de uso y derechos de autor"
+      ],
+      [
+        "Trabaja con información pública abierta ya anonimizada",
+        "Parcial",
+        "Basta con citar la fuente y su licencia de uso"
+      ],
+      [
+        "Solo diseña una arquitectura o compara algoritmos con datos sintéticos",
+        "**No aplica**",
+        "Una **declaración explícita** de no aplicabilidad, argumentada"
+      ]
     ],
     "note": "El marco legal no depende del tema: depende de **los datos y las personas** que su estudio tocaría.",
-    "col_w": [5.2, 2.2, 4.6]
+    "col_w": [
+      5.2,
+      2.2,
+      4.6
+    ]
   },
   {
     "type": "table",
     "title": "Normas colombianas que más aparecen en proyectos de IA",
-    "headers": ["Norma", "De qué trata", "Cuándo la necesita"],
+    "headers": [
+      "Norma",
+      "De qué trata",
+      "Cuándo la necesita"
+    ],
     "rows": [
-      ["**Ley 1581 de 2012**", "Régimen general de protección de datos personales", "Siempre que trate datos de personas identificables"],
-      ["**Decreto 1074 de 2015**", "Reglamenta el tratamiento de datos (autorización, finalidad)", "Al describir cómo pediría la autorización"],
-      ["**Ley 1273 de 2009**", "Delitos informáticos: acceso abusivo, uso de datos ajenos", "Si accedería a sistemas o bases de una entidad"],
-      ["**Ley 1712 de 2014**", "Transparencia y acceso a la información pública", "Si sus datos vienen de una entidad del Estado"],
-      ["**Ley 1098 de 2006**", "Código de Infancia y Adolescencia", "Si la población incluye menores de edad"],
-      ["**Ley 23 de 1982** · Decisión Andina 351", "Derechos de autor sobre obras y software", "Si reutiliza código, datasets o modelos de terceros"],
-      ["**CONPES 3975 de 2019**", "Política nacional de transformación digital e IA", "Para enmarcar la política pública de IA en Colombia"]
+      [
+        "**Ley 1581 de 2012**",
+        "Régimen general de protección de datos personales",
+        "Siempre que trate datos de personas identificables"
+      ],
+      [
+        "**Decreto 1074 de 2015**",
+        "Reglamenta el tratamiento de datos (autorización, finalidad)",
+        "Al describir cómo pediría la autorización"
+      ],
+      [
+        "**Ley 1273 de 2009**",
+        "Delitos informáticos: acceso abusivo, uso de datos ajenos",
+        "Si accedería a sistemas o bases de una entidad"
+      ],
+      [
+        "**Ley 1712 de 2014**",
+        "Transparencia y acceso a la información pública",
+        "Si sus datos vienen de una entidad del Estado"
+      ],
+      [
+        "**Ley 1098 de 2006**",
+        "Código de Infancia y Adolescencia",
+        "Si la población incluye menores de edad"
+      ],
+      [
+        "**Ley 23 de 1982** · Decisión Andina 351",
+        "Derechos de autor sobre obras y software",
+        "Si reutiliza código, datasets o modelos de terceros"
+      ],
+      [
+        "**CONPES 3975 de 2019**",
+        "Política nacional de transformación digital e IA",
+        "Para enmarcar la política pública de IA en Colombia"
+      ]
     ],
     "note": "Referente internacional opcional: el **Reglamento (UE) 2024/1689 de IA**, útil si su marco conversa con estándares de riesgo.",
-    "col_w": [3.0, 4.5, 4.5]
+    "col_w": [
+      3.0,
+      4.5,
+      4.5
+    ]
   },
   {
     "type": "bullets",
@@ -79,9 +147,18 @@
     "type": "boxes",
     "title": "Si a usted no le aplica: cómo declararlo sin quedar mal parado",
     "boxes": [
-      ["aclaracion", "Declarar que **no aplica** es una respuesta profesional y válida. Lo que se penaliza no es la ausencia de leyes, es el silencio o la invención."],
-      ["info", "Redacción sugerida: \"El presente estudio no requiere marco legal específico, dado que su alcance se limita al **diseño metodológico** y a la comparación de algoritmos sobre **datos sintéticos**, sin tratamiento de datos personales ni intervención sobre sujetos humanos.\""],
-      ["advertencia", "Nunca copie una lista de leyes de otro trabajo \"por si acaso\". Una norma que usted no puede explicar en la sustentación es una trampa que usted mismo se puso."]
+      [
+        "aclaracion",
+        "Declarar que **no aplica** es una respuesta profesional y válida. Lo que se penaliza no es la ausencia de leyes, es el silencio o la invención."
+      ],
+      [
+        "info",
+        "Redacción sugerida: \"El presente estudio no requiere marco legal específico, dado que su alcance se limita al **diseño metodológico** y a la comparación de algoritmos sobre **datos sintéticos**, sin tratamiento de datos personales ni intervención sobre sujetos humanos.\""
+      ],
+      [
+        "advertencia",
+        "Nunca copie una lista de leyes de otro trabajo \"por si acaso\". Una norma que usted no puede explicar en la sustentación es una trampa que usted mismo se puso."
+      ]
     ]
   },
   {
@@ -102,34 +179,96 @@
   {
     "type": "table",
     "title": "Cita narrativa vs. cita parentética",
-    "headers": ["Autores", "Narrativa (el autor va DENTRO de la frase)", "Parentética (al final, entre paréntesis)"],
+    "headers": [
+      "Autores",
+      "Narrativa (el autor va DENTRO de la frase)",
+      "Parentética (al final, entre paréntesis)"
+    ],
     "rows": [
-      ["Uno", "**Pérez (2021)** sostiene que el sesgo algorítmico…", "…el sesgo algorítmico persiste **(Pérez, 2021)**."],
-      ["Dos", "**Pérez y Gómez (2021)** compararon dos modelos…", "…dos modelos comparables **(Pérez y Gómez, 2021)**."],
-      ["Tres o más", "**Rodríguez et al. (2022)** evaluaron el desempeño…", "…un desempeño superior **(Rodríguez et al., 2022)**."],
-      ["Institución", "El **DANE (2023)** reporta que…", "…según cifras oficiales **(DANE, 2023)**."],
-      ["Cita textual corta (< 40 palabras)", "Pérez (2021) afirma: \"el sesgo se hereda del dato\" (**p. 45**).", "…\"el sesgo se hereda del dato\" **(Pérez, 2021, p. 45)**."],
-      ["Cita textual larga (≥ 40 palabras)", "Bloque aparte, **sin comillas**, con sangría de 1,27 cm", "La referencia con página va al final del bloque"]
+      [
+        "Uno",
+        "**Pérez (2021)** sostiene que el sesgo algorítmico…",
+        "…el sesgo algorítmico persiste **(Pérez, 2021)**."
+      ],
+      [
+        "Dos",
+        "**Pérez y Gómez (2021)** compararon dos modelos…",
+        "…dos modelos comparables **(Pérez y Gómez, 2021)**."
+      ],
+      [
+        "Tres o más",
+        "**Rodríguez et al. (2022)** evaluaron el desempeño…",
+        "…un desempeño superior **(Rodríguez et al., 2022)**."
+      ],
+      [
+        "Institución",
+        "El **DANE (2023)** reporta que…",
+        "…según cifras oficiales **(DANE, 2023)**."
+      ],
+      [
+        "Cita textual corta (< 40 palabras)",
+        "Pérez (2021) afirma: \"el sesgo se hereda del dato\" (**p. 45**).",
+        "…\"el sesgo se hereda del dato\" **(Pérez, 2021, p. 45)**."
+      ],
+      [
+        "Cita textual larga (≥ 40 palabras)",
+        "Bloque aparte, **sin comillas**, con sangría de 1,27 cm",
+        "La referencia con página va al final del bloque"
+      ]
     ],
     "note": "Con **tres o más autores** se usa `et al.` **desde la primera cita** (APA 7 eliminó la lista completa inicial). En textos en español se usa «y»; APA en inglés usa «&».",
-    "col_w": [2.4, 4.8, 4.8]
+    "col_w": [
+      2.4,
+      4.8,
+      4.8
+    ]
   },
   {
     "type": "table",
     "title": "Plantillas de referencia APA 7 por tipo de fuente",
-    "headers": ["Tipo", "Estructura"],
+    "headers": [
+      "Tipo",
+      "Estructura"
+    ],
     "rows": [
-      ["**Artículo de revista**", "Apellido, N. (Año). Título del artículo. **Nombre de la Revista, vol**(núm.), pp–pp. https://doi.org/10.xxxx"],
-      ["**Libro**", "Apellido, N. (Año). **Título del libro** (n.ª ed.). Editorial.  *(APA 7 ya no pide la ciudad)*"],
-      ["**Capítulo de libro**", "Apellido, N. (Año). Título del capítulo. En N. Editor (Ed.), **Título del libro** (pp. xx–xx). Editorial."],
-      ["**Tesis o trabajo de grado**", "Apellido, N. (Año). **Título** [Tesis de especialización, Nombre de la Universidad]. Repositorio institucional. URL"],
-      ["**Informe institucional**", "Organización. (Año). **Título del informe** (Informe n.º xx). URL"],
-      ["**Página web**", "Autor. (Año, día de mes). **Título de la página**. Nombre del sitio. URL"],
-      ["**Ley colombiana**", "Congreso de la República de Colombia. (Año, día de mes). **Ley xxxx de aaaa**. Diario Oficial n.º xxxxx. URL"],
-      ["**Modelo de IA generativa**", "OpenAI. (Año). **ChatGPT** (versión) [Modelo de lenguaje grande]. URL"]
+      [
+        "**Artículo de revista**",
+        "Apellido, N. (Año). Título del artículo. **Nombre de la Revista, vol**(núm.), pp–pp. https://doi.org/10.xxxx"
+      ],
+      [
+        "**Libro**",
+        "Apellido, N. (Año). **Título del libro** (n.ª ed.). Editorial.  *(APA 7 ya no pide la ciudad)*"
+      ],
+      [
+        "**Capítulo de libro**",
+        "Apellido, N. (Año). Título del capítulo. En N. Editor (Ed.), **Título del libro** (pp. xx–xx). Editorial."
+      ],
+      [
+        "**Tesis o trabajo de grado**",
+        "Apellido, N. (Año). **Título** [Tesis de especialización, Nombre de la Universidad]. Repositorio institucional. URL"
+      ],
+      [
+        "**Informe institucional**",
+        "Organización. (Año). **Título del informe** (Informe n.º xx). URL"
+      ],
+      [
+        "**Página web**",
+        "Autor. (Año, día de mes). **Título de la página**. Nombre del sitio. URL"
+      ],
+      [
+        "**Ley colombiana**",
+        "Congreso de la República de Colombia. (Año, día de mes). **Ley xxxx de aaaa**. Diario Oficial n.º xxxxx. URL"
+      ],
+      [
+        "**Modelo de IA generativa**",
+        "OpenAI. (Año). **ChatGPT** (versión) [Modelo de lenguaje grande]. URL"
+      ]
     ],
     "note": "Lista de referencias: **orden alfabético**, **sangría francesa de 1,27 cm** e interlineado doble. Si la fuente tiene **DOI**, el DOI manda sobre la URL.",
-    "col_w": [2.8, 9.2]
+    "col_w": [
+      2.8,
+      9.2
+    ]
   },
   {
     "type": "bullets",
@@ -150,10 +289,22 @@
     "type": "boxes",
     "title": "Errores frecuentes que voy a buscar en su avance",
     "boxes": [
-      ["advertencia", "**Bibliografía huérfana.** Referencias que nunca aparecen en el texto. O la cita en el cuerpo, o la retira de la lista: no hay tercera opción."],
-      ["advertencia", "**Leyes inventadas o mal numeradas.** Verifique número y año en la fuente oficial. Una \"Ley 1518 de 2012\" en vez de la 1581 delata que copió sin leer."],
-      ["aclaracion", "**Falta el DOI o la URL.** Si la fuente lo tiene, va. Búsquelo en el propio artículo o en Google Scholar; ZoteroBib normalmente lo trae solo."],
-      ["aclaracion", "**Estilos mezclados.** Decidir es simple: ¿el autor va dentro de la frase o entre paréntesis al final? Lo importante es que el criterio sea consistente en todo el documento."]
+      [
+        "advertencia",
+        "**Bibliografía huérfana.** Referencias que nunca aparecen en el texto. O la cita en el cuerpo, o la retira de la lista: no hay tercera opción."
+      ],
+      [
+        "advertencia",
+        "**Leyes inventadas o mal numeradas.** Verifique número y año en la fuente oficial. Una \"Ley 1518 de 2012\" en vez de la 1581 delata que copió sin leer."
+      ],
+      [
+        "aclaracion",
+        "**Falta el DOI o la URL.** Si la fuente lo tiene, va. Búsquelo en el propio artículo o en Google Scholar; ZoteroBib normalmente lo trae solo."
+      ],
+      [
+        "aclaracion",
+        "**Estilos mezclados.** Decidir es simple: ¿el autor va dentro de la frase o entre paréntesis al final? Lo importante es que el criterio sea consistente en todo el documento."
+      ]
     ]
   },
   {
@@ -173,19 +324,7 @@
     "note": "Todo esto corre en el navegador y es **gratis**: no se requiere instalar ningún programa de escritorio ni complemento pago."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Limpieza legal y bibliográfica (20 minutos)",
-    "bullets": [
-      "**Consigna literal**, con su documento de avance abierto en Google Docs:",
-      "  **(a)** Decida si aplica marco legal y escriba **un párrafo con la fórmula de tres tiempos** — norma, principio pertinente, implicación para su estudio.",
-      "  **(b)** Si no aplica, escriba la **declaración argumentada de no aplicabilidad** (mínimo dos renglones, con razón explícita).",
-      "  **(c)** Regenere **todas** sus referencias en ZoteroBib con estilo APA 7 y aplique sangría francesa.",
-      "  **(d)** Haga la **verificación cruzada** con Ctrl + F: marque en amarillo toda referencia que no encuentre en el cuerpo.",
-      "**Criterio de éxito verificable:** cero resaltados en amarillo al terminar y el párrafo legal con la implicación redactada en condicional.",
-      "El Docente circula por los equipos durante el taller; levante la mano cuando llegue a la parte (d).",
-      "**Entrega:** suba el archivo como `S07_LegalAPA_Apellidos` en [URL CDigital — campus del curso pendiente].",
-      "Con esto queda cerrado el bloque referencial: antecedentes, teórico, conceptual, contextual y legal."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -214,7 +353,7 @@
       "  Empezamos el **diseño metodológico**: paradigma, enfoque y alcance.",
       "  Traiga su **pregunta de investigación** escrita y a la mano — es la que decide el método.",
       "Recuerde: las tutorías por equipo se acuerdan durante la semana con el Docente; no hay atención sin cita previa.",
-      "Todo el material de apoyo y la plantilla APA quedan en [URL CDigital — campus del curso pendiente]."
+      "Todo el material de apoyo y la plantilla APA quedan en {{CDIGITAL}}."
     ]
   }
 ]

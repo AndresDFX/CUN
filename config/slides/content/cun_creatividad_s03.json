@@ -61,31 +61,98 @@
   {
     "type": "table",
     "title": "Los cinco tipos de innovación (taxonomía del curso)",
-    "headers": ["Tipo", "Qué cambia", "Señal de que \"sí es\" ese tipo", "Ejemplo en Ingeniería / negocio"],
+    "headers": [
+      "Tipo",
+      "Qué cambia",
+      "Señal de que \"sí es\" ese tipo",
+      "Ejemplo en Ingeniería / negocio"
+    ],
     "rows": [
-      ["**Producto**", "Un bien o servicio nuevo o mejorado", "El usuario **percibe una función nueva**", "Módulo o servicio digital que resuelve un dolor concreto"],
-      ["**Proceso**", "El método de producción o de entrega", "Baja el **tiempo, el error o el costo**", "Automatizar las pruebas o el despliegue de software"],
-      ["**Organización**", "Prácticas, roles y relaciones de trabajo", "**El equipo se coordina distinto**", "Pasar de sprints caóticos a Kanban con rituales"],
-      ["**Marketing**", "Diseño, precio, promoción o canal", "Cambia la **adopción** o el posicionamiento", "Nuevo canal de onboarding para un servicio digital"],
-      ["**Social**", "El valor público o comunitario", "Mejora un **bien común medible**", "App gratuita que articula a la comunidad con la alcaldía"]
+      [
+        "**Producto**",
+        "Un bien o servicio nuevo o mejorado",
+        "El usuario **percibe una función nueva**",
+        "Módulo o servicio digital que resuelve un dolor concreto"
+      ],
+      [
+        "**Proceso**",
+        "El método de producción o de entrega",
+        "Baja el **tiempo, el error o el costo**",
+        "Automatizar las pruebas o el despliegue de software"
+      ],
+      [
+        "**Organización**",
+        "Prácticas, roles y relaciones de trabajo",
+        "**El equipo se coordina distinto**",
+        "Pasar de sprints caóticos a Kanban con rituales"
+      ],
+      [
+        "**Marketing**",
+        "Diseño, precio, promoción o canal",
+        "Cambia la **adopción** o el posicionamiento",
+        "Nuevo canal de onboarding para un servicio digital"
+      ],
+      [
+        "**Social**",
+        "El valor público o comunitario",
+        "Mejora un **bien común medible**",
+        "App gratuita que articula a la comunidad con la alcaldía"
+      ]
     ],
     "note": "La columna del medio es la que decide. No pregunte \"¿de qué tipo se ve?\"; pregunte **\"¿qué cambia realmente?\"**.",
-    "col_w": [1.8, 3.0, 3.4, 4.4]
+    "col_w": [
+      1.8,
+      3.0,
+      3.4,
+      4.4
+    ]
   },
   {
     "type": "table",
     "title": "El caso difícil: ¿producto o proceso?",
-    "headers": ["Pregunta de desempate", "Si la respuesta es...", "Entonces es"],
+    "headers": [
+      "Pregunta de desempate",
+      "Si la respuesta es...",
+      "Entonces es"
+    ],
     "rows": [
-      ["¿El usuario ve algo que antes no existía?", "Sí, una función nueva", "**Producto**"],
-      ["¿Lo que cambia es cuánto tarda o cuánto falla?", "Sí, el mismo servicio pero más rápido", "**Proceso**"],
-      ["¿Cambió lo que se entrega o cómo se entrega?", "**Qué** se entrega", "**Producto**"],
-      ["¿Cambió lo que se entrega o cómo se entrega?", "**Cómo** se entrega", "**Proceso**"],
-      ["¿El cambio lo notaría alguien de afuera?", "Solo lo nota el equipo interno", "**Proceso** u **organización**"],
-      ["¿Lo que cambió fue quién decide y con quién habla?", "Sí, la coordinación", "**Organización**"]
+      [
+        "¿El usuario ve algo que antes no existía?",
+        "Sí, una función nueva",
+        "**Producto**"
+      ],
+      [
+        "¿Lo que cambia es cuánto tarda o cuánto falla?",
+        "Sí, el mismo servicio pero más rápido",
+        "**Proceso**"
+      ],
+      [
+        "¿Cambió lo que se entrega o cómo se entrega?",
+        "**Qué** se entrega",
+        "**Producto**"
+      ],
+      [
+        "¿Cambió lo que se entrega o cómo se entrega?",
+        "**Cómo** se entrega",
+        "**Proceso**"
+      ],
+      [
+        "¿El cambio lo notaría alguien de afuera?",
+        "Solo lo nota el equipo interno",
+        "**Proceso** u **organización**"
+      ],
+      [
+        "¿Lo que cambió fue quién decide y con quién habla?",
+        "Sí, la coordinación",
+        "**Organización**"
+      ]
     ],
     "note": "Truco: si su propuesta se puede describir sin nombrar una función nueva, casi seguro **no** es producto.",
-    "col_w": [4.6, 3.4, 2.6]
+    "col_w": [
+      4.6,
+      3.4,
+      2.6
+    ]
   },
   {
     "type": "bullets",
@@ -138,12 +205,30 @@
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
-      ["advertencia", "**\"Innovación = tecnología nueva, ¿no?\"** No. Cambiar la forma de coordinar un equipo (**organización**) o de entregar (**proceso**) es innovación **sin ningún gadget**."],
-      ["advertencia", "**\"Mi proyecto es de todos los tipos.\"** Puede tener capas, pero elija **uno dominante**. En sustentación se defiende **un eje**, no cinco a la vez."],
-      ["advertencia", "**\"Es un producto tech\"** — cuando el cambio real es de flujo. Pregunta de desempate: ¿el usuario ve una **función nueva** o el proceso **tarda menos**? Si es lo segundo, es **proceso**."],
-      ["advertencia", "**\"Gestionar es hacer más reuniones.\"** Gestionar es imponer un **ritmo de aprendizaje**: prototipar, medir, decidir. Una reunión sin decisión no gestiona nada."],
-      ["advertencia", "**\"Ya lo pensé bien, con eso basta.\"** Oslo pide **implementación**. Sin un piloto o un prototipo, usted sigue teniendo una idea."],
-      ["aclaracion", "**Novedad no es originalidad absoluta.** Nueva para su campus, su área o su usuario ya cuenta. Lo que no cuenta es \"nuevo\" sin decir **para quién**."]
+      [
+        "advertencia",
+        "**\"Innovación = tecnología nueva, ¿no?\"** No. Cambiar la forma de coordinar un equipo (**organización**) o de entregar (**proceso**) es innovación **sin ningún gadget**."
+      ],
+      [
+        "advertencia",
+        "**\"Mi proyecto es de todos los tipos.\"** Puede tener capas, pero elija **uno dominante**. En sustentación se defiende **un eje**, no cinco a la vez."
+      ],
+      [
+        "advertencia",
+        "**\"Es un producto tech\"** — cuando el cambio real es de flujo. Pregunta de desempate: ¿el usuario ve una **función nueva** o el proceso **tarda menos**? Si es lo segundo, es **proceso**."
+      ],
+      [
+        "advertencia",
+        "**\"Gestionar es hacer más reuniones.\"** Gestionar es imponer un **ritmo de aprendizaje**: prototipar, medir, decidir. Una reunión sin decisión no gestiona nada."
+      ],
+      [
+        "advertencia",
+        "**\"Ya lo pensé bien, con eso basta.\"** Oslo pide **implementación**. Sin un piloto o un prototipo, usted sigue teniendo una idea."
+      ],
+      [
+        "aclaracion",
+        "**Novedad no es originalidad absoluta.** Nueva para su campus, su área o su usuario ya cuenta. Lo que no cuenta es \"nuevo\" sin decir **para quién**."
+      ]
     ]
   },
   {
@@ -164,33 +249,48 @@
   {
     "type": "table",
     "title": "Ficha Oslo modelo — caso del laboratorio",
-    "headers": ["Campo", "Contenido de la ficha"],
+    "headers": [
+      "Campo",
+      "Contenido de la ficha"
+    ],
     "rows": [
-      ["**Tipo dominante**", "**Proceso** — porque lo que cambia no es un servicio nuevo, sino el **método de asignación**: se elimina el trámite de reserva"],
-      ["**Tipo secundario**", "Producto (aparece una pantalla de consulta, pero es el vehículo, no el eje)"],
-      ["**Novedad**", "Nueva **para el campus**: antes cada docente asignaba a mano en su cuaderno; ahora se asigna desde el horario del curso"],
-      ["**Valor esperado**", "El estudiante **deja de perder hasta una hora** por semana buscando equipo libre"],
-      ["**Actividad 1**", "Levantar el horario real de ocupación de 2 laboratorios — responsable: yo — semana 1"],
-      ["**Actividad 2**", "Probar el flujo en papel con 5 estudiantes y cronómetro — responsable: yo + 1 compañero — semana 2"],
-      ["**Riesgo #1**", "Que la ocupación real no siga el horario oficial: si el desfase es alto, la asignación automática falla"]
+      [
+        "**Tipo dominante**",
+        "**Proceso** — porque lo que cambia no es un servicio nuevo, sino el **método de asignación**: se elimina el trámite de reserva"
+      ],
+      [
+        "**Tipo secundario**",
+        "Producto (aparece una pantalla de consulta, pero es el vehículo, no el eje)"
+      ],
+      [
+        "**Novedad**",
+        "Nueva **para el campus**: antes cada docente asignaba a mano en su cuaderno; ahora se asigna desde el horario del curso"
+      ],
+      [
+        "**Valor esperado**",
+        "El estudiante **deja de perder hasta una hora** por semana buscando equipo libre"
+      ],
+      [
+        "**Actividad 1**",
+        "Levantar el horario real de ocupación de 2 laboratorios — responsable: yo — semana 1"
+      ],
+      [
+        "**Actividad 2**",
+        "Probar el flujo en papel con 5 estudiantes y cronómetro — responsable: yo + 1 compañero — semana 2"
+      ],
+      [
+        "**Riesgo #1**",
+        "Que la ocupación real no siga el horario oficial: si el desfase es alto, la asignación automática falla"
+      ]
     ],
     "note": "Observen las actividades: tienen **verbo, alcance, responsable y momento**. Eso es gestión mínima, y cabe en dos líneas.",
-    "col_w": [2.2, 8.0]
+    "col_w": [
+      2.2,
+      8.0
+    ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Ficha Oslo de su propuesta (20 minutos)",
-    "bullets": [
-      "Completen la **Ficha Oslo** de su propuesta en Google Docs o Excalidraw, con los **seis campos**:",
-      "  (1) **tipo dominante** · (2) tipo **secundario** opcional · (3) **novedad** — ¿nueva para quién? · (4) **valor esperado** en una frase · (5) **dos actividades de gestión** con responsable y fecha · (6) **riesgo #1**.",
-      "**Minutos 0–6** · Decidan el tipo dominante y escriban la justificación con \"porque lo que cambia es...\".",
-      "**Minutos 6–12** · Novedad y valor. Escriban el valor **desde el usuario**, no desde la técnica.",
-      "**Minutos 12–18** · Las dos actividades, con nombre y fecha, y el riesgo #1.",
-      "**Minutos 18–20** · Relean y borren toda frase que sirva para cualquier proyecto.",
-      "Al final leo **tres fichas** en voz alta y corregimos juntos las clasificaciones dudosas.",
-      "**Criterio de éxito verificable:** el tipo dominante está **justificado** con una razón (no solo nombrado) **y** las dos actividades tienen **fecha real**."
-    ],
-    "note": "Si duda entre dos tipos, use la tabla de desempate: ¿función nueva, o menos tiempo/error?"
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -216,7 +316,7 @@
       "  2. El **Manual de Oslo** nos da **cinco tipos** para hablar el mismo idioma.",
       "  3. Sin **novedad e implementación**, sigue siendo una idea, no una innovación.",
       "**(a)** Suban su ficha como **`S03_FichaOslo_Apellido`** a **CDigital**.",
-      "  Plataforma: [URL CDigital — campus del curso pendiente]",
+      "  Plataforma: {{CDIGITAL}}",
       "**(b)** Traigan un **cuadro comparativo** de su tipo elegido **contra un tipo alternativo que descartaron**, explicando **por qué no**.",
       "  Ejemplo: \"elegí proceso y descarté producto, porque el usuario no recibe una función nueva sino el mismo servicio más rápido\".",
       "  Ese cuadro es exactamente el punto de partida de la próxima sesión, así que llévenlo escrito.",

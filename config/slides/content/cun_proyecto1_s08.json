@@ -32,15 +32,45 @@
   {
     "type": "table",
     "title": "Los paradigmas, en el idioma del aula",
-    "headers": ["Paradigma", "Supuesto sobre la realidad", "Qué busca producir", "Encaja con"],
+    "headers": [
+      "Paradigma",
+      "Supuesto sobre la realidad",
+      "Qué busca producir",
+      "Encaja con"
+    ],
     "rows": [
-      ["**Positivista / pospositivista**", "Hay una realidad medible, aproximable con datos", "Medir, comparar, generalizar", "Enfoque cuantitativo"],
-      ["**Interpretativo (constructivista)**", "La realidad se construye en el sentido que le dan las personas", "Comprender significados y experiencias", "Enfoque cualitativo"],
-      ["**Sociocrítico**", "La realidad está atravesada por relaciones de poder", "Transformar una situación con los participantes", "Cualitativo participativo (IAP)"],
-      ["**Pragmático**", "Vale lo que responde mejor la pregunta", "Combinar rutas por utilidad y no por dogma", "Enfoque mixto"]
+      [
+        "**Positivista / pospositivista**",
+        "Hay una realidad medible, aproximable con datos",
+        "Medir, comparar, generalizar",
+        "Enfoque cuantitativo"
+      ],
+      [
+        "**Interpretativo (constructivista)**",
+        "La realidad se construye en el sentido que le dan las personas",
+        "Comprender significados y experiencias",
+        "Enfoque cualitativo"
+      ],
+      [
+        "**Sociocrítico**",
+        "La realidad está atravesada por relaciones de poder",
+        "Transformar una situación con los participantes",
+        "Cualitativo participativo (IAP)"
+      ],
+      [
+        "**Pragmático**",
+        "Vale lo que responde mejor la pregunta",
+        "Combinar rutas por utilidad y no por dogma",
+        "Enfoque mixto"
+      ]
     ],
     "note": "En un anteproyecto de especialización, el paradigma se declara y se justifica en **un párrafo**. No se escribe un ensayo de epistemología.",
-    "col_w": [3.0, 3.6, 2.8, 2.6]
+    "col_w": [
+      3.0,
+      3.6,
+      2.8,
+      2.6
+    ]
   },
   {
     "type": "bullets",
@@ -60,57 +90,191 @@
   {
     "type": "table",
     "title": "Cuantitativo · Cualitativo · Mixto, frente a frente",
-    "headers": ["Criterio", "Cuantitativo", "Cualitativo", "Mixto"],
+    "headers": [
+      "Criterio",
+      "Cuantitativo",
+      "Cualitativo",
+      "Mixto"
+    ],
     "rows": [
-      ["Lógica", "Deductiva: de la teoría al dato", "Inductiva: del dato a la categoría", "Ambas, en secuencia o en paralelo"],
-      ["Qué se estudia", "**Variables** e indicadores", "**Categorías** y significados", "Variables + categorías"],
-      ["Dato típico", "Escalas, conteos, métricas, logs", "Entrevistas, documentos, observación", "Los dos, integrados"],
-      ["Muestra", "Grande, busca representatividad", "Pequeña, busca profundidad y saturación", "Una de cada tipo, justificadas"],
-      ["Análisis", "Estadística descriptiva e inferencial", "Codificación y análisis de contenido", "Integración o \"triangulación\""],
-      ["Resultado", "Cifras, tablas, correlaciones", "Categorías, patrones, citas textuales", "Convergencias y divergencias"],
-      ["Riesgo típico", "Medir lo fácil y no lo importante", "Perder rigor por falta de sistematicidad", "Hacer dos estudios flojos en vez de uno bueno"]
+      [
+        "Lógica",
+        "Deductiva: de la teoría al dato",
+        "Inductiva: del dato a la categoría",
+        "Ambas, en secuencia o en paralelo"
+      ],
+      [
+        "Qué se estudia",
+        "**Variables** e indicadores",
+        "**Categorías** y significados",
+        "Variables + categorías"
+      ],
+      [
+        "Dato típico",
+        "Escalas, conteos, métricas, logs",
+        "Entrevistas, documentos, observación",
+        "Los dos, integrados"
+      ],
+      [
+        "Muestra",
+        "Grande, busca representatividad",
+        "Pequeña, busca profundidad y saturación",
+        "Una de cada tipo, justificadas"
+      ],
+      [
+        "Análisis",
+        "Estadística descriptiva e inferencial",
+        "Codificación y análisis de contenido",
+        "Integración o \"triangulación\""
+      ],
+      [
+        "Resultado",
+        "Cifras, tablas, correlaciones",
+        "Categorías, patrones, citas textuales",
+        "Convergencias y divergencias"
+      ],
+      [
+        "Riesgo típico",
+        "Medir lo fácil y no lo importante",
+        "Perder rigor por falta de sistematicidad",
+        "Hacer dos estudios flojos en vez de uno bueno"
+      ]
     ],
     "note": "**Mixto no es \"un poquito de cada uno\".** Cuesta el doble: exige justificar por qué una sola ruta es insuficiente para responder su pregunta.",
-    "col_w": [1.9, 3.4, 3.4, 3.3]
+    "col_w": [
+      1.9,
+      3.4,
+      3.4,
+      3.3
+    ]
   },
   {
     "type": "table",
     "title": "El alcance: hasta dónde llega su estudio (Hernández-Sampieri)",
-    "headers": ["Alcance", "Pregunta típica", "Qué produce", "Ejemplo en IA"],
+    "headers": [
+      "Alcance",
+      "Pregunta típica",
+      "Qué produce",
+      "Ejemplo en IA"
+    ],
     "rows": [
-      ["**Exploratorio**", "¿Qué está pasando con…? (tema poco estudiado)", "Primer mapa, hipótesis por formular", "Uso de IA generativa en juzgados municipales"],
-      ["**Descriptivo**", "¿Cómo es? ¿Cuáles son sus características?", "Un retrato con dimensiones y frecuencias", "Caracterizar el flujo actual de PQRS y sus tiempos"],
-      ["**Correlacional**", "¿Qué relación hay entre X y Y?", "Grado y sentido de la asociación", "Relación entre calidad del dato y precisión del modelo"],
-      ["**Explicativo**", "¿Por qué ocurre? ¿Qué efecto produce X sobre Y?", "Explicación causal, casi siempre con diseño experimental", "Efecto de la clasificación automática sobre el tiempo de respuesta"]
+      [
+        "**Exploratorio**",
+        "¿Qué está pasando con…? (tema poco estudiado)",
+        "Primer mapa, hipótesis por formular",
+        "Uso de IA generativa en juzgados municipales"
+      ],
+      [
+        "**Descriptivo**",
+        "¿Cómo es? ¿Cuáles son sus características?",
+        "Un retrato con dimensiones y frecuencias",
+        "Caracterizar el flujo actual de PQRS y sus tiempos"
+      ],
+      [
+        "**Correlacional**",
+        "¿Qué relación hay entre X y Y?",
+        "Grado y sentido de la asociación",
+        "Relación entre calidad del dato y precisión del modelo"
+      ],
+      [
+        "**Explicativo**",
+        "¿Por qué ocurre? ¿Qué efecto produce X sobre Y?",
+        "Explicación causal, casi siempre con diseño experimental",
+        "Efecto de la clasificación automática sobre el tiempo de respuesta"
+      ]
     ],
     "note": "Los alcances son **acumulativos**: un estudio correlacional describe antes de correlacionar. En una especialización, lo honesto suele ser **descriptivo** o **correlacional**.",
-    "col_w": [2.0, 3.4, 3.0, 3.6]
+    "col_w": [
+      2.0,
+      3.4,
+      3.0,
+      3.6
+    ]
   },
   {
     "type": "boxes",
     "title": "Enfoque y alcance no son lo mismo: la confusión que más se repite",
     "boxes": [
-      ["aclaracion", "Son **dos ejes independientes**. El enfoque dice de qué material está hecho su dato (números o significados); el alcance dice qué tan lejos llega su conclusión (describir, relacionar, explicar)."],
-      ["info", "Se combinan: existe un estudio **cualitativo descriptivo** y también uno **cuantitativo descriptivo**. \"Descriptivo\" no significa \"cualitativo\", aunque suene parecido."],
-      ["advertencia", "Una frase como \"mi investigación es de enfoque descriptivo\" es un error de categoría, y se nota. Lo correcto: \"enfoque **cuantitativo**, alcance **descriptivo**\"."]
+      [
+        "aclaracion",
+        "Son **dos ejes independientes**. El enfoque dice de qué material está hecho su dato (números o significados); el alcance dice qué tan lejos llega su conclusión (describir, relacionar, explicar)."
+      ],
+      [
+        "info",
+        "Se combinan: existe un estudio **cualitativo descriptivo** y también uno **cuantitativo descriptivo**. \"Descriptivo\" no significa \"cualitativo\", aunque suene parecido."
+      ],
+      [
+        "advertencia",
+        "Una frase como \"mi investigación es de enfoque descriptivo\" es un error de categoría, y se nota. Lo correcto: \"enfoque **cuantitativo**, alcance **descriptivo**\"."
+      ]
     ]
   },
   {
     "type": "table",
     "title": "Diseños que se proponen con más frecuencia en proyectos de IA",
-    "headers": ["Enfoque", "Diseño", "En qué consiste", "Cuándo conviene"],
+    "headers": [
+      "Enfoque",
+      "Diseño",
+      "En qué consiste",
+      "Cuándo conviene"
+    ],
     "rows": [
-      ["Cuanti", "**No experimental transversal**", "Se mide una sola vez, sin manipular nada", "Caracterizar una situación actual"],
-      ["Cuanti", "**No experimental longitudinal**", "Se mide el mismo objeto en varios momentos", "Ver evolución de una métrica en el tiempo"],
-      ["Cuanti", "**Cuasiexperimental**", "Hay comparación entre grupos, sin asignación aleatoria", "Comparar proceso con y sin apoyo de IA"],
-      ["Cuali", "**Estudio de caso**", "Análisis profundo de una unidad delimitada", "Una entidad, un área, un sistema concreto"],
-      ["Cuali", "**Fenomenológico**", "Recupera la experiencia vivida de los participantes", "\"¿Cómo experimentan…?\""],
-      ["Cuali", "**Teoría fundamentada**", "Construye categorías desde el dato hasta saturar", "Fenómenos poco teorizados"],
-      ["Cuali", "**Análisis documental**", "El dato son documentos, actas, logs o repositorios", "Cuando no hay acceso a personas"],
-      ["Mixto", "**Explicativo secuencial**", "Primero mide, luego explica con entrevistas", "El número muestra algo raro y hay que entenderlo"]
+      [
+        "Cuanti",
+        "**No experimental transversal**",
+        "Se mide una sola vez, sin manipular nada",
+        "Caracterizar una situación actual"
+      ],
+      [
+        "Cuanti",
+        "**No experimental longitudinal**",
+        "Se mide el mismo objeto en varios momentos",
+        "Ver evolución de una métrica en el tiempo"
+      ],
+      [
+        "Cuanti",
+        "**Cuasiexperimental**",
+        "Hay comparación entre grupos, sin asignación aleatoria",
+        "Comparar proceso con y sin apoyo de IA"
+      ],
+      [
+        "Cuali",
+        "**Estudio de caso**",
+        "Análisis profundo de una unidad delimitada",
+        "Una entidad, un área, un sistema concreto"
+      ],
+      [
+        "Cuali",
+        "**Fenomenológico**",
+        "Recupera la experiencia vivida de los participantes",
+        "\"¿Cómo experimentan…?\""
+      ],
+      [
+        "Cuali",
+        "**Teoría fundamentada**",
+        "Construye categorías desde el dato hasta saturar",
+        "Fenómenos poco teorizados"
+      ],
+      [
+        "Cuali",
+        "**Análisis documental**",
+        "El dato son documentos, actas, logs o repositorios",
+        "Cuando no hay acceso a personas"
+      ],
+      [
+        "Mixto",
+        "**Explicativo secuencial**",
+        "Primero mide, luego explica con entrevistas",
+        "El número muestra algo raro y hay que entenderlo"
+      ]
     ],
     "note": "Elija **uno** y descríbalo. Un anteproyecto que lista cuatro diseños \"posibles\" es un anteproyecto que aún no decidió.",
-    "col_w": [1.3, 2.7, 4.0, 4.0]
+    "col_w": [
+      1.3,
+      2.7,
+      4.0,
+      4.0
+    ]
   },
   {
     "type": "bullets",
@@ -131,25 +295,79 @@
   {
     "type": "table",
     "title": "La matriz de coherencia: su herramienta de control",
-    "headers": ["Pregunta", "Enfoque", "Alcance", "Técnica propuesta", "Por qué es coherente"],
+    "headers": [
+      "Pregunta",
+      "Enfoque",
+      "Alcance",
+      "Técnica propuesta",
+      "Por qué es coherente"
+    ],
     "rows": [
-      ["¿Qué relación hay entre calidad del dato y precisión del clasificador?", "Cuantitativo", "Correlacional", "Análisis de corpus histórico anonimizado", "Pide **relación entre dos variables medibles**"],
-      ["¿Cómo perciben los funcionarios el uso del clasificador?", "Cualitativo", "Descriptivo", "Entrevista semiestructurada", "Pide **significados**, no magnitudes"],
-      ["¿Cuáles son las características actuales del flujo de PQRS?", "Cuantitativo", "Descriptivo", "Análisis documental de registros y tiempos", "Pide **retrato**, no explicación causal"],
-      ["¿Qué efecto tiene el clasificador sobre el tiempo de respuesta?", "Cuantitativo", "Explicativo", "Cuasiexperimento con dos grupos", "Pide **causa–efecto**, exige comparación"],
-      ["¿Cómo perciben el cambio **y** cuánto varía el tiempo?", "Mixto", "Descriptivo + correlacional", "Entrevistas + registros de tiempo", "**Dos cláusulas** distintas en una pregunta"]
+      [
+        "¿Qué relación hay entre calidad del dato y precisión del clasificador?",
+        "Cuantitativo",
+        "Correlacional",
+        "Análisis de corpus histórico anonimizado",
+        "Pide **relación entre dos variables medibles**"
+      ],
+      [
+        "¿Cómo perciben los funcionarios el uso del clasificador?",
+        "Cualitativo",
+        "Descriptivo",
+        "Entrevista semiestructurada",
+        "Pide **significados**, no magnitudes"
+      ],
+      [
+        "¿Cuáles son las características actuales del flujo de PQRS?",
+        "Cuantitativo",
+        "Descriptivo",
+        "Análisis documental de registros y tiempos",
+        "Pide **retrato**, no explicación causal"
+      ],
+      [
+        "¿Qué efecto tiene el clasificador sobre el tiempo de respuesta?",
+        "Cuantitativo",
+        "Explicativo",
+        "Cuasiexperimento con dos grupos",
+        "Pide **causa–efecto**, exige comparación"
+      ],
+      [
+        "¿Cómo perciben el cambio **y** cuánto varía el tiempo?",
+        "Mixto",
+        "Descriptivo + correlacional",
+        "Entrevistas + registros de tiempo",
+        "**Dos cláusulas** distintas en una pregunta"
+      ]
     ],
     "note": "La última columna, **\"por qué es coherente\"**, es la que se califica. Es la única que demuestra que usted derivó el método y no lo escogió al azar.",
-    "col_w": [3.6, 1.5, 1.9, 2.6, 2.4]
+    "col_w": [
+      3.6,
+      1.5,
+      1.9,
+      2.6,
+      2.4
+    ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes en el capítulo metodológico",
     "boxes": [
-      ["advertencia", "**\"Elegí cualitativo porque me gusta más\" / \"porque es más fácil\".** El enfoque se deriva de la pregunta. Si no puede derivarlo, el problema no es el método: es que la pregunta todavía está mal formulada."],
-      ["advertencia", "**Pregunta cualitativa con encuesta de escalas.** Si busca significados, entreviste. Una escala Likert nunca le va a contar cómo vive alguien un cambio."],
-      ["aclaracion", "**\"Mixto\" sin justificación.** Escriba explícitamente qué parte de su pregunta no responde la ruta cuantitativa y qué parte no responde la cualitativa. Sin eso, mixto es una excusa para no decidir."],
-      ["advertencia", "**Aplicar el instrumento \"solo para probar\".** En Proyecto I el diseño se **propone**. Recolectar datos sin aval es un riesgo real, no un adelanto."]
+      [
+        "advertencia",
+        "**\"Elegí cualitativo porque me gusta más\" / \"porque es más fácil\".** El enfoque se deriva de la pregunta. Si no puede derivarlo, el problema no es el método: es que la pregunta todavía está mal formulada."
+      ],
+      [
+        "advertencia",
+        "**Pregunta cualitativa con encuesta de escalas.** Si busca significados, entreviste. Una escala Likert nunca le va a contar cómo vive alguien un cambio."
+      ],
+      [
+        "aclaracion",
+        "**\"Mixto\" sin justificación.** Escriba explícitamente qué parte de su pregunta no responde la ruta cuantitativa y qué parte no responde la cualitativa. Sin eso, mixto es una excusa para no decidir."
+      ],
+      [
+        "advertencia",
+        "**Aplicar el instrumento \"solo para probar\".** En Proyecto I el diseño se **propone**. Recolectar datos sin aval es un riesgo real, no un adelanto."
+      ]
     ]
   },
   {
@@ -168,19 +386,7 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Su ficha metodológica (20 minutos)",
-    "bullets": [
-      "**Consigna literal:** en un Google Doc nuevo, arme la tabla de cinco columnas de la matriz de coherencia.",
-      "  Columnas: **Pregunta | Enfoque | Alcance | Técnica propuesta | Por qué es coherente**.",
-      "  Llene **una sola fila**, con SU pregunta real. No con la del ejemplo.",
-      "  Debajo de la tabla, escriba el **párrafo de paradigma** (mínimo cuatro renglones) y el **párrafo de justificación del enfoque**.",
-      "  En la justificación debe aparecer **citado el verbo de su pregunta**: \"dado que la pregunta indaga *en qué medida*…\".",
-      "**Criterio de éxito verificable:** un lector que solo vea su tabla puede **predecir el tipo de instrumento** que usted usaría.",
-      "Si al llenar la fila descubre que su pregunta no encaja en ninguna ruta, no fuerce el método: **corrija la pregunta**. Eso también es avance.",
-      "El Docente circula por los equipos; tenga la pregunta visible en pantalla cuando llegue su turno.",
-      "**Entrega:** suba el archivo como `S08_DisenoMetodologico_Apellidos` en [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

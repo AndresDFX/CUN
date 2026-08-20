@@ -32,19 +32,59 @@
   {
     "type": "table",
     "title": "Checklist de secciones: verificación en 30 segundos cada una",
-    "headers": ["Sección", "Qué debe existir", "Cómo lo verifico rápido"],
+    "headers": [
+      "Sección",
+      "Qué debe existir",
+      "Cómo lo verifico rápido"
+    ],
     "rows": [
-      ["**Problema**", "Situación concreta, situada y con afectados", "¿Puedo nombrar dónde ocurre y a quién afecta?"],
-      ["**Pregunta**", "Una sola, delimitada y respondible", "Ctrl + F del signo \"¿\": ¿aparece una versión o dos?"],
-      ["**Objetivos**", "General que responde la pregunta + específicos que lo desglosan", "¿El verbo del general cabe dentro del alcance declarado?"],
-      ["**Marco referencial**", "Antecedentes, teórico, conceptual, contextual y legal (o su no aplicabilidad)", "¿Cada concepto del marco reaparece en el método?"],
-      ["**Método**", "Paradigma, enfoque, alcance y diseño justificados", "¿La justificación cita el verbo de mi pregunta?"],
-      ["**Instrumento propuesto**", "Ítems redactados + matriz de alineación con objetivos", "¿Todo ítem tiene objetivo y todo objetivo tiene ítems?"],
-      ["**Cronograma y viabilidad**", "Fases con productos verificables y los cuatro frentes de viabilidad", "¿Aparece la fase de avales y permisos?"],
-      ["**Referencias**", "Lista APA 7 alfabética, con sangría francesa", "Ctrl + F apellido por apellido en el cuerpo"]
+      [
+        "**Problema**",
+        "Situación concreta, situada y con afectados",
+        "¿Puedo nombrar dónde ocurre y a quién afecta?"
+      ],
+      [
+        "**Pregunta**",
+        "Una sola, delimitada y respondible",
+        "Ctrl + F del signo \"¿\": ¿aparece una versión o dos?"
+      ],
+      [
+        "**Objetivos**",
+        "General que responde la pregunta + específicos que lo desglosan",
+        "¿El verbo del general cabe dentro del alcance declarado?"
+      ],
+      [
+        "**Marco referencial**",
+        "Antecedentes, teórico, conceptual, contextual y legal (o su no aplicabilidad)",
+        "¿Cada concepto del marco reaparece en el método?"
+      ],
+      [
+        "**Método**",
+        "Paradigma, enfoque, alcance y diseño justificados",
+        "¿La justificación cita el verbo de mi pregunta?"
+      ],
+      [
+        "**Instrumento propuesto**",
+        "Ítems redactados + matriz de alineación con objetivos",
+        "¿Todo ítem tiene objetivo y todo objetivo tiene ítems?"
+      ],
+      [
+        "**Cronograma y viabilidad**",
+        "Fases con productos verificables y los cuatro frentes de viabilidad",
+        "¿Aparece la fase de avales y permisos?"
+      ],
+      [
+        "**Referencias**",
+        "Lista APA 7 alfabética, con sangría francesa",
+        "Ctrl + F apellido por apellido en el cuerpo"
+      ]
     ],
     "note": "Imprima o copie esta tabla y **márquela sobre su propio documento** durante la clase. Lo que no pueda verificar con evidencia, cuéntelo como faltante.",
-    "col_w": [2.6, 4.6, 4.8]
+    "col_w": [
+      2.6,
+      4.6,
+      4.8
+    ]
   },
   {
     "type": "bullets",
@@ -80,15 +120,45 @@
   {
     "type": "table",
     "title": "Rúbrica de coevaluación: cuatro criterios, tres niveles",
-    "headers": ["Criterio", "Por mejorar", "Aceptable", "Sólido"],
+    "headers": [
+      "Criterio",
+      "Por mejorar",
+      "Aceptable",
+      "Sólido"
+    ],
     "rows": [
-      ["**Coherencia**", "La pregunta, los objetivos y el método apuntan a cosas distintas", "El hilo se sigue, con uno o dos saltos", "Cada sección recoge la anterior sin saltos"],
-      ["**Delimitación**", "Es un tema general, sin lugar ni periodo", "Está delimitado, pero el alcance es ambicioso", "Objeto, lugar y periodo claros y alcanzables"],
-      ["**Método propuesto**", "Enfoque sin justificar o incoherente con la pregunta", "Justificado, pero el instrumento no cuelga de los objetivos", "Enfoque derivado de la pregunta e instrumento alineado"],
-      ["**APA 7**", "Citas o referencias huérfanas; formatos mezclados", "Formato correcto con dos o tres inconsistencias", "Cero huérfanas, lista alfabética con sangría francesa"]
+      [
+        "**Coherencia**",
+        "La pregunta, los objetivos y el método apuntan a cosas distintas",
+        "El hilo se sigue, con uno o dos saltos",
+        "Cada sección recoge la anterior sin saltos"
+      ],
+      [
+        "**Delimitación**",
+        "Es un tema general, sin lugar ni periodo",
+        "Está delimitado, pero el alcance es ambicioso",
+        "Objeto, lugar y periodo claros y alcanzables"
+      ],
+      [
+        "**Método propuesto**",
+        "Enfoque sin justificar o incoherente con la pregunta",
+        "Justificado, pero el instrumento no cuelga de los objetivos",
+        "Enfoque derivado de la pregunta e instrumento alineado"
+      ],
+      [
+        "**APA 7**",
+        "Citas o referencias huérfanas; formatos mezclados",
+        "Formato correcto con dos o tres inconsistencias",
+        "Cero huérfanas, lista alfabética con sangría francesa"
+      ]
     ],
     "note": "Una rúbrica sirve **antes** de entregar, no solo después de calificar. Úsela como lista de control sobre su propio trabajo.",
-    "col_w": [2.1, 3.3, 3.3, 3.3]
+    "col_w": [
+      2.1,
+      3.3,
+      3.3,
+      3.3
+    ]
   },
   {
     "type": "bullets",
@@ -108,25 +178,58 @@
   {
     "type": "table",
     "title": "Feedback vago vs. feedback accionable",
-    "headers": ["Comentario vago (no sirve)", "Comentario accionable (sí sirve)"],
+    "headers": [
+      "Comentario vago (no sirve)",
+      "Comentario accionable (sí sirve)"
+    ],
     "rows": [
-      ["\"Está bien, me gustó\"", "\"El marco conceptual (p. 12) define bien 'sesgo algorítmico'; ese mismo nivel de detalle le falta a 'carga operativa'\""],
-      ["\"Falta profundizar\"", "\"El apartado de antecedentes solo trae fuentes nacionales; agregue dos internacionales de los últimos cinco años\""],
-      ["\"No entendí el método\"", "\"El enfoque dice cualitativo pero el instrumento (p. 20) es una escala Likert; o cambia el enfoque o cambia el instrumento\""],
-      ["\"Revisen las normas APA\"", "\"Las referencias 3, 7 y 11 no aparecen citadas en el cuerpo; cítelas o retírelas de la lista\""],
-      ["\"El objetivo está mal\"", "\"El OE3 dice 'implementar', pero el estudio solo propone; cámbielo por 'diseñar' o 'formular'\""],
-      ["\"Muy ambicioso\"", "\"El cronograma asigna una semana a 500 encuestas; con la muestra que declaran serían al menos cuatro\""]
+      [
+        "\"Está bien, me gustó\"",
+        "\"El marco conceptual (p. 12) define bien 'sesgo algorítmico'; ese mismo nivel de detalle le falta a 'carga operativa'\""
+      ],
+      [
+        "\"Falta profundizar\"",
+        "\"El apartado de antecedentes solo trae fuentes nacionales; agregue dos internacionales de los últimos cinco años\""
+      ],
+      [
+        "\"No entendí el método\"",
+        "\"El enfoque dice cualitativo pero el instrumento (p. 20) es una escala Likert; o cambia el enfoque o cambia el instrumento\""
+      ],
+      [
+        "\"Revisen las normas APA\"",
+        "\"Las referencias 3, 7 y 11 no aparecen citadas en el cuerpo; cítelas o retírelas de la lista\""
+      ],
+      [
+        "\"El objetivo está mal\"",
+        "\"El OE3 dice 'implementar', pero el estudio solo propone; cámbielo por 'diseñar' o 'formular'\""
+      ],
+      [
+        "\"Muy ambicioso\"",
+        "\"El cronograma asigna una semana a 500 encuestas; con la muestra que declaran serían al menos cuatro\""
+      ]
     ],
     "note": "El comentario de la derecha se puede **ejecutar hoy mismo**. El de la izquierda solo genera ansiedad. Esa es toda la diferencia.",
-    "col_w": [4.2, 7.8]
+    "col_w": [
+      4.2,
+      7.8
+    ]
   },
   {
     "type": "boxes",
     "title": "Lo que hacemos hoy y lo que se diligencia en la plataforma",
     "boxes": [
-      ["info", "La coevaluación practicada en clase es **formativa**: entrena criterios. La actividad **oficial** de coevaluación y la de autoevaluación se diligencian de forma individual en **CDigital**, cada una en su ventana."],
-      ["advertencia", "Participar en el ejercicio de clase **no marca** la actividad de la plataforma como cumplida. Son registros distintos: si no la diligencia en CDigital, no queda."],
-      ["aclaracion", "El detalle logístico (ventanas, formato y peso de cada componente) está en la **Presentación del Curso** y publicado en [URL CDigital — campus del curso pendiente]. Revíselo apenas termine el encuentro."]
+      [
+        "info",
+        "La coevaluación practicada en clase es **formativa**: entrena criterios. La actividad **oficial** de coevaluación y la de autoevaluación se diligencian de forma individual en **CDigital**, cada una en su ventana."
+      ],
+      [
+        "advertencia",
+        "Participar en el ejercicio de clase **no marca** la actividad de la plataforma como cumplida. Son registros distintos: si no la diligencia en CDigital, no queda."
+      ],
+      [
+        "aclaracion",
+        "El detalle logístico (ventanas, formato y peso de cada componente) está en la **Presentación del Curso** y publicado en {{CDIGITAL}}. Revíselo apenas termine el encuentro."
+      ]
     ]
   },
   {
@@ -163,26 +266,26 @@
     "type": "boxes",
     "title": "Errores frecuentes en el cierre",
     "boxes": [
-      ["advertencia", "**Presentar los instrumentos como aplicados.** Es la frontera de Proyecto I y la que se revisa con más rigor. Deje escrito y explícito que son una **propuesta** para Proyecto II."],
-      ["advertencia", "**Devolver feedback vago.** \"Está bien\" no ayuda a nadie y desperdicia el ejercicio. Use la fórmula: observación + ubicación + acción."],
-      ["aclaracion", "**El documento suena a piezas pegadas.** Léalo de corrido en voz alta y una las costuras con frases de enlace entre secciones. La transición es parte del contenido."],
-      ["info", "**Autoevaluarse sin criterios.** Use la rúbrica de los cuatro criterios y argumente cada uno con evidencia; una nota sin argumento no es autoevaluación."]
+      [
+        "advertencia",
+        "**Presentar los instrumentos como aplicados.** Es la frontera de Proyecto I y la que se revisa con más rigor. Deje escrito y explícito que son una **propuesta** para Proyecto II."
+      ],
+      [
+        "advertencia",
+        "**Devolver feedback vago.** \"Está bien\" no ayuda a nadie y desperdicia el ejercicio. Use la fórmula: observación + ubicación + acción."
+      ],
+      [
+        "aclaracion",
+        "**El documento suena a piezas pegadas.** Léalo de corrido en voz alta y una las costuras con frases de enlace entre secciones. La transición es parte del contenido."
+      ],
+      [
+        "info",
+        "**Autoevaluarse sin criterios.** Use la rúbrica de los cuatro criterios y argumente cada uno con evidencia; una nota sin argumento no es autoevaluación."
+      ]
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Coevaluación entre pares y ajustes (20 minutos)",
-    "bullets": [
-      "**Consigna literal**, en parejas de equipos (lectura cruzada):",
-      "  **(a)** Intercambien **una sección** del anteproyecto — de preferencia el método o el instrumento propuesto.",
-      "  **(b)** Ubique la sección recibida en la **rúbrica de cuatro criterios** y marque un nivel por criterio.",
-      "  **(c)** Escriba **tres comentarios accionables**, uno por criterio distinto, con la fórmula observación + ubicación + acción.",
-      "  **(d)** Devuelva los comentarios al equipo autor y reciba los suyos.",
-      "  **(e)** **Aplique de inmediato**, en su propio documento, al menos las mejoras que sean claramente pertinentes.",
-      "**Criterio de éxito verificable:** al cerrar el taller, su documento tiene **tres mejoras concretas aplicadas** y usted puede señalarlas en pantalla.",
-      "Los comentarios que reciba y no aplique hoy, anótelos como pendientes con responsable.",
-      "**Entrega:** suba el archivo como `S11_CierreIntegracion_Apellidos` en [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

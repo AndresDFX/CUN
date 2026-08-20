@@ -16,14 +16,44 @@
   {
     "type": "table",
     "title": "La matriz de consistencia, fila por fila",
-    "headers": ["Objetivo específico", "Variable / constructo", "Técnica", "Instrumento", "Análisis"],
+    "headers": [
+      "Objetivo específico",
+      "Variable / constructo",
+      "Técnica",
+      "Instrumento",
+      "Análisis"
+    ],
     "rows": [
-      ["Caracterizar el proceso actual de despliegue", "Tiempo de despliegue", "Observación", "Bitácora / registro de logs", "Estadística descriptiva (promedio, rango)"],
-      ["Diseñar la automatización de las pruebas", "Cobertura de pruebas", "Prototipado", "Prototipo (obra-creación) + rúbrica", "Revisión técnica contra criterios"],
-      ["Comparar el desempeño antes y después", "Errores en producción", "Medición", "Registro de incidencias", "Comparación de promedios"]
+      [
+        "Caracterizar el proceso actual de despliegue",
+        "Tiempo de despliegue",
+        "Observación",
+        "Bitácora / registro de logs",
+        "Estadística descriptiva (promedio, rango)"
+      ],
+      [
+        "Diseñar la automatización de las pruebas",
+        "Cobertura de pruebas",
+        "Prototipado",
+        "Prototipo (obra-creación) + rúbrica",
+        "Revisión técnica contra criterios"
+      ],
+      [
+        "Comparar el desempeño antes y después",
+        "Errores en producción",
+        "Medición",
+        "Registro de incidencias",
+        "Comparación de promedios"
+      ]
     ],
     "note": "Léala de izquierda a derecha: **qué quiero lograr → qué observo → cómo lo capturo → con qué herramienta → cómo lo interpreto**. Si una fila se corta a medio camino, ahí está el problema.",
-    "col_w": [3.0, 2.1, 1.7, 2.5, 2.6]
+    "col_w": [
+      3.0,
+      2.1,
+      1.7,
+      2.5,
+      2.6
+    ]
   },
   {
     "type": "bullets",
@@ -43,30 +73,91 @@
   {
     "type": "table",
     "title": "Decisión 1 — El enfoque: cuali, cuanti o mixto",
-    "headers": ["Enfoque", "Para qué sirve", "Qué produce", "Se nota cuando…"],
+    "headers": [
+      "Enfoque",
+      "Para qué sirve",
+      "Qué produce",
+      "Se nota cuando…"
+    ],
     "rows": [
-      ["**Cuantitativo**", "Medir, contar, comparar magnitudes", "Números, tablas, porcentajes, gráficos", "Su pregunta dice \"en qué medida\", \"cuánto\", \"qué diferencia\""],
-      ["**Cualitativo**", "Comprender significados, prácticas y percepciones", "Categorías, patrones, citas de los participantes", "Su pregunta dice \"cómo\", \"por qué\", \"qué sentido\""],
-      ["**Mixto**", "Combinar la medida con la comprensión", "Números + categorías que se explican entre sí", "Necesita el dato duro **y** la explicación de la gente"]
+      [
+        "**Cuantitativo**",
+        "Medir, contar, comparar magnitudes",
+        "Números, tablas, porcentajes, gráficos",
+        "Su pregunta dice \"en qué medida\", \"cuánto\", \"qué diferencia\""
+      ],
+      [
+        "**Cualitativo**",
+        "Comprender significados, prácticas y percepciones",
+        "Categorías, patrones, citas de los participantes",
+        "Su pregunta dice \"cómo\", \"por qué\", \"qué sentido\""
+      ],
+      [
+        "**Mixto**",
+        "Combinar la medida con la comprensión",
+        "Números + categorías que se explican entre sí",
+        "Necesita el dato duro **y** la explicación de la gente"
+      ]
     ],
     "note": "El enfoque no se decide por gusto ni por facilidad: se decide por lo que exige su pregunta. Y una vez decidido, condiciona todo el resto de la matriz.",
-    "col_w": [2.0, 3.1, 3.3, 3.5]
+    "col_w": [
+      2.0,
+      3.1,
+      3.3,
+      3.5
+    ]
   },
   {
     "type": "table",
     "title": "Decisión 2 y 3 — Alcance y diseño",
-    "headers": ["Decisión", "Opciones", "Cuándo se usa"],
-    "rows": [
-      ["**Alcance: exploratorio**", "Tema poco estudiado, primeras aproximaciones", "Cuando encontró muy pocos referentes en la Fase I"],
-      ["**Alcance: descriptivo**", "Caracterizar cómo es algo, sin explicar causas", "Lo más común en trabajos de grado de pregrado"],
-      ["**Alcance: correlacional**", "Ver si dos variables se mueven juntas", "Cuando su pregunta relaciona dos variables medibles"],
-      ["**Alcance: explicativo**", "Establecer causa y efecto", "Exige control de condiciones; rara vez viable en un semestre"],
-      ["**Diseño: estudio de caso**", "Un solo escenario estudiado a fondo", "Cuando trabaja con una sola empresa, área o comunidad"],
-      ["**Diseño: cuasi-experimento**", "Medición antes y después de una intervención", "Cuando usted introduce un cambio y mide su efecto"],
-      ["**Diseño: investigación-creación**", "Se diseña, se prueba y se documenta una obra o prototipo", "Cuando el producto de su trabajo **es** el prototipo"]
+    "headers": [
+      "Decisión",
+      "Opciones",
+      "Cuándo se usa"
     ],
-    "note": "Estas tres decisiones —enfoque, alcance, diseño— se **enuncian explícitamente** en la sección de Metodología del artículo. El jurado las busca.",
-    "col_w": [3.3, 4.3, 4.3]
+    "rows": [
+      [
+        "**Alcance: exploratorio**",
+        "Tema poco estudiado, primeras aproximaciones",
+        "Cuando encontró muy pocos referentes en la Fase I"
+      ],
+      [
+        "**Alcance: descriptivo**",
+        "Caracterizar cómo es algo, sin explicar causas",
+        "Lo más común en trabajos de grado de pregrado"
+      ],
+      [
+        "**Alcance: correlacional**",
+        "Ver si dos variables se mueven juntas",
+        "Cuando su pregunta relaciona dos variables medibles"
+      ],
+      [
+        "**Alcance: explicativo**",
+        "Establecer causa y efecto",
+        "Exige control de condiciones; rara vez viable en un semestre"
+      ],
+      [
+        "**Diseño: estudio de caso**",
+        "Un solo escenario estudiado a fondo",
+        "Cuando trabaja con una sola empresa, área o comunidad"
+      ],
+      [
+        "**Diseño: cuasi-experimento**",
+        "Medición antes y después de una intervención",
+        "Cuando usted introduce un cambio y mide su efecto"
+      ],
+      [
+        "**Diseño: investigación-creación**",
+        "Se diseña, se prueba y se documenta una obra o prototipo",
+        "Cuando el producto de su trabajo **es** el prototipo"
+      ]
+    ],
+    "note": "Estas tres decisiones —enfoque, alcance, diseño— se **enuncian explícitamente** en la sección de Metodología del documento. El jurado las busca.",
+    "col_w": [
+      3.3,
+      4.3,
+      4.3
+    ]
   },
   {
     "type": "bullets",
@@ -102,16 +193,51 @@
   {
     "type": "table",
     "title": "Qué instrumento para qué necesidad",
-    "headers": ["Instrumento", "Captura", "Tamaño razonable", "Ojo con…"],
+    "headers": [
+      "Instrumento",
+      "Captura",
+      "Tamaño razonable",
+      "Ojo con…"
+    ],
     "rows": [
-      ["**Cuestionario**", "Percepciones y frecuencias de muchas personas", "8 a 12 ítems", "Preguntas dobles y respuestas inducidas"],
-      ["**Guía de entrevista**", "Explicaciones y matices de pocas personas", "6 a 8 preguntas abiertas", "Convertirla en un interrogatorio cerrado"],
-      ["**Guía de observación**", "Lo que pasa realmente, sin intermediarios", "5 a 8 criterios", "Observar sin criterios definidos previamente"],
-      ["**Bitácora / registro**", "Datos que se generan solos (tiempos, incidencias)", "Campos fijos por evento", "No definir desde cuándo hasta cuándo se registra"],
-      ["**Rúbrica del prototipo**", "Calidad de la obra-creación contra criterios", "4 a 6 criterios con niveles", "Criterios subjetivos que nadie más podría aplicar"]
+      [
+        "**Cuestionario**",
+        "Percepciones y frecuencias de muchas personas",
+        "8 a 12 ítems",
+        "Preguntas dobles y respuestas inducidas"
+      ],
+      [
+        "**Guía de entrevista**",
+        "Explicaciones y matices de pocas personas",
+        "6 a 8 preguntas abiertas",
+        "Convertirla en un interrogatorio cerrado"
+      ],
+      [
+        "**Guía de observación**",
+        "Lo que pasa realmente, sin intermediarios",
+        "5 a 8 criterios",
+        "Observar sin criterios definidos previamente"
+      ],
+      [
+        "**Bitácora / registro**",
+        "Datos que se generan solos (tiempos, incidencias)",
+        "Campos fijos por evento",
+        "No definir desde cuándo hasta cuándo se registra"
+      ],
+      [
+        "**Rúbrica del prototipo**",
+        "Calidad de la obra-creación contra criterios",
+        "4 a 6 criterios con niveles",
+        "Criterios subjetivos que nadie más podría aplicar"
+      ]
     ],
     "note": "Se puede usar más de un instrumento: lo normal es una bitácora para lo medible y una entrevista corta para entender el porqué.",
-    "col_w": [2.6, 3.6, 2.6, 3.1]
+    "col_w": [
+      2.6,
+      3.6,
+      2.6,
+      3.1
+    ]
   },
   {
     "type": "bullets",
@@ -132,22 +258,52 @@
     "type": "boxes",
     "title": "Ética de los datos: no es un trámite, es un criterio de evaluación",
     "boxes": [
-      ["advertencia", "Si su instrumento recoge información de personas, necesita **consentimiento informado**: quién es usted, para qué son los datos, que la participación es voluntaria y que puede retirarse."],
-      ["advertencia", "**Anonimice siempre.** Nada de nombres, cédulas, correos ni cargos identificables en el artículo. Use códigos: Participante 1, Participante 2."],
-      ["aclaracion", "Los datos se usan **solo para este estudio**. No se comparten con terceros, no se publican en bruto y no se reutilizan para otro proyecto sin nuevo consentimiento."],
-      ["aclaracion", "Si trabaja con datos de una empresa, pida **autorización escrita** de quien pueda darla y respete lo que sea confidencial. Un logo o un dato interno publicado sin permiso le puede costar la sustentación."],
-      ["info", "En su sección de Metodología debe quedar **una declaración explícita** del tratamiento ético. El jurado la busca y su ausencia resta."]
+      [
+        "advertencia",
+        "Si su instrumento recoge información de personas, necesita **consentimiento informado**: quién es usted, para qué son los datos, que la participación es voluntaria y que puede retirarse."
+      ],
+      [
+        "advertencia",
+        "**Anonimice siempre.** Nada de nombres, cédulas, correos ni cargos identificables en el documento. Use códigos: Participante 1, Participante 2."
+      ],
+      [
+        "aclaracion",
+        "Los datos se usan **solo para este estudio**. No se comparten con terceros, no se publican en bruto y no se reutilizan para otro proyecto sin nuevo consentimiento."
+      ],
+      [
+        "aclaracion",
+        "Si trabaja con datos de una empresa, pida **autorización escrita** de quien pueda darla y respete lo que sea confidencial. Un logo o un dato interno publicado sin permiso le puede costar la sustentación."
+      ],
+      [
+        "info",
+        "En su sección de Metodología debe quedar **una declaración explícita** del tratamiento ético. El jurado la busca y su ausencia resta."
+      ]
     ]
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes de esta sesión",
     "boxes": [
-      ["advertencia", "\"Elegí encuesta porque es lo más fácil.\" — El método se deriva de la pregunta y los objetivos, no de la comodidad. Revíselo en la matriz de consistencia."],
-      ["advertencia", "\"Mi encuesta tiene 40 preguntas para que sea completa.\" — Está dispersa. Cada ítem debe responder a un objetivo; si no, se borra. Diez ítems alineados valen más que cuarenta sueltos."],
-      ["advertencia", "\"Copié el método de un artículo tal cual.\" — Puede copiar la **lógica**, nunca el texto, y debe justificar por qué aplica a **su** pregunta y a **su** contexto."],
-      ["aclaracion", "\"¿Puedo cambiar el instrumento si no funciona?\" — Sí, y se documenta el cambio. Lo que no se puede es cambiarlo a mitad de la recolección sin dejar constancia."],
-      ["info", "Un buen indicio de que la matriz quedó bien: usted puede explicar su metodología completa en dos minutos, sin leer."]
+      [
+        "advertencia",
+        "\"Elegí encuesta porque es lo más fácil.\" — El método se deriva de la pregunta y los objetivos, no de la comodidad. Revíselo en la matriz de consistencia."
+      ],
+      [
+        "advertencia",
+        "\"Mi encuesta tiene 40 preguntas para que sea completa.\" — Está dispersa. Cada ítem debe responder a un objetivo; si no, se borra. Diez ítems alineados valen más que cuarenta sueltos."
+      ],
+      [
+        "advertencia",
+        "\"Copié el método de un artículo tal cual.\" — Puede copiar la **lógica**, nunca el texto, y debe justificar por qué aplica a **su** pregunta y a **su** contexto."
+      ],
+      [
+        "aclaracion",
+        "\"¿Puedo cambiar el instrumento si no funciona?\" — Sí, y se documenta el cambio. Lo que no se puede es cambiarlo a mitad de la recolección sin dejar constancia."
+      ],
+      [
+        "info",
+        "Un buen indicio de que la matriz quedó bien: usted puede explicar su metodología completa en dos minutos, sin leer."
+      ]
     ]
   },
   {
@@ -167,44 +323,45 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Matriz de consistencia y bosquejo del instrumento",
-    "bullets": [
-      "**Tiempo: 20 minutos.** Trabajo individual. Entregable: `S05_MetodoInstrumento_Apellido`.",
-      "**Consigna literal:**",
-      "  **(1)** Llene su **matriz de consistencia** con **una fila por objetivo específico** y las cinco columnas completas.",
-      "  **(2)** Declare en **tres líneas** su enfoque, su alcance y su diseño, cada uno con media línea de justificación.",
-      "  **(3)** Redacte el **bosquejo del instrumento**: 10 ítems de cuestionario, o una guía de 8 preguntas, o la rúbrica del prototipo con 4 a 6 criterios.",
-      "  **(4)** Escriba **una línea** sobre el tratamiento ético de los datos.",
-      "**Criterio de éxito (así se verifica):**",
-      "  **No queda ninguna celda vacía** en la matriz.",
-      "  **No queda ningún ítem huérfano**: todos tienen anotado al frente el objetivo que responden.",
-      "  Un compañero puede leer su matriz y decirle qué va a hacer usted, sin que se lo explique."
-    ],
-    "note": "Mientras trabajan, **el Docente** revisa fila por fila. La pregunta que va a escuchar todo el tiempo es: \"¿ese instrumento sí mide esa variable?\"."
+    "type": "taller"
   },
   {
     "type": "boxes",
     "title": "Checklist de autoevaluación antes de subir a CDigital",
     "boxes": [
-      ["info", "**Matriz:** ¿hay una fila por cada objetivo específico? ¿todas las celdas están llenas? ¿la técnica y el instrumento son cosas distintas y no la misma repetida?"],
-      ["info", "**Coherencia hacia atrás:** ¿cada variable de la matriz aparece en mi pregunta de la Sesión 02? Si aparece una variable nueva, o sobra o mi pregunta estaba incompleta."],
-      ["info", "**Instrumento:** ¿cada ítem tiene su objetivo anotado al frente? ¿ningún ítem pregunta dos cosas a la vez? ¿ninguno induce la respuesta?"],
-      ["aclaracion", "**Viabilidad:** ¿puedo realmente aplicar este instrumento con el tiempo y el acceso que tengo? Un diseño perfecto e imposible no sirve de nada."],
-      ["advertencia", "**Ética:** si hay personas de por medio, ¿está escrito el consentimiento, la anonimización y el uso exclusivo de los datos? Sin eso, la sección de Metodología queda incompleta."]
+      [
+        "info",
+        "**Matriz:** ¿hay una fila por cada objetivo específico? ¿todas las celdas están llenas? ¿la técnica y el instrumento son cosas distintas y no la misma repetida?"
+      ],
+      [
+        "info",
+        "**Coherencia hacia atrás:** ¿cada variable de la matriz aparece en mi pregunta de la Sesión 02? Si aparece una variable nueva, o sobra o mi pregunta estaba incompleta."
+      ],
+      [
+        "info",
+        "**Instrumento:** ¿cada ítem tiene su objetivo anotado al frente? ¿ningún ítem pregunta dos cosas a la vez? ¿ninguno induce la respuesta?"
+      ],
+      [
+        "aclaracion",
+        "**Viabilidad:** ¿puedo realmente aplicar este instrumento con el tiempo y el acceso que tengo? Un diseño perfecto e imposible no sirve de nada."
+      ],
+      [
+        "advertencia",
+        "**Ética:** si hay personas de por medio, ¿está escrito el consentimiento, la anonimización y el uso exclusivo de los datos? Sin eso, la sección de Metodología queda incompleta."
+      ]
     ]
   },
   {
     "type": "bullets",
     "title": "Para continuar — trabajo autónomo",
     "bullets": [
-      "**Suba** `S05_MetodoInstrumento_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Suba** `S05_MetodoInstrumento_Apellido` a **CDigital**: {{CDIGITAL}}",
       "**Trabajo autónomo (extensión de la sesión):**",
       "  **Pruebe su instrumento con una sola persona** antes de aplicarlo en serio. Va a descubrir preguntas que nadie entiende.",
       "  Pase su cuestionario a **Formularios de Google** si va a aplicarlo en línea: gratis, en el navegador y con las respuestas ya tabuladas.",
       "  Si su trabajo es obra-creación, avance el **prototipo** y empiece la **bitácora de iteraciones** desde la primera decisión de diseño.",
       "  Redacte el borrador del **consentimiento informado** en media página.",
-      "  Escriba ya la sección de **Metodología** del artículo con lo que produjo hoy: la matriz se traduce a prosa casi sola.",
+      "  Escriba ya la sección de **Metodología** del documento con lo que produjo hoy: la matriz se traduce a prosa casi sola.",
       "**En la próxima sesión** trabajamos **comunidades de práctica y co-creación**: su proyecto sale de la burbuja y recibe feedback de sus pares.",
       "  Llegue con su avance listo para mostrarlo en tres minutos."
     ]

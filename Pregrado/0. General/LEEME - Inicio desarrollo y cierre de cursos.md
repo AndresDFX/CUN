@@ -26,7 +26,7 @@ Hoy no hay PDFs institucionales de pregrado equivalentes a los instructivos AFI.
 | Uso | Link | Estado |
 |---|---|---|
 | Google Meet (por curso) | `[URL Meet — mismo enlace toda la serie · <Curso>]` | Placeholder — sustituir. |
-| CDigital (campus) | `[URL CDigital — campus del curso pendiente]` | Placeholder. |
+| CDigital (campus) | `cdigital_url("<curso>")` → `config/cursos/carga_academica_2026.json` | Ya registrado para los cuatro cursos. **No copiar la URL aquí:** TG3 tiene **un aula por grupo** y una sola URL sería la equivocada para dos tercios del curso. |
 | Tutorías estudiante (AFI) | https://forms.gle/oZ8xCYiUo3KEWr1d9 | **Solo aplica a Proyecto I/II AFI**, no a pregrado estándar. |
 | Registro docente sesiones AFI | https://forms.gle/6t6BXqQ2Kwmivpct8 | **Solo AFI** — no usar en pregrado salvo que Coordinación lo indique. |
 | Informe cierre / Acuerdo (forms P1/P2) | https://docs.google.com/forms/d/e/1FAIpQLSej5yUK3b0p617XhccE7GZrm2C4ra3lk-hzfPTx43uJM_xAmg/viewform | **Especialización AFI.** No asumir que aplica a pregrado. |

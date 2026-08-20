@@ -50,30 +50,94 @@
   {
     "type": "table",
     "title": "Los seis componentes del planteamiento",
-    "headers": ["Componente", "Pregunta que responde", "Ejemplo del caso modelado", "Extensión"],
+    "headers": [
+      "Componente",
+      "Pregunta que responde",
+      "Ejemplo del caso modelado",
+      "Extensión"
+    ],
     "rows": [
-      ["**Estado actual**", "¿Qué ocurre hoy?", "\"Las prácticas del laboratorio dependen de una red inestable.\"", "1 párrafo"],
-      ["**Evidencias**", "¿Cómo lo sé?", "\"La bitácora del laboratorio registra 12 caídas en un mes.\"", "Dentro de los párrafos"],
-      ["**Causas**", "¿Por qué ocurre?", "\"Cableado antiguo y saturación en las horas pico.\"", "1 párrafo (2–3 causas)"],
-      ["**Consecuencias**", "¿A quién o a qué afecta?", "\"Prácticas incompletas y repetición de sesiones.\"", "1 párrafo"],
-      ["**Vacío**", "¿Qué falta saber?", "\"No hay medición de la pérdida de paquetes en esa red.\"", "2–3 frases"],
-      ["**Pregunta**", "¿Qué me propongo responder?", "La misma pregunta de la sesión anterior, sin cambios", "1 frase final"]
+      [
+        "**Estado actual**",
+        "¿Qué ocurre hoy?",
+        "\"Las prácticas del laboratorio dependen de una red inestable.\"",
+        "1 párrafo"
+      ],
+      [
+        "**Evidencias**",
+        "¿Cómo lo sé?",
+        "\"La bitácora del laboratorio registra 12 caídas en un mes.\"",
+        "Dentro de los párrafos"
+      ],
+      [
+        "**Causas**",
+        "¿Por qué ocurre?",
+        "\"Cableado antiguo y saturación en las horas pico.\"",
+        "1 párrafo (2–3 causas)"
+      ],
+      [
+        "**Consecuencias**",
+        "¿A quién o a qué afecta?",
+        "\"Prácticas incompletas y repetición de sesiones.\"",
+        "1 párrafo"
+      ],
+      [
+        "**Vacío**",
+        "¿Qué falta saber?",
+        "\"No hay medición de la pérdida de paquetes en esa red.\"",
+        "2–3 frases"
+      ],
+      [
+        "**Pregunta**",
+        "¿Qué me propongo responder?",
+        "La misma pregunta de la sesión anterior, sin cambios",
+        "1 frase final"
+      ]
     ],
     "note": "Los seis en ese orden. Si le falta uno, el lector siente el hueco aunque no sepa nombrarlo.",
-    "col_w": [2.2, 2.4, 4.4, 1.8]
+    "col_w": [
+      2.2,
+      2.4,
+      4.4,
+      1.8
+    ]
   },
   {
     "type": "table",
     "title": "La regla dura de hoy: evidencia, no opinión",
-    "headers": ["Afirmación débil (opinión)", "Afirmación fuerte (evidencia)", "Qué la volvió fuerte"],
+    "headers": [
+      "Afirmación débil (opinión)",
+      "Afirmación fuerte (evidencia)",
+      "Qué la volvió fuerte"
+    ],
     "rows": [
-      ["\"Creo que muchos estudiantes reprueban.\"", "\"El 34 % del grupo reprobó, según el reporte académico (2024).\"", "Cifra + fuente + año"],
-      ["\"La red se cae mucho.\"", "\"La bitácora del laboratorio registró 12 interrupciones en un mes.\"", "Conteo + registro verificable"],
-      ["\"Todo el mundo recibe correos falsos.\"", "\"El 61 % de los estudiantes encuestados reportó haber recibido correos que suplantan a la institución (Autor, 2023).\"", "Proporción + estudio citado"],
-      ["\"Es obvio que la retroalimentación llega tarde.\"", "\"El tiempo promedio entre la entrega y la retroalimentación fue de 9 días.\"", "Medida concreta y comparable"]
+      [
+        "\"Creo que muchos estudiantes reprueban.\"",
+        "\"El 34 % del grupo reprobó, según el reporte académico (2024).\"",
+        "Cifra + fuente + año"
+      ],
+      [
+        "\"La red se cae mucho.\"",
+        "\"La bitácora del laboratorio registró 12 interrupciones en un mes.\"",
+        "Conteo + registro verificable"
+      ],
+      [
+        "\"Todo el mundo recibe correos falsos.\"",
+        "\"El 61 % de los estudiantes encuestados reportó haber recibido correos que suplantan a la institución (Autor, 2023).\"",
+        "Proporción + estudio citado"
+      ],
+      [
+        "\"Es obvio que la retroalimentación llega tarde.\"",
+        "\"El tiempo promedio entre la entrega y la retroalimentación fue de 9 días.\"",
+        "Medida concreta y comparable"
+      ]
     ],
     "note": "Prueba de control: subraye cada afirmación fuerte de su texto. **Si no tiene cifra ni cita al lado, es opinión.**",
-    "col_w": [3.4, 4.6, 2.8]
+    "col_w": [
+      3.4,
+      4.6,
+      2.8
+    ]
   },
   {
     "type": "bullets",
@@ -111,11 +175,27 @@
   {
     "type": "table",
     "title": "Ejemplo modelado (1/2): la tabla llena",
-    "headers": ["Síntoma", "Evidencia", "Consecuencia"],
+    "headers": [
+      "Síntoma",
+      "Evidencia",
+      "Consecuencia"
+    ],
     "rows": [
-      ["La red del laboratorio X se interrumpe durante las prácticas", "La bitácora institucional registra **12 interrupciones en un mes**", "Prácticas incompletas y repetición de sesiones"],
-      ["Las interrupciones se concentran en la franja de la tarde", "El registro de soporte ubica **9 de las 12 caídas entre 2 y 5 p. m.**", "La franja de mayor ocupación es la más afectada"],
-      ["No se conoce la calidad real del enlace durante la práctica", "**No existe** ningún registro de pérdida de paquetes ni de latencia", "Las causas se atribuyen por suposición, no por medición"]
+      [
+        "La red del laboratorio X se interrumpe durante las prácticas",
+        "La bitácora institucional registra **12 interrupciones en un mes**",
+        "Prácticas incompletas y repetición de sesiones"
+      ],
+      [
+        "Las interrupciones se concentran en la franja de la tarde",
+        "El registro de soporte ubica **9 de las 12 caídas entre 2 y 5 p. m.**",
+        "La franja de mayor ocupación es la más afectada"
+      ],
+      [
+        "No se conoce la calidad real del enlace durante la práctica",
+        "**No existe** ningún registro de pérdida de paquetes ni de latencia",
+        "Las causas se atribuyen por suposición, no por medición"
+      ]
     ],
     "note": "Note la tercera fila: **la ausencia de datos también es evidencia** — y es justamente la que anuncia el vacío."
   },
@@ -218,16 +298,44 @@
   {
     "type": "table",
     "title": "La ficha de lectura: campos y qué escribir",
-    "headers": ["Campo", "Qué se escribe", "Ejemplo (caso modelado)"],
+    "headers": [
+      "Campo",
+      "Qué se escribe",
+      "Ejemplo (caso modelado)"
+    ],
     "rows": [
-      ["**Referencia APA 7**", "La cita completa generada en ZoteroBib", "Apellido, A. (2022). Título del artículo. *Nombre de la Revista*, 14(2), 45–58."],
-      ["**Constructo al que responde**", "Cuál de sus 2–3 constructos aborda", "Constructo 1: pérdida de paquetes"],
-      ["**Idea principal**", "Una frase, con sus propias palabras", "Mide el efecto de la pérdida de paquetes sobre aplicaciones en tiempo real"],
-      ["**Cita textual + página**", "Máximo 2 líneas, entre comillas, con página", "\"Por encima del 2 % de pérdida, la sesión se degrada de forma perceptible\" (p. 51)"],
-      ["**Relación con mi pregunta**", "Por qué esta fuente entra en **mi** marco", "Aporta un umbral de referencia para juzgar las mediciones del laboratorio X"]
+      [
+        "**Referencia APA 7**",
+        "La cita completa generada en ZoteroBib",
+        "Apellido, A. (2022). Título del artículo. *Nombre de la Revista*, 14(2), 45–58."
+      ],
+      [
+        "**Constructo al que responde**",
+        "Cuál de sus 2–3 constructos aborda",
+        "Constructo 1: pérdida de paquetes"
+      ],
+      [
+        "**Idea principal**",
+        "Una frase, con sus propias palabras",
+        "Mide el efecto de la pérdida de paquetes sobre aplicaciones en tiempo real"
+      ],
+      [
+        "**Cita textual + página**",
+        "Máximo 2 líneas, entre comillas, con página",
+        "\"Por encima del 2 % de pérdida, la sesión se degrada de forma perceptible\" (p. 51)"
+      ],
+      [
+        "**Relación con mi pregunta**",
+        "Por qué esta fuente entra en **mi** marco",
+        "Aporta un umbral de referencia para juzgar las mediciones del laboratorio X"
+      ]
     ],
     "note": "El último campo es el que decide. **Si no puede llenarlo, la fuente no entra en su marco.**",
-    "col_w": [2.4, 3.0, 5.4]
+    "col_w": [
+      2.4,
+      3.0,
+      5.4
+    ]
   },
   {
     "type": "bullets",
@@ -250,11 +358,26 @@
     "type": "boxes",
     "title": "Errores frecuentes: planteamiento y marco",
     "boxes": [
-      ["advertencia", "**Escribir lo que uno cree, sin datos.** Cada afirmación fuerte necesita una cifra, un registro o un estudio. Sin evidencia, su planteamiento es una opinión larga."],
-      ["advertencia", "**Empezar por la solución que quiere proponer.** Hoy se argumenta el problema. Si su texto ya dice \"por eso se desarrollará una aplicación...\", bórrelo: esa frase pertenece a otra sección."],
-      ["advertencia", "**Un marco que no vuelve nunca a su caso.** Si ningún párrafo termina amarrando el concepto a su laboratorio, su sede o su empresa, lo que escribió es un resumen de lecturas."],
-      ["aclaracion", "**El planteamiento debe caer exactamente en la pregunta que ya formuló.** Si termina en otra cosa —o en una pregunta distinta—, hay una desalineación que corregir antes de seguir."],
-      ["info", "**Diez causas sin jerarquía.** Priorice 2 o 3 con evidencia. Una causa bien sustentada pesa más que ocho enunciadas al paso."]
+      [
+        "advertencia",
+        "**Escribir lo que uno cree, sin datos.** Cada afirmación fuerte necesita una cifra, un registro o un estudio. Sin evidencia, su planteamiento es una opinión larga."
+      ],
+      [
+        "advertencia",
+        "**Empezar por la solución que quiere proponer.** Hoy se argumenta el problema. Si su texto ya dice \"por eso se desarrollará una aplicación...\", bórrelo: esa frase pertenece a otra sección."
+      ],
+      [
+        "advertencia",
+        "**Un marco que no vuelve nunca a su caso.** Si ningún párrafo termina amarrando el concepto a su laboratorio, su sede o su empresa, lo que escribió es un resumen de lecturas."
+      ],
+      [
+        "aclaracion",
+        "**El planteamiento debe caer exactamente en la pregunta que ya formuló.** Si termina en otra cosa —o en una pregunta distinta—, hay una desalineación que corregir antes de seguir."
+      ],
+      [
+        "info",
+        "**Diez causas sin jerarquía.** Priorice 2 o 3 con evidencia. Una causa bien sustentada pesa más que ocho enunciadas al paso."
+      ]
     ]
   },
   {
@@ -275,20 +398,7 @@
     "note": "Todo en el navegador: Google Docs, Google Académico, SciELO, Redalyc, biblioteca CUN y ZoteroBib. Escriba primero, corrija después."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Planteamiento + primera página de marco (~24 min)",
-    "bullets": [
-      "**Consigna literal.** En el documento `S05_PlanteamientoMarco_Apellido`:",
-      "  **(1)** Llene la tabla **síntoma / evidencia / consecuencia** con **al menos tres filas**. **(5 min)**",
-      "  **(2)** Conviértala en un planteamiento de **1 a 1.5 páginas** con los **seis componentes** en orden, que **termine en su pregunta**. **(9 min)**",
-      "  **(3)** Declare sus **2 constructos** y ponga un **subtítulo** para cada uno. **(2 min)**",
-      "  **(4)** Complete **5 fuentes** con su **ficha de lectura** (los cinco campos), citadas en APA 7. **(4 min)**",
-      "  **(5)** Escriba **un párrafo de marco** por constructo con los **cuatro movimientos**, y cierre cada uno volviendo a su caso. **(4 min)**",
-      "**El Docente pasa acompañando y revisando alineación** entre pregunta, planteamiento y marco.",
-      "**Criterio de éxito (verificable):** al leer su planteamiento **sin conocer su tema** se entiende **qué pasa, cómo lo sabe y por qué importa**; y cada párrafo del marco **se puede etiquetar con un constructo**.",
-      "Prueba de control rápida: cuente cuántas veces aparece un **número o una cita** en su texto. Si la respuesta es cero, todavía es opinión."
-    ],
-    "note": "Si el tiempo aprieta, priorice el planteamiento completo y **un** párrafo de marco bien hecho. Media página con argumento vale más que dos páginas de definiciones."
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -305,7 +415,7 @@
       "[ ] Cada párrafo del marco **vuelve a mi caso** en su última frase.",
       "[ ] Uso **el mismo vocabulario** en el planteamiento y en el marco (no \"caídas\" en uno e \"interrupciones\" en el otro).",
       "[ ] Todo lo citado en el texto aparece en Referencias, y viceversa, en **APA 7** revisado a mano.",
-      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "[ ] Subí el archivo a **CDigital**: {{CDIGITAL}}"
     ]
   },
   {
@@ -322,7 +432,7 @@
       "  **6.** Incorpore la **retroalimentación** de los cortes anteriores: eso se evalúa.",
       "**No deje la consolidación para la última noche.** Cerrado el espacio, no hay archivo que lo reemplace.",
       "**La próxima sesión no tiene entrega nueva:** es la **socialización del artículo y el cierre del curso**. Prepárese para contar su trabajo en cuatro minutos.",
-      "Entrega y materiales en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "Entrega y materiales en **CDigital**: {{CDIGITAL}}"
     ]
   }
 ]

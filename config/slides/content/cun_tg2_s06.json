@@ -30,16 +30,44 @@
   {
     "type": "table",
     "title": "Del diccionario a lo operativo: cuatro términos del caso",
-    "headers": ["Término", "Definición de diccionario (insuficiente)", "Definición operativa (útil)"],
+    "headers": [
+      "Término",
+      "Definición de diccionario (insuficiente)",
+      "Definición operativa (útil)"
+    ],
     "rows": [
-      ["Ticket", "\"Una solicitud\"", "Registro de incidente creado por un usuario en la mesa de ayuda, con identificador único y fecha de apertura"],
-      ["Tiempo de atención", "\"Lo que tarda un servicio\"", "Minutos transcurridos entre la apertura y el cierre del ticket, según el registro del sistema X"],
-      ["Clasificación correcta", "\"Un acierto\"", "Coincidencia entre la categoría asignada por el modelo y la que asignó el analista al mismo ticket"],
-      ["Categoría frecuente", "\"Las más comunes\"", "Categoría que concentra al menos el 5 % de los tickets del periodo analizado"],
-      ["Analista de soporte", "\"Quien atiende\"", "Persona del área de soporte TI con perfil habilitado para asignar categoría y cerrar tickets en el sistema X"]
+      [
+        "Ticket",
+        "\"Una solicitud\"",
+        "Registro de incidente creado por un usuario en la mesa de ayuda, con identificador único y fecha de apertura"
+      ],
+      [
+        "Tiempo de atención",
+        "\"Lo que tarda un servicio\"",
+        "Minutos transcurridos entre la apertura y el cierre del ticket, según el registro del sistema X"
+      ],
+      [
+        "Clasificación correcta",
+        "\"Un acierto\"",
+        "Coincidencia entre la categoría asignada por el modelo y la que asignó el analista al mismo ticket"
+      ],
+      [
+        "Categoría frecuente",
+        "\"Las más comunes\"",
+        "Categoría que concentra al menos el 5 % de los tickets del periodo analizado"
+      ],
+      [
+        "Analista de soporte",
+        "\"Quien atiende\"",
+        "Persona del área de soporte TI con perfil habilitado para asignar categoría y cerrar tickets en el sistema X"
+      ]
     ],
     "note": "Note el patrón de la tercera columna: siempre aparece **qué se observa**, **en qué unidad** y **de dónde sale el dato**.",
-    "col_w": [2.4, 3.7, 5.8]
+    "col_w": [
+      2.4,
+      3.7,
+      5.8
+    ]
   },
   {
     "type": "bullets",
@@ -73,15 +101,39 @@
   {
     "type": "table",
     "title": "Contexto mal acotado frente a contexto bien acotado",
-    "headers": ["Como suele llegar", "Qué falla", "Cómo debe quedar"],
+    "headers": [
+      "Como suele llegar",
+      "Qué falla",
+      "Cómo debe quedar"
+    ],
     "rows": [
-      ["\"Colombia es un país en vías de digitalización…\"", "Nivel macro que no toca el problema", "\"La empresa X, del sector servicios, opera con un área de soporte TI centralizada.\""],
-      ["\"El sector TI mueve millones de dólares al año.\"", "Dato de relleno sin relación con la pregunta", "\"El área atiende solicitudes de las tres sedes por correo, teléfono y formulario web.\""],
-      ["\"La empresa fue fundada hace treinta años y ha crecido…\"", "Historia irrelevante para el problema", "\"El equipo lo conforman los analistas de soporte, que registran cada solicitud en el sistema X.\""],
-      ["\"Todos los usuarios tienen problemas con el sistema.\"", "Afirmación sin fuente ni medida", "\"Según el informe interno del área, se reciben en promedio N solicitudes diarias.\""]
+      [
+        "\"Colombia es un país en vías de digitalización…\"",
+        "Nivel macro que no toca el problema",
+        "\"La empresa X, del sector servicios, opera con un área de soporte TI centralizada.\""
+      ],
+      [
+        "\"El sector TI mueve millones de dólares al año.\"",
+        "Dato de relleno sin relación con la pregunta",
+        "\"El área atiende solicitudes de las tres sedes por correo, teléfono y formulario web.\""
+      ],
+      [
+        "\"La empresa fue fundada hace treinta años y ha crecido…\"",
+        "Historia irrelevante para el problema",
+        "\"El equipo lo conforman los analistas de soporte, que registran cada solicitud en el sistema X.\""
+      ],
+      [
+        "\"Todos los usuarios tienen problemas con el sistema.\"",
+        "Afirmación sin fuente ni medida",
+        "\"Según el informe interno del área, se reciben en promedio N solicitudes diarias.\""
+      ]
     ],
     "note": "Todo dato de contexto necesita origen: informe interno, página institucional o fuente citada en APA 7. Sin origen, es suposición.",
-    "col_w": [3.7, 3.0, 5.2]
+    "col_w": [
+      3.7,
+      3.0,
+      5.2
+    ]
   },
   {
     "type": "bullets",
@@ -99,23 +151,60 @@
   {
     "type": "table",
     "title": "Por qué esto sostiene el próximo semestre",
-    "headers": ["Definición operativa (hoy)", "Variable (metodología)", "Indicador", "Fuente del dato"],
+    "headers": [
+      "Definición operativa (hoy)",
+      "Variable (metodología)",
+      "Indicador",
+      "Fuente del dato"
+    ],
     "rows": [
-      ["Minutos entre apertura y cierre del ticket", "Tiempo de atención", "Promedio de minutos por ticket", "Registro histórico del sistema X"],
-      ["Coincidencia entre categoría del modelo y del analista", "Acierto de clasificación", "Porcentaje de coincidencias", "Comparación de ambas categorías"],
-      ["Categoría con al menos el 5 % de los tickets", "Frecuencia de categoría", "Distribución de tickets por categoría", "Reporte de categorías del periodo"]
+      [
+        "Minutos entre apertura y cierre del ticket",
+        "Tiempo de atención",
+        "Promedio de minutos por ticket",
+        "Registro histórico del sistema X"
+      ],
+      [
+        "Coincidencia entre categoría del modelo y del analista",
+        "Acierto de clasificación",
+        "Porcentaje de coincidencias",
+        "Comparación de ambas categorías"
+      ],
+      [
+        "Categoría con al menos el 5 % de los tickets",
+        "Frecuencia de categoría",
+        "Distribución de tickets por categoría",
+        "Reporte de categorías del periodo"
+      ]
     ],
     "note": "Lea la tabla de izquierda a derecha: **un término mal definido hoy es un instrumento imposible mañana**. Por eso esta sesión, aunque corta, decide la metodología.",
-    "col_w": [4.0, 2.6, 2.9, 2.4]
+    "col_w": [
+      4.0,
+      2.6,
+      2.9,
+      2.4
+    ]
   },
   {
     "type": "boxes",
     "title": "Lo que más se corrige en esta sesión",
     "boxes": [
-      ["advertencia", "**\"Copié la definición de la enciclopedia en línea.\"** — No sirve para medir y además es fuente débil. Construya la definición operativa de su caso."],
-      ["advertencia", "**\"Mi contexto es Colombia y el sector TI.\"** — Baje a la organización, el área y el proceso. El país cabe en dos frases, no en dos páginas."],
-      ["aclaracion", "**\"Definí el término tan amplio que sirve para todo.\"** — Si sirve para todo, no mide nada. Agréguele unidad, fuente del dato y límite."],
-      ["info", "**\"¿Conceptual y contextual no son lo mismo?\"** — No: el conceptual define los términos; el contextual describe el lugar y el proceso donde ocurren."]
+      [
+        "advertencia",
+        "**\"Copié la definición de la enciclopedia en línea.\"** — No sirve para medir y además es fuente débil. Construya la definición operativa de su caso."
+      ],
+      [
+        "advertencia",
+        "**\"Mi contexto es Colombia y el sector TI.\"** — Baje a la organización, el área y el proceso. El país cabe en dos frases, no en dos páginas."
+      ],
+      [
+        "aclaracion",
+        "**\"Definí el término tan amplio que sirve para todo.\"** — Si sirve para todo, no mide nada. Agréguele unidad, fuente del dato y límite."
+      ],
+      [
+        "info",
+        "**\"¿Conceptual y contextual no son lo mismo?\"** — No: el conceptual define los términos; el contextual describe el lugar y el proceso donde ocurren."
+      ]
     ]
   },
   {
@@ -134,18 +223,7 @@
     "note": "Si le ayuda ver el contexto antes de escribirlo, dibuje el flujo del proceso en **Excalidraw** o **tldraw**: gratis, en el navegador, y la imagen se pega en el documento."
   },
   {
-    "type": "bullets",
-    "title": "Taller — 20 minutos para cerrar el marco referencial",
-    "bullets": [
-      "**Consigna:** en un documento llamado `S06_ConceptualContextual_Apellido`:",
-      "  **(1)** Una **tabla de mínimo cuatro términos** con su definición operativa, siguiendo las cuatro piezas.",
-      "  **(2)** **Una página de contexto** que describa organización, área y proceso concretos.",
-      "  **(3)** Las citas en **APA 7** de las definiciones que haya tomado de autores.",
-      "  **(4)** Un dato con origen por cada párrafo de contexto (informe, documento del área o fuente citada).",
-      "**Tiempo:** 20 minutos; el Docente revisa término por término si la definición es medible.",
-      "**Criterio de éxito:** cada término se puede medir tal como está escrito, y el contexto describe un lugar concreto —no un país—.",
-      "Prueba en pareja, si alcanza el tiempo: intercambien definiciones y verifiquen si ambos medirían igual."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -166,7 +244,7 @@
     "title": "Trabajo autónomo y qué viene la próxima sesión",
     "bullets": [
       "**Entrega:** suba `S06_ConceptualContextual_Apellido` a **CDigital**.",
-      "  [URL CDigital — campus del curso pendiente]",
+      "  {{CDIGITAL}}",
       "**Autónomo 1:** integre la tabla y el contexto en el documento general: con esto el **marco referencial queda armado completo**.",
       "**Autónomo 2:** relea el marco teórico y reemplace los términos vagos por los que acaba de definir.",
       "**Autónomo 3:** para cada definición operativa anote, en una línea, con qué dato existente se podría verificar.",

@@ -17,19 +17,59 @@
   {
     "type": "table",
     "title": "Cómo se lee la rúbrica de la ACA 1, criterio por criterio",
-    "headers": ["Criterio de la rúbrica", "Qué se miró", "Qué se corrige antes de la ACA FINAL"],
+    "headers": [
+      "Criterio de la rúbrica",
+      "Qué se miró",
+      "Qué se corrige antes de la ACA FINAL"
+    ],
     "rows": [
-      ["**Coherencia problema–pregunta–objetivos**", "Que los tres cuenten la misma historia", "Reescribir el objetivo específico que no responde la pregunta; uno a la vez, sin tocar todo"],
-      ["**Pertinencia al campo y a las líneas del programa**", "Que el problema sea de IA aplicada y no un tema suelto", "Reencuadrar el caso en la línea del programa y decirlo explícito en la justificación"],
-      ["**Justificación argumentada**", "Vacío, beneficiario y aporte; no opinión personal", "Cambiar la opinión por evidencia citada: qué vacío llena y a quién le sirve"],
-      ["**Alcances y limitaciones realistas**", "Que no prometan lo que es Proyecto II", "Bajar a diseño lo prometido y dejar la aplicación anunciada para Proyecto II"],
-      ["**Antecedentes ≥ 6, nacionales e internacionales**", "Número, mezcla y cierre de cada ficha", "Completar los que falten y añadir la frase “esto le aporta a mi pregunta porque…”"],
-      ["**Marco teórico, conceptual y contextual**", "Que respondan a la pregunta y no sean un listado", "Amarrar cada base teórica a una variable o categoría de la pregunta"],
-      ["**Escritura académica e integridad**", "Citas de lo prestado, redacción, similitud", "Citar o borrar la afirmación sin fuente; declarar el uso de IA si lo hubo"],
-      ["**Referencias APA 7**", "Que la cita en texto y la lista final se correspondan", "Cerrar el par cita–referencia en ambos sentidos, sobre la plantilla APA CUN"]
+      [
+        "**Coherencia problema–pregunta–objetivos**",
+        "Que los tres cuenten la misma historia",
+        "Reescribir el objetivo específico que no responde la pregunta; uno a la vez, sin tocar todo"
+      ],
+      [
+        "**Pertinencia al campo y a las líneas del programa**",
+        "Que el problema sea de IA aplicada y no un tema suelto",
+        "Reencuadrar el caso en la línea del programa y decirlo explícito en la justificación"
+      ],
+      [
+        "**Justificación argumentada**",
+        "Vacío, beneficiario y aporte; no opinión personal",
+        "Cambiar la opinión por evidencia citada: qué vacío llena y a quién le sirve"
+      ],
+      [
+        "**Alcances y limitaciones realistas**",
+        "Que no prometan lo que es Proyecto II",
+        "Bajar a diseño lo prometido y dejar la aplicación anunciada para Proyecto II"
+      ],
+      [
+        "**Antecedentes ≥ 6, nacionales e internacionales**",
+        "Número, mezcla y cierre de cada ficha",
+        "Completar los que falten y añadir la frase “esto le aporta a mi pregunta porque…”"
+      ],
+      [
+        "**Marco teórico, conceptual y contextual**",
+        "Que respondan a la pregunta y no sean un listado",
+        "Amarrar cada base teórica a una variable o categoría de la pregunta"
+      ],
+      [
+        "**Escritura académica e integridad**",
+        "Citas de lo prestado, redacción, similitud",
+        "Citar o borrar la afirmación sin fuente; declarar el uso de IA si lo hubo"
+      ],
+      [
+        "**Referencias APA 7**",
+        "Que la cita en texto y la lista final se correspondan",
+        "Cerrar el par cita–referencia en ambos sentidos, sobre la plantilla APA CUN"
+      ]
     ],
     "note": "La rúbrica de la ACA 1 no se archiva: sus criterios siguen vivos dentro de la coherencia global que evalúa la ACA FINAL.",
-    "col_w": [3.2, 4.0, 4.8]
+    "col_w": [
+      3.2,
+      4.0,
+      4.8
+    ]
   },
   {
     "type": "bullets",
@@ -79,16 +119,51 @@
   {
     "type": "table",
     "title": "Población, muestra y muestreo: tres cosas distintas",
-    "headers": ["Concepto", "Qué es", "Error típico", "Ejemplo (proyecto de IA)"],
+    "headers": [
+      "Concepto",
+      "Qué es",
+      "Error típico",
+      "Ejemplo (proyecto de IA)"
+    ],
     "rows": [
-      ["**Unidad de análisis**", "El elemento que se estudia de a uno", "Confundirla con la fuente de información", "Una PQRS radicada"],
-      ["**Población**", "El **total** de unidades que interesan al estudio", "Escribirla sin delimitar tiempo ni lugar", "Las PQRS radicadas en la Alcaldía de X durante un año"],
-      ["**Marco muestral**", "La lista real desde la cual se puede seleccionar", "Suponer que existe cuando nadie la tiene", "El registro digital de radicación de la entidad"],
-      ["**Muestra**", "El **subconjunto** que efectivamente se estudiaría", "Decir \"algunas\" sin número ni criterio", "380 PQRS seleccionadas del registro"],
-      ["**Muestreo**", "El **procedimiento** para elegir esa muestra", "Nombrar el tipo sin explicar cómo se ejecutaría", "Aleatorio simple sobre el registro anonimizado"]
+      [
+        "**Unidad de análisis**",
+        "El elemento que se estudia de a uno",
+        "Confundirla con la fuente de información",
+        "Una PQRS radicada"
+      ],
+      [
+        "**Población**",
+        "El **total** de unidades que interesan al estudio",
+        "Escribirla sin delimitar tiempo ni lugar",
+        "Las PQRS radicadas en la Alcaldía de X durante un año"
+      ],
+      [
+        "**Marco muestral**",
+        "La lista real desde la cual se puede seleccionar",
+        "Suponer que existe cuando nadie la tiene",
+        "El registro digital de radicación de la entidad"
+      ],
+      [
+        "**Muestra**",
+        "El **subconjunto** que efectivamente se estudiaría",
+        "Decir \"algunas\" sin número ni criterio",
+        "380 PQRS seleccionadas del registro"
+      ],
+      [
+        "**Muestreo**",
+        "El **procedimiento** para elegir esa muestra",
+        "Nombrar el tipo sin explicar cómo se ejecutaría",
+        "Aleatorio simple sobre el registro anonimizado"
+      ]
     ],
     "note": "Población y muestra se escriben **delimitadas**: quiénes, **dónde** y en **qué periodo**. \"Los funcionarios públicos\" no es una población: es un tema.",
-    "col_w": [2.4, 3.2, 3.0, 3.4]
+    "col_w": [
+      2.4,
+      3.2,
+      3.0,
+      3.4
+    ]
   },
   {
     "type": "bullets",
@@ -108,18 +183,54 @@
   {
     "type": "table",
     "title": "Tipos de muestreo: probabilístico y no probabilístico",
-    "headers": ["Tipo", "Cómo se selecciona", "Cuándo se propone"],
+    "headers": [
+      "Tipo",
+      "Cómo se selecciona",
+      "Cuándo se propone"
+    ],
     "rows": [
-      ["**Aleatorio simple** (prob.)", "Todos tienen la misma probabilidad; sorteo sobre la lista", "Hay marco muestral completo y accesible"],
-      ["**Estratificado** (prob.)", "Se divide en estratos y se muestrea dentro de cada uno", "Interesa comparar subgrupos (áreas, sedes, tipos)"],
-      ["**Sistemático** (prob.)", "Se toma cada k-ésimo elemento de la lista", "Registros ordenados, como radicados o logs"],
-      ["**Por conveniencia** (no prob.)", "Los que están disponibles y accesibles", "Estudios exploratorios; se declara la limitación"],
-      ["**Por criterio o experto** (no prob.)", "Se eligen por su conocimiento del fenómeno", "Entrevistas a quienes sí saben del proceso"],
-      ["**Bola de nieve** (no prob.)", "Un participante recomienda al siguiente", "Poblaciones difíciles de identificar"],
-      ["**Teórico / por saturación** (no prob.)", "Se suma gente hasta que no aparece información nueva", "Investigación cualitativa"]
+      [
+        "**Aleatorio simple** (prob.)",
+        "Todos tienen la misma probabilidad; sorteo sobre la lista",
+        "Hay marco muestral completo y accesible"
+      ],
+      [
+        "**Estratificado** (prob.)",
+        "Se divide en estratos y se muestrea dentro de cada uno",
+        "Interesa comparar subgrupos (áreas, sedes, tipos)"
+      ],
+      [
+        "**Sistemático** (prob.)",
+        "Se toma cada k-ésimo elemento de la lista",
+        "Registros ordenados, como radicados o logs"
+      ],
+      [
+        "**Por conveniencia** (no prob.)",
+        "Los que están disponibles y accesibles",
+        "Estudios exploratorios; se declara la limitación"
+      ],
+      [
+        "**Por criterio o experto** (no prob.)",
+        "Se eligen por su conocimiento del fenómeno",
+        "Entrevistas a quienes sí saben del proceso"
+      ],
+      [
+        "**Bola de nieve** (no prob.)",
+        "Un participante recomienda al siguiente",
+        "Poblaciones difíciles de identificar"
+      ],
+      [
+        "**Teórico / por saturación** (no prob.)",
+        "Se suma gente hasta que no aparece información nueva",
+        "Investigación cualitativa"
+      ]
     ],
     "note": "El muestreo **no probabilístico no está prohibido**: está permitido si se **declara** y si se reconoce su límite (no generaliza). Lo que no se acepta es esconderlo.",
-    "col_w": [3.2, 4.4, 4.4]
+    "col_w": [
+      3.2,
+      4.4,
+      4.4
+    ]
   },
   {
     "type": "bullets",
@@ -140,26 +251,80 @@
     "type": "boxes",
     "title": "Técnica e instrumento no son sinónimos",
     "boxes": [
-      ["aclaracion", "La **técnica** es el procedimiento general (encuestar, entrevistar, observar, analizar documentos). El **instrumento** es la herramienta concreta que usted construye y adjunta (el cuestionario, la guía, la rúbrica, la ficha)."],
-      ["info", "Analogía de aula: la técnica es \"tomar una fotografía\"; el instrumento es **la cámara específica** con sus ajustes. En el anteproyecto se evalúa sobre todo el instrumento, porque es lo que usted diseñó."],
-      ["advertencia", "Escribir solo \"se aplicará una encuesta\" no es un instrumento propuesto. Sin ítems redactados, no hay nada que revisar ni que validar."]
+      [
+        "aclaracion",
+        "La **técnica** es el procedimiento general (encuestar, entrevistar, observar, analizar documentos). El **instrumento** es la herramienta concreta que usted construye y adjunta (el cuestionario, la guía, la rúbrica, la ficha)."
+      ],
+      [
+        "info",
+        "Analogía de aula: la técnica es \"tomar una fotografía\"; el instrumento es **la cámara específica** con sus ajustes. En el anteproyecto se evalúa sobre todo el instrumento, porque es lo que usted diseñó."
+      ],
+      [
+        "advertencia",
+        "Escribir solo \"se aplicará una encuesta\" no es un instrumento propuesto. Sin ítems redactados, no hay nada que revisar ni que validar."
+      ]
     ]
   },
   {
     "type": "table",
     "title": "De la técnica al instrumento: qué produce cada ruta",
-    "headers": ["Técnica", "Instrumento", "Qué produce", "Encaja con"],
+    "headers": [
+      "Técnica",
+      "Instrumento",
+      "Qué produce",
+      "Encaja con"
+    ],
     "rows": [
-      ["Encuesta", "**Cuestionario** (ítems cerrados, escalas)", "Frecuencias, promedios, correlaciones", "Cuantitativo"],
-      ["Entrevista semiestructurada", "**Guía de entrevista** (preguntas abiertas)", "Relatos, percepciones, categorías", "Cualitativo"],
-      ["Grupo focal", "**Guía de moderación** (ejes de discusión)", "Consensos y tensiones del grupo", "Cualitativo"],
-      ["Observación", "**Lista de chequeo** o ficha de registro", "Conductas y eventos observados", "Ambos"],
-      ["Análisis documental", "**Matriz de análisis** (filas: documento; columnas: categorías)", "Comparación sistemática de contenidos", "Ambos"],
-      ["Análisis de datos o logs", "**Protocolo de extracción** (variables, filtros, periodo)", "Métricas y series de datos", "Cuantitativo"],
-      ["Juicio de expertos", "**Formato de validación** por pertinencia y claridad", "Ajustes al instrumento antes de aplicarlo", "Ambos"]
+      [
+        "Encuesta",
+        "**Cuestionario** (ítems cerrados, escalas)",
+        "Frecuencias, promedios, correlaciones",
+        "Cuantitativo"
+      ],
+      [
+        "Entrevista semiestructurada",
+        "**Guía de entrevista** (preguntas abiertas)",
+        "Relatos, percepciones, categorías",
+        "Cualitativo"
+      ],
+      [
+        "Grupo focal",
+        "**Guía de moderación** (ejes de discusión)",
+        "Consensos y tensiones del grupo",
+        "Cualitativo"
+      ],
+      [
+        "Observación",
+        "**Lista de chequeo** o ficha de registro",
+        "Conductas y eventos observados",
+        "Ambos"
+      ],
+      [
+        "Análisis documental",
+        "**Matriz de análisis** (filas: documento; columnas: categorías)",
+        "Comparación sistemática de contenidos",
+        "Ambos"
+      ],
+      [
+        "Análisis de datos o logs",
+        "**Protocolo de extracción** (variables, filtros, periodo)",
+        "Métricas y series de datos",
+        "Cuantitativo"
+      ],
+      [
+        "Juicio de expertos",
+        "**Formato de validación** por pertinencia y claridad",
+        "Ajustes al instrumento antes de aplicarlo",
+        "Ambos"
+      ]
     ],
     "note": "Puede proponer **más de una técnica**, pero cada una necesita **su propio instrumento** bosquejado. No se vale nombrar tres y adjuntar cero.",
-    "col_w": [2.6, 4.0, 3.2, 2.2]
+    "col_w": [
+      2.6,
+      4.0,
+      3.2,
+      2.2
+    ]
   },
   {
     "type": "bullets",
@@ -179,15 +344,45 @@
   {
     "type": "table",
     "title": "Matriz de alineación: cada ítem cuelga de un objetivo",
-    "headers": ["Objetivo específico", "Categoría / variable", "Bloque del instrumento", "Ítems"],
+    "headers": [
+      "Objetivo específico",
+      "Categoría / variable",
+      "Bloque del instrumento",
+      "Ítems"
+    ],
     "rows": [
-      ["OE1. Caracterizar el flujo actual de atención de PQRS", "Tiempos y etapas del proceso", "Bloque A — Proceso actual", "1 a 4"],
-      ["OE2. Identificar la percepción del personal sobre la carga operativa", "Percepción de carga", "Bloque B — Escala Likert", "5 a 10"],
-      ["OE3. Establecer requisitos de un clasificador automático", "Requisitos funcionales esperados", "Bloque C — Preguntas abiertas", "11 a 14"],
-      ["— (sin objetivo asociado)", "—", "\"¿Le gusta la inteligencia artificial?\"", "**Ítem que sobra**"]
+      [
+        "OE1. Caracterizar el flujo actual de atención de PQRS",
+        "Tiempos y etapas del proceso",
+        "Bloque A — Proceso actual",
+        "1 a 4"
+      ],
+      [
+        "OE2. Identificar la percepción del personal sobre la carga operativa",
+        "Percepción de carga",
+        "Bloque B — Escala Likert",
+        "5 a 10"
+      ],
+      [
+        "OE3. Establecer requisitos de un clasificador automático",
+        "Requisitos funcionales esperados",
+        "Bloque C — Preguntas abiertas",
+        "11 a 14"
+      ],
+      [
+        "— (sin objetivo asociado)",
+        "—",
+        "\"¿Le gusta la inteligencia artificial?\"",
+        "**Ítem que sobra**"
+      ]
     ],
     "note": "Regla en dos direcciones: **ítem sin objetivo → se elimina**; **objetivo sin ítems → falta instrumento**. Esta matriz es la evidencia de que su instrumento no salió de la intuición.",
-    "col_w": [4.0, 2.8, 3.2, 2.0]
+    "col_w": [
+      4.0,
+      2.8,
+      3.2,
+      2.0
+    ]
   },
   {
     "type": "bullets",
@@ -209,10 +404,22 @@
     "type": "boxes",
     "title": "Ética y datos: lo que su instrumento debe prever desde ya",
     "boxes": [
-      ["advertencia", "**Consentimiento informado.** Todo instrumento dirigido a personas debe prever un texto de consentimiento: propósito, uso de los datos, carácter voluntario y posibilidad de retirarse. Se **redacta ahora**, se **usa en Proyecto II**."],
-      ["info", "**Anonimización.** Si su unidad son registros, el protocolo debe decir cómo se eliminarían nombres, cédulas y contactos antes del análisis (Ley 1581 de 2012). Un dataset con datos personales identificables no se manipula \"para mirar\"."],
-      ["advertencia", "**Menores de edad.** Si la población incluye menores, se requiere autorización del representante legal y asentimiento del menor. No hay atajo posible."],
-      ["aclaracion", "**Aval institucional.** Si va a acceder a datos de una entidad, prevea la carta de solicitud y el compromiso de confidencialidad. Gestionarlo temprano evita que el proyecto se caiga en la fase de campo."]
+      [
+        "advertencia",
+        "**Consentimiento informado.** Todo instrumento dirigido a personas debe prever un texto de consentimiento: propósito, uso de los datos, carácter voluntario y posibilidad de retirarse. Se **redacta ahora**, se **usa en Proyecto II**."
+      ],
+      [
+        "info",
+        "**Anonimización.** Si su unidad son registros, el protocolo debe decir cómo se eliminarían nombres, cédulas y contactos antes del análisis (Ley 1581 de 2012). Un dataset con datos personales identificables no se manipula \"para mirar\"."
+      ],
+      [
+        "advertencia",
+        "**Menores de edad.** Si la población incluye menores, se requiere autorización del representante legal y asentimiento del menor. No hay atajo posible."
+      ],
+      [
+        "aclaracion",
+        "**Aval institucional.** Si va a acceder a datos de una entidad, prevea la carta de solicitud y el compromiso de confidencialidad. Gestionarlo temprano evita que el proyecto se caiga en la fase de campo."
+      ]
     ]
   },
   {
@@ -232,19 +439,7 @@
     "note": "Todo en el navegador y gratis. **No cree el formulario en Google Forms todavía**: el bosquejo va en un documento, no en una herramienta lista para enviar."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Bosquejo de instrumento (20 minutos)",
-    "bullets": [
-      "**Consigna literal**, con el documento de instrumento abierto:",
-      "  **(a)** Escriba **población** y **muestra** delimitadas (quiénes, dónde, en qué periodo) más los criterios de **inclusión** y **exclusión**.",
-      "  **(b)** Declare el **tipo de muestreo** propuesto y por qué es el pertinente para su enfoque.",
-      "  **(c)** Bosqueje su instrumento: si es **cuestionario**, entre **10 y 15 ítems**; si es **guía de entrevista**, **8 preguntas** abiertas.",
-      "  **(d)** Al lado de cada bloque, escriba **a qué objetivo específico responde**.",
-      "  **(e)** Cierre con un párrafo de **plan de análisis** (mínimo tres renglones).",
-      "**Criterio de éxito verificable:** **ningún ítem queda sin objetivo** y **ningún objetivo queda sin ítems**; todo el texto está en condicional.",
-      "El Docente circula por los equipos y frena cualquier intento de aplicación anticipada.",
-      "**Entrega:** suba el archivo como `S09_InstrumentosPropuestos_Apellidos` en [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

@@ -37,6 +37,7 @@ from cun_slides_engine import (
     slido_url,
 )
 from guion_md_a_docx import convert as md_to_docx
+import talleres  # la línea de entrega la deriva él, no se escribe aquí
 from build_acas_estudiantes import build_course as build_acas, catalog_for_leeme
 from build_correo_bienvenida import build_course as build_correo, CORREO_NAME
 from carga_academica import GRABACIONES_URL, course_dir, curso as carga_curso
@@ -173,10 +174,10 @@ PRESENTACION_CURSO = {
     "tg3": "Presentacion del Curso - Trabajo de Grado 3.pptx",
 }
 
-FICHA_CREATIVIDAD_S01 = """# Ficha problema–oportunidad (Sesión 01)
+FICHA_CREATIVIDAD_S01_TPL = """# Ficha problema–oportunidad (Sesión 01)
 
 **Curso:** Creatividad y Pensamiento Innovador  
-**Entregable:** sube a CDigital como `S01_FichaProblema_Apellido`  
+{destino}  
 **Preferible:** Google Docs / Word Online (no se exige Office de escritorio).
 
 Completa los 6 campos:
@@ -197,6 +198,33 @@ Completa los 6 campos:
 
 **Criterio de éxito:** si alguien externo entiende el usuario + el dolor + el contexto sin pedirte aclaración, la ficha sirve.
 """
+# Salto de línea duro de Markdown: dos espacios al final. Sin ellos, las dos líneas del
+# destino se pegan en un solo párrafo del .docx.
+SALTO_DURO = "  \n"
+
+
+def ficha_creatividad_s01() -> str:
+    """La ficha de la Sesión 01, con su línea de entrega derivada del libro de calificaciones.
+
+    Era una constante y decía «**Entregable:** sube a CDigital como `S01_FichaProblema_Apellido`».
+    El aula **no tiene espacio de entrega por sesión**: la ficha es un avance formativo que
+    alimenta la única tarea documental del curso, así que esa instrucción mandaba al estudiante
+    a buscar un botón que no existe. Sale de `talleres`, la misma fuente que la línea de las
+    decks, para que el peso y la sesión de cierre no queden escritos a mano en dos sitios.
+    """
+    prox = talleres.proxima_tarea("creatividad", 1)
+    lineas = [
+        "**Hoy no subes nada al aula:** guarda la ficha en tu Drive como "
+        "`S01_FichaProblema_Apellido` y tráela a la próxima sesión."
+    ]
+    if prox:
+        lineas.append(
+            "**Esto alimenta:** la **%s** —%s, %s—, el documento que **sí** recibe %s; cierra en "
+            "la semana de la **Sesión %02d**."
+            % (prox["code"], prox["tipo"].lower(), prox["peso"],
+               talleres.donde_aula("creatividad"), prox["ancla"] or 0)
+        )
+    return FICHA_CREATIVIDAD_S01_TPL.format(destino=SALTO_DURO.join(lineas))
 
 
 def write_md_as_docx(
@@ -419,16 +447,16 @@ def sync_course(key: str) -> None:
         if s01:
             ficha_docx = os.path.join(s01, FICHA_CREATIVIDAD_NAME)
             write_md_as_docx(
-                FICHA_CREATIVIDAD_S01,
+                ficha_creatividad_s01(),
                 ficha_docx,
                 subtitle=f"Ficha de taller · {cc['titulo_corto']}",
                 footer=brand_foot,
             )
             print("OK ficha", ficha_docx)
             remove_if_exists(os.path.join(s01, "Ficha_problema_oportunidad.md"))
-            # Ejemplo modelo (referencia visual) — opcional si existe en Guiones/Capturas
+            # Ejemplo modelo (referencia visual) — opcional si existe en Docente/Guiones/Capturas
             modelo_src = os.path.join(
-                c["folder"], "Guiones", "Capturas", "Sesion 01", "s01_ficha_modelo.html"
+                c["folder"], "Docente", "Guiones", "Capturas", "Sesion 01", "s01_ficha_modelo.html"
             )
             if os.path.isfile(modelo_src):
                 modelo_dst = os.path.join(s01, "Ejemplo_ficha_modelo.html")

@@ -31,16 +31,48 @@
   {
     "type": "table",
     "title": "Definición teórica vs. definición operativa",
-    "headers": ["", "Definición teórica", "Definición operativa"],
-    "rows": [
-      ["**Responde a**", "¿Qué es este concepto?", "¿Cómo lo reconozco en mi contexto?"],
-      ["**De dónde sale**", "De un autor, citado en APA 7", "De una decisión argumentada del equipo"],
-      ["**Nivel**", "Abstracta y general", "Concreta, con umbral o criterio observable"],
-      ["**Ejemplo**", "“Retroalimentación que orienta la mejora del desempeño (Autor, año)”", "“Devolución escrita con al menos un criterio de mejora, entregada en 72 horas o menos”"],
-      ["**Sirve para**", "Ubicar el concepto en el campo", "Que el método sepa qué observar"],
-      ["**Si falta**", "El concepto queda sin respaldo", "El método queda sin punto de apoyo"]
+    "headers": [
+      "",
+      "Definición teórica",
+      "Definición operativa"
     ],
-    "col_w": [2.2, 4.0, 4.4],
+    "rows": [
+      [
+        "**Responde a**",
+        "¿Qué es este concepto?",
+        "¿Cómo lo reconozco en mi contexto?"
+      ],
+      [
+        "**De dónde sale**",
+        "De un autor, citado en APA 7",
+        "De una decisión argumentada del equipo"
+      ],
+      [
+        "**Nivel**",
+        "Abstracta y general",
+        "Concreta, con umbral o criterio observable"
+      ],
+      [
+        "**Ejemplo**",
+        "“Retroalimentación que orienta la mejora del desempeño (Autor, año)”",
+        "“Devolución escrita con al menos un criterio de mejora, entregada en 72 horas o menos”"
+      ],
+      [
+        "**Sirve para**",
+        "Ubicar el concepto en el campo",
+        "Que el método sepa qué observar"
+      ],
+      [
+        "**Si falta**",
+        "El concepto queda sin respaldo",
+        "El método queda sin punto de apoyo"
+      ]
+    ],
+    "col_w": [
+      2.2,
+      4.0,
+      4.4
+    ],
     "note": "Se escriben **las dos**, y en ese orden. Una operativa sin ancla teórica es un capricho; una teórica sin operativa no se puede usar."
   },
   {
@@ -61,13 +93,38 @@
   {
     "type": "table",
     "title": "Así queda la tabla de definiciones en el documento",
-    "headers": ["Término", "Definición teórica (con autor)", "Definición operativa (cómo la uso yo)", "Por qué le importa a la pregunta"],
-    "rows": [
-      ["**Retroalimentación oportuna**", "Devolución que llega a tiempo de influir en la siguiente entrega (Autor, año)", "Devolución escrita entregada en 72 horas hábiles o menos", "La pregunta indaga fricciones de tiempo: sin umbral no hay qué observar"],
-      ["**Fricción de uso**", "Obstáculo percibido al ejecutar una tarea con una tecnología (Autor, año)", "Mención explícita del usuario a un paso que lo detiene o lo obliga a repetir", "Es la unidad que recogerá el instrumento propuesto"],
-      ["**Asistente de IA**", "Sistema conversacional que apoya una tarea humana con lenguaje natural (Autor, año)", "Herramienta de acceso web y gratuito, sin instalación, usada por docente o estudiante", "Delimita qué herramientas entran y cuáles no en la propuesta"]
+    "headers": [
+      "Término",
+      "Definición teórica (con autor)",
+      "Definición operativa (cómo la uso yo)",
+      "Por qué le importa a la pregunta"
     ],
-    "col_w": [1.9, 3.2, 3.2, 2.7],
+    "rows": [
+      [
+        "**Retroalimentación oportuna**",
+        "Devolución que llega a tiempo de influir en la siguiente entrega (Autor, año)",
+        "Devolución escrita entregada en 72 horas hábiles o menos",
+        "La pregunta indaga fricciones de tiempo: sin umbral no hay qué observar"
+      ],
+      [
+        "**Fricción de uso**",
+        "Obstáculo percibido al ejecutar una tarea con una tecnología (Autor, año)",
+        "Mención explícita del usuario a un paso que lo detiene o lo obliga a repetir",
+        "Es la unidad que recogerá el instrumento propuesto"
+      ],
+      [
+        "**Asistente de IA**",
+        "Sistema conversacional que apoya una tarea humana con lenguaje natural (Autor, año)",
+        "Herramienta de acceso web y gratuito, sin instalación, usada por docente o estudiante",
+        "Delimita qué herramientas entran y cuáles no en la propuesta"
+      ]
+    ],
+    "col_w": [
+      1.9,
+      3.2,
+      3.2,
+      2.7
+    ],
     "note": "Cuatro columnas y de cuatro a seis filas. **La cuarta columna es obligatoria**: sin ella la tabla es un glosario, no un marco conceptual."
   },
   {
@@ -103,14 +160,38 @@
   {
     "type": "table",
     "title": "Contexto útil vs. contexto de relleno",
-    "headers": ["Frase de relleno", "Qué le falta", "Versión útil"],
-    "rows": [
-      ["“En Colombia la IA está en auge.”", "No dice dónde ocurre el problema", "“La planta opera tres turnos y cada supervisor cierra su reporte al final del turno.”"],
-      ["“La empresa es líder de su sector.”", "Es publicidad, no contexto", "“El área de mantenimiento recibe los reportes en papel y los digita al día siguiente.”"],
-      ["“La educación virtual creció mucho.”", "No delimita el escenario del estudio", "“El curso es presencial, tiene una sesión semanal y entrega informe cada quince días.”"],
-      ["“La institución cuenta con tecnología moderna.”", "No dice qué hay ni qué falta", "“Las aulas tienen conexión estable; los estudiantes usan equipos propios, sin software licenciado.”"]
+    "headers": [
+      "Frase de relleno",
+      "Qué le falta",
+      "Versión útil"
     ],
-    "col_w": [2.9, 2.3, 5.4],
+    "rows": [
+      [
+        "“En Colombia la IA está en auge.”",
+        "No dice dónde ocurre el problema",
+        "“La planta opera tres turnos y cada supervisor cierra su reporte al final del turno.”"
+      ],
+      [
+        "“La empresa es líder de su sector.”",
+        "Es publicidad, no contexto",
+        "“El área de mantenimiento recibe los reportes en papel y los digita al día siguiente.”"
+      ],
+      [
+        "“La educación virtual creció mucho.”",
+        "No delimita el escenario del estudio",
+        "“El curso es presencial, tiene una sesión semanal y entrega informe cada quince días.”"
+      ],
+      [
+        "“La institución cuenta con tecnología moderna.”",
+        "No dice qué hay ni qué falta",
+        "“Las aulas tienen conexión estable; los estudiantes usan equipos propios, sin software licenciado.”"
+      ]
+    ],
+    "col_w": [
+      2.9,
+      2.3,
+      5.4
+    ],
     "note": "Truco de poda: pregúntele a cada frase “¿esto cambia algo del método?”. Si no cambia nada, se borra."
   },
   {
@@ -146,10 +227,22 @@
     "type": "boxes",
     "title": "Errores frecuentes en conceptual y contextual",
     "boxes": [
-      ["advertencia", "**Copiar la definición del diccionario o de una enciclopedia.** No se busca la definición general del término, sino cómo lo va a usar USTED en este estudio, con umbral o con rasgos observables."],
-      ["advertencia", "**Dejar términos ambiguos.** Si “adopción”, “usabilidad” o “eficiencia” aparecen en su pregunta u objetivos sin definir, el método se cae. Primero se define; después se observa."],
-      ["aclaracion", "**Confundir conceptual con teórico.** El marco teórico **explica** el fenómeno; el conceptual **define para poder usar**. Un mismo término aparece en ambos, con distinta función."],
-      ["info", "**Contexto que el método no usará.** Si describe un dato del escenario y no puede decir en qué parte del método influye, recórtelo. El contexto sirve al método, no al conteo de páginas."]
+      [
+        "advertencia",
+        "**Copiar la definición del diccionario o de una enciclopedia.** No se busca la definición general del término, sino cómo lo va a usar USTED en este estudio, con umbral o con rasgos observables."
+      ],
+      [
+        "advertencia",
+        "**Dejar términos ambiguos.** Si “adopción”, “usabilidad” o “eficiencia” aparecen en su pregunta u objetivos sin definir, el método se cae. Primero se define; después se observa."
+      ],
+      [
+        "aclaracion",
+        "**Confundir conceptual con teórico.** El marco teórico **explica** el fenómeno; el conceptual **define para poder usar**. Un mismo término aparece en ambos, con distinta función."
+      ],
+      [
+        "info",
+        "**Contexto que el método no usará.** Si describe un dato del escenario y no puede decir en qué parte del método influye, recórtelo. El contexto sirve al método, no al conteo de páginas."
+      ]
     ]
   },
   {
@@ -165,38 +258,66 @@
       "**7.** Debajo de la tabla, redacte el contexto en prosa siguiendo la lista de chequeo del escenario.",
       "**8.** Suba el avance a CDigital como **S06_ConceptualContextual_Apellidos**."
     ],
-    "note": "Todo desde el navegador y sin costo: Google Docs para el documento, ZoteroBib para las citas nuevas. [URL CDigital — campus del curso pendiente]"
+    "note": "Todo desde el navegador y sin costo: Google Docs para el documento, ZoteroBib para las citas nuevas. {{CDIGITAL}}"
   },
   {
-    "type": "bullets",
-    "title": "TALLER (22 minutos) — definiciones operativas y contexto",
-    "bullets": [
-      "**Consigna literal:** 22 minutos, dos productos en el documento del equipo.",
-      "  **(1)** La tabla conceptual con **cuatro a seis términos** y las cuatro columnas completas.",
-      "  **(2)** Una página de **marco contextual**: organización o aula, proceso, actores, ritmos y restricciones.",
-      "Los términos se toman de la pregunta y de los objetivos: si un término no aparece allí, no va en la tabla.",
-      "El Docente circula; prioridad para los equipos que no logren ponerle umbral a sus definiciones.",
-      "**Criterio de éxito (verificable):** ningún término admite dos interpretaciones y cada dato de contexto se puede vincular a una decisión del método.",
-      "  Prueba en voz alta: el Docente lee una definición del equipo vecino y pregunta “¿esto cuenta o no cuenta?”. Debe haber una sola respuesta posible.",
-      "Suban el avance como **S06_ConceptualContextual_Apellidos**."
-    ],
-    "note": "Prohibido en este taller: definiciones copiadas de un diccionario y párrafos de contexto que empiecen por “en el mundo actual…”."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de subir el avance",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
-    "rows": [
-      ["Cada término sale de la pregunta o de los objetivos", "Lo encuentro subrayado en esos textos", "[  ]"],
-      ["Hay entre cuatro y seis términos", "Los cuento en la tabla", "[  ]"],
-      ["Cada definición teórica tiene autor y año", "Ninguna celda de la segunda columna va sin cita", "[  ]"],
-      ["Las operativas tienen umbral o rasgos", "No queda ningún adjetivo suelto: rápido, frecuente, adecuado", "[  ]"],
-      ["La cuarta columna está llena", "Cada fila dice qué se rompe si el término queda ambiguo", "[  ]"],
-      ["El contexto responde con datos", "Turnos, sesiones, roles, herramientas; no adjetivos", "[  ]"],
-      ["No hay contexto panorámico", "Ninguna frase habla del país o del mundo en general", "[  ]"],
-      ["El escenario se describe, no se interviene", "No aparece ninguna frase de recolección o de aplicación", "[  ]"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "Listo"
     ],
-    "col_w": [3.2, 5.4, 0.8],
+    "rows": [
+      [
+        "Cada término sale de la pregunta o de los objetivos",
+        "Lo encuentro subrayado en esos textos",
+        "[  ]"
+      ],
+      [
+        "Hay entre cuatro y seis términos",
+        "Los cuento en la tabla",
+        "[  ]"
+      ],
+      [
+        "Cada definición teórica tiene autor y año",
+        "Ninguna celda de la segunda columna va sin cita",
+        "[  ]"
+      ],
+      [
+        "Las operativas tienen umbral o rasgos",
+        "No queda ningún adjetivo suelto: rápido, frecuente, adecuado",
+        "[  ]"
+      ],
+      [
+        "La cuarta columna está llena",
+        "Cada fila dice qué se rompe si el término queda ambiguo",
+        "[  ]"
+      ],
+      [
+        "El contexto responde con datos",
+        "Turnos, sesiones, roles, herramientas; no adjetivos",
+        "[  ]"
+      ],
+      [
+        "No hay contexto panorámico",
+        "Ninguna frase habla del país o del mundo en general",
+        "[  ]"
+      ],
+      [
+        "El escenario se describe, no se interviene",
+        "No aparece ninguna frase de recolección o de aplicación",
+        "[  ]"
+      ]
+    ],
+    "col_w": [
+      3.2,
+      5.4,
+      0.8
+    ],
     "note": "Ocho casillas. La última es innegociable en Proyecto I."
   },
   {

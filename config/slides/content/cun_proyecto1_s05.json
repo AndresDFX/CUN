@@ -32,15 +32,43 @@
   {
     "type": "table",
     "title": "Cuatro textos que se confunden con el marco teórico",
-    "headers": ["Texto", "Qué hace", "Por qué no es marco teórico"],
-    "rows": [
-      ["**Resumen de libros**", "Encadena lo que dijeron varios autores", "No elige ni relaciona: solo acumula"],
-      ["**Glosario**", "Define términos uno por uno", "Define, pero no explica el fenómeno"],
-      ["**Antecedentes**", "Reporta estudios previos", "Habla de investigaciones, no de conceptos"],
-      ["**Historia del campo**", "Narra cómo evolucionó la disciplina", "Es cultura general, no andamiaje del estudio"],
-      ["**Marco teórico**", "Elige constructos, los define con autor y los **relaciona** con la pregunta", "Es el único que el método puede llegar a usar"]
+    "headers": [
+      "Texto",
+      "Qué hace",
+      "Por qué no es marco teórico"
     ],
-    "col_w": [2.4, 4.2, 4.4],
+    "rows": [
+      [
+        "**Resumen de libros**",
+        "Encadena lo que dijeron varios autores",
+        "No elige ni relaciona: solo acumula"
+      ],
+      [
+        "**Glosario**",
+        "Define términos uno por uno",
+        "Define, pero no explica el fenómeno"
+      ],
+      [
+        "**Antecedentes**",
+        "Reporta estudios previos",
+        "Habla de investigaciones, no de conceptos"
+      ],
+      [
+        "**Historia del campo**",
+        "Narra cómo evolucionó la disciplina",
+        "Es cultura general, no andamiaje del estudio"
+      ],
+      [
+        "**Marco teórico**",
+        "Elige constructos, los define con autor y los **relaciona** con la pregunta",
+        "Es el único que el método puede llegar a usar"
+      ]
+    ],
+    "col_w": [
+      2.4,
+      4.2,
+      4.4
+    ],
     "note": "Diferencia práctica: si borro un párrafo y la metodología sigue teniendo sentido, ese párrafo no era marco teórico."
   },
   {
@@ -76,30 +104,90 @@
   {
     "type": "table",
     "title": "Criterios de admisión de un constructo",
-    "headers": ["Criterio", "Pregunta de control", "Si la respuesta es no…"],
-    "rows": [
-      ["**Necesidad**", "¿Mi pregunta me obliga a definirlo?", "Fuera: es cultura general"],
-      ["**Autoría**", "¿Tengo un autor y año que lo definan?", "Fuera hasta conseguir la fuente"],
-      ["**Operatividad**", "¿Puedo decir cómo se reconoce en la práctica?", "Se queda, pero hay que bajarlo a tierra"],
-      ["**Trazabilidad al método**", "¿Va a reaparecer en la metodología?", "Fuera: es teoría ornamental"],
-      ["**Pertinencia al contexto**", "¿Aplica a mi organización, aula o proceso?", "Se queda, pero hay que matizar sus límites"],
-      ["**Cantidad**", "¿Ya sumo más de cuatro constructos centrales?", "Recorte: profundidad antes que acumulación"]
+    "headers": [
+      "Criterio",
+      "Pregunta de control",
+      "Si la respuesta es no…"
     ],
-    "col_w": [2.6, 4.2, 4.2],
+    "rows": [
+      [
+        "**Necesidad**",
+        "¿Mi pregunta me obliga a definirlo?",
+        "Fuera: es cultura general"
+      ],
+      [
+        "**Autoría**",
+        "¿Tengo un autor y año que lo definan?",
+        "Fuera hasta conseguir la fuente"
+      ],
+      [
+        "**Operatividad**",
+        "¿Puedo decir cómo se reconoce en la práctica?",
+        "Se queda, pero hay que bajarlo a tierra"
+      ],
+      [
+        "**Trazabilidad al método**",
+        "¿Va a reaparecer en la metodología?",
+        "Fuera: es teoría ornamental"
+      ],
+      [
+        "**Pertinencia al contexto**",
+        "¿Aplica a mi organización, aula o proceso?",
+        "Se queda, pero hay que matizar sus límites"
+      ],
+      [
+        "**Cantidad**",
+        "¿Ya sumo más de cuatro constructos centrales?",
+        "Recorte: profundidad antes que acumulación"
+      ]
+    ],
+    "col_w": [
+      2.6,
+      4.2,
+      4.2
+    ],
     "note": "Un marco teórico de especialización se sostiene con **dos a cuatro** constructos bien hilados. La lista larga no impresiona a nadie."
   },
   {
     "type": "table",
     "title": "Dónde se consiguen fuentes teóricas (no es lo mismo que buscar antecedentes)",
-    "headers": ["Tipo de fuente", "Para qué sirve aquí", "Dónde encontrarla"],
-    "rows": [
-      ["**Artículo seminal**", "El texto que propuso el constructo por primera vez", "Google Scholar: suele ser el más citado del tema"],
-      ["**Capítulo de libro o manual de referencia**", "Definiciones consolidadas y comparadas entre autores", "Biblioteca virtual de la CUN"],
-      ["**Revisión sistemática**", "Un mapa de cómo se ha definido el constructo", "Scholar, SciELO, Redalyc"],
-      ["**Artículo latinoamericano reciente**", "El constructo aplicado a contextos parecidos al suyo", "SciELO, Redalyc"],
-      ["**Norma o guía técnica**", "Definiciones ya acordadas en la industria", "Sitio oficial de la entidad que la emite"]
+    "headers": [
+      "Tipo de fuente",
+      "Para qué sirve aquí",
+      "Dónde encontrarla"
     ],
-    "col_w": [3.0, 4.2, 3.8],
+    "rows": [
+      [
+        "**Artículo seminal**",
+        "El texto que propuso el constructo por primera vez",
+        "Google Scholar: suele ser el más citado del tema"
+      ],
+      [
+        "**Capítulo de libro o manual de referencia**",
+        "Definiciones consolidadas y comparadas entre autores",
+        "Biblioteca virtual de la CUN"
+      ],
+      [
+        "**Revisión sistemática**",
+        "Un mapa de cómo se ha definido el constructo",
+        "Scholar, SciELO, Redalyc"
+      ],
+      [
+        "**Artículo latinoamericano reciente**",
+        "El constructo aplicado a contextos parecidos al suyo",
+        "SciELO, Redalyc"
+      ],
+      [
+        "**Norma o guía técnica**",
+        "Definiciones ya acordadas en la industria",
+        "Sitio oficial de la entidad que la emite"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      4.2,
+      3.8
+    ],
     "note": "Diferencia con la sesión pasada: allá buscaban **estudios**; aquí buscan **definiciones**. A veces el mismo texto sirve para las dos cosas, con función distinta."
   },
   {
@@ -120,14 +208,38 @@
   {
     "type": "table",
     "title": "El mismo mapa, ya con función y con uso posterior",
-    "headers": ["Constructo", "Qué aporta a la pregunta", "Dónde reaparece en el método"],
-    "rows": [
-      ["**Retroalimentación formativa**", "Define qué cuenta como “buena” retroalimentación en este estudio", "En los criterios de la propuesta y en la rejilla de análisis"],
-      ["**Oportunidad de la devolución**", "Convierte “tarde” en una categoría observable", "En la categoría de tiempo del instrumento propuesto"],
-      ["**Aceptación tecnológica**", "Explica por qué una herramienta útil puede terminar sin usarse", "En las preguntas propuestas a docente y estudiantes"],
-      ["**Historia de la IA**", "Nada", "En ninguna parte: **por eso salió del marco**"]
+    "headers": [
+      "Constructo",
+      "Qué aporta a la pregunta",
+      "Dónde reaparece en el método"
     ],
-    "col_w": [2.6, 4.0, 4.4],
+    "rows": [
+      [
+        "**Retroalimentación formativa**",
+        "Define qué cuenta como “buena” retroalimentación en este estudio",
+        "En los criterios de la propuesta y en la rejilla de análisis"
+      ],
+      [
+        "**Oportunidad de la devolución**",
+        "Convierte “tarde” en una categoría observable",
+        "En la categoría de tiempo del instrumento propuesto"
+      ],
+      [
+        "**Aceptación tecnológica**",
+        "Explica por qué una herramienta útil puede terminar sin usarse",
+        "En las preguntas propuestas a docente y estudiantes"
+      ],
+      [
+        "**Historia de la IA**",
+        "Nada",
+        "En ninguna parte: **por eso salió del marco**"
+      ]
+    ],
+    "col_w": [
+      2.6,
+      4.0,
+      4.4
+    ],
     "note": "La tercera columna es la prueba definitiva. Si una fila la deja vacía, esa fila no pertenece al marco teórico."
   },
   {
@@ -149,10 +261,22 @@
     "type": "boxes",
     "title": "Errores frecuentes del marco teórico",
     "boxes": [
-      ["advertencia", "**Definiciones encadenadas sacadas de la web.** Empiece por la pregunta, no por el buscador: ¿cuál de esos conceptos exige SU pregunta? Ese, y con autor citado en APA 7."],
-      ["advertencia", "**Teoría que el método nunca va a tocar.** Si un constructo no reaparece en la metodología, es peso muerto: quítelo aunque le haya costado escribirlo."],
-      ["aclaracion", "**Quince citas para “verse riguroso”.** El lector experto detecta la cita decorativa al instante. Tres constructos bien hilados sostienen más que quince referencias sueltas."],
-      ["info", "**Definir sin citar.** Toda definición operativa lleva autor y año. Una definición sin fuente es una opinión, y una opinión no sostiene un anteproyecto."]
+      [
+        "advertencia",
+        "**Definiciones encadenadas sacadas de la web.** Empiece por la pregunta, no por el buscador: ¿cuál de esos conceptos exige SU pregunta? Ese, y con autor citado en APA 7."
+      ],
+      [
+        "advertencia",
+        "**Teoría que el método nunca va a tocar.** Si un constructo no reaparece en la metodología, es peso muerto: quítelo aunque le haya costado escribirlo."
+      ],
+      [
+        "aclaracion",
+        "**Quince citas para “verse riguroso”.** El lector experto detecta la cita decorativa al instante. Tres constructos bien hilados sostienen más que quince referencias sueltas."
+      ],
+      [
+        "info",
+        "**Definir sin citar.** Toda definición operativa lleva autor y año. Una definición sin fuente es una opinión, y una opinión no sostiene un anteproyecto."
+      ]
     ]
   },
   {
@@ -171,35 +295,63 @@
     "note": "Alternativas igual de válidas y gratuitas: **tldraw** o **Miro** en su versión libre. Ninguna requiere instalar nada."
   },
   {
-    "type": "bullets",
-    "title": "TALLER (20 minutos) — mapa de constructos y primer apartado",
-    "bullets": [
-      "**Consigna literal:** 20 minutos, dos productos, ambos en el navegador.",
-      "  **(1)** El **mapa de constructos** en Excalidraw: pregunta al centro, constructos, autores y punto de reaparición en el método.",
-      "  **(2)** De **una a dos páginas** del primer apartado teórico en el documento del equipo.",
-      "Ese apartado desarrolla **un solo constructo**, con la arquitectura de cuatro movimientos vista hoy.",
-      "El Docente circula; prioridad para los equipos que no logren pasar de dos constructos.",
-      "**Criterio de éxito (verificable):** cada párrafo del apartado afirma algo que el método podrá “tocar”.",
-      "  Prueba en voz alta: se señala un párrafo al azar y ustedes dicen en qué parte de la metodología reaparece.",
-      "Suban el mapa exportado y el texto dentro del mismo documento acumulativo."
-    ],
-    "note": "Prohibido en este taller: pegar definiciones sin autor y abrir un apartado de “historia de la inteligencia artificial”."
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist de autoevaluación antes de subir el avance",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "Listo"],
-    "rows": [
-      ["Cada constructo cuelga de la pregunta", "Está subrayado en la pregunta o se deduce directamente de ella", "[  ]"],
-      ["Son entre dos y cuatro constructos", "Los cuento en el mapa", "[  ]"],
-      ["Cada definición tiene autor y año", "Ninguna aparece huérfana en el texto", "[  ]"],
-      ["Digo cómo lo entiendo yo", "Después de cada cita hay una frase mía de precisión", "[  ]"],
-      ["Mi voz aparece en cada párrafo", "No hay párrafos de puras citas encadenadas", "[  ]"],
-      ["Todo reaparece en el método", "Puedo nombrar dónde se usará cada constructo", "[  ]"],
-      ["No hay historia ni glosario", "Ningún apartado narra la evolución del campo", "[  ]"],
-      ["El mapa está en el documento", "Insertado como figura y rotulado en APA 7", "[  ]"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "Listo"
     ],
-    "col_w": [3.0, 5.6, 0.8],
+    "rows": [
+      [
+        "Cada constructo cuelga de la pregunta",
+        "Está subrayado en la pregunta o se deduce directamente de ella",
+        "[  ]"
+      ],
+      [
+        "Son entre dos y cuatro constructos",
+        "Los cuento en el mapa",
+        "[  ]"
+      ],
+      [
+        "Cada definición tiene autor y año",
+        "Ninguna aparece huérfana en el texto",
+        "[  ]"
+      ],
+      [
+        "Digo cómo lo entiendo yo",
+        "Después de cada cita hay una frase mía de precisión",
+        "[  ]"
+      ],
+      [
+        "Mi voz aparece en cada párrafo",
+        "No hay párrafos de puras citas encadenadas",
+        "[  ]"
+      ],
+      [
+        "Todo reaparece en el método",
+        "Puedo nombrar dónde se usará cada constructo",
+        "[  ]"
+      ],
+      [
+        "No hay historia ni glosario",
+        "Ningún apartado narra la evolución del campo",
+        "[  ]"
+      ],
+      [
+        "El mapa está en el documento",
+        "Insertado como figura y rotulado en APA 7",
+        "[  ]"
+      ]
+    ],
+    "col_w": [
+      3.0,
+      5.6,
+      0.8
+    ],
     "note": "Si falla la casilla “todo reaparece en el método”, el problema no es el marco: es que el método aún no está pensado. Anótelo para la tutoría."
   },
   {

@@ -34,15 +34,45 @@
   {
     "type": "table",
     "title": "La misma innovación cambia de escala: local → internacional",
-    "headers": ["Escala", "Qué se innova ahí", "Quién decide y financia", "Qué le exigen a usted"],
+    "headers": [
+      "Escala",
+      "Qué se innova ahí",
+      "Quién decide y financia",
+      "Qué le exigen a usted"
+    ],
     "rows": [
-      ["**Local** (barrio, campus, empresa)", "Mejora de un proceso concreto, con usuarios que usted puede ver", "La institución o el jefe del área", "Un piloto pequeño y un permiso"],
-      ["**Regional** (ciudad, departamento)", "Soluciones replicables en varios sitios parecidos", "Alcaldías, gobernaciones, cámaras de comercio", "Que sirva a más de un caso y se pueda medir"],
-      ["**Nacional**", "Propuestas alineadas con políticas y focos del país", "**MinCiencias**, **iNNpulsa**, ministerios sectoriales", "Formulación formal, indicadores y contrapartida"],
-      ["**Internacional**", "Retos abiertos, cooperación y escalamiento", "Programas de cooperación, **OCDE**/**CEPAL** como referencia, corporativos", "Inglés, estándares y evidencia comparable"]
+      [
+        "**Local** (barrio, campus, empresa)",
+        "Mejora de un proceso concreto, con usuarios que usted puede ver",
+        "La institución o el jefe del área",
+        "Un piloto pequeño y un permiso"
+      ],
+      [
+        "**Regional** (ciudad, departamento)",
+        "Soluciones replicables en varios sitios parecidos",
+        "Alcaldías, gobernaciones, cámaras de comercio",
+        "Que sirva a más de un caso y se pueda medir"
+      ],
+      [
+        "**Nacional**",
+        "Propuestas alineadas con políticas y focos del país",
+        "**MinCiencias**, **iNNpulsa**, ministerios sectoriales",
+        "Formulación formal, indicadores y contrapartida"
+      ],
+      [
+        "**Internacional**",
+        "Retos abiertos, cooperación y escalamiento",
+        "Programas de cooperación, **OCDE**/**CEPAL** como referencia, corporativos",
+        "Inglés, estándares y evidencia comparable"
+      ]
     ],
     "note": "No se sube de escala saltando pasos: **un piloto local bien medido es el pasaporte** para la escala siguiente. Sin él, la postulación nacional se cae en la primera revisión.",
-    "col_w": [2.4, 3.3, 3.0, 2.7]
+    "col_w": [
+      2.4,
+      3.3,
+      3.0,
+      2.7
+    ]
   },
   {
     "type": "bullets",
@@ -62,15 +92,39 @@
   {
     "type": "table",
     "title": "El mapa de entidades: cuatro cuadrantes",
-    "headers": ["Cuadrante", "Ejemplos orientativos", "Qué suelen ofrecer"],
+    "headers": [
+      "Cuadrante",
+      "Ejemplos orientativos",
+      "Qué suelen ofrecer"
+    ],
     "rows": [
-      ["**Universitario**", "Unidad de emprendimiento de la CUN · semilleros de investigación · laboratorios y docentes del programa", "Mentoría, espacio, validación, contactos"],
-      ["**Público / mixto**", "Cámaras de Comercio · programas de alcaldías y gobernaciones · **iNNpulsa** · **MinCiencias**", "Convocatorias, capital semilla, formación"],
-      ["**Privado / redes**", "Hubs y aceleradoras · centros de desarrollo tecnológico (p. ej. **Cidei**) · comunidades tech · empresas ancla de su sector", "Piloto, inversión, red de clientes"],
-      ["**Internacional**", "Programas de cooperación · **open innovation** de multilatinas · plataformas de retos · marcos de referencia (**OCDE**, **CEPAL**)", "Retos abiertos, financiación, escalamiento"]
+      [
+        "**Universitario**",
+        "Unidad de emprendimiento de la CUN · semilleros de investigación · laboratorios y docentes del programa",
+        "Mentoría, espacio, validación, contactos"
+      ],
+      [
+        "**Público / mixto**",
+        "Cámaras de Comercio · programas de alcaldías y gobernaciones · **iNNpulsa** · **MinCiencias**",
+        "Convocatorias, capital semilla, formación"
+      ],
+      [
+        "**Privado / redes**",
+        "Hubs y aceleradoras · centros de desarrollo tecnológico (p. ej. **Cidei**) · comunidades tech · empresas ancla de su sector",
+        "Piloto, inversión, red de clientes"
+      ],
+      [
+        "**Internacional**",
+        "Programas de cooperación · **open innovation** de multilatinas · plataformas de retos · marcos de referencia (**OCDE**, **CEPAL**)",
+        "Retos abiertos, financiación, escalamiento"
+      ]
     ],
     "note": "Es un **mapa**, no un directorio. Los programas cambian: **verifiquen el nombre y la vigencia** el día que vayan a escribir. Un nombre mal escrito hunde la credibilidad del documento.",
-    "col_w": [2.0, 5.2, 3.0]
+    "col_w": [
+      2.0,
+      5.2,
+      3.0
+    ]
   },
   {
     "type": "bullets",
@@ -90,27 +144,71 @@
   {
     "type": "table",
     "title": "\"Pedir apoyo\" no es un pedido",
-    "headers": ["Pedido vago", "Por qué no funciona", "Pedido concreto"],
+    "headers": [
+      "Pedido vago",
+      "Por qué no funciona",
+      "Pedido concreto"
+    ],
     "rows": [
-      ["\"Necesito apoyo para mi proyecto\"", "El otro no sabe qué hacer con eso y archiva el correo", "\"Solicito **20 minutos** para que revisen mi Canvas y mi MVP\""],
-      ["\"Quisiera que me ayuden con usuarios\"", "No dice cuántos, ni cuándo, ni para qué", "\"Solicito acceso a **10 usuarios por 2 semanas** para probar el flujo\""],
-      ["\"Me interesa participar en convocatorias\"", "Pide información que ya es pública", "\"Solicito confirmar **fechas y requisitos** de la convocatoria vigente\""],
-      ["\"Busco financiación\"", "Sin monto ni destino, no es evaluable", "\"Solicito apoyo para **materiales de un piloto de 4 semanas**\""]
+      [
+        "\"Necesito apoyo para mi proyecto\"",
+        "El otro no sabe qué hacer con eso y archiva el correo",
+        "\"Solicito **20 minutos** para que revisen mi Canvas y mi MVP\""
+      ],
+      [
+        "\"Quisiera que me ayuden con usuarios\"",
+        "No dice cuántos, ni cuándo, ni para qué",
+        "\"Solicito acceso a **10 usuarios por 2 semanas** para probar el flujo\""
+      ],
+      [
+        "\"Me interesa participar en convocatorias\"",
+        "Pide información que ya es pública",
+        "\"Solicito confirmar **fechas y requisitos** de la convocatoria vigente\""
+      ],
+      [
+        "\"Busco financiación\"",
+        "Sin monto ni destino, no es evaluable",
+        "\"Solicito apoyo para **materiales de un piloto de 4 semanas**\""
+      ]
     ],
     "note": "Un buen pedido cabe en **un correo de 5 líneas** y le permite al otro decir **sí o no** sin tener que preguntar nada más.",
-    "col_w": [3.0, 3.4, 4.6]
+    "col_w": [
+      3.0,
+      3.4,
+      4.6
+    ]
   },
   {
     "type": "table",
     "title": "Ejemplo modelado: mapa de entidades del caso del laboratorio",
-    "headers": ["Entidad", "Tipo de apoyo", "Qué le pediría en un correo de 5 líneas"],
+    "headers": [
+      "Entidad",
+      "Tipo de apoyo",
+      "Qué le pediría en un correo de 5 líneas"
+    ],
     "rows": [
-      ["Unidad de emprendimiento de la CUN", "**Mentoría / pitch**", "Revisión del Canvas y del pitch, y **5 contactos** de estudiantes usuarios"],
-      ["Área de TI o empresa del sector", "**Piloto**", "**10 usuarios reales durante 2 semanas** para cronometrar el flujo"],
-      ["Programa público o Cámara de Comercio", "**Convocatoria**", "Confirmación de **fechas y requisitos** de postulación vigentes"]
+      [
+        "Unidad de emprendimiento de la CUN",
+        "**Mentoría / pitch**",
+        "Revisión del Canvas y del pitch, y **5 contactos** de estudiantes usuarios"
+      ],
+      [
+        "Área de TI o empresa del sector",
+        "**Piloto**",
+        "**10 usuarios reales durante 2 semanas** para cronometrar el flujo"
+      ],
+      [
+        "Programa público o Cámara de Comercio",
+        "**Convocatoria**",
+        "Confirmación de **fechas y requisitos** de postulación vigentes"
+      ]
     ],
     "note": "Fíjense en la tercera columna: cada fila tiene un **pedido concreto, medible y acotado en el tiempo**. Ninguna dice \"pedir ayuda\".",
-    "col_w": [3.0, 2.2, 5.4]
+    "col_w": [
+      3.0,
+      2.2,
+      5.4
+    ]
   },
   {
     "type": "bullets",
@@ -131,16 +229,51 @@
   {
     "type": "table",
     "title": "Los cinco tramos del pitch de 60 segundos",
-    "headers": ["Tramo", "Contenido", "Tiempo", "Pregunta que responde"],
+    "headers": [
+      "Tramo",
+      "Contenido",
+      "Tiempo",
+      "Pregunta que responde"
+    ],
     "rows": [
-      ["**1**", "**Usuario + dolor**", "~10 s", "¿A quién y qué le duele?"],
-      ["**2**", "**Insight**", "~10 s", "¿Qué observación lo cambia todo?"],
-      ["**3**", "**Propuesta + tipo de innovación**", "~15 s", "¿Qué proponen y qué cambia?"],
-      ["**4**", "**Evidencia breve**", "~15 s", "¿Por qué debería creerles?"],
-      ["**5**", "**Pedido / siguiente paso**", "~10 s", "¿Qué necesitan de mí ahora?"]
+      [
+        "**1**",
+        "**Usuario + dolor**",
+        "~10 s",
+        "¿A quién y qué le duele?"
+      ],
+      [
+        "**2**",
+        "**Insight**",
+        "~10 s",
+        "¿Qué observación lo cambia todo?"
+      ],
+      [
+        "**3**",
+        "**Propuesta + tipo de innovación**",
+        "~15 s",
+        "¿Qué proponen y qué cambia?"
+      ],
+      [
+        "**4**",
+        "**Evidencia breve**",
+        "~15 s",
+        "¿Por qué debería creerles?"
+      ],
+      [
+        "**5**",
+        "**Pedido / siguiente paso**",
+        "~10 s",
+        "¿Qué necesitan de mí ahora?"
+      ]
     ],
     "note": "El tramo 4 es el que separa un proyecto de aula de una propuesta creíble: ahí entra su **validación** o su **vigilancia** de la sesión pasada.",
-    "col_w": [1.0, 4.0, 1.4, 3.8]
+    "col_w": [
+      1.0,
+      4.0,
+      1.4,
+      3.8
+    ]
   },
   {
     "type": "bullets",
@@ -162,12 +295,30 @@
     "type": "boxes",
     "title": "Errores frecuentes y respuestas",
     "boxes": [
-      ["advertencia", "**Listar entidades sin decir qué les pediría.** Una entidad sin un pedido concreto no sirve. ¿Le pide **mentoría, piloto, capital o contactos**?"],
-      ["advertencia", "**Entidades genéricas o inventadas.** Se necesita el **nombre real y correcto**, verificado en su sitio. ¿Existe esa entidad y hace lo que usted dice que hace?"],
-      ["advertencia", "**Empezar el pitch por la tecnología.** Empiece por **la persona y su dolor**. La tecnología va en el tramo 3, como medio."],
-      ["advertencia", "**Pitch de 3 minutos \"porque hay mucho que contar\".** En 60 s usted no cuenta todo: logra que quieran una **segunda charla**. Corte lo demás."],
-      ["advertencia", "**Confundir el producto con el impacto.** \"Una app\" no es impacto. **A quién + qué cambia + en cuánto**, eso sí lo es."],
-      ["aclaracion", "**Sobre cupos y financiaciones:** el Docente **no maneja** esas convocatorias y no puede prometer cupos ni recursos. Lo que sí se enseña aquí es a **identificarlas** y a **preguntar el encaje**."]
+      [
+        "advertencia",
+        "**Listar entidades sin decir qué les pediría.** Una entidad sin un pedido concreto no sirve. ¿Le pide **mentoría, piloto, capital o contactos**?"
+      ],
+      [
+        "advertencia",
+        "**Entidades genéricas o inventadas.** Se necesita el **nombre real y correcto**, verificado en su sitio. ¿Existe esa entidad y hace lo que usted dice que hace?"
+      ],
+      [
+        "advertencia",
+        "**Empezar el pitch por la tecnología.** Empiece por **la persona y su dolor**. La tecnología va en el tramo 3, como medio."
+      ],
+      [
+        "advertencia",
+        "**Pitch de 3 minutos \"porque hay mucho que contar\".** En 60 s usted no cuenta todo: logra que quieran una **segunda charla**. Corte lo demás."
+      ],
+      [
+        "advertencia",
+        "**Confundir el producto con el impacto.** \"Una app\" no es impacto. **A quién + qué cambia + en cuánto**, eso sí lo es."
+      ],
+      [
+        "aclaracion",
+        "**Sobre cupos y financiaciones:** el Docente **no maneja** esas convocatorias y no puede prometer cupos ni recursos. Lo que sí se enseña aquí es a **identificarlas** y a **preguntar el encaje**."
+      ]
     ]
   },
   {
@@ -187,20 +338,7 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Mapa de entidades + guion del pitch (23 minutos)",
-    "bullets": [
-      "**Paso 1 (8 min)** · Completen su **Mapa de entidades** en Google Docs: **mínimo 3 entidades reales**, de **cuadrantes distintos**, con **nombre correcto** y un **pedido concreto** a cada una.",
-      "  Verifiquen el nombre en el sitio de la entidad antes de escribirlo. Si no lo encuentran, esa entidad no entra.",
-      "**Paso 2 (3 min)** · Escriban su **frase de impacto**: a quién + qué cambia + en cuánto. Una sola frase.",
-      "**Paso 3 (6 min)** · Escriban el **guion del pitch de 60 s** siguiendo los **cinco tramos**. Pueden bocetarlo en Excalidraw.",
-      "**Paso 4 (4 min)** · **Ensayen en parejas** con cronómetro. El que escucha repite qué entendió; el que habla ajusta.",
-      "**Paso 5 (2 min)** · **Dos voluntarios** hacen su pitch en vivo y se les toma el tiempo. El resto se sustenta la próxima sesión.",
-      "Si quieren una diapositiva de apoyo: **Canva free**, opcional, una sola.",
-      "**Criterio de éxito verificable:** **3 entidades con pedido concreto** + un guion en el que, en **60 segundos**, se entienden **dolor, valor y pedido**.",
-      "  Verificación en pareja: si su compañero no puede repetir el pedido después de escucharlo, el tramo 5 está mal escrito."
-    ],
-    "note": "El cronómetro no es para presionar: es para que descubran cuánto sobra. Casi siempre sobra el tramo 3."
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -226,7 +364,7 @@
       "  1. Una innovación **no sobrevive sola**: necesita un ecosistema que le dé lo que le falta.",
       "  2. Una entidad **sin un pedido concreto** no le sirve todavía.",
       "  3. Un pitch se gana **empezando por la persona**, no por la tecnología.",
-      "**(a)** Suban su mapa y su guion como **`S06_EcosistemaPitch_Apellido`** a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**(a)** Suban su mapa y su guion como **`S06_EcosistemaPitch_Apellido`** a **CDigital**: {{CDIGITAL}}",
       "**(b)** **Esta es la semana de la ACA Final.** Arme el **paquete consolidado** con lo que ya tiene: ficha del problema · ficha Oslo · matriz de tipos · Canvas, MVP y validación · tablero de vigilancia · mapa de entidades · guion del pitch.",
       "  **Nada de esto hay que inventarlo ahora**: son documentos que ya existen. Lo que falta es **integrarlos en un solo texto** y que el usuario sea el mismo en todos.",
       "**(c)** **Revisen en CDigital la rúbrica y el espacio de entrega (EV) de la ACA Final** antes de subir, y verifiquen ahí la fecha exacta de cierre. Cerrado el espacio, la nota es la que hay.",

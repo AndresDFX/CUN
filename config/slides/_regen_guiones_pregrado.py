@@ -127,12 +127,13 @@ def slides_std():
 | **4** | ENFOQUE DE HOY | Anclaje |
 | **5** | ACTIVIDAD / TALLER | Consigna |
 | **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |
+| **7** | RUTA DE ENTREGABLES DEL CURSO | Recordatorio de entregas (sin fechas) |
+| **8** | Cierre | Despedida |
 """
 
 
 def shot(rel_path: str, caption: str, tip: str) -> str:
-    """Bloque markdown con imagen relativa a Guiones/ + tip de pantalla."""
+    """Bloque markdown con imagen relativa a Docente/Guiones/ + tip de pantalla."""
     return (
         f"\n![{caption}](Capturas/{rel_path})\n\n"
         f"> **En pantalla:** {tip}\n"
@@ -189,7 +190,7 @@ _spec(
 #### 1. Qué debe tener abierto y probado
 | Qué | Para qué lo necesita hoy |
 | :--- | :--- |
-| Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo; nada de “luego les aviso” |
+| Aula del curso en **CDigital**, con el **libro de calificaciones** y el espacio de la **ACA Final** a la vista | Va a proyectar dónde se sube lo que sí se sube —el aula no tiene espacio por sesión—; nada de “luego les aviso” |
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** (QR + Padlet) y logística de periodo (grupo, fechas, evaluación) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 21 slides, en orden |
 | **Padlet oficial** abierto y probado en una pestaña | Rompehielos; el link se pega en el chat apenas empiece |
@@ -211,7 +212,7 @@ _spec(
 Es la única clase donde usted “vende” el curso. Hable despacio, use el nombre de quien participa y explique cada acuerdo **con la razón detrás**, no como lista de prohibiciones. Un encuadre bien hecho ahorra medio periodo de preguntas repetidas.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **cinco pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer en pantalla los ítems con su nombre y su peso → **4.** `Clases/Recursos/ACAs/` con el enunciado de la **ACA Final** → **5.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
+**1.** Padlet (rompehielos) → **2.** CDigital, en el espacio de la **ACA Final** —la única tarea documental del aula— → **3.** el **libro de calificaciones** del aula, para leer en pantalla los ítems con su nombre y su peso → **4.** `Clases/Recursos/ACAs/` con el enunciado de la **ACA Final** → **5.** plantilla APA CUN abierta en Google Docs (*Archivo → Abrir con → Documentos de Google*).
 Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -233,7 +234,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
         ("“Todavía no tengo tema, ¿estoy mal?”",
          "“No. Hoy nadie tiene tema definitivo. Salga con una frase tentativa; en la Sesión 02 la afinamos con la línea de investigación.”"),
         ("“¿Dónde entrego?”",
-         "“Solo en CDigital, en el espacio de la sesión. Lo que llegue por WhatsApp o correo personal no cuenta como entregado.”"),
+         "“En CDigital, en el espacio de la **ACA Final**: es la **única entrega documental** del aula, no hay un espacio por sesión. Los avances de cada clase se guardan en su Drive y alimentan esa entrega. Lo que llegue por WhatsApp o correo personal no cuenta como entregado.”"),
     ],
     fases=[
         ("1️⃣ Apertura, agenda y presentación del Docente", 10),
@@ -324,7 +325,7 @@ Modelar el paso 5 en vivo, treinta segundos, evita la mitad de las preguntas de 
     taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2**, publicadas en la carpeta de la Sesión 01 del **Drive de clases**, y anotar 2 dudas; y redactar en Google Docs la ficha de **tema tentativo** — una frase con actor + fenómeno + contexto, 2–3 líneas de por qué importa y 1 fuente exploratoria de Google Académico.",
     entregable="`S01_TemaTentativo_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
-        "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
+        "- [ ] Aula del curso en **CDigital** abierta, con el libro de calificaciones y el espacio de la **ACA Final** a la vista",
         "- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo de hoy no se puede cumplir)",
         "- [ ] **Padlet** oficial probado y el link listo para pegar en el chat: " + PADLET_PRESENTACION_URL,
         "- [ ] **Presentación del Curso** abierta en la slide PRESÉNTATE (QR)",
@@ -731,8 +732,8 @@ Y con esa pregunta se busca: `problemas de internet en la universidad` no sirve;
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 04) y **decidido qué slides no se proyectan** (la deck da para dos horas)",
         "- [ ] Cuatro pestañas abiertas y probadas: **Google Académico**, **SciELO** (o Redalyc), **biblioteca CUN con sesión iniciada** y **zbib.org**",
         "- [ ] Un **DOI de prueba** copiado al portapapeles (no se busca en vivo) y **excalidraw.com** abierto en otra pestaña",
-        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
-        "- [ ] Espacio de entrega de la Sesión 04 creado en CDigital, con el nombre de archivo `S04_ProblemaPreguntaFuentes_Apellido` en la consigna",
+        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Docente/Guiones/Capturas/`)",
+        "- [ ] Nombre de archivo `S04_ProblemaPreguntaFuentes_Apellido` a la vista en la slide del taller (el avance **no se sube**: no hay que crear nada en el aula)",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
     ],
     shots_demo=[
@@ -941,8 +942,8 @@ De la misma pregunta salen los constructos —**pérdida de paquetes** y **prác
         "- [ ] Deck de hoy abierta (`Presentacion.pptx` de la Sesión 05) y marcadas las slides que **no** se proyectan",
         "- [ ] **Google Docs** abierto con dos plantillas listas: la tabla *síntoma · evidencia · consecuencia* y la **ficha de lectura** de cinco campos",
         "- [ ] Un **dato con fuente** a la mano para modelar la evidencia (bitácora, DANE, SNIES o un artículo de la Sesión 04)",
-        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
-        "- [ ] Espacio de entrega de la Sesión 05 creado en CDigital, con el nombre `S05_PlanteamientoMarco_Apellido` en la consigna",
+        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Docente/Guiones/Capturas/`)",
+        "- [ ] Nombre de archivo `S05_PlanteamientoMarco_Apellido` a la vista en la slide del taller (el avance **no se sube**: no hay que crear nada en el aula)",
         "- [ ] Verificadas en CDigital las ventanas de **ACA Final** y **Quiz 3**, para anunciarlas sin equivocarse",
         "- [ ] Meet de la serie abierto **10 minutos antes** (enlace en la ficha de arriba)",
     ],
@@ -1123,7 +1124,7 @@ Haga la cuenta antes de entrar: la fase de socialización de este plan son 22 mi
 
 > “Una advertencia honesta para terminar: **nadie va a venir a preguntarles por su artículo. La puerta se toca desde adentro.** Gracias por el trabajo de estas seis semanas.”""",
     entregable_titulo="🧩 **Qué se lleva hoy** *(no hay archivo nuevo que subir)*",
-    taller="Ronda de socialización: cada quien cuenta su artículo en cuatro minutos con la estructura de la deck y recibe dos preguntas; quien escucha toma nota con los cuatro criterios de la rúbrica y devuelve las **tres frases**. Producto del taller: una **lista escrita de tres ajustes** al documento.",
+    taller="Ronda de socialización: cada quien cuenta su artículo en cuatro minutos con la estructura de la deck y recibe dos preguntas; quien escucha toma nota con los cuatro criterios de la rúbrica y devuelve las **tres frases**. Producto del taller: una **lista escrita de tres ajustes** al documento, en `S06_AjustesCierre_Apellido` (Google Doc o PDF), que se guarda en el Drive: la ACA Final ya cerró y hoy no se sube ningún archivo al aula.",
     entregable="**no hay archivo nuevo.** Lo que sí queda registrado hoy en CDigital: la **autoevaluación** (cuestionario) diligenciada y la **coevaluación** (foro) con un comentario propio y una respuesta a otro. Quien no alcance a socializar en vivo lo hace por el **foro del curso**.",
     ejemplo="""**Los cuatro minutos, modelados con el caso del laboratorio.** *«En el laboratorio X de la sede Y las prácticas se interrumpen: la bitácora institucional registró doce cortes en un mes, nueve de ellos entre las 2 y las 5 de la tarde. [40 s] Mi pregunta es: ¿en qué medida la pérdida de paquetes afecta las prácticas del laboratorio de redes? [1:20] Trabajé dos constructos —pérdida de paquetes y prácticas de laboratorio— y me sorprendió que el umbral del 2 % que todos citan se propuso para aplicaciones en tiempo real, que no es mi caso. [2:20] Listo: planteamiento y marco. Falta: no conseguí el registro de latencia. [3:00]»*
 Y la devolución, en tres frases: *«Me quedó claro el problema y la cifra. No me quedó claro a quiénes afecta: ¿un grupo o toda la franja? Le sugiero acotar a la franja de la tarde, que es donde usted mismo mostró que se concentran las caídas.»*""",
@@ -1181,7 +1182,7 @@ _spec(
 #### 1. Qué debe tener abierto y probado
 | Qué | Para qué lo necesita hoy |
 | :--- | :--- |
-| Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
+| Aula del curso en **CDigital**, con el **libro de calificaciones** y el espacio de la **ACA Final** a la vista | Va a proyectar dónde se sube lo que sí se sube: el aula no tiene espacio por sesión |
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística del periodo |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 23 slides, en orden |
 | **Evento de Slido** creado y probado desde el celular: **quiz de 3 preguntas** (una por ronda), **una encuesta A/B/C** vacía para la ronda final y el **Q&A abierto**; el **código** copiado para el chat | Es el rompehielos entero. **Son 50 estudiantes: no hay muro que se lea entero** ni ronda hablada que quepa en la hora, así que el hielo se rompe jugando y el diagnóstico se recoge en el Q&A |
@@ -1204,7 +1205,7 @@ TG2 **no tiene Syllabus SIAC cargado**. El temario es orientativo (Manual del Do
 3. **Se entrega en CDigital**, con plantilla APA CUN, y lo acordado hoy queda por escrito.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** el **evento de Slido** en modo presentación (rompehielos), con el quiz listo para lanzar → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
+**1.** el **evento de Slido** en modo presentación (rompehielos), con el quiz listo para lanzar → **2.** CDigital, en el espacio de la **ACA Final** —la única tarea documental del aula— → **3.** el **libro de calificaciones** del aula, para leer los ítems con su peso, y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto) elimina la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -1267,7 +1268,7 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
 > **Por qué ya no hay muro:** este grupo tiene **50 estudiantes**. Cincuenta notas en un tablero no se leen en clase, y el que escribe y nunca es leído se desconecta. Así que el rompehielos es un **juego**: acertar en «dos verdades y una mentira» es **1 entre 3**, azar puro, y el que llega con el proyecto congelado arranca igual que el que lo tiene listo — que en TG2, donde media sala llega con culpa, no es un detalle menor. Va **antes de la primera tabla de porcentajes**: si lo primero que ven es la tabla de pesos, ya perdió la sala.
 
 **(1) GUION LITERAL — explicar el juego y anunciar el premio (~1 min):**
-> “**Slide 4 — PRESÉNTATE.** Antes de hablar de notas y de fechas, ocho minutos de juego. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
+> “**Slide 4 — ROMPEHIELOS.** Antes de hablar de notas y de fechas, ocho minutos de juego. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
 
 > “Se llama **dos verdades y una mentira** y va sobre mí. **Tres rondas.** En cada una les muestro **tres frases mías** y **una es falsa**: ustedes votan cuál. Acertar es una entre tres, así que aquí nadie llega con ventaja: no gana el que más haya escrito de su trabajo de grado, gana el que me lea mejor.”
 
@@ -1362,7 +1363,7 @@ Modelar en vivo cómo se abre la plantilla y cómo se sube un archivo (un minuto
     taller="**No se hace en clase, es trabajo autónomo:** leer el material sobre **delimitación / reformulación del tema**, publicado en la carpeta de la Sesión 01 del **Drive de clases**; y llenar en Google Docs la **matriz de estado** del proyecto (sección · lista/a medias/inexistente · evidencia), el **tema delimitado** en una frase (actor + fenómeno + contexto) y **3 compromisos** para las próximas dos semanas.",
     entregable="`S01_EstadoProyecto_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
-        "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
+        "- [ ] Aula del curso en **CDigital** abierta, con el libro de calificaciones y el espacio de la **ACA Final** a la vista",
         "- [ ] **Lectura autónoma sobre delimitación del tema** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
         "- [ ] **Las tres rondas ajustadas y la mentira de cada una marcada** en `" + RUNBOOK_TG2 + "` *(material del Docente — sin esto no hay juego)*",
@@ -1486,13 +1487,15 @@ Título tentativo ≤ 21 palabras, sin eslóganes: debe dejar ver el actor, el f
 
 _spec(
     "tg2", 3,
-    objetivos="""1. **Lograr:** Dominar la estructura del artículo / documento de avance (plantilla APA CUN).
+    objetivos="""1. **Lograr:** Dominar la estructura del documento / documento de avance (plantilla APA CUN).
 2. **Producir** un avance observable en CDigital.
 3. **Salir** con tarea autónoma clara.""",
     fundamento="""> Hoy no se escribe contenido nuevo: se ordena el envase. El estudiante debe salir sabiendo **qué va en cada sección** de la Plantilla APA CUN y qué NO va.
 
 #### 1. La plantilla APA CUN es el mapa
 El documento de avance sigue la **Plantilla APA CUN de proyecto de grado** (se abre en Google Docs; no exige Word de escritorio). Su valor es que ya trae el orden de las secciones y el formato de citas; el estudiante no inventa la estructura, la **llena**.
+
+Y esa estructura **sirve a cualquier modalidad de grado**: artículo resultado de investigación (la forma por defecto en TG3), proyecto aplicado o de desarrollo, prototipo o sistema documentado, sistematización de experiencia, emprendimiento. Cambia el **peso** de cada sección y qué contará como «resultado» cuando llegue TG3; no la estructura. Dígalo hoy: en TG2 nadie tiene resultados todavía y el estudiante que trae un desarrollo suele creer que «lo suyo no cabe» en un documento académico. Cabe, y es el mismo. La modalidad formal se confirma en TG3 con la **Dirección del Programa** — no enumere opciones oficiales, que el repositorio no las tiene.
 
 #### 2. Qué va en cada sección (y qué no)
 | Sección | Qué va | Error típico |
@@ -1536,6 +1539,8 @@ Escribir directo a párrafo produce bloqueo. La técnica es hacer primero un **o
 
 **GUION LITERAL:**
 > “**Slide 3 — CONTENIDO CLAVE.** Buena noticia: ustedes **no** inventan la estructura. La **Plantilla APA CUN** ya trae el orden y el formato; se abre en Google Docs, no necesitan Word de escritorio. Su trabajo es **llenarla**, no diseñarla.”
+
+> “Y una segunda buena noticia, para el que está pensando ‘lo mío es un desarrollo, no un texto académico’: **esta misma estructura sirve para cualquier modalidad de grado**. Artículo, proyecto aplicado, prototipo documentado, sistematización de una experiencia. Lo que cambia es cuánto pesa cada sección y qué van a contar como resultado en TG3. El envase es el mismo para todos.”
 
 > “Recorramos qué va en cada sección: la introducción es contexto → problema → propósito; el planteamiento argumenta el problema y aterriza en la pregunta; los objetivos ya los tienen; el marco referencial junta antecedentes, teoría y conceptos; el diseño metodológico dice enfoque, tipo y alcance; y las referencias van en APA 7.”
 
@@ -1588,7 +1593,7 @@ _spec(
     objetivos="""1. **Lograr:** Construir antecedentes y referentes (Fase I).
 2. **Producir** un avance observable en CDigital.
 3. **Salir** con tarea autónoma clara.""",
-    fundamento="""> Sesión muy de "escritura académica". Aquí conviene apoyarse en la guía transversal `Guiones/Guía práctica - Herramientas de escritura y citación.md`, que trae el flujo Scholar → ZoteroBib → Docs paso a paso; no lo repita entero, remita a ella.
+    fundamento="""> Sesión muy de "escritura académica". Aquí conviene apoyarse en la guía transversal `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`, que trae el flujo Scholar → ZoteroBib → Docs paso a paso; no lo repita entero, remita a ella.
 
 #### 1. Antecedentes ≠ marco teórico
 Los **antecedentes** son estudios previos que ya abordaron un problema parecido al suyo: qué hicieron, cómo y qué encontraron. No son definiciones (eso es marco conceptual) ni teoría de fondo (marco teórico): son **precedentes**. Sirven para mostrar que su problema es real y para no repetir lo ya hecho.
@@ -1966,7 +1971,7 @@ En TG2 no hay campo todavía: se escribe en futuro —"se aplicará", "se propon
     ejemplo="Matriz: objetivo ‘comparar tiempos’ → dato ‘tiempos antes/después’ → análisis ‘comparación de medias’; enfoque cuantitativo justificado por la pregunta.",
     shots_demo=[
         ("tg_scholar.png", "Referentes metodológicos",
-         "Buscar 1 artículo con un método similar; copiar la lógica, no el texto."),
+         "Buscar 1 documento con un método similar; copiar la lógica, no el texto."),
     ],
     shots_taller=[
         ("Herramientas/tg_zoterobib.png", "ZoteroBib",
@@ -2388,7 +2393,7 @@ TG3 = [
        "Identificar cómo nombran las variables autores cercanos.")],
      [("Herramientas/tg_zoterobib.png", "ZoteroBib",
        "2 APA que sostienen la pregunta.")]),
-    (3, "Estructura del artículo + taller de introducción.",
+    (3, "Estructura del documento + taller de introducción.",
      "Introducción con contexto, problema, pregunta y objetivos.",
      "Introducción 3–4 párrafos en plantilla APA CUN (Docs).",
      "`S03_Introduccion_Apellido`.",
@@ -2445,7 +2450,7 @@ TG3 = [
      [("Herramientas/tg_zoterobib.png", "ZoteroBib",
        "Citas de la discusión.")]),
     (10, "Resumen, palabras clave UNESCO, conclusiones y referencias.",
-     "Culminación formal del artículo.",
+     "Culminación formal del documento.",
      "Resumen + keywords + conclusiones + referencias APA.",
      "`S10_CierreArticulo_Apellido`.",
      [("Herramientas/tg_zoterobib.png", "ZoteroBib — lista final APA 7",
@@ -2518,7 +2523,7 @@ _tg3(
 | **4** | ROMPEHIELOS — DOS VERDADES Y UNA MENTIRA (juego en Slido) | 2 |
 | **5** | CÓMO SE EVALÚA — LOS ÍTEMS DEL AULA | 4 |
 | **6** | Cómo trabajamos: una hora semanal para cerrar el trabajo de grado | 3 |
-| **7** | Qué se llevan al final: artículo, sustentación y repositorio | 3 |
+| **7** | Qué se llevan al final: documento, sustentación y repositorio | 3 |
 | **8–9** | Mapa del curso (1/2 y 2/2): los 15 encuentros | 3 |
 | **10** | El acuerdo pedagógico: qué pactamos hoy | 3 |
 | **11** | Corte por corte: qué hay en el aula y qué se prepara | 4 |
@@ -2534,7 +2539,7 @@ _tg3(
 | **21** | PARA LA PRÓXIMA SESIÓN | 5 |
 | **22** | Cierre — Sesión 01 | 5 |
 """,
-    objetivos="""1. **Encuadrar** TG3 como **culminación**: cómo se usa la hora sincrónica, qué se hace en autónomo y cuál es el producto (**artículo + sustentación + repositorio**).
+    objetivos="""1. **Encuadrar** TG3 como **culminación**: cómo se usa la hora sincrónica, qué se hace en autónomo y cuál es el producto (**documento + sustentación + repositorio**).
 2. **Presentar** al Docente **jugando** —«dos verdades y una mentira» en Slido, con premio— y **diagnosticar por escrito**, en el Q&A del mismo evento, el estado de los 112 proyectos: en esta serie **no se presentan todos en voz alta**, no cabe en la hora; hablan tres, y son los que se ganaron el turno.
 3. **Explicar** la evaluación real del aula (quices y parciales por corte + **ACA Final** + auto y coevaluación) y la sustentación ante jurados, la ruta de entrega en CDigital, la integridad académica con antiplagio institucional y el uso de IA generativa.
 4. **Dejar por escrito el acuerdo pedagógico** y encargar el trabajo autónomo: lectura U1–U2 + matriz de herencia de lo que traen de TG2.""",
@@ -2544,7 +2549,7 @@ _tg3(
 #### 1. Qué debe tener abierto y probado
 | Qué | Para qué lo necesita hoy |
 | :--- | :--- |
-| Aula del curso en **CDigital**, con el espacio de entrega de la Sesión 01 creado | Va a proyectar dónde se sube el encargo autónomo |
+| Aula del curso en **CDigital**, con el **libro de calificaciones** y el espacio de la **ACA Final** a la vista | Va a proyectar dónde se sube lo que sí se sube: el aula no tiene espacio por sesión |
 | **Presentación del Curso** (`Clases/Presentacion del Curso - ….pptx`) | Slide **PRESÉNTATE** y la logística por grupo (recepción y cierre) |
 | **Esta deck** (`Clases/Sesion 01 - …/Presentacion.pptx`) | Es el hilo de la hora: 22 slides, en orden |
 | **Evento de Slido** creado y probado desde el celular: **quiz de 3 preguntas** (una por ronda), **una encuesta A/B/C** vacía para la ronda final y el **Q&A abierto**; el **código** copiado para el chat | Es el rompehielos entero. Son **112 estudiantes en una sola serie**: ningún muro ni ninguna ronda de presentaciones cabe en la hora, pero el juego sí. El plan gratis admite **100 participantes por evento**; a una virtual de una hora no se conectan los 112, pero conviene saberlo |
@@ -2561,7 +2566,7 @@ _tg3(
 
 #### 3. Los tres mensajes que deben quedar grabados
 1. **TG3 culmina, no empieza**: se hereda de TG2 / Opción de grado II y hoy se inventaría esa herencia.
-2. **El producto son tres piezas encadenadas**: artículo (≥ 50 referencias y no menos de 4.000 palabras según el Syllabus 94532), sustentación ante jurados y carga al repositorio.
+2. **El producto son tres piezas encadenadas**: documento (≥ 50 referencias y no menos de 4.000 palabras según el Syllabus 94532), sustentación ante jurados y carga al repositorio.
 3. **Se avanza una sección por semana.** Quien deje todo para el cierre no alcanza a defender con dominio.
 
 #### 4. Un cuidado propio de TG3
@@ -2571,7 +2576,7 @@ Aquí hay **tres grupos con calendarios de recepción y cierre distintos**. Cuan
 Los tres grupos entran al **mismo Meet**. Eso cambia el primer día entero: **casi nadie se presenta hablando**. Ciento doce presentaciones de treinta segundos son **cincuenta y seis minutos**, es decir, la clase completa sin encuadre. La regla operativa de hoy: **lo que se juega, se juega en Slido y lo juegan los 112 a la vez**; **hablan tres**, los del podio, que se ganaron el turno en un juego de azar puro; **todo lo que 112 personas quieran decir se escribe** en el Q&A del mismo evento; y **lo que se pregunta va al Q&A**, no al micrófono. Nadie sale con la sensación de no haber sido tenido en cuenta, y usted no gastó la hora en una ronda.""",
     ejemplo_titulo="#### Qué proyectar en pantalla (y en qué orden)",
     ejemplo="""Deje **seis pestañas** abiertas y páselas en este orden, sin buscar nada en vivo:
-**1.** el **evento de Slido** en modo presentación, con el quiz listo para lanzar (rompehielos) → **2.** CDigital, en el espacio de entrega de la sesión → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
+**1.** el **evento de Slido** en modo presentación, con el quiz listo para lanzar (rompehielos) → **2.** CDigital, en el espacio de la **ACA Final** —la única tarea documental del aula— → **3.** el **libro de calificaciones** del aula (para leer los ítems reales con su peso) y el enunciado de la **ACA Final** → **4.** plantilla APA CUN abierta en Google Docs → **5.** el espacio donde queda registrado el **acuerdo pedagógico** → **6.** la carpeta `Clases/` del **Drive** que ellos ya tienen compartida, para mostrar dónde vive el material de cada sesión.
 Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita la mitad de los correos de la primera semana.""",
     errores_titulo="#### Si un estudiante pregunta… (dudas reales del primer día)",
     errores_headers=("Si un estudiante pregunta…", "Usted responde…"),
@@ -2635,11 +2640,11 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 > **Aquí NO se presentan todos, y se dice en voz alta.** Son **112 estudiantes** (54450 + 54466 + 54467) en una sola serie: treinta segundos por persona son **casi una hora**. Pero **jugar sí lo pueden hacer los 112 a la vez**: acertar en «dos verdades y una mentira» es **1 entre 3**, azar puro, así que el que llega con el proyecto caído arranca igual que el que llega con resultados. **Hablan tres** —el podio—, y hablan porque se ganaron el turno, no porque el Docente los nombrara.
 
 **(1) GUION LITERAL — explicar el juego y anunciar el premio (~1 min):**
-> “**Slide 4 — PRESÉNTATE.** Somos ciento doce en esta sala. Si nos presentamos hablando, se nos va la clase entera y no alcanzamos ni a ver cómo se evalúa. Así que nos vamos a conocer de otra manera: ocho minutos de juego, y hay premio. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
+> “**Slide 4 — ROMPEHIELOS.** Somos ciento doce en esta sala. Si nos presentamos hablando, se nos va la clase entera y no alcanzamos ni a ver cómo se evalúa. Así que nos vamos a conocer de otra manera: ocho minutos de juego, y hay premio. Entren a **slido.com** —celular u otra pestaña— y escriban el **código** que acabo de pegar en el chat. No hay que instalar nada ni crear cuenta. Pongan su **nombre real**: con ese nombre se arma la tabla de posiciones.”
 
 > “Se llama **dos verdades y una mentira** y va sobre mí. **Tres rondas.** En cada una les muestro **tres frases mías** y **una es falsa**: ustedes votan cuál. Acertar es una entre tres, así que aquí no gana el que más lleve escrito de su trabajo de grado: gana el que me lea mejor. Y eso significa que **todos arrancan iguales**, vengan de donde vengan.”
 
-> “Se juega por algo: quien más veces me pille se gana una **revisión uno a uno conmigo**, media hora solo para su artículo, **antes de la primera entrega**. Con ciento doce personas, media hora mía a solas es lo más escaso que hay en este curso; y no, no regalo décimas.”
+> “Se juega por algo: quien más veces me pille se gana una **revisión uno a uno conmigo**, media hora solo para su documento, **antes de la primera entrega**. Con ciento doce personas, media hora mía a solas es lo más escaso que hay en este curso; y no, no regalo décimas.”
 
 **(2) GUION LITERAL — las tres rondas (~4 min, unos 80 segundos cada una):**
 > “**Ronda uno.** Ahí están las tres frases. Una de estas tres **no** es cierta: ¿cuál? Veinte segundos… y voten, que el que no vota no puntúa.”
@@ -2680,7 +2685,7 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 | A los 2 minutos hay 15 participantes | Proyecta el contador de Slido subiendo: “vamos en 15, treinta segundos y arrancamos”. Pero arranca igual: el juego se ve en pantalla y engancha a los que van entrando. |
 | “No me abre / no me deja entrar” | Repite el código en el chat y aclara que se entra por **slido.com** escribiendo el código, sin crear cuenta y sin instalar nada. |
 | Nadie vota en la ronda uno | Vota usted una en voz alta como ejemplo y baja el costo: “no hay nada que estudiar, es una entre tres; adivinen”. |
-| Alguien pregunta si esto tiene nota | “Ninguna. Lo único que se juega es media hora mía revisando su artículo.” |
+| Alguien pregunta si esto tiene nota | “Ninguna. Lo único que se juega es media hora mía revisando su documento.” |
 | El podio no quiere hablar | Baja al siguiente de la tabla; si tampoco, cierra con la tabla proyectada y entrega el premio ahí mismo. La fase no se estira. |
 | Alguien escribe en el Q&A que su proyecto se cayó | **No se lee en público.** Mensaje privado en el chat y cita al terminar la sesión. |
 | Quedan 40 sin conectarse | Deja el evento **abierto 48 horas** y publica el enlace en el aula: juegan igual, fuera de la tabla de posiciones —sería injusto con quien sí llegó—, y aparecen en la Sesión 02 sabiendo quién les da clase. |
@@ -2689,11 +2694,15 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
     fase3_texto="""**Protagonista:** Docente (recorrido de la deck).
 
 **GUION LITERAL:**
-> “**Slide 6 — Cómo trabajamos.** Quince encuentros de una hora. En una hora no se escribe un artículo oyendo hablar al profesor: yo doy criterio y ejemplo en pocos minutos y el resto lo usamos para revisar **su** documento real. Traigan siempre tres cosas: el artículo abierto en su versión vigente —una sola, no cinco copias—, su lista de referencias con el conteo real, y una duda concreta.”
+> “**Slide 6 — Cómo trabajamos.** Quince encuentros de una hora. En una hora no se escribe un documento oyendo hablar al profesor: yo doy criterio y ejemplo en pocos minutos y el resto lo usamos para revisar **su** documento real. Traigan siempre tres cosas: el documento abierto en su versión vigente —una sola, no cinco copias—, su lista de referencias con el conteo real, y una duda concreta.”
 
-> “**Slide 7 — Qué se llevan al final.** El producto son **tres cosas encadenadas** y se las digo hoy para que nadie se sorprenda: primero, un artículo resultado de investigación, con revisión amplia —el Syllabus habla de al menos cincuenta referencias y de no menos de cuatro mil palabras—; segundo, una **sustentación ante jurados**; y tercero, la **carga al repositorio institucional**. Y si su opción de grado incluye un producto de ingeniería, ese producto no reemplaza al artículo: se documenta dentro de él.”
+> “**Slide 7 — Qué se llevan al final.** El producto son **tres cosas encadenadas** y se las digo hoy para que nadie se sorprenda: primero, un **documento escrito**, con revisión amplia —el Syllabus habla de al menos cincuenta referencias y de no menos de cuatro mil palabras—; segundo, una **sustentación ante jurados**; y tercero, la **carga al repositorio institucional**.”
 
-> “**Slides 8 y 9 — Mapa del curso.** Miren los quince encuentros en tres tramos: escribir el artículo, alistar póster y antiplagio, y defender y cerrar. Fíjense en la última columna: cada sesión deja algo listo. Y lean la nota: **la recepción y el cierre varían según su grupo**; busque el suyo en la Presentación del Curso y anótelo hoy.”
+> “Y aclaro algo que suele generar angustia el primer día: **la forma por defecto de ese documento es el artículo resultado de investigación, pero no es la única salida**. Si lo suyo es un proyecto aplicado o de desarrollo, un prototipo o un sistema documentado, una sistematización de experiencia o un emprendimiento, **cabe**: el producto no reemplaza al documento, se documenta y se investiga dentro de él, con los mismos mínimos. Lo que cambia es el peso de cada sección y qué cuenta como resultado, no el esqueleto. Su modalidad la confirmamos ustedes y yo en las primeras semanas.”
+
+⚠️ **No improvise una lista de modalidades oficiales.** El Syllabus 94532 no la trae y en la carpeta del curso no hay documento que la enumere. Diga los cuatro ejemplos como ejemplos y remita a la **Dirección del Programa** para lo formal (detalle en §1.1 del Manual del Docente).
+
+> “**Slides 8 y 9 — Mapa del curso.** Miren los quince encuentros en tres tramos: escribir el documento, alistar póster y antiplagio, y defender y cerrar. Fíjense en la última columna: cada sesión deja algo listo. Y lean la nota: **la recepción y el cierre varían según su grupo**; busque el suyo en la Presentación del Curso y anótelo hoy.”
 
 > “**Slide 10 — El acuerdo pedagógico.** Esto lo pactamos hoy y queda por escrito en CDigital: una sección por sesión, plantilla APA CUN en Google Docs, entrega por CDigital, retroalimentación solo sobre lo entregado, y la sustentación se prepara desde ahora. Léanlo antes de aceptarlo y pregunten ahora, no en noviembre.”""",
     fase4_texto=f"""**Protagonista:** Docente, compartiendo pantalla (CDigital + libro de calificaciones + plantilla APA).
@@ -2701,11 +2710,11 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 **GUION LITERAL:**
 > “**Slide 5 — Cómo se evalúa TG3.** Aquí tengo que corregir algo que circula desde semestres pasados: **TG3 no es un corte único de 100%** con un ‘proceso’ y un ‘examen’. Abran su aula y miren el libro de calificaciones: son **tres cortes**, y los ítems son **{items_corte_txt('tg3', 1)}** en el primero, **{items_corte_txt('tg3', 2)}** en el segundo y **{items_corte_txt('tg3', 3)}** en el tercero. Si alguien les dijo otra cosa, la fuente que manda es CDigital.”
 
-> “Lo que eso significa para ustedes: los **cuestionarios suman {peso_tipo('tg3', KIND_CUESTIONARIO)} del curso**, y caen **en día de clase**. El artículo —la **ACA Final**, {peso_item('tg3', 'aca_final')}— sigue siendo la pieza grande, pero no es la única, y no se puede llegar al final con todo pendiente. Y las **fechas cambian por grupo**: cada quien anota la de su aula, no la del compañero.”
+> “Lo que eso significa para ustedes: los **cuestionarios suman {peso_tipo('tg3', KIND_CUESTIONARIO)} del curso**, y caen **en día de clase**. El documento —la **ACA Final**, {peso_item('tg3', 'aca_final')}— sigue siendo la pieza grande, pero no es la única, y no se puede llegar al final con todo pendiente. Y las **fechas cambian por grupo**: cada quien anota la de su aula, no la del compañero.”
 
 > “**Slide 11 — ítem por ítem.** En los quices y parciales se evalúa que ustedes dominen lo que están escribiendo: son cuestionarios, individuales, con tiempo, y cierran ese mismo día. En la **ACA Final** lo que se mira es la **coherencia de cabo a rabo**: que los resultados respondan la pregunta y que las referencias estén citadas en el cuerpo, no solo listadas al final. Y la **sustentación ante jurados** —que preparamos desde ahora— es el hito donde se juega el **dominio**: explicar por qué eligió ese método, qué límites tiene su trabajo y qué encontró, sin leer.”
 
-> “**Slide 12 — Cómo se entrega.** Procedimiento puro.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla: **un solo documento que crece**. El artículo no es una carpeta de archivos sueltos.”
+> “**Slide 12 — Cómo se entrega.** Procedimiento puro.” [Hágalo en vivo: abra la plantilla APA CUN en Google Docs, muestre el nombre `SNN_Tema_Apellido`, descargue como PDF y abra el espacio de entrega en CDigital.] “Y una regla: **un solo documento que crece**. El documento no es una carpeta de archivos sueltos.”
 
 > “**Slide 13 — Integridad académica.** Aquí sí pasa por antiplagio: antes de la sustentación el documento se verifica con la **herramienta institucional del campus**. No es una amenaza, es un paso del cronograma. Todo lo que no es suyo se cita en APA 7, incluido su propio texto de TG2 —reutilizarlo sin declararlo es **autoplagio**—. Y el consejo práctico: anoten la fuente en el instante en que pegan algo; con cincuenta referencias, reconstruir de memoria es imposible.”
 
@@ -2728,7 +2737,7 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
     taller="**No se hace en clase, es trabajo autónomo:** leer las unidades **U1–U2** (casos de éxito · retomar el proyecto), publicadas en la carpeta de la Sesión 01 del **Drive de clases**; y llenar en Google Docs la **matriz de herencia** (reutilizo tal cual · reescribo · creo de cero) sección por sección, el **conteo real de referencias citadas en el cuerpo** y **3 compromisos** para las próximas dos semanas.",
     entregable="`S01_AcuerdoRetoma_Apellido` (Google Doc o PDF), **antes de la Sesión 02**.",
     checklist=[
-        "- [ ] Aula del curso en **CDigital** abierta, con el espacio de entrega de la Sesión 01 creado",
+        "- [ ] Aula del curso en **CDigital** abierta, con el libro de calificaciones y el espacio de la **ACA Final** a la vista",
         "- [ ] **Lectura autónoma U1–U2** cargada en `Clases/Sesion 01 - …/` del **Drive de clases** (sin eso el encargo no se puede cumplir)",
         "- [ ] Texto del **acuerdo pedagógico** listo y el sitio donde quedará registrado (hoy se firma)",
         "- [ ] **Fechas de recepción y cierre de cada grupo** a la vista (este curso tiene calendarios distintos)",
@@ -2750,15 +2759,15 @@ Un minuto modelando cómo se abre la plantilla y cómo se sube un archivo evita 
 
 _tg3(
     2,
-    fundamento="""> Sesión bisagra: sin una buena pregunta, todo el artículo cojea. Léalo completo; aquí decide la coherencia de todo el documento.
+    fundamento="""> Sesión bisagra: sin una buena pregunta, todo el documento cojea. Léalo completo; aquí decide la coherencia de todo el documento.
 
 #### 1. La pregunta manda: variables visibles
-La pregunta de investigación es el eje del artículo. Una buena pregunta deja **ver sus variables** (o constructos): qué se relaciona con qué, en quién y dónde. "¿Sirve la automatización?" no muestra nada; "¿en qué medida la automatización de pruebas reduce el tiempo de despliegue en el equipo X?" muestra dos variables (automatización de pruebas ↔ tiempo de despliegue) y un contexto. Como el Syllabus define, **de la pregunta salen los objetivos**.
+La pregunta de investigación es el eje del documento. Una buena pregunta deja **ver sus variables** (o constructos): qué se relaciona con qué, en quién y dónde. "¿Sirve la automatización?" no muestra nada; "¿en qué medida la automatización de pruebas reduce el tiempo de despliegue en el equipo X?" muestra dos variables (automatización de pruebas ↔ tiempo de despliegue) y un contexto. Como el Syllabus define, **de la pregunta salen los objetivos**.
 
 #### 2. Objetivo general vs. específicos (y los verbos que sí sirven)
-El **objetivo general** es la pregunta convertida en propósito, con un verbo de alcance amplio (analizar, diseñar, evaluar). Los **específicos** son los pasos para lograrlo, y aquí está la regla de oro: **cada objetivo específico se convierte después en una sección del artículo**. Por eso los verbos importan: "conocer", "entender" o "saber" no se pueden medir ni redactar como sección; "identificar", "caracterizar", "comparar", "diseñar", "validar" sí.
+El **objetivo general** es la pregunta convertida en propósito, con un verbo de alcance amplio (analizar, diseñar, evaluar). Los **específicos** son los pasos para lograrlo, y aquí está la regla de oro: **cada objetivo específico se convierte después en una sección del documento**. Por eso los verbos importan: "conocer", "entender" o "saber" no se pueden medir ni redactar como sección; "identificar", "caracterizar", "comparar", "diseñar", "validar" sí.
 
-| Verbo débil (evítelo) | Verbo operable (úselo) | Qué produce en el artículo |
+| Verbo débil (evítelo) | Verbo operable (úselo) | Qué produce en el documento |
 | :--- | :--- | :--- |
 | Conocer / entender / saber | Identificar / caracterizar | Una sección de descripción |
 | Ver / analizar (vago) | Comparar / correlacionar | Una sección de análisis |
@@ -2779,12 +2788,12 @@ Pregunta, objetivos y título deben ser **la misma idea dicha de tres formas**. 
         ("“Título tipo eslogan: 'Revolucionando el software'.”",
          "Sin variables ni contexto. Título = actor + fenómeno + contexto, ≤ ~15–20 palabras."),
         ("“Puse 7 objetivos específicos para que se vea completo.”",
-         "Cada específico es una sección; con 7 el artículo se vuelve inmanejable. Deje 3–4 alineados."),
+         "Cada específico es una sección; con 7 el documento se vuelve inmanejable. Deje 3–4 alineados."),
     ],
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Buenas tardes. Sesión 02. La semana pasada cada uno dejó su tema y su matriz de herencia. Hoy le damos el corazón al proyecto: la **pregunta**, los **objetivos** y el **título**. Si esto queda bien, el resto del artículo casi se ordena solo.”
+> “Buenas tardes. Sesión 02. La semana pasada cada uno dejó su tema y su matriz de herencia. Hoy le damos el corazón al proyecto: la **pregunta**, los **objetivos** y el **título**. Si esto queda bien, el resto del documento casi se ordena solo.”
 
 > “**Slide 2 — OBJETIVOS.** Vamos a formular una pregunta con variables visibles, derivar de ella un objetivo general y sus específicos con verbos que sí se pueden medir, y cerrar con un título que un jurado entienda de una sola leída. Tengan abierta su matriz de la Sesión 01.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -2792,7 +2801,7 @@ Pregunta, objetivos y título deben ser **la misma idea dicha de tres formas**. 
 **GUION LITERAL:**
 > “**Slide 3 — CONTENIDO CLAVE.** La pregunta manda. Y una buena pregunta **deja ver sus variables**: qué se relaciona con qué, en quién y dónde. '¿Sirve la automatización?' no muestra nada. '¿En qué medida automatizar las pruebas reduce el tiempo de despliegue en el equipo X?' muestra dos variables y un contexto. De esa pregunta salen los objetivos.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Los objetivos: uno **general** —la pregunta hecha propósito— y tres o cuatro **específicos**. Regla de oro: **cada objetivo específico será una sección del artículo**. Por eso destierro tres verbos: 'conocer', 'entender', 'saber'. No se miden ni se vuelven sección. En su lugar: identificar, caracterizar, comparar, diseñar, evaluar.”
+> “**Slide 4 — ENFOQUE DE HOY.** Los objetivos: uno **general** —la pregunta hecha propósito— y tres o cuatro **específicos**. Regla de oro: **cada objetivo específico será una sección del documento**. Por eso destierro tres verbos: 'conocer', 'entender', 'saber'. No se miden ni se vuelven sección. En su lugar: identificar, caracterizar, comparar, diseñar, evaluar.”
 
 > “Y el título. El jurado lo lee primero. Actor + fenómeno + contexto, sin eslóganes. 'Innovando el futuro' no es un título; 'Detección de phishing con aprendizaje automático en los correos de la CUN' sí lo es.”""",
     fase3_texto="""**Protagonista:** Docente (modela en Google Docs).
@@ -2824,7 +2833,7 @@ Pregunta, objetivos y título deben ser **la misma idea dicha de tres formas**. 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) la pregunta manda y debe dejar ver sus variables; (2) cada objetivo específico será una sección, así que use verbos que se midan; (3) el título es la puerta del jurado: actor + fenómeno + contexto.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos esta pregunta y estos objetivos y montamos la **estructura del artículo**, con un taller de **introducción** sobre la plantilla APA CUN.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S02_PreguntaObjetivos_Apellido` a CDigital. La próxima sesión tomamos esta pregunta y estos objetivos y montamos la **estructura del documento**, con un taller de **introducción** sobre la plantilla APA CUN.”
 
 > “**Slide 7 — Cierre.** Gracias; mismo Meet el próximo martes.”""",
 )
@@ -2833,8 +2842,11 @@ _tg3(
     3,
     fundamento="""> Hoy el estudiante deja de tener "ideas sueltas" y empieza a tener un **documento con secciones**. Léalo completo.
 
-#### 1. Anatomía del artículo (plantilla APA CUN / IMRyD)
-Un artículo de resultados de investigación no es un ensayo libre: tiene **secciones fijas**. El esqueleto IMRyD, adaptado a la plantilla APA CUN, es:
+#### 0. Un esqueleto, todas las modalidades
+Antes de la tabla, dígalo explícitamente: **este esqueleto no es «el del artículo», es el del trabajo de grado**. Sirve igual para un artículo resultado de investigación (la forma por defecto del Syllabus), un proyecto aplicado o de desarrollo, un prototipo o sistema documentado, una sistematización de experiencia o un emprendimiento. Lo que cambia entre modalidades es el **peso** de cada sección y **qué cuenta como «resultado»** —una medición, un sistema funcionando y evaluado, una experiencia sistematizada—, no la estructura, ni la plantilla APA CUN, ni los mínimos (≥ 4.000 palabras, ≥ 50 referencias). Quien traiga un desarrollo escribirá una metodología más densa y unos resultados con evidencia de funcionamiento; quien traiga una investigación clásica hará lo inverso. Ambos entregan **el mismo documento**.
+
+#### 1. Anatomía del documento (plantilla APA CUN / IMRyD)
+El documento de trabajo de grado no es un ensayo libre: tiene **secciones fijas**. El esqueleto IMRyD, adaptado a la plantilla APA CUN, es:
 
 | Sección | Qué va (y qué NO) | Error típico |
 | :--- | :--- | :--- |
@@ -2848,13 +2860,13 @@ Un artículo de resultados de investigación no es un ensayo libre: tiene **secc
 | Referencias | ≥ 50, en APA 7 | Listar sin citar en el cuerpo |
 
 #### 2. La introducción como embudo
-La introducción va de lo ancho a lo estrecho: **gancho/contexto → problema → vacío → pregunta → objetivos → propósito del artículo**. Tres o cuatro párrafos bastan. El lector debe terminar la introducción sabiendo qué se pregunta el autor y qué se propone hacer, sin haber leído todavía la teoría.
+La introducción va de lo ancho a lo estrecho: **gancho/contexto → problema → vacío → pregunta → objetivos → propósito del documento**. Tres o cuatro párrafos bastan. El lector debe terminar la introducción sabiendo qué se pregunta el autor y qué se propone hacer, sin haber leído todavía la teoría.
 
 #### 3. No mezclar secciones
 El error de forma más común: meter método en la introducción, o interpretar en los resultados. Cada cosa en su sección. Regla mental: **introducción = por qué; método = cómo; resultados = qué encontré; discusión = qué significa**.
 
 #### 4. Plantilla APA CUN en Google Docs (nube, sin Word de escritorio)
-Se trabaja sobre la **plantilla APA CUN abierta en Google Docs** (`Plantilla_APA_CUN_Proyecto de grado.docx` subida a Drive y abierta como Documento de Google). Así se garantiza formato correcto sin depender de Word instalado. El flujo de citación (Scholar → ZoteroBib → Docs) está detallado en la guía transversal `Guiones/Guía práctica - Herramientas de escritura y citación.md`; no lo repita en clase, remítalos allí.""",
+Se trabaja sobre la **plantilla APA CUN abierta en Google Docs** (`Plantilla_APA_CUN_Proyecto de grado.docx` subida a Drive y abierta como Documento de Google). Así se garantiza formato correcto sin depender de Word instalado. El flujo de citación (Scholar → ZoteroBib → Docs) está detallado en la guía transversal `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`; no lo repita en clase, remítalos allí.""",
     ejemplo="En la plantilla APA CUN (abierta en Google Docs) escribir en vivo una introducción de 3–4 párrafos con la estructura gancho→contexto→problema→vacío→pregunta→objetivos, y marcar en rojo un mal arranque ('desde la antigüedad el ser humano…') para contrastar.",
     errores=[
         ("“La introducción arranca con 'desde la antigüedad el ser humano…'.”",
@@ -2869,15 +2881,17 @@ Se trabaja sobre la **plantilla APA CUN abierta en Google Docs** (`Plantilla_APA
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 03. Ya tienen pregunta, objetivos y título. Hoy dejan de tener ideas sueltas y pasan a tener un **documento con secciones**. Vamos a montar el esqueleto del artículo y a escribir, en vivo, la **introducción**.”
+> “Sesión 03. Ya tienen pregunta, objetivos y título. Hoy dejan de tener ideas sueltas y pasan a tener un **documento con secciones**. Vamos a montar el esqueleto del documento y a escribir, en vivo, la **introducción**.”
 
-> “**Slide 2 — OBJETIVOS.** Conocer la anatomía del artículo en la plantilla APA CUN, entender qué va en cada sección para no mezclarlas, y salir con la introducción empezada. Abran ya la **plantilla APA CUN en Google Docs**; hoy trabajamos sobre ella.”""",
+> “**Slide 2 — OBJETIVOS.** Conocer la anatomía del documento en la plantilla APA CUN, entender qué va en cada sección para no mezclarlas, y salir con la introducción empezada. Abran ya la **plantilla APA CUN en Google Docs**; hoy trabajamos sobre ella.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El artículo tiene secciones fijas, no es un ensayo libre. Resumen, introducción, marco, metodología, resultados, discusión, conclusiones y referencias. Y una regla mental que les va a salvar la vida: **introducción = por qué; método = cómo; resultados = qué encontré; discusión = qué significa**. Si respetan eso, no mezclan.”
+> “**Slide 3 — CONTENIDO CLAVE.** El documento tiene secciones fijas, no es un ensayo libre. Resumen, introducción, marco, metodología, resultados, discusión, conclusiones y referencias. Y una regla mental que les va a salvar la vida: **introducción = por qué; método = cómo; resultados = qué encontré; discusión = qué significa**. Si respetan eso, no mezclan.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Hoy nos concentramos en la **introducción**, que funciona como un **embudo**: arranca ancho —contexto— y se va cerrando por el problema, el vacío, la pregunta y los objetivos, hasta el propósito del artículo. Tres o cuatro párrafos. Lo que **no** se hace: empezar con 'desde la antigüedad el ser humano se comunica'. Se arranca en el problema real.”
+> “Y ojo con una duda que oigo cada semestre: este esqueleto **no es «el del artículo»**, es el del trabajo de grado. El mismo sirve si lo suyo es un artículo, un proyecto aplicado, un prototipo documentado o una sistematización. Lo que cambia es **cuánto pesa cada sección** y **qué cuenta como resultado** en su caso: si usted desarrolló un sistema, su metodología será más densa y sus resultados mostrarán el sistema funcionando y evaluado. Las secciones y los mínimos son los mismos para todos.”
+
+> “**Slide 4 — ENFOQUE DE HOY.** Hoy nos concentramos en la **introducción**, que funciona como un **embudo**: arranca ancho —contexto— y se va cerrando por el problema, el vacío, la pregunta y los objetivos, hasta el propósito del documento. Tres o cuatro párrafos. Lo que **no** se hace: empezar con 'desde la antigüedad el ser humano se comunica'. Se arranca en el problema real.”
 
 > “Y una nota de forma: trabajamos sobre la **plantilla APA CUN en Google Docs**. Nada de dar formato a mano ni de depender de Word instalado; el formato ya viene resuelto.”""",
     fase3_texto="""**Protagonista:** Docente (modela en la plantilla APA CUN, en Google Docs).
@@ -2885,7 +2899,7 @@ Se trabaja sobre la **plantilla APA CUN abierta en Google Docs** (`Plantilla_APA
 **En pantalla (Google Docs + plantilla APA CUN):** escriba una introducción de 3–4 párrafos en vivo.
 
 **GUION LITERAL:**
-> “Modelo la introducción como embudo. Párrafo 1, contexto: 'El despliegue continuo de software depende de pruebas confiables…'. Párrafo 2, problema y vacío: 'Sin embargo, en el equipo X las pruebas son manuales y no se ha medido su impacto en el tiempo de despliegue…'. Párrafo 3, pregunta y objetivos: 'Por ello este artículo se pregunta en qué medida… y se propone evaluar…'.”
+> “Modelo la introducción como embudo. Párrafo 1, contexto: 'El despliegue continuo de software depende de pruebas confiables…'. Párrafo 2, problema y vacío: 'Sin embargo, en el equipo X las pruebas son manuales y no se ha medido su impacto en el tiempo de despliegue…'. Párrafo 3, pregunta y objetivos: 'Por ello este trabajo se pregunta en qué medida… y se propone evaluar…'.”
 
 > “Miren lo que NO hice —lo dejo en rojo un segundo—: no empecé con 'desde la antigüedad'. Arranqué en el problema. Y fíjense dónde citaré: el flujo Scholar → ZoteroBib → pegar en Docs está en la guía transversal; ahí lo tienen paso a paso, no lo repito hoy.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
@@ -2905,7 +2919,7 @@ Se trabaja sobre la **plantilla APA CUN abierta en Google Docs** (`Plantilla_APA
     fase5_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el artículo tiene secciones fijas y no se mezclan —por qué, cómo, qué encontré, qué significa—; (2) la introducción es un embudo que termina en la pregunta; (3) se escribe sobre la plantilla APA CUN en Docs.”
+> “Cierre. Tres ideas: (1) el documento tiene secciones fijas y no se mezclan —por qué, cómo, qué encontré, qué significa—; (2) la introducción es un embudo que termina en la pregunta; (3) se escribe sobre la plantilla APA CUN en Docs.”
 
 > “**Slide 6 — PARA CONTINUAR.** Suban `S03_Introduccion_Apellido` a CDigital. La próxima sesión abrimos la **Fase I de referentes**: búsqueda sistemática y fichas de lectura para empezar a sumar hacia las 50 referencias.”
 
@@ -2939,7 +2953,7 @@ Una fuente que no se puede relacionar con la pregunta **no entra**.
 Buscar bien ahorra semanas. Estrategia: empezar amplio en **Google Académico** (con comillas para frase exacta, AND/OR, filtro por año —últimos 5 en temas tecnológicos—), afinar en **SciELO/Redalyc**, y descargar el texto completo desde la **biblioteca CUN** con login institucional. Definir **criterios de inclusión/exclusión** (idioma, años, pertinencia) para no ahogarse. El enlace "citado por" de Scholar es oro: lleva de un buen paper a otros mejores.
 
 #### 4. Mapa de diálogo entre autores (no una lista)
-Los referentes no se apilan; se **ponen a conversar**. Un mapa de diálogo agrupa autores por lo que dicen: quiénes coinciden, quiénes discrepan, quién extiende a quién. Ese mapa es el borrador de la discusión que escribirán en la Sesión 09. El flujo Scholar → ZoteroBib → Docs está en la guía transversal `Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
+Los referentes no se apilan; se **ponen a conversar**. Un mapa de diálogo agrupa autores por lo que dicen: quiénes coinciden, quiénes discrepan, quién extiende a quién. Ese mapa es el borrador de la discusión que escribirán en la Sesión 09. El flujo Scholar → ZoteroBib → Docs está en la guía transversal `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
     ejemplo="En pantalla, hacer una búsqueda en Google Académico con comillas + AND + filtro de año, abrir el enlace 'citado por' de un resultado, y llenar UNA ficha de lectura completa (APA + idea + cita + relación con la pregunta) para mostrar el estándar.",
     errores=[
         ("“Cito un paper por el título, sin leerlo.”",
@@ -3200,7 +3214,7 @@ Pegar diez tablas sin leer no es análisis: es un volcado. Cada tabla o figura d
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 07. Ya tienen datos —o los están recogiendo—. Hoy aprendemos lo que separa un buen artículo de uno mediocre: convertir **datos en hallazgos**. Porque el dato en bruto no dice nada; el hallazgo sí.”
+> “Sesión 07. Ya tienen datos —o los están recogiendo—. Hoy aprendemos lo que separa un buen documento de uno mediocre: convertir **datos en hallazgos**. Porque el dato en bruto no dice nada; el hallazgo sí.”
 
 > “**Slide 2 — OBJETIVOS.** Distinguir dato, hallazgo y resultado; analizar según el enfoque; y armar una **tabla de hallazgos** que conecte cada dato con un objetivo. Tengan a la mano lo que hayan recogido con su instrumento.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -3323,7 +3337,7 @@ El marco no termina en sí mismo: prepara la **discusión**. Cada autor que se c
 
 _tg3(
     9,
-    fundamento="""> El corazón del artículo: aquí se demuestra que hay **nuevo conocimiento**. Léalo completo.
+    fundamento="""> El corazón del documento: aquí se demuestra que hay **nuevo conocimiento**. Léalo completo.
 
 #### 1. Resultados ≠ discusión (la separación que todos violan)
 - **Resultados:** qué se encontró, en tono **neutral**, sin interpretar. "El tiempo de despliegue bajó de 42 a 18 minutos".
@@ -3347,7 +3361,7 @@ Cada párrafo de discusión sigue el mismo latido:
 La discusión debe **cerrar cada objetivo específico**. Si un objetivo no aparece respondido, el jurado lo notará. Buena práctica: subtítulos o párrafos ordenados por objetivo.
 
 #### 4. Honestidad científica
-Reportar también **lo que no salió** o lo que contradice la expectativa. Ocultarlo debilita el artículo y es un problema de integridad. Un buen investigador discute sus **limitaciones**: eso da credibilidad, no la quita. El flujo de citas está en la guía transversal `Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
+Reportar también **lo que no salió** o lo que contradice la expectativa. Ocultarlo debilita el documento y es un problema de integridad. Un buen investigador discute sus **limitaciones**: eso da credibilidad, no la quita. El flujo de citas está en la guía transversal `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
     ejemplo="En pantalla, escribir un párrafo de discusión con el latido completo: retomar hallazgo → confrontar con autor (confirma/contradice) → implicación → límite; contrastarlo con un párrafo que solo repite el resultado.",
     errores=[
         ("“En resultados ya explico qué significa cada dato.”",
@@ -3362,7 +3376,7 @@ Reportar también **lo que no salió** o lo que contradice la expectativa. Ocult
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 09. Llegamos al corazón del artículo: **resultados y discusión**. Aquí es donde se demuestra que su trabajo produjo algo nuevo. Y aquí también está el error de forma que más se penaliza: mezclar las dos cosas.”
+> “Sesión 09. Llegamos al corazón del documento: **resultados y discusión**. Aquí es donde se demuestra que su trabajo produjo algo nuevo. Y aquí también está el error de forma que más se penaliza: mezclar las dos cosas.”
 
 > “**Slide 2 — OBJETIVOS.** Separar resultados de discusión, escribir una discusión que **dialogue con los referentes**, responder cada objetivo y hacerlo con honestidad científica. Tengan abierta su tabla de hallazgos de la Sesión 07 y su marco de la Sesión 08.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -3370,7 +3384,7 @@ Reportar también **lo que no salió** o lo que contradice la expectativa. Ocult
 **GUION LITERAL:**
 > “**Slide 3 — CONTENIDO CLAVE.** Dos secciones, dos tareas distintas. **Resultados**: qué encontré, neutral, sin interpretar —'el tiempo bajó de 42 a 18 minutos'—. **Discusión**: qué significa, dialogando con los autores —'esto confirma lo que reporta X en 2022'—. Interpretar en resultados o repetir resultados en discusión es el error más castigado.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Cada párrafo de discusión tiene el mismo latido: retomo un hallazgo, lo confronto con un autor —¿lo confirma, lo contradice, lo extiende?—, digo la implicación y reconozco un límite. Y algo serio: reporten también **lo que no salió**. Ocultar un dato que contradice su hipótesis debilita el artículo; discutir sus limitaciones, al contrario, les da credibilidad.”
+> “**Slide 4 — ENFOQUE DE HOY.** Cada párrafo de discusión tiene el mismo latido: retomo un hallazgo, lo confronto con un autor —¿lo confirma, lo contradice, lo extiende?—, digo la implicación y reconozco un límite. Y algo serio: reporten también **lo que no salió**. Ocultar un dato que contradice su hipótesis debilita el documento; discutir sus limitaciones, al contrario, les da credibilidad.”
 
 > “Y no olviden: la discusión debe **responder cada objetivo específico**. Si uno queda huérfano, el jurado lo va a ver.”""",
     fase3_texto="""**Protagonista:** Docente (modela un párrafo de discusión).
@@ -3400,20 +3414,20 @@ Reportar también **lo que no salió** o lo que contradice la expectativa. Ocult
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) resultados neutral, discusión interpreta; (2) la discusión dialoga con autores, no repite; (3) se responde cada objetivo y se es honesto con lo que no salió.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S09_ResultadosDiscusion_Apellido` a CDigital. Con esto el cuerpo del artículo está casi completo. La próxima sesión le ponemos la cabeza y la cola: **resumen, palabras clave UNESCO, conclusiones y referencias**.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S09_ResultadosDiscusion_Apellido` a CDigital. Con esto el cuerpo del documento está casi completo. La próxima sesión le ponemos la cabeza y la cola: **resumen, palabras clave UNESCO, conclusiones y referencias**.”
 
 > “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
 )
 
 _tg3(
     10,
-    fundamento="""> Sesión de culminación formal del artículo: lo que se escribe **al final**. Léalo completo.
+    fundamento="""> Sesión de culminación formal del documento: lo que se escribe **al final**. Léalo completo.
 
 #### 1. El resumen se escribe al final (y por algo)
-El **resumen (abstract)** condensa todo el artículo en ~200–250 palabras, y por eso se redacta al final: solo ahora se sabe qué resultado resumir. Estructura: **contexto → objetivo → método → resultado principal → conclusión**. Sin citas, sin abreviaturas sin definir, sin "en este artículo se hablará de…". Es un espejo del trabajo completo.
+El **resumen (abstract)** condensa todo el documento en ~200–250 palabras, y por eso se redacta al final: solo ahora se sabe qué resultado resumir. Estructura: **contexto → objetivo → método → resultado principal → conclusión**. Sin citas, sin abreviaturas sin definir, sin "en este documento se hablará de…". Es un espejo del trabajo completo.
 
 #### 2. Palabras clave del tesauro UNESCO
-Las **palabras clave** no se inventan: se eligen de un **vocabulario controlado**, el tesauro de la UNESCO. ¿Por qué? Para que el artículo sea **encontrable**: si todos usamos los mismos términos normalizados, las búsquedas funcionan. Se eligen 3–5 términos que un investigador usaría para encontrar este trabajo. Contrastarlos con el uso real en Scholar ayuda a validarlos.
+Las **palabras clave** no se inventan: se eligen de un **vocabulario controlado**, el tesauro de la UNESCO. ¿Por qué? Para que el documento sea **encontrable**: si todos usamos los mismos términos normalizados, las búsquedas funcionan. Se eligen 3–5 términos que un investigador usaría para encontrar este trabajo. Contrastarlos con el uso real en Scholar ayuda a validarlos.
 
 #### 3. Conclusiones ≠ resumen de resultados
 Las conclusiones **responden la pregunta de investigación**, no repiten los resultados. Incluyen: respuesta a la pregunta, cumplimiento de objetivos, **limitaciones** y **trabajo futuro**. No se introducen ideas nuevas ni datos que no aparecieron antes.
@@ -3426,13 +3440,13 @@ Las conclusiones **responden la pregunta de investigación**, no repiten los res
 | Referencias | ≥ 50, APA 7, orden alfabético, sangría francesa | Huérfanas (citadas o listadas de más) |
 
 #### 4. Referencias sin huérfanas (ZoteroBib)
-La lista de referencias debe cumplir: **≥ 50**, APA 7, orden alfabético y sin **huérfanas** (toda cita del cuerpo está en la lista, y toda entrada de la lista se cita). ZoteroBib (zbib.org) genera y ordena todo sin instalar nada; el flujo está en `Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
+La lista de referencias debe cumplir: **≥ 50**, APA 7, orden alfabético y sin **huérfanas** (toda cita del cuerpo está en la lista, y toda entrada de la lista se cita). ZoteroBib (zbib.org) genera y ordena todo sin instalar nada; el flujo está en `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`.""",
     ejemplo="En pantalla, escribir un resumen de ~200 palabras con la estructura contexto→objetivo→método→resultado→conclusión; luego elegir 4 palabras clave contrastándolas con el tesauro UNESCO y con el uso en Scholar.",
     errores=[
         ("“Escribo el resumen ahora para ir adelantando.”",
          "El resumen se escribe al final: solo entonces sabe qué resultado resumir."),
         ("“Pongo como palabras clave las que suenan bien.”",
-         "Elíjalas del tesauro UNESCO; son vocabulario controlado para que el artículo sea encontrable."),
+         "Elíjalas del tesauro UNESCO; son vocabulario controlado para que el documento sea encontrable."),
         ("“En conclusiones repito los resultados.”",
          "Las conclusiones responden la pregunta e incluyen límites y trabajo futuro; no repiten."),
         ("“Tengo citas en el cuerpo que no están en la lista.”",
@@ -3441,15 +3455,15 @@ La lista de referencias debe cumplir: **≥ 50**, APA 7, orden alfabético y sin
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 10. El cuerpo del artículo ya está; hoy le ponemos la **cabeza y la cola**: el resumen, las palabras clave, las conclusiones y las referencias. Todo esto se escribe **al final**, y hay una razón para cada cosa.”
+> “Sesión 10. El cuerpo del documento ya está; hoy le ponemos la **cabeza y la cola**: el resumen, las palabras clave, las conclusiones y las referencias. Todo esto se escribe **al final**, y hay una razón para cada cosa.”
 
-> “**Slide 2 — OBJETIVOS.** Redactar un resumen que sea espejo del artículo, elegir palabras clave del **tesauro UNESCO**, escribir conclusiones que respondan la pregunta y cuadrar las referencias en APA 7 sin huérfanas. Tengan el artículo completo a la vista.”""",
+> “**Slide 2 — OBJETIVOS.** Redactar un resumen que sea espejo del documento, elegir palabras clave del **tesauro UNESCO**, escribir conclusiones que respondan la pregunta y cuadrar las referencias en APA 7 sin huérfanas. Tengan el documento completo a la vista.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El **resumen** se escribe de último porque solo ahora saben qué resultado resumir. Son ~200–250 palabras con cinco piezas: contexto, objetivo, método, resultado principal y conclusión. Sin citas, sin abreviaturas raras, sin 'en este artículo se hablará de…'. Es un espejo del trabajo.”
+> “**Slide 3 — CONTENIDO CLAVE.** El **resumen** se escribe de último porque solo ahora saben qué resultado resumir. Son ~200–250 palabras con cinco piezas: contexto, objetivo, método, resultado principal y conclusión. Sin citas, sin abreviaturas raras, sin 'en este documento se hablará de…'. Es un espejo del trabajo.”
 
-> “Las **palabras clave** no se inventan: se sacan del **tesauro UNESCO**, un vocabulario controlado. ¿Por qué? Para que el artículo sea **encontrable**. Elijan 3–5 términos que otro investigador usaría para dar con su trabajo.”
+> “Las **palabras clave** no se inventan: se sacan del **tesauro UNESCO**, un vocabulario controlado. ¿Por qué? Para que el documento sea **encontrable**. Elijan 3–5 términos que otro investigador usaría para dar con su trabajo.”
 
 > “**Slide 4 — ENFOQUE DE HOY.** Las **conclusiones** responden la pregunta —no repiten resultados— e incluyen límites y trabajo futuro. Y las **referencias**: mínimo 50, APA 7, orden alfabético y **sin huérfanas**: toda cita del cuerpo está en la lista, y toda entrada de la lista se cita. ZoteroBib les cuadra eso sin instalar nada.”""",
     fase3_texto="""**Protagonista:** Docente (modela resumen + keywords).
@@ -3459,7 +3473,7 @@ La lista de referencias debe cumplir: **≥ 50**, APA 7, orden alfabético y sin
 **GUION LITERAL:**
 > “Modelo el resumen. Escribo pieza por pieza: contexto —'el despliegue continuo depende de pruebas confiables'—; objetivo —'este estudio evaluó el efecto de automatizarlas'—; método —'cuasi-experimento en el equipo X'—; resultado —'el tiempo bajó a la mitad'—; conclusión —'la automatización mejora el despliegue en equipos pequeños'—. Cuento palabras: 210. Perfecto.”
 
-> “Ahora las keywords. Pienso 'automatización de pruebas', 'integración continua', 'tiempo de despliegue'. Las contrasto en Scholar para ver si así las nombran los autores, y las ajusto al término normalizado del tesauro UNESCO. Cuatro palabras clave, y mi artículo se vuelve encontrable.”""",
+> “Ahora las keywords. Pienso 'automatización de pruebas', 'integración continua', 'tiempo de despliegue'. Las contrasto en Scholar para ver si así las nombran los autores, y las ajusto al término normalizado del tesauro UNESCO. Cuatro palabras clave, y mi documento se vuelve encontrable.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
@@ -3477,9 +3491,9 @@ La lista de referencias debe cumplir: **≥ 50**, APA 7, orden alfabético y sin
     fase5_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el resumen es un espejo del artículo y se escribe al final; (2) las palabras clave vienen del tesauro UNESCO; (3) las conclusiones responden la pregunta y las referencias van sin huérfanas, camino a las 50.”
+> “Cierre. Tres ideas: (1) el resumen es un espejo del documento y se escribe al final; (2) las palabras clave vienen del tesauro UNESCO; (3) las conclusiones responden la pregunta y las referencias van sin huérfanas, camino a las 50.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S10_CierreArticulo_Apellido` a CDigital. El artículo debería estar completo. La próxima sesión preparamos la divulgación: **póster, evidencias y verificación antiplagio**.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S10_CierreArticulo_Apellido` a CDigital. El documento debería estar completo. La próxima sesión preparamos la divulgación: **póster, evidencias y verificación antiplagio**.”
 
 > “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
 )
@@ -3488,8 +3502,8 @@ _tg3(
     11,
     fundamento="""> Sesión de alistamiento para la sustentación + integridad académica. Léalo completo; el antiplagio se explica bien o genera pánico injustificado.
 
-#### 1. El póster NO es el artículo en miniatura
-Un póster es una **pieza de divulgación visual**: se lee de lejos, en un minuto, y cuenta lo esencial. Bloques mínimos: **título, problema, método, hallazgo principal, conclusión** y una imagen/gráfico. Pegar el artículo con letra 8 es el error clásico. Regla: si no se lee a un metro de distancia, sobra texto.
+#### 1. El póster NO es el documento en miniatura
+Un póster es una **pieza de divulgación visual**: se lee de lejos, en un minuto, y cuenta lo esencial. Bloques mínimos: **título, problema, método, hallazgo principal, conclusión** y una imagen/gráfico. Pegar el documento con letra 8 es el error clásico. Regla: si no se lee a un metro de distancia, sobra texto.
 
 | Bloque del póster | Contenido | Espacio |
 | :--- | :--- | :--- |
@@ -3511,8 +3525,8 @@ El software de similitud mide **coincidencia textual** con otras fuentes; **no**
 Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear no es cambiar tres palabras; es **reexpresar la idea** y aun así citar la fuente. Esto cierra el hilo abierto en co-creación (Sesión 06).""",
     ejemplo="En Canva free o Google Slides, montar el esqueleto de un póster (título, problema, método, hallazgo con gráfico, conclusión) mostrando jerarquía visual; luego tomar un párrafo 'copiado' y reescribirlo parafraseado + citado para mostrar cómo baja la similitud legítimamente.",
     errores=[
-        ("“Pego el artículo completo en el póster.”",
-         "El póster es divulgación visual, no el artículo en miniatura. Si no se lee a un metro, sobra texto."),
+        ("“Pego el documento completo en el póster.”",
+         "El póster es divulgación visual, no el documento en miniatura. Si no se lee a un metro, sobra texto."),
         ("“Tengo 40% de similitud, hago trucos para bajarlo.”",
          "No haga trucos: reescriba con sus palabras y cite bien. El % baja de forma legítima."),
         ("“Parafrasear es cambiar tres palabras.”",
@@ -3525,11 +3539,11 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
 **GUION LITERAL:**
 > “Sesión 11. Entramos en la recta de la sustentación. Hoy preparamos tres cosas: el **póster**, las **evidencias** para anexos y la **verificación antiplagio**. Y quiero desmontar de una el pánico: el antiplagio no muerde si citan bien.”
 
-> “**Slide 2 — OBJETIVOS.** Diseñar un póster que sea divulgación visual —no el artículo pegado—, organizar los anexos de la obra-creación, y entender qué mide de verdad el software de similitud. Tengan su artículo y sus evidencias del prototipo a la mano.”""",
+> “**Slide 2 — OBJETIVOS.** Diseñar un póster que sea divulgación visual —no el documento pegado—, organizar los anexos de la obra-creación, y entender qué mide de verdad el software de similitud. Tengan su documento y sus evidencias del prototipo a la mano.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El póster **no** es el artículo en miniatura. Es una pieza que se lee de lejos, en un minuto: título, problema, método, hallazgo principal, conclusión y una imagen. El error clásico es pegar el artículo con letra 8. Regla: si no se lee a un metro, sobra texto. Se hace en **Canva free** o en Google Slides, gratis y en la nube.”
+> “**Slide 3 — CONTENIDO CLAVE.** El póster **no** es el documento en miniatura. Es una pieza que se lee de lejos, en un minuto: título, problema, método, hallazgo principal, conclusión y una imagen. El error clásico es pegar el documento con letra 8. Regla: si no se lee a un metro, sobra texto. Se hace en **Canva free** o en Google Slides, gratis y en la nube.”
 
 > “**Slide 4 — ENFOQUE DE HOY.** Ahora el antiplagio, sin mitos. El software mide **coincidencia textual**, no plagio por sí mismo: una cita bien hecha también coincide. Un porcentaje alto casi siempre viene de **parafraseo malo** o de no citar. ¿La forma de bajarlo? No trucos: **reescribir con sus palabras y citar bien**. La verificación se hace por la **ruta institucional en CDigital**; no busquen páginas de terceros. Y esto cierra lo que dijimos en co-creación: todo lo prestado se cita.”""",
     fase3_texto="""**Protagonista:** Docente (modela póster + parafraseo).
@@ -3543,7 +3557,7 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su artículo un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
+> “**Slide 5 — TALLER.** ~20 minutos. En `S11_PosterEvidencias_Apellido`: (1) monten el **póster de una página** (Canva free o Slides) con los bloques problema-método-hallazgo-conclusión; (2) armen la **lista de anexos** rotulados y referenciados desde el cuerpo; (3) identifiquen en su documento un párrafo con riesgo de similitud y **parafraséenlo + cítenlo**. Dejen por escrito **cómo opera la revisión de similitud en el aula** según lo que confirmó el Docente: cuándo ocurre y si el curso pide adjuntar algún informe.”
 
 > “Criterio de éxito: el póster se entiende a un metro, los anexos están referenciados, y el párrafo reescrito conserva la idea con voz propia y su cita.”
 
@@ -3557,7 +3571,7 @@ Todo lo que no es propio se cita: texto, ideas, imágenes, código. Parafrasear 
     fase5_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el póster es divulgación visual, no el artículo pegado; (2) los anexos se seleccionan, rotulan y referencian; (3) el antiplagio mide coincidencia —se resuelve parafraseando bien y citando, por la ruta institucional—.”
+> “Cierre. Tres ideas: (1) el póster es divulgación visual, no el documento pegado; (2) los anexos se seleccionan, rotulan y referencian; (3) el antiplagio mide coincidencia —se resuelve parafraseando bien y citando, por la ruta institucional—.”
 
 > “**Slide 6 — PARA CONTINUAR.** Suban `S11_PosterEvidencias_Apellido` a CDigital. **Si el curso exige verificación de similitud, yo les indico la ruta institucional**; no busquen servicios externos. La próxima sesión es grande: **ensayo de la sustentación ante jurados**.”
 
@@ -3573,7 +3587,7 @@ El Syllabus 94532 describía una evaluación de «corte único» con dos compone
 
 > **Antes de dictar esta sesión:** confirme con la Dirección del Programa **en qué ítem** del aula queda la nota de la sustentación y dígalo así de claro en clase. Lo que **no** se puede hacer es anunciar «la sustentación vale el 50%»: ese porcentaje no existe en el libro de calificaciones de ninguno de los tres grupos.
 
-El jurado evalúa **dominio del tema, claridad, coherencia del artículo y capacidad de defensa** (no la belleza de las diapositivas). Hoy es el **ensayo**; la sustentación real es ante los jurados asignados por la Dirección del Programa.
+El jurado evalúa **dominio del tema, claridad, coherencia del documento y capacidad de defensa** (no la belleza de las diapositivas). Hoy es el **ensayo**; la sustentación real es ante los jurados asignados por la Dirección del Programa.
 
 #### 2. Estructura del guion oral (10–12 min)
 El tiempo es nota: pasarse o quedarse corto resta. Reparto sugerido:
@@ -3607,7 +3621,7 @@ Las diapositivas se **apoyan**, no se leen. Ante una pregunta que no sabe: hones
          "No invente: reconozca con honestidad y reconduzca a lo que sí domina o a trabajo futuro."),
         ("“El tiempo no importa, si me extiendo es porque sé.”",
          "El tiempo es nota. Pasarse resta; ensaye con cronómetro para caber en 10–12 min."),
-        ("“Meto todo el artículo en las diapositivas.”",
+        ("“Meto todo el documento en las diapositivas.”",
          "Diapositivas con párrafos = lectura. Use frases y visuales; el contenido lo pone su voz."),
     ],
     fase1_texto=f"""**Protagonista:** Docente.
@@ -3615,11 +3629,11 @@ Las diapositivas se **apoyan**, no se leen. Ante una pregunta que no sabe: hones
 **GUION LITERAL:**
 > “Sesión 12. Hoy ensayamos la **sustentación ante jurados**. Y quiero ser exacto con lo que les digo de la nota, porque circulan cifras viejas: en el aula, el **tercer corte** vale {peso_corte_txt('tg3', 3)} y está compuesto por **{items_corte_txt('tg3', 3)}**. La sustentación es el hito con el que el programa valida su trabajo, y lo que ustedes defiendan ahí es lo mismo que quedó escrito en la **ACA Final**. No hay un ítem llamado ‘examen’ que valga la mitad del curso: eso era del Syllabus viejo.”
 
-> “**Slide 2 — OBJETIVOS.** Armar un guion oral de 10–12 minutos, **anticipar las preguntas** del jurado y ensayar con cronómetro. Esto es un simulacro: la defensa real es ante los jurados que asigna la Dirección del Programa. Tengan su artículo y su póster listos.”""",
+> “**Slide 2 — OBJETIVOS.** Armar un guion oral de 10–12 minutos, **anticipar las preguntas** del jurado y ensayar con cronómetro. Esto es un simulacro: la defensa real es ante los jurados que asigna la Dirección del Programa. Tengan su documento y su póster listos.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** El jurado evalúa cuatro cosas: **dominio del tema, claridad, coherencia del artículo y capacidad de defensa**. No evalúa lo bonitas que sean las diapositivas. Así que las diapositivas se **apoyan**, no se leen. Si leen, pierden dominio ante los ojos del jurado.”
+> “**Slide 3 — CONTENIDO CLAVE.** El jurado evalúa cuatro cosas: **dominio del tema, claridad, coherencia del documento y capacidad de defensa**. No evalúa lo bonitas que sean las diapositivas. Así que las diapositivas se **apoyan**, no se leen. Si leen, pierden dominio ante los ojos del jurado.”
 
 > “El guion dura 10–12 minutos y el tiempo es nota. Reparto: dos minutos de problema y pregunta, uno de objetivos, dos o tres de método, tres de resultados, dos o tres de discusión y conclusión, y uno de aporte. Ensáyenlo con cronómetro: pasarse resta, quedarse corto también.”
 
@@ -3658,33 +3672,33 @@ Las diapositivas se **apoyan**, no se leen. Ante una pregunta que no sabe: hones
 
 _tg3(
     13,
-    fundamento="""> Sesión de empaquetado final: el artículo va a un repositorio institucional para quedar público y permanente. Léalo completo.
+    fundamento="""> Sesión de empaquetado final: el documento va a un repositorio institucional para quedar público y permanente. Léalo completo.
 
 #### 1. Qué es un repositorio institucional (y por qué importa)
-Un **repositorio institucional** es el archivo digital donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede allí significa: permanencia, acceso público (según licencia) y un identificador estable para que otros lo citen. No es "subir un archivo más": es **publicar** su trabajo de grado.
+Un **repositorio institucional** es el archivo digital donde la universidad **preserva y da visibilidad** a la producción académica. Que su documento quede allí significa: permanencia, acceso público (según licencia) y un identificador estable para que otros lo citen. No es "subir un archivo más": es **publicar** su trabajo de grado.
 
 #### 2. El paquete de entregables (checklist)
 El repositorio exige un paquete completo y bien formado, según el **instructivo institucional del semestre** (no se inventan URLs ni formularios; se usa la ruta oficial en CDigital):
 
 | Entregable | Detalle |
 | :--- | :--- |
-| Artículo final | PDF, plantilla APA CUN, ≥ 4.000 palabras, ≥ 50 refs |
+| Documento final | PDF, plantilla APA CUN, ≥ 4.000 palabras, ≥ 50 refs |
 | Metadatos | Título, autor(es), resumen, palabras clave UNESCO |
 | Autorización de publicación | Formato institucional firmado |
 | Anexos / evidencias | Rotulados, referenciados desde el cuerpo |
 | Constancia antiplagio | Según ruta institucional CDigital |
 
 #### 3. Metadatos y licencia
-Los **metadatos** son los datos que describen el artículo para que sea buscable (título, autor, resumen, keywords). La **licencia** define qué pueden hacer otros con el trabajo. Cargar mal los metadatos hace que un buen artículo sea invisible.
+Los **metadatos** son los datos que describen el documento para que sea buscable (título, autor, resumen, keywords). La **licencia** define qué pueden hacer otros con el trabajo. Cargar mal los metadatos hace que un buen documento sea invisible.
 
 #### 4. Forma antes de cargar
 Antes de subir, revisión de forma: portada correcta, numeración, tablas rotuladas, referencias en APA 7 sin huérfanas, nombre de archivo consistente. Se carga la **versión final**, no un borrador. Un descuido de forma en el repositorio queda público.""",
-    ejemplo="En pantalla, recorrer un checklist de entregables del repositorio marcando qué está listo y qué falta; mostrar cómo unos metadatos bien puestos (título + resumen + keywords UNESCO) hacen buscable el artículo.",
+    ejemplo="En pantalla, recorrer un checklist de entregables del repositorio marcando qué está listo y qué falta; mostrar cómo unos metadatos bien puestos (título + resumen + keywords UNESCO) hacen buscable el documento.",
     errores=[
         ("“Subo el borrador y luego lo cambio.”",
          "Se carga la versión final; lo que queda en el repositorio es público y permanente."),
         ("“Los metadatos son opcionales.”",
-         "Sin buenos metadatos el artículo es invisible; título, resumen y keywords UNESCO son obligatorios."),
+         "Sin buenos metadatos el documento es invisible; título, resumen y keywords UNESCO son obligatorios."),
         ("“Invento la URL del repositorio para el guion.”",
          "No se inventan URLs; use la ruta y el instructivo institucional del semestre en CDigital."),
         ("“El nombre del archivo da igual.”",
@@ -3693,25 +3707,25 @@ Antes de subir, revisión de forma: portada correcta, numeración, tablas rotula
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 13. Ya defendieron (o están por hacerlo). Hoy preparamos el **paquete para el repositorio institucional**. Ojo con esto: subir el artículo al repositorio es **publicarlo**: queda público y permanente. Por eso hoy trabajamos con lupa.”
+> “Sesión 13. Ya defendieron (o están por hacerlo). Hoy preparamos el **paquete para el repositorio institucional**. Ojo con esto: subir el documento al repositorio es **publicarlo**: queda público y permanente. Por eso hoy trabajamos con lupa.”
 
-> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su artículo final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”""",
+> “**Slide 2 — OBJETIVOS.** Entender qué es el repositorio y por qué importa, armar el **checklist de entregables** completo, y dejar la versión final revisada en forma. Tengan a la mano su documento final, sus anexos y —si el curso lo exige— el informe de similitud que haya indicado el Docente.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
 
 **GUION LITERAL:**
-> “**Slide 3 — CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su artículo quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
+> “**Slide 3 — CONTENIDO CLAVE.** Un repositorio institucional es donde la universidad **preserva y da visibilidad** a la producción académica. Que su documento quede ahí significa permanencia, acceso público y un identificador estable para que otros lo citen. No es 'subir un archivo más': es **publicar** su trabajo de grado.”
 
-> “El paquete tiene piezas fijas: el **artículo final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y, **si el curso lo exige**, el **informe de similitud**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
+> “El paquete tiene piezas fijas: el **documento final** en PDF con la plantilla APA CUN, los **metadatos** —título, autor, resumen, palabras clave UNESCO—, la **autorización de publicación** firmada, los **anexos** rotulados y, **si el curso lo exige**, el **informe de similitud**. Todo según el **instructivo institucional del semestre**; no inventamos URLs ni formularios, usamos la ruta oficial de CDigital.”
 
-> “**Slide 4 — ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el artículo— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”""",
+> “**Slide 4 — ENFOQUE DE HOY.** Dos detalles que hunden a buenos trabajos: **metadatos mal puestos** —que vuelven invisible el documento— y **descuidos de forma** que quedan públicos. Se carga la **versión final**, no un borrador.”""",
     fase3_texto="""**Protagonista:** Docente (modela el checklist + metadatos).
 
 **En pantalla (Google Docs / ruta CDigital del semestre):** un checklist de repositorio y un formulario de metadatos de ejemplo.
 
 **GUION LITERAL:**
-> “Modelo el checklist. Voy marcando: artículo final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. En dos minutos sé exactamente qué me falta para poder cargar.”
+> “Modelo el checklist. Voy marcando: documento final en PDF —listo—; ≥ 4.000 palabras y ≥ 50 referencias —verifico el conteo—; autorización firmada —falta—; anexos rotulados —a medias—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. En dos minutos sé exactamente qué me falta para poder cargar.”
 
-> “Ahora los metadatos. Pongo el título tal cual, el resumen que ya escribimos y las palabras clave UNESCO. Les muestro por qué importa: si el resumen y las keywords están bien, el artículo aparece en las búsquedas; si están vacíos o mal, el trabajo queda enterrado aunque sea excelente.”""",
+> “Ahora los metadatos. Pongo el título tal cual, el resumen que ya escribimos y las palabras clave UNESCO. Les muestro por qué importa: si el resumen y las keywords están bien, el documento aparece en las búsquedas; si están vacíos o mal, el trabajo queda enterrado aunque sea excelente.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
@@ -3723,13 +3737,13 @@ Antes de subir, revisión de forma: portada correcta, numeración, tablas rotula
 | Si el estudiante… | Usted responde… |
 | :--- | :--- |
 | Quiere subir un borrador | “Cargue la versión final; lo del repositorio es público.” |
-| Deja los metadatos vacíos | “Sin metadatos el artículo es invisible; complételos.” |
+| Deja los metadatos vacíos | “Sin metadatos el documento es invisible; complételos.” |
 | Pregunta la URL del repositorio | “Use la ruta del instructivo del semestre en CDigital; no inventamos enlaces.” |
 | Nombre de archivo caótico | “Ajústelo a la norma institucional; facilita la recepción.” |""",
     fase5_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Cierre. Tres ideas: (1) el repositorio publica su trabajo —permanente y público—; (2) el paquete tiene piezas fijas: artículo, metadatos, autorización, anexos, antiplagio; (3) se carga la versión final, revisada en forma, por la ruta institucional.”
+> “Cierre. Tres ideas: (1) el repositorio publica su trabajo —permanente y público—; (2) el paquete tiene piezas fijas: documento, metadatos, autorización, anexos, antiplagio; (3) se carga la versión final, revisada en forma, por la ruta institucional.”
 
 > “**Slide 6 — PARA CONTINUAR.** Suban `S13_PaqueteRepositorio_Apellido` a CDigital y completen lo que quedó en 'falta'. La próxima sesión hacemos los **ajustes finales y el seguimiento post-sustentación** con las observaciones del jurado.”
 
@@ -3756,7 +3770,7 @@ No todos los ajustes pesan igual. **Críticos**: afectan la validez o una conclu
 Un cambio en resultados puede obligar a ajustar la discusión y las conclusiones. Se revisa el **efecto dominó**. Herramienta gratis y en la nube: el **historial de versiones de Google Docs** (Archivo → Historial de versiones) permite volver atrás si un cambio empeora las cosas; no hace falta software de control de versiones.
 
 #### 4. Seguimiento: qué queda para la carga final
-El cierre de esta sesión es una **versión corregida** y una lista clara de lo que aún falta para dejar el artículo listo en el repositorio. Nada de cambios "de última hora sin registrar".""",
+El cierre de esta sesión es una **versión corregida** y una lista clara de lo que aún falta para dejar el documento listo en el repositorio. Nada de cambios "de última hora sin registrar".""",
     ejemplo="En pantalla, llenar una matriz de ajustes con 3 observaciones (una crítica, una mayor, una menor) y mostrar el historial de versiones de Google Docs para revertir un cambio que empeoró un párrafo.",
     errores=[
         ("“Las observaciones menores las ignoro.”",
@@ -3793,7 +3807,7 @@ El cierre de esta sesión es una **versión corregida** y una lista clara de lo 
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del artículo; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
+> “**Slide 5 — TALLER.** ~20 minutos. En `S14_AjustesPost_Apellido`: (1) armen su **matriz de ajustes** con todas las observaciones del jurado (columnas: observación · cambio · prioridad · estado); (2) atiendan al menos los ajustes **críticos** en la versión del documento; (3) revisen el **efecto dominó** de cada cambio en las otras secciones.”
 
 > “Criterio de éxito: la matriz muestra cada observación con su prioridad y estado, y los ajustes críticos ya están incorporados sin romper la coherencia del documento.”
 
@@ -3809,7 +3823,7 @@ El cierre de esta sesión es una **versión corregida** y una lista clara de lo 
 **GUION LITERAL:**
 > “Cierre. Tres ideas: (1) los ajustes del jurado se registran en una matriz con estado; (2) se priorizan —crítico, mayor, menor—; (3) se incorporan cuidando el efecto dominó y con el historial de versiones como red.”
 
-> “**Slide 6 — PARA CONTINUAR.** Suban `S14_AjustesPost_Apellido` a CDigital con la matriz y la versión corregida. Terminen los ajustes pendientes en autónomo para dejar el artículo listo. La próxima sesión hacemos el **cierre administrativo y la verificación de recepción**.”
+> “**Slide 6 — PARA CONTINUAR.** Suban `S14_AjustesPost_Apellido` a CDigital con la matriz y la versión corregida. Terminen los ajustes pendientes en autónomo para dejar el documento listo. La próxima sesión hacemos el **cierre administrativo y la verificación de recepción**.”
 
 > “**Slide 7 — Cierre.** Gracias; mismo Meet.”""",
 )
@@ -3819,14 +3833,14 @@ _tg3(
     fundamento="""> Sesión buffer de cierre. Solo aplica a los grupos que la tienen en calendario (26V04). Léalo completo. (Sin fechas de periodo en el guion; consulte la Presentación del Curso / Manual para plazos por grupo.)
 
 #### 1. Cierre administrativo ≠ cierre académico
-El trabajo académico ya terminó (artículo, sustentación, ajustes). El **cierre administrativo** es asegurarse de que **todo quedó cargado y fue recibido** en CDigital. Un excelente trabajo que no se cargó, o que se cargó mal, no cuenta. Esta sesión es la red de seguridad final.
+El trabajo académico ya terminó (documento, sustentación, ajustes). El **cierre administrativo** es asegurarse de que **todo quedó cargado y fue recibido** en CDigital. Un excelente trabajo que no se cargó, o que se cargó mal, no cuenta. Esta sesión es la red de seguridad final.
 
 #### 2. Subir ≠ recibido
 El error silencioso: creer que "lo subí" equivale a "lo recibieron". Hay que **verificar la recepción**: que el archivo esté en el espacio correcto, con el nombre correcto, y —si el campus lo permite— guardar **evidencia de envío** (captura del estado "entregado").
 
 | Entregable | ¿Cargado? | ¿Recibido/confirmado? | Evidencia |
 | :--- | :---: | :---: | :--- |
-| Artículo final (PDF) | | | Captura de envío |
+| Documento final (PDF) | | | Captura de envío |
 | Póster | | | Captura |
 | Anexos / evidencias | | | Captura |
 | Autorización repositorio | | | Formato firmado |
@@ -3851,7 +3865,7 @@ El objetivo de hoy es que nadie pierda la nota por un tema logístico: recorrer 
     fase1_texto="""**Protagonista:** Docente.
 
 **GUION LITERAL:**
-> “Sesión 15, la última. El trabajo académico ya está hecho: artículo, sustentación, ajustes. Hoy hacemos el **cierre administrativo**, que suena aburrido pero es la red de seguridad: verificar que **todo** quedó cargado y recibido en CDigital.”
+> “Sesión 15, la última. El trabajo académico ya está hecho: documento, sustentación, ajustes. Hoy hacemos el **cierre administrativo**, que suena aburrido pero es la red de seguridad: verificar que **todo** quedó cargado y recibido en CDigital.”
 
 > “**Slide 2 — OBJETIVOS.** Recorrer el checklist de recepción, confirmar cada carga y guardar evidencia de envío. Recuerden: un trabajo excelente que no se cargó, o que se cargó mal, no cuenta. Tengan CDigital abierto.”""",
     fase2_texto="""**Protagonista:** Docente (exposición).
@@ -3865,13 +3879,13 @@ El objetivo de hoy es que nadie pierda la nota por un tema logístico: recorrer 
 **En pantalla (CDigital + Google Docs):** el espacio de entregas y un checklist de recepción.
 
 **GUION LITERAL:**
-> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: artículo final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. Voy marcando en el checklist: cargado y recibido.”
+> “Modelo la verificación. Entro a CDigital y recorro cada espacio de entrega: documento final —lo veo cargado, con el nombre correcto—; póster —cargado—; anexos —falta uno—; autorización —firmada y subida—; informe de similitud —sólo si el curso lo exige, según confirmó el Docente—. Voy marcando en el checklist: cargado y recibido.”
 
 > “Y donde el campus lo permite, capturo el estado 'entregado': esa captura es su respaldo si más adelante hay cualquier duda sobre si entregaron o no. Cerrar bien y con evidencia es parte de ser profesional.”""",
     fase4_texto="""**Protagonista:** Estudiantes (taller) · Docente acompaña.
 
 **GUION LITERAL (consigna):**
-> “**Slide 5 — TALLER.** ~20 minutos. En `S15_CierreAdmin_Apellido`: (1) recorran el **checklist de recepción** —artículo, póster, anexos, autorización, antiplagio— marcando cargado y recibido; (2) capturen la **evidencia de envío** de cada entregable si el campus lo permite; (3) anoten cualquier **pendiente administrativo** que deban resolver antes de la recepción de su grupo.”
+> “**Slide 5 — TALLER.** ~20 minutos. En `S15_CierreAdmin_Apellido`: (1) recorran el **checklist de recepción** —documento, póster, anexos, autorización, antiplagio— marcando cargado y recibido; (2) capturen la **evidencia de envío** de cada entregable si el campus lo permite; (3) anoten cualquier **pendiente administrativo** que deban resolver antes de la recepción de su grupo.”
 
 > “Criterio de éxito: cada entregable está confirmado como recibido (no solo subido) y con su evidencia; y no queda ningún pendiente sin anotar.”
 
@@ -3889,7 +3903,7 @@ El objetivo de hoy es que nadie pierda la nota por un tema logístico: recorrer 
 
 > “**Slide 6 — PARA CONTINUAR.** Suban `S15_CierreAdmin_Apellido` a CDigital con su checklist y sus evidencias, y resuelvan los pendientes antes de la recepción de su grupo. Con esto culmina su trabajo de grado.”
 
-> “**Slide 7 — Cierre.** Felicitaciones: cierran un proceso largo con un artículo publicado y una defensa hecha. Gracias por el trabajo de este periodo.”""",
+> “**Slide 7 — Cierre.** Felicitaciones: cierran un proceso largo con un documento publicado y una defensa hecha. Gracias por el trabajo de este periodo.”""",
 )
 
 for n, fund, note, taller, ent, shots_d, shots_t in TG3:
@@ -3898,11 +3912,11 @@ for n, fund, note, taller, ent, shots_d, shots_t in TG3:
         objetivos=(
             f"1. **Desarrollar:** {(fund.split(':')[0] if ':' in fund else fund[:80]).rstrip('.')}.\n"
             "2. **Dejar** evidencia en CDigital.\n"
-            "3. **Preparar** el siguiente hito del artículo/sustentación."
+            "3. **Preparar** el siguiente hito del documento/sustentación."
         ),
         fundamento=rich.get("fundamento") or (
             f"#### Enfoque\n{fund}\n\n{note}\n\n"
-            "Producto del Syllabus 94532: artículo + sustentación + repositorio. "
+            "Producto del Syllabus 94532: documento + sustentación + repositorio. "
             "Práctica en nube (Docs, Canva free para póster, Scholar, ZoteroBib)."
         ),
         fases=[
@@ -4096,7 +4110,7 @@ def build_guion(course_key: str, ses: dict) -> str:
     checklist_default = [
         "- [ ] Fundamento teórico leído",
         f"- [ ] PPTX `Clases/{label}/Presentacion.pptx`",
-        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Guiones/Capturas/`)",
+        "- [ ] Pantallazos de esta sesión abiertos (carpeta `Docente/Guiones/Capturas/`)",
         (("- [ ] Presentación del Curso (Preséntate / Padlet): " + PADLET_PRESENTACION_URL)
          if usa_padlet(course_key)
          else ("- [ ] Presentación del Curso (Preséntate / juego en Slido): "
@@ -4175,7 +4189,7 @@ def build_guion(course_key: str, ses: dict) -> str:
 1. {spec['taller']}
 2. Archivo en CDigital: {spec['entregable']}
 3. Herramientas: gratis + nube (Docs, Scholar, ZoteroBib, Excalidraw y —solo en la Sesión 01— el Padlet o el juego en Slido, según el tamaño del grupo).
-4. Pantallazos de apoyo en `Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
+4. Pantallazos de apoyo en `Docente/Guiones/Capturas/` (y subcarpetas `Sesion NN/` / `Herramientas/`).
 
 ✅ **Checklist del docente antes de clase**
 {checklist_md}
@@ -4210,7 +4224,7 @@ def main(argv=None):
         if key not in COURSES or key not in KEYS:
             print("SKIP curso:", key)
             continue
-        root = os.path.join(COURSES[key]["folder"], "Guiones")
+        root = os.path.join(COURSES[key]["folder"], "Docente", "Guiones")
         os.makedirs(root, exist_ok=True)
         os.makedirs(os.path.join(root, "Capturas"), exist_ok=True)
         # limpiar Sesion*.md obsoletos (conservar Guías / Capturas)

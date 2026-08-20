@@ -32,15 +32,45 @@
   {
     "type": "table",
     "title": "Las cuatro piezas del avance (y su error típico)",
-    "headers": ["Pieza", "Qué debe contener", "Extensión", "Error típico"],
+    "headers": [
+      "Pieza",
+      "Qué debe contener",
+      "Extensión",
+      "Error típico"
+    ],
     "rows": [
-      ["**Título tentativo**", "Actor + fenómeno + contexto", "≤ 20 palabras", "Título-eslogan sin variables (\"La revolución de la IA\")"],
-      ["**Introducción breve**", "Contexto → vacío → propósito", "3 párrafos", "Arrancar con \"desde la antigüedad el ser humano...\""],
-      ["**Problema y pregunta**", "El vacío convertido en una pregunta investigable", "1 párrafo + 1 pregunta", "Pregunta que se responde con sí o no"],
-      ["**Referencias iniciales**", "2 a 3 fuentes en **APA 7**", "Al final del texto", "Pegar URLs sueltas sin formato ni autor"]
+      [
+        "**Título tentativo**",
+        "Actor + fenómeno + contexto",
+        "≤ 20 palabras",
+        "Título-eslogan sin variables (\"La revolución de la IA\")"
+      ],
+      [
+        "**Introducción breve**",
+        "Contexto → vacío → propósito",
+        "3 párrafos",
+        "Arrancar con \"desde la antigüedad el ser humano...\""
+      ],
+      [
+        "**Problema y pregunta**",
+        "El vacío convertido en una pregunta investigable",
+        "1 párrafo + 1 pregunta",
+        "Pregunta que se responde con sí o no"
+      ],
+      [
+        "**Referencias iniciales**",
+        "2 a 3 fuentes en **APA 7**",
+        "Al final del texto",
+        "Pegar URLs sueltas sin formato ni autor"
+      ]
     ],
     "note": "Solo cuatro piezas. Si le sobra tiempo, **no agregue piezas: mejore las cuatro**.",
-    "col_w": [2.4, 4.0, 1.8, 4.0]
+    "col_w": [
+      2.4,
+      4.0,
+      1.8,
+      4.0
+    ]
   },
   {
     "type": "bullets",
@@ -90,22 +120,66 @@
   {
     "type": "table",
     "title": "Tipos de conocimiento (esto suele caer en el parcial)",
-    "headers": ["Tipo", "Cómo se obtiene", "¿Se verifica?", "Ejemplo", "¿Sostiene el artículo?"],
+    "headers": [
+      "Tipo",
+      "Cómo se obtiene",
+      "¿Se verifica?",
+      "Ejemplo",
+      "¿Sostiene el artículo?"
+    ],
     "rows": [
-      ["**Cotidiano / vulgar**", "Por experiencia inmediata y sentido común", "No", "\"Sé que llueve porque me mojé\"", "No"],
-      ["**Empírico**", "Por observación repetida, sin sistematizar", "Parcialmente", "\"Llevo un año y siempre se cae la red a las 3 p.m.\"", "Solo como indicio inicial"],
-      ["**Científico**", "Con método, medición y evidencia documentada", "**Sí, por otros**", "\"La bitácora registra 12 caídas en un mes\"", "**Sí**"]
+      [
+        "**Cotidiano / vulgar**",
+        "Por experiencia inmediata y sentido común",
+        "No",
+        "\"Sé que llueve porque me mojé\"",
+        "No"
+      ],
+      [
+        "**Empírico**",
+        "Por observación repetida, sin sistematizar",
+        "Parcialmente",
+        "\"Llevo un año y siempre se cae la red a las 3 p.m.\"",
+        "Solo como indicio inicial"
+      ],
+      [
+        "**Científico**",
+        "Con método, medición y evidencia documentada",
+        "**Sí, por otros**",
+        "\"La bitácora registra 12 caídas en un mes\"",
+        "**Sí**"
+      ]
     ],
     "note": "La diferencia entre empírico y científico no es la verdad: es que el científico **se puede verificar y repetir** porque quedó registrado el cómo."
   },
   {
     "type": "table",
     "title": "Tipos de fuente: primaria, secundaria y terciaria",
-    "headers": ["Tipo", "Qué es", "Ejemplos", "Cómo se usa en su artículo"],
+    "headers": [
+      "Tipo",
+      "Qué es",
+      "Ejemplos",
+      "Cómo se usa en su artículo"
+    ],
     "rows": [
-      ["**Primaria**", "El estudio original, donde se generó el conocimiento", "Artículo de investigación, tesis, dataset, norma técnica, informe oficial", "**Es su fuente principal**; se cita como autoridad"],
-      ["**Secundaria**", "Interpreta, sintetiza o comenta las primarias", "Libro de texto, artículo de revisión, estado del arte", "Útil para entender el panorama y ubicar primarias"],
-      ["**Terciaria**", "Índices y compilaciones que llevan a las otras dos", "Enciclopedias, catálogos, buscadores, Wikipedia", "**Solo para orientarse**; no se cita como autoridad"]
+      [
+        "**Primaria**",
+        "El estudio original, donde se generó el conocimiento",
+        "Artículo de investigación, tesis, dataset, norma técnica, informe oficial",
+        "**Es su fuente principal**; se cita como autoridad"
+      ],
+      [
+        "**Secundaria**",
+        "Interpreta, sintetiza o comenta las primarias",
+        "Libro de texto, artículo de revisión, estado del arte",
+        "Útil para entender el panorama y ubicar primarias"
+      ],
+      [
+        "**Terciaria**",
+        "Índices y compilaciones que llevan a las otras dos",
+        "Enciclopedias, catálogos, buscadores, Wikipedia",
+        "**Solo para orientarse**; no se cita como autoridad"
+      ]
     ],
     "note": "Truco: si el texto cuenta un estudio que **alguien más** hizo, es secundaria; si cuenta lo que **sus autores** hicieron, es primaria."
   },
@@ -113,10 +187,22 @@
     "type": "boxes",
     "title": "Wikipedia, blogs e IA generativa: qué se puede y qué no",
     "boxes": [
-      ["aclaracion", "**Wikipedia sí sirve, pero como puerta.** Léala para entender un concepto y luego baje a la sección de **referencias** del artículo: allí están las fuentes reales que sí puede citar."],
-      ["advertencia", "**Un blog o un video no son fuente del artículo.** Pueden explicarle bien un tema, pero no pasaron revisión. Si lo que dice el blog es cierto, existe una fuente académica que lo respalda: busque esa."],
-      ["advertencia", "**La IA generativa inventa referencias.** Puede darle un autor, un año y un título que suenan perfectos y no existen. Regla: **si no abrió el documento, no lo cita**."],
-      ["info", "**Verifique siempre en la fuente original.** Abra el artículo, confirme autor, año y revista, y solo entonces genere la cita. Una referencia falsa en un artículo es una falta grave, no un descuido."]
+      [
+        "aclaracion",
+        "**Wikipedia sí sirve, pero como puerta.** Léala para entender un concepto y luego baje a la sección de **referencias** del artículo: allí están las fuentes reales que sí puede citar."
+      ],
+      [
+        "advertencia",
+        "**Un blog o un video no son fuente del artículo.** Pueden explicarle bien un tema, pero no pasaron revisión. Si lo que dice el blog es cierto, existe una fuente académica que lo respalda: busque esa."
+      ],
+      [
+        "advertencia",
+        "**La IA generativa inventa referencias.** Puede darle un autor, un año y un título que suenan perfectos y no existen. Regla: **si no abrió el documento, no lo cita**."
+      ],
+      [
+        "info",
+        "**Verifique siempre en la fuente original.** Abra el artículo, confirme autor, año y revista, y solo entonces genere la cita. Una referencia falsa en un artículo es una falta grave, no un descuido."
+      ]
     ]
   },
   {
@@ -132,7 +218,7 @@
       "  Identificar el **vacío** dentro de una introducción de ejemplo.",
       "Formato típico de pregunta: se le da un caso corto y se le pide clasificarlo o corregirlo.",
       "Cómo prepararse en poco tiempo: repase las **dos tablas** de esta sesión y explíqueselas en voz alta a alguien.",
-      "El detalle oficial de la evaluación del corte está publicado en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "El detalle oficial de la evaluación del corte está publicado en **CDigital**: {{CDIGITAL}}"
     ]
   },
   {
@@ -153,19 +239,7 @@
     "note": "Nada de Mendeley ni Zotero de escritorio: no hace falta instalar programas para este curso."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Escribir el 1.er avance (~22 min)",
-    "bullets": [
-      "**Consigna literal.** En un documento llamado `S03_Avance1_Apellido` escriba las cuatro piezas:",
-      "  **(1) Título tentativo** con actor + fenómeno + contexto, en 20 palabras o menos.",
-      "  **(2) Introducción** de exactamente **3 párrafos**: contexto → vacío → propósito.",
-      "  **(3) El problema convertido en pregunta**, en una sola frase, que no se responda con sí o no.",
-      "  **(4) Dos referencias en APA 7** generadas con ZoteroBib, de fuentes que usted abrió.",
-      "**Tiempo:** ~22 minutos. Escriba primero y corrija después: no se quede puliendo la primera frase.",
-      "**Criterio de éxito (verificable):** si otra persona lee su introducción **sin conocer su tema**, puede decirle cuál es el contexto, cuál es el vacío y qué se propone usted.",
-      "Prueba de control: subraye el vacío. Si no puede subrayarlo, **no lo escribió**.",
-      "Se prefiere **media página impecable a tres páginas de relleno**."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -181,7 +255,7 @@
       "[ ] Mis 2 referencias son **primarias o secundarias**, no un blog ni Wikipedia.",
       "[ ] **Abrí** los dos documentos que cito: no los tomé del listado de resultados.",
       "[ ] Las referencias están en APA 7, en orden alfabético, al final.",
-      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "[ ] Subí el archivo a **CDigital**: {{CDIGITAL}}"
     ]
   },
   {
@@ -197,7 +271,7 @@
       "  Traiga su avance: vamos a **someter su pregunta a prueba** con espina de pescado y árbol de problemas.",
       "  Si su pregunta cambia la próxima sesión, no es un fracaso: es exactamente para lo que sirve el avance.",
       "  Tenga a mano su **login institucional** de la biblioteca CUN: se usa en clase.",
-      "Todo el material y las entregas viven en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "Todo el material y las entregas viven en **CDigital**: {{CDIGITAL}}"
     ]
   }
 ]

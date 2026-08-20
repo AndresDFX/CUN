@@ -33,25 +33,66 @@
   {
     "type": "table",
     "title": "Deseo de producto vs. problema de investigación",
-    "headers": ["Lo que suele escribirse (deseo de producto)", "Lo que sí es problema de investigación"],
+    "headers": [
+      "Lo que suele escribirse (deseo de producto)",
+      "Lo que sí es problema de investigación"
+    ],
     "rows": [
-      ["\"No existe una app que avise de los cortes de red.\"", "\"Las prácticas del laboratorio se interrumpen y no se conoce con qué frecuencia ni por qué.\""],
-      ["\"Falta un chatbot que responda dudas de los estudiantes.\"", "\"La retroalimentación llega días después y los estudiantes repiten el mismo error.\""],
-      ["\"Hay que implementar un sistema de sensores en la sede.\"", "\"No se sabe cuánta energía consumen los laboratorios en horas pico ni qué la dispara.\""],
-      ["\"Se necesita un dashboard de deserción.\"", "\"La deserción del programa se detecta cuando ya ocurrió, sin señales tempranas identificadas.\""],
-      ["\"Deberíamos migrar todo a la nube.\"", "\"Se desconocen los riesgos y costos que asumiría la institución al migrar los pagos a la nube.\""]
+      [
+        "\"No existe una app que avise de los cortes de red.\"",
+        "\"Las prácticas del laboratorio se interrumpen y no se conoce con qué frecuencia ni por qué.\""
+      ],
+      [
+        "\"Falta un chatbot que responda dudas de los estudiantes.\"",
+        "\"La retroalimentación llega días después y los estudiantes repiten el mismo error.\""
+      ],
+      [
+        "\"Hay que implementar un sistema de sensores en la sede.\"",
+        "\"No se sabe cuánta energía consumen los laboratorios en horas pico ni qué la dispara.\""
+      ],
+      [
+        "\"Se necesita un dashboard de deserción.\"",
+        "\"La deserción del programa se detecta cuando ya ocurrió, sin señales tempranas identificadas.\""
+      ],
+      [
+        "\"Deberíamos migrar todo a la nube.\"",
+        "\"Se desconocen los riesgos y costos que asumiría la institución al migrar los pagos a la nube.\""
+      ]
     ],
     "note": "Fíjese en el patrón: la columna izquierda empieza con **\"falta / no existe / hay que\"**; la derecha empieza con **un hecho y sus consecuencias**.",
-    "col_w": [5.2, 5.6]
+    "col_w": [
+      5.2,
+      5.6
+    ]
   },
   {
     "type": "table",
     "title": "Tres herramientas para ordenar el problema",
-    "headers": ["Herramienta", "Qué produce", "Cuándo usarla", "Qué necesita para empezar"],
+    "headers": [
+      "Herramienta",
+      "Qué produce",
+      "Cuándo usarla",
+      "Qué necesita para empezar"
+    ],
     "rows": [
-      ["**Espina de pescado** (Ishikawa)", "Familias de causas de un mismo efecto", "Hay muchas causas dispersas y no sabe cuál pesa", "El efecto escrito en una frase"],
-      ["**Árbol de problemas**", "Causas → problema central → efectos", "Confunde lo que causa con lo que resulta", "Una lista cruda de hechos"],
-      ["**Método 3D**", "Descripción acotada + pregunta", "El tema está demasiado amplio", "Un tema y algo de contexto"]
+      [
+        "**Espina de pescado** (Ishikawa)",
+        "Familias de causas de un mismo efecto",
+        "Hay muchas causas dispersas y no sabe cuál pesa",
+        "El efecto escrito en una frase"
+      ],
+      [
+        "**Árbol de problemas**",
+        "Causas → problema central → efectos",
+        "Confunde lo que causa con lo que resulta",
+        "Una lista cruda de hechos"
+      ],
+      [
+        "**Método 3D**",
+        "Descripción acotada + pregunta",
+        "El tema está demasiado amplio",
+        "Un tema y algo de contexto"
+      ]
     ],
     "note": "No se usan las tres: **elija una** según lo que le esté fallando. Las tres terminan en el mismo punto: la pregunta."
   },
@@ -119,29 +160,81 @@
   {
     "type": "table",
     "title": "Anatomía de una pregunta investigable",
-    "headers": ["Atributo", "Qué significa", "Prueba de control"],
+    "headers": [
+      "Atributo",
+      "Qué significa",
+      "Prueba de control"
+    ],
     "rows": [
-      ["**Clara**", "Se entiende sin que usted la explique", "Se la lee a alguien ajeno al tema y la repite con sus palabras"],
-      ["**Delimitada**", "Tiene actor, contexto y alcance", "Puede señalar en el texto **quién**, **dónde** y **qué se observa**"],
-      ["**Viable**", "Existen fuentes y datos a su alcance", "Busca 2 términos en Google Académico y **aparece literatura**"],
-      ["**Relevante**", "A alguien le importa la respuesta", "Puede nombrar quién usaría el resultado"],
-      ["**Abierta**", "No se contesta con sí o no", "Empieza por **cómo / qué / cuál / en qué medida**"]
+      [
+        "**Clara**",
+        "Se entiende sin que usted la explique",
+        "Se la lee a alguien ajeno al tema y la repite con sus palabras"
+      ],
+      [
+        "**Delimitada**",
+        "Tiene actor, contexto y alcance",
+        "Puede señalar en el texto **quién**, **dónde** y **qué se observa**"
+      ],
+      [
+        "**Viable**",
+        "Existen fuentes y datos a su alcance",
+        "Busca 2 términos en Google Académico y **aparece literatura**"
+      ],
+      [
+        "**Relevante**",
+        "A alguien le importa la respuesta",
+        "Puede nombrar quién usaría el resultado"
+      ],
+      [
+        "**Abierta**",
+        "No se contesta con sí o no",
+        "Empieza por **cómo / qué / cuál / en qué medida**"
+      ]
     ],
     "note": "Los cinco atributos se cumplen a la vez. Si falla uno, la pregunta todavía no está lista para el planteamiento. El de **viabilidad** se comprueba en la segunda mitad de hoy.",
-    "col_w": [1.8, 3.6, 5.4]
+    "col_w": [
+      1.8,
+      3.6,
+      5.4
+    ]
   },
   {
     "type": "table",
     "title": "Preguntas mal formuladas y su reformulación",
-    "headers": ["Como la escriben", "Qué falla", "Reformulada"],
+    "headers": [
+      "Como la escriben",
+      "Qué falla",
+      "Reformulada"
+    ],
     "rows": [
-      ["\"¿Es útil la inteligencia artificial?\"", "Sí/no + planetaria: sin actor ni contexto", "\"¿En qué medida un clasificador reduce los correos de phishing que llegan a los estudiantes de la sede X?\""],
-      ["\"¿Existe deserción en el programa?\"", "Sí/no; además ya se sabe la respuesta", "\"¿Qué factores académicos anteceden la deserción en los dos primeros semestres del programa X?\""],
-      ["\"¿Cómo hacer una app para el laboratorio?\"", "Pregunta de diseño, no de investigación", "\"¿Qué barreras enfrentan los estudiantes al registrar sus prácticas en el sistema actual?\""],
-      ["\"¿Cuál es la mejor tecnología para la nube?\"", "\"Mejor\" sin criterio ni contexto", "\"¿Qué criterios de disponibilidad y costo priorizan las pymes de Bogotá al migrar servicios a la nube?\""]
+      [
+        "\"¿Es útil la inteligencia artificial?\"",
+        "Sí/no + planetaria: sin actor ni contexto",
+        "\"¿En qué medida un clasificador reduce los correos de phishing que llegan a los estudiantes de la sede X?\""
+      ],
+      [
+        "\"¿Existe deserción en el programa?\"",
+        "Sí/no; además ya se sabe la respuesta",
+        "\"¿Qué factores académicos anteceden la deserción en los dos primeros semestres del programa X?\""
+      ],
+      [
+        "\"¿Cómo hacer una app para el laboratorio?\"",
+        "Pregunta de diseño, no de investigación",
+        "\"¿Qué barreras enfrentan los estudiantes al registrar sus prácticas en el sistema actual?\""
+      ],
+      [
+        "\"¿Cuál es la mejor tecnología para la nube?\"",
+        "\"Mejor\" sin criterio ni contexto",
+        "\"¿Qué criterios de disponibilidad y costo priorizan las pymes de Bogotá al migrar servicios a la nube?\""
+      ]
     ],
     "note": "Patrón de la corrección: **agregar actor y lugar**, y cambiar el verbo de apertura por *qué*, *cómo* o *en qué medida*.",
-    "col_w": [3.2, 2.4, 5.2]
+    "col_w": [
+      3.2,
+      2.4,
+      5.2
+    ]
   },
   {
     "type": "bullets",
@@ -163,31 +256,98 @@
   {
     "type": "table",
     "title": "Buscador ≠ base de datos: cuándo usar cada uno",
-    "headers": ["Recurso", "Qué es", "Fortaleza", "Límite"],
+    "headers": [
+      "Recurso",
+      "Qué es",
+      "Fortaleza",
+      "Límite"
+    ],
     "rows": [
-      ["**Google Académico** (scholar.google.com)", "Buscador académico amplio", "Arranque rápido, cobertura enorme, enlace **\"citado por\"**", "Mezcla calidades; muchos resultados sin texto completo"],
-      ["**SciELO** (scielo.org)", "Base de acceso abierto regional", "Fuerte en español y portugués, texto completo gratis", "Menos cobertura en temas muy técnicos o recientes"],
-      ["**Redalyc** (redalyc.org)", "Red de revistas iberoamericanas abiertas", "Revistas de la región, descarga libre", "Cobertura desigual por área"],
-      ["**Biblioteca CUN** (web, login institucional)", "Acceso a bases **suscritas** por la institución (EBSCO y otras)", "**Texto completo** de artículos de pago", "Requiere iniciar sesión con la cuenta institucional"],
-      ["**ZoteroBib** (zbib.org)", "Generador de citas en línea", "APA 7 al instante, sin instalar ni registrarse", "No guarda su biblioteca: copie lo que genere"]
+      [
+        "**Google Académico** (scholar.google.com)",
+        "Buscador académico amplio",
+        "Arranque rápido, cobertura enorme, enlace **\"citado por\"**",
+        "Mezcla calidades; muchos resultados sin texto completo"
+      ],
+      [
+        "**SciELO** (scielo.org)",
+        "Base de acceso abierto regional",
+        "Fuerte en español y portugués, texto completo gratis",
+        "Menos cobertura en temas muy técnicos o recientes"
+      ],
+      [
+        "**Redalyc** (redalyc.org)",
+        "Red de revistas iberoamericanas abiertas",
+        "Revistas de la región, descarga libre",
+        "Cobertura desigual por área"
+      ],
+      [
+        "**Biblioteca CUN** (web, login institucional)",
+        "Acceso a bases **suscritas** por la institución (EBSCO y otras)",
+        "**Texto completo** de artículos de pago",
+        "Requiere iniciar sesión con la cuenta institucional"
+      ],
+      [
+        "**ZoteroBib** (zbib.org)",
+        "Generador de citas en línea",
+        "APA 7 al instante, sin instalar ni registrarse",
+        "No guarda su biblioteca: copie lo que genere"
+      ]
     ],
     "note": "Nunca pague por un artículo: primero verifique si la institución **ya lo tiene** en la biblioteca CUN.",
-    "col_w": [2.8, 2.4, 3.2, 2.6]
+    "col_w": [
+      2.8,
+      2.4,
+      3.2,
+      2.6
+    ]
   },
   {
     "type": "table",
     "title": "Operadores de búsqueda que ahorran horas",
-    "headers": ["Operador / filtro", "Qué hace", "Cómo se escribe"],
+    "headers": [
+      "Operador / filtro",
+      "Qué hace",
+      "Cómo se escribe"
+    ],
     "rows": [
-      ["**Comillas**", "Busca la **frase exacta**, en ese orden", "`\"pérdida de paquetes\"`"],
-      ["**AND**", "Exige que aparezcan **ambos** términos", "`\"pérdida de paquetes\" AND laboratorio`"],
-      ["**OR**", "Amplía: sirve cualquiera de los dos (útil para sinónimos)", "`phishing OR \"correo malicioso\"`"],
-      ["**Signo menos**", "**Excluye** un término que le ensucia los resultados", "`redes -sociales`"],
-      ["**Filtro por año**", "Limita a lo reciente: en tecnología, **últimos 5 años**", "Panel izquierdo de Scholar: *Desde 2021*"],
-      ["**\"Citado por\"**", "Muestra quién retomó ese artículo después", "Enlace bajo cada resultado en Scholar"]
+      [
+        "**Comillas**",
+        "Busca la **frase exacta**, en ese orden",
+        "`\"pérdida de paquetes\"`"
+      ],
+      [
+        "**AND**",
+        "Exige que aparezcan **ambos** términos",
+        "`\"pérdida de paquetes\" AND laboratorio`"
+      ],
+      [
+        "**OR**",
+        "Amplía: sirve cualquiera de los dos (útil para sinónimos)",
+        "`phishing OR \"correo malicioso\"`"
+      ],
+      [
+        "**Signo menos**",
+        "**Excluye** un término que le ensucia los resultados",
+        "`redes -sociales`"
+      ],
+      [
+        "**Filtro por año**",
+        "Limita a lo reciente: en tecnología, **últimos 5 años**",
+        "Panel izquierdo de Scholar: *Desde 2021*"
+      ],
+      [
+        "**\"Citado por\"**",
+        "Muestra quién retomó ese artículo después",
+        "Enlace bajo cada resultado en Scholar"
+      ]
     ],
     "note": "Regla práctica: **empiece amplio y vaya cerrando**. Si arranca con cinco filtros, no encontrará nada y creerá que su tema no existe.",
-    "col_w": [2.2, 5.0, 3.6]
+    "col_w": [
+      2.2,
+      5.0,
+      3.6
+    ]
   },
   {
     "type": "bullets",
@@ -242,11 +402,26 @@
     "type": "boxes",
     "title": "Errores frecuentes: del problema a la fuente",
     "boxes": [
-      ["advertencia", "**\"El problema es que no existe mi aplicación.\"** Eso es un deseo de producto. Pregúntese: si su app nunca existiera, ¿qué seguiría doliendo? Esa respuesta es el problema."],
-      ["advertencia", "**Confundir causas con efectos.** Dos preguntas distintas las separan: *¿por qué ocurre?* señala una **causa**; *¿qué provoca esto?* señala un **efecto**. En el árbol: causas abajo, efectos arriba."],
-      ["advertencia", "**Citar sin haber leído.** Si toma una idea de un artículo que cita a otro, cite el que **usted** leyó. Es riesgo de plagio y se nota."],
-      ["aclaracion", "**Wikipedia y los blogs orientan, no sostienen.** Úselos para entender un concepto y luego vaya a las referencias que ellos citan. El artículo se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN."],
-      ["info", "**La IA generativa fabrica referencias creíbles y falsas.** Puede darle autor, año, revista y DOI de un artículo que no existe. Regla innegociable: **si no abrió el documento, no lo cita**."]
+      [
+        "advertencia",
+        "**\"El problema es que no existe mi aplicación.\"** Eso es un deseo de producto. Pregúntese: si su app nunca existiera, ¿qué seguiría doliendo? Esa respuesta es el problema."
+      ],
+      [
+        "advertencia",
+        "**Confundir causas con efectos.** Dos preguntas distintas las separan: *¿por qué ocurre?* señala una **causa**; *¿qué provoca esto?* señala un **efecto**. En el árbol: causas abajo, efectos arriba."
+      ],
+      [
+        "advertencia",
+        "**Citar sin haber leído.** Si toma una idea de un artículo que cita a otro, cite el que **usted** leyó. Es riesgo de plagio y se nota."
+      ],
+      [
+        "aclaracion",
+        "**Wikipedia y los blogs orientan, no sostienen.** Úselos para entender un concepto y luego vaya a las referencias que ellos citan. El artículo se sostiene en Scholar, SciELO, Redalyc y las bases de la biblioteca CUN."
+      ],
+      [
+        "info",
+        "**La IA generativa fabrica referencias creíbles y falsas.** Puede darle autor, año, revista y DOI de un artículo que no existe. Regla innegociable: **si no abrió el documento, no lo cita**."
+      ]
     ]
   },
   {
@@ -267,20 +442,7 @@
     "note": "Todo en el navegador: Excalidraw, Google Docs, Google Académico, SciELO/Redalyc y ZoteroBib. Sin instalar programas."
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Pregunta + tres fuentes citadas (~24 min)",
-    "bullets": [
-      "**Consigna literal.** En un documento llamado `S04_ProblemaPreguntaFuentes_Apellido`:",
-      "  **(1)** Describa el problema en **8 a 12 líneas**, como un hecho con consecuencias, **no** como la falta de su solución. **(6 min)**",
-      "  **(2)** Haga un diagrama en **Excalidraw** —espina de pescado o árbol de problemas— y pegue la captura. **(5 min)**",
-      "  **(3)** Escriba la pregunta en **una sola frase** investigable. **(3 min)**",
-      "  **(4)** Busque en **Google Académico** y en **SciELO o Redalyc**, y quédese con **3 fuentes** que pasen el filtro de 60 segundos. **(6 min)**",
-      "  **(5)** Genere las **3 referencias en APA 7** con **ZoteroBib**, revíselas a mano y péguelas bajo *Referencias*. **(4 min)**",
-      "**Empiece por el diagrama:** pensar dibujando desatasca más rápido que pensar escribiendo.",
-      "**Criterio de éxito (verificable):** su pregunta **tiene actor y contexto**, **no** se responde con sí/no, el diagrama muestra **al menos tres causas** en familias distintas, y las **3 referencias** están completas —autor, año, título, fuente— y usted **abrió las tres**.",
-      "Prueba final antes de entregar: lea su pregunta a un compañero. Si tiene que explicársela, todavía no es clara."
-    ],
-    "note": "Al menos **una** de las tres fuentes debería ser regional (SciELO o Redalyc): es la que le da pertinencia local al artículo."
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -296,7 +458,7 @@
       "[ ] Ninguna de mis fuentes es un blog, un video o Wikipedia; **al menos una** es de SciELO o Redalyc.",
       "[ ] Mis **3 referencias en APA 7** están revisadas a mano (autores, año, revista, mayúsculas, DOI).",
       "[ ] Anoté, al lado de cada fuente, **una línea** que diga por qué se relaciona con mi pregunta.",
-      "[ ] Subí el archivo a **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "[ ] Subí el archivo a **CDigital**: {{CDIGITAL}}"
     ]
   },
   {
@@ -312,7 +474,7 @@
       "**La próxima sesión son dos cosas otra vez:** el **planteamiento del problema** completo y la primera página de **marco teórico y revisión de literatura**.",
       "  Traiga su pregunta, su diagrama y sus fuentes: sin ellos no hay con qué trabajar.",
       "  Es además la **última sesión antes del cierre de la ACA Final**: verifique hoy mismo en CDigital la fecha de recepción de trabajos.",
-      "Entrega y materiales en **CDigital**: [URL CDigital — campus del curso pendiente]"
+      "Entrega y materiales en **CDigital**: {{CDIGITAL}}"
     ]
   }
 ]

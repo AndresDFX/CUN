@@ -1,15 +1,15 @@
 [
   {
     "type": "bullets",
-    "title": "Sin una buena pregunta, todo el artículo cojea",
+    "title": "Sin una buena pregunta, todo el documento cojea",
     "bullets": [
-      "Hoy le ponemos **corazón** al proyecto: pregunta, objetivos y título. Si esto queda bien, el resto del artículo casi se ordena solo.",
+      "Hoy le ponemos **corazón** al proyecto: pregunta, objetivos y título. Si esto queda bien, el resto del documento casi se ordena solo.",
       "El jurado de sustentación no empieza por su metodología: empieza por el **título** y por la **pregunta**.",
       "  Si en 20 segundos no entiende qué investigó usted, ya arrancó con desventaja.",
       "Caso real de Ingeniería de Sistemas: un estudiante llega con \"quiero hacer algo de inteligencia artificial\".",
       "  Eso no es un proyecto: es un antojo. No dice qué se mide, en quién, ni dónde.",
       "La versión investigable: \"**¿En qué medida un clasificador de correos reduce los intentos de phishing que llegan a la bandeja de los funcionarios de una entidad pública en Bogotá?**\"",
-      "Regla de la sesión: la **pregunta manda**. De ella salen los objetivos, y de los objetivos salen las secciones del artículo."
+      "Regla de la sesión: la **pregunta manda**. De ella salen los objetivos, y de los objetivos salen las secciones del documento."
     ],
     "note": "Traiga abierta su matriz de herencia de la Sesión 01: hoy se convierte en pregunta."
   },
@@ -22,22 +22,46 @@
       "**NO es** un tema. \"Automatización de pruebas\" es un tema; no se puede responder.",
       "**NO es** de sí/no. \"¿Sirve la automatización?\" se responde con \"sí\" y se acabó el trabajo de grado.",
       "**NO es** una consulta de Google. \"¿Qué es DevOps?\" ya está respondido en un manual: eso no genera conocimiento nuevo.",
-      "**NO es** una lista de deseos. \"¿Cómo mejorar todo el proceso de la empresa?\" no tiene límites y no cabe en un artículo.",
+      "**NO es** una lista de deseos. \"¿Cómo mejorar todo el proceso de la empresa?\" no tiene límites y no cabe en un documento.",
       "Prueba rápida en clase: si al leer su pregunta **el Docente** no puede decir qué dato tendría que recoger para responderla, la pregunta todavía no sirve."
     ]
   },
   {
     "type": "table",
     "title": "Pregunta floja vs. pregunta con variables visibles",
-    "headers": ["Pregunta floja", "Qué le falta", "Versión reescrita"],
+    "headers": [
+      "Pregunta floja",
+      "Qué le falta",
+      "Versión reescrita"
+    ],
     "rows": [
-      ["¿Es buena la automatización?", "Sin variables, sin actor, sin contexto; se responde sí/no", "**¿En qué medida** la automatización de pruebas **reduce el tiempo de despliegue** en el equipo de desarrollo del área de TI?"],
-      ["¿La IA es útil en las empresas?", "Demasiado ancha; \"útil\" no se mide", "**¿Cómo** incide un modelo de clasificación de tickets **en el tiempo de respuesta** de la mesa de ayuda?"],
-      ["¿Qué es la ciberseguridad?", "Es pregunta de manual, no de investigación", "**¿Qué prácticas de seguridad** aplican hoy las pymes de software de la ciudad **y qué brechas** persisten?"],
-      ["¿Cómo mejorar la empresa?", "Sin límite: no cabe en un artículo", "**¿Qué efecto** tiene un tablero de indicadores **sobre el control de inventario** en una microempresa de comercio?"]
+      [
+        "¿Es buena la automatización?",
+        "Sin variables, sin actor, sin contexto; se responde sí/no",
+        "**¿En qué medida** la automatización de pruebas **reduce el tiempo de despliegue** en el equipo de desarrollo del área de TI?"
+      ],
+      [
+        "¿La IA es útil en las empresas?",
+        "Demasiado ancha; \"útil\" no se mide",
+        "**¿Cómo** incide un modelo de clasificación de tickets **en el tiempo de respuesta** de la mesa de ayuda?"
+      ],
+      [
+        "¿Qué es la ciberseguridad?",
+        "Es pregunta de manual, no de investigación",
+        "**¿Qué prácticas de seguridad** aplican hoy las pymes de software de la ciudad **y qué brechas** persisten?"
+      ],
+      [
+        "¿Cómo mejorar la empresa?",
+        "Sin límite: no cabe en un documento",
+        "**¿Qué efecto** tiene un tablero de indicadores **sobre el control de inventario** en una microempresa de comercio?"
+      ]
     ],
     "note": "Fórmula que sirve para casi todos: **¿En qué medida / cómo** [variable A] **afecta a** [variable B] **en** [actor y contexto]?",
-    "col_w": [3.4, 3.0, 5.5]
+    "col_w": [
+      3.4,
+      3.0,
+      5.5
+    ]
   },
   {
     "type": "bullets",
@@ -60,8 +84,8 @@
       "El **objetivo general** es la pregunta convertida en propósito, con un verbo de alcance amplio: analizar, diseñar, evaluar.",
       "  Se escribe en infinitivo, es **uno solo** y debe caber en una sola oración.",
       "Los **objetivos específicos** son los pasos para lograr el general: **tres o cuatro**, ni más ni menos.",
-      "**Regla de oro de esta sesión:** cada objetivo específico se convierte después en una **sección del artículo**.",
-      "  Si tiene 7 específicos, va a escribir 7 secciones y el artículo se le vuelve inmanejable.",
+      "**Regla de oro de esta sesión:** cada objetivo específico se convierte después en una **sección del documento**.",
+      "  Si tiene 7 específicos, va a escribir 7 secciones y el documento se le vuelve inmanejable.",
       "  Si tiene 1 solo, no tiene un proyecto: tiene una tarea.",
       "Los específicos se ordenan en **secuencia lógica**: primero describir lo que hay, luego diseñar o intervenir, al final comparar o evaluar.",
       "Ningún objetivo específico puede pedir algo que la pregunta no pidió; si aparece uno así, o sobra el objetivo o su pregunta era otra."
@@ -70,16 +94,51 @@
   {
     "type": "table",
     "title": "Verbos: los que hunden el proyecto y los que lo sostienen",
-    "headers": ["Verbo débil (evítelo)", "Por qué falla", "Verbo operable (úselo)", "Qué produce en el artículo"],
+    "headers": [
+      "Verbo débil (evítelo)",
+      "Por qué falla",
+      "Verbo operable (úselo)",
+      "Qué produce en el documento"
+    ],
     "rows": [
-      ["Conocer / entender / saber", "Ocurre dentro de su cabeza: nadie puede verificarlo", "**Identificar · Caracterizar**", "Una sección de descripción"],
-      ["Ver / analizar (a secas)", "\"Analizar\" sin decir qué ni contra qué no compromete a nada", "**Comparar · Correlacionar**", "Una sección de análisis"],
-      ["Aprender sobre", "Es un objetivo de estudiante, no de investigación", "**Diseñar · Construir · Implementar**", "La obra-creación o el prototipo"],
-      ["Profundizar en", "No tiene punto de llegada: nunca se sabe si se cumplió", "**Evaluar · Validar · Medir**", "Resultados y discusión"],
-      ["Concientizar / sensibilizar", "Es intención pedagógica, no resultado verificable", "**Determinar · Establecer**", "Conclusiones sostenidas en datos"]
+      [
+        "Conocer / entender / saber",
+        "Ocurre dentro de su cabeza: nadie puede verificarlo",
+        "**Identificar · Caracterizar**",
+        "Una sección de descripción"
+      ],
+      [
+        "Ver / analizar (a secas)",
+        "\"Analizar\" sin decir qué ni contra qué no compromete a nada",
+        "**Comparar · Correlacionar**",
+        "Una sección de análisis"
+      ],
+      [
+        "Aprender sobre",
+        "Es un objetivo de estudiante, no de investigación",
+        "**Diseñar · Construir · Implementar**",
+        "La obra-creación o el prototipo"
+      ],
+      [
+        "Profundizar en",
+        "No tiene punto de llegada: nunca se sabe si se cumplió",
+        "**Evaluar · Validar · Medir**",
+        "Resultados y discusión"
+      ],
+      [
+        "Concientizar / sensibilizar",
+        "Es intención pedagógica, no resultado verificable",
+        "**Determinar · Establecer**",
+        "Conclusiones sostenidas en datos"
+      ]
     ],
     "note": "Prueba del verbo: pregúntese **\"¿cómo demuestro que ya lo cumplí?\"**. Si no puede responder con una evidencia concreta, cambie el verbo.",
-    "col_w": [2.6, 3.6, 2.7, 3.0]
+    "col_w": [
+      2.6,
+      3.6,
+      2.7,
+      3.0
+    ]
   },
   {
     "type": "bullets",
@@ -115,11 +174,26 @@
     "type": "boxes",
     "title": "Errores frecuentes que hoy quedan desterrados",
     "boxes": [
-      ["advertencia", "\"Mi objetivo es **conocer** sobre la automatización de pruebas.\" — 'Conocer' no se mide ni se vuelve sección. Cámbielo por identificar, caracterizar, comparar, diseñar o evaluar."],
-      ["advertencia", "\"Puse **7 objetivos específicos** para que se vea completo.\" — Cada específico es una sección: con 7 el artículo se vuelve inmanejable. Deje 3 o 4 bien alineados."],
-      ["advertencia", "\"Mi título es **'Revolucionando el software'**.\" — Eslogan sin variables ni contexto. Título = fenómeno + actor + contexto, en 15 a 20 palabras."],
-      ["aclaracion", "\"¿Puedo cambiar la pregunta más adelante?\" — Sí, pero cada cambio obliga a reescribir objetivos y título. Por eso hoy se invierte tiempo en dejarla firme."],
-      ["info", "Su pregunta es la **brújula** de todo lo que viene: la búsqueda de referentes, el instrumento, el análisis y la discusión se derivan de ella."]
+      [
+        "advertencia",
+        "\"Mi objetivo es **conocer** sobre la automatización de pruebas.\" — 'Conocer' no se mide ni se vuelve sección. Cámbielo por identificar, caracterizar, comparar, diseñar o evaluar."
+      ],
+      [
+        "advertencia",
+        "\"Puse **7 objetivos específicos** para que se vea completo.\" — Cada específico es una sección: con 7 el documento se vuelve inmanejable. Deje 3 o 4 bien alineados."
+      ],
+      [
+        "advertencia",
+        "\"Mi título es **'Revolucionando el software'**.\" — Eslogan sin variables ni contexto. Título = fenómeno + actor + contexto, en 15 a 20 palabras."
+      ],
+      [
+        "aclaracion",
+        "\"¿Puedo cambiar la pregunta más adelante?\" — Sí, pero cada cambio obliga a reescribir objetivos y título. Por eso hoy se invierte tiempo en dejarla firme."
+      ],
+      [
+        "info",
+        "Su pregunta es la **brújula** de todo lo que viene: la búsqueda de referentes, el instrumento, el análisis y la discusión se derivan de ella."
+      ]
     ]
   },
   {
@@ -138,43 +212,44 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Pregunta, objetivos y título en una página",
-    "bullets": [
-      "**Tiempo: 20 minutos.** Trabajo individual sobre su propio proyecto. Entregable: `S02_PreguntaObjetivos_Apellido`.",
-      "**Consigna literal:**",
-      "  **(1)** Escriba su **pregunta** con las dos variables visibles, el actor y el contexto.",
-      "  **(2)** Derive **un objetivo general + tres específicos** con verbos operables, y anote al frente de cada específico la sección que producirá.",
-      "  **(3)** Escriba el **título** en 15 a 20 palabras, sin eslóganes.",
-      "  **(4)** Cierre con la **prueba de coherencia**: lea los tres bloques seguidos y escriba una línea diciendo si suenan al mismo proyecto.",
-      "**Criterio de éxito (así se verifica):**",
-      "  Un compañero que no conoce su tema lee su página y puede decir **qué va a medir usted y en quién**.",
-      "  Ningún objetivo específico usa conocer, entender, saber o profundizar.",
-      "  El título no contiene ningún adjetivo publicitario."
-    ],
-    "note": "Mientras trabajan, **el Docente** pasa por los grupos: si usa 'conocer', si su pregunta es de sí/no o si su título es un eslogan, se lo va a decir en el momento."
+    "type": "taller"
   },
   {
     "type": "boxes",
     "title": "Checklist de autoevaluación antes de subir a CDigital",
     "boxes": [
-      ["info", "**Pregunta:** ¿puedo subrayar dos variables? ¿aparece el actor y el lugar? ¿empieza por 'en qué medida' o 'cómo' y no se responde con sí/no?"],
-      ["info", "**Objetivos:** ¿el general es uno solo y empieza en infinitivo? ¿hay entre 3 y 4 específicos? ¿todos usan verbos que se pueden verificar? ¿cada uno anuncia una sección?"],
-      ["info", "**Título:** ¿tiene fenómeno, actor y contexto? ¿está entre 15 y 20 palabras? ¿no tiene adjetivos de folleto ni signos de admiración?"],
-      ["aclaracion", "**Coherencia:** si leo pregunta, objetivos y título seguidos, ¿suenan a un solo proyecto? Si suenan a tres proyectos distintos, alinéelos antes de entregar."],
-      ["advertencia", "Si respondió 'no' a cualquiera de estas casillas, todavía no suba el archivo: arréglelo primero. Este documento es la base de todo lo que viene."]
+      [
+        "info",
+        "**Pregunta:** ¿puedo subrayar dos variables? ¿aparece el actor y el lugar? ¿empieza por 'en qué medida' o 'cómo' y no se responde con sí/no?"
+      ],
+      [
+        "info",
+        "**Objetivos:** ¿el general es uno solo y empieza en infinitivo? ¿hay entre 3 y 4 específicos? ¿todos usan verbos que se pueden verificar? ¿cada uno anuncia una sección?"
+      ],
+      [
+        "info",
+        "**Título:** ¿tiene fenómeno, actor y contexto? ¿está entre 15 y 20 palabras? ¿no tiene adjetivos de folleto ni signos de admiración?"
+      ],
+      [
+        "aclaracion",
+        "**Coherencia:** si leo pregunta, objetivos y título seguidos, ¿suenan a un solo proyecto? Si suenan a tres proyectos distintos, alinéelos antes de entregar."
+      ],
+      [
+        "advertencia",
+        "Si respondió 'no' a cualquiera de estas casillas, todavía no suba el archivo: arréglelo primero. Este documento es la base de todo lo que viene."
+      ]
     ]
   },
   {
     "type": "bullets",
     "title": "Para continuar — trabajo autónomo",
     "bullets": [
-      "**Suba** `S02_PreguntaObjetivos_Apellido` a **CDigital**: [URL CDigital — campus del curso pendiente]",
+      "**Suba** `S02_PreguntaObjetivos_Apellido` a **CDigital**: {{CDIGITAL}}",
       "**Trabajo autónomo (extensión de la sesión):**",
       "  Muéstrele su pregunta a alguien ajeno al proyecto y pídale que le explique con sus palabras qué va a investigar usted. Si no puede, reescríbala.",
       "  Busque en Google Académico **tres artículos** cuyo título se parezca en estructura al suyo y observe cómo están construidos.",
       "  Anote en su bitácora las variables tal como las nombran esos autores: ese vocabulario le va a servir para los referentes.",
-      "**En la próxima sesión** tomamos exactamente esta pregunta y estos objetivos y montamos la **estructura del artículo**, con taller de **introducción** sobre la plantilla APA CUN en Google Docs.",
+      "**En la próxima sesión** tomamos exactamente esta pregunta y estos objetivos y montamos la **estructura del documento**, con taller de **introducción** sobre la plantilla APA CUN en Google Docs.",
       "  Llegue con el documento de hoy terminado: la introducción se escribe encima de él."
     ]
   }

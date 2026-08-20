@@ -31,7 +31,7 @@
 | Registro docente sesiones/tutorías AFI | https://forms.gle/6t6BXqQ2Kwmivpct8 | **Solo docente** · dentro de 24h · con link de grabación. |
 | Consulta de asignación (docentes) | https://script.google.com/a/macros/cun.edu.co/s/AKfycbyd-kySUI1vX2PL-MHp8BG61Xmkv8AD0uwvtGDbTWO4B01Ltzp7sC9CkWIjZO5yivaI/exec | Correo Coordinación 6/08/2026. |
 | Google Meet | `[URL Meet — mismo enlace toda la serie · Proyecto I]` | Un solo enlace para toda la serie. Ver reglas Meet abajo. |
-| CDigital (campus) | `[URL CDigital — campus del curso pendiente]` | Sustituir cuando exista el campus real. |
+| CDigital (campus) | `cdigital_url("proyecto1")` → `config/cursos/carga_academica_2026.json` | Ya registrado (aula 130378). **No copiar la URL aquí:** se saca de la fuente única, como en los builds. |
 | Normatividad CUN (referencia) | https://cun.edu.co/somos-la-cun/normatividad/ | Reglamento estudiantil y demás. |
 
 ---

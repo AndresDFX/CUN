@@ -33,17 +33,49 @@
   {
     "type": "table",
     "title": "Trazabilidad: qué sesión produjo qué sección del documento",
-    "headers": ["Sesión", "Lo que produjo", "Dónde vive en la propuesta"],
+    "headers": [
+      "Sesión",
+      "Lo que produjo",
+      "Dónde vive en la propuesta"
+    ],
     "rows": [
-      ["**02**", "Reto (HMW), banco de ideas y criterios de selección", "Problema–oportunidad: usuario, dolor y evidencia"],
-      ["**03**", "**Ficha Oslo**: tipo dominante, novedad, valor", "Propuesta de valor y tipo de innovación"],
-      ["**04**", "**Matriz comparativa** contra una alternativa + conclusión", "Justificación del tipo y del grado"],
-      ["**05**", "FODA, **Canvas**, **MVP** y la prueba con criterio; **tablero de vigilancia**", "Validación y vigilancia tecnológica"],
-      ["**06**", "**Mapa de entidades**, frase de impacto y **guion del pitch**", "Ecosistema, siguiente paso y pitch anexo"],
-      ["**07** (hoy)", "Sustentación, ajustes de coherencia y cierre", "El documento revisado que se lleva del curso"]
+      [
+        "**02**",
+        "Reto (HMW), banco de ideas y criterios de selección",
+        "Problema–oportunidad: usuario, dolor y evidencia"
+      ],
+      [
+        "**03**",
+        "**Ficha Oslo**: tipo dominante, novedad, valor",
+        "Propuesta de valor y tipo de innovación"
+      ],
+      [
+        "**04**",
+        "**Matriz comparativa** contra una alternativa + conclusión",
+        "Justificación del tipo y del grado"
+      ],
+      [
+        "**05**",
+        "FODA, **Canvas**, **MVP** y la prueba con criterio; **tablero de vigilancia**",
+        "Validación y vigilancia tecnológica"
+      ],
+      [
+        "**06**",
+        "**Mapa de entidades**, frase de impacto y **guion del pitch**",
+        "Ecosistema, siguiente paso y pitch anexo"
+      ],
+      [
+        "**07** (hoy)",
+        "Sustentación, ajustes de coherencia y cierre",
+        "El documento revisado que se lleva del curso"
+      ]
     ],
     "note": "Si alguna fila de esta tabla **no tiene documento** en su carpeta, esa es la sección que hay que reconstruir antes de usar la propuesta para cualquier otra cosa.",
-    "col_w": [1.2, 5.0, 4.6]
+    "col_w": [
+      1.2,
+      5.0,
+      4.6
+    ]
   },
   {
     "type": "bullets",
@@ -64,16 +96,44 @@
   {
     "type": "table",
     "title": "Las cinco preguntas que le van a hacer (y cómo se responden)",
-    "headers": ["Pregunta", "Qué está midiendo", "Respuesta que funciona"],
+    "headers": [
+      "Pregunta",
+      "Qué está midiendo",
+      "Respuesta que funciona"
+    ],
     "rows": [
-      ["¿Quién es exactamente su usuario?", "Si el problema tiene una persona detrás", "Rol + situación: \"estudiantes de 4º que cursan laboratorio los martes\""],
-      ["¿Qué evidencia tiene de que eso pasa?", "Si el problema es observado o supuesto", "Un dato, una observación o una frase textual del usuario"],
-      ["¿En qué se diferencia de lo que ya existe?", "Si hubo vigilancia real", "\"Existe X; mi diferencia está en Y\" — con la fuente a la mano"],
-      ["¿Cómo sabría que su propuesta funcionó?", "Si hay criterio, no deseo", "El criterio de la prueba: [cuántos] de [cuántos] en [qué condición]"],
-      ["¿Qué necesita ahora que no tiene?", "Si sabe pedir el encaje", "Un pedido concreto a una entidad concreta, acotado en el tiempo"]
+      [
+        "¿Quién es exactamente su usuario?",
+        "Si el problema tiene una persona detrás",
+        "Rol + situación: \"estudiantes de 4º que cursan laboratorio los martes\""
+      ],
+      [
+        "¿Qué evidencia tiene de que eso pasa?",
+        "Si el problema es observado o supuesto",
+        "Un dato, una observación o una frase textual del usuario"
+      ],
+      [
+        "¿En qué se diferencia de lo que ya existe?",
+        "Si hubo vigilancia real",
+        "\"Existe X; mi diferencia está en Y\" — con la fuente a la mano"
+      ],
+      [
+        "¿Cómo sabría que su propuesta funcionó?",
+        "Si hay criterio, no deseo",
+        "El criterio de la prueba: [cuántos] de [cuántos] en [qué condición]"
+      ],
+      [
+        "¿Qué necesita ahora que no tiene?",
+        "Si sabe pedir el encaje",
+        "Un pedido concreto a una entidad concreta, acotado en el tiempo"
+      ]
     ],
     "note": "Las cinco se responden con material que **usted ya escribió**. Si alguna lo deja en blanco, ahí está el hueco de su documento.",
-    "col_w": [3.2, 3.0, 4.6]
+    "col_w": [
+      3.2,
+      3.0,
+      4.6
+    ]
   },
   {
     "type": "bullets",
@@ -94,15 +154,39 @@
   {
     "type": "table",
     "title": "Rúbrica de la ronda: qué mirar cuando escucha a un compañero",
-    "headers": ["Criterio", "Señal de que está flojo", "Señal de que está sólido"],
+    "headers": [
+      "Criterio",
+      "Señal de que está flojo",
+      "Señal de que está sólido"
+    ],
     "rows": [
-      ["**Claridad del problema**", "Empieza por la solución o por la tecnología", "En 10 s ya sabemos a quién le duele qué"],
-      ["**Solidez de la evidencia**", "\"Todo el mundo sabe que...\"", "Un número, una observación o una cita del usuario"],
-      ["**Diferencia**", "\"No hay nada parecido\" (sin haber buscado)", "Nombra lo que existe y dice en qué se aparta"],
-      ["**Claridad del pedido**", "Termina sin pedir nada", "Se puede responder con un sí o un no"]
+      [
+        "**Claridad del problema**",
+        "Empieza por la solución o por la tecnología",
+        "En 10 s ya sabemos a quién le duele qué"
+      ],
+      [
+        "**Solidez de la evidencia**",
+        "\"Todo el mundo sabe que...\"",
+        "Un número, una observación o una cita del usuario"
+      ],
+      [
+        "**Diferencia**",
+        "\"No hay nada parecido\" (sin haber buscado)",
+        "Nombra lo que existe y dice en qué se aparta"
+      ],
+      [
+        "**Claridad del pedido**",
+        "Termina sin pedir nada",
+        "Se puede responder con un sí o un no"
+      ]
     ],
     "note": "Estos cuatro criterios son los que debe usar también en el **foro de coevaluación**: escriba con ellos, no con adjetivos.",
-    "col_w": [2.4, 4.0, 4.4]
+    "col_w": [
+      2.4,
+      4.0,
+      4.4
+    ]
   },
   {
     "type": "bullets",
@@ -137,30 +221,32 @@
     "note": "Auto y coevaluación pesan poco por separado, pero son las notas más fáciles de perder: se pierden por no entrar."
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Sustentación cruzada y consolidación (25 minutos)",
-    "bullets": [
-      "**Paso 1 (12 min) · Ronda de sustentación.** Turnos de 3 minutos: pitch de 60 s + dos preguntas + la frase de \"qué está listo / qué falta\".",
-      "  Quien escucha toma nota con los **cuatro criterios de la rúbrica**. Una línea por criterio, no más.",
-      "**Paso 2 (5 min) · Devolución en pareja.** Cada quien le entrega a su compañero las **tres frases**: me quedó claro / no me quedó claro / le sugiero.",
-      "**Paso 3 (6 min) · Revisión de costuras.** Con la devolución en la mano, revise las **seis costuras** de su documento y anote los ajustes en una lista.",
-      "  No los haga ahora: **anótelos**. Escribir la lista es el producto del taller.",
-      "**Paso 4 (2 min) · Abra CDigital** y verifique que ve los espacios de **autoevaluación** y **coevaluación**, y sus fechas.",
-      "**Criterio de éxito verificable:** sale de la sesión con **una lista escrita de ajustes** —mínimo tres— y con **la devolución de un compañero** anotada, no recordada.",
-      "  Segunda verificación: su compañero pudo repetir su **dolor, su valor y su pedido** sin mirar el documento.",
-      "Quien no alcance a sustentar hoy lo hace por el **foro del curso**: guion del pitch escrito + la frase de qué está listo y qué falta."
-    ],
-    "note": "El objetivo no es lucirse: es descubrir el hueco mientras todavía hay alguien al lado para señalarlo."
+    "type": "taller"
   },
   {
     "type": "boxes",
     "title": "Errores frecuentes en la sustentación",
     "boxes": [
-      ["advertencia", "**Leer el documento en voz alta.** El pitch se cuenta, no se lee. Si necesita apoyo, use una sola diapositiva con el dolor y el número."],
-      ["advertencia", "**Empezar pidiendo disculpas.** \"No me quedó muy bien\" borra el trabajo de seis sesiones antes de la primera frase."],
-      ["advertencia", "**Responder otra cosa cuando no se sabe.** Si no verificó algo, dígalo: \"no lo verifiqué\" es una respuesta profesional. Inventar no lo es."],
-      ["aclaracion", "**\"Ya entregué, ¿para qué sustentar?\"** Porque el documento no se acaba en la nota: es la base de una convocatoria, de una opción de grado o de una entrevista."],
-      ["info", "**\"Mi propuesta cambió después de entregar.\"** Perfecto, dígalo. Mostrar que la propuesta evolucionó con la evidencia es exactamente lo que este curso quería enseñar."]
+      [
+        "advertencia",
+        "**Leer el documento en voz alta.** El pitch se cuenta, no se lee. Si necesita apoyo, use una sola diapositiva con el dolor y el número."
+      ],
+      [
+        "advertencia",
+        "**Empezar pidiendo disculpas.** \"No me quedó muy bien\" borra el trabajo de seis sesiones antes de la primera frase."
+      ],
+      [
+        "advertencia",
+        "**Responder otra cosa cuando no se sabe.** Si no verificó algo, dígalo: \"no lo verifiqué\" es una respuesta profesional. Inventar no lo es."
+      ],
+      [
+        "aclaracion",
+        "**\"Ya entregué, ¿para qué sustentar?\"** Porque el documento no se acaba en la nota: es la base de una convocatoria, de una opción de grado o de una entrevista."
+      ],
+      [
+        "info",
+        "**\"Mi propuesta cambió después de entregar.\"** Perfecto, dígalo. Mostrar que la propuesta evolucionó con la evidencia es exactamente lo que este curso quería enseñar."
+      ]
     ]
   },
   {
@@ -190,7 +276,7 @@
       "  Diligenciar la **autoevaluación** (cuestionario) y participar en la **coevaluación** (foro) dentro de su ventana en CDigital.",
       "  Aplicar la **lista de ajustes** del taller a su documento y guardarlo en un sitio que no sea el escritorio del computador.",
       "  Revisar sus notas en el libro de calificaciones y **escribir al Docente antes del cierre** si algo no cuadra. Después del cierre ya no hay margen.",
-      "Plataforma del curso: [URL CDigital — campus del curso pendiente]",
+      "Plataforma del curso: {{CDIGITAL}}",
       "Cualquier duda administrativa, por el canal del curso. **Gracias por el trabajo de todo el ciclo.**"
     ]
   }

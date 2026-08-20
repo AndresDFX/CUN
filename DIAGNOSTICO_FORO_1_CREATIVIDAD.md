@@ -99,12 +99,19 @@ Los avances formativos por corte son:
 
 ## 5. Hueco detectado: la ficha de la Sesión 01 no tiene dónde subirse
 
-`Clases/Sesion 01 .../Ficha_problema_oportunidad.docx` instruye al estudiante:
+`Clases/Sesion 01 .../Ficha_problema_oportunidad.docx` instruía al estudiante:
 
 > «Entregable: sube a CDigital como `S01_FichaProblema_Apellido`»
 
 Pero **en el aula no existe ninguna tarea para eso**: el único `assign` del aula es
-**ACA Final**. Es decir, hoy la ficha de S01 no tiene punto de entrega.
+**ACA Final**. Es decir, la ficha de S01 no tenía punto de entrega.
+
+**Corregido el 2026-08-20.** La ficha ya no pide subir nada: su línea de destino la deriva
+`sync_clases_estudiantes.ficha_creatividad_s01()` desde `talleres`, igual que las decks, y hoy
+dice «hoy no subes nada al aula: guarda la ficha en tu Drive … esto alimenta la **ACA Final**
+—tarea, 32,8%—, que cierra en la semana de la **Sesión 06**». Lo de abajo sigue en pie como
+propuesta: **usar los foros vacíos de Tema 1** para que ese avance formativo tenga además un
+lugar visible en el aula.
 
 **Los dos foros vacíos de Tema 1 son exactamente el lugar donde encaja ese avance
 formativo del Corte 1.** Eso resuelve el hueco y le da sentido a los dos foros de una vez.

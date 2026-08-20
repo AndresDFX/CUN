@@ -180,11 +180,27 @@ def cdigital_urls_por_grupo(course_key: str) -> dict[str, str]:
     return aulas if len(set(aulas.values())) > 1 else {}
 
 
+def cdigital_frase(course_key: str) -> str:
+    """Cómo se nombra el aula en material que se proyecta a **todos** los grupos a la vez.
+
+    Existe porque las decks de sesión traían la URL escrita a mano en el JSON de cada sesión —53
+    bloques— y esa copia se quedó con el placeholder, así que el estudiante veía proyectado
+    «[URL CDigital — campus del curso pendiente]» aunque el aula sí estuviera registrada.
+
+    En TG3 devuelve una frase, no una URL: son **tres** aulas para una sola serie de encuentros,
+    y cualquier URL única sería la equivocada para dos tercios del curso.
+    """
+    if cdigital_urls_por_grupo(course_key):
+        return "el aula de **su grupo** en CDigital"
+    url = cdigital_url(course_key)
+    return url if url != CDIGITAL_PLACEHOLDER else "el aula del curso en **CDigital**"
+
+
 # Convención carpetas (raíz de asignatura, GENÉRICO — sin código de grupo):
 #   Clases/Presentacion del Curso - ....pptx
 #   Clases/Sesion 01 - <Nombre del tema>/Presentacion.pptx  ← numerada + tema
-#   Guiones/Sesion 01 - <Nombre del tema>.md                ← numerado + tema (solo .md)
-#   Guiones/Capturas/
+#   Docente/Guiones/Sesion 01 - <Nombre del tema>.md        ← numerado + tema (solo .md)
+#   Docente/Guiones/Capturas/
 # PPTX de sesión: SIN bio/correo del docente (eso solo en Presentación del Curso).
 #
 # REGLA · TÍTULOS DE SESIÓN SIN FECHAS (obligatoria, verificada al importar):
@@ -388,8 +404,8 @@ COURSES = {
              "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema. Sesión reprogramada al viernes 14/08; la Sesión 02 vuelve al lunes."},
             {"n": 2, "fecha": "24/08/2026", "titulo": "Pregunta, objetivos y título provisional", "bloque": "Orientativo",
              "detalle": "17/08 es clase autónoma (festivo)."},
-            {"n": 3, "fecha": "31/08/2026", "titulo": "Estructura del documento / artículo de avance", "bloque": "Orientativo",
-             "detalle": "Plantilla APA CUN."},
+            {"n": 3, "fecha": "31/08/2026", "titulo": "Estructura del documento de avance", "bloque": "Orientativo",
+             "detalle": "Plantilla APA CUN. El esqueleto es el mismo para cualquier modalidad de grado."},
             {"n": 4, "fecha": "07/09/2026", "titulo": "Antecedentes y referentes (Fase I)", "bloque": "Orientativo",
              "detalle": "Búsqueda en bases CUN."},
             {"n": 5, "fecha": "14/09/2026", "titulo": "Marco teórico — avance", "bloque": "Orientativo",
@@ -426,8 +442,8 @@ COURSES = {
              "detalle": "Encuadre: presentación del curso, del Docente, de los estudiantes y de las ACAs (peso, fechas, formato APA) + acuerdo pedagógico. No se dicta tema."},
             {"n": 2, "fecha": "18/08/2026", "titulo": "Formulación de pregunta, objetivos y título", "bloque": "U3",
              "detalle": "Variables en la pregunta-problema."},
-            {"n": 3, "fecha": "25/08/2026", "titulo": "Estructura del artículo · taller de introducción", "bloque": "U4",
-             "detalle": "Contexto, problema, pregunta y objetivos."},
+            {"n": 3, "fecha": "25/08/2026", "titulo": "Estructura del documento · taller de introducción", "bloque": "U4",
+             "detalle": "Contexto, problema, pregunta y objetivos. Mismo esqueleto para cualquier modalidad."},
             {"n": 4, "fecha": "01/09/2026", "titulo": "Fase I de referentes de investigación", "bloque": "U5",
              "detalle": "Diálogo colaborativo."},
             {"n": 5, "fecha": "08/09/2026", "titulo": "Diseño de instrumento · desarrollo metodológico", "bloque": "U6",
@@ -441,7 +457,7 @@ COURSES = {
             {"n": 9, "fecha": "06/10/2026", "titulo": "Resultados, discusión y relación con referentes", "bloque": "U10",
              "detalle": "Hallazgos vs. literatura."},
             {"n": 10, "fecha": "13/10/2026", "titulo": "Resumen, palabras clave UNESCO, conclusiones y referencias", "bloque": "U11",
-             "detalle": "Culminación del artículo."},
+             "detalle": "Culminación del documento."},
             {"n": 11, "fecha": "20/10/2026", "titulo": "Póster · evidencias · verificación antiplagio", "bloque": "U12",
              "detalle": "Alistamiento para sustentación."},
             {"n": 12, "fecha": "27/10/2026", "titulo": "Sustentación ante jurados", "bloque": "U13",

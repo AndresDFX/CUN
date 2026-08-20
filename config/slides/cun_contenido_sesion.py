@@ -102,8 +102,79 @@ def load(course_key: str, n: int):
     if not isinstance(data, list):
         print(f"WARN {os.path.basename(path)}: se esperaba una lista de bloques", file=sys.stderr)
         return None
+    data = _expandir_talleres(data, course_key, n, os.path.basename(path))
+    data = _resolver_aula(data, course_key)
     blocks = [b for b in data if isinstance(b, dict) and _block_type(b)]
     return blocks or None
+
+
+MARCA_AULA = "{{CDIGITAL}}"
+
+
+def _resolver_aula(data: list, course_key: str):
+    """Sustituye `{{CDIGITAL}}` por el aula real del curso, en cualquier texto del bloque.
+
+    La URL del aula no puede vivir copiada en los JSON: cuando cambió el id de las aulas de TG3
+    (54450 → 112321 y compañía) las copias quedaron viejas, y de hecho 53 bloques seguían
+    proyectando el placeholder «[URL CDigital — campus del curso pendiente]» con el aula ya
+    registrada. El JSON marca **dónde** va el aula; cuál es lo decide `sesiones_cun`.
+    """
+    _cursos = os.path.join(os.path.dirname(SLIDES_DIR), "cursos")
+    if _cursos not in sys.path:
+        sys.path.insert(0, _cursos)
+    try:
+        from sesiones_cun import CDIGITAL_PLACEHOLDER, cdigital_frase
+    except Exception as exc:
+        print(f"WARN no se pudo resolver el aula de CDigital ({exc}); el marcador queda visible",
+              file=sys.stderr)
+        return data
+    frase = cdigital_frase(course_key)
+
+    def sub(v):
+        if isinstance(v, str):
+            return v.replace(MARCA_AULA, frase).replace(CDIGITAL_PLACEHOLDER, frase)
+        if isinstance(v, list):
+            return [sub(x) for x in v]
+        if isinstance(v, dict):
+            return {k: sub(x) for k, x in v.items()}
+        return v
+
+    return [sub(b) for b in data]
+
+
+def _expandir_talleres(data: list, course_key: str, n: int, nombre: str) -> list:
+    """Convierte cada `{"type": "taller"}` en las dos slides que da `talleres.bloques()`.
+
+    Tiene que correr **antes** del filtro de `_block_type`, que descarta los tipos que no
+    conoce y se comería el marcador sin decir nada.
+
+    El marcador existe porque los 45 talleres estaban escritos a mano dentro de estos JSON y
+    habían derivado a cuatro formatos distintos, con el nombre del archivo repetido en el guion
+    y con la frase «súbalo al espacio de esta sesión» apuntando a un espacio que el aula no
+    tiene. Ahora el JSON solo marca **dónde** va el taller; qué dice lo decide `talleres.py`.
+    """
+    if not any(isinstance(b, dict) and (b.get("type") or "").strip().lower() == "taller"
+               for b in data):
+        return data
+    try:
+        import talleres
+    except Exception as exc:
+        print(f"WARN {nombre}: no se pudo cargar talleres.py ({exc}); el taller se omite",
+              file=sys.stderr)
+        return [b for b in data
+                if not (isinstance(b, dict) and (b.get("type") or "").strip().lower() == "taller")]
+    salida = []
+    for b in data:
+        if not (isinstance(b, dict) and (b.get("type") or "").strip().lower() == "taller"):
+            salida.append(b)
+            continue
+        bloques = talleres.bloques(course_key, n)
+        if not bloques:
+            print(f"WARN {nombre}: marcador de taller sin entrada en talleres.py "
+                  f"para ({course_key}, s{n:02d})", file=sys.stderr)
+            continue
+        salida.extend(bloques)
+    return salida
 
 
 def _block_type(blk: dict) -> str | None:

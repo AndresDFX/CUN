@@ -34,16 +34,44 @@
   {
     "type": "table",
     "title": "Trazabilidad: qué sesión produjo qué sección del artículo",
-    "headers": ["Sesión", "Lo que produjo", "Dónde vive en el artículo"],
+    "headers": [
+      "Sesión",
+      "Lo que produjo",
+      "Dónde vive en el artículo"
+    ],
     "rows": [
-      ["**02**", "Línea de Ingeniería elegida y justificada", "Introducción: tema, línea y motivación"],
-      ["**03**", "Título, introducción en tres párrafos, primeras referencias", "Título e introducción"],
-      ["**04**", "Diagrama de causas, **pregunta** y **3 fuentes citadas**", "Problema y pregunta · primeras referencias APA 7"],
-      ["**05**", "**Planteamiento** con evidencia y **marco** por constructos", "Planteamiento del problema · marco teórico y revisión"],
-      ["**06** (hoy)", "Socialización, retroalimentación y cierre", "Los ajustes que se lleva para seguir con el documento"]
+      [
+        "**02**",
+        "Línea de Ingeniería elegida y justificada",
+        "Introducción: tema, línea y motivación"
+      ],
+      [
+        "**03**",
+        "Título, introducción en tres párrafos, primeras referencias",
+        "Título e introducción"
+      ],
+      [
+        "**04**",
+        "Diagrama de causas, **pregunta** y **3 fuentes citadas**",
+        "Problema y pregunta · primeras referencias APA 7"
+      ],
+      [
+        "**05**",
+        "**Planteamiento** con evidencia y **marco** por constructos",
+        "Planteamiento del problema · marco teórico y revisión"
+      ],
+      [
+        "**06** (hoy)",
+        "Socialización, retroalimentación y cierre",
+        "Los ajustes que se lleva para seguir con el documento"
+      ]
     ],
     "note": "Si alguna fila **no tiene documento** en su carpeta, esa es la sección que hay que reconstruir antes de usar el artículo para cualquier otra cosa.",
-    "col_w": [1.2, 5.0, 4.6]
+    "col_w": [
+      1.2,
+      5.0,
+      4.6
+    ]
   },
   {
     "type": "bullets",
@@ -63,16 +91,44 @@
   {
     "type": "table",
     "title": "Las cinco preguntas que le van a hacer (y cómo se responden)",
-    "headers": ["Pregunta", "Qué está midiendo", "Respuesta que funciona"],
+    "headers": [
+      "Pregunta",
+      "Qué está midiendo",
+      "Respuesta que funciona"
+    ],
     "rows": [
-      ["¿A quién afecta y dónde ocurre?", "Si el problema tiene actor y contexto", "Rol + lugar: \"los estudiantes del laboratorio X de la sede Y\""],
-      ["¿Qué evidencia tiene de que eso pasa?", "Si el problema es observado o supuesto", "Un dato con fuente y año, o un registro institucional"],
-      ["¿Su pregunta se puede responder este periodo?", "Viabilidad y alcance", "Qué fuentes existen y qué parte del problema recortó"],
-      ["¿Qué dicen los autores que leyó?", "Si el marco es argumento o collage", "Dos constructos, un acuerdo y una diferencia entre autores"],
-      ["¿Qué le falta al artículo?", "Honestidad y madurez del trabajo", "Una frase concreta: qué sección, qué dato, qué fuente"]
+      [
+        "¿A quién afecta y dónde ocurre?",
+        "Si el problema tiene actor y contexto",
+        "Rol + lugar: \"los estudiantes del laboratorio X de la sede Y\""
+      ],
+      [
+        "¿Qué evidencia tiene de que eso pasa?",
+        "Si el problema es observado o supuesto",
+        "Un dato con fuente y año, o un registro institucional"
+      ],
+      [
+        "¿Su pregunta se puede responder este periodo?",
+        "Viabilidad y alcance",
+        "Qué fuentes existen y qué parte del problema recortó"
+      ],
+      [
+        "¿Qué dicen los autores que leyó?",
+        "Si el marco es argumento o collage",
+        "Dos constructos, un acuerdo y una diferencia entre autores"
+      ],
+      [
+        "¿Qué le falta al artículo?",
+        "Honestidad y madurez del trabajo",
+        "Una frase concreta: qué sección, qué dato, qué fuente"
+      ]
     ],
     "note": "Las cinco se responden con material que **usted ya escribió**. Si alguna lo deja en blanco, ahí está el hueco del documento.",
-    "col_w": [3.2, 3.0, 4.6]
+    "col_w": [
+      3.2,
+      3.0,
+      4.6
+    ]
   },
   {
     "type": "bullets",
@@ -93,31 +149,42 @@
   {
     "type": "table",
     "title": "Rúbrica de la ronda: qué mirar cuando escucha a un compañero",
-    "headers": ["Criterio", "Señal de que está flojo", "Señal de que está sólido"],
+    "headers": [
+      "Criterio",
+      "Señal de que está flojo",
+      "Señal de que está sólido"
+    ],
     "rows": [
-      ["**Problema**", "Empieza por la solución o por la tecnología", "En 40 s ya sabemos a quién le pasa qué y dónde"],
-      ["**Evidencia**", "\"Todo el mundo sabe que...\"", "Una cifra o un registro, con fuente y año"],
-      ["**Pregunta**", "Se responde con sí o no, o es planetaria", "Tiene actor, contexto y abre con qué / cómo / en qué medida"],
-      ["**Marco**", "Lista de definiciones sin relación con el caso", "Constructos claros y al menos un contraste entre autores"]
+      [
+        "**Problema**",
+        "Empieza por la solución o por la tecnología",
+        "En 40 s ya sabemos a quién le pasa qué y dónde"
+      ],
+      [
+        "**Evidencia**",
+        "\"Todo el mundo sabe que...\"",
+        "Una cifra o un registro, con fuente y año"
+      ],
+      [
+        "**Pregunta**",
+        "Se responde con sí o no, o es planetaria",
+        "Tiene actor, contexto y abre con qué / cómo / en qué medida"
+      ],
+      [
+        "**Marco**",
+        "Lista de definiciones sin relación con el caso",
+        "Constructos claros y al menos un contraste entre autores"
+      ]
     ],
     "note": "Estos cuatro criterios son los que debe usar en el **foro de coevaluación**: escriba con ellos, no con adjetivos.",
-    "col_w": [1.8, 4.2, 4.8]
+    "col_w": [
+      1.8,
+      4.2,
+      4.8
+    ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER · Ronda de socialización (~25 min)",
-    "bullets": [
-      "**Paso 1 (16 min) · Rondas de 4 minutos.** Cada quien cuenta su artículo con la estructura de hoy y recibe dos preguntas.",
-      "  Quien escucha toma nota con los **cuatro criterios de la rúbrica**. Una línea por criterio, no más.",
-      "**Paso 2 (5 min) · Devolución en pareja.** Cada quien le entrega a su compañero las **tres frases**: me quedó claro / no me quedó claro / le sugiero.",
-      "**Paso 3 (3 min) · Lista de ajustes.** Con la devolución en la mano, escriba los **tres arreglos** que le va a hacer al documento.",
-      "  No los haga ahora: **anótelos**. Escribir la lista es el producto del taller.",
-      "**Paso 4 (1 min) · Abra CDigital** y verifique que ve los espacios de **autoevaluación** y **coevaluación**, y sus fechas.",
-      "**Criterio de éxito (verificable):** sale con **una lista escrita de tres ajustes** y con **la devolución de un compañero** anotada, no recordada.",
-      "  Segunda verificación: su compañero pudo repetir **su pregunta y a quién afecta** sin mirar el documento.",
-      "Quien no alcance a socializar en clase lo hace por el **foro del curso**: pregunta, dos constructos y la frase de qué está listo y qué falta."
-    ],
-    "note": "El objetivo no es lucirse: es descubrir el hueco mientras todavía hay alguien al lado para señalarlo."
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -138,15 +205,39 @@
   {
     "type": "table",
     "title": "Autoevaluarse con criterio: cuatro preguntas honestas",
-    "headers": ["Pregunta", "Respuesta que no dice nada", "Respuesta que sí argumenta"],
+    "headers": [
+      "Pregunta",
+      "Respuesta que no dice nada",
+      "Respuesta que sí argumenta"
+    ],
     "rows": [
-      ["¿Entregué a tiempo?", "\"Sí, casi siempre\"", "\"Entregué las cuatro entradas dentro de la ventana; la de la sesión 04 la subí el mismo día del cierre\""],
-      ["¿Trabajé por semanas o la última noche?", "\"Me organicé bien\"", "\"El planteamiento lo escribí en dos sesiones distintas; el marco sí lo armé en un solo día\""],
-      ["¿Incorporé la retroalimentación?", "\"Sí, tuve en cuenta todo\"", "\"Cambié la pregunta después del comentario sobre el actor y volví a alinear el planteamiento\""],
-      ["¿Qué haría distinto?", "\"Dedicarle más tiempo\"", "\"Buscar fuentes desde la sesión 02: llegué al marco con pocas y tuve que improvisar\""]
+      [
+        "¿Entregué a tiempo?",
+        "\"Sí, casi siempre\"",
+        "\"Entregué las cuatro entradas dentro de la ventana; la de la sesión 04 la subí el mismo día del cierre\""
+      ],
+      [
+        "¿Trabajé por semanas o la última noche?",
+        "\"Me organicé bien\"",
+        "\"El planteamiento lo escribí en dos sesiones distintas; el marco sí lo armé en un solo día\""
+      ],
+      [
+        "¿Incorporé la retroalimentación?",
+        "\"Sí, tuve en cuenta todo\"",
+        "\"Cambié la pregunta después del comentario sobre el actor y volví a alinear el planteamiento\""
+      ],
+      [
+        "¿Qué haría distinto?",
+        "\"Dedicarle más tiempo\"",
+        "\"Buscar fuentes desde la sesión 02: llegué al marco con pocas y tuve que improvisar\""
+      ]
     ],
     "note": "Una autoevaluación creíble **nombra hechos concretos del periodo**. La que solo dice \"cumplí\" no le sirve a nadie, ni siquiera a usted.",
-    "col_w": [2.6, 3.4, 4.8]
+    "col_w": [
+      2.6,
+      3.4,
+      4.8
+    ]
   },
   {
     "type": "bullets",
@@ -182,10 +273,22 @@
     "type": "boxes",
     "title": "Preguntas del último día",
     "boxes": [
-      ["info", "**\"¿Todavía puedo mejorar mi nota?\"** El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revise sus ventanas en CDigital y diligéncielas."],
-      ["aclaracion", "**\"Mi pregunta cambió después de entregar.\"** Es normal y es buena señal: significa que la evidencia le enseñó algo. Anótelo y llévelo a la siguiente versión del documento."],
-      ["advertencia", "**\"¿Puedo entregar el artículo por correo?\"** No. La entrega oficial es **CDigital** y su espacio ya cerró. Si hay una situación particular, se habla con el Docente por el canal del curso antes del cierre de notas."],
-      ["info", "**\"¿Sirve este artículo para otra materia?\"** Como base, sí, y conviene declararlo. Volver a entregar el mismo texto como nuevo es autoplagio."]
+      [
+        "info",
+        "**\"¿Todavía puedo mejorar mi nota?\"** El artículo y el Quiz 3 ya cerraron. Lo que sigue abierto es **autoevaluación** y **coevaluación**: revise sus ventanas en CDigital y diligéncielas."
+      ],
+      [
+        "aclaracion",
+        "**\"Mi pregunta cambió después de entregar.\"** Es normal y es buena señal: significa que la evidencia le enseñó algo. Anótelo y llévelo a la siguiente versión del documento."
+      ],
+      [
+        "advertencia",
+        "**\"¿Puedo entregar el artículo por correo?\"** No. La entrega oficial es **CDigital** y su espacio ya cerró. Si hay una situación particular, se habla con el Docente por el canal del curso antes del cierre de notas."
+      ],
+      [
+        "info",
+        "**\"¿Sirve este artículo para otra materia?\"** Como base, sí, y conviene declararlo. Volver a entregar el mismo texto como nuevo es autoplagio."
+      ]
     ]
   },
   {
@@ -200,7 +303,7 @@
       "  Diligenciar la **autoevaluación** (cuestionario) y participar en la **coevaluación** (foro) dentro de su ventana en CDigital.",
       "  Aplicar la **lista de tres ajustes** del taller a su documento y guardarlo con sus fichas de lectura.",
       "  Revisar sus notas en el libro de calificaciones y **escribir al Docente antes del cierre** si algo no cuadra. Después del cierre ya no hay margen.",
-      "Plataforma del curso: [URL CDigital — campus del curso pendiente]",
+      "Plataforma del curso: {{CDIGITAL}}",
       "Cualquier duda administrativa, por el canal del curso. **Gracias por el trabajo de estas seis semanas.**"
     ]
   }

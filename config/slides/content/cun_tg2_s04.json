@@ -16,15 +16,45 @@
   {
     "type": "table",
     "title": "Las tres piezas del marco referencial no son lo mismo",
-    "headers": ["Pieza", "Qué contiene", "Pregunta que responde", "Ejemplo del caso tickets"],
+    "headers": [
+      "Pieza",
+      "Qué contiene",
+      "Pregunta que responde",
+      "Ejemplo del caso tickets"
+    ],
     "rows": [
-      ["**Antecedentes**", "Estudios previos parecidos al suyo", "¿Quién ya hizo algo así y qué halló?", "Un estudio que clasificó tickets con aprendizaje automático en 2022"],
-      ["**Marco teórico**", "Teorías y modelos de fondo", "¿Con qué teoría entiendo el fenómeno?", "Qué es y cómo funciona la clasificación supervisada"],
-      ["**Marco conceptual**", "Definiciones operativas de sus términos", "¿Qué significa exactamente cada palabra en MI proyecto?", "\"Tiempo de atención\" = minutos entre apertura y cierre"],
-      ["**Marco contextual**", "El escenario real y acotado", "¿Dónde ocurre esto exactamente?", "El área de soporte TI de la empresa X"]
+      [
+        "**Antecedentes**",
+        "Estudios previos parecidos al suyo",
+        "¿Quién ya hizo algo así y qué halló?",
+        "Un estudio que clasificó tickets con aprendizaje automático en 2022"
+      ],
+      [
+        "**Marco teórico**",
+        "Teorías y modelos de fondo",
+        "¿Con qué teoría entiendo el fenómeno?",
+        "Qué es y cómo funciona la clasificación supervisada"
+      ],
+      [
+        "**Marco conceptual**",
+        "Definiciones operativas de sus términos",
+        "¿Qué significa exactamente cada palabra en MI proyecto?",
+        "\"Tiempo de atención\" = minutos entre apertura y cierre"
+      ],
+      [
+        "**Marco contextual**",
+        "El escenario real y acotado",
+        "¿Dónde ocurre esto exactamente?",
+        "El área de soporte TI de la empresa X"
+      ]
     ],
     "note": "Hoy solo se trabaja la primera fila. Confundir antecedentes con teoría es el error que más devoluciones genera en esta sección.",
-    "col_w": [2.2, 2.9, 3.2, 3.6]
+    "col_w": [
+      2.2,
+      2.9,
+      3.2,
+      3.6
+    ]
   },
   {
     "type": "bullets",
@@ -43,16 +73,44 @@
   {
     "type": "table",
     "title": "La ficha de antecedente: cinco campos, ninguno opcional",
-    "headers": ["Campo", "Pregunta que responde", "Extensión sugerida"],
+    "headers": [
+      "Campo",
+      "Pregunta que responde",
+      "Extensión sugerida"
+    ],
     "rows": [
-      ["Referencia en APA 7", "¿De dónde salió?", "Una línea, generada en ZoteroBib"],
-      ["Objetivo del estudio", "¿Qué buscaban los autores?", "Una o dos líneas, con sus palabras"],
-      ["Método", "¿Cómo lo hicieron? (enfoque, muestra, técnica)", "Dos líneas"],
-      ["Hallazgo principal", "¿Qué encontraron?", "Dos líneas; incluya el dato si lo hay"],
-      ["**Aporte a mi proyecto**", "**¿Para qué me sirve a mí?**", "Una línea, obligatoria"]
+      [
+        "Referencia en APA 7",
+        "¿De dónde salió?",
+        "Una línea, generada en ZoteroBib"
+      ],
+      [
+        "Objetivo del estudio",
+        "¿Qué buscaban los autores?",
+        "Una o dos líneas, con sus palabras"
+      ],
+      [
+        "Método",
+        "¿Cómo lo hicieron? (enfoque, muestra, técnica)",
+        "Dos líneas"
+      ],
+      [
+        "Hallazgo principal",
+        "¿Qué encontraron?",
+        "Dos líneas; incluya el dato si lo hay"
+      ],
+      [
+        "**Aporte a mi proyecto**",
+        "**¿Para qué me sirve a mí?**",
+        "Una línea, obligatoria"
+      ]
     ],
     "note": "Sin la última línea la ficha es decorativa: se convierte en una lista de lecturas, no en un argumento. Empiécela siempre con \"Me aporta…\".",
-    "col_w": [3.0, 5.1, 3.8]
+    "col_w": [
+      3.0,
+      5.1,
+      3.8
+    ]
   },
   {
     "type": "bullets",
@@ -128,10 +186,22 @@
     "type": "boxes",
     "title": "Lo que más se corrige en esta sesión",
     "boxes": [
-      ["advertencia", "**\"Pego el resumen del artículo tal cual.\"** — Eso es plagio, aunque cite. Reescriba con sus palabras y agregue la línea \"me aporta…\"."],
-      ["advertencia", "**\"Antecedentes y marco teórico son lo mismo.\"** — No: antecedentes son estudios previos parecidos; el marco es la teoría de fondo del fenómeno."],
-      ["aclaracion", "**\"Cito ocho estudios y ya.\"** — Ocho fichas sueltas no son un argumento. Mejor cuatro bien hechas más el párrafo puente que muestra el vacío."],
-      ["info", "**\"Solo encuentro fuentes en español.\"** — Traduzca los términos técnicos y repita la búsqueda en inglés; luego integre ambas en el mismo párrafo."]
+      [
+        "advertencia",
+        "**\"Pego el resumen del artículo tal cual.\"** — Eso es plagio, aunque cite. Reescriba con sus palabras y agregue la línea \"me aporta…\"."
+      ],
+      [
+        "advertencia",
+        "**\"Antecedentes y marco teórico son lo mismo.\"** — No: antecedentes son estudios previos parecidos; el marco es la teoría de fondo del fenómeno."
+      ],
+      [
+        "aclaracion",
+        "**\"Cito ocho estudios y ya.\"** — Ocho fichas sueltas no son un argumento. Mejor cuatro bien hechas más el párrafo puente que muestra el vacío."
+      ],
+      [
+        "info",
+        "**\"Solo encuentro fuentes en español.\"** — Traduzca los términos técnicos y repita la búsqueda en inglés; luego integre ambas en el mismo párrafo."
+      ]
     ]
   },
   {
@@ -150,18 +220,7 @@
     "note": "El paso a paso ampliado está en la guía práctica de herramientas de escritura y citación de la carpeta del curso."
   },
   {
-    "type": "bullets",
-    "title": "Taller — 20 minutos de búsqueda y fichaje",
-    "bullets": [
-      "**Consigna:** en un documento llamado `S04_Antecedentes_Apellido`:",
-      "  **(1)** Busque y elija **cuatro antecedentes**, con al menos **uno nacional o local** y **uno internacional**.",
-      "  **(2)** Haga una **ficha** por cada uno con los cinco campos, redactada con sus palabras.",
-      "  **(3)** Genere las cuatro referencias en **APA 7** con ZoteroBib y péguelas en la sección Referencias.",
-      "  **(4)** Escriba el **párrafo puente** con la fórmula coinciden / difieren / vacío.",
-      "**Tiempo:** 20 minutos; el Docente acompaña la búsqueda de quienes no encuentren resultados.",
-      "**Criterio de éxito:** cada ficha tiene su línea \"me aporta…\" y el párrafo puente nombra explícitamente el vacío que llena su proyecto.",
-      "Si una búsqueda no da nada en tres intentos, cambie una palabra clave: el problema casi siempre es el vocabulario."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",
@@ -182,7 +241,7 @@
     "title": "Trabajo autónomo y qué viene la próxima sesión",
     "bullets": [
       "**Entrega:** suba `S04_Antecedentes_Apellido` a **CDigital** con las cuatro fichas y el párrafo puente.",
-      "  [URL CDigital — campus del curso pendiente]",
+      "  {{CDIGITAL}}",
       "**Autónomo 1:** aplique la técnica de bola de nieve: entre a las referencias de su mejor artículo y sume dos fuentes más.",
       "**Autónomo 2:** pegue las fichas en la sección de marco referencial del documento que armó con la plantilla.",
       "**Autónomo 3:** subraye en sus fichas los tres conceptos que más se repiten; serán la materia prima de la próxima sesión.",

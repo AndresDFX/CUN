@@ -29,26 +29,86 @@
   {
     "type": "table",
     "title": "Las cinco decisiones encadenadas de la metodología",
-    "headers": ["Decisión", "Pregunta que resuelve", "Opciones típicas", "Qué la determina"],
+    "headers": [
+      "Decisión",
+      "Pregunta que resuelve",
+      "Opciones típicas",
+      "Qué la determina"
+    ],
     "rows": [
-      ["**Enfoque**", "¿Mido o interpreto?", "Cuantitativo · cualitativo · mixto", "La forma de su pregunta"],
-      ["**Alcance**", "¿Qué tanto se sabe ya?", "Exploratorio · descriptivo · correlacional · explicativo", "Lo que encontró en antecedentes"],
-      ["**Diseño**", "¿Intervengo o solo observo?", "Experimental · cuasiexperimental · no experimental · estudio de caso", "Si puede o no manipular variables"],
-      ["**Población / datos**", "¿Sobre qué o quiénes?", "Personas, procesos, registros, logs, documentos", "La unidad de análisis de la pregunta"],
-      ["**Técnicas**", "¿Con qué recojo la evidencia?", "Encuesta, entrevista, observación, prueba de sistema", "El tipo de dato que necesita"]
+      [
+        "**Enfoque**",
+        "¿Mido o interpreto?",
+        "Cuantitativo · cualitativo · mixto",
+        "La forma de su pregunta"
+      ],
+      [
+        "**Alcance**",
+        "¿Qué tanto se sabe ya?",
+        "Exploratorio · descriptivo · correlacional · explicativo",
+        "Lo que encontró en antecedentes"
+      ],
+      [
+        "**Diseño**",
+        "¿Intervengo o solo observo?",
+        "Experimental · cuasiexperimental · no experimental · estudio de caso",
+        "Si puede o no manipular variables"
+      ],
+      [
+        "**Población / datos**",
+        "¿Sobre qué o quiénes?",
+        "Personas, procesos, registros, logs, documentos",
+        "La unidad de análisis de la pregunta"
+      ],
+      [
+        "**Técnicas**",
+        "¿Con qué recojo la evidencia?",
+        "Encuesta, entrevista, observación, prueba de sistema",
+        "El tipo de dato que necesita"
+      ]
     ],
     "note": "Se leen de arriba abajo: si usted cambia el enfoque, cambian obligatoriamente las cuatro filas siguientes."
   },
   {
     "type": "table",
     "title": "Cuantitativo, cualitativo o mixto: cómo elegir sin adivinar",
-    "headers": ["Criterio", "Cuantitativo", "Cualitativo", "Mixto"],
+    "headers": [
+      "Criterio",
+      "Cuantitativo",
+      "Cualitativo",
+      "Mixto"
+    ],
     "rows": [
-      ["Forma de la pregunta", "¿Cuánto? ¿en qué medida? ¿hay diferencia?", "¿Cómo? ¿por qué? ¿qué significa para ellos?", "Las dos preguntas conviven"],
-      ["Dato que produce", "Números, métricas, conteos", "Textos, relatos, observaciones", "Números + texto"],
-      ["Técnica típica", "Encuesta cerrada, log del sistema, prueba de rendimiento", "Entrevista semiestructurada, grupo focal", "Encuesta + entrevista"],
-      ["Análisis típico", "Descriptiva, comparación de medias, correlación", "Codificación y análisis temático", "Triangulación de ambas fuentes"],
-      ["En el caso de la mesa de ayuda", "Comparar minutos de atención antes y después", "Entender por qué los agentes desconfían del clasificador", "Medir tiempos y además entrevistar agentes"]
+      [
+        "Forma de la pregunta",
+        "¿Cuánto? ¿en qué medida? ¿hay diferencia?",
+        "¿Cómo? ¿por qué? ¿qué significa para ellos?",
+        "Las dos preguntas conviven"
+      ],
+      [
+        "Dato que produce",
+        "Números, métricas, conteos",
+        "Textos, relatos, observaciones",
+        "Números + texto"
+      ],
+      [
+        "Técnica típica",
+        "Encuesta cerrada, log del sistema, prueba de rendimiento",
+        "Entrevista semiestructurada, grupo focal",
+        "Encuesta + entrevista"
+      ],
+      [
+        "Análisis típico",
+        "Descriptiva, comparación de medias, correlación",
+        "Codificación y análisis temático",
+        "Triangulación de ambas fuentes"
+      ],
+      [
+        "En el caso de la mesa de ayuda",
+        "Comparar minutos de atención antes y después",
+        "Entender por qué los agentes desconfían del clasificador",
+        "Medir tiempos y además entrevistar agentes"
+      ]
     ],
     "note": "Si su pregunta dice 'en qué medida', ya es cuantitativa. El enfoque sale de la pregunta, no de la comodidad ni de la moda."
   },
@@ -97,11 +157,31 @@
   {
     "type": "table",
     "title": "Ejemplo modelado: matriz del caso 'mesa de ayuda'",
-    "headers": ["Objetivo específico", "Dato que necesito", "Cómo lo consigo (propuesto)", "Cómo lo analizo (propuesto)"],
+    "headers": [
+      "Objetivo específico",
+      "Dato que necesito",
+      "Cómo lo consigo (propuesto)",
+      "Cómo lo analizo (propuesto)"
+    ],
     "rows": [
-      ["1. Caracterizar el flujo actual de tickets", "Histórico con hora de apertura y cierre de cada ticket", "Se exportará el histórico del sistema de mesa de ayuda", "Estadística descriptiva: promedio y dispersión de minutos por ticket"],
-      ["2. Diseñar el modelo de clasificación", "Conjunto de tickets etiquetados por categoría", "Se etiquetará una muestra del histórico con apoyo de dos agentes", "Entrenamiento supervisado y medición de exactitud"],
-      ["3. Comparar el tiempo de atención", "Tiempos de atención antes y después del modelo", "Se registrarán los tiempos en una prueba controlada propuesta", "Comparación de medias entre los dos momentos"]
+      [
+        "1. Caracterizar el flujo actual de tickets",
+        "Histórico con hora de apertura y cierre de cada ticket",
+        "Se exportará el histórico del sistema de mesa de ayuda",
+        "Estadística descriptiva: promedio y dispersión de minutos por ticket"
+      ],
+      [
+        "2. Diseñar el modelo de clasificación",
+        "Conjunto de tickets etiquetados por categoría",
+        "Se etiquetará una muestra del histórico con apoyo de dos agentes",
+        "Entrenamiento supervisado y medición de exactitud"
+      ],
+      [
+        "3. Comparar el tiempo de atención",
+        "Tiempos de atención antes y después del modelo",
+        "Se registrarán los tiempos en una prueba controlada propuesta",
+        "Comparación de medias entre los dos momentos"
+      ]
     ],
     "note": "Tres objetivos, tres métodos, ninguno suelto. Y todos los verbos en futuro: es una propuesta, no un informe de resultados."
   },
@@ -123,10 +203,22 @@
     "type": "boxes",
     "title": "Errores frecuentes al proponer la metodología",
     "boxes": [
-      ["advertencia", "'Elijo enfoque cualitativo porque suena más fácil.' Se elige por la pregunta, no por comodidad. Pregúntese si su pregunta **mide** o **interpreta**: eso decide."],
-      ["advertencia", "'Tengo un método, pero no sé a qué objetivo responde.' Es un método huérfano: o lo conecta con un objetivo en la matriz, o lo elimina del documento."],
-      ["aclaracion", "Enfoque, alcance y diseño **no son sinónimos**: el enfoque dice si mide o interpreta; el alcance, qué tanto se sabe ya; el diseño, si manipula variables o solo observa."],
-      ["info", "En TG2 la metodología se **propone**: no se recogen datos, no se entrevista a nadie, no se corren pruebas de campo. La aplicación real es de TG3."]
+      [
+        "advertencia",
+        "'Elijo enfoque cualitativo porque suena más fácil.' Se elige por la pregunta, no por comodidad. Pregúntese si su pregunta **mide** o **interpreta**: eso decide."
+      ],
+      [
+        "advertencia",
+        "'Tengo un método, pero no sé a qué objetivo responde.' Es un método huérfano: o lo conecta con un objetivo en la matriz, o lo elimina del documento."
+      ],
+      [
+        "aclaracion",
+        "Enfoque, alcance y diseño **no son sinónimos**: el enfoque dice si mide o interpreta; el alcance, qué tanto se sabe ya; el diseño, si manipula variables o solo observa."
+      ],
+      [
+        "info",
+        "En TG2 la metodología se **propone**: no se recogen datos, no se entrevista a nadie, no se corren pruebas de campo. La aplicación real es de TG3."
+      ]
     ]
   },
   {
@@ -140,7 +232,7 @@
       "**5.** Escriba **diseño**, **población**, **muestra propuesta** y **unidad de análisis**, cada uno en un párrafo corto.",
       "**6.** Inserte una tabla de 4 columnas y llene **una fila por objetivo específico**.",
       "**7.** Revise con Ctrl+F los verbos en pasado y páselos a futuro o a 'se propone'.",
-      "**8.** Suba el archivo al espacio de la sesión en **CDigital** — [URL CDigital — campus del curso pendiente]."
+      "**8.** Guarde el archivo en su Drive y tráigalo a la próxima sesión: este avance **no se sube**. Lo que recibe {{CDIGITAL}} es la **ACA Final**, y este es uno de sus insumos."
     ],
     "note": "Todo con herramientas gratuitas de navegador: Google Docs, Google Scholar, SciELO, Redalyc y ZoteroBib (zbib.org)."
   },
@@ -159,17 +251,7 @@
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Ficha metodológica y matriz de coherencia",
-    "bullets": [
-      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
-      "**Archivo:** un documento en Google Docs llamado S07_Metodologia_Apellido.",
-      "**Consigna 1.** Defina **enfoque, alcance y diseño**, cada uno con una línea de justificación que empiece con 'porque'.",
-      "**Consigna 2.** Arme la **matriz pregunta–método**: una fila por objetivo específico, con dato / técnica / análisis.",
-      "**Consigna 3.** Redacte todo en **propuesto**: ni un verbo en pasado referido a datos.",
-      "**Criterio de éxito (verificable):** todos sus objetivos específicos tienen fila; ninguna técnica queda huérfana; Ctrl+F de 'se aplicó' y 'se obtuvo' devuelve cero resultados.",
-      "**Entrega:** suba S07_Metodologia_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

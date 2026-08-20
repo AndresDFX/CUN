@@ -59,11 +59,11 @@ El libro de calificaciones ya tiene los ocho ítems con su peso (§3). Lo que **
 | `HERRAMIENTAS_EXAMLAB.md` | Análisis de ExamLab como apoyo para redactar los bancos de preguntas. **Borrador para aprobación docente**, no es norma. |
 | `Clases/` | **La única carpeta que se comparte con estudiantes.** `Presentacion del Curso - Trabajo de Grado 2.pptx`, `LEEME - Material para estudiantes.docx`, `Recursos/` (plantilla APA + `ACAs/`) y una carpeta `Sesion NN - <tema>/` por sesión con su `Presentacion.pptx`. |
 | `Clases/Recursos/ACAs/` | **Un documento por ítem real del aula:** guía de Quiz 1/2/3, guía de Parcial 1/2, enunciado de la ACA Final e instructivos de autoevaluación y coevaluación. Ocho ítems, ocho documentos. |
-| `Guiones/` | **Solo docente.** `Sesion NN - <tema>.md`: guion minuto a minuto, autocontenido para los 60 minutos, con fundamento teórico y checklist previo. Más `Guía práctica - Herramientas de escritura y citación.md` (flujo Scholar → ZoteroBib → Docs → CDigital) y `Capturas/`. |
+| `Docente/Guiones/` | **Solo docente.** `Sesion NN - <tema>.md`: guion minuto a minuto, autocontenido para los 60 minutos, con fundamento teórico y checklist previo. Más `Guía práctica - Herramientas de escritura y citación.md` (flujo Scholar → ZoteroBib → Docs → CDigital) y `Capturas/`. |
 | `2026/54448/` | Todo lo específico de esta oferta: `Informacion.txt`, roster (`Listado estudiantes (CDigital).csv`, `Correos estudiantes (invitados Calendar).txt`), `Correo de bienvenida.docx`, el Apps Script de Calendar y su runbook (§8). |
 | `_Archivo obsoleto 2026-08-09/` | Material anterior al renombrado. No usarlo. |
 
-> **Convención de nombres, con una trampa:** el tema del catálogo se usa tal cual en la carpeta del deck y en el guion, **pero los caracteres inválidos para el sistema de archivos se eliminan**. El tema «Estructura del documento / artículo de avance» está en disco como `Sesion 03 - Estructura del documento artículo de avance` (sin la barra). Si buscas la carpeta por el título exacto del calendario, no la encuentras.
+> **Convención de nombres:** el tema del catálogo (`config/cursos/sesiones_cun.py`) se usa tal cual en la carpeta del deck y en el nombre del guion, **salvo los caracteres inválidos para el sistema de archivos, que se eliminan**. Hoy ningún título de TG2 los tiene —el de la S03 se llamaba «Estructura del documento / artículo de avance» y perdía la barra en disco; ahora es «Estructura del documento de avance» y coincide exactamente—. Si cambias un título en el catálogo, `build_sesion_material.py` **renombra la carpeta y borra la vieja**: no edites nombres a mano.
 
 ## 1. Qué es Trabajo de Grado 2
 
@@ -76,6 +76,12 @@ Tres consecuencias que conviene tener claras desde el primer día:
 - **El punto de partida real del grupo es un proyecto a medias.** Casi ninguno llega con problema escrito y delimitado; muchos vienen congelados de un semestre anterior. El encuadre de la Sesión 01 existe para responder esa ansiedad antes de que se convierta en deserción.
 
 **No aplica el instructivo AFI de Especializaciones** (Proyecto I/II): ni sus rúbricas unificadas, ni los equipos de máximo tres, ni su cronograma. Extensión orientativa del avance: 18–30 páginas (enunciado de la ACA Final).
+
+### 1.1 El documento sirve a cualquier modalidad de grado
+
+TG2 no decide la modalidad del trabajo de grado: **prepara el documento que la sostendrá en TG3**, y el esqueleto es el mismo en todas. Introducción → referentes → metodología → resultados → discusión → conclusiones sirve igual para un **artículo resultado de investigación** (la forma por defecto), un **proyecto aplicado o de desarrollo**, un **prototipo o sistema documentado**, una **sistematización de experiencia** o un **emprendimiento**. Lo que cambia es el **peso de cada sección** y qué contará como «resultado» cuando llegue TG3 —no la estructura, ni la plantilla APA CUN, ni las reglas de citación.
+
+Por eso el tema de la **S03** se llama «Estructura del documento de avance» y no «del artículo»: en TG2 nadie tiene resultados todavía y nadie debería sentir que su proyecto no cabe. Si un estudiante pregunta si «lo suyo vale», la respuesta es **sí, con el mismo documento**; la modalidad formal se confirma en TG3 con la **Dirección del Programa** (ver §1.1 del Manual de TG3). En esta carpeta no hay ningún documento que enumere las opciones de grado oficiales de la CUN: no las inventes frente al grupo.
 
 ## 2. Temario: de dónde sale, ya que no hay Syllabus SIAC
 
@@ -121,7 +127,7 @@ Régimen: **Art. 52 · tres cortes** — **Corte 1 = 30%** · **Corte 2 = 30%** 
 
 ### Notas de este curso
 
-- **Producto documental del curso:** avance consolidado del proyecto/artículo (`Plantilla_APA_CUN_Proyecto de grado.docx`), que se entrega como **ACA Final** (tarea) en el tercer corte.
+- **Producto documental del curso:** avance consolidado del **documento** de grado (`Plantilla_APA_CUN_Proyecto de grado.docx`), que se entrega como **ACA Final** (tarea) en el tercer corte.
 - **Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem del aula**, incluidas las guías de los quices y parciales.
 - ⚠️ Sigue faltando el **Syllabus SIAC**, pero los pesos **ya no son orientativos**: salen del libro de calificaciones del aula. Lo que falta del SIAC es el **temario**, no la evaluación.
 
@@ -163,7 +169,7 @@ El encuentro dura **60 minutos** (lunes 5:00–6:00 pm) y el catálogo lo dimens
 
 | Momento | Duración típica | Qué haces |
 |---|---|---|
-| Antes de la clase | — | Estudiar el **Fundamento Teórico** del guion, abrir el deck, tener el ejemplo modelado listo y el espacio de entrega de la sesión visible en CDigital. Cada guion cierra con su checklist previo. |
+| Antes de la clase | — | Estudiar el **Fundamento Teórico** del guion, abrir el deck, tener el ejemplo modelado listo y el **libro de calificaciones** de CDigital a la vista. El aula **no tiene espacio de entrega por sesión**: la única tarea documental es la **ACA Final**, y los avances de cada clase se guardan en el Drive del estudiante. Cada guion cierra con su checklist previo. |
 | Apertura | ~5 min | Recibir por nombre, recordar dónde quedó la sesión anterior y qué se produce hoy. |
 | Contenido + modelación | ~25–30 min | Explicar el concepto y **modelarlo en vivo sobre un ejemplo**, no solo enunciarlo. Los guiones traen el texto casi literal. |
 | Taller sobre el propio proyecto | ~15–20 min | Cada estudiante aplica lo del día a **su** proyecto, con la pantalla compartida cuando haga falta. |
@@ -175,8 +181,10 @@ El encuentro dura **60 minutos** (lunes 5:00–6:00 pm) y el catálogo lo dimens
 
 Para cada sesión hay exactamente dos archivos, con el mismo nombre de tema:
 
-- **Guion (solo docente):** `Guiones/Sesion NN - <tema>.md` — autocontenido para 60 minutos, con fundamento teórico, guion literal por bloque, respuestas a las dudas reales que salen ese día, entregable de la sesión y checklist previo. Van de ~1.900 a ~4.000 palabras.
+- **Guion (solo docente):** `Docente/Guiones/Sesion NN - <tema>.md` — autocontenido para 60 minutos, con fundamento teórico, guion literal por bloque, respuestas a las dudas reales que salen ese día, entregable de la sesión y checklist previo. Van de ~1.900 a ~4.000 palabras.
 - **Deck (estudiante):** `Clases/Sesion NN - <tema>/Presentacion.pptx`.
+
+**La penúltima slide de todos los decks de sesión es `RUTA DE ENTREGABLES DEL CURSO`, y no se edita.** La escribe `config/slides/ruta_entregables.py` con los ítems del libro de calificaciones, su tipo, su peso y —en **número de sesión, nunca en fecha**— el punto del curso en que cierra cada uno, más una línea de qué tiene que tener listo el estudiante. Te sirve para cerrar la clase en treinta segundos («esto es lo que viene»); y como no hay fechas escritas, cuando el próximo periodo mueva el calendario se recoloca sola sin reeditar deck alguno. La **fecha** exacta de cada ventana sigue viviendo solo en el enunciado del ACA y en CDigital, que es lo que manda.
 
 Regenerar ambos: `python config/slides/build_sesion_material.py tg2 all` (solo guiones: añade `--guion-only`). Y recuerda la trampa del nombre de carpeta descrita arriba: los caracteres inválidos del tema se eliminan en disco.
 
@@ -189,7 +197,7 @@ Fechas y temas salen de `config/cursos/sesiones_cun.py`; el movimiento de plataf
 | **01** | 10/08 | **Encuadre: no dictas tema.** Presentas curso, Docente y grupo (rompehielos en **Slido**: «dos verdades y una mentira», tres rondas, 8 minutos, con premio), abres en pantalla el **libro de calificaciones** para leer los ítems con sus nombres reales, explicas entrega e integridad y **dejas por escrito el acuerdo pedagógico**. | Lectura autónoma sobre delimitación del tema (Arias Castrillón, 2020, en la carpeta de la sesión) + inventario del estado de su proyecto. | Abre la ventana de la **ACA Final** (queda abierta todo el periodo). |
 | — | 17/08 | **Festivo (Asunción). Clase autónoma:** no se cancela — la semana se cursa con la lectura y el inventario en CDigital. | — | — |
 | **02** | 24/08 | Primera sesión de contenido. Pregunta investigable, objetivo general + 3 específicos con **verbos medibles**, título provisional ≤ 21 palabras, y coherencia vertical entre los tres. | `S02_PreguntaObjetivos_Apellido` | **Abre Quiz 1.** Ábrelo en pantalla en el cierre de la clase. |
-| **03** | 31/08 | Estructura del artículo/documento sobre la plantilla APA CUN: outline completo, secciones vacías marcadas, metodología escrita en «propuesto». | `S03_EstructuraAvance_Apellido` | **Cierra Quiz 1** — se aplica en clase (~12 min). |
+| **03** | 31/08 | Estructura del documento sobre la plantilla APA CUN: outline completo, secciones vacías marcadas, metodología escrita en «propuesto». | `S03_EstructuraAvance_Apellido` | **Cierra Quiz 1** — se aplica en clase (~12 min). |
 | **04** | 07/09 | Antecedentes y referentes: búsqueda en Scholar y bases CUN, fichas con ≥ 1 fuente nacional y ≥ 1 internacional, citación con ZoteroBib. | `S04_Antecedentes_Apellido` | **Abre Parcial 1** (24%: anúncialo con nombre y peso). |
 | **05** | 14/09 | Marco teórico: derivar 3 constructos de la pregunta y mapearlos a fuentes. **Sesión corta:** el parcial se lleva ~22 de los 60 minutos. | `S05_MarcoTeorico_Apellido` | **Cierra Parcial 1** — se aplica en clase (~22 min). |
 | **06** | 21/09 | Marco conceptual y contextual: ≥ 4 definiciones operativas propias del proyecto + 1 página de contexto acotada, con citas. | `S06_ConceptualContextual_Apellido` | **Abre Quiz 2.** |
@@ -248,7 +256,7 @@ Díselo así al grupo: *la nota de cada corte la ponen los cuestionarios y la AC
 - **Normas APA 7** en todas las citas y referencias.
 - **Un solo documento que crece** durante todo el periodo, no un archivo nuevo por sesión.
 - Entrega **solo por CDigital**. Drive y correo no sustituyen la plataforma: lo que no está en el aula no existe para el libro de calificaciones.
-- Herramientas del curso: gratuitas y en el navegador (Google Docs, Scholar, SciELO, Redalyc, biblioteca CUN, ZoteroBib, Excalidraw). Flujo completo en `Guiones/Guía práctica - Herramientas de escritura y citación.md`.
+- Herramientas del curso: gratuitas y en el navegador (Google Docs, Scholar, SciELO, Redalyc, biblioteca CUN, ZoteroBib, Excalidraw). Flujo completo en `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md`.
 - **Entrega individual.** Los nombres de archivo son por apellido y cada estudiante trae su propio proyecto (ver §8.3 sobre el punto pendiente de grupos).
 
 ## 7. Qué le entregas tú a la universidad

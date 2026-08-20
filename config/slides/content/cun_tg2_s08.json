@@ -29,13 +29,43 @@
   {
     "type": "table",
     "title": "Tipos de instrumento: cuál le sirve a su proyecto",
-    "headers": ["Instrumento", "Dato que produce", "Cuándo conviene", "Tamaño razonable en el avance"],
+    "headers": [
+      "Instrumento",
+      "Dato que produce",
+      "Cuándo conviene",
+      "Tamaño razonable en el avance"
+    ],
     "rows": [
-      ["**Encuesta / cuestionario**", "Numérico y categórico", "Enfoque cuantitativo, muchas unidades, respuestas comparables", "~10 ítems"],
-      ["**Guía de entrevista**", "Relatos, percepciones, razones", "Enfoque cualitativo, pocas personas, se busca el porqué", "~8 preguntas abiertas"],
-      ["**Ficha de observación**", "Conductas y eventos registrados", "Se estudia un proceso en funcionamiento", "6 a 10 criterios"],
-      ["**Protocolo de prueba técnica**", "Métricas del sistema (tiempo, exactitud, errores)", "Proyectos de ingeniería con software o hardware", "5 a 8 casos de prueba"],
-      ["**Ficha de registro documental**", "Datos extraídos de archivos o históricos", "El dato ya existe en logs, actas o bases", "6 a 10 campos"]
+      [
+        "**Encuesta / cuestionario**",
+        "Numérico y categórico",
+        "Enfoque cuantitativo, muchas unidades, respuestas comparables",
+        "~10 ítems"
+      ],
+      [
+        "**Guía de entrevista**",
+        "Relatos, percepciones, razones",
+        "Enfoque cualitativo, pocas personas, se busca el porqué",
+        "~8 preguntas abiertas"
+      ],
+      [
+        "**Ficha de observación**",
+        "Conductas y eventos registrados",
+        "Se estudia un proceso en funcionamiento",
+        "6 a 10 criterios"
+      ],
+      [
+        "**Protocolo de prueba técnica**",
+        "Métricas del sistema (tiempo, exactitud, errores)",
+        "Proyectos de ingeniería con software o hardware",
+        "5 a 8 casos de prueba"
+      ],
+      [
+        "**Ficha de registro documental**",
+        "Datos extraídos de archivos o históricos",
+        "El dato ya existe en logs, actas o bases",
+        "6 a 10 campos"
+      ]
     ],
     "note": "Un proyecto puede combinar dos instrumentos, pero cada uno debe tener su propio objetivo asociado en la matriz del S07."
   },
@@ -69,13 +99,43 @@
   {
     "type": "table",
     "title": "Ejemplo modelado: operacionalización del caso 'mesa de ayuda'",
-    "headers": ["Variable", "Dimensión", "Indicador", "Ítem propuesto (texto literal)"],
+    "headers": [
+      "Variable",
+      "Dimensión",
+      "Indicador",
+      "Ítem propuesto (texto literal)"
+    ],
     "rows": [
-      ["Tiempo de atención", "Duración del ciclo del ticket", "Minutos entre apertura y cierre", "Campo de registro: 'Hora de apertura' y 'Hora de cierre' del ticket"],
-      ["Satisfacción del usuario", "Conformidad con la solución", "Escala de 1 a 5", "'¿Qué tan conforme quedó con la solución entregada? 1 = nada conforme, 5 = totalmente conforme'"],
-      ["Satisfacción del usuario", "Percepción de rapidez", "Escala de 1 a 5", "'¿Qué tan oportuna le pareció la respuesta recibida?'"],
-      ["Exactitud del modelo", "Acierto de la clasificación", "Porcentaje de tickets bien clasificados", "Métrica del sistema en el protocolo de prueba (no es ítem de encuesta)"],
-      ["Carga de trabajo del agente", "Volumen atendido", "Tickets atendidos por turno", "Campo de registro documental extraído del histórico"]
+      [
+        "Tiempo de atención",
+        "Duración del ciclo del ticket",
+        "Minutos entre apertura y cierre",
+        "Campo de registro: 'Hora de apertura' y 'Hora de cierre' del ticket"
+      ],
+      [
+        "Satisfacción del usuario",
+        "Conformidad con la solución",
+        "Escala de 1 a 5",
+        "'¿Qué tan conforme quedó con la solución entregada? 1 = nada conforme, 5 = totalmente conforme'"
+      ],
+      [
+        "Satisfacción del usuario",
+        "Percepción de rapidez",
+        "Escala de 1 a 5",
+        "'¿Qué tan oportuna le pareció la respuesta recibida?'"
+      ],
+      [
+        "Exactitud del modelo",
+        "Acierto de la clasificación",
+        "Porcentaje de tickets bien clasificados",
+        "Métrica del sistema en el protocolo de prueba (no es ítem de encuesta)"
+      ],
+      [
+        "Carga de trabajo del agente",
+        "Volumen atendido",
+        "Tickets atendidos por turno",
+        "Campo de registro documental extraído del histórico"
+      ]
     ],
     "note": "Ninguno de estos ítems se me ocurrió: todos salieron bajando la escalera desde la variable. Fíjese que la exactitud del modelo no se pregunta, se mide."
   },
@@ -96,13 +156,37 @@
   {
     "type": "table",
     "title": "Ítem mal redactado vs. ítem corregido",
-    "headers": ["Ítem problemático", "Qué falla", "Versión corregida"],
+    "headers": [
+      "Ítem problemático",
+      "Qué falla",
+      "Versión corregida"
+    ],
     "rows": [
-      ["'¿Está satisfecho con el servicio?'", "Sí/no; no gradúa nada y no dice de qué servicio", "'¿Qué tan conforme quedó con la solución del ticket? (1 a 5)'"],
-      ["'¿Le parece que el sistema es lento e ineficiente?'", "Dos ideas juntas y además induce la respuesta", "'¿Cuánto tiempo esperó desde que reportó hasta la primera respuesta?'"],
-      ["'¿Considera adecuada la latencia del pipeline?'", "Vocabulario técnico que el usuario no maneja", "'¿La respuesta llegó en el tiempo que usted esperaba?'"],
-      ["'Estrato socioeconómico: ___'", "Dato personal que ningún análisis va a usar", "Se elimina del instrumento"],
-      ["'Comente lo que quiera del área de soporte'", "Pregunta abierta sin foco: produce texto inanalizable", "'¿Qué parte del proceso de soporte le generó mayor demora? ¿Por qué?'"]
+      [
+        "'¿Está satisfecho con el servicio?'",
+        "Sí/no; no gradúa nada y no dice de qué servicio",
+        "'¿Qué tan conforme quedó con la solución del ticket? (1 a 5)'"
+      ],
+      [
+        "'¿Le parece que el sistema es lento e ineficiente?'",
+        "Dos ideas juntas y además induce la respuesta",
+        "'¿Cuánto tiempo esperó desde que reportó hasta la primera respuesta?'"
+      ],
+      [
+        "'¿Considera adecuada la latencia del pipeline?'",
+        "Vocabulario técnico que el usuario no maneja",
+        "'¿La respuesta llegó en el tiempo que usted esperaba?'"
+      ],
+      [
+        "'Estrato socioeconómico: ___'",
+        "Dato personal que ningún análisis va a usar",
+        "Se elimina del instrumento"
+      ],
+      [
+        "'Comente lo que quiera del área de soporte'",
+        "Pregunta abierta sin foco: produce texto inanalizable",
+        "'¿Qué parte del proceso de soporte le generó mayor demora? ¿Por qué?'"
+      ]
     ],
     "note": "Lea cada ítem en voz alta imaginando a la persona que lo va a responder. Si usted tendría que explicárselo, el ítem está mal escrito."
   },
@@ -137,13 +221,43 @@
   {
     "type": "table",
     "title": "Ejemplo modelado: plan de análisis del caso",
-    "headers": ["Dato recogido", "Tipo", "Análisis propuesto", "Objetivo que responde"],
+    "headers": [
+      "Dato recogido",
+      "Tipo",
+      "Análisis propuesto",
+      "Objetivo que responde"
+    ],
     "rows": [
-      ["Minutos por ticket antes y después", "Numérico", "Se calculará el promedio de cada momento y se compararán las medias", "3. Comparar el tiempo de atención"],
-      ["Categoría asignada a cada ticket", "Categórico", "Se calcularán frecuencias y porcentaje por categoría", "1. Caracterizar el flujo de tickets"],
-      ["Porcentaje de aciertos del clasificador", "Numérico", "Se reportará la exactitud sobre el conjunto de prueba", "2. Diseñar el modelo de clasificación"],
-      ["Escala de conformidad 1 a 5", "Ordinal", "Se reportará la distribución de respuestas y el promedio por ítem", "3. Comparar el tiempo de atención"],
-      ["Respuestas abiertas de los agentes", "Textual", "Se agruparán por temas recurrentes y se contará cuántos los mencionan", "1. Caracterizar el flujo de tickets"]
+      [
+        "Minutos por ticket antes y después",
+        "Numérico",
+        "Se calculará el promedio de cada momento y se compararán las medias",
+        "3. Comparar el tiempo de atención"
+      ],
+      [
+        "Categoría asignada a cada ticket",
+        "Categórico",
+        "Se calcularán frecuencias y porcentaje por categoría",
+        "1. Caracterizar el flujo de tickets"
+      ],
+      [
+        "Porcentaje de aciertos del clasificador",
+        "Numérico",
+        "Se reportará la exactitud sobre el conjunto de prueba",
+        "2. Diseñar el modelo de clasificación"
+      ],
+      [
+        "Escala de conformidad 1 a 5",
+        "Ordinal",
+        "Se reportará la distribución de respuestas y el promedio por ítem",
+        "3. Comparar el tiempo de atención"
+      ],
+      [
+        "Respuestas abiertas de los agentes",
+        "Textual",
+        "Se agruparán por temas recurrentes y se contará cuántos los mencionan",
+        "1. Caracterizar el flujo de tickets"
+      ]
     ],
     "note": "Escrito así, cuando en TG3 lleguen los datos usted no improvisa: ya sabe exactamente qué calcular y para qué objetivo."
   },
@@ -151,10 +265,22 @@
     "type": "boxes",
     "title": "Errores frecuentes con instrumentos y análisis",
     "boxes": [
-      ["advertencia", "'Pongo preguntas interesantes.' Interesante no basta: cada ítem debe rastrearse hasta un objetivo por la tabla de operacionalización. Si no se rastrea, sobra."],
-      ["advertencia", "'Primero recojo y después veo cómo analizo.' Así es como se descubre, demasiado tarde, que faltó el dato principal. El plan se escribe antes."],
-      ["aclaracion", "Cuarenta preguntas no valen más que diez: en el avance se evalúa la **alineación** con los objetivos, no el volumen del instrumento."],
-      ["info", "En TG2 el instrumento es **propuesto**: se diseña, se justifica y se deja listo. Aplicarlo, difundirlo o recoger respuestas es tarea de TG3."]
+      [
+        "advertencia",
+        "'Pongo preguntas interesantes.' Interesante no basta: cada ítem debe rastrearse hasta un objetivo por la tabla de operacionalización. Si no se rastrea, sobra."
+      ],
+      [
+        "advertencia",
+        "'Primero recojo y después veo cómo analizo.' Así es como se descubre, demasiado tarde, que faltó el dato principal. El plan se escribe antes."
+      ],
+      [
+        "aclaracion",
+        "Cuarenta preguntas no valen más que diez: en el avance se evalúa la **alineación** con los objetivos, no el volumen del instrumento."
+      ],
+      [
+        "info",
+        "En TG2 el instrumento es **propuesto**: se diseña, se justifica y se deja listo. Aplicarlo, difundirlo o recoger respuestas es tarea de TG3."
+      ]
     ]
   },
   {
@@ -168,22 +294,12 @@
       "**5.** Si quiere ver cómo se vería digital, puede maquetarlo en **Google Forms**, pero déjelo **sin publicar y sin enviar a nadie**.",
       "  En TG2 el formulario es una maqueta para anexar como captura; la aplicación real es de TG3.",
       "**6.** Escriba abajo el plan de análisis en forma de tabla: dato, tipo, análisis propuesto, objetivo.",
-      "**7.** Suba el archivo a **CDigital** — [URL CDigital — campus del curso pendiente]."
+      "**7.** Suba el archivo a **CDigital** — {{CDIGITAL}}."
     ],
     "note": "Todo con herramientas gratuitas en el navegador: Google Docs, Google Forms (solo maqueta), Google Sheets, Scholar y ZoteroBib (zbib.org)."
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Operacionalización, instrumento y plan de análisis",
-    "bullets": [
-      "**Tiempo:** 20 minutos de trabajo individual, con acompañamiento del Docente.",
-      "**Archivo:** un documento en Google Docs llamado S08_Instrumentos_Apellido.",
-      "**Consigna 1.** Complete la **tabla de operacionalización** (variable → dimensión → indicador → ítem) para al menos dos variables de su proyecto.",
-      "**Consigna 2.** Redacte su **instrumento**: unos 10 ítems de encuesta, o una guía de unas 8 preguntas, o un protocolo de 5 a 8 casos de prueba.",
-      "**Consigna 3.** Escriba el **plan de análisis** en tabla: qué hará con cada tipo de dato y a qué objetivo responde.",
-      "**Criterio de éxito (verificable):** cada ítem se rastrea a un objetivo por la tabla; cada objetivo tiene al menos un ítem; el plan de análisis no deja ningún dato sin destino.",
-      "**Entrega:** suba S08_Instrumentos_Apellido a **CDigital** — [URL CDigital — campus del curso pendiente]."
-    ]
+    "type": "taller"
   },
   {
     "type": "bullets",

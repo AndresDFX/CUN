@@ -3,7 +3,7 @@
     "type": "bullets",
     "title": "Un trabajo excelente que no se cargó, no cuenta",
     "bullets": [
-      "Lo académico ya terminó: el artículo está escrito, la sustentación ocurrió, los ajustes se incorporaron.",
+      "Lo académico ya terminó: el documento está escrito, la sustentación ocurrió, los ajustes se incorporaron.",
       "Falta lo menos glamoroso y lo más fatal si se descuida: **verificar que todo quedó cargado y recibido**.",
       "Cada periodo hay casos así, y duelen: alguien hizo el trabajo completo y perdió puntos por una carga que nunca llegó.",
       "  Subió el archivo al espacio equivocado. O lo subió y se cerró el navegador antes de confirmar.",
@@ -13,14 +13,14 @@
       "Esta sesión es exactamente eso: la **red de seguridad final** del trabajo de grado.",
       "Cerrar bien —con evidencia y sin cabos sueltos— también es parte de ser un profesional."
     ],
-    "note": "Tenga **CDigital abierto** durante toda la sesión — [URL CDigital — campus del curso pendiente]. Hoy no se expone: se verifica."
+    "note": "Tenga **CDigital abierto** durante toda la sesión — {{CDIGITAL}}. Hoy no se expone: se verifica."
   },
   {
     "type": "bullets",
     "title": "Cierre administrativo ≠ cierre académico",
     "bullets": [
       "**Cierre académico** = el trabajo intelectual está terminado y aprobado.",
-      "  Artículo completo, sustentación hecha, observaciones del jurado atendidas.",
+      "  Documento completo, sustentación hecha, observaciones del jurado atendidas.",
       "**Cierre administrativo** = todos los entregables están **cargados, en el espacio correcto y confirmados**.",
       "Son dos cosas distintas y pueden estar en estados distintos: se puede tener el cierre académico listo y el administrativo a medias.",
       "  Y para efectos del registro, **el que cuenta es el administrativo**: lo que existe es lo que quedó en la plataforma.",
@@ -50,18 +50,63 @@
   {
     "type": "table",
     "title": "Checklist de recepción: entregable por entregable",
-    "headers": ["Entregable", "¿Cargado?", "¿Confirmado?", "Evidencia que guardo"],
+    "headers": [
+      "Entregable",
+      "¿Cargado?",
+      "¿Confirmado?",
+      "Evidencia que guardo"
+    ],
     "rows": [
-      ["**Artículo final (PDF)**", "☐", "☐", "Captura del estado \"entregado\""],
-      ["**Póster (1 página)**", "☐", "☐", "Captura del espacio de entrega"],
-      ["**Anexos / evidencias**", "☐", "☐", "Captura con la lista de archivos"],
-      ["**Autorización de publicación**", "☐", "☐", "Formato firmado + captura"],
-      ["**Informe de similitud (si aplica)**", "☐", "☐", "Solo si el Docente indicó que se adjunta"],
-      ["**Matriz de ajustes / versión corregida**", "☐", "☐", "Captura del estado"],
-      ["**Talleres de las sesiones del curso**", "☐", "☐", "Captura del listado de actividades"]
+      [
+        "**Documento final (PDF)**",
+        "☐",
+        "☐",
+        "Captura del estado \"entregado\""
+      ],
+      [
+        "**Póster (1 página)**",
+        "☐",
+        "☐",
+        "Captura del espacio de entrega"
+      ],
+      [
+        "**Anexos / evidencias**",
+        "☐",
+        "☐",
+        "Captura con la lista de archivos"
+      ],
+      [
+        "**Autorización de publicación**",
+        "☐",
+        "☐",
+        "Formato firmado + captura"
+      ],
+      [
+        "**Informe de similitud (si aplica)**",
+        "☐",
+        "☐",
+        "Solo si el Docente indicó que se adjunta"
+      ],
+      [
+        "**Matriz de ajustes / versión corregida**",
+        "☐",
+        "☐",
+        "Captura del estado"
+      ],
+      [
+        "**Talleres de las sesiones del curso**",
+        "☐",
+        "☐",
+        "Captura del listado de actividades"
+      ]
     ],
     "note": "Las dos columnas del medio **no son la misma pregunta**. \"Cargado\" es que el archivo está; \"confirmado\" es que la plataforma registró la entrega. Marque las dos, no una.",
-    "col_w": [3.2, 1.3, 1.5, 3.5]
+    "col_w": [
+      3.2,
+      1.3,
+      1.5,
+      3.5
+    ]
   },
   {
     "type": "bullets",
@@ -100,7 +145,7 @@
     "title": "Ejemplo modelado: un recorrido de verificación real",
     "bullets": [
       "Recorro mi curso en CDigital, actividad por actividad, y voy anotando:",
-      "  **Artículo final** → cargado, estado **\"entregado\"**, abre bien, nombre correcto. ✔ Capturo pantalla.",
+      "  **Documento final** → cargado, estado **\"entregado\"**, abre bien, nombre correcto. ✔ Capturo pantalla.",
       "  **Póster** → cargado, pero al abrirlo veo que subí la **versión sin el gráfico corregido**. ✖ Lo reemplazo ahora mismo.",
       "  **Anexos** → veo cuatro archivos y mi lista dice **cinco**. Falta el Anexo E. ✖ Lo cargo y vuelvo a verificar.",
       "  **Autorización de publicación** → aparece cargada, pero el PDF **no tiene la firma**. ✖ Firmo, reemplazo y capturo.",
@@ -132,52 +177,112 @@
     "type": "boxes",
     "title": "Errores frecuentes del cierre administrativo",
     "boxes": [
-      ["advertencia", "\"Ya lo subí, entonces ya está recibido.\""],
-      ["aclaracion", "**Subir no es recibido.** Verifique el espacio, lea el estado (entregado, no borrador), abra el archivo y guarde la captura. Son treinta segundos por entregable."],
-      ["advertencia", "\"Recepción y cierre son la misma fecha, ¿no?\""],
-      ["aclaracion", "No. **Recepción** es la última fecha para recibir trabajos; **cierre** es el fin del periodo. Además **cambian según el grupo**: consulte la Presentación del Curso y el calendario de su grupo."],
-      ["advertencia", "\"No guardo capturas, para qué, si yo sé que entregué.\""],
-      ["aclaracion", "Si el campus lo permite, capture el estado **entregado**. Esa imagen es su único respaldo verificable si más adelante hay una duda sobre la entrega."],
-      ["advertencia", "\"Me falta un entregable, pero lo subo después con calma.\""],
-      ["aclaracion", "Recorra el checklist **hoy**. Un entregable faltante puede costar la nota de todo un semestre de trabajo, y el margen para corregirlo se acaba en la recepción."],
-      ["info", "Verifique los enlaces en una **ventana de incógnito**. Un documento compartido sin permisos es, para quien revisa, un documento inexistente."]
+      [
+        "advertencia",
+        "\"Ya lo subí, entonces ya está recibido.\""
+      ],
+      [
+        "aclaracion",
+        "**Subir no es recibido.** Verifique el espacio, lea el estado (entregado, no borrador), abra el archivo y guarde la captura. Son treinta segundos por entregable."
+      ],
+      [
+        "advertencia",
+        "\"Recepción y cierre son la misma fecha, ¿no?\""
+      ],
+      [
+        "aclaracion",
+        "No. **Recepción** es la última fecha para recibir trabajos; **cierre** es el fin del periodo. Además **cambian según el grupo**: consulte la Presentación del Curso y el calendario de su grupo."
+      ],
+      [
+        "advertencia",
+        "\"No guardo capturas, para qué, si yo sé que entregué.\""
+      ],
+      [
+        "aclaracion",
+        "Si el campus lo permite, capture el estado **entregado**. Esa imagen es su único respaldo verificable si más adelante hay una duda sobre la entrega."
+      ],
+      [
+        "advertencia",
+        "\"Me falta un entregable, pero lo subo después con calma.\""
+      ],
+      [
+        "aclaracion",
+        "Recorra el checklist **hoy**. Un entregable faltante puede costar la nota de todo un semestre de trabajo, y el margen para corregirlo se acaba en la recepción."
+      ],
+      [
+        "info",
+        "Verifique los enlaces en una **ventana de incógnito**. Un documento compartido sin permisos es, para quien revisa, un documento inexistente."
+      ]
     ]
   },
   {
-    "type": "bullets",
-    "title": "TALLER — Verificación de recepción (20 minutos)",
-    "bullets": [
-      "**Consigna literal.** Con CDigital abierto, entregue **S15_CierreAdmin_Apellido** con:",
-      "  **(1) El checklist de recepción completo**, con las columnas entregable · cargado · confirmado · evidencia, cubriendo **todos** sus entregables del curso.",
-      "  **(2) Las capturas de evidencia** de cada entrega confirmada (o el registro escrito si el campus no permite capturar).",
-      "  **(3) La lista de pendientes administrativos**: qué falta, **quién** lo resuelve y **para cuándo**.",
-      "  **(4) La fecha de recepción de SU grupo**, tomada del calendario oficial en CDigital.",
-      "**Tiempo:** 20 minutos. El Docente acompaña resolviendo dudas de ubicación de entregas.",
-      "**Criterio de éxito (verificable):**",
-      "  Cada entregable está marcado como **confirmado**, no solo como cargado.",
-      "  Cada uno tiene su **evidencia** guardada en la carpeta del Drive.",
-      "  **Ningún pendiente sin responsable ni sin fecha.**",
-      "  Todos los enlaces compartidos **abren en ventana de incógnito**.",
-      "**Lo que dependa solo de usted, resuélvalo dentro de estos 20 minutos.** No salga de clase con eso pendiente."
-    ]
+    "type": "taller"
   },
   {
     "type": "table",
     "title": "Checklist final de autoevaluación",
-    "headers": ["Reviso que…", "Cómo lo compruebo", "¿Listo?"],
-    "rows": [
-      ["El artículo final está entregado y es la versión corregida", "Lo abro desde la plataforma y verifico el contenido", "☐"],
-      ["El póster está cargado y actualizado", "Lo abro: es la versión con los datos finales", "☐"],
-      ["Todos los anexos están cargados", "Cuento los archivos contra mi lista de anexos", "☐"],
-      ["La autorización está firmada y subida", "El PDF muestra la firma", "☐"],
-      ["Sé si el curso exige adjuntar el informe de similitud", "Lo confirmé con el Docente; si aplica, está cargado", "☐"],
-      ["Ninguna actividad quedó en \"borrador\"", "Recorro el listado completo del curso", "☐"],
-      ["Los enlaces abren sin pedir permisos", "Los pruebo en ventana de incógnito", "☐"],
-      ["Tengo la evidencia de cada envío", "Carpeta Evidencias_Entrega_Apellido en mi Drive", "☐"],
-      ["Sé la fecha de recepción de MI grupo", "La tomé del calendario oficial, no de un compañero", "☐"],
-      ["Tengo copia personal de todo el trabajo", "Carpeta de respaldo en mi Drive propio", "☐"]
+    "headers": [
+      "Reviso que…",
+      "Cómo lo compruebo",
+      "¿Listo?"
     ],
-    "col_w": [3.9, 4.1, 1.0]
+    "rows": [
+      [
+        "El documento final está entregado y es la versión corregida",
+        "Lo abro desde la plataforma y verifico el contenido",
+        "☐"
+      ],
+      [
+        "El póster está cargado y actualizado",
+        "Lo abro: es la versión con los datos finales",
+        "☐"
+      ],
+      [
+        "Todos los anexos están cargados",
+        "Cuento los archivos contra mi lista de anexos",
+        "☐"
+      ],
+      [
+        "La autorización está firmada y subida",
+        "El PDF muestra la firma",
+        "☐"
+      ],
+      [
+        "Sé si el curso exige adjuntar el informe de similitud",
+        "Lo confirmé con el Docente; si aplica, está cargado",
+        "☐"
+      ],
+      [
+        "Ninguna actividad quedó en \"borrador\"",
+        "Recorro el listado completo del curso",
+        "☐"
+      ],
+      [
+        "Los enlaces abren sin pedir permisos",
+        "Los pruebo en ventana de incógnito",
+        "☐"
+      ],
+      [
+        "Tengo la evidencia de cada envío",
+        "Carpeta Evidencias_Entrega_Apellido en mi Drive",
+        "☐"
+      ],
+      [
+        "Sé la fecha de recepción de MI grupo",
+        "La tomé del calendario oficial, no de un compañero",
+        "☐"
+      ],
+      [
+        "Tengo copia personal de todo el trabajo",
+        "Carpeta de respaldo en mi Drive propio",
+        "☐"
+      ]
+    ],
+    "col_w": [
+      3.9,
+      4.1,
+      1.0
+    ]
   },
   {
     "type": "bullets",
@@ -188,7 +293,7 @@
       "  Un **marco teórico** con decenas de fuentes leídas y citadas en APA 7.",
       "  Un **método** diseñado, con su instrumento y su justificación.",
       "  **Resultados** propios, discutidos en diálogo con la literatura.",
-      "  Un **artículo completo** y un **póster** de divulgación.",
+      "  Un **documento completo** y un **póster** de divulgación.",
       "  Una **defensa oral** hecha ante jurados.",
       "  Y un trabajo **publicado en el repositorio institucional**, con enlace estable y citable.",
       "Ese último punto merece una segunda lectura: **su trabajo ya es parte de la conversación académica**.",
@@ -201,14 +306,14 @@
     "type": "bullets",
     "title": "Cierre del curso",
     "bullets": [
-      "**Suba** `S15_CierreAdmin_Apellido` a CDigital — [URL CDigital — campus del curso pendiente], con el checklist y las evidencias.",
+      "**Suba** `S15_CierreAdmin_Apellido` a CDigital — {{CDIGITAL}}, con el checklist y las evidencias.",
       "**Resuelva los pendientes** antes de la fecha de recepción de su grupo. No deje nada para el último día hábil.",
-      "**Guarde** su copia personal de todo: artículo, anexos, póster, guion de sustentación y evidencias de entrega.",
-      "**Anote el enlace** de su artículo en el repositorio cuando quede publicado: le va a servir mucho antes de lo que cree.",
-      "**Vuelva a leer su artículo dentro de un mes.** Va a ver cuánto aprendió, y va a notar que puede explicar cada decisión que tomó.",
+      "**Guarde** su copia personal de todo: documento, anexos, póster, guion de sustentación y evidencias de entrega.",
+      "**Anote el enlace** de su documento en el repositorio cuando quede publicado: le va a servir mucho antes de lo que cree.",
+      "**Vuelva a leer su documento dentro de un mes.** Va a ver cuánto aprendió, y va a notar que puede explicar cada decisión que tomó.",
       "Lo que se llevan de este proceso no es solo el documento: es la **capacidad de investigar de forma ordenada**.",
       "  Formular una pregunta, sostenerla con evidencia, discutirla con otros y defenderla en público sirve en cualquier trabajo de Ingeniería.",
-      "Felicitaciones: cierran un proceso largo con **un artículo publicado y una defensa hecha**."
+      "Felicitaciones: cierran un proceso largo con **un documento publicado y una defensa hecha**."
     ]
   }
 ]
