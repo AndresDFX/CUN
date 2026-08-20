@@ -1522,8 +1522,9 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "encajaban a esa hora. Muévelo a mano; el script no adivina. |",
         "| `no hay ningún encuentro en el Calendar …` | Lo más probable: **la serie de "
         "encuentros de ese curso todavía no existe**. Créala con `PRINCIPAL - Crear encuentros "
-        "con invitados.gs` del curso (necesita la sala de Meet en "
-        "`carga_academica_2026.json → cursos.<key>.meet`) y ejecuta `reintentarPendientes()`. Si "
+        "con invitados.gs` del curso —**no necesitas la sala de antemano: ese script la crea y "
+        "la imprime**; el enlace que imprime se pega en `carga_academica_2026.json → "
+        "cursos.<key>.meet` y después se regenera este `.gs`— y ejecuta `reintentarPendientes()`. Si "
         "la serie ya existe y aun así sale esto, era una tutoría, un jurado o una reunión "
         "ajena: **no** debe publicarse. |",
         "| `la sala dice «X» y … no es de esa asignatura` | "
