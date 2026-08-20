@@ -122,7 +122,7 @@
       "minuto_a_minuto": true,
       "texto_casi_literal": true,
       "teorico_practico": true,
-      "modelo_aprobado_revision": "Pregrado/Creatividad y pensamiento innovador/Guiones/Sesion 01 - Introducción · Propuesta de Innovación · creatividad e inteligencia em.md",
+      "modelo_aprobado_revision": "Pregrado/Creatividad y pensamiento innovador/Docente/Guiones/Sesion 01 - Introducción · Propuesta de Innovación · creatividad e inteligencia em.md",
       "proyecto1_checklist_post_clase": "Cada guion P1 debe cerrar con checklist post-clase leyendo URLs desde `links_afi` (registro docente <24h + recordatorio asistencia estudiante en tutoría). Build: build_sesion_material.py.",
       "nota": "Modelo de calidad = Creatividad S01 (canónico). Regeneradores alinean el resto al mismo estándar."
     },
@@ -154,10 +154,10 @@
       "<Asignatura>/Calendario de clases (oficial).md",
       "<Asignatura>/Clases/Presentacion del Curso - ….pptx  (SÍ docente + correo + logística)",
       "<Asignatura>/Clases/Sesion NN - <Tema>/Presentacion.pptx  (NO bio/correo docente)",
-      "<Asignatura>/Guiones/Sesion NN - <Tema>.md",
+      "<Asignatura>/Docente/Guiones/Sesion NN - <Tema>.md",
       "<Asignatura>/2026/<grupo>/Informacion.txt, CSV/ICS Calendar…"
     ],
-    "raiz_generica": "Manual del Docente (sin nombre de grupo), Calendario oficial, syllabus, Clases/ (Presentación del Curso + carpetas Sesion NN - Tema/), Guiones/. Sin código de grupo en títulos ni nombres de archivo.",
+    "raiz_generica": "Manual del Docente (sin nombre de grupo), Calendario oficial, syllabus, Clases/ (Presentación del Curso + carpetas Sesion NN - Tema/), Docente/Guiones/. Sin código de grupo en títulos ni nombres de archivo.",
     "oferta_puntual": "2026/<grupo>/ — Informacion.txt, roster (si aplica), CSV/ICS Calendar. Pregrado sin Guests/ATTENDEE. Proyecto I 54ES4: invitados vía Apps Script `Crear encuentros con invitados.gs` (Google al importar CSV/ICS descarta Guests/ATTENDEE). Subject encuentros: «{grupos} - {Asignatura} - Sesion NN» (+ « (autónoma)» si festivo Pregrado).",
     "calendario": {
       "subject_encuentro": "{grupos} - {Asignatura corta} - Sesion NN  |  sin tema largo  |  festivo Pregrado: mismo + (autónoma)  |  helper sesiones_cun.subject_encuentro  |  builds: build_pregrado_cursos.py --calendar-only · build_calendar_proyecto1_54es4.py",

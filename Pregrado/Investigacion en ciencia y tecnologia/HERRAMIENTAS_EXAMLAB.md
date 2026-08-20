@@ -103,7 +103,7 @@ Y los cuatro defectos del material que sí condicionan las decisiones de abajo:
 
 | Defecto (del análisis del corpus) | Consecuencia para la herramienta |
 |---|---|
-| §6.1 — Las slides 4, 5 y 6 son **textualmente idénticas** en las 6 sesiones; la consigna real vive solo en `Guiones/`, que no se comparte | El estudiante que revisa la presentación después de clase **no recupera la consigna**. Es la necesidad #1 |
+| §6.1 — Las slides 4, 5 y 6 son **textualmente idénticas** en las 6 sesiones; la consigna real vive solo en `Docente/Guiones/`, que no se comparte | El estudiante que revisa la presentación después de clase **no recupera la consigna**. Es la necesidad #1 |
 | §6.2 — La **prueba parcial no está redactada**, aunque el syllabus la exige en U5 y U11–12 **y el aula ya tiene los ítems creados** (Parcial 1 24% · Parcial 2 21%) | La S03 tiene un hueco de contenido, no solo de herramienta — y ahora con fecha: el Parcial 1 cierra el **27/08**. Es la necesidad #3 |
 | §6.3 — No hay rúbricas: 5 casillas binarias por ACA. *(La tabla EV del syllabus venía truncada, pero eso **ya no bloquea nada**: el desglose real sale del aula)* | Configurar en ExamLab los **8 ítems** con su peso real, no tres cortes al 100%. Ver §8-checklist |
 | §6.9 — No hay material para las clases autónomas ni para las ~26 h que el bloque corto no entrega | Es la necesidad #10, y tiene una herramienta específica y poco obvia (§4.6) |
@@ -245,7 +245,7 @@ Las seis que más pesan en este curso, en orden de valor.
 
 Se sube la carpeta `Clases/` **completa** (acepta selección de carpeta y sube en lote), y el tablero asigna el material a cada una de las 6 sesiones. Formatos aceptados: `.pdf .pptx .docx .xlsx .md .txt .csv` + imágenes + `.zip`, hasta 25 MB por archivo. Visor inline sin descargar: el PDF se ve en la página, el `.pptx` con anotaciones por slide, el `.md` con editor.
 
-**Lo que resuelve:** el defecto §6.1. La consigna real de cada taller —que hoy vive solo en `Guiones/`— se sube como un `.md` corto por sesión y el estudiante la recupera cuando revisa después de clase.
+**Lo que resuelve:** el defecto §6.1. La consigna real de cada taller —que hoy vive solo en `Docente/Guiones/`— se sube como un `.md` corto por sesión y el estudiante la recupera cuando revisa después de clase.
 
 **Cómo separar lo del docente de lo del estudiante:**
 - Los guiones **asignados a una sesión** se destildan del subconjunto visible (el docente elige archivo por archivo qué ve el alumno en esa sesión). No hay que renombrar nada.
@@ -502,7 +502,7 @@ Este es un curso de **pregrado, virtual, de 6 semanas, con 6 horas sincrónicas 
 | `Calendario de clases (oficial).md` | Las 6 sesiones, la regla de festivo, la nota de compresión U8+U10–12 |
 | `2026/53339/Calendario de clases - Grupo 53339.md` · `Entregas y hitos…csv` | Hitos, y la nota de que los CSV/ICS **no** incluyen estudiantes |
 | `Manual del Docente - Investigacion Ciencia y Tecnologia.md` | Fechas de cierre y de límite de nota por ACA |
-| `Guiones/Sesion 01–06 ….md` | Estructura de 60 min, actividades por fase, nombres de entregable, tabla de remediación |
+| `Docente/Guiones/Sesion 01–06 ….md` | Estructura de 60 min, actividades por fase, nombres de entregable, tabla de remediación |
 | `Clases/Sesion 01–06 …/Presentacion.pptx` (6) · `Presentacion del Curso….pptx` | Contenido visible al estudiante; evidencia de las slides idénticas |
 | `Clases/Recursos/ACAs/*.docx` — un documento por ítem del aula (guía de cada quiz y parcial, `ACA Final (32,8%) - Articulo de nuevo conocimiento.docx`, instructivos de auto y coevaluación) | Consignas, checklists, restricción "solo gratis + nube", "entrega oficial: solo por CDigital" |
 | `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` | **Estructura real del aula**: ítems, tipos, pesos y ventanas (fuente de verdad de la evaluación) |

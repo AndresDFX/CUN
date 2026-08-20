@@ -7,7 +7,7 @@
 
 > **REGLA DE PRÁCTICA:** toda actividad práctica de clase usa **solo componentes gratis + en la nube** (browser / SaaS free tier). Sin software de escritorio de pago, sin instalaciones obligatorias en el PC del estudiante (ni Packet Tracer, Visual Studio desktop, Office desktop obligatorio, Adobe de pago, Mendeley Desktop / Cite en Word, etc.).
 
-> Convención de capturas: `<Curso>/Guiones/Capturas/Sesion NN/` (+ copia plana en `Guiones/Capturas/` para embeber en `.docx`, y espejo en `Clases/Sesion NN…/Capturas/` cuando aplica).
+> Convención de capturas: `<Curso>/Docente/Guiones/Capturas/Sesion NN/` (+ copia plana en `Docente/Guiones/Capturas/` para embeber en `.docx`, y espejo en `Clases/Sesion NN…/Capturas/` cuando aplica).
 
 ---
 
@@ -75,7 +75,7 @@
 | Curso | Uso típico | Herramienta | Capturas |
 | :--- | :--- | :--- | :--- |
 | TG2 / TG3 S01 | Encuadre / acuerdo pedagógico | **Slido** — «dos verdades y una mentira», 3 rondas, 8 min (50 y 112 estudiantes) | ✅ slide + guion S01 |
-| TG2 / TG3 | Búsqueda y citas | Google Scholar · **ZoteroBib** (https://zbib.org/) | ✅ `Guiones/Capturas/Herramientas/tg_*.png` (ambos cursos) |
+| TG2 / TG3 | Búsqueda y citas | Google Scholar · **ZoteroBib** (https://zbib.org/) | ✅ `Docente/Guiones/Capturas/Herramientas/tg_*.png` (ambos cursos) |
 | TG2 / TG3 | Formato artículo / APA | Plantilla APA CUN abierta en **Google Docs** · APA Style web | Reutilizar `p1_apa_style.png` |
 | TG2 / TG3 | Antiplagio | Herramienta institucional CUN si existe en CDigital; si no, **no inventar** URL — instruir ruta oficial del semestre | ⏳ pendiente URL real |
 | TG2 / TG3 | Estructura artículo | **Google Docs** + ZoteroBib | Guía breve (misma lógica de Investigación **S04–S05**) |

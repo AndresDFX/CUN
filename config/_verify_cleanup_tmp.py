@@ -20,7 +20,7 @@ for key, c in carga["cursos"].items():
     print(f"  Presentaciones: {[x.name for x in pptx]}")
     leeme = p / "Clases" / "LEEME - Material para estudiantes.docx"
     print(f"  LEEME: {leeme.exists()}")
-    guiones = list((p / "Guiones").glob("Sesion *.md")) if (p / "Guiones").exists() else []
+    guiones = list((p / "Docente" / "Guiones").glob("Sesion *.md")) if (p / "Docente" / "Guiones").exists() else []
     print(f"  Guiones .md: {len(guiones)} · sesiones COURSES={len(COURSES[key]['sesiones'])}")
 
 orphans = []
@@ -41,7 +41,7 @@ print(
         ROOT
         / "Pregrado"
         / "Investigacion en ciencia y tecnologia"
-        / "Guiones"
+        / "Docente" / "Guiones"
         / "Capturas"
         / "Sesion 07"
     ).exists(),
@@ -52,7 +52,7 @@ print(
 )
 print(
     "docx in Guiones:",
-    [str(p.relative_to(ROOT)) for p in (ROOT).rglob("Guiones/**/*.docx")],
+    [str(p.relative_to(ROOT)) for p in (ROOT).rglob("Docente/Guiones/**/*.docx")],
 )
 print(
     "correo in Clases:",

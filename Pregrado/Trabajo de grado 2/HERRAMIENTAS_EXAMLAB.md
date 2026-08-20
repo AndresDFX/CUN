@@ -64,7 +64,7 @@ Tres hechos, y el primero no es sobre ExamLab:
    estudiante recibe son **plantilla interpolada**: el slide "ACTIVIDAD / TALLER" dice lo mismo en las 11
    sesiones (*"Aplica el concepto de hoy a tu propio proyecto… Entregable: según indique el Docente"*).
    Las consignas reales —*"4 fichas mínimas + párrafo puente"*, *"matriz de gaps + dueños"*— viven **solo
-   en `Guiones/`, que el `LEEME` dice explícitamente que no se comparte**. El estudiante de pregrado que
+   en `Docente/Guiones/`, que el `LEEME` dice explícitamente que no se comparte**. El estudiante de pregrado que
    faltó, o que no tomó nota en el minuto 32, no tiene de dónde recuperar qué debía producir. Ese hueco
    lo cierra una herramienta de material, no una de evaluación.
 
@@ -158,7 +158,7 @@ las 3 ventanas ACA. Detalle en §8.
 |---:|---|---|---|
 | **01** | 10/08 | Acuerdo pedagógico · delimitación. **Taller:** matriz de estado (secciones listas / a medias / inexistentes) + 3 compromisos. Rompehielos en Padlet | **Encuesta `mixed`** que reemplaza a Padlet y al Doc de estado: 1 campo cerrado por sección del APA (Planteamiento · Objetivos · Marco · Metodología → *listo / a medias / inexistente*) + 1 abierto para los 3 compromisos. El docente la lee **agrupada por campo y con el nombre del autor** → tiene el semáforo de los 50 en la misma clase. Ventaja sobre Padlet: queda por curso (hoy el Padlet es **el mismo enlace en los 5 cursos** del docente) y los nombres se resuelven |
 | **02** | 24/08 | Pregunta, objetivos y título ≤21 palabras. **Taller:** bloque pregunta + general + 3 específicos + título | **Taller formativo** con 4 preguntas abiertas + **rúbrica escrita como tabla markdown en el enunciado** (el estudiante la ve *antes* de responder) + calificación IA formativa + hilo de retro por pieza. **Reto en vivo** de 6–8 preguntas cerradas sobre el error nombrado en el guion: verbos *"conocer / entender"* en objetivos |
-| **03** | 31/08 | Estructura del documento / artículo de avance. **Taller:** outline con bullets por sección | **Pregunta `diagrama`** (mermaid `mindmap`): el mapa de secciones del APA queda **persistido por estudiante, calificable y consultable después** — hoy se dibuja en Excalidraw suelto y se pierde. Contenidos: la `Plantilla_APA_CUN` asignada a esta sesión alimenta al Tutor IA |
+| **03** | 31/08 | Estructura del documento de avance. **Taller:** outline con bullets por sección | **Pregunta `diagrama`** (mermaid `mindmap`): el mapa de secciones del APA queda **persistido por estudiante, calificable y consultable después** — hoy se dibuja en Excalidraw suelto y se pierde. Contenidos: la `Plantilla_APA_CUN` asignada a esta sesión alimenta al Tutor IA |
 | **04** | 07/09 | Antecedentes y referentes (Fase I). **Taller:** 4 fichas + párrafo puente. *(el **Quiz 1**, 6%, cerró el 31/08 en la S03; el **Parcial 1**, 24%, cierra el 14/09 en la S05)* | **Taller formativo**: 1 pregunta abierta por ficha (autor · año · aporte · relación con mi pregunta) con la rúbrica de la ficha en el enunciado, + hilo de retro por ficha. **Registro del Quiz 1** como ítem externo (nota + observación) y **repaso del Parcial 1**, que es el ítem más pesado del primer corte. **Brecha:** la citación APA sigue en ZoteroBib, fuera de ExamLab (§6.1) |
 | **05** | 14/09 | Marco teórico — avance. **Taller:** mapa de constructos + 1–2 páginas | **Pregunta `diagrama`** (mermaid `mindmap` o `flowchart`) = el mapa de constructos, exactamente lo que pide el guion. **Tutor IA** para la duda típica de esta semana: *"¿esto es marco teórico o conceptual?"* — respondida a las 11 pm del domingo, no 7 días después |
 | **06** | 21/09 | Marco conceptual y contextual. **Taller:** tabla de términos + 1 página contextual | **Encuesta `mixed`** para la tabla de términos (término · definición operativa · fuente), o **foro** — con el dato fino de que **en el foro una tabla markdown sí renderiza como tabla**, mientras que en la respuesta de un taller sale en texto plano (§6.2). Error a atajar: *"contexto = país entero"* |
@@ -194,7 +194,7 @@ lo mismo.
 
 | # | Herramienta | Qué hace exactamente | Por qué aquí |
 |---|---|---|---|
-| 1 | **Contenidos + Tablero** | Sube **carpetas completas** (`.pdf .pptx .docx .xlsx .md .txt .csv` + imágenes; 25 MB/archivo, 100 MB/lote). Asigna material **a una sesión concreta** y permite **destildar archivo por archivo** cuál ve el alumno. Visor inline de PDF e imágenes | Cierra el hueco #1 del curso: la `Clases/` entera entra tal cual, y la consigna real de cada sesión (hoy solo en `Guiones/`) se publica como un `.md` corto por sesión |
+| 1 | **Contenidos + Tablero** | Sube **carpetas completas** (`.pdf .pptx .docx .xlsx .md .txt .csv` + imágenes; 25 MB/archivo, 100 MB/lote). Asigna material **a una sesión concreta** y permite **destildar archivo por archivo** cuál ve el alumno. Visor inline de PDF e imágenes | Cierra el hueco #1 del curso: la `Clases/` entera entra tal cual, y la consigna real de cada sesión (hoy solo en `Docente/Guiones/`) se publica como un `.md` corto por sesión |
 | 2 | **Tutor IA por curso** | Chat persistente por alumno que lee el **texto real** del material: `.docx`, `.pptx` (**incluidas las notas del orador**), `.pdf` y `.xlsx`. El alumno **referencia archivos con `#`** y esos se priorizan. Prompt sembrado explícitamente socrático: *"acompañar… **NO resolverle los ejercicios**"*. Es **síncrono** — responde en vivo | La pieza de mayor apalancamiento: 50 proyectos, 6 días de cada 7 en solitario. Lee la `Plantilla_APA_CUN` y los 3 ACAs, así que responde *"¿esto va en marco teórico o conceptual?"* con el documento real del curso, no en genérico |
 | 3 | **Foros** | N foros por curso, con **ventana de apertura/cierre**, **sesión asociada**, hilos **fijados**, hilos cerrados y **respuesta oficial** del docente (que sube al tope). Alumno matriculado abre hilos y responde. Renderiza markdown, **tablas incluidas** | En los 4 cursos del docente el foro **no existe hoy** — es el canal asíncrono que con 1 hora semanal no es un extra, es donde ocurre el acompañamiento. En pregrado vale doble: el que no habla en Meet frente a 50 sí escribe |
 | 4 | **Sesiones + tipo `autonoma`** | Importación por CSV de las 15 filas (fecha, título, hora, enlace de Meet, corte, grabación, **tipo**). El tipo `autonoma` **notifica y emaila solo** al llegar la fecha, y el alumno marca el material como revisado → cuenta como asistencia. Generador de cronograma que **conoce los festivos de Colombia** | Es el contenedor exacto de la regla *"festivo en lunes → clase autónoma, no cancelación"*, repetida en el Manual y el Calendario. Y el generador evita el error de cuentas: 15 lunes, 4 festivos |
@@ -412,7 +412,7 @@ Ponderados para **pregrado**: menos autonomía, más estudiantes por hora, y una
 - [ ] Subir la carpeta `Clases/` completa y asignar el material a cada sesión.
 - [ ] Subir `Plantilla_APA_CUN_Proyecto de grado.docx` y los 3 enunciados ACA — **esto es lo que alimenta al Tutor IA**.
 - [ ] Renombrar o **destildar** los 11 guiones docentes para que no queden visibles al estudiante.
-- [ ] **Escribir y publicar las 11 consignas de taller** (hoy solo están en `Guiones/`) como un `.md` corto por sesión. *Es el mayor valor individual de todo el montaje.*
+- [ ] **Escribir y publicar las 11 consignas de taller** (hoy solo están en `Docente/Guiones/`) como un `.md` corto por sesión. *Es el mayor valor individual de todo el montaje.*
 - [ ] **Escribir las 4 consignas de clase autónoma** (R13).
 - [ ] Crear los 11 foros (uno por sesión) + 4 foros con ventana para las autónomas.
 - [ ] Sincronizar el calendario con los 50 como invitados.
@@ -451,8 +451,8 @@ Ponderados para **pregrado**: menos autonomía, más estudiantes por hora, y una
 | Manual del Docente | `Trabajo de grado 2/Manual del Docente - Trabajo de Grado 2.md` |
 | Calendario oficial (15 eventos) | `Trabajo de grado 2/Calendario de clases (oficial).md` |
 | Información del grupo | `2026/54448/Informacion.txt` (50/50 inscritos · 94453 · 26V04) |
-| Guiones docentes (11) | `Guiones/Sesion NN - <tema>.md` — consignas de taller y tabla de acompañamiento |
-| Guía de citación | `Guiones/Guía práctica - Herramientas de escritura y citación.md` |
+| Guiones docentes (11) | `Docente/Guiones/Sesion NN - <tema>.md` — consignas de taller y tabla de acompañamiento |
+| Guía de citación | `Docente/Guiones/Guía práctica - Herramientas de escritura y citación.md` |
 | Material del estudiante | `Clases/LEEME…docx` · `Presentacion del Curso…pptx` · 11 × `Sesion NN/Presentacion.pptx` |
 | Enunciados ACA (3) | `Clases/Recursos/ACAs/ACA {1,2,3}…docx` |
 | Plantilla institucional | `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` |

@@ -147,7 +147,7 @@ def main() -> int:
 
     for curso in CURSOS:
         carpeta = os.path.join(RAIZ, curso.replace("/", os.sep))
-        for md in sorted(glob.glob(os.path.join(carpeta, "Guiones", "Sesion *.md"))):
+        for md in sorted(glob.glob(os.path.join(carpeta, "Docente", "Guiones", "Sesion *.md"))):
             label = os.path.splitext(os.path.basename(md))[0]
             reales = candidatos(deck_path(carpeta, label))
             if not reales:

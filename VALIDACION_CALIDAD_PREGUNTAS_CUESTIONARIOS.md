@@ -38,7 +38,7 @@
 ## ✅ RESULTADOS POR CURSO
 
 ### 1. CREATIVIDAD Y PENSAMIENTO INNOVADOR
-**Archivo analizado:** `Pregrado/Creatividad y pensamiento innovador/Clases/Recursos/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
+**Archivo analizado:** `Pregrado/Creatividad y pensamiento innovador/Docente/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
 
 **Banco:** 10 preguntas (CRE-Q06 a CRE-Q15)
 
@@ -76,7 +76,7 @@
 ---
 
 ### 2. TRABAJO DE GRADO 2
-**Archivo analizado:** `Pregrado/Trabajo de grado 2/Clases/Recursos/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
+**Archivo analizado:** `Pregrado/Trabajo de grado 2/Docente/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
 
 **Banco:** 10 preguntas (TG2-Q1-01 a TG2-Q1-10)
 
@@ -111,7 +111,7 @@
 ---
 
 ### 3. PROYECTO I (ESPECIALIZACIÓN)
-**Archivo analizado:** `Especializacion/Proyecto I/Clases/Recursos/Cuestionarios/Quiz - banco de preguntas (Moodle XML).xml`
+**Archivo analizado:** `Especializacion/Proyecto I/Docente/Cuestionarios/Quiz - banco de preguntas (Moodle XML).xml`
 
 **Banco:** 10 preguntas (PRO-Q01 a PRO-Q10)
 
@@ -249,6 +249,6 @@
 **Fecha:** 16 de agosto de 2026, 01:50 AM  
 **Método:** Lectura directa de XML + análisis de preguntas completas + verificación de retroalimentación  
 **Archivos analizados:**
-- `Pregrado/Creatividad y pensamiento innovador/Clases/Recursos/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
-- `Pregrado/Trabajo de grado 2/Clases/Recursos/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
-- `Especializacion/Proyecto I/Clases/Recursos/Cuestionarios/Quiz - banco de preguntas (Moodle XML).xml`
+- `Pregrado/Creatividad y pensamiento innovador/Docente/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
+- `Pregrado/Trabajo de grado 2/Docente/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml`
+- `Especializacion/Proyecto I/Docente/Cuestionarios/Quiz - banco de preguntas (Moodle XML).xml`

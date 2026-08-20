@@ -8,17 +8,20 @@ Convención (obligatoria):
       Presentacion.pptx          ← SOLO el tema de esa clase (sin fechas ni mapa del curso)
     Sesion 02 - <Nombre del tema>/
       ...
-  Guiones/
-    Sesion 01 - <Nombre del tema>.md   ← solo Markdown (interno docente; sin .docx)
-    Capturas/
+  Docente/                             ← interno docente: no se comparte con estudiantes
+    Guiones/
+      Sesion 01 - <Nombre del tema>.md ← solo Markdown (interno docente; sin .docx)
+      Capturas/
 
 Contenido RICO por sesión (opcional, recomendado):
   - `config/slides/content/cun_<curso>_s<NN>.json` (curso ∈ proyecto1|investigacion|
     creatividad|tg2|tg3 · NN con cero: s03). Lista de bloques bullets/table/boxes —
     esquema y render en `cun_contenido_sesion.py`; validar con:
         python cun_contenido_sesion.py <curso> <NN>
-  - Si el JSON existe: la deck = portada + bloques del JSON + cierre.
-  - Si NO existe: deck genérica de 7 slides de siempre (fallback intacto).
+  - Si el JSON existe: la deck = portada + bloques del JSON + ruta de entregables + cierre.
+  - Si NO existe: deck genérica de 8 slides (las 7 de siempre + la ruta antes del cierre).
+  - `RUTA DE ENTREGABLES DEL CURSO` es la **penúltima slide de toda deck de sesión** y la
+    escribe `ruta_entregables.py`: sin fechas, con el punto temporal en número de sesión.
   - Sesión 01 (encuadre): el contenido rico se intercala DESPUÉS de la slide
     «CÓMO SE EVALÚA» y ANTES de «PARA LA PRÓXIMA SESIÓN» (ver `S01_CONTENIDO_TRAS`).
 
@@ -35,8 +38,8 @@ Estándar guion:
     + recordatorio formulario de asistencia del estudiante en tutoría.
     URLs desde config/universidades/cun.json → links_afi (vía sesiones_cun).
   - Guiones ricos (minuto a minuto): regeneradores propios — no sobrescribir aquí:
-      proyecto1 → Especializacion/Proyecto I/Guiones/_regen_guiones_proyecto1.py
-      creatividad → Pregrado/.../Guiones/_regen_guiones_creatividad.py
+      proyecto1 → Especializacion/Proyecto I/Docente/Guiones/_regen_guiones_proyecto1.py
+      creatividad → Pregrado/.../Docente/Guiones/_regen_guiones_creatividad.py
       investigacion/tg2/tg3 → config/slides/_regen_guiones_pregrado.py
 
 Uso:
@@ -60,6 +63,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cursos"))
 from cun_slides_engine import *
 import cun_contenido_sesion as contenido
+import ruta_entregables
 from sesiones_cun import (
     COURSES,
     DOCENTE,
@@ -184,7 +188,7 @@ FUNDAMENTOS_S1 = {
         | Fase | Enfoque típico |
         |---|---|
         | TG2 | Problema, marco, método propuesto, avance integrado |
-        | TG3 | Artículo completo, póster, antiplagio, sustentación, repositorio |
+        | TG3 | Documento completo, póster, antiplagio, sustentación, repositorio |
 
         ### 2. Tu rol en el primer encuentro
         Diagnosticar el estado real del proyecto de cada estudiante/equipo y fijar el
@@ -195,20 +199,24 @@ FUNDAMENTOS_S1 = {
 
     "tg3": textwrap.dedent("""\
         ### 1. Qué exige el Syllabus 94532
-        Culminar la opción de grado con un **artículo resultado de investigación**
-        (revisión rigurosa; el Syllabus indica ≥50 referencias y extensión no inferior a
-        4.000 palabras) + **sustentación ante jurados** + carga a repositorio.
+        Culminar la opción de grado con un **documento escrito** (su forma por defecto es el
+        **artículo resultado de investigación**: revisión rigurosa, ≥50 referencias y extensión
+        no inferior a 4.000 palabras) + **sustentación ante jurados** + carga a repositorio.
+        El Syllabus pide además un **producto** que evidencie desempeño profesional: si el
+        estudiante trae un proyecto aplicado, un prototipo o una sistematización, el documento
+        **reporta ese producto** y cumple los mismos mínimos. Cambia el peso de las secciones,
+        no el esqueleto.
 
         | Entregable | Momento del Syllabus |
         |---|---|
-        | Artículo completo | Unidades 4–11 |
+        | Documento completo | Unidades 4–11 |
         | Póster + antiplagio | Unidad 12 |
         | Sustentación | Unidad 13 |
         | Repositorio | Unidad 14 |
 
         ### 2. Primer encuentro: casos de éxito y acuerdo
         Modela con casos de investigación/obra-creación qué se espera al final.
-        Deja claros el producto de hoy y el hilo hacia artículo + sustentación.
+        Deja claros el producto de hoy y el hilo hacia documento + sustentación.
         """),
 }
 
@@ -217,7 +225,7 @@ def _paths(course, ses):
     root = course["folder"]
     label = session_folder_name(ses["n"], ses["titulo"])
     ses_dir = os.path.join(root, "Clases", label)
-    guiones = os.path.join(root, "Guiones")
+    guiones = os.path.join(root, "Docente", "Guiones")
     os.makedirs(ses_dir, exist_ok=True)
     os.makedirs(os.path.join(guiones, "Capturas"), exist_ok=True)
     pptx = os.path.join(ses_dir, "Presentacion.pptx")
@@ -233,7 +241,7 @@ ROMPEHIELOS_PROMPTS = {
     "proyecto1": "expectativa del curso + **tema tentativo** de investigación (1 frase)",
     "investigacion": "expectativa del curso + **idea de tema** para el artículo (1 frase)",
     "tg2": "**estado actual** del proyecto (1 frase) + expectativa de TG2",
-    "tg3": "**tema del artículo** (1 frase) + expectativa del semestre",
+    "tg3": "**tema de tu trabajo de grado** (1 frase) + expectativa del semestre",
     "creatividad": "expectativa del curso + **tema/problema** de interés",
 }
 
@@ -431,6 +439,8 @@ def build_pptx_presentacion(course, ses, pptx):
     if diferida:
         proximos.insert(0, f"**Lectura autónoma:** {diferida.split('→')[0].strip()} — la retomamos al abrir la Sesión 02.")
     content_slide(prs, "PARA LA PRÓXIMA SESIÓN", proximos, idx=idx)
+    idx += 1
+    ruta_entregables.slide(prs, key, n, idx=idx)
     closing_slide(prs, f"Cierre — {label}", [
         "Ya sabemos qué haremos, cómo se evalúa y quién es quién.",
         "**Sesión 02:** arranca el contenido del curso.",
@@ -459,8 +469,12 @@ def build_pptx(course, ses, pptx):
     Sin fechas, sin mapa del curso, sin bio/correo del docente.
 
     Si existe `config/slides/content/cun_<curso>_s<NN>.json`, la deck se arma con ese
-    contenido rico (portada + bloques del JSON + cierre). Si no existe, se conserva
-    exactamente el deck genérico de 7 slides de siempre.
+    contenido rico (portada + bloques del JSON + ruta de entregables + cierre). Si no
+    existe, se conserva el deck genérico de siempre, también con la ruta antes del cierre.
+
+    La penúltima slide es siempre `RUTA DE ENTREGABLES DEL CURSO` (`ruta_entregables.py`):
+    los entregables del curso, sin una sola fecha y con el punto temporal dicho en número
+    de sesión, para que la edición del próximo periodo se recoloque sola.
     """
     if ses.get("presentacion"):
         return build_pptx_presentacion(course, ses, pptx)
@@ -473,7 +487,8 @@ def build_pptx(course, ses, pptx):
     if bloques:
         prs = new_prs()
         _cover_sesion(prs, course, ses, label)
-        contenido.render(prs, bloques, start_idx=2)
+        idx = contenido.render(prs, bloques, start_idx=2)
+        ruta_entregables.slide(prs, course["key"], n, idx=idx)
         closing_slide(prs, f"Cierre — {label}", [
             f"{label}: {titulo}",
             "Siguiente encuentro: continúa el hilo del mismo entregable.",
@@ -524,6 +539,8 @@ def build_pptx(course, ses, pptx):
         "Lleva dudas concretas (el párrafo o sección puntual, no “no entendí nada”).",
         "Revisa la plantilla APA CUN si tu entregable es documental.",
     ], idx=next_idx)
+    next_idx += 1
+    ruta_entregables.slide(prs, course["key"], n, idx=next_idx)
     closing_slide(prs, f"Cierre — {label}", [
         f"{label}: {titulo}",
         "Siguiente encuentro: continúa el hilo del mismo entregable.",
@@ -597,7 +614,8 @@ def build_guion_md(course, ses, label: str) -> str:
 | **4** | {"RECUERDA" if course["key"] == "proyecto1" else "ENFOQUE DE HOY"} | Anclaje del tema |
 | **5** | ACTIVIDAD / TALLER | Consigna práctica |
 | **6** | PARA CONTINUAR | Trabajo autónomo |
-| **7** | Cierre | Despedida |"""
+| **7** | RUTA DE ENTREGABLES DEL CURSO | Recordatorio de entregas (sin fechas) |
+| **8** | Cierre | Despedida |"""
 
     board_block = ""
     rompehielos_check = ""
@@ -733,11 +751,11 @@ def _run_rich_guion_regen(course_key: str, only_n: int | None = None) -> None:
 
     if course_key == "proyecto1":
         script = os.path.join(
-            COURSES["proyecto1"]["folder"], "Guiones", "_regen_guiones_proyecto1.py"
+            COURSES["proyecto1"]["folder"], "Docente", "Guiones", "_regen_guiones_proyecto1.py"
         )
     elif course_key == "creatividad":
         script = os.path.join(
-            COURSES["creatividad"]["folder"], "Guiones", "_regen_guiones_creatividad.py"
+            COURSES["creatividad"]["folder"], "Docente", "Guiones", "_regen_guiones_creatividad.py"
         )
     elif course_key in {"investigacion", "tg2", "tg3"}:
         script = os.path.join(SLIDES_DIR, "_regen_guiones_pregrado.py")
@@ -770,8 +788,8 @@ def _cleanup_legacy_temas(course):
 
 
 def _cleanup_legacy_guiones(course, keep_labels: set[str]):
-    """Quita guiones obsoletos; elimina cualquier .docx residual bajo Guiones/."""
-    guiones = os.path.join(course["folder"], "Guiones")
+    """Quita guiones obsoletos; elimina cualquier .docx residual bajo Docente/Guiones/."""
+    guiones = os.path.join(course["folder"], "Docente", "Guiones")
     if not os.path.isdir(guiones):
         return
     for name in os.listdir(guiones):
@@ -870,6 +888,10 @@ def main(argv):
             generate_course(key, None, guion_only=guion_only)
         else:
             generate_course(key, int(ses_arg), guion_only=guion_only)
+    # La ruta de entregables se imprime en TODAS las decks: si a un ítem del aula le falta
+    # su frase, el aviso tiene que salir aquí y no descubrirse proyectando en clase.
+    for aviso in ruta_entregables.verificar():
+        print("⚠ RUTA:", aviso)
 
 
 if __name__ == "__main__":

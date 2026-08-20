@@ -70,7 +70,7 @@ Tres precisiones que definen el alcance, y las tres son honestas:
 | 17 | Lista de verificación que el estudiante marca y el docente ve consolidada | Encuesta `mixed` con `cerrada` sí/no por criterio | ⚠️ **Workaround** (el `.md` publicado **no** es marcable) |
 | 18 | Muro colaborativo con entrada por QR **sin cuenta** (rompehielos S01) | — | ❌ **No existe** → mantener Padlet en S01 |
 | 19 | Señal real de que el estudiante abrió el material | `content_file_progress` (la base **sí** lo registra) | ❌ **Sin pantalla docente** → usar la sesión autónoma como señal autodeclarada |
-| 20 | Canal por equipo / bitácora del *"acuerdo observable"* (`Guiones/*:97`) | — | ❌ **No existe** (el chat de grupo está en la base, **sin interfaz**) |
+| 20 | Canal por equipo / bitácora del *"acuerdo observable"* (`Docente/Guiones/*:97`) | — | ❌ **No existe** (el chat de grupo está en la base, **sin interfaz**) |
 | 21 | Registro de correcciones con estado pendiente → atendido (`ACA 2:18`) | — | ❌ **No existe** |
 | 22 | Gestor de referencias · verificación APA 7 · comprobación de DOI | — | ❌ **No existe** (0 rastros en todo el producto) |
 | 23 | Que el **estudiante** diseñe y aplique su propio instrumento (S09) | — | ❌ **No existe** (3 candados independientes) |
@@ -84,7 +84,7 @@ Tres precisiones que definen el alcance, y las tres son honestas:
 Tres convenciones, para que la sección 3 se lea rápido:
 
 - **Fechas.** Se usa el mapeo de sesiones ya fijado en §9 del plan de entregas (inicio 10/08/2026). Las discrepancias de fechas entre el Cronograma de Coordinación y los enunciados ACA **están abiertas y son bloqueantes**, pero se resuelven allá (§11a de ese documento), no acá.
-- **Origen de la actividad.** Las 11 `Presentacion.pptx` **no contienen las actividades**: sus slides 4, 5 y 6 son idénticas en todas las sesiones y la slide 5 remite a `Clases/Recursos/ACAs/`. Todo lo que aparece como actividad sale de `Guiones/Sesion NN - ….md` y de los enunciados ACA. Lo marcado *(inferido)* es lectura mía, no texto del curso.
+- **Origen de la actividad.** Las 11 `Presentacion.pptx` **no contienen las actividades**: sus slides 4, 5 y 6 son idénticas en todas las sesiones y la slide 5 remite a `Clases/Recursos/ACAs/`. Todo lo que aparece como actividad sale de `Docente/Guiones/Sesion NN - ….md` y de los enunciados ACA. Lo marcado *(inferido)* es lectura mía, no texto del curso.
 - **Marco fijo de las 11.** Encuentro de 2 h = **60 min de contenido + 60 min de tutoría en vivo por equipos**; aula invertida; grabación completa; equipos de máx. 3; el estudiante registra su asistencia a tutoría en un formulario externo; **en Proyecto I los instrumentos se proponen, no se aplican**. Eso no se repite en cada fila.
 
 ---
@@ -491,7 +491,7 @@ Incluye el perfil: **posgrado virtual, 40 adultos que trabajan, clase de lunes 8
 | Documento hermano (eje entregas) | `Especializacion/Proyecto I/PLAN_VIABILIDAD_EXAMLAB.md` |
 | Manual del Docente | `Especializacion/Proyecto I/Manual del Docente - PROYECTO I.md` |
 | Calendario oficial | `Especializacion/Proyecto I/Calendario de clases (oficial).md` |
-| Guiones de las 11 sesiones *(donde vive la actividad real)* | `Proyecto I/Guiones/Sesion 01..11 - ….md` |
+| Guiones de las 11 sesiones *(donde vive la actividad real)* | `Proyecto I/Docente/Guiones/Sesion 01..11 - ….md` |
 | Enunciados ACA (5) | `Proyecto I/Clases/Recursos/ACAs/ACA {1,2,3}….docx` · `ACA {Auto,Co}evaluacion.docx` |
 | Presentaciones de sesión *(plantilla: sin actividades, slides 4-5-6 idénticas)* | `Proyecto I/Clases/Sesion NN - …/Presentacion.pptx` |
 | Syllabus ESP329 (7 unidades + estrategia didáctica) | `Especializacion_En_Inteligencia_Artificial_Proyecto_I_ESP329.docx` |

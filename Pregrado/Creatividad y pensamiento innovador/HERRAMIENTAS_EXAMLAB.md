@@ -61,7 +61,7 @@ El cuello de botella real de este curso no es evaluar. Es que **hay 50 estudiant
 
 ExamLab resuelve **bien** tres cosas de ese cuello de botella y las resuelve hoy, sin desarrollo:
 
-1. **Que el estudiante reciba la consigna real.** Los PPTX de las sesiones 02–07 son plantilla genérica; el contenido está en `Guiones/`, que el estudiante no recibe. El módulo de Contenidos + Tablero cierra ese hueco, con un detalle que cambia el esfuerzo: **genera el paquete completo por clase con IA** (presentación, guía docente, taller práctico, ejercicio con solución, examen con clave y rúbrica), y lo emite ya separado en material de docente vs. material de estudiante.
+1. **Que el estudiante reciba la consigna real.** Los PPTX de las sesiones 02–07 son plantilla genérica; el contenido está en `Docente/Guiones/`, que el estudiante no recibe. El módulo de Contenidos + Tablero cierra ese hueco, con un detalle que cambia el esfuerzo: **genera el paquete completo por clase con IA** (presentación, guía docente, taller práctico, ejercicio con solución, examen con clave y rúbrica), y lo emite ya separado en material de docente vs. material de estudiante.
 2. **Que el docente lea las 50 fichas, no 3.** El constructor de formularios (`encuesta mixta`) convierte la ficha de 6 campos en 6 campos reales, y el docente los lee **agrupados por campo con el nombre del autor** — las 50 respuestas al campo "usuario concreto", una debajo de otra.
 3. **Que el estudiante tenga a quién preguntarle entre miércoles y miércoles.** El Tutor IA lee el texto real del material —PDF, DOCX, PPTX incluyendo las notas del orador, XLSX— y su prompt está sembrado explícitamente para **no resolverle el ejercicio**. El criterio de calidad que hoy vive en la tabla de acompañamiento del guion (*"¿Quién la usaría mañana a las 8 am y qué le duele hoy?"*) alcanza a los 50 y no solo a quien preguntó dentro de los 18 minutos.
 
@@ -574,11 +574,11 @@ El curso dura 7 semanas. Estrenar todo el catálogo garantiza que ninguna pieza 
 | Syllabus SIAC (8 unidades, sistema de evaluación truncado) | `CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIAS EI004_VIR.docx` |
 | Manual del docente (regla de festivos, hilo conductor) | `Manual del Docente - Creatividad y Pensamiento Innovador.md` |
 | Calendario de los 7 encuentros | `Calendario de clases (oficial).md` |
-| Guiones de las 7 sesiones (fases al minuto, talleres, criterios) | `Guiones/Sesion 0N - ….md` |
+| Guiones de las 7 sesiones (fases al minuto, talleres, criterios) | `Docente/Guiones/Sesion 0N - ….md` |
 | Enunciados — **un documento por ítem del aula** (guía de cada quiz y parcial, ACA Final, instructivos de auto y coevaluación; realineados 2026-08-10) | `Clases/Recursos/ACAs/` |
 | Estructura real del aula (ítems, tipos, pesos, ventanas) | `AUDITORIA CDigital 2026-08-10.md` §2 · `config/cursos/fechas_entrega_aca.py` |
 | Presentación del curso (cortes 30/30/40, acuerdos) | `Presentacion del Curso….pptx` |
-| Instrumento huérfano de la Unidad 2 | `Guiones/Capturas/Sesion 02/s02_mapa_utilidad_modelo.html` |
+| Instrumento huérfano de la Unidad 2 | `Docente/Guiones/Capturas/Sesion 02/s02_mapa_utilidad_modelo.html` |
 | Índice de material para estudiantes | `LEEME - Material para estudiantes.docx` |
 | Fechas e hitos | `Entregas y hitos docentes - Importar a Calendar.csv` |
 

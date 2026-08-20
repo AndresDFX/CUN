@@ -50,7 +50,7 @@ El **alistamiento de aulas** es el proceso completo de preparar las aulas de CDi
 ### 1. Repositorio actualizado
 Verificar que el repositorio en `g:\My Drive\Trabajos\Empleo\CUN\Cursos` tenga:
 - ✅ Material de clases actualizado (presentaciones, guías, lecturas)
-- ✅ Bancos de preguntas actualizados (XML en `Clases/Recursos/Cuestionarios/`)
+- ✅ Bancos de preguntas actualizados (XML en `Docente/Cuestionarios/`)
 - ✅ Fechas del semestre actualizadas en `config/cursos/fechas_entrega_aca.py`
 
 ### 2. Credenciales configuradas
@@ -115,7 +115,7 @@ Revisar que existan:
 - Presentaciones en `Clases/Sesion NN - */Presentacion.pptx`
 - Guías de ACAs en `Clases/ACAs/`
 - Lecturas obligatorias en `Clases/Lecturas/`
-- Bancos de preguntas XML en `Clases/Recursos/Cuestionarios/`
+- Bancos de preguntas XML en `Docente/Cuestionarios/`
 
 #### 1.3. Obtener los IDs de las aulas
 **Si no los tienes:**
@@ -284,7 +284,7 @@ python config/moodle/cdigital.py quiz-sustituir 6745720 --categoria <id_categori
 
 ```bash
 # Ver preguntas de Quiz 1 de Creatividad
-cat "Pregrado/Creatividad y pensamiento innovador/Clases/Recursos/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml"
+cat "Pregrado/Creatividad y pensamiento innovador/Docente/Cuestionarios/Quiz 1 - banco de preguntas (Moodle XML).xml"
 ```
 
 **Verificar:**
@@ -904,7 +904,7 @@ Entorno»).
 - `config/moodle/ocultar_no_evaluativo.py` — Barrido de componentes de plantilla sin nota (Fase 2 bis)
 - `config/cursos/fechas_entrega_aca.py` — Fechas del semestre
 - `config/cursos/festivos_colombia.py` — Festivos para ajustar calendario
-- `Pregrado/*/Clases/Recursos/Cuestionarios/*.xml` — Bancos de preguntas
+- `Pregrado/*/Docente/Cuestionarios/*.xml` — Bancos de preguntas
 
 ### Documentos generados en cada alistamiento:
 - `VERIFICACION_MATERIAL_VISIBLE_CDIGITAL.md`

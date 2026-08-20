@@ -18,11 +18,11 @@ Este manual es **genérico del curso**; lo específico de la oferta de este peri
 9. `Clases/Recursos/Plantilla_APA_CUN_Proyecto de grado.docx` — formato del producto documental.
 10. `HERRAMIENTAS_EXAMLAB.md` (esta carpeta) — análisis de herramientas de apoyo; **no** define entregas ni notas.
 
-## 📁 Estructura de carpetas (`Clases/` = estudiante · `Guiones/` = docente)
+## 📁 Estructura de carpetas (`Clases/` = estudiante · `Docente/Guiones/` = docente)
 
 - **`Clases/Presentacion del Curso - Investigacion Ciencia y Tecnologia.pptx`** — encuadre del semestre: docente, horario, evaluación, contacto.
 - **`Clases/Sesion NN - <tema>/Presentacion.pptx`** — deck de la sesión (sin bio del docente). Algunas carpetas traen además las lecturas de esa semana (p. ej. la Sesión 01 lleva dos PDF de acceso abierto y un `Lectura autonoma - Sesion 01.txt` con la consigna).
-- **`Guiones/Sesion NN - <tema>.md`** — guion docente, minuto a minuto, para leer casi literal (**solo Markdown**, no hay `.docx`) + `Guiones/Capturas/`.
+- **`Docente/Guiones/Sesion NN - <tema>.md`** — guion docente, minuto a minuto, para leer casi literal (**solo Markdown**, no hay `.docx`) + `Docente/Guiones/Capturas/`.
 - **`Clases/Recursos/ACAs/`** — **un documento por ítem real del aula**: guía de cada quiz y de cada parcial, enunciado de la ACA Final e instructivos de auto y coevaluación.
 - **`Calendario de clases (oficial).md`** — mapeo tema ↔ fecha ↔ evaluación.
 - **`2026/<grupo>/`** — roster, correo de bienvenida, CSV de hitos docentes y el script de Calendar.
@@ -160,10 +160,12 @@ Cada guion trae el minuto a minuto y el texto casi literal; el estándar del pro
 
 Los dos comparten el mismo nombre de sesión:
 
-- **Guion (docente):** `Guiones/Sesion NN - <título>.md`
+- **Guion (docente):** `Docente/Guiones/Sesion NN - <título>.md`
 - **Deck (estudiante):** `Clases/Sesion NN - <título>/Presentacion.pptx`
 
 Además, el **encuadre del semestre** tiene su propio deck: `Clases/Presentacion del Curso - Investigacion Ciencia y Tecnologia.pptx`.
+
+**La penúltima slide de todos los decks de sesión es `RUTA DE ENTREGABLES DEL CURSO`, y no se edita.** La escribe `config/slides/ruta_entregables.py` con los ítems del libro de calificaciones, su tipo, su peso y —en **número de sesión, nunca en fecha**— el punto del curso en que cierra cada uno, más una línea de qué tiene que tener listo el estudiante. Te sirve para cerrar la clase en treinta segundos («esto es lo que viene»); y como no hay fechas escritas, cuando el próximo periodo mueva el calendario se recoloca sola sin reeditar deck alguno. La **fecha** exacta de cada ventana sigue viviendo solo en el enunciado del ACA y en CDigital, que es lo que manda.
 
 ### 5.3 Sesión por sesión
 

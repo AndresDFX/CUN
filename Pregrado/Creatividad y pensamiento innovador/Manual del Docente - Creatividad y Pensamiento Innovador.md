@@ -31,7 +31,7 @@ Fuente: syllabus `CREATIVIDAD Y PENSAMIENTO INNOVADOR PARA ESCUELA DE INGENIERIA
 
 ## 📁 Estructura
 - **`Clases/Presentacion del Curso - ….pptx`** + **`Clases/Sesion NN - <tema>/Presentacion.pptx`** · docente **Julian Andres Castaño** · `julian_castanoe@cun.edu.co`
-- **`Guiones/Sesion NN - <tema>.md`** (solo Markdown; no hay `.docx`) + `Capturas/`
+- **`Docente/Guiones/Sesion NN - <tema>.md`** (solo Markdown; no hay `.docx`) + `Capturas/`
 - **`Calendario de clases (oficial).md`** · festivo = autónoma · mapeo tema↔fecha
 - **`2026/<grupo>/`** — Informacion + CSV/ICS (**sin invitados**; Meet placeholder único por serie)
 - **`Clases/Recursos/ACAs/`** — un documento para el estudiante **por ítem real del aula** (guía de cada quiz y parcial, enunciado de la ACA Final, instructivos de auto y coevaluación) + `Plantilla_APA_CUN_Proyecto de grado.docx`.
@@ -161,7 +161,7 @@ Durante los minutos del cuestionario tu trabajo es mirar el chat del Meet y **an
 
 ### 5.2 Sesión por sesión
 
-Siete encuentros, todos miércoles 5:00–6:00 pm. Guion en `Guiones/Sesion NN - <tema>.md`; deck del estudiante en `Clases/Sesion NN - <tema>/Presentacion.pptx` (el guion indica, fase por fase, en qué slide vas).
+Siete encuentros, todos miércoles 5:00–6:00 pm. Guion en `Docente/Guiones/Sesion NN - <tema>.md`; deck del estudiante en `Clases/Sesion NN - <tema>/Presentacion.pptx` (el guion indica, fase por fase, en qué slide vas).
 
 | # | Fecha | Qué pasa realmente en el encuentro | Cierra ese día |
 |---|---|---|---|
@@ -191,10 +191,12 @@ El Syllabus declara **32 h con docente y 64 h autónomas**, pero la oferta real 
 
 ### 5.4 Dónde están tu guion y tu deck
 
-- **Guion (interno, solo Markdown):** `Guiones/Sesion NN - <tema>.md`. Trae fundamento teórico para estudiar antes, guion literal para leer casi textual, minutos por fase, tabla de acompañamiento del taller, preguntas trampa frecuentes, checklist antes de clase y checklist después de clase. Están escritos para que **un docente sin trayectoria en innovación pueda dictar la hora completa**.
+- **Guion (interno, solo Markdown):** `Docente/Guiones/Sesion NN - <tema>.md`. Trae fundamento teórico para estudiar antes, guion literal para leer casi textual, minutos por fase, tabla de acompañamiento del taller, preguntas trampa frecuentes, checklist antes de clase y checklist después de clase. Están escritos para que **un docente sin trayectoria en innovación pueda dictar la hora completa**.
 - **Deck del estudiante:** `Clases/Sesion NN - <tema>/Presentacion.pptx`. Sin bio del docente (esa va solo en `Clases/Presentacion del Curso - ….pptx`).
-- **Capturas de apoyo:** `Guiones/Capturas/`.
-- **Regenerar guiones:** `python "Pregrado/Creatividad y pensamiento innovador/Guiones/_regen_guiones_creatividad.py"` o `python config/slides/build_sesion_material.py creatividad all --guion-only`.
+
+**La penúltima slide de todos los decks de sesión es `RUTA DE ENTREGABLES DEL CURSO`, y no se edita.** La escribe `config/slides/ruta_entregables.py` con los ítems del libro de calificaciones, su tipo, su peso y —en **número de sesión, nunca en fecha**— el punto del curso en que cierra cada uno, más una línea de qué tiene que tener listo el estudiante. Te sirve para cerrar la clase en treinta segundos («esto es lo que viene»); y como no hay fechas escritas, cuando el próximo periodo mueva el calendario se recoloca sola sin reeditar deck alguno. La **fecha** exacta de cada ventana sigue viviendo solo en el enunciado del ACA y en CDigital, que es lo que manda.
+- **Capturas de apoyo:** `Docente/Guiones/Capturas/`.
+- **Regenerar guiones:** `python "Pregrado/Creatividad y pensamiento innovador/Docente/Guiones/_regen_guiones_creatividad.py"` o `python config/slides/build_sesion_material.py creatividad all --guion-only`.
 
 ## 6. Qué le entregas tú a la Universidad
 

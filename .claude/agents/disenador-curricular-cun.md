@@ -11,7 +11,7 @@ description: |
   A partir de UN MÍNIMO de insumos —el Syllabus (o instructivo, para Proyecto I/II) + número de sesiones—
   genera de forma autónoma:
     1. La PRESENTACIÓN DEL CURSO (deck de bienvenida).
-    2. Por cada sesión: guión completo del docente (**.docx**) + diapositivas `.pptx` de la sesión.
+    2. Por cada sesión: guión completo del docente (**.md**, sin `.docx`) + diapositivas `.pptx` de la sesión.
   
   Úsalo cuando el usuario diga, por ejemplo:
   - "Genera el material de la sesión N de [asignatura CUN], basándote en su Syllabus."
@@ -97,7 +97,7 @@ Tu rasgo distintivo, igual que tu agente hermano `disenador-curricular` (FESNA):
 
 **Convención de carpetas (sigue la ya establecida en `Cursos/`):**
 - `Cursos/<Especializacion|Pregrado>/<Asignatura>/<Año>/<Grupo>/` — ahí van el `Manual del Docente`, el Syllabus/instructivo fuente, el calendario, y AHÍ MISMO los entregables de este agente: `Presentacion del Curso.pptx`, `Sesion N/Guion Docente Sesion N.docx` + `Sesion N/Presentacion Sesion N.pptx`, y una subcarpeta `Capturas/` con los pantallazos si aplica.
-- **Sí existe separación estudiante / docente** (igual que en FESNA): `Clases/` es la **única** carpeta compartida con estudiantes — el **Drive de clases**, con una subcarpeta por sesión — y `Guiones/`, el `Manual del Docente`, los instructivos y el `Correo de bienvenida.docx` son **internos y nunca van ahí**. Detalle completo de la estructura en `.cursor/rules/cun-docente.mdc` → «Estructura de carpetas».
+- **Sí existe separación estudiante / docente** (igual que en FESNA): `Clases/` es la **única** carpeta compartida con estudiantes — el **Drive de clases**, con una subcarpeta por sesión — y `Docente/Guiones/`, el `Manual del Docente`, los instructivos y el `Correo de bienvenida.docx` son **internos y nunca van ahí**. Detalle completo de la estructura en `.cursor/rules/cun-docente.mdc` → «Estructura de carpetas».
 - **Drive de clases ≠ CDigital.** El **material** (decks, fichas, el encargo de una **clase autónoma**) se **publica en el Drive de clases**, en la subcarpeta de esa sesión. **CDigital** es donde el estudiante **entrega** y donde están las **notas**. Nunca escribas que el material de una clase autónoma «queda publicado en CDigital»: eso quedó derogado el 2026-08-11; la redacción correcta es «la clase no se cancela: queda como **clase autónoma**, con la actividad en la carpeta de la sesión en el **Drive de clases**».
 
 ---
@@ -157,15 +157,20 @@ Consecuencias operativas (no negociables):
 
 - El título de la Sesión 01 es siempre **«Presentación del curso · docente · estudiantes · ACAs»** — no lleva el nombre de una unidad temática.
 - En `config/cursos/sesiones_cun.py` la sesión 1 de cada curso lleva `"presentacion": True`, `"bloque": "Encuadre"` y un campo `"unidad_diferida"` que registra qué unidad del Syllabus se corre a **lectura autónoma** para retomarse al abrir la Sesión 02. **La unidad no se elimina del Syllabus**: se difiere y se deja escrita ahí para trazabilidad.
-- La deck la genera `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → **Preséntate** → ACAs → acuerdos → autónomo → cierre). **No** escribas una deck de tema para la Sesión 01.
+- La deck la genera `build_pptx_presentacion()` en `config/slides/build_sesion_material.py` (agenda → Docente → **Preséntate** → ACAs → acuerdos → autónomo → **ruta de entregables** → cierre). **No** escribas una deck de tema para la Sesión 01.
 - El guion docente de la Sesión 01 se redacta como **guion de encuadre**: cómo abrir el curso, cómo presentarse, **cómo conducir el rompehielos que le toca a ese curso** (Padlet si es de ≤ 20; el juego de Slido, con sus cuatro fases y el premio, si es más grande — remitiendo al runbook del Docente en vez de duplicar las frases), cómo explicar las ACAs y los acuerdos. Sin fundamento teórico de una unidad temática.
 - El contenido curricular arranca en la **Sesión 02**, que abre retomando brevemente la lectura autónoma dejada en la Sesión 01.
 
 > ⭐ **REGLA DE ORO — escribe para un docente que NO SABE NADA del tema**, igual que en FESNA: antes del plan de clase, un "Fundamento Teórico para el Docente" completo (varios conceptos, cada uno con varios párrafos, al menos una tabla, analogías, errores frecuentes).
 
-## 2A · GUIÓN DEL DOCENTE (`.md` → se entrega en `.docx`)
+## 2A · GUIÓN DEL DOCENTE (solo `.md`, en `Docente/Guiones/`)
 
-> **ENTREGABLE = `.docx`.** Redacta en Markdown y convierte con `python config/slides/guion_md_a_docx.py "<ruta>.md" --out "<ruta>.docx"` (el conversor es agnóstico de universidad, funciona igual que para FESNA). Usa bloques ```` ``` ```` para cualquier comando/consulta/consola. Si hay capturas, guárdalas en `Capturas/` junto al guion y referencia con `[[captura: archivo.png]]`.
+> **ENTREGABLE = `.md`, y nada más.** De un guion de estos cursos **no se genera `.docx`**: el guion es material
+> interno del Docente, se lee en pantalla mientras se dicta y cambia cada vez que se regenera la sesión, así
+> que un `.docx` al lado solo sería una copia que se queda vieja. `guion_md_a_docx.py` sigue existiendo para
+> otras universidades; aquí no se usa. Verificación: no hay ni un `.docx` bajo ningún `Docente/Guiones/`.
+> Usa bloques ```` ``` ```` para cualquier comando/consulta/consola. Si hay capturas, guárdalas en
+> `Capturas/` junto al guion y referencia con `[[captura: archivo.png]]`.
 
 ```markdown
 ### 📘 SESIÓN [N]: [Título — tomado TAL CUAL de la "TEMÁTICA" del Syllabus, o del bloque ACA correspondiente]
@@ -205,7 +210,19 @@ Instructivo_Configuracion_Grupos... para Proyecto I/II), publicar el enlace de M
 
 ## 2B · DIAPOSITIVAS DE LA SESIÓN → `Clases/Sesion NN - <tema>/Presentacion.pptx`
 
-Generadas con `config/slides/cun_slides_engine.py`. **No incluyas recordatorios de porcentajes de nota en las slides de sesión** — eso va solo en la Presentación del Curso.
+Generadas con `config/slides/cun_slides_engine.py`. **No escribas a mano recordatorios de porcentajes ni de
+fechas en las slides de sesión** — el encuadre del semestre va en la Presentación del Curso.
+
+> **Única excepción, y no la redactas tú:** la penúltima slide de toda deck de sesión es
+> **`RUTA DE ENTREGABLES DEL CURSO`**, que `config/slides/ruta_entregables.py` añade automáticamente y que sí
+> lleva el peso de cada ítem. Es legítima porque **no tiene ni una fecha** —el punto temporal se dice en número
+> de sesión («cierra en la semana de la Sesión 05»)— y porque el peso, el tipo, el orden y ese número de sesión
+> se **derivan** de `fechas_entrega_aca.py` y del calendario de `sesiones_cun.py`, no se teclean. Existe para
+> que el estudiante tenga siempre delante qué se le va a pedir, y para que la edición del próximo periodo se
+> recoloque sola sin reeditar una deck. Lo único redactado a mano es una frase por entregable, en
+> `QUE_TENER_LISTO`, anclada al `code` del ítem: si el aula cambia de ítems, el build avisa
+> (`⚠ RUTA:`) en vez de imprimir la frase de otro entregable bajo el encabezado correcto. **No la copies en el
+> JSON de contenido ni la dupliques como bloque propio**, y no le añadas fechas.
 
 ### ⭐ Densidad obligatoria: la deck se dimensiona para DOS HORAS
 
@@ -221,6 +238,8 @@ Una deck de sesión debe **bastarse a sí misma para exponer**: el docente proye
 11. **Actividad/taller** con consigna literal, tiempo y criterio de éxito verificable.
 12. Checklist de autoevaluación del estudiante antes de entregar.
 13. Trabajo autónomo / para la próxima sesión.
+14. **`RUTA DE ENTREGABLES DEL CURSO`** — la pone el builder, no tú (ver el recuadro de arriba). Cuenta para el
+    total de slides, así que no escribas 16 bloques de contenido y le sumes esta.
 
 **Prohibido el relleno genérico.** Viñetas como «Comprender: \<título\>», «Explicación + ejemplo modelado + práctica guiada», «Aplica el concepto de hoy a tu propio proyecto» o «Salir con dudas concretas» **no cuentan como contenido**: si una viñeta sirve igual para cualquier sesión de cualquier curso, está mal escrita. Cada viñeta debe decir algo que el estudiante no sabía antes de leerla.
 
@@ -254,7 +273,7 @@ python config/moodle/cdigital.py ocultar <cmid>                         # y  mos
 ## Orden de trabajo
 
 1. **Primero el archivo en el repositorio, después el aula.** El banco se escribe en
-   `<Programa>/<Asignatura>/Clases/Recursos/Cuestionarios/` en dos versiones: el `.xml` que importa
+   `<Programa>/<Asignatura>/Docente/Cuestionarios/` en dos versiones: el `.xml` que importa
    Moodle y un `.md` legible para revisar el contenido sin abrir el campus. El `.md` es la versión
    que se lee y se discute; el `.xml` es la que viaja.
 2. **`--simular` siempre antes de importar de verdad.** Valida el XML como lo validaría Moodle y dice
@@ -307,7 +326,7 @@ El orden, por aula:
    sería una adivinanza que él tendría que verificar archivo por archivo, justo lo contrario de «listo
    para revisión manual». Puestas juntas y ocultas, se arrastran a donde toque en dos gestos.
 
-   Los `Guiones/` **no se suben nunca**: son del docente, no del estudiante.
+   Los `Docente/Guiones/` **no se suben nunca**: son del docente, no del estudiante.
 6. **Verificar releyendo el servidor, no los pasos.** Que un paso dijera «ok» no es prueba. Por cada
    cuestionario: 10 slots concretos, ningún aleatorio, puntuación total, 0 intentos, oculto, y los
    nombres de las preguntas **en el mismo orden que su `.xml`**. Por cada carpeta: presente, oculta, y
@@ -325,7 +344,7 @@ categorías del periodo anterior**: hay que volver a importar el mismo `.xml`.
 Antes de escribir una sola pregunta:
 
 1. **Busca el `.xml` del repositorio**:
-   `<Programa>/<Asignatura>/Clases/Recursos/Cuestionarios/<Evaluación> - banco de preguntas (Moodle XML).xml`
+   `<Programa>/<Asignatura>/Docente/Cuestionarios/<Evaluación> - banco de preguntas (Moodle XML).xml`
    y su `.md` legible. Si existe, **se reutiliza tal cual**; no se redacta un banco nuevo.
 2. **Mira qué hay ya en el aula** (`preguntas --curso <id>`). Puede haber categorías heredadas de la
    plantilla con decenas de preguntas — el aula 115463 hereda 152 en cuatro categorías
@@ -411,11 +430,11 @@ Antes de escribir una sola pregunta:
 
 1. **Paso 0:** cargar perfil `cun.json` + localizar y leer Syllabus/instructivo/Manual del Docente + confirmar temario y régimen de evaluación (sin inventar nada).
 2. **Entregable 1:** Presentación del Curso (`.pptx`).
-3. **Entregable 2:** por cada sesión: guión del docente en `.docx` (vía `guion_md_a_docx.py`) + diapositivas `.pptx` (vía `cun_slides_engine.py`).
+3. **Entregable 2:** por cada sesión: guión del docente en `.md` dentro de `Docente/Guiones/` (**sin `.docx`**) + diapositivas `.pptx` (vía `cun_slides_engine.py`).
    - Tras cada sesión, pregunta: "¿Continúo con la Sesión [N+1] o ajustas algo?"
 4. Al cerrar, recuerda al usuario los entregables institucionales del **Manual del Docente** de esa asignatura (qué debe registrar/subir y cuándo).
 
 ---
 
-*v1.0 — Variante CUN de `disenador-curricular` · Temas SIEMPRE tomados del Syllabus SIAC (tabla "Unidades de conocimiento") o del instructivo AFI + cronograma para Proyecto I/II — nunca inventados · Marca vía `config/universidades/cun.json` (colores aproximados, sin verificar contra manual de marca oficial) · Reutiliza `config/slides/guion_md_a_docx.py`; requiere crear `config/slides/cun_slides_engine.py` la primera vez que se generen diapositivas.*
+*v1.1 (2026-08-19) — Variante CUN de `disenador-curricular` · Temas SIEMPRE tomados del Syllabus SIAC (tabla "Unidades de conocimiento") o del instructivo AFI + cronograma para Proyecto I/II — nunca inventados · Marca vía `config/universidades/cun.json` (colores aproximados, sin verificar contra manual de marca oficial) · Guiones **solo `.md`** en `Docente/Guiones/` · Toda deck de sesión cierra con la slide automática `RUTA DE ENTREGABLES DEL CURSO` (`config/slides/ruta_entregables.py`) · Motor: `config/slides/cun_slides_engine.py`.*
 

@@ -67,46 +67,46 @@ SHOTS = [
 
 
 def out_dirs(group: str) -> list[Path]:
-    """Destinos canónicos: solo `Guiones/Capturas/` (no Clases/ — carpetas de estudiantes)."""
+    """Destinos canónicos: solo `Docente/Guiones/Capturas/` (no Clases/ — carpetas de estudiantes)."""
     mapping = {
         "creatividad_s01": [
-            CREAT / "Guiones" / "Capturas" / "Sesion 01",
+            CREAT / "Docente" / "Guiones" / "Capturas" / "Sesion 01",
         ],
         "creatividad_s02": [
-            CREAT / "Guiones" / "Capturas" / "Sesion 02",
+            CREAT / "Docente" / "Guiones" / "Capturas" / "Sesion 02",
         ],
         "creatividad_tools": [
-            CREAT / "Guiones" / "Capturas" / "Herramientas",
+            CREAT / "Docente" / "Guiones" / "Capturas" / "Herramientas",
         ],
         "investigacion_s01": [
-            INV / "Guiones" / "Capturas" / "Sesion 01",
+            INV / "Docente" / "Guiones" / "Capturas" / "Sesion 01",
         ],
         "investigacion_s06": [
-            INV / "Guiones" / "Capturas" / "Sesion 06",
+            INV / "Docente" / "Guiones" / "Capturas" / "Sesion 06",
         ],
         "proyecto1_s01": [
-            P1 / "Guiones" / "Capturas" / "Sesion 01",
+            P1 / "Docente" / "Guiones" / "Capturas" / "Sesion 01",
         ],
         "tg_tools": [
-            TG2 / "Guiones" / "Capturas" / "Herramientas",
-            TG3 / "Guiones" / "Capturas" / "Herramientas",
-            TG2 / "Guiones" / "Capturas" / "Sesion 01",
-            TG3 / "Guiones" / "Capturas" / "Sesion 01",
+            TG2 / "Docente" / "Guiones" / "Capturas" / "Herramientas",
+            TG3 / "Docente" / "Guiones" / "Capturas" / "Herramientas",
+            TG2 / "Docente" / "Guiones" / "Capturas" / "Sesion 01",
+            TG3 / "Docente" / "Guiones" / "Capturas" / "Sesion 01",
         ],
     }
     return mapping[group]
 
 
 def mirror_flat(primary: Path, group: str) -> None:
-    """Copia plana en Guiones/Capturas/ para referenciar desde guiones .md (matriz)."""
+    """Copia plana en Docente/Guiones/Capturas/ para referenciar desde guiones .md (matriz)."""
     flat_roots = {
-        "creatividad_s01": CREAT / "Guiones" / "Capturas",
-        "creatividad_s02": CREAT / "Guiones" / "Capturas",
-        "creatividad_tools": CREAT / "Guiones" / "Capturas",
-        "investigacion_s01": INV / "Guiones" / "Capturas",
-        "investigacion_s06": INV / "Guiones" / "Capturas",
-        "proyecto1_s01": P1 / "Guiones" / "Capturas",
-        "tg_tools": TG2 / "Guiones" / "Capturas",
+        "creatividad_s01": CREAT / "Docente" / "Guiones" / "Capturas",
+        "creatividad_s02": CREAT / "Docente" / "Guiones" / "Capturas",
+        "creatividad_tools": CREAT / "Docente" / "Guiones" / "Capturas",
+        "investigacion_s01": INV / "Docente" / "Guiones" / "Capturas",
+        "investigacion_s06": INV / "Docente" / "Guiones" / "Capturas",
+        "proyecto1_s01": P1 / "Docente" / "Guiones" / "Capturas",
+        "tg_tools": TG2 / "Docente" / "Guiones" / "Capturas",
     }
     root = flat_roots.get(group)
     if not root or not primary.exists():
@@ -209,10 +209,10 @@ def main() -> int:
         return 1
 
     # Ficha HTML modelo
-    ficha = CREAT / "Guiones" / "Capturas" / "Sesion 01" / "s01_ficha_modelo.html"
+    ficha = CREAT / "Docente" / "Guiones" / "Capturas" / "Sesion 01" / "s01_ficha_modelo.html"
     render_ficha_html(ficha)
     if not args.only or args.only == "creatividad_s01":
-        src = CREAT / "Guiones" / "Capturas" / "Sesion 01" / "s01_ficha_modelo.png"
+        src = CREAT / "Docente" / "Guiones" / "Capturas" / "Sesion 01" / "s01_ficha_modelo.png"
         capture(ficha.as_uri(), src, 1)
         if src.exists():
             mirror_flat(src, "creatividad_s01")

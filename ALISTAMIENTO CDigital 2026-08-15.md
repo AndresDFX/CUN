@@ -256,7 +256,7 @@ Están aquí para que las puedas revertir, no para justificarlas.
 
 | Cosa | Dónde |
 |---|---|
-| Los 21 bancos de preguntas (maestros) | `<Curso>/Clases/Recursos/Cuestionarios/<ÍTEM> - banco de preguntas (Moodle XML).xml` |
+| Los 21 bancos de preguntas (maestros) | `<Curso>/Docente/Cuestionarios/<ÍTEM> - banco de preguntas (Moodle XML).xml` |
 | Qué evalúa cada banco, pregunta por pregunta | el `.md` hermano de cada `.xml` |
 | La herramienta | `config/moodle/cdigital.py` — cómo funciona, en `config/moodle/LEEME.md` |
 | El proceso completo | `config/moodle/LEEME.md` § «Alistamiento del aula» |
