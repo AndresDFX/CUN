@@ -95,7 +95,7 @@ Comunes a las tres revistas candidatas, y verificables en sus normas de autor:
   (sección 5 de estas notas). Enviar en la resolución que pida la revista, con título y fuente.
 - **Envío ciego:** si la revista usa revisión doble ciego, hay que preparar una versión sin datos de
   autoría ni filiación, y un archivo separado de portada.
-- **ORCID:** exigido por casi todas las plataformas OJS. El del autor de correspondencia **no existe
+- **ORCID:** exigido por casi todas las plataformas OJS. El del autor de correspondencia **ya existe**: https://orcid.org/0009-0003-6598-432X (creado el 23/08/2026 y usado en los tres depósitos de SciELO Preprints).
   aún** y hay que crearlo.
 - **Carta de presentación:** breve, declarando originalidad, no envío simultáneo y —esto es
   importante para este manuscrito— **la naturaleza sintética del conjunto de datos**, para que el
@@ -152,7 +152,7 @@ antes de que se conviertan en entregables.
 | 3 | Llenar las 5 tablas y generar las 3 figuras de la sección 4 | Docente + Equipo 1 | 28 sep – 10 oct |
 | 4 | Redactar las secciones marcadas como pendientes: síntesis de resultados en resumen y abstract, 4.2, 4.3, 4.4, 4.5, 4.6, 5.2 y conclusiones 3 y 4 | Docente | 11 – 20 oct |
 | 5 | Eliminar la «Nota de estado del manuscrito» que encabeza la sección 4 | Docente | Antes de enviar |
-| 6 | Crear ORCID del autor de correspondencia | Docente | Cualquier día, 10 minutos |
+| 6 | ~~Crear ORCID del autor de correspondencia~~ **HECHO** el 23/08/2026: `0009-0003-6598-432X` | — | — |
 | 7 | Confirmar coautores del Equipo 1 con autorización escrita y criterios de autoría; declarar contribución CRediT. **Sin cédulas ni datos personales en el manuscrito** | Docente | 15 – 20 oct |
 | 8 | Publicar repositorio (código, generador con sus coeficientes, plan de análisis previo, entorno, semillas) y depositar el conjunto sintético con identificador persistente; pegar URL e identificador en la sección 3.11 y en «Disponibilidad de datos» | Docente + Equipo 1 | 15 – 25 oct |
 | 9 | Verificar en Crossref los DOI de las 52 referencias e incorporarlos | Docente | 20 – 27 oct |
