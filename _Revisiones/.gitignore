@@ -1,0 +1,20 @@
+# El trabajo de los estudiantes NO ENTRA AL REPOSITORIO.
+#
+# Aquí caen las copias que el Docente descarga de los documentos que le comparten los
+# estudiantes (Archivo → Descargar → Microsoft Word), y los `plan.json` / `Plan.gs` que se
+# generan a partir de ellas. Es materia prima con nombres propios, sin revisar, y a veces
+# con datos que el estudiante escribió sin pensar que quedaban en un historial: la empresa
+# donde trabaja, la sede, el nombre de un tercero.
+#
+# Este repositorio está versionado en git **y** sincronizado con Google Drive. `git rm` no
+# borra el pasado, así que lo que entra una vez se queda. Es el mismo criterio que dejó
+# fuera `3 - Transcripcion.md` y las 196 cédulas del cronograma de sustentaciones (ver
+# `Especializacion/Evaluaciones/.gitignore`).
+#
+# Sincronizarse a Drive sí está bien: es el Drive del propio Docente, y ahí el documento ya
+# vive. Lo que no puede pasar es que entre al historial de git.
+#
+# Se versionan solo este archivo y el LEEME.
+*
+!.gitignore
+!LEEME.md

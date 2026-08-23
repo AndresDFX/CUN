@@ -33,7 +33,12 @@ _WS = Path(__file__).resolve().parents[2]
 
 
 ROOT = (_WS)
-SECRETS = Path(__file__).resolve().parent / "secrets"
+# Fuera del repositorio, que está en git y sincronizado a Google Drive — igual que
+# `cdigital-cun`, `synapse-cun` y `gdocs-cun`. Antes esto apuntaba a `config/slides/secrets/`
+# (sin guion bajo): el `.gitignore` solo cubre `_secrets/`, así que el token de OAuth **habría
+# entrado a git** y de ahí a Drive. Y de paso el script no encontraba el `credentials.json` que
+# su propio README manda poner en `_secrets/`. Corregido el 2026-08-20.
+SECRETS = Path(os.environ.get("LOCALAPPDATA", os.path.expanduser("~"))) / "gcal-cun"
 CREDENTIALS = SECRETS / "credentials.json"
 TOKEN = SECRETS / "token_calendar_p1.json"
 SCOPES = ["https://www.googleapis.com/auth/calendar"]

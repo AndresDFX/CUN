@@ -36,7 +36,14 @@ from carga_academica import (  # noqa: E402
     load_carga,
     _parse_date,
 )
-from sesiones_cun import COURSES, meet_url, subject_encuentro  # noqa: E402
+from sesiones_cun import (  # noqa: E402
+    COURSES,
+    CURSOS_CON_ASESORIA,
+    LINK_AGENDA_ASESORIA,
+    MSG_AGENDA_ASESORIA,
+    meet_url,
+    subject_encuentro,
+)
 
 # Placeholder de respaldo: los usos por curso deben llamar a
 # `cdigital_url(<clave del curso>)`, que devuelve la URL real del aula si existe
@@ -176,6 +183,11 @@ def correo_md(key: str, grupo: str | None = None) -> str:
 
     nota_diferida = f"\n\n> {diferida}" if diferida else ""
 
+    # La asesoría solo se anuncia donde el Syllabus la sostiene (ver `CURSOS_CON_ASESORIA`).
+    # Prometerla en un curso que no la pide crea una expectativa que después hay que retirar.
+    asesoria = ("\n\n" + MSG_AGENDA_ASESORIA.format(enlace=LINK_AGENDA_ASESORIA)
+                if key in CURSOS_CON_ASESORIA else "")
+
     return f"""# Correo de bienvenida — {titulo}
 
 **Asunto sugerido:** Bienvenida · {titulo} — primera clase {primera}
@@ -192,7 +204,7 @@ Te doy la bienvenida al curso **{titulo}**. Soy el Docente de la asignatura.
 
 **Lo mínimo para el primer día:** conéctate por el Meet a la hora indicada y ten a mano la
 carpeta del curso. En esa primera sesión revisamos juntos las ACAs (qué se entrega, cuándo
-y con qué formato) y dejamos acordadas las reglas de trabajo.{nota_diferida}
+y con qué formato) y dejamos acordadas las reglas de trabajo.{nota_diferida}{asesoria}
 
 Cualquier duda, escríbeme al correo de contacto.
 

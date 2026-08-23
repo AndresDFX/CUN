@@ -12,6 +12,8 @@ Los **7 encuentros** del periodo (12/08/2026 → 23/09/2026) en tu Google Calend
 
 Google Calendar **descarta la lista de invitados** al importar `.ics` y `.csv`. No es un defecto de estos archivos: es cómo Google trata esos formatos. Si importas el `.ics` de esta carpeta te quedan los 7 eventos **con cero de los 50 estudiantes**, y encima ya no puedes usar el script sin borrarlos antes.
 
+> **Si ya creaste los encuentros y lo que buscas es meter matrícula nueva**, no repitas nada de esto: salta a [Llega matrícula nueva](#llega-matrícula-nueva-y-los-encuentros-ya-están-creados). Son dos órdenes, `verificarInvitados()` y `agregarInvitados()`, y no tocan lo que ya está.
+
 Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIPAL - …`. El respaldo está solo por si algún día necesitas las fechas en un calendario que no sea Google. **El flujo bueno es el `.gs`.**
 
 ## Qué hay en esta carpeta
@@ -21,6 +23,7 @@ Por eso el respaldo se llama `RESPALDO sin invitados - …` y el script `PRINCIP
 | `Calendario de clases - Grupo 54408.md` | Referencia: el cronograma en tabla. No se importa: se lee. |
 | `Correo de bienvenida.docx` | Correo para enviar a los estudiantes el primer día. |
 | `Correos estudiantes (invitados Calendar).txt` | Roster en texto plano — de aquí sacó el `.gs` la lista de invitados. |
+| `desktop.ini` | — |
 | `Entregas y hitos docentes - Importar a Calendar.csv` | Cierres de ACA y hitos del docente. Este **sí** se importa a Calendar: son recordatorios tuyos, sin invitados. |
 | `Fechas.txt` | Datos de la oferta del grupo (portal). |
 | `Informacion.txt` | Datos de la oferta del grupo (portal). |
@@ -96,6 +99,51 @@ Mientras ese campo siga vacío, el **correo de bienvenida**, el **LEEME del estu
 - **Coanfitrión de Meet:** ábrelo en Calendar y añádelo desde la ficha del evento.
 - Publica el enlace en el aula de CDigital: https://cdigital.cun.edu.co/course/view.php?id=115463
 
+## Llega matrícula nueva y los encuentros ya están creados
+
+Pasa cada semestre: alguien se matricula tarde, o el aula tenía menos estudiantes que hoy. No hay que borrar ni rehacer los **7 encuentros** ni tocar el Meet. Hay dos órdenes nuevas para esto:
+
+| Ejecuta | Qué hace | Escribe algo |
+|---|---|---|
+| **`verificarInvitados`** | encuentro por encuentro: a quién le falta invitación y quién está invitado sin estar en el roster | **no** |
+| **`agregarInvitados`** | añade solo los que faltan | sí |
+
+Nunca **quitan** a nadie, no crean eventos y no tocan la sala de Meet. Y son idempotentes: si no falta nadie, no hacen nada.
+
+### Vía normal — que entre toda la matrícula de hoy
+
+1. Descarga otra vez el listado del aula y sobrescribe `2026/54408/Listado estudiantes (CDigital).csv`.
+2. `python config/slides/build_calendar_encuentros.py creatividad` — el `.gs` sale con el roster nuevo dentro.
+3. Pega el `PRINCIPAL - Crear encuentros con invitados.gs` actualizado en el proyecto de Apps Script (reemplaza el que había).
+4. **`verificarInvitados`** → lee el registro → **`agregarInvitados`**.
+
+### Vía corta — un solo estudiante
+
+Si es una persona y no quieres regenerar nada, pon su correo arriba del `.gs`:
+
+```js
+var NUEVOS = ['nombre.apellido@cun.edu.co'];
+```
+
+y ejecuta **`verificarInvitados`** → **`agregarInvitados`**. Con `NUEVOS` puesto, esos son los **únicos** correos que se añaden; el roster del archivo se ignora. Déjalo en `[]` para volver a la vía normal.
+
+### Para qué sirve pasarle el id del Meet
+
+Los encuentros se localizan por el **título**. Si renombraste alguno a mano —o quieres alcanzar una **tutoría** que creaste aparte con la misma sala—, el título ya no cuadra y por ahí no se encuentran. El asidero que sí aguanta es la **sala de Meet**, porque es la misma en toda la serie:
+
+```js
+var MEET_ID = 'abc-defg-hij';   // o la URL completa; sale de la barra del navegador
+```
+
+Con eso entran también los eventos que no están en la lista de sesiones, y el registro los marca `[FUERA DE SESIONES · lo hallé por el Meet]` para que los veas **antes** de confirmar. Vacío (lo normal), el script usa la sala de este curso en cuanto exista.
+
+> Si el id que pegas **no** es el de este curso, el registro te lo grita antes de escribir nada: pegar por error el Meet de otra asignatura invitaría a este roster a los encuentros de la otra.
+
+### Dos cosas que conviene saber
+
+- **¿Les llega correo?** Manda `SEND_INVITES`, igual que al crear. En `false` el encuentro les aparece en el calendario sin notificación. Para el que se matricula tarde normalmente **sí** quieres avisarle: ponlo en `true` antes de `agregarInvitados` — pero ojo, entonces el aviso les llega **a todos** los invitados del evento, no solo al nuevo (Google no distingue).
+- **Las bajas no se quitan solas.** Si alguien ya no está en el roster, el registro lo lista como «invitados que ya NO están en el roster» y ahí se queda: quitar a una persona de un evento se hace a mano, abriendo el encuentro en Calendar.
+
 ## Si algo sale mal
 
 | Lo que ves | Qué pasa y qué haces |
@@ -106,12 +154,17 @@ Mientras ese campo siga vacío, el **correo de bienvenida**, el **LEEME del estu
 | Invitados = **0** en `verificar()` | No se leyó el roster. Revisa `Correos estudiantes (invitados Calendar).txt` en la carpeta del grupo y regenera el `.gs`. |
 | Eventos duplicados | Se crearon dos veces con títulos distintos, o se importó el `.ics`. `borrarEncuentros()` limpia los del script; el resto, a mano. |
 | «Se ha excedido el tiempo máximo de ejecución» | Vuelve a ejecutar `crearEncuentros()`: continúa donde se quedó. |
+| `verificarInvitados()` dice **«No encontré NINGÚN encuentro»** | O no los has creado (`crearEncuentros()`), o los renombraste: pon la sala en `MEET_ID`. |
+| `agregarInvitados()` dice **CORTADO por el límite de 6 minutos** | Vuelve a ejecutarlo: sigue por donde se quedó y no invita a nadie dos veces. |
+| `MEET_ID = «…» no parece un Meet` | Pega la URL completa o solo el código de tres bloques (`abc-defg-hij`). |
+| `NUEVOS tiene N entrada(s) que no son un correo` | Coma o espacio de más al pegar la lista. Corrige y repite: no invitó a nadie. |
 
 ## Cómo deshacer
 
 - **`borrarEncuentros()`** — borra solo los eventos cuyo título coincide exactamente con los 7 de esta serie. No toca nada más de tu calendario. Si ya habías puesto `SEND_INVITES = true`, los estudiantes reciben la cancelación.
 - **`olvidarSalaMeet()`** — hace que el script olvide la sala que creó, para que la siguiente ejecución genere otra. La sala vieja no se borra de Google, y los eventos ya creados siguen apuntando a ella.
 - **Rehacer desde cero:** `borrarEncuentros()` → `olvidarSalaMeet()` → `crearEncuentros()`.
+- **`agregarInvitados()` no se deshace en bloque.** Añadir invitados no tiene marcha atrás automática: se quitan a mano en el evento. Por eso `verificarInvitados()` existe y por eso se ejecuta primero.
 
 ## Las sesiones que se van a crear
 

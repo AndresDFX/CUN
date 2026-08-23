@@ -21,7 +21,13 @@
  * 6. Copia la URL de Meet que imprime -> carga_academica_2026.json -> cursos.proyecto1.meet
  * 7. Añade el coanfitrión de Meet a mano (eso no lo puede hacer la API).
  *
+ * MATRÍCULA NUEVA, con los encuentros YA creados: `verificarInvitados()` (solo lectura) y
+ * después `agregarInvitados()`. Añade a quien le falte en TODOS los encuentros de la serie;
+ * no crea eventos, no quita a nadie y no toca el Meet. Los encuentros se localizan por el
+ * título y —si pones `MEET_ID`— por la sala, que los alcanza incluso renombrados.
+ *
  * Deshacer: `borrarEncuentros()` (eventos) · `olvidarSalaMeet()` (sala guardada).
+ * Quitar un invitado NO lo hace este script: se abre el evento en Calendar.
  *
  * Regenerar este .gs: python config/slides/build_calendar_encuentros.py proyecto1
  */
@@ -39,6 +45,18 @@ var PROP_MEET = 'MEET_URL_proyecto1';
 // Determinista: Google ignora un createRequest con un requestId ya usado, así que ni
 // borrando ScriptProperties se acaba con dos salas para la misma serie.
 var REQUEST_ID = 'cun-proyecto1-2026-08-10';
+var DOCENTE = 'julian_castanoe@cun.edu.co';  // organizador: nunca se añade como invitado
+
+// ── AÑADIR INVITADOS A ENCUENTROS YA CREADOS ─────────────────────────────────
+// Para matrícula que llega después de crear la serie. Órdenes:
+//   verificarInvitados()  (solo lectura)   ->   agregarInvitados()
+// Caso normal: NO toques ninguna de las dos líneas de abajo. El archivo ya trae el roster
+// al día (lo regenera el build desde el listado de CDigital) y añade a quien le falte.
+var MEET_ID = '';  // Id o URL de la sala, p. ej. 'abc-defg-hij'. Vacío -> la de este curso.
+                   // Sirve para encontrar los encuentros aunque los hayas renombrado a mano,
+                   // y para alcanzar tutorías que no están en SESIONES.
+var NUEVOS = [];   // Solo estos correos, p. ej. ['nuevo.estudiante@cun.edu.co'].
+                   // Vacío -> todo el roster de INVITADOS (se añade el que falte).
 
 // Roster por grupo (51 invitados distintos en total).
 var INVITADOS = {
@@ -231,6 +249,7 @@ function verificar() {
   Logger.log(existen === SESIONES.length
     ? 'Los ' + existen + ' encuentros ya están creados: crearEncuentros() solo tocará el Meet.'
     : 'Si esto cuadra, ejecuta crearEncuentros().');
+  Logger.log('¿Matrícula nueva en encuentros que ya existen? -> verificarInvitados().');
 }
 
 /**
@@ -269,6 +288,136 @@ function crearEncuentros() {
   Logger.log(nativos
     ? 'Listo. Abre un evento en Calendar: debe tener Invitados y «Unirse con Google Meet».'
     : 'Listo. Abre un evento: tiene Invitados y el enlace en Ubicación, pero sin chip nativo.');
+}
+
+// ═══════ AÑADIR INVITADOS A ENCUENTROS QUE YA EXISTEN ════════════════════════
+//
+// Para cuando la serie ya está en el calendario y llega matrícula nueva. Estas dos órdenes
+// NO crean eventos, NO quitan a nadie y NO tocan el Meet: solo suman los invitados que
+// falten. El Meet es el asidero para encontrar los encuentros (ver MEET_ID arriba).
+
+/**
+ * SOLO LECTURA. Dice, encuentro por encuentro, a quién le falta la invitación y quién está
+ * invitado sin estar en el roster. No escribe nada. Ejecuta SIEMPRE esto primero.
+ */
+function verificarInvitados() { _correrInvitados_('verificar'); }
+
+/**
+ * Añade a los encuentros que YA existen los invitados que les falten. Idempotente: si no
+ * falta nadie no hace nada, y volver a ejecutarlo no invita a nadie dos veces.
+ */
+function agregarInvitados() { _correrInvitados_('agregar'); }
+
+function _correrInvitados_(modo) {
+  _INICIO_ = Date.now();
+  var cal = CalendarApp.getDefaultCalendar();
+  var sala = _salaObjetivo_(cal);
+  var explicitos = _correosLimpios_(NUEVOS);
+  if (NUEVOS && NUEVOS.length && !explicitos.length) {
+    // Si no, «NUEVOS = ['<tu correo>']» acabaría invitando al roster entero sin decirlo.
+    throw new Error('NUEVOS solo trae tu propio correo: tú eres el organizador, no un ' +
+      'invitado. Déjalo vacío ([]) si lo que quieres es añadir el roster completo.');
+  }
+
+  Logger.log('CURSO     : ' + CURSO + '  (clave interna: ' + CURSO_KEY + ')');
+  Logger.log('CALENDARIO: ' + cal.getName() + '  (' + cal.getId() + ')');
+  Logger.log('SALA      : ' + (sala.id ? sala.id + '   <- ' + sala.origen
+    : '(ninguna conocida: busco solo por el título de las sesiones)'));
+  Logger.log('A INVITAR : ' + (explicitos.length
+    ? 'solo los ' + explicitos.length + ' correos de NUEVOS'
+    : 'el roster de este archivo (' + _todosLosInvitados_().length + ' correos)'));
+  Logger.log('Servicio avanzado «Google Calendar API»: ' +
+             (_apiCalendar_() ? 'ACTIVADO' : 'NO ACTIVADO'));
+  if (!_apiCalendar_()) {
+    Logger.log('  Sin él invito de a uno y NO puedo elegir si se les notifica: Google les');
+    Logger.log('  manda la invitación. Actívalo (Servicios + -> «Google Calendar API») para');
+    Logger.log('  que SEND_INVITES = ' + SEND_INVITES + ' mande de verdad.');
+  }
+  if (sala.id && _meetConfigurado_() && sala.id !== _meetId_(MEET_URL)) {
+    Logger.log('');
+    Logger.log('  !! OJO: esa sala NO es la de ' + CURSO + ' (' + MEET_URL + ').');
+    Logger.log('  !! Si te equivocaste de curso al copiar el id, PÁRATE AQUÍ: este archivo');
+    Logger.log('  !! invitaría al roster de ' + CURSO + ' a los encuentros de otro curso.');
+    Logger.log('');
+  }
+
+  var objetivos = _objetivosInvitados_(cal, sala.id);
+  if (!objetivos.length) {
+    Logger.log('No encontré NINGÚN encuentro de esta serie en el calendario.');
+    Logger.log('Si todavía no los has creado, eso lo hace crearEncuentros(). Si los creaste');
+    Logger.log('con otro nombre, pon el id de la sala en MEET_ID y vuelve a ejecutar.');
+    return;
+  }
+
+  var faltantes = 0, sobrantes = {}, distintos = {};
+  Logger.log('--- encuentros ya creados --------------------------------------');
+  objetivos.forEach(function (o) {
+    var deben = explicitos.length ? explicitos : _correosDeSesion_(o);
+    var ya = {};
+    o.asistentes.forEach(function (a) {
+      if (a && a.email) ya[String(a.email).toLowerCase()] = true;
+    });
+    o.faltan = deben.filter(function (e) { return !ya[e.toLowerCase()]; });
+    faltantes += o.faltan.length;
+    o.faltan.forEach(function (e) { distintos[e.toLowerCase()] = true; });
+    // «Sobran» = invitados que el roster ya no tiene (bajas). Solo se informa: para quitar a
+    // alguien hay que abrir el evento, que es una decisión con consecuencias para esa persona.
+    if (!explicitos.length) {
+      var esperado = {};
+      deben.forEach(function (e) { esperado[e.toLowerCase()] = true; });
+      o.asistentes.forEach(function (a) {
+        var e = a && a.email ? String(a.email).toLowerCase() : '';
+        if (e && !esperado[e] && e !== String(DOCENTE).toLowerCase()) sobrantes[e] = true;
+      });
+    }
+    Logger.log(o.dia + '  ' + o.titulo +
+               (o.porMeet ? '   [FUERA DE SESIONES · lo hallé por el Meet]' : '') +
+               '  invitados=' + o.asistentes.length + '  faltan=' + o.faltan.length +
+               (o.faltan.length ? '  -> ' + _resumirLista_(o.faltan) : ''));
+  });
+
+  var hallados = {};
+  objetivos.forEach(function (o) { if (o.sesion) hallados[o.sesion.subject] = true; });
+  var sinCrear = SESIONES.filter(function (s) { return !hallados[s.subject]; });
+
+  Logger.log('--- resumen ----------------------------------------------------');
+  Logger.log('Encuentros hallados: ' + objetivos.length + ' de ' + SESIONES.length +
+             ' sesiones' + (sinCrear.length ? '  ·  sin crear todavía: ' + sinCrear.length +
+             ' (eso es crearEncuentros())' : ''));
+  Logger.log('Invitaciones que faltan: ' + faltantes + '  ·  personas distintas: ' +
+             _cuantas_(distintos));
+  var basura = _cuantas_(sobrantes);
+  if (basura) {
+    Logger.log('Invitados que ya NO están en el roster: ' + basura + ' -> ' +
+               _resumirLista_(_claves_(sobrantes)));
+    Logger.log('  (posibles bajas. NO se quita a nadie: eso se hace a mano en el evento.)');
+  }
+
+  if (modo !== 'agregar') {
+    Logger.log('----------------------------------------------------------------');
+    Logger.log(faltantes ? 'Si esto cuadra, ejecuta agregarInvitados().'
+                         : 'No falta nadie: no hay nada que ejecutar.');
+    return;
+  }
+  if (!faltantes) { Logger.log('No falta nadie: no toco nada.'); return; }
+
+  var sumados = 0, tocados = 0, cortado = false;
+  Logger.log('--- añadiendo -------------------------------------------------');
+  for (var i = 0; i < objetivos.length; i++) {
+    var o = objetivos[i];
+    if (!o.faltan.length) continue;
+    if (_sinTiempo_()) { cortado = true; break; }
+    var n = _agregarA_(o, o.faltan);
+    if (n) { sumados += n; tocados++; Logger.log('  +' + n + '  ' + o.dia + '  ' + o.titulo); }
+  }
+  Logger.log('Añadidos: ' + sumados + ' invitaciones en ' + tocados + ' encuentros · ' +
+             'sendInvites=' + SEND_INVITES);
+  if (cortado) {
+    Logger.log('CORTADO por el límite de 6 minutos de Apps Script. Vuelve a ejecutar');
+    Logger.log('agregarInvitados(): continúa por donde se quedó y no repite a nadie.');
+  } else {
+    Logger.log('Listo. Abre un encuentro en Calendar y cuenta los invitados.');
+  }
 }
 
 /**
@@ -472,6 +621,179 @@ function _aplicarMeet_(evento, url) {
     return false;
   }
 }
+
+// ── internas de verificarInvitados() / agregarInvitados() ────────────────────
+
+var _INICIO_ = 0;
+
+/** Quedan menos de minuto y medio del tope de 6 min de Apps Script. */
+function _sinTiempo_() { return !!_INICIO_ && (Date.now() - _INICIO_) > 270000; }
+
+/**
+ * Código de una sala de Meet, sin guiones y en minúsculas, para poder comparar.
+ * Acepta la URL completa (aunque venga dentro de un texto más largo), el código con
+ * guiones o el código pelado. Devuelve '' si ahí no hay ninguna sala.
+ */
+function _meetId_(x) {
+  var s = String(x == null ? '' : x).trim().toLowerCase();
+  var url = s.match(/meet\.google\.com\/([a-z0-9\-]+)/);
+  if (url) return url[1].replace(/-/g, '');
+  if (/^[a-z0-9]{2,}-[a-z0-9]{2,}-[a-z0-9]{2,}$/.test(s)) return s.replace(/-/g, '');
+  if (/^[a-z0-9]{8,}$/.test(s)) return s;
+  return '';
+}
+
+/**
+ * La sala que identifica la serie, y de dónde salió. Orden: lo que pusiste en MEET_ID >
+ * el material > la que creó este script > la que ya tienen los encuentros.
+ */
+function _salaObjetivo_(cal) {
+  var puesto = String(MEET_ID == null ? '' : MEET_ID).trim();
+  if (puesto) {
+    var id = _meetId_(puesto);
+    if (!id) {
+      throw new Error('MEET_ID = «' + puesto + '» no parece un Meet. Pon la URL completa ' +
+        '(https://meet.google.com/abc-defg-hij) o solo el código (abc-defg-hij).');
+    }
+    return { id: id, origen: 'MEET_ID, que pusiste arriba' };
+  }
+  if (_meetConfigurado_()) return { id: _meetId_(MEET_URL), origen: 'MEET_URL del material' };
+  var guardado = _salaGuardada_();
+  if (guardado) return { id: _meetId_(guardado), origen: 'la sala que creó este script' };
+  var enEvento = _apiCalendar_() ? _meetDeLaSerieExistente_(cal) : '';
+  if (enEvento) return { id: _meetId_(enEvento), origen: 'la sala que ya tienen los encuentros' };
+  return { id: '', origen: '' };
+}
+
+/** Sala de un evento de la API avanzada: chip nativo, si no Ubicación, si no descripción. */
+function _meetIdDeEventoApi_(ev) {
+  return _meetId_(_uriDeConferencia_(ev.conferenceData)) ||
+         _meetId_(ev.location) || _meetId_(ev.description);
+}
+
+/** Todos los eventos del periodo del curso. Una sola consulta (más las páginas que haga falta). */
+function _eventosDelPeriodo_() {
+  var desde = _fecha(SESIONES[0].start);
+  var hasta = new Date(_fecha(SESIONES[SESIONES.length - 1].end).getTime() + 36e5);
+  var items = [], token = '';
+  do {
+    var opt = {
+      timeMin: desde.toISOString(), timeMax: hasta.toISOString(),
+      singleEvents: true, maxResults: 2500, orderBy: 'startTime'
+    };
+    if (token) opt.pageToken = token;
+    var r = Calendar.Events.list('primary', opt);
+    items = items.concat(r.items || []);
+    token = (r && r.nextPageToken) || '';
+  } while (token);
+  return items;
+}
+
+/**
+ * Encuentros YA creados a los que hay que revisarles los invitados. Entra un evento si:
+ *   - su título es uno de SESIONES —la vía normal—, o
+ *   - usa la sala buscada: eso es lo que compra el Meet como asidero, y alcanza los eventos
+ *     que renombraste a mano o las tutorías que no están en SESIONES (van marcadas).
+ * Con el servicio avanzado los invitados vienen en la misma consulta; sin él se leen con
+ * CalendarApp, que también ve la Ubicación y la descripción.
+ */
+function _objetivosInvitados_(cal, idSala) {
+  var porTitulo = {};
+  SESIONES.forEach(function (s) { porTitulo[s.subject] = s; });
+  var out = [];
+
+  if (_apiCalendar_()) {
+    _eventosDelPeriodo_().forEach(function (ev) {
+      if (ev.status === 'cancelled') return;
+      var s = porTitulo[ev.summary] || null;
+      var porMeet = !!idSala && _meetIdDeEventoApi_(ev) === idSala;
+      if (!s && !porMeet) return;
+      out.push({
+        apiId: ev.id, evApp: null,
+        titulo: ev.summary || '(sin título)',
+        dia: String((ev.start && (ev.start.dateTime || ev.start.date)) || '').substring(0, 10),
+        sesion: s, porMeet: porMeet && !s, faltan: [],
+        asistentes: ev.attendees ? ev.attendees.slice(0) : []
+      });
+    });
+  } else {
+    var desde = _fecha(SESIONES[0].start);
+    var hasta = new Date(_fecha(SESIONES[SESIONES.length - 1].end).getTime() + 36e5);
+    cal.getEvents(desde, hasta).forEach(function (ev) {
+      var s = porTitulo[ev.getTitle()] || null;
+      var porMeet = !!idSala && (_meetId_(ev.getLocation()) === idSala ||
+                                 _meetId_(ev.getDescription()) === idSala);
+      if (!s && !porMeet) return;
+      out.push({
+        apiId: null, evApp: ev,
+        titulo: ev.getTitle(),
+        dia: Utilities.formatDate(ev.getStartTime(), TIMEZONE, 'yyyy-MM-dd'),
+        sesion: s, porMeet: porMeet && !s, faltan: [],
+        asistentes: ev.getGuestList().map(function (g) { return { email: g.getEmail() }; })
+      });
+    });
+  }
+  out.sort(function (a, b) { return a.dia < b.dia ? -1 : (a.dia > b.dia ? 1 : 0); });
+  return out;
+}
+
+/** Quiénes deberían estar invitados a este encuentro. */
+function _correosDeSesion_(o) {
+  // Un evento fuera de SESIONES no declara grupos: se le invita a todo el roster, que en los
+  // cursos de un solo grupo es lo mismo. Va marcado en el registro para que lo veas antes.
+  return o.sesion ? _invitados(o.sesion.grupos) : _todosLosInvitados_();
+}
+
+/** Añade `correos` a un encuentro. Devuelve cuántos entraron. */
+function _agregarA_(o, correos) {
+  if (o.apiId) {
+    // Un solo patch por evento con la lista completa: los que ya estaban van tal cual, así no
+    // se pierde su respuesta («Sí asisto»), y 51 invitados cuestan una llamada, no 51.
+    var lista = o.asistentes.slice(0);
+    correos.forEach(function (e) { lista.push({ email: e }); });
+    try {
+      Calendar.Events.patch({ attendees: lista }, 'primary', o.apiId,
+                            { sendUpdates: SEND_INVITES ? 'all' : 'none' });
+      o.asistentes = lista;
+      return correos.length;
+    } catch (err) {
+      Logger.log('AVISO: no pude invitar en «' + o.titulo + '»: ' + err);
+      return 0;
+    }
+  }
+  var n = 0;
+  correos.forEach(function (e) {
+    try { o.evApp.addGuest(e); n++; }
+    catch (err) { Logger.log('AVISO: ' + e + ' no entró en «' + o.titulo + '»: ' + err); }
+  });
+  return n;
+}
+
+/** Correos de NUEVOS, validados. Revienta si hay algo que no es un correo (mejor que invitar mal). */
+function _correosLimpios_(lista) {
+  var out = [], vistos = {}, malos = [];
+  (lista || []).forEach(function (x) {
+    var e = String(x == null ? '' : x).trim();
+    if (!e) return;
+    if (!/^[^\s@,;]+@[^\s@,;]+\.[^\s@,;]+$/.test(e)) { malos.push(e); return; }
+    var k = e.toLowerCase();
+    if (k === String(DOCENTE).toLowerCase()) return;   // el organizador no es invitado
+    if (!vistos[k]) { vistos[k] = true; out.push(e); }
+  });
+  if (malos.length) {
+    throw new Error('NUEVOS tiene ' + malos.length + ' entrada(s) que no son un correo: ' +
+      malos.join(', ') + '. Corrígelas y vuelve a ejecutar.');
+  }
+  return out;
+}
+
+function _resumirLista_(a) {
+  return a.length <= 4 ? a.join(', ')
+    : a.slice(0, 4).join(', ') + ' … y ' + (a.length - 4) + ' más';
+}
+
+function _claves_(o) { var k = []; for (var x in o) k.push(x); return k; }
+function _cuantas_(o) { return _claves_(o).length; }
 
 function _invitados(grupos) {
   var out = [], vistos = {};

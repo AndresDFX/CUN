@@ -94,6 +94,29 @@ MSG_TUTORIAS_POR_GRUPO = (
 CURSOS_CON_TUTORIAS_POR_GRUPO = frozenset({"proyecto1"})
 CURSOS_PROYECTO = CURSOS_CON_TUTORIAS_POR_GRUPO  # compat: builds antiguos
 
+# ── Agenda de asesoría del Docente ────────────────────────────────────────────
+# OJO, no confundir con LINK_TUTORIAS: aquel es el **formulario de asistencia AFI** que el
+# estudiante de Proyecto I diligencia DESPUÉS de una tutoría, y sale de `cun.json`. Este es otro
+# asunto y va antes: el estudiante **reserva** un espacio en el calendario del Docente. Por eso
+# vive aquí, junto a los datos del Docente, y no en el bloque AFI: no es de la especialización,
+# es de la persona, y sirve igual en pregrado.
+LINK_AGENDA_ASESORIA = "https://calendar.app.google/1xkHJosUTHdLemvB7"
+
+# Qué cursos lo anuncian, y por qué cada uno:
+#   · proyecto1 — su Syllabus lo pide con todas las letras: «tutorías de proyecto»,
+#     «acompañamiento metodológico», «Acompañamiento Directo».
+#   · tg2 y tg3 — producto de investigación individual que se sustenta ante jurados designados
+#     por la Dirección del Programa; el Syllabus reserva horas «Tutorial con Docente».
+# Creatividad e Investigación quedan FUERA a propósito: en sus dos Syllabus la casilla
+# «Proyectos tutorados» está **sin marcar** (☐), así que anunciar asesoría ahí sería inventarla.
+# Si un Syllabus nuevo la marca, se añade aquí y el correo lo recoge solo.
+CURSOS_CON_ASESORIA = frozenset({"proyecto1", "tg2", "tg3"})
+
+MSG_AGENDA_ASESORIA = (
+    "Si necesitas asesoría sobre tu trabajo, puedes reservar un espacio en mi calendario "
+    "cuando te sirva: {enlace} — elige el horario que te quede bien y queda agendado."
+)
+
 
 def _horario_carga(key: str, default: str) -> str:
     if _carga_curso is None:
@@ -390,8 +413,8 @@ COURSES = {
         "horario": _horario_carga("tg2", "Lunes, 5:00 pm – 6:00 pm"),
         "duracion_min": 60,
         "contenido_min": 60,
-        "fuente": "Manual del Docente (⚠️ sin Syllabus SIAC) · analogía con TG3",
-        "nota_syllabus": "FALTA SYLLABUS OFICIAL. Temario orientativo — confirmar en Moodle/portal.",
+        "fuente": "Syllabus SIAC oficial (entregado el 22/08/2026) · Manual del Docente",
+        "nota_syllabus": "Syllabus recibido el 22/08/2026: «TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx», sin código SIAC en el nombre. 6 unidades didácticas.",
         "sesiones": [
             # EXCEPCIÓN puntual: esta sesión se corrió del lunes 10/08 al viernes 14/08 porque
             # la clase del lunes no se pudo dar (decisión del Docente, 11/08/2026). Es la ÚNICA

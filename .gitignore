@@ -26,3 +26,7 @@ desktop.ini
 *.gdoc
 *.gsheet
 *.gslides
+
+# Descargas temporales de documentos de estudiantes: nunca entran a git.
+_tmp_verif/
+_tmp/
