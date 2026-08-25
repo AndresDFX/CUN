@@ -50,3 +50,30 @@ el nombre: hay nombres repetidos entre los productos del Docente.
 | Manuscrito | Por qué |
 |---|---|
 | `Articulo_Calidad_D_Desercion_ML.md` | 39 marcadores `[PENDIENTE: …]`, una nota interna «eliminar antes del sometimiento» y cifras nunca medidas. Su versión depositable es el protocolo (17601). Destino previsto: revista, ver `Articulo_Calidad_D_NOTAS_DE_ENVIO.md` |
+| `Preprint_Completion_Gating_Moodle.md` | **RESERVADO. NO DEPOSITAR EN NINGÚN SERVIDOR DE PREPRINTS.** Ver el candado de aquí abajo. |
+
+### Candado: `Preprint_Completion_Gating_Moodle` va a revista, no a preprint
+
+**No lo deposites en SciELO, ni en Qeios, ni en Zenodo, ni en ningún sitio.** Puesto el 25/08/2026.
+
+Está reservado para **TecnoLógicas (ITM)**, la única revista **Publindex B** —8 puntos— de la lista
+de destinos que se verificó ese día (las otras nueve: dos son C y **siete no están en Publindex**,
+así que dan cero). Es diamante, sin cargos, y su convocatoria es permanente.
+
+Y es el **único manuscrito de esta carpeta que puede ir**: los otros tres limpios ya están
+depositados en SciELO, y el cuarto no es enviable. TecnoLógicas obliga a firmar que el trabajo no
+ha sido publicado «en ningún formato» ni sometido a ningún otro medio. Un depósito, aunque sea un
+preprint con DOI, **invalida esa declaración** y el filtro antiplagio de la revista lo encontraría
+en la evaluación preliminar, que son 48-72 horas.
+
+La revista **no publica política de preprints** —ni a favor ni en contra, se buscó en las 13
+páginas del sitio—, así que no hay excepción en la que ampararse. Hasta que respondan a la consulta
+de pertinencia enviada a `tecnologicas@itm.edu.co`, la regla es: **no se deposita**.
+
+Si TecnoLógicas lo rechaza por alcance, el plan B es **ACOFI** (Revista Digital de Educación en
+Ingeniería, Publindex C, 3 puntos, diamante), que es el mejor encaje temático de toda la lista.
+Ojo con ACOFI: **solo admite un artículo por autor y año**, así que gastarla cierra la puerta
+hasta 2027. Por eso no es la primera opción.
+
+La versión adaptada a la revista se escribe aparte, en `Articulo_TecnoLogicas_Completion_Gating.md`,
+para que este original quede intacto.
