@@ -1811,4 +1811,56 @@ function _apuntarDescartes_(quietos) {
  * El silencio es el fallo más peligroso: si Google vuelve a mover o renombrar las carpetas de
  * Meet, el script barrería un id que no recibe nada y nadie se enteraría hasta que un
  * estudiante preguntara. Y hay un silencio peor, porque no parece un fallo: que haya archivos
- * pero NINGUNO se pueda clasificar (típico si los enc
+ * pero NINGUNO se pueda clasificar (típico si los encuentros de ese curso todavía no están en
+ * el Calendar). Así que: hubo clase en las últimas 48 h y no se mueve nada = aviso explícito.
+ */
+function _avisoSilencio_(cal, lote, plan) {
+  var vacio = !lote.archivos.length && !lote.recientes;
+  var nadaQueMover = plan && !plan.mover.length;
+  if (!vacio && !nadaQueMover) return;
+  var ahora = new Date();
+  var desde = new Date(ahora.getTime() - 48 * 3600 * 1000);
+  var n = 0;
+  try {
+    n = cal.getEvents(desde, ahora).filter(function (ev) {
+      return (ev.getTitle() || '').indexOf(MARCA) >= 0;
+    }).length;
+  } catch (e) { return; }
+  if (!n) return;
+  if (vacio) {
+    Logger.log('AVISO: no encontré NINGÚN archivo en la carpeta origen y hubo ' + n +
+               ' encuentro(s) en las últimas 48 h.');
+    Logger.log('Puede ser normal (aún no has grabado, o la grabación tarda), pero si se ' +
+               'repite: confirma ORIGEN_ID y que la grabación la inicias TÚ como organizador ' +
+               '— si la inicia un coanfitrión, el archivo nace en el Drive de esa persona y ' +
+               'este script no puede verlo.');
+    return;
+  }
+  Logger.log('AVISO: hay ' + lote.archivos.length + ' archivo(s) en el origen y hubo ' + n +
+             ' encuentro(s) en las últimas 48 h, pero NINGUNO se pudo clasificar.');
+  Logger.log('Lee los motivos de «sin clasificar» de arriba. Lo más frecuente: la serie de ' +
+             'encuentros de ese curso todavía no existe en tu Calendar (la crea ' +
+             'quien monte la serie de encuentros en tu institución), o lo que hay en la ' +
+             'carpeta son tutorías y jurados, que NO deben publicarse.');
+}
+
+/** Disparadores temporales de este proyecto que llaman a moverGrabaciones. */
+function _disparadores_() {
+  return ScriptApp.getProjectTriggers().filter(function (t) {
+    return t.getHandlerFunction() === 'moverGrabaciones';
+  });
+}
+
+function _estadoDisparador_() {
+  var n = _disparadores_().length;
+  if (!n) return 'NO instalado (instalarDisparador() lo deja cada ' + CADA_MIN + ' min)';
+  return n + ' instalado(s) para moverGrabaciones' +
+         (n > 1 ? '  <- SOBRAN: quitarDisparador() y vuelve a instalar' : '') +
+         (SIMULAR ? '  ·  pero SIMULAR = true: no mueve nada' : '');
+}
+
+// ── fechas ──────────────────────────────────────────────────────────────────
+
+function _dia_(d) { return Utilities.formatDate(d, TIMEZONE, 'dd/MM/yyyy'); }
+
+function _hm_(d) { return Utilities.formatDate(d, TIMEZONE, 'dd/MM HH:mm'); }

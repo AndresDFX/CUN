@@ -3115,4 +3115,81 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
             "- Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → "
             "`subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula "
             "todos los periodos.",
-       
+            "- Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.",
+            "- Los eventos del calendario los crea "
+            "`config/slides/build_calendar_encuentros.py` → "
+            "`PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en "
+            "`<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.",
+        ]
+    else:
+        L += [
+            f"- Carpeta destino — el enlace que el perfil `{p.clave}` trae en `destino_url`, "
+            f"pegado tal cual (`{p.destino_url or 'todavía SIN RELLENAR'}`"
+            + (f" → id `{dest}`" if dest else "")
+            + "). Si esa carpeta ya está publicada a los estudiantes, cambiarla dejaría "
+            "mintiendo lo que ya está en sus manos: se cambia en el perfil y se regenera.",
+            "- Patrón del nombre buscable — `rx_subject` del perfil, que es la nomenclatura con "
+            "la que tu institución titula los encuentros del Calendar.",
+            "- Salas de Meet — `salas` del perfil: `{código: nombre de la asignatura tal como "
+            "aparece en el título del evento}`.",
+            "- Los eventos del calendario los crea quien monte la serie de encuentros en tu "
+            "institución. Este script **los lee**, no los toca.",
+        ]
+    L += [
+        "",
+        "Si cambia cualquiera de esos datos, regenera: "
+        f"`python config/slides/build_apps_script_grabaciones.py {p.clave}`.",
+    ]
+    return "\n".join(L) + "\n"
+
+
+def main(argv: list[str]) -> int:
+    """Sin argumentos, el perfil de la CUN: la invocación de siempre sigue igual."""
+    arg = (argv[0].strip() if argv else "")
+    if arg in ("-h", "--help", "--perfiles"):
+        print("Uso: python config/slides/build_apps_script_grabaciones.py [PERFIL]")
+        print(f"     sin PERFIL se usa {PERFIL_POR_OMISION}")
+        for k in sorted(PERFILES):
+            q = PERFILES[k]
+            print(f"     {k:<10} {q.institucion} · {q.timezone} · {q.gs_name}")
+        return 0
+
+    p = perfil(arg or None)
+    raiz = workspace_root()
+    dest = destino_id(p)
+    sal = salas_del_perfil(p)
+
+    gs = raiz / p.gs_name
+    gs.write_text(_gs_texto(p, sal), encoding="utf-8")
+    leeme = raiz / p.leeme_name
+    leeme.write_text(_leeme_texto(p, sal, dest), encoding="utf-8")
+
+    # Los nombres viejos solo los limpia el perfil por omisión: los archivos de otro perfil
+    # llevan sufijo y no son basura de una versión anterior de este build.
+    if not p.sufijo:
+        for viejo in GS_LEGACY:
+            ruta = raiz / viejo
+            if viejo != p.gs_name and ruta.exists():
+                try:
+                    ruta.unlink()
+                except OSError:
+                    pass
+
+    faltan = sin_sala(p)
+    total = len(p.cursos) or len(sal)
+    print(f"OK {p.gs_name} · perfil={p.clave} · destino={dest or '(SIN DESTINO)'} · "
+          f"salas en config={len(sal)}/{total}")
+    print(f"   runbook: {p.leeme_name}")
+    print("   ORIGEN_ID sale VACÍO a propósito: la carpeta por omisión de Meet (hoy «Meet "
+          "Recordings») la pega el docente — y ahora acepta el ENLACE tal cual, no solo el id.")
+    if not dest:
+        print(f"   AVISO: el perfil {p.clave} no trae destino_url: pega el enlace de la carpeta "
+              "de grabaciones en PERFILES antes de usarlo.")
+    if faltan:
+        print("   sin sala en carga_academica_2026.json -> cursos.<key>.meet: "
+              + ", ".join(faltan))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))
