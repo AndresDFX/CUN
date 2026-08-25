@@ -27,8 +27,9 @@
  * 1. https://script.google.com con la cuenta CUN (julian_castanoe@cun.edu.co) — TIENE que ser la del
  *    organizador de las clases: las grabaciones nacen en SU Mi unidad.
  * 2. Nuevo proyecto -> pega TODO este archivo -> guarda.
- * 3. Pega en ORIGEN_ID el id de la carpeta de Meet de Mi unidad (abajo se explica de
- *    dónde sacarlo). Es el ÚNICO dato que falta.
+ * 3. Pega en ORIGEN_ID el ENLACE de la carpeta de Meet de Mi unidad, tal cual, el de la
+ *    barra de direcciones (también vale el id pelado: el script entiende las dos formas).
+ *    Es el ÚNICO dato que falta.
  * 4. Ejecuta `verificarGrabaciones()` (SOLO LECTURA) y lee el registro entero.
  * 5. Si cuadra: pon SIMULAR = false, guarda y ejecuta `moverGrabaciones()` UNA vez a mano.
  * 6. `instalarDisparador()` -> a partir de ahí corre solo cada 30 minutos.
@@ -37,7 +38,37 @@
  *           (para el automatismo) · `olvidarRegistro()` (suelta el historial de deshacer) ·
  *           `reintentarPendientes()` (vuelve a mirar lo descartado y lo que falló al mover).
  *
- * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py
+ * LO QUE ES DEL PERFIL CUN Y NO ES UNIVERSAL  (los perfiles viven en el generador)
+ * - La clasificación va por el CALENDARIO. NO puede ir por el número de sesión del nombre
+ *   del archivo: se midió sobre los 19 artefactos reales y TODOS decían «Sesion 01» (Meet
+ *   congela el título del evento con el que se estrenó la sala). Eso exige que los
+ *   encuentros existan en el Calendar y que sus títulos lleven MARCA y encajen con
+ *   RX_SUBJECT: una institución que titule sus eventos de otra forma cambia esas dos
+ *   constantes en su perfil — no el código de abajo, que no sabe nada de nomenclaturas.
+ * - RX_FECHA es la convención de MEET, no de la institución: no está documentada por Google
+ *   y ya cambió una vez sin avisar. Es la misma para todos los perfiles a propósito.
+ *   MEDIDO Y TODAVÍA SIN ARREGLAR: sobre los archivos reales de la carpeta no caza NINGUNO
+ *   —Meet los nombra «2026 08 13 17 00 GMT-05 00», con espacios y sin dos puntos—, así que
+ *   hoy la hora del nombre NUNCA se usa y toda la clasificación va por el respaldo
+ *   aproximado (fecha de creación, mirando hacia atrás). Corregir el patrón cambia el
+ *   comportamiento de lo que ya está funcionando, así que se decide aparte; y mientras no
+ *   cace, poner otro DESFASE_ESPERADO en un perfil nuevo no cambia nada.
+ * - DESFASE_ESPERADO es UNO solo, y con eso basta donde no hay horario de verano (Colombia).
+ *   Con cambio de hora, media parte del año la hora del nombre se descarta y todo cae al
+ *   respaldo aproximado por fecha de creación: más «AMBIGUO», nunca un movimiento erróneo.
+ * - Las carpetas se identifican por ID (o por su enlace), NUNCA por nombre: los nombres los
+ *   pone Google, ya los cambió en julio de 2026, y NOMBRES_ORIGEN solo sirve para sugerir.
+ * - Los topes (MAX_*, LIMITE_MS, CADA_MIN) son cuota de Apps Script, no de la institución:
+ *   se pueden bajar, no subir. Con una cuenta sin Workspace la cuota diaria es menor.
+ * - Un despliegue por ORGANIZADOR: Apps Script solo ve el Drive de su dueño. Si la grabación
+ *   la inicia otra persona, nace en SU Mi unidad y este script no la ve. Y supone Mi unidad:
+ *   con unidades compartidas haría falta otro camino de código, no otro parámetro.
+ * - Los textos de este archivo hablan de «estudiantes», de «tutorías y jurados», del correo
+ *   de bienvenida y de rutas de este repositorio: son de la CUN, donde nació el script, y se
+ *   dejan tal cual a propósito. Parametrizar la prosa obligaría a tocar el cuerpo del
+ *   script, que es justo lo que no se toca para no cambiar lo que ya funciona.
+ *
+ * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py CUN
  */
 
 // ───────────────────────────── CONFIGURACIÓN ─────────────────────────────────
@@ -54,8 +85,10 @@ var TIMEZONE = 'America/Bogota';
 // VACÍO A PROPÓSITO: este id NO está en el repositorio y no se puede deducir. Tampoco se
 // elige por nombre: Google ha movido y renombrado estas carpetas más de una vez, y elegir
 // «la primera que aparezca» sería adivinar.
-// Cómo obtenerlo: abre la carpeta en Drive y copia el tramo final de la URL,
-//   https://drive.google.com/drive/folders/<ESTO>
+// Cómo obtenerlo: abre la carpeta en Drive y PEGA AQUÍ EL ENLACE TAL CUAL, el de la barra
+// de direcciones. No hace falta sacarle el id: lo hace el propio script (ver «ENLACES DE
+// CARPETA» al final de esta sección). Si prefieres pegar solo el id, también vale.
+//   https://drive.google.com/drive/folders/<id>          <- pégalo entero, así
 // Mientras esté vacío, verificarGrabaciones() te SUGIERE candidatos y no mueve nada.
 var ORIGEN_ID = '';
 
@@ -70,7 +103,8 @@ var ORIGEN_LEGACY_ID = '';
 // periodos, plana y sin subcarpetas. Fuente única: config/cursos/carga_academica.py ->
 // GRABACIONES_URL (y la nota normativa de carga_academica_2026.json). Esta URL ya está
 // impresa en el correo de bienvenida y en el LEEME del estudiante: no la cambies aquí.
-var DESTINO_ID = '1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ';
+// Va el ENLACE tal cual, como lo copia Drive (el id pelado también vale).
+var DESTINO_ID = 'https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing';
 
 // Calendario donde están los encuentros. Es la AUTORIDAD de nombres: los eventos los creó
 // «PRINCIPAL - Crear encuentros con invitados.gs», así que al abrir el semestre siguiente
@@ -118,7 +152,7 @@ var MARCA = ' - Sesion ';
 var RX_SUBJECT = /\d{2}[A-Z]{1,2}\d{1,2}(?:\/\d{2}[A-Z]{1,2}\d{1,2})* - [0-9A-Z]{5}(?:\/[0-9A-Z]{5})* - [^()]{3,60}? - Sesion \d{1,2}(?: \(autónoma\))?/;
 
 // Fecha y hora que Meet escribe en el nombre: « (2026-08-11 17:00 GMT-05:00)».
-var RX_FECHA = /(\d{4})-(\d{2})-(\d{2})[ _T]+(\d{2})[:._h](\d{2})(?:[^)]*?GMT([+-]\d{2}))?/;
+var RX_FECHA = /(\d{4})[-_ ](\d{2})[-_ ](\d{2})[ _T]+(\d{2})[:._h ](\d{2})(?:[^)]*?GMT\s*([+-]\d{2}))?/;
 var DESFASE_ESPERADO = '-05';   // Bogotá. Otro desfase -> la hora del nombre no se usa.
 
 // Código de sala de Meet -> asignatura tal como aparece en el título del evento. Sirve para
@@ -143,8 +177,8 @@ var SALAS = {
 
 // Nombres con los que buscar candidatos a ORIGEN_ID. SOLO para SUGERIR en el registro: el
 // script nunca elige «la primera que aparezca». Son los nombres que documenta Google en
-// inglés; si tu Drive los muestra traducidos no aparecerá ninguno, y entonces el id se copia
-// a mano de la URL (que es lo que hay que hacer de todas formas).
+// inglés; si tu Drive los muestra traducidos no aparecerá ninguno, y entonces el enlace se
+// copia a mano de Drive (que es lo que hay que hacer de todas formas).
 var NOMBRES_ORIGEN = ['Meet Recordings', 'Google Meet'];
 var NOMBRES_LEGACY = ['Legacy Meet Recordings'];
 
@@ -178,6 +212,72 @@ var MAX_ARCHIVOS = 40;
 var MAX_EXAMINADOS = 400;
 var MAX_PROFUNDIDAD = 4;   // raíz de Meet / subcarpeta de la reunión / ... y para de contar
 var LIMITE_MS = 270000;    // 4,5 min de los 6 que da Apps Script por ejecución
+
+// ─────────────────── ENLACES DE CARPETA: URL o id, da igual ──────────────────
+// Las tres constantes de arriba (ORIGEN_ID, ORIGEN_LEGACY_ID, DESTINO_ID) aceptan LAS DOS
+// FORMAS, y aquí se normalizan al id, que es lo único que entiende DriveApp:
+//
+//   https://drive.google.com/drive/folders/<id>
+//   https://drive.google.com/drive/u/0/folders/<id>
+//   https://drive.google.com/drive/folders/<id>?usp=sharing
+//   https://drive.google.com/open?id=<id>
+//   <id>                                      (el id pelado, como siempre)
+//
+// Si lo pegado no es una carpeta —el caso típico: el enlace de un ARCHIVO, que lleva
+// «/d/»— se dice en el registro y esa constante queda VACÍA, que es exactamente el estado
+// de antes de pegar nada: el script avisa y no mueve. Nunca adivina.
+
+/** Avisos de configuración de esta ejecución. Se llenan al cargar el archivo. */
+var AVISOS_ENLACES = [];
+
+function _avisoEnlace_(comoSeLlama, pegado, porque) {
+  var msg = comoSeLlama + ': ' + porque;
+  AVISOS_ENLACES.push(msg);
+  Logger.log('AVISO CONFIGURACIÓN — ' + msg);
+  Logger.log('      lo pegado fue: «' + pegado + '»');
+  Logger.log('      ' + comoSeLlama + ' queda VACÍO: por ese lado no se moverá nada.');
+  return '';
+}
+
+/**
+ * Id de carpeta a partir de lo que haya pegado el humano: enlace de Drive o id pelado.
+ * NUNCA lanza: esto corre al cargar el archivo, y una excepción aquí rompería TODAS las
+ * funciones del proyecto. Devuelve '' y deja dicho por qué en el registro.
+ */
+function _idDeCarpeta_(valor, comoSeLlama) {
+  var s = String(valor == null ? '' : valor).trim().replace(/^[<"']+|[>"']+$/g, '');
+  if (!s) return '';
+
+  if (/^https?:\/\//i.test(s) || s.indexOf('google.com') >= 0) {
+    var mCarpeta = s.match(/\/folders\/([^\/?#]+)/);
+    var mParam = s.match(/[?&]id=([^&#]+)/);
+    if (mCarpeta) {
+      s = mCarpeta[1];
+    } else if (/\/(?:file|document|spreadsheets|presentation|forms)\/d\//.test(s)) {
+      return _avisoEnlace_(comoSeLlama, s, 'ese enlace es de un ARCHIVO, no de una carpeta ' +
+        '(lleva «/d/»). Abre en Drive la CARPETA que contiene las grabaciones y copia el ' +
+        'enlace de la barra de direcciones: el de una carpeta lleva «/folders/».');
+    } else if (mParam) {
+      s = mParam[1];
+    } else {
+      return _avisoEnlace_(comoSeLlama, s, 'no reconozco esa URL de Drive. Pega el enlace de ' +
+        'la CARPETA (el que lleva «/folders/») o, si lo prefieres, solo el id.');
+    }
+  }
+
+  if (!/^[A-Za-z0-9_-]{11,}$/.test(s)) {
+    return _avisoEnlace_(comoSeLlama, valor, 'esto no tiene forma de id de carpeta de Drive ' +
+      '(letras, dígitos, «-» y «_»; los ids de verdad rondan los 30 caracteres). Lo que ' +
+      'entendí como id fue: «' + s + '».');
+  }
+  return s;
+}
+
+// Se reasignan las MISMAS constantes: de aquí para abajo ORIGEN_ID, ORIGEN_LEGACY_ID y
+// DESTINO_ID son ids, como lo han sido siempre. Todo lo que hay debajo no se enteró.
+ORIGEN_ID = _idDeCarpeta_(ORIGEN_ID, 'ORIGEN_ID');
+ORIGEN_LEGACY_ID = _idDeCarpeta_(ORIGEN_LEGACY_ID, 'ORIGEN_LEGACY_ID');
+DESTINO_ID = _idDeCarpeta_(DESTINO_ID, 'DESTINO_ID');
 
 // ═════════════════════════════ PÚBLICAS ══════════════════════════════════════
 
@@ -540,10 +640,11 @@ function _contexto_() {
  */
 function _sugerirOrigen_() {
   Logger.log('  +--------------------------------------------------------------');
-  Logger.log('  | FALTA ORIGEN_ID: el id de la carpeta «Google Meet» de Mi unidad.');
-  Logger.log('  | Ábrela en Drive y copia el tramo final de la URL:');
-  Logger.log('  |   https://drive.google.com/drive/folders/<ESTO>');
-  Logger.log('  | Pégalo arriba, en  var ORIGEN_ID = \'\';');
+  Logger.log('  | FALTA ORIGEN_ID: la carpeta de grabaciones de Meet de tu Mi unidad.');
+  Logger.log('  | Ábrela en Drive y copia el ENLACE de la barra de direcciones, entero:');
+  Logger.log('  |   https://drive.google.com/drive/folders/<id>');
+  Logger.log('  | Pégalo arriba, en  var ORIGEN_ID = \'\';  — el script le saca el id solo');
+  Logger.log('  | (o pega solo el id, si lo prefieres: las dos formas valen).');
   var vistos = 0;
   NOMBRES_ORIGEN.forEach(function (n) {
     var it = DriveApp.getFoldersByName(n);

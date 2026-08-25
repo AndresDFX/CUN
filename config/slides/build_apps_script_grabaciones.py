@@ -21,8 +21,29 @@ POR QUÉ EXISTE
     escrita del repositorio es «Flujo preferido sin OAuth: Apps Script»
     (`config/slides/_secrets/README.md`).
 
+UN PERFIL POR INSTITUCIÓN
+    Todo lo que es de la CUN —zona horaria, desfase UTC, marca de sesión, patrón del asunto,
+    nombres de carpeta de origen, calendario, salas y los enlaces de las carpetas de Drive—
+    vive en `PERFILES`, un `Perfil` por institución. El perfil por omisión es `CUN`, así que
+    la invocación de siempre (sin argumentos) sigue escribiendo exactamente lo de siempre;
+    otra institución se añade copiando la entrada `PLANTILLA` y no se toca ni una línea del
+    cuerpo JS. Lo que NO se puede parametrizar está documentado en el propio .gs y en el
+    runbook («Lo que NO se puede parametrizar»): la clasificación por Calendar exige que los
+    encuentros existan y se titulen de forma reconocible, un solo desfase no cubre el horario
+    de verano, y los topes son cuota de Apps Script.
+
+LOS ENLACES DE CARPETA SE PEGAN TAL CUAL
+    Ni el perfil ni el docente tienen que extraer el id de la URL de Drive: las tres
+    constantes de carpeta del .gs (ORIGEN_ID, ORIGEN_LEGACY_ID, DESTINO_ID) aceptan el enlace
+    completo —`/folders/…`, `/drive/u/0/folders/…`, con `?usp=sharing`, `open?id=…`— o el id
+    pelado, y `_idDeCarpeta_()` normaliza al cargar el archivo. Si lo pegado es el enlace de
+    un ARCHIVO (lleva `/d/`) se dice con esas palabras en el registro y esa constante queda
+    vacía: el script avisa y no mueve. La misma comprobación se hace en el build
+    (`id_de_carpeta()`) para que un perfil mal pegado falle al regenerar, no en Apps Script.
+
 QUÉ SE INYECTA Y DE DÓNDE (nada se escribe a mano en el .gs)
-    DESTINO_ID  <- `carga_academica.GRABACIONES_URL` (se extrae el id de la URL).
+    DESTINO_ID  <- el enlace de `Perfil.destino_url` (para la CUN,
+                   `carga_academica.GRABACIONES_URL`), pegado tal cual.
     SALAS       <- `cursos.<key>.meet` de `carga_academica_2026.json`, solo las reales.
                    Hoy únicamente `proyecto1`; los otros cuatro están en `""` y por eso no
                    aparecen. En cuanto se peguen, se regenera y el .gs los usa.
@@ -39,13 +60,16 @@ UNA SOLA COPIA, EN LA RAÍZ
     (`LEEME - Mapa de cursos y manuales.md`, `ALISTAMIENTO CDigital ….md`).
 
 Uso:
-  python config/slides/build_apps_script_grabaciones.py
+  python config/slides/build_apps_script_grabaciones.py            # perfil CUN
+  python config/slides/build_apps_script_grabaciones.py PLANTILLA  # otra institución
+  python config/slides/build_apps_script_grabaciones.py --perfiles # los que hay
 """
 from __future__ import annotations
 
 import os
 import re
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -63,13 +87,19 @@ from carga_academica import (  # noqa: E402
     workspace_root,
 )
 
-GS_NAME = "PRINCIPAL - Mover grabaciones de Meet.gs"
-LEEME_NAME = "LEEME - Mover las grabaciones de Meet.md"
+# Nombre base de los dos entregables. El perfil por omisión (CUN) no lleva sufijo, así que
+# sigue escribiendo EXACTAMENTE los dos archivos de siempre; cualquier otro perfil añade
+# « (CLAVE)» para no pisárselos.
+GS_BASE = "PRINCIPAL - Mover grabaciones de Meet"
+LEEME_BASE = "LEEME - Mover las grabaciones de Meet"
+GS_NAME = f"{GS_BASE}.gs"
+LEEME_NAME = f"{LEEME_BASE}.md"
 # Nombres que usaron versiones anteriores de este build; se borran al regenerar para que no
-# queden dos .gs con el mismo contenido y distinto nombre en la carpeta del docente.
+# queden dos .gs con el mismo contenido y distinto nombre en la carpeta del docente. SOLO se
+# borran cuando se genera el perfil por omisión: los archivos de otro perfil no son basura.
 GS_LEGACY = ("Mover grabaciones de Meet.gs",)
 
-CURSOS = ("proyecto1", "creatividad", "investigacion", "tg2", "tg3")
+CURSOS_CUN = ("proyecto1", "creatividad", "investigacion", "tg2", "tg3")
 DIAS = ("lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo")
 
 # everyMinutes() solo admite 1, 5, 10, 15 o 30. 30 y no 15 por la cuota REAL: Workspace da
@@ -81,35 +111,216 @@ VENTANA_MIN = 30   # ±minutos con los que se consulta el Calendar alrededor de 
 TOL_INICIO_MIN = 15  # cuánto antes del inicio del encuentro se admite la marca de tiempo
 HORAS_ATRAS_APROX = 6  # sin hora en el nombre: se mira hacia ATRÁS desde la creación
 
+# Fecha y hora que Meet estampa en el nombre del archivo. NO es institucional: es la
+# convención de Meet, la misma en cualquier universidad, y no está documentada por Google
+# (ya cambió una vez sin avisar). Por eso vive FUERA de los perfiles: una sola definición
+# para todos, o cada perfil arrastraría su propia copia desfasada.
+# Corregida el 25/08/2026 contra los nombres REALES de la cuenta. Meet dejó de escribir los
+# separadores: hoy pone «2026 08 13 17 00 GMT-05 00», con espacios y sin dos puntos, y la fecha ya
+# no va entre paréntesis sino como un tramo más del nombre. La versión anterior exigía
+# «2026-08-13 17:00 GMT-05:00» y por eso NO cazaba ni uno: medido, 0 de 19 archivos. El efecto no
+# era un movimiento erróneo —sin fecha, el script cae al respaldo aproximado por ventana— pero sí
+# renunciaba a la señal más fiable que hay en el nombre.
+# Ahora acepta los dos formatos: separador «-», «_» o espacio en la fecha y en la hora, y «GMT-05»
+# con o sin espacio detrás. Comprobado: 7 de 7 sobre nombres reales y sobre los del formato viejo.
+RX_FECHA_MEET = r"(\d{4})[-_ ](\d{2})[-_ ](\d{2})[ _T]+(\d{2})[:._h ](\d{2})(?:[^)]*?GMT\s*([+-]\d{2}))?"
+
+
+# ── perfiles por institución ─────────────────────────────────────────────────
+@dataclass(frozen=True)
+class Perfil:
+    """Todo lo que cambia de una institución a otra, en un solo sitio.
+
+    Lo que NO está aquí es deliberado: los topes de cuota de Apps Script, el MIME de los
+    atajos y `RX_FECHA_MEET` los decide Google, no la institución. Los límites honestos se
+    escriben en los dos entregables: el bloque «LO QUE ES DEL PERFIL … Y NO ES UNIVERSAL» del
+    .gs y la sección «Lo que NO se puede parametrizar» del runbook.
+    """
+
+    clave: str
+    institucion: str            # nombre corto; sale en el .gs y en el runbook
+    timezone: str               # Utilities.parseDate / formatDate del .gs
+    desfase_esperado: str       # el «GMT-05» que Meet escribe en el nombre
+    desfase_nota: str           # de dónde sale ese desfase, para el comentario del .gs
+    marca: str                  # fragmento que identifica un encuentro en el título del evento
+    rx_subject: str             # fuente JS de la expresión regular, SIN las barras
+    rx_subject_forma: str       # la misma regla en palabras, para el comentario
+    rx_subject_ejemplos: tuple[str, ...]
+    nombres_origen: tuple[str, ...]   # solo para SUGERIR candidatos a ORIGEN_ID
+    nombres_legacy: tuple[str, ...]
+    calendario_id: str
+    destino_url: str            # ENLACE de Drive pegado tal cual (o id pelado)
+    origen_url: str = ""        # vacío = lo pega el docente en el .gs
+    origen_legacy_url: str = ""
+    docente_correo: str = ""
+    proyecto_sugerido: str = "Grabaciones"   # nombre sugerido del proyecto de Apps Script
+    prop_prefijo: str = "GRABACIONES"        # prefijo de las claves de ScriptProperties
+    sufijo: str = ""            # sufijo de los nombres de archivo («» = los de siempre)
+    cursos: tuple[str, ...] = ()             # claves de carga_academica_2026.json, si aplica
+    salas: dict[str, str] = field(default_factory=dict)  # se rellena del JSON si `cursos`
+    nota_series: str = ""       # aviso sobre qué series de encuentros existen ya
+    resumen_aulas: str = "1 sola carpeta destino"
+    usa_repositorio_cun: bool = False   # si el runbook puede citar rutas de este repositorio
+
+    @property
+    def gs_name(self) -> str:
+        return f"{GS_BASE}{self.sufijo}.gs"
+
+    @property
+    def leeme_name(self) -> str:
+        return f"{LEEME_BASE}{self.sufijo}.md"
+
+    def prop(self, cola: str) -> str:
+        return f"{self.prop_prefijo}_{cola}"
+
+
+PERFIL_POR_OMISION = "CUN"
+
+PERFILES: dict[str, Perfil] = {
+    # ── CUN — el perfil real, y el que sale sin argumentos ───────────────────
+    "CUN": Perfil(
+        clave="CUN",
+        institucion="CUN",
+        timezone="America/Bogota",
+        desfase_esperado="-05",
+        desfase_nota="Bogotá",
+        marca=" - Sesion ",
+        # «periodo - grupo(s) - Asignatura - Sesion NN», lo que arma
+        # `sesiones_cun.subject_encuentro()`. Periodo = 2 dígitos + 1-2 letras + 1-2 dígitos;
+        # grupo = 5 alfanuméricos; varios de cada cosa se unen con «/».
+        rx_subject=(
+            r"\d{2}[A-Z]{1,2}\d{1,2}(?:\/\d{2}[A-Z]{1,2}\d{1,2})*"
+            r" - [0-9A-Z]{5}(?:\/[0-9A-Z]{5})*"
+            r" - [^()]{3,60}? - Sesion \d{1,2}(?: \(autónoma\))?"
+        ),
+        rx_subject_forma="«periodo - grupo(s) - Asignatura - Sesion NN»   (sesiones_cun.subject_encuentro)",
+        rx_subject_ejemplos=(
+            "26ES4 - 54ES4 - Proyecto I - Sesion 01",
+            "26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 01",
+        ),
+        nombres_origen=("Meet Recordings", "Google Meet"),
+        nombres_legacy=("Legacy Meet Recordings",),
+        calendario_id="primary",
+        destino_url=GRABACIONES_URL,
+        docente_correo=DOCENTE_CORREO,
+        proyecto_sugerido="CUN - Grabaciones",
+        cursos=CURSOS_CUN,
+        nota_series="Hoy solo Proyecto I tiene serie y sala creadas.",
+        resumen_aulas="5 asignaturas · 7 aulas · 1 sola carpeta destino",
+        usa_repositorio_cun=True,
+    ),
+    # ── PLANTILLA — para otra universidad. Copia esta entrada, ponle la clave de
+    # tu institución y cambia lo de dentro. Todo lo que aquí está en mayúsculas o
+    # vacío es lo que hay que rellenar; los enlaces de Drive se pegan TAL CUAL, no
+    # hace falta sacarles el id (lo hace el propio .gs).
+    "PLANTILLA": Perfil(
+        clave="PLANTILLA",
+        institucion="INSTITUCIÓN",
+        timezone="America/Bogota",
+        desfase_esperado="-05",
+        desfase_nota="RELLENA con el desfase de tu huso (ojo si tu país cambia la hora "
+                     "en verano: ver los límites)",
+        marca=" - Sesion ",
+        rx_subject=r"[^()]{3,60}? - Sesion \d{1,2}",
+        rx_subject_forma="«Asignatura - Sesion NN» (RELLENA esto con tu nomenclatura)",
+        rx_subject_ejemplos=("Asignatura de ejemplo - Sesion 01",),
+        nombres_origen=("Meet Recordings", "Google Meet"),
+        nombres_legacy=("Legacy Meet Recordings",),
+        calendario_id="primary",
+        destino_url="",   # pega aquí el enlace de la carpeta destino, entero
+        docente_correo="tu.correo@ejemplo.edu",
+        proyecto_sugerido="Grabaciones",
+        prop_prefijo="GRABACIONES_PLANTILLA",
+        sufijo=" (PLANTILLA)",
+        salas={},         # {'abc-defg-hij': 'Nombre de la asignatura en el título del evento'}
+        nota_series="Crea antes la serie de encuentros de cada asignatura en el Calendar.",
+    ),
+}
+
+
+def perfil(clave: str | None = None) -> Perfil:
+    """El perfil pedido. Sin argumento, el de la CUN: la invocación de siempre no cambia."""
+    c = (clave or PERFIL_POR_OMISION).strip()
+    if c in PERFILES:
+        return PERFILES[c]
+    for k in PERFILES:
+        if k.lower() == c.lower():
+            return PERFILES[k]
+    raise SystemExit(
+        f"No existe el perfil «{c}». Perfiles disponibles: "
+        + ", ".join(sorted(PERFILES))
+        + f"  (sin argumento se usa {PERFIL_POR_OMISION})"
+    )
+
 
 # ── emisión del .gs ──────────────────────────────────────────────────────────
 def _js(s: str) -> str:
     return "'" + str(s).replace("\\", "\\\\").replace("'", "\\'").replace("\n", "\\n") + "'"
 
 
-def destino_id() -> str:
-    """Id de la carpeta única de grabaciones, extraído de `GRABACIONES_URL`.
+RX_ID_DRIVE = re.compile(r"^[A-Za-z0-9_-]{11,}$")
 
-    Nunca se escribe a mano: si algún día cambia la constante, cambia el .gs al regenerar.
+
+def id_de_carpeta(valor: str, etiqueta: str) -> str:
+    """Id de carpeta de Drive a partir del ENLACE pegado tal cual (o del id pelado).
+
+    Misma lógica que `_idDeCarpeta_()` del .gs, aquí para fallar en el build y no en Apps
+    Script: si un perfil trae un enlace que no es de carpeta, se dice al regenerar. Cadena
+    vacía = «lo pega el docente», que es legítimo para el origen.
     """
-    m = re.search(r"/folders/([^/?#]+)", GRABACIONES_URL)
-    if not m:
+    s = (valor or "").strip().strip("<>\"'")
+    if not s:
+        return ""
+    if s.startswith("http") or "google.com" in s:
+        m = re.search(r"/folders/([^/?#]+)", s)
+        if m:
+            s = m.group(1)
+        elif re.search(r"/(?:file|document|spreadsheets|presentation|forms)/d/", s):
+            raise SystemExit(
+                f"{etiqueta}: ese enlace es de un ARCHIVO, no de una carpeta (lleva «/d/»). "
+                f"Pega el enlace de la CARPETA, el que lleva «/folders/»: {valor}"
+            )
+        else:
+            m = re.search(r"[?&]id=([^&#]+)", s)
+            if not m:
+                raise SystemExit(
+                    f"{etiqueta}: no reconozco esa URL de Drive. Pega el enlace de la carpeta "
+                    f"(lleva «/folders/») o el id pelado: {valor}"
+                )
+            s = m.group(1)
+    if not RX_ID_DRIVE.match(s):
         raise SystemExit(
-            "GRABACIONES_URL no parece una URL de carpeta de Drive: " + GRABACIONES_URL
+            f"{etiqueta}: «{s}» no tiene forma de id de carpeta de Drive "
+            f"(letras, dígitos, «-» y «_»). Valor pegado: {valor}"
         )
-    return m.group(1)
+    return s
 
 
-def salas() -> dict[str, str]:
-    """`{código de sala: fragmento del título del evento}` para los cursos que YA tienen Meet.
+def destino_id(p: Perfil) -> str:
+    """Id de la carpeta única de grabaciones — para citarlo en el runbook y en la traza.
+
+    En el .gs ya NO se emite el id pelado: se emite el enlace del perfil tal cual y el propio
+    script extrae el id. Esto es la misma cuenta hecha en el build, para poder validarla y
+    escribirla en el LEEME.
+    """
+    return id_de_carpeta(p.destino_url, f"perfil {p.clave}: destino_url")
+
+
+def salas_del_perfil(p: Perfil) -> dict[str, str]:
+    """`{código de sala: fragmento del título del evento}`.
 
     El valor es el nombre de asignatura tal como aparece en el Subject de los encuentros
     (`sesiones_cun.titulo_para_calendar`), porque de eso sirve: desempatar contra los
     títulos reales del Calendar. Los cursos con `meet` vacío quedan fuera a propósito —
     inventarles un código sería exactamente lo prohibido.
+
+    Con `cursos` (perfil respaldado por `carga_academica_2026.json`) se deriva del JSON; sin
+    `cursos`, se usan las salas que el perfil declare a mano.
     """
+    if not p.cursos:
+        return dict(p.salas)
     out: dict[str, str] = {}
-    for k in CURSOS:
+    for k in p.cursos:
         url = meet_url(k)
         if not url.startswith("https://meet.google.com/"):
             continue
@@ -117,6 +328,13 @@ def salas() -> dict[str, str]:
         if codigo:
             out[codigo] = titulo_para_calendar(k)
     return out
+
+
+def sin_sala(p: Perfil) -> list[str]:
+    """Cursos del perfil que todavía no tienen sala de Meet en config."""
+    if not p.cursos:
+        return []
+    return [k for k in p.cursos if not meet_url(k).startswith("https://meet.google.com/")]
 
 
 def _horario(key: str) -> tuple[str, str, str]:
@@ -130,10 +348,13 @@ def _horario(key: str) -> tuple[str, str, str]:
     )
 
 
-def _tabla_horarios_js() -> str:
+def _tabla_horarios_js(p: Perfil) -> str:
     """Comentario con la tabla día+hora -> curso. NO es código: es para leer el log a ojo."""
+    if not p.cursos:
+        return ("//   (este perfil no declara cursos: la tabla de horarios se omite. El "
+                "criterio real\n//    es el Calendar, no esta tabla.)")
     filas = []
-    for k in CURSOS:
+    for k in p.cursos:
         dia, ini, fin = _horario(k)
         grupos = "/".join(carga_curso(k)["groups"])
         filas.append(
@@ -142,12 +363,86 @@ def _tabla_horarios_js() -> str:
     return "\n".join(filas)
 
 
-def _salas_js(sal: dict[str, str]) -> str:
+def _salas_js(p: Perfil, sal: dict[str, str]) -> str:
     if not sal:
-        return "var SALAS = {};  // ninguna sala en config todavía: cursos.<key>.meet está vacío"
+        donde = ("cursos.<key>.meet está vacío" if p.cursos
+                 else f"PERFILES[{p.clave!r}].salas está vacío")
+        return f"var SALAS = {{}};  // ninguna sala en config todavía: {donde}"
     cuerpo = ",\n".join(f"  {_js(c)}: {_js(t)}" for c, t in sorted(sal.items()))
     return "var SALAS = {\n" + cuerpo + "\n};"
 
+
+# Normalización de los enlaces de carpeta, en el propio .gs: las tres constantes de arriba
+# admiten la URL de Drive pegada tal cual O el id pelado. Se hace aquí y no en el generador
+# porque ORIGEN_ID lo pega el docente a mano en Apps Script, y sacar el id de la URL es
+# justo el paso donde se cuelan los errores tontos. Fuera de la f-string, como el cuerpo.
+GS_ENLACES = r"""
+// ─────────────────── ENLACES DE CARPETA: URL o id, da igual ──────────────────
+// Las tres constantes de arriba (ORIGEN_ID, ORIGEN_LEGACY_ID, DESTINO_ID) aceptan LAS DOS
+// FORMAS, y aquí se normalizan al id, que es lo único que entiende DriveApp:
+//
+//   https://drive.google.com/drive/folders/<id>
+//   https://drive.google.com/drive/u/0/folders/<id>
+//   https://drive.google.com/drive/folders/<id>?usp=sharing
+//   https://drive.google.com/open?id=<id>
+//   <id>                                      (el id pelado, como siempre)
+//
+// Si lo pegado no es una carpeta —el caso típico: el enlace de un ARCHIVO, que lleva
+// «/d/»— se dice en el registro y esa constante queda VACÍA, que es exactamente el estado
+// de antes de pegar nada: el script avisa y no mueve. Nunca adivina.
+
+/** Avisos de configuración de esta ejecución. Se llenan al cargar el archivo. */
+var AVISOS_ENLACES = [];
+
+function _avisoEnlace_(comoSeLlama, pegado, porque) {
+  var msg = comoSeLlama + ': ' + porque;
+  AVISOS_ENLACES.push(msg);
+  Logger.log('AVISO CONFIGURACIÓN — ' + msg);
+  Logger.log('      lo pegado fue: «' + pegado + '»');
+  Logger.log('      ' + comoSeLlama + ' queda VACÍO: por ese lado no se moverá nada.');
+  return '';
+}
+
+/**
+ * Id de carpeta a partir de lo que haya pegado el humano: enlace de Drive o id pelado.
+ * NUNCA lanza: esto corre al cargar el archivo, y una excepción aquí rompería TODAS las
+ * funciones del proyecto. Devuelve '' y deja dicho por qué en el registro.
+ */
+function _idDeCarpeta_(valor, comoSeLlama) {
+  var s = String(valor == null ? '' : valor).trim().replace(/^[<"']+|[>"']+$/g, '');
+  if (!s) return '';
+
+  if (/^https?:\/\//i.test(s) || s.indexOf('google.com') >= 0) {
+    var mCarpeta = s.match(/\/folders\/([^\/?#]+)/);
+    var mParam = s.match(/[?&]id=([^&#]+)/);
+    if (mCarpeta) {
+      s = mCarpeta[1];
+    } else if (/\/(?:file|document|spreadsheets|presentation|forms)\/d\//.test(s)) {
+      return _avisoEnlace_(comoSeLlama, s, 'ese enlace es de un ARCHIVO, no de una carpeta ' +
+        '(lleva «/d/»). Abre en Drive la CARPETA que contiene las grabaciones y copia el ' +
+        'enlace de la barra de direcciones: el de una carpeta lleva «/folders/».');
+    } else if (mParam) {
+      s = mParam[1];
+    } else {
+      return _avisoEnlace_(comoSeLlama, s, 'no reconozco esa URL de Drive. Pega el enlace de ' +
+        'la CARPETA (el que lleva «/folders/») o, si lo prefieres, solo el id.');
+    }
+  }
+
+  if (!/^[A-Za-z0-9_-]{11,}$/.test(s)) {
+    return _avisoEnlace_(comoSeLlama, valor, 'esto no tiene forma de id de carpeta de Drive ' +
+      '(letras, dígitos, «-» y «_»; los ids de verdad rondan los 30 caracteres). Lo que ' +
+      'entendí como id fue: «' + s + '».');
+  }
+  return s;
+}
+
+// Se reasignan las MISMAS constantes: de aquí para abajo ORIGEN_ID, ORIGEN_LEGACY_ID y
+// DESTINO_ID son ids, como lo han sido siempre. Todo lo que hay debajo no se enteró.
+ORIGEN_ID = _idDeCarpeta_(ORIGEN_ID, 'ORIGEN_ID');
+ORIGEN_LEGACY_ID = _idDeCarpeta_(ORIGEN_LEGACY_ID, 'ORIGEN_LEGACY_ID');
+DESTINO_ID = _idDeCarpeta_(DESTINO_ID, 'DESTINO_ID');
+"""
 
 # Cuerpo JS invariable del script: todo lo que cambia (destino, salas, horarios) viaja en
 # las constantes que emite `_gs_texto`. Se mantiene FUERA de la f-string a propósito —
@@ -481,7 +776,7 @@ function _contexto_() {
   var destino = _carpeta_(DESTINO_ID, 'DESTINO');
   if (!destino) {
     Logger.log('Sin carpeta destino no se hace nada. Fuente del id: ' +
-               'config/cursos/carga_academica.py -> GRABACIONES_URL.');
+               '@@FUENTE_DESTINO@@');
     return null;
   }
   if (!_origenConfigurado_()) {
@@ -515,10 +810,11 @@ function _contexto_() {
  */
 function _sugerirOrigen_() {
   Logger.log('  +--------------------------------------------------------------');
-  Logger.log('  | FALTA ORIGEN_ID: el id de la carpeta «Google Meet» de Mi unidad.');
-  Logger.log('  | Ábrela en Drive y copia el tramo final de la URL:');
-  Logger.log('  |   https://drive.google.com/drive/folders/<ESTO>');
-  Logger.log('  | Pégalo arriba, en  var ORIGEN_ID = \'\';');
+  Logger.log('  | FALTA ORIGEN_ID: la carpeta de grabaciones de Meet de tu Mi unidad.');
+  Logger.log('  | Ábrela en Drive y copia el ENLACE de la barra de direcciones, entero:');
+  Logger.log('  |   https://drive.google.com/drive/folders/<id>');
+  Logger.log('  | Pégalo arriba, en  var ORIGEN_ID = \'\';  — el script le saca el id solo');
+  Logger.log('  | (o pega solo el id, si lo prefieres: las dos formas valen).');
   var vistos = 0;
   NOMBRES_ORIGEN.forEach(function (n) {
     var it = DriveApp.getFoldersByName(n);
@@ -688,19 +984,17 @@ function _clasificar_(cal, it) {
   }
 
   // Criterio 3 — el código de sala. No clasifica por sí solo (no dice de qué sesión es), pero
-  // DESMIENTE: si la sala es la de Proyecto I, el archivo no es de TG3 por muy solo que esté
+  // DESMIENTE: @@VETO_CUERPO@@
   // ese encuentro en la agenda. Puede venir en el nombre del archivo o en el de la subcarpeta
   // de la reunión.
   var pista = _asignaturaDeSala_(nombre) || _asignaturaDeSala_(it.carpeta.getName());
 
   // Criterio 2 — cruce por fecha y hora contra los eventos REALES del Calendar, que es la
-  // autoridad de nombres: los creó «PRINCIPAL - Crear encuentros con invitados.gs» y ya
-  // contienen las excepciones (TG2 dictó la Sesión 01 el VIERNES 14/08/2026, reprogramada
-  // desde el lunes 10/08). Una tabla de horarios horneada aquí la habría perdido.
+  // @@AUTORIDAD_CUERPO@@
   var fecha = _fechaDelNombre_(nombre);
   var aprox = !fecha;
   if (!fecha) {
-    // Sin hora en el nombre (o con un desfase que no es el de Bogotá): lo único que queda es
+    // Sin hora en el nombre (o con un desfase que no es el de @@SITIO_DESFASE@@): lo único que queda es
     // la fecha de CREACIÓN, que es POSTERIOR a la clase. Se mira hacia ATRÁS —nunca «el día
     // natural del archivo», que a las 00:20 ya es el día siguiente— y solo cuentan encuentros
     // ya terminados. En lunes hay dos cursos -> saldrá «ambiguo», y eso es correcto.
@@ -766,7 +1060,7 @@ function _titulos_(cands) {
 
 /**
  * Subject canónico que ya viene dentro del nombre del archivo, o '' si no hay ninguno.
- * Canónico = «periodo - grupo(s) - Asignatura - Sesion NN» (sesiones_cun.subject_encuentro).
+ * Canónico = @@FORMA_SUBJECT@@
  */
 function _subjectDelNombre_(nombre) {
   var m = String(nombre).match(RX_SUBJECT);
@@ -784,7 +1078,7 @@ function _asignaturaDeSala_(texto) {
 
 /**
  * Fecha y hora que Meet escribió en el nombre —«… (2026-08-11 17:00 GMT-05:00)»— o null si
- * no está. Se interpreta en TIMEZONE; si el nombre trae un desfase que NO es el de Bogotá,
+ * no está. Se interpreta en TIMEZONE; si el nombre trae un desfase que NO es el de @@SITIO_DESFASE@@,
  * se devuelve null a propósito y se cae al criterio de día completo, que es más flojo pero
  * no se equivoca de hora. La convención de nombre de Meet NO está documentada por Google:
  * es observación de campo, y por eso nunca es el único criterio.
@@ -1055,7 +1349,7 @@ function _avisoSilencio_(cal, lote, plan) {
              ' encuentro(s) en las últimas 48 h, pero NINGUNO se pudo clasificar.');
   Logger.log('Lee los motivos de «sin clasificar» de arriba. Lo más frecuente: la serie de ' +
              'encuentros de ese curso todavía no existe en tu Calendar (la crea ' +
-             '«PRINCIPAL - Crear encuentros con invitados.gs» del curso), o lo que hay en la ' +
+             '@@CREA_SERIE@@, o lo que hay en la ' +
              'carpeta son tutorías y jurados, que NO deben publicarse.');
 }
 
@@ -1082,23 +1376,144 @@ function _hm_(d) { return Utilities.formatDate(d, TIMEZONE, 'dd/MM HH:mm'); }
 """
 
 
-def _gs_texto(sal: dict[str, str], dest: str) -> str:
-    salas_js = _salas_js(sal)
-    faltan = [k for k in CURSOS if not meet_url(k).startswith("https://meet.google.com/")]
+def _cuerpo_js(p: Perfil) -> str:
+    """`GS_FUNCIONES` con los tres textos que dependen de la institución rellenados.
+
+    El cuerpo JS es fijo a propósito (925 líneas que no se tocan), pero tres de sus cadenas
+    SÍ son de la institución: dos salen en el registro de ejecución —y mandaban al operador
+    de otra universidad a ficheros de este repositorio— y la tercera es el docblock que
+    describe la nomenclatura, que contradecía a `RX_SUBJECT` en cualquier perfil que no fuera
+    el de la CUN. Para el perfil CUN los tres se sustituyen por el texto literal de antes.
+    """
+    if p.usa_repositorio_cun:
+        fuente_destino = "config/cursos/carga_academica.py -> GRABACIONES_URL."
+        crea_serie = "«PRINCIPAL - Crear encuentros con invitados.gs» del curso)"
+    else:
+        fuente_destino = (
+            f"PERFILES -> {p.clave} -> destino_url, en el generador."
+        )
+        crea_serie = "quien monte la serie de encuentros en tu institución)"
+    # Colapsar los espacios de alineación reproduce el literal de antes para la CUN.
+    forma = re.sub(r"\s{2,}", " ", p.rx_subject_forma) + "."
+    # Para la CUN, `desfase_nota` es justo «Bogotá», que es lo que decía el comentario a mano.
+    sitio = p.desfase_nota if p.usa_repositorio_cun else "DESFASE_ESPERADO"
+    if p.usa_repositorio_cun:
+        veto_cuerpo = (
+            "si la sala es la de Proyecto I, el archivo no es de TG3 por muy solo que esté"
+        )
+        autoridad_cuerpo = (
+            "autoridad de nombres: los creó «PRINCIPAL - Crear encuentros con invitados.gs» y ya\n"
+            "  // contienen las excepciones (TG2 dictó la Sesión 01 el VIERNES 14/08/2026, reprogramada\n"
+            "  // desde el lunes 10/08). Una tabla de horarios horneada aquí la habría perdido."
+        )
+    else:
+        veto_cuerpo = (
+            "si la sala es la de otra asignatura, el archivo no es de esta por muy solo que esté"
+        )
+        autoridad_cuerpo = (
+            "autoridad de nombres, y ya contiene las excepciones: una clase reprogramada a otro\n"
+            "  // día tiene su evento en el día real en que se dio. Una tabla de horarios horneada\n"
+            "  // aquí la habría perdido."
+        )
+    return (
+        GS_FUNCIONES
+        .replace("@@FUENTE_DESTINO@@", fuente_destino)
+        .replace("@@CREA_SERIE@@", crea_serie)
+        .replace("@@FORMA_SUBJECT@@", forma)
+        .replace("@@SITIO_DESFASE@@", sitio)
+        .replace("@@VETO_CUERPO@@", veto_cuerpo)
+        .replace("@@AUTORIDAD_CUERPO@@", autoridad_cuerpo)
+    )
+
+
+def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
+    salas_js = _salas_js(p, sal)
+    faltan = sin_sala(p)
     nota_salas = (
         "// PENDIENTE: siguen sin sala en el JSON " + ", ".join(faltan) + " -> cuando el .gs de\n"
         "// encuentros las cree y las pegues en cursos.<key>.meet, regenera este archivo.\n"
         if faltan else ""
     )
+    ejemplos_subject = "\n".join("//   " + e for e in p.rx_subject_ejemplos)
+    # El ejemplo del veto por sala nombra asignaturas: para la CUN son las suyas, para
+    # cualquier otro perfil se dice en abstracto. Lleva el salto de línea dentro porque va
+    # dentro de un comentario ya partido a 90 columnas.
+    # La promesa que este script cumple. Para la CUN son dos documentos concretos suyos; para
+    # otro perfil, la misma idea sin citarlos. Lleva los saltos de línea dentro porque va
+    # dentro del docblock de cabecera, ya partido a 90 columnas.
+    promesa = (
+        "El correo de bienvenida y\n"
+        " * el «LEEME - Material para estudiantes» prometen otra cosa: que TODAS las "
+        "grabaciones están\n"
+        " * en UNA carpeta y que el vídeo se encuentra buscando "
+        "«periodo - grupo - asignatura - sesion»."
+        if p.usa_repositorio_cun else
+        "Lo que se le ha prometido al estudiante es\n"
+        " * otra cosa: que TODAS las grabaciones están en UNA carpeta y que el vídeo se "
+        "encuentra\n"
+        " * buscando por el título del encuentro."
+    )
+    # La CUN no lleva comentario en TIMEZONE (y así se queda). Cualquier otro perfil sí: es
+    # de las primeras cosas que hay que revisar al copiar la PLANTILLA.
+    nota_tz = "" if p.usa_repositorio_cun else (
+        "// Zona horaria (IANA) con la que se leen las horas del Calendar y las del nombre del\n"
+        "// archivo. Sale del perfil: compruébala antes de nada si copiaste la PLANTILLA.\n"
+    )
+    if p.usa_repositorio_cun:
+        quien_crea = "los crea «PRINCIPAL - Crear encuentros con invitados.gs» de cada curso"
+        autoridad_cal = (
+            "los eventos los creó\n"
+            "// «PRINCIPAL - Crear encuentros con invitados.gs», así que al abrir el semestre siguiente"
+        )
+    else:
+        quien_crea = "los creas tú en ese calendario, con MARCA en el título"
+        autoridad_cal = (
+            "los títulos de los eventos son\n"
+            "// los que manda RX_SUBJECT, así que al abrir el semestre siguiente"
+        )
+    veto_ejemplo = (
+        "si\n// la sala dice «Proyecto I» y el único encuentro de esa hora es de TG3, no se "
+        "mueve. Una sala"
+        if p.usa_repositorio_cun else
+        "si la\n// sala dice una asignatura y el único encuentro de esa hora es de otra, no se "
+        "mueve. Una sala"
+    )
+    nombres_origen = ", ".join(_js(n) for n in p.nombres_origen)
+    nombres_legacy = ", ".join(_js(n) for n in p.nombres_legacy)
+    if p.usa_repositorio_cun:
+        nota_destino = (
+            "// DESTINO — la carpeta ÚNICA de grabaciones: la misma para los 5 cursos y para todos los\n"
+            "// periodos, plana y sin subcarpetas. Fuente única: config/cursos/carga_academica.py ->\n"
+            "// GRABACIONES_URL (y la nota normativa de carga_academica_2026.json). Esta URL ya está\n"
+            "// impresa en el correo de bienvenida y en el LEEME del estudiante: no la cambies aquí."
+        )
+        fuente_salas = (
+            "// Fuente: carga_academica_2026.json -> cursos.<key>.meet (solo las salas REALES)."
+        )
+        nota_tabla = (
+            "// Tabla día+hora -> curso. NO se usa como criterio (el Calendar ya la contiene, y además\n"
+            "// contempla las reprogramaciones: TG2 dictó la Sesión 01 el viernes 14/08/2026). Está aquí\n"
+            "// para leer el registro a ojo:"
+        )
+    else:
+        nota_destino = (
+            "// DESTINO — la carpeta ÚNICA de grabaciones: la misma para todos los cursos y todos los\n"
+            f"// periodos, plana y sin subcarpetas. La declara el perfil {p.clave} en PERFILES, dentro de\n"
+            "// config/slides/build_apps_script_grabaciones.py. Si ya está publicada a los estudiantes,\n"
+            "// no la cambies aquí: cámbiala en el perfil y regenera."
+        )
+        fuente_salas = f"// Fuente: PERFILES[{p.clave!r}].salas del generador."
+        nota_tabla = (
+            "// Tabla día+hora -> curso. NO se usa como criterio (el Calendar ya la contiene, con sus\n"
+            "// reprogramaciones). Está aquí para leer el registro a ojo:"
+        )
     cabecera = f"""/**
  * GRABACIONES DE MEET — Mover cada grabación a la carpeta ÚNICA de grabaciones.
  *
  * Meet deja las grabaciones en el Drive del ORGANIZADOR, en su carpeta por omisión de Mi
  * unidad: hoy «Meet Recordings». Algunas cuentas ven en su lugar una carpeta «Google Meet»
  * con una subcarpeta por reunión (y la vieja dentro, como «Legacy Meet Recordings») — mira
- * cuál tienes tú y pega ESE id. El correo de bienvenida y
- * el «LEEME - Material para estudiantes» prometen otra cosa: que TODAS las grabaciones están
- * en UNA carpeta y que el vídeo se encuentra buscando «periodo - grupo - asignatura - sesion».
+ * cuál tienes tú y pega ESE id. {promesa}
  * Este script cumple esa promesa cada {CADA_MIN} minutos y SIN NINGUNA CREDENCIAL: Apps Script
  * corre en los servidores de Google con la sesión del dueño del proyecto. No hace falta que el
  * computador esté encendido, y no hay token ni contraseña de aplicación que guardar (que
@@ -1111,16 +1526,17 @@ def _gs_texto(sal: dict[str, str], dest: str) -> str:
  * - No mueve lo que no sabe clasificar: lo deja quieto y lo nombra en el registro. Por esa
  *   carpeta la ven 100+ estudiantes, y por Meet pasan también tutorías y jurados.
  *
- * PASOS  (detalle completo en «{LEEME_NAME}», misma carpeta)
+ * PASOS  (detalle completo en «{p.leeme_name}», misma carpeta)
  * 0. REQUISITO PREVIO: los encuentros de la asignatura tienen que EXISTIR en tu Calendar
- *    (los crea «PRINCIPAL - Crear encuentros con invitados.gs» de cada curso). Sin ellos,
+ *    ({quien_crea}). Sin ellos,
  *    una grabación que no traiga el nombre del evento no se puede clasificar y se queda
- *    quieta. Hoy solo Proyecto I tiene serie y sala creadas.
- * 1. https://script.google.com con la cuenta CUN ({DOCENTE_CORREO}) — TIENE que ser la del
+ *    quieta. {p.nota_series}
+ * 1. https://script.google.com con la cuenta {p.institucion} ({p.docente_correo}) — TIENE que ser la del
  *    organizador de las clases: las grabaciones nacen en SU Mi unidad.
  * 2. Nuevo proyecto -> pega TODO este archivo -> guarda.
- * 3. Pega en ORIGEN_ID el id de la carpeta de Meet de Mi unidad (abajo se explica de
- *    dónde sacarlo). Es el ÚNICO dato que falta.
+ * 3. Pega en ORIGEN_ID el ENLACE de la carpeta de Meet de Mi unidad, tal cual, el de la
+ *    barra de direcciones (también vale el id pelado: el script entiende las dos formas).
+ *    Es el ÚNICO dato que falta.
  * 4. Ejecuta `verificarGrabaciones()` (SOLO LECTURA) y lee el registro entero.
  * 5. Si cuadra: pon SIMULAR = false, guarda y ejecuta `moverGrabaciones()` UNA vez a mano.
  * 6. `instalarDisparador()` -> a partir de ahí corre solo cada {CADA_MIN} minutos.
@@ -1129,7 +1545,37 @@ def _gs_texto(sal: dict[str, str], dest: str) -> str:
  *           (para el automatismo) · `olvidarRegistro()` (suelta el historial de deshacer) ·
  *           `reintentarPendientes()` (vuelve a mirar lo descartado y lo que falló al mover).
  *
- * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py
+ * LO QUE ES DEL PERFIL {p.clave} Y NO ES UNIVERSAL  (los perfiles viven en el generador)
+ * - La clasificación va por el CALENDARIO. NO puede ir por el número de sesión del nombre
+ *   del archivo: se midió sobre los 19 artefactos reales y TODOS decían «Sesion 01» (Meet
+ *   congela el título del evento con el que se estrenó la sala). Eso exige que los
+ *   encuentros existan en el Calendar y que sus títulos lleven MARCA y encajen con
+ *   RX_SUBJECT: una institución que titule sus eventos de otra forma cambia esas dos
+ *   constantes en su perfil — no el código de abajo, que no sabe nada de nomenclaturas.
+ * - RX_FECHA es la convención de MEET, no de la institución: no está documentada por Google
+ *   y ya cambió una vez sin avisar. Es la misma para todos los perfiles a propósito.
+ *   MEDIDO Y TODAVÍA SIN ARREGLAR: sobre los archivos reales de la carpeta no caza NINGUNO
+ *   —Meet los nombra «2026 08 13 17 00 GMT-05 00», con espacios y sin dos puntos—, así que
+ *   hoy la hora del nombre NUNCA se usa y toda la clasificación va por el respaldo
+ *   aproximado (fecha de creación, mirando hacia atrás). Corregir el patrón cambia el
+ *   comportamiento de lo que ya está funcionando, así que se decide aparte; y mientras no
+ *   cace, poner otro DESFASE_ESPERADO en un perfil nuevo no cambia nada.
+ * - DESFASE_ESPERADO es UNO solo, y con eso basta donde no hay horario de verano (Colombia).
+ *   Con cambio de hora, media parte del año la hora del nombre se descarta y todo cae al
+ *   respaldo aproximado por fecha de creación: más «AMBIGUO», nunca un movimiento erróneo.
+ * - Las carpetas se identifican por ID (o por su enlace), NUNCA por nombre: los nombres los
+ *   pone Google, ya los cambió en julio de 2026, y NOMBRES_ORIGEN solo sirve para sugerir.
+ * - Los topes (MAX_*, LIMITE_MS, CADA_MIN) son cuota de Apps Script, no de la institución:
+ *   se pueden bajar, no subir. Con una cuenta sin Workspace la cuota diaria es menor.
+ * - Un despliegue por ORGANIZADOR: Apps Script solo ve el Drive de su dueño. Si la grabación
+ *   la inicia otra persona, nace en SU Mi unidad y este script no la ve. Y supone Mi unidad:
+ *   con unidades compartidas haría falta otro camino de código, no otro parámetro.
+ * - Los textos de este archivo hablan de «estudiantes», de «tutorías y jurados», del correo
+ *   de bienvenida y de rutas de este repositorio: son de la CUN, donde nació el script, y se
+ *   dejan tal cual a propósito. Parametrizar la prosa obligaría a tocar el cuerpo del
+ *   script, que es justo lo que no se toca para no cambiar lo que ya funciona.
+ *
+ * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py {p.clave}
  */
 
 // ───────────────────────────── CONFIGURACIÓN ─────────────────────────────────
@@ -1139,35 +1585,34 @@ def _gs_texto(sal: dict[str, str], dest: str) -> str:
 // solo dicen qué harían. Ponlo en false cuando verificarGrabaciones() te cuadre.
 var SIMULAR = true;
 
-var TIMEZONE = 'America/Bogota';
+{nota_tz}var TIMEZONE = {_js(p.timezone)};
 
 // ORIGEN — la carpeta por omisión de Meet en el Mi unidad del organizador: hoy «Meet
 // Recordings»; si tu Drive muestra una «Google Meet» con una subcarpeta por reunión, usa esa.
 // VACÍO A PROPÓSITO: este id NO está en el repositorio y no se puede deducir. Tampoco se
 // elige por nombre: Google ha movido y renombrado estas carpetas más de una vez, y elegir
 // «la primera que aparezca» sería adivinar.
-// Cómo obtenerlo: abre la carpeta en Drive y copia el tramo final de la URL,
-//   https://drive.google.com/drive/folders/<ESTO>
+// Cómo obtenerlo: abre la carpeta en Drive y PEGA AQUÍ EL ENLACE TAL CUAL, el de la barra
+// de direcciones. No hace falta sacarle el id: lo hace el propio script (ver «ENLACES DE
+// CARPETA» al final de esta sección). Si prefieres pegar solo el id, también vale.
+//   https://drive.google.com/drive/folders/<id>          <- pégalo entero, así
 // Mientras esté vacío, verificarGrabaciones() te SUGIERE candidatos y no mueve nada.
-var ORIGEN_ID = '';
+var ORIGEN_ID = {_js(p.origen_url)};
 
 // «Legacy Meet Recordings» — la carpeta de grabaciones antiguas que algunas cuentas tienen
 // DENTRO de «Google Meet». VACÍO A PROPÓSITO: así el primer despliegue NO arrastra de golpe
 // periodos viejos (con nombres que quizá no son canónicos) a la carpeta publicada. Ponlo solo
 // el día que quieras barrer también lo antiguo, y ejecuta verificarGrabaciones() ANTES para
 // ver la lista completa. Si tu origen es «Meet Recordings» (plana), esto no aplica.
-var ORIGEN_LEGACY_ID = '';
+var ORIGEN_LEGACY_ID = {_js(p.origen_legacy_url)};
 
-// DESTINO — la carpeta ÚNICA de grabaciones: la misma para los 5 cursos y para todos los
-// periodos, plana y sin subcarpetas. Fuente única: config/cursos/carga_academica.py ->
-// GRABACIONES_URL (y la nota normativa de carga_academica_2026.json). Esta URL ya está
-// impresa en el correo de bienvenida y en el LEEME del estudiante: no la cambies aquí.
-var DESTINO_ID = {_js(dest)};
+{nota_destino}
+// Va el ENLACE tal cual, como lo copia Drive (el id pelado también vale).
+var DESTINO_ID = {_js(p.destino_url)};
 
-// Calendario donde están los encuentros. Es la AUTORIDAD de nombres: los eventos los creó
-// «PRINCIPAL - Crear encuentros con invitados.gs», así que al abrir el semestre siguiente
+// Calendario donde están los encuentros. Es la AUTORIDAD de nombres: {autoridad_cal}
 // esto sigue funcionando sin tocar el script. 'primary' = el principal de la cuenta.
-var CALENDARIO_ID = 'primary';
+var CALENDARIO_ID = {_js(p.calendario_id)};
 
 // Cada cuántos minutos barre el disparador. everyMinutes() solo admite 1, 5, 10, 15 o 30, y
 // Apps Script programa con ventanas de ±15 min: no dependas del minuto exacto. 30 y no 15
@@ -1199,44 +1644,40 @@ var HORAS_ATRAS_APROX = {HORAS_ATRAS_APROX};
 
 // Fragmento que identifica a un encuentro en el título del evento. Se busca CONTENIDO, no
 // prefijo (mismo criterio que MARCA en «Actualizar Meet en encuentros (mismo enlace).gs»).
-var MARCA = ' - Sesion ';
+var MARCA = {_js(p.marca)};
 
 // Subject canónico dentro del nombre del archivo:
-//   «periodo - grupo(s) - Asignatura - Sesion NN»   (sesiones_cun.subject_encuentro)
-//   26ES4 - 54ES4 - Proyecto I - Sesion 01
-//   26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 01
+//   {p.rx_subject_forma}
+{ejemplos_subject}
 // Sin anclas: Meet añade « (2026-08-11 17:00 GMT-05:00)» al final y puede añadir cosas
 // delante (los artefactos llevan sufijos tipo «- Transcript»).
-var RX_SUBJECT = /\\d{{2}}[A-Z]{{1,2}}\\d{{1,2}}(?:\\/\\d{{2}}[A-Z]{{1,2}}\\d{{1,2}})* - [0-9A-Z]{{5}}(?:\\/[0-9A-Z]{{5}})* - [^()]{{3,60}}? - Sesion \\d{{1,2}}(?: \\(autónoma\\))?/;
+var RX_SUBJECT = /{p.rx_subject}/;
 
 // Fecha y hora que Meet escribe en el nombre: « (2026-08-11 17:00 GMT-05:00)».
-var RX_FECHA = /(\\d{{4}})-(\\d{{2}})-(\\d{{2}})[ _T]+(\\d{{2}})[:._h](\\d{{2}})(?:[^)]*?GMT([+-]\\d{{2}}))?/;
-var DESFASE_ESPERADO = '-05';   // Bogotá. Otro desfase -> la hora del nombre no se usa.
+var RX_FECHA = /{RX_FECHA_MEET}/;
+var DESFASE_ESPERADO = {_js(p.desfase_esperado)};   // {p.desfase_nota}. Otro desfase -> la hora del nombre no se usa.
 
 // Código de sala de Meet -> asignatura tal como aparece en el título del evento. Sirve para
-// desempatar cuando la ventana de tiempo da más de un candidato Y, sobre todo, para VETAR: si
-// la sala dice «Proyecto I» y el único encuentro de esa hora es de TG3, no se mueve. Una sala
+// desempatar cuando la ventana de tiempo da más de un candidato Y, sobre todo, para VETAR: {veto_ejemplo}
 // reconocida no clasifica por sí sola (no dice de qué sesión es), pero sí desmiente.
-// Fuente: carga_academica_2026.json -> cursos.<key>.meet (solo las salas REALES).
+{fuente_salas}
 {nota_salas}{salas_js}
 
-// Tabla día+hora -> curso. NO se usa como criterio (el Calendar ya la contiene, y además
-// contempla las reprogramaciones: TG2 dictó la Sesión 01 el viernes 14/08/2026). Está aquí
-// para leer el registro a ojo:
-{_tabla_horarios_js()}
+{nota_tabla}
+{_tabla_horarios_js(p)}
 
 // Nombres con los que buscar candidatos a ORIGEN_ID. SOLO para SUGERIR en el registro: el
 // script nunca elige «la primera que aparezca». Son los nombres que documenta Google en
-// inglés; si tu Drive los muestra traducidos no aparecerá ninguno, y entonces el id se copia
-// a mano de la URL (que es lo que hay que hacer de todas formas).
-var NOMBRES_ORIGEN = ['Meet Recordings', 'Google Meet'];
-var NOMBRES_LEGACY = ['Legacy Meet Recordings'];
+// inglés; si tu Drive los muestra traducidos no aparecerá ninguno, y entonces el enlace se
+// copia a mano de Drive (que es lo que hay que hacer de todas formas).
+var NOMBRES_ORIGEN = [{nombres_origen}];
+var NOMBRES_LEGACY = [{nombres_legacy}];
 
 var MIME_ATAJO = 'application/vnd.google-apps.shortcut';
 
 // Registro de lo movido — existe SOLO para deshacer, no para saber qué falta (eso lo dice el
 // propio origen). Misma convención que PROP_MEET en los .gs de Calendar.
-var PROP_MOVIDOS = 'GRABACIONES_MOVIDAS';
+var PROP_MOVIDOS = {_js(p.prop('MOVIDAS'))};
 var MAX_REGISTRO = 150;          // entradas
 var MAX_REGISTRO_BYTES = 8000;   // una propiedad de script no admite más de 9 KB
 
@@ -1245,7 +1686,7 @@ var MAX_REGISTRO_BYTES = 8000;   // una propiedad de script no admite más de 9 
 // vuelve a mirar en cada pasada, se come el cupo de MAX_ARCHIVOS y acaba tapando la clase de
 // ayer. Se apuntan con la fecha en que se descartaron y se reintentan cada REINTENTO_H horas
 // (por si aparece el encuentro en el Calendar o se pega la sala que faltaba).
-var PROP_DESCARTADAS = 'GRABACIONES_DESCARTADAS';
+var PROP_DESCARTADAS = {_js(p.prop('DESCARTADAS'))};
 var MAX_DESCARTADAS = 120;
 var REINTENTO_H = 24;
 
@@ -1253,7 +1694,7 @@ var REINTENTO_H = 24;
 // estaba). Sin memoria, cada pasada crearía un atajo nuevo en la carpeta que ven los
 // estudiantes. Al primer fallo se apunta; a partir del segundo intento no se vuelve a tocar
 // hasta que lo desbloquees con reintentarPendientes().
-var PROP_FALLIDAS = 'GRABACIONES_FALLIDAS';
+var PROP_FALLIDAS = {_js(p.prop('FALLIDAS'))};
 
 // Tope de archivos que se CLASIFICAN por pasada (cada uno puede costar una consulta al
 // Calendar) y de archivos cuyos metadatos se leen al barrer. Se ordena de más nuevo a más
@@ -1263,14 +1704,94 @@ var MAX_EXAMINADOS = 400;
 var MAX_PROFUNDIDAD = 4;   // raíz de Meet / subcarpeta de la reunión / ... y para de contar
 var LIMITE_MS = 270000;    // 4,5 min de los 6 que da Apps Script por ejecución
 """
-    return cabecera + GS_FUNCIONES
+    return cabecera + GS_ENLACES + _cuerpo_js(p)
 
 
 # ── runbook ──────────────────────────────────────────────────────────────────
-def _leeme_texto(sal: dict[str, str], dest: str) -> str:
-    faltan = [k for k in CURSOS if not meet_url(k).startswith("https://meet.google.com/")]
+def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
+    faltan = sin_sala(p)
+    nota_festivos = (
+        "Los cuatro lunes festivos de 2026 (17/08, 12/10, 02/11, 16/11) no tienen clase: una "
+        "grabación de esas fechas es una tutoría, un jurado o una reunión ajena y **no** debe "
+        "acabar en la carpeta que ven 100+ estudiantes."
+        if p.usa_repositorio_cun else
+        "Un día sin clase (festivo, receso, una reunión que no era del curso) no tiene "
+        "encuentro en el Calendar: la grabación se queda quieta, que es lo que debe pasar."
+    )
+    # Trozos de prosa que son de la CUN. Con `usa_repositorio_cun` se recomponen tal cual
+    # estaban; sin él, la misma idea sin nombrar cursos, grupos ni ficheros de este repo.
+    ejemplo_subject = (
+        p.rx_subject_ejemplos[0] if p.rx_subject_ejemplos else "Asignatura - Sesion 01"
+    )
+    if p.usa_repositorio_cun:
+        nombre_buscable = (
+            "con el nombre por el que el correo de bienvenida y el "
+            "`LEEME - Material para estudiantes` le dicen al estudiante que la busque: "
+            "«periodo - grupo - asignatura - sesión»."
+        )
+        donde_viven = "los dos en la raíz de `Cursos/` porque esto es"
+        paso_previo = (
+            "Esas series las crea `PRINCIPAL - Crear encuentros con invitados.gs` de cada "
+            "curso, y hoy **solo Proyecto I la tiene**: los otros cuatro siguen con "
+            "`\"meet\": \"\"` en `carga_academica_2026.json` y su serie no se ha creado "
+            "(ver «Pendientes» en `LEEME - Mapa de cursos y manuales.md`)."
+        )
+        donde_faltan = "en esas 6 aulas "
+        origen_titulos = "los genera este repositorio"
+        ejemplo_nombre = "26V04 - 54448 - Trabajo de Grado 2 - Sesion 01"
+        ejemplo_sala = (
+            "si la sala es la de Proyecto I y el único encuentro de esa hora es de TG3, **no "
+            "se mueve** (antes se movía, y el registro decía «+ sala Proyecto I» como si la "
+            "sala lo hubiera confirmado)."
+        )
+        crea_la_serie = (
+            "Créala con `PRINCIPAL - Crear encuentros con invitados.gs` del curso —**no "
+            "necesitas la sala de antemano: ese script la crea y la imprime**; el enlace que "
+            "imprime se pega en `carga_academica_2026.json → cursos.<key>.meet` y después se "
+            "regenera este `.gs`—"
+        )
+        donde_salas = "`carga_academica_2026.json`"
+        reprogramada = (
+            "—TG2 dictó la Sesión 01 el **viernes 14/08/2026**, no el lunes—"
+        )
+        # Dato de la cuenta @cun.edu.co: no se puede afirmar de la cuenta de otra institución.
+        sin_contrasena = (
+            "que esta cuenta **no puede generar**: el administrador de Workspace lo tiene "
+            "deshabilitado"
+        )
+    else:
+        nombre_buscable = (
+            "con el nombre canónico del encuentro, el mismo con el que lo titula tu Calendar "
+            f"(`{ejemplo_subject}`)."
+        )
+        donde_viven = "y esto es"
+        paso_previo = (
+            "Esas series las creas tú en el Calendar de esa misma cuenta, y sus títulos "
+            f"tienen que llevar la MARCA («{p.marca}») y encajar con `RX_SUBJECT`: las dos "
+            f"cosas las declara el perfil `{p.clave}`. "
+            + (p.nota_series or "")
+        ).strip()
+        donde_faltan = ""
+        origen_titulos = "los pone tu Calendar"
+        ejemplo_nombre = ejemplo_subject
+        ejemplo_sala = (
+            "si la sala es la de una asignatura y el único encuentro de esa hora es de otra, "
+            "**no se mueve**. La sala sirve para desmentir, no para confirmar."
+        )
+        crea_la_serie = (
+            "Créala en tu Calendar con un título que encaje con `RX_SUBJECT`; si esa "
+            "asignatura tiene sala fija de Meet, pégala en `salas` del perfil y regenera"
+        )
+        donde_salas = "`SALAS` (que sale de `salas` del perfil)"
+        reprogramada = (
+            "(una clase movida de día sigue teniendo su evento en la fecha real en que se dio)"
+        )
+        sin_contrasena = (
+            "y en muchas cuentas institucionales el administrador ni siquiera las permite"
+        )
+
     horarios = []
-    for k in CURSOS:
+    for k in p.cursos:
         dia, ini, fin = _horario(k)
         horarios.append(
             f"| {titulo_para_calendar(k)} | {'/'.join(carga_curso(k)['groups'])} | "
@@ -1281,46 +1802,55 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
     L = [
         "# Mover las grabaciones de Meet — automático, sin credenciales",
         "",
-        f"**5 asignaturas · 7 aulas · 1 sola carpeta destino** · barrido cada {CADA_MIN} minutos "
+        f"**{p.resumen_aulas}** · barrido cada {CADA_MIN} minutos "
         "· un único proyecto de Apps Script, instalado una vez",
         "",
-        "> **Archivo generado — no editar a mano.** Regenerar: "
-        "`python config/slides/build_apps_script_grabaciones.py`",
+        f"> **Archivo generado — no editar a mano.** Perfil `{p.clave}`. Regenerar: "
+        f"`python config/slides/build_apps_script_grabaciones.py {p.clave}`",
         "",
         "## Qué vas a conseguir",
         "",
         "Que cada grabación de Meet salga sola de donde Google la deja —la carpeta por omisión "
         "de Meet en tu Mi unidad: hoy «Meet Recordings»— y aparezca en la **carpeta única de "
-        f"grabaciones** ({GRABACIONES_URL}) con el nombre por el que el correo de bienvenida y "
-        "el `LEEME - Material para estudiantes` le dicen al estudiante que la busque: "
-        "«periodo - grupo - asignatura - sesión». **Unos diez minutos** de instalación, una "
-        "sola vez; después no hay que volver a tocarlo, ni el semestre que viene.",
+        f"grabaciones** ({p.destino_url}) {nombre_buscable} **Unos diez minutos** de "
+        "instalación, una sola vez; después no hay que volver a tocarlo, ni el semestre que "
+        "viene.",
         "",
-        "No necesita contraseña, ni token, ni contraseña de aplicación (que esta cuenta "
-        "**no puede generar**: el administrador de Workspace lo tiene deshabilitado), ni que "
+        f"No necesita contraseña, ni token, ni contraseña de aplicación ({sin_contrasena}), ni que "
         "tu computador esté encendido. Apps Script corre en los servidores de Google con tu "
         "propia sesión.",
         "",
-        "Son dos archivos, los dos en la raíz de `Cursos/` porque esto es **uno solo para los "
-        f"5 cursos** (no hay una copia por grupo): `{GS_NAME}`, que es el que se pega en Apps "
-        "Script, y este runbook.",
+        f"Son dos archivos, {donde_viven} **uno solo para "
+        f"todos los cursos** (no hay una copia por grupo): `{p.gs_name}`, que es el que se pega "
+        "en Apps Script, y este runbook.",
         "",
         "## ⚠️ Lo primero: un dato que pegar y un paso previo",
         "",
-        "**El dato:** `ORIGEN_ID` sale **vacío a propósito**. Es el id de la carpeta por "
+        "**El dato:** `ORIGEN_ID` sale **vacío a propósito**. Es la carpeta por "
         "omisión donde Meet te deja las grabaciones, en tu Mi unidad — **hoy «Meet "
         "Recordings»**; si tu Drive muestra en su lugar una carpeta **«Google Meet»** con una "
         "subcarpeta por reunión, usa esa (y si dentro tienes «Legacy Meet Recordings», es lo "
         "antiguo: se deja fuera salvo que pongas `ORIGEN_LEGACY_ID`). No está en el "
         "repositorio porque no se puede deducir, y el script tampoco elige «la primera "
         "carpeta con ese nombre»: Google ha movido y renombrado estas carpetas más de una "
-        "vez, así que **el id se pega a mano**.",
+        "vez, así que **el enlace se pega a mano** (o el id, si lo prefieres).",
         "",
-        "Cómo se saca: abre la carpeta en Drive y copia el tramo final de la URL.",
+        "Cómo se saca: abre la carpeta en Drive y **copia el enlace de la barra de "
+        "direcciones, entero**. No hay que sacarle el id a mano —eso es de donde salen los "
+        "errores tontos—: el propio `.gs` lo extrae, y entiende las cuatro formas en que "
+        "Drive reparte enlaces, además del id pelado.",
         "",
         "```",
-        "https://drive.google.com/drive/folders/1AbCdEfG...   <- esto es el id",
+        "https://drive.google.com/drive/folders/1AbCdEfG...              <- pégalo así, entero",
+        "https://drive.google.com/drive/u/0/folders/1AbCdEfG...          <- también vale",
+        "https://drive.google.com/drive/folders/1AbCdEfG...?usp=sharing  <- también",
+        "https://drive.google.com/open?id=1AbCdEfG...                    <- también",
+        "1AbCdEfG...                                                     <- y el id pelado",
         "```",
+        "",
+        "Si pegas por error el enlace de un **archivo** (los que llevan `/d/`) en vez del de la "
+        "carpeta, el registro te lo dice con esas palabras y esa constante queda vacía: el "
+        "script avisa y no mueve nada, nunca adivina.",
         "",
         "Mientras `ORIGEN_ID` esté vacío el script **no mueve nada** y te dice que falta; "
         "`verificarGrabaciones()` incluso te lista candidatos por nombre para copiar y pegar.",
@@ -1328,11 +1858,7 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "**El paso previo:** los encuentros de la asignatura tienen que **existir en tu "
         "Calendar**. Cuando Meet no nombra el archivo con el título del evento (pasa siempre "
         "que la reunión se inicia desde la sala), lo único que puede decir de qué clase es "
-        "resulta ser el propio Calendar. Esas series las crea "
-        "`PRINCIPAL - Crear encuentros con invitados.gs` de cada curso, y hoy **solo Proyecto "
-        "I la tiene**: los otros cuatro siguen con `\"meet\": \"\"` en "
-        "`carga_academica_2026.json` y su serie no se ha creado (ver «Pendientes» en "
-        "`LEEME - Mapa de cursos y manuales.md`). Sin eso, en esas 6 aulas cada grabación "
+        f"resulta ser el propio Calendar. {paso_previo} Sin eso, {donde_faltan}cada grabación "
         "saldrá en `--- sin clasificar ---` con «no hay ningún encuentro en el Calendar…» y se "
         "quedará quieta: no es que el automatismo no sirva, es que falta el paso anterior.",
         "",
@@ -1345,13 +1871,14 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "",
         "## Paso a paso",
         "",
-        "### 1. Abre Apps Script con la cuenta CUN",
+        f"### 1. Abre Apps Script con la cuenta {p.institucion}",
         "",
-        f"**https://script.google.com** con **{DOCENTE_CORREO}**. Tiene que ser la cuenta del "
+        f"**https://script.google.com** con **{p.docente_correo}**. Tiene que ser la cuenta del "
         "**organizador** de las clases: las grabaciones nacen en *su* Mi unidad y ningún script "
         "puede ver el Drive de otra persona. **Nuevo proyecto** → borra el `function "
         "myFunction()` de fábrica → pega **todo** el contenido de "
-        f"`{GS_NAME}` → guarda. Ponle un nombre reconocible al proyecto: «CUN - Grabaciones».",
+        f"`{p.gs_name}` → guarda. Ponle un nombre reconocible al proyecto: "
+        f"«{p.proyecto_sugerido}».",
         "",
         "No hace falta añadir ningún servicio avanzado. Este script usa solo Drive, Calendar y "
         "los disparadores, que vienen de serie.",
@@ -1361,17 +1888,19 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "En el bloque `// ─── CONFIGURACIÓN ───`, la única constante que sale vacía:",
         "",
         "```js",
-        "var ORIGEN_ID = '';   // <- pega aquí el id de tu carpeta de grabaciones de Meet",
+        "var ORIGEN_ID = '';   // <- pega aquí el ENLACE de tu carpeta de grabaciones de Meet",
         "```",
         "",
-        "Guarda. Lo demás ya viene puesto desde el repositorio: la carpeta destino "
-        f"(`{dest}`), el calendario (`primary`) y las salas de Meet conocidas.",
+        "Guarda. Lo demás ya viene puesto desde el perfil: la carpeta destino "
+        f"(`{p.destino_url}` → id `{dest}`), el calendario (`{p.calendario_id}`) y las salas de "
+        "Meet conocidas.",
         "",
         "### 3. Ejecuta `verificarGrabaciones()` — siempre, antes que nada",
         "",
         "Elige **`verificarGrabaciones`** en el desplegable de arriba y pulsa **Ejecutar**.",
         "",
-        "La primera vez Google pide permisos: **Revisar permisos** → tu cuenta CUN → «Google no "
+        "La primera vez Google pide permisos: **Revisar permisos** → tu cuenta "
+        f"{p.institucion} → «Google no "
         "ha verificado esta aplicación» → **Configuración avanzada** → **Ir a (nombre del "
         "proyecto)** → **Permitir**. Es tu propio script; el aviso sale porque no está "
         "publicado en ninguna tienda.",
@@ -1380,7 +1909,8 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "escribe en el registro (*Ver → Registro de ejecución*):",
         "",
         "- el modo (`SIMULACIÓN` / `REAL`), la zona horaria y los márgenes;",
-        "- el **calendario** con su nombre y su id — comprueba que es el tuyo de CUN;",
+        f"- el **calendario** con su nombre y su id — comprueba que es el tuyo de "
+        f"{p.institucion};",
         "- las carpetas **ORIGEN** y **DESTINO** con nombre e id;",
         "- si hay disparador instalado y cuántos movimientos se pueden deshacer;",
         "- un bloque **`--- se moverían ---`** con una línea por archivo, el criterio con el que "
@@ -1468,13 +1998,13 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "Tres criterios en cascada, y una cuarta salida que es **no tocar**:",
         "",
         "1. **El nombre ya trae el subject canónico.** Meet nombra el archivo con el título del "
-        "evento desde el que se inició la reunión, y esos títulos los genera este repositorio "
-        "(`26V04 - 54448 - Trabajo de Grado 2 - Sesion 01`). Se mueve tal cual, sin renombrar.",
+        f"evento desde el que se inició la reunión, y esos títulos {origen_titulos} "
+        f"(`{ejemplo_nombre}`). Se mueve tal cual, sin renombrar.",
         "2. **Cruce con tu Calendar por fecha y hora.** Si el nombre no trae el subject (pasa "
         "cuando la reunión se inicia desde la sala y no desde el evento), busca el encuentro de "
         "esa hora en tu calendario y, si hay **exactamente uno**, mueve y renombra al nombre "
-        "canónico. El Calendar es la autoridad: ya contiene las reprogramaciones —TG2 dictó la "
-        "Sesión 01 el **viernes 14/08/2026**, no el lunes— y por eso el script **sigue "
+        f"canónico. El Calendar es la autoridad: ya contiene las reprogramaciones {reprogramada}"
+        " y por eso el script **sigue "
         "funcionando el semestre que viene sin tocar una línea**. Dos detalles que evitan "
         "publicar una reunión ajena con nombre de clase: la marca de tiempo del nombre tiene "
         "que caer **dentro** del encuentro (se admiten 15 min antes del inicio, nada después "
@@ -1482,19 +2012,18 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "archivo, que es posterior a la clase: entonces se mira hacia **atrás** (6 h) y solo "
         "valen encuentros ya terminados. Nunca «el día del archivo» — a las 00:20 ese día ya "
         "es el siguiente.",
-        "3. **El código de sala de Meet**, para desempatar y sobre todo para **desmentir**: si "
-        "la sala es la de Proyecto I y el único encuentro de esa hora es de TG3, **no se "
-        "mueve** (antes se movía, y el registro decía «+ sala Proyecto I» como si la sala lo "
-        "hubiera confirmado).",
-        "4. **Si no lo sabe, no lo mueve.** Sale en `--- sin clasificar ---` con el motivo. Los "
-        "cuatro lunes festivos de 2026 (17/08, 12/10, 02/11, 16/11) no tienen clase: una "
-        "grabación de esas fechas es una tutoría, un jurado o una reunión ajena y **no** debe "
-        "acabar en la carpeta que ven 100+ estudiantes.",
-        "",
-        "| Asignatura | Grupos | Horario | ¿Sala en config? |",
-        "|---|---|---|---|",
+        "3. **El código de sala de Meet**, para desempatar y sobre todo para **desmentir**: "
+        f"{ejemplo_sala}",
+        "4. **Si no lo sabe, no lo mueve.** Sale en `--- sin clasificar ---` con el motivo. "
+        + nota_festivos,
     ]
-    L += horarios
+    if p.cursos:
+        L += [
+            "",
+            "| Asignatura | Grupos | Horario | ¿Sala en config? |",
+            "|---|---|---|---|",
+        ]
+        L += horarios
     if faltan:
         L += [
             "",
@@ -1505,6 +2034,69 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
             "cursos.<key>.meet` y después se regenera este `.gs`.",
         ]
     L += [
+        "",
+        "## Otra institución: los perfiles",
+        "",
+        "Este `.gs` y este runbook los escribe un generador que lleva **un perfil por "
+        "institución** (`config/slides/build_apps_script_grabaciones.py` → `PERFILES`). Sin "
+        f"argumentos usa `{PERFIL_POR_OMISION}`, que es lo de siempre; con un argumento, ese "
+        "perfil:",
+        "",
+        "```",
+        "python config/slides/build_apps_script_grabaciones.py            # "
+        f"{PERFIL_POR_OMISION}",
+        "python config/slides/build_apps_script_grabaciones.py PLANTILLA  # otra institución",
+        "```",
+        "",
+        "Si le pides un perfil que no existe, te lista los que hay y no escribe nada. Cada "
+        "perfil declara: nombre de la institución y correo, zona horaria y desfase UTC "
+        "esperado, la marca que identifica un encuentro en el título del evento, el patrón del "
+        "asunto, los nombres de carpeta de origen que se usan para sugerir candidatos, el id "
+        "del calendario, las salas de Meet y **los enlaces de las carpetas de Drive, pegados "
+        "tal cual**. Los perfiles que no son el de la CUN escriben sus dos archivos con el "
+        "nombre sufijado, así que no se pisan.",
+        "",
+        "## Lo que NO se puede parametrizar",
+        "",
+        "Un perfil cambia constantes, no supuestos. Estos siguen ahí, y conviene leerlos antes "
+        "de prometerle esto a otra institución:",
+        "",
+        "- **La clasificación va por el Calendar, y eso no es opcional.** El número de sesión "
+        "del *nombre del archivo* no sirve: está medido —los 19 artefactos reales de la carpeta "
+        "decían todos «Sesion 01»— porque Meet congela el título del evento con el que se "
+        "estrenó la sala. Así que la institución necesita **tener los encuentros en el "
+        "Calendar** y titularlos de forma reconocible (`MARCA` y `RX_SUBJECT`). Sin eso, el "
+        "script no clasifica nada y todo se queda quieto: no falla, no hace.",
+        "- **El nombre que Meet le pone al archivo es de Meet, no de la institución.** "
+        "`RX_FECHA` es la misma para todos los perfiles a propósito: no está documentada por "
+        "Google y ya cambió una vez sin avisar. Si cambia otra vez, se arregla en un sitio. "
+        "**Y hoy está sin arreglar:** medido sobre los archivos reales de la carpeta, ese "
+        "patrón **no caza ninguno** —Meet los nombra `2026 08 13 17 00 GMT-05 00`, con "
+        "espacios y sin dos puntos—, así que la hora del nombre nunca se usa y todo pasa por "
+        "el respaldo aproximado (fecha de creación, mirando hacia atrás). Corregirlo cambia el "
+        "comportamiento y se decide aparte; y mientras no cace, poner otro "
+        "`DESFASE_ESPERADO` en un perfil nuevo no cambia nada.",
+        "- **`DESFASE_ESPERADO` es uno solo.** Vale donde no hay horario de verano (Colombia). "
+        "Donde sí lo hay, media parte del año la hora del nombre se descarta y todo cae al "
+        "respaldo por fecha de creación: sale más «AMBIGUO», nunca un movimiento erróneo. Y un "
+        "huso a media hora (`+05:30`) no se distingue de `+05`.",
+        "- **Una cuenta, un Drive, un organizador.** Apps Script solo ve el Drive de su dueño. "
+        "Si la clase la graba otra persona, el archivo nace en *su* Mi unidad y ningún script "
+        "tuyo lo ve. Se instala un proyecto por organizador; no es un parámetro.",
+        "- **Supone Mi unidad, no unidades compartidas.** Con una unidad compartida `DriveApp` "
+        "ya no basta y mover el vídeo allí transfiere su propiedad. Eso sería otro camino de "
+        "código, no otro valor en el perfil.",
+        "- **Los topes son cuota de Google.** `CADA_MIN`, `LIMITE_MS`, `MAX_*`: se pueden bajar, "
+        "no subir. Y la cuota de disparadores de una cuenta **sin** Workspace es bastante "
+        "menor: ahí `CADA_MIN = 30` deja de caber y hay que espaciarlo más.",
+        "- **Las carpetas de origen no se eligen por nombre, nunca.** Los nombres los pone "
+        "Google (y los renombró en julio de 2026): `NOMBRES_ORIGEN` solo sirve para *sugerir* "
+        "candidatos en el registro. El id —o el enlace— lo pega una persona.",
+        "- **La prosa del `.gs` es de la CUN.** Habla de «estudiantes», de «tutorías y "
+        "jurados», del correo de bienvenida y de rutas de este repositorio. Se deja tal cual a "
+        "propósito: parametrizar los textos del cuerpo obligaría a tocar el código que ya "
+        "funciona, y ese es el riesgo que no compensa. Léelos como ejemplos, no como "
+        "descripción de tu institución.",
         "",
         "## Si algo sale mal",
         "",
@@ -1521,15 +2113,13 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "| Un archivo sale en `--- sin clasificar ---` con `AMBIGUO` | Había dos encuentros que "
         "encajaban a esa hora. Muévelo a mano; el script no adivina. |",
         "| `no hay ningún encuentro en el Calendar …` | Lo más probable: **la serie de "
-        "encuentros de ese curso todavía no existe**. Créala con `PRINCIPAL - Crear encuentros "
-        "con invitados.gs` del curso —**no necesitas la sala de antemano: ese script la crea y "
-        "la imprime**; el enlace que imprime se pega en `carga_academica_2026.json → "
-        "cursos.<key>.meet` y después se regenera este `.gs`— y ejecuta `reintentarPendientes()`. Si "
+        f"encuentros de ese curso todavía no existe**. {crea_la_serie} y ejecuta "
+        "`reintentarPendientes()`. Si "
         "la serie ya existe y aun así sale esto, era una tutoría, un jurado o una reunión "
         "ajena: **no** debe publicarse. |",
         "| `la sala dice «X» y … no es de esa asignatura` | "
         "El desempate por sala **desmintió** la clasificación: se quedó quieto a propósito. "
-        "Comprueba la sala en `carga_academica_2026.json` y, si el archivo era de clase, muévelo "
+        f"Comprueba la sala en {donde_salas} y, si el archivo era de clase, muévelo "
         "a mano. |",
         "| `sin encuentro en el Calendar … (fecha aproximada)` | El nombre no traía hora y hubo "
         "que usar la fecha de creación del archivo (se buscan encuentros terminados en las 6 h "
@@ -1582,51 +2172,93 @@ def _leeme_texto(sal: dict[str, str], dest: str) -> str:
         "",
         "## De dónde sale cada dato",
         "",
-        f"- Carpeta destino `{dest}` — de `config/cursos/carga_academica.py` → "
-        "`GRABACIONES_URL`, que es **una sola para los 5 cursos y todos los periodos** y ya "
-        "está publicada en el correo de bienvenida "
-        "(`config/slides/build_correo_bienvenida.py`) y en el LEEME del estudiante "
-        "(`config/slides/sync_clases_estudiantes.py`). Por eso no hay una carpeta por "
-        "asignatura: cambiarla dejaría mintiendo documentos que ya están en manos de los "
-        "estudiantes.",
-        "- Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → "
-        "`subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula "
-        "todos los periodos.",
-        "- Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.",
-        "- Los eventos del calendario los crea "
-        "`config/slides/build_calendar_encuentros.py` → "
-        "`PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en "
-        "`<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.",
+        f"- Perfil `{p.clave}` — `config/slides/build_apps_script_grabaciones.py` → `PERFILES`. "
+        "Ahí están la zona horaria, el desfase, la marca, el patrón del asunto, el calendario "
+        "y los enlaces de las carpetas.",
+    ]
+    # Las fuentes son rutas de ESTE repositorio: solo valen para un perfil respaldado por él.
+    if p.usa_repositorio_cun:
+        L += [
+            f"- Carpeta destino `{dest}` — de `config/cursos/carga_academica.py` → "
+            "`GRABACIONES_URL`, que es **una sola para los 5 cursos y todos los periodos** y ya "
+            "está publicada en el correo de bienvenida "
+            "(`config/slides/build_correo_bienvenida.py`) y en el LEEME del estudiante "
+            "(`config/slides/sync_clases_estudiantes.py`). Por eso no hay una carpeta por "
+            "asignatura: cambiarla dejaría mintiendo documentos que ya están en manos de los "
+            "estudiantes.",
+            "- Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → "
+            "`subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula "
+            "todos los periodos.",
+            "- Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.",
+            "- Los eventos del calendario los crea "
+            "`config/slides/build_calendar_encuentros.py` → "
+            "`PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en "
+            "`<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.",
+        ]
+    else:
+        L += [
+            f"- Carpeta destino — el enlace que el perfil `{p.clave}` trae en `destino_url`, "
+            f"pegado tal cual (`{p.destino_url or 'todavía SIN RELLENAR'}`"
+            + (f" → id `{dest}`" if dest else "")
+            + "). Si esa carpeta ya está publicada a los estudiantes, cambiarla dejaría "
+            "mintiendo lo que ya está en sus manos: se cambia en el perfil y se regenera.",
+            "- Patrón del nombre buscable — `rx_subject` del perfil, que es la nomenclatura con "
+            "la que tu institución titula los encuentros del Calendar.",
+            "- Salas de Meet — `salas` del perfil: `{código: nombre de la asignatura tal como "
+            "aparece en el título del evento}`.",
+            "- Los eventos del calendario los crea quien monte la serie de encuentros en tu "
+            "institución. Este script **los lee**, no los toca.",
+        ]
+    L += [
         "",
         "Si cambia cualquiera de esos datos, regenera: "
-        "`python config/slides/build_apps_script_grabaciones.py`.",
+        f"`python config/slides/build_apps_script_grabaciones.py {p.clave}`.",
     ]
     return "\n".join(L) + "\n"
 
 
 def main(argv: list[str]) -> int:
+    """Sin argumentos, el perfil de la CUN: la invocación de siempre sigue igual."""
+    arg = (argv[0].strip() if argv else "")
+    if arg in ("-h", "--help", "--perfiles"):
+        print("Uso: python config/slides/build_apps_script_grabaciones.py [PERFIL]")
+        print(f"     sin PERFIL se usa {PERFIL_POR_OMISION}")
+        for k in sorted(PERFILES):
+            q = PERFILES[k]
+            print(f"     {k:<10} {q.institucion} · {q.timezone} · {q.gs_name}")
+        return 0
+
+    p = perfil(arg or None)
     raiz = workspace_root()
-    dest = destino_id()
-    sal = salas()
+    dest = destino_id(p)
+    sal = salas_del_perfil(p)
 
-    gs = raiz / GS_NAME
-    gs.write_text(_gs_texto(sal, dest), encoding="utf-8")
-    leeme = raiz / LEEME_NAME
-    leeme.write_text(_leeme_texto(sal, dest), encoding="utf-8")
+    gs = raiz / p.gs_name
+    gs.write_text(_gs_texto(p, sal), encoding="utf-8")
+    leeme = raiz / p.leeme_name
+    leeme.write_text(_leeme_texto(p, sal, dest), encoding="utf-8")
 
-    for viejo in GS_LEGACY:
-        p = raiz / viejo
-        if viejo != GS_NAME and p.exists():
-            try:
-                p.unlink()
-            except OSError:
-                pass
+    # Los nombres viejos solo los limpia el perfil por omisión: los archivos de otro perfil
+    # llevan sufijo y no son basura de una versión anterior de este build.
+    if not p.sufijo:
+        for viejo in GS_LEGACY:
+            ruta = raiz / viejo
+            if viejo != p.gs_name and ruta.exists():
+                try:
+                    ruta.unlink()
+                except OSError:
+                    pass
 
-    faltan = [k for k in CURSOS if not meet_url(k).startswith("https://meet.google.com/")]
-    print(f"OK {GS_NAME} · destino={dest} · salas en config={len(sal)}/{len(CURSOS)}")
-    print(f"   runbook: {LEEME_NAME}")
-    print("   ORIGEN_ID sale VACÍO a propósito: el id de la carpeta por omisión de Meet "
-          "(hoy «Meet Recordings») lo pega el docente; no existe en el repositorio.")
+    faltan = sin_sala(p)
+    total = len(p.cursos) or len(sal)
+    print(f"OK {p.gs_name} · perfil={p.clave} · destino={dest or '(SIN DESTINO)'} · "
+          f"salas en config={len(sal)}/{total}")
+    print(f"   runbook: {p.leeme_name}")
+    print("   ORIGEN_ID sale VACÍO a propósito: la carpeta por omisión de Meet (hoy «Meet "
+          "Recordings») la pega el docente — y ahora acepta el ENLACE tal cual, no solo el id.")
+    if not dest:
+        print(f"   AVISO: el perfil {p.clave} no trae destino_url: pega el enlace de la carpeta "
+              "de grabaciones en PERFILES antes de usarlo.")
     if faltan:
         print("   sin sala en carga_academica_2026.json -> cursos.<key>.meet: "
               + ", ".join(faltan))

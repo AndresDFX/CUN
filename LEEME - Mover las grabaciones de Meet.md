@@ -2,7 +2,7 @@
 
 **5 asignaturas · 7 aulas · 1 sola carpeta destino** · barrido cada 30 minutos · un único proyecto de Apps Script, instalado una vez
 
-> **Archivo generado — no editar a mano.** Regenerar: `python config/slides/build_apps_script_grabaciones.py`
+> **Archivo generado — no editar a mano.** Perfil `CUN`. Regenerar: `python config/slides/build_apps_script_grabaciones.py CUN`
 
 ## Qué vas a conseguir
 
@@ -10,17 +10,23 @@ Que cada grabación de Meet salga sola de donde Google la deja —la carpeta por
 
 No necesita contraseña, ni token, ni contraseña de aplicación (que esta cuenta **no puede generar**: el administrador de Workspace lo tiene deshabilitado), ni que tu computador esté encendido. Apps Script corre en los servidores de Google con tu propia sesión.
 
-Son dos archivos, los dos en la raíz de `Cursos/` porque esto es **uno solo para los 5 cursos** (no hay una copia por grupo): `PRINCIPAL - Mover grabaciones de Meet.gs`, que es el que se pega en Apps Script, y este runbook.
+Son dos archivos, los dos en la raíz de `Cursos/` porque esto es **uno solo para todos los cursos** (no hay una copia por grupo): `PRINCIPAL - Mover grabaciones de Meet.gs`, que es el que se pega en Apps Script, y este runbook.
 
 ## ⚠️ Lo primero: un dato que pegar y un paso previo
 
-**El dato:** `ORIGEN_ID` sale **vacío a propósito**. Es el id de la carpeta por omisión donde Meet te deja las grabaciones, en tu Mi unidad — **hoy «Meet Recordings»**; si tu Drive muestra en su lugar una carpeta **«Google Meet»** con una subcarpeta por reunión, usa esa (y si dentro tienes «Legacy Meet Recordings», es lo antiguo: se deja fuera salvo que pongas `ORIGEN_LEGACY_ID`). No está en el repositorio porque no se puede deducir, y el script tampoco elige «la primera carpeta con ese nombre»: Google ha movido y renombrado estas carpetas más de una vez, así que **el id se pega a mano**.
+**El dato:** `ORIGEN_ID` sale **vacío a propósito**. Es la carpeta por omisión donde Meet te deja las grabaciones, en tu Mi unidad — **hoy «Meet Recordings»**; si tu Drive muestra en su lugar una carpeta **«Google Meet»** con una subcarpeta por reunión, usa esa (y si dentro tienes «Legacy Meet Recordings», es lo antiguo: se deja fuera salvo que pongas `ORIGEN_LEGACY_ID`). No está en el repositorio porque no se puede deducir, y el script tampoco elige «la primera carpeta con ese nombre»: Google ha movido y renombrado estas carpetas más de una vez, así que **el enlace se pega a mano** (o el id, si lo prefieres).
 
-Cómo se saca: abre la carpeta en Drive y copia el tramo final de la URL.
+Cómo se saca: abre la carpeta en Drive y **copia el enlace de la barra de direcciones, entero**. No hay que sacarle el id a mano —eso es de donde salen los errores tontos—: el propio `.gs` lo extrae, y entiende las cuatro formas en que Drive reparte enlaces, además del id pelado.
 
 ```
-https://drive.google.com/drive/folders/1AbCdEfG...   <- esto es el id
+https://drive.google.com/drive/folders/1AbCdEfG...              <- pégalo así, entero
+https://drive.google.com/drive/u/0/folders/1AbCdEfG...          <- también vale
+https://drive.google.com/drive/folders/1AbCdEfG...?usp=sharing  <- también
+https://drive.google.com/open?id=1AbCdEfG...                    <- también
+1AbCdEfG...                                                     <- y el id pelado
 ```
+
+Si pegas por error el enlace de un **archivo** (los que llevan `/d/`) en vez del de la carpeta, el registro te lo dice con esas palabras y esa constante queda vacía: el script avisa y no mueve nada, nunca adivina.
 
 Mientras `ORIGEN_ID` esté vacío el script **no mueve nada** y te dice que falta; `verificarGrabaciones()` incluso te lista candidatos por nombre para copiar y pegar.
 
@@ -41,10 +47,10 @@ No hace falta añadir ningún servicio avanzado. Este script usa solo Drive, Cal
 En el bloque `// ─── CONFIGURACIÓN ───`, la única constante que sale vacía:
 
 ```js
-var ORIGEN_ID = '';   // <- pega aquí el id de tu carpeta de grabaciones de Meet
+var ORIGEN_ID = '';   // <- pega aquí el ENLACE de tu carpeta de grabaciones de Meet
 ```
 
-Guarda. Lo demás ya viene puesto desde el repositorio: la carpeta destino (`1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ`), el calendario (`primary`) y las salas de Meet conocidas.
+Guarda. Lo demás ya viene puesto desde el perfil: la carpeta destino (`https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing` → id `1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ`), el calendario (`primary`) y las salas de Meet conocidas.
 
 ### 3. Ejecuta `verificarGrabaciones()` — siempre, antes que nada
 
@@ -120,6 +126,30 @@ Tres criterios en cascada, y una cuarta salida que es **no tocar**:
 
 Las salas «pendientes» no impiden nada (el criterio 2 no las necesita), pero conviene pegarlas: son la red de seguridad cuando una grabación no trae el nombre del evento. Las imprime el propio `PRINCIPAL - Crear encuentros con invitados.gs` al crear la serie; van a `config/cursos/carga_academica_2026.json → cursos.<key>.meet` y después se regenera este `.gs`.
 
+## Otra institución: los perfiles
+
+Este `.gs` y este runbook los escribe un generador que lleva **un perfil por institución** (`config/slides/build_apps_script_grabaciones.py` → `PERFILES`). Sin argumentos usa `CUN`, que es lo de siempre; con un argumento, ese perfil:
+
+```
+python config/slides/build_apps_script_grabaciones.py            # CUN
+python config/slides/build_apps_script_grabaciones.py PLANTILLA  # otra institución
+```
+
+Si le pides un perfil que no existe, te lista los que hay y no escribe nada. Cada perfil declara: nombre de la institución y correo, zona horaria y desfase UTC esperado, la marca que identifica un encuentro en el título del evento, el patrón del asunto, los nombres de carpeta de origen que se usan para sugerir candidatos, el id del calendario, las salas de Meet y **los enlaces de las carpetas de Drive, pegados tal cual**. Los perfiles que no son el de la CUN escriben sus dos archivos con el nombre sufijado, así que no se pisan.
+
+## Lo que NO se puede parametrizar
+
+Un perfil cambia constantes, no supuestos. Estos siguen ahí, y conviene leerlos antes de prometerle esto a otra institución:
+
+- **La clasificación va por el Calendar, y eso no es opcional.** El número de sesión del *nombre del archivo* no sirve: está medido —los 19 artefactos reales de la carpeta decían todos «Sesion 01»— porque Meet congela el título del evento con el que se estrenó la sala. Así que la institución necesita **tener los encuentros en el Calendar** y titularlos de forma reconocible (`MARCA` y `RX_SUBJECT`). Sin eso, el script no clasifica nada y todo se queda quieto: no falla, no hace.
+- **El nombre que Meet le pone al archivo es de Meet, no de la institución.** `RX_FECHA` es la misma para todos los perfiles a propósito: no está documentada por Google y ya cambió una vez sin avisar. Si cambia otra vez, se arregla en un sitio. **Y hoy está sin arreglar:** medido sobre los archivos reales de la carpeta, ese patrón **no caza ninguno** —Meet los nombra `2026 08 13 17 00 GMT-05 00`, con espacios y sin dos puntos—, así que la hora del nombre nunca se usa y todo pasa por el respaldo aproximado (fecha de creación, mirando hacia atrás). Corregirlo cambia el comportamiento y se decide aparte; y mientras no cace, poner otro `DESFASE_ESPERADO` en un perfil nuevo no cambia nada.
+- **`DESFASE_ESPERADO` es uno solo.** Vale donde no hay horario de verano (Colombia). Donde sí lo hay, media parte del año la hora del nombre se descarta y todo cae al respaldo por fecha de creación: sale más «AMBIGUO», nunca un movimiento erróneo. Y un huso a media hora (`+05:30`) no se distingue de `+05`.
+- **Una cuenta, un Drive, un organizador.** Apps Script solo ve el Drive de su dueño. Si la clase la graba otra persona, el archivo nace en *su* Mi unidad y ningún script tuyo lo ve. Se instala un proyecto por organizador; no es un parámetro.
+- **Supone Mi unidad, no unidades compartidas.** Con una unidad compartida `DriveApp` ya no basta y mover el vídeo allí transfiere su propiedad. Eso sería otro camino de código, no otro valor en el perfil.
+- **Los topes son cuota de Google.** `CADA_MIN`, `LIMITE_MS`, `MAX_*`: se pueden bajar, no subir. Y la cuota de disparadores de una cuenta **sin** Workspace es bastante menor: ahí `CADA_MIN = 30` deja de caber y hay que espaciarlo más.
+- **Las carpetas de origen no se eligen por nombre, nunca.** Los nombres los pone Google (y los renombró en julio de 2026): `NOMBRES_ORIGEN` solo sirve para *sugerir* candidatos en el registro. El id —o el enlace— lo pega una persona.
+- **La prosa del `.gs` es de la CUN.** Habla de «estudiantes», de «tutorías y jurados», del correo de bienvenida y de rutas de este repositorio. Se deja tal cual a propósito: parametrizar los textos del cuerpo obligaría a tocar el código que ya funciona, y ese es el riesgo que no compensa. Léelos como ejemplos, no como descripción de tu institución.
+
 ## Si algo sale mal
 
 | Lo que ves | Qué pasa y qué haces |
@@ -149,9 +179,10 @@ Las salas «pendientes» no impiden nada (el criterio 2 no las necesita), pero c
 
 ## De dónde sale cada dato
 
+- Perfil `CUN` — `config/slides/build_apps_script_grabaciones.py` → `PERFILES`. Ahí están la zona horaria, el desfase, la marca, el patrón del asunto, el calendario y los enlaces de las carpetas.
 - Carpeta destino `1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ` — de `config/cursos/carga_academica.py` → `GRABACIONES_URL`, que es **una sola para los 5 cursos y todos los periodos** y ya está publicada en el correo de bienvenida (`config/slides/build_correo_bienvenida.py`) y en el LEEME del estudiante (`config/slides/sync_clases_estudiantes.py`). Por eso no hay una carpeta por asignatura: cambiarla dejaría mintiendo documentos que ya están en manos de los estudiantes.
 - Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → `subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula todos los periodos.
 - Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.
 - Los eventos del calendario los crea `config/slides/build_calendar_encuentros.py` → `PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en `<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.
 
-Si cambia cualquiera de esos datos, regenera: `python config/slides/build_apps_script_grabaciones.py`.
+Si cambia cualquiera de esos datos, regenera: `python config/slides/build_apps_script_grabaciones.py CUN`.
