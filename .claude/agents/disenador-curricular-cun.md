@@ -132,7 +132,7 @@ Genera este deck una sola vez por asignatura/grupo. Estructura sugerida (ajústa
 **SLIDE 8 — RECURSOS**
 - Plataforma (CDigital/Moodle), bibliografía del Syllabus, plantillas (APA CUN si aplica), gestor de citas (Mendeley si el Syllabus lo menciona).
 - **Drive de clases** = carpeta `Clases/` del curso (de ahí se baja el material, incluido el de las clases autónomas). Mientras no exista la URL: marcador de posición `[URL Drive — carpeta Clases/ del curso · <Curso>]`, igual que el de Meet — nunca inventes un enlace de Drive.
-- **Grabaciones de los encuentros:** carpeta única para todos los cursos y periodos — https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing — y se buscan por el **nombre del evento**: «periodo - grupo - asignatura - sesión».
+- **Grabaciones de los encuentros:** carpeta única para todos los cursos y periodos — https://drive.google.com/drive/folders/1TPGCeqIsaCQsh4-n5sniy68EnE7HYOal?usp=sharing — y se buscan por el **nombre del evento**: «periodo - grupo - asignatura - sesión».
 
 **SLIDE 9 — IMPORTANTE**
 - Fechas críticas (apertura/cierre de cada corte o ACA), fecha oficial de cierre del periodo, canales de atención institucionales si el instructivo los trae.

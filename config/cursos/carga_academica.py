@@ -96,7 +96,7 @@ def slido_url(key: str, curso_corto: str | None = None) -> str:
 # EVENTO del calendario: «periodo - grupo - asignatura - sesion»
 # (lo arma `sesiones_cun.subject_encuentro`; por eso el subject lleva el periodo delante).
 GRABACIONES_URL = (
-    "https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing"
+    "https://drive.google.com/drive/folders/1TPGCeqIsaCQsh4-n5sniy68EnE7HYOal?usp=sharing"
 )
 
 

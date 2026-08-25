@@ -13,10 +13,12 @@ POR QUÉ EXISTE
     (`sync_clases_estudiantes.py`) prometen otra cosa: que TODAS las grabaciones están en
     UNA carpeta —`carga_academica.GRABACIONES_URL`— y que el vídeo se encuentra buscando
     «periodo - grupo - asignatura - sesion». Esa carpeta sigue siendo una sola y ese nombre
-    sigue siendo el que se busca: lo que cambió el 25/08/2026 es que dentro hay UNA SUBCARPETA
-    POR SESIÓN, con ese mismo nombre, porque cada encuentro deja TRES archivos (vídeo,
-    transcripción y chat) y sueltos se mezclaban con los de las demás sesiones. Lo gobierna
-    `AGRUPAR_POR_MATERIA` en el .gs. Mover a mano cada semana es lo que el docente
+    sigue siendo el que se busca —lo lleva cada ARCHIVO—: lo que cambió el 25/08/2026 es que
+    dentro hay UNA SUBCARPETA POR ASIGNATURA, porque cada encuentro deja TRES archivos (vídeo,
+    transcripción y chat) y sueltos se mezclaban con los de las demás asignaturas. Lo gobiernan
+    `AGRUPAR_POR_MATERIA` y `CARPETA_MATERIA_CON_PERIODO` en el .gs; la segunda sale en false
+    porque el docente ya creó a mano esas cinco carpetas con el nombre pelado de la asignatura,
+    sin periodo ni grupo delante. Mover a mano cada semana es lo que el docente
     quiere dejar de hacer, y no hay ajuste de administrador ni paso de Workspace Studio que
     mueva un archivo de Drive: hoy la única vía es un script.
 
@@ -128,7 +130,15 @@ HORAS_ATRAS_APROX = 6  # sin hora en el nombre: se mira hacia ATRÁS desde la cr
 # renunciaba a la señal más fiable que hay en el nombre.
 # Ahora acepta los dos formatos: separador «-», «_» o espacio en la fecha y en la hora, y «GMT-05»
 # con o sin espacio detrás. Comprobado: 7 de 7 sobre nombres reales y sobre los del formato viejo.
-RX_FECHA_MEET = r"(\d{4})[-_ ](\d{2})[-_ ](\d{2})[ _T]+(\d{2})[:._h ](\d{2})(?:[^)]*?GMT\s*([+-]\d{2}))?"
+# Corregida OTRA VEZ el 25/08/2026, ahora contra el nombre que Drive tiene DE VERDAD. La
+# correccion anterior se midio sobre los nombres vistos en la unidad montada en Windows, y ahi
+# Drive SANEA el titulo: cambia «/» y «:» por espacios, porque un nombre de archivo de Windows
+# no los admite. El titulo real dice «2026/08/11 16:59 GMT-05:00», con barras. Medido en la
+# ejecucion real del 25/08: el patron anterior no cazaba la fecha, el Calendar no podia
+# confirmar la sesion y el archivo se iba SUELTO a la raiz del destino en vez de a su carpeta.
+# Con «/» en las dos clases: caza los 3 titulos reales y los 2 saneados. No quitar ninguna de
+# las dos formas: por la API llegan con barras, por la unidad montada con espacios.
+RX_FECHA_MEET = r"(\d{4})[-_/ ](\d{2})[-_/ ](\d{2})[ _T]+(\d{2})[:._h ](\d{2})(?:[^)]*?GMT\s*([+-]\d{2}))?"
 
 
 # ── perfiles por institución ─────────────────────────────────────────────────
@@ -193,15 +203,36 @@ PERFILES: dict[str, Perfil] = {
         # «periodo - grupo(s) - Asignatura - Sesion NN», lo que arma
         # `sesiones_cun.subject_encuentro()`. Periodo = 2 dígitos + 1-2 letras + 1-2 dígitos;
         # grupo = 5 alfanuméricos; varios de cada cosa se unen con «/».
+        # El PERIODO de delante es OPCIONAL desde el 25/08/2026, y está medido por qué: de los
+        # cinco cursos, DOS no lo llevan en el título del evento. «54ES4 - Proyecto I - Sesion 01»
+        # y «54408 - Creatividad y Pensamiento Innovador - Sesion 01» empiezan por el GRUPO. Con
+        # el periodo obligatorio cazaba 3 de 5, y esos dos cursos se quedaban sin respaldo por
+        # nombre: dependían solo del Calendar, y si el Calendar dudaba el archivo no se movía.
+        # Probado con node sobre los cinco títulos REALES de la cuenta: 5 de 5. Y sigue
+        # rechazando «Tutoria con estudiante», «Reunion de jurados» y un «Sesion 01» a secas, que
+        # son justo las reuniones que NO deben publicarse: lo que ancla el patrón no es el
+        # periodo, son el grupo de 5 alfanuméricos y el « - Sesion NN» del final.
+        # Y los códigos se separan con «/» O CON ESPACIO: Drive no admite «/» en un nombre de
+        # archivo, así que Meet escribe «26P04/26V04» como «26P04 26V04». Medido en la cuenta:
+        # «26P04 26V04 - 54450 54466 54467 - Trabajo de Grado 3 - Sesion 01 - …». Sin admitir
+        # el espacio la expresión casaba a MEDIAS —empezaba en el segundo periodo y se comía
+        # los grupos como si fueran el nombre de la asignatura—, y ese subject a medias no
+        # coincidía con el del Calendar: el guardarraíl de «otra asignatura» saltaba y TG3 se
+        # quedaba sin carpeta y sin renombrar, suelto en la carpeta que ven los estudiantes.
         rx_subject=(
-            r"\d{2}[A-Z]{1,2}\d{1,2}(?:\/\d{2}[A-Z]{1,2}\d{1,2})*"
-            r" - [0-9A-Z]{5}(?:\/[0-9A-Z]{5})*"
+            r"(?:\d{2}[A-Z]{1,2}\d{1,2}(?:[\/ ]\d{2}[A-Z]{1,2}\d{1,2})* - )?"
+            r"[0-9A-Z]{5}(?:[\/ ][0-9A-Z]{5})*"
             r" - [^()]{3,60}? - Sesion \d{1,2}(?: \(autónoma\))?"
         ),
-        rx_subject_forma="«periodo - grupo(s) - Asignatura - Sesion NN»   (sesiones_cun.subject_encuentro)",
+        rx_subject_forma=(
+            "«[periodo - ]grupo(s) - Asignatura - Sesion NN»   (sesiones_cun.subject_encuentro; "
+            "el periodo es opcional: Proyecto I y Creatividad no lo llevan. Los códigos van con "
+            "«/» o con espacio: Drive no admite la barra y Meet la cambia por un espacio)"),
         rx_subject_ejemplos=(
             "26ES4 - 54ES4 - Proyecto I - Sesion 01",
             "26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 01",
+            "26P04 26V04 - 54450 54466 54467 - Trabajo de Grado 3 - Sesion 01   (el mismo, tal como lo escribe Meet en el nombre del archivo)",
+            "54408 - Creatividad y Pensamiento Innovador - Sesion 01   (sin periodo, es real)",
         ),
         nombres_origen=("Meet Recordings", "Google Meet"),
         nombres_legacy=("Legacy Meet Recordings",),
@@ -370,6 +401,36 @@ def _ejemplo_carpeta(p: Perfil) -> str:
     return "Asignatura - Sesion 04"
 
 
+def _ejemplo_carpeta_materia(p: Perfil, con_periodo: bool) -> str:
+    """Nombre de ejemplo de la subcarpeta POR MATERIA, con y sin el periodo delante.
+
+    Repite en Python lo que hace `_nombreCarpetaMateria_` en el .gs: el tronco del subject
+    (lo que va antes de la MARCA) y, si el periodo no se quiere, ese tronco sin los CÓDIGOS
+    que lleve delante — la misma regla que `_esCodigoSubject_`: un trozo sin minúsculas, sin
+    espacios y con algún dígito. Sale de `rx_subject_ejemplos` —la misma tupla que documenta
+    RX_SUBJECT— para que el ejemplo del comentario no se aparte de la regla que el script
+    aplica de verdad. Un perfil cuyo subject no traiga códigos delante (la PLANTILLA,
+    «Asignatura - Sesion NN») cae al tronco entero, igual que el .gs.
+    """
+    ejemplo = p.rx_subject_ejemplos[0] if p.rx_subject_ejemplos else "Asignatura - Sesion 01"
+    tronco = ejemplo.split(p.marca)[0] if p.marca in ejemplo else ejemplo
+    if con_periodo:
+        return tronco
+    trozos = tronco.split(" - ")
+    i = 0
+    while i < len(trozos) - 1 and _es_codigo_subject(trozos[i]):
+        i += 1
+    return " - ".join(trozos[i:]).strip() or tronco
+
+
+def _es_codigo_subject(trozo: str) -> bool:
+    """El gemelo en Python de `_esCodigoSubject_` del .gs: ¿es un periodo o un grupo?"""
+    s = str(trozo or "")
+    if not s or any(c.isspace() for c in s) or not any(c.isdigit() for c in s):
+        return False
+    return s == s.upper()
+
+
 def _tabla_horarios_js(p: Perfil) -> str:
     """Comentario con la tabla día+hora -> curso. NO es código: es para leer el log a ojo."""
     if not p.cursos:
@@ -536,7 +597,7 @@ function verificarGrabaciones() {
              ' · sin mirar por falta de tiempo=' + plan.sinMirar +
              ' · destino=«' + ctx.destino.getName() + '»' +
              (AGRUPAR_POR_MATERIA
-               ? ' · subcarpetas por sesión que se crearían=' + nCrearia +
+               ? ' · subcarpetas por asignatura que se crearían=' + nCrearia +
                  (plan.sinConfirmar ? ' · a la raíz sin confirmar=' + plan.sinConfirmar : '')
                : ' · subcarpetas: APAGADAS (AGRUPAR_POR_MATERIA = false)'));
   _avisoSilencio_(ctx.cal, lote, plan);
@@ -607,7 +668,7 @@ function moverGrabaciones() {
       }
       continue;
     }
-    // La subcarpeta de la sesión, creada o reutilizada, ANTES de tocar el archivo. Si no se
+    // La subcarpeta de la ASIGNATURA, creada o reutilizada, ANTES de tocar el archivo. Si no se
     // puede preparar, el archivo NO se mueve: soltarlo suelto en la raíz del destino rompería
     // justo lo que se viene a arreglar, y encima en la carpeta que ven los estudiantes.
     var destinoArchivo = ctx.destino;
@@ -714,7 +775,7 @@ function moverGrabaciones() {
   // fallo cada media hora sin que nadie se enterara — y _avisoSilencio_ no lo ve, porque sí
   // hubo cosas que mover. Los archivos siguen intactos en la carpeta de Meet.
   if (sinCarpeta && !SIMULAR) {
-    throw new Error('No pude crear la subcarpeta de la sesión de ' + sinCarpeta + ' archivo(s) ' +
+    throw new Error('No pude crear la subcarpeta de la asignatura de ' + sinCarpeta + ' archivo(s) ' +
                     'dentro de «' + ctx.destino.getName() + '», así que NO los moví (dejarlos ' +
                     'sueltos ahí sería peor). Casi siempre es permiso de escritura sobre esa ' +
                     'carpeta. Arréglalo y se recogen solos en la próxima pasada; si prefieres ' +
@@ -848,6 +909,7 @@ function _arrancar_() {
   _CACHE_EVENTOS_ = {};
   _CACHE_CARPETAS_ = {};
   _SIN_CARPETA_ = {};
+  _INDICE_CARPETAS_ = null;
 }
 
 /** ¿Me estoy acercando al límite de 6 minutos por ejecución? */
@@ -886,6 +948,81 @@ function _calendario_() {
 }
 
 /**
+ * ¿Está `idAncestro` por encima de `carpeta`? Sube por los padres hasta MAX_SALTOS_PADRE
+ * saltos. En Drive una carpeta puede tener VARIOS padres, así que esto es un árbol y no una
+ * cuerda: se apuntan los ids ya vistos para no dar vueltas si Drive devuelve un ciclo.
+ *
+ * Devuelve { hallado, error }. Con `error` lleno no se pudo comprobar —casi siempre permisos
+ * sobre una carpeta de más arriba—, y entonces quien llama AVISA y sigue. Solo lectura.
+ */
+function _porEncima_(carpeta, idAncestro) {
+  var vistos = {}, nivel = [carpeta], saltos = 0;
+  try {
+    while (nivel.length && saltos < MAX_SALTOS_PADRE) {
+      saltos++;
+      var siguiente = [];
+      for (var i = 0; i < nivel.length; i++) {
+        var it = nivel[i].getParents();
+        while (it.hasNext()) {
+          var padre = it.next(), id = padre.getId();
+          if (id === idAncestro) return { hallado: true, error: '' };
+          if (vistos[id]) continue;
+          vistos[id] = true;
+          siguiente.push(padre);
+        }
+      }
+      nivel = siguiente;
+    }
+  } catch (e) {
+    return { hallado: false, error: String(e) };
+  }
+  return { hallado: false, error: '' };
+}
+
+/**
+ * ORIGEN y DESTINO no pueden estar uno DENTRO del otro. true = hay que parar, y se ha dicho
+ * por qué en el registro.
+ *
+ * Con el DESTINO dentro del ORIGEN el barrido baja MAX_PROFUNDIDAD niveles por las
+ * subcarpetas del origen y vuelve a encontrar lo que ya movió: se come el cupo de
+ * MAX_ARCHIVOS con grabaciones ya colocadas, las nuevas se quedan fuera de la pasada, y deja
+ * de ser verdad el argumento de idempotencia de este script («lo ya movido no está en el
+ * origen»). Al revés rompe por el otro lado: publicaría a los estudiantes la carpeta de
+ * volcado de Meet entera, con las tutorías y las reuniones ajenas dentro.
+ *
+ * Hasta hoy esto pasaba CALLANDO: solo se comparaban los dos ids por igualdad, y dos
+ * carpetas anidadas tienen ids distintos.
+ */
+function _anidamientoRoto_(origen, destino) {
+  var casos = [
+    { hijo: destino, arriba: origen,
+      dano: 'el barrido del origen vuelve a encontrar lo que ya movió: se come el cupo de ' +
+            MAX_ARCHIVOS + ' archivos por pasada con grabaciones ya colocadas y las nuevas ' +
+            'se quedan sin sitio' },
+    { hijo: origen, arriba: destino,
+      dano: 'la carpeta que ven los estudiantes contiene el volcado de Meet entero, con las ' +
+            'tutorías y las reuniones ajenas dentro' }
+  ];
+  for (var i = 0; i < casos.length; i++) {
+    var c = casos[i];
+    var r = _porEncima_(c.hijo, c.arriba.getId());
+    if (r.error) {
+      Logger.log('AVISO: no pude comprobar si «' + c.hijo.getName() + '» está dentro de «' +
+                 c.arriba.getName() + '» -> ' + r.error + '. Sigo de todas formas: esto es ' +
+                 'un guardarraíl, no una cárcel.');
+      continue;
+    }
+    if (!r.hallado) continue;
+    Logger.log('ERROR: «' + c.hijo.getName() + '» está DENTRO de «' + c.arriba.getName() +
+               '». Así ' + c.dano + '.');
+    Logger.log('SOLUCIÓN: saca la carpeta destino de dentro de la de Meet y ponla en Mi ' +
+               'unidad, al mismo nivel.');
+    return true;
+  }
+  return false;
+}
+
+/**
  * Cabecera de contexto y las tres cosas que hacen falta para trabajar: carpeta origen,
  * carpeta destino y calendario. Devuelve null —y explica por qué— si falta algo. Nunca
  * lanza: si no se puede trabajar, se dice y se sale.
@@ -915,6 +1052,8 @@ function _contexto_() {
     Logger.log('ERROR: ORIGEN_ID y DESTINO_ID son la misma carpeta. Revisa la configuración.');
     return null;
   }
+  // Y tampoco una dentro de la otra, que rompe igual y hasta hoy pasaba en silencio.
+  if (_anidamientoRoto_(origen, destino)) return null;
 
   var raices = [origen];
   if (ORIGEN_LEGACY_ID) {
@@ -1123,26 +1262,31 @@ function _plan_(ctx, lote) {
     var nuevo = renombrar ? _nombreCanonico_(subject, v.nombre) : v.nombre;
     if (nuevo !== v.nombre) renombra++;
     // LA CARPETA SOLO SE NOMBRA CON LO QUE EL CALENDAR CONFIRMÓ (fuerza 2), sea de este
-    // archivo o de un hermano suyo. Con el respaldo por nombre, el número de sesión es JUSTO
-    // el dato que no se ha podido comprobar —y está medido que Meet lo congela en «01»—, así
-    // que abrir «… - Sesion 01» plantaría, al lado de la carpeta buena, otra que dice ser la
-    // sesión 1 y no lo es: un estudiante entraría a ver la clase equivocada. Sin confirmar, el
-    // archivo se mueve igual, a la carpeta destino y suelto, exactamente como antes de que
-    // existieran las subcarpetas. Nunca se deja de mover nada.
+    // archivo o de un hermano suyo. Con el respaldo por nombre, el subject se ha reconocido a
+    // medias: la asignatura la dice la sala, pero el número de sesión es JUSTO el dato que no
+    // se ha podido comprobar, y está medido que Meet lo congela en «01». Abrir una carpeta a
+    // partir de un subject así es construir la carpeta que ven 100+ estudiantes sobre un dato
+    // sin comprobar. Sin confirmar, el archivo se mueve igual, a la carpeta destino y suelto,
+    // exactamente como antes de que existieran las subcarpetas. Nunca se deja de mover nada.
     var confirmado = fuerza >= 2;
     if (AGRUPAR_POR_MATERIA && !confirmado) sinConfirmar++;
     mover.push({
       archivo: v.it.archivo, carpeta: v.it.carpeta, nombre: v.nombre,
       nuevo: nuevo, criterio: criterio, confirmado: confirmado,
       // La subcarpeta es POR MATERIA, no por sesión: dentro caben todos los encuentros del
-      // curso. Por eso se usa el TRONCO del subject —lo que hay antes de « - Sesion NN»—, que
-      // da «26P03 - 53339 - Investigación Ciencia y Tecnología». Conserva el periodo y el
-      // grupo a propósito: la carpeta destino acumula todos los cursos y todos los periodos, y
-      // sin ellos las grabaciones del semestre que viene se mezclarían con las de este.
+      // curso. El nombre lo decide CARPETA_MATERIA_CON_PERIODO: por omisión solo la
+      // asignatura —«Investigación Ciencia y Tecnología»—, que es como están creadas a mano
+      // las carpetas de la cuenta; con la constante en true, el tronco entero del subject,
+      // con el periodo y el grupo delante, que separa los semestres.
       // Los tres artefactos de un encuentro (Recording, Transcript, Chat) caen en la misma
       // carpeta y quedan juntos al ordenar por nombre, porque comparten todo el nombre salvo
-      // el sufijo.  Vacío = a la raíz del destino, como en el reparto plano.
-      carpetaMateria: (AGRUPAR_POR_MATERIA && confirmado) ? _troncoSubject_(subject) : ''
+      // el sufijo. Y como el NOMBRE DEL ARCHIVO lleva el periodo delante —cuando el subject
+      // lo trae; hay series creadas antes de que el periodo estuviera en la carga académica,
+      // y su nombre empieza por el grupo—, ordenar la carpeta por nombre agrupa por semestre
+      // aunque la carpeta no los separe. El nombre de la CARPETA sale igual en los dos casos:
+      // _asignaturaDelSubject_ quita los códigos de delante, no un número fijo de guiones.
+      // Vacío = a la raíz del destino, como en el reparto plano.
+      carpetaMateria: (AGRUPAR_POR_MATERIA && confirmado) ? _nombreCarpetaMateria_(subject) : ''
     });
   }
   return { mover: mover, quietos: quietos, renombra: renombra, sinMirar: sinMirar,
@@ -1300,7 +1444,14 @@ function _clasificar_(cal, it) {
   // un curso dentro de la carpeta de otro, con el nombre de otro, en la carpeta que ven 100+
   // estudiantes — y el registro lo contaría como un movimiento normal. Así que gana el nombre,
   // que es exactamente lo que hacía este script antes, y se dice a gritos.
-  if (enNombre && _troncoSubject_(enNombre) !== _troncoSubject_(titulo)) {
+  //
+  // La comparación la hace _mismoEncuentro_ (asignatura + algún código en común), NO los
+  // troncos letra a letra: el nombre del archivo escribe «26P04 26V04» donde el evento pone
+  // «26P04/26V04» —Drive no admite la barra—, y hay series cuyo nombre empieza por el grupo
+  // porque se crearon antes de que el periodo estuviera en la carga académica. Comparando
+  // troncos, esos dos casos MEDIDOS se leían como «otra asignatura» y dejaban al archivo sin
+  // carpeta y sin renombrar.
+  if (enNombre && !_mismoEncuentro_(enNombre, titulo)) {
     Logger.log('AVISO: «' + nombre + '» dice ser de «' + _troncoSubject_(enNombre) + '» y el ' +
                'encuentro que encaja en esa hora es «' + titulo + '», que es de otra ' +
                'asignatura o de otros grupos. NO lo renombro al del Calendar: lo trato por su ' +
@@ -1334,6 +1485,91 @@ function _troncoSubject_(s) {
   var t = String(s || '');
   var i = t.lastIndexOf(MARCA);
   return i < 0 ? t : t.substring(0, i);
+}
+
+/**
+ * ¿Este trozo del subject es un CÓDIGO —un periodo o un grupo— y no el nombre de la
+ * asignatura? El trozo puede traer VARIOS códigos, separados por «/» como los escribe el
+ * Calendar o por ESPACIO como los deja Meet en el nombre del archivo (Drive no admite «/»):
+ * «26P03», «54ES4», «26P04/26V04», «54450 54466 54467». Lo es si TODOS sus pedazos van sin
+ * minúsculas y con algún dígito. Una asignatura no cumple eso: «Proyecto I» tiene
+ * minúsculas, y «TIC» y «MATE II» no tienen dígitos.
+ */
+function _esCodigoSubject_(t) {
+  var s = String(t || '').trim();
+  if (!s) return false;
+  var tk = s.split(/[\/\s]+/);
+  for (var i = 0; i < tk.length; i++) {
+    if (!/\d/.test(tk[i]) || tk[i] !== tk[i].toUpperCase()) return false;
+  }
+  return true;
+}
+
+/**
+ * Los CÓDIGOS que el subject lleva delante de la asignatura, uno por uno y sin importar si
+ * venían con «/» o con espacio: «26P04 26V04 - 54450 54466 54467 - Trabajo de Grado 3» ->
+ * [26P04, 26V04, 54450, 54466, 54467]. Lista vacía = ese subject no trae códigos delante.
+ */
+function _codigosSubject_(s) {
+  var trozos = _troncoSubject_(s).split(' - ');
+  var out = [];
+  for (var i = 0; i < trozos.length - 1 && _esCodigoSubject_(trozos[i]); i++) {
+    var tk = trozos[i].trim().split(/[\/\s]+/);
+    for (var j = 0; j < tk.length; j++) if (tk[j]) out.push(tk[j]);
+  }
+  return out;
+}
+
+/**
+ * ¿Estos dos subjects hablan del MISMO encuentro, sin mirar el número de sesión? Se compara
+ * la ASIGNATURA y, si los dos traen códigos, que compartan al menos uno.
+ *
+ * NO se comparan los troncos letra a letra, y está medido por qué: el nombre del archivo y
+ * el título del evento escriben los mismos códigos de dos formas —«26P04 26V04» frente a
+ * «26P04/26V04», porque Drive no admite la barra— y hay series creadas antes de que el
+ * periodo estuviera en la carga académica, cuyo nombre empieza directamente por el grupo
+ * («54408 - Creatividad…» frente a «26V04 - 54408 - Creatividad…»). Comparando los troncos,
+ * esos dos casos se leían como «otra asignatura»: el Calendar se descartaba, el archivo no
+ * se renombraba y se quedaba SIN carpeta, suelto en la carpeta que ven los estudiantes.
+ *
+ * Lo que sí sigue separando: otra asignatura (aunque coincida la hora), y la misma
+ * asignatura de OTROS grupos —ningún código en común—, que es el aviso que hay que dar.
+ */
+function _mismoEncuentro_(a, b) {
+  if (_asignaturaDelSubject_(a) !== _asignaturaDelSubject_(b)) return false;
+  var ca = _codigosSubject_(a), cb = _codigosSubject_(b);
+  if (!ca.length || !cb.length) return true;
+  for (var i = 0; i < ca.length; i++) if (cb.indexOf(ca[i]) >= 0) return true;
+  return false;
+}
+
+/**
+ * Solo la ASIGNATURA del subject: el tronco (lo de delante de la MARCA) sin los códigos que
+ * lleve DELANTE. NO se cuentan separadores: está medido que en esta cuenta hay dos
+ * nomenclaturas vivas a la vez —«periodo - grupo - Asignatura» y, cuando el grupo no tenía
+ * periodo en la carga académica, «grupo - Asignatura»—, y contar « - » dejaba el grupo dentro
+ * del nombre de la carpeta («54ES4 - Proyecto I»), que es justo la carpeta que NO coincide
+ * con la que el Docente creó a mano.
+ *
+ * Se quitan los trozos iniciales que sean código (_esCodigoSubject_) y se vuelve a unir lo
+ * que quede, así que una asignatura que lleve « - » dentro no se parte. NUNCA se quita el
+ * último trozo: si de un subject «26P03 - 53339 - Sesion 04» solo quedan códigos, se deja el
+ * último en pie antes que devolver nada. Sale vacío solo si el subject entra vacío, y con el
+ * nombre vacío el archivo se mueve SUELTO a la raíz del destino: no se queda sin mover.
+ */
+function _asignaturaDelSubject_(s) {
+  var tronco = _troncoSubject_(s);
+  var trozos = tronco.split(' - ');
+  var i = 0;
+  while (i < trozos.length - 1 && _esCodigoSubject_(trozos[i])) i++;
+  return trozos.slice(i).join(' - ').trim() || tronco;
+}
+
+/** Cómo se llama la subcarpeta de este encuentro. Lo decide CARPETA_MATERIA_CON_PERIODO. */
+function _nombreCarpetaMateria_(subject) {
+  return CARPETA_MATERIA_CON_PERIODO
+    ? _troncoSubject_(subject)
+    : _asignaturaDelSubject_(subject);
 }
 
 /**
@@ -1464,13 +1700,61 @@ function _nombreCanonico_(subject, original) {
   return subject + ' (' + base + ')' + ext;
 }
 
-// ── la subcarpeta de cada sesión ────────────────────────────────────────────
+// ── la subcarpeta de cada asignatura ───────────────────────────────────────
 
 // Subcarpetas ya resueltas en ESTA ejecución (nombre -> Folder) y nombres que se buscaron y no
 // estaban. Los tres artefactos de una reunión piden la misma carpeta, y una consulta a Drive
 // por archivo es justo lo que hace que una pasada no llegue a mover nada. _arrancar_() las vacía.
 var _CACHE_CARPETAS_ = {};
 var _SIN_CARPETA_ = {};
+
+// Las carpetas que hay DENTRO del destino, indexadas por su nombre normalizado (null = el
+// destino no se ha recorrido todavía). Es el respaldo para cuando el nombre solo difiere en
+// las MAYÚSCULAS: «Trabajo de grado 3» —la que está creada a mano— y «Trabajo de Grado 3»
+// —el nombre canónico— son la misma carpeta para quien la lee, y Drive NO documenta que
+// getFoldersByName() ignore las mayúsculas. Sin este respaldo el script crearía una segunda
+// carpeta al lado y dejaría la de al lado vacía, con la asignatura partida en dos sitios.
+// El recorrido se hace UNA vez y se guarda: son tres artefactos por sesión, y recorrer el
+// destino por archivo es justo lo que impide que una pasada llegue a mover algo.
+var _INDICE_CARPETAS_ = null;
+
+/**
+ * El nombre de una carpeta tal como lo compara un humano: minúsculas y espacios colapsados.
+ * Las TILDES se quedan A PROPÓSITO. «Investigación» e «Investigacion» pueden ser dos
+ * asignaturas distintas de verdad, y juntarlas metería las grabaciones de una en la carpeta
+ * de la otra: un error peor que crear una carpeta de más.
+ */
+function _normalCarpeta_(nombre) {
+  return String(nombre || '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+/**
+ * La carpeta de dentro del destino cuyo nombre coincide con `nombre` salvo en las mayúsculas
+ * y los espacios, o null si no hay ninguna. Recorre el destino una sola vez por ejecución y
+ * se queda el índice. Es SOLO LECTURA: no crea nada, así que vale igual en SIMULAR y en
+ * verificarGrabaciones(). Si el recorrido falla, se avisa y se sigue con la búsqueda exacta:
+ * lo peor que pasa entonces es una carpeta duplicada, no un archivo sin mover.
+ */
+function _carpetaNormalizada_(destino, nombre) {
+  if (_INDICE_CARPETAS_ === null) {
+    _INDICE_CARPETAS_ = {};
+    try {
+      var it = destino.getFolders();
+      while (it.hasNext()) {
+        var f = it.next();
+        if (f.isTrashed()) continue;
+        var k = _normalCarpeta_(f.getName());
+        if (!_INDICE_CARPETAS_.hasOwnProperty(k)) _INDICE_CARPETAS_[k] = f;
+      }
+    } catch (e) {
+      Logger.log('AVISO: no pude listar las carpetas de «' + destino.getName() + '» para ' +
+                 'comparar nombres sin mirar las mayúsculas: ' + e + '. Sigo con la búsqueda ' +
+                 'exacta, que es la de siempre.');
+    }
+  }
+  var clave = _normalCarpeta_(nombre);
+  return _INDICE_CARPETAS_.hasOwnProperty(clave) ? _INDICE_CARPETAS_[clave] : null;
+}
 
 /**
  * La subcarpeta de ESTE encuentro dentro del destino: la que ya está, o una nueva si `crear`.
@@ -1486,6 +1770,11 @@ var _SIN_CARPETA_ = {};
  * Si dentro del destino hubiera DOS carpetas con ese nombre se usa la primera y se dice en el
  * registro: es señal de que algo se duplicó y de que los estudiantes verán la sesión partida.
  * Y las de la PAPELERA no cuentan: reutilizar una carpeta borrada metería ahí las grabaciones.
+ *
+ * Y si la búsqueda exacta no da nada, se prueba OTRA VEZ ignorando las mayúsculas y los
+ * espacios (_carpetaNormalizada_), porque las carpetas creadas a mano no se escriben con la
+ * misma caja que el subject canónico: «Trabajo de grado 3» y «Trabajo de Grado 3». Crear la
+ * segunda al lado de la primera dejaría una de las dos vacía y la asignatura partida.
  */
 function _carpetaMateria_(destino, nombre, crear) {
   var vacio = { carpeta: null, existia: false, creada: false, error: '' };
@@ -1517,6 +1806,16 @@ function _carpetaMateria_(destino, nombre, crear) {
       _CACHE_CARPETAS_[nombre] = halladas[0];
       return { carpeta: halladas[0], existia: true, creada: false, error: '' };
     }
+    // Nada con ese nombre exacto. Antes de crear nada, la misma carpeta escrita con otras
+    // mayúsculas: se REUSA y se dice cuál, para que quede en el registro por qué el nombre
+    // de la carpeta no es el del archivo.
+    var otra = _carpetaNormalizada_(destino, nombre);
+    if (otra) {
+      Logger.log('reuso la carpeta «' + otra.getName() + '» para «' + nombre + '»: el nombre ' +
+                 'solo difiere en las mayúsculas o los espacios, y es la misma carpeta.');
+      _CACHE_CARPETAS_[nombre] = otra;
+      return { carpeta: otra, existia: true, creada: false, error: '' };
+    }
     _SIN_CARPETA_[nombre] = true;
   }
   if (!crear) return vacio;   // modo lectura: verificarGrabaciones() y SIMULAR no escriben
@@ -1530,6 +1829,12 @@ function _carpetaMateria_(destino, nombre, crear) {
   }
   _CACHE_CARPETAS_[nombre] = nueva;
   delete _SIN_CARPETA_[nombre];
+  // Al índice también: si en esta misma pasada llega otro subject que solo difiere en las
+  // mayúsculas, tiene que caer AQUÍ y no abrir una tercera carpeta.
+  if (_INDICE_CARPETAS_) {
+    var kn = _normalCarpeta_(nombre);
+    if (!_INDICE_CARPETAS_.hasOwnProperty(kn)) _INDICE_CARPETAS_[kn] = nueva;
+  }
   return { carpeta: nueva, existia: false, creada: true, error: '' };
 }
 
@@ -1817,16 +2122,16 @@ def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
         "grabaciones están\n"
         " * en UNA carpeta y que el vídeo se encuentra buscando "
         "«periodo - grupo - asignatura - sesion»\n"
-        " * — y las dos cosas siguen siendo verdad: la carpeta es una sola, y dentro cada sesión "
-        "tiene\n"
-        " * la suya, con ese mismo nombre."
+        " * — y las dos cosas siguen siendo verdad: la carpeta es una sola, ese nombre lo lleva\n"
+        " * cada ARCHIVO, y dentro cada asignatura tiene su subcarpeta."
         if p.usa_repositorio_cun else
         "Lo que se le ha prometido al estudiante es\n"
         " * otra cosa: que TODAS las grabaciones están en UNA carpeta y que el vídeo se "
         "encuentra\n"
         " * buscando por el título del encuentro — y las dos cosas siguen siendo verdad: la "
         "carpeta\n"
-        " * es una sola, y dentro cada sesión tiene la suya, con ese mismo nombre."
+        " * es una sola, ese título lo lleva cada ARCHIVO, y dentro cada asignatura tiene la "
+        "suya."
     )
     # La CUN no lleva comentario en TIMEZONE (y así se queda). Cualquier otro perfil sí: es
     # de las primeras cosas que hay que revisar al copiar la PLANTILLA.
@@ -1853,13 +2158,33 @@ def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
         "si la\n// sala dice una asignatura y el único encuentro de esa hora es de otra, no se "
         "mueve. Una sala"
     )
-    ejemplo_carpeta = _ejemplo_carpeta(p)
+    # Los dos nombres que puede llevar la subcarpeta, para el comentario de la constante.
+    carpeta_llana = _ejemplo_carpeta_materia(p, False)
+    carpeta_con_periodo = _ejemplo_carpeta_materia(p, True)
+    # Hay nomenclaturas cuyo subject no trae periodo ni grupo (la PLANTILLA es una): ahí las
+    # dos opciones dan el MISMO nombre, y decirlo evita que alguien cambie la constante
+    # esperando un cambio que no va a ver.
+    nota_periodo = (
+        ""
+        if carpeta_llana != carpeta_con_periodo else
+        "\n//            En la nomenclatura de este perfil el subject no trae periodo ni "
+        "grupo,\n//            así que aquí las dos opciones dan el mismo nombre."
+    )
+    # Por qué el valor por omisión es el llano. Para la CUN es un hecho de la cuenta; para
+    # cualquier otro perfil, la misma razón sin atribuírsela a un docente que no conocemos.
+    motivo_llano = (
+        "el Docente ya creó a mano las carpetas de\n//            sus cinco asignaturas con "
+        "ese nombre, y manda lo que él hizo"
+        if p.usa_repositorio_cun else
+        "así es como nombra una carpeta quien la crea a\n//            mano para mirarla él "
+        "mismo, y manda lo que ya esté hecho"
+    )
     nombres_origen = ", ".join(_js(n) for n in p.nombres_origen)
     nombres_legacy = ", ".join(_js(n) for n in p.nombres_legacy)
     if p.usa_repositorio_cun:
         nota_destino = (
             "// DESTINO — la carpeta ÚNICA de grabaciones: la misma para los 5 cursos y para todos los\n"
-            "// periodos. Dentro NO va todo suelto: cada encuentro tiene su subcarpeta (ver\n"
+            "// periodos. Dentro NO va todo suelto: cada ASIGNATURA tiene su subcarpeta (ver\n"
             "// AGRUPAR_POR_MATERIA, aquí debajo). Fuente única: config/cursos/carga_academica.py ->\n"
             "// GRABACIONES_URL (y la nota normativa de carga_academica_2026.json). Esta URL ya está\n"
             "// impresa en el correo de bienvenida y en el LEEME del estudiante: no la cambies aquí."
@@ -1875,7 +2200,7 @@ def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
     else:
         nota_destino = (
             "// DESTINO — la carpeta ÚNICA de grabaciones: la misma para todos los cursos y todos los\n"
-            "// periodos. Dentro NO va todo suelto: cada encuentro tiene su subcarpeta (ver\n"
+            "// periodos. Dentro NO va todo suelto: cada ASIGNATURA tiene su subcarpeta (ver\n"
             f"// AGRUPAR_POR_MATERIA, aquí debajo). La declara el perfil {p.clave} en PERFILES, dentro de\n"
             "// config/slides/build_apps_script_grabaciones.py. Si ya está publicada a los estudiantes,\n"
             "// no la cambies aquí: cámbiala en el perfil y regenera."
@@ -1887,7 +2212,7 @@ def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
         )
     cabecera = f"""/**
  * GRABACIONES DE MEET — Mover cada grabación a la carpeta ÚNICA de grabaciones, y dentro,
- * a la subcarpeta de su sesión (los tres artefactos del encuentro, juntos).
+ * a la subcarpeta de su asignatura (los tres artefactos del encuentro, juntos).
  *
  * Meet deja las grabaciones en el Drive del ORGANIZADOR, en su carpeta por omisión de Mi
  * unidad: hoy «Meet Recordings». Algunas cuentas ven en su lugar una carpeta «Google Meet»
@@ -1900,7 +2225,7 @@ def _gs_texto(p: Perfil, sal: dict[str, str]) -> str:
  *
  * LO QUE NO HACE, A PROPÓSITO
  * - No borra nada. Ni las subcarpetas de reunión que Meet deja vacías en el origen. Las
- *   subcarpetas que SÍ crea son las del destino, una por sesión, y SOLO con un nombre que le
+ *   subcarpetas que SÍ crea son las del destino, una por asignatura, y SOLO con un nombre que
  *   haya confirmado el Calendar. Para lo que no sabe clasificar no se inventa ninguna carpeta;
  *   y lo que solo sabe por el nombre del archivo lo mueve —como siempre— pero suelto, porque
  *   su número de sesión es justo el que Meet congela.
@@ -1996,10 +2321,11 @@ var DESTINO_ID = {_js(p.destino_url)};
 // UNA SUBCARPETA POR MATERIA dentro de esa carpeta destino. Cada encuentro deja TRES archivos
 // en Meet —el vídeo, la transcripción y el chat— y sueltos se mezclan con los de las demás
 // asignaturas. Con esto todas las sesiones de un curso caen en su carpeta, que se llama:
-//   «{ejemplo_carpeta}»
+//   «{carpeta_llana}»   (el nombre lo decide CARPETA_MATERIA_CON_PERIODO, aquí debajo)
 //   true  -> se crea esa subcarpeta dentro del destino (o se REUTILIZA si ya está) y ahí van
 //            los tres. La promesa publicada sigue en pie —se busca igual, «periodo - grupo -
-//            asignatura - sesion»— y además se puede navegar sesión por sesión.
+//            asignatura - sesion», que es el nombre del ARCHIVO y no cambia— y además se
+//            puede navegar asignatura por asignatura.
 //   false -> lo de antes: todo suelto en la carpeta destino, sin subcarpetas. Volver atrás es
 //            cambiar este valor; no hay que tocar ni una línea del cuerpo del script.
 // La subcarpeta se busca SIEMPRE dentro del destino (destino.getFoldersByName), NUNCA con
@@ -2009,6 +2335,25 @@ var DESTINO_ID = {_js(p.destino_url)};
 // supo solo por el nombre del archivo se mueve —como siempre— pero SUELTO a la carpeta
 // destino, porque su número de sesión es el que Meet congeló y abriría una carpeta que miente.
 var AGRUPAR_POR_MATERIA = true;
+
+// CÓMO SE LLAMA esa subcarpeta: solo con la asignatura, o con el periodo y el grupo delante.
+//   false -> «{carpeta_llana}»
+//            La asignatura pelada, sin el periodo ni el grupo delante. Es el valor POR
+//            OMISIÓN, y no por gusto: {motivo_llano}.
+//            Si el script las nombrara de otra forma, plantaría carpetas nuevas al lado y
+//            dejaría esas vacías.
+//            Las sesiones de TODOS los periodos se acumulan en la misma carpeta, y se
+//            distinguen porque el NOMBRE DEL ARCHIVO lleva el periodo delante —cuando el
+//            subject lo trae: las series antiguas empiezan por el grupo—: al ordenar la
+//            carpeta por nombre quedan agrupadas por semestre.
+//   true  -> «{carpeta_con_periodo}»
+//            Una carpeta por periodo y grupo: separa los semestres, a cambio de multiplicar
+//            las carpetas y de no coincidir con las que ya estén creadas a mano.{nota_periodo}
+// Las MAYÚSCULAS no deciden: si dentro del destino ya hay una carpeta cuyo nombre solo
+// difiere en eso —«Trabajo de grado 3» frente a «Trabajo de Grado 3»— se REUTILIZA esa, que
+// para quien la lee es la misma. Las TILDES sí deciden: quitarlas podría juntar dos
+// asignaturas distintas de verdad.
+var CARPETA_MATERIA_CON_PERIODO = false;
 
 // Sufijos con los que Meet distingue los artefactos de UNA MISMA reunión. Todo lo que va
 // DELANTE del sufijo es idéntico en los tres —incluida la marca de tiempo—, así que ese
@@ -2125,6 +2470,10 @@ var PROP_FALLIDAS = {_js(p.prop('FALLIDAS'))};
 var MAX_ARCHIVOS = 40;
 var MAX_EXAMINADOS = 400;
 var MAX_PROFUNDIDAD = 4;   // raíz de Meet / subcarpeta de la reunión / ... y para de contar
+// Saltos hacia ARRIBA al comprobar que origen y destino no están uno dentro del otro. Seis
+// sobran para cualquier Mi unidad sensata, y el tope está para no subir sin fin si Drive
+// devuelve una jerarquía rara.
+var MAX_SALTOS_PADRE = 6;
 var LIMITE_MS = 270000;    // 4,5 min de los 6 que da Apps Script por ejecución
 """
     return cabecera + GS_ENLACES + _cuerpo_js(p)
@@ -2134,6 +2483,36 @@ var LIMITE_MS = 270000;    // 4,5 min de los 6 que da Apps Script por ejecución
 def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
     faltan = sin_sala(p)
     ejemplo_carpeta = _ejemplo_carpeta(p)
+    carpeta_llana = _ejemplo_carpeta_materia(p, False)
+    carpeta_con_periodo = _ejemplo_carpeta_materia(p, True)
+    # Por qué la carpeta se llama solo con la asignatura. Para la CUN es un hecho de la
+    # cuenta —las cinco carpetas ya están creadas—; para otro perfil, la misma idea sin
+    # afirmar nada de un Drive que no hemos visto.
+    por_que_llana = (
+        "No es una preferencia de estilo: esas carpetas **ya están creadas a mano** con ese "
+        "nombre, y si el script las nombrara de otra forma plantaría otras nuevas al lado y "
+        "dejaría esas vacías."
+        if p.usa_repositorio_cun else
+        "Si ya tienes esas carpetas creadas a mano, el script mete las grabaciones en las que "
+        "están en vez de plantar otras al lado."
+    )
+    # Y si el subject de este perfil no trae periodo ni grupo, la constante no cambia nada:
+    # decirlo evita que alguien la mueva esperando un efecto que no va a ver.
+    mezcla_periodos = (
+        "Las sesiones de todos los periodos se acumulan en la misma carpeta, y se distinguen "
+        "porque el nombre del archivo **lleva el periodo delante** —cuando el subject del "
+        "encuentro lo traía: en esta cuenta hay grabaciones cuyo nombre empieza directamente "
+        "por el grupo, `54ES4 - Proyecto I - Sesion 01`, porque el periodo aún no estaba en la "
+        "carga académica cuando se creó esa serie—: ordena la carpeta por nombre y quedan "
+        "agrupadas por semestre. La carpeta se llama igual en los dos casos: del nombre se "
+        "quitan los **códigos** de delante (periodo y grupo, o solo el grupo), no un número "
+        "fijo de guiones. Si prefieres una carpeta por semestre "
+        f"—`{carpeta_con_periodo}`—, es una constante: `CARPETA_MATERIA_CON_PERIODO = true`."
+        if carpeta_llana != carpeta_con_periodo else
+        "En la nomenclatura de este perfil el subject no trae periodo ni grupo delante del "
+        "número de sesión, así que `CARPETA_MATERIA_CON_PERIODO = true` no cambiaría este "
+        f"nombre: las dos opciones dan `{carpeta_llana}`."
+    )
     nota_festivos = (
         "Los cuatro lunes festivos de 2026 (17/08, 12/10, 02/11, 16/11) no tienen clase: una "
         "grabación de esas fechas es una tutoría, un jurado o una reunión ajena y **no** debe "
@@ -2149,10 +2528,12 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
     )
     if p.usa_repositorio_cun:
         nombre_buscable = (
-            "en **la carpeta de su sesión**, que se llama con el nombre por el que el correo de "
-            "bienvenida y el `LEEME - Material para estudiantes` le dicen al estudiante que la "
-            "busque: «periodo - grupo - asignatura - sesión». Los **tres** archivos que deja "
-            "cada encuentro —vídeo, transcripción y chat— caen juntos ahí."
+            "en **la carpeta de su asignatura**. El nombre por el que el correo de bienvenida y "
+            "el `LEEME - Material para estudiantes` le dicen al estudiante que busque "
+            "—«periodo - grupo - asignatura - sesión»— lo lleva **cada archivo**, así que "
+            "buscando se encuentra igual; la carpeta se llama solo con la asignatura. Los "
+            "**tres** archivos que deja cada encuentro —vídeo, transcripción y chat— caen "
+            "juntos ahí."
         )
         donde_viven = "los dos en la raíz de `Cursos/` porque esto es"
         paso_previo = (
@@ -2186,9 +2567,11 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         )
     else:
         nombre_buscable = (
-            "en **la carpeta de su sesión**, que se llama con el nombre canónico del encuentro, "
-            f"el mismo con el que lo titula tu Calendar (`{ejemplo_subject}`). Los **tres** "
-            "archivos que deja cada encuentro —vídeo, transcripción y chat— caen juntos ahí."
+            "en **la carpeta de su asignatura**. El nombre canónico del encuentro —el mismo con "
+            f"el que lo titula tu Calendar, `{ejemplo_subject}`— lo lleva **cada archivo**, así "
+            "que buscando se encuentra igual; la carpeta se llama solo con la asignatura. Los "
+            "**tres** archivos que deja cada encuentro —vídeo, transcripción y chat— caen "
+            "juntos ahí."
         )
         donde_viven = "y esto es"
         paso_previo = (
@@ -2295,6 +2678,16 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         "irreversible**. Si algún día se decide eso, se decide a propósito y no como efecto "
         "secundario de este script.",
         "",
+        "Y una cosa que el script comprueba ahora por ti: **la carpeta destino no puede estar "
+        "dentro de la carpeta de Meet**, ni al contrario. Si lo está, el barrido del origen "
+        "baja a sus subcarpetas y vuelve a encontrar lo que ya movió: se come el cupo de la "
+        "pasada (`MAX_ARCHIVOS`) con grabaciones ya colocadas y las nuevas se quedan sin sitio. Al revés es peor: los estudiantes verían el volcado de Meet entero, con las "
+        "tutorías y las reuniones ajenas dentro. Antes esto pasaba **en silencio** —solo se "
+        "comprobaba que no fueran la *misma* carpeta—; ahora sale un `ERROR:` y no se mueve "
+        "nada. **La solución es un arrastre:** saca la carpeta destino de dentro de la de Meet "
+        "y ponla en Mi unidad, al mismo nivel. Si el script no puede comprobarlo (permisos "
+        "sobre alguna carpeta de más arriba), avisa y sigue: es un guardarraíl, no una cárcel.",
+        "",
         "## Paso a paso",
         "",
         f"### 1. Abre Apps Script con la cuenta {p.institucion}",
@@ -2354,7 +2747,7 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         "```",
         "",
         "Guarda y ejecuta **`moverGrabaciones()`**. Verás una línea `carpeta creada: …` por "
-        "sesión nueva, una `movido: …` por archivo y el resumen `movidos=… · renombrados=… · "
+        "asignatura nueva, una `movido: …` por archivo y el resumen `movidos=… · renombrados=… · "
         "sin clasificar=… · fallidos=… · subcarpetas creadas=… · a la raíz sin confirmar=… · "
         "en gracia=… · descartados "
         "antes=… · sin mirar por falta de tiempo=… · subcarpetas vaciadas=…`. Abre la carpeta "
@@ -2430,17 +2823,27 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         "Cada encuentro deja **tres** archivos en Meet, con el mismo nombre salvo el final: "
         "`… - Recording`, `… - Transcript` y `… - Chat`. Sueltos en la carpeta destino se "
         "mezclan con los de las demás asignaturas, así que el script crea **una subcarpeta por "
-        "materia** dentro del destino y los deja ahí. La subcarpeta se llama con el TRONCO "
-        "del nombre del encuentro —el de siempre, «periodo - grupo - asignatura - sesión»—, así "
-        "que lo prometido se sigue cumpliendo por partida doble: **buscando** ese nombre "
-        "aparece la carpeta (y los archivos, que también lo llevan), y **navegando** se ve una "
-        "carpeta por sesión.",
+        "materia** dentro del destino y los deja ahí. Lo prometido se sigue cumpliendo por "
+        "partida doble: **buscando** «periodo - grupo - asignatura - sesión» aparecen los "
+        "archivos, que llevan ese nombre entero, y **navegando** se ve una carpeta por "
+        "asignatura.",
         "",
+        f"- **La carpeta se llama solo con la asignatura:** `{carpeta_llana}`, sin el periodo "
+        f"ni el grupo delante. {por_que_llana} {mezcla_periodos}",
+        "- **Las mayúsculas no parten la carpeta en dos.** «Trabajo de grado 3» y «Trabajo de "
+        "Grado 3» son la misma carpeta para quien la lee, pero Drive no promete que su búsqueda "
+        "por nombre ignore la caja. Si la búsqueda exacta no da nada, el script mira otra vez "
+        "sin distinguir mayúsculas ni espacios de más, **reutiliza** la que ya está y lo dice "
+        "en el registro (`reuso la carpeta «…»`). Las **tildes sí** cuentan: quitarlas podría "
+        "juntar dos asignaturas distintas de verdad. Así que si ya tienes las carpetas hechas "
+        "a mano, **arrástralas a la carpeta destino** y el script las usa tal como están, "
+        "escritas como las escribiste.",
         f"- **El número de sesión sale del Calendar, no del nombre del archivo.** `{ejemplo_carpeta}` "
         "y no `… - Sesion 01`. Meet **congela** el título del evento con el que se estrenó la "
         "sala: está medido, los 19 artefactos reales de la carpeta decían «Sesion 01», también "
-        "los del 11, 13, 18 y 20 de agosto. Si mandara el nombre, **todas** las sesiones del "
-        "semestre caerían en la misma carpeta. Lo gobierna `CALENDAR_MANDA_SESION`.",
+        "los del 11, 13, 18 y 20 de agosto. Si mandara el nombre, **todos** los archivos del "
+        "semestre dirían «Sesion 01» y ninguno diría de qué clase es. Lo gobierna "
+        "`CALENDAR_MANDA_SESION`.",
         "- **Pero el Calendar manda en el número, no en la asignatura.** Si el encuentro que "
         "encaja en esa hora es de **otro curso** que el que dice el nombre del archivo, eso no es "
         "un número congelado: es una contradicción, y el nombre gana. Meet bautiza el archivo con "
@@ -2462,10 +2865,11 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         "- **La carpeta solo se abre con un nombre que haya confirmado el Calendar.** Si de una "
         "grabación se sabe la asignatura (lo dice su nombre) pero **no** la sesión —no hay "
         "encuentro a esa hora, hay dos, o el nombre no traía hora—, el archivo **se mueve igual**, "
-        "pero suelto a la carpeta destino, como antes de que existieran las subcarpetas. Abrirle "
-        "una carpeta con el número que trae el nombre plantaría, al lado de la carpeta buena, "
-        "otra que dice ser la «Sesion 01» y no lo es, y un estudiante entraría a ver la clase "
-        "equivocada. El resumen los cuenta en `a la raíz sin confirmar=N` y el registro dice por "
+        "pero suelto a la carpeta destino, como antes de que existieran las subcarpetas. Es "
+        "conservador a propósito: el nombre de la carpeta se saca del subject, y un subject sin "
+        "confirmar se ha reconocido a medias —la asignatura sí, el número de sesión no—. La "
+        "carpeta que ven 100+ estudiantes no se construye sobre un dato sin comprobar. "
+        "El resumen los cuenta en `a la raíz sin confirmar=N` y el registro dice por "
         "qué. Se arregla creando la serie de encuentros de ese curso en el Calendar (los que ya "
         "estén en el destino se arrastran a mano: el script no vuelve a mirar allí).",
         "",
@@ -2627,14 +3031,22 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
         "persona** — en ese caso el archivo nace en el Drive de esa persona y ningún script "
         "tuyo puede verlo. Graba siempre tú, como organizador. |",
         "| `hay 2 carpetas que se llaman «…»` | Dentro del destino hay dos carpetas con el "
-        "nombre de esa sesión. El script usa la **primera** y sigue —no duplica—, pero los "
-        "estudiantes verían la sesión partida en dos sitios: junta los archivos a mano y borra "
+        "nombre de esa asignatura. El script usa la **primera** y sigue —no duplica—, pero los "
+        "estudiantes verían la asignatura partida en dos sitios: junta los archivos a mano y borra "
         "la que sobre. |",
         "| `no pude crear la subcarpeta «…»` / `sin subcarpeta (no movidos)=N` | No pudo crear "
-        "la carpeta de la sesión, casi siempre por permiso de escritura sobre la carpeta "
+        "la carpeta de la asignatura, casi siempre por permiso de escritura sobre la carpeta "
         "destino. Esos archivos **no se mueven** a propósito: soltarlos en la raíz del destino "
         "rompería justo lo que se viene a arreglar. Se reintentan solos en la pasada siguiente. "
         "Si prefieres el reparto plano, `AGRUPAR_POR_MATERIA = false`. |",
+        "| `ERROR: «…» está DENTRO de «…»` | La carpeta destino está dentro de la de Meet (o al "
+        "revés). No se mueve nada a propósito: si el destino cuelga del origen, el barrido "
+        "vuelve a encontrar lo que ya movió y gasta el cupo de la pasada en archivos ya "
+        "colocados. Saca la carpeta destino de dentro de la de Meet y ponla en Mi unidad, al "
+        "mismo nivel. |",
+        "| `reuso la carpeta «…» para «…»` | No es un problema. Ya había una carpeta cuyo "
+        "nombre solo se diferencia en las mayúsculas o en un espacio de más —una creada a "
+        "mano—, y el script mete ahí las grabaciones en vez de plantar otra al lado. |",
         "| `a la raíz sin confirmar=N`: archivos sueltos en el destino, sin carpeta | Se sabe de "
         "qué asignatura son —lo dice su nombre— pero el Calendar no confirmó **qué sesión**, y el "
         "número que trae el nombre lo congeló Meet. Se mueven igual (es el comportamiento de "
@@ -2695,88 +3107,12 @@ def _leeme_texto(p: Perfil, sal: dict[str, str], dest: str) -> str:
             "`GRABACIONES_URL`, que es **una sola para los 5 cursos y todos los periodos** y ya "
             "está publicada en el correo de bienvenida "
             "(`config/slides/build_correo_bienvenida.py`) y en el LEEME del estudiante "
-            "(`config/slides/sync_clases_estudiantes.py`). Por eso no hay una carpeta por "
-            "asignatura: cambiarla dejaría mintiendo documentos que ya están en manos de los "
-            "estudiantes. Las subcarpetas por sesión van **dentro** de esa misma carpeta, así "
-            "que no cambian ni el enlace publicado ni el nombre por el que se busca.",
+            "(`config/slides/sync_clases_estudiantes.py`). Por eso el destino no se parte en "
+            "cinco carpetas publicadas: cambiar ese enlace dejaría mintiendo documentos que ya "
+            "están en manos de los estudiantes. Las subcarpetas por asignatura van **dentro** "
+            "de esa misma carpeta, así que no cambian ni el enlace publicado ni el nombre por "
+            "el que se busca.",
             "- Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → "
             "`subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula "
             "todos los periodos.",
-            "- Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.",
-            "- Los eventos del calendario los crea "
-            "`config/slides/build_calendar_encuentros.py` → "
-            "`PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en "
-            "`<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.",
-        ]
-    else:
-        L += [
-            f"- Carpeta destino — el enlace que el perfil `{p.clave}` trae en `destino_url`, "
-            f"pegado tal cual (`{p.destino_url or 'todavía SIN RELLENAR'}`"
-            + (f" → id `{dest}`" if dest else "")
-            + "). Si esa carpeta ya está publicada a los estudiantes, cambiarla dejaría "
-            "mintiendo lo que ya está en sus manos: se cambia en el perfil y se regenera.",
-            "- Patrón del nombre buscable — `rx_subject` del perfil, que es la nomenclatura con "
-            "la que tu institución titula los encuentros del Calendar.",
-            "- Salas de Meet — `salas` del perfil: `{código: nombre de la asignatura tal como "
-            "aparece en el título del evento}`.",
-            "- Los eventos del calendario los crea quien monte la serie de encuentros en tu "
-            "institución. Este script **los lee**, no los toca.",
-        ]
-    L += [
-        "",
-        "Si cambia cualquiera de esos datos, regenera: "
-        f"`python config/slides/build_apps_script_grabaciones.py {p.clave}`.",
-    ]
-    return "\n".join(L) + "\n"
-
-
-def main(argv: list[str]) -> int:
-    """Sin argumentos, el perfil de la CUN: la invocación de siempre sigue igual."""
-    arg = (argv[0].strip() if argv else "")
-    if arg in ("-h", "--help", "--perfiles"):
-        print("Uso: python config/slides/build_apps_script_grabaciones.py [PERFIL]")
-        print(f"     sin PERFIL se usa {PERFIL_POR_OMISION}")
-        for k in sorted(PERFILES):
-            q = PERFILES[k]
-            print(f"     {k:<10} {q.institucion} · {q.timezone} · {q.gs_name}")
-        return 0
-
-    p = perfil(arg or None)
-    raiz = workspace_root()
-    dest = destino_id(p)
-    sal = salas_del_perfil(p)
-
-    gs = raiz / p.gs_name
-    gs.write_text(_gs_texto(p, sal), encoding="utf-8")
-    leeme = raiz / p.leeme_name
-    leeme.write_text(_leeme_texto(p, sal, dest), encoding="utf-8")
-
-    # Los nombres viejos solo los limpia el perfil por omisión: los archivos de otro perfil
-    # llevan sufijo y no son basura de una versión anterior de este build.
-    if not p.sufijo:
-        for viejo in GS_LEGACY:
-            ruta = raiz / viejo
-            if viejo != p.gs_name and ruta.exists():
-                try:
-                    ruta.unlink()
-                except OSError:
-                    pass
-
-    faltan = sin_sala(p)
-    total = len(p.cursos) or len(sal)
-    print(f"OK {p.gs_name} · perfil={p.clave} · destino={dest or '(SIN DESTINO)'} · "
-          f"salas en config={len(sal)}/{total}")
-    print(f"   runbook: {p.leeme_name}")
-    print("   ORIGEN_ID sale VACÍO a propósito: la carpeta por omisión de Meet (hoy «Meet "
-          "Recordings») la pega el docente — y ahora acepta el ENLACE tal cual, no solo el id.")
-    if not dest:
-        print(f"   AVISO: el perfil {p.clave} no trae destino_url: pega el enlace de la carpeta "
-              "de grabaciones en PERFILES antes de usarlo.")
-    if faltan:
-        print("   sin sala en carga_academica_2026.json -> cursos.<key>.meet: "
-              + ", ".join(faltan))
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main(sys.argv[1:]))
+       
