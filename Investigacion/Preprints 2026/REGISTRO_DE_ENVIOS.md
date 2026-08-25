@@ -33,6 +33,41 @@ Cuando salga el DOI, se añade a la fila la URL pública
 (`https://preprints.scielo.org/index.php/scielo/preprint/view/<id>/version/<pubId>`) y se lleva el
 DOI a **CvLAC**, a **ORCID** y a la evidencia del producto de **Synapse**.
 
+## Revistas indexadas
+
+| Manuscrito | Revista | Publindex | Fecha | Estado |
+|---|---|---|---|---|
+| `Articulo_TecnoLogicas_Completion_Gating` | TecnoLógicas (ITM) | **B** · 8 pts | 2026-08-25 | **consulta de pertinencia enviada** |
+
+### 25/08/2026 — consulta de pertinencia a TecnoLógicas
+
+Enviada desde `julian_castanoe@cun.edu.co` a **tecnologicas@itm.edu.co**, asunto «Consulta de
+pertinencia tematica - auditoria de configuracion en Moodle 4.5». Comprobado en Enviados: **una
+sola copia**, sin borradores colgando. El texto está en `CORREO_Consulta_pertinencia_TecnoLogicas.md`.
+
+Se preguntan dos cosas:
+
+1. **Pertinencia temática.** Es el riesgo número uno del envío: «docencia» no está entre las nueve
+   áreas que declara la revista, y hay una fase de evaluación editorial que decide expresamente si
+   el trabajo cabe. Se argumenta que entra por Ciencias de la Computación —auditoría instrumentada
+   de la configuración de un sistema desplegado, verificada contra el código fuente de la rama
+   `MOODLE_405_STABLE`— y que el aula es el caso de validación, no el objeto.
+2. **Qué cifra rige para el resumen.** La guía de autor pide 250-300 palabras y la lista de
+   comprobación pide 200-250. El manuscrito se preparó con 249 y 5 palabras clave por idioma, que
+   cumple las dos a la vez.
+
+**Mientras no contesten, no se toca nada más.** Maquetar en la plantilla del ITM antes de esa
+respuesta es tirar tres horas. Si dicen que no cabe, el destino es ACOFI (C, 3 puntos), que es el
+mejor encaje temático de la lista pero **solo admite un artículo por autor y año**.
+
+**Pendiente cuando contesten que sí:** maquetación en la plantilla Word del ITM (Montserrat, 10 pt,
+tablas como tablas y no como imagen), carta de presentación, tres evaluadores propuestos —los pone
+el Docente, no se inventan— y la cuenta en su OJS, que tiene reCAPTCHA y se crea a mano.
+
+**Dos decisiones del Docente, abiertas:** si el artículo va con el nombre de la CUN y con los
+identificadores reales de las siete aulas (`129268`, `112321`, `6522210`…), o anonimizado; y si la
+decanatura o la DNI lo saben antes de la publicación.
+
 ## Software acompañante
 
 | Paquete | Preprint al que acompaña | Depósito |
