@@ -5,11 +5,10 @@
  * Meet deja las grabaciones en el Drive del ORGANIZADOR, en su carpeta por omisión de Mi
  * unidad: hoy «Meet Recordings». Algunas cuentas ven en su lugar una carpeta «Google Meet»
  * con una subcarpeta por reunión (y la vieja dentro, como «Legacy Meet Recordings») — mira
- * cuál tienes tú y pega ESE id. El correo de bienvenida y
- * el «LEEME - Material para estudiantes» prometen otra cosa: que TODAS las grabaciones están
- * en UNA carpeta y que el vídeo se encuentra buscando «periodo - grupo - asignatura - sesion»
- * — y las dos cosas siguen siendo verdad: la carpeta es una sola, y dentro cada sesión tiene
- * la suya, con ese mismo nombre.
+ * cuál tienes tú y pega ESE id. Lo que se le ha prometido al estudiante es
+ * otra cosa: que TODAS las grabaciones están en UNA carpeta y que el vídeo se encuentra
+ * buscando por el título del encuentro — y las dos cosas siguen siendo verdad: la carpeta
+ * es una sola, y dentro cada sesión tiene la suya, con ese mismo nombre.
  * Este script cumple esa promesa cada 30 minutos y SIN NINGUNA CREDENCIAL: Apps Script
  * corre en los servidores de Google con la sesión del dueño del proyecto. No hace falta que el
  * computador esté encendido, y no hay token ni contraseña de aplicación que guardar (que
@@ -26,12 +25,12 @@
  * - No mueve lo que no sabe clasificar: lo deja quieto y lo nombra en el registro. Por esa
  *   carpeta la ven 100+ estudiantes, y por Meet pasan también tutorías y jurados.
  *
- * PASOS  (detalle completo en «LEEME - Mover las grabaciones de Meet.md», misma carpeta)
+ * PASOS  (detalle completo en «LEEME - Mover las grabaciones de Meet (PLANTILLA).md», misma carpeta)
  * 0. REQUISITO PREVIO: los encuentros de la asignatura tienen que EXISTIR en tu Calendar
- *    (los crea «PRINCIPAL - Crear encuentros con invitados.gs» de cada curso). Sin ellos,
+ *    (los creas tú en ese calendario, con MARCA en el título). Sin ellos,
  *    una grabación que no traiga el nombre del evento no se puede clasificar y se queda
- *    quieta. Hoy solo Proyecto I tiene serie y sala creadas.
- * 1. https://script.google.com con la cuenta CUN (julian_castanoe@cun.edu.co) — TIENE que ser la del
+ *    quieta. Crea antes la serie de encuentros de cada asignatura en el Calendar.
+ * 1. https://script.google.com con la cuenta INSTITUCIÓN (tu.correo@ejemplo.edu) — TIENE que ser la del
  *    organizador de las clases: las grabaciones nacen en SU Mi unidad.
  * 2. Nuevo proyecto -> pega TODO este archivo -> guarda.
  * 3. Pega en ORIGEN_ID el ENLACE de la carpeta de Meet de Mi unidad, tal cual, el de la
@@ -45,7 +44,7 @@
  *           (para el automatismo) · `olvidarRegistro()` (suelta el historial de deshacer) ·
  *           `reintentarPendientes()` (vuelve a mirar lo descartado y lo que falló al mover).
  *
- * LO QUE ES DEL PERFIL CUN Y NO ES UNIVERSAL  (los perfiles viven en el generador)
+ * LO QUE ES DEL PERFIL PLANTILLA Y NO ES UNIVERSAL  (los perfiles viven en el generador)
  * - La clasificación va por el CALENDARIO. NO puede ir por el número de sesión del nombre
  *   del archivo: se midió sobre los 19 artefactos reales y TODOS decían «Sesion 01» (Meet
  *   congela el título del evento con el que se estrenó la sala). Eso exige que los
@@ -75,7 +74,7 @@
  *   dejan tal cual a propósito. Parametrizar la prosa obligaría a tocar el cuerpo del
  *   script, que es justo lo que no se toca para no cambiar lo que ya funciona.
  *
- * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py CUN
+ * Regenerar este .gs: python config/slides/build_apps_script_grabaciones.py PLANTILLA
  */
 
 // ───────────────────────────── CONFIGURACIÓN ─────────────────────────────────
@@ -85,6 +84,8 @@
 // solo dicen qué harían. Ponlo en false cuando verificarGrabaciones() te cuadre.
 var SIMULAR = true;
 
+// Zona horaria (IANA) con la que se leen las horas del Calendar y las del nombre del
+// archivo. Sale del perfil: compruébala antes de nada si copiaste la PLANTILLA.
 var TIMEZONE = 'America/Bogota';
 
 // ORIGEN — la carpeta por omisión de Meet en el Mi unidad del organizador: hoy «Meet
@@ -106,18 +107,18 @@ var ORIGEN_ID = '';
 // ver la lista completa. Si tu origen es «Meet Recordings» (plana), esto no aplica.
 var ORIGEN_LEGACY_ID = '';
 
-// DESTINO — la carpeta ÚNICA de grabaciones: la misma para los 5 cursos y para todos los
+// DESTINO — la carpeta ÚNICA de grabaciones: la misma para todos los cursos y todos los
 // periodos. Dentro NO va todo suelto: cada encuentro tiene su subcarpeta (ver
-// AGRUPAR_POR_MATERIA, aquí debajo). Fuente única: config/cursos/carga_academica.py ->
-// GRABACIONES_URL (y la nota normativa de carga_academica_2026.json). Esta URL ya está
-// impresa en el correo de bienvenida y en el LEEME del estudiante: no la cambies aquí.
+// AGRUPAR_POR_MATERIA, aquí debajo). La declara el perfil PLANTILLA en PERFILES, dentro de
+// config/slides/build_apps_script_grabaciones.py. Si ya está publicada a los estudiantes,
+// no la cambies aquí: cámbiala en el perfil y regenera.
 // Va el ENLACE tal cual, como lo copia Drive (el id pelado también vale).
-var DESTINO_ID = 'https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing';
+var DESTINO_ID = '';
 
-// UNA SUBCARPETA POR MATERIA dentro de esa carpeta destino. Cada encuentro deja TRES archivos
+// UNA SUBCARPETA POR SESIÓN dentro de esa carpeta destino. Cada encuentro deja TRES archivos
 // en Meet —el vídeo, la transcripción y el chat— y sueltos se mezclan con los de las demás
-// asignaturas. Con esto todas las sesiones de un curso caen en su carpeta, que se llama:
-//   «26ES4 - 54ES4 - Proyecto I - Sesion 04»
+// sesiones. Con esto los tres caen juntos en una carpeta que se llama como el encuentro:
+//   «Asignatura de ejemplo - Sesion 04»
 //   true  -> se crea esa subcarpeta dentro del destino (o se REUTILIZA si ya está) y ahí van
 //            los tres. La promesa publicada sigue en pie —se busca igual, «periodo - grupo -
 //            asignatura - sesion»— y además se puede navegar sesión por sesión.
@@ -154,8 +155,8 @@ var SUFIJOS_ARTEFACTO = [' - Recording', ' - Transcript', ' - Chat'];
 //            2026-08-25. No se renombra nada, y el número de sesión será el que Meet congelara.
 var CALENDAR_MANDA_SESION = true;
 
-// Calendario donde están los encuentros. Es la AUTORIDAD de nombres: los eventos los creó
-// «PRINCIPAL - Crear encuentros con invitados.gs», así que al abrir el semestre siguiente
+// Calendario donde están los encuentros. Es la AUTORIDAD de nombres: los títulos de los eventos son
+// los que manda RX_SUBJECT, así que al abrir el semestre siguiente
 // esto sigue funcionando sin tocar el script. 'primary' = el principal de la cuenta.
 var CALENDARIO_ID = 'primary';
 
@@ -192,36 +193,27 @@ var HORAS_ATRAS_APROX = 6;
 var MARCA = ' - Sesion ';
 
 // Subject canónico dentro del nombre del archivo:
-//   «periodo - grupo(s) - Asignatura - Sesion NN»   (sesiones_cun.subject_encuentro)
-//   26ES4 - 54ES4 - Proyecto I - Sesion 01
-//   26P04/26V04 - 54450/54466/54467 - Trabajo de Grado 3 - Sesion 01
+//   «Asignatura - Sesion NN» (RELLENA esto con tu nomenclatura)
+//   Asignatura de ejemplo - Sesion 01
 // Sin anclas: Meet añade « (2026-08-11 17:00 GMT-05:00)» al final y puede añadir cosas
 // delante (los artefactos llevan sufijos tipo «- Transcript»).
-var RX_SUBJECT = /\d{2}[A-Z]{1,2}\d{1,2}(?:\/\d{2}[A-Z]{1,2}\d{1,2})* - [0-9A-Z]{5}(?:\/[0-9A-Z]{5})* - [^()]{3,60}? - Sesion \d{1,2}(?: \(autónoma\))?/;
+var RX_SUBJECT = /[^()]{3,60}? - Sesion \d{1,2}/;
 
 // Fecha y hora que Meet escribe en el nombre: « (2026-08-11 17:00 GMT-05:00)».
 var RX_FECHA = /(\d{4})[-_ ](\d{2})[-_ ](\d{2})[ _T]+(\d{2})[:._h ](\d{2})(?:[^)]*?GMT\s*([+-]\d{2}))?/;
-var DESFASE_ESPERADO = '-05';   // Bogotá. Otro desfase -> la hora del nombre no se usa.
+var DESFASE_ESPERADO = '-05';   // RELLENA con el desfase de tu huso (ojo si tu país cambia la hora en verano: ver los límites). Otro desfase -> la hora del nombre no se usa.
 
 // Código de sala de Meet -> asignatura tal como aparece en el título del evento. Sirve para
-// desempatar cuando la ventana de tiempo da más de un candidato Y, sobre todo, para VETAR: si
-// la sala dice «Proyecto I» y el único encuentro de esa hora es de TG3, no se mueve. Una sala
+// desempatar cuando la ventana de tiempo da más de un candidato Y, sobre todo, para VETAR: si la
+// sala dice una asignatura y el único encuentro de esa hora es de otra, no se mueve. Una sala
 // reconocida no clasifica por sí sola (no dice de qué sesión es), pero sí desmiente.
-// Fuente: carga_academica_2026.json -> cursos.<key>.meet (solo las salas REALES).
-// PENDIENTE: siguen sin sala en el JSON creatividad, investigacion, tg2, tg3 -> cuando el .gs de
-// encuentros las cree y las pegues en cursos.<key>.meet, regenera este archivo.
-var SALAS = {
-  'omk-woqk-vsj': 'Proyecto I'
-};
+// Fuente: PERFILES['PLANTILLA'].salas del generador.
+var SALAS = {};  // ninguna sala en config todavía: PERFILES['PLANTILLA'].salas está vacío
 
-// Tabla día+hora -> curso. NO se usa como criterio (el Calendar ya la contiene, y además
-// contempla las reprogramaciones: TG2 dictó la Sesión 01 el viernes 14/08/2026). Está aquí
-// para leer el registro a ojo:
-//   lunes      20:00–22:00  ->  Proyecto I · 54ES4
-//   miércoles  17:00–18:00  ->  Creatividad y Pensamiento Innovador · 54408
-//   jueves     17:00–18:00  ->  Investigación Ciencia y Tecnología · 53339
-//   lunes      17:00–18:00  ->  Trabajo de Grado 2 · 54448
-//   martes     17:00–18:00  ->  Trabajo de Grado 3 · 54450/54466/54467
+// Tabla día+hora -> curso. NO se usa como criterio (el Calendar ya la contiene, con sus
+// reprogramaciones). Está aquí para leer el registro a ojo:
+//   (este perfil no declara cursos: la tabla de horarios se omite. El criterio real
+//    es el Calendar, no esta tabla.)
 
 // Nombres con los que buscar candidatos a ORIGEN_ID. SOLO para SUGERIR en el registro: el
 // script nunca elige «la primera que aparezca». Son los nombres que documenta Google en
@@ -234,7 +226,7 @@ var MIME_ATAJO = 'application/vnd.google-apps.shortcut';
 
 // Registro de lo movido — existe SOLO para deshacer, no para saber qué falta (eso lo dice el
 // propio origen). Misma convención que PROP_MEET en los .gs de Calendar.
-var PROP_MOVIDOS = 'GRABACIONES_MOVIDAS';
+var PROP_MOVIDOS = 'GRABACIONES_PLANTILLA_MOVIDAS';
 var MAX_REGISTRO = 150;          // entradas
 var MAX_REGISTRO_BYTES = 8000;   // una propiedad de script no admite más de 9 KB
 
@@ -243,7 +235,7 @@ var MAX_REGISTRO_BYTES = 8000;   // una propiedad de script no admite más de 9 
 // vuelve a mirar en cada pasada, se come el cupo de MAX_ARCHIVOS y acaba tapando la clase de
 // ayer. Se apuntan con la fecha en que se descartaron y se reintentan cada REINTENTO_H horas
 // (por si aparece el encuentro en el Calendar o se pega la sala que faltaba).
-var PROP_DESCARTADAS = 'GRABACIONES_DESCARTADAS';
+var PROP_DESCARTADAS = 'GRABACIONES_PLANTILLA_DESCARTADAS';
 var MAX_DESCARTADAS = 120;
 var REINTENTO_H = 24;
 
@@ -251,7 +243,7 @@ var REINTENTO_H = 24;
 // estaba). Sin memoria, cada pasada crearía un atajo nuevo en la carpeta que ven los
 // estudiantes. Al primer fallo se apunta; a partir del segundo intento no se vuelve a tocar
 // hasta que lo desbloquees con reintentarPendientes().
-var PROP_FALLIDAS = 'GRABACIONES_FALLIDAS';
+var PROP_FALLIDAS = 'GRABACIONES_PLANTILLA_FALLIDAS';
 
 // Tope de archivos que se CLASIFICAN por pasada (cada uno puede costar una consulta al
 // Calendar) y de archivos cuyos metadatos se leen al barrer. Se ordena de más nuevo a más
@@ -415,7 +407,7 @@ function verificarGrabaciones() {
 
 /**
  * Mueve a la carpeta única de grabaciones lo que sabe identificar, y solo eso — a la
- * subcarpeta de su materia, si AGRUPAR_POR_MATERIA. Es la función que llama el disparador.
+ * subcarpeta de su sesión, si AGRUPAR_POR_MATERIA. Es la función que llama el disparador.
  * Idempotente por partida doble: lo ya movido no está en el origen, así que una segunda pasada
  * no lo vuelve a tocar, y la subcarpeta se REUTILIZA si ya existe, nunca se duplica. Y es
  * REINCIDENTE a propósito — la transcripción y las notas pueden llegar horas después del vídeo,
@@ -757,7 +749,7 @@ function _contexto_() {
   var destino = _carpeta_(DESTINO_ID, 'DESTINO');
   if (!destino) {
     Logger.log('Sin carpeta destino no se hace nada. Fuente del id: ' +
-               'config/cursos/carga_academica.py -> GRABACIONES_URL.');
+               'PERFILES -> PLANTILLA -> destino_url, en el generador.');
     return null;
   }
   if (!_origenConfigurado_()) {
@@ -1084,19 +1076,19 @@ function _clasificar_(cal, it) {
   }
 
   // Criterio 3 — el código de sala. No clasifica por sí solo (no dice de qué sesión es), pero
-  // DESMIENTE: si la sala es la de Proyecto I, el archivo no es de TG3 por muy solo que esté
+  // DESMIENTE: si la sala es la de otra asignatura, el archivo no es de esta por muy solo que esté
   // ese encuentro en la agenda. Puede venir en el nombre del archivo o en el de la subcarpeta
   // de la reunión.
   var pista = _asignaturaDeSala_(nombre) || _asignaturaDeSala_(it.carpeta.getName());
 
   // Criterio 2 — cruce por fecha y hora contra los eventos REALES del Calendar, que es la
-  // autoridad de nombres: los creó «PRINCIPAL - Crear encuentros con invitados.gs» y ya
-  // contienen las excepciones (TG2 dictó la Sesión 01 el VIERNES 14/08/2026, reprogramada
-  // desde el lunes 10/08). Una tabla de horarios horneada aquí la habría perdido.
+  // autoridad de nombres, y ya contiene las excepciones: una clase reprogramada a otro
+  // día tiene su evento en el día real en que se dio. Una tabla de horarios horneada
+  // aquí la habría perdido.
   var fecha = _fechaDelNombre_(nombre);
   var aprox = !fecha;
   if (!fecha) {
-    // Sin hora en el nombre (o con un desfase que no es el de Bogotá): lo único que queda es
+    // Sin hora en el nombre (o con un desfase que no es el de DESFASE_ESPERADO): lo único que queda es
     // la fecha de CREACIÓN, que es POSTERIOR a la clase. Se mira hacia ATRÁS —nunca «el día
     // natural del archivo», que a las 00:20 ya es el día siguiente— y solo cuentan encuentros
     // ya terminados. En lunes hay dos cursos -> saldrá «ambiguo», y eso es correcto.
@@ -1219,7 +1211,7 @@ function _titulos_(cands) {
 
 /**
  * Subject canónico que ya viene dentro del nombre del archivo, o '' si no hay ninguno.
- * Canónico = «periodo - grupo(s) - Asignatura - Sesion NN» (sesiones_cun.subject_encuentro).
+ * Canónico = «Asignatura - Sesion NN» (RELLENA esto con tu nomenclatura).
  */
 function _subjectDelNombre_(nombre) {
   var m = String(nombre).match(RX_SUBJECT);
@@ -1237,7 +1229,7 @@ function _asignaturaDeSala_(texto) {
 
 /**
  * Fecha y hora que Meet escribió en el nombre —«… (2026-08-11 17:00 GMT-05:00)»— o null si
- * no está. Se interpreta en TIMEZONE; si el nombre trae un desfase que NO es el de Bogotá,
+ * no está. Se interpreta en TIMEZONE; si el nombre trae un desfase que NO es el de DESFASE_ESPERADO,
  * se devuelve null a propósito y se cae al criterio de día completo, que es más flojo pero
  * no se equivoca de hora. La convención de nombre de Meet NO está documentada por Google:
  * es observación de campo, y por eso nunca es el único criterio.
@@ -1577,7 +1569,7 @@ function _avisoSilencio_(cal, lote, plan) {
              ' encuentro(s) en las últimas 48 h, pero NINGUNO se pudo clasificar.');
   Logger.log('Lee los motivos de «sin clasificar» de arriba. Lo más frecuente: la serie de ' +
              'encuentros de ese curso todavía no existe en tu Calendar (la crea ' +
-             '«PRINCIPAL - Crear encuentros con invitados.gs» del curso), o lo que hay en la ' +
+             'quien monte la serie de encuentros en tu institución), o lo que hay en la ' +
              'carpeta son tutorías y jurados, que NO deben publicarse.');
 }
 

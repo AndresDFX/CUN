@@ -122,9 +122,17 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         "(`Sesion NN - …/`) y `Recursos/ACAs/`. El **LEEME** de adentro explica qué es cada cosa. |",
         # La carpeta de grabaciones acumula todos los cursos y todos los periodos: lo que
         # identifica cada video es el NOMBRE DEL EVENTO, por eso el ejemplo va literal.
+        # Desde el 25/08/2026 esa carpeta no está plana: `build_apps_script_grabaciones.py`
+        # deja cada encuentro en SU subcarpeta, con ese mismo nombre (los tres archivos que
+        # produce Meet —video, transcripción y chat— van juntos). El enlace y el nombre que se
+        # busca no cambian, así que esta fila sigue siendo cierta; se dice lo de la carpeta
+        # para que el estudiante sepa que también puede navegar en vez de buscar.
         f"| **Grabaciones de las clases** | {GRABACIONES_URL} — busca por el **nombre del evento**, "
         "con la sintaxis «periodo - grupo - asignatura - sesión». En este curso, la Sesión 01 es "
         f"{bold_var(_ejemplo_nombre_evento(key, c))}."
+        " Las grabaciones están agrupadas en **una carpeta por asignatura**, y dentro de "
+        "ella encontrarás todas las sesiones del curso: de cada encuentro, el vídeo "
+        "junto con su transcripción y el chat."
         # TG3: una sola serie para los tres grupos ⇒ el nombre del evento (y por tanto el de
         # la grabación) lleva los tres códigos, no solo el del destinatario.
         + (

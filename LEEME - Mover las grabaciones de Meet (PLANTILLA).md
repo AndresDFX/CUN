@@ -1,16 +1,16 @@
 # Mover las grabaciones de Meet — automático, sin credenciales
 
-**5 asignaturas · 7 aulas · 1 sola carpeta destino** · barrido cada 30 minutos · un único proyecto de Apps Script, instalado una vez
+**1 sola carpeta destino** · barrido cada 30 minutos · un único proyecto de Apps Script, instalado una vez
 
-> **Archivo generado — no editar a mano.** Perfil `CUN`. Regenerar: `python config/slides/build_apps_script_grabaciones.py CUN`
+> **Archivo generado — no editar a mano.** Perfil `PLANTILLA`. Regenerar: `python config/slides/build_apps_script_grabaciones.py PLANTILLA`
 
 ## Qué vas a conseguir
 
-Que cada grabación de Meet salga sola de donde Google la deja —la carpeta por omisión de Meet en tu Mi unidad: hoy «Meet Recordings»— y aparezca en la **carpeta única de grabaciones** (https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing) en **la carpeta de su sesión**, que se llama con el nombre por el que el correo de bienvenida y el `LEEME - Material para estudiantes` le dicen al estudiante que la busque: «periodo - grupo - asignatura - sesión». Los **tres** archivos que deja cada encuentro —vídeo, transcripción y chat— caen juntos ahí. **Unos diez minutos** de instalación, una sola vez; después no hay que volver a tocarlo, ni el semestre que viene.
+Que cada grabación de Meet salga sola de donde Google la deja —la carpeta por omisión de Meet en tu Mi unidad: hoy «Meet Recordings»— y aparezca en la **carpeta única de grabaciones** () en **la carpeta de su sesión**, que se llama con el nombre canónico del encuentro, el mismo con el que lo titula tu Calendar (`Asignatura de ejemplo - Sesion 01`). Los **tres** archivos que deja cada encuentro —vídeo, transcripción y chat— caen juntos ahí. **Unos diez minutos** de instalación, una sola vez; después no hay que volver a tocarlo, ni el semestre que viene.
 
-No necesita contraseña, ni token, ni contraseña de aplicación (que esta cuenta **no puede generar**: el administrador de Workspace lo tiene deshabilitado), ni que tu computador esté encendido. Apps Script corre en los servidores de Google con tu propia sesión.
+No necesita contraseña, ni token, ni contraseña de aplicación (y en muchas cuentas institucionales el administrador ni siquiera las permite), ni que tu computador esté encendido. Apps Script corre en los servidores de Google con tu propia sesión.
 
-Son dos archivos, los dos en la raíz de `Cursos/` porque esto es **uno solo para todos los cursos** (no hay una copia por grupo): `PRINCIPAL - Mover grabaciones de Meet.gs`, que es el que se pega en Apps Script, y este runbook.
+Son dos archivos, y esto es **uno solo para todos los cursos** (no hay una copia por grupo): `PRINCIPAL - Mover grabaciones de Meet (PLANTILLA).gs`, que es el que se pega en Apps Script, y este runbook.
 
 ## ⚠️ Lo primero: un dato que pegar y un paso previo
 
@@ -30,15 +30,15 @@ Si pegas por error el enlace de un **archivo** (los que llevan `/d/`) en vez del
 
 Mientras `ORIGEN_ID` esté vacío el script **no mueve nada** y te dice que falta; `verificarGrabaciones()` incluso te lista candidatos por nombre para copiar y pegar.
 
-**El paso previo:** los encuentros de la asignatura tienen que **existir en tu Calendar**. Cuando Meet no nombra el archivo con el título del evento (pasa siempre que la reunión se inicia desde la sala), lo único que puede decir de qué clase es resulta ser el propio Calendar. Esas series las crea `PRINCIPAL - Crear encuentros con invitados.gs` de cada curso, y hoy **solo Proyecto I la tiene**: los otros cuatro siguen con `"meet": ""` en `carga_academica_2026.json` y su serie no se ha creado (ver «Pendientes» en `LEEME - Mapa de cursos y manuales.md`). Sin eso, en esas 6 aulas cada grabación saldrá en `--- sin clasificar ---` con «no hay ningún encuentro en el Calendar…» y se quedará quieta: no es que el automatismo no sirva, es que falta el paso anterior.
+**El paso previo:** los encuentros de la asignatura tienen que **existir en tu Calendar**. Cuando Meet no nombra el archivo con el título del evento (pasa siempre que la reunión se inicia desde la sala), lo único que puede decir de qué clase es resulta ser el propio Calendar. Esas series las creas tú en el Calendar de esa misma cuenta, y sus títulos tienen que llevar la MARCA (« - Sesion ») y encajar con `RX_SUBJECT`: las dos cosas las declara el perfil `PLANTILLA`. Crea antes la serie de encuentros de cada asignatura en el Calendar. Sin eso, cada grabación saldrá en `--- sin clasificar ---` con «no hay ningún encuentro en el Calendar…» y se quedará quieta: no es que el automatismo no sirva, es que falta el paso anterior.
 
 Y un supuesto que conviene confirmar el primer día: **la carpeta de grabaciones está en Mi unidad**, no en una unidad compartida. Si estuviera en una unidad compartida, `DriveApp` no bastaría (haría falta el servicio avanzado de Drive) y —lo importante— mover el vídeo allí **transferiría su propiedad a la institución de forma irreversible**. Si algún día se decide eso, se decide a propósito y no como efecto secundario de este script.
 
 ## Paso a paso
 
-### 1. Abre Apps Script con la cuenta CUN
+### 1. Abre Apps Script con la cuenta INSTITUCIÓN
 
-**https://script.google.com** con **julian_castanoe@cun.edu.co**. Tiene que ser la cuenta del **organizador** de las clases: las grabaciones nacen en *su* Mi unidad y ningún script puede ver el Drive de otra persona. **Nuevo proyecto** → borra el `function myFunction()` de fábrica → pega **todo** el contenido de `PRINCIPAL - Mover grabaciones de Meet.gs` → guarda. Ponle un nombre reconocible al proyecto: «CUN - Grabaciones».
+**https://script.google.com** con **tu.correo@ejemplo.edu**. Tiene que ser la cuenta del **organizador** de las clases: las grabaciones nacen en *su* Mi unidad y ningún script puede ver el Drive de otra persona. **Nuevo proyecto** → borra el `function myFunction()` de fábrica → pega **todo** el contenido de `PRINCIPAL - Mover grabaciones de Meet (PLANTILLA).gs` → guarda. Ponle un nombre reconocible al proyecto: «Grabaciones».
 
 No hace falta añadir ningún servicio avanzado. Este script usa solo Drive, Calendar y los disparadores, que vienen de serie.
 
@@ -50,18 +50,18 @@ En el bloque `// ─── CONFIGURACIÓN ───`, la única constante que sa
 var ORIGEN_ID = '';   // <- pega aquí el ENLACE de tu carpeta de grabaciones de Meet
 ```
 
-Guarda. Lo demás ya viene puesto desde el perfil: la carpeta destino (`https://drive.google.com/drive/folders/1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ?usp=sharing` → id `1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ`), el calendario (`primary`) y las salas de Meet conocidas.
+Guarda. Lo demás ya viene puesto desde el perfil: la carpeta destino (`` → id ``), el calendario (`primary`) y las salas de Meet conocidas.
 
 ### 3. Ejecuta `verificarGrabaciones()` — siempre, antes que nada
 
 Elige **`verificarGrabaciones`** en el desplegable de arriba y pulsa **Ejecutar**.
 
-La primera vez Google pide permisos: **Revisar permisos** → tu cuenta CUN → «Google no ha verificado esta aplicación» → **Configuración avanzada** → **Ir a (nombre del proyecto)** → **Permitir**. Es tu propio script; el aviso sale porque no está publicado en ninguna tienda.
+La primera vez Google pide permisos: **Revisar permisos** → tu cuenta INSTITUCIÓN → «Google no ha verificado esta aplicación» → **Configuración avanzada** → **Ir a (nombre del proyecto)** → **Permitir**. Es tu propio script; el aviso sale porque no está publicado en ninguna tienda.
 
 `verificarGrabaciones()` **no mueve, no renombra, no borra y no instala nada**. Solo escribe en el registro (*Ver → Registro de ejecución*):
 
 - el modo (`SIMULACIÓN` / `REAL`), la zona horaria y los márgenes;
-- el **calendario** con su nombre y su id — comprueba que es el tuyo de CUN;
+- el **calendario** con su nombre y su id — comprueba que es el tuyo de INSTITUCIÓN;
 - las carpetas **ORIGEN** y **DESTINO** con nombre e id;
 - si hay disparador instalado y cuántos movimientos se pueden deshacer;
 - un bloque **`--- se moverían ---`** con una línea por archivo, el criterio con el que lo identificó y **el nombre nuevo** si va a renombrarlo;
@@ -108,11 +108,11 @@ Nada de eso guarda una credencial: el script se ejecuta *como tú*, y si algún 
 - **No se borra nada, nunca.** Las subcarpetas que Meet deja en el origen quedan vacías en su sitio y se cuentan en el registro (`subcarpetas vaciadas=`).
 - **Meter el archivo en una subcarpeta tampoco cambia el enlace.** Es el mismo movimiento de Drive que antes, solo que a un destino más adentro: el `fileId` no cambia y `revertirMovimientos()` lo devuelve igual a su carpeta y su nombre de antes.
 
-## Una carpeta por materia, con todas sus sesiones dentro
+## Una carpeta por sesión, con los tres archivos dentro
 
-Cada encuentro deja **tres** archivos en Meet, con el mismo nombre salvo el final: `… - Recording`, `… - Transcript` y `… - Chat`. Sueltos en la carpeta destino se mezclan con los de las demás asignaturas, así que el script crea **una subcarpeta por materia** dentro del destino y los deja ahí. La subcarpeta se llama con el TRONCO del nombre del encuentro —el de siempre, «periodo - grupo - asignatura - sesión»—, así que lo prometido se sigue cumpliendo por partida doble: **buscando** ese nombre aparece la carpeta (y los archivos, que también lo llevan), y **navegando** se ve una carpeta por sesión.
+Cada encuentro deja **tres** archivos en Meet, con el mismo nombre salvo el final: `… - Recording`, `… - Transcript` y `… - Chat`. Sueltos en la carpeta destino se mezclan con los de las demás sesiones, así que el script crea **una subcarpeta por sesión** dentro del destino y los deja ahí. La subcarpeta se llama **exactamente** con el nombre del encuentro —el de siempre, «periodo - grupo - asignatura - sesión»—, así que lo prometido se sigue cumpliendo por partida doble: **buscando** ese nombre aparece la carpeta (y los archivos, que también lo llevan), y **navegando** se ve una carpeta por sesión.
 
-- **El número de sesión sale del Calendar, no del nombre del archivo.** `26ES4 - 54ES4 - Proyecto I - Sesion 04` y no `… - Sesion 01`. Meet **congela** el título del evento con el que se estrenó la sala: está medido, los 19 artefactos reales de la carpeta decían «Sesion 01», también los del 11, 13, 18 y 20 de agosto. Si mandara el nombre, **todas** las sesiones del semestre caerían en la misma carpeta. Lo gobierna `CALENDAR_MANDA_SESION`.
+- **El número de sesión sale del Calendar, no del nombre del archivo.** `Asignatura de ejemplo - Sesion 04` y no `… - Sesion 01`. Meet **congela** el título del evento con el que se estrenó la sala: está medido, los 19 artefactos reales de la carpeta decían «Sesion 01», también los del 11, 13, 18 y 20 de agosto. Si mandara el nombre, **todas** las sesiones del semestre caerían en la misma carpeta. Lo gobierna `CALENDAR_MANDA_SESION`.
 - **Pero el Calendar manda en el número, no en la asignatura.** Si el encuentro que encaja en esa hora es de **otro curso** que el que dice el nombre del archivo, eso no es un número congelado: es una contradicción, y el nombre gana. Meet bautiza el archivo con el título de la sala desde la que se grabó, y hay una sala por curso, así que el nombre acierta la asignatura aunque mienta en la sesión. Sin este freno, una clase de un curso podría publicarse dentro de la carpeta de otro y con el nombre de otro. Cuando pasa, sale un `AVISO:` con los dos nombres.
 - **Si la carpeta ya existe, se reutiliza.** Se busca *dentro* de la carpeta destino (nunca en todo tu Drive, que podría devolver una carpeta ajena que se llame igual), así que ejecutarlo dos veces no crea dos carpetas. Si encontrara **dos** con el mismo nombre usa la primera y te lo dice en el registro: es señal de que algo se duplicó.
 - **El que llega tarde entra en la misma carpeta.** La transcripción puede aparecer horas después del vídeo; la pasada siguiente la mete en la carpeta que ya está. No hace falta que los tres estén a la vez.
@@ -125,20 +125,10 @@ Volver al reparto plano de antes es una constante, `AGRUPAR_POR_MATERIA = false`
 
 Tres criterios en cascada, y una cuarta salida que es **no tocar**:
 
-1. **Cruce con tu Calendar por fecha y hora, que es quien manda.** Busca el encuentro de esa hora en tu calendario y, si hay **exactamente uno**, mueve y renombra al nombre canónico. El Calendar es la autoridad: ya contiene las reprogramaciones —TG2 dictó la Sesión 01 el **viernes 14/08/2026**, no el lunes— y —lo que de verdad importa— es el único que sabe el **número de sesión de verdad**. Por eso el script **sigue funcionando el semestre que viene sin tocar una línea**. Dos detalles que evitan publicar una reunión ajena con nombre de clase: la marca de tiempo del nombre tiene que caer **dentro** del encuentro (se admiten 15 min antes del inicio, nada después del final), y si el nombre **no trae hora** solo queda la fecha de creación del archivo, que es posterior a la clase: entonces se mira hacia **atrás** (6 h) y solo valen encuentros ya terminados. Nunca «el día del archivo» — a las 00:20 ese día ya es el siguiente.
-2. **El nombre del archivo, como respaldo.** Meet nombra el archivo con el título del evento desde el que se estrenó la sala, y esos títulos los genera este repositorio (`26V04 - 54448 - Trabajo de Grado 2 - Sesion 01`). Dice bien la **asignatura**, pero el **número de sesión** viene congelado —los 19 artefactos reales decían «Sesion 01»—, así que solo se usa cuando el Calendar no puede confirmar nada: no hay encuentro a esa hora, hay dos, o el nombre no traía hora. Entonces el archivo se mueve igual (como siempre se ha movido) y el registro dice que el número de sesión puede venir congelado. Se cambia con `CALENDAR_MANDA_SESION = false`, que devuelve el mando al nombre.
-3. **El código de sala de Meet**, para desempatar y sobre todo para **desmentir**: si la sala es la de Proyecto I y el único encuentro de esa hora es de TG3, **no se mueve** (antes se movía, y el registro decía «+ sala Proyecto I» como si la sala lo hubiera confirmado).
-4. **Si no lo sabe, no lo mueve.** Sale en `--- sin clasificar ---` con el motivo. Los cuatro lunes festivos de 2026 (17/08, 12/10, 02/11, 16/11) no tienen clase: una grabación de esas fechas es una tutoría, un jurado o una reunión ajena y **no** debe acabar en la carpeta que ven 100+ estudiantes.
-
-| Asignatura | Grupos | Horario | ¿Sala en config? |
-|---|---|---|---|
-| Proyecto I | 54ES4 | lunes 20:00–22:00 | sí |
-| Creatividad y Pensamiento Innovador | 54408 | miércoles 17:00–18:00 | **pendiente** |
-| Investigación Ciencia y Tecnología | 53339 | jueves 17:00–18:00 | **pendiente** |
-| Trabajo de Grado 2 | 54448 | lunes 17:00–18:00 | **pendiente** |
-| Trabajo de Grado 3 | 54450/54466/54467 | martes 17:00–18:00 | **pendiente** |
-
-Las salas «pendientes» no impiden nada (el criterio 2 no las necesita), pero conviene pegarlas: son la red de seguridad cuando una grabación no trae el nombre del evento. Las imprime el propio `PRINCIPAL - Crear encuentros con invitados.gs` al crear la serie; van a `config/cursos/carga_academica_2026.json → cursos.<key>.meet` y después se regenera este `.gs`.
+1. **Cruce con tu Calendar por fecha y hora, que es quien manda.** Busca el encuentro de esa hora en tu calendario y, si hay **exactamente uno**, mueve y renombra al nombre canónico. El Calendar es la autoridad: ya contiene las reprogramaciones (una clase movida de día sigue teniendo su evento en la fecha real en que se dio) y —lo que de verdad importa— es el único que sabe el **número de sesión de verdad**. Por eso el script **sigue funcionando el semestre que viene sin tocar una línea**. Dos detalles que evitan publicar una reunión ajena con nombre de clase: la marca de tiempo del nombre tiene que caer **dentro** del encuentro (se admiten 15 min antes del inicio, nada después del final), y si el nombre **no trae hora** solo queda la fecha de creación del archivo, que es posterior a la clase: entonces se mira hacia **atrás** (6 h) y solo valen encuentros ya terminados. Nunca «el día del archivo» — a las 00:20 ese día ya es el siguiente.
+2. **El nombre del archivo, como respaldo.** Meet nombra el archivo con el título del evento desde el que se estrenó la sala, y esos títulos los pone tu Calendar (`Asignatura de ejemplo - Sesion 01`). Dice bien la **asignatura**, pero el **número de sesión** viene congelado —los 19 artefactos reales decían «Sesion 01»—, así que solo se usa cuando el Calendar no puede confirmar nada: no hay encuentro a esa hora, hay dos, o el nombre no traía hora. Entonces el archivo se mueve igual (como siempre se ha movido) y el registro dice que el número de sesión puede venir congelado. Se cambia con `CALENDAR_MANDA_SESION = false`, que devuelve el mando al nombre.
+3. **El código de sala de Meet**, para desempatar y sobre todo para **desmentir**: si la sala es la de una asignatura y el único encuentro de esa hora es de otra, **no se mueve**. La sala sirve para desmentir, no para confirmar.
+4. **Si no lo sabe, no lo mueve.** Sale en `--- sin clasificar ---` con el motivo. Un día sin clase (festivo, receso, una reunión que no era del curso) no tiene encuentro en el Calendar: la grabación se queda quieta, que es lo que debe pasar.
 
 ## Otra institución: los perfiles
 
@@ -172,8 +162,8 @@ Un perfil cambia constantes, no supuestos. Estos siguen ahí, y conviene leerlos
 | `SIMULAR = true: NO se movió nada de verdad` | Sigue en modo simulación. Paso 4. |
 | `ERROR en «…»: probablemente Drive creó un ATAJO en vez de mover` | No tienes permiso para mover a la carpeta destino. Drive falla en silencio dejando un atajo, así que el script comprueba el resultado y lo cuenta como `fallidos=`. Revisa que la carpeta de grabaciones sea tuya (o que puedas escribir en ella), **borra a mano el atajo que haya quedado en ella** y vuelve a ejecutar. |
 | Un archivo sale en `--- sin clasificar ---` con `AMBIGUO` | Había dos encuentros que encajaban a esa hora. Muévelo a mano; el script no adivina. |
-| `no hay ningún encuentro en el Calendar …` | Lo más probable: **la serie de encuentros de ese curso todavía no existe**. Créala con `PRINCIPAL - Crear encuentros con invitados.gs` del curso —**no necesitas la sala de antemano: ese script la crea y la imprime**; el enlace que imprime se pega en `carga_academica_2026.json → cursos.<key>.meet` y después se regenera este `.gs`— y ejecuta `reintentarPendientes()`. Si la serie ya existe y aun así sale esto, era una tutoría, un jurado o una reunión ajena: **no** debe publicarse. |
-| `la sala dice «X» y … no es de esa asignatura` | El desempate por sala **desmintió** la clasificación: se quedó quieto a propósito. Comprueba la sala en `carga_academica_2026.json` y, si el archivo era de clase, muévelo a mano. |
+| `no hay ningún encuentro en el Calendar …` | Lo más probable: **la serie de encuentros de ese curso todavía no existe**. Créala en tu Calendar con un título que encaje con `RX_SUBJECT`; si esa asignatura tiene sala fija de Meet, pégala en `salas` del perfil y regenera y ejecuta `reintentarPendientes()`. Si la serie ya existe y aun así sale esto, era una tutoría, un jurado o una reunión ajena: **no** debe publicarse. |
+| `la sala dice «X» y … no es de esa asignatura` | El desempate por sala **desmintió** la clasificación: se quedó quieto a propósito. Comprueba la sala en `SALAS` (que sale de `salas` del perfil) y, si el archivo era de clase, muévelo a mano. |
 | `sin encuentro en el Calendar … (fecha aproximada)` | El nombre no traía hora y hubo que usar la fecha de creación del archivo (se buscan encuentros terminados en las 6 h anteriores). Si de verdad era una clase, muévela a mano y renómbrala con el título del evento. |
 | `ya intenté moverlo y Drive dejó un ATAJO` | El archivo está **aparcado a propósito**: reintentarlo cada pasada llenaría de atajos la carpeta que ven los estudiantes. Arregla el permiso sobre la carpeta destino, borra los atajos que hayan quedado y ejecuta `reintentarPendientes()`. |
 | `descartado(s) en pasadas anteriores` / `Aparcados N archivo(s) sin clasificar` | Normal: lo que no se puede clasificar (tutorías, jurados) se deja de mirar durante 24 h para que no se coma el cupo de la pasada y tape las grabaciones nuevas. Se vuelve a mirar solo con `reintentarPendientes()` o cuando pasen esas 24 h. |
@@ -198,10 +188,10 @@ Un perfil cambia constantes, no supuestos. Estos siguen ahí, y conviene leerlos
 
 ## De dónde sale cada dato
 
-- Perfil `CUN` — `config/slides/build_apps_script_grabaciones.py` → `PERFILES`. Ahí están la zona horaria, el desfase, la marca, el patrón del asunto, el calendario y los enlaces de las carpetas.
-- Carpeta destino `1EHck-ZdbwwLJtDk2NsS4UDL1UMf1sLqZ` — de `config/cursos/carga_academica.py` → `GRABACIONES_URL`, que es **una sola para los 5 cursos y todos los periodos** y ya está publicada en el correo de bienvenida (`config/slides/build_correo_bienvenida.py`) y en el LEEME del estudiante (`config/slides/sync_clases_estudiantes.py`). Por eso no hay una carpeta por asignatura: cambiarla dejaría mintiendo documentos que ya están en manos de los estudiantes. Las subcarpetas por sesión van **dentro** de esa misma carpeta, así que no cambian ni el enlace publicado ni el nombre por el que se busca.
-- Patrón del nombre buscable — `config/cursos/sesiones_cun.py` → `subject_encuentro()`. El periodo va delante justamente porque esa carpeta acumula todos los periodos.
-- Horarios, grupos y salas de Meet — `config/cursos/carga_academica_2026.json`.
-- Los eventos del calendario los crea `config/slides/build_calendar_encuentros.py` → `PRINCIPAL - Crear encuentros con invitados.gs` (uno por grupo, en `<Curso>/2026/<grupo>/`). Este script **los lee**, no los toca.
+- Perfil `PLANTILLA` — `config/slides/build_apps_script_grabaciones.py` → `PERFILES`. Ahí están la zona horaria, el desfase, la marca, el patrón del asunto, el calendario y los enlaces de las carpetas.
+- Carpeta destino — el enlace que el perfil `PLANTILLA` trae en `destino_url`, pegado tal cual (`todavía SIN RELLENAR`). Si esa carpeta ya está publicada a los estudiantes, cambiarla dejaría mintiendo lo que ya está en sus manos: se cambia en el perfil y se regenera.
+- Patrón del nombre buscable — `rx_subject` del perfil, que es la nomenclatura con la que tu institución titula los encuentros del Calendar.
+- Salas de Meet — `salas` del perfil: `{código: nombre de la asignatura tal como aparece en el título del evento}`.
+- Los eventos del calendario los crea quien monte la serie de encuentros en tu institución. Este script **los lee**, no los toca.
 
-Si cambia cualquiera de esos datos, regenera: `python config/slides/build_apps_script_grabaciones.py CUN`.
+Si cambia cualquiera de esos datos, regenera: `python config/slides/build_apps_script_grabaciones.py PLANTILLA`.
