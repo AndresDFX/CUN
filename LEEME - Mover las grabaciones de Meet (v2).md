@@ -108,32 +108,52 @@ Ejecuta `instalarDisparador()`:
 
 **No hace falta regenerar nada**: editas directo en Apps Script.
 
-## Mismo curso en varios semestres
+## Separar grabaciones por periodo académico
 
-Si tienes el MISMO curso en DOS semestres (ej: "Trabajo de grado 3" en 26ES4 y 27ES4), usa el campo
-`periodo` para distinguirlos:
+Si quieres usar el MISMO script en DOS semestres seguidos (ej: 26ES4 y 27ES4), pero con carpetas
+destino diferentes, usa el campo `FECHA_HASTA` en lugar de cambiar CONFIG_CURSOS:
 
+### Ejemplo: Transición de 26ES4 a 27ES4
+
+**Paso 1 - Durante 26ES4:**
 ```javascript
-{
-  periodo: "26ES4",
-  tituloContiene: "Trabajo de grado 3",
-  meetLink: "",
-  carpetaDestino: "https://drive.google.com/drive/folders/1ABC..."  // <- carpeta de 26ES4
-},
-{
-  periodo: "27ES4",
-  tituloContiene: "Trabajo de grado 3",
-  meetLink: "",
-  carpetaDestino: "https://drive.google.com/drive/folders/1DEF..."  // <- carpeta de 27ES4
-}
+var FECHA_HASTA = '2026-12-31';  // solo mueve archivos creados en 2026
+
+var CONFIG_CURSOS = [
+  {
+    tituloContiene: "Trabajo de grado 3",
+    carpetaDestino: "https://drive.google.com/drive/folders/1ABC..."  // <- carpeta de 26ES4
+  },
+  // ... resto de cursos con carpetas de 26ES4
+];
 ```
 
-El script verifica que el nombre del archivo contenga el periodo antes de clasificar. Así:
-- "26ES4 - 54ES4 - Trabajo de grado 3 - Sesion 01" → va a la carpeta de 26ES4
-- "27ES4 - 55ES4 - Trabajo de grado 3 - Sesion 01" → va a la carpeta de 27ES4
+El script mueve solo las grabaciones creadas ANTES del 2027-01-01, hacia las carpetas de 26ES4.
 
-Si dejas `periodo: ""`, clasifica sin mirar el periodo (útil cuando el curso es único o cuando los
-nombres de archivo no traen periodo).
+**Paso 2 - Al iniciar 27ES4:**
+1. Cambia las carpetas destino en CONFIG_CURSOS por las de 27ES4
+2. Cambia FECHA_HASTA a la nueva fecha límite: `'2027-12-31'`
+3. Las grabaciones de 27ES4 (creadas en 2027) van a las carpetas nuevas
+4. Las grabaciones viejas de 26ES4 ya están movidas, no las vuelve a tocar
+
+**Alternativa: sin fecha límite**
+
+Si dejas `FECHA_HASTA = ''`, el script mueve TODO sin mirar la fecha de creación (útil cuando
+no hay riesgo de mezclar periodos o cuando solo das un curso por año).
+
+## El campo FECHA_HASTA
+
+`FECHA_HASTA` filtra por fecha de creación del archivo en Drive, NO por lo que diga el nombre.
+
+- **Formato:** `'YYYY-MM-DD'` (ej: `'2026-12-31'`)
+- **Comportamiento:**
+  - Si está configurado: solo mueve archivos creados ANTES de esa fecha (inclusive)
+  - Si está vacío (`''`): mueve todo sin filtrar por fecha
+- **Se aplica después de MARGEN_MIN:** primero espera 20 minutos, luego verifica la fecha límite
+- **Útil para:**
+  - Reutilizar el mismo script en varios semestres sin editar CONFIG_CURSOS cada vez
+  - Evitar que grabaciones nuevas se muevan a carpetas de semestres viejos
+  - Separar periodos académicos sin depender del formato del nombre del archivo
 
 ## Cómo cambiar la carpeta destino de un curso
 
