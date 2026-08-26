@@ -108,6 +108,33 @@ Ejecuta `instalarDisparador()`:
 
 **No hace falta regenerar nada**: editas directo en Apps Script.
 
+## Mismo curso en varios semestres
+
+Si tienes el MISMO curso en DOS semestres (ej: "Trabajo de grado 3" en 26ES4 y 27ES4), usa el campo
+`periodo` para distinguirlos:
+
+```javascript
+{
+  periodo: "26ES4",
+  tituloContiene: "Trabajo de grado 3",
+  meetLink: "",
+  carpetaDestino: "https://drive.google.com/drive/folders/1ABC..."  // <- carpeta de 26ES4
+},
+{
+  periodo: "27ES4",
+  tituloContiene: "Trabajo de grado 3",
+  meetLink: "",
+  carpetaDestino: "https://drive.google.com/drive/folders/1DEF..."  // <- carpeta de 27ES4
+}
+```
+
+El script verifica que el nombre del archivo contenga el periodo antes de clasificar. Así:
+- "26ES4 - 54ES4 - Trabajo de grado 3 - Sesion 01" → va a la carpeta de 26ES4
+- "27ES4 - 55ES4 - Trabajo de grado 3 - Sesion 01" → va a la carpeta de 27ES4
+
+Si dejas `periodo: ""`, clasifica sin mirar el periodo (útil cuando el curso es único o cuando los
+nombres de archivo no traen periodo).
+
 ## Cómo cambiar la carpeta destino de un curso
 
 Igual: editas el diccionario, cambias el enlace en `carpetaDestino`, guardas, listo.

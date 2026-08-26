@@ -31,33 +31,44 @@
 
 // ═══════════════════════ CONFIGURACIÓN POR CURSO ═══════════════════════
 // Edita esta tabla para agregar cursos o cambiar destinos. Por cada curso:
+//   periodo: periodo académico (ej: "26ES4", "27ES4") — SI LO PONES, solo clasifica archivos
+//            que traigan ESE periodo en el nombre. Déjalo en "" para que clasifique sin mirar periodo.
 //   tituloContiene: fragmento del título (busca con "contains", NO tiene que ser exacto)
 //   meetLink: código de la sala (el «abc-defg-hij» de meet.google.com/abc-defg-hij)
 //             O déjalo en "" si no todos usan la misma sala
 //   carpetaDestino: enlace o ID de la carpeta de Drive donde van las grabaciones de ESE curso
+//
+// IMPORTANTE: Si tienes el MISMO curso en DOS semestres (ej: Trabajo de grado 3 en 26ES4 y 27ES4),
+// pon el periodo en cada uno. Así evitas que las grabaciones de un semestre se muevan a la carpeta
+// del otro.
 
 var CONFIG_CURSOS = [
   {
+    periodo: "26ES4",  // <- si tienes TG3 en otro semestre, pon aquí "26ES4" y en el otro "27ES4"
     tituloContiene: "Trabajo de grado 3",
     meetLink: "",
-    carpetaDestino: ""  // <- pega aquí el enlace de la carpeta de TG3
+    carpetaDestino: ""  // <- pega aquí el enlace de la carpeta de TG3 de 26ES4
   },
   {
+    periodo: "26ES4",
     tituloContiene: "Trabajo de grado 2",
     meetLink: "",
     carpetaDestino: ""
   },
   {
+    periodo: "26ES4",
     tituloContiene: "Proyecto I",
     meetLink: "",  // <- si todos usan meet.google.com/abc-defg-hij, pon "abc-defg-hij"
     carpetaDestino: ""
   },
   {
+    periodo: "26ES4",
     tituloContiene: "Creatividad",
     meetLink: "",
     carpetaDestino: ""
   },
   {
+    periodo: "26ES4",
     tituloContiene: "Investigación",
     meetLink: "",
     carpetaDestino: ""
@@ -143,6 +154,16 @@ function _quitarSufijo_(nombre) {
 function _clasificarPorTitulo_(base) {
   for (var i = 0; i < CONFIG_CURSOS.length; i++) {
     var cfg = CONFIG_CURSOS[i];
+
+    // Si el config especifica periodo, verificar que el nombre lo contenga
+    // Esto evita que "27ES4 - Trabajo de grado 3" se clasifique con el config de "26ES4 - Trabajo de grado 3"
+    if (cfg.periodo && cfg.periodo.trim() !== '') {
+      if (base.indexOf(cfg.periodo) < 0) {
+        continue;  // este config no aplica para este archivo
+      }
+    }
+
+    // Verificar el título
     if (cfg.tituloContiene && base.toLowerCase().indexOf(cfg.tituloContiene.toLowerCase()) >= 0) {
       return cfg;
     }
@@ -150,10 +171,18 @@ function _clasificarPorTitulo_(base) {
   return null;
 }
 
-function _clasificarPorMeetLink_(meetLink) {
+function _clasificarPorMeetLink_(meetLink, base) {
   if (!meetLink) return null;
   for (var i = 0; i < CONFIG_CURSOS.length; i++) {
     var cfg = CONFIG_CURSOS[i];
+
+    // Si el config especifica periodo, verificar que el nombre lo contenga
+    if (cfg.periodo && cfg.periodo.trim() !== '') {
+      if (base.indexOf(cfg.periodo) < 0) {
+        continue;
+      }
+    }
+
     if (cfg.meetLink && cfg.meetLink === meetLink) {
       return cfg;
     }
