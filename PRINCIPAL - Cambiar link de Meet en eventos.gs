@@ -28,26 +28,28 @@
 // ═══════════════════════ CONFIGURACIÓN ═════════════════════════════════
 
 // Pre-configurado con los 5 cursos de la CUN
+// MODO LINK DINÁMICO: deja nuevoLinkMeet en "DINAMICO" para generar un link único por sesión
+// MODO LINK FIJO: pega un link de Meet para usar el mismo en todas las sesiones
 var CONFIG_CURSOS = [
   {
     tituloContiene: "Proyecto I",  // fragmento del título del evento
-    nuevoLinkMeet: ""  // <- pega aquí el link de Meet (ej: https://meet.google.com/abc-defg-hij)
+    nuevoLinkMeet: "DINAMICO"  // <- "DINAMICO" = link único por sesión, o pega un link fijo
   },
   {
     tituloContiene: "Trabajo de Grado 2",
-    nuevoLinkMeet: ""
+    nuevoLinkMeet: "DINAMICO"
   },
   {
     tituloContiene: "Trabajo de Grado 3",
-    nuevoLinkMeet: ""
+    nuevoLinkMeet: "DINAMICO"
   },
   {
     tituloContiene: "Creatividad y Pensamiento Innovador",
-    nuevoLinkMeet: ""
+    nuevoLinkMeet: "DINAMICO"
   },
   {
     tituloContiene: "Investigación Ciencia y Tecnología",
-    nuevoLinkMeet: ""
+    nuevoLinkMeet: "DINAMICO"
   }
 ];
 
@@ -183,7 +185,11 @@ function verificarEventos() {
 
     var eventos = _buscarEventos_(calendar, cfg.tituloContiene, rango);
     Logger.log('  Eventos encontrados: ' + eventos.length);
-    Logger.log('  Nuevo link de Meet: ' + cfg.nuevoLinkMeet);
+    if (cfg.nuevoLinkMeet === 'DINAMICO') {
+      Logger.log('  Modo: Link ÚNICO por sesión (dinámico)');
+    } else {
+      Logger.log('  Nuevo link de Meet: ' + cfg.nuevoLinkMeet);
+    }
 
     if (eventos.length === 0) {
       Logger.log('  ⚠️  No se encontraron eventos con ese título');
@@ -256,15 +262,28 @@ function cambiarLinkMeet() {
           evt.deleteEvent();
 
           // Recrear con el nuevo link de Meet
-          var descripcionNueva = datos.descripcion;
-          if (descripcionNueva.indexOf('meet.google.com') < 0) {
-            descripcionNueva += '\n\nEnlace de Meet: ' + cfg.nuevoLinkMeet;
-          }
+          var nuevoEvento;
 
-          var nuevoEvento = calendar.createEvent(datos.titulo, datos.inicio, datos.fin, {
-            description: descripcionNueva,
-            location: cfg.nuevoLinkMeet
-          });
+          if (cfg.nuevoLinkMeet === 'DINAMICO') {
+            // Modo dinámico: generar link único por sesión
+            nuevoEvento = calendar.createEvent(datos.titulo, datos.inicio, datos.fin, {
+              description: datos.descripcion
+            });
+            // addConferenceData() genera un link de Meet único automáticamente
+            nuevoEvento.addConferenceData(ConferenceDataService.newConferenceDataBuilder()
+              .setConferenceId(datos.titulo + '_' + datos.inicio.getTime())
+              .build());
+          } else {
+            // Modo fijo: usar el link configurado
+            var descripcionNueva = datos.descripcion;
+            if (descripcionNueva.indexOf('meet.google.com') < 0) {
+              descripcionNueva += '\n\nEnlace de Meet: ' + cfg.nuevoLinkMeet;
+            }
+            nuevoEvento = calendar.createEvent(datos.titulo, datos.inicio, datos.fin, {
+              description: descripcionNueva,
+              location: cfg.nuevoLinkMeet
+            });
+          }
 
           // Agregar participantes
           for (var k = 0; k < datos.participantes.length; k++) {
