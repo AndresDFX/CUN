@@ -38,7 +38,49 @@ DOI a **CvLAC**, a **ORCID** y a la evidencia del producto de **Synapse**.
 | Manuscrito | Revista | Publindex | Fecha | Estado |
 |---|---|---|---|---|
 | `Articulo_TecnoLogicas_Completion_Gating` | TecnoLógicas (ITM) | **B** · 8 pts | 2026-08-25 | **consulta de pertinencia enviada** |
-| `Preprint_Protocolo_Desercion_ML` (17601) | EDU REVIEW (Edulab, ES) | **ninguna** · 0 pts | 2026-08-26 | **paquete listo, sin enviar** — falta cuenta OJS y el clic del Docente |
+| `Preprint_Protocolo_Desercion_ML` (17601) | EDU REVIEW (Edulab, ES) | **ninguna** · 0 pts | **2026-08-27** | **SOMETIDO** · envío **5579** · «Envío completo», en Revisión |
+
+### 27/08/2026 — SOMETIDO a EDU REVIEW: envío 5579
+
+Primer sometimiento a revista de esta carpeta. **Constancia:**
+
+| Dato | Valor |
+|---|---|
+| Revista | EDU REVIEW. International Education and Learning Review · **ISSN 2695-9917** · Edulab (España) |
+| Identificador del envío | **5579** |
+| Fecha | **27 de agosto de 2026** |
+| Sección | Artículos de investigación |
+| Idioma | Español (con título y resumen también en inglés) |
+| Estado | **«Envío completo»**, el flujo marca *Revisión* y no aparece como incompleto |
+| Archivos | `19021` Manuscrito_ciego.docx · `19022` Portada_con_autoria.docx · `19023` Carta_de_presentacion.docx |
+| Evidencia | `Envio_EDU_REVIEW_17601/_evidencia_envio_5579.png` (captura del panel del autor) |
+| Panel | <https://edulab.es/revEDU/authorDashboard/submission/5579> |
+
+**Lo declarado al editor, por escrito en «Comentarios al editor»:** que el manuscrito está depositado
+como preprint en SciELO Preprints (**17601**, DOI previsto `10.1590/SciELOPreprints.17601`), que no
+está publicado ni sometido en otro medio, que **el conjunto de datos es sintético** y que **es un
+protocolo y no reporta resultados**. Las dos últimas se comprobaron guardadas en el resumen del
+envío, no solo en la carta.
+
+**Sirve para el producto `ART_OPEN_D` de Synapse**, que se cumple con la constancia de sometimiento
+y no con la aceptación. Para radicarlo faltan el correo de acuse de la revista (la revista avisa que
+lo manda) y el PDF del manuscrito enviado. **Publindex: ninguna, 0 puntos** — EDU REVIEW no está en
+Scopus ni WoS.
+
+#### Tres cosas del formulario que no están en sus normas de autor
+
+Costaron varios intentos y conviene no volver a descubrirlas:
+
+1. **Hay un campo «Citas» OBLIGATORIO.** El paso 3 no guarda nada y no dice por qué hasta que se
+   inspeccionan los errores: «Citas* Este campo es obligatorio». Hay que **pegar la lista completa de
+   referencias** en ese campo. Se pegaron las **52** del manuscrito (9.687 caracteres), extraídas por
+   párrafo y no por línea —por línea salen 109 fragmentos, porque las referencias vienen partidas—.
+2. **El resumen no puede pasar de 200 palabras.** El del manuscrito tenía **234**. Se recortó a
+   **189** (y el inglés a 177) conservando intactas las dos declaraciones no negociables. Las normas
+   públicas de la revista no mencionan ese límite; lo dice el propio formulario.
+3. **El paso 3 se pinta vacío al recargarlo, aunque haya guardado.** No sirve como comprobación:
+   parece que se perdió todo cuando no es cierto. Lo que sí vale es el **panel del autor**
+   (`/authorDashboard/submission/5579`), que muestra el título y el resumen reales.
 
 ### 26/08/2026 — revisión de la «BASE DE DATOS ARTÍCULOS» y paquete para EDU REVIEW
 
