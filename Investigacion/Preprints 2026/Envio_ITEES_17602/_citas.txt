@@ -1,0 +1,37 @@
+Beck, K. (2003). Test-Driven Development: By Example. Addison-Wesley.
+
+Brown, J. S., Collins, A., & Duguid, P. (1989). Situated cognition and the culture of learning. Educational Researcher, 18(1), 32–42.
+
+Buckingham Shum, S., & Ferguson, R. (2012). Social learning analytics. Educational Technology & Society, 15(3), 3–26.
+
+Fowler, M. (2018). Refactoring: Improving the Design of Existing Code (2nd ed.). Addison-Wesley.
+
+Humble, J., & Farley, D. (2010). Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. Addison-Wesley.
+
+Kitchenham, B., Pfleeger, S. L., Pickard, L. M., Jones, P. W., Hoaglin, D. C., El Emam, K., & Rosenberg, J. (2002). Preliminary guidelines for empirical research in software engineering. IEEE Transactions on Software Engineering, 28(8), 721–734.
+
+Knuth, D. E. (1984). Literate programming. The Computer Journal, 27(2), 97–111.
+
+Laurillard, D. (2012). Teaching as a Design Science: Building Pedagogical Patterns for Learning and Technology. Routledge.
+
+Merrill, M. D. (2002). First principles of instruction. Educational Technology Research and Development, 50(3), 43–59.
+
+Mishra, P., & Koehler, M. J. (2006). Technological pedagogical content knowledge: A framework for teacher knowledge. Teachers College Record, 108(6), 1017–1054.
+
+Peng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226–1227.
+
+Perkel, J. M. (2018). A toolkit for data transparency takes shape. Nature, 560(7719), 513–515.
+
+Runeson, P., & Höst, M. (2009). Guidelines for conducting and reporting case study research in software engineering. Empirical Software Engineering, 14(2), 131–164.
+
+Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules for reproducible computational research. PLOS Computational Biology, 9(10), e1003285.
+
+Selwyn, N. (2019). Should robots replace teachers? AI and the future of education. Learning, Media and Technology, 44(4), 1–14.
+
+Shute, V. J. (2008). Focus on formative feedback. Review of Educational Research, 78(1), 153–189.
+
+Wiggins, G., & McTighe, J. (2005). Understanding by Design (2nd ed.). Association for Supervision and Curriculum Development.
+
+Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., & Teal, T. K. (2017). Good enough practices in scientific computing. PLOS Computational Biology, 13(6), e1005510.
+
+Zawacki-Richter, O., Marín, V. I., Bond, M., & Gouverneur, F. (2019). Systematic review of research on artificial intelligence applications in higher education. International Journal of Educational Technology in Higher Education, 16(1), 39.

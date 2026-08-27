@@ -166,6 +166,53 @@ el Docente, no se inventan— y la cuenta en su OJS, que tiene reCAPTCHA y se cr
 identificadores reales de las siete aulas (`129268`, `112321`, `6522210`…), o anonimizado; y si la
 decanatura o la DNI lo saben antes de la publicación.
 
+## ⚠️ La cláusula «en ningún formato» descarta tres de las cinco revistas
+
+Descubierto el 27/08/2026 al intentar someter el **17602**. Es el hallazgo que más condiciona el
+plan, porque **no es un problema de encaje temático sino de integridad**: hay revistas cuya
+declaración de originalidad **no se puede firmar** con un preprint depositado, y las tres primeras
+preguntas de sus listas de comprobación lo dicen con estas palabras:
+
+| Revista | Casilla 1 de su lista de comprobación | ¿Se puede firmar con preprint? |
+|---|---|---|
+| **Revista CEA (ITM)** | «original and unpublished … **has not been published in any format**» | **NO** |
+| **TecnoLógicas (ITM)** | la misma cláusula (de ahí el candado del 25/08) | **NO** |
+| **Revista Virtual UCN** | «no ha sido publicado ni aceptado ni presentado para publicación en otra revista **o sitio web en internet**» | **NO** — es aún más estricta |
+| **ITEES (EIDEC)** | «no ha sido publicado previamente … **(o se ha proporcionado una explicación en los Comentarios al editor)**» | **SÍ**, declarándolo |
+| **EDU REVIEW** | y además lo dice en sus normas: «Se permite también la difusión pre-print» | **SÍ** |
+
+**Consecuencia práctica.** De las cinco cuentas creadas, **solo EDU REVIEW e ITEES sirven para los
+tres manuscritos depositados** (17601, 17602, 17606). Las tres restantes quedan reservadas de hecho
+para material **no difundido**, que hoy es únicamente `Preprint_Completion_Gating_Moodle` —el del
+candado—. Y el candado, visto esto, protege más de lo que se creía: no solo TecnoLógicas, también
+CEA y UCN.
+
+**No se marcó la casilla de CEA.** Se abandonó ese envío antes de empezar y se borró su carpeta de
+paquete. Firmar «has not been published in any format» con el 17602 depositado en SciELO habría sido
+declarar algo falso.
+
+## Envío en curso · ITEES 596 (manuscrito 17602)
+
+**A medias, y le faltan dos clics.** Instrucciones completas en
+`Envio_ITEES_17602/_COMO_TERMINARLO.md`.
+
+| Dato | Valor |
+|---|---|
+| Revista | ITEES · EIDEC (Colombia) |
+| Envío | **596** · sección **Artículos de Reflexión** (id 18) |
+| Paso 1 | **completo** — con el **preprint 17602 declarado por escrito** al editor, acogiéndose a la salvedad de su lista de comprobación |
+| Paso 2 | **tres archivos subidos** (`1486` manuscrito ciego · `1487` portada · `1488` carta) |
+| Bloqueo | **falta asignar el tipo a cada archivo**: «Texto del artículo» al manuscrito, «Otro» a los otros dos |
+
+**Por qué se quedó ahí.** El botón de tipo es un componente Vue que **no reacciona a clics
+automatizados**, y la vía de la API —`PUT …/files/<id>` con `{"genreId": 37}` («Texto del artículo»)
+o `48` («Otro»)— **devuelve HTTP 403**: el servidor no admite esa escritura. Tras unos quince
+accesos automatizados, el sitio **dejó de aceptar conexiones** de esta máquina: el dominio resuelve
+pero las conexiones expiran. Se dejó de insistir a propósito.
+
+En la carta se le preguntan además dos cosas al editor: **si la revista cobra** —no lo publica en
+ninguna parte— y **si acepta el cuerpo en inglés**, con el compromiso de traducirlo si no.
+
 ## Cuentas en los OJS de las revistas
 
 Las crea `config/revistas/registrar_revistas.py`. **Las claves NO están en este repositorio**: van
