@@ -18,9 +18,10 @@
  * PASOS:
  * 1. https://script.google.com con tu cuenta
  * 2. Nuevo proyecto -> pega TODO este archivo -> guarda
- * 3. Edita CONFIG_CURSOS: por cada curso, el título y el link de Meet
- * 4. Ejecuta verificarEventos() (solo lectura) -> lee el registro
- * 5. Si cuadra: pon SIMULAR = false, guarda, ejecuta cambiarLinkMeet()
+ * 3. IMPORTANTE PARA MODO DINÁMICO: Servicios -> Calendar API -> ON
+ * 4. Edita CONFIG_CURSOS: por cada curso, el título y el link de Meet
+ * 5. Ejecuta verificarEventos() (solo lectura) -> lee el registro
+ * 6. Si cuadra: pon SIMULAR = false, guarda, ejecuta cambiarLinkMeet()
  *
  * ⚠️  IMPORTANTE: Los eventos se eliminan y recrean. Las notificaciones se reenvían.
  */
@@ -265,14 +266,38 @@ function cambiarLinkMeet() {
           var nuevoEvento;
 
           if (cfg.nuevoLinkMeet === 'DINAMICO') {
-            // Modo dinámico: generar link único por sesión
-            nuevoEvento = calendar.createEvent(datos.titulo, datos.inicio, datos.fin, {
-              description: datos.descripcion
+            // Modo dinámico: usar Calendar API avanzado para generar Meet automáticamente
+            var evento = {
+              summary: datos.titulo,
+              start: {
+                dateTime: datos.inicio.toISOString(),
+                timeZone: TIMEZONE
+              },
+              end: {
+                dateTime: datos.fin.toISOString(),
+                timeZone: TIMEZONE
+              },
+              description: datos.descripcion,
+              conferenceData: {
+                createRequest: {
+                  requestId: datos.titulo.substring(0, 50) + '_' + datos.inicio.getTime(),
+                  conferenceSolutionKey: { type: 'hangoutsMeet' }
+                }
+              },
+              attendees: datos.participantes.map(function(email) {
+                return { email: email };
+              })
+            };
+
+            var nuevoEventoApi = Calendar.Events.insert(evento, CALENDARIO_ID, {
+              conferenceDataVersion: 1
             });
-            // addConferenceData() genera un link de Meet único automáticamente
-            nuevoEvento.addConferenceData(ConferenceDataService.newConferenceDataBuilder()
-              .setConferenceId(datos.titulo + '_' + datos.inicio.getTime())
-              .build());
+
+            Logger.log('  ✓ ACTUALIZADO: ' + datos.titulo);
+            Logger.log('      Nuevo ID: ' + nuevoEventoApi.id);
+            if (nuevoEventoApi.hangoutLink) {
+              Logger.log('      Meet: ' + nuevoEventoApi.hangoutLink);
+            }
           } else {
             // Modo fijo: usar el link configurado
             var descripcionNueva = datos.descripcion;
@@ -283,15 +308,15 @@ function cambiarLinkMeet() {
               description: descripcionNueva,
               location: cfg.nuevoLinkMeet
             });
-          }
 
-          // Agregar participantes
-          for (var k = 0; k < datos.participantes.length; k++) {
-            nuevoEvento.addGuest(datos.participantes[k]);
-          }
+            // Agregar participantes
+            for (var k = 0; k < datos.participantes.length; k++) {
+              nuevoEvento.addGuest(datos.participantes[k]);
+            }
 
-          Logger.log('  ✓ ACTUALIZADO: ' + datos.titulo);
-          Logger.log('      Nuevo ID: ' + nuevoEvento.getId());
+            Logger.log('  ✓ ACTUALIZADO: ' + datos.titulo);
+            Logger.log('      Nuevo ID: ' + nuevoEvento.getId());
+          }
         }
         totalCambiados++;
       } catch (e) {
