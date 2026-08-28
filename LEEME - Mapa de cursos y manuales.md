@@ -50,7 +50,7 @@
 
 | Ubicación | Contenido |
 |---|---|
-| Raíz de la asignatura | Manual, Calendario oficial, syllabus `.docx` (falta en TG2), hitos CSV, `HERRAMIENTAS_EXAMLAB.md` (+ correo si multi-grupo) |
+| Raíz de la asignatura | Manual, Calendario oficial, syllabus `.docx` (el de TG2 llegó el 22/08/2026 **sin código SIAC en el nombre**: `TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx`, con la errata original), hitos CSV, `HERRAMIENTAS_EXAMLAB.md` (+ correo si multi-grupo) |
 | `Clases/` | `Presentacion del Curso - ….pptx` · `LEEME - Material para estudiantes.docx` · `Sesion NN - …/` · `Recursos/`. **Sin** correo ni `.md` |
 | `Docente/` | **No se comparte nunca.** `Cuestionarios/` = los bancos de preguntas maestros (`.xml` + su gemelo `.md`), que **llevan la respuesta correcta**. Movidos aquí desde `Clases/Recursos/Cuestionarios/` el 2026-08-18. Regla y motivo en `Docente/LEEME - Solo para el Docente.md` de cada asignatura |
 | `Docente/Guiones/` | Solo `Sesion NN - ….md` + `Capturas/` (docente) |
@@ -86,7 +86,7 @@
 |---|---|---|---|
 | Investigación C&T (EI005) | Jue 5–6 pm | 6 | Syllabus EI005 · cierra 20/09 · **temario adelantado 2026-08-11**: U6+U8 en S04 · U7+U10–12 en S05 · S06 = cierre sin evaluar |
 | Creatividad (EI004) | Mié 5–6 pm | 7 | Syllabus EI004 · cierra 27/09 · **temario adelantado 2026-08-11**: U6+U7 en S05 · U8 en S06 · S07 = cierre sin evaluar · **S01 guion = modelo de calidad** |
-| TG2 | Lun 5–6 pm | 11 | ⚠️ Sin syllabus SIAC — temario orientativo |
+| TG2 | Lun 5–6 pm | 11 | Syllabus SIAC recibido el **22/08/2026** · 12 unidades · producto de entrega en la U11: **artículo de reflexión ≥ 4.000 palabras** |
 | TG3 (94532) | Mar 5–6 pm | 15 | 54450 cierra 15/11; 54466/54467 hasta 22/11 · encuentros = **una sola serie** para los tres grupos en `2026/_combinado_todos/` (un `.gs`, una sala de Meet) |
 
 ## Guiones docentes (estándar de calidad)
@@ -198,7 +198,7 @@ En Proyecto I el `Calendario de clases (oficial).md` **ya no se cura a mano**: d
 >
 > Por eso, en **Investigación**, el Quiz 3 se adelantó del 17/09 al **12/09** (decisión del Docente, 10/08/2026): todo el corte 3 cierra el mismo día y la S06 queda limpia para el cierre.
 
-- **TG2 54448** — sigue sin Syllabus SIAC, pero los pesos **ya no son orientativos**: salen del libro de calificaciones del aula (30/30/40 con el mismo desglose de los otros cursos de pregrado).
+- **TG2 54448** — **ya tiene Syllabus SIAC** (entregado el 22/08/2026; hasta esa fecha no lo había, y varios documentos del repositorio siguen escritos con la premisa vieja). Declara `CORTE ÚNICO = 100 %` (EV 05 50 % + EXAM 50 %) y el aula está en 30/30/40: **manda el aula**. El temario ya no es orientativo — son las 12 unidades del Syllabus, y el producto de entrega de la asignatura está en la **U11**: un artículo de reflexión de mínimo 4.000 palabras con revisión bibliográfica.
 - ~~**Pendiente de material (auditoría §5.1):** los decks y guiones siguen escritos como ACA 1/2/3 (y EV05/EXAM en TG3)~~ → **FALSO desde el 2026-08-11.** Barrido con `rg` sobre los 55 `.pptx` vigentes de `Clases/`, los 52 guiones `.md` y los JSON de `config/slides/content/`: **cero** decks de sesión y **cero** JSON de contenido con esa numeración. Las únicas apariciones son deliberadas y dicen «esto queda anulado»: slide 17 de la Presentación del Curso de Proyecto I (tabla puente Syllabus ↔ aula), los 4 Manuales de pregrado (bloque «Qué desmiente esto») y los guiones de TG3 S01 y S12 (que explican que TG3 **no** es corte único EV05/EXAM). La otra mitad de la frase —«los quices y parciales no existen como actividad en el aula»— también quedó **desmentida el 2026-08-15**: sí existen, y con banco de preguntas. Ver el pendiente correspondiente más abajo.
 
 ### Otros pendientes vigentes

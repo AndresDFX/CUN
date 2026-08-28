@@ -86,9 +86,10 @@ NOTAS_CURSO: dict[str, list[str]] = {
         "(tarea) en el tercer corte.",
         "**Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem "
         "del aula**, incluidas las guías de los quices y parciales.",
-        "⚠️ Sigue faltando el **Syllabus SIAC**, pero los pesos **ya no son orientativos**: "
-        "salen del libro de calificaciones del aula. Lo que falta del SIAC es el **temario**, "
-        "no la evaluación.",
+        "**Syllabus SIAC recibido el 22/08/2026** (`TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx`, "
+        "errata del nombre original). Trae 12 unidades y, en la **U11**, el producto de entrega de la "
+        "asignatura: un artículo de reflexión de mínimo 4.000 palabras. Declara CORTE ÚNICO = 100 % "
+        "y el aula está en 30/30/40: **manda el aula**.",
     ],
     "tg3": [
         "**Producto documental del curso:** el **documento** de grado —por defecto, "

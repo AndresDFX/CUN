@@ -414,7 +414,7 @@ COURSES = {
         "duracion_min": 60,
         "contenido_min": 60,
         "fuente": "Syllabus SIAC oficial (entregado el 22/08/2026) · Manual del Docente",
-        "nota_syllabus": "Syllabus recibido el 22/08/2026: «TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx», sin código SIAC en el nombre. 6 unidades didácticas.",
+        "nota_syllabus": "Syllabus recibido el 22/08/2026: «TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx», sin código SIAC en el nombre. 12 unidades didácticas en dos tablas (U1-U6 y U7-U12); la segunda va dentro de un control de contenido de Word y hasta el 28/08 se leían solo 6. El producto de entrega está en la U11: un artículo de reflexión de mínimo 4.000 palabras.",
         "sesiones": [
             # EXCEPCIÓN puntual: esta sesión se corrió del lunes 10/08 al viernes 14/08 porque
             # la clase del lunes no se pudo dar (decisión del Docente, 11/08/2026). Es la ÚNICA

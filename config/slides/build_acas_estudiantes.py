@@ -1783,7 +1783,7 @@ Convertir una oportunidad detectada en una **propuesta de innovación** tipifica
 def docs_tg2() -> list[dict]:
     key = "tg2"
     fuente = (
-        "Manual del Docente TG2 (⚠️ sin Syllabus SIAC en carpeta) · Art. 52: tres cortes "
+        "Manual del Docente TG2 · Syllabus SIAC (recibido el 22/08/2026) · Art. 52: tres cortes "
         f"30/30/40. **Libro de calificaciones del aula (CDigital, auditoría 2026-08-10):** "
         f"{desglose_corte_texto(key)} — ya verificado en el aula, no orientativo. Producto: "
         "avance consolidado del **documento** de grado hacia TG3, que se entrega como **ACA Final** "

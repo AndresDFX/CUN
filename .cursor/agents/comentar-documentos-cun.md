@@ -194,9 +194,12 @@ Dos fuentes distintas, y las dos hacen falta:
 - **`syllabus_curso.py`** — el Syllabus: **qué enseña la asignatura** (competencia, elementos,
   unidades, resultado de aprendizaje). Sin esto el comentario se vuelve un inventario del checklist.
 
-**TG2 no tiene Syllabus** y eso no es un fallo: la CUN nunca lo entregó. `syllabus_curso` lo dice
-abiertamente y añade «No te inventes competencias ni unidades: comenta con la guía del ACA». Hazle
-caso literalmente.
+**TG2 ya tiene Syllabus** — llegó el 22/08/2026 y `ficha("tg2")` devuelve `formato="siac"`, sus 12
+unidades y `advertencias: []`. Si lees en algún documento del repositorio que «TG2 no tiene
+Syllabus», está viejo: era cierto hasta esa fecha. Lo que más importa al comentar un documento de TG2
+está en la **U11**: el producto de entrega es **un artículo de reflexión de mínimo 4.000 palabras**
+con revisión bibliográfica, perspectiva propia y crítica. Un documento de TG2 que apunta a otra cosa
+—un prototipo, un informe suelto— no está cumpliendo la asignatura, y eso sí se comenta.
 
 Los pesos y las fechas **no** salen del Syllabus, que numera las entregas ACA 1/2/3 a su manera: salen
 de `config/cursos/fechas_entrega_aca.py`. Y de todos modos **no se comentan**: al estudiante no le

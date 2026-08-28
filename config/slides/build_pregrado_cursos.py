@@ -824,14 +824,15 @@ def build_tg2(out: Path):
     _i = add_eval_scope_pregrado(
         prs, _i,
         "**Régimen:** Art. 52 · **Corte 1 = 30% · Corte 2 = 30% · Corte 3 = 40%**, "
-        "tomados del libro de calificaciones del aula (sigue sin cargarse el Syllabus SIAC de TG2).",
+        "tomados del libro de calificaciones del aula. El Syllabus SIAC de TG2 (recibido el 22/08/2026) "
+        "declara CORTE ÚNICO = 100 %; **manda el aula**.",
         course_key="tg2",
     )
     box_note_slide(prs, "ACUERDOS DEL CURSO", [
         ("info", f"Encuentro sincrónico: {bold_var(_tg2_h)} por Google Meet. El Meet es el mismo enlace para toda la serie."),
         ("aclaracion", "Lunes festivo = **clase autónoma**, no se pierde el hilo del proyecto: "
                        f"{AVISO_AUTONOMA_DRIVE}."),
-        ("advertencia", "Hasta cargar el Syllabus SIAC, cualquier detalle de rubrica/pesos se verifica en el aula virtual."),
+        ("advertencia", "El Syllabus dice corte único y el aula dice 30/30/40: cualquier detalle de rubrica o peso se verifica en el aula virtual, que es la que manda."),
     ], idx=_i)
     _i += 1
     content_slide(prs, "RECURSOS", recursos_items(

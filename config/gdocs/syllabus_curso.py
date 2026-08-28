@@ -18,10 +18,15 @@ código, el temario por sesión y la nota de qué falta). El Syllabus lleva el c
 (`…EI005_PRES.docx`, `…94532_PRES_VIR.docx`, `…ESP329.docx`), así que se busca por eso y no por una
 tabla de nombres que se desactualiza sola.
 
-**TG2 no tiene Syllabus** y eso no es un fallo del programa: la CUN nunca lo entregó, y el
-repositorio lo dice abiertamente en el Manual del Docente y en `sesiones_cun.py` (`nota_syllabus`).
-Aquí se devuelve `archivo=None` con la nota, y quien redacta los comentarios lo sabe en vez de
-creerse un Syllabus inventado.
+⛔ **«TG2 no tiene Syllabus» era cierto hasta el 2026-08-22 y hoy es FALSO.** Lo entregaron ese día
+y está en el repositorio desde `124b1f4`: `Pregrado/Trabajo de grado 2/TRABJO DE GRADO II INGENIERIA
+DE SISTEMAS.docx` (la errata «TRABJO» es del nombre original y se conserva tal cual). **Llegó sin
+código SIAC en el nombre**, así que no se localiza por código: por eso `archivo()` cae al respaldo
+por carpeta. `ficha("tg2")` devuelve `formato="siac"` y `archivo` con ruta — no `None`.
+
+Quien redacte comentarios de TG2 tiene Syllabus y debe usarlo. Lo que **manda para la nota** sigue
+siendo el aula: el Syllabus declara `CORTE ÚNICO = 100 %` (EV 05 50 % + EXAM 50 %) y el libro de
+calificaciones está en 30/30/40. Si los dos se contradicen, manda el aula.
 
 HAY DOS FORMATOS, NO UNO
 ------------------------
@@ -137,6 +142,24 @@ def _filas(tabla) -> list[list[str]]:
     return fuera
 
 
+def _tablas_todas(doc) -> list:
+    """Todas las tablas del documento, **incluidas las que Word envolvió en un control de contenido**.
+
+    `doc.tables` solo devuelve las `w:tbl` que son **hijas directas del cuerpo**. El Syllabus de TG2
+    tiene 20 `<w:tbl>` en el XML y 16 `<w:sdt>`, y python-docx ve 19: la que falta es justo la de la
+    «Unidad didáctica 2» (offset 94276, envuelta en `w:sdtContent`). No es anidamiento —las tablas
+    dentro de celdas viven en `cell.tables` y aquí hay cero— sino un envoltorio que la biblioteca no
+    atraviesa. Recorrer el cuerpo con `iter()` las trae todas, en orden de documento y sin duplicar.
+
+    Mismo modo de fallo que los campos de segundo nivel del Anexo 2: la lectura sale incompleta y
+    **no avisa**. Aquí costaba la mitad del temario de TG2.
+    """
+    from docx.table import Table
+
+    W_TBL = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}tbl"
+    return [Table(el, doc) for el in doc.element.body.iter(W_TBL)]
+
+
 def _seccion_de(texto: str, secciones) -> str | None:
     t = " ".join(texto.split()).upper()
     if len(t) > 160:                    # una cabecera es corta; esto ya es contenido
@@ -188,12 +211,18 @@ def _unidades_didacticas(doc) -> list[dict]:
     Nació con el sílabo de especialización, pero **TG2 la usa dentro del armazón SIAC de pregrado**:
     el documento tiene las 19 tablas del formato 1 y, en lugar de «UNIDADES DE CONOCIMIENTO», esta
     otra. Por eso vive aparte y la llaman los dos lectores, en vez de duplicarse.
+
+    **Puede haber más de una tabla, y hay que buscarlas con `_tablas_todas`.** ESP329 trae una sola,
+    pero TG2 parte sus 12 unidades en dos («Unidad didáctica 1» → U1–U6 y «Unidad didáctica 2» →
+    U7–U12) y la segunda está envuelta en un `w:sdt`, así que `doc.tables` no la devuelve: se leían
+    6 unidades de 12 y quedaba invisible la **U11**, que es justamente donde vive el producto de
+    entrega de la asignatura («un artículo de reflexión de mínimo 4.000 palabras»).
     """
-    for tabla in doc.tables:
+    salida: list[dict] = []
+    for tabla in _tablas_todas(doc):
         filas = _filas(tabla)
         if not filas or "unidad didáctica" not in " ".join(filas[0]).lower():
             continue
-        salida = []
         for fila in filas[1:]:
             titulo = (fila[0] if fila else "").strip()
             if not titulo:
@@ -204,8 +233,7 @@ def _unidades_didacticas(doc) -> list[dict]:
                 "tematica": (m.group(2) if m else titulo).strip(),
                 "subtematica": " · ".join(x.strip() for x in fila[1:] if x.strip()),
             })
-        return salida
-    return []
+    return salida
 
 
 def _leer_siac(doc, d: dict) -> None:

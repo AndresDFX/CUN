@@ -179,7 +179,8 @@ FUNDAMENTOS_S1 = {
 
     "tg2": textwrap.dedent("""\
         ### 1. Lugar de TG2 en la ruta de opción de grado
-        ⚠️ **Sin Syllabus SIAC cargado.** Usa este marco orientativo y confírmalo en CDigital.
+        El Syllabus SIAC llegó el 22/08/2026: son **12 unidades**, y el producto de entrega de la
+        asignatura está en la **U11** — un artículo de reflexión de mínimo 4.000 palabras.
 
         Trabajo de Grado 2 es la fase de **avance consolidado** del documento/proyecto antes
         de la culminación y sustentación (TG3). El estudiante no “empieza de cero”: retoma

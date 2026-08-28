@@ -61,7 +61,7 @@ Hasta confirmar: tratar los eventos de Calendar de pregrado marcados “(confirm
   - **Duración:** 2-3 horas para las 7 aulas (pregrado + especialización)
 
 ### INICIO DEL SEMESTRE
-- [ ] Revisar Manual del Docente + syllabus SIAC de la asignatura (⚠️ TG2 sin syllabus SIAC — temario orientativo).
+- [ ] Revisar Manual del Docente + syllabus SIAC de la asignatura (el de TG2 llegó el 22/08/2026 sin el código en el nombre: `TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx`).
 - [ ] Publicar Meet único + placeholder CDigital en Presentación del Curso / aula.
 - [ ] Alistar CDigital semana 1: bienvenida, syllabus, cortes, rúbricas/actividades.
 - [ ] Socializar evaluación Art. 52 (**30% + 30% + 40%**) y reglas de entrega.
