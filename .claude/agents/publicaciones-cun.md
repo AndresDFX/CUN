@@ -89,8 +89,17 @@ School of Engineering, Corporación Unificada Nacional de Educación Superior �
 Bogotá, Colombia
 julian_castanoe@cun.edu.co
 ORCID: https://orcid.org/0009-0003-6598-432X
-Internal research call CUN 2026 — Thematic Research Groups, Phase II
 ```
+
+⛔ **La línea de financiación que aquí figuraba se retiró el 2026-08-28 y no se vuelve a poner.**
+Decía «Internal research call CUN 2026 — Thematic Research Groups, Phase II». **Esa convocatoria
+cerró el 20/03/2026 y no se radicó ninguna de las cinco propuestas**: no hay proyecto, no hay acta,
+no hay financiación. Escribirla en una sección *Funding* no es una filiación discutible, es
+**declarar ante un editor una financiación institucional que no existe**. Se propagó a **10 archivos
+—8 manuscritos, porque 17601 y 17602 llevan portada y cuerpo aparte—, con 18 apariciones**; uno de
+ellos ya sometido (5579 en EDU REVIEW) y otro ya público en abierto (Qeios `10.32388/z2uxxt`).
+Mientras no haya un proyecto aprobado con acta, la sección va
+**`No funding was received for this work.`**
 
 El ORCID **existe y está reclamado** (comprobado contra `pub.orcid.org`, con correo verificado).
 Cuidado: `Articulo_Calidad_D_NOTAS_DE_ENVIO.md` todavía lleva un pendiente que dice «Crear ORCID del
@@ -208,7 +217,7 @@ completa, no en su lugar. Esta es la forma que pasó, y es la plantilla:
 ```markdown
 ## ACKNOWLEDGEMENTS AND DECLARATIONS
 
-**Funding.** Internal research call CUN 2026 — Thematic Research Groups, Phase II. No external funding.
+**Funding.** No funding was received for this work.
 
 **Author contributions.** Conceptualisation, methodology, software, original draft, review and
 editing: the single signing author.

@@ -17,16 +17,13 @@ participen efectivamente en la ejecución se incorporarán como coautores en la 
 de resultados, con arreglo a los criterios de autoría del ICMJE y previa autorización
 expresa y por escrito de cada uno.
 **Filiación institucional del trabajo:** Semillero de Investigación en Inteligencia Artificial
-Aplicada a la Educación Superior (SIAES), Escuela de Ingenierías, CUN. Convocatoria interna
-CUN 2026 — Desarrollo de Grupos Temáticos de Investigación, Fase II.
+Aplicada a la Educación Superior (SIAES), Escuela de Ingenierías, CUN.
 
 ---
 
 ## AGRADECIMIENTOS Y DECLARACIONES
 
-**Financiación.** Este trabajo se desarrolla en el marco de la Convocatoria interna CUN 2026 —
-Desarrollo de Grupos Temáticos de Investigación, Fase II, de la Corporación Unificada Nacional de
-Educación Superior. Trabajo adscrito a la convocatoria interna CUN 2026, Fase II. Sin financiación externa.
+**Financiación.** Este trabajo no recibió financiación.
 
 **Contribución de los autores.** Conceptualización, metodología, redacción del borrador original y redacción con revisión y edición: el autor único firmante.
 

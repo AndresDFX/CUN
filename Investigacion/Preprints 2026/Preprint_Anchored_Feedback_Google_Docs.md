@@ -14,8 +14,7 @@ ORCID: https://orcid.org/0009-0003-6598-432X
 
 **Authorship.** Single author, who designed, implemented and operated the system reported.
 
-**Institutional affiliation of the work:** School of Engineering, CUN. Internal research call
-CUN 2026 — Thematic Research Groups, Phase II.
+**Institutional affiliation of the work:** School of Engineering, CUN.
 
 ---
 
@@ -233,8 +232,7 @@ one vendor.
 
 ## ACKNOWLEDGEMENTS AND DECLARATIONS
 
-**Funding.** Internal research call CUN 2026 — Thematic Research Groups, Phase II. No external
-funding.
+**Funding.** No funding was received for this work.
 
 **Author contributions.** Conceptualisation, methodology, software, original draft, review and
 editing: the single signing author.

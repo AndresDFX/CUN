@@ -618,8 +618,7 @@ evaluación de impacto de la intervención mediante un diseño con grupo de comp
 
 ## AGRADECIMIENTOS Y DECLARACIONES
 
-**Financiación.** Trabajo adscrito a una convocatoria interna de investigación de la institución
-del autor, Fase II. Sin financiación externa. *(La institución se retira para la evaluación ciega
+**Financiación.** Este trabajo no recibió financiación. *(La institución se retira para la evaluación ciega
 y consta en la portada enviada por separado.)*
 
 **Contribución de los autores.** Conceptualización, metodología, redacción del borrador original y

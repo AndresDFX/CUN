@@ -15,8 +15,7 @@ ORCID: https://orcid.org/0009-0003-6598-432X
 **Authorship.** This experience report is signed by a single author, who designed, implemented and
 operated the system described.
 
-**Institutional affiliation of the work:** School of Engineering, CUN. Internal research call
-CUN 2026 — Thematic Research Groups, Phase II.
+**Institutional affiliation of the work:** School of Engineering, CUN.
 
 ---
 
@@ -257,8 +256,7 @@ do not let that place be the draft.
 
 ## ACKNOWLEDGEMENTS AND DECLARATIONS
 
-**Funding.** This work was developed within the internal research call CUN 2026 — Thematic Research
-Groups, Phase II, of the Corporación Unificada Nacional de Educación Superior. No external funding.
+**Funding.** No funding was received for this work.
 
 **Author contributions.** Conceptualisation, methodology, software, writing of the original draft,
 and writing with review and editing: the single signing author.

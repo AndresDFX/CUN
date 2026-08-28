@@ -15,8 +15,7 @@ ORCID: https://orcid.org/0009-0003-6598-432X
 **Authorship.** Single author, who designed and operated the audit, wrote the client used to perform
 it, applied the corrections and verified them.
 
-**Institutional affiliation of the work:** School of Engineering, CUN. Internal research call
-CUN 2026 — Thematic Research Groups, Phase II.
+**Institutional affiliation of the work:** School of Engineering, CUN.
 
 ---
 
@@ -656,8 +655,7 @@ access restriction, and it must watch the state it cannot edit.
 
 ## ACKNOWLEDGEMENTS AND DECLARATIONS
 
-**Funding.** Internal research call CUN 2026 — Thematic Research Groups, Phase II. No external
-funding was received for this work.
+**Funding.** No funding was received for this work.
 
 **Author contributions.** Conceptualisation, methodology, software, data curation, formal analysis,
 original draft, review and editing: the single signing author.

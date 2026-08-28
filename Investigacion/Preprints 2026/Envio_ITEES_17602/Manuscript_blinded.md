@@ -245,8 +245,7 @@ do not let that place be the draft.
 
 ## ACKNOWLEDGEMENTS AND DECLARATIONS
 
-**Funding.** This work was carried out within an internal research call of the author's institution,
-Phase II. No external funding. *(The institution is withheld for blind review and is stated on the
+**Funding.** No funding was received for this work. *(The institution is withheld for blind review and is stated on the
 separate title page.)*
 
 **Author contributions.** Conceptualisation, design and implementation of the system, drafting and

@@ -21,8 +21,7 @@ dado autorización expresa y por escrito. Este manuscrito no registra ningún da
 personal de estudiantes.]
 
 **Filiación institucional del trabajo:** Semillero de Investigación en Inteligencia Artificial
-Aplicada a la Educación Superior (SIAES), Escuela de Ingenierías, CUN. Convocatoria interna
-CUN 2026 — Desarrollo de Grupos Temáticos de Investigación, Fase II.
+Aplicada a la Educación Superior (SIAES), Escuela de Ingenierías, CUN.
 
 ---
 
@@ -747,10 +746,7 @@ evaluación de impacto de la intervención mediante un diseño con grupo de comp
 
 ## AGRADECIMIENTOS Y DECLARACIONES
 
-**Financiación.** Este trabajo se desarrolla en el marco de la Convocatoria interna CUN 2026 —
-Desarrollo de Grupos Temáticos de Investigación, Fase II, de la Corporación Unificada Nacional de
-Educación Superior. [PENDIENTE: confirmar con la Dirección Nacional de Investigación si
-corresponde declarar código o número de proyecto.]
+**Financiación.** Este trabajo no recibió financiación.
 
 **Contribución de los autores.** [PENDIENTE: declarar según taxonomía CRediT una vez confirmada la
 participación efectiva de cada coautor.]
