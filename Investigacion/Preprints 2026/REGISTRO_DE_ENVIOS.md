@@ -25,9 +25,27 @@ sigue en moderación; cuando responda `302`, está aprobado y publicado.
 | `Preprint_AI_Assisted_Course_Authoring` | **17602** | en | 2026-08-21 | `10.1590/SciELOPreprints.17602` | en fila |
 | `Preprint_Anchored_Feedback_Google_Docs` | **17606** | en | 2026-08-21 | `10.1590/SciELOPreprints.17606` | en fila |
 
-Última comprobación: **2026-08-23**. Los tres en `404` (Crossref y `doi.org`). Id más alto publicado
-en el prefijo `10.1590` a esa fecha: **17584**, depositado el 2026-08-21. Los tres están justo por
-encima de la frontera de la cola, que es lo esperable dos días después de enviarlos.
+Última comprobación: **2026-08-28** (sondeo Ruta B, sin credenciales). Los tres siguen en `404`, tanto
+en `doi.org` como en la API de Crossref. Control de que el sondeo funciona: `…17562` devuelve `302` a
+`…/preprint/view/17562/version/18445`.
+
+Id más alto publicado en el prefijo `10.1590` a esta fecha: **17675**, depositado el 2026-08-27 (el
+2026-08-23 era 17584). **La cola ya adelantó a los tres envíos:** hay ocho ids más altos publicados
+—17617, 17619, 17621, 17635, 17639, 17653, 17657 y 17675— mientras los nuestros siguen sin DOI. Eso
+**no** prueba que estén atascados, porque la moderación no es FIFO (el 27-ago se publicaron ids en un
+rango de 1.169), pero sí es el disparador para entrar por la Ruta A. El umbral de «silencio
+prolongado» (`nuestro_id + 200`, estimación propia pendiente de recalibrar) **todavía no se ha
+alcanzado**: exigiría ver publicado el 17801 y vamos por el 17675.
+
+Día 7 desde el depósito. Un `404` **no distingue «en fila» de «rechazado»**: para eso hace falta el
+entero `status` de la Ruta A, y **hoy no se pudo consultar**. Todo `preprints.scielo.org` sigue tras
+el escudo de Bunny (403 con 1.830 bytes en la API, en la página pública y en el OAI-PMH, reverificado
+el 2026-08-28), y el perfil de navegador `%LOCALAPPDATA%\scielo-cun\` **no existe**: en
+`%LOCALAPPDATA%` solo hay `gdocs-cun\`, `synapse-cun\` y `revistas-cun\`. La Ruta A necesita que el
+Docente abra Chrome con la sesión de `andresdfx`.
+
+Por tanto el estado «en fila» de la tabla es **lo último observado, no lo confirmado hoy**: es
+compatible con un rechazo silencioso, que por Crossref es invisible.
 
 Cuando salga el DOI, se añade a la fila la URL pública
 (`https://preprints.scielo.org/index.php/scielo/preprint/view/<id>/version/<pubId>`) y se lleva el
@@ -39,6 +57,80 @@ DOI a **CvLAC**, a **ORCID** y a la evidencia del producto de **Synapse**.
 |---|---|---|---|---|
 | `Articulo_TecnoLogicas_Completion_Gating` | TecnoLógicas (ITM) | **B** · 8 pts | 2026-08-25 | **consulta de pertinencia enviada** |
 | `Preprint_Protocolo_Desercion_ML` (17601) | EDU REVIEW (Edulab, ES) | **ninguna** · 0 pts | **2026-08-27** | **SOMETIDO** · envío **5579** · «Envío completo», en Revisión |
+| `Preprint_AI_Assisted_Course_Authoring` (17602) | ITEES (EIDEC) | sin comprobar | 2026-08-27 | **envío 596 A MEDIAS** — falta el tipo de archivo, ver su sección |
+| `Preprint_Anchored_Feedback_Google_Docs` (17606) | **ninguna viable hoy** | — | 2026-08-28 | **NO SE ENVIÓ** — dictamen aquí abajo |
+
+### 28/08/2026 — el 17606 NO se envió a ninguna parte, y el motivo es firme
+
+Se buscó destino para `Preprint_Anchored_Feedback_Google_Docs` (**17606**, inglés) y **no hay ninguno
+firmable hoy**. Queda anotado para no repetir la búsqueda; el dictamen completo, con la cita literal
+de cada web, está en **`DESTINOS_BASE_DE_DATOS_ARTICULOS.md`**.
+
+Con la cláusula «en ningún formato» fuera de juego (CEA, TecnoLógicas y Revista Virtual UCN, más
+abajo), las únicas dos candidatas eran EDU REVIEW e ITEES, y **cada una falla por un motivo
+distinto**. Ninguno de los dos se arregla con una carta:
+
+| Revista | ¿Se puede firmar su casilla 1? | Por qué no se envió |
+|---|---|---|
+| **EDU REVIEW** | **sí** — su política admite el preprint | **por extensión**: su umbral más bajo para un texto académico son **3.000** palabras y el 17606 no llega ni contando el archivo entero |
+| **ITEES** | **sí** — por la salvedad de su casilla 1 | **no declara si cobra**, **no publica normas de autor ni extensión**, no consta que acepte el cuerpo en inglés, y su envío **596** sigue a medias |
+
+**Lo que el manuscrito es, medido hoy sobre el archivo** —que no ha cambiado desde el 23/08—: **1.486
+palabras de cuerpo** (§1–§6), **1.744** con las declaraciones y **2.785** el archivo entero sin
+excluir nada, ni abstracts ni referencias. 17 referencias APA 7 sin DOI, cero tablas, cero figuras,
+cero marcadores `[PENDIENTE]`. El **1.479** anotado el 26/08 es el mismo texto contado de otra forma.
+Género: resultado negativo con solución alterna sobre una limitación documentada de la API de Google
+Docs, más el reporte de un incidente. No mide nada y lo declara: «No student data are reported and no
+learning outcome is claimed.»
+
+**EDU REVIEW falla por extensión, no por política.** Sus tres condiciones se verificaron hoy y están
+por escrito: «Coste de publicación: gratuito», «Se permite también la difusión pre-print del
+artículo» y publicación «de manera inmediata» (recepción continua). Lo que la cierra son sus umbrales
+**por tipo de envío**, en `edulab.es/revEDU/typesofsubmissions`: investigación mín. **5.000**,
+**reflexión crítica mín. 3.000** ← el más bajo, revisión sistemática mín. **5.000**, monográfico por
+propuesta, **reseñas 800–1.500**, vídeos académicos. La regla excluye del cómputo resúmenes, palabras
+clave y bibliografía. **No existe convención de conteo que lleve el 17606 a 3.000**: no es un caso
+límite negociable con el editor.
+
+> **La trampa que no hay que morder.** La ventana de **«Reseñas» (800–1.500)** encaja al milímetro con
+> las 1.486 palabras del 17606. Es una coincidencia sin valor: una reseña es, con las palabras de la
+> revista, un texto «a través de los cuales se da a conocer el contenido de un libro de interés
+> académico». Esto no es un libro ni una reseña de nada. Meterlo ahí para que cuadre el número es
+> **declarar un género falso**: rebote de mesa y una firma que no se sostiene. Queda escrito para que
+> nadie redescubra la coincidencia y la tome por una puerta.
+
+**ITEES sí es firmable, pero hoy no se le manda un segundo manuscrito.** Su casilla 1 trae la salvedad
+expresa —así se usó en el 596— y declara acceso libre inmediato con CC BY-NC-ND 4.0. Lo que decide es
+lo que **no** publica: **no dice en ninguna parte si cobra al autor** (se buscaron «APC», «cargo»,
+«cobro», «tarifa», «gratuito», «pago» y «fee» en sus páginas de envíos y de políticas: ni una
+mención, y acceso gratuito **para el lector** no es lo mismo), su pestaña **«Author Guidelines» está
+vacía** mientras anuncia una «Revisión equipo Editorial» que juzga «criterios de fondo y forma según
+las normas de la revista», y **no consta que acepte el cuerpo en inglés**. Las dos primeras preguntas
+ya van escritas en la carta del 596 y **siguen sin contestar**. Encima el 596 está a medias en esa
+misma revista y esa misma sección («Artículos de Reflexión»): abrir un segundo envío antes de cerrar
+el primero, en una cuatrimestral y con un solo autor firmante, es quemar el trato.
+
+**Qué se hace en su lugar, en este orden:**
+
+1. **Terminar a mano el envío 596** (`Envio_ITEES_17602/_COMO_TERMINARLO.md`). No es solo cerrar el
+   17602: **la respuesta del editor resuelve las dos incógnitas —cargos e inglés— que hoy bloquean a
+   ITEES como destino del 17606**. Es a la vez la acción urgente y el paso que produce la información
+   que falta.
+2. **Decidir el alcance del 17606**, que es de `escritor-investigacion-cun` y no de aquí: o crece a
+   **≥3.000 palabras de cuerpo** —le faltan unas **1.520**— y va a EDU REVIEW como «Artículo de
+   reflexión crítica», o espera la respuesta de ITEES y va a «Artículos de Reflexión». El material
+   para crecer honestamente ya está dentro del manuscrito: la evidencia documental de §2, el incidente
+   de §4, los límites de §5.3 y las dos líneas de trabajo futuro de §6. **Crecer no es añadir ninguna
+   cifra: el manuscrito no mide nada y no debe empezar a hacerlo.**
+3. **No mandarlo como reseña a EDU REVIEW.**
+
+**Que no haya destino hoy no cuesta nada en el expediente:** `ART_OPEN_D` ya está cubierto en lo
+esencial por el sometimiento 5579 del 17601, y lo que falta ahí es el correo de acuse, no otro
+sometimiento. Un rebote de mesa sí costaría.
+
+**Disciplina de acceso del dictamen:** 2 accesos a `revistaseidec.com` y 3 a `edulab.es`, y el resto
+parseando el HTML ya descargado. Sin credenciales, sin tocar ningún formulario y sin pulsar nada a
+nombre del Docente.
 
 ### 27/08/2026 — SOMETIDO a EDU REVIEW: envío 5579
 
@@ -61,6 +153,19 @@ como preprint en SciELO Preprints (**17601**, DOI previsto `10.1590/SciELOPrepri
 está publicado ni sometido en otro medio, que **el conjunto de datos es sintético** y que **es un
 protocolo y no reporta resultados**. Las dos últimas se comprobaron guardadas en el resumen del
 envío, no solo en la carta.
+
+> **2026-08-28 · no verificado hoy.** `edulab.es` está en pie: la ruta del panel del autor de 5579
+> devuelve `302` al login, que es lo normal sin sesión. **Eso no dice nada del estado del envío** —OJS
+> redirige igual para cualquier id, exista o no—, y el panel es justamente la única superficie válida
+> (el formulario del paso 3 se pinta vacío aunque haya guardado). Para saber si sigue en *Revisión*
+> hay que entrar con la credencial de `%LOCALAPPDATA%\revistas-cun\credenciales.json`, y este agente
+> no la usa. **Sigue pendiente el correo de acuse**, que es la pieza que falta para radicar.
+
+**Riesgo señalado el 28/08 y sin resolver.** EDU REVIEW «utiliza Turnitin … detectando plagio y
+autoplagio», y avisa de que «el incumplimiento en la fase inicial de evaluación llevará al **rechazo
+automático** del envío». El 17601 **coincidirá con su propio preprint de SciELO**. Es defendible —el
+preprint va declarado por escrito al editor y la política de la revista lo admite—, pero conviene
+vigilar esa respuesta y **no confundir un rechazo automático de mesa con un juicio de fondo**.
 
 **Sirve para el producto `ART_OPEN_D` de Synapse**, que se cumple con la constancia de sometimiento
 y no con la aceptación. Para radicarlo faltan el correo de acuse de la revista (la revista avisa que
@@ -117,6 +222,13 @@ recepción permanente declarada para los tres números de 2027.
 Se eligió este manuscrito porque **es el único de los tres que cumple la extensión**: 6.027 palabras
 de cuerpo contra el rango 5.000–9.000 de la revista. Los otros dos se quedan muy cortos —**1.717** el
 17602 y **1.479** el 17606— y su problema no es de revista sino de formato.
+
+> **Corregido el 28/08/2026 — ese rango no es «de la revista».** Es el de los **artículos de
+> investigación**. EDU REVIEW tiene **seis tipos de envío con umbrales distintos**, y el mínimo más
+> bajo para un texto académico es **3.000** palabras («Artículos de reflexión crítica»), no 5.000. Los
+> huecos reales son por tanto **unas 1.300** palabras en el 17602 y **unas 1.520** en el 17606 —no
+> 3.300 ni 3.500—. Siguen sin alcanzar, pero cambia cuánto hay que escribir. Detalle en el dictamen
+> del 28/08, arriba.
 
 **Dos marcadores bloqueaban el envío**, uno rotulado «ANTES DEL SOMETIMIENTO»:
 
@@ -178,8 +290,13 @@ preguntas de sus listas de comprobación lo dicen con estas palabras:
 | **Revista CEA (ITM)** | «original and unpublished … **has not been published in any format**» | **NO** |
 | **TecnoLógicas (ITM)** | la misma cláusula (de ahí el candado del 25/08) | **NO** |
 | **Revista Virtual UCN** | «no ha sido publicado ni aceptado ni presentado para publicación en otra revista **o sitio web en internet**» | **NO** — es aún más estricta |
-| **ITEES (EIDEC)** | «no ha sido publicado previamente … **(o se ha proporcionado una explicación en los Comentarios al editor)**» | **SÍ**, declarándolo |
-| **EDU REVIEW** | y además lo dice en sus normas: «Se permite también la difusión pre-print» | **SÍ** |
+| **ITEES (EIDEC)** | «El envío no ha sido publicado previamente ni se ha sometido a consideración por ninguna otra revista **(o se ha proporcionado una explicación al respecto en los Comentarios al editor/a)**» | **SÍ**, declarándolo |
+| **EDU REVIEW** | «Solo publicamos artículos originales e inéditos … garantizan la originalidad y la inexistencia de plagio, **incluido el auto-plagio**» — y su política editorial añade: «**Se permite también la difusión pre-print del artículo**» | **SÍ**, por esa política |
+
+Las casillas de **ITEES** y **EDU REVIEW** se releyeron literales el **28/08/2026** en
+`revistaseidec.com/index.php/ITEES/about/submissions` y `edulab.es/revEDU/about/submissions`, y siguen
+igual. Ojo con la de EDU REVIEW: **su casilla 1 no menciona los preprints** y habla de auto-plagio; lo
+que la hace firmable es su política editorial, que los admite por escrito.
 
 **Consecuencia práctica.** De las cinco cuentas creadas, **solo EDU REVIEW e ITEES sirven para los
 tres manuscritos depositados** (17601, 17602, 17606). Las tres restantes quedan reservadas de hecho
@@ -207,11 +324,28 @@ declarar algo falso.
 **Por qué se quedó ahí.** El botón de tipo es un componente Vue que **no reacciona a clics
 automatizados**, y la vía de la API —`PUT …/files/<id>` con `{"genreId": 37}` («Texto del artículo»)
 o `48` («Otro»)— **devuelve HTTP 403**: el servidor no admite esa escritura. Tras unos quince
-accesos automatizados, el sitio **dejó de aceptar conexiones** de esta máquina: el dominio resuelve
-pero las conexiones expiran. Se dejó de insistir a propósito.
+accesos automatizados, el sitio **dejó de aceptar conexiones** de esta máquina —el dominio resolvía
+pero las conexiones expiraban—. Se dejó de insistir a propósito. **Fue temporal: el 28/08 ya volvía a
+responder** (nota de abajo).
 
 En la carta se le preguntan además dos cosas al editor: **si la revista cobra** —no lo publica en
 ninguna parte— y **si acepta el cuerpo en inglés**, con el compromiso de traducirlo si no.
+
+> **2026-08-28 · la limitación por tasa se levantó.** `revistaseidec.com` vuelve a responder:
+> `HTTP 200` en la portada de ITEES y `302` al login en la ruta del asistente del envío 596, que es
+> la respuesta normal sin sesión. **Se hicieron tres accesos y se paró**, para no volver a agotar el
+> cupo. Esto solo dice que **el sitio es alcanzable**: el estado interno del envío 596 —si sigue
+> faltando el tipo de archivo— **no se comprobó**, porque el asistente exige sesión y este agente no
+> entra con la credencial. La ventana para terminarlo a mano está abierta.
+
+**Lo que ITEES no publica, comprobado el 28/08.** Las dos preguntas de la carta **no se pueden resolver
+en su web, y no por descuido de la búsqueda**: no hay una sola mención de «APC», «cargo», «cobro»,
+«tarifa», «gratuito», «pago» ni «fee» en sus páginas de envíos y de políticas —lo que declara es acceso
+libre **para el lector**, con CC BY-NC-ND 4.0, que no es lo mismo que sin cargos para el autor—, y su
+pestaña **«Author Guidelines» está vacía**, con un enlace de plantilla a
+`ojs3modern8.openjournalsystems.com` todavía puesto: **no publica extensión ni normas de autor**. Por
+eso ITEES tampoco se pudo usar hoy como destino del **17606** (dictamen del 28/08, arriba), y por eso
+**la respuesta del editor al 596 vale doble**: cierra este envío y desbloquea el otro.
 
 ## Cuentas en los OJS de las revistas
 
@@ -381,6 +515,26 @@ públicos) y **qué hay en su lista de envíos de SciELO**, que necesita su clav
 `productTypeId: ART_OPEN_D` — «Artículos de investigación con Calidad D (acceso abierto)»,
 `prod_1785940748621`, vence **2026-11-20**. El emparejamiento se hace por `productTypeId`, nunca por
 el nombre: hay nombres repetidos entre los productos del Docente.
+
+**Consultado el 2026-08-28:** sigue en `Pendiente`, **sin evidencia radicada**, a **84 días** de su
+fecha. El sometimiento a EDU REVIEW (5579) ya lo cubre en lo esencial; falta el correo de acuse.
+
+### Dos plazos de Synapse a 3 días que tocan a este expediente
+
+No están en `ART_OPEN_D` y por eso se pasan por alto. Los dos se llaman «Labores administrativas»
+—de ahí la regla de emparejar por id y no por nombre— y vencen el **2026-08-31**:
+
+| id | Qué pide | Estado hoy |
+|---|---|---|
+| `prod_1785939714815` | «Actualización **GOOGLE ACADEMIC**» · pantallazo del perfil actualizado | **Pendiente** |
+| `prod_1785939730775` | «Actualización **ORCID**» · pantallazo del perfil actualizado | **Aprobado** |
+
+**Y hay una contradicción que conviene ver:** el de ORCID está **Aprobado** mientras
+`0009-0003-6598-432X` sigue con **cero obras** (`group: []`, reverificado el 2026-08-28). La
+plataforma lo dio por bueno con el perfil vacío. No hay que hacer nada, pero tampoco conviene leer ese
+«Aprobado» como que ORCID esté al día: no lo está, y en cuanto salga un DOI habrá que cargarlo.
+
+El de CvLAC (`prod_1785939694462`, pantallazo con productos 2026) vence el **2026-11-20**.
 
 ## Manuscritos que NO están depositados
 

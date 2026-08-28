@@ -151,8 +151,14 @@ literalmente «ANTES DEL SOMETIMIENTO»:
 cuerpo.** EDU REVIEW pide 5.000 como mínimo: le faltan unas 3.300. No es un problema de revista sino
 de formato: es un *experience report* corto.
 
+> **Corregido el 28/08/2026 — «5.000 como mínimo» era incompleto.** EDU REVIEW tiene **seis tipos de
+> envío con umbrales distintos**, leídos en `edulab.es/revEDU/typesofsubmissions`. El umbral más bajo
+> para un texto académico **no es 5.000, es 3.000** («Artículos de reflexión crítica»). Al 17602 no le
+> faltan 3.300 palabras: le faltan **unas 1.300**. Ver el dictamen del 28/08 al final.
+
 **Intento 3 · `Preprint_Anchored_Feedback_Google_Docs` (17606) → sin destino.** **1.479 palabras de
-cuerpo.** Mismo caso, le faltan unas 3.500.
+cuerpo.** Mismo caso, le faltan unas 3.500. **Dictamen firme del 28/08/2026 al final de este
+archivo: sigue sin destino, y ahora se sabe exactamente por qué.**
 
 De las revistas revisadas, **Revista Virtual UCN es la única que no declara extensión mínima**, así
 que es donde estos dos podrían caber sin crecer. Pero exige cuatro formatos institucionales, y uno
@@ -169,4 +175,97 @@ propuestos no se inventan. Y no publica política de preprints, así que tambié
 | Preguntar a ITEES si cobra | **Docente** | `revistaitees@eidec.com.co` |
 | Abrir Ignis y Opinión Pública en el navegador | **Docente** | BunkerWeb bloquea la consulta automática |
 | Decidir si 17602 y 17606 crecen a 5.000 palabras o buscan revista de nota corta | **Docente** | Es una decisión de alcance, no de formato |
+
+---
+
+## Dictamen 28/08/2026 · destino del 17606: **ninguno viable hoy**
+
+Se buscó destino para `Preprint_Anchored_Feedback_Google_Docs` (17606, inglés). **No hay ninguno
+firmable hoy.** No es pereza ni falta de revistas: es que las dos únicas revistas cuya casilla 1 se
+puede firmar con un preprint depositado fallan cada una por un motivo distinto y comprobado.
+
+**Lo que el manuscrito es, medido:** 1.486 palabras de cuerpo (§1–§6), 260 de abstract, 248 de
+resumen, 17 referencias en APA 7 sin DOI, cero tablas, cero figuras, cero marcadores `[PENDIENTE]`.
+Género: **resultado negativo con solución alterna** sobre una limitación de la API de Google Docs,
+más el reporte de un incidente. No mide nada y lo dice: «No student data are reported and no learning
+outcome is claimed.»
+
+### EDU REVIEW — falla por extensión, no por política
+
+Política **verificada hoy en su web, literal**: «Coste de publicación: gratuito», «Se permite también
+la difusión pre-print del artículo», y las versiones electrónicas «se van publicando de manera
+inmediata» (recepción continua). Las tres condiciones se cumplen. Y su **casilla 1** dice: «Solo
+publicamos artículos originales e inéditos. Los autores garantizan la originalidad y la inexistencia
+de plagio, **incluido el auto-plagio**.» Se firma porque su política editorial admite el preprint por
+escrito, igual que se hizo con el 17601.
+
+Lo que lo mata son los **umbrales por tipo de envío** (`/typesofsubmissions`, leídos hoy):
+
+| Tipo de envío | Umbral | ¿Cabe el 17606? |
+|---|---|---|
+| Artículos de investigación | mín. **5.000** | no |
+| **Artículos de reflexión crítica** | mín. **3.000** ← el más bajo | **no** |
+| Artículos de revisión sistemática | mín. **5.000** | no |
+| Monográfico | por propuesta al comité | no aplica |
+| **Reseñas** | **800–1.500** | **numéricamente sí, pero es «el contenido de un libro»** |
+| Vídeos académicos | formato vídeo | no aplica |
+
+**El resultado es aritméticamente concluyente.** La regla excluye del cómputo resúmenes, palabras
+clave y bibliografía. Cuerpo: 1.486. Cuerpo + declaraciones: 1.744. **El archivo entero, sin excluir
+nada, ni siquiera abstracts ni referencias: 2.785.** No hay forma de contar que llegue a 3.000. No es
+un caso límite discutible con el editor.
+
+**La trampa que hay que no morder:** la ventana de **Reseñas (800–1.500)** encaja con las 1.486
+palabras del 17606 **al milímetro**, y es una coincidencia sin valor. Una reseña es, con sus palabras,
+un texto «a través de los cuales se da a conocer el contenido de un libro de interés académico». Esto
+no es un libro ni una reseña de nada. Meterlo ahí para que el número cuadre es declarar un género
+falso: rebote de mesa y, peor, una firma que no se sostiene.
+
+### ITEES — se puede firmar, pero hay tres cosas sin verificar y un envío a medias
+
+**Casilla 1, literal de `revistaseidec.com/index.php/ITEES/about/submissions`, leída hoy:** «El envío
+no ha sido publicado previamente ni se ha sometido a consideración por ninguna otra revista (**o se ha
+proporcionado una explicación al respecto en los Comentarios al editor/a**).» La salvedad existe y es
+la que hace firmable el destino declarando el preprint. Confirmado también su acceso abierto: «provee
+acceso libre inmediato a su contenido», CC BY-NC-ND 4.0.
+
+Y sin embargo hoy no se le manda nada, por cuatro razones:
+
+1. **No dice en ninguna parte si cobra.** Se buscó «APC», «cargo», «cobro», «tarifa», «gratuito» y
+   «pago» en sus páginas de envíos y de políticas: **no hay una sola mención**. Lo que sí declara es
+   acceso gratuito **para el lector**, que no es lo mismo. El criterio de §9 exige revista **sin
+   cargos comprobados**; aquí no está comprobado, está sin declarar. La pregunta ya va escrita en la
+   carta del envío 596 y **no ha sido contestada**.
+2. **No publica extensión ni normas de autor.** La pestaña «Author Guidelines» de su web **está
+   vacía** —conserva incluso un enlace de plantilla a `ojs3modern8.openjournalsystems.com`—, y su
+   política de revisión sí anuncia una «Revisión equipo Editorial» que comprueba «criterios de fondo y
+   forma según las normas de la revista». Normas que no están publicadas. Que 1.486 palabras no estén
+   prohibidas no es lo mismo que estén admitidas.
+3. **No consta que acepte el cuerpo en inglés.** Es la otra pregunta abierta de la carta del 596, y el
+   17606 está en inglés. Mandar el segundo manuscrito en inglés antes de que contesten por el primero
+   es duplicar el mismo riesgo.
+4. **El envío 596 del 17602 sigue a medias en esa misma revista y esa misma sección.** Abrir un
+   segundo envío antes de cerrar el primero, en una revista cuatrimestral y con un solo autor
+   firmante, es la manera de quemar el trato. Y el sitio **ya limitó por tasa a esta máquina** tras
+   unos quince accesos automatizados.
+
+### Lo que sí hay que hacer, en este orden
+
+1. **Terminar a mano el envío 596 de ITEES** (`Envio_ITEES_17602/_COMO_TERMINARLO.md`). Son dos clics.
+   Además de cerrar el 17602, **la respuesta del editor resuelve las dos incógnitas —cargos e
+   inglés— que hoy bloquean a ITEES como destino del 17606.** Es a la vez la acción urgente y el paso
+   que produce la información que falta.
+2. **Decidir el alcance del 17606**, que es de `escritor-investigacion-cun`, no de aquí: o crece a
+   **≥3.000 palabras de cuerpo** —le faltan unas **1.520**— y va a EDU REVIEW como «Artículo de
+   reflexión crítica», o espera la respuesta de ITEES y va a «Artículos de Reflexión». El material
+   para crecer honestamente ya está dentro: la evidencia documental de §2, el incidente de §4, los
+   límites de §5.3 y las dos líneas de trabajo futuro de §6. **Crecer no significa añadir ninguna
+   cifra: el manuscrito no mide nada y no debe empezar a hacerlo.**
+3. **No mandarlo como reseña a EDU REVIEW.** Queda escrito aquí para que no se redescubra la
+   coincidencia de las 1.500 palabras y se tome por una puerta.
+
+**Las tres revistas descartadas siguen descartadas** por la cláusula «en ningún formato» (CEA,
+TecnoLógicas) y «ni sitio web en internet» (Revista Virtual UCN) — y eso incluye a la UCN, que era la
+única sin extensión mínima declarada. Sinergias Educativas sigue igual: «no acepta material
+previamente publicado», y su consulta sin contestar.
 
