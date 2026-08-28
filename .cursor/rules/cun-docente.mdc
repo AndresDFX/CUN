@@ -107,6 +107,7 @@ Aplica **solo a Proyecto I** (especialización · AFI). **No** extender a TG2/TG
 - **Proyecto I: las ACAs son TRES** (25/25/42). La **autoevaluación (4%, cuestionario)** y la **coevaluación (4%, foro)** **no son ACAs**: instrumentos individuales de cierre que el estudiante *diligencia* o en los que *participa* en CDigital (el Docente habilita y registra). Nunca les pongas prefijo «ACA»: sus instructivos son `Clases/Recursos/ACAs/Autoevaluacion|Coevaluacion individual (4%) - instructivo.docx` (`kind="instrumento"` en `build_acas_estudiantes.py`; ids `auto` / `coev` con `kind="cuestionario"` / `"foro"` en `config/cursos/fechas_entrega_aca.py`). **No son exclusivas de Proyecto I:** existen en los 4 cursos de pregrado con peso menor (ver «REGLA VIGENTE DE EVALUACIÓN»). Los cursos de pregrado **todavía no tienen instructivo** para ellas — pendiente.
 - **Cero `.md` en `Clases/`.** Todo texto orientado a estudiantes (LEEME, fichas, consignas, ACAs) se entrega como **`.docx`** (regenerable con el sync / `guion_md_a_docx.py` solo para material de `Clases/`). Los guiones docentes en `Docente/Guiones/` son **solo `.md`** (no generar ni versionar `.docx` de guiones).
 - **NO meter en `Clases/`:** Guiones docentes, Manual del Docente, CSV/ICS Calendar con roster, formularios solo-docente AFI, `Informacion.txt` de grupo, **`Correo de bienvenida.docx`**, builds/`config/`, ni archivos `.md`.
+- **`Eventos/` (carpeta raíz, 2026-08-27) = postulaciones a congresos y encuentros.** No es material de curso y no cuelga de ninguna asignatura: `Eventos/<Nombre del evento>/` con el `.md` del resumen (**fuente de verdad**), el `.docx` generado, `HOJA_DE_RESPUESTAS_Formulario.md` y `_armar_resumen_docx.py` (un constructor por evento). El texto se edita en el `.md`; **`guion_md_a_docx.py` no sirve aquí** —está dimensionado para guiones y fichas de `Clases/` y derrama un resumen corto en dos hojas—. Un evento paga el producto de *Evento científico* de Synapse, **no `ART_OPEN_D`**. Agente: `publicaciones-cun` §9 bis.
 - **Raíz** = material genérico/reutilizable (sin código de grupo en títulos ni nombres de archivo de sesión).
 - **`2026/<grupo>/`** = oferta puntual (Informacion, roster si aplica, Calendar, correo de bienvenida para pegar/enviar).
 - Grupos en **slides:** solo portada de la Presentación del Curso. En **Calendar** (Subject) sí van códigos de grupo. No en títulos de Sesión NN ni en el resto de diapositivas.
@@ -258,10 +259,20 @@ El rompehielos «Preséntate» **ya no es Padlet en los 5 cursos**. La herramien
 
 # Agentes de este workspace (CUN)
 
+Son **9**, no 2: esta tabla se había quedado con los dos primeros (corregido el 2026-08-27 listando
+`.cursor/agents/`).
+
 | Agente | Uso |
 | :--- | :--- |
 | `disenador-curricular-cun` | Generar material (Syllabus → presentación + guiones + slides) |
 | `cun-dudas-material` | Consultas rápidas sobre normas, ACAs, cronogramas (no genera material) |
+| `cierre-notas-cun` | Bajar notas de CDigital, calcular la final y decir qué falta para cerrar (no escribe en el aula) |
+| `comentar-documentos-cun` | Comentarios anclados a la frase en el Google Docs de un estudiante (`simular` → `ensayar` → `comentar --confirmar`) |
+| `evaluador-proyectos-grado-cun` | Ser jurado: resumen, preguntas antes/después y evaluación con la rúbrica |
+| `escritor-investigacion-cun` | **Redacta** anteproyectos INV-FO03 y artículos IMRaD |
+| `publicaciones-cun` | **Publica**: destino, PDF, metadatos por API, depósito, evidencia para Synapse y **postulaciones a eventos** (`Eventos/`, §9 bis) |
+| `estado-publicaciones-cun` | **Vigila**, solo lectura: preprints, DOI, ORCID y vencimientos de Synapse |
+| `examlab-practica` | Diseñar la práctica de una sesión con examlab y herramientas de navegador |
 
 - Cursor: `.cursor/agents/*.md` · Claude: `.claude/agents/*.md`
 - Edita primero en `.cursor/agents/`, luego: `python config/sync_agents_cursor_claude.py`

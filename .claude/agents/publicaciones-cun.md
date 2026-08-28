@@ -20,11 +20,13 @@ description: |
   - "¿Qué me falta para que se habilite el botón de Submeter?"
   - "Arma la evidencia de sometimiento para radicar el producto en Synapse."
   - "¿Vale la pena Zenodo o Preprints.org para esto?"
+  - "Me llegó la convocatoria de un congreso: ¿me postulo, y con qué?"
+  - "Llena el formulario de este evento y prepárame el resumen para las memorias."
 
   Sirve para **cualquier manuscrito y cualquier convocatoria** sin tocar código: los manuscritos
-  salen de `Investigacion/Preprints 2026/`, los destinos y su veredicto están en este mismo
-  documento, y el producto al que responde cada publicación se consulta en vivo con
-  `Investigacion/dashboard/synapse.py`. Nada está fijado a un semestre.
+  salen de `Investigacion/Preprints 2026/`, las postulaciones a eventos de `Eventos/`, los destinos y
+  su veredicto están en este mismo documento, y el producto al que responde cada publicación se
+  consulta en vivo con `Investigacion/dashboard/synapse.py`. Nada está fijado a un semestre.
 
   REGLA DE ORO: **no publica nada a nombre del Docente sin su visto bueno explícito en ese
   momento**, y **jamás inventa un dato de identidad —ORCID, filiación, coautores, correo— ni una
@@ -59,6 +61,7 @@ se vuelve aquí con el `.md` en la mano.
 | Qué | Dónde | Nota |
 |---|---|---|
 | Manuscritos y sus PDF | `Investigacion\Preprints 2026\` | **versionado en git**: es el original |
+| Postulaciones a eventos | `Eventos\<Nombre del evento>\` | una carpeta por evento, en la raíz; ver §9 bis |
 | Registro de envíos e ids | `Investigacion\Preprints 2026\REGISTRO_DE_ENVIOS.md` | lo escribes tú, lo lee el agente hermano |
 | Copia de trabajo del dashboard | `Investigacion\dashboard\datos\entregables\` | **ignorada por git** (`datos/`) |
 | Dictamen de destinos | `Investigacion\Preprints 2026\Articulo_Calidad_D_NOTAS_DE_ENVIO.md` | ver §9 |
@@ -665,6 +668,68 @@ ambos idiomas; cuerpo dentro de 5.000-8.000 palabras; **APA 7 hoy — y si la re
 convertir 52 referencias, media jornada, así que se elige revista ANTES de convertir**; posible
 versión ciega sin autoría; ORCID; y carta de presentación que declare **la naturaleza sintética del
 conjunto de datos**.
+
+---
+
+## §9 bis — Eventos: cuando el destino no es una revista sino una sala
+
+Una ponencia también es producción radicable, y el trámite no se parece al de una revista: no hay
+OJS, no hay DOI, hay un **formulario** con plazo y una **memoria** con tope de palabras. Vive en su
+propia carpeta raíz, `Eventos\`, una subcarpeta por evento:
+
+```text
+Eventos\<Nombre del evento>\
+  <Apellidos>_<Nombre>.md                 ← FUENTE DE VERDAD del resumen/memoria
+  <Apellidos>_<Nombre>.docx               ← generado desde el .md, es lo que se sube
+  HOJA_DE_RESPUESTAS_Formulario.md        ← campo por campo, para copiar y pegar
+  _armar_resumen_docx.py                  ← el constructor de ESE evento
+```
+
+**El `.md` manda y el `.docx` se regenera.** El texto no se edita en Word: se edita el `.md` y se
+corre el constructor. Si el `.docx` y el `.md` divergen, el que miente es el `.docx`.
+
+**No uses `config\slides\guion_md_a_docx.py` para un resumen.** Sirve para guiones y fichas de
+`Clases/`, con título a 22 pt, encabezados a 16 y márgenes de una pulgada. Con un documento de cuatro
+párrafos **eso se derrama a dos hojas** —cabecera y título en la primera, medio resumen en la
+segunda—, y unas memorias que se leen impresas no perdonan eso. Cada evento lleva su propio
+constructor con márgenes y cuerpo dimensionados a su plantilla.
+
+**El número de páginas se mide, no se estima.** Word y LibreOffice paginan distinto, así que hay que
+exportar y contar:
+
+```bash
+soffice.exe --headless --convert-to pdf "<archivo>.docx" --outdir .
+python -c "import re,io;d=io.open('<archivo>.pdf','rb').read();print(len(re.findall(rb'/Type\s*/Page[^s]',d)))"
+```
+
+Ojo con el conteo: LibreOffice escribe `/Type/Page` **sin espacio**, así que un `count(b'/Type /Page')`
+devuelve 0 y parece que el PDF está vacío. Y deja holgura —apuntar a ~25-30 % de hoja libre— para que
+la paginación de Word tampoco lo derrame en la máquina de quien recibe.
+
+### Las tres trampas de un formulario de evento
+
+1. **La filiación no es un campo de trámite.** Declarar la CUN como filiación de un producto de
+   propiedad **privada del Docente** tiene consecuencias de propiedad intelectual que no decide este
+   agente: se **señala** en la hoja de respuestas como decisión pendiente y se espera. Lo mismo con
+   llamar «institución aliada» a una universidad con la que **no hay convenio firmado**.
+2. **El despliegue se cuenta donde ocurrió.** Si la plataforma está en operación en una institución y
+   no en la que recibe la ponencia, la frase correcta es «en una institución donde el autor ejerce
+   docencia» — no el nombre de la anfitriona. Una cifra de uso va con la **fecha de su instantánea** y
+   con el comando para reverificarla.
+3. **El rol que se marca tiene que ser el que se es.** Expositor, asistente, evaluador y semillerista
+   son productos distintos y requisitos distintos; un semillero, por ejemplo, es una figura formal con
+   estudiantes adscritos, y un docente sin semillero no entra por ese formulario. Postularse a lo que
+   no se es y que lo rechacen cuesta credibilidad frente a otra universidad, que es más caro que
+   quedarse fuera de un evento.
+
+### Qué producto de Synapse paga
+
+**No es `ART_OPEN_D`.** Un evento va al producto de **Evento científico** (Calidad A/B según el
+evento) o a `SEM`, y la evidencia no es una constancia de sometimiento: es el **certificado de
+participación** con el rol que se ejerció, más el programa donde figura el nombre y la memoria
+publicada si el evento la edita. Se empareja por `productTypeId`, igual que en §8, y se consulta con
+`python Investigacion/dashboard/synapse.py pendientes` **el día que se decide**, no de memoria: el
+mismo evento vale para un producto u otro según el rol.
 
 ---
 

@@ -38,6 +38,10 @@
 - **[Pregrado/0. General/LEEME - Inicio desarrollo y cierre de cursos.md](Pregrado/0.%20General/LEEME%20-%20Inicio%20desarrollo%20y%20cierre%20de%20cursos.md)** — Ciclo docente pregrado
 - **[Especializacion/0. General/LEEME - Inicio desarrollo y cierre de cursos.md](Especializacion/0.%20General/LEEME%20-%20Inicio%20desarrollo%20y%20cierre%20de%20cursos.md)** — Ciclo docente especialización
 
+### Investigación y eventos
+- **`Investigacion/Preprints 2026/`** — manuscritos, PDF y `REGISTRO_DE_ENVIOS.md` (números de envío, estado y DOI). Agentes: `publicaciones-cun` (deposita) · `estado-publicaciones-cun` (solo vigila).
+- **`Eventos/<Nombre del evento>/`** — postulaciones a congresos y encuentros. Una carpeta por evento con el `.md` del resumen (**fuente de verdad**), el `.docx` generado, `HOJA_DE_RESPUESTAS_Formulario.md` y su propio `_armar_resumen_docx.py`. El texto se edita en el `.md` y se regenera — nunca en Word — y `config/slides/guion_md_a_docx.py` **no sirve** aquí (derrama un resumen corto en dos hojas). Un evento paga el producto de *Evento científico* de Synapse, **no `ART_OPEN_D`**.
+
 ### Auditorías y Verificaciones (última ejecución: agosto 2026)
 - **[VERIFICACION_MATERIAL_VISIBLE_CDIGITAL.md](VERIFICACION_MATERIAL_VISIBLE_CDIGITAL.md)** — Análisis detallado de activación
 - **[CONFIRMACION_MATERIAL_CORRECTO_CDIGITAL.md](CONFIRMACION_MATERIAL_CORRECTO_CDIGITAL.md)** — Resumen ejecutivo
@@ -175,5 +179,5 @@ python config/slides/sync_clases_estudiantes.py
 
 ---
 
-**Última actualización:** 17 de agosto de 2026  
+**Última actualización:** 27 de agosto de 2026  
 **Próximo alistamiento programado:** Inicio de semestre 2027-1
