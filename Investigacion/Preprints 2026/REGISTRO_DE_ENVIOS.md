@@ -498,17 +498,51 @@ Se buscó de dónde pudo salir, y **las cuatro vías dieron negativo**:
 La búsqueda en web abierta quedó **inconcluyente** (el selector del buscador no devolvió nada
 utilizable), así que no se puede afirmar que no esté indexado en ninguna parte.
 
-**Qué significa para TecnoLógicas.** Hoy **no hay evidencia de difusión pública**, así que la
-declaración de «no publicado en ningún formato» sigue sostenible. Pero conviene que el Docente
-resuelva dos cosas antes de someter, porque son las únicas que quedan sin mirar: **con quién están
-compartidos esos cuatro archivos en Drive** (la interfaz los marca «Compartido», aunque no sean
-públicos) y **qué hay en su lista de envíos de SciELO**, que necesita su clave.
+**⛔ CORREGIDO EL 2026-08-28. El manuscrito está público y la declaración ya no se puede firmar.**
+Lo que decía este párrafo —«hoy no hay evidencia de difusión pública, así que la declaración de *no
+publicado en ningún formato* sigue sostenible»— es **falso**. Comprobado en Crossref el 28/08:
+
+| Dato | Valor |
+|---|---|
+| DOI | **`10.32388/z2uxxt`** |
+| Tipo · editor | `posted-content` · **Qeios Ltd** |
+| `posted` · `created` | 2026-08-25 · 2026-08-25T13:36:58Z |
+| Licencia | **CC BY 4.0** (irrevocable) |
+| Autor | Julian Andrés Castaño Espinosa (en Crossref el ORCID va **nulo** y la filiación **vacía**) |
+| Título | coincide palabra por palabra con `Preprint_Completion_Gating_Moodle.md` |
+
+Consecuencias, en orden de gravedad:
+
+1. **La casilla 1 de TecnoLógicas, CEA y UCN ya no se puede firmar para este manuscrito**, y con eso
+   se queda sin material el único destino Publindex **B** de la lista (8 puntos).
+2. **Existía una vía de difusión pública anterior** al correo depredador del 26/08 que citaba el
+   título exacto. Eso no prueba de dónde salió ese correo —el origen sigue sin establecerse—, pero
+   tumba la premisa con la que se cerró la búsqueda.
+3. **Lo institucional, que es lo grande:** el texto audita la mala configuración de siete aulas de
+   la CUN y está en abierto sin que nadie de la institución lo sepa. Retirarlo no lo arregla: CC BY
+   es irrevocable y Crossref ya tiene el registro. **Hay que averiguar quién depositó, cuándo y con
+   qué versión**, entrando a `qeios.com` con la cuenta asociada al correo institucional; si no hay
+   cuenta, es uso no autorizado de esa identidad. En este mismo directorio existe un
+   `Preprint_Completion_Gating_Moodle.pdf`, así que el paquete para depositarlo estaba listo.
+4. **No añadir obras al perfil de Google Académico** que hay que crear antes del 31/08: Qeios
+   declara indexación en Scholar, y este texto sería la única obra visible bajo filiación CUN. El
+   producto se cierra con un perfil verificado y vacío, que es lo único que pide su observación.
+
+De lo que quedaba sin mirar sigue pendiente una sola cosa, y la puede hacer solo el Docente: **qué
+hay en su lista de envíos de SciELO**, que necesita su clave. Los cuatro archivos de Drive dan HTTP
+401 sin sesión.
 
 ## Software acompañante
 
 | Paquete | Preprint al que acompaña | Depósito |
 |---|---|---|
-| `anchored-feedback` v1.0.0 | 17606 | sin depositar |
+| `anchored-feedback` v1.0.0 | 17606 | **Zenodo, 2026-08-23.** DOI de versión `10.5281/zenodo.22069535`, DOI de concepto `10.5281/zenodo.22069534` · tipo Software · CC BY 4.0 + MIT · autor «Castaño Espinosa, Julian Andrés» |
+
+> Corregido el 2026-08-28: esta fila decía **«sin depositar»** y es falso. Verificado en la API de
+> DataCite (`api.datacite.org/dois/10.5281/zenodo.22069535`): `registered 2026-08-23T14:43:08Z`,
+> `version 1.0.0`, `IsVersionOf 10.5281/zenodo.22069534`. Son **dos DOI del mismo objeto** (concepto
+> y versión), no dos depósitos distintos — de ahí el `works_count` inflado en OpenAlex. En la ficha
+> de DataCite la **filiación del autor va vacía y sin ORCID**.
 
 ## Producto de Synapse al que responden
 
@@ -540,10 +574,19 @@ El de CvLAC (`prod_1785939694462`, pantallazo con productos 2026) vence el **202
 
 | Manuscrito | Por qué |
 |---|---|
-| `Articulo_Calidad_D_Desercion_ML.md` | 39 marcadores `[PENDIENTE: …]`, una nota interna «eliminar antes del sometimiento» y cifras nunca medidas. Su versión depositable es el protocolo (17601). Destino previsto: revista, ver `Articulo_Calidad_D_NOTAS_DE_ENVIO.md` |
-| `Preprint_Completion_Gating_Moodle.md` | **RESERVADO. NO DEPOSITAR EN NINGÚN SERVIDOR DE PREPRINTS.** Ver el candado de aquí abajo. |
+| `Articulo_Calidad_D_Desercion_ML.md` | **90** marcadores `[PENDIENTE: …]` (contados el 2026-08-28; este registro decía **39**, y eran 91 antes de retirar el de la financiación inexistente). Casi todos están donde irían los resultados, y **la investigación no existe**: cero notebooks, cero datasets de deserción, cero modelos entrenados y cero scripts en todo el repositorio. Lleva además una nota interna «eliminar antes del sometimiento» y cifras nunca medidas. Su versión depositable es el protocolo (17601). Destino previsto: revista, ver `Articulo_Calidad_D_NOTAS_DE_ENVIO.md` |
+| ~~`Preprint_Completion_Gating_Moodle.md`~~ | ⛔ **ESTA FILA ES FALSA DESDE EL 2026-08-25.** Decía «RESERVADO. NO DEPOSITAR EN NINGÚN SERVIDOR DE PREPRINTS». **Sí está depositado**: Qeios, DOI `10.32388/z2uxxt`, CC BY 4.0 (ver el bloque de Crossref más arriba). Este manuscrito ya no pertenece a esta tabla. |
 
-### Candado: `Preprint_Completion_Gating_Moodle` va a revista, no a preprint
+### ⛔ Candado ROTO: `Preprint_Completion_Gating_Moodle` ya está depositado
+
+> **El candado se rompió el mismo día en que se puso.** Se escribió el **25/08/2026**, y el depósito
+> en Qeios está sellado el **25/08/2026 a las 13:36:58Z**. O se redactó después del depósito sin
+> saberlo, o el depósito se hizo con el candado ya escrito. **Averiguar cuál de las dos, entrando a
+> `qeios.com`, es lo primero que hay que hacer**, porque solo una de las dos es un descuido.
+>
+> Todo lo que sigue queda **como registro de la decisión que se tomó, no como instrucción vigente**.
+> Lo único que sobrevive de este bloque es su plan B: si hace falta un destino, **ACOFI** sigue en
+> pie, y su regla de un artículo por autor y año también.
 
 **No lo deposites en SciELO, ni en Qeios, ni en Zenodo, ni en ningún sitio.** Puesto el 25/08/2026.
 
