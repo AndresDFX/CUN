@@ -622,15 +622,28 @@ def analizar_productos(doc: dict) -> dict:
             if isinstance(h, dict) and str(h.get("status", "")).lower() in ESTADOS_ABIERTOS
         ]
 
+        # Los nombres de campo se comprobaron el 2026-08-28 contra los 3.015 productos de los 218
+        # documentos de `products`: los reales son `productTypeId`, `categoryName` y
+        # `observacionesLabores`. `productType`, `tipoProducto`, `categoriaMinciencias`,
+        # `categoryId` y `adminFeedback` —que es lo que leía este código— aparecen CERO veces.
+        # Consecuencia del defecto: la columna Tipo salía «—» en las once filas del espejo y la
+        # observación nunca se imprimía, así que los cinco productos llamados «Labores
+        # administrativas» eran indistinguibles y se escondía justo el texto que dice qué evidencia
+        # pide cada uno. Si se vuelve a tocar, comprobar contra la colección, no contra la app.
         ficha = {
             "producto": pr.get("productName") or pr.get("title") or pr.get("id"),
-            "tipo": pr.get("productType") or pr.get("tipoProducto"),
-            "categoria_minciencias": pr.get("categoriaMinciencias") or pr.get("categoryId"),
+            # El `id` es la ÚNICA clave que distingue los cinco productos llamados «Labores
+            # administrativas», porque su `productTypeId` viene vacío. Se empareja por id, nunca
+            # por nombre.
+            "id": pr.get("id"),
+            "tipo": pr.get("productTypeId"),
+            "categoria_minciencias": pr.get("categoryName"),
             "estado": estado,
             "fecha_limite": pr.get("deliveryDate") or pr.get("dueDate"),
             "vencido": _vencido(pr.get("deliveryDate") or pr.get("dueDate")),
             "entregado": pr.get("deliveredAt"),
-            "observacion_admin": pr.get("adminFeedback"),
+            "observacion_admin": pr.get("observacionesLabores"),
+            "notas_rechazo": pr.get("rejectionNotes"),
             "hitos_abiertos": hitos_abiertos,
             "ultima_actividad": pr.get("lastActivity"),
         }
@@ -665,7 +678,7 @@ def eventos_calendario(doc: dict, dias_alerta: int = 7, hoy: date | None = None)
 
     for pr in _lista_productos(doc):
         producto = pr.get("productName") or pr.get("title") or pr.get("id") or "(sin nombre)"
-        categoria = pr.get("categoriaMinciencias") or pr.get("categoryId") or ""
+        categoria = pr.get("categoryName") or ""   # ver nota de campos en analizar_productos()
         es_coautoria = pr.get("_esCoautoria", False)
         docente_principal = pr.get("_docentePrincipalUid", "")
 
@@ -844,8 +857,8 @@ def cmd_pendientes(args) -> int:
     ]
     if an["abiertos"]:
         lineas += ["## Abiertos (vencidos primero)", "",
-                   "| Producto | Tipo | Estado | Fecha límite | ¿Vencido? | Hitos abiertos |",
-                   "|---|---|---|---|---|---|"]
+                   "| Id | Producto | Tipo | Estado | Fecha límite | ¿Vencido? | Hitos abiertos |",
+                   "|---|---|---|---|---|---|---|"]
         for p in an["abiertos"]:
             hitos = "; ".join(
                 f"{h['titulo']} ({h['estado']}"
@@ -854,14 +867,20 @@ def cmd_pendientes(args) -> int:
                 for h in p["hitos_abiertos"]
             ) or "—"
             lineas.append(
-                f"| {p['producto']} | {p['tipo'] or '—'} | {p['estado']} | "
+                f"| `{p['id'] or '?'}` | {p['producto']} | {p['tipo'] or '—'} | {p['estado']} | "
                 f"{p['fecha_limite'] or '—'} | {'**SÍ**' if p['vencido'] else 'no'} | {hitos} |"
             )
         lineas.append("")
+        lineas.append("Un `productTypeId` vacío (`—`) es dato real, no un fallo del informe: los "
+                      "productos de «Labores administrativas» no lo traen. Lo que los distingue es "
+                      "el `id` y su observación.")
+        lineas.append("")
         for p in an["abiertos"]:
             if p["observacion_admin"]:
-                lineas.append(f"- **{p['producto']}** — observación del administrador: "
+                lineas.append(f"- `{p['id']}` **{p['producto']}** — observación del administrador: "
                               f"{p['observacion_admin']}")
+            if p.get("notas_rechazo"):
+                lineas.append(f"  - ⛔ **Rechazado.** Motivo: {p['notas_rechazo']}")
         lineas.append("")
     else:
         lineas += ["## Abiertos", "", "No hay productos pendientes ni vencidos.", ""]
