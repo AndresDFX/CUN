@@ -110,6 +110,13 @@ def load_roster_emails(ods: Path) -> list[str]:
     El `.ods` que subió el docente se quedó en 40 estudiantes; la matrícula real en el aula
     (auditada el 2026-08-10) es de 50. Se lee el primer archivo disponible en la carpeta del
     grupo por orden de confianza y, si hay varios, se toma el que más correos aporte.
+
+    **El Docente se descarta siempre.** Los correos se extraen por expresión regular, que no
+    mira la columna `rol`, y el export de participantes de CDigital lo trae como una fila más
+    —con `rol=Profesor`, pero una fila—. Sin este filtro basta con que ese archivo gane el
+    desempate para que el organizador acabe en la lista de invitados de sus propios encuentros,
+    y Calendar le mande la invitación a sí mismo. Se descubrió al añadir dos estudiantes: el CSV
+    pasó a 53 correos y le ganó al `.txt`, que tenía 51.
     """
     carpeta = ods.parent
     candidatos = [
@@ -134,6 +141,7 @@ def load_roster_emails(ods: Path) -> list[str]:
             continue
         hallados = sorted(set(re.findall(
             r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}", data)))
+        hallados = [c for c in hallados if c.lower() != DOCENTE_CORREO.lower()]
         if len(hallados) > len(mejor):
             mejor = hallados
     if not mejor:

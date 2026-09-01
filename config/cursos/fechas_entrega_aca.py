@@ -212,7 +212,11 @@ VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
     # CREATIVIDAD 54408 · mié · recepción 19/09 · cierre de notas 27/09
     "creatividad": {
         "quiz1":     (date(2026, 8, 12), date(2026, 8, 19), date(2026, 8, 26)),   # cierra S02
-        "parcial1":  (date(2026, 8, 20), date(2026, 8, 26), date(2026, 9, 2)),    # cierra S03
+        # REABIERTO el 31/08/2026 a petición del Docente. Cerró el 28/08 (viernes) y llegaron
+        # dos correos de estudiantes que lo daban por abierto hasta el domingo. Se reabre hasta
+        # el miércoles 02/09, que es día de clase y era el límite de nota anterior; el límite de
+        # nota pasa al 09/09. Antes: (20/08, 26/08, 02/09).
+        "parcial1":  (date(2026, 8, 20), date(2026, 9, 2), date(2026, 9, 9)),     # reabierto
         "quiz2":     (date(2026, 8, 27), date(2026, 9, 2), date(2026, 9, 9)),     # cierra S04
         "parcial2":  (date(2026, 9, 3), date(2026, 9, 9), date(2026, 9, 16)),     # cierra S05
         "quiz3":     (date(2026, 9, 10), date(2026, 9, 16), date(2026, 9, 23)),   # cierra S06
@@ -222,19 +226,39 @@ VENTANAS: dict[str, dict[str, tuple[date, date, date]]] = {
     },
     # INVESTIGACIÓN 53339 · jue · recepción 12/09 · cierre de notas 20/09
     "investigacion": {
-        "quiz1":     (date(2026, 8, 13), date(2026, 8, 20), date(2026, 8, 27)),   # cierra S02
-        "parcial1":  (date(2026, 8, 21), date(2026, 8, 27), date(2026, 9, 3)),    # cierra S03
-        "quiz2":     (date(2026, 8, 28), date(2026, 9, 3), date(2026, 9, 10)),    # cierra S04
-        "parcial2":  (date(2026, 9, 4), date(2026, 9, 10), date(2026, 9, 17)),    # cierra S05
+        # LO QUE DE VERDAD CORRIÓ, no lo que se planeó (corregido el 31/08/2026 leyendo el aula).
+        # El Quiz 1 estuvo abierto del 20 al 27/08 —una semana entera desplazado respecto de esta
+        # tabla, que decía 13→20— y el Parcial 1 cerró el 28/08 y no el 27. Los dos vencieron con los
+        # 20 estudiantes presentados. Se ajusta la tabla al aula y no al revés, por dos razones: es lo
+        # que pasó, y porque `cdigital.py fechas` escribe el aula ENTERA — con las fechas viejas aquí,
+        # sincronizar habría retrocedido dos actividades cerradas y con todas las notas puestas.
+        "quiz1":     (date(2026, 8, 20), date(2026, 8, 27), date(2026, 8, 27)),   # corrió así
+        "parcial1":  (date(2026, 8, 21), date(2026, 8, 28), date(2026, 9, 3)),    # corrió así
+        # DOMINGO A DOMINGO desde el 31/08/2026, a petición de una estudiante del grupo: pidió el
+        # mismo esquema que ve en sus otras asignaturas —abre domingo, cierra domingo a medianoche—
+        # porque le permite saber de antemano cuánto plazo tiene. Se aplica a lo que cabe sin
+        # recortarle tiempo a nadie y sin cruzar la recepción del 12/09.
+        # El Quiz 2 ya está abierto y tiene intentos dentro, así que la apertura NO se toca: solo se
+        # alarga el cierre. Antes: (28/08, 03/09 jue, 10/09).
+        "quiz2":     (date(2026, 8, 28), date(2026, 9, 6), date(2026, 9, 13)),    # cierra dom
+        # Antes: (04/09, 10/09 jue, 17/09). Todavía no abre, así que va domingo a domingo entero.
+        "parcial2":  (date(2026, 9, 6), date(2026, 9, 13), date(2026, 9, 20)),    # dom a dom
         "aca_final": (date(2026, 8, 13), date(2026, 9, 12), date(2026, 9, 20)),   # recepción
         # Excepción a REGLA_VENTANAS_DOCENTE: el Quiz 3 NO cierra en día de clase.
         # La última sesión (S06, 17/09) cae DESPUÉS de la recepción del 12/09, así que
         # dejarlo en la S06 lo ponía a cerrar después del entregable final del corte.
         # Decisión del Docente (10/08/2026): todo el corte 3 cierra el 12/09 y la S06
         # queda como socialización y cierre, sin evaluación.
+        # Y NO se pasa a domingo con el resto (31/08/2026): el domingo siguiente es el 13/09, un día
+        # DESPUÉS de la ACA Final de su propio corte, que es exactamente el defecto que esta
+        # excepción evita. Se queda en el 12/09, con la ACA Final.
         "quiz3":     (date(2026, 9, 11), date(2026, 9, 12), date(2026, 9, 20)),   # con la ACA Final
-        "auto":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
-        "coev":      (date(2026, 9, 17), date(2026, 9, 20), date(2026, 9, 20)),
+        # Ya cerraban en domingo; ahora también abren en domingo. Antes: (17/09, 20/09, 20/09).
+        # La coevaluación es un FORO y en Moodle un foro no tiene fecha de apertura: esta fecha vale
+        # como intención y como lo que se le anuncia al estudiante, pero el aula no la puede cumplir
+        # sola — se abre mostrando el foro.
+        "auto":      (date(2026, 9, 13), date(2026, 9, 20), date(2026, 9, 20)),   # dom a dom
+        "coev":      (date(2026, 9, 13), date(2026, 9, 20), date(2026, 9, 20)),   # dom a dom
     },
     # TG2 54448 · lun · recepción 14/11 · cierre de notas 22/11
     "tg2": {

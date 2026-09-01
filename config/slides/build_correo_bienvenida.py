@@ -114,7 +114,7 @@ def correo_md(key: str, grupo: str | None = None) -> str:
         "las ACAs y nos conocemos. **No se dicta tema**; el contenido arranca en la Sesión 02."
         + (f" ⚠️ **Ojo:** {s1['reprogramada'].strip()}" if s1.get("reprogramada") else "")
         + " |",
-        f"| **Google Meet** (mismo enlace toda la serie) | {meet_url(key, c['titulo_corto'])} |",
+        f"| **Google Meet** | {meet_url(key, c['titulo_corto'])} |",
         # Material ≠ entregas: la carpeta `Clases/` del Drive es de dónde SE BAJA el material
         # (deck, lectura autónoma, enunciados) y CDigital es dónde SE SUBE lo evaluado.
         f"| **Material de clases** (carpeta `Clases/` en Drive) | {clases_url(key)} — es la carpeta "

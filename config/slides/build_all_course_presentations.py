@@ -74,7 +74,7 @@ def build_proyecto1(course):
         f"**CDigital (campus del curso):** {bold_var(cdigital_url('proyecto1'))}",
         f"**Tutorías:** @@{LINK_TUTORIAS}@@",
         MSG_TUTORIAS_POR_GRUPO,
-        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url('proyecto1', 'Proyecto I'))}",
+        f"**Meet:** {bold_var(meet_url('proyecto1', 'Proyecto I'))}",
         f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
         "**Enunciados ACA:** `Clases/Recursos/ACAs/`",
@@ -127,7 +127,7 @@ def build_pregrado(course, filename):
     content_slide(prs, "RECURSOS", [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(cdigital_url(key))}",
-        f"**Meet (mismo enlace toda la serie):** {bold_var(meet_url(course['key'], course['titulo']))}",
+        f"**Meet:** {bold_var(meet_url(course['key'], course['titulo']))}",
         f"**Plantilla APA CUN:** `{RUTA_PLANTILLA_APA}` (viene en tu carpeta del curso)",
         f"**Plantilla APA CUN (en tu carpeta):** `{RUTA_PLANTILLA_APA}`",
     ], idx=_i)

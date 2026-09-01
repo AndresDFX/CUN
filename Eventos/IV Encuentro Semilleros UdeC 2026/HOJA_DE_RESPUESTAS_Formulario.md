@@ -2,6 +2,28 @@
 
 Universidad de Cundinamarca, sede Fusagasugá · **miércoles 4 de noviembre de 2026**.
 
+> ⚠️ **NOTA AÑADIDA EL 29 DE AGOSTO DE 2026 — LA DECISIÓN DE ABAJO YA NO ES LA VIGENTE.**
+> Este documento se escribió el **28 de agosto** y su decisión (ir por el formulario de
+> **evaluadores** porque el de semilleristas «no se puede diligenciar sin mentir») quedó superada al
+> día siguiente por dos datos nuevos:
+> **(1)** el censo de los 48 ítems del formulario de semilleristas (29/08) muestra que **los diez
+> campos del Segundo Ponente, ítems 15 a 24, no son obligatorios** — incluido el ítem 24, «Semestre
+> que cursa actualmente», que era justamente el campo que aquí se dio por bloqueante; y
+> **(2)** la consulta a Synapse del 28/08 confirma **117 semilleros activos, 22 en la Escuela de
+> Ingeniería y cinco de IA con estudiantes**, así que sí existe un semillero anfitrión posible aunque
+> SIAES no esté constituido.
+> **Lo vigente está en `LEEME.md` y en `GUIA - Inscripcion paso a paso.md`**: se prepara la
+> postulación como **Segundo Ponente** por el formulario de semilleristas, y esta vía de evaluadores
+> queda como alternativa viva hasta el **21 de septiembre de 2026**.
+> Lo que de este documento **sigue siendo válido y por eso no se ha tocado**: el censo completo de los
+> 35 ítems del formulario de evaluadores con su respuesta, el análisis de que por esa vía «los 300
+> puntos no existen» (`prod_1785939759024`, `score: 0`), el aviso de que ese formulario no tiene campo
+> de nombre, y los datos de identidad recogidos en la tabla de campos. Aviso menor: los «quedan N
+> días» de este archivo están contados desde el **28** de agosto.
+> Hay además un bloqueo que ninguna de las dos versiones había escrito y que hoy sí está en la guía
+> (**B14**): el ítem 45 fila 1 obliga a declarar que el trabajo lo hicieron sus autores, y examlab lo
+> hiciste tú, a título personal y fuera de la CUN. La vía está abierta; el trabajo que presentar, no.
+
 **La decisión: te postulas por el formulario de EVALUADORES, en modalidad VIRTUAL.**
 <https://forms.gle/HM82o137SQd5FY1E8>
 

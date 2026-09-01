@@ -1,0 +1,529 @@
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    print(d[i].get_text())
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u27a2' in position 1033: character maps to <undefined>
+PAGES 11
+META {'format': 'PDF 1.7', 'title': '', 'author': 'HERNAN DARIO GONZALEZ MOLINA', 'subject': '', 'keywords': '', 'creator': 'Microsoft® Word LTSC', 'producer': 'Microsoft® Word LTSC', 'creationDate': "D:20260821101039-05'00'", 'modDate': "D:20260821101039-05'00'", 'trapped': '', 'encryption': None}
+============================== PAGE 1
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 1 de 11 
+ 
+ 
+Etiqueta de Activo de Información - IN                               
+ PÚBLICO  
+22. 
+ 
+Fusagasugá, 2026 - 08- 11. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IV ENCUENTRO TRANLOCAL 
+LATINOAMERICANO DE SEMILLEROS DE 
+INVESTIGACIÓN 
+Universidad de Cundinamarca 
+"Sembramos ideas, cultivamos conocimiento, 
+Transformamos Latinoamérica" 
+ 
+Fecha: 4 de noviembre de 2026 
+Lugar: Universidad de Cundinamarca – Sede Fusagasugá 
+ 
+
+============================== PAGE 2
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 2 de 11 
+ 
+ 
+PRESENTACIÓN 
+La Universidad de Cundinamarca, comprometida con la formación 
+para la vida, los valores democráticos, la generación de conocimiento 
+y la transformación social, invita a creadores de oportunidades, 
+gestores del conocimiento, lideres investigadores, líderes de semilleros 
+e instituciones de educación superior nacionales e internacionales a 
+participar en el IV Encuentro Latinoamericano de Semilleros de 
+Investigación. 
+Este evento académico constituye un escenario de apropiación social 
+del conocimiento, intercambio de experiencias investigativas y 
+fortalecimiento de redes de cooperación académica internacional, 
+permitiendo la socialización de proyectos desarrollados por estudiantes 
+vinculados a semilleros de investigación. 
+El encuentro busca consolidarse como un espacio para el diálogo de 
+saberes, la construcción colectiva de conocimiento y la promoción de 
+iniciativas investigativas orientadas a la solución de problemáticas 
+sociales, ambientales, tecnológicas, económicas y culturales de la 
+región latinoamericana. 
+ 
+OBJETIVO GENERAL 
+Promover un espacio de encuentro académico internacional para la 
+socialización, evaluación y fortalecimiento de proyectos desarrollados 
+por semilleros de investigación, fomentando la cooperación científica, 
+la innovación y la generación de conocimiento con impacto social en 
+Latinoamérica. 
+ 
+ 
+ 
+ 
+
+============================== PAGE 3
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 3 de 11 
+ 
+ 
+OBJETIVOS ESPECÍFICOS 
+• 
+Socializar 
+experiencias 
+y 
+resultados 
+de 
+investigación 
+desarrollados por estudiantes vinculados a semilleros de 
+investigación. 
+• 
+Fortalecer 
+las 
+competencias 
+investigativas, 
+científicas 
+y 
+comunicativas de los participantes. 
+• 
+Generar espacios de diálogo académico entre instituciones 
+nacionales e internacionales. 
+• 
+Promover la conformación de redes de investigación y 
+cooperación científica. 
+• 
+Incentivar la divulgación del conocimiento y la apropiación 
+social de los resultados de investigación. 
+• 
+Reconocer las mejores experiencias de investigación formativa 
+desarrolladas por los semilleros participantes. 
+DIRIGIDO A: 
+• 
+Estudiantes de pregrado y posgrado. 
+• 
+Integrantes de semilleros de investigación. 
+• 
+Jóvenes investigadores. 
+• 
+Grupos de investigación. 
+• 
+Instituciones de Educación Superior nacionales e internacionales. 
+MODALIDADES DE PARTICIPACIÓN 
+1. Proyectos de Investigación en Curso: Proyectos que presentan 
+avances parciales de investigación. 
+2. Proyectos de Investigación Terminados: Investigaciones con 
+resultados finales y conclusiones consolidadas. 
+3. Proyectos de Innovación y Desarrollo Tecnológico: Propuestas 
+orientadas a la generación de soluciones tecnológicas, procesos o 
+productos innovadores. 
+4. Proyectos de Emprendimiento: Iniciativas empresariales derivadas 
+de procesos de investigación e innovación. 
+5. Investigación-Creación: Proyectos relacionados con expresiones 
+artísticas, culturales y creativas. 
+
+============================== PAGE 4
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 4 de 11 
+ 
+ 
+EJES TEMÁTICOS 
+Los trabajos podrán inscribirse en las siguientes áreas: 
+1. Innovación, Ciencia, Tecnología y Transformación Digital Dirigido a 
+proyectos relacionados con: 
+• Inteligencia artificial.  
+• Ciencia de datos.  
+• Desarrollo de software.  
+• Automatización y robótica.  
+• Tecnologías emergentes.  
+• Ciberseguridad.  
+2. Desarrollo Rural, Agroindustria y Sostenibilidad Ambiental - proyectos 
+enfocados en: 
+• Producción agropecuaria sostenible.  
+• Seguridad alimentaria.  
+• Agricultura de precisión.  
+• Gestión ambiental.  
+• Cambio climático.  
+• Conservación de recursos naturales.  
+• Economía circular.  
+3. Salud, Bienestar y Calidad de Vida - Incluye investigaciones sobre: 
+• Promoción y prevención en salud.  
+• Salud pública.  
+• Salud mental.  
+• Enfermería.  
+• Actividad física y hábitos saludables.  
+• Atención comunitaria.  
+• Innovaciones para el cuidado de la salud.  
+4. Educación, Pedagogía e Innovación para el Aprendizaje-Proyectos 
+relacionados con: 
+
+============================== PAGE 5
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 5 de 11 
+ 
+ 
+• Prácticas pedagógicas innovadoras.  
+• Tecnologías educativas.  
+• Inclusión educativa.  
+• Competencias para el siglo XXI.  
+• Educación rural.  
+• Educación intercultural.  
+• Formación ciudadana.  
+5. Emprendimiento, Competitividad y Desarrollo Empresarial -Temas 
+asociados a: 
+• Modelos de negocio innovadores.  
+• Marketing digital.  
+• Finanzas.  
+• Economía solidaria.  
+• Gestión organizacional.  
+• Emprendimiento social.  
+• Innovación empresarial.  
+7. Ingeniería para el Desarrollo Sostenible - Investigaciones 
+relacionadas con: 
+• Energías renovables.  
+• Infraestructura sostenible.  
+• Logística inteligente.  
+• Gestión del riesgo.  
+• Movilidad sostenible.  
+• Tecnologías verdes.  
+8. Deporte, Recreación, Actividad Física y Desarrollo Humano - Temas 
+como: 
+• Rendimiento deportivo.  
+• Recreación comunitaria.  
+• Actividad física y salud.  
+• Gestión deportiva.  
+• Inclusión mediante el deporte.  
+• Calidad de vida.  
+
+============================== PAGE 6
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 6 de 11 
+ 
+ 
+9. Investigación Formativa e Interdisciplinar para los Objetivos de 
+Desarrollo Sostenible (ODS)- Eje transversal para proyectos que 
+contribuyan a: 
+• Erradicación de la pobreza.  
+• Educación de calidad.  
+• Igualdad de género.  
+• Acción por el clima.  
+• Ciudades sostenibles.  
+• Innovación e infraestructura.  
+• Alianzas para el desarrollo.  
+Formulario de inscripción: https://forms.gle/DgoD5G8VfYsJgeuT6 
+ 
+PRESENTACIÓN DE LOS TRABAJOS 
+Los proyectos deberán presentarse mediante: Modalidad Póster 
+Científico 
+El póster deberá incluir: Dimensiones Medidas: 90 cm x 120 cm. 
+Orientación vertical. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Se recomienda Imprimir el poster en PAPEL BOND TAMAÑO PLIEGO 
+
+============================== PAGE 7
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 7 de 11 
+ 
+ 
+CONTENIDO OBLIGATORIO 
+1. Logo de la Universidad e institución participante. 
+2. Título del proyecto. 
+3. Autores. 
+4. Semillero de investigación. 
+5. Introducción. 
+6. Objetivos. 
+7. Metodología. 
+8. Resultados. 
+9. Conclusiones. 
+10. Referencias bibliográficas. 
+INSCRIPCIÓN PARA PRESENTACIÓN DE PONENCIAS: $0. 
+De acuerdo con los principios del Modelo Educativo Digital 
+Transmoderno (MEDIT), la Universidad de Cundinamarca promoverá la 
+participación y el fortalecimiento de los semilleros de investigación 
+mediante la financiación de los trabajos que sean seleccionados por el 
+Comité del evento. 
+En este sentido, con el propósito de garantizar condiciones de 
+participación accesibles, estimular la producción investigativa y 
+fortalecer el intercambio de experiencias entre los semilleros de 
+investigación del país, la inscripción de los trabajos seleccionados para 
+presentación de ponencias será gratuita. 
+Recomendaciones 
+• 
+Utilizar gráficos e imágenes de alta calidad. 
+• 
+Emplear lenguaje claro y preciso. 
+• 
+Garantizar legibilidad a una distancia mínima de dos metros. 
+• 
+Evitar exceso de texto. 
+ 
+ 
+
+============================== PAGE 8
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 8 de 11 
+ 
+ 
+Modalidad Exposición Oral 
+Cada proyecto dispondrá de: 
+• 
+15 minutos de presentación según la modalidad. 
+• 
+5 minutos para preguntas y retroalimentación. 
+• 
+Los proyectos serán evaluados por pares académicos 
+nacionales e internacionales. 
+MODALIDAD 
+DESCRIPCIÓN 
+FORMA DE 
+PRESENTACIÓN 
+TIEMPO 
+APROXIMADO 
+Ponencia 
+oral 
+Exposición 
+verbal 
+de los resultados de 
+una investigación o 
+proyecto. 
+El 
+participante 
+presenta ante un 
+jurado 
+y 
+público 
+utilizando 
+diapositivas 
+o 
+recursos 
+audiovisuales. 
+10 a 15 minutos 
+más preguntas. 
+Póster 
+científico 
+Presentación visual 
+y resumida de una 
+investigación. 
+Se diseña un afiche 
+académico donde 
+se 
+muestran 
+objetivos, 
+metodología, 
+resultados 
+y 
+conclusiones. 
+El 
+autor 
+explica 
+el 
+contenido 
+a 
+los 
+evaluadores. 
+5 a 10 minutos 
+por 
+evaluación. 
+Muestra de 
+innovación 
+Exhibición 
+de 
+productos, 
+prototipos, 
+desarrollos 
+tecnológicos, 
+modelos 
+o 
+soluciones 
+innovadoras. 
+Se 
+presenta 
+físicamente 
+o 
+mediante 
+demostraciones 
+funcionales 
+del 
+producto 
+o 
+innovación 
+desarrollada. 
+10 minutos. 
+ 
+ 
+
+============================== PAGE 9
+Diagonal 18 No. 20-29 Fusagasugá – Cundinamarca 
+Teléfono: (601) 8281483 Línea Gratuita: 018000180414 
+www.ucundinamarca.edu.co E-mail: info@ucundinamarca.edu.co 
+NIT: 890.680.062-2 
+Documento controlado por el Sistema de Gestión de la Calidad 
+Asegúrese que corresponde a la última versión consultando el Portal Institucional 
+ 
+MACROPROCESO DE APOYO 
+CÓDIGO: ADOr001 
+PROCESO GESTIÓN DOCUMENTAL 
+VERSIÓN: 12 
+CARTA 
+VIGENCIA: 2026-05-19 
+PAGINA: 9 de 11 
+ 
+ 
+Ponencia oral: cuando el proyecto tiene resultados sólidos y el 
+estudiante tiene habilidades para exponer y responder preguntas. 
+Póster científico: cuando se desea presentar de forma visual una 
+investigación en desarrollo o terminada y facilitar la interacción con los 
+asistentes. 
+Muestra de innovación: cuando el proyecto genera un producto 
+tangible, prototipo, software, aplicación, dispositivo, metodología o 
+solución innovadora. 
+ 
+PARES EVALUADORES 
+Este espacio está dirigido a profesionales interesados en participar como pares 
+evaluadores de proyectos de investigación, emprendimiento empresarial, 
+innovación y/o desarrollo, e investigación-creación, quienes, desde su experiencia 
+profesional, disciplinar y trayectoria en procesos de formación e investigación, 
+contribuyan a garantizar una evaluación objetiva, pertinente y rigurosa de las 
+propuestas presentadas. 
+Los profesionales interesados deberán acreditar previamente su experiencia y 
+perfil mediante el diligenciamiento de los formatos establecidos para tal fin, de 
+acuerdo con los criterios definidos por la organización del evento. 
+PROCESO DE INSCRIPCIÓN PARA EVALUADORES 
+El proceso de inscripción de pares evaluadores se realizará a través del siguiente 
+enlace: https://forms.gle/HM82o137SQd5FY1E8 
+La participación como par evaluador no tendrá ningún costo de inscripción. Como 
+reconocimiento a su contribución académica y al fortalecimiento de los procesos 
+de investigación, los evaluadores seleccionados recibirán un certificado que 
+acreditará su participación como par evaluador, en el cual se relacionarán los 
+proyectos evaluados durante el evento. 
+La aceptación como par evaluador será comunicada formalmente mediante correo 
+electrónico, una vez finalizado el proceso de revisión y selección de los perfiles 
+registrados. 
+Nota: La fecha límite para realizar el registro como par evaluador será el 21 de 
+
+============================== PAGE 10

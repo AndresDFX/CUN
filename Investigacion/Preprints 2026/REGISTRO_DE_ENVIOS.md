@@ -25,27 +25,50 @@ sigue en moderación; cuando responda `302`, está aprobado y publicado.
 | `Preprint_AI_Assisted_Course_Authoring` | **17602** | en | 2026-08-21 | `10.1590/SciELOPreprints.17602` | en fila |
 | `Preprint_Anchored_Feedback_Google_Docs` | **17606** | en | 2026-08-21 | `10.1590/SciELOPreprints.17606` | en fila |
 
-Última comprobación: **2026-08-28** (sondeo Ruta B, sin credenciales). Los tres siguen en `404`, tanto
+Última comprobación: **2026-09-01** (sondeo Ruta B, sin credenciales). Los tres siguen en `404`, tanto
 en `doi.org` como en la API de Crossref. Control de que el sondeo funciona: `…17562` devuelve `302` a
-`…/preprint/view/17562/version/18445`.
+`…/preprint/view/17562/version/18445`, y `…17736` (el más nuevo de la cola) devuelve `302` a
+`…/preprint/view/17736/version/18622`.
 
-Id más alto publicado en el prefijo `10.1590` a esta fecha: **17675**, depositado el 2026-08-27 (el
-2026-08-23 era 17584). **La cola ya adelantó a los tres envíos:** hay ocho ids más altos publicados
-—17617, 17619, 17621, 17635, 17639, 17653, 17657 y 17675— mientras los nuestros siguen sin DOI. Eso
-**no** prueba que estén atascados, porque la moderación no es FIFO (el 27-ago se publicaron ids en un
-rango de 1.169), pero sí es el disparador para entrar por la Ruta A. El umbral de «silencio
+**Segunda fuente independiente, nueva el 2026-09-01: el OAI-PMH ya no está tras el escudo.**
+`https://preprints.scielo.org/index.php/scielo/oai?verb=Identify` devuelve **200** (1.972 bytes de
+XML válido), no el 403 de 1.830 bytes que devolvía el 2026-08-28. El identificador válido es
+`oai:ops.preprints.scielo.org:preprint/<id>` (lo declara su propio `sampleIdentifier`). Consultados
+hoy por `verb=GetRecord&metadataPrefix=oai_dc`:
+
+| id | Respuesta del OAI |
+|---:|---|
+| 17601 | `idDoesNotExist` — «No matching identifier in this repository» |
+| 17602 | `idDoesNotExist` |
+| 17606 | `idDoesNotExist` |
+| 17562 (control) | registro completo: título, `10.1590/SciELOPreprints.17562`, autoras, CC BY, datestamp `2026-08-21T17:31:04Z` |
+
+Esto **corrobora** el 404 de Crossref con una fuente distinta, pero **no lo mejora**: el OAI solo
+expone lo publicado, así que un rechazo también saldría como `idDoesNotExist`. La distinción entre
+«en fila» y «rechazado» sigue necesitando el entero `status` de la Ruta A. Ojo, que este repositorio
+declara `deletedRecord: persistent`: un registro retirado *después* de publicarse aparecería con
+`status="deleted"` en la cabecera, no como inexistente — no es nuestro caso.
+
+Id más alto publicado en el prefijo `10.1590` a esta fecha: **17736**, depositado el 2026-08-31 (el
+2026-08-28 era 17675 y el 2026-08-23, 17584). **La cola ya adelantó a los tres envíos:** hay
+**dieciocho** ids más altos publicados —17617, 17619, 17621, 17635, 17639, 17644, 17653, 17657,
+17661, 17671, 17675, 17687, 17707, 17721, 17729, 17730, 17735 y 17736— mientras los nuestros siguen
+sin DOI. **Entre 17595 y 17610 no se ha publicado ni un solo id.** Eso **no** prueba que estén
+atascados, porque la moderación no es FIFO (el 25-ago se publicaron ids en un rango de 2.023 y el
+26-ago en uno de 1.249), pero sí es el disparador para entrar por la Ruta A. El umbral de «silencio
 prolongado» (`nuestro_id + 200`, estimación propia pendiente de recalibrar) **todavía no se ha
-alcanzado**: exigiría ver publicado el 17801 y vamos por el 17675.
+alcanzado**: exigiría ver publicado el 17806 y vamos por el 17736 — quedan **70 ids** de margen, así
+que es previsible que se cruce en días, no en semanas.
 
-Día 7 desde el depósito. Un `404` **no distingue «en fila» de «rechazado»**: para eso hace falta el
-entero `status` de la Ruta A, y **hoy no se pudo consultar**. Todo `preprints.scielo.org` sigue tras
-el escudo de Bunny (403 con 1.830 bytes en la API, en la página pública y en el OAI-PMH, reverificado
-el 2026-08-28), y el perfil de navegador `%LOCALAPPDATA%\scielo-cun\` **no existe**: en
-`%LOCALAPPDATA%` solo hay `gdocs-cun\`, `synapse-cun\` y `revistas-cun\`. La Ruta A necesita que el
+Día 11 desde el depósito. Un `404` **no distingue «en fila» de «rechazado»**: para eso hace falta el
+entero `status` de la Ruta A, y **hoy tampoco se pudo consultar**. La API de OJS sigue tras el escudo
+de Bunny (**403** en `/api/v1/submissions/17601`, reverificado el 2026-09-01; lo que cambió es solo
+el OAI), y el perfil de navegador `%LOCALAPPDATA%\scielo-cun\` **no existe**: en `%LOCALAPPDATA%`
+hay `gdocs-cun\`, `synapse-cun\`, `revistas-cun\` y `cdigital-cun\`. La Ruta A necesita que el
 Docente abra Chrome con la sesión de `andresdfx`.
 
 Por tanto el estado «en fila» de la tabla es **lo último observado, no lo confirmado hoy**: es
-compatible con un rechazo silencioso, que por Crossref es invisible.
+compatible con un rechazo silencioso, que por Crossref y por OAI es invisible.
 
 Cuando salga el DOI, se añade a la fila la URL pública
 (`https://preprints.scielo.org/index.php/scielo/preprint/view/<id>/version/<pubId>`) y se lleva el
@@ -550,18 +573,28 @@ hay en su lista de envíos de SciELO**, que necesita su clave. Los cuatro archiv
 `prod_1785940748621`, vence **2026-11-20**. El emparejamiento se hace por `productTypeId`, nunca por
 el nombre: hay nombres repetidos entre los productos del Docente.
 
-**Consultado el 2026-08-28:** sigue en `Pendiente`, **sin evidencia radicada**, a **84 días** de su
+**Consultado el 2026-09-01:** sigue en `Pendiente`, **sin evidencia radicada**, a **80 días** de su
 fecha. El sometimiento a EDU REVIEW (5579) ya lo cubre en lo esencial; falta el correo de acuse.
 
-### Dos plazos de Synapse a 3 días que tocan a este expediente
+**Medida el 2026-09-01 sobre `productos_propios.json`:** el campo que lleva la evidencia es
+`documentUrl`, y **de los 11 productos solo uno lo tiene** — el de ORCID (`prod_1785939730775`, ya
+`Aprobado`). Los otros **diez lo traen ausente**: cero evidencia radicada en todo lo abierto.
 
-No están en `ART_OPEN_D` y por eso se pasan por alto. Los dos se llaman «Labores administrativas»
-—de ahí la regla de emparejar por id y no por nombre— y vencen el **2026-08-31**:
+### El plazo de Synapse que VENCIÓ ayer, y toca a este expediente
 
-| id | Qué pide | Estado hoy |
+No está en `ART_OPEN_D` y por eso se pasa por alto. Se llama «Labores administrativas» —de ahí la
+regla de emparejar por id y no por nombre— y venció el **2026-08-31**:
+
+| id | Qué pide | Estado el 2026-09-01 |
 |---|---|---|
-| `prod_1785939714815` | «Actualización **GOOGLE ACADEMIC**» · pantallazo del perfil actualizado | **Pendiente** |
-| `prod_1785939730775` | «Actualización **ORCID**» · pantallazo del perfil actualizado | **Aprobado** |
+| `prod_1785939714815` | «Actualización **GOOGLE ACADEMIC**» · pantallazo del perfil actualizado | **Pendiente · VENCIDO hace 1 día** |
+| `prod_1785939730775` | «Actualización **ORCID**» · pantallazo del perfil actualizado | **Aprobado** (con `documentUrl` en Drive) |
+
+> **El de Google Académico se pasó de fecha.** El 2026-08-28 se anotó aquí como «a 3 días»; hoy,
+> 2026-09-01, está **vencido**. No lo cierra este agente —es solo lectura— pero es lo primero que
+> hay que decirle al Docente: la observación pide un pantallazo del perfil, y **el perfil se cierra
+> con estar verificado y vacío**, sin añadir obras. Sigue siendo la acción más barata del expediente,
+> solo que ahora fuera de plazo.
 
 **Y hay una contradicción que conviene ver:** el de ORCID está **Aprobado** mientras
 `0009-0003-6598-432X` sigue con **cero obras** (`group: []`, reverificado el 2026-08-28). La

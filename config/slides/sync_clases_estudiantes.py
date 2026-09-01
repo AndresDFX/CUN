@@ -350,7 +350,7 @@ La **bienvenida del curso** (grupo, horario y contacto) la recibes por **correo 
 | Recurso | Enlace / ubicación |
 | :--- | :--- |
 | {rh["recurso"]} | {rh["url"]} |
-| **Google Meet** (mismo enlace toda la serie) | {meet} |
+| **Google Meet** | {meet} |
 | **CDigital** (campus del curso: entregas y notas) | {aula_txt} |
 | **Grabaciones de las clases** (Drive) | {GRABACIONES_URL} |
 | **Plantilla APA CUN** | `Recursos/{APA_NAME}` (ábrela en Google Docs / Word Online) |

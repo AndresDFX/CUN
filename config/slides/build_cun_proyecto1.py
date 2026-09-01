@@ -412,7 +412,7 @@ content_slide(
         f"**CDigital (campus del curso):** {bold_var(URL_CDIGITAL)}",
         f"**Registro de tutorías (obligatorio):** @@{LINK_TUTORIAS_ESTUDIANTE}@@",
         MSG_TUTORIAS_POR_GRUPO,
-        f"**Google Meet (mismo enlace toda la serie):** {bold_var(URL_MEET)}",
+        f"**Google Meet:** {bold_var(URL_MEET)}",
         f"**Material de clases (Drive):** {bold_var(URL_CLASES)}",
         f"**Plantilla APA CUN – Proyecto de Grado** (viene en tu carpeta del curso): "
         f"`{RUTA_PLANTILLA_APA}`.",

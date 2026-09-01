@@ -463,7 +463,7 @@ def recursos_items(course_key: str, titulo_corto: str, *extra: str) -> list[str]
     items = [
         f"**Contacto del Docente:** {DOCENTE_CORREO}",
         f"**CDigital (campus del curso):** {bold_var(cdigital_url(course_key))}",
-        f"**Google Meet (mismo enlace toda la serie):** {bold_var(_meet(course_key, titulo_corto))}",
+        f"**Google Meet:** {bold_var(_meet(course_key, titulo_corto))}",
         # Carpeta `Clases/` compartida en Drive: material de cada sesión y, cuando el día
         # de clase es festivo, la actividad de la clase autónoma.
         f"**Material de clases (Drive):** {bold_var(clases_url(course_key, titulo_corto))} — "
@@ -1641,7 +1641,7 @@ def write_calendario_proyecto1(course: dict, course_dir: Path) -> None:
         "único de Meet de la serie— lo genera "
         "`python config/slides/build_calendar_proyecto1_54es4.py`, **no** este build.",
         f"> **CDigital (aula del curso):** {cdigital_url(key)} · "
-        f"**Google Meet (mismo enlace toda la serie):** {_meet(key, course['titulo_corto'])}",
+        f"**Google Meet:** {_meet(key, course['titulo_corto'])}",
     ]
     if syllabus.get("nota_syllabus"):
         lines.append(f"> **Nota Syllabus:** {syllabus['nota_syllabus']}")

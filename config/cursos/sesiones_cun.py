@@ -127,12 +127,18 @@ def _horario_carga(key: str, default: str) -> str:
     except Exception:
         return default
 
-# Un solo Meet por curso (serie completa).
-# Fuente única del enlace real: carga_academica_2026.json → cursos.<key>.meet
-# (cadena vacía = el docente aún no creó la sala ⇒ se muestra el placeholder).
+# UNA SALA DE MEET POR SESIÓN (decisión del Docente, 31/08/2026).
+# Antes toda la serie compartía un enlace y resultó problemático, así que cada encuentro tiene
+# ahora el suyo. Consecuencia para el material del estudiante: **ya no existe "el enlace del
+# curso"**, y escribir uno solo manda a la gente a la sala equivocada en diez de las once
+# sesiones. Por eso el marcador de posición dejó de ser una URL a rellenar y pasó a ser la
+# instrucción correcta: el enlace se saca de la invitación de cada sesión.
+#
+# `carga_academica_2026.json → cursos.<key>.meet` se sigue leyendo por si un curso concreto
+# vuelve al enlace único; con la cadena vacía —que es lo normal ahora— sale la instrucción.
 # NO hardcodear la URL en los builds: usar `meet_url(course_key, titulo)`.
 def meet_placeholder(curso_corto: str) -> str:
-    return f"[URL Meet — mismo enlace toda la serie · {curso_corto}]"
+    return "el enlace está en la invitación de cada sesión, en tu Calendar"
 
 
 def meet_url(course_key: str, curso_corto: str | None = None) -> str:

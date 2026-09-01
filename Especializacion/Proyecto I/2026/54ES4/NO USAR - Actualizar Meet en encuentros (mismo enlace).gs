@@ -1,4 +1,21 @@
 /**
+ * ⛔ NO LO EJECUTES. Quedó obsoleto el 31/08/2026 y ahora es DESTRUCTIVO.
+ *
+ * Este guion pone EL MISMO enlace de Meet en todos los encuentros de la serie. Desde el
+ * 31/08/2026 cada sesión tiene el SUYO, por decisión del Docente: el enlace único resultaba
+ * problemático. Correr esto hoy machacaría los once enlaces por uno solo, y las invitaciones
+ * que los estudiantes ya tienen en su Calendar dejarían de llevar a la sala correcta.
+ *
+ * Lo que sí sirve, en la misma carpeta:
+ *   · «PRINCIPAL - Crear encuentros con invitados.gs» → `verificarInvitados()` y
+ *     `agregarInvitados()` para la matrícula, y `crearEncuentros()`, que con
+ *     `MEET_POR_SESION = true` le crea a cada sesión su propia sala y NO toca las que ya tienen.
+ *
+ * Se conserva solo por si algún curso vuelve al enlace único. Si ese fuera el caso, quítale
+ * este encabezado a conciencia y sabiendo qué reemplaza.
+ */
+
+/**
  * Proyecto I · 54ES4 — Poner el MISMO enlace de Meet en los 11 encuentros ya creados.
  *
  * ─────────────────────────────────────────────────────────────────────────────

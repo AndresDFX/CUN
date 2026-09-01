@@ -38,10 +38,20 @@ var TIMEZONE = 'America/Bogota';
 var CURSO = 'TRABAJO DE GRADO 2';
 var CURSO_KEY = 'tg2';
 // Sala real -> se reutiliza. Marcador de posición -> el script crea UNA y te dice dónde pegarla.
-var MEET_URL = '[URL Meet — mismo enlace toda la serie · TRABAJO DE GRADO 2]';
+var MEET_URL = 'el enlace está en la invitación de cada sesión, en tu Calendar';
 var CDIGITAL = 'https://cdigital.cun.edu.co/course/view.php?id=129268';
 // Dónde recuerda el script la sala que creó, para no crear una segunda al reejecutar.
 var PROP_MEET = 'MEET_URL_tg2';
+// UNA SALA POR SESIÓN, que es como se trabaja desde el 31/08/2026.
+// Antes toda la serie compartía un enlace y resultó problemático, así que ahora cada encuentro
+// tiene el suyo. Con `true`:
+//   · `crearEncuentros()` le crea a cada sesión su propia sala (requestId distinto por sesión);
+//   · `verificarInvitados()` y `agregarInvitados()` buscan los encuentros **por su título** y no
+//     por la sala, que ya no identifica a la serie;
+//   · nada vuelve a escribir un mismo enlace en varios eventos.
+// Ponlo en `false` solo si un curso concreto vuelve al enlace único, y entonces MEET_URL manda.
+var MEET_POR_SESION = true;
+
 // Determinista: Google ignora un createRequest con un requestId ya usado, así que ni
 // borrando ScriptProperties se acaba con dos salas para la misma serie.
 var REQUEST_ID = 'cun-tg2-2026-08-14';
@@ -272,15 +282,40 @@ function crearEncuentros() {
   Logger.log('Encuentros: creados=' + creados + ' · ya existían=' + existentes +
              ' · sendInvites=' + SEND_INVITES);
 
-  // ── Meet: UNA sala para toda la serie ──────────────────────────────────────
-  var url = _salaDeLaSerie_(cal, eventos[0]);
+  // ── Meet ───────────────────────────────────────────────────────────────────
+  var nativos = 0, soloEnlace = 0, url;
+
+  if (MEET_POR_SESION) {
+    // Una sala por encuentro. Se crea SOLO en el que no tenga ya la suya: así reejecutar esto no
+    // le cambia el enlace a nadie, que es lo que invalidaría las invitaciones ya enviadas.
+    var conSala = 0, nuevas = 0, sinSala = 0;
+    eventos.forEach(function (ev, i) {
+      var suya = _apiCalendar_() ? _meetNativo_(_idApi_(ev)) : '';
+      if (!suya && _meetId_(ev.getLocation())) suya = ev.getLocation();
+      if (suya) {
+        conSala++;
+      } else {
+        suya = _crearSala_(ev, 's' + (i + 1));
+        if (suya) { nuevas++; } else { sinSala++; return; }
+      }
+      if (_aplicarMeet_(ev, suya)) nativos++; else soloEnlace++;
+    });
+    Logger.log('Meet POR SESIÓN -> ya tenían=' + conSala + ' · creadas=' + nuevas +
+               ' · sin sala=' + sinSala);
+    Logger.log('  chip nativo en ' + nativos + ' · solo enlace en ' + soloEnlace +
+               (_apiCalendar_() ? '' : '  (activa «Google Calendar API» para el chip)'));
+    Logger.log(sinSala ? 'Quedaron ' + sinSala + ' encuentros sin sala: reintenta en un minuto.'
+                       : 'Listo. Cada encuentro tiene su propio enlace.');
+    return;
+  }
+
+  url = _salaDeLaSerie_(cal, eventos[0]);
   if (!url) {
     Logger.log('Los encuentros quedaron creados, pero SIN enlace de Meet.');
     Logger.log('Activa el servicio avanzado («Google Calendar API») y vuelve a ejecutar');
     Logger.log('crearEncuentros(): no duplica nada, solo añade la sala.');
     return;
   }
-  var nativos = 0, soloEnlace = 0;
   eventos.forEach(function (ev) { if (_aplicarMeet_(ev, url)) nativos++; else soloEnlace++; });
   Logger.log('Meet ' + url + ' -> chip nativo en ' + nativos + ' · solo enlace en ' + soloEnlace +
              (_apiCalendar_() ? '' : '  (activa «Google Calendar API» para el chip)'));
@@ -307,6 +342,63 @@ function verificarInvitados() { _correrInvitados_('verificar'); }
  */
 function agregarInvitados() { _correrInvitados_('agregar'); }
 
+/**
+ * SOLO LECTURA. Encuentro por encuentro, compara el Meet DE VERDAD del evento —el del chip— con
+ * el enlace que anuncia su descripción, y dice cuáles no coinciden.
+ *
+ * Hace falta porque los encuentros creados cuando la serie compartía sala arrastran una línea
+ * «Meet (mismo enlace toda la serie): …» que apunta a la sala vieja, mientras el chip del evento
+ * lleva ya la suya. Quien lea la descripción entra a otra sala, y no tiene forma de saberlo.
+ */
+function verificarEnlaceEnDescripcion() { _correrDescripcion_('verificar'); }
+
+/** Reescribe esa línea con el Meet real de cada encuentro. No toca nada más de la descripción. */
+function arreglarEnlaceEnDescripcion() { _correrDescripcion_('arreglar'); }
+
+function _correrDescripcion_(modo) {
+  var cal = CalendarApp.getDefaultCalendar();
+  var revisados = 0, malos = 0, arreglados = 0, sinChip = 0;
+  Logger.log('MODO: ' + modo + (modo === 'verificar' ? '  (no escribe nada)' : '  (ESCRIBE)'));
+
+  SESIONES.forEach(function (s) {
+    var ev = _buscarEvento_(cal, s);
+    if (!ev) { Logger.log('  (no esta) ' + s.subject); return; }
+    revisados++;
+
+    var real = _apiCalendar_() ? _meetNativo_(_idApi_(ev)) : '';
+    if (!real && _meetId_(ev.getLocation())) real = ev.getLocation();
+    if (!real) { sinChip++; Logger.log('  SIN MEET  ' + ev.getTitle()); return; }
+
+    // La descripción se recorre por líneas y no con una expresión regular multilínea: es más fácil
+    // de leer, y sobre todo no toca ni una línea más que la del enlace.
+    var lineas = (ev.getDescription() || '').split('\n');
+    var idx = -1, anunciado = '';
+    for (var i = 0; i < lineas.length; i++) {
+      var m = lineas[i].match(/Meet[^:]*:\s*(https:\/\/meet\.google\.com\/[a-z-]+)/i);
+      if (m) { idx = i; anunciado = m[1]; break; }
+    }
+    if (anunciado && _meetId_(anunciado) === _meetId_(real)) return;   // coincide: nada que hacer
+
+    malos++;
+    Logger.log('  DISTINTO  ' + ev.getTitle());
+    Logger.log('     chip del evento : ' + real);
+    Logger.log('     dice la descrip.: ' + (anunciado || '(no anuncia ninguno)'));
+    if (modo !== 'arreglar') return;
+
+    if (idx >= 0) lineas[idx] = 'Meet de esta sesion: ' + real;
+    else lineas.push('Meet de esta sesion: ' + real);
+    try { ev.setDescription(lineas.join('\n')); arreglados++; }
+    catch (e) { Logger.log('     no se pudo escribir: ' + e); }
+  });
+
+  Logger.log('');
+  Logger.log('Encuentros revisados=' + revisados + ' · con enlace distinto=' + malos +
+             ' · sin Meet=' + sinChip + (modo === 'arreglar' ? ' · corregidos=' + arreglados : ''));
+  if (malos && modo !== 'arreglar') {
+    Logger.log('Para corregirlos: arreglarEnlaceEnDescripcion(). Solo toca esa linea.');
+  }
+}
+
 function _correrInvitados_(modo) {
   _INICIO_ = Date.now();
   var cal = CalendarApp.getDefaultCalendar();
@@ -332,7 +424,7 @@ function _correrInvitados_(modo) {
     Logger.log('  manda la invitación. Actívalo (Servicios + -> «Google Calendar API») para');
     Logger.log('  que SEND_INVITES = ' + SEND_INVITES + ' mande de verdad.');
   }
-  if (sala.id && _meetConfigurado_() && sala.id !== _meetId_(MEET_URL)) {
+  if (!MEET_POR_SESION && sala.id && _meetConfigurado_() && sala.id !== _meetId_(MEET_URL)) {
     Logger.log('');
     Logger.log('  !! OJO: esa sala NO es la de ' + CURSO + ' (' + MEET_URL + ').');
     Logger.log('  !! Si te equivocaste de curso al copiar el id, PÁRATE AQUÍ: este archivo');
@@ -471,9 +563,50 @@ function _salaGuardada_() {
 function _idApi_(evento) { return evento.getId().split('@')[0]; }
 
 /** Evento ya existente para esa sesión (mismo título, mismo día), o null. */
+/** Clave de comparación: minúsculas y espacios normalizados. */
+function _claveTitulo_(t) {
+  return String(t == null ? '' : t).replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+/**
+ * ¿El título de este evento es el de esta sesión?
+ *
+ * NO se compara con `===`, y eso es lo que estaba roto. Los encuentros del calendario pueden
+ * llevar el prefijo del periodo o no llevarlo: «26ES4 - 54ES4 - Proyecto I - Sesion 06» y
+ * «54ES4 - Proyecto I - Sesion 06» son el mismo encuentro, y con la comparación exacta el guion
+ * no reconocía ninguno. Las consecuencias eran las dos peores posibles: `verificarInvitados()`
+ * decía «no encontré NINGÚN encuentro» con los once delante, y `crearEncuentros()` los daba por
+ * inexistentes y creaba once duplicados encima.
+ *
+ * Se compara por el FINAL, que es donde está lo que distingue —grupo, curso y número de sesión—,
+ * y exigiendo que el corte caiga en un separador para no casar a media palabra.
+ */
+function _mismoTitulo_(tituloEvento, subject) {
+  var a = _claveTitulo_(tituloEvento), b = _claveTitulo_(subject);
+  if (!a || !b) return false;
+  if (a === b) return true;
+  var largo = a.length > b.length ? a : b, corto = a.length > b.length ? b : a;
+  if (largo.slice(-corto.length) !== corto) return false;
+  if (!/[\s\-]$/.test(largo.slice(0, largo.length - corto.length))) return false;
+  // El trozo corto tiene que seguir identificando al curso, no solo a la sesión: sin esto, un
+  // evento ajeno llamado «Sesion 06» a la misma hora casaría, porque también es un final válido.
+  // Se exige que conserve al menos un separador, es decir grupo y curso además del número.
+  return corto.indexOf(' - ') >= 0;
+}
+
+/** La sesión a la que corresponde un título, o null. */
+function _sesionDeTitulo_(titulo) {
+  for (var i = 0; i < SESIONES.length; i++) {
+    if (_mismoTitulo_(titulo, SESIONES[i].subject)) return SESIONES[i];
+  }
+  return null;
+}
+
 function _buscarEvento_(cal, s) {
-  var hallados = cal.getEvents(_fecha(s.start), _fecha(s.end), { search: s.subject })
-    .filter(function (ev) { return ev.getTitle() === s.subject; });
+  // Sin la opción `search`: buscaba el título completo, con el prefijo del periodo incluido, y por
+  // eso no devolvía el evento que en el calendario se llama sin él. La ventana ya es estrecha.
+  var hallados = cal.getEvents(_fecha(s.start), _fecha(s.end))
+    .filter(function (ev) { return _mismoTitulo_(ev.getTitle(), s.subject); });
   return hallados.length ? hallados[0] : null;
 }
 
@@ -560,14 +693,16 @@ function _salaDeLaSerie_(cal, semilla) {
 }
 
 /** Crea UNA sala de Meet sobre `evento` y devuelve su URL ('' si no se pudo). */
-function _crearSala_(evento) {
+function _crearSala_(evento, sufijo) {
   var id = _idApi_(evento);
   try {
     var res = Calendar.Events.patch({
       conferenceData: {
         createRequest: {
-          // Determinista a propósito: si se repite el requestId, Google NO crea otra sala.
-          requestId: REQUEST_ID,
+          // Determinista a propósito: si se repite el requestId, Google NO crea otra sala. Por eso
+          // el sufijo por sesión es imprescindible cuando cada encuentro lleva la suya: sin él,
+          // Google devolvería la MISMA sala once veces y el cambio no se notaría.
+          requestId: REQUEST_ID + (sufijo ? '-' + sufijo : ''),
           conferenceSolutionKey: { type: 'hangoutsMeet' }
         }
       }
@@ -601,7 +736,8 @@ function _aplicarMeet_(evento, url) {
     if (evento.getLocation() !== url) evento.setLocation(url);
     var d = evento.getDescription() || '';
     if (d.indexOf(url) < 0) {
-      evento.setDescription((d ? d + '\n' : '') + 'Meet (mismo enlace toda la serie): ' + url);
+      evento.setDescription((d ? d + '\n' : '') + (MEET_POR_SESION ? 'Meet de esta sesión: '
+                                          : 'Meet (mismo enlace toda la serie): ') + url);
     }
   } catch (e) {
     Logger.log('AVISO: no pude escribir el enlace en «' + evento.getTitle() + '»: ' + e);
@@ -656,6 +792,10 @@ function _salaObjetivo_(cal) {
     }
     return { id: id, origen: 'MEET_ID, que pusiste arriba' };
   }
+  // Con una sala por sesión no hay «la sala de la serie»: el ancla es el título. Devolver aquí
+  // MEET_URL haría que el aviso de más abajo gritara, en cada encuentro, que la sala no es la del
+  // curso — que es justo lo que pasaba.
+  if (MEET_POR_SESION) return { id: '', origen: '' };
   if (_meetConfigurado_()) return { id: _meetId_(MEET_URL), origen: 'MEET_URL del material' };
   var guardado = _salaGuardada_();
   if (guardado) return { id: _meetId_(guardado), origen: 'la sala que creó este script' };
@@ -704,7 +844,7 @@ function _objetivosInvitados_(cal, idSala) {
   if (_apiCalendar_()) {
     _eventosDelPeriodo_().forEach(function (ev) {
       if (ev.status === 'cancelled') return;
-      var s = porTitulo[ev.summary] || null;
+      var s = porTitulo[ev.summary] || _sesionDeTitulo_(ev.summary);
       var porMeet = !!idSala && _meetIdDeEventoApi_(ev) === idSala;
       if (!s && !porMeet) return;
       out.push({
@@ -719,7 +859,7 @@ function _objetivosInvitados_(cal, idSala) {
     var desde = _fecha(SESIONES[0].start);
     var hasta = new Date(_fecha(SESIONES[SESIONES.length - 1].end).getTime() + 36e5);
     cal.getEvents(desde, hasta).forEach(function (ev) {
-      var s = porTitulo[ev.getTitle()] || null;
+      var s = porTitulo[ev.getTitle()] || _sesionDeTitulo_(ev.getTitle());
       var porMeet = !!idSala && (_meetId_(ev.getLocation()) === idSala ||
                                  _meetId_(ev.getDescription()) === idSala);
       if (!s && !porMeet) return;

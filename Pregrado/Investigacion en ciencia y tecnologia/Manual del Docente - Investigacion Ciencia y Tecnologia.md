@@ -111,14 +111,14 @@ Fuente en vivo: `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — 
 
 | Ítem | Tipo | Corte | Peso | Apertura | Cierre | Nota docente |
 | :--- | :--- | :---: | ---: | :--- | :--- | :--- |
-| **Quiz 1** | Cuestionario | 1 | 6% | 13/08/2026 | 20/08/2026 | 27/08/2026 |
-| **Parcial 1** | Cuestionario | 1 | 24% | 21/08/2026 | 27/08/2026 | 03/09/2026 |
-| **Quiz 2** | Cuestionario | 2 | 9% | 28/08/2026 | 03/09/2026 | 10/09/2026 |
-| **Parcial 2** | Cuestionario | 2 | 21% | 04/09/2026 | 10/09/2026 | 17/09/2026 |
+| **Quiz 1** | Cuestionario | 1 | 6% | 20/08/2026 | 27/08/2026 | 27/08/2026 |
+| **Parcial 1** | Cuestionario | 1 | 24% | 21/08/2026 | 28/08/2026 | 03/09/2026 |
+| **Quiz 2** | Cuestionario | 2 | 9% | 28/08/2026 | 06/09/2026 | 13/09/2026 |
+| **Parcial 2** | Cuestionario | 2 | 21% | 06/09/2026 | 13/09/2026 | 20/09/2026 |
 | **ACA Final** | Tarea | 3 | 32,8% | 13/08/2026 | 12/09/2026 | 20/09/2026 |
 | **Quiz 3** | Cuestionario | 3 | 4% | 11/09/2026 | 12/09/2026 | 20/09/2026 |
-| **Autoevaluación** | Cuestionario | 3 | 1,6% | 17/09/2026 | 20/09/2026 | 20/09/2026 |
-| **Coevaluación** | Foro | 3 | 1,6% | 17/09/2026 | 20/09/2026 | 20/09/2026 |
+| **Autoevaluación** | Cuestionario | 3 | 1,6% | 13/09/2026 | 20/09/2026 | 20/09/2026 |
+| **Coevaluación** | Foro | 3 | 1,6% | 13/09/2026 | 20/09/2026 | 20/09/2026 |
 
 **Cortes:** Corte 1 30% = Quiz 1 6% + Parcial 1 24% · Corte 2 30% = Quiz 2 9% + Parcial 2 21% · Corte 3 40% = ACA Final 32,8% + Quiz 3 4% + Autoevaluación 1,6% + Coevaluación 1,6%.
 

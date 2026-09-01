@@ -134,6 +134,21 @@ Genera este deck una sola vez por asignatura/grupo. Estructura sugerida (ajústa
 - **Drive de clases** = carpeta `Clases/` del curso (de ahí se baja el material, incluido el de las clases autónomas). Mientras no exista la URL: marcador de posición `[URL Drive — carpeta Clases/ del curso · <Curso>]`, igual que el de Meet — nunca inventes un enlace de Drive.
 - **Grabaciones de los encuentros:** carpeta única para todos los cursos y periodos — https://drive.google.com/drive/folders/1TPGCeqIsaCQsh4-n5sniy68EnE7HYOal?usp=sharing — y se buscan por el **nombre del evento**: «periodo - grupo - asignatura - sesión».
 
+**EL ENLACE DE MEET: UNO POR SESIÓN, NUNCA UNO PARA EL CURSO**
+- Desde el **31/08/2026** cada encuentro tiene **su propio enlace**. El diseño anterior —una sala para
+  toda la serie— lo descartó el Docente porque resultaba problemático. **No escribas una URL de Meet en
+  el material del estudiante**: escribe que el enlace está en la invitación de cada sesión, en su
+  Calendar. Una sola URL manda a la gente a la sala equivocada en todas las sesiones menos una, y es un
+  error que el estudiante no puede detectar —hace clic y entra a una sala vacía—.
+- Lo genera `config/slides/build_calendar_encuentros.py`, con `MEET_POR_SESION = true` en el `.gs`. El
+  `requestId` lleva sufijo por sesión: sin él Google devuelve **la misma sala** once veces, porque
+  ignora un `createRequest` con un `requestId` ya usado, y el fallo no se ve hasta que alguien compara
+  dos invitaciones.
+- Para encontrar los encuentros ya creados —al añadir matrícula— se busca **por el título**, no por la
+  sala: la sala ya no identifica la serie.
+- `NO USAR - Actualizar Meet en encuentros (mismo enlace).gs` hace justo lo contrario y hoy es
+  destructivo: machacaría los enlaces que los estudiantes ya tienen. No lo propongas.
+
 **SLIDE 9 — IMPORTANTE**
 - Fechas críticas (apertura/cierre de cada corte o ACA), fecha oficial de cierre del periodo, canales de atención institucionales si el instructivo los trae.
 ```

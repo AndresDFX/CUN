@@ -115,7 +115,7 @@ Fuente en vivo: `config/cursos/fechas_entrega_aca.py`. **No editar a mano** — 
 | Ítem | Tipo | Corte | Peso | Apertura | Cierre | Nota docente |
 | :--- | :--- | :---: | ---: | :--- | :--- | :--- |
 | **Quiz 1** | Cuestionario | 1 | 6% | 12/08/2026 | 19/08/2026 | 26/08/2026 |
-| **Parcial 1** | Cuestionario | 1 | 24% | 20/08/2026 | 26/08/2026 | 02/09/2026 |
+| **Parcial 1** | Cuestionario | 1 | 24% | 20/08/2026 | 02/09/2026 | 09/09/2026 |
 | **Quiz 2** | Cuestionario | 2 | 9% | 27/08/2026 | 02/09/2026 | 09/09/2026 |
 | **Parcial 2** | Cuestionario | 2 | 21% | 03/09/2026 | 09/09/2026 | 16/09/2026 |
 | **ACA Final** | Tarea | 3 | 32,8% | 12/08/2026 | 19/09/2026 | 27/09/2026 |

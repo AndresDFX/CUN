@@ -129,7 +129,7 @@ Régimen: **Art. 52 · tres cortes** — **Corte 1 = 30%** · **Corte 2 = 30%** 
 
 - **Producto documental del curso:** avance consolidado del **documento** de grado (`Plantilla_APA_CUN_Proyecto de grado.docx`), que se entrega como **ACA Final** (tarea) en el tercer corte.
 - **Enunciados para estudiantes:** `Clases/Recursos/ACAs/` — **un documento por ítem del aula**, incluidas las guías de los quices y parciales.
-- ⚠️ Sigue faltando el **Syllabus SIAC**, pero los pesos **ya no son orientativos**: salen del libro de calificaciones del aula. Lo que falta del SIAC es el **temario**, no la evaluación.
+- **Syllabus SIAC recibido el 22/08/2026** (`TRABJO DE GRADO II INGENIERIA DE SISTEMAS.docx`, errata del nombre original). Trae 12 unidades y, en la **U11**, el producto de entrega de la asignatura: un artículo de reflexión de mínimo 4.000 palabras. Declara CORTE ÚNICO = 100 % y el aula está en 30/30/40: **manda el aula**.
 
 Ventanas (apertura · cierre · límite de nota) y en qué sesión cae cada cuestionario: «Fechas de entrega ACA / cortes» más abajo y `Calendario de clases (oficial).md` → «Evaluación en el aula».
 
