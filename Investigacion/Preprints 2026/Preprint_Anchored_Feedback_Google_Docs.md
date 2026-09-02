@@ -92,9 +92,9 @@ The Drive API accepts comment creation via `POST files/{fileId}/comments`, with 
 the field can be set.
 
 Google's own guidance on anchoring, however, states that anchors "are immutable, and their position
-relative to the content of a document cannot be guaranteed across revisions", and — decisively —
-that Workspace editor applications "treat developer-defined anchored comments **as unanchored
-comments** in their display".
+relative to the content of a document cannot be guaranteed between revisions", and — decisively —
+that "the anchor is saved and returned when retrieving the comment, however Google Workspace editor
+apps treat these comments as un-anchored comments" (Google, 2026).
 
 The consequence is precise and easy to miss: a program can set the anchor, receive a success
 response, and produce a comment that the student sees floating unattached. Verification by API
@@ -294,6 +294,9 @@ acquisition of expert performance. *Psychological Review*, 100(3), 363–406.
 
 Felt, A. P., Chin, E., Hanna, S., Song, D., & Wagner, D. (2011). Android permissions demystified.
 *Proceedings of the 18th ACM Conference on Computer and Communications Security*, 627–638.
+
+Google. (2026, July 22). *Manage comments and replies*. Google Drive API documentation. Google for
+Developers. https://developers.google.com/workspace/drive/api/guides/manage-comments
 
 Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educational Research*, 77(1),
 81–112.

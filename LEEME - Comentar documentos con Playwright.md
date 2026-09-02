@@ -179,9 +179,14 @@ python config/gdocs/comentar_docs.py ensayar --doc <ID> --plan "_Revisiones/….
 Copia el documento a tu Drive y publica **ahí** los comentarios, con la misma secuencia de teclas que
 usaría la publicación real. Te da el enlace de la copia: ábrela y **léela con tus ojos**.
 
-Esto no es un lujo. `simular` comprueba el plan, no el resultado: no puede mentir pero tampoco puede
-probar nada. **Nunca vayas de `simular` directo a `comentar`.** Cuando acabes, la copia es tuya y va a
-la papelera.
+`simular` comprueba el plan, no el resultado: no puede mentir, pero tampoco puede probar nada. El
+ensayo sí lo prueba. Cuando acabes, la copia es tuya y va a la papelera.
+
+**Pero no es una parada obligatoria.** El 01/09/2026 el Docente lo dijo así: «la revisión se pone
+aquí ‹enlace› directamente». Pedir la revisión sobre un enlace concreto **es** la autorización para
+publicar; pararse a pedir permiso otra vez le devuelve el trabajo que quería delegar. Úsalo cuando
+algo del plan te dé mala espina —una cita rara, un documento con tabla de contenido, tipografía
+mezclada—, no por rutina. Lo que sí es obligatorio siempre es `simular`.
 
 ### 5. Publicar
 
@@ -233,6 +238,8 @@ otra persona, y el programa te lo dice en vez de borrar a ciegas.
 | «El plan es de otro documento» | el `docId` del plan no es el `--doc` que pediste |
 | `deshacer`: «no hay recibo» | esa publicación no la hizo este programa → bórralos a mano |
 | Chrome se abre y se queda en la pantalla de Google | pasó con el Chromium de Playwright; usa `channel="chrome"`, que es lo que ya hace |
+| «#N quedó anclado a otra cosa» y al mirarlo está bien | **era un falso fallo, corregido el 02/09/2026.** `comentarios_publicados()` leía el `.docx` sin desescapar entidades XML: una cita con `<`, `>` o `&` volvía como `&gt;` y la comparación no casaba. Si vuelve a aparecer, mira si la cita lleva alguno de esos tres caracteres antes de tocar el documento |
+| «N comentarios publicados» y el número es mayor que tu plan | no publicó de más: cuenta **todos** los comentarios anclados del documento, incluidos los que ya traía. El recibo `_Revisiones/<id>.publicados.json` es el que dice cuáles son tuyos |
 
 ## Mantenimiento
 

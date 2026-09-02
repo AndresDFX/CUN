@@ -236,9 +236,12 @@ def main() -> int:
         check("9. TG2 ya tiene Syllabus, y se encuentra pese a no llevar el código en el nombre",
               f["archivo"] is not None and "94453" not in Path(f["archivo"]).name,
               json.dumps(f, ensure_ascii=False)[:200])
-        check("9b. TG2: 6 unidades didácticas dentro del armazón SIAC, y el artículo de reflexión",
-              len(f["unidades"]) == 6
-              and [u["n"] for u in f["unidades"]] == [1, 2, 3, 4, 5, 6]
+        # El número era 6 hasta que el lector aprendió a recorrer el armazón SIAC completo (commit
+        # «TG2 lee sus 12 unidades»). La prueba se quedó con el 6 y llevaba fallando desde entonces:
+        # un arnés que falla siempre por lo mismo deja de avisar de lo que sí importa.
+        check("9b. TG2: 12 unidades didácticas dentro del armazón SIAC, y el artículo de reflexión",
+              len(f["unidades"]) == 12
+              and [u["n"] for u in f["unidades"]] == list(range(1, 13))
               and "artículo de reflexión" in (f["competencia"] or "")
               and "CORTE ÚNICO" in (f["evaluacion"] or "").upper(),
               f"{len(f['unidades'])} unidades · {(f['competencia'] or '')[:60]}")

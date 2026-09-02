@@ -61,6 +61,7 @@ sincroniza a Drive, al historial no entra. Mismo criterio que dejó fuera `3 - T
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import sys
@@ -137,7 +138,6 @@ def texto_como_lo_busca_ctrl_f(ruta: Path) -> list[str]:
     que el lector ve. Se corta en cada fin de párrafo para no casar citas que cruzan un salto, que
     Ctrl+F tampoco cruza.
     """
-    import html
     import zipfile
 
     xml = zipfile.ZipFile(ruta).read("word/document.xml").decode("utf-8", "replace")
@@ -334,7 +334,19 @@ def comentarios_publicados(ctx, doc: str) -> list[dict]:
         return []
 
     def plano(x: str) -> str:
-        return " ".join(re.sub(r"<[^>]+>", " ", x).split())
+        """Texto legible de un trozo de XML.
+
+        `unescape` va DESPUÉS de quitar las etiquetas, igual que en `hilos_publicados`: al revés, un
+        «&lt;b&gt;» del texto del estudiante se convertiría en `<b>` y la siguiente pasada se lo
+        comería como si fuera etiqueta.
+
+        Sin este `unescape` la comprobación del ancla daba **falso fallo** en cuanto la cita llevaba
+        un `<`, un `>` o un `&`: el 02/09/2026 un comentario anclado a un diagrama de flechas
+        —«[Control 100% Manual] ──> […]»— se reportó como «quedó anclado a otra cosa» porque el
+        `.docx` devuelve `──&gt;`. El ancla era correcta. Un falso fallo es peor que ninguno: manda
+        a mirar a mano un problema que no existe, y a la tercera vez ya nadie mira.
+        """
+        return html.unescape(" ".join(re.sub(r"<[^>]+>", " ", x).split()))
 
     xml = z.read("word/comments.xml").decode("utf-8", "replace")
     cuerpo = z.read("word/document.xml").decode("utf-8", "replace")
@@ -380,7 +392,6 @@ def hilos_publicados(ctx, doc: str) -> list[dict]:
     def plano(x: str) -> str:
         # `unescape` va DESPUÉS de quitar las etiquetas: al revés, un «&lt;b&gt;» del texto del
         # estudiante se convertiría en una etiqueta y la siguiente pasada se lo comería.
-        import html
         return html.unescape(" ".join(re.sub(r"<[^>]+>", " ", x).split()))
 
     xml = z.read("word/comments.xml").decode("utf-8", "replace")

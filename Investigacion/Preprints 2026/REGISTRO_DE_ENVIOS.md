@@ -67,6 +67,12 @@ el OAI), y el perfil de navegador `%LOCALAPPDATA%\scielo-cun\` **no existe**: en
 hay `gdocs-cun\`, `synapse-cun\`, `revistas-cun\` y `cdigital-cun\`. La Ruta A necesita que el
 Docente abra Chrome con la sesión de `andresdfx`.
 
+**Ojo con una pista falsa, comprobada el 02/09/2026:** el perfil `revistas-cun` **sí tiene una
+cookie `OJSSID` de `.preprints.scielo.org`**, así que parece que la sesión estuviera ahí. No lo
+está: abrir `preprints.scielo.org/index.php/scielo/submissions` con ese perfil **redirige a
+`login`**. Una cookie de sesión guardada no prueba que la sesión siga viva; lo único que lo
+prueba es cargar una página que exija estar dentro.
+
 Por tanto el estado «en fila» de la tabla es **lo último observado, no lo confirmado hoy**: es
 compatible con un rechazo silencioso, que por Crossref y por OAI es invisible.
 
@@ -100,7 +106,9 @@ distinto**. Ninguno de los dos se arregla con una carta:
 
 **Lo que el manuscrito es, medido hoy sobre el archivo** —que no ha cambiado desde el 23/08—: **1.486
 palabras de cuerpo** (§1–§6), **1.744** con las declaraciones y **2.785** el archivo entero sin
-excluir nada, ni abstracts ni referencias. 17 referencias APA 7 sin DOI, cero tablas, cero figuras,
+excluir nada, ni abstracts ni referencias. **16** referencias APA 7 sin DOI (el «17» que decía aquí
+se contó mal; y desde el 01/09 son **17** de verdad, al añadirse la fuente de Google), cero tablas,
+cero figuras,
 cero marcadores `[PENDIENTE]`. El **1.479** anotado el 26/08 es el mismo texto contado de otra forma.
 Género: resultado negativo con solución alterna sobre una limitación documentada de la API de Google
 Docs, más el reporte de un incidente. No mide nada y lo declara: «No student data are reported and no
@@ -644,3 +652,71 @@ hasta 2027. Por eso no es la primera opción.
 
 La versión adaptada a la revista se escribe aparte, en `Articulo_TecnoLogicas_Completion_Gating.md`,
 para que este original quede intacto.
+
+
+---
+
+## 01/09/2026 — Revista PACA y LAJAR: un destino nuevo y uno descartado
+
+Las dos las propuso el Docente. **No son comparables.**
+
+### LAJAR (Latin American Journal of Aquatic Research) — DESCARTADA, y para siempre
+
+No hay que volver a mirarla para ningún manuscrito de este portafolio. Dos motivos, cada uno
+suficiente, y los dos literales de su propio sitio:
+
+1. **Alcance.** Publica «original and unpublished research articles, reviews and short
+   communications on aquatic science… conducted in aquaculture and marine waters of Latin America».
+   Sus categorías propias son Fisheries Q4, Marine & Freshwater Biology Q4, Oceanography Q3, Aquatic
+   Science Q3. Sus secciones son exactamente cuatro —Review Articles, Research Articles, Short
+   Communications, In Memoriam— y su lista de temas es **cerrada**: siete, sin ninguna coletilla de
+   «áreas afines». No hay sección de metodología, ni de notas técnicas, ni de educación.
+2. **Cobra.** «Papers accepted are subjected to a publication charge of US$500,00», con casilla de
+   aceptación: «I accept to pay US$500.00 once upon I receive the galley proofs».
+
+Se puso un agente a **refutar** ese descarte buscando activamente una puerta. No la encontró.
+
+### Revista PACA (Universidad Surcolombiana, ISSN 2027-257x) — SÍ es un destino real
+
+| Aspecto | Detalle |
+|---|---|
+| Alcance | educación, pedagogía, currículo, evaluación, políticas públicas en educación, **educación superior**, investigación educativa **y áreas afines** |
+| Idioma | español **o inglés** |
+| Coste | **cero**, en todos los conceptos |
+| Extensión | **8 a 15 páginas**, Arial 12, interlineado 1.5 — la regla es en PÁGINAS, no en palabras |
+| Tipologías | investigación · revisión · reflexión |
+| Exige | ORCID, afiliación, declaración de financiación, Declaración de Originalidad y **declaración de uso de IA nombrando la herramienta** |
+| Contacto | revistapaca@usco.edu.co |
+
+**Que mida en páginas abre una puerta que estaba cerrada.** El 17606 quedó fuera de EDU REVIEW por
+su umbral de 3.000 palabras; maquetado en el formato de PACA da **11 páginas** (medidas generando el
+.docx y convirtiéndolo a PDF con LibreOffice, no estimadas). Cabe.
+
+### Pero hoy no se puede enviar nada, y el motivo es el mismo para los seis
+
+La casilla 1 de PACA dice «original e inédito y no ha sido publicado ni se encuentra en proceso de
+evaluación en otra revista **o medio de difusión científica**». Cada manuscrito choca con ella:
+
+| Manuscrito | Por qué no se puede firmar hoy |
+|---|---|
+| 17601 Protocolo_Desercion_ML | sometido a EDU REVIEW (5579), en revisión |
+| 17602 AI_Assisted_Course_Authoring | envío 596 a medias en ITEES + preprint en moderación |
+| 17606 Anchored_Feedback | preprint en moderación en SciELO Preprints |
+| Completion_Gating (las dos versiones) | **publicado** en Qeios, DOI 10.32388/z2uxxt, CC BY |
+| Articulo_Calidad_D_Desercion_ML | además, 8.657 palabras: 26-29 páginas, el doble del máximo |
+
+**Consulta enviada el 01/09/2026 a `revistapaca@usco.edu.co`** preguntando las dos cosas que no se
+pueden resolver leyendo sus normas: si un depósito en SciELO Preprints **aún sin publicar** es
+compatible con esa casilla, y bajo qué tipología encajaría el 17606. Texto en
+`CORREO_Consulta_PACA.md`.
+
+### Un defecto del 17606 que salió al revisarlo, y que ya está corregido
+
+§2.1 entrecomillaba dos frases de la documentación de Google **sin referencia recuperable**, y la
+bibliografía no tenía ni una sola fuente técnica. Peor: **el texto entrecomillado no era el de la
+fuente.** Decía «across revisions» donde Google dice «between revisions», y ponía entre comillas
+«treat developer-defined anchored comments as unanchored comments in their display», que Google no
+escribe en ninguna parte. Corregido el 01/09 contra la página original: las dos citas ahora son
+literales, llevan `(Google, 2026)` y la referencia está en la bibliografía, en su sitio alfabético.
+La Política Antiplagio de PACA llama plagio a «la reproducción total o parcial de ideas, textos… de
+terceros sin el debido reconocimiento de la fuente original».

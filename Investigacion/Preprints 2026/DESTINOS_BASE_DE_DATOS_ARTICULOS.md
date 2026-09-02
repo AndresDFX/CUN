@@ -269,3 +269,46 @@ TecnoLógicas) y «ni sitio web en internet» (Revista Virtual UCN) — y eso in
 única sin extensión mínima declarada. Sinergias Educativas sigue igual: «no acepta material
 previamente publicado», y su consulta sin contestar.
 
+
+---
+
+## 01/09/2026 — LAJAR: cerrada para siempre. PACA: abierta, con dos puertas por abrir
+
+### LAJAR (Latin American Journal of Aquatic Research) — NO VOLVER A MIRARLA
+
+Queda escrito para que nadie repita la búsqueda. Dos motivos independientes, literales de su sitio:
+
+- **Alcance acuático y cerrado.** Publica «original and unpublished research articles, reviews and
+  short communications on aquatic science… conducted in aquaculture and marine waters of Latin
+  America». Categorías propias: Fisheries Q4, Marine & Freshwater Biology Q4, Oceanography Q3,
+  Aquatic Science Q3. **Cuatro** secciones —Review Articles, Research Articles, Short Communications,
+  In Memoriam— y **siete** temas en lista cerrada, **sin** coletilla de «áreas afines». No hay sección
+  de metodología, ni de notas técnicas, ni de educación.
+- **Cobra US$500.** «Papers accepted are subjected to a publication charge of US$500,00», con casilla
+  de aceptación del pago al recibir las galeradas.
+
+Se encargó a un agente **refutar** este descarte buscando activamente cuatro puertas (metodología,
+notas técnicas, educación en ciencias del mar, ciencia de datos aplicada). Las cuatro están tapiadas.
+
+### Revista PACA (Universidad Surcolombiana) — el mejor destino conocido para dos manuscritos
+
+Alcance de educación superior con «y áreas afines», español o inglés, **gratuita**, y —lo decisivo—
+**mide en páginas (8-15), no en palabras**. Detalle completo y paquete de envío en
+`Envio_PACA/LEEME - listo para enviar.md`.
+
+Bloqueada hoy para los seis manuscritos por su casilla 1 («ni se encuentra en proceso de evaluación
+en otra revista **o medio de difusión científica**») y, para crear cuenta, por un **reCAPTCHA** en el
+registro. Consulta enviada el 01/09.
+
+### Un hallazgo que no es de destino, y que es más grave
+
+`Articulo_Calidad_D_Desercion_ML` **no es un artículo distinto de `Preprint_Protocolo_Desercion_ML`
+(17601)**: medido hoy, **90,0 % de similitud de secuencia y 105 de 138 párrafos largos idénticos byte
+a byte**. El 17601 está vivo como envío **5579** en EDU REVIEW, así que mandar el gemelo a otra parte
+sería envío duplicado, y la Política Antiplagio de PACA prohíbe además el autoplagio por separado.
+
+Y sobre su estado de fondo: tiene **96 marcadores sin resolver** —68 de ellos celdas de tabla— y
+**cero cuadernos, cero datasets, cero modelos y cero scripts**. Los experimentos no se han ejecutado.
+Eso importa porque responde al producto de Synapse «Artículos de investigación con Calidad D (acceso
+abierto)», con **fecha límite 2026-11-20**: lo que se radica es la constancia de sometimiento, y hoy
+no hay nada que someter sin ejecutar antes el trabajo.
